@@ -17,7 +17,7 @@ DIRS = HERE.parent / "directories.json"
 def ok(code_text, which):
     """Agents wrote the check either as codes ("webs:200 offi:200") or as a plain yes / no / 200 for the row."""
     t = (code_text or "").strip().lower()
-    if t in ("yes", "y", "200", "ok", "true"):
+    if t in ("yes", "y", "200", "ok", "true") or re.match(r"yes\b", t):
         return True
     if which == "webs" and re.match(r"200\b", t):                      # "200; RTI page 200": the first code is the site's
         return True
