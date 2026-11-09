@@ -18,7 +18,7 @@ from urllib.parse import urlsplit
 
 import requests
 
-from officials import ajax_rows, candidate_links, common_links, normalise, page_title, pager_blocks, row_id, tables
+from officials import ajax_rows, candidate_links, common_links, normalise, page_title, pager_blocks, pubutility, row_id, tables
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
 MAX_PAGES = 25          # pages fetched per site (home page and candidates; AJAX pages are counted apart)
@@ -152,6 +152,8 @@ class Site:
             n = 0
             for t in tables(r.text):
                 n += self.add_rows(final, t["caption"], t["rows"], "table")
+            for t in pubutility(r.text):
+                n += self.add_rows(final, t["caption"], t["rows"], "card")
             n += self.ajax(final, r.text)
             self.keep_page(u, final, r.text, n)
             if n:      # a page with officials: its own links to more such pages (directory categories) are worth a look

@@ -18,7 +18,8 @@ LINK_WORDS = re.compile(
     r"adhikari|अधिकारी|संपर्क|सम्पर्क|निर्देशिका|पार्षद|ಅಧಿಕಾರಿ|ಸಂಪರ್ಕ|ಸಿಬ್ಬಂದಿ|ಸದಸ್ಯ|ಚುನಾಯಿತ|அலுவலர்|தொடர்பு|உறுப்பினர்|যোগাযোগ|আধিকারিক|अधिकाऱ्यां",
     re.I)
 # Addresses that most S3WaaS sites have even when the home page does not link them.
-COMMON_PATHS = ["whos-who/", "about-district/whos-who/", "en/whos-who/", "en/about-district/whos-who/", "directory/", "contact-us/"]
+COMMON_PATHS = ["whos-who/", "about-district/whos-who/", "en/whos-who/", "en/about-district/whos-who/", "directory/", "contact-us/",
+                "public-utility-category/municipality/"]
 SKIP = re.compile(r"\.(pdf|jpe?g|png|gif|zip|docx?|xlsx?|pptx?|mp4|mp3)$|^(mailto|tel|javascript):|/(feed|wp-json|tag|category)/", re.I)
 PAGE_OF = re.compile(r"Page\s*-?\s*(\d+)\s*of\s*(\d+)", re.I)
 
@@ -160,3 +161,25 @@ def row_id(site, page, caption, cells):
 def page_title(html):
     soup = BeautifulSoup(html, "lxml")
     return " ".join((soup.title.get_text(" ", strip=True) if soup.title else "").split())[:300]
+
+
+def pubutility(html):
+    """S3WaaS "public utility" cards (e.g. /public-utility-category/municipality/ on district sites): one card per office, with
+    the office's name as heading and lines "Phone : ...", "Email : ...", "Website : ..." and an address. Returns [{"caption", "rows"}]."""
+    soup = BeautifulSoup(html, "lxml")
+    rows = []
+    for ul in soup.select("ul.pubutility-list"):
+        box = ul.find_parent(["div", "li", "article"])
+        head = box.find(["h2", "h3", "h4", "h5", "strong"]) if box else None
+        cells = {"Office": " ".join(head.get_text(" ", strip=True).split()) if head else ""}
+        for li in ul.find_all("li"):
+            t = " ".join(li.get_text(" ", strip=True).split())
+            m = re.match(r"(Phone|Mobile|Email|E-mail|Website|Fax|Pincode)\s*:?\s*(.*)", t, re.I)
+            if m:
+                cells[m.group(1).title()] = deobfuscate(m.group(2)) if m.group(1).lower().startswith("e") else m.group(2)
+            elif t:
+                cells.setdefault("Address", t)
+        if any(v for k, v in cells.items() if k != "Office"):
+            rows.append(cells)
+    title = soup.find("h1")
+    return [{"caption": " ".join(title.get_text(" ", strip=True).split()) if title else "public utility", "rows": rows}] if rows else []

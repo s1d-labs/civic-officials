@@ -18,7 +18,7 @@ import time
 
 import requests
 
-from officials import normalise, tables
+from officials import normalise, pubutility, tables
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
 stop = False
@@ -82,7 +82,7 @@ def run(item, get):
             if not r.encoding or r.encoding.lower() == "iso-8859-1":
                 r.encoding = r.apparent_encoding or "utf-8"
             n = 0
-            for t in tables(r.text):
+            for t in tables(r.text) + pubutility(r.text):
                 for cells in t["rows"]:
                     recs.append((f"dir:{key}:{n}", {"type": "row", **meta, "url": p["url"], "category": t["caption"] or p.get("label", ""),
                                                     "via": "table", **normalise(cells), "cells": cells}))

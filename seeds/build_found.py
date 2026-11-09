@@ -3,12 +3,15 @@ from India (HTTP 200). The start address is the officials page when there is one
 Rajasthan's lsg.rajasthan.gov.in/<vdir> shell answers 200 for any address (an Angular app): those rows are left out here."""
 import csv
 import glob
+import hashlib
+import json
 import re
 from pathlib import Path
 from urllib.parse import urlsplit
 
 HERE = Path(__file__).parent
 OUT = HERE.parent / "found_sites.csv"
+DIRS = HERE.parent / "directories.json"
 
 
 def ok(code_text, which):
@@ -16,12 +19,16 @@ def ok(code_text, which):
     t = (code_text or "").strip().lower()
     if t in ("yes", "y", "200", "ok", "true"):
         return True
+    if which == "webs" and re.match(r"200\b", t):                      # "200; RTI page 200": the first code is the site's
+        return True
+    if which == "offi" and re.search(r"(rti page|offi:)\s*200", t):
+        return True
     m = re.search(rf"{which}:(\d+)", t)
     return bool(m and m.group(1) == "200")
 
 
 def main():
-    out, seen = [], set()
+    out, seen, pdfs = [], set(), set()
     for f in sorted(glob.glob(str(HERE / "raw/search/out_g*.csv"))):
         group = Path(f).stem.removeprefix("out_")
         for r in csv.DictReader(open(f, newline="", encoding="utf-8")):
@@ -29,6 +36,9 @@ def main():
             if "(sh" in v or "lsg.rajasthan.gov.in" in (r.get("website") or ""):
                 continue
             start, read_start = "", False
+            if (r.get("officials_url") or "").lower().split("?")[0].endswith(".pdf"):
+                pdfs.add(r["officials_url"])          # statewide PDF lists go to the directory task (directories.json)
+                r = {**r, "officials_url": ""}
             if r.get("officials_url") and ok(v, "offi"):
                 start, read_start = r["officials_url"], True
             elif r.get("website") and ok(v, "webs"):
@@ -47,6 +57,14 @@ def main():
         w.writeheader()
         w.writerows(out)
     print(len(out), "sites;", sum(1 for x in out if x["read_start"]), "start at an officials page")
+    d = json.loads(DIRS.read_text())
+    have = {i["payload"]["url"] for i in d}
+    new = [u for u in sorted(pdfs) if u not in have]
+    for u in new:
+        d.append({"key": "pdf-" + hashlib.sha1(u.encode()).hexdigest()[:12], "payload": {"url": u, "method": "GET", "data": None,
+                  "fmt": "pdf", "state": "", "source": "search", "label": "officials list (PDF) found by search"}})
+    DIRS.write_text(json.dumps(d, indent=1, ensure_ascii=False))
+    print(len(new), "new PDF lists added to directories.json")
 
 
 if __name__ == "__main__":

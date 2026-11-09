@@ -50,3 +50,10 @@ def test_candidate_links_town_site():
     html = '<a href="/en/Engwardstaffs">Wardwise Staff Details</a><a href="/en/BLO">Booth Level Officers</a><a href="/en/tenders">Tenders</a>'
     links = candidate_links(html, "http://www.harohallitown.mrc.gov.in/", "harohallitown.mrc.gov.in")
     assert links == ["http://www.harohallitown.mrc.gov.in/en/Engwardstaffs", "http://www.harohallitown.mrc.gov.in/en/BLO"]
+
+
+def test_pubutility():
+    from officials import pubutility
+    t = pubutility(read("patna_pubutility_municipality.html"))
+    assert t and t[0]["rows"][0]["Office"] == "Patna Municipal Corporation"
+    assert normalise(t[0]["rows"][0])["phone"].startswith("+91")
