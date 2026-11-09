@@ -12,7 +12,11 @@ OUT = HERE.parent / "found_sites.csv"
 
 
 def ok(code_text, which):
-    m = re.search(rf"{which}:(\d+)", code_text or "")
+    """Agents wrote the check either as codes ("webs:200 offi:200") or as a plain yes / no / 200 for the row."""
+    t = (code_text or "").strip().lower()
+    if t in ("yes", "y", "200", "ok", "true"):
+        return True
+    m = re.search(rf"{which}:(\d+)", t)
     return bool(m and m.group(1) == "200")
 
 
