@@ -1,0 +1,1986 @@
+[
+ {
+  "key": "ap-ulbprofiles",
+  "payload": {
+   "url": "https://apcmms.ap.gov.in/apiv1/public/web/ulbdetails/ulbprofiles",
+   "method": "GET",
+   "data": null,
+   "fmt": "json",
+   "state": "AP",
+   "source": "APCMMS",
+   "label": "AP ULB commissioners"
+  }
+ },
+ {
+  "key": "cg-contacts",
+  "payload": {
+   "url": "https://uad.cg.gov.in/ContactUAD/ContactReport.aspx",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "CG",
+   "source": "UAD Chhattisgarh",
+   "label": "CG commissioners and CMOs"
+  }
+ },
+ {
+  "key": "cg-elected",
+  "payload": {
+   "url": "https://cguadestablishment.in/electionresult",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "CG",
+   "source": "UAD Chhattisgarh",
+   "label": "CG mayors and chairpersons"
+  }
+ },
+ {
+  "key": "br-commissioners-eo-2026-01",
+  "payload": {
+   "url": "https://betastate.bihar.gov.in/file_2/FileUpload/2026/Jan/09-Jan-2026/19/DyPage/062d1115-4ac3-46f7-96d2-59a58fbc7c96.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "BR",
+   "source": "UDHD Bihar",
+   "label": "Bihar commissioners and EOs (Jan 2026)"
+  }
+ },
+ {
+  "key": "tr-ulb-contacts",
+  "payload": {
+   "url": "https://udd.tripura.gov.in/ulb-contact-list",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "TR",
+   "source": "UDD Tripura",
+   "label": "Tripura ULB contacts"
+  }
+ },
+ {
+  "key": "jk-jammu-whoswho",
+  "payload": {
+   "url": "https://ulbjammu.jk.gov.in/ulb%20AboUsWhoSWho.html",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "JK",
+   "source": "ULB Jammu",
+   "label": "Jammu division EOs"
+  }
+ },
+ {
+  "key": "tn-municipal-emails",
+  "payload": {
+   "url": "https://www.tnurbantree.tn.gov.in/municipal-e-mail-ids/",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "TN",
+   "source": "CMA Tamil Nadu",
+   "label": "TN municipal commissioners (email)"
+  }
+ },
+ {
+  "key": "tn-townpanchayat-officials",
+  "payload": {
+   "url": "https://www.townpanchayat.in/town_panchayat_officials_contact_numbers.php",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "TN",
+   "source": "DTP Tamil Nadu",
+   "label": "TN town panchayat EOs"
+  }
+ },
+ {
+  "key": "tn-townpanchayat-websites",
+  "payload": {
+   "url": "https://www.townpanchayat.in/tpwebsitesnew.php",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "TN",
+   "source": "DTP Tamil Nadu",
+   "label": "TN town panchayat websites"
+  }
+ },
+ {
+  "key": "up-nagar-nigam",
+  "payload": {
+   "url": "https://localbodies.up.nic.in/listnn.htm",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "UP",
+   "source": "Local Bodies UP",
+   "label": "UP nagar nigams: mayor, commissioner"
+  }
+ },
+ {
+  "key": "up-elected-npp",
+  "payload": {
+   "url": "https://localbodies.up.nic.in/pdf/elected-npp.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "UP",
+   "source": "Local Bodies UP",
+   "label": "UP nagar palika chairpersons"
+  }
+ },
+ {
+  "key": "up-elected-np",
+  "payload": {
+   "url": "https://localbodies.up.nic.in/pdf/elected-np.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "UP",
+   "source": "Local Bodies UP",
+   "label": "UP nagar panchayat chairpersons"
+  }
+ },
+ {
+  "key": "up-ulb-cug",
+  "payload": {
+   "url": "https://localbodies.up.nic.in/pdf/ulb-cug2005.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "UP",
+   "source": "Local Bodies UP",
+   "label": "UP ULB CUG numbers (scan)"
+  }
+ },
+ {
+  "key": "mp-directory",
+  "payload": {
+   "url": "https://www.mpurban.gov.in/Uploaded%20Document/ULBs%20Telephone%20and%20emails/Directory%20(3).pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "MP",
+   "source": "UADD MP",
+   "label": "MP ULB phones and emails"
+  }
+ },
+ {
+  "key": "gj-corporations",
+  "payload": {
+   "url": "https://udd.gujarat.gov.in/corporations.php",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "GJ",
+   "source": "UDD Gujarat",
+   "label": "Gujarat corporations: mayor, commissioner"
+  }
+ },
+ {
+  "key": "ts-rti-contacts",
+  "payload": {
+   "url": "https://cdma.cgg.gov.in/cdma/Files/RTI%20Act/RTIACT_14082026030845RTI%20ACT%20Contact%20Details.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "TS",
+   "source": "CDMA Telangana",
+   "label": "Telangana RTI contacts (PIOs)"
+  }
+ },
+ {
+  "key": "wb-sudawb-1",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "1"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Alipurduar Municipality"
+  }
+ },
+ {
+  "key": "wb-sudawb-2",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "2"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Arambagh"
+  }
+ },
+ {
+  "key": "wb-sudawb-3",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "3"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Asansol Municipal Corporation"
+  }
+ },
+ {
+  "key": "wb-sudawb-4",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "4"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Ashokenagar-Kalyangarh"
+  }
+ },
+ {
+  "key": "wb-sudawb-5",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "5"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Baduria"
+  }
+ },
+ {
+  "key": "wb-sudawb-6",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "6"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Baidyabati"
+  }
+ },
+ {
+  "key": "wb-sudawb-7",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "7"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Bolpur"
+  }
+ },
+ {
+  "key": "wb-sudawb-8",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "8"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Balurghat"
+  }
+ },
+ {
+  "key": "wb-sudawb-9",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "9"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Bankura Municipality"
+  }
+ },
+ {
+  "key": "wb-sudawb-10",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "10"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Bansberia"
+  }
+ },
+ {
+  "key": "wb-sudawb-11",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "11"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Baranagar"
+  }
+ },
+ {
+  "key": "wb-sudawb-12",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "12"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Barasat"
+  }
+ },
+ {
+  "key": "wb-sudawb-13",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "13"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Burdwan"
+  }
+ },
+ {
+  "key": "wb-sudawb-14",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "14"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Barrackpore"
+  }
+ },
+ {
+  "key": "wb-sudawb-15",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "15"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Baruipur"
+  }
+ },
+ {
+  "key": "wb-sudawb-16",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "16"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Basirhat"
+  }
+ },
+ {
+  "key": "wb-sudawb-17",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "17"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Beldanga"
+  }
+ },
+ {
+  "key": "wb-sudawb-18",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "18"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Berhampore"
+  }
+ },
+ {
+  "key": "wb-sudawb-19",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "19"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Bhadreswar"
+  }
+ },
+ {
+  "key": "wb-sudawb-20",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "20"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Bhatpara"
+  }
+ },
+ {
+  "key": "wb-sudawb-21",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "21"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Bidhannagar"
+  }
+ },
+ {
+  "key": "wb-sudawb-22",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "22"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Birnagar"
+  }
+ },
+ {
+  "key": "wb-sudawb-23",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "23"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Bishnupur"
+  }
+ },
+ {
+  "key": "wb-sudawb-25",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "25"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Bongaon"
+  }
+ },
+ {
+  "key": "wb-sudawb-26",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "26"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Budge Budge"
+  }
+ },
+ {
+  "key": "wb-sudawb-27",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "27"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Buniadpur"
+  }
+ },
+ {
+  "key": "wb-sudawb-28",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "28"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Chakdah"
+  }
+ },
+ {
+  "key": "wb-sudawb-29",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "29"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Champdany"
+  }
+ },
+ {
+  "key": "wb-sudawb-30",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "30"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Chandannagar"
+  }
+ },
+ {
+  "key": "wb-sudawb-31",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "31"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Chandrakona"
+  }
+ },
+ {
+  "key": "wb-sudawb-32",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "32"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Contai"
+  }
+ },
+ {
+  "key": "wb-sudawb-33",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "33"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Cooch Behar"
+  }
+ },
+ {
+  "key": "wb-sudawb-34",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "34"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Coopers Camp NAA"
+  }
+ },
+ {
+  "key": "wb-sudawb-35",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "35"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "DAINHAT"
+  }
+ },
+ {
+  "key": "wb-sudawb-36",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "36"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Darjeeling"
+  }
+ },
+ {
+  "key": "wb-sudawb-37",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "37"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Dalkhola"
+  }
+ },
+ {
+  "key": "wb-sudawb-38",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "38"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Dankuni"
+  }
+ },
+ {
+  "key": "wb-sudawb-39",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "39"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "DHULIYAN MUNICIPALITY"
+  }
+ },
+ {
+  "key": "wb-sudawb-40",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "40"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Dhupguri"
+  }
+ },
+ {
+  "key": "wb-sudawb-41",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "41"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Diamond Harbour"
+  }
+ },
+ {
+  "key": "wb-sudawb-42",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "42"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Dinhata"
+  }
+ },
+ {
+  "key": "wb-sudawb-43",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "43"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Domkal"
+  }
+ },
+ {
+  "key": "wb-sudawb-44",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "44"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "DUBRAJPUR MUNICIPALITY"
+  }
+ },
+ {
+  "key": "wb-sudawb-45",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "45"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Dum Dum"
+  }
+ },
+ {
+  "key": "wb-sudawb-46",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "46"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Durgapur MC"
+  }
+ },
+ {
+  "key": "wb-sudawb-47",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "47"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Egra"
+  }
+ },
+ {
+  "key": "wb-sudawb-48",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "48"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Englishbazar"
+  }
+ },
+ {
+  "key": "wb-sudawb-49",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "49"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Gangarampur"
+  }
+ },
+ {
+  "key": "wb-sudawb-50",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "50"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Garulia"
+  }
+ },
+ {
+  "key": "wb-sudawb-51",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "51"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Gayeshpur"
+  }
+ },
+ {
+  "key": "wb-sudawb-52",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "52"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Ghatal"
+  }
+ },
+ {
+  "key": "wb-sudawb-53",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "53"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Gobardanga"
+  }
+ },
+ {
+  "key": "wb-sudawb-54",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "54"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Guskara"
+  }
+ },
+ {
+  "key": "wb-sudawb-55",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "55"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Habra"
+  }
+ },
+ {
+  "key": "wb-sudawb-56",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "56"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Haldia"
+  }
+ },
+ {
+  "key": "wb-sudawb-57",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "57"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Haldibari"
+  }
+ },
+ {
+  "key": "wb-sudawb-58",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "58"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "HALISAHAR MUNICIPALITY"
+  }
+ },
+ {
+  "key": "wb-sudawb-59",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "59"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Haringhata"
+  }
+ },
+ {
+  "key": "wb-sudawb-60",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "60"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Hoogly Chinsurah"
+  }
+ },
+ {
+  "key": "wb-sudawb-61",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "61"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Howrah Municipal Corporation"
+  }
+ },
+ {
+  "key": "wb-sudawb-62",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "62"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Islampur"
+  }
+ },
+ {
+  "key": "wb-sudawb-63",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "63"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Jalpaiguri"
+  }
+ },
+ {
+  "key": "wb-sudawb-65",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "65"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Jangipur"
+  }
+ },
+ {
+  "key": "wb-sudawb-66",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "66"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Jhalda"
+  }
+ },
+ {
+  "key": "wb-sudawb-67",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "67"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Jhargram"
+  }
+ },
+ {
+  "key": "wb-sudawb-68",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "68"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Jiaganj Azimganj"
+  }
+ },
+ {
+  "key": "wb-sudawb-69",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "69"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Joynagar-Mazilpur"
+  }
+ },
+ {
+  "key": "wb-sudawb-70",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "70"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kalimpong"
+  }
+ },
+ {
+  "key": "wb-sudawb-71",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "71"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kaliyaganj"
+  }
+ },
+ {
+  "key": "wb-sudawb-72",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "72"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kalna"
+  }
+ },
+ {
+  "key": "wb-sudawb-73",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "73"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kalyani"
+  }
+ },
+ {
+  "key": "wb-sudawb-74",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "74"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kamarhati"
+  }
+ },
+ {
+  "key": "wb-sudawb-75",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "75"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kanchrapara"
+  }
+ },
+ {
+  "key": "wb-sudawb-76",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "76"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kandi"
+  }
+ },
+ {
+  "key": "wb-sudawb-77",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "77"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Katwa"
+  }
+ },
+ {
+  "key": "wb-sudawb-78",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "78"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kharagpur"
+  }
+ },
+ {
+  "key": "wb-sudawb-79",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "79"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kharar"
+  }
+ },
+ {
+  "key": "wb-sudawb-80",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "80"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "KHARDAH MUNICIPALITY"
+  }
+ },
+ {
+  "key": "wb-sudawb-81",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "81"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Khirpai"
+  }
+ },
+ {
+  "key": "wb-sudawb-82",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "82"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Konnagar"
+  }
+ },
+ {
+  "key": "wb-sudawb-83",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "83"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Krishnanagar Municipality"
+  }
+ },
+ {
+  "key": "wb-sudawb-85",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "85"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kurseong"
+  }
+ },
+ {
+  "key": "wb-sudawb-86",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "86"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Madhyamgram"
+  }
+ },
+ {
+  "key": "wb-sudawb-87",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "87"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Maheshtala"
+  }
+ },
+ {
+  "key": "wb-sudawb-88",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "88"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Mal"
+  }
+ },
+ {
+  "key": "wb-sudawb-89",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "89"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Mathabhanga"
+  }
+ },
+ {
+  "key": "wb-sudawb-90",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "90"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Mekhliganj"
+  }
+ },
+ {
+  "key": "wb-sudawb-91",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "91"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Memari"
+  }
+ },
+ {
+  "key": "wb-sudawb-92",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "92"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Midnapore"
+  }
+ },
+ {
+  "key": "wb-sudawb-93",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "93"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Mirik"
+  }
+ },
+ {
+  "key": "wb-sudawb-94",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "94"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Murshidabad"
+  }
+ },
+ {
+  "key": "wb-sudawb-95",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "95"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Nabadwip"
+  }
+ },
+ {
+  "key": "wb-sudawb-96",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "96"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Naihati"
+  }
+ },
+ {
+  "key": "wb-sudawb-97",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "97"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Nalhati"
+  }
+ },
+ {
+  "key": "wb-sudawb-98",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "98"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "New Barrackpore"
+  }
+ },
+ {
+  "key": "wb-sudawb-99",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "99"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "North Barrackpore Municipality"
+  }
+ },
+ {
+  "key": "wb-sudawb-100",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "100"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "North Dum Dum"
+  }
+ },
+ {
+  "key": "wb-sudawb-101",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "101"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Old Malda"
+  }
+ },
+ {
+  "key": "wb-sudawb-102",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "102"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Panihati"
+  }
+ },
+ {
+  "key": "wb-sudawb-103",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "103"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Panskura"
+  }
+ },
+ {
+  "key": "wb-sudawb-104",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "104"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Pujali"
+  }
+ },
+ {
+  "key": "wb-sudawb-105",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "105"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Purulia"
+  }
+ },
+ {
+  "key": "wb-sudawb-106",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "106"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "RAGHUNATHPUR MUNICIPALITY"
+  }
+ },
+ {
+  "key": "wb-sudawb-107",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "107"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Raiganj"
+  }
+ },
+ {
+  "key": "wb-sudawb-109",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "109"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Rajpur Sonarpur"
+  }
+ },
+ {
+  "key": "wb-sudawb-110",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "110"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Ramjibanpur"
+  }
+ },
+ {
+  "key": "wb-sudawb-111",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "111"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Rampurhat"
+  }
+ },
+ {
+  "key": "wb-sudawb-112",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "112"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Ranaghat"
+  }
+ },
+ {
+  "key": "wb-sudawb-114",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "114"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Rishra"
+  }
+ },
+ {
+  "key": "wb-sudawb-115",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "115"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Sainthia"
+  }
+ },
+ {
+  "key": "wb-sudawb-116",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "116"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Santipur"
+  }
+ },
+ {
+  "key": "wb-sudawb-117",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "117"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Serampore"
+  }
+ },
+ {
+  "key": "wb-sudawb-118",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "118"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Siliguri"
+  }
+ },
+ {
+  "key": "wb-sudawb-119",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "119"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Sonamukhi"
+  }
+ },
+ {
+  "key": "wb-sudawb-120",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "120"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "South Dum Dum"
+  }
+ },
+ {
+  "key": "wb-sudawb-121",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "121"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Suri"
+  }
+ },
+ {
+  "key": "wb-sudawb-122",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "122"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Taherpur"
+  }
+ },
+ {
+  "key": "wb-sudawb-123",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "123"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Taki"
+  }
+ },
+ {
+  "key": "wb-sudawb-124",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "124"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Tamralipta"
+  }
+ },
+ {
+  "key": "wb-sudawb-125",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "125"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Tarakeshwar"
+  }
+ },
+ {
+  "key": "wb-sudawb-126",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "126"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Titagarh"
+  }
+ },
+ {
+  "key": "wb-sudawb-127",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "127"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Tufanganj"
+  }
+ },
+ {
+  "key": "wb-sudawb-128",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "128"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Uluberia"
+  }
+ },
+ {
+  "key": "wb-sudawb-129",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "129"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Uttarpara Kotrung"
+  }
+ },
+ {
+  "key": "wb-sudawb-130",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "130"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Kolkata Municipal Corporation"
+  }
+ },
+ {
+  "key": "wb-sudawb-131",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "131"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Bally"
+  }
+ },
+ {
+  "key": "wb-sudawb-132",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "132"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Falakata"
+  }
+ },
+ {
+  "key": "wb-sudawb-133",
+  "payload": {
+   "url": "https://sudawb.org/frontend/getulbdtl",
+   "method": "POST",
+   "data": {
+    "ulb_id": "133"
+   },
+   "fmt": "json",
+   "state": "WB",
+   "source": "SUDA West Bengal",
+   "label": "Maynaguri Municipality"
+  }
+ }
+]

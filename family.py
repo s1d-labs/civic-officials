@@ -63,4 +63,10 @@ with open(HERE / "platform_sites.csv", newline="", encoding="utf-8") as f:
     _plat = list(csv.DictReader(f))
 PROJECTS.append(project("platforms", "Town sites on state municipal platforms (Kerala, Telangana, Tamil Nadu, Assam, Jharkhand)", _plat, geo="IN"))
 
+# Statewide sources of officials (directory task): APIs, contact pages and PDFs that cover many bodies at once (directories.json).
+_dirs = json.loads((HERE / "directories.json").read_text())
+PROJECTS.append({"name": f"{FAMILY}-directories", "title": "Statewide officials directories (APIs, contact pages, PDFs)", "task": "directory",
+                 "target": f"{FAMILY}-directories", "env": {}, "probe": None, "unit_label": "source", "record_label": "official or page",
+                 "items": _dirs, "workers": 2, "threads": 1, "delay_ms": 1500, "geo": "IN"})
+
 PROBES = []    # many hosts per project: no single health check would mean anything
