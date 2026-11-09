@@ -1,0 +1,658 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>
+	NIC
+</title><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+     <!-- Bootstrap -->
+    <script type="text/javascript" src="js/jquery3.7.min.js"></script>
+  
+  
+ 
+   
+   <!-- Modernizr -->
+    <script src="jsp/main.js" type="text/javascript"></script>
+
+
+ <link href="themes/1/js-image-slider.css" rel="stylesheet" type="text/css" />
+   
+ <script src="themes/1/js-image-slider.js" type="text/javascript"></script>
+   <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+	
+      <style>
+            .blink {
+                animation: blinker 2.5s linear infinite;
+                color: red;
+                font-family: sans-serif;
+            }
+            @keyframes blinker {
+             60% {
+                    opacity: 0;
+                }
+  }
+            
+        </style>
+
+
+<script type="text/javascript">
+    $('.count').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 4000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+      function animate(obj, initVal, lastVal, duration) {
+         let startTime = null;
+
+      //get the current timestamp and assign it to the currentTime variable
+      let currentTime = Date.now();
+
+      //pass the current timestamp to the step function
+      const step = (currentTime ) => {
+
+      //if the start time is null, assign the current time to startTime
+      if (!startTime) {
+         startTime = currentTime ;
+      }
+
+      //calculate the value to be used in calculating the number to be displayed
+      const progress = Math.min((currentTime - startTime)/ duration, 1);
+
+      //calculate what to be displayed using the value gotten above
+      obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+
+      //checking to make sure the counter does not exceed the last value (lastVal)
+      if (progress < 1) {
+         window.requestAnimationFrame(step);
+      } else {
+            window.cancelAnimationFrame(window.requestAnimationFrame(step));
+         }
+      };
+      //start animating
+         window.requestAnimationFrame(step);
+      }
+      let text1 = document.getElementById('0101');
+      let text2 = document.getElementById('0102');
+      let text3 = document.getElementById('0103');
+      let text4 = document.getElementById('0104');
+      const load = () => {
+          animate(text1, 0, lbltradecnt.Text, 7000);
+         animate(text2, 0, 232, 7000);
+         animate(text3, 0, 259, 7000);
+         animate(text4, 0, 1000, 7000);
+      }
+   </script>
+</head>
+<body background="images/abstract-gb2.jpg">
+<div style="background-image: url('images/abstract-gb2.jpg')">
+     <div class="container-fluid" style="background-color: #95AD19; height: 85px;">
+          <img src="images/Seal_of_Goa.png" alt="Avatar Logo" style="width:80px; height: 80px;" />
+         
+         
+         <span id="Label1" style="font-family:Times New Roman;font-size:X-Large;font-weight:bold;font-style:normal;">Directorate of Municipal Administration</span>
+        
+            </div>
+     
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon">#</span>
+      
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+    <ul class="navbar-nav me-auto">
+      
+      <li class="nav-item">
+         
+         
+        <a class="nav-link" href="Home.aspx">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="About.aspx">About Us</a>
+      </li>
+      
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >          
+          <li ><a class="dropdown-item" href="PayHouseTax.aspx">Pay House Tax</a></li>
+          <li><a class="dropdown-item" href="PayRent.aspx">Pay Rent</a></li>
+          <li><a class="dropdown-item" href="PayTSTax.aspx">Pay Trade/Signboard fees</a></li>
+          <li><a class="dropdown-item" href="Login.aspx">Transfer of House Tax</a></li>
+          <li><a class="dropdown-item" href="Login.aspx">Application For Trade/Signboard</a></li>
+            <li><a class="dropdown-item" href="Login.aspx">Pet Dog Registration</a></li>
+          <li ><a class="dropdown-item" href="Birth.aspx"  >Search Birth certificate</a></li>
+   
+          <li><a class="dropdown-item" href="Death.aspx">Search Death certificate</a></li>
+        
+            
+             <li><a class="dropdown-item" href="Hoarding.aspx">Signage Application</a></li>
+          <li><a class="dropdown-item" href="Login.aspx">Income Certificate</a></li>
+              <li><a class="dropdown-item" href="Login.aspx">NOC for Water / Electricity</a></li>
+            <li><a class="dropdown-item" href="Login.aspx">Hall Booking</a></li>
+            <li><a class="dropdown-item" href="Login.aspx">Night Soil Tanker Service</a></li>
+            
+           
+        
+
+        </ul>
+      </li>
+         <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Grievances
+        </a>
+             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" >          
+          <li ><a class="dropdown-item" href="Complaints.aspx">Register a Complaint</a></li>
+          <li><a class="dropdown-item" href="complaintstatus.aspx">Check Complaint Status</a></li>
+          
+         
+        </ul>
+       </li>
+     <li class="nav-item">
+        <a class="nav-link" href="faq.aspx">FAQ</a>
+      </li>
+ <li class="nav-item">
+        <a class="nav-link" href="EODB.aspx">EoDB</a>
+      </li>
+        
+    </ul>
+ <form class="d-flex" >
+        
+          <a href="Login.aspx" class="btn btn-primary ">
+      <span class="glyphicon glyphicon-log-in"></span>
+      Login
+      </a> 
+      </form>
+  </div>
+ </div>
+</nav>
+
+
+
+ <form name="Form1" method="post" action="./" id="Form1" class="form-horizontal">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="rsmjwZjN+8IkjffHgO51co0z2AKvZXkTMVGMWnRnznhJRBOOyuTm3a/6Ws9I3NphOUhdCSTwmx6XGOfPDGFkWm4ZLAqzIFs4mL008wLRguuuXbbMIJt7G4hCZolC7RPyZKNQJdqqKpJ+QXUMNLdzGQ0uYMSoMuDqZUcisZxP7IGAR0aFv2rC5To3f7Q357QBUtCMqeaDrI9Q+bsQfYwnFlVBasD5neVl1vMfrakdwreZyK5QsuqYnyQiEIMx7OjN4H8lB51jd5qa2UIL148FrWrBd8BxgJJCQylMidlZn4L16Mrbat0EKvkT5krWlkzFZ4eOh71eaWJNKzL3zK8mqvhuAmyO15pSEjoeSbLJdhjgp7FvrYC5CjJVzQ0LIRuVO0AQzDyonIjVw/qkntQjw24nHZRYqrtSXJaGY0yCPMIIxMUuQYSv2+mX8iShIy9ih+CVTMf2UltpBgXJy4n2XQw3107zefEnXAqVKs5LcxQroCt5voI8Y+WJFllQ6vMiq4P8M7NAMs6y5j+SICKaWTm54Q7o/f+S0qsLqVqHkRR4Sq1usb4BuLRBfa5MtB+cpcNDbCWa6HrEc36quIp2j65+Eyt6NJaqfz4ExIkpb4+Dmm+Ji8T1UjcNMabTMi6vWoA0X9TkhtA7AIB4+jCZ3GzdcWzLwAzhTxs9ScKPF/iCkNh9xS5i7w41FTH98Anaz50lH73AVWvbNMXseljlKQ==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=VHPDA6J1e_0v6uaQX1zrurWt494yy9e80Vdp54CTdtQqFz0I-ExJqcnik_B9g37z2G-GaWDRDmUHtGPnaf4t3LuLZlPOD4_G3mfuyF0cNtw1&amp;t=638901739900000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=-xpPKKTTknffPzDA73yAnTyx_pODPW6We0gJ8dui27hIlI4-N7N0ieSwP-3IGA_9hmaQmkt3zlGbyzUk2-QI42p1KmdtVv75VTsbgyXDggME-SaNoo0ZZhpXqRR87vnEi6NlKLPQI8-LHQpFuTvOEKaF2bS3iITcLf7O9EpepMg1&amp;t=5c0e0825" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=CQqUjxHtWlVqAfkgMQQz8fd1nPERxSuDojAh-PhtD-Y-1FnkchPxdmdcnLcAN0dUmk4_XiV0RFMZi2ObkMqGPC-Y-f6cmOQEMnHLTh_vNcq02kRpqrOqA2mPMGdgCVART5ylrYBBPH88hkiggwObaKQm9TrEEVVJvUTV06PyDvTlsYkbHMy5QDooio8MooS20&amp;t=5c0e0825" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8D0E13E6" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="oTXRsODIccdRlRzx5Xd41muhk7sN2nOm6EAgU0ifveabhE50KZJBIug4BYYsKoswBI8SekqBeURm0DIjVpUg6RIiiViKasNmo1dONTnqSJwtqvjBGcYLEkF6JjVzjwFEqvn1AfXFYnUri6ginljJ8a4McrTFMox9qxtvbk5phDCAfZsHDdYqpOaH+GV3TYqdQq9t/ilklTmBfIO0BchV7VEZKzMLXnqdWQcl5gJVA0Zht+duFPdjlnqII6McU4Zs0ksjdEfa/0TNwvW+AsYBo3faiCmZNRAYfdrQtzSvzbwVernXyiYTooAfEolXyGbRU96Vb95Q8LzqdKqh+AZ9mzEnXZNqDR8++Ttpa+SWotQZtq6SgrD+yQ6fjvzkG/7GX4IL/UVpnLn1l9VrFTj2Hb5zRqsxdDdtNrp0ZgYdULuOp3c/6gyuCRWZedaMLE1e0stdWKmR4NGEET/XXMpazw==" />
+</div> 
+     <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'Form1', [], [], [], 90, '');
+//]]>
+</script>
+
+      <input type="hidden" name="antiforgery" id="antiforgery" value="207014d9-0584-4f45-ba0c-dfefb8da65ee" />
+
+<div id="fontdiv">
+
+
+ <br class="clear" />
+    <div class="row">
+    <div class="col-sm-1 col-md-1 col-lg-1">
+      </div>
+        <div class="col-sm-10 col-md-10 col-lg-10">
+    <div class="modal fade" id="flagModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content" >
+          <button type="button" class="btn-close" data-bs-dismiss="modal">[X]</button>
+       
+        <div class="modal-body">   
+                  
+         
+            <img class="img-responsive" src="images/har-ghar-tiranga.jpg"  alt="" />
+            
+        </div>
+       
+
+         
+      </div>
+      
+      
+    </div>
+  </div>
+        </div>
+        <div class="col-sm-1 col-md-1 col-lg-1">
+      </div>
+   </div>
+ <br />
+<div class="container-fluid">
+
+ <div class="row">
+  <div class="col-sm-3 col-md-3 col-lg-3">
+  <div class="thumbnail" 
+          style="background-image: url('images/Abstract-Green-Background-Wallpaper-Vector-Graphic.jpg')" >
+     
+          <a href="#" class="list-group-item " 
+           
+           style=" padding: 2px; background-color: #B2C629; font-family: 'Arial Black'; color: #000000; font-size: x-large; font-weight: bold;"><center>Links</center> </a>
+      <div class="caption">
+       <center> 
+           <br />
+
+           <input type="submit" name="Button15" value="Dept. of Mun. Administration" id="Button15" class="btn btn-primary btn-md" style="width:245px;" /> 
+       
+        <br />
+           <br />
+   
+    
+       
+        </center>
+      </div>
+    </div>
+     <br />
+
+<div class="accordion" style="width: 100%; padding-left: 0px;" >
+<div class="card">
+      <div class="card-header" style="background-color: #B2C629; font-size: x-large; font-weight: bold;">
+           
+           Online Services
+ </div>
+          
+		
+				<a class="collapsed btn" data-bs-toggle="collapse"  href="#collapseTwo" 
+                    style="font-weight: bold;  text-decoration: blink; color: #009933; background-image: url('images/Abstract-Green-Background-Wallpaper-Vector-Graphic.jpg'); width: 100%;">Payment of Taxes</a>
+				
+                 <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                 
+			     <a href="PayHouseTax.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px" >Pay House tax </a>
+                 <a href="PayRent.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Pay Rent</a>
+                <a href="PayTSTax.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Pay Trade & Signboard fees</a>
+              
+			</div>
+        
+
+				<a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTthree" 
+                    style="font-weight: bold; padding: 11px 30px 11px 26px; text-decoration: blink; background-color: #B1E6B0; color: #009933; background-image: url('images/Abstract-Green-Background-Wallpaper-Vector-Graphic.jpg'); width: 100%;">Births/Deaths</a>
+				
+                 <div id="collapseTthree" class="collapse" data-bs-parent="#accordion">
+                 
+	    <a href="Birth.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Search Municipal Birth Certificate</a>          
+           <a href="Death.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Search Municipal Death Certificate</a>
+        
+        
+          <a href="BDCertVerify.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Verify Birth/Death Certificate</a>
+             
+           </div>     
+
+			
+				<a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTfour" 
+                  style="font-weight: bold; padding: 11px 30px 11px 26px; text-decoration: blink; background-color: #B1E6B0; color: #009933; background-image: url('images/Abstract-Green-Background-Wallpaper-Vector-Graphic.jpg'); width: 100%;">Booking Services</a>
+				
+                 <div id="collapseTfour" class="collapse" data-bs-parent="#accordion">
+                 
+					<a href="HallBooking.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Hall Booking</a>
+                     <a href="nightsoil.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Night soil Tanker</a>
+                     <a href="hearsevanservice.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Hearse Van</a>
+                
+                 </div>
+             
+
+			
+				<a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTfive" 
+      
+                    style="font-weight: bold; padding: 11px 30px 11px 26px; text-decoration: blink; background-color: #B1E6B0; color: #009933; background-image: url('images/Abstract-Green-Background-Wallpaper-Vector-Graphic.jpg'); width: 100%;">Other Services</a>
+				
+                <div id="collapseTfive" class="collapse" data-bs-parent="#accordion">
+               
+                
+          <a href="Login.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Application for Trade/Signboard</a>          
+          <a href="Login.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Transfer of House tax </a>
+          <a href="Login.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Income Certificate</a>
+           <a href="Login.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">NOC for Water & Power Connection</a>
+          <a href="CalHTax.aspx" class="list-group-item list-group-item-success" style="padding: 7px 35px">Calculate House Tax</a>
+                    </div>
+             
+		</div>	
+	</div>
+
+   <br />  
+  
+<div class="thumbnail" style="background-image: url('images/Abstract-Green-Background-Wallpaper-Vector-Graphic.jpg')" >
+
+      
+           <a href="#" class="list-group-item "  style=" padding: 2px; background-color: #B2C629; font-family: 'Arial Black'; color: #000000; font-size: x-large; font-weight: bold;"><center>Important Links</center> </a>
+       <center> 
+                            
+                             <p class="card-text" align="left">  <a id="Repeater1_ctl00_HyperLink1" class="link-success" rel="noopener noreferrer" href="http://southgoa.gov.in" target="_blank">South Goa Collectorate</a>   </p>
+                         
+                                
+                              
+                             <p class="card-text" align="left">  <a id="Repeater1_ctl01_HyperLink1" class="link-success" rel="noopener noreferrer" href="https://panchayatsgoa.gov.in/" target="_blank">Directorate of Panchayats</a>   </p>
+                         
+                                
+                              
+                             <p class="card-text" align="left">  <a id="Repeater1_ctl02_HyperLink1" class="link-success" rel="noopener noreferrer" href="https://www.goavidhansabha.gov.in/" target="_blank">Goa Legislative Assembly</a>   </p>
+                         
+                                
+                              
+                             <p class="card-text" align="left">  <a id="Repeater1_ctl03_HyperLink1" class="link-success" rel="noopener noreferrer" href="https://northgoa.gov.in" target="_blank">North Goa Collectorate</a>   </p>
+                         
+                                
+                              
+    
+        </center>
+        </div> 
+ 
+ 
+   
+ </div>
+ 
+    
+  <div class=" col-sm-12 col-md-6 col-xs-12 col-lg-6"> 
+      <div class="container" style="background-color: #B2C629">
+         <div class="row">
+              <div id="counter">
+        <!-- counts -->
+           </div>
+            <div class="col-sm">
+                
+               <p id='0101' class="fs-2 text-dark" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold" >
+                  <span id="lbltradecnt" class="fs-2 text-dark" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold">2503</span></p>
+               <p class="text-dark" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold">New Trade Licences Issued</p>
+            </div>
+            <div class="col-sm">
+               <p id='0102' class="fs-2 text-dark" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold">
+                    <span id="lblhtxCnt" class="fs-2 text-dark" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold">4098</span>
+               </p>
+               <p class="text-dark" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold">New House Tax Assessment</p>
+         </div>
+         <div class="col-sm">
+            <p class="fs-2 text-dark" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold"><span id='0103'>
+                 <span id="Lblonlinecnt" class="fs-2 text-dark" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold">35277</span>
+           </span></p>
+            <p class="text-dark align-content-center" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold">Total Online Payments Count</p>
+         </div>
+           <div class="col-sm">
+            <p ><span id='0104' class="fs-2 text-dark" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold">
+<span id="Lblamt" class="fs-2 text-dark" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold"> Rs.214376727</span>
+ </span></p>
+            <p class="text-dark align-content-center" style="font-family: 'Times New Roman', Times, serif; font-size: medium; font-weight: bold" >Total Online Payments Amount Collected</p>
+         </div>
+      </div>
+   </div>
+  <br />
+    <div id="sliderFrame">
+        <div id="slider">
+            
+                <img src="images/goa1.JPG" alt="" />
+            
+            <img src="images/goa2.JPG" alt="" />
+            <img src="images/goa3.JPG" alt="" />
+            <img src="images/goa4.jpeg" alt="" />
+            <img src="images/goa5.JPG" alt="" />
+             <img src="images/goa6.JPG" alt="" />
+              <img src="images/goa7.JPG" alt="" />
+            <img src="images/goa8.jpg" alt="" />
+            
+      
+        </div>
+        
+    </div>
+    <br />
+    <br />
+<div class="well well-sm well-lg " style=" background-color: #CCFF99; height: 240px;" 
+          align="center">
+
+ <marquee direction="up" scrollamount="4" onmouseover="this.setAttribute('scrollamount', 0, 0);" onmouseout="this.setAttribute('scrollamount', 4, 0);"  >
+ 
+ <table style="border-color: #CCFF99;width: 620px">
+ <tr>
+ <td align="justify">The Directorate of Municipal Administration is the Administrative Department which exercises administrative control over the 13 Municipal Councils and one Corporation of the City of Panaji in the State of Goa. The Directorate of Municipal Administration deals with various functions as envisaged under the Goa Municipalities Act, 1968 and the city of Panaji corporation Act, 2002 and Rules.Besides, it also administers/implements State and Central Government Schemes which include Schemes of the Ministry of Urban Development and Housing and Poverty Alleviation. Also grants are provided by the Directorate to the Municipal Councils/Corporation. Solid Waste Management and grants for development are two major subjects which grants are provided by this Directorate.
+  </td>
+ </tr>
+ </table>
+ </marquee>
+</div>
+    </div>
+
+ <div class="col-lg-3">    
+ <center>
+
+    <div id="Panel_Img3">
+	
+ 
+ <table border="0">
+		<tr align="center">
+			<td style="width:150px;background-color:#F8F8FF"><img src="HomepgImg.ashx?ID=1" style="height:180px;width:180px;border-width:0px;" /></td>
+		</tr><tr align="center">
+			<td style="width:150px;background-color:#F8F8FF"><span style="font-family:Calibre;font-weight:bold;">Shri. Viswajit Rane</span></td>
+		</tr><tr align="center">
+			<td style="width:150px;background-color:#F8F8FF"><span style="font-family:Calibre;">Honourable Minister for Urban Development</span></td>
+		</tr>
+	</table>
+</div>   
+ <br />
+   <div id="Panel_Img">
+	
+ 
+ <table border="0">
+		<tr align="center">
+			<td style="width:150px;background-color:#F8F8FF"><img src="HomepgImg.ashx?ID=3" style="height:180px;width:180px;border-width:0px;" /></td>
+		</tr><tr align="center">
+			<td style="width:150px;background-color:#F8F8FF"><span style="font-family:Calibre;font-weight:bold;">Shri. Yetindra M. Maralker, IAS</span></td>
+		</tr><tr align="center">
+			<td style="width:150px;background-color:#F8F8FF"><span style="font-family:Calibre;">Secretary for Urban Development</span></td>
+		</tr>
+	</table>
+</div> 
+     <br />
+  <div id="Panel_Img2">
+	
+ 
+ <table border="0">
+		<tr align="center">
+			<td style="width:150px;background-color:#F8F8FF"><img src="HomepgImg.ashx?ID=2" style="height:180px;width:180px;border-width:0px;" /></td>
+		</tr><tr align="center">
+			<td style="width:150px;background-color:#F8F8FF"><span style="font-family:Calibre;font-weight:bold;">Shri. Brijesh Manerkar</span></td>
+		</tr><tr align="center">
+			<td style="width:150px;background-color:#F8F8FF"><span style="font-family:Calibre;">Director of Municipal Administration</span></td>
+		</tr>
+	</table>
+</div> 
+    
+
+ </center>
+<br />
+ 	
+</div>
+
+
+
+ </div>
+</div>
+<br />
+ 
+
+ <div class="row ">
+  
+   <div class="col-md-1 themed-grid-col"></div>
+   
+  <div class=" col-md-2 themed-grid-col"> 
+  
+     <input type="submit" name="Button1" value="Corporation of City Panaji" id="Button1" class="btn btn-success btn-sm" style="width:200px;" /> 
+  </div>
+  <div class="col-md-2 themed-grid-col">
+      <input type="submit" name="Button2" value="Margao Municipal Council" id="Button2" class="btn btn-success btn-sm" style="width:200px;" />
+  </div>
+  <div class="col-md-2 themed-grid-col">
+      <input type="submit" name="Button3" value="Ponda Municipal Council" id="Button3" class="btn btn-success btn-sm" style="width:200px;" />
+  </div>
+   <div class="col-md-2 themed-grid-col">
+  <input type="submit" name="Button4" value="Bicholim Municipal Council" id="Button4" class="btn btn-success btn-sm" style="width:200px;" />
+  </div>
+     <div class="col-md-2 themed-grid-col"> 
+  
+     
+  </div>
+   <div class="col-1 themed-grid-col"></div>
+    
+ </div>
+
+ <br />
+ <div class="row">
+
+ <div class="col-lg-1 themed-grid-col"></div>
+ <div class="col-lg-2 themed-grid-col">
+             <input type="submit" name="Button5" value="Mormugao Municipal Council" id="Button5" class="btn btn-success btn-sm" style="width:200px;" />
+   </div>
+    <div class="col-lg-2 themed-grid-col">
+    <input type="submit" name="Button6" value="Mhapsa Municipal Council" id="Button6" class="btn btn-success btn-sm" style="width:200px;" />
+    </div>
+     <div class="col-lg-2 themed-grid-col">
+     <input type="submit" name="Button7" value="Canacona Municipal Council" id="Button7" class="btn btn-success btn-sm" style="width:200px;" />
+     </div>
+     <div class="col-lg-2 themed-grid-col">
+     <input type="submit" name="Button8" value="Curchorem-Cacora Council" id="Button8" class="btn btn-success btn-sm" style="font-size:Small;width:200px;" />
+     </div>
+     <div class="col-lg-2 themed-grid-col">
+     <input type="submit" name="Button9" value="Quepem Municipal Council" id="Button9" class="btn btn-success btn-sm" style="width:200px;" /> 
+     </div>     
+      <div class="col-lg-1 themed-grid-col"></div>
+  </div>
+
+<br />
+<div class="row ">
+  
+   <div class="col-lg-1 themed-grid-col"></div>
+   <div class="col-lg-2 themed-grid-col">
+             <input type="submit" name="Button10" value="Cuncolim Municipal Council" id="Button10" class="btn btn-success btn-sm" style="width:200px;" /> 
+     </div>
+  <div class="col-lg-2 themed-grid-col"> 
+  <input type="submit" name="Button11" value="Sankhali Municipal Council" id="Button11" class="btn btn-success btn-sm" style="width:200px;" />
+  </div>
+  <div class="col-lg-2 themed-grid-col">
+      <input type="submit" name="Button12" value="Pernem Municipal Council" id="Button12" class="btn btn-success btn-sm" style="width:200px;" /> 
+  </div>
+  <div class="col-lg-2 themed-grid-col">
+      <input type="submit" name="Button13" value="Sanguem Municipal Council" id="Button13" class="btn btn-success btn-sm" style="width:200px;" />
+  </div>
+   <div class="col-lg-2 themed-grid-col">
+       <input type="submit" name="Button14" value="Valpoi Municipal Council" id="Button14" class="btn btn-success btn-sm" style="width:200px;" />
+  </div>
+    <div class="col-lg-2 themed-grid-col">
+ 
+    </div>
+ </div>
+
+        
+  
+
+ <br />
+ 
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+load()//]]>
+</script>
+</form>
+
+   
+    
+  
+   
+   
+<!-- ####################################################################################################### -->
+ 
+    <br />
+    <br />
+
+
+</div>
+</body>
+
+        
+       
+      <footer class="bg-dark text-center text-lg-start text-white">
+        <div class="row">
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left">
+                 <a href="Privacy.aspx"class="text-white">Privacy Policy</a>
+            </div>
+           <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left">
+                <a href="Disclaimer.aspx"class="text-white">Disclaimer</a>
+            </div>
+           <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left">
+                <a  class="text-white" href="terms.aspx">Terms </a>
+            </div>
+           <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" align="left">
+               <a class="text-white" href="Accessibility.aspx">Accessibility Statement</a>
+            </div>
+       </div>  
+  <div id="copyright">
+  <center>
+      <div class="container">
+           <div class="row">
+  <div class="col-sm-3 col-md-3 col-lg-3">
+       <a target="_blank" href="https://data.gov.in/" rel="noopener noreferrer" title="data gov, External Link that opens in a new window"><img src="images/img/data-gov.png" alt="" /></a>
+      </div>
+<div class="col-sm-3 col-md-3 col-lg-3">
+      <a target="_blank" href="https://www.india.gov.in/" rel="noopener noreferrer" title="India-gov, External Link that opens in a new window"><img src="images/img/india-gov.png" alt="India-gov, External Link that opens in a new window"/></a>
+      </div>
+    <div class="col-sm-3 col-md-3 col-lg-3">
+          <a target="_blank" href="https://digitalindia.gov.in/" rel="noopener noreferrer" title="digitalindia, External Link that opens in a new window"><img src="images/img/digital-india.png" alt=""/></a>
+      </div>
+     <div class="col-sm-3 col-md-3 col-lg-3">
+          <a target="_blank" href="https://mygov.in/" rel="noopener noreferrer" title="MyGov, External Link that opens in a new window"><img src="images/img/mygov.png" alt=""/></a>
+      </div>
+   </div>
+     
+    </div>
+      <br />
+      <br />
+
+    </center>
+    
+  </div>
+ </footer>
+   <footer class="bg-dark text-center text-lg-start text-white"> 
+             
+        <div align="center">
+            
+       <p  > Copyright &copy; 2021 -Department of Urban Development,Govt. of Goa. All Rights Reserved</p>
+     <p >&nbsp Developed and hosted by National Informatics Centre(NIC) </p> 
+       <p class="fl_right">&nbsp This site is best viewed in Mozilla Firefox and Chrome </p>
+        </div>
+</footer>
+</html>

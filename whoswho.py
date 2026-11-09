@@ -24,7 +24,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +htt
 MAX_PAGES = 25          # pages fetched per site (home page and candidates; AJAX pages are counted apart)
 MAX_AJAX = 300          # ww_pages calls per site
 # A site that fails from a GitHub runner usually refuses foreign IPs: it goes to the -in project (Indian proxies), which retries.
-RETRY = os.environ.get("SCRAPE_POOL_PROJECT", "").endswith(("-in", "-geo"))
+RETRY = os.environ.get("SCRAPE_POOL_PROJECT", "").endswith(("-in", "-geo", "-platforms"))
 MAX_ATTEMPTS = 3
 stop = False
 

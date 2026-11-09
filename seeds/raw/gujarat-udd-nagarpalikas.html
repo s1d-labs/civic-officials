@@ -1,0 +1,569 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>UDD :: INSTITUTIONS :: MUNICIPALITIES</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link href="css/banner.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/thumbnail_associates.js"></script>
+    </head>
+
+    <body onload="initHIS3()">
+
+        <script type="text/javascript">
+    function go() {
+    var x = document.getElementById("lan").value;
+    if (x == "guj") 
+    {
+    var url = document.location.href;	
+    url = url.split('/');
+    window.open('/GUDD/'+ url[url.length-1]  ,'_self');
+    }
+    else {
+    
+    var url = document.location.href;
+    url = url.split('/');
+    window.open('/UDD/'+ url[url.length-1] ,'_self');
+    }
+    }
+    
+</script>
+
+ 
+<div class="topWrapper">
+    <div class="topboxWrapper">
+        <div class="topLinkBarHolder">
+            <ul>
+                <li><a href="#content" title="Skip banner">Skip</a></li>
+                <li>
+                    <select name="lan" id="lan" onchange="go()" title="Select Language">
+                        <option>Select language</option>
+                        <option value="eng" selected="selected">English</option>
+                        <option value="guj">Gujarati</option>
+                    </select>
+                </li>
+                <li><a href="index.php" title="Home">Home</a></li>
+               <!-- <li>
+                    <a href="FeedBack.php" title="FeedBack">FeedBack</a>
+                </li>-->
+                                    <!--<li>
+         				<a href="Disclaimer.php" title="Disclaimer">Disclaimer</a>
+                                        </li>-->
+                <li>
+                    <a href="sitemap.php" title="Sitemap">Sitemap</a>
+                </li>
+                                    <!--<li>
+                    			<a href="Disclaimer.php" title="Disclaimer">Disclaimer</a>
+                                        </li>-->
+               <!-- <li>
+                    <div id="search">
+                        <input type="text" class="search" value="Type and hit enter" onblur="if(this.value == '') { this.value = 'Type and hit enter'; }" onfocus="if(this.value == 'Type and hit enter') { this.value = ''; }" name="s"></input>
+                        <button type="submit">Submit</button>
+                    </div>
+                </li> -->
+		<li> &nbsp; </li>
+            </ul>
+        </div>
+        <p class="clear"></p>
+        <div class="logoContainer">
+            <div class="logoHolder"></div>
+            <div class="grayHeading">Government of Gujarat&nbsp;</div>
+        </div>
+        <div class="mainNavHolder">
+
+            <ul id="menu">
+
+                <li><a class="" title="About Department">About Department</a>
+                    <ul>
+                        <li><a href="Overview.php">Overview</a></li>
+                        <!--<li><a href="pdf/organization stucture.pdf" target="_blank">Organization Structure</a></li>-->
+                        <li><a href="contact.php">Contact </a></li>
+                    </ul>
+                </li>
+                <li><a class="" title="Budget &amp; Planning">Budget &amp; Planning</a>
+                    <ul>
+                   	<li><a href="pdf/Budget/Kamgiri andajpatra 2025-26.pdf" target="_blank">Kamgiri Andajpatra</a></li>
+                       <!-- <li><a href="pdf/Budget/Anuual_Plan_2017-2018.pdf" target="_blank">Annual Plan</a></li>
+                        <li><a href="budget_annual_plan.php">5 Years Probable Plan</a></li>-->
+<li><a href="SPMU.php">State Project Management Unit (SPMU)</a></li>
+                    </ul>
+                </li>
+                <li><a class="" title="Institutions">Institutions</a>
+                    <ul>
+                        <li><a href="ctp.php" target="_blank">Town Planning &amp; Valuation Department</a></li>
+                        <li><a href="dom.php" target="_blank">Commissioner of Municipalities Administration</a></li>
+						<li><a href="gmfb.php" target="_blank">Gujarat Municipal Finance Board</a></li>
+						<li><a href="ghb.php" target="_blank">Gujarat Housing Board</a></li>
+						<li><a href="gudc.php" target="_blank">Gujarat Urban Development Company</a></li>
+                        <li><a href="gudm.php" target="_blank">Gujarat Urban Development Mission</a></li>                                                                     
+                        <li><a href="corporations.php" target="_blank">Municipal Corporations</a></li>
+						<li><a href="UrbanDevelopment.php" target="_blank">Urban Development Authorities</a></li>
+                        <li><a href="AreaDevelopment.php" target="_blank">Area Development Authorities</a></li>
+						<li><a href="GandhidhamDevelopment.php" target="_blank">Gandhidham Development Authorities</a></li>
+						<li><a href="https://communi.gujarat.gov.in/en/list-municipalities" target="_blank">Municipalities</a></li>
+                        <li><a href="https://sbm-urban.gujarat.gov.in/Index" target="_blank">Swachh Bharat Mission (Urban)</a></li>
+						<li><a href="https://ahm.gujarat.gov.in/" target="_blank">Affordable Housing Mission</a></li>
+						<li><a href="https://giftgujarat.in/" target="_blank">Gujarat Finance Tech city</a></li>
+						<li><a href="https://www.gujaratmetrorail.com/" target="_blank">Gujarat Metro Rail Corporation Limited</a></li>
+						<li><a href="https://gujfiresafetycop.in/" target="_blank">Gujarat State Fire Prevention Services</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="" title="Policies">Policies</a>
+                    <ul>
+                        <li><a href="pdf/L/Policy/Amendment_Slum_Regulation_22052012.pdf" target="_blank">Rehabilitation &amp; Redevelopment of Slums</a></li>
+                        
+                        <li><a href="pdf/TH/GR/18.07.2013.pdf" target="_blank">Rehabilitation &amp; Redevelopment of Slums through PPP</a></li>
+                        
+<li><a href="pdf/L/Policy/Regulation_for_hospital2011.pdf" target="_blank">Regulation for Hospitals</a></li>
+                        <li><a href="pdf/L/Policy/Hotel_Policy_2016.pdf" target="_blank">Regulation for Hotels</a></li>
+                        <li><a href="pdf/L/Policy/RTPolicy.pdf" target="_blank">Regulation for Residential Township</a></li>
+                        <li><a href="pdf/L/Policy/CRZ-GDCR-2016.pdf" target="_blank">REGULATIONS FOR BUILDINGS IN CRZ AREA</a></li>
+			<li><a href="pdf/L/Policy/Waste-to-Energy-Policy-2016.pdf" target="_blank">GUJARAT WASTE TO ENERGY POLICY - 2016</a></li>
+                    </ul>
+                </li>
+
+                <li><a class="active                       " title="Programs">Programs
+                    </a>
+                    <ul>                        
+                        <li><a href="Prog_Nirmal.php">Flagship Programs</a></li>
+                        <li><a href="#">SJSRY</a></li>
+                        <li><a href="Prog_GaribSamrudhi.php">Gareeb Samrudhi Yojna</a></li>                        
+                        <li><a href="#">Saheri Vikas Yojana</a></li>
+                    </ul>
+                </li>
+                <li><a class="active                       " title="Projects">Projects
+                    </a>
+                    <ul>
+                        <li><a href="projects_gift.php">Innovatice Projects</a></li>                                                
+                        <li><a href="projects_UIG.php">JnNURM</a></li>
+                        <li><a href="projects_WaterSupply.php">Infrastructure</a></li>
+                       <li><a href="projects_brts.php">Urban Transport</a></li>  
+			<li><a href="http://smartcities.gov.in/" target="_blank">Smart Cities</a></li>   
+			<li><a href="http://amrut.gov.in/" target="_blank">Amrut</a></li>   
+			<li><a href="http://mhupa.gov.in/" target="_blank">Housing</a></li>              
+			<li><a href="http://enagar.org/" target="_blank">ENAGAR</a></li>              
+                    </ul>
+                </li>
+                                    <!--
+                                        <li><a class="" title="Statistics">Statistics</a>
+                                            <ul>
+                                                <li><a href="housing.php">Housing</a></li>
+                                                <li><a href="swarnim_jayanti.php">Swarnim Jayanti</a></li>
+                                                <li><a href="statistics_jnnuram.php">JnNURM</a></li>
+                                                <li><a href="solid_waste.php">Solid Waste &amp; Liquid Waste</a></li>
+                                            </ul>
+                                        </li>                                        </li>
+                                        -->                
+                <li><a class="" title="Citizens">Citizens</a>
+                    <ul>
+                        <li><a href="pdf/RTI.pdf" target="_blank">RTI</a></li>
+                        <li><a href="act_and_rules.php">Act &amp; Rules</a></li>
+                        <li><a href="notification_branch.php">Notifications</a></li>
+                        <li><a href="gr_book.php">GR</a></li>
+                         <li><a href="https://townplanning.gujarat.gov.in/act-legislation/common_gdcr.aspx" target="_blank">COMMON GDCR</a></li>  
+					    <li><a href="Proactive_Dis.php" target="_blank">proactive disclosure</a></li>
+						 <li><a href="gruda.php" target="_blank">GRUDA ACT 2022</a></li>
+                    </ul>
+                </li>
+                <li><a class="" title="Rera">Rera</a>
+                    <ul>
+                        <li><a href="Acts.php">Acts</a></li>
+                        <li><a href="Rules.php">Rules</a></li>                
+                    </ul>
+                </li>
+<li><a class="" title="Career" href="Career.php">career</a>
+                   
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+        <div class="innerbanner_heading_bar">
+            <p class="barHeading"><a href="index.php">HOME</a> :: INSTITUTIONS :: MUNICIPALITIES</p>
+        </div>
+        <div class="innercontentWrapper">
+            <div class="innerbgBox">
+                <div class="innerbgBoxHolder">
+                    <div class="innerLeft">
+    <p class="leftHeading">Institutions</p>
+    <ul>
+        <li><a href="ctp.php">Town Planning &amp; Valuation Department</a></li>
+        <li><a href="dom.php">Commissioner of Municipalities Administration</a></li>
+		<li><a href="gmfb.php">Gujarat Municipal Finance Board</a></li>
+		<li><a href="ghb.php">Gujarat Housing Board</a></li>
+		<li><a href="gudc.php">Gujarat Urban Development Company</a></li>
+		<li><a href="gudm.php">Gujarat Urban Development Mission</a></li>
+        <li><a href="corporations.php">Municipal Corporations</a></li>
+        <li><a href="UrbanDevelopment.php">Urban Development Authorities</a></li>
+        <li><a href="AreaDevelopment.php">Area Development Authorities</a></li>
+		<li><a href="GandhidhamDevelopment.php">Gandhidham Development Authorities</a></li>
+        <li><a href="https://communi.gujarat.gov.in/en/list-municipalities" target="_blank">Municipalities</a></li>
+		<li><a href="https://sbm-urban.gujarat.gov.in/Index" target="_blank">Swachh Bharat Mission (Urban)</a></li>
+		<li><a href="https://ahm.gujarat.gov.in/" target="_blank">Affordable Housing Mission</a></li>
+		<li><a href="https://giftgujarat.in/" target="_blank">Gujarat Finance Tech city</a></li>
+		<li><a href="https://www.gujaratmetrorail.com/" target="_blank">Gujarat Metro Rail Corporation Limited</a></li>
+		<li><a href="https://gujfiresafetycop.in/" target="_blank">Gujarat State Fire Prevention Services</a></li>
+    </ul>
+</div>                    <div class="inner_Left_Container">
+                        <p class="brownHeading">MUNICIPALITIES</p>
+                        <p class="clear">&nbsp;</p>
+                        <table width="100%" cellpadding="1" cellspacing="1" class="legislationTable">
+                            <tr>
+                                <th class="header" rowspan="2"><div><strong>District</strong></strong></div></th>
+                                <th class="header" colspan="4" style="text-align: center"><div><strong>Name of Municipality</strong></div></th>
+                            </tr>
+                            <tr>
+                                <th class="header" style="text-align: center"><strong>A</strong></strong></th>
+                                <th class="header" style="text-align: center"><strong>B</strong></strong></th>
+                                <th class="header" style="text-align: center"><strong>C</strong></strong></th>
+                                <th class="header" style="text-align: center"><strong>D</strong></strong></th>
+                            </tr>
+                            <tr>
+                                <td class="alt">
+                                    Ahmedabad
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    --
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Dholka<br />
+                                    Viramgam
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Bhavla<br />
+                                    Dhandhuka
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Bareja<BR/>
+                                    Barvala
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="reg">
+                                    Amreli
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    --
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Amreli<br/>
+                                    Savarkundala
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Bagasara<br/>
+                                    Jafrabad<br/>
+                                    Rajula
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Babara   <br/>
+                                    Chalala  <br/>
+                                    Damnagar <br/>
+                                    Lathi
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="alt">
+                                    Anand
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Anand   <br/>
+                                    Bharuch <br/>
+                                    Botad   <br/>
+                                    Palanpur
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Ankleshwar<br/>
+                                    Borsad    <br/>
+                                    Dahod     <br/>
+                                    Deesa     <br/>
+                                    Khambhat  <br/>
+                                    Mahuva    <br/>
+                                    Palitana  <br/>
+                                    Petlad    
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                   Gadhda             <br/>
+                                    Gariyadhar         <br/>
+                                    Jambusar           <br/>
+                                    Karamsad           <br/>
+                                    Shihor             <br/>
+                                    Talaja             <br/>
+                                    Umreth             <br/>
+                                    Vallabh Vidhyanagar<br/>
+                                    Zalod          
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Amod         <br/>
+                                    Anklav       <br/>
+                                    Bhabhar      <br/>
+                                    Boriavi      <br/>
+                                    Devgadhbariya<br/>
+                                    Dhanera      <br/>
+                                    Oad          <br/>
+                                    Sojitra      <br/>
+                                    Thara        <br/>
+                                    Tharad       <br/>
+                                    Vallbhipur   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="reg">
+                                    Gandhinagar
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Kalol (G)
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    --
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Dehgam<br/>
+                                    Mansa                                    
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Pethapur                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="alt">
+                                    Jamnagar
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    --
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Okha
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                   Dwarka        <br/>
+                                    Jamkhambhaliya<br/>
+                                    Salaya         
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Bhanvad   <br/>
+                                    Dhrol     <br/>
+                                    Jamjodhpur<br/>
+                                    Jamraval  <br/>
+                                    Kalavad   <br/>
+                                    Sikka   
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="reg">
+                                    Junagadh
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Gandhidham <br/>
+                                    Mahesana   <br/>
+                                    Nadiad     <br/>
+                                    Navsari    <br/>
+                                    Veraval-Patan
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Anjar   <br/>
+                                    Bhuj    <br/>
+                                    Bilimora<br/>
+                                    Kadi    <br/>
+                                    Keshod  <br/>
+                                    Mangrol <br/>
+                                    Una     <br/>
+                                    Unjha   <br/>
+                                    Vijalpor<br/>
+                                    Visnagar
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Balasinor <br/>
+                                    Bhachau   <br/>
+                                    Chaklasi  <br/>
+                                    Kapadvanj <br/>
+                                    Kodinar   <br/>
+                                    Mahemdavad<br/>
+                                    Manavadar <br/>
+                                    Mandvi (K)<br/>
+                                    Rajpipla  <br/>
+                                    Vadnagar                               
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Bantva   <br/>
+                                    Chorvad  <br/>
+                                    Dakor    <br/>
+                                    Gandevi  <br/>
+                                    Kanjari  <br/>
+                                    Kathlal  <br/>
+                                    Kheda    <br/>
+                                    Kheralu  <br/>
+                                    Mahudha  <br/>
+                                    Rapar    <br/>
+                                    Sutrapada<br/>
+                                    Talala   <br/>
+                                    Thasra   <br/>
+                                    Vanthali <br/>
+                                    Vijapur  <br/> 
+                                    Visavadar
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="alt">
+                                    Mehsana
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Godhra <br/>
+                                    Patan  <br/>
+                                    Porbandar
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Sidhdhapur
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Chaya <br/>
+                                    Halol     <br/>
+                                    Lunavada  <br/>
+                                    Radhanpur <br/>
+                                    Ranavav      
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Chansma<br/>
+                                    Harij      <br/>
+                                    Kalol (P)  <br/>
+                                    Kutiyana   <br/>
+                                    Santrampur <br/>
+                                    Shahera
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="reg">
+                                    Rajkot
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Jetpur-Navagadh <br/>
+                                    Morbi           <br/>
+                                    Surendranagar-Dudhrej
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Bardoli     <br/>
+                                    Dabhoi      <br/>
+                                    Dhoraji     <br/>
+                                    Dhrangadhra <br/>
+                                    Gondal      <br/>
+                                    Himmatnagar <br/>
+                                    Modasa      <br/>
+                                    Upleta      <br/>
+                                    Wadhvan
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Idar       <br/>
+                                    Jasdan     <br/>
+                                    Karjan     <br/>
+                                    Khedbrahma <br/>
+                                    Limbadi    <br/>
+                                    Padra      <br/>
+                                    Thangadh   <br/>
+                                    Vyara      <br/>
+                                    Wankaner
+                                </td>
+                                <td class="reg" style="text-align: center">
+                                    Bayad            <br/>
+                                    Bhayavadar       <br/>
+                                    Chhota Udepur    <br/>
+                                    Chotila          <br/>
+                                    Halvad           <br/>
+                                    Kanakpur-Kansad  <br/>
+                                    Maliya-Miyana    <br/>
+                                    Mandvi(S)        <br/>
+                                    Patadi           <br/>
+                                    Prantij          <br/>
+                                    Savali           <br/>
+                                    Songadh          <br/>
+                                    Talod            <br/>
+                                    Tarsadi          <br/>
+                                    Vadali                              
+                                </td>                                
+                            </tr>
+                            <tr>
+                                <td class="alt">
+                                    Valsad
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Valsad<br/>
+                                    Vapi
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Pardi
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    --   
+                                </td>
+                                <td class="alt" style="text-align: center">
+                                    Dharampur<br/>
+                                    Umargam
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--
+<div class="footerContentWrapper">
+  <div class="footercontHolder">
+    div class="quickLinkBox">
+                        	<p class="footerHeading">Quick Links</p>
+								<ul>
+                                    <li><a href="urban_overview.php" title="Urban Scenario">Urban Scenario</a></li>
+                                    <li><a href="town_planning_department.php" title="Department Head">Department</a></li>
+                                    <li><a href="imp_overview.php" title="Important Legislation">Important Legislation</a></li>
+                                    <li><a href="election.php" title="Election">Election</a></li>
+                            	</ul>
+                                
+                                <ul style="margin:0 0 0 35px;">
+                                    <li><a href="sfc.php" title="SFC">SFC</a></li>
+                                    <li><a href="achievments.php" title="Achievements">Achievements </a></li>
+                                    <li><a href="municipal_corp_Ahmedabad.php" title="Municipal Corporation">Municipal Corporation </a></li>
+                            	</ul>
+                                
+                                <ul style="margin:0 0 0 35px;">
+                                    <li><a href="uda.php" title="UDA">UDA</a></li>
+                                    <li><a href="gr_book.php" title="GR Book">GR Book</a></li>
+                                    <li><a href="RTI.php" title="RTI">RTI</a></li>
+                                    <li><a href="budget.php" title="Budget">Budget</a></li>
+                            	</ul>
+                        </div>
+
+    <div class="contactBox">
+      <p class="footerHeading">Contact Us</p>
+      <p style="float:left; width:auto;">
+        <img src="images/contact_icon.gif" alt="contact" align="absmiddle" /> 079-23251008 &nbsp;&nbsp;
+      </p>
+      <p style="float:left; width:auto;">
+        <img src="images/email_icon.gif" alt="email" align="absmiddle" /> us-ud@gujarat.gov.in &nbsp;&nbsp;
+      </p>
+      <p style="float:left; width:auto;">
+        <img src="images/address_icon.gif" alt="address" align="absmiddle" /> 14th block, 9th Floor, New Sachivalaya, &nbsp;Gandhinagar-382010
+      </p>
+    </div>
+
+    <div class="footerlogoBox">
+      <p>
+        <img src="images/footer_logo.gif" alt="Footer_logo" />
+      </p>
+    </div>
+  </div>
+</div>
+-->
+<!--<div class="copyrightWrapper">
+  <div class="copyrightWrapperHolder">
+      <p style="float:right; width:auto;">Visitors : 00015789</p>
+  </div>
+</div>-->
+
+<div class="copyrightWrapper">
+  <div class="copyrightWrapperHolder">
+    Copyright Urban Development &amp; Urban Housing Department All Rights Reserved  <p class="lastupdate_Date">Last Update On : 24-June-2026 &nbsp;</p>
+    <p class="lastupdate_Date"> </p>
+  </div>
+</div>        </div>
+    </body>
+</html>

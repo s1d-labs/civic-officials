@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<!--<html lang="">-->
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<title>State Urban Development Agency - West Bengal</title>
+	<!-- Standard Favicon -->
+	<link rel="icon" type="image/x-icon" href="https://sudawb.org/assets/images/newlogo.png"/>	
+	<!-- For iPhone 4 Retina display: -->
+	<link rel="apple-touch-icon-precomposed" href="https://sudawb.org/assets/images/apple-touch-icon-114x114-precomposed.png">	
+	<!-- For iPad: -->
+	<link rel="apple-touch-icon-precomposed" href="https://sudawb.org/assets/images/apple-touch-icon-72x72-precomposed.html">	
+	<!-- For iPhone: -->
+	<link rel="apple-touch-icon-precomposed" href="https://sudawb.org/assets/images/apple-touch-icon-57x57-precomposed.png">		
+	<!-- Library - Google Font Familys -->
+	<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900|Vollkorn:400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://sudawb.org/assets/revolution/css/settings.css">
+	<link rel="stylesheet" type="text/css" href="https://sudawb.org/assets/revolution/fonts/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="https://sudawb.org/assets/revolution/fonts/font-awesome/css/font-awesome.min.css">	
+	<!-- RS5.3 Layers and Navigation Styles -->
+	<link rel="stylesheet" type="text/css" href="https://sudawb.org/assets/revolution/css/layers.css">
+	<link rel="stylesheet" type="text/css" href="https://sudawb.org/assets/revolution/css/navigation.css">		
+	<!-- Library -->
+    <link href="https://sudawb.org/assets/css/lib.css" rel="stylesheet">
+    <link href="https://sudawb.org/assets/css/flags.css" rel="stylesheet">	
+	<!-- Custom - Common CSS -->
+	<link href="https://sudawb.org/assets/css/plugins.css" rel="stylesheet">
+	<link href="https://sudawb.org/assets/css/elements.css" rel="stylesheet">	
+	<link href="https://sudawb.org/assets/css/rtl.css" rel="stylesheet">
+	<link href="https://sudawb.org/assets/css/online_counter.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="https://sudawb.org/assets/style.css">		
+	<link rel="stylesheet" type="text/css" href="https://sudawb.org/assets/css/team.css">	
+	<link rel="stylesheet" type="text/css" href="https://sudawb.org/assets/css/style_scroll.css">	
+	<link rel="stylesheet" type="text/css" href="https://sudawb.org/assets/css/scroll_to_top.css">
+	<!--[if lt IE 9]>
+		<script src="js/html5/respond.min.js"></script>
+    <![endif]-->
+	<!--<script type="text/javascript" src="https://sudawb.org/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>  -->
+	<!-- DataTables css --> 
+    <link rel="stylesheet" type="text/css" href="https://sudawb.org/assets/tablejs/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<style>
+/* =========================================================
+   SUDA HEADER - CLEAN / MODERN / RESPONSIVE
+   ========================================================= */
+:root{
+    --suda-orange:#f97812;
+    --suda-orange-dark:#d95d00;
+    --suda-orange-light:#ff8a1c;
+    --suda-white:#ffffff;
+    --suda-text:#3b1d08;
+    --suda-shadow:0 8px 24px rgba(80,38,0,.18);
+}
+
+/* ---------- Existing utility styles ---------- */
+blink{
+    animation:blinker .8s linear infinite;
+    color:#fff;
+    font-size:16px;
+    font-family:Georgia,serif;
+}
+@keyframes blinker{50%{opacity:0}}
+
+.blink{
+    color:#ffeb3b;
+    font-weight:700;
+    margin:0 6px;
+    animation:blink-animation 1s infinite;
+}
+@keyframes blink-animation{
+    0%,100%{opacity:1}
+    50%{opacity:0}
+}
+
+/* ---------- Top utility bar ---------- */
+.suda-utility-bar{
+    width:100%;
+    background:#cf5f00;
+    color:#fff;
+    min-height:48px;
+    border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+.suda-utility-inner{
+    min-height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:14px;
+    flex-wrap:nowrap;
+}
+
+.suda-utility-social{
+    display:flex;
+    align-items:center;
+    gap:7px;
+    flex:0 0 auto;
+    margin-right:5px;
+}
+
+.suda-utility-social a{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff !important;
+    text-decoration:none !important;
+    font-size:14px;
+    box-shadow:0 2px 7px rgba(0,0,0,.18);
+    transition:transform .2s ease,box-shadow .2s ease;
+}
+
+.suda-utility-social a.facebook{background:#1877f2}
+.suda-utility-social a.youtube{background:#ff0000}
+.suda-utility-social a.x{background:#000}
+
+.suda-utility-social a:hover{
+    transform:translateY(-2px) scale(1.05);
+    box-shadow:0 5px 12px rgba(0,0,0,.28);
+}
+
+.suda-utility-links{
+    display:flex;
+    align-items:center;
+    gap:0;
+    flex:1 1 auto;
+    min-width:0;
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+.suda-utility-links::-webkit-scrollbar{display:none}
+
+.suda-utility-links > p{
+    margin:0 !important;
+    padding:0 14px;
+    border-right:1px solid rgba(255,255,255,.22);
+    white-space:nowrap;
+    line-height:1;
+}
+
+.suda-utility-links > p:first-child{padding-left:0}
+
+.suda-utility-links a{
+    color:#fff !important;
+    text-decoration:none !important;
+    font-size:13px;
+    font-weight:500;
+}
+
+.suda-utility-links a:hover{color:#ffe8c9 !important}
+
+.suda-utility-links i{
+    margin-right:7px;
+    font-size:13px;
+}
+
+.suda-utility-font{
+    white-space:nowrap;
+}
+
+.suda-utility-font a{
+    font-weight:700;
+    margin:0 2px;
+}
+
+.suda-utility-icon{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* ---------- Main identity/header ---------- */
+.suda-brand-area{
+    position:relative;
+    width:100%;
+    background:linear-gradient(135deg,var(--suda-orange) 0%,var(--suda-orange-light) 55%,#ff7810 100%);
+    color:#fff;
+    overflow:hidden;
+}
+
+.suda-brand-area:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(circle at 12% 50%,rgba(255,255,255,.10),transparent 22%),
+        radial-gradient(circle at 88% 50%,rgba(255,255,255,.10),transparent 22%);
+    pointer-events:none;
+}
+
+.suda-brand-inner{
+    position:relative;
+    z-index:1;
+    min-height:188px;
+    display:grid;
+    grid-template-columns:220px minmax(0,1fr) 220px;
+    align-items:center;
+    gap:20px;
+    padding:18px 0 20px;
+}
+
+/* ---------- Four leader cards: two left + two right ---------- */
+.suda-leaders{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0,1fr));
+    gap:14px;
+    align-items:start;
+    justify-items:center;
+}
+
+.suda-leader-card{
+    width:100%;
+    max-width:105px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    text-align:center;
+}
+
+.suda-leader-photo{
+    width:92px;
+    height:108px;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:4px;
+    border:3px solid rgba(255,255,255,.95);
+    background:#fff;
+    box-shadow:0 7px 18px rgba(70,30,0,.28);
+    display:block;
+}
+
+.suda-leader-name{
+    margin-top:7px;
+    color:#fff;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:12px;
+    font-weight:700;
+    line-height:1.25;
+}
+
+.suda-leader-designation{
+    margin-top:3px;
+    color:rgba(255,255,255,.95);
+    font-size:10px;
+    line-height:1.3;
+    max-width:105px;
+}
+
+/* Center title */
+
+.suda-brand-center{
+    text-align:center;
+    padding:0 10px;
+}
+
+.suda-brand-title{
+    color:#fff;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(28px,3.2vw,43px);
+    line-height:1.12;
+    font-weight:500;
+    text-shadow:0 2px 4px rgba(80,30,0,.18);
+    margin:0;
+}
+
+.suda-brand-subtitle{
+    margin-top:9px;
+    color:#fff;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(15px,1.35vw,19px);
+    font-weight:600;
+    line-height:1.45;
+}
+
+.suda-brand-state{
+    margin-top:1px;
+    color:#fff;
+    font-family:Georgia,"Times New Roman",serif;
+    font-size:clamp(14px,1.2vw,18px);
+    font-weight:600;
+}
+
+.meeting-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:13px;
+    padding:9px 20px;
+    background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.38);
+    color:#fff !important;
+    font-size:14px;
+    font-weight:700;
+    border-radius:24px;
+    text-decoration:none !important;
+    box-shadow:0 4px 12px rgba(80,30,0,.18);
+    transition:all .25s ease;
+    backdrop-filter:blur(4px);
+}
+
+.meeting-btn i{margin-right:7px}
+
+.meeting-btn:hover{
+    background:#fff;
+    color:var(--suda-orange-dark) !important;
+    transform:translateY(-2px);
+    box-shadow:0 7px 17px rgba(80,30,0,.25);
+}
+
+/* ---------- Navigation ---------- */
+.ownavigation{
+    position:relative;
+    z-index:20;
+}
+
+/* ---------- Accessibility / mobile ---------- */
+@media (max-width:991px){
+    .suda-utility-inner{
+        padding:7px 15px;
+    }
+
+    .suda-brand-inner{
+        grid-template-columns:190px minmax(0,1fr) 190px;
+        gap:10px;
+    }
+
+    .suda-leader-photo{
+        width:78px;
+        height:94px;
+    }
+
+    .suda-leader-card{max-width:88px}
+    .suda-leader-name{font-size:11px}
+    .suda-leader-designation{font-size:9px}
+
+    .suda-brand-title{font-size:30px}
+    .suda-brand-subtitle{font-size:15px}
+    .suda-brand-state{font-size:14px}
+}
+
+@media (max-width:767px){
+    .suda-utility-inner{
+        display:block;
+        padding:7px 12px;
+    }
+
+    .suda-utility-social{
+        justify-content:flex-start;
+        margin-bottom:7px;
+    }
+
+    .suda-utility-links{
+        width:100%;
+        padding-bottom:2px;
+    }
+
+    .suda-utility-links > p{
+        padding:0 10px;
+    }
+
+    .suda-brand-inner{
+        min-height:auto;
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "center"
+            "left"
+            "right";
+        gap:16px;
+        padding:20px 12px 22px;
+    }
+
+    .suda-brand-center{grid-area:center}
+    .suda-leaders-left{grid-area:left}
+    .suda-leaders-right{grid-area:right}
+
+    .suda-leaders{
+        grid-template-columns:repeat(2, minmax(0,1fr));
+        gap:12px;
+    }
+
+    .suda-brand-title{font-size:28px}
+    .suda-brand-subtitle{font-size:14px}
+    .suda-brand-state{font-size:13px}
+
+    .suda-leader-card{
+        max-width:100px;
+    }
+
+    .suda-leader-photo{
+        width:78px;
+        height:96px;
+        border-width:3px;
+    }
+
+    .suda-leader-name{font-size:11px}
+    .suda-leader-designation{font-size:9px}
+
+    .meeting-btn{
+        font-size:13px;
+        padding:8px 16px;
+    }
+}
+
+@media (max-width:420px){
+    .suda-brand-title{font-size:24px}
+    .suda-brand-subtitle{font-size:12px}
+    .suda-brand-state{font-size:12px}
+
+    .suda-leaders{
+        gap:8px;
+    }
+
+    .suda-leader-card{max-width:88px}
+
+    .suda-leader-photo{
+        width:68px;
+        height:84px;
+    }
+}
+
+/* Prevent old duplicate header styles from affecting new social/header */
+.social-links,
+.social-links-left{margin:0 !important}
+</style>
+
+<body data-offset="200" data-spy="scroll" data-target=".ownavigation">
+	<div class="scroll-top-wrapper ">
+		<span class="scroll-top-inner">
+			<i class="fa fa-2x fa-arrow-circle-up"></i>
+		</span>
+	</div>
+	<div id="site-loader" class="load-complete">
+		<div class="loader">
+			<div class="loader-inner ball-clip-rotate">
+				<div></div>
+			</div>
+		</div>
+	</div>
+	<header class="header_s header_s1">
+
+        <!-- ===================== TOP UTILITY BAR ===================== -->
+        <div id="slidepanel" class="suda-utility-bar">
+            <div class="container">
+                <div class="suda-utility-inner">
+
+                    <!-- Social icons: LEFT of Skip To Content -->
+                    <div class="suda-utility-social" aria-label="Social media links">
+                        <a href="https://www.facebook.com/profile.php?id=100088190044909"
+                           target="_blank" rel="noopener noreferrer"
+                           class="facebook" aria-label="Facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@stateurbandevelopmentagency"
+                           target="_blank" rel="noopener noreferrer"
+                           class="youtube" aria-label="YouTube" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                        <a href="https://x.com/SUDAWB"
+                           target="_blank" rel="noopener noreferrer"
+                           class="x" aria-label="X" title="X">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                    </div>
+
+                    <!-- Existing utility links -->
+                    <div class="suda-utility-links">
+                        <p>
+                            <a href="#skip_c" title="Skip To Content">Skip To Content</a>
+                        </p>
+
+                        <p>
+                            <a href="https://sudawb.org/DEPT-EODB" title="EoDB">
+                                <blink style="color:yellow;font-weight:800;">EoDB</blink>
+                            </a>
+                        </p>
+
+                                                    <p>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <a href="https://sudawb.org/Ulb-Details"
+                                   title="ULB Details">
+                                    ULB Details                                </a>
+                            </p>
+                                                    <p>
+                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                <a href="https://sudawb.org/SUDA-Gallery"
+                                   title="Gallery">
+                                    Gallery                                </a>
+                            </p>
+                                                    <p>
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                                <a href="https://sudawb.org/Contact-Us"
+                                   title="RTI">
+                                    RTI                                </a>
+                            </p>
+                                                    <p>
+                                <i class="fa fa-inr" aria-hidden="true"></i>
+                                <a href="https://sudawb.org/Fund-Release"
+                                   title="Fund Release">
+                                    Fund Release                                </a>
+                            </p>
+                                                    <p>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <a href="https://sudawb.org/Login"
+                                   title="e-Services">
+                                    e-Services                                </a>
+                            </p>
+                        
+                        <p class="suda-utility-font">
+                            <a href="JavaScript:void(0);" title="Decrease font size" class="decrease">-A&nbsp;</a>
+                            <a href="JavaScript:void(0);" title="Reset font size" class="resetMe">A&nbsp;</a>
+                            <a href="JavaScript:void(0);" title="Increase font size" class="increase">+A</a>
+                        </p>
+
+                        <p class="suda-utility-icon">
+                            <a href="https://sudawb.org/S-Reader" title="Screen Reader">
+                                <i class="fa fa-volume-up" aria-hidden="true"></i>
+                            </a>
+                        </p>
+
+                        <p class="suda-utility-icon">
+                            <a href="https://sudawb.org/S-Map" title="Site Map">
+                                <i class="fa fa-sitemap" aria-hidden="true"></i>
+                            </a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ===================== MAIN BRAND HEADER ===================== -->
+        <div class="container-fluidsd suda-brand-area">
+            <div class="container">
+                <div class="suda-brand-inner">
+
+                    <!-- LEFT: TWO LEADER IMAGES -->
+                    <div class="suda-leaders suda-leaders-left">
+                        <div class="suda-leader-card">
+                            <img
+                                src="https://sudawb.org/assets/images/leader-1.jpg"
+                                alt="Leader 1"
+                                class="suda-leader-photo"
+                                loading="eager"
+                            >
+                            <div class="suda-leader-name">Smt. Agnimitra Paul</div>
+                            <div class="suda-leader-name">MIC,UD&MA Dept.</div>
+                        </div>
+
+                        <div class="suda-leader-card">
+                            <img
+                                src="https://sudawb.org/assets/images/leader-2.jpg"
+                                alt="Leader 2"
+                                class="suda-leader-photo"
+                                loading="eager"
+                            >
+                            <div class="suda-leader-name">Sri Umesh Rai</div>
+                            <div class="suda-leader-name">MOS,UD&MA Dept.</div>
+                        </div>
+                    </div>
+
+                    <!-- CENTER: SUDA -->
+                    <div class="suda-brand-center">
+                        <h1 class="suda-brand-title">State Urban Development Agency</h1>
+
+                        <div class="suda-brand-subtitle">
+                            Under Department of Urban Development &amp; Municipal Affairs
+                        </div>
+
+                        <div class="suda-brand-state">
+                            Government of West Bengal
+                        </div>
+
+                        <a href="https://www.sudawb.org/adminpanel/meetings"
+                           class="meeting-btn"
+                           title="Meetings">
+                            <i class="fa fa-calendar"></i> Meetings
+                        </a>
+                    </div>
+
+                    <!-- RIGHT: TWO LEADER IMAGES -->
+                    <div class="suda-leaders suda-leaders-right">
+                        <div class="suda-leader-card">
+                            <img
+                                src="https://sudawb.org/assets/images/leader-3.png"
+                                alt="Leader 3"
+                                class="suda-leader-photo"
+                                loading="eager"
+                            >
+                            <div class="suda-leader-name"> Sri Khalil Ahmed, IAS</div>
+                            <div class="suda-leader-designation">Additional Chief Secretary, UD&MA Dept.</div>
+                        </div>
+
+                        <!-- <div class="suda-leader-card">
+                            <img
+                                src="https://sudawb.org/assets/images/leader-4.jpg"
+                                alt="Leader 4"
+                                class="suda-leader-photo"
+                                loading="eager"
+                            >
+                            <div class="suda-leader-name">Leader Name 4</div>
+                            <div class="suda-leader-designation">Designation</div>
+                        </div> -->
+                    </div>
+
+                </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+		<nav class="navbar ownavigation">			
+			<!-- Container -->
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="https://sudawb.org/Home"><img src="https://sudawb.org/assets/images/newlogo.png" alt="logo"></a>
+				</div>				
+				<div id="navbar" class="navbar-collapse collapse navbar-right">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a href="https://sudawb.org/Home" title="Home" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home"></i></a></li>	
+								
+						<li class="dropdown">
+							<a href="https://sudawb.org/" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="About">About</a>
+							<i class="ddl-switch fa fa-angle-down"></i>							
+							<ul class="dropdown-menu">								
+														<li>
+																			<a href="https://sudawb.org/About-Us-Details/14" title="About Us">About Us</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/About-Us-Details/15" title="Vision & Mission">Vision & Mission</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/About-Us-Details/16" title="Functional Responsibility">Functional Responsibility</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/About-Us-Details/17" title="Developmental Activity">Developmental Activity</a>
+																		
+								</li>							
+													</ul>
+						</li>
+								
+						<li class="">
+							<a href="https://sudawb.org/Organisation-Structure" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="Organogram">Organogram</a>
+							<i class="ddl-switch fa fa-angle-down"></i>							
+							<ul class="dropdown-menu">								
+													</ul>
+						</li>
+								
+						<li class="dropdown">
+							<a href="https://sudawb.org/" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="Programmes">Programmes</a>
+							<i class="ddl-switch fa fa-angle-down"></i>							
+							<ul class="dropdown-menu">								
+														<li>
+																			<a href="https://sudawb.org/Program-Details/12" title="Swachh Bharat Mission(Urban)">Swachh Bharat Mission(Urban)</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/9" title="Pradhan Mantri Awas Yojana(U)">Pradhan Mantri Awas Yojana(U)</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/8" title="NSAP">NSAP</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/21" title="MAA AAHAR">MAA AAHAR</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/22" title="Accounts">Accounts</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/23" title="Establishment">Establishment</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/24" title="IT Cell">IT Cell</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/25" title="NAMASTE">NAMASTE</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/26" title="Miscellaneous">Miscellaneous</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/27" title="Health">Health</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/28" title="PM SVANIDHI">PM SVANIDHI</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/30" title="Legal Cell">Legal Cell</a>
+																		
+								</li>							
+													</ul>
+						</li>
+								
+						<li class="">
+							<a href="https://sudawb.org/Notification-orders" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="Notification & Orders ">Notification & Orders </a>
+							<i class="ddl-switch fa fa-angle-down"></i>							
+							<ul class="dropdown-menu">								
+														<li>
+																			<a href="https://sudawb.org/Program-Details/20" title="COVID-19">COVID-19</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/1" title="NVBDCP">NVBDCP</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/2" title="CBPHCS">CBPHCS</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/3" title="UPHCS">UPHCS</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/4" title="Urban RCH">Urban RCH</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/5" title="RI PROG">RI PROG</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Program-Details/6" title="NUHM">NUHM</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/LISTOFFAIRPRICEMEDICINESHOPS-GOVTOFWB.mht" title="Fair Price Medicene Shops">Fair Price Medicene Shops</a>
+																		
+								</li>							
+													</ul>
+						</li>
+								
+						<li class="">
+							<a href="https://sudawb.org/mimes" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="Minutes">Minutes</a>
+							<i class="ddl-switch fa fa-angle-down"></i>							
+							<ul class="dropdown-menu">								
+													</ul>
+						</li>
+								
+						<li class="dropdown">
+							<a href="https://sudawb.org/" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="Guidelines">Guidelines</a>
+							<i class="ddl-switch fa fa-angle-down"></i>							
+							<ul class="dropdown-menu">								
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/Plastic Waste Management Advisory-final.pdf" target="_blank" title="Plastic Waste Mgmt. Advisory">Plastic Waste Mgmt. Advisory</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/plastic_waste_guidelines.pdf" target="_blank" title="Plastic Waste Management">Plastic Waste Management</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/swm_guideline.pdf" target="_blank" title="Solid Waste Management">Solid Waste Management</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/green_space_guideline.pdf" target="_blank" title="Green Space Development">Green Space Development</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/Operational_Guidelines_AHP_PMAY_HFA(U).pdf" target="_blank" title="Pradhan Mantri Awas Yojana(U)">Pradhan Mantri Awas Yojana(U)</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/sbm_guideline.pdf" target="_blank" title="Swachh Bharat Mission(Urban)">Swachh Bharat Mission(Urban)</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/amrut_guidelines.pdf" target="_blank" title="AMRUT">AMRUT</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/nulm_mission _document.pdf" target="_blank" title="PM SVANidhi">PM SVANidhi</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/Implementation_Framework_NUHM.pdf" target="_blank" title="NUHM">NUHM</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/usv_guideline.pdf" target="_blank" title="Urban Street Vendor ">Urban Street Vendor </a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/assets/guideline/NAMASTE Scheme Guideline.pdf" target="_blank" title="NAMASTE">NAMASTE</a>
+																		
+								</li>							
+													</ul>
+						</li>
+								
+						<li class="dropdown">
+							<a href="https://sudawb.org/" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="Contact Us">Contact Us</a>
+							<i class="ddl-switch fa fa-angle-down"></i>							
+							<ul class="dropdown-menu">								
+														<li>
+																			<a href="https://sudawb.org/Contact-Us" title="Location">Location</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Officers" title="Officials">Officials</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/G-Council" title="General Council">General Council</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/G-Body" title="Governing Body">Governing Body</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Citizen-Feedback" title="Citizen Feedback">Citizen Feedback</a>
+																		
+								</li>							
+														<li>
+																			<a href="https://sudawb.org/Our-Team" title="Our Team">Our Team</a>
+																		
+								</li>							
+													</ul>
+						</li>
+										
+					</ul>					
+				</div>
+				<div id="loginpanel" class="desktop-hide">
+					<div class="right" id="toggle">
+						<a id="slideit" href="#slidepanel"><i class="fo-icons fa fa-inbox"></i></a>
+						<a id="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>
+					</div>
+				</div>
+			</div><!-- Container /- -->
+		</nav><!-- Ownavigation /- -->			
+	</header><!-- Header Section /- -->	<div class="main-container">		
+	<div class="container-fluid no-left-padding no-right-padding">	
+	    <div class="col-md-8 col-sm-8 col-lg-8">
+			<iframe width="100%" height="350px;" id="gmap" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=West+Bengal&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=West+Bengal&amp;output=embed&amp;iwloc=near"></iframe>
+		</div>	     
+	    <div class="col-md-4 col-sm-4 col-lg-4">
+	    	<div class="row">
+              	<div class="form-group"> 
+              		<div class="col-md-12 col-sm-12 col-xs-12">
+                    	<label class="control-label">Authority Type<span class="red">*</span></label>
+                    	<select class="form-control" name="aut_id" id="aut_id" required="required" >                		
+                     		<option value="">---Select Authority Type---</option>                         	<option value="10" >Municipal Corporation</option>    
+                        	                         	<option value="20" >Municipality</option>    
+                        	                         	<option value="30" >Notified Area Authority</option>    
+                        	                         	<option value="40" >Development Authority</option>    
+                        	 
+                      	</select>    
+                    </div>  
+                </div>
+            </div>
+            <br/>
+            <br/>
+
+            <div class="row">
+              	<div class="form-group">
+	                <div class="col-md-12 col-sm-12 col-xs-12">
+	                    <label class="control-label">ULB Name<span class="red">*</span></label>
+	                    <select class="form-control" name="ulb_id" id="ulb_id" required="required"> 
+	                    	<option value="">--Select ULB Name--</option>                   
+	                    	                                          
+	                    </select>   
+	                </div>	                                                            
+                </div>                     
+            </div> 
+		</div>
+		<br/>
+        <br/>           
+        <br/>
+        <!-- https://sudawb.org/ULB-FOEO -->
+        <!--<p><center><a href="https://sudawb.org/uploads/ulb_all/wb_ulb.xlsx" target="_blank"><h3>All Municipalities/Corporations Detail</h3></a></center></p>-->
+        <p><center><a href="https://www.sudawb.org/adminpanel/"><h3>All Municipalities/Corporations/Notified Areas Detail</h3></a></center></p>
+        <div class="col-md-12 col-sm-12 col-lg-12" id="ulb_dtl">
+        	
+			<div class="clearfix"></div>
+		</div>
+
+    </div>
+</div>
+		</main>
+	</div>
+		<footer id="footer-main" class="container-fluid no-left-padding no-right-padding footer-main footer2">
+		<div class="container-fluid no-left-padding no-right-padding top-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-4">
+						<aside class="widget widget_about">
+							<aside class="widget widget_map">
+								<h3 class="widget-title">contact us</h3>
+								<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+								<div style='overflow:hidden;height:auto;width:auto;'>
+									<div id='gmap_canvas' style='height:250px;width:auto;'></div>
+									<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+								</div>
+								<script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(22.572989,88.41683990000001),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(22.572989,88.41683990000001)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>HC BLOCK, Sector III, Salt Lake City, Kolkata, West Bengal 700106<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+							</aside>
+							<aside class="widget widget_social">
+								<ul>
+									<li><a href="https://www.facebook.com/profile.php?id=100088190044909" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="https://www.youtube.com/@stateurbandevelopmentagency" title="Youtube"><i class="fa fa-youtube"></i></a></li>
+								</ul>
+							</aside>							
+						</aside>
+					</div>					
+					<div class="col-md-4 col-sm-4 col-xs-4">	
+							<h3 class="widget-title">Districts of West Bengal</h3>
+						<img src="https://sudawb.org/assets/images/WestBengalDistricts.png" alt="Districts of West Bengal">
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-4">
+						<aside class="widget widget_link">
+							<h3 class="widget-title">Useful Links</h3>
+							<ul>
+																	<li><a href="https://udma.wb.gov.in/" target="_blank">UD&MA</a></li>
+																	<li><a href="https://finance.wb.gov.in/Fin_New/HomePage.aspx" target="_blank">Finance Department</a></li>
+																	<li><a href="https://www.wbhealth.gov.in/" target="_blank">Health & Family Welfare Department</a></li>
+																	<li><a href="https://sudawb.org/uploads/Action_Point_water_logging.pdf" target="_blank">Action Point for prevention of water logging</a></li>
+																	<li><a href="https://www.kmcgov.in/KMCPortal/jsp/KMCPortalHome1.jsp" target="_blank">Kolkata Municipal Corporation</a></li>
+																	<li><a href="https://par.wb.gov.in/ " target="_blank">Personnel & Administrative Reforms Dept</a></li>
+														
+							</ul>
+							<div class="right_align_white">
+								<a class="right_align_white" href="https://sudawb.org/Imp-Link" title="Read More">Read More <i class="arrow_right"></i></a>	
+							</div>
+						</aside>
+						<aside class="widget widget_visitor">	
+							<h6 class="widget-title"></h6>
+							<h7 class="widget-title">Total Visitor :- <span id="total_visitors"></span></h7><br/>
+							<h7 class="widget-title">Online Visitors :- <span id="total_online_visitors"></span></h7>
+							<br/>
+							<h7 class="widget-title">Today's Visitor :- <span id="today_visitors"></span></h7>
+						</aside>						
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid bottom-footer">
+    <div class="row">
+        <div class="col-md-12 text-center">
+
+            <a href="https://www.sudawb.org/onlineapplication_em/" 
+               class="admin-login-link" 
+               target="_blank">
+                <i class="fa fa-user-shield"></i> Admin Login
+            </a>
+
+        </div>
+    </div>
+</div>
+		<div class="container-fluid bottom-footer">
+			<p><i class="fa fa-copyright"></i> 2026 All Rights Reserved &nbsp;&nbsp;Design & Developed By SUDA (IT CELL), Govt. of West Bengal |  Last Updated on 09-11-2026 &nbsp;<a href="https://www.sudawb.org/adminpanel/" target="_blank"> <i class="fa fa-lock" aria-hidden="true"></i></a>
+</p>
+      <p id="google_translate_element"></p>
+ <div id="google_translate_element"></div>
+        <script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+        </script>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+		</div>
+	</footer>
+	<!-- JQuery v1.12.4 -->
+	<script src="https://sudawb.org/assets/js/jquery-1.12.4.min.js"></script>
+	<!-- For scroll to top -->
+	<script src="https://sudawb.org/assets/js/scroll_to_top.js"></script>
+	<!-- Library - Js -->
+	<script src="https://sudawb.org/assets/js/lib.js"></script>
+	<script src="https://sudawb.org/assets/js/jquery.flagstrap.min.js"></script>
+	<script src="https://sudawb.org/assets/js/jquery.knob.js"></script>	
+	<!-- RS5.3`````` Core JS Files -->
+	<script type="text/javascript" src="https://sudawb.org/assets/revolution/js/jquery.themepunch.tools.min838f.js?rev=5.0"></script>
+	<script type="text/javascript" src="https://sudawb.org/assets/revolution/js/jquery.themepunch.revolution.min838f.js?rev=5.0"></script>
+	<script type="text/javascript" src="https://sudawb.org/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+	<script type="text/javascript" src="https://sudawb.org/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+	<script type="text/javascript" src="https://sudawb.org/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+	<script type="text/javascript" src="https://sudawb.org/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+	<script type="text/javascript" src="https://sudawb.org/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>	
+	<!-- Library - Theme JS -->
+	<script src="https://sudawb.org/assets/js/functions.js"></script>
+
+
+	<!-- DataTables JavaScript -->
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.js"></script>-->
+    <script src="https://sudawb.org/assets/tablejs/jquery.dataTables.min.js"></script>
+    <script src="https://sudawb.org/assets/tablejs/dataTables.bootstrap4.min.js"></script>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {		
+		$.ajax({
+           type: "post",
+           url: 'https://sudawb.org/frontend/total_online',
+           dataType : "json",
+           data: {flag:'online_visitors'},
+           success:function(data) {
+            var ob=jQuery.parseJSON(data);
+            $('#total_online_visitors').text(ob);
+          }
+        });
+        $.ajax({
+           type: "post",
+           url: 'https://sudawb.org/frontend/total_online',
+           dataType : "json",
+           data: {flag:'total_visitors'},
+           success:function(data) {
+            var ob=jQuery.parseJSON(data);
+            //alert(ob);
+            $('#total_visitors').text(ob);
+          }
+        });  
+        $.ajax({
+           type: "post",
+           url: 'https://sudawb.org/frontend/total_online',
+           dataType : "json",
+           data: {flag:'today_visitors'},
+           success:function(data) {
+            var ob=jQuery.parseJSON(data);
+            //alert(ob);
+            $('#today_visitors').text(ob);
+          }
+        });       
+	}); 
+</script>
+<!--<script type="text/javascript" language="javascript" src="http://code.jquery.com/jquery-latest.js"></script> --> 
+         
+<script type="text/javascript">
+ $(document).ready(function(){        
+   var originalSize = $('.main-container').css('font-size');         
+   var originalSizep = $('p').css('font-size');         
+  // reset        
+   $(".resetMe").click(function(){           
+  	$('.main-container').css('font-size', originalSize);         
+  	$('p').css('font-size', originalSizep);         
+   });
+ 
+   // Increase Font Size          
+   $(".increase").click(function(){ 
+     var fontSize = parseInt($(".main-container").css("font-size"));
+   	//alert(fontSize);
+	fontSize = fontSize + 2 + "px";
+	$(".main-container").css({'font-size':fontSize}); 
+
+	var fontSizep = parseInt($("p").css("font-size"));
+	fontSizep = fontSizep + 2 + "px";
+	$("p").css({'font-size':fontSizep});  
+  });        
+  
+   // Decrease Font Size       
+   $(".decrease").click(function(){        
+   	var fontSize = parseInt($(".main-container").css("font-size"));
+   	//alert(fontSize);
+	fontSize = fontSize - 2 + "px";
+	$(".main-container").css({'font-size':fontSize}); 
+
+	var fontSizep = parseInt($("p").css("font-size"));
+	fontSizep = fontSizep - 2 + "px";
+	$("p").css({'font-size':fontSizep});        
+   });         
+ }); 
+</script>
+<script type="text/javascript">
+function resizeText(multiplier) {
+	//alert(multiplier);
+  if (multiplier == "1") {
+  	document.body.style.fontSize = "large";
+  }
+
+  if (multiplier == "0") {
+  	document.body.style.fontSize = "normal";    
+  }
+
+  if (multiplier == "-1") {
+  	document.body.style.fontSize = "small";    
+  }
+
+  //document.body.style.fontSize = parseFloat(document.body.style.fontSize) + (multiplier * 0.2) + "em";
+}
+</script>  
+<script type="text/javascript">
+$(document).ready(function() {
+    $("body").on("change", "#aut_id", function(){
+      var aut_id = $(this).val();
+      var data = 'aut_id='+aut_id;
+      $.ajax({
+        type: "post",
+        url: 'https://sudawb.org/'+'frontend/getagencylist',
+        data: data,
+        success: function(response) {
+          var res = JSON.parse(response);
+          $("#ulb_id").html(res.content);
+        }
+      });
+    });
+
+    $("body").on("change", "#ulb_id", function(){
+      var ulb_id = $(this).val();
+      var data = 'ulb_id='+ulb_id;
+      $.ajax({
+        type: "post",
+        url: 'https://sudawb.org/'+'frontend/getulbdtl',
+        data: data,
+        success: function(response) {
+          var res = JSON.parse(response);
+          var kk = 'datatable-buttons';
+          var tk = 'table table-striped table-bordered';
+          //alert(res.ulb_name);
+          $("#ulb_dtl").html('<table id="'+kk+'" class="'+tk+'"><thead><tr><td colspan="'+2+'">'+res.ulb_name+'</td></tr></thead><tbody><tr></tr><tr><td>Name of Mayor / Chairman / Chairperson</td><td>'+res.chair_person+'</td></tr><tr><td>Full Postal Address</td><td>'+res.ulb_address+'</td></tr><tr><td>Name of Vice - Chairman</td><td>'+res.vc_person+'</td></tr><tr><td>E-mail ID</td><td>'+res.ulb_name+'</td></tr><tr><td>Website</td><td>'+res.ulb_website+'</td></tr><tr><td>No. of Municipal Wards</td><td>'+res.ulb_ward+'</td></tr><tr><td>Area in Sq. K.M.</td><td>'+res.ulb_area+'</td></tr><tr><td>Population as per Census 2011</td><td>'+res.ulb_population+'</td></tr></tbody></table>');      
+      		}
+      });
+    });
+});
+</script>

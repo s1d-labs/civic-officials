@@ -58,4 +58,9 @@ _p = project("geo", "Sites that answer only over HTTP from Indian machines (Indi
 _p["items"] = [_http(i) for i in _p["items"]]
 PROJECTS.append(_p)
 
+# Town sites on states' shared municipal platforms (seeds/build_platforms.py): mostly India-only, so on the India pool servers.
+with open(HERE / "platform_sites.csv", newline="", encoding="utf-8") as f:
+    _plat = list(csv.DictReader(f))
+PROJECTS.append(project("platforms", "Town sites on state municipal platforms (Kerala, Telangana, Tamil Nadu, Assam, Jharkhand)", _plat, geo="IN"))
+
 PROBES = []    # many hosts per project: no single health check would mean anything
