@@ -73,6 +73,6 @@ PROJECTS.append(project("found", "Town sites found by web search (start at the o
 _dirs = json.loads((HERE / "directories.json").read_text())
 PROJECTS.append({"name": f"{FAMILY}-directories", "title": "Statewide officials directories (APIs, contact pages, PDFs)", "task": "directory",
                  "target": f"{FAMILY}-directories", "env": {}, "probe": None, "unit_label": "source", "record_label": "official or page",
-                 "items": _dirs, "workers": 2, "threads": 1, "delay_ms": 1500, "geo": "IN"})
+                 "items": _dirs, "workers": 6, "threads": 1, "delay_ms": 1500, "geo": "IN"})
 
 PROBES = []    # many hosts per project: no single health check would mean anything
