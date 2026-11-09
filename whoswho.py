@@ -25,6 +25,7 @@ MAX_PAGES = 20          # pages fetched per site (home page and candidates; AJAX
 MAX_AJAX = 300          # ww_pages calls per site
 # A site that fails from a GitHub runner usually refuses foreign IPs: it goes to the -in project (Indian proxies), which retries.
 RETRY = os.environ.get("SCRAPE_POOL_PROJECT", "").endswith("-in")
+MAX_ATTEMPTS = 3
 stop = False
 
 
@@ -177,6 +178,11 @@ def main():
             if not items:
                 return
             item = items[0]
+            if item.get("attempts", 0) > MAX_ATTEMPTS:     # down from India too (checked 2026-11-09): stop spending proxy time on it
+                with lock:
+                    hub.failure("site", item["key"], f"gave up after {MAX_ATTEMPTS} attempts", url=item["payload"]["url"])
+                    hub.complete([item["key"]], "done", fetched=0)
+                continue
             site = Site(hub, s, item, max(0.5, hub.settings.get("delay_ms", 0) / 1000))
             try:
                 ok, why = site.run()
