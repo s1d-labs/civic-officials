@@ -43,4 +43,19 @@ _in = set(_retry.read_text().split()) if _retry.exists() else set()
 PROJECTS.append(project("in", "Sites that answer only from India (through the hub's Indian proxies)",
                         [r for r in ALL if r["domain"] in _in], proxy="IN"))
 
+# Sites that answer only plain HTTP and only from Indian machines (Karnataka's town sites on mrc.gov.in refuse HTTPS, and give 504
+# through the proxies): they run on the hub's India pool servers (geo "IN"), from http://.
+_geo = HERE / "geo_in.txt"
+_g = set(_geo.read_text().split()) if _geo.exists() else set()
+
+
+def _http(it):
+    it["payload"]["url"] = "http://" + it["payload"]["url"].split("://", 1)[-1]
+    return it
+
+
+_p = project("geo", "Sites that answer only over HTTP from Indian machines (India pool servers)", [r for r in ALL if r["domain"] in _g], geo="IN")
+_p["items"] = [_http(i) for i in _p["items"]]
+PROJECTS.append(_p)
+
 PROBES = []    # many hosts per project: no single health check would mean anything

@@ -44,3 +44,9 @@ def test_ajax_rows():
 def test_candidate_links():
     links = candidate_links(read("patna_whoswho.html"), "https://patna.nic.in/", "patna.nic.in")
     assert any("whos-who" in u for u in links)
+
+
+def test_candidate_links_town_site():
+    html = '<a href="/en/Engwardstaffs">Wardwise Staff Details</a><a href="/en/BLO">Booth Level Officers</a><a href="/en/tenders">Tenders</a>'
+    links = candidate_links(html, "http://www.harohallitown.mrc.gov.in/", "harohallitown.mrc.gov.in")
+    assert links == ["http://www.harohallitown.mrc.gov.in/en/Engwardstaffs", "http://www.harohallitown.mrc.gov.in/en/BLO"]

@@ -13,7 +13,9 @@ from bs4 import BeautifulSoup
 # Link text or address of a page that lists officials or their contacts (English, Hindi, Kannada, Tamil, Bengali, Marathi words).
 LINK_WORDS = re.compile(
     r"who'?\s*'?s[\s_-]*who|who[\s_-]*is[\s_-]*who|whoswho|whos-who|directory|telephone|contact|officer|official|key[\s_-]*person|"
-    r"adhikari|अधिकारी|संपर्क|सम्पर्क|निर्देशिका|ಅಧಿಕಾರಿ|ಸಂಪರ್ಕ|அலுவலர்|தொடர்பு|যোগাযোগ|আধিকারিক|अधिकाऱ्यां|संपर्क",
+    r"staff|booth[\s_-]*level|\bblo\b|\bpio\b|\bapio\b|organi[sz]ation[\s_-]*chart|council|councillor|corporator|elected|"
+    r"representative|member|mayor|president|chairman|commissioner|"
+    r"adhikari|अधिकारी|संपर्क|सम्पर्क|निर्देशिका|पार्षद|ಅಧಿಕಾರಿ|ಸಂಪರ್ಕ|ಸಿಬ್ಬಂದಿ|ಸದಸ್ಯ|ಚುನಾಯಿತ|அலுவலர்|தொடர்பு|உறுப்பினர்|যোগাযোগ|আধিকারিক|अधिकाऱ्यां",
     re.I)
 # Addresses that most S3WaaS sites have even when the home page does not link them.
 COMMON_PATHS = ["whos-who/", "about-district/whos-who/", "en/whos-who/", "en/about-district/whos-who/", "directory/", "contact-us/"]
