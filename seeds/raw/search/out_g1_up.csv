@@ -16,3 +16,756 @@ local_body_code,name,website,officials_url,source,verified_from_india,notes
 248873,Saharanpur,http://saharanpurnagarnigam.com/,http://saharanpurnagarnigam.com/officerlist.php,localbodies.up.nic.in listnn.htm + site menu,yes (200),also pdf/parshadlist.pdf (ward-wise councillors) contact.php
 297802,Shahjahanpur,http://www.nagarnigamshahjahanpur.in/,http://www.nagarnigamshahjahanpur.in/en/page/staff-and-officers-list,localbodies.up.nic.in listnn.htm + site menu,yes (200),also en/page/telephone-directory
 249531,Varanasi,https://nnvns.org/,http://localbodies.up.nic.in/listnn.htm,localbodies.up.nic.in listnn.htm,yes (200),JS app; officials from listnn
+249066,Achhnera,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248917,Afzalgarh,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://bijnor.nic.in/nagar-palika-parishad-nagar-panchayat/
+249545,Ahraura,,https://mirzapur.nic.in/public-utility/nagar-palika-parishad-ahraura/,,,officials_url = district NIC page with body contacts
+249400,Akbarpur,https://nppakbarpur.in/,http://localbodies.up.nic.in/pdf/elected-npp.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles; district page lists body: https://ambedkarnagar.nic.in/public-utility-category/municipality/
+249095,Aliganj,,https://etah.nic.in/public-utility/nagar-palika-aliganj/,,,officials_url = district NIC page with body contacts
+248950,Amroha,http://nppamroha.com/,http://nppamroha.com/landing/contactus.aspx,domain-pattern guess + DNS + page check,yes (200),
+249011,Anupshahr,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249145,Aonla,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249339,Atarra,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://banda.nic.in/nagar-palika-parishad-nagar-panchayat/
+249022,Atrauli,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249273,Auraiya,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://auraiya.nic.in/nagar-palika-parishad-nagar-panchayat/
+249477,Azamgarh,,https://azamgarh.nic.in/public-utility/nagar-panchayat-martinganj-azamgarh/,,,officials_url = district NIC page with body contacts
+249428,Baansi,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248947,Bachhraon,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248973,Baghpat,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249074,Bah,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249135,Bahedi,https://nppbaheri.com/,https://nppbaheri.com/contact,domain guess,yes (200),also 
+248935,Bahjoi,https://nppbahjoi.com/,http://localbodies.up.nic.in/pdf/elected-npp.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles; district page lists body: https://sambhal.nic.in/public-utility-category/municipality/
+249410,Bahraich,https://nppbahraich.in/,https://nppbahraich.in/landing/contactus.aspx,domain-pattern guess + DNS + page check,yes (200),
+249497,Ballia,http://nppballia.in,https://ballia.nic.in/public-utility/ballia-nagar-palika-parishad/,ballia.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+249414,Balrampur,,https://balrampur.nic.in/public-utility/npp-balrampur/,,,officials_url = district NIC page with body contacts
+301242,Banaras Locomotive Works,https://blw.indianrailways.gov.in/,https://blw.indianrailways.gov.in/connect/directory,known (railway township),yes (200),also https://blw.indianrailways.gov.in/connect/custom/Contact%20Us
+249334,Banda,http://nppbanda.in/,http://nppbanda.in/members.php,domain-pattern guess + DNS + page check,yes (200),"also http://nppbanda.in/executive.php, http://nppbanda.in/directory.php"
+249212,Bangarmau,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248972,Baraut,http://nppbaraut.in/,http://nppbaraut.in/en/page/executive-officer’s-message,domain-pattern guess + DNS + page check,yes (200),"also http://nppbaraut.in/en/page/staff, http://nppbaraut.in/en/page/personnel-staff-management"
+249311,Barua Sagar,https://nppbaruasagar.com/,https://nppbaruasagar.com/contact-person,domain-pattern guess + DNS + page check,yes (200),
+249430,Basti,,https://basti.nic.in/public-utility-category/municipalities/,,,officials_url = district NIC page with body contacts
+249353,Belha,https://nppbelha.in/,https://nppbelha.in/contact_us.aspx,domain-pattern guess + DNS + page check,yes (200),
+249535,Bhadohi,https://nppbhadohi.co.in/,https://nppbhadohi.co.in/Web/Officer,domain-pattern guess + DNS + page check,yes (200),also https://nppbhadohi.co.in/Web/Contact; alt nppbhadohi.in (listed on bhadohi.nic.in)
+249264,Bharthana,http://nppbharthana.com,https://etawah.nic.in/public-utility/nagar-palika-parishad-bharthana/,etawah.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+249361,Bharwari(Kaushambi),,https://kaushambi.nic.in/public-utility/nagar-palika-parishad-bharwari/,,,officials_url = district NIC page with body contacts
+297025,Bhinga,https://www.nppbhinga.com/,https://www.nppbhinga.com/contact.aspx,domain-pattern guess + DNS + page check,yes (200),also 
+248910,Bijnor,https://inb.link/,http://localbodies.up.nic.in/pdf/elected-npp.pdf,bijnor.nic.in body page,no (spam/parked page),domain now parked or spam; old listing only; officials_url = state list of chairs with mobiles; district page lists body: https://bijnor.nic.in/nagar-palika-parishad-nagar-panchayat/
+248931,Bilari,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249470,Bilariaganj,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248941,Bilaspur,,https://rampur.nic.in/public-utility-category/municipality/,,,officials_url = district NIC page with body contacts
+249203,Bilgram,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249282,Bilhaur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249122,Bilsi,https://nppbilsi.co.in/,https://nppbilsi.co.in/wardlist.html,domain-pattern guess + DNS + page check,yes (200),"also https://nppbilsi.co.in/adhishasi.html, https://nppbilsi.co.in/karmchari.html"
+249345,Bindki,,https://fatehpur.nic.in/public-utility/nagar-palika-parishad-bindki/,,,officials_url = district NIC page with body contacts
+249162,Bisalpur,https://www.nppbisalpur.in/,https://www.nppbisalpur.in/mr/elected-wing.html,domain-pattern guess + DNS + page check,yes (200),"also https://www.nppbisalpur.in/mr/contact-us.html, https://www.nppbisalpur.in/mr/contact-us.html"
+249118,Bisauli,http://nppbisauli.in/,https://nppbisauli.in/Web/formation,domain-pattern guess + DNS + page check,yes (200),also https://nppbisauli.in/Web/contact
+249193,Biswan,http://nppbiswan.com/,http://nppbiswan.com/landing/contactus.aspx,domain-pattern guess + DNS + page check,yes (200),
+249126,Budaun,https://nppbudaun.in/,https://nppbudaun.in/Web/contact/index.html,domain-pattern guess + DNS + page check,yes (200),
+249005,Bulandshahr,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://bulandshahar.nic.in/public-utility-category/municipality/
+248937,Chandausi,https://www.nppchandausi.co.in/,https://www.nppchandausi.co.in/WardList.aspx,domain-pattern guess + DNS + page check,yes (200),"also https://www.nppchandausi.co.in/EO_Msg.aspx, https://www.nppchandausi.co.in/Chairman_msg.aspx"
+248924,Chandpur,https://nppchandpur.org/,https://nppchandpur.org/contact_us.aspx,domain-pattern guess + DNS + page check,yes (200),
+249330,Charkhari,,https://mahoba.nic.in/public-utility/charkhari-nagar-palika-parishad/,,,officials_url = district NIC page with body contacts
+249256,Chhibramau,,https://kannauj.nic.in/public-utility/nagar-palika-parishad-chhibramau/,,,officials_url = district NIC page with body contacts
+249303,Chirgaon,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249342,Chitrakoot Dham - Karwi,http://nppchitrakoot.in/,http://nppchitrakoot.in/officer-message.php,domain guess,yes (200),"also http://nppchitrakoot.in/staff.php, http://nppchitrakoot.in/appellate-jan-suchna-adhikari.php"
+249543,Chunar,https://nppchunar.in/,https://nppchunar.in/LandingPage/ContactUs,domain-pattern guess + DNS + page check,yes (200),
+249421,Colonelganj,http://nppcolonelganj.com/,http://nppcolonelganj.com/landing/contactus.aspx,domain-pattern guess + DNS + page check,yes (200),
+248996,Dadri,https://nppdadri.com/,http://localbodies.up.nic.in/pdf/elected-npp.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles
+297026,Dataganj,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249013,Debai,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248882,Deoband,http://nppdeoband.in,https://saharanpur.nic.in/public-utility/nagar-palika-parishad-deoband/,saharanpur.nic.in body page,no (000),officials_url = district NIC page with body contacts
+249460,Deoria,http://nppdeoria.in/,https://deoria.nic.in/public-utility/nagar-palika-parishad-deoria/,deoria.nic.in public utilities,yes (200),officials_url = district NIC page with body contacts
+248919,Dhampur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://bijnor.nic.in/nagar-palika-parishad-nagar-panchayat/
+248946,Dhanaura,https://nppdhanaura.in/,https://nppdhanaura.in/contact,domain-pattern guess + DNS + page check,yes (200),also https://nppdhanaura.in/services/emergency-contacts
+249098,Etah,http://nppetah.in,https://etah.nic.in/public-utility/nagar-palika-parishad-etah/,etah.nic.in public utilities,no (404),officials_url = district NIC page with body contacts
+249262,Etawah,http://nppetawah.in/,https://etawah.nic.in/public-utility/nagar-palika-parishad-etawah/,etawah.nic.in public utilities,no (spam/parked page),domain now parked or spam; old listing only; officials_url = district NIC page with body contacts
+249059,Etmadpur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249156,Faridpur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249250,Farrukhabad,https://nppfarrukhabad.com/,https://nppfarrukhabad.com/page.php?id=93,domain-pattern guess + DNS + page check,yes (200),also https://nppfarrukhabad.com/page.php?id=92
+249347,Fatehpur(Fatehpur),http://nppfatehpur.com/,http://nppfatehpur.com/content/board_of_members.html,domain-pattern guess + DNS + page check,yes (200),"also http://nppfatehpur.com/content/employees_directory.html, http://nppfatehpur.com/content/notice/namitjansuchanaadhikari.pdf"
+249068,Fatehpur Sikri,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+297027,Gajralua,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+297022,Gangaghat,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248878,Gangoh,,https://saharanpur.nic.in/public-utility/nagar-palika-parishad-gangoh/,,,officials_url = district NIC page with body contacts
+249090,Ganj Dundwara,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248993,Garhmukteshwar,,https://hapur.nic.in/public-utility-category/municipalities/,,,officials_url = district NIC page with body contacts
+249462,Gaura Barhaj,http://nppgaurabarhaj.in/,http://nppgaurabarhaj.in/contact.aspx,domain-pattern guess + DNS + page check,yes (200),also 
+276425,Gauriganj,https://nppgauriganj.in/,https://nppgauriganj.in/contact-us,domain-pattern guess + DNS + page check,yes (200),
+249290,Ghatampur,https://nppghatampur.in/,https://nppghatampur.in/employe.html,domain-pattern guess + DNS + page check,yes (200),"also https://nppghatampur.in/executive-officer.html, https://nppghatampur.in/chairman.html"
+249512,Ghazipur,,https://ghazipur.nic.in/public-utility/nagar-palika-parishad-ghazipur/,,,officials_url = district NIC page with body contacts
+274823,Gnida,http://greaternoidaauthority.in,,known (development authority),no (000),industrial/railway township or development authority; no elected board
+249179,Gola Gokarannath,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249419,Gonda,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249537,Gopi Ganj,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+301249,Grasim Industries Ltd,,,,,industrial/railway township or development authority; no elected board
+249006,Gulaothi,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://bulandshahar.nic.in/public-utility-category/municipality/
+249254,Gursahaiganj,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249305,Gursarai,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248914,Haldaur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://bijnor.nic.in/nagar-palika-parishad-nagar-panchayat/
+249322,Hamirpur,,https://hamirpur.nic.in/public-utility/nagar-palika-parishad-hamirpur/,,,officials_url = district NIC page with body contacts
+248991,Hapur,,https://hapur.nic.in/public-utility-category/municipalities/,,,officials_url = district NIC page with body contacts
+249201,Hardoi,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248952,Hasanpur,http://npphasanpur.in/,http://npphasanpur.in/employee/,domain-pattern guess + DNS + page check,yes (200),also 
+297020,Hata,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249037,Hathras,,https://hathras.nic.in/public-utility/nagar-palika-parishad-hathras/,,,officials_url = district NIC page with body contacts
+301244,Hindalco Industries Ltd. Renukoot,,,,,industrial/railway township or development authority; no elected board
+249012,Jahangirabad,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249240,Jais,,https://amethi.nic.in/public-utility/nagar-palika-jais/,,,officials_url = district NIC page with body contacts
+249174,Jalalabad,,https://shahjahanpur.nic.in/public-utility/nagar-palika-parishad-jalalabad/,,,officials_url = district NIC page with body contacts
+249399,Jalalpur,http://nppjalalpur.com/,http://localbodies.up.nic.in/pdf/elected-npp.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles; district page lists body: https://ambedkarnagar.nic.in/public-utility-category/municipality/
+249294,Jalaun,,https://jalaun.nic.in/public-utility-category/municipalities/,,,officials_url = district NIC page with body contacts
+249101,Jalesar,,https://etah.nic.in/public-utility/nagar-palika-jalesar/,,,officials_url = district NIC page with body contacts
+249261,Jaswantnagar,http://nppjaswantnagar.com,https://etawah.nic.in/public-utility/nagar-palika-parishad-jaswantnagar/,etawah.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+249505,Jaunpur,http://www.nppjaunpuronline.org/,https://jaunpur.nic.in/public-utility/nagar-palika-parishad-jaunpur/,jaunpur.nic.in public utilities,yes (200),officials_url = district NIC page with body contacts
+301241,Jhansi Railway Settlement,,,,,industrial/railway township or development authority; no elected board
+263354,Jhinjhak,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249086,Kaasganj,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249248,Kaimganj,,https://farrukhabad.nic.in/public-utility/nagar-palika-parishad-kaimganj/,,,officials_url = district NIC page with body contacts
+248885,Kairana,,https://shamli.nic.in/public-utility/nagar-palika-parishad-kairana/,,,officials_url = district NIC page with body contacts
+249130,Kakrala,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249295,Kalpi,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248886,Kandhla,,https://shamli.nic.in/public-utility/nagar-panchyat-kandhla/,,,officials_url = district NIC page with body contacts
+249259,Kannauj,,https://kannauj.nic.in/public-utility/nagar-palika-parishad-kannauj/,,,officials_url = district NIC page with body contacts
+249020,Khair,http://nagarpalikaparishadkhair.in/,http://nagarpalikaparishadkhair.in/index.php/frontend/en/about-us/message/executive-officer-message,domain-pattern guess + DNS + page check,yes (200),"also http://nagarpalikaparishadkhair.in/index.php/frontend/en/about-us/message/chairman-message, http://nagarpalikaparishadkhair.in/index.php/frontend/en/about-us/chairman-tenue "
+249188,Khairabad,http://khairabadnpp.in/,http://khairabadnpp.in/page/employee-list,domain guess,yes (200),"also http://khairabadnpp.in/contact, https://khairabadnpp.in/contact"
+249433,Khalilabad,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248899,Khatauli,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+297023,Khekada,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+274820,Khoda Makanpur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249018,Khurja,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://bulandshahar.nic.in/public-utility-category/municipality/
+248908,Kiratpur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://bijnor.nic.in/nagar-palika-parishad-nagar-panchayat/
+249299,Konch,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249041,Kosi Kalan,,https://mathura.nic.in/public-utility/nagar-palika-kosi-kalan/,,,officials_url = district NIC page with body contacts
+297024,Kushinagar,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://kushinagar.nic.in/public-utility-category/municipality/
+249191,Laharpur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249182,Lakhimpur,https://npplakhimpur.com/,https://npplakhimpur.com/StaffDetail_Eng.aspx,domain-pattern guess + DNS + page check,yes (200),also https://npplakhimpur.com/Contact_Eng.aspx
+249318,Lalitpur,http://npplalitpur.com/,http://npplalitpur.com/hi/हमारे बारे में/अध्यक्ष कार्यकाल ,domain-pattern guess + DNS + page check,yes (200),also http://npplalitpur.com/contact
+248985,Loni,https://www.npploni.in/,https://www.npploni.in/emploee-list/,domain-pattern guess + DNS + page check,yes (200),also ; alt npploni.in
+249441,Maharajganj,,https://maharajganj.nic.in/public-utility/nagar-palika-parishad-maharajganj/,,,officials_url = district NIC page with body contacts
+249194,Mahmudabad,http://nppmahmudabad.co.in/,http://nppmahmudabad.co.in/officer-message.php,domain-pattern guess + DNS + page check,yes (200),"also http://nppmahmudabad.co.in/staff.php, http://nppmahmudabad.co.in/appellate-jan-suchna-adhikari.php"
+249331,Mahoba,https://nppmahoba.in/,https://nppmahoba.in/AboutDistrictWhosWho.aspx,domain-pattern guess + DNS + page check,yes (200),"also https://nppmahoba.in/ContactUs.aspx, https://nppmahoba.in/ContactUs.aspx"
+249106,Mainpuri,,https://mainpuri.nic.in/public-utility/nagar-palika-parishad-mainpuri/,,,officials_url = district NIC page with body contacts
+249205,Mallawan,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249359,Manjhanpur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249099,Marehra,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249327,Maudaha,,https://hamirpur.nic.in/public-utility/nagar-palika-parishad-maudaha/,,,officials_url = district NIC page with body contacts
+249488,Maunath Bhanjan,https://nppmau.com/,http://localbodies.up.nic.in/pdf/elected-npp.pdf,mau.nic.in public utilities,yes (200),officials_url = state list of chairs with mobiles
+249308,Mauranipur,https://nppmauranipur.com/,https://nppmauranipur.com/contact-view,domain-pattern guess + DNS + page check,yes (200),also https://nppmauranipur.com/service-view
+248961,Mawana,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://meerut.nic.in/public-utility-category/municipality/
+248945,Milak,https://nppmilak.in/,https://nppmilak.in/sadasya,domain-pattern guess + DNS + page check,yes (200),"also https://nppmilak.in/eo-officers, https://nppmilak.in/staff-list"
+249540,Mirzapur-Cum-Vindhyachal,http://mirzapurnpp.in,http://localbodies.up.nic.in/pdf/elected-npp.pdf,mirzapur.nic.in public utilities,no (000),officials_url = state list of chairs with mobiles
+249187,Misrikh Cum Neemsar,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248981,Modinagar,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249514,Mohammadabad(Gazipur),,https://ghazipur.nic.in/public-utility/nagar-palika-parishad-mohammadabad/,,,officials_url = district NIC page with body contacts
+249180,Mohammadi,http://nppmohammadi.in/,https://nppmohammadi.in/Web/contact,domain-pattern guess + DNS + page check,yes (200),
+249474,Mubarakpur,https://nppmubarakpur.com/,https://nppmubarakpur.com/ward-members,domain-pattern guess + DNS + page check,yes (200),also https://nppmubarakpur.com/eomsg
+249503,Mungra Badshahpur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248983,Muradnagar,https://nagarpalikamuradnagar.in/,http://localbodies.up.nic.in/pdf/elected-npp.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles
+248895,Muzaffarnagar,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248915,Nagina,https://nppnagina.in/,http://localbodies.up.nic.in/pdf/elected-npp.pdf,domain-pattern guess + DNS + page check,yes (200),alt nppnagina.com (listed on bijnor.nic.in); .in is a JS app; officials_url = state list of chairs with mobiles; district page lists body: https://bijnor.nic.in/nagar-palika-parishad-nagar-panchayat/
+248905,Najibabad,http://nppnajibabad.co.in,http://localbodies.up.nic.in/pdf/elected-npp.pdf,bijnor.nic.in body page,no (000),officials_url = state list of chairs with mobiles; district page lists body: https://bijnor.nic.in/nagar-palika-parishad-nagar-panchayat/
+248876,Nakur,,https://saharanpur.nic.in/public-utility/nagar-palika-parishad-nakur/,,,officials_url = district NIC page with body contacts
+249408,Nanpara,https://nppnanpara.com/,https://nppnanpara.com/contact-us,domain-pattern guess + DNS + page check,yes (200),also 
+249436,Nautanwa,,https://maharajganj.nic.in/public-utility/nagar-palika-parishad-nautanwa/,,,officials_url = district NIC page with body contacts
+301389,Nawabganj (Bara Banki),http://nppnawabganj.in,https://barabanki.nic.in/public-utility/nagar-palika-parishad-nawabganj-barabanki/,barabanki.nic.in public utilities,no (301),officials_url = district NIC page with body contacts
+249154,Nawabganj(Bareilly),,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249422,Nawabganj(Gonda),,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248920,Nehtaur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://bijnor.nic.in/nagar-palika-parishad-nagar-panchayat/
+301210,Noida,http://noidaauthorityonline.in,,known (development authority),no (000),industrial/railway township or development authority; no elected board
+248923,Noorpur,https://nppnoorpur.org/,https://nppnoorpur.org/contact_us.aspx,domain-pattern guess + DNS + page check,yes (200),
+249297,Orai,http://npporai.in,https://jalaun.nic.in/public-utility-category/municipalities/,jalaun.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+249452,Padrauna,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://kushinagar.nic.in/public-utility-category/municipality/
+249176,Palia Kalan,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249198,Pihani,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249160,Pilibhit,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248990,Pilkhuwa,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249167,Powayan,,https://shahjahanpur.nic.in/public-utility/nagar-palika-parishad-powayan/,,,officials_url = district NIC page with body contacts
+249518,Pt Deen Dayal Nagar(Mughalsarai),,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+301243,Pt. Deen Dayal Upadhyaya Nagar,,,,,industrial/railway township or development authority; no elected board
+249279,Pukhrayan,http://npppukhrayan.in/,https://npppukhrayan.in/Web/officer,domain-pattern guess + DNS + page check,yes (200),also https://npppukhrayan.in/
+249165,Puranpur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249241,Rae Bareli,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248943,Rampur,http://npprampur.gov.in,https://rampur.nic.in/public-utility-category/municipality/,rampur.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+249495,Rasra,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249326,Rath,https://rathnpp.in/,https://rathnpp.in/employe.html,domain guess,yes (200),"also https://rathnpp.in/executive-officer.html, https://rathnpp.in/chairman.html"
+249547,Robertsganj,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249388,Rudauli,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249123,Sahaswan,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248934,Sambhal,http://www.nagarpalikasambhal.in/,http://www.nagarpalikasambhal.in/Staff_Members.aspx,domain-pattern guess + DNS + page check,yes (200),"also http://www.nagarpalikasambhal.in/WardList.aspx, http://www.nagarpalikasambhal.in/WardList.aspx"
+249301,Samthar,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249202,Sandi,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249209,Sandila,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248955,Sardhana,http://nppsardhana.com/,http://nppsardhana.com/Views/home/Contact.html,domain-pattern guess + DNS + page check,yes (200),"also http://nppsardhana.com/ContactUS.aspx, http://nppsardhana.com/ContactUS.aspx"
+248875,Sarsawan,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248921,Seohara,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249197,Shahabad,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249501,Shahganj,http://nppshahganj.in,https://jaunpur.nic.in/public-utility/nagar-palika-parishad-shahganj/,jaunpur.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+248888,Shamli,https://nppshamli.com/,https://nppshamli.com/contact,domain-pattern guess + DNS + page check,yes (200),also 
+249071,Shamsabad,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248918,Sherkot,https://nppsherkot.org/,https://nppsherkot.org/contact_us.aspx,domain-pattern guess + DNS + page check,yes (200),
+249015,Shikarpur,https://nppshikarpur.com/,https://nppshikarpur.com/sub_page.php?page_id=98,domain-pattern guess + DNS + page check,yes (200),"also https://nppshikarpur.com/sub_page.php?page_id=50, https://nppshikarpur.com/sub_page.php?page_id=90"
+249082,Shikohabad,https://www.nppshikohabad.in/,https://www.nppshikohabad.in/contact.aspx,domain-pattern guess + DNS + page check,yes (200),
+249008,Siana,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249427,Siddharth Nagar (Tetri Bazar),,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249003,Sikandrabad,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://bulandshahar.nic.in/public-utility-category/municipality/
+249033,Sikandra Rao,,https://hathras.nic.in/public-utility/nagar-palika-parishad-sikandrarao/,,,officials_url = district NIC page with body contacts
+249083,Sirsaganj,,https://firozabad.nic.in/public-utility/nagar-palika-parishad-sirsaganj/,,,officials_url = district NIC page with body contacts
+249438,Siswa Bazar,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249189,Sitapur,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249084,Soron,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+248939,Suar,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249404,Sultanpur,https://nppsultanpur.in/,https://sultanpur.nic.in/public-utility/nagar-palika-parishad-sultanpur/,domain-pattern guess + DNS + page check,yes (200),officials_url = district NIC page with body contacts
+248940,Tanda,,https://rampur.nic.in/public-utility-category/municipality/,,,officials_url = district NIC page with body contacts
+249396,Tanda (Ambedkar Nagar),,https://ambedkarnagar.nic.in/public-utility/nagarpalika-parisad-tanda-2/,,,officials_url = district NIC page with body contacts
+248925,Thakurdwara,https://nppthakurdwara.org/,https://nppthakurdwara.org/contact_us.aspx,domain-pattern guess + DNS + page check,yes (200),
+249170,Tilhar,,https://shahjahanpur.nic.in/public-utility/nagar-palika-parishad-tilhar/,,,officials_url = district NIC page with body contacts
+249075,Tundla,,https://firozabad.nic.in/public-utility/nagar-palika-parishad-tundla/,,,officials_url = district NIC page with body contacts
+249125,Ujhani,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249223,Unnao,,http://localbodies.up.nic.in/pdf/elected-npp.pdf,,,officials_url = state list of chairs with mobiles
+249417,Utraula,,https://balrampur.nic.in/public-utility/utraula-panchayat/,,,officials_url = district NIC page with body contacts
+274822,Yeida,http://yamunaexpresswayauthority.com,,known (development authority),no (500),industrial/railway township or development authority; no elected board
+249516,Zamania,,https://ghazipur.nic.in/public-utility/nagar-palika-parishad-zamania/,,,officials_url = district NIC page with body contacts
+297922,Achal Ganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249268,Achhalda,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://auraiya.nic.in/nagar-palika-parishad-nagar-panchayat/
+249487,Adari,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248974,Agarwal Mandi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297071,Agawanpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248887,Ailum,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297055,Ait,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249357,Ajhuwa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249277,Akbarpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249175,Allahganj,,https://shahjahanpur.nic.in/public-utility/nagar-panchayat-allahganj/,,,officials_url = district NIC page with body contacts
+249131,Allapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249088,Amanpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248877,Ambehta,,https://saharanpur.nic.in/public-utility/nagar-panchayat-ambehta-peer/,,,officials_url = district NIC page with body contacts
+249402,Amethi(Amethi),,https://amethi.nic.in/public-utility/nagar-panchayat-amethi/,,,officials_url = district NIC page with body contacts
+249236,Amethi(Lucknow),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249484,Amila,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248975,Aminagar Sarai,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+263353,Amraudhaa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249439,Anandnagar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://maharajganj.nic.in/public-utility-category/municipality/
+299053,Anpara,https://www.npanpara.in/,https://www.npanpara.in/ward-members,domain-pattern guess + DNS + page check,yes (200),also https://www.npanpara.in/employee
+249352,Antu,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://pratapgarh.nic.in/public-utility-category/municipality/
+249398,Ashrafpur Kichhauchha,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297623,Asothar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249270,Atasu,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://auraiya.nic.in/nagar-palika-parishad-nagar-panchayat/
+249468,Atraulia,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249004,Aurangabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,"officials_url = state list of chairs with mobiles; district page lists body: https://bulandshahar.nic.in/public-utility-category/municipality/; unconfirmed candidate rejected: npaurangabad.in shows ""Nagar Parishad Aurangabad"" (likely another state)"
+249217,Auras,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249102,Awagarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249472,Azmatgarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249269,Babarpur Ajitmal,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249336,Baberu,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://banda.nic.in/nagar-palika-parishad-nagar-panchayat/
+297073,Babhnan Bazar,,https://basti.nic.in/public-utility-category/municipalities/,,,officials_url = district NIC page with body contacts
+263350,Babralaa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248992,Babugarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249238,Bachhrawan,,https://raebareli.nic.in/public-utility/nagar-panchayat-bachhrawan/,,,officials_url = district NIC page with body contacts
+249313,Bada Gaon,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249463,Badhani Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297056,Badhani Chafa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+263358,Badlapur,,https://jaunpur.nic.in/public-utility/nagar-panchayat-badlapur/,,,officials_url = district NIC page with body contacts
+297053,Baghnagar Urf Bakhira,http://npbaghnagarurfbakhira.in/,http://npbaghnagarurfbakhira.in/shabhasad.html,domain-pattern guess + DNS + page check,yes (200),"also http://npbaghnagarurfbakhira.in/officer.html, http://npbaghnagarurfbakhira.in/employee.html"
+249513,Bahadurganj,,https://ghazipur.nic.in/public-utility/nagar-panchayat-bahadurganj/,,,officials_url = district NIC page with body contacts
+248959,Bahsuma,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249346,Bahuwa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+277185,Bairia,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300768,Baitalpur,,https://deoria.nic.in/public-utility/nagar-panchayat-baitalpur/,,,officials_url = district NIC page with body contacts
+249046,Bajna,,https://mathura.nic.in/public-utility/nagar-panchayat-bajna/,,,officials_url = district NIC page with body contacts
+249265,Bakewar,http://nagarpanchayatbakewar.com,https://etawah.nic.in/public-utility/nagar-panchayat-bakewar/,etawah.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+249057,Baldeo,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248889,Banat,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297057,Banda,http://nppbanda.com/,http://nppbanda.com/landing/contactus.aspx,domain-pattern guess + DNS + page check,yes (200),
+249380,Banki,,https://barabanki.nic.in/public-utility/nagar-palika-parishad-nawabganj-barabanki/,,,officials_url = district NIC page with body contacts
+289237,Bankti,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249498,Bansdih,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249448,Bansgaon,,https://gorakhpur.nic.in/public-utility-category/municipality/,,,officials_url = district NIC page with body contacts
+297048,Banthra,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+299018,Barauli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249181,Barbar,,https://kheri.nic.in/public-utility/nagar-panchayat-barbar/,,,officials_url = district NIC page with body contacts
+249450,Barhalganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+301390,Barhni Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+281989,Bariyarpur,http://npbariyarpur.in/,http://npbariyarpur.in/shabhasad.html,domain-pattern guess + DNS + page check,yes (200),"also http://npbariyarpur.in/officer.html, http://npbariyarpur.in/employee.html"
+249161,Barkhera,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297058,Barnahal,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249043,Barsana,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://mathura.nic.in/public-utility-category/municipality/
+248870,Behat,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+277186,Belhara,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297059,Belhar Kala,https://npbelharkala.in/,https://npbelharkala.in/Sabhasad.html,domain-pattern guess + DNS + page check,yes (200),"also https://npbelharkala.in/adhikari.html, https://npbelharkala.in/chairman.html"
+301014,Belsar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249492,Belthara Road,https://npbelthararoad.co.in/,https://npbelthararoad.co.in/web/EO,domain-pattern guess + DNS + page check,yes (200),"also https://npbelthararoad.co.in/web/Officer, https://npbelthararoad.co.in/web/Chairman"
+249208,Beniganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249031,Beswan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249109,Bewar,,https://mainpuri.nic.in/public-utility/nagar-panchayat-bewar/,,,officials_url = district NIC page with body contacts
+249389,Bhadarsa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://ayodhya.nic.in/public-utility-category/municipality/
+249229,Bhagwant Nagar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300729,Bhaluani,,https://deoria.nic.in/public-utility/nagar-panchayat-bhaluani/,,,officials_url = district NIC page with body contacts
+297060,Bhanpur Kaswa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297061,Bharatbhari,,https://siddharthnagar.nic.in/public-utility/j-nagar-panchayat-npp-bharatbhari/,,,officials_url = district NIC page with body contacts
+249374,Bharatganj,http://npbharatganj.com/,https://npbharatganj.com/Web/officer,domain-pattern guess + DNS + page check,yes (200),also https://npbharatganj.com/Web/contact
+249093,Bhargain,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249467,Bhatpar Rani,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://deoria.nic.in/public-utility-category/municipality/
+249007,Bhawan Bahadur Nagar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300719,Bhira,,https://kheri.nic.in/public-utility/nagar-panchayat-bhira/,,,officials_url = district NIC page with body contacts
+249108,Bhogaon,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248928,Bhojpur Dharampur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248902,Bhokarhedi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249267,Bidhuna,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249228,Bighapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249393,Bikapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248997,Bilaspur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249085,Bilram,https://www.npbilram.in/,https://www.npbilram.in/WardList.aspx,domain-pattern guess + DNS + page check,yes (200),also https://www.npbilram.in/Chairman_msg.aspx
+249163,Bilsanda,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249338,Bisanda Buzurg,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249144,Bisharatganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297050,Biskohar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249285,Bithoor,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+263351,Bkt,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297075,Boodhanpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297062,Brijmanganj,http://npbrijmanganj.com/,http://npbrijmanganj.com/contact-us/Contact,domain-pattern guess + DNS + page check,yes (200),also 
+248897,Budhana,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249009,Bugrasi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297029,Campierganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249362,Chail,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249522,Chakia,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249520,Chandauli,http://npchandauli.in/,http://npchandauli.in/member.html,domain-pattern guess + DNS + page check,yes (200),"also http://npchandauli.in/contact.html, http://npchandauli.in/contact.html"
+297076,Chandaus,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248894,Charthaval,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+299009,Charwa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+298915,Chauk,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249045,Chaumuha,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://mathura.nic.in/public-utility-category/municipality/
+248969,Chhaprauli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249023,Chharra Rafatpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249044,Chhata,,https://mathura.nic.in/public-utility/nagar-panchayat-chhata/,,,officials_url = district NIC page with body contacts
+249017,Chhatari,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297077,Chhitauni,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+296986,Chhutmalpura,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+277189,Chirayakot,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249496,Chitbara Gaon,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249549,Chopan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249548,Chukradhumra,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+299069,Dadiyal,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297063,Dahagwan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297044,Dala Bazar,https://npdalabazar.in/,http://localbodies.up.nic.in/pdf/elected-np.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles
+249243,Dalmau,,https://raebareli.nic.in/public-utility/nagar-panchayat-dalmau/,,,officials_url = district NIC page with body contacts
+248998,Dankaur,http://npdankaur.com/,http://npdankaur.com/4.php,domain-pattern guess + DNS + page check,yes (200),
+297064,Daranagar,https://npdaranagar.in/,https://npdaranagar.in/ward-members,domain-pattern guess + DNS + page check,yes (200),also https://npdaranagar.in/employee
+249385,Dariyabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248989,Dasna,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248956,Daurala,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://meerut.nic.in/nagar-panchayat-list/
+249060,Dayalbagh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249138,Deoranian,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+263348,Derapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300772,Derva(Pratapgarh),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249378,Dewa,http://npdewa.in/,http://npdewa.in/whos-who,domain-pattern guess + DNS + page check,yes (200),
+290251,Dhakia,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+299013,Dhakwa (Pratapgarh),https://npdhakwa.in/,https://npdhakwa.in/ward-members,domain-pattern guess + DNS + page check,yes (200),also https://npdhakwa.in/eomsg
+301016,Dhanepur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+301363,Dharamsinghwa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249185,Dhaurahara,,https://kheri.nic.in/public-utility/nagar-palika-dhaurahara/,,,officials_url = district NIC page with body contacts
+249147,Dhaura Tanda,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249272,Dibiyapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://auraiya.nic.in/nagar-palika-parishad-nagar-panchayat/
+249515,Dildarnagar Fatehpur Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248971,Doghat,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249483,Dohrighat,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248145,Domariyaganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249406,Dostpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://sultanpur.nic.in/public-utility-category/municipality/
+297078,Duddhi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249551,Dudhi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+277188,Eka,,https://firozabad.nic.in/public-utility/nagar-panchayat-eka/,,,officials_url = district NIC page with body contacts
+249263,Ekdil,http://nagarpanchayatekdil.com,https://etawah.nic.in/public-utility/nagar-panchayat-ekdil/,etawah.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+249304,Erich,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249116,Faizganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249058,Farah,,https://mathura.nic.in/public-utility/nagar-panchayat-farah/,,,officials_url = district NIC page with body contacts
+248982,Faridnagar,http://npfaridnagar.com,http://localbodies.up.nic.in/pdf/elected-np.pdf,ghaziabad.nic.in public utilities,no (000),officials_url = state list of chairs with mobiles
+249136,Faridpur(Bareilly),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249080,Fariha,,https://firozabad.nic.in/public-utility/nagar-panchayat-fariha/,,,officials_url = district NIC page with body contacts
+249072,Fatehabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249142,Fatehganj Pashchimi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249155,Fatehganj Purvi,http://npfatehganjpurvi.in/,https://npfatehganjpurvi.in/Web/officer,domain-pattern guess + DNS + page check,yes (200),also https://npfatehganjpurvi.in/Web/contact
+249376,Fatehpur(Barabanki),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249213,Fatehpur Chaurasi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297065,Fazilnagar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297066,Gaayghat,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+298115,Gabhana,https://www.npgabhana.in/,https://www.npgabhana.in/ward-members,domain-pattern guess + DNS + page check,yes (200),"also https://www.npgabhana.in/eomsg, https://www.npgabhana.in/employee"
+300512,Gaisari,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297031,Ganeshpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249524,Gangapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249211,Ganj Muradabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249306,Garautha,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248890,Garhi Pukhta,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300693,Garwara,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297034,Gaurabadshahpur,https://npgaurabadshahpur.in/,https://npgaurabadshahpur.in/chair-members.php,domain-pattern guess + DNS + page check,yes (200),also https://npgaurabadshahpur.in/fellow-members.php
+249458,Gauri Bazar,http://npgauribazar.in/,https://npgauribazar.in/Web/officer,domain-pattern guess + DNS + page check,yes (200),also https://npgauribazar.in/Web/contact
+249112,Gawan,https://npgawan.in/,https://npgawan.in/executive-officers-message/,domain-pattern guess + DNS + page check,yes (200),"also https://npgawan.in/employee-list/, https://npgawan.in/chairmans-message/"
+300750,Ghaghsarabazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249105,Ghiraur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249546,Ghorawal,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249485,Ghosi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249539,Ghosia Bazar,http://npghosiabazar.in/,https://npghosiabazar.in/Web/officer,domain-pattern guess + DNS + page check,yes (200),also 
+249440,Ghughuli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249325,Gohand,,https://hamirpur.nic.in/public-utility/nagar-panchayat-gohand/,,,officials_url = district NIC page with body contacts
+249055,Gokul,,https://mathura.nic.in/public-utility/nagar-panchayat-gokul/,,,officials_url = district NIC page with body contacts
+249449,Gola Bazar,http://npgolabazar.in/,http://npgolabazar.in/shabhasad.html,domain-pattern guess + DNS + page check,yes (200),"also http://npgolabazar.in/officer.html, http://npgolabazar.in/employee.html"
+249200,Gopamau,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249235,Gosainganj (Ayodhya),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249392,Gosainganj (Lucknow),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249050,Govardhan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249157,Gularia Bhindara,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249128,Gulariya,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249114,Gunnaur,,https://sambhal.nic.in/public-utility/nagar-panchayat-gunnaur/,,,officials_url = district NIC page with body contacts
+249536,Gyanpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249387,Haidergarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300532,Hainsar Bazar Dhanghata,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249372,Handia,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249024,Harduaganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249190,Hargaon,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249435,Hariharpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+301364,Harra,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://meerut.nic.in/nagar-panchayat-list/
+249429,Harraiya,,https://basti.nic.in/public-utility-category/municipalities/,,,officials_url = district NIC page with body contacts
+249035,Hasayan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248960,Hastinapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://meerut.nic.in/nagar-panchayat-list/
+253113,Hathgam,http://nphathgam.in/,http://nphathgam.in/whos-who,domain-pattern guess + DNS + page check,yes (200),
+300707,Heeraganj Bazaar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300779,Hetimpur,,https://deoria.nic.in/public-utility/nagar-panchayat-hetimpur/,,,officials_url = district NIC page with body contacts
+249218,Hyderabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249030,Iglas,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249413,Ikauna,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249394,Iltifatganj Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249115,Islamnagar,https://www.npislamnagar.in/,https://www.npislamnagar.in/Staff_Members.aspx,domain-pattern guess + DNS + page check,yes (200),"also https://www.npislamnagar.in/WardList.aspx, https://www.npislamnagar.in/WardList.aspx"
+249232,Itaunja,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297067,Itwa,,https://siddharthnagar.nic.in/public-utility/i-nagar-panchayat-npp-itwa/,,,officials_url = district NIC page with body contacts
+249069,Jagner,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+298935,Jahagirganj,,https://ambedkarnagar.nic.in/public-utility/nagarpanchayat-jahagirganj/,,,officials_url = district NIC page with body contacts
+249159,Jahanabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+301253,Jahanaganj,https://npjahanaganj.in/,https://npjahanaganj.in/shabhasad.html,domain-pattern guess + DNS + page check,yes (200),"also https://npjahanaganj.in/officer.html, https://npjahanaganj.in/employee.html"
+249001,Jahangirpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249096,Jaithara,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248892,Jalalabad(Bijnor),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248907,Jalalabad(Shamli),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249026,Jalali,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249511,Jangipur,,https://ghazipur.nic.in/public-utility/nagar-panchayat-jangipur/,,,officials_url = district NIC page with body contacts
+248901,Jansath,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249411,Jarwal,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249081,Jasrana,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://firozabad.nic.in/public-utility-category/municipality/
+249019,Jatari,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+299023,Jawan Sikandpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249002,Jewar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248913,Jhalu,http://npjhalu.com/,http://npjhalu.com/executive-officer-message,domain-pattern guess + DNS + page check,yes (200),"also http://npjhalu.com/telephone-directory, http://npjhalu.com/chairman-message"
+248884,Jhinjhana,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249471,Jiyanpur,,https://azamgarh.nic.in/public-utility/nagar-panchayat-jiyanpur/,,,officials_url = district NIC page with body contacts
+248951,Joya,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://amroha.nic.in/public-utility-category/municipality/
+249104,Jyoti Khuria,http://jyotikhudiya.in,http://localbodies.up.nic.in/pdf/elected-np.pdf,mainpuri.nic.in public utilities,no (000),officials_url = state list of chairs with mobiles
+249332,Kabrai,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297068,Kachgaon,https://npkachgaon.in/,https://npkachgaon.in/adhikari.html,domain-pattern guess + DNS + page check,yes (200),"also https://npkachgaon.in/chairman.html, https://npkachgaon.in/contact.html"
+249207,Kachhauna Patseni,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249124,Kachhla,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249542,Kachhwa,,https://mirzapur.nic.in/public-utility/nagar-panchayat-kachhwa/,,,officials_url = district NIC page with body contacts
+249296,Kadaura,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249407,Kadipur,,https://sultanpur.nic.in/public-utility/nagar-panchayat-kadipur/,,,officials_url = district NIC page with body contacts
+299017,Kaisharganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248999,Kakod,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249233,Kakori,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297807,Kalan,,https://shahjahanpur.nic.in/public-utility/nagar-panchayat-kalan/,,,officials_url = district NIC page with body contacts
+249164,Kalinagar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249252,Kamalganj,,https://farrukhabad.nic.in/public-utility/nagar-panchayat-kamalganj/,,,officials_url = district NIC page with body contacts
+249247,Kampil,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://farrukhabad.nic.in/public-utility-category/municipality/
+297864,Kanchausi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248926,Kanth(Moradabad),https://www.npkanth.in/,https://www.npkanth.in/ward-members,domain-pattern guess + DNS + page check,yes (200),also https://www.npkanth.in/eomsg
+249173,Kanth(Shahjhanpur),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297051,Kapilavastu,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249454,Kaptanganj,https://npkaptanganj.in/,https://npkaptanganj.in/eo-officers,domain-pattern guess + DNS + page check,yes (200),"also https://npkaptanganj.in/staff-list, https://npkaptanganj.in/chairman"
+298096,Kaptanganj Basti,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249360,Karari,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249107,Karhal,,https://mainpuri.nic.in/public-utility/nagar-panchayat-karhal/,,,officials_url = district NIC page with body contacts
+300833,Karikan Dhata,https://npkarikandhata.in/,https://npkarikandhata.in/member.html,domain-pattern guess + DNS + page check,yes (200),also https://npkarikandhata.in/adhikari.html
+248954,Karnawal,http://npkarnawal.com/,http://npkarnawal.com/landing/contactus.aspx,domain-pattern guess + DNS + page check,yes (200),
+297495,Kasba Sangrampur Urf Unwal,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249481,Katghar Lalganj,,https://azamgarh.nic.in/public-utility-category/municipalities/,,,officials_url = district NIC page with body contacts
+249310,Kathera,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249169,Katra,,https://shahjahanpur.nic.in/public-utility/nagar-panchayat-katra/,,,officials_url = district NIC page with body contacts
+249420,Katra Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300776,Katra Gulab Singh,,https://pratapgarh.nic.in/public-utility/nagar-panchayat-katra-gulab-singh/,,,officials_url = district NIC page with body contacts
+249355,Katra Medniganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://pratapgarh.nic.in/public-utility-category/municipality/
+249027,Kauriaganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248942,Kemri,,https://rampur.nic.in/public-utility-category/municipality/,,,officials_url = district NIC page with body contacts
+249508,Kerakat,https://npkerakat.in/,https://npkerakat.in/chair-members.php,domain-pattern guess + DNS + page check,yes (200),also https://npkerakat.in/fellow-members.php
+249451,Khadda,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249348,Khaga,https://npkhaga.in/,https://npkhaga.in/Ward-Member-Detail.pdf,domain-pattern guess + DNS + page check,yes (200),also https://npkhaga.in/contact-us
+249070,Khairragarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300839,Khakhareru,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249538,Khamaria,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249010,Khanpur,https://nagarpanchayatkhanpur.in/,https://nagarpanchayatkhanpur.in/WardList.aspx,domain-pattern guess + DNS + page check,yes (200),"also https://nagarpanchayatkhanpur.in/EO_Msg.aspx, https://nagarpanchayatkhanpur.in/Chairman_msg.aspx"
+249329,Kharela,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249418,Khargupur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248968,Kharkhoda,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://meerut.nic.in/nagar-panchayat-list/
+249183,Kheri,,https://kheri.nic.in/public-utility/nagar-panchayat-kheri/,,,officials_url = district NIC page with body contacts
+249502,Kheta Sarai,,https://jaunpur.nic.in/public-utility/nagar-panchayat-khetasarai/,,,officials_url = district NIC page with body contacts
+300652,Khimsepur,,https://farrukhabad.nic.in/public-utility/khimsepur/,,,officials_url = district NIC page with body contacts
+297756,Khirauni(Suchittaganj),https://npkhirauni.in/,http://localbodies.up.nic.in/pdf/elected-np.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles
+297079,Khiwai,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://meerut.nic.in/nagar-panchayat-list/
+249168,Khudaganj,,https://shahjahanpur.nic.in/public-utility/nagar-panchayat-khudaganj/,,,officials_url = district NIC page with body contacts
+249166,Khutar,,https://shahjahanpur.nic.in/public-utility/nagar-panchayat-khutar/,,,officials_url = district NIC page with body contacts
+249067,Kiraoli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249111,Kishni,http://npkishni.in,https://mainpuri.nic.in/public-utility/nagar-panchayat-kishni/,mainpuri.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+249349,Kishunpur,,https://fatehpur.nic.in/public-utility/nagar-panchayat-kishunpur-fatehpur/,,,officials_url = district NIC page with body contacts
+248963,Kithaur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249405,Koeripur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297042,Kohdaur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249486,Kopaganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249344,Kora Jahanabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249375,Koraon,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249298,Kotra,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249328,Kulpahar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297758,Kumarganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249351,Kunda,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://pratapgarh.nic.in/public-utility-category/municipality/
+248930,Kundarki,https://www.npkundarki.in/,https://www.npkundarki.in/Staff_Members.aspx,domain-pattern guess + DNS + page check,yes (200),"also https://www.npkundarki.in/WardList.aspx, https://www.npkundarki.in/WardList.aspx"
+249127,Kunwargaon,http://npkunwargaon.in/,http://npkunwargaon.in/shabhasad.html,domain-pattern guess + DNS + page check,yes (200),"also http://npkunwargaon.in/officer.html, http://npkunwargaon.in/employee.html"
+249103,Kuraoli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249321,Kurara,,https://hamirpur.nic.in/public-utility/nagar-panchayat-kurara/,,,officials_url = district NIC page with body contacts
+249216,Kursath (Hardoi),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249206,Kursath (Unnao),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+299071,Kurthijafarpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249110,Kusmara,http://npkushmara.in,https://mainpuri.nic.in/public-utility-category/municipality/,mainpuri.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+277531,Laalganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249266,Lakhna,http://nagarpanchayatlakhna.com,https://etawah.nic.in/public-utility/nagar-panchayat-lakhna/,etawah.nic.in public utilities,no (000),officials_url = district NIC page with body contacts
+249242,Lalganj,http://nplalganj.com/,http://localbodies.up.nic.in/pdf/elected-np.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles
+249365,Lal Gopal Ganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,"officials_url = state list of chairs with mobiles; unconfirmed candidate rejected: nplalgopalganj.org shows ""Nagar Panchayat Belha Pratapgarh"""
+297038,Lambhua,https://nplambhua.in/,https://nplambhua.in/member.html,domain-pattern guess + DNS + page check,yes (200),"also https://nplambhua.in/adhikari.html, https://nplambhua.in/chairman.html"
+249466,Lar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://deoria.nic.in/public-utility-category/municipality/
+248957,Lawar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300865,Maa Kamakhya,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249504,Machhlishahr,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300789,Madanpur,,https://deoria.nic.in/public-utility/nagar-panchayat-madanpur/,,,officials_url = district NIC page with body contacts
+249204,Madhoganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249293,Madhogarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+301254,Madhuban,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297033,Madrak,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249434,Maghar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249056,Mahaban,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249239,Maharajganj(Azamgarh),,https://azamgarh.nic.in/public-utility/nagar-panchayat-maharajganj/,,,officials_url = district NIC page with body contacts
+249469,Maharajganj(Raibareilly),,https://raebareli.nic.in/public-utility/nagar-panchayat-maharajganj/,,,officials_url = district NIC page with body contacts
+299027,Mahmoodpur Mafi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249186,Maholi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249231,Mahona,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249320,Mahroni,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+263356,Mahul,,https://azamgarh.nic.in/public-utility/nagar-panchayat-mahul/,,,officials_url = district NIC page with body contacts
+249178,Mailani,,https://kheri.nic.in/public-utility/nagar-panchayat-mailani/,,,officials_url = district NIC page with body contacts
+249464,Majhauliraj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297081,Makkhanpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249230,Malihabad,https://npmalihabad.in/,https://npmalihabad.in/adhikari.html,domain-pattern guess + DNS + page check,yes (200),"also https://npmalihabad.in/chairman.html, https://npmalihabad.in/contact.html"
+248909,Mandawar,https://www.mandawarnp.com/,http://localbodies.up.nic.in/pdf/elected-np.pdf,domain guess,yes (200),officials_url = state list of chairs with mobiles
+300774,Mandhata(Pratapgarh),,https://pratapgarh.nic.in/public-utility/nagar-panchayat-mandhata-bazar/,,,officials_url = district NIC page with body contacts
+249350,Manikpur(Pratapgarh),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249341,Manikpur Sarhat (Chitrakoot),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249494,Maniyar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249423,Mankapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249507,Mariahu,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300510,Martinganj,,https://azamgarh.nic.in/public-utility/nagar-panchayat-martinganj-azamgarh/,,,officials_url = district NIC page with body contacts
+248938,Maswasi,,https://rampur.nic.in/public-utility-category/municipality/,,,officials_url = district NIC page with body contacts
+249333,Mataundh,http://npmataundh.in/,https://npmataundh.in/WebController/Officer,domain-pattern guess + DNS + page check,yes (200),also https://npmataundh.in/WebController/Contactus
+300705,Mathauli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249364,Mau Aima,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+299010,Mau Mustkil,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249227,Maurawan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248903,Meerapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249431,Mehdawal,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249482,Mehnagar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249036,Mendu,https://npmendu.co.in/,https://npmendu.co.in/contact.php,domain-pattern guess + DNS + page check,yes (200),also 
+300930,Mihinpurwa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249141,Mirganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300713,Mirhachi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249490,Mohammadabad (Farrukhabad),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249251,Mohammadabad Gohna,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249220,Mohan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297039,Mohanlalganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249089,Mohanpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249302,Moth,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249447,Mundera Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+298093,Munderwa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249117,Mundia,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249038,Mursan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249401,Musafirkhana,,https://amethi.nic.in/public-utility/nagar-panchayat-musafirkhana/,,,officials_url = district NIC page with body contacts
+297651,Musanagar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249300,Nadigaon,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+298095,Nagar Bazar,https://nagarpanchayatnagarbazar.com/,http://localbodies.up.nic.in/pdf/elected-np.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles
+297083,Nagra,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249237,Nagram,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249534,Nai Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248880,Nanauta,https://www.npnanauta.in/,https://www.npnanauta.in/ContactUs.aspx,domain-pattern guess + DNS + page check,yes (200),
+249042,Nandgaon,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249340,Naraini,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://banda.nic.in/nagar-palika-parishad-nagar-panchayat/
+248936,Narauli,,https://sambhal.nic.in/public-utility/nagar-panchayat-narauli/,,,officials_url = district NIC page with body contacts
+249014,Naraura,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297047,Narpat Nagar Doondawala,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297084,Nasirabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248949,Naugawan Sadat,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://amroha.nic.in/public-utility-category/municipality/
+297735,Nawabganj,,https://farrukhabad.nic.in/public-utility/nagar-panchayat-nawabganj/,,,officials_url = district NIC page with body contacts
+249222,Nawabganj (Unnao),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249437,Nichlaul,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://maharajganj.nic.in/public-utility-category/municipality/
+249100,Nidhauli Kalan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297085,Nighasan,,https://kheri.nic.in/public-utility/nagar-panchayat-nighasan/,,,officials_url = district NIC page with body contacts
+297049,Nigohi,,https://shahjahanpur.nic.in/public-utility/nagar-panchayat-nigohi/,,,officials_url = district NIC page with body contacts
+248978,Niwari,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249478,Nizamabad,http://npnizamabad.in/,http://npnizamabad.in/shabhasad.html,domain-pattern guess + DNS + page check,yes (200),"also http://npnizamabad.in/officer.html, http://npnizamabad.in/employee.html"
+249158,Nyoria Husainpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249221,Nyotini,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249550,Obra,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249184,Oel Dhakwa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249337,Oran,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://banda.nic.in/nagar-palika-parishad-nagar-panchayat/
+249416,Pachperwa,https://pachperwanp.in/,http://localbodies.up.nic.in/pdf/elected-np.pdf,domain guess,yes (200),officials_url = state list of chairs with mobiles
+249016,Pahasu,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249195,Paintepur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297046,Pakadia Naugawa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+290250,Pakbara,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249199,Pali (Hardoi),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249319,Pali (Lalitpur),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297041,Paniyara,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://maharajganj.nic.in/public-utility-category/municipality/
+301245,Paraspur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248962,Parikshitgarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://meerut.nic.in/nagar-panchayat-list/
+249245,Parsadepur,,https://raebareli.nic.in/public-utility/nagar-panchayat-parsadepur/,,,officials_url = district NIC page with body contacts
+297040,Partawal,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://maharajganj.nic.in/public-utility-category/municipality/
+300782,Pathardewa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249091,Patiyali,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248977,Patla,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249356,Patti,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297070,Payagpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248958,Phalauda,https://npphalauda.in/,https://npphalauda.in/ward-details/,domain-pattern guess + DNS + page check,yes (200),"also https://npphalauda.in/executive-officers-message/, https://npphalauda.in/employee-list/"
+249271,Phaphund,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://auraiya.nic.in/nagar-palika-parishad-nagar-panchayat/
+249480,Phoolpur,,https://azamgarh.nic.in/public-utility/nagar-panchayat-phoolpur/,,,officials_url = district NIC page with body contacts
+249368,Phulpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249028,Pilkhana,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249073,Pinahat,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249442,Pipiganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249446,Pipraich,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249553,Pipri,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297045,Pisawa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297086,Poorav Pashchim Shareera,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249354,Pratapgarh City,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297087,Prithviganj,https://npprithviganj.org/,https://npprithviganj.org/contact_us.aspx,domain-pattern guess + DNS + page check,yes (200),
+249034,Purdilnagar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248893,Purquazi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249226,Purwa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249000,Rabupura,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249049,Radhakund,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249094,Raja Ka Rampur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249343,Rajapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300509,Rajesultanpur,,https://ambedkarnagar.nic.in/public-utility/nagarpanchayat-rajesultanpur/,,,officials_url = district NIC page with body contacts
+297037,Rajpur,https://nprajpur.in/,http://localbodies.up.nic.in/pdf/elected-np.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles
+299012,Ramganj (Pratapgarh),,https://pratapgarh.nic.in/public-utility/nagar-panchayat-ramganj/,,,officials_url = district NIC page with body contacts
+249453,Ramkola,https://npramkola.in/,https://npramkola.in/ward-members,domain-pattern guess + DNS + page check,yes (200),also https://npramkola.in/eomsg
+249377,Ramnagar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; unconfirmed candidate rejected: nagarpalikaramnagar.in names no district (Ramnagar Uttarakhand?)
+249291,Rampura,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,"officials_url = state list of chairs with mobiles; unconfirmed candidate rejected: nprampura.in says Nagar Palika Parishad Rampura, no district"
+297088,Rampur (Jaunpur),https://nprampur.in/,https://nprampur.in/sabhasat.html,domain-pattern guess + DNS + page check,yes (200),"also https://nprampur.in/adhikari.html, https://nprampur.in/chairman.html"
+249459,Rampur Karkhana,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248881,Rampur Maniharan,,https://saharanpur.nic.in/public-utility/nagar-panchayat-rampur-maniharan/,,,officials_url = district NIC page with body contacts
+299081,Ram Sanehi Ghat,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+277192,Raniganj,http://npraniganj.com/,http://localbodies.up.nic.in/pdf/elected-np.pdf,domain-pattern guess + DNS + page check,yes (200),officials_url = state list of chairs with mobiles
+249309,Ranipur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297089,Raniya,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+263352,Rasulabaad(Kanpur Dehat),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249219,Rasulabaad(Unnao),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297820,Rataul,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297861,Ratsar Kala,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249047,Raya,,https://mathura.nic.in/public-utility/nagar-panchayat-raya/,,,officials_url = district NIC page with body contacts
+249552,Renukoot,https://nprenukoot.in/,https://nprenukoot.in/ward-members,domain-pattern guess + DNS + page check,yes (200),also https://nprenukoot.in/eomsg
+249500,Reoti,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249137,Richha,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249409,Risia Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249152,Rithora,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249121,Rudayan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+263359,Rudhauli Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249461,Rudrapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300511,Rupaideeha,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249276,Rura,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249039,Sadabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249509,Sadat,,https://ghazipur.nic.in/public-utility/nagar-panchayat-sadat/,,,officials_url = district NIC page with body contacts
+249215,Safipur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248904,Sahanpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248922,Sahaspur,https://www.npsahaspur.co.in/,https://www.npsahaspur.co.in/WardList.aspx,domain-pattern guess + DNS + page check,yes (200),"also https://www.npsahaspur.co.in/EO_Msg.aspx, https://www.npsahaspur.co.in/Chairman_msg.aspx"
+249499,Sahatwar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249087,Sahawar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249443,Sahjanwa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249040,Sahpau,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297714,Said Nagli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249119,Saidpur(Badaun),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249510,Saidpur(Gazipur),,https://ghazipur.nic.in/public-utility/nagar-panchayat-saidpur/,,,officials_url = district NIC page with body contacts
+297090,Saifani,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249153,Sainthal,http://npsainthal.in/,https://npsainthal.in/Web#officials,domain-pattern guess + DNS + page check,yes (200),also https://npsainthal.in/Web/officer
+249521,Saiyad Raja,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249129,Sakhanu,https://www.npsakhanu.in/,https://www.npsakhanu.in/WardList.aspx,domain-pattern guess + DNS + page check,yes (200),also https://www.npsakhanu.in/Chairman_msg.aspx
+249097,Sakit,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249465,Salempur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249246,Salon,https://npsalon.in/,https://npsalon.in/sabhasat.html,domain-pattern guess + DNS + page check,yes (200),"also https://npsalon.in/adhikari.html, https://npsalon.in/chairman.html"
+249253,Samdhan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300651,Sankisa Basantpur,,https://farrukhabad.nic.in/public-utility/sankisa-basantpur/,,,officials_url = district NIC page with body contacts
+249363,Sarai Aquil,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249479,Sarai Mir,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249324,Sarila,,https://hamirpur.nic.in/public-utility/nagar-panchayat-sarila/,,,officials_url = district NIC page with body contacts
+249032,Sasni,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249381,Satrikh,http://npsatrikh.in/,http://npsatrikh.in/page/--1,domain-pattern guess + DNS + page check,yes (200),"also http://npsatrikh.in/page/contact-persons, http://npsatrikh.in/page/employee-list"
+249051,Saunkh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249257,Saurikh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248967,Sewalkhas,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249457,Sewarhi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248944,Shahbad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249143,Shahi,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+301349,Shahjaganpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248898,Shahpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297032,Shamshabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249370,Shankargarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249139,Shergarh,http://npshergarh.in/,https://npshergarh.in/Web/officer,domain-pattern guess + DNS + page check,yes (200),"also https://npshergarh.in/web#officials, https://npshergarh.in/Web/contact"
+249140,Shishgarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300739,Shivgarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249275,Shivli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249283,Shivrajpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249426,Shohratgarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249386,Siddhaur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249196,Sidhauli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249092,Sidhpura,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+263355,Sikandara,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249493,Sikanderpur (Ballia),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249255,Sikanderpur (Kannauj),,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249177,Singahi Bhiraura,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249358,Sirathu,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249146,Sirauli,http://npsirauli.in/,https://npsirauli.in/Web/contact,domain-pattern guess + DNS + page check,yes (200),also 
+249373,Sirsa,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248933,Sirsi,,https://sambhal.nic.in/public-utility/nagar-panchayat-sirsi/,,,officials_url = district NIC page with body contacts
+248896,Sisauli,https://www.npsisauli.in/,https://www.npsisauli.in/WardList.aspx,domain-pattern guess + DNS + page check,yes (200),"also https://www.npsisauli.in/EO_Msg.aspx, https://www.npsisauli.in/Chairman_msg.aspx"
+277139,Sonauli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+253131,Subeha,https://npsubeha.in/,https://npsubeha.in/page/contact-persons,domain-pattern guess + DNS + page check,yes (200),"also https://npsubeha.in/page/employee-list, https://npsubeha.in/contact"
+249412,Sukrauli,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248874,Sultanpur Chilkana,,https://saharanpur.nic.in/public-utility/nagar-panchayat-sultanpur-chilkana/,,,officials_url = district NIC page with body contacts
+249323,Sumerpur,https://npsumerpur.in/,https://npsumerpur.in/employe.html,domain-pattern guess + DNS + page check,yes (200),"also https://npsumerpur.in/executive-officer.html, https://npsumerpur.in/chairman.html"
+249533,Suriyawan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297054,Suwansa Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249061,Swamibagh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249317,Talbehat,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249258,Talgram,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249192,Tambaur Cum Ahmadabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+297036,Tamkuhi Raj,https://nptamkuhiraj.in/,https://nptamkuhiraj.in/shabhasad.html,domain-pattern guess + DNS + page check,yes (200),"also https://nptamkuhiraj.in/Adhikari.html, https://nptamkuhiraj.in/Chairman.html"
+301012,Tarabganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300807,Tarkulwa,,https://deoria.nic.in/public-utility/nagar-panchayat-tarkulwa/,,,officials_url = district NIC page with body contacts
+248891,Thana Bhawan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249151,Thiriya Nizamat Khan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249384,Tikait Nagar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248970,Tikri,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249335,Tindwari,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://banda.nic.in/nagar-palika-parishad-nagar-panchayat/
+249260,Tirwaganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248879,Titron,,https://saharanpur.nic.in/public-utility/nagar-panchayat-titron/,,,officials_url = district NIC page with body contacts
+249307,Tondi Fatehpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249415,Tulsipur,,https://balrampur.nic.in/public-utility/tulsipur-panchayat/,,,officials_url = district NIC page with body contacts
+249214,Ugu,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248953,Ujhari,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; district page lists body: https://amroha.nic.in/public-utility-category/municipality/
+249292,Umri,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248927,Umri Kalan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249244,Unchahar,,https://raebareli.nic.in/public-utility/nagar-panchayat-unchahar/,,,officials_url = district NIC page with body contacts
+248883,Unn,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+300721,Uruwa Bazar,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249133,Usawan,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249134,Usehat,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+257826,Uska Bazar,,https://siddharthnagar.nic.in/public-utility/d-nagar-panchayat-npp-uska-bazar/,,,officials_url = district NIC page with body contacts
+249029,Vijaigarh,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+270654,Walidpur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+248916,Warhapur,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249120,Wazirganj,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles; unconfirmed candidate rejected: nagarpanchayatwazirganj.com names no district (Wazirganj Bihar?)
+297091,Zafrabad,,http://localbodies.up.nic.in/pdf/elected-np.pdf,,,officials_url = state list of chairs with mobiles
+249382,Zaidpur,https://npzaidpur.in/,https://npzaidpur.in/Home/ContactUs,domain-pattern guess + DNS + page check,yes (200),also 

@@ -9842,5 +9842,41 @@
    "source": "search",
    "label": "officials list (PDF) found by search"
   }
+ },
+ {
+  "key": "pdf-2dfcec366960",
+  "payload": {
+   "url": "http://localbodies.up.nic.in/pdf/elected-np.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "search",
+   "label": "officials list (PDF) found by search"
+  }
+ },
+ {
+  "key": "pdf-abc14f7e7948",
+  "payload": {
+   "url": "http://localbodies.up.nic.in/pdf/elected-npp.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "search",
+   "label": "officials list (PDF) found by search"
+  }
+ },
+ {
+  "key": "pdf-746159c9d789",
+  "payload": {
+   "url": "https://npkhaga.in/Ward-Member-Detail.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "search",
+   "label": "officials list (PDF) found by search"
+  }
  }
 ]
