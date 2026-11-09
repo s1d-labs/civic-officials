@@ -1,8 +1,13 @@
 {
-  "family": "example",
-  "about": "Example family: books.toscrape.com (a public site made for scraping practice). Copy this repo and change it.",
-  "setup": ["pip install -r requirements.txt"],
+  "family": "civic-officials",
+  "about": "Officials of Indian districts, cities and departments: Who's Who and directory pages of government sites",
+  "setup": [
+    "pip install -r requirements.txt"
+  ],
   "tasks": {
-    "crawl": ["python", "crawl.py"]
+    "crawl": [
+      "python",
+      "crawl.py"
+    ]
   }
 }
