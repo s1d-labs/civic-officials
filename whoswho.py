@@ -23,6 +23,8 @@ from officials import ajax_rows, candidate_links, common_links, normalise, page_
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
 MAX_PAGES = 20          # pages fetched per site (home page and candidates; AJAX pages are counted apart)
 MAX_AJAX = 300          # ww_pages calls per site
+# A site that fails from a GitHub runner usually refuses foreign IPs: it goes to the -in project (Indian proxies), which retries.
+RETRY = os.environ.get("SCRAPE_POOL_PROJECT", "").endswith("-in")
 stop = False
 
 
@@ -167,7 +169,7 @@ def main():
                 if hub.settings.get("paused"):
                     items = None
                 else:
-                    items = hub.claim(1, steal=True, retry_failed=True)
+                    items = hub.claim(1, steal=True, retry_failed=RETRY)
             if items is None:
                 time.sleep(30)
                 continue
