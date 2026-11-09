@@ -1,0 +1,810 @@
+local_body_code,name,website,officials_url,source,verified_from_india,notes
+276386,Chandigarh,https://mcchandigarh.gov.in/,https://mcchandigarh.gov.in/Directory.aspx,search + check,webs:200 offi:200,emails comm-mcc-chd[at]nic[dot]in
+251096,Ahmadabad,https://ahmedabadcity.gov.in/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:000 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251174,Anand,https://anandmunicipal.com/,https://anandmunicipal.com/contactus,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations; UDD page links anandmc.com (406 from India); live site is Karamsad-Anand MC at anandmunicipal.com
+251165,Bhavnagar,https://bmcgujarat.com/en/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251050,Gandhidham,https://gandhidhamcity.in/,https://gandhidhamcity.in/contactus,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+276440,Gandhinagar,https://gandhinagarmunicipal.com/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:403 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251133,Jamnagar,https://www.mcjamnagar.com/,https://collectorjamnagar.gujarat.gov.in/municipality-detail,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251147,Junagadh,https://junagadhmunicipal.org/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:000 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251068,Mahesana,https://mahesanacity.in/,https://mahesanacity.in/corporators-list,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251118,Morbi,https://mmcgujarat.in/,https://mmcgujarat.in/,search + check,webs:200 offi:200,home page names commissioner and mayor; phones 02822-220551/220552
+251187,Nadiad,https://nadiadnmc.in/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251245,Navsari-Vijalpor,https://nmc.gujarat.gov.in/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:500 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251138,Porbandar,https://porbandarcity.in/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,"UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations; porbandarcity.in shows ""coming soon"""
+251120,Rajkot,https://www.rmc.gov.in/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251231,Surat,https://www.suratmunicipal.gov.in/,https://www.suratmunicipal.gov.in/home/smcofficials,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251114,Surendranagar,https://snmcgujarat.com/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251209,Vadodara,https://vmc.gov.in/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+251264,Vapi,https://vapicity.in/,https://udd.gujarat.gov.in/corporations.php,udd.gujarat.gov.in/corporations.php (+ pattern check),webs:200 offi:200,UDD page: commissioner name + email; mayor/commissioner phones for the 8 old corporations
+253223,Amod,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251157,Amreli,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251046,Anjar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251182,Anklav,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251225,Anklesvar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253147,Babra,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251158,Bagasara,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251184,Balasinor,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251143,Bantwa,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251243,Bardoli,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+277165,Bareja,,https://ahmedabad.nic.in/village-panchayats/,Ahmedabad district NIC page,offi:200,"chief officer name, phone, email (district page)"
+253241,Barwala,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251109,Bavla,,https://ahmedabad.nic.in/village-panchayats/,Ahmedabad district NIC page,offi:200,"chief officer name, phone, email (district page)"
+253127,Bayad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+305191,Bechar-Becharaji,https://becharajinagarpalika.org/,https://becharajinagarpalika.org/about/staff,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+253103,Bhabhar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251045,Bhachau,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251136,Bhanvad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251222,Bharuch,https://bharuchnagarpalika.com/,https://bharuchnagarpalika.com/ContactUs.aspx,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+251123,Bhayavadar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251047,Bhuj,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251251,Bilimora,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+305192,Bodeli,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251172,Boriavi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251180,Borsad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251163,Botad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251188,Chaklasi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251159,Chalala,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251062,Chanasma,https://chanasmanagarpalika.org/,https://chanasmanagarpalika.org/ChiefOfficer.html,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+251211,Chhota-Udepur,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251151,Chorvad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253137,Chotila,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251213,Dabhoi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251199,Dahod,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251190,Dakor,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251156,Damnagar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251057,Deesa,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251088,Dehgam,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251200,Devgadbaria,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251110,Dhandhuka,,https://ahmedabad.nic.in/village-panchayats/,Ahmedabad district NIC page,offi:200,"chief officer name, phone, email (district page)"
+251053,Dhanera,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251261,Dharampur,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+302660,DHARI,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251108,Dholka,,https://ahmedabad.nic.in/village-panchayats/,Ahmedabad district NIC page,offi:200,"chief officer name, phone, email (district page)"
+251125,Dhoraji,https://www.dhorajinagarpalika.org/,https://www.dhorajinagarpalika.org/contact-us,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+251112,Dhrangadhra,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251134,Dhrol,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251129,Dwarka,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251164,Gadhada,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251249,Gandevi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251167,Gariadhar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251193,Godhra,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251122,Gondal,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251196,Halol,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251111,Halvad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251061,Harij,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251074,Himatnagar,https://himatnagarnagarpalika.org/,https://himatnagarnagarpalika.org/Staffs.html,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+251072,Idar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251161,Jafrabad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251219,Jambusar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251137,Jamjodhpur,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251121,Jasdan,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251126,Jetpur Navagadh,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251197,Jhalod,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251194,Kaalol,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251070,Kadi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+276024,Kadodara,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251135,Kalavad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251081,Kalol,https://www.kalolnagarpalika.org/,https://www.kalolnagarpalika.org/ChiefOfficer.aspx,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,"vendor nagarpalika site; title and email match the town; Kalol (Gandhinagar) assumed: email np_kalol@yahoo.co.in, check against Kalol (Panchmahal)"
+253226,Kanajari,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251183,Kapadvanj,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251215,Karjan,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253225,Kathlal,https://kathlalnagarpalika.org/,https://kathlalnagarpalika.org/ChiefOfficer.aspx,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+251149,Keshod,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251131,Khambhalia,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251179,Khambhat,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251186,Kheda,https://khedanagarpalika.com/,https://khedanagarpalika.com/ChiefOfficer.aspx,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+251071,Khedbrahma,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251063,Kheralu,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251153,Kodinar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251142,Kutiyana,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251155,Lathi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251117,Limbdi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251192,Lunawada,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251189,Mahudha,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251170,Mahuva,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253135,Maliya Miyana,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251144,Manavadar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251048,Mandvi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+277169,Mandvi Kachchh,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251150,Mangrol,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251082,Mansa,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251185,Mehmedabad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251077,Modasa,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+297099,Mundra-Baroi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+301161,Nakhatrana,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251173,Ode,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251127,Okha,https://okhanagarpalika.com/,,domain pattern <name>nagarpalika.org/.com checked from India,webs:200,vendor nagarpalika site; title and email match the town
+251214,Padra,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251055,Palanpur,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251168,Palitana,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251262,Pardi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251060,Patan,https://patannagarpalika.org/,https://patannagarpalika.org/#members,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+253138,Patdi,https://www.patdimunicipality.org/,,domain pattern <name>nagarpalika.org/.com checked from India,webs:200,site says under maintenance
+251178,Petlad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251075,Prantij,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251058,Radhanpur,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251216,Rajpipla,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251162,Rajula,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251141,Ranavav,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251044,Rapar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253143,Raval,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251130,Salaya,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251090,Sanand,https://sanandmunicipality.org/,https://sanandmunicipality.org/ChiefOfficer.aspx,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town; chief officer phone/email also on https://ahmedabad.nic.in/village-panchayats/
+251191,Santrampur,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+277167,Saputara,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251160,Savarkundla,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253247,Savli,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+248076,Shahera,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251059,Sidhpur,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251166,Sihor,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251132,Sikka,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253230,Sojitra,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251230,Songadh,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+277171,Sutrapada,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251169,Talaja,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+277170,Talala,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251076,Talod,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+302662,TANKARA,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+305197,Tarapur,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+276026,Tarsadi,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251116,Thangadh,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253164,Thara,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251052,Tharad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253224,Thasra,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251269,Ummargam,https://www.umargamnagarpalika.com/,https://www.umargamnagarpalika.com/contact,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+251171,Umreth,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251154,Una,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251064,Unjha,https://unjhanagarpalika.org/,https://unjhanagarpalika.org/ChiefOfficer.aspx,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+251124,Upleta,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253128,Vadali,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251066,Vadnagar,https://vadnagarnagarpalika.org/,https://vadnagarnagarpalika.org/ChiefOfficer.aspx,domain pattern <name>nagarpalika.org/.com checked from India,webs:200 offi:200,vendor nagarpalika site; title and email match the town
+305196,Vaghodiya,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+253126,Vallabhipur,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251254,Valsad,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251145,Vanthali,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251152,Veraval,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251067,Vijapur,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251089,Viramgam,,https://ahmedabad.nic.in/village-panchayats/,Ahmedabad district NIC page,offi:200,"chief officer name, phone, email (district page)"
+251148,Visavadar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251065,Visnagar,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+251244,Vyara,https://vyaranagarpalika.org/,,domain pattern <name>nagarpalika.org/.com checked from India,webs:200,vendor nagarpalika site; title and email match the town
+251119,Wankaner,,,,,no site found; <name>nagarpalika.org/.com/.in and municipality patterns failed
+248491,Ambala,https://mcambala.in,https://mcambala.in/directory/office-directory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248585,Faridabad,https://mcfaridabad.in/,,domain pattern mc<name>.in checked from India,webs:200,title Municipal Corporation Faridabad
+248576,Gurugram,https://www.mcg.gov.in/,,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200,
+248546,Hisar,,,search,,old state page ulbharyana.gov.in/7622 now redirects to state home; no own site found
+248517,Karnal,https://mckarnal.co.in,https://mckarnal.co.in/office-directory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+297117,Manesar,https://mcmanesar.in/,https://mcmanesar.in/index.php/officers-directory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248489,Panchkula,https://mcpanchkula.in/,,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:999,
+248521,Panipat,https://nagarnigampanipat.in/,,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:406,
+248557,Rohtak,https://mcrohtak.in/,https://mcrohtak.in/index.php/officer-directory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248529,Sonipat,https://mcsonipat.in/,https://mcsonipat.in/officers-directory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248500,Yamunanagar,https://mcynr.com/,https://mcynr.com/directory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+290431,Ambala Sadar,https://mcambalasadar.org/,,domain pattern,webs:999,WebKnight firewall page from India; not confirmed
+248560,Bahadurgarh,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248550,Bhiwani,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248554,Charkhi Dadri,https://mccharkhidadri.in/,https://mccharkhidadri.in/page/officedirectory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248538,Fatehabad,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248527,Gohana,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248548,Hansi,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248589,Hodal,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248562,Jhajjar,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248533,Jind,https://mcjind.in,https://mcjind.in/directory/office-directory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248511,Kaithal,https://mckaithal.in,https://mckaithal.in/directory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248487,Kalka,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248539,Mandi Dabwali,https://ulbsirsa.in/u/mdw/,https://ulbsirsa.in/u/mdw/contact,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248566,Narnaul,https://mcnarnaul.in/,https://mcnarnaul.in/officers-directory,domain pattern mc<name>.in checked from India,webs:200 offi:200,same vendor as state-listed sites; ulbharyana.gov.in email on page
+248531,Narwana,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248581,Nuh,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248586,Palwal,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248573,Pataudi Jatauli Mandi,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248569,Rewari,https://mcrewari.in/,https://mcrewari.in/officers-directory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248526,Samalkha,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248541,Sirsa,https://ulbsirsa.in/u/srs/,,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200,
+248579,Sohna,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248508,Thanesar,https://www.mcthanesar.in,https://www.mcthanesar.in/directory,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248537,Tohana,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248519,Assandh,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248565,Ateli,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+272866,Barara,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248545,Barwala,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248571,Bawal,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248549,Bawani Khera,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248558,Beri,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+262120,Bhuna,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248510,Cheeka,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248568,Dharuhera,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248543,Ellenabad,https://ulbsirsa.in/u/eln/,,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200,
+248574,Farrukhnagar,https://mcfarukhnagar.in,https://mcfarukhnagar.in/directory/elected-members,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200 offi:200,
+248582,Ferozepur Jhirka,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248528,Ganaur,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248520,Gharaunda,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248587,Hathin,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248516,Indri,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+289253,Ismailabad,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+276399,Jakhal Mandi,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248534,Julana,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248556,Kalanaur,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248540,Kalanwali,https://ulbsirsa.in/klw,,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200,
+248512,Kalayat,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248563,Kanina,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248530,Kharkhoda,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+289251,Kundli,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248509,Ladwa,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248553,Loharu,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248564,Mahendragarh,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248555,Meham,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+259688,Nangal Chaudhary,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248490,Naraingarh,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248547,Narnaund,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248514,Nilokheri,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+253296,Nissing,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248507,Pehowa,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248583,Punahana,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248513,Pundri,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+274458,Radaur,https://mcradaur.com/,https://mcradaur.com/webhome/office-directory,domain pattern mc<name>.in checked from India,webs:200 offi:200,same vendor as state-listed sites; ulbharyana.gov.in email on page
+262119,Rajound,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248542,Rania,https://ulbsirsa.in/ran/,,ulbharyana.gov.in/Home/StateMunicipalities (Website of ULBs menu),webs:200,
+248536,Ratia,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+289254,Sadhaura,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248535,Safidon,https://mcsafidon.in/,https://mcsafidon.in/office-directory,domain pattern mc<name>.in checked from India,webs:200 offi:200,same vendor as state-listed sites; ulbharyana.gov.in email on page
+253298,Sampla,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248506,Shahbad,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+299095,Siwan,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248552,Siwani,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248580,Taoru,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248515,Taraori,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248532,Uchana,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248544,Uklanamandi,,,,,not in ulbharyana Website-of-ULBs menu; mc<name>.in/.org/.com/.gov.in checks failed
+248242,Baddi,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248211,Dharamshala,https://edharamshala.in/,,search,webs:000,"edharamshala.in (Dharamshala MC, found by search) did not answer from India on 2026-11-09"
+248229,Hamirpur,https://mchamirpur.com/,https://mchamirpur.com/Web/Contact,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248225,Mandi,https://www.municipalcorporationmandi.in/,,search (Tribune: Mandi MC launches website),webs:200,
+248217,Palampur,https://mcpalampur.in/,https://mcpalampur.in/Web/contact,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248248,Shimla,https://shimlamc.hp.gov.in/,https://shimlamc.hp.gov.in/ContactUs,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248244,Solan,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248233,Una,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+274797,Baijnath-Paprola,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248239,Bilaspur,https://mcbilaspur.com/,https://mcbilaspur.com/Web/contact,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248046,Chamba,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+248044,Dalhousie,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+276626,Dehra,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+248236,Ghumarwin,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248216,Jawalamukhi,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+275535,Jawali,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248222,Jogindarnagar,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+248213,Kangra,https://mckangra.in/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+248219,Kullu,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248218,Manali,https://mcmanali.in/,https://mcmanali.in/web/officers_details,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248234,Mehatpur Basdehra,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+248228,Nadaun,https://mcnadaun.in/,https://mcnadaun.in/Web/Officer,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248214,Nagrota Bagwan,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+248043,Nahan,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+248238,Naina Devi,https://mcnainadevi.in/,https://mcnainadevi.in/Web/Contact,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248241,Nalagarh,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+274794,Nerchowk,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248210,Nurpur,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248045,Paonta Sahib,https://mcpaontasahib.in/,https://mcpaontasahib.in/Web/officers,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248243,Parwanoo,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248245,Rampur,https://mcrampur.in/,https://mcrampur.in/Web/officer,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248253,Rohru,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248235,Santokhgarh,https://mcsantokhgarh.in/,https://mcsantokhgarh.in/Web/Officer,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248223,Sarkaghat,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248224,Sundernagar,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248249,Theog,https://mctheog.in/,https://mctheog.in/Web/Contact,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248227,Tira Sujanpur,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+297009,Amb,https://npamb.in/,https://npamb.in/Web/Officers,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248240,Arki,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+306001,Badsar,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305976,Bangana,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305980,Banikhet,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248221,Banjar,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+305934,Beed,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305995,Bhoranj,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248230,Bhota,https://npbhota.in/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+248220,Bhuntar,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305938,Bladwara,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+297013,Chirgaon,https://npchirgaon.in/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+248250,Chopal,https://npchopal.in/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+276627,Chowari,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+248231,Daulatpur,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305979,Dharampur,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248232,Gagret,https://npgagret.in/,https://npgagret.in/Home/contact,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+305981,Jhandutta,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248251,Jubbal,https://npjubbal.com/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+297010,Kandaghat,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+276625,Karsog,https://npkarsog.in/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+305926,Khundian,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248252,Kotkhai,https://npkotkhai.in/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+305924,Kotla,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305977,Kunihar,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305935,Nagrota Surian,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248246,Narkanda,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+297014,Nerwa,https://npnerwa.com/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+297011,Nirmand,https://npnirmand.in/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+248047,Rajgarh,,,domain pattern,,old mc<name>.in/np<name>.in domain now a gambling site (lapsed); no current site found
+248226,Rawalsar,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305922,Sandhol,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305963,Sangrah,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305930,Sawarghat,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+297015,Shahpur,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+305960,Shillai,,,,,no site found (ud.hp.gov.in down; mc/np<name>.in patterns failed)
+248247,Suni,https://npsuni.in/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+276639,Tahliwal,https://nptahliwal.in/,,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200,
+248237,Talai,https://nptalai.com/,https://nptalai.com/Web/contact,"domain pattern mc<name>.in / np<name>.in checked from India (HP MC-House CMS, links mcslogin.hp.gov.in)",webs:200 offi:200,
+248355,Abohar,https://www.mcabohar.com/,https://mcabohar.punjab.gov.in/Home,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 offi:200,own site listed on lgpunjab ulb-websites page; also state MC-House site https://mcabohar.punjab.gov.in/ (councillor pages /Councilors/...)
+248273,Amritsar,https://mcamritsar.punjab.gov.in/,https://mcamritsar.punjab.gov.in/Home,lgpunjab.gov.in/cms/ulb-websites.php,webs:200 offi:200,own site listed on lgpunjab ulb-websites page; also state MC-House site https://mcamritsar.punjab.gov.in/ (councillor pages /Councilors/...)
+248264,Batala,https://lgpunjab.gov.in/eSewa/batala/,https://mcbatala.punjab.gov.in/Home,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down) offi:200,eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09; also state MC-House site https://mcbatala.punjab.gov.in/ (councillor pages /Councilors/...)
+248367,Bathinda,https://www.mcbathinda.com/,https://www.mcbathinda.com/WhomH.aspx,lgpunjab.gov.in/cms/ulb-websites.php,webs:200 offi:200,own site listed on lgpunjab ulb-websites page; also state MC-House site https://mcbathinda.punjab.gov.in/ (councillor pages /Councilors/...); councillors https://www.mcbathinda.com/Councillors.aspx
+248308,Hoshiarpur,https://mchoshiarpur.punjab.gov.in/,https://mchoshiarpur.punjab.gov.in/Home,pattern mc<name>.punjab.gov.in (MC-House CMS),webs:200 offi:200,councillor list on home page
+248296,Jalandhar,https://mcjalandhar.in/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:406,own site listed on lgpunjab ulb-websites page
+248283,Kapurthala,https://lgpunjab.gov.in/eSewa/kapurthala/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248338,Ludhiana,https://mcludhiana.gov.in/,https://mcludhiana.gov.in/StaffList.aspx,pattern mc<name>.punjab.gov.in (MC-House CMS),webs:200 offi:200,"also CouncilorList.aspx, Mayor.aspx, ContactUs.aspx; state site https://mcludhiana.punjab.gov.in/Home"
+248347,Moga,https://mcmoga.org/Index.aspx,https://mcmoga.punjab.gov.in/Home,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 offi:200,own site listed on lgpunjab ulb-websites page; also state MC-House site https://mcmoga.punjab.gov.in/ (councillor pages /Councilors/...)
+248256,Pathankot,https://lgpunjab.gov.in/eSewa/pathankot/,https://mcpathankot.punjab.gov.in/Home,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down) offi:200,eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09; also state MC-House site https://mcpathankot.punjab.gov.in/ (councillor pages /Councilors/...)
+248399,Patiala,https://mcpatiala.org/,https://mcpatiala.punjab.gov.in/Home,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 offi:200,own site listed on lgpunjab ulb-websites page; also state MC-House site https://mcpatiala.punjab.gov.in/ (councillor pages /Councilors/...)
+248286,Phagwara,https://mcphagwara.punjab.gov.in/,https://mcphagwara.punjab.gov.in/Home,pattern mc<name>.punjab.gov.in (MC-House CMS),webs:200 offi:200,councillor list on home page
+248325,S.A.S.Nagar - Mohali,https://www.mcmohali.punjab.gov.in/,https://mcmohali.punjab.gov.in/Home,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 offi:200,own site listed on lgpunjab ulb-websites page; www.mcmohali.punjab.gov.in did not answer; mcmohali.punjab.gov.in (MC-House) answers
+248294,Adampur,https://lgpunjab.gov.in/eSewa/adampur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248382,Ahmedgarh,https://lgpunjab.gov.in/eSewa/ahmedgarh,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248269,Ajnala,https://lgpunjab.gov.in/eSewa/ajnala/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248295,Alawalpur,https://lgpunjab.gov.in/eSewa/alawalpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248330,Amloh,https://lgpunjab.gov.in/eSewa/amloh/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248317,Anandpur Sahib,https://lgpunjab.gov.in/eSewa/anandpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248315,Balachaur,https://lgpunjab.gov.in/eSewa/balachaur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248312,Banga,https://lgpunjab.gov.in/eSewa/banga/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248404,Banur,https://lgpunjab.gov.in/eSewa/banur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248374,Bareta,https://lgpunjab.gov.in/eSewa/bareta/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248378,Barnala,https://mcbarnala.punjab.gov.in/,https://mcbarnala.punjab.gov.in/Home,pattern mc<name>.punjab.gov.in (MC-House CMS),webs:200 offi:200,councillor list on home page
+248327,Bassi Pathana,https://lgpunjab.gov.in/eSewa/bassipathana,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248377,Bhadaur,https://lgpunjab.gov.in/eSewa/bhadaur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248345,Bhagha Purana,https://lgpunjab.gov.in/eSewa/baghapurana/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248387,Bhawanigarh,https://lgpunjab.gov.in/eSewa/bhawanigarh/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248298,Bhogpur,https://lgpunjab.gov.in/eSewa/bhogpur,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248366,Bhucho Mandi,https://lgpunjab.gov.in/eSewa/bhucho/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248373,Budhlada,https://lgpunjab.gov.in/eSewa/budhlada/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248300,Dasua,https://lgpunjab.gov.in/eSewa/dasuya/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248267,Dera Baba Nanak,https://lgpunjab.gov.in/eSewa/derababananak,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248405,Dera Bassi,https://lgpunjab.gov.in/eSewa/derabassi,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248381,Dhanaula,https://lgpunjab.gov.in/eSewa/dhanaula/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248346,Dharamkot,https://lgpunjab.gov.in/eSewa/dharamkot/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248262,Dhariwal,https://lgpunjab.gov.in/eSewa/dhariwal,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248384,Dhuri,https://lgpunjab.gov.in/eSewa/dhuri/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248259,Dinanagar,https://lgpunjab.gov.in/eSewa/dinanagar/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248337,Doraha,https://lgpunjab.gov.in/eSewa/doraha/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248360,Faridkot,https://lgpunjab.gov.in/eSewa/faridkot,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248263,Fatehgarh Churian,https://www.mcfatehgarhchurian.com/,https://mcfatehgarhchurian.punjab.gov.in/Home,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 offi:200,own site listed on lgpunjab ulb-websites page; also state MC-House site https://mcfatehgarhchurian.punjab.gov.in/ (councillor pages /Councilors/...)
+248354,Fazilka,https://lgpunjab.gov.in/eSewa/fazilka/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248351,Firozpur,https://lgpunjab.gov.in/eSewa/ferozpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248301,Gardhiwala,https://lgpunjab.gov.in/eSewa/garhdiwala/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248311,Garhshankar,https://lgpunjab.gov.in/eSewa/garhshankar,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248357,Giddarbaha,https://lgpunjab.gov.in/eSewa/gidderbaha/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248329,Gobindgarh,https://lgpunjab.gov.in/eSewa/mandigobindgarh,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248364,Goniana,,,,,not on lgpunjab ulb-websites list; pattern checks failed
+248292,Goraya,https://lgpunjab.gov.in/eSewa/goraya/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248260,Gurdaspur,https://lgpunjab.gov.in/eSewa/gurdaspur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248352,Guru Har Sahai,https://lgpunjab.gov.in/eSewa/guruharsahai/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248306,Hariana,https://lgpunjab.gov.in/eSewa/hariana,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248343,Jagraon,https://www.mcjagraon.com/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000,own site listed on lgpunjab ulb-websites page
+248362,Jaitu,https://lgpunjab.gov.in/eSewa/jaitu/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248353,Jalalabad,https://lgpunjab.gov.in/eSewa/jalalabad/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248272,Jandiala Guru,https://lgpunjab.gov.in/eSewa/jandiala/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248299,Kartarpur,https://lgpunjab.gov.in/eSewa/kartarpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248334,Khanna,https://mckhanna.org/index.aspx,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000,own site listed on lgpunjab ulb-websites page
+248324,Kharar,https://lgpunjab.gov.in/eSewa/kharar/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248369,Kot Fatta,https://lgpunjab.gov.in/eSewa/kotfatta/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248361,Kot Kapura,https://lgpunjab.gov.in/eSewa/kotkapura/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248321,Kurali,https://lgpunjab.gov.in/eSewa/kurali/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+277203,Lalru,https://lgpunjab.gov.in/eSewa/lalru,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248391,Lehragaga,https://lgpunjab.gov.in/eSewa/lehragaga/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248385,Longowal,https://lgpunjab.gov.in/eSewa/longowal/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248333,Machhiwara,https://www.mcmachhiwarasahib.com/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000,own site listed on lgpunjab ulb-websites page
+248383,Malerkotla,,,,,not on lgpunjab ulb-websites list; pattern checks failed
+248356,Malout,https://lgpunjab.gov.in/eSewa/malout/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248376,Mansa,https://lgpunjab.gov.in/eSewa/mansa/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248371,Maur,https://lgpunjab.gov.in/eSewa/maur,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248320,Morinda,https://lgpunjab.gov.in/eSewa/morinda/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248303,Mukerian,https://mcmukerian.com/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000,own site listed on lgpunjab ulb-websites page
+248359,Muktsar,https://www.mcmuktsar.punjab.gov.in/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000,own site listed on lgpunjab ulb-websites page
+248340,Mullanpur Dakha,https://lgpunjab.gov.in/eSewa/mullanpurdhaka,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248397,Nabha,https://lgpunjab.gov.in/eSewa/nabha,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248289,Nakodar,https://lgpunjab.gov.in/eSewa/nakodar/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+277196,Nangal,https://lgpunjab.gov.in/eSewa/nangal,https://mcnangal.punjab.gov.in/Home,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down) offi:200,eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09; also state MC-House site https://mcnangal.punjab.gov.in/ (councillor pages /Councilors/...)
+248313,Nawanshahr,https://lgpunjab.gov.in/eSewa/nawanshahr/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+277194,Nayan Gaon,https://lgpunjab.gov.in/eSewa/nayagaon,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248291,Nurmahal,https://lgpunjab.gov.in/eSewa/nurmahal/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248395,Patran,https://lgpunjab.gov.in/eSewa/patran/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248277,Patti,https://lgpunjab.gov.in/eSewa/patti/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248336,Payal,https://lgpunjab.gov.in/eSewa/payal/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248293,Phillaur,https://lgpunjab.gov.in/eSewa/phillaur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248266,Qadian,https://lgpunjab.gov.in/eSewa/qadian/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248314,Rahon,https://lgpunjab.gov.in/eSewa/rahon/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248342,Raikot,https://lgpunjab.gov.in/eSewa/raikot/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248403,Rajpura,https://lgpunjab.gov.in/eSewa/rajpura/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248370,Raman,https://lgpunjab.gov.in/eSewa/raman/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248363,Rampura Phul,https://lgpunjab.gov.in/eSewa/rampuraphul/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248278,Rayya,https://lgpunjab.gov.in/eSewa/rayya/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248319,Rupnagar,https://lgpunjab.gov.in/eSewa/ropar/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248339,Sahnewal,https://lgpunjab.gov.in/eSewa/sahnewal/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248396,Samana,https://lgpunjab.gov.in/eSewa/samana/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248332,Samrala,https://mcsamrala.com/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000,own site listed on lgpunjab ulb-websites page
+248398,Sanaur,https://lgpunjab.gov.in/eSewa/sanour/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248368,Sangat,https://lgpunjab.gov.in/eSewa/sangat,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248386,Sangrur,,,,,not on lgpunjab ulb-websites list; pattern checks failed
+248309,Sham Chaurasi,https://lgpunjab.gov.in/eSewa/shamchaurasi/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248328,Sirhind Fatehgarh Sahib,,,,,not on lgpunjab ulb-websites list; pattern checks failed
+248265,Sri Hargobindpur,https://lgpunjab.gov.in/eSewa/srihargobindpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248254,Sujanpur,https://lgpunjab.gov.in/eSewa/sujanpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248285,Sultanpur Lodhi,https://lgpunjab.gov.in/eSewa/sultanpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248390,Sunam,https://lgpunjab.gov.in/eSewa/sunam/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248350,Talwandi Bhai,https://lgpunjab.gov.in/eSewa/talwandibhai/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248380,Tapa,https://lgpunjab.gov.in/eSewa/tapa,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248274,Tarn-Taran,https://lgpunjab.gov.in/eSewa/tarntaran/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248302,Urmar Tanda,https://lgpunjab.gov.in/eSewa/urmartanda/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248349,Zira,https://lgpunjab.gov.in/eSewa/zira,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248407,Zirakpur,https://lgpunjab.gov.in/eSewa/zirakpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+299458,Adda Devigarh,,,,,not on lgpunjab ulb-websites list; pattern checks failed
+273471,Amargarh,https://lgpunjab.gov.in/eSewa/amargarh/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+277198,Arniwala Shekh Suban,https://lgpunjab.gov.in/eSewa/arnivala,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+299457,Baba Bakala,,,,,not on lgpunjab ulb-websites list; pattern checks failed
+248344,Badhni Kalan,https://lgpunjab.gov.in/eSewa/badhnikalan/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248358,Bariwala,https://lgpunjab.gov.in/eSewa/bariwala,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248280,Begowal,https://lgpunjab.gov.in/eSewa/begowal,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+261762,Bhadson,https://npbhadson.com/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000,own site listed on lgpunjab ulb-websites page
+276562,Bhagta Bhai Ka Nagar Panchayat,https://lgpunjab.gov.in/eSewa/bhagtabhaika,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+260770,Bhai Rupa,https://lgpunjab.gov.in/eSewa/bhairupa/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248375,Bhikhi,https://lgpunjab.gov.in/eSewa/bhikhi/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248275,Bhikhiwind,https://lgpunjab.gov.in/eSewa/bhikhiwind/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248281,Bhulath,https://lgpunjab.gov.in/eSewa/bholath/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+277200,Bilga,https://lgpunjab.gov.in/eSewa/bilga/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+277199,Boha,https://lgpunjab.gov.in/eSewa/boha/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+261450,Chamkaur Sahib,https://lgpunjab.gov.in/eSewa/chamkaursahib,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248388,Cheema,https://lgpunjab.gov.in/eSewa/cheema/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248282,Dhilwan,https://lgpunjab.gov.in/eSewa/dhilwan/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248389,Dirba,https://lgpunjab.gov.in/eSewa/dirba/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+276647,Fatehgarh Panjtoor,https://lgpunjab.gov.in/eSewa/fatehgarhpanjtoor/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248394,Ghagga,https://lgpunjab.gov.in/eSewa/ghagga/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248402,Ghanaur,https://lgpunjab.gov.in/eSewa/ghanaur,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+299456,Gharuan,,,,,not on lgpunjab ulb-websites list; pattern checks failed
+248379,Handiaya,https://lgpunjab.gov.in/eSewa/handiaya,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+262906,Joga,https://lgpunjab.gov.in/eSewa/joga/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248331,Khamanon,,,,,not on lgpunjab ulb-websites list; pattern checks failed
+248393,Khanauri,https://lgpunjab.gov.in/eSewa/khanauri/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248276,Khemkaran,https://lgpunjab.gov.in/eSewa/khemkaran/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+261446,Kiratpur Sahib,https://lgpunjab.gov.in/eSewa/kiratpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+260780,Kotha Guru,https://lgpunjab.gov.in/eSewa/kothaguru,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+262989,Kot Ise Khan,https://lgpunjab.gov.in/eSewa/kotisekhan/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+260782,Kot Shamir,https://lgpunjab.gov.in/eSewa/kotshamir,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+260778,Lehra Mohabat,https://lgpunjab.gov.in/eSewa/lehramohabbat/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248287,Lohian Khas,https://lgpunjab.gov.in/eSewa/lohiankhas/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248310,Mahilpur,https://lgpunjab.gov.in/eSewa/mahilpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248271,Majitha,https://lgpunjab.gov.in/eSewa/majitha/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248348,Makhu,https://lgpunjab.gov.in/eSewa/makhu/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+253222,Mallanwala,https://lgpunjab.gov.in/eSewa/mallanwala/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248335,Maloud,https://lgpunjab.gov.in/eSewa/maloud/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+260781,Maluka,https://lgpunjab.gov.in/eSewa/maluka/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+277197,Mamdot,https://lgpunjab.gov.in/eSewa/mamdot/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+277201,Mehatpur,https://lgpunjab.gov.in/eSewa/mehatpur/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+260771,Mehraj,https://lgpunjab.gov.in/eSewa/mehraj/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248392,Moonak,https://lgpunjab.gov.in/eSewa/moonak/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+253122,Mudki,https://lgpunjab.gov.in/eSewa/mudki/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+274218,Nadala,https://lgpunjab.gov.in/eSewa/nadala,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+260779,Nathana,https://lgpunjab.gov.in/eSewa/nathana/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+262988,Nihal Singh Wala,https://lgpunjab.gov.in/eSewa/nihalsinghwala,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+277202,Norat Jamal Singh,https://lgpunjab.gov.in/eSewa/narotjaimalsingh/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248270,Raja Sansi,https://lgpunjab.gov.in/eSewa/rajasansi/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248268,Ramdas,https://lgpunjab.gov.in/eSewa/ramdass/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248372,Sardulgarh,https://lgpunjab.gov.in/eSewa/sardulgarh/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248288,Shahkot,https://lgpunjab.gov.in/eSewa/shahkot/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+253124,Talwandi Sabo,https://lgpunjab.gov.in/eSewa/talwandisabo/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248305,Talwara,https://lgpunjab.gov.in/eSewa/talwara/,,lgpunjab.gov.in/cms/ulb-websites.php,webs:000 (server down),eSewa site; lgpunjab.gov.in returned HTTP 500 on 2026-11-09
+248788,Ajmer,https://lsg.rajasthan.gov.in/mcajmer/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=199
+248699,Alwar,https://lsg.rajasthan.gov.in/ulbalwar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=916
+248708,Bharatpur,https://lsg.rajasthan.gov.in/mcbharatpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=200
+248812,Bhilwara,https://lsg.rajasthan.gov.in/ulbbhilwara/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=914
+248667,Bikaner,https://lsg.rajasthan.gov.in/mcbikaner/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=201
+303088,Jaipur,https://lsg.rajasthan.gov.in/mcjaipurheritage/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=202; LGD Jaipur maps to two corporations: Jaipur Heritage (this) and Jaipur Greater
+303089,Jodhpur,https://lsg.rajasthan.gov.in/nnjodhpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=203; Jodhpur also has mcjn (Jodhpur North) vdir
+303090,Kota,https://lsg.rajasthan.gov.in/mckota/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=204; Kota also has mckotanorth vdir
+248778,Pali,https://lsg.rajasthan.gov.in/ulbpali/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=926
+248822,Udaipur,https://lsg.rajasthan.gov.in/mcudaipur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=205
+248774,Abu Road,https://lsg.rajasthan.gov.in/ulbaburoad/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=673
+301405,Ahore,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+299977,Ajeetgarh,https://lsg.rajasthan.gov.in/ulbajitgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1133
+248865,Aklera,https://lsg.rajasthan.gov.in/ulbaklera/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=521
+301433,Akola,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248817,Amet,https://lsg.rajasthan.gov.in/ulbaamet/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=628
+248857,Anta,https://lsg.rajasthan.gov.in/ulbanta/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=605
+248656,Anupgarh,https://lsg.rajasthan.gov.in/ulbanoopgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=612
+302889,Arnod,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248808,Asind,https://lsg.rajasthan.gov.in/ulbaasind/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=558
+296934,Atru,https://lsg.rajasthan.gov.in/ulbatru/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1142
+248684,Baggar,https://lsg.rajasthan.gov.in/ulbbaggar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=762
+248735,Bagru,https://lsg.rajasthan.gov.in/ulbbagru/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=705
+300344,Bahadurpur,https://lsg.rajasthan.gov.in/ulbbahadurpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1121
+299784,Balesar Satta,https://lsg.rajasthan.gov.in/ulbbalesarsatta/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1136
+248785,Bali,https://lsg.rajasthan.gov.in/ulbbali/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=684
+248765,Balotra,https://lsg.rajasthan.gov.in/ulbbalotra/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=936
+296936,Bamanwas,https://lsg.rajasthan.gov.in/ulbbamanwas/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1106
+248722,Bandikui,https://lsg.rajasthan.gov.in/ulbbandikui/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=758
+302924,Banera,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+296923,Bansur,https://lsg.rajasthan.gov.in/ulbbansur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1114
+248835,Banswara,https://lsg.rajasthan.gov.in/ulbbanswara/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=928
+301412,Bap,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248858,Baran,https://lsg.rajasthan.gov.in/ulbbaran/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=932
+299974,Bardod,https://lsg.rajasthan.gov.in/ulbbardod/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1117
+248712,Bari,https://lsg.rajasthan.gov.in/ulbbari/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=710
+248843,Bari Sadri,https://lsg.rajasthan.gov.in/ulbbadisadri/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=641
+248766,Barmer,https://lsg.rajasthan.gov.in/ulbbarmer/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=925
+300347,Baroda Meo,https://lsg.rajasthan.gov.in/ulbbardomev/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1120
+296931,Baseri,https://lsg.rajasthan.gov.in/ulbbaseri/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1104
+299976,Basni,https://lsg.rajasthan.gov.in/ulbbasni/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1098
+296925,Bassi,https://lsg.rajasthan.gov.in/ulbbassi/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1131
+301411,Baswa,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248711,Bayana,https://lsg.rajasthan.gov.in/ulbbayana/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=731
+248790,Beawar,https://lsg.rajasthan.gov.in/ulbbeawar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=912
+248837,Begun,https://lsg.rajasthan.gov.in/ulbbegun/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=635
+248694,Behror,https://lsg.rajasthan.gov.in/ulbbehror/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=751
+248666,Bhadra,https://lsg.rajasthan.gov.in/ulbbhadra/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=659
+301435,Bhandarej,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248867,Bhawani Mandi,https://lsg.rajasthan.gov.in/ulbbhawanimandi/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=525
+301436,Bhim,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248823,Bhinder,https://lsg.rajasthan.gov.in/ulbbhinder/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=654
+248768,Bhinmal,https://lsg.rajasthan.gov.in/ulbbhinmal/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=694
+248695,Bhiwadi,https://lsg.rajasthan.gov.in/ulbbhiwadi/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=935
+296924,Bhopalgarh,https://lsg.rajasthan.gov.in/ulbbhopalgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1139
+248709,Bhusawar,https://lsg.rajasthan.gov.in/ulbbhusawar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=713
+248678,Bidasar,https://lsg.rajasthan.gov.in/ulbbidasar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=595
+302998,Bigod,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301915,Bijoliya,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248762,Bilara,https://lsg.rajasthan.gov.in/ulbbilara/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=697
+248681,Bissau,https://lsg.rajasthan.gov.in/ulbbissau/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=764
+299825,Bonli,https://lsg.rajasthan.gov.in/ulbbolli/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1100
+299534,Borawar,https://lsg.rajasthan.gov.in/ulbborawar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1097
+302876,Buhana,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248806,Bundi,https://lsg.rajasthan.gov.in/ulbbundi/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=937
+248737,Chaksu,https://lsg.rajasthan.gov.in/ulbchaksu/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=671
+248860,Chhabra,https://lsg.rajasthan.gov.in/ulbchhabra/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=599
+248679,Chhapar,https://lsg.rajasthan.gov.in/ulbchhapar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=593
+248842,Chhoti Sadri,https://lsg.rajasthan.gov.in/ulbchotisadri/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=622
+248687,Chirawa,https://lsg.rajasthan.gov.in/ulbchirawa/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=766
+248839,Chittorgarh,https://lsg.rajasthan.gov.in/ulbchittorgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=929
+302181,Chohtan,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248730,Chomu,https://lsg.rajasthan.gov.in/ulbchomu/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=667
+248673,Churu,https://lsg.rajasthan.gov.in/ulbchuru/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=915
+302855,Dag,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+299941,Danta,https://lsg.rajasthan.gov.in/ulbdanta/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1132
+248725,Dausa,https://lsg.rajasthan.gov.in/ulbdausa/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=917
+248705,Deeg,https://lsg.rajasthan.gov.in/ulbdeeg/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=730
+277231,Degana,https://lsg.rajasthan.gov.in/ulbdegana/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=572
+301414,Dei,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248816,Deogarh,https://lsg.rajasthan.gov.in/ulbdeogarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=624
+248799,Deoli,https://lsg.rajasthan.gov.in/ulbdeoli/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=574
+248668,Deshnoke,https://lsg.rajasthan.gov.in/ulbdeshnok/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=587
+299942,Dhariawad,https://lsg.rajasthan.gov.in/ulbdhariyawad/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1145
+248713,Dhaulpur,https://lsg.rajasthan.gov.in/ulbdholpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=920
+302255,Dhod,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+302257,Dhorimanna,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248748,Didwana,https://lsg.rajasthan.gov.in/ulbdidwana/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=562
+301914,Diggi,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301439,Dooni,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301438,Dudu,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301913,Dundlod,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248831,Dungarpur,https://lsg.rajasthan.gov.in/ulbdungarpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1093
+248784,Falna,https://lsg.rajasthan.gov.in/ulbkhudalafalnast/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=679
+248821,Fatehnagar,https://lsg.rajasthan.gov.in/ulbfatehnagar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=660
+248739,Fatehpur,https://lsg.rajasthan.gov.in/ulbfatehpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=743
+301440,Fhagi,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248654,Gajsinghpur,https://lsg.rajasthan.gov.in/ulbgajsinghpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=614
+248811,Gangapur,https://lsg.rajasthan.gov.in/ulbgangapur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=551
+248718,Gangapur City,https://lsg.rajasthan.gov.in/ulbgangapurcity/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=924
+302263,Gharsana,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301442,Goluwala,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+299536,Govindgarh,https://lsg.rajasthan.gov.in/ulbgovindgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1115
+302204,Gudhamalani,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248809,Gulabpura,https://lsg.rajasthan.gov.in/ulbgulabpura/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=550
+299936,Hameergarh,https://lsg.rajasthan.gov.in/ulbhammirgadh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1095
+248662,Hanumangarh,https://lsg.rajasthan.gov.in/ulbhanumangarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=939
+248716,Hindaun City,https://lsg.rajasthan.gov.in/ulbhindauncity/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=922
+303112,Hindoli,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248802,Indragarh,https://lsg.rajasthan.gov.in/ulbindragarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=530
+263007,Itawa,https://lsg.rajasthan.gov.in/ulbitawa/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=608
+248813,Jahazpur,https://lsg.rajasthan.gov.in/ulbjahazpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=553
+248763,Jaisalmer,https://lsg.rajasthan.gov.in/ulbjaisalmer/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=940
+248775,Jaitaran,https://lsg.rajasthan.gov.in/ulbjaitaran/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=685
+301912,Jakhal,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248767,Jalore,https://lsg.rajasthan.gov.in/ulbjalore/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1092
+301911,Jamwa Ramgarh,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+302984,Jasol,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+299764,Jayal,https://lsg.rajasthan.gov.in/ulbjayal/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1096
+248862,Jhalawar,https://lsg.rajasthan.gov.in/ulbjhalawar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=933
+248863,Jhalrapatan,https://lsg.rajasthan.gov.in/ulbjhalarapatan/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=524
+248683,Jhunjhunun,https://lsg.rajasthan.gov.in/ulbjhunjhunu/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=918
+248732,Jobner,https://lsg.rajasthan.gov.in/ulbjobner/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=678
+302800,Kaladera,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248703,Kaman,https://lsg.rajasthan.gov.in/ulbkaman/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=724
+248824,Kanor,https://lsg.rajasthan.gov.in/ulbkanore/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=646
+302921,Kanota,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248840,Kapasan,https://lsg.rajasthan.gov.in/ulbkapasan/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=637
+248804,Kaprain,https://lsg.rajasthan.gov.in/ulbkapren/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=531
+248717,Karauli,https://lsg.rajasthan.gov.in/ulbkarauli/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=921
+301415,Kathumar,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248793,Kekri,https://lsg.rajasthan.gov.in/ulbkekri/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=540
+248805,Keshoraipatan,https://lsg.rajasthan.gov.in/ulbkeshoraipatan/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=592
+248649,Kesrisinghpur,https://lsg.rajasthan.gov.in/ulbkesarisinghpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=636
+248698,Khairthal-Tijara,https://lsg.rajasthan.gov.in/ulbkherthal/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=714; LGD name Khairthal-Tijara mapped to Khairthal vdir (check)
+299753,Khajuwala,https://lsg.rajasthan.gov.in/ulbkhajuwala/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1107
+302262,Khandar,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248743,Khandela,https://lsg.rajasthan.gov.in/ulbkhandela/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=738
+302856,Khanpur,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+302919,Khatu Khurd,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+277601,Khatushyamji,https://lsg.rajasthan.gov.in/ulbkhatushyamji/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1130
+302813,Khejroli,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248702,Kherli,https://lsg.rajasthan.gov.in/ulbkherli/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=719
+248690,Khetri,https://lsg.rajasthan.gov.in/ulbkhetri/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=757
+248786,Kishangarh,https://lsg.rajasthan.gov.in/ulbkishangarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=913
+277233,Kishangarhbas,https://lsg.rajasthan.gov.in/ulbkishangarhbas/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=755
+248731,Kishangarh Renwal,https://lsg.rajasthan.gov.in/ulbkishangarhrenwal/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=704
+299535,Kotkasim,https://lsg.rajasthan.gov.in/ulbkotkasim/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1116
+248727,Kotputli,https://lsg.rajasthan.gov.in/ulbkothputali/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=675
+248757,Kuchaman City,https://lsg.rajasthan.gov.in/ulbkuchamancity/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=563
+248752,Kuchera,https://lsg.rajasthan.gov.in/ulbkuchera/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=565
+248707,Kumher,https://lsg.rajasthan.gov.in/ulbkumher/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=717
+248836,Kushalgarh,https://lsg.rajasthan.gov.in/ulbkushalgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1143
+248740,Lachhmangarh,https://lsg.rajasthan.gov.in/ulblaxmangarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=742
+248747,Ladnu,https://lsg.rajasthan.gov.in/ulbladnun/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=560
+248803,Lakheri,https://lsg.rajasthan.gov.in/ulblakheri/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=594
+248726,Lalsot,https://lsg.rajasthan.gov.in/ulblalsot/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=761
+301909,Lambaharising,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301406,Lawan,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+296915,Laxmangarh (Alwar),https://lsg.rajasthan.gov.in/ulblaxmangarhalwar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1112
+248742,Losal,https://lsg.rajasthan.gov.in/ulblosal/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=733
+302182,Lunkaransar,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+275691,Mahwa,https://lsg.rajasthan.gov.in/ulbmahwa/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1123
+248756,Makrana,https://lsg.rajasthan.gov.in/ulbmakrana/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=942
+301407,Malakheda,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248794,Malpura,https://lsg.rajasthan.gov.in/ulbmalpura/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=578
+302612,Malsisar,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248814,Mandalgarh,https://lsg.rajasthan.gov.in/ulbmandalgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=555
+302890,Mandar,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248682,Mandawa,https://lsg.rajasthan.gov.in/ulbmandawa/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=754
+299765,Mandawar,https://lsg.rajasthan.gov.in/ulbmandawar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1125
+296926,Mandawari,https://lsg.rajasthan.gov.in/ulbmandawari/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1126
+302222,Mandhan,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301413,Mandrayal,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+302801,Mandrela,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248856,Mangrol,https://lsg.rajasthan.gov.in/ulbmangrol/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=597
+302896,Maniyan,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+300350,Manoharpur,https://lsg.rajasthan.gov.in/ulbmanoharpura/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1129
+302858,Manoharthana,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+300322,Marwar Junction,https://lsg.rajasthan.gov.in/ulbmarwarjunction/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1138
+302261,Masuda,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+302802,Mathaniya,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301445,Mawali,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248753,Merta City,https://lsg.rajasthan.gov.in/ulbmertacity/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=561
+301906,Mertaroad,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248773,Mount Abu,https://lsg.rajasthan.gov.in/ulbmountabu/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=510
+248691,Mukandgarh,https://lsg.rajasthan.gov.in/ulbmukundgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=750
+301461,Mundawar,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248751,Mundwa,https://lsg.rajasthan.gov.in/ulbmundwa/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=569
+248706,Nadbai,https://lsg.rajasthan.gov.in/ulbnadbai/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=721
+248704,Nagar,https://lsg.rajasthan.gov.in/ulbnagar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=711
+248749,Nagaur,https://lsg.rajasthan.gov.in/ulbnagaur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=941
+248801,Nainwa,https://lsg.rajasthan.gov.in/ulbnainwa/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=533
+302180,Napasar,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+300321,Narayana,https://lsg.rajasthan.gov.in/ulbnaraina/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1128
+301905,Narayanpur,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+277232,Nasirabad,https://lsg.rajasthan.gov.in/ulbnasirabad/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1094
+248820,Nathdwara,https://lsg.rajasthan.gov.in/ulbnathdwara/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=626
+301446,Nauganwa,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248758,Nawa,https://lsg.rajasthan.gov.in/ulbnawacity/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=568
+248692,Nawalgarh,https://lsg.rajasthan.gov.in/ulbnawalgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=769
+248746,Neem-Ka-Thana,https://lsg.rajasthan.gov.in/ulbneemkathana/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=736
+299935,Neemrana,https://lsg.rajasthan.gov.in/ulbneemrana/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1119
+248841,Nimbahera,https://lsg.rajasthan.gov.in/ulbnimbahera/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=644
+248796,Niwai,https://lsg.rajasthan.gov.in/ulbniwai/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=577
+248665,Nohar,https://lsg.rajasthan.gov.in/ulbnohar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=651
+248669,Nokha,https://lsg.rajasthan.gov.in/ulbnokha/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=584
+248653,Padampur,https://lsg.rajasthan.gov.in/ulbpadampur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=616
+302206,Pahari,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+302948,Palsana,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+296922,Paota-Pragpura,https://lsg.rajasthan.gov.in/ulbpaotapragpura/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1127
+248755,Parbatsar,https://lsg.rajasthan.gov.in/ulbparbatsar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=564
+277602,Partapur -Garhi,https://lsg.rajasthan.gov.in/ulbpartapurgarhi/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1144
+302259,Peeplu,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248759,Phalodi,https://lsg.rajasthan.gov.in/ulbphalodi/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=703
+248734,Phulera,https://lsg.rajasthan.gov.in/ulbphulera/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=696
+248685,Pilani,https://lsg.rajasthan.gov.in/ulbpilani/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=747
+248663,Pilibanga,https://lsg.rajasthan.gov.in/ulbpilibanga/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=661
+277234,Pindwara,https://lsg.rajasthan.gov.in/ulbpindwara/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=665
+248761,Pipar City,https://lsg.rajasthan.gov.in/ulbpiparcity/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=700
+248868,Pirawa,https://lsg.rajasthan.gov.in/ulbpirawa/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=523
+302909,Pisangan,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248764,Pokaran,https://lsg.rajasthan.gov.in/ulbpokhran/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=695
+248844,Pratapgarh,https://lsg.rajasthan.gov.in/ulbpratapgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=931
+248787,Pushkar,https://lsg.rajasthan.gov.in/ulbpushkar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=542
+302860,Raipur,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248655,Raisinghnagar,https://lsg.rajasthan.gov.in/ulbraisinghnagar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=611
+248714,Rajakhera,https://lsg.rajasthan.gov.in/ulbrajakheda/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=709
+248677,Rajaldesar,https://lsg.rajasthan.gov.in/ulbrajaldesar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=596
+248671,Rajgarh (Alwar),https://lsg.rajasthan.gov.in/ulbrajgarhalwar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1111
+248700,Rajgarh(Churu),https://lsg.rajasthan.gov.in/ulbrajgarhchuru/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=591
+248818,Rajsamand,https://lsg.rajasthan.gov.in/ulbrajsamand/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=930
+248851,Ramganj Mandi,https://lsg.rajasthan.gov.in/ulbramganjmandi/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=618
+248738,Ramgarh,https://lsg.rajasthan.gov.in/ulbramgarhshekhawati/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=741
+296916,Ramgarh (Alwar),https://lsg.rajasthan.gov.in/ulbramgarhalwar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1113
+301410,Ramgarh Pachwara,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248780,Rani,https://lsg.rajasthan.gov.in/ulbranikhurd/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=674
+248676,Ratangarh,https://lsg.rajasthan.gov.in/ulbratangarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=588
+248674,Ratannagar,https://lsg.rajasthan.gov.in/ulbratannagar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=604
+248838,Rawatbhata,https://lsg.rajasthan.gov.in/ulbrawatbhata/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=632
+248664,Rawatsar,https://lsg.rajasthan.gov.in/ulbrawatsar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=664
+248745,Reengus,https://lsg.rajasthan.gov.in/ulbringus/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=734
+302942,Riyan Bari,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+263008,Roopbas,https://lsg.rajasthan.gov.in/ulbroopwas/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=507
+248781,Sadri,https://lsg.rajasthan.gov.in/ulbsadri/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=682
+248652,Sadulshahar,https://lsg.rajasthan.gov.in/ulbsadulshahar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=638
+248832,Sagwara,https://lsg.rajasthan.gov.in/ulbsagwara/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=630
+302861,Sahwa,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+302862,Saipau,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248826,Salumbar,https://lsg.rajasthan.gov.in/ulbsalumber/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=657
+302863,Samadari,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248733,Sambhar,https://lsg.rajasthan.gov.in/ulbsambhar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=670
+248769,Sanchore,https://lsg.rajasthan.gov.in/ulbsanchore/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=692
+248661,Sangaria,https://lsg.rajasthan.gov.in/ulbsangariya/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=655
+248855,Sangod,https://lsg.rajasthan.gov.in/ulbsangod/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=613
+296932,Sapotra,https://lsg.rajasthan.gov.in/ulbsapotra/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1105
+248672,Sardarshahar,https://lsg.rajasthan.gov.in/ulbsardarshahar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=590
+296930,Sarmathura,https://lsg.rajasthan.gov.in/ulbsirmathura/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1103
+248792,Sarwar,https://lsg.rajasthan.gov.in/ulbsarwar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=544
+248720,Sawai Madhopur,https://lsg.rajasthan.gov.in/ulbsawaimadhopur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=923
+301417,Sawar,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+302254,Sayla,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301460,Seeswali,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248729,Shahpura,https://lsg.rajasthan.gov.in/ulbshahpura/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=701
+277235,Shahpura..(Bhilwara),https://lsg.rajasthan.gov.in/ulbbhilwarashahpura/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=548
+248770,Sheoganj,https://lsg.rajasthan.gov.in/ulbsheoganj/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=668
+248741,Sikar,https://lsg.rajasthan.gov.in/ulbsikar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=919
+301451,Sikaray,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+298995,Sikri,https://lsg.rajasthan.gov.in/ulbsikri/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1101
+303111,Sindhari,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301409,Singhana,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248771,Sirohi,https://lsg.rajasthan.gov.in/ulbsirohi/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=927
+299757,Siwana,https://lsg.rajasthan.gov.in/ulbsiwana/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1134
+248776,Sojat,https://lsg.rajasthan.gov.in/ulbsojatcity/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=688
+302249,Sojat Road,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248675,Sri Dungargarh,https://lsg.rajasthan.gov.in/ulbshridungargarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=585
+248651,Sri Ganganagar,https://lsg.rajasthan.gov.in/ulbsriganganagar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=943
+248650,Srikaranpur,https://lsg.rajasthan.gov.in/ulbsrikarnpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=642
+248744,Sri Madhopur,https://lsg.rajasthan.gov.in/ulbshrimadhopur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=739
+248658,Srivijainagar,https://lsg.rajasthan.gov.in/ulbshrivijaynagar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=648
+248680,Sujangarh,https://lsg.rajasthan.gov.in/ulbsujangarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=938
+301453,Suket,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+302258,Sultana,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+296933,Sultanpur,https://lsg.rajasthan.gov.in/ulbsultanpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1141
+248783,Sumerpur,https://lsg.rajasthan.gov.in/ulbsumerpur/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=690
+248688,Surajgarh,https://lsg.rajasthan.gov.in/ulbsurajgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=749
+248660,Suratgarh,https://lsg.rajasthan.gov.in/ulbsuratgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=645
+302962,Suroth,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248782,Takhatgarh,https://lsg.rajasthan.gov.in/ulbtakhatgarh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=683
+301901,Tantoti,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+299934,Tapukara,https://lsg.rajasthan.gov.in/ulbtapokada/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1118
+248670,Taranagar,https://lsg.rajasthan.gov.in/ulbtaranagar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=606
+290432,Thanagaji,https://lsg.rajasthan.gov.in/ulbthanagaji/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1122
+299937,Tibbi,https://lsg.rajasthan.gov.in/ulbtibbi/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1108
+248696,Tijara,https://lsg.rajasthan.gov.in/ulbtijara/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=725
+302253,Tinwari,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248715,Todabhim,https://lsg.rajasthan.gov.in/ulbtodabhim/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=707
+248798,Todaraisingh,https://lsg.rajasthan.gov.in/ulbtodaraisingh/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=580
+248797,Tonk,https://lsg.rajasthan.gov.in/ulbtonk/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=934
+298994,Uchchain,https://lsg.rajasthan.gov.in/ulbujjchain/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=1102
+248693,Udaipurwati,https://lsg.rajasthan.gov.in/ulbudaipurvati/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=745
+248800,Uniara,https://lsg.rajasthan.gov.in/ulbuniara/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=582
+301454,Vajirpur,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301408,Vallabhnagar,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+301455,Vatika,,,,,not in lsg.rajasthan.gov.in vdir list (likely a new body); not found
+248686,Vidyavihar,https://lsg.rajasthan.gov.in/ulbvidhyavihar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=744
+248791,Vijainagar,https://lsg.rajasthan.gov.in/ulbvijaynagar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=547
+248728,Viratnagar,https://lsg.rajasthan.gov.in/ulbviratnagar/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=698
+248710,Weir,https://lsg.rajasthan.gov.in/ulbweir/,,lsg.rajasthan.gov.in vdir list (rajasthan-ulb-sites.tsv),webs:200 (shell page; answers 200 for any vdir),Angular site; officials data from /webapi/ by deptCode=718

@@ -1,0 +1,18 @@
+local_body_code,name,website,officials_url,source,verified_from_india,notes
+249062,Agra,https://nagarnigamagra.com/,http://localbodies.up.nic.in/listnn.htm,localbodies.up.nic.in listnn.htm,yes (200),site has /contact/ only; listnn gives mayor+commissioner phones+email; short UA gets 406
+249025,Aligarh,https://nnaligarh.in/,http://localbodies.up.nic.in/listnn.htm,localbodies.up.nic.in listnn.htm,yes (302 to /ASCL/CitizenHome.html),JS app; officials from listnn
+249391,Ayodhya,http://www.nagarnigamayodhya.in/,http://localbodies.up.nic.in/listnn.htm,localbodies.up.nic.in listnn.htm,yes (200),JS-only homepage; officials from listnn
+249149,Bareilly,https://nagarnigambareilly.com/,https://nagarnigambareilly.com/mohalla-wards-covered-by-npp-bareilly.php,localbodies.up.nic.in listnn.htm + site menu,yes (200),also jan-suchna-adhikari.php; listnn for mayor/commissioner
+249079,Firozabad,http://firozabadnagarnigam.com/,http://firozabadnagarnigam.com/Parshads.aspx,localbodies.up.nic.in listnn.htm + site menu,yes (200),parshad list on site; listnn for mayor/commissioner
+248988,Ghaziabad,https://ghaziabadnagarnigam.in/,https://ghaziabadnagarnigam.in/parshad-list.aspx,localbodies.up.nic.in listnn.htm + site menu,yes (200),also staffList.aspx and assets/pdf/OFFICER%27s%20CONTACT%2011-10-2023.pdf
+249444,Gorakhpur,https://nagarnigamgkp.org/,http://localbodies.up.nic.in/listnn.htm,localbodies.up.nic.in listnn.htm,yes (200),JS-only homepage; officials from listnn
+249314,Jhansi,https://jnnjhansi.com/,http://www.jnnjhansi.com/corporators/index.php,localbodies.up.nic.in listnn.htm + site menu,yes (200),also /docs/Mayor Parshad.pdf and contactus.php
+249286,Kanpur,https://kmc.up.nic.in/,https://kmc.up.nic.in/english/key-contacts.html,listnn.htm + web search,no (timeout from vpsin),key-contacts has name/designation/mobile/mail
+249234,Lucknow,https://lmc.up.nic.in/,https://lmc.up.nic.in/pdf/Corporator_2023_2027_sapath_date_26_05_2023_Main_List.pdf,localbodies.up.nic.in listnn.htm + site menu,yes (200),also pdf/mayerlist.pdf pdf/NNADMINSTRATORS.pdf helpline.aspx
+249052,Mathura-Vrindavan,http://nnmvonline.in/,http://nnmvonline.in/OfficerList.aspx,localbodies.up.nic.in listnn.htm + site menu,yes (200),officer directory; listnn for mayor
+248964,Meerut,https://meerutnagarnigam.com/,https://meerutnagarnigam.com/mayor-parshads-profile.htm,localbodies.up.nic.in listnn.htm + site menu,yes (200),also important-contacts.htm
+248929,Moradabad,https://nagarnigammoradabad.in/,https://nagarnigammoradabad.in/HOME/index.php#features14-m,localbodies.up.nic.in listnn.htm + site menu,yes (200),officers CUG list section on home page
+249369,Prayagraj,https://allahabadmc.gov.in/,http://localbodies.up.nic.in/listnn.htm,localbodies.up.nic.in listnn.htm + prayagraj.nic.in public-utilities,no (timeout from vpsin),site did not answer in test
+248873,Saharanpur,http://saharanpurnagarnigam.com/,http://saharanpurnagarnigam.com/officerlist.php,localbodies.up.nic.in listnn.htm + site menu,yes (200),also pdf/parshadlist.pdf (ward-wise councillors) contact.php
+297802,Shahjahanpur,http://www.nagarnigamshahjahanpur.in/,http://www.nagarnigamshahjahanpur.in/en/page/staff-and-officers-list,localbodies.up.nic.in listnn.htm + site menu,yes (200),also en/page/telephone-directory
+249531,Varanasi,https://nnvns.org/,http://localbodies.up.nic.in/listnn.htm,localbodies.up.nic.in listnn.htm,yes (200),JS app; officials from listnn

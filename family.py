@@ -25,8 +25,9 @@ def sites():
 
 
 def item(row):
+    extra = {k: row[k] for k in ("lgd_code", "read_start") if row.get(k)}
     return {"key": row["domain"], "payload": {"url": row["url"], "name": row["name"], "kind": row["kind"],
-                                              "state": row["state_code"], "jurisdiction": row["jurisdiction"]}}
+                                              "state": row["state_code"], "jurisdiction": row["jurisdiction"], **extra}}
 
 
 def project(suffix, title, rows, **extra):
@@ -62,6 +63,11 @@ PROJECTS.append(_p)
 with open(HERE / "platform_sites.csv", newline="", encoding="utf-8") as f:
     _plat = list(csv.DictReader(f))
 PROJECTS.append(project("platforms", "Town sites on state municipal platforms (Kerala, Telangana, Tamil Nadu, Assam, Jharkhand)", _plat, geo="IN"))
+
+# Bodies whose site or officials page the search agents found (seeds/build_found.py): India servers.
+with open(HERE / "found_sites.csv", newline="", encoding="utf-8") as f:
+    _found = list(csv.DictReader(f))
+PROJECTS.append(project("found", "Town sites found by web search (start at the officials page when known)", _found, geo="IN"))
 
 # Statewide sources of officials (directory task): APIs, contact pages and PDFs that cover many bodies at once (directories.json).
 _dirs = json.loads((HERE / "directories.json").read_text())

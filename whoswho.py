@@ -24,7 +24,7 @@ HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +htt
 MAX_PAGES = 25          # pages fetched per site (home page and candidates; AJAX pages are counted apart)
 MAX_AJAX = 300          # ww_pages calls per site
 # A site that fails from a GitHub runner usually refuses foreign IPs: it goes to the -in project (Indian proxies), which retries.
-RETRY = os.environ.get("SCRAPE_POOL_PROJECT", "").endswith(("-in", "-geo", "-platforms"))
+RETRY = os.environ.get("SCRAPE_POOL_PROJECT", "").endswith(("-in", "-geo", "-platforms", "-found"))
 MAX_ATTEMPTS = 3
 stop = False
 
@@ -41,7 +41,9 @@ class Site:
         self.hub, self.s, self.item, self.delay = hub, session, item, delay
         p = item["payload"]
         self.url = p["url"]
-        self.meta = {"site_name": p.get("name", ""), **{k: p.get(k, "") for k in ("kind", "state", "jurisdiction")}}
+        self.meta = {"site_name": p.get("name", ""), **{k: p.get(k, "") for k in ("kind", "state", "jurisdiction")},
+                     **({"lgd_code": p["lgd_code"]} if p.get("lgd_code") else {})}
+        self.read_start = bool(p.get("read_start"))     # the start address is itself an officials page (found by search)
         self.site = (urlsplit(self.url).hostname or "").lower().removeprefix("www.")
         self.records, self.files, self.n_rows = [], [], 0
 
@@ -126,7 +128,12 @@ class Site:
         for u in common_links(base):
             if u not in todo:
                 todo.append(u)
-        self.keep_page(self.url, base, home.text, 0)     # home-page tables are mostly tenders and notices: not read as rows
+        n0 = 0
+        if self.read_start:
+            for t in tables(home.text):
+                n0 += self.add_rows(base, t["caption"], t["rows"], "table")
+            n0 += self.ajax(base, home.text)
+        self.keep_page(self.url, base, home.text, n0)    # a home page's tables are mostly tenders and notices: read only when told
         seen, fetched = {base.rstrip("/")}, 0
         while todo and fetched < MAX_PAGES and not stop:
             u = todo.pop(0)
