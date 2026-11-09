@@ -39,7 +39,8 @@ class Site:
     def __init__(self, hub, session, item, delay):
         self.hub, self.s, self.item, self.delay = hub, session, item, delay
         p = item["payload"]
-        self.url, self.meta = p["url"], {k: p.get(k, "") for k in ("name", "kind", "state", "jurisdiction")}
+        self.url = p["url"]
+        self.meta = {"site_name": p.get("name", ""), **{k: p.get(k, "") for k in ("kind", "state", "jurisdiction")}}
         self.site = (urlsplit(self.url).hostname or "").lower().removeprefix("www.")
         self.records, self.files, self.n_rows = [], [], 0
 

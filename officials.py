@@ -54,6 +54,8 @@ def common_links(base):
 def deobfuscate(s):
     """dcurban[at]nic[dot]in -> dcurban@nic.in (NIC sites write emails this way)."""
     s = re.sub(r"\s*\[\s*at\s*\]\s*|\s*\(\s*at\s*\)\s*", "@", s or "", flags=re.I)
+    s = re.sub(r"\s*\[\s*hyphen\s*\]\s*", "-", s, flags=re.I)
+    s = re.sub(r"\s*\[\s*underscore\s*\]\s*", "_", s, flags=re.I)
     return re.sub(r"\s*\[\s*dot\s*\]\s*|\s*\(\s*dot\s*\)\s*", ".", s, flags=re.I).strip()
 
 

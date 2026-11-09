@@ -13,6 +13,7 @@ def read(name):
 def test_deobfuscate():
     assert deobfuscate("dcurban[at]nic[dot]in") == "dcurban@nic.in"
     assert deobfuscate("deo[dot]bangaloreu[at]gmail[dot]com") == "deo.bangaloreu@gmail.com"
+    assert deobfuscate("so[hyphen]holagarh[dot]ah[at]nic[dot]in") == "so-holagarh.ah@nic.in"
 
 
 def test_tables_bengaluru():
