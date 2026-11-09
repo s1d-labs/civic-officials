@@ -1,4 +1,12 @@
-# CLAUDE.md: how this repo works (s1d-labs scrape pool family)
+# CLAUDE.md: civic-officials
+
+This family reads the officials that Indian government sites list (Who's Who, directory, contacts). `README.md` says what it does.
+- `officials.py`: pure parsing (link finding, tables, S3WaaS pager inputs, pager answers). Test it on `tests/pages/`.
+- `whoswho.py`: the task. One queue item = one site. `--local URL` runs one site without the hub.
+- `family.py`: projects from `sites.csv` (one per kind of site) and `retry_in.txt` (sites that need an Indian proxy).
+- S3WaaS pager: the site's own admin-ajax.php calls `ww_pages` / `dir_pages`, with the nonce the page itself carries. Only these.
+
+## The scrape pool contract (from the family template)
 
 This repo is one **family** of the s1d-labs scrape pool: scrapers that run on members' GitHub Actions minutes, coordinated by
 scrape-hub (https://scrape.s1d.me). The hub is generic: it hands out queue items, sets speed per site, signs file uploads, and tracks

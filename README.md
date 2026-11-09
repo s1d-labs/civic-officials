@@ -1,47 +1,35 @@
-# family-template
+# civic-officials
 
-Start a new scraping family for the s1d-labs pool. A family is one kind of site (or one platform many sites share); the pool runs
-its code on members' GitHub Actions minutes. This template is a complete, working family for
-[books.toscrape.com](https://books.toscrape.com) (a public site made for scraping practice): copy it, then change it.
+This family collects the officials that Indian government sites list on their Who's Who, directory and contact pages.
 
-## Make your family
+## What it scrapes
 
-1. Ask the hub owner to **add the family** on [scrape.s1d.me/runners](https://scrape.s1d.me/runners) (name, what it scrapes, owner).
-   The hub creates `s1d-labs/<family>` from this template, names the family in `scrape.json`, and makes the owner admin
-   (with the GitHub account they added on home.s1d.me).
-2. Clone it: `gh repo clone s1d-labs/<family>`.
-3. In your repo:
-   - `scrape.json`: set `"family"` to the family name; list your tasks (one command each) and setup steps.
-   - `family.py`: your projects (one queue of work per site), their target hosts, the env your command needs, the queue items,
-     and the health checks.
-   - `crawl.py` (or whatever your tasks run): the scraper.
-4. **Check it**: `scrape-check` in the repo (needs `pip install "scrape-hub-client @ git+https://github.com/s1d-labs/runner@main#subdirectory=sdk"`).
-   It runs your setup and task against a local stand-in hub on 3 real items and says what works. The **check** workflow runs it
-   (and `tests/`) on every push.
-5. Run the **setup** workflow (Actions → setup → Run workflow). It registers the projects, puts them in the pool and registers
-   the health checks.
-6. The hub starts runs in members' accounts when the pool is on and there is work. Watch it on scrape.s1d.me.
+- 652 district administration sites, 435 urban local body sites and 250 police unit sites.
+- The site list is `sites.csv`. It comes from the India Gov Status list of igod.gov.in sites.
+- One project for each kind of site. One queue item for each site.
 
-## What your code gets
+## How it works
 
-The pool worker ([s1d-labs/runner](https://github.com/s1d-labs/runner)) checks out this repo at `main`, runs the `setup` steps from
-`scrape.json`, and for each assignment runs the task's command here with:
+1. The task `whoswho` reads the home page of a site.
+2. It finds the links to Who's Who, directory and contact pages. It also tries the usual S3WaaS addresses.
+3. It reads each page and stores each table row as a record.
+4. On S3WaaS sites, it gets the remaining rows of each list with the site's own "next page" call.
+5. It saves each page that it reads to the bucket, under `pages/<site>/`.
 
-| Variable | What |
-|---|---|
-| `SCRAPE_POOL_PROJECT` | the project to work on |
-| `SCRAPE_JOB_INDEX`, `SCRAPE_TOTAL_JOBS` | this worker's slice |
-| `SCRAPE_MAX_HOURS` | how long the command may run |
-| `SCRAPE_HUB_URL` | the hub |
-| your project's `env` | e.g. `SITE` |
+## Records
 
-Use `scrape_hub_client` (`HubClient`) to claim queue items, store records, upload files and report counters. Exit when there is
-nothing left; the worker then asks the hub for the next assignment.
+- `type: "row"`: one official or one contact line. Fields: `site`, `kind`, `state`, `page`, `category`, `name`, `designation`,
+  `email`, `phone`, `address`, and `cells` (all columns as the site shows them).
+- `type: "page"`: one page that the task read, with its title, row count and bucket file.
 
-## Rules (the full contract is in CLAUDE.md, written for people and for Claude Code)
+## Run and test
 
-- **Be polite.** Use `hub.settings["threads"]` and `delay_ms`, idle while `hub.settings["paused"]`, and report `n_http` and
-  `t_http_s` for every request and `http_<code>` / `http_error` for failures: the hub throttles you from these.
-- **Files go through the hub** (`hub.upload_many`): it signs each upload into the family's bucket (500 GB per member) and stops at
-  the cap. Never put storage keys in this repo.
-- **Public data only**; read the site's terms first. See the team docs on home.s1d.me (Scraping rules).
+- Run one site without the hub: `python whoswho.py --local https://patna.nic.in/`
+- Run the tests: `python -m pytest tests`
+- Run the check against a local hub: `scrape-check --items 2 --project civic-officials-districts`
+
+## Sites that do not answer from abroad
+
+1. Put their domains in `retry_in.txt`, one on each line.
+2. Run the Setup workflow.
+3. The `civic-officials-in` project then reads them through the hub's Indian proxies.

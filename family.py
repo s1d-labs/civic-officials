@@ -1,27 +1,46 @@
-"""What this family scrapes. Change this file first.
+"""What this family scrapes: the officials listed on Indian government sites (Who's Who, directory and contact pages).
 
-FAMILY must equal the repo name (s1d-labs/<FAMILY>) and the family the hub owner added on scrape.s1d.me/runners.
-Each project is one queue of work on one site; `target` is the host it hits (the hub caps workers per target).
+sites.csv holds the sites (from the India Gov Status list of igod.gov.in sites): district administrations, urban local bodies and
+police units. One project per kind; one queue item per site. The work runs on GitHub runners (most NIC sites answer from abroad).
+Sites that do not answer from abroad go to the `-in` project, which runs through the hub's Indian proxies: list their domains in
+retry_in.txt and run Setup again.
 """
+import csv
 import json
 from pathlib import Path
 
-FAMILY = json.loads((Path(__file__).parent / "scrape.json").read_text())["family"]
+HERE = Path(__file__).parent
+FAMILY = json.loads((HERE / "scrape.json").read_text())["family"]
 
-PROJECTS = [
-    {
-        "name": f"{FAMILY}-books",              # project names: 2-64 chars of a-z 0-9 - _, start them with the family name
-        "title": "Books to Scrape catalogue",
-        "task": "crawl",                         # a task from scrape.json
-        "target": "books.toscrape.com",
-        "env": {"SITE": "https://books.toscrape.com"},
-        "probe": f"{FAMILY}:books.toscrape.com",
-        "unit_label": "page", "record_label": "book",
-        # the queue: one item per catalogue page; `expected` (records per item) gives progress and ETAs on the dashboard
-        "items": [{"key": f"page-{n}", "payload": {"url": f"https://books.toscrape.com/catalogue/page-{n}.html", "expected": 20}}
-                  for n in range(1, 51)],
-    },
-]
+KINDS = {  # sites.csv kind -> project suffix, title
+    "District administration": ("districts", "District administration sites: Who's Who and directories"),
+    "Urban local body": ("ulbs", "Urban local body sites: officials and contacts"),
+    "Police unit": ("police", "Police unit sites: officers and contacts"),
+}
 
-# health checks the hub runs every minute; work for a project holds while its probe fails
-PROBES = [{"name": f"{FAMILY}:books.toscrape.com", "url": "https://books.toscrape.com/", "expect": "All products"}]
+
+def sites():
+    with open(HERE / "sites.csv", newline="", encoding="utf-8") as f:
+        return list(csv.DictReader(f))
+
+
+def item(row):
+    return {"key": row["domain"], "payload": {"url": row["url"], "name": row["name"], "kind": row["kind"],
+                                              "state": row["state_code"], "jurisdiction": row["jurisdiction"]}}
+
+
+def project(suffix, title, rows, **extra):
+    return {"name": f"{FAMILY}-{suffix}", "title": title, "task": "whoswho", "target": f"{FAMILY}-{suffix}",
+            "env": {}, "probe": None, "unit_label": "site", "record_label": "official or page",
+            "items": [item(r) for r in rows], "workers": 8, "threads": 4, "delay_ms": 800, **extra}
+
+
+ALL = sites()
+PROJECTS = [project(suffix, title, [r for r in ALL if r["kind"] == kind]) for kind, (suffix, title) in KINDS.items()]
+
+_retry = HERE / "retry_in.txt"
+_in = set(_retry.read_text().split()) if _retry.exists() else set()
+PROJECTS.append(project("in", "Sites that answer only from India (through the hub's Indian proxies)",
+                        [r for r in ALL if r["domain"] in _in], proxy="IN"))
+
+PROBES = []    # many hosts per project: no single health check would mean anything

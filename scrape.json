@@ -1,13 +1,6 @@
 {
   "family": "civic-officials",
-  "about": "Officials of Indian districts, cities and departments: Who's Who and directory pages of government sites",
-  "setup": [
-    "pip install -r requirements.txt"
-  ],
-  "tasks": {
-    "crawl": [
-      "python",
-      "crawl.py"
-    ]
-  }
+  "about": "Officials of Indian districts, cities and police units: Who's Who, directory and contact pages of government sites.",
+  "setup": ["pip install -r requirements.txt"],
+  "tasks": {"whoswho": ["python", "whoswho.py"]}
 }

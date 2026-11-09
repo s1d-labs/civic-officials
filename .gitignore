@@ -1,3 +1,4 @@
-.scrape-check/
-__pycache__/
 *.pyc
+__pycache__/
+.scrape-check/
+.venv/

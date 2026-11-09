@@ -1,20 +1,45 @@
-"""Parsing tests on a saved page: fast, no network. Add a saved page for every layout your site has."""
+"""Parsing tests on saved pages (tests/pages): S3WaaS Who's Who tables, the pager's inputs, and one ww_pages answer."""
 from pathlib import Path
 
-import crawl
+from officials import ajax_rows, candidate_links, deobfuscate, normalise, pager_blocks, tables
 
 PAGES = Path(__file__).parent / "pages"
 
 
-def test_catalogue_page_gives_twenty_books():
-    rows = crawl.parse((PAGES / "catalogue-page-1.html").read_text(encoding="utf-8"))
-    assert len(rows) == 20
-    rid, book = rows[0]
-    assert rid == "a-light-in-the-attic_1000"                       # the site's own id: stable across runs
-    assert book["title"] == "A Light in the Attic" and book["price"] == "£51.77" and book["availability"] == "In stock"
-    assert book["url"].startswith("https://books.toscrape.com/catalogue/")
-    assert len({r for r, _ in rows}) == 20                          # no duplicate ids on a page
+def read(name):
+    return (PAGES / name).read_text(encoding="utf-8", errors="replace")
 
 
-def test_an_empty_page_gives_nothing():
-    assert crawl.parse("<html><body>No products</body></html>") == []
+def test_deobfuscate():
+    assert deobfuscate("dcurban[at]nic[dot]in") == "dcurban@nic.in"
+    assert deobfuscate("deo[dot]bangaloreu[at]gmail[dot]com") == "deo.bangaloreu@gmail.com"
+
+
+def test_tables_bengaluru():
+    ts = tables(read("bengaluruurban_whoswho.html"))
+    assert ts[0]["caption"] == "Deputy Commissioner"
+    row = normalise(ts[0]["rows"][0])
+    assert row["name"].startswith("Shri. P.S.Kantharaju")
+    assert row["designation"].startswith("Deputy Commissioner")
+    assert row["email"] == "dcurban@nic.in"
+    assert row["phone"] == "080-22211292"
+
+
+def test_pager_patna():
+    pg = pager_blocks(read("patna_whoswho.html"), "ww")
+    assert pg["action"] == "ww_pages" and pg["nonce"] and pg["ajaxurl"].endswith("admin-ajax.php")
+    names = [b["name"] for b in pg["blocks"]]
+    assert "District Administration" in names
+    assert max(b["pages"] for b in pg["blocks"]) > 1
+    assert pager_blocks(read("patna_whoswho.html"), "dir") is None
+
+
+def test_ajax_rows():
+    rows = ajax_rows(read("patna_ww_pages.json"))
+    assert rows and all(normalise(r).get("designation") for r in rows)
+    assert any(normalise(r).get("email", "").endswith("@nic.in") for r in rows)
+
+
+def test_candidate_links():
+    links = candidate_links(read("patna_whoswho.html"), "https://patna.nic.in/", "patna.nic.in")
+    assert any("whos-who" in u for u in links)
