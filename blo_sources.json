@@ -430904,5 +430904,29 @@
    "kind": "pdf",
    "state": "AN"
   }
+ },
+ {
+  "key": "la-leh",
+  "payload": {
+   "url": "https://ceo.ladakh.gov.in/pdf/blo-leh-list.pdf",
+   "kind": "pdf",
+   "state": "LA"
+  }
+ },
+ {
+  "key": "la-kargil",
+  "payload": {
+   "url": "https://ceo.ladakh.gov.in/pdf/blo-kargil-list.pdf",
+   "kind": "pdf",
+   "state": "LA"
+  }
+ },
+ {
+  "key": "hr-nuh",
+  "payload": {
+   "url": "https://nuh.gov.in/?p=30681",
+   "kind": "html-table",
+   "state": "HR"
+  }
  }
 ]
