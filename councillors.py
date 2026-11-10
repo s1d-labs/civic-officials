@@ -4,11 +4,14 @@ body or one file. Payload: {"url", "kind", "state", ...}. Kinds:
   page per member, /public/wyr/view/<member id> (name, post, party, front, votes, margin, ward code, phone, email, address).
 - "pdf": a results file (Andhra Pradesh, Odisha, Assam ...). The file goes to the bucket, each page's text becomes a record
   (parsed later on the box).
+- "form-<xx>": a state reader in cforms/<xx>.py (Punjab, Rajasthan, Telangana, Himachal ...): fetch(payload, get) with
+  get(url, method="GET", data=None, headers=None) on one requests session (cookies kept), returning (records, files, why).
 Records: one per member ("councillor:<state>:<ward code or body:ward>"). Every answer is kept in the bucket under councillors/<state>/.
 `python councillors.py --local '<payload json>'` runs one item without the hub.
 """
 import gzip
 import hashlib
+import importlib
 import io
 import json
 import os
@@ -128,7 +131,11 @@ KINDS = {"kl-body": kl_body, "pdf": pdf}
 
 
 def run(item, get):
+    """Built-in kinds above; "form-<xx>" uses cforms/<xx>.py, whose fetch(payload, get) returns (records, files, why) like kl_body."""
     p = item["payload"]
+    if p["kind"].startswith("form-"):
+        mod = importlib.import_module("cforms." + p["kind"].split("-", 1)[1])
+        return mod.fetch(p, get)
     return KINDS[p["kind"]](p, get)
 
 
@@ -143,10 +150,10 @@ def main():
     s.verify = trust()
     s.headers.update(HEADERS)
 
-    def get(url):
+    def get(url, method="GET", data=None, headers=None):
         t = time.time()
         try:
-            r = s.get(url, timeout=(20, 90))
+            r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
         except requests.RequestException:
             hub.metric("http_error")
             hub.error()
@@ -210,8 +217,8 @@ def local(payload):
     s.verify = trust()
     s.headers.update(HEADERS)
 
-    def get(url):
-        r = s.get(url, timeout=(20, 90))
+    def get(url, method="GET", data=None, headers=None):
+        r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
         time.sleep(1)
         if r.status_code == 200 and (not r.encoding or r.encoding.lower() == "iso-8859-1"):
             r.encoding = r.apparent_encoding or "utf-8"
