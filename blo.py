@@ -173,7 +173,11 @@ def main():
             if hub.settings.get("paused"):
                 time.sleep(30)
                 continue
-            items = hub.claim(1, steal=True, retry_failed=True)
+            try:
+                items = hub.claim(1, steal=True, retry_failed=True)
+            except requests.RequestException:      # hub slow under load: wait and ask again instead of ending the run
+                time.sleep(30)
+                continue
             if not items:
                 break
             item = items[0]
@@ -185,15 +189,20 @@ def main():
                 recs, files, why = run(item, get)
             except Exception as e:
                 recs, files, why = [], [], f"{type(e).__name__}: {e}"[:200]
-            if files:
-                hub.upload_many(files)
-            for rid, data in recs:
-                hub.record(rid, data)
-            if why and not recs:
-                hub.failure("blo", item["key"], why, url=item["payload"].get("url", ""))
-                hub.complete([item["key"]], "failed", error=why)
-            else:
-                hub.complete([item["key"]], "done", fetched=len(recs))
+            for attempt in range(5):
+                try:
+                    if files:
+                        hub.upload_many(files)
+                    for rid, data in recs:
+                        hub.record(rid, data)
+                    if why and not recs:
+                        hub.failure("blo", item["key"], why, url=item["payload"].get("url", ""))
+                        hub.complete([item["key"]], "failed", error=why)
+                    else:
+                        hub.complete([item["key"]], "done", fetched=len(recs))
+                    break
+                except requests.RequestException:  # same item again after a pause; records are keyed, so a repeat is harmless
+                    time.sleep(30 * (attempt + 1))
         hub.close("finished" if not stop else "failed", "" if not stop else "stopped by signal")
     except BaseException as e:
         hub.close("failed", f"{type(e).__name__}: {e}"[:200])
