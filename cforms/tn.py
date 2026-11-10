@@ -84,7 +84,9 @@ def ocr_parts(text):
         if m:
             heads.append((i, m.group(1).strip(" :"), m.group(2), (m.group(3) or "").strip()))
             continue
-        if "வெற்றி" in ln:
+        # candidate lines: votes and a percentage (the winner is picked by the text layer's vote count, so the word "வெற்றி",
+        # which older Tesseract builds read differently, is not needed)
+        if re.search(r"\d+\s+\d+\.\d+", ln):
             toks = ln.split()
             vi = next((j for j in range(len(toks) - 1, -1, -1) if re.fullmatch(r"\d+", toks[j]) and j + 1 < len(toks)
                        and re.fullmatch(r"\d+\.\d+", toks[j + 1])), None)
@@ -140,4 +142,8 @@ def fetch(p, get):
             for rec in page_records(p, pg, layer, text):
                 slug = re.sub(r"\s+", "-", rec["body"])[:40] or f"{p.get('type')}-{p.get('district_code')}-p{pg}"
                 recs.append((f"councillor:TN:{p.get('type')}-{p.get('district_code')}:{slug}:{rec['ward_no']}", rec))
-    return recs, files, "" if recs else "no winners read"
+    if recs:
+        return recs, files, ""
+    ver = subprocess.run(["tesseract", "--version"], capture_output=True, text=True)
+    chars = sum(len(t[1]) for t in texts.values())
+    return recs, files, f"no winners read (ocr {chars} chars, {(ver.stdout or ver.stderr).splitlines()[0] if (ver.stdout or ver.stderr) else '?'})"
