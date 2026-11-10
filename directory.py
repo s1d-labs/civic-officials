@@ -78,9 +78,19 @@ def run(item, get):
                 rows = [flat(o) for o in objects(r.json())]
             except ValueError:
                 rows = []
-            for i, cells in enumerate(rows):
-                recs.append((f"dir:{key}:{i}", {"type": "row", **meta, "url": p["url"], "category": p.get("label", ""), "via": "json",
+            n = 0
+            for cells in rows:
+                embedded = [t for v in cells.values() if "<table" in v for t in tables(v)]
+                if embedded:     # a CMS answer that carries an HTML table inside a text field (e.g. MCD's showContent)
+                    for t in embedded:
+                        for c in t["rows"]:
+                            recs.append((f"dir:{key}:{n}", {"type": "row", **meta, "url": p["url"], "category": t["caption"] or p.get("label", ""),
+                                                            "via": "json-html", **normalise(c), "cells": c}))
+                            n += 1
+                    continue
+                recs.append((f"dir:{key}:{n}", {"type": "row", **meta, "url": p["url"], "category": p.get("label", ""), "via": "json",
                                                 **normalise(cells), "cells": cells}))
+                n += 1
         else:
             if not r.encoding or r.encoding.lower() == "iso-8859-1":
                 r.encoding = r.apparent_encoding or "utf-8"

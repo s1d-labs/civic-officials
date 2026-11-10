@@ -64,3 +64,18 @@ def test_text_people_cards():
     rows = text_people(read("tezpur_members.html"))[0]["rows"]
     assert len(rows) >= 15
     assert rows[0] == {"Name": "Prajanoo Bhatacharjyya", "Designation": "Chairman", "Phone": "9435080593"}
+
+
+def test_json_with_embedded_table():
+    import json as _j
+    import directory
+
+    class R:
+        status_code = 200
+        content = _j.dumps({"data": [{"menuName": "<table><tr><th>Name</th><th>Mobile</th></tr><tr><td>A B</td><td>9999999999</td></tr></table>"}]}).encode()
+
+        def json(self):
+            return _j.loads(self.content)
+    recs, _, _ = directory.run({"key": "k", "payload": {"url": "u", "fmt": "json"}}, lambda m, u, d: R())
+    rows = [d for _, d in recs if d["type"] == "row"]
+    assert rows[0]["name"] == "A B" and rows[0]["phone"] == "9999999999"
