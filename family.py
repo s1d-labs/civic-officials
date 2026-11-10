@@ -82,4 +82,11 @@ PROJECTS.append({"name": f"{FAMILY}-directories", "title": "Statewide officials 
                  "target": f"{FAMILY}-directories", "env": {}, "probe": None, "unit_label": "source", "record_label": "official or page",
                  "items": _dirs, "workers": 6, "threads": 1, "delay_ms": 1500, "geo": "IN"})
 
+# Sources that time out from India but answer from abroad (MCD's portal): GitHub runners (no geo, no proxy).
+_farf = HERE / "directories_abroad.json"
+if _farf.exists():
+    PROJECTS.append({"name": f"{FAMILY}-dir-abroad", "title": "Officials sources that answer only from abroad (GitHub runners)",
+                     "task": "directory", "target": f"{FAMILY}-dir-abroad", "env": {}, "probe": None, "unit_label": "source",
+                     "record_label": "official or page", "items": json.loads(_farf.read_text()), "workers": 1, "threads": 1, "delay_ms": 2000})
+
 PROBES = []    # many hosts per project: no single health check would mean anything

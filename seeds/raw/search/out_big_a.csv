@@ -1,0 +1,106 @@
+local_body_code,city,url,what,fmt,verified,notes
+251488,Mumbai,"https://mcgm.gov.in/irj/go/km/docs/documents/RTI/List%20of%20RTI%20PIOs%20and%20FAOs/LIST%20OF%20P.I.O's%20AND%20F.A.A's(8800662725).pdf",rti,pdf,200,MCGM list of PIOs and first appellate authorities (2.4 MB); department and ward officers
+251488,Mumbai,https://crmapp.mcgm.gov.in/irj/go/km/docs/documents/RTI/List%20of%20RTI%20PIOs%20and%20FAOs/17091615.pdf,rti,pdf,200,security department PIOs with zone and email (one page)
+251488,Mumbai,https://portal.mcgm.gov.in/irj/go/km/docs/documents/HomePage%20Data/Whats%20New/English%20Year%20Book%202025%20Portal.pdf,officers,pdf,200,BMC English Year Book 2025 (13.5 MB); municipal officers list; also on r3app.mcgm.gov.in
+251488,Mumbai,https://portal.mcgm.gov.in/irj/go/km/docs/documents/MCGM%20Department%20List/Municipal%20Commissioners%20Office/RTI%20Manuals/MunicipalCommissionersOffice_RTI_E10.pdf,rti,pdf,200,Municipal Commissioner office RTI 4(1)(b) manual chapter 10 (officer directory); other departments use the same path pattern .../MCGM Department List/<dept>/RTI Manuals/
+251488,Mumbai,https://portal.mcgm.gov.in/irj/go/km/docs/documents/D%20Ward/Water%20Dept.pdf,directory,pdf,200,D ward water department officers with mobile and ward email; other wards may have the same pattern
+251488,Mumbai,https://portal.mcgm.gov.in/irj/portal/anonymous/qlacrsward,officers,js,200,SAP portal ward page (Assistant Commissioner R/South); plain client gets 'iView not compatible with your browser'
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=bcf298dc-7fdd-4b50-a0d9-5c92f5be30cb,councillors,json,000,"List of ward councillors: ward name, no., name, mobile (JSON with HTML table; menu About Us > 5). mcdonline.nic.in times out from India VPS, 200 from Germany"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=e1c1bd00-e793-4356-94eb-6e6ce4f10571,officers,json,000,"List of HODs: department, officer, designation, landline, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=52457d1a-cdfe-41a7-80aa-03771444c99b,officers,json,000,"Commissioner office: commissioner + additional commissioners with phones. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=c9eb852c-1af9-4f75-bf60-fca92f8d2615,officers,json,000,"Mayor office: mayor and staff with phone, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=a7f49361-4ed5-48a0-9a6f-ce85f079ad91,officers,json,000,"South Shahdara Zone key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=0ac8a026-c8a4-4c6a-8b94-8523c66fea34,officers,json,000,"Civil Lines key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=cb52b3b0-cf26-49f3-a515-3da962f72852,officers,json,000,"Rohini key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=c8fed5c6-830c-4416-b39c-7b2b35f26a8f,officers,json,000,"West Zone key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=6d3223d8-839b-460c-a74a-625976f28c6a,officers,json,000,"North Shahdara Zone key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=626f9c26-ef25-4ef1-9f37-024f8e720993,officers,json,000,"Keshav Puram key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=5bd1a3ae-cc6b-4a60-913f-7f8f87ac392f,officers,json,000,"Central Zone key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=ea5255d8-6b8e-49c9-a636-d9a868d0f5a5,officers,json,000,"South Zone key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=54d3f52a-af40-406a-819d-c4a0052f8124,officers,json,000,"Karol Bagh key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=3d69c5dc-e4e0-4d69-aee3-a11b99c67b99,officers,json,000,"Narela key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=ccd063c0-10d1-4aa5-9f08-0b2dfe38677a,officers,json,000,"Najafgarh Zone key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://mcdonline.nic.in/portal/showContent?menuguide=77780593-2787-4da4-ab0b-158a61f7f552,officers,json,000,"City-SP Zone key contacts: deputy commissioner, assistant commissioners, department officers with phone, mobile, email. Same host note"
+X-DL-MCD,Delhi,https://ddma.delhi.gov.in/sites/default/files/ddma/mom/ddmadir.pdf,directory,pdf,200,"Delhi DDMA directory, includes MCD zone DCs with phones and email; undated, names may be old"
+252294,Chennai,https://chennaicorporation.gov.in/gcc/who-is-who/index_data.jsp,officers,html,200,"Who is Who: mayor, commissioner, deputy commissioners, regional and zonal officers, HODs with phones (about 300 phone numbers); /gcc/who-is-who/ only redirects here by JS"
+252294,Chennai,https://chennaicorporation.gov.in/gcc/council/council-address/,councillors,html,200,"Councillor's detail: mayor, deputy mayor and 200 ward councillors with address and phone (over 1,000 phone matches)"
+252294,Chennai,https://chennaicorporation.gov.in/gcc/pdf/CDMP%20DIRECTORY%202026.pdf,directory,pdf,200,City Disaster Management Plan directory 2026 (12.5 MB); emergency contacts of GCC zonal and department officers
+252294,Chennai,https://chennaicorporation.gov.in/gcc/department/zonal-details/,wards,html,200,zonal details page; few phones in static HTML (zone officer data may load by script)
+251096,Ahmedabad,https://ahmedabad.gujarat.gov.in/assets/downloads/AMC_Contact_Directory_.pdf,directory,pdf,200,"AMC contact directory on Ahmedabad district portal (server sends PDF as text/html, 112 KB); zonal and department officers with phones and email"
+251096,Ahmedabad,https://udd.gujarat.gov.in/corporations.php,officers,html,200,"Gujarat UDD: commissioner name + email (mc@ahmedabadcity.gov.in); mayor and deputy mayor fields"
+251096,Ahmedabad,https://ahmedabadcity.gov.in/Images/updated%20pad%20GARDEN.pdf,rti,pdf,000,"AMC proactive disclosure 2021 with zone PIOs, phones, email; ahmedabadcity.gov.in timed out from India VPS and from Germany (site down or blocked); other PADs: Images/PAD SWM SWZONE 2021.pdf, Images/SWZ Engineering Dept.pdf"
+251362,Nagpur,https://nmcnagpur.gov.in/laxmi-nagar,wards,html,200,"NMC zone page (laxmi-nagar): assistant commissioner with contact number"
+251362,Nagpur,https://nmcnagpur.gov.in/dharampeth,wards,html,200,"NMC zone page (dharampeth): assistant commissioner with contact number"
+251362,Nagpur,https://nmcnagpur.gov.in/hanuman-nagar,wards,html,200,"NMC zone page (hanuman-nagar): assistant commissioner with contact number"
+251362,Nagpur,https://nmcnagpur.gov.in/dhantoli,wards,html,200,"NMC zone page (dhantoli): assistant commissioner with contact number"
+251362,Nagpur,https://nmcnagpur.gov.in/nehru-nagar,wards,html,200,"NMC zone page (nehru-nagar): assistant commissioner with contact number"
+251362,Nagpur,https://nmcnagpur.gov.in/satranjipura,wards,html,200,"NMC zone page (satranjipura): assistant commissioner with contact number"
+251362,Nagpur,https://nmcnagpur.gov.in/lakadganj,wards,html,200,"NMC zone page (lakadganj): assistant commissioner with contact number"
+251362,Nagpur,https://nmcnagpur.gov.in/ashi-nagar,wards,html,200,"NMC zone page (ashi-nagar): assistant commissioner with contact number"
+251362,Nagpur,https://nmcnagpur.gov.in/mangalwari,wards,html,200,"NMC zone page (mangalwari): assistant commissioner with contact number"
+251362,Nagpur,https://nmcnagpur.gov.in/public-work-department,officers,html,200,"PWD: chief engineer, superintending and executive engineers with mobiles; other department pages use the same pattern (town-planning-department, health-department, solid-waste-management-department, estate-department)"
+251362,Nagpur,https://nmcnagpur.gov.in/town-planning-department,officers,html,200,town planning department contact table
+251362,Nagpur,https://nmcnagpur.gov.in/health-department,officers,html,200,health department page
+251362,Nagpur,https://nmcnagpur.gov.in/solid-waste-management-department,officers,html,200,solid waste management department page
+251362,Nagpur,https://nmcnagpur.gov.in/assets/300/2024/01/mediafiles/RTI.pdf,rti,pdf,200,"RTI document, 9 pages, scanned Marathi (no text layer)"
+251362,Nagpur,https://nmcnagpur.gov.in/assets/300/2025/02/mediafiles/Fire_Station_Officer_details.pdf,directory,pdf,200,fire station officers with landline and mobile and email
+251362,Nagpur,https://nmcnagpur.gov.in/assets/300/2025/07/mediafiles/Apatti_Vyavsthapan_2025-26.pdf,directory,pdf,200,disaster management plan 2025-26 (38 MB); emergency contact lists of zone and department officers
+251471,Thane,https://thanecity.gov.in/tmc/cache/1/About%20TMC/Right%20to%20Information/PIO%20list.pdf,rti,pdf,200,TMC list of public information officers (department and ward committee)
+251471,Thane,https://thanecity.gov.in/tmc/cache/1/About%20TMC/Right%20to%20Information/APIO%20list.pdf,rti,pdf,200,TMC list of appellate officers
+251471,Thane,https://thanecity.gov.in/tmc/SectionInformation.html?editForm&rowId=36,rti,html,200,"RTI page with 4(1)(b) PDFs per department (Accounts, Fire, Education, SWM, Estate, Municipal Secretary...); plain request gets 302 loop, 200 when cookies are kept (curl -c/-b)"
+248338,Ludhiana,https://mcludhiana.gov.in/StaffList.aspx,officers,html,200,"MC Ludhiana staff list: officers by department with phones (35 numbers)"
+248338,Ludhiana,https://mcludhiana.gov.in/CouncilorList.aspx,councillors,html,200,councillor list by ward with phones (72 numbers)
+248338,Ludhiana,https://mcludhiana.gov.in/Mayor.aspx,councillors,html,200,mayor page
+248338,Ludhiana,https://mcludhiana.gov.in/RTI.aspx,rti,html,200,RTI page (PIO details)
+248338,Ludhiana,https://mcludhiana.gov.in/ContactUs.aspx,directory,html,200,contact page with office phone and email
+248338,Ludhiana,https://mcludhiana.punjab.gov.in/Home,councillors,html,200,Punjab MC-House site for Ludhiana: councillor cards (/Councilors/CouncillorsDetail?mcid=...&MemberCode=...)
+248273,Amritsar,https://www.amritsarcorp.com/officers.htm,officers,html,200,Officers of MCA with phones (official site amritsarcorp.com)
+248273,Amritsar,https://www.amritsarcorp.com/council.htm,councillors,html,200,list of councillors with ward and phone
+248273,Amritsar,https://www.amritsarcorp.com/mayor.htm,councillors,html,200,mayor page
+248273,Amritsar,https://www.amritsarcorp.com/commissioner.htm,officers,html,200,commissioner page with email
+248273,Amritsar,https://www.amritsarcorp.com/TenderPDF/PIO.pdf,rti,pdf,200,list of PIOs and APIOs of MC Amritsar
+248273,Amritsar,https://www.amritsarcorp.com/NoticePDF/Civil-Update-14-9-26.pdf,officers,pdf,200,officers of civil (engineering) department; updated 14-9-2026
+248273,Amritsar,https://www.amritsarcorp.com/NoticePDF/Health-Update-8-9-26.pdf,officers,pdf,200,officers of health department; updated 8-9-2026
+248273,Amritsar,https://www.amritsarcorp.com/NoticePDF/MT_%20Department_April26.pdf,officers,pdf,200,officers of MTP (town planning) department; April 2026
+248273,Amritsar,https://www.amritsarcorp.com/NoticePDF/OandM_Department-Sep-2026.pdf,officers,pdf,200,officers of O&M department; Sep 2026
+248273,Amritsar,https://mcamritsar.punjab.gov.in/Home,councillors,html,200,"Punjab MC-House site: councillor cards, detail pages /Councilors/CouncillorsDetail?mcid=1006&MemberCode=..."
+276386,Chandigarh,https://mcchandigarh.gov.in/Directory.aspx,directory,html,200,"MC Chandigarh telephone directory: officers with phones and emails (164 numbers, 101 emails)"
+276386,Chandigarh,https://mcchandigarh.gov.in/Page.aspx?id=CZA6UBnjBVR48Nm/tqmk2Q==&t=188,councillors,html,200,Councilors Detail page (names by ward; few phones in HTML)
+276386,Chandigarh,https://mcchandigarh.gov.in/team.aspx,officers,html,200,team page: mayor/commissioner/senior officers (names)
+276386,Chandigarh,https://mcchandigarh.gov.in/Pageview1.aspx?id=QpZ+g/6Bfh0i8qdaUlSiVg==,rti,html,,Right to information page (not separately verified)
+251577,Solapur,https://www.solapurcorporation.gov.in/smc/who_is_who_marathi.aspx,officers,html,200,"who is who (Marathi): commissioner, deputy/assistant commissioners, HODs; 6 emails, phone digits may be in Devanagari"
+251577,Solapur,https://www.solapurcorporation.gov.in/smc/RTI_marathi.aspx,rti,html,200,RTI page (Marathi); content not checked in detail
+251577,Solapur,https://www.solapurcorporation.gov.in/smc/section4_marathi.aspx,rti,html,200,section 4(1)(b) page (500 KB); content not checked in detail
+251577,Solapur,https://www.solapurcorporation.gov.in/smc/department_list_marathi.aspx,officers,html,200,department list (Marathi)
+251577,Solapur,https://www.solapurcorporation.gov.in/smc/contact_us_marathi.aspx,directory,html,200,contact us (Marathi)
+251577,Solapur,https://www.solapurcorporation.gov.in/smc/committee_marathi.aspx,councillors,html,200,committees page (Marathi); members if a council sits
+249062,Agra,http://localbodies.up.nic.in/listnn.htm,officers,html,200,"UP Directorate of Local Bodies list of nagar nigams: mayor and municipal commissioner of each, with phones and email (51 numbers, 17 emails); same row serves Meerut and Aligarh"
+248964,Meerut,http://localbodies.up.nic.in/listnn.htm,officers,html,200,UP local bodies list: Meerut mayor and municipal commissioner with phone and email
+249025,Aligarh,http://localbodies.up.nic.in/listnn.htm,officers,html,200,UP local bodies list: Aligarh mayor and municipal commissioner with phone and email
+248964,Meerut,https://meerutnagarnigam.com/mayor-parshads-profile.htm,councillors,html,200,mayor and parshads (councillors) profile page; few phones in HTML (list may be an image or PDF link)
+248964,Meerut,https://meerutnagarnigam.com/important-contacts.htm,directory,html,200,important contacts page
+248964,Meerut,https://meerutnagarnigam.com/health-department.htm,officers,html,200,health department page
+248964,Meerut,https://meerutnagarnigam.com/downloads/MAYOR-AND-PARSHD-LIST.pdf,councillors,pdf,200,mayor and parshad (councillor) list PDF linked from mayor-parshads-profile.htm
+248964,Meerut,https://meerutnagarnigam.com/downloads/nagar-nigam-sadan.pdf,councillors,pdf,200,nagar nigam sadan (house) PDF
+248964,Meerut,https://meerutnagarnigam.com/images/pages/important-contacts.jpg,directory,html,200,"important contacts are an image (JPEG), not text"
+249062,Agra,https://nagarnigamagra.com/contact/,directory,html,406,"Agra Nagar Nigam contact page; short user agent gets 406 from India (server rule), no officer list found on own site"
+251472,Navi Mumbai,https://www.nmmc.gov.in/administration-department,officers,js,200,"NMMC administration department (directory of officers, PIOs); Ionic SPA: every path returns the same 79 KB shell, data loads by script"
+251472,Navi Mumbai,https://nmmc.gov.in/navimumbai/rti-administration-department,rti,js,200,"RTI page of administration department (PIO names, directory of officers); SPA shell"
+303088,Jaipur,https://jaipurmc.org/PDF/Others/jp_AdminContList.pdf,directory,pdf,200,"Nagar Nigam Jaipur administrative directory: officers and zone offices with phones (Kruti Dev font in part); linked as Administrative Directory"
+303088,Jaipur,https://jaipurmc.org/PDF/Others/ParshadList_Jaiupr.pdf,councillors,pdf,200,"Our Corporators: parshad list by zone and ward with party and mobile (6 pages, Hindi)"
+303088,Jaipur,https://jaipurmc.org/Presentation/Others/ConctactUs.aspx,directory,html,200,contact us page with phones and emails
+303088,Jaipur,https://jaipurmc.org/PDF/Others/Jp_CitizenHelpLine.pdf,directory,pdf,200,citizen help line centres and zone office addresses
+303088,Jaipur,https://lsg.rajasthan.gov.in/mcjaipurheritage/,officers,js,200,"Rajasthan LSG Angular site; data by POST to lsg.rajasthan.gov.in/webapi/api/JankalyanHome/GetDepartmentProfileList"
+303090,Kota,https://kotamc.org/PDF/Kota_North.pdf,officers,pdf,200,"Officer and employee list with designation and mobile (7 pages, Kruti Dev Hindi font; title Nagar Nigam Kota Uttar), commissioner first"
+303090,Kota,https://kotamc.org/ContactUs.aspx,directory,html,200,contact us with phones and emails
+303090,Kota,https://kotamc.org/UI/Static/Mayormessage.aspx,councillors,html,200,mayor page (deputy mayor at /UI/Static/Deputymayor.aspx)
+303090,Kota,https://kotamc.org/UI/Static/CEOmessage.aspx,officers,html,200,commissioner page
+303090,Kota,https://lsg.rajasthan.gov.in/mckota/,officers,js,200,Rajasthan LSG Angular shell (2.7 KB); data via webapi POST
+303089,Jodhpur,https://lsg.rajasthan.gov.in/nnjodhpur/,officers,js,200,"Rajasthan LSG Angular shell (2.7 KB); data via POST lsg.rajasthan.gov.in/webapi/api/JankalyanHome/GetDepartmentProfileList; jodhpurmc.org is a news blog, not the corporation"
+250694,Gwalior,https://gwalior.nic.in/en/public-utility-category/municipality/,officers,html,200,"Gwalior district NIC public utility page: nagar nigam office with phone 0751-2438300 and email nn.gwalior@mpurban.gov.in; no own GMC site reachable (gmcgwalior.org timed out)"
+249854,Guwahati,https://gmc.assam.gov.in/contact-us,officers,html,000,"GMC contact page (commissioner, joint commissioners, cell officers per search index); gmc.assam.gov.in timed out from India VPS and Germany"
+249854,Guwahati,https://gmc.assam.gov.in/node/92477,officers,html,000,organisational chart (60 elected + 2 nominated councillors); same host note
+249854,Guwahati,https://gmc.assam.gov.in/about-us/our-history,councillors,html,000,history page with lists of mayors / deputy mayors / commissioners; same host note
+249025,Aligarh,https://nnaligarh.in/,officers,js,302,"Aligarh Nagar Nigam site redirects to /ASCL/CitizenHome.html (JS app); use localbodies.up.nic.in/listnn.htm for mayor and commissioner"
+251483,Kalyan-Dombivli,https://www.kdmc.gov.in/,officers,html,000,"KDMC site timed out from India VPS (http and https); listed on thane.nic.in/municipal-corporations/"
+251483,Kalyan-Dombivli,https://thane.nic.in/municipal-corporations/,directory,html,200,"Thane district NIC list of municipal corporations: KDMC address, phone and email only"
