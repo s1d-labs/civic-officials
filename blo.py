@@ -10,9 +10,11 @@ supervising officers. Every answer is kept in the bucket under blo/<state>/.
 """
 import gzip
 import hashlib
+import importlib
 import io
 import json
 import os
+import re
 import signal
 import sys
 import time
@@ -21,6 +23,7 @@ import requests
 
 from certs_trust import trust
 
+from forms import aspnet
 from officials import normalise, tables
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
@@ -46,8 +49,49 @@ def ka_ac(doc, p):
     return out
 
 
+PART_K = re.compile(r"part|booth|मतदान केंद्र क्र|भाग", re.I)
+STATION_K = re.compile(r"station|polling|केंद्र का नाम|location", re.I)
+NAME_K = re.compile(r"blo.*name|name.*blo|officer.*name|^name$|नाम", re.I)
+PHONE_K = re.compile(r"mobile|contact|phone|मोबाइल", re.I)
+
+
+def pick(cells, rx, skip=()):
+    for k, v in cells.items():
+        if rx.search(k or "") and k not in skip and v:
+            return k, v
+    return None, ""
+
+
+def form_rows(p, rows):
+    """Rows from a forms/<state>.py reader -> blo records (common fields from whichever columns carry them)."""
+    out = []
+    for i, r in enumerate(rows):
+        c = r.get("cells") or {}
+        pk, part = pick(c, PART_K)
+        sk, station = pick(c, STATION_K, skip=(pk,))
+        _, name = pick(c, NAME_K, skip=(pk, sk))
+        _, phone = pick(c, PHONE_K)
+        part = r.get("part_no") or part
+        rec = {"type": "blo", "state": p["state"], "url": p.get("url", ""), "ac_no": r.get("ac_no", p.get("ac_no")),
+               "ac_name": r.get("ac_name", p.get("ac_name")), "district": r.get("district", p.get("district")), "part_no": part,
+               "station": r.get("station") or station, "blo_name": r.get("blo_name") or name, "blo_phone": r.get("blo_phone") or phone,
+               **({"designation": r["designation"]} if r.get("designation") else {}), "cells": c}
+        out.append((f"blo:{p['state']}:{rec['ac_no']}:{part or i}", rec))
+    return out
+
+
+def run_form(item):
+    p = item["payload"]
+    mod = importlib.import_module("forms." + p["kind"].split("-", 1)[1])
+    s = mod.new_session() if hasattr(mod, "new_session") else aspnet.session()
+    rows = mod.fetch(s, p)
+    return form_rows(p, rows), [], "" if rows else "no rows"
+
+
 def run(item, get):
     p = item["payload"]
+    if p.get("kind", "").startswith("form-"):
+        return run_form(item)
     r = get(p.get("method", "GET"), p["url"], p.get("data"))
     if r is None:
         return [], [], "no answer"
