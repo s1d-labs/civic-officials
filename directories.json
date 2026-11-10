@@ -11680,5 +11680,545 @@
    "label": "Jalandhar: rti",
    "lgd_code": "248296"
   }
+ },
+ {
+  "key": "f2-f55f25198c86",
+  "payload": {
+   "url": "https://communi.gujarat.gov.in/Home/listofmunicipalities",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "GJ",
+   "source": "search 2026-11-10",
+   "label": "(state directory)"
+  }
+ },
+ {
+  "key": "f2-10dd5c9fbf1d",
+  "payload": {
+   "url": "https://communi.gujarat.gov.in/Home/pramukhlist",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "GJ",
+   "source": "search 2026-11-10",
+   "label": "(state directory)"
+  }
+ },
+ {
+  "key": "f2-3dd7f508a91f",
+  "payload": {
+   "url": "https://communi.gujarat.gov.in/Home/ZoneOffices",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "GJ",
+   "source": "search 2026-11-10",
+   "label": "(state directory)"
+  }
+ },
+ {
+  "key": "f2-421e57a5c6f2",
+  "payload": {
+   "url": "https://<subdomain>.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "(state directory)"
+  }
+ },
+ {
+  "key": "f2-61479e02b625",
+  "payload": {
+   "url": "https://udhd.jharkhand.gov.in/Other/ULBInformation.aspx",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "JH",
+   "source": "search 2026-11-10",
+   "label": "(state directory)"
+  }
+ },
+ {
+  "key": "f2-a0ebc6583bcb",
+  "payload": {
+   "url": "https://www.pdymun.in/images/pdf/citizen-charter.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "PY",
+   "source": "search 2026-11-10",
+   "label": "(state directory)"
+  }
+ },
+ {
+  "key": "f2-7dddc57c38f9",
+  "payload": {
+   "url": "https://alappuzhamunicipality.lsgkerala.gov.in/en/members",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "KL",
+   "source": "search 2026-11-10",
+   "label": "Alappuzha",
+   "lgd_code": "252247"
+  }
+ },
+ {
+  "key": "f2-729272be9863",
+  "payload": {
+   "url": "https://palakkadmunicipality.lsgkerala.gov.in/en/members",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "KL",
+   "source": "search 2026-11-10",
+   "label": "Palakkad",
+   "lgd_code": "252176"
+  }
+ },
+ {
+  "key": "f2-7c19f09ff98a",
+  "payload": {
+   "url": "https://manjerimunicipality.lsgkerala.gov.in/en/members",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "KL",
+   "source": "search 2026-11-10",
+   "label": "Manjeri",
+   "lgd_code": "252169"
+  }
+ },
+ {
+  "key": "f2-c144fdf4d6d2",
+  "payload": {
+   "url": "https://ponnanimunicipality.lsgkerala.gov.in/en/members",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "KL",
+   "source": "search 2026-11-10",
+   "label": "Ponnani",
+   "lgd_code": "252173"
+  }
+ },
+ {
+  "key": "f2-b72618892f40",
+  "payload": {
+   "url": "https://kalamasserymunicipality.lsgkerala.gov.in/en/members",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "KL",
+   "source": "search 2026-11-10",
+   "label": "Kalamassery",
+   "lgd_code": "252224"
+  }
+ },
+ {
+  "key": "f2-97cbf143400a",
+  "payload": {
+   "url": "https://kannurcorporation.lsgkerala.gov.in/en/members",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "KL",
+   "source": "search 2026-11-10",
+   "label": "Kannur",
+   "lgd_code": "252125"
+  }
+ },
+ {
+  "key": "f2-a6834f6251bc",
+  "payload": {
+   "url": "https://tirurmunicipality.lsgkerala.gov.in/en/members",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "KL",
+   "source": "search 2026-11-10",
+   "label": "Tirur",
+   "lgd_code": "252172"
+  }
+ },
+ {
+  "key": "f2-2569e1bb7490",
+  "payload": {
+   "url": "https://kunnamkulammunicipality.lsgkerala.gov.in/en/members",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "KL",
+   "source": "search 2026-11-10",
+   "label": "Kunnamkulam",
+   "lgd_code": "252180"
+  }
+ },
+ {
+  "key": "f2-1b974420334f",
+  "payload": {
+   "url": "https://changanasserymunicipality.lsgkerala.gov.in/en/members",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "KL",
+   "source": "search 2026-11-10",
+   "label": "Changanassery",
+   "lgd_code": "252239"
+  }
+ },
+ {
+  "key": "f2-9e98e811417b",
+  "payload": {
+   "url": "https://silchar.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Silchar",
+   "lgd_code": "249933"
+  }
+ },
+ {
+  "key": "f2-f116053cee22",
+  "payload": {
+   "url": "https://dibrugarh.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Dibrugarh",
+   "lgd_code": "249896"
+  }
+ },
+ {
+  "key": "f2-21f68c78e3bf",
+  "payload": {
+   "url": "https://nagaon.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Nagaon",
+   "lgd_code": "249866"
+  }
+ },
+ {
+  "key": "f2-3469a3d54569",
+  "payload": {
+   "url": "https://tinsukia.assamurban.in/contact",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Tinsukia",
+   "lgd_code": "249888"
+  }
+ },
+ {
+  "key": "f2-af9963bd4fd9",
+  "payload": {
+   "url": "https://jorhat.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Jorhat",
+   "lgd_code": "249912"
+  }
+ },
+ {
+  "key": "f2-ac37ee7e2077",
+  "payload": {
+   "url": "https://bongaigaon.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Bongaigaon",
+   "lgd_code": "249836"
+  }
+ },
+ {
+  "key": "f2-9197c733320c",
+  "payload": {
+   "url": "https://dhubri.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Dhubri",
+   "lgd_code": "249827"
+  }
+ },
+ {
+  "key": "f2-135007032ac2",
+  "payload": {
+   "url": "https://diphu.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Diphu",
+   "lgd_code": "249925"
+  }
+ },
+ {
+  "key": "f2-5fa1a937f8be",
+  "payload": {
+   "url": "https://nlakhimpur.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "North Lakhimpur",
+   "lgd_code": "249882"
+  }
+ },
+ {
+  "key": "f2-fd6822add90c",
+  "payload": {
+   "url": "https://tezpur.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Tezpur",
+   "lgd_code": "249877"
+  }
+ },
+ {
+  "key": "f2-39fa524cf748",
+  "payload": {
+   "url": "https://karimganj.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Karimganj",
+   "lgd_code": "249940"
+  }
+ },
+ {
+  "key": "f2-d75fe4112d74",
+  "payload": {
+   "url": "https://goalpara.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Goalpara",
+   "lgd_code": "249834"
+  }
+ },
+ {
+  "key": "f2-2817f67280ca",
+  "payload": {
+   "url": "https://sibsagar.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Sibsagar",
+   "lgd_code": "249905"
+  }
+ },
+ {
+  "key": "f2-11af2bf360b7",
+  "payload": {
+   "url": "https://haflong.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Haflong",
+   "lgd_code": "249930"
+  }
+ },
+ {
+  "key": "f2-2cd96b286ef3",
+  "payload": {
+   "url": "https://barpeta.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Barpeta",
+   "lgd_code": "249843"
+  }
+ },
+ {
+  "key": "f2-c92fed113134",
+  "payload": {
+   "url": "https://golaghat.assamurban.in/office-staff",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "AS",
+   "source": "search 2026-11-10",
+   "label": "Golaghat",
+   "lgd_code": "249919"
+  }
+ },
+ {
+  "key": "f2-af5b1a59cef4",
+  "payload": {
+   "url": "https://jamshedpur.nic.in/telephone-directory/",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "JH",
+   "source": "search 2026-11-10",
+   "label": "Jamshedpur",
+   "lgd_code": "250434"
+  }
+ },
+ {
+  "key": "f2-de3fed89e08b",
+  "payload": {
+   "url": "https://e-nigam.punjab.gov.in/SecureFileStructure/Kharar/Employees.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "PB",
+   "source": "search 2026-11-10",
+   "label": "Kharar",
+   "lgd_code": "248324"
+  }
+ },
+ {
+  "key": "f2-ee52312f393a",
+  "payload": {
+   "url": "https://e-nigam.punjab.gov.in/SecureFileStructure/Samana/Employees.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "PB",
+   "source": "search 2026-11-10",
+   "label": "Samana",
+   "lgd_code": "248396"
+  }
+ },
+ {
+  "key": "f2-17bdc07fab0a",
+  "payload": {
+   "url": "https://e-nigam.punjab.gov.in/SecureFileStructure/Employees.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "PB",
+   "source": "search 2026-11-10",
+   "label": "S.A.S.Nagar - Mohali",
+   "lgd_code": "248325"
+  }
+ },
+ {
+  "key": "f2-eb28010779fa",
+  "payload": {
+   "url": "https://e-nigam.punjab.gov.in/SecureFileStructure/Ludhiana/Employees.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "PB",
+   "source": "search 2026-11-10",
+   "label": "Ludhiana",
+   "lgd_code": "248338"
+  }
+ },
+ {
+  "key": "f2-c66421fd5879",
+  "payload": {
+   "url": "https://pune.gov.in/en/nagarpalika-branch/",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "MH",
+   "source": "search 2026-11-10",
+   "label": "Lonavala",
+   "lgd_code": "251526"
+  }
+ },
+ {
+  "key": "f2-cb310a0604dd",
+  "payload": {
+   "url": "https://ahmednagar.nic.in/en/municipal-administration/",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "MH",
+   "source": "search 2026-11-10",
+   "label": "Ahmadnagar",
+   "lgd_code": "251548"
+  }
+ },
+ {
+  "key": "f2-4e5f450966bb",
+  "payload": {
+   "url": "https://nagpur.gov.in/public-utility-category/municipal-councils/",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "MH",
+   "source": "search 2026-11-10",
+   "label": "Kamptee",
+   "lgd_code": "251356"
+  }
+ },
+ {
+  "key": "f2-f7827dfc6bbe",
+  "payload": {
+   "url": "https://www.satara.gov.in/en/public-utility/chief-officer-phaltan/",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "MH",
+   "source": "search 2026-11-10",
+   "label": "Phaltan",
+   "lgd_code": "251588"
+  }
+ },
+ {
+  "key": "f2-8833ed43bdaa",
+  "payload": {
+   "url": "https://ulbsirsa.in/srs/officials",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "HR",
+   "source": "search 2026-11-10",
+   "label": "Sirsa",
+   "lgd_code": "248541"
+  }
+ },
+ {
+  "key": "f2-e8582cd0a48c",
+  "payload": {
+   "url": "https://ambala.gov.in/divisions/urban-local-bodies/",
+   "method": "GET",
+   "data": null,
+   "fmt": "html",
+   "state": "HR",
+   "source": "search 2026-11-10",
+   "label": "Ambala Sadar",
+   "lgd_code": "290431"
+  }
  }
 ]
