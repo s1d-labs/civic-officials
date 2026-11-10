@@ -1,0 +1,32 @@
+[
+ {
+  "key": "pb-2026-type4",
+  "payload": {
+   "kind": "form-pb",
+   "state": "PB",
+   "url": "https://lbpams.punjab.gov.in/prodapi/api/ResultDeclarationEndpoint/GetPublicResultReportDetailed1",
+   "election_type": 4,
+   "body_type": "Municipal Corporation"
+  }
+ },
+ {
+  "key": "pb-2026-type5",
+  "payload": {
+   "kind": "form-pb",
+   "state": "PB",
+   "url": "https://lbpams.punjab.gov.in/prodapi/api/ResultDeclarationEndpoint/GetPublicResultReportDetailed1",
+   "election_type": 5,
+   "body_type": "Municipal Council"
+  }
+ },
+ {
+  "key": "pb-2026-type6",
+  "payload": {
+   "kind": "form-pb",
+   "state": "PB",
+   "url": "https://lbpams.punjab.gov.in/prodapi/api/ResultDeclarationEndpoint/GetPublicResultReportDetailed1",
+   "election_type": 6,
+   "body_type": "Nagar Panchayat"
+  }
+ }
+]
