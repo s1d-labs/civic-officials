@@ -1,0 +1,76 @@
+local_body_code,city,url,what,fmt,verified,notes
+251470,Mira-Bhayandar,https://mbmc.gov.in/mbmc/6-information-about-councillors,councillors,html,200,councillor information page (Marathi); links PDF list
+251470,Mira-Bhayandar,https://mbmc.gov.in/assets/upload2/2026/01/Daily update/नगरसेवक यादी.pdf,councillors,pdf,200,"councillor list 2026: ward, seat, name, address, phone"
+251470,Mira-Bhayandar,https://mbmc.gov.in/assets/upload2/2026/01/Daily update/contact list 06.05.2026.pdf,directory,pdf,200,"contact list 06.05.2026: ward offices, ward officers and staff with mobiles"
+251470,Mira-Bhayandar,https://mbmc.gov.in/contact,directory,html,200,contact page; links contact list PDF
+251470,Mira-Bhayandar,https://mbmc.gov.in/mbmc/9-municipal-commissioner,officers,html,200,commissioner page; also /mbmc/a-municipal-additional-commissioner and /mbmc/b-municipal-deputy-commissioner
+251470,Mira-Bhayandar,https://mbmc.gov.in/mbmc/2-hon-ble-mayor,councillors,html,200,mayor page; deputy mayor at /mbmc/3-hon-ble-deputy-mayor
+251470,Mira-Bhayandar,https://mbmc.gov.in/mbmc/ward-offices,wards,html,200,ward offices (6 ward committees)
+248296,Jalandhar,https://mcjalandhar.in/wp-content/uploads/2025/03/Councillor-List-2025-2030.pdf,councillors,pdf,406,"elected councillors 2025-2030: ward, party, name, address, mobile, email. 406 with -A Mozilla/5.0 (WAF); 200 with default curl UA"
+248296,Jalandhar,https://mcjalandhar.in/elected-authorities/,councillors,html,406,elected authorities page; links councillor list PDF. 200 with default curl UA
+248296,Jalandhar,https://mcjalandhar.in/administration/,officers,html,406,administration: officers with phones (about 66 numbers). 200 with default curl UA
+248296,Jalandhar,https://mcjalandhar.in/contact-us/,directory,html,406,"contact page, few phones. 200 with default curl UA"
+248296,Jalandhar,https://mcjalandhar.in/wp-content/uploads/2026/07/list-of-PIO-2026.pdf,rti,pdf,406,list of PIOs 2026; scanned image (no text layer). 200 with default curl UA
+248296,Jalandhar,https://mcjalandhar.in/wp-content/uploads/2024/03/pio-apio.pdf,rti,pdf,406,PIO/APIO list 2024; scanned image. 200 with default curl UA
+248399,Patiala,https://mcpatiala.punjab.gov.in/Home,directory,html,200,MC Patiala site on Punjab eNigam (MC-House); links councillor pages and PDFs below
+248399,Patiala,https://enigambackuprestore.blob.core.windows.net/securefilestructure/MC/Patiala/MCSubMenu/pdf/LIST OF MUNICIPAL COUNCILLORS PATIALA (2025 to till date) Partywise.pdf,councillors,pdf,200,"councillors 2025 to date, ward and party; linked from mcpatiala.punjab.gov.in as 'Councillors Contact Detail'; few phones in text layer; file on eNigam Azure storage"
+248399,Patiala,https://mcpatiala.punjab.gov.in/Councilors/CouncillorsDetail?mcid=1002&MemberCode=687,councillors,html,200,one councillor detail page; MemberCode 687-742 (about 30 links on home page)
+248399,Patiala,https://enigambackuprestore.blob.core.windows.net/securefilestructure/MC/Patiala/MCSubMenu/pdf/linkpdf_8_10_2026_27_553.mc patiala officer.pdf,officers,pdf,200,"MC Patiala employees detail: name, designation, about 49 phones; linked from mcpatiala.punjab.gov.in"
+248399,Patiala,https://enigambackuprestore.blob.core.windows.net/securefilestructure/MC/Patiala/MCSubMenu/pdf/linkpdf_11_2_2026_12_490.Office Contact.pdf,directory,pdf,200,"office contact: name, designation, contact no, landline, email"
+251328,Amravati,https://amravaticorporation.in/elected-members/,councillors,html,200,corporators with ward and mobile (Devanagari digits); mayor marked; by party
+251328,Amravati,https://amravaticorporation.in/administrative-officers/,officers,html,200,"commissioner, additional and deputy commissioners, HODs: name, mobile, designation"
+251328,Amravati,https://amravaticorporation.in/wp-content/uploads/2025/01/amravati-mahanagarpalika-officer-list.pdf,officers,pdf,200,officer list with citizen meeting times (2025); no phones in text layer
+251328,Amravati,https://amravaticorporation.in/noninated_member/,councillors,html,,nominated members list (not verified separately)
+251561,Latur,https://mclatur.org/wp-content/uploads/2026/08/Corporators%20list.pdf,councillors,pdf,200,"corporators list 2026 ('Elected Member'); scanned image, no text layer"
+251561,Latur,https://mclatur.org/wp-content/uploads/2026/08/EMPLYM%20RECOR%20JULY%202026%20(2).xlsx.pdf,officers,pdf,200,officers/employees record July 2026 with about 226 phones
+251561,Latur,https://mclatur.org/official-email-ids/,directory,html,200,department email ids
+251561,Latur,https://mclatur.org/contact-us-latur/,directory,html,200,contact page
+251561,Latur,https://mclatur.org/rti-2005-4-1-b-electrical-dept/,rti,html,,RTI 4(1)(b) electrical department (not verified separately)
+251282,Dhule,https://dhulecorporation.org/dmc/office-bearers,councillors,html,200,"office bearers (mayor, deputy mayor, committee chairs, corporators): name, mobile (Devanagari digits)"
+251282,Dhule,https://dhulecorporation.org/dmc/officers,officers,html,200,"officers: name, department, contact number"
+251282,Dhule,https://dhulecorporation.org/dmc/right-to-information-cell,rti,html,200,RTI cell: head of department name and designation
+251282,Dhule,https://dhulecorporation.org/contact,directory,html,200,contact page; office phones and helpline
+251282,Dhule,https://dhulecorporation.org/dmc/liaison-officer,officers,html,200,liaison officer page
+251438,Malegaon,https://malegaoncorporation.org/mmc/information-about-corporators,councillors,html,200,links 'Nagar sevak list 2017-2022' only (old term)
+251438,Malegaon,https://malegaoncorporation.org/contact,directory,html,200,contact page; HO phones (02554) 231800/231801
+251438,Malegaon,https://malegaoncorporation.org/mmc/commissioner-office,officers,html,200,commissioner office: downloads incl. list of officers/staff working in the office; other department pages /mmc/<dept> and ward offices /mmc/ward-office-no-1..4 have similar downloads
+251438,Malegaon,https://malegaoncorporation.org/file/Nagar%20sevak%20list%202017-2022.pdf,councillors,pdf,,corporator list 2017-2022 (old term; not verified separately)
+252220,Kochi,https://kochicorporation.lsgkerala.gov.in/en/phone-numbers/404,directory,html,200,"phone numbers: mayor, standing committee chairs, councillors, officials (18 tables, about 196 phones)"
+252220,Kochi,https://kochicorporation.lsgkerala.gov.in/en/ward-details/328,councillors,html,200,division-wise councillor name and phone
+252220,Kochi,https://kochicorporation.lsgkerala.gov.in/en/right-information/10,rti,html,200,RTI: PIOs/APIOs by section (Malayalam)
+252220,Kochi,https://kochicorporation.lsgkerala.gov.in/en/establishment/396,officers,html,200,establishment page (little content)
+252220,Kochi,https://lsgkerala.gov.in/en/lbelection/electdmemberdet/2020/169,councillors,html,200,"state LSGD: elected members 2020 term (ward, name, party); the 2025 page (/2025/169) is empty now"
+252160,Kozhikode,https://lsgkerala.gov.in/en/lbelection/electdmemberdet/2020/171,councillors,html,200,"state LSGD: elected members 2020 term (ward, name, party), no phones; /2025/171 is empty now"
+252160,Kozhikode,https://kozhikodecorporation.lsgkerala.gov.in/system/files/2019-12/RTI034(1).pdf,rti,pdf,200,"RTI officers list 2019 (Malayalam, legacy font: text not extractable)"
+252160,Kozhikode,https://kozhikodecorporation.lsgkerala.gov.in/ml/node/401,officers,html,200,'list of officers' page; empty now
+252160,Kozhikode,https://kozhikodecorporation.lsgkerala.gov.in/ml/node/328,wards,html,200,ward details (ward number and name only); /en/officials and /en/members return 404
+249444,Gorakhpur,https://gorakhpurnagarnigam.up.gov.in/parsadlist.aspx,councillors,html,200,parshad list with ward and mobile (about 82 phones)
+249444,Gorakhpur,https://gorakhpurnagarnigam.up.gov.in/Administrativewing.aspx,officers,html,200,"officer's directory: nagar ayukt, apar nagar ayukt I-III and others with mobile numbers"
+249444,Gorakhpur,https://gorakhpurnagarnigam.up.gov.in/contact.aspx,directory,html,200,"contact page: head office, zonal offices, phones and email"
+249444,Gorakhpur,https://gorakhpurnagarnigam.up.gov.in/mmes.aspx,councillors,html,200,mayor page; commissioner page at /cmes.aspx
+250434,Jamshedpur,https://jamshedpur.nic.in/telephone-directory/,directory,html,200,East Singhbhum district telephone directory: JNAC Special Officer and Dy Municipal Commissioner with phones (JNAC has no elected board)
+248667,Bikaner,https://lsg.rajasthan.gov.in/mcbikaner/,directory,js,200,Angular shell (deptCode 201); data from webapi
+248788,Ajmer,https://lsg.rajasthan.gov.in/mcajmer/,directory,js,200,Angular shell (deptCode 199)
+248822,Udaipur,https://lsg.rajasthan.gov.in/mcudaipur/,directory,js,200,Angular shell (deptCode 205)
+251484,Ulhasnagar,https://www.umc.gov.in/elected-member,councillors,js,200,React page; data from https://umc.gov.in/api/api/elected_data?lang=en (links to Drive PDFs per term)
+251484,Ulhasnagar,https://drive.google.com/file/d/1zrJ3icf8LIq6dB4QwDTibZPEXYlgNNa5/view?usp=drive_link,councillors,pdf,403,'List of corporators for the year 2026-2031'; Google Drive file linked from umc.gov.in elected_data API (Drive answers 403 to curl; open in a browser)
+251484,Ulhasnagar,https://umc.gov.in/api/api/mayor-details?lang=en,councillors,json,200,"mayor and deputy mayor (Mrs. Ashwini Kamlesh Nikam, mayor) with phones"
+251484,Ulhasnagar,https://umc.gov.in/api/api/addt-commissioner-details?lang=en,officers,json,200,"additional commissioner: name, address, phone, email; also /commissioner-data, /dept-commissioner-details (4), /asst-commissioner-details (4)"
+251484,Ulhasnagar,https://umc.gov.in/api/api/asst-commissioner-details?lang=en,officers,json,200,"4 assistant commissioners: name, designation, address, number, email"
+251484,Ulhasnagar,https://umc.gov.in/api/api/ward-offices?lang=en,wards,json,200,"4 ward offices: officer name, address, email, mobile"
+251484,Ulhasnagar,https://umc.gov.in/api/api/sub-rti?lang=en,rti,json,200,"RTI sub-page: links to officer/employee seniority lists 2016, 2024, 2025 (Drive PDFs)"
+251484,Ulhasnagar,https://umc.gov.in/api/api/contacts-info?lang=en,directory,json,200,head office phone and email
+251477,Bhiwandi,https://www.bncmc.gov.in/administration.php,officers,html,406,"commissioner, additional/deputy/assistant commissioners, HODs: name, PA name, mobile, email. 406 with -A Mozilla/5.0 (WAF); 200 with default curl UA"
+251477,Bhiwandi,https://www.bncmc.gov.in/commisioner.php,officers,html,406,administrator and commissioner office contact. 200 with default curl UA
+251477,Bhiwandi,https://www.bncmc.gov.in/department1,directory,html,406,department list; department.php?department_id=1..44 give HOD names and some phones. 200 with default curl UA
+251477,Bhiwandi,https://www.bncmc.gov.in/contactUs,directory,html,406,"contact page: helplines, email. 200 with default curl UA"
+251691,Warangal,https://gwmc.gov.in/RTIACT.aspx,rti,html,000,GWMC RTI 4(1)(b) chapters (Chapter-X directory of officers at 'RTI pdfs/'); host timed out from India and Germany 2026-11-10
+251691,Warangal,https://gwmc.gov.in/KnowYourCorporation.aspx,directory,html,000,"'Know your corporation' (helpline, officers); host timed out 2026-11-10"
+301210,Noida,https://www.noidaauthorityonline.in/,officers,html,000,Noida Authority (development authority; no elected board); host timed out from India and Germany 2026-11-10
+251312,Akola,https://amcakola.in/,directory,html,000,own site; timed out / connection reset from India 2026-11-10
+251312,Akola,https://akola.gov.in/en/public-utility-category/corporation/,directory,html,200,district NIC card for the corporation; phone only
+248895,Muzaffarnagar,http://localbodies.up.nic.in/pdf/elected-npp.pdf,councillors,pdf,200,"UP Directorate of Local Bodies: Nagar Palika Parishad chairpersons with mobile; Muzaffarnagar row 275 (chairperson, mobile). No ward member list found"
+249444,Gorakhpur,http://localbodies.up.nic.in/listnn.htm,councillors,html,200,UP list of nagar nigam: Gorakhpur mayor and nagar ayukt with phone and email
+249444,Gorakhpur,http://localbodies.up.nic.in/pdf/elected-nn.pdf,councillors,pdf,200,UP list of nagar nigam mayors (1 page) with mobiles; Gorakhpur row
+248895,Muzaffarnagar,http://localbodies.up.nic.in/pdf/ulb-cug2005.pdf,officers,pdf,200,"UP 'Contact Details ULB' (CUG numbers of ULB officers, 16 pages); scanned image, no text layer"
+252220,Kochi,https://kochicorporation.lsgkerala.gov.in/en/officials,officers,html,404,suggested path does not exist on this site; use /en/phone-numbers/404 and /en/right-information/10

@@ -11121,5 +11121,213 @@
    "label": "Ichalkaranji: rti",
    "lgd_code": "251619"
   }
+ },
+ {
+  "key": "big-0c25103077ca",
+  "payload": {
+   "url": "https://mbmc.gov.in/assets/upload2/2026/01/Daily update/नगरसेवक यादी.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Mira-Bhayandar",
+   "label": "Mira-Bhayandar: councillors",
+   "lgd_code": "251470"
+  }
+ },
+ {
+  "key": "big-5766f1ef498d",
+  "payload": {
+   "url": "https://mbmc.gov.in/assets/upload2/2026/01/Daily update/contact list 06.05.2026.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Mira-Bhayandar",
+   "label": "Mira-Bhayandar: directory",
+   "lgd_code": "251470"
+  }
+ },
+ {
+  "key": "big-2fb469b0e50b",
+  "payload": {
+   "url": "https://enigambackuprestore.blob.core.windows.net/securefilestructure/MC/Patiala/MCSubMenu/pdf/LIST OF MUNICIPAL COUNCILLORS PATIALA (2025 to till date) Partywise.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Patiala",
+   "label": "Patiala: councillors",
+   "lgd_code": "248399"
+  }
+ },
+ {
+  "key": "big-c2cb70949fed",
+  "payload": {
+   "url": "https://enigambackuprestore.blob.core.windows.net/securefilestructure/MC/Patiala/MCSubMenu/pdf/linkpdf_8_10_2026_27_553.mc patiala officer.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Patiala",
+   "label": "Patiala: officers",
+   "lgd_code": "248399"
+  }
+ },
+ {
+  "key": "big-8f0bd22ed5aa",
+  "payload": {
+   "url": "https://enigambackuprestore.blob.core.windows.net/securefilestructure/MC/Patiala/MCSubMenu/pdf/linkpdf_11_2_2026_12_490.Office Contact.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Patiala",
+   "label": "Patiala: directory",
+   "lgd_code": "248399"
+  }
+ },
+ {
+  "key": "big-06dfd058a082",
+  "payload": {
+   "url": "https://amravaticorporation.in/wp-content/uploads/2025/01/amravati-mahanagarpalika-officer-list.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Amravati",
+   "label": "Amravati: officers",
+   "lgd_code": "251328"
+  }
+ },
+ {
+  "key": "big-4708906ef159",
+  "payload": {
+   "url": "https://mclatur.org/wp-content/uploads/2026/08/Corporators%20list.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Latur",
+   "label": "Latur: councillors",
+   "lgd_code": "251561"
+  }
+ },
+ {
+  "key": "big-663fdb32f6b5",
+  "payload": {
+   "url": "https://mclatur.org/wp-content/uploads/2026/08/EMPLYM%20RECOR%20JULY%202026%20(2).xlsx.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Latur",
+   "label": "Latur: officers",
+   "lgd_code": "251561"
+  }
+ },
+ {
+  "key": "big-4c13d799c940",
+  "payload": {
+   "url": "https://kozhikodecorporation.lsgkerala.gov.in/system/files/2019-12/RTI034(1).pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Kozhikode",
+   "label": "Kozhikode: rti",
+   "lgd_code": "252160"
+  }
+ },
+ {
+  "key": "big-b279be259ff7",
+  "payload": {
+   "url": "https://umc.gov.in/api/api/mayor-details?lang=en",
+   "method": "GET",
+   "data": null,
+   "fmt": "json",
+   "state": "",
+   "source": "Ulhasnagar",
+   "label": "Ulhasnagar: councillors",
+   "lgd_code": "251484"
+  }
+ },
+ {
+  "key": "big-515c7f872a25",
+  "payload": {
+   "url": "https://umc.gov.in/api/api/addt-commissioner-details?lang=en",
+   "method": "GET",
+   "data": null,
+   "fmt": "json",
+   "state": "",
+   "source": "Ulhasnagar",
+   "label": "Ulhasnagar: officers",
+   "lgd_code": "251484"
+  }
+ },
+ {
+  "key": "big-3b566965bd09",
+  "payload": {
+   "url": "https://umc.gov.in/api/api/asst-commissioner-details?lang=en",
+   "method": "GET",
+   "data": null,
+   "fmt": "json",
+   "state": "",
+   "source": "Ulhasnagar",
+   "label": "Ulhasnagar: officers",
+   "lgd_code": "251484"
+  }
+ },
+ {
+  "key": "big-569b66e2dc19",
+  "payload": {
+   "url": "https://umc.gov.in/api/api/ward-offices?lang=en",
+   "method": "GET",
+   "data": null,
+   "fmt": "json",
+   "state": "",
+   "source": "Ulhasnagar",
+   "label": "Ulhasnagar: wards",
+   "lgd_code": "251484"
+  }
+ },
+ {
+  "key": "big-c629d908ede6",
+  "payload": {
+   "url": "https://umc.gov.in/api/api/sub-rti?lang=en",
+   "method": "GET",
+   "data": null,
+   "fmt": "json",
+   "state": "",
+   "source": "Ulhasnagar",
+   "label": "Ulhasnagar: rti",
+   "lgd_code": "251484"
+  }
+ },
+ {
+  "key": "big-3bafb2252945",
+  "payload": {
+   "url": "https://umc.gov.in/api/api/contacts-info?lang=en",
+   "method": "GET",
+   "data": null,
+   "fmt": "json",
+   "state": "",
+   "source": "Ulhasnagar",
+   "label": "Ulhasnagar: directory",
+   "lgd_code": "251484"
+  }
+ },
+ {
+  "key": "big-a51ba8d32448",
+  "payload": {
+   "url": "http://localbodies.up.nic.in/pdf/ulb-cug2005.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Muzaffarnagar",
+   "label": "Muzaffarnagar: officers",
+   "lgd_code": "248895"
+  }
  }
 ]
