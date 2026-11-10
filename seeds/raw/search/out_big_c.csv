@@ -1,0 +1,67 @@
+local_body_code,city,url,what,fmt,verified,notes
+248557,Rohtak,https://mcrohtak.in/index.php/officer-directory,officers,html,200,"MC Rohtak officer directory: names, designations, ~45 phone numbers"
+248557,Rohtak,https://mcrohtak.in/index.php/elected-members-0,councillors,html,200,elected members by ward with ~25 phone numbers
+248557,Rohtak,https://mcrohtak.in/mayor-mc-rohtak,councillors,html,200,mayor page
+248557,Rohtak,https://mcrohtak.in/index.php/contact-us,directory,html,200,office contact phones
+248529,Sonipat,https://mcsonipat.in/officers-directory,officers,html,200,"MC Sonipat officers directory: names, designations, ~75 phones, 1 email"
+248529,Sonipat,https://mcsonipat.in/elected-members,councillors,html,200,"table of elected representatives by ward (name, father/husband name); few phones"
+248529,Sonipat,https://mcsonipat.in/contact-us,directory,html,200,office phones + email
+248367,Bathinda,https://www.mcbathinda.com/WhomH.aspx,officers,html,200,"who-is-who: commissioner, joint commissioner, branch heads; fax 0164-2235246"
+248367,Bathinda,https://www.mcbathinda.com/Councillors.aspx,councillors,html,200,councillors list with ~50 phone numbers
+248367,Bathinda,https://www.mcbathinda.com/PDF/RTI%20SECTION%204.pdf,rti,pdf,200,RTI section 4 manual (447 KB PDF)
+248367,Bathinda,https://mcbathinda.punjab.gov.in/,councillors,html,200,"state MC-House site: councillor cards, detail pages /Councilors/CouncillorsDetail?mcid=1007&MemberCode=3657..; ~50 phones"
+297802,Shahjahanpur,http://www.nagarnigamshahjahanpur.in/en/page/staff-and-officers-list,officers,html,200,"staff and officers list, ~36 phones, 1 email"
+297802,Shahjahanpur,http://www.nagarnigamshahjahanpur.in/en/page/telephone-directory,directory,html,200,telephone directory page (few numbers)
+252194,Thrissur,https://thrissurcorporation.lsgkerala.gov.in/en/mayor/181,councillors,html,200,mayor page (phone + email)
+252194,Thrissur,https://thrissurcorporation.lsgkerala.gov.in/en/deputy-mayor/372,councillors,html,200,deputy mayor page
+252194,Thrissur,https://thrissurcorporation.lsgkerala.gov.in/en/secretary/370,officers,html,200,secretary page (phones + email)
+252194,Thrissur,https://thrissurcorporation.lsgkerala.gov.in/en/council/476,councillors,html,200,council page
+252194,Thrissur,https://thrissurcorporation.lsgkerala.gov.in/system/files/2026-02/Councillors%20List%202025-30.pdf,councillors,pdf,403,Councillors List 2025-30 PDF linked from home page; returns 403 to curl from India
+252194,Thrissur,https://thrissurcorporation.lsgkerala.gov.in/en/contact-us/4,directory,html,200,5 office phones 0487-2422020..; thrissursecretary@gmail.com
+252194,Thrissur,https://thrissurcorporation.lsgkerala.gov.in/index.php/en/ward/328,wards,html,200,ward number + ward name table; /en/officials and /en/members are 404
+297802,Shahjahanpur,http://www.nagarnigamshahjahanpur.in/en/article/nagar-nigam-sadan,councillors,html,200,Nagar Nigam Sadan: mayor (7355001317) and members with mobile numbers (~15)
+297802,Shahjahanpur,http://www.nagarnigamshahjahanpur.in/en/page/contact-details,directory,html,200,contact details (phones + email)
+297802,Shahjahanpur,http://www.nagarnigamshahjahanpur.in/article/en/web-information-manager,officers,html,200,web information manager (2 emails)
+253093,Ozhukarai,https://oulmun.in/rti,rti,html,200,"Oulgaret Municipality RTI: appellate authority = commissioner (0413-2201142, om@py.gov.in); PIO = section heads; dpa-om@py.gov.in"
+253093,Ozhukarai,https://oulmun.in/contact,directory,html,200,"contact page: 0413-2201142, comnrom@py.gov.in, om@py.gov.in (5 emails)"
+253093,Ozhukarai,https://oulmun.in/sites/default/files/2026-08/staff_service_record_oulgaret_municipality.pdf,officers,pdf,200,staff service record PDF (names; no phones in text layer)
+253093,Ozhukarai,https://oulmun.in/wards,wards,html,200,ward list
+249770,Aizawl,https://amcmizoram.com/page/list-of-councillors,councillors,html,200,Aizawl Municipal Corporation: list of corporators with ~26 phones
+249770,Aizawl,https://amcmizoram.com/page/list-of-officers-staff,officers,html,200,list of officers and staff (~8 phones)
+249770,Aizawl,https://amcmizoram.com/page/important-contact-numbers,directory,html,200,important contact numbers (~9 phones)
+249770,Aizawl,https://amcmizoram.com/page/rti,rti,html,200,"SPIO, SAPIO and appellate names; SPIO 0389-2352090"
+249770,Aizawl,https://amcmizoram.com/documents/councillors,councillors,html,200,councillors documents page (~18 phones)
+248943,Rampur,https://rampur.nic.in/public-utility-category/municipality/,directory,html,200,"district NIC card: Nagar Palika Parishad Rampur, EO email eonpprampra-up[at]nic[dot]in, phone 05952970051; own site npprampur.gov.in no answer (000)"
+248943,Rampur,http://localbodies.up.nic.in/pdf/elected-npp.pdf,councillors,pdf,200,UP state list of NPP chairpersons with mobiles; Rampur: Sana Khanam 9520927281 (row 150)
+248991,Hapur,https://hapur.nic.in/public-utility-category/municipalities/,directory,html,200,"district NIC card: Nagar Palika Parishad Hapur, EO email eonpphapurhp-up[at]nic[dot]in, phone 8189077903"
+248991,Hapur,http://localbodies.up.nic.in/pdf/elected-npp.pdf,councillors,pdf,200,UP state list of NPP chairpersons with mobiles; Hapur row not found in the text layer (broken Hindi glyphs): check by eye
+249262,Etawah,https://etawah.nic.in/public-utility/nagar-palika-parishad-etawah/,directory,html,200,district NIC card: address + etawahnagarpalika@gmail.com; own site nppetawah.in is parked
+249262,Etawah,http://localbodies.up.nic.in/pdf/elected-npp.pdf,councillors,pdf,200,"chairperson Jyoti Gupta, 9411436333 (row 24)"
+249488,Maunath Bhanjan,http://localbodies.up.nic.in/pdf/elected-npp.pdf,councillors,pdf,200,"chairperson Arshad Jamal, 9838620601 (row 133)"
+249488,Maunath Bhanjan,https://mau.nic.in/public-utility-category/municipality/,directory,html,200,district NIC card for NagarPalika Mau (few contacts); own site nppmau.com is a blank 'Success!' page
+297802,Shahjahanpur,http://localbodies.up.nic.in/listnn.htm,directory,html,200,"UP list of Nagar Nigams: mayor, address, nagarnigamshahjahanpur@gmail.com, phones"
+297802,Shahjahanpur,http://localbodies.up.nic.in/pdf/elected-nn.pdf,councillors,pdf,200,UP state list of Nagar Nigam mayors (Hindi PDF; Shahjahanpur row not matched in text layer)
+249659,Arrah,https://betastate.bihar.gov.in/file_2/FileUpload/2026/Jan/06-Jan-2026/19/DyPage/a06d8362-29f5-4f0b-ac58-6b12cca9fafb.pdf,officers,pdf,200,Bihar UDHD: contact numbers of municipal commissioners/EOs (Nagar Nigam); Ara: Smt Anju Kumari 9472677217; second table Md. Jamal Akhtar Ansari 7979081615
+249659,Arrah,https://betastate.bihar.gov.in/file_2/FileUpload/2026/Feb/16-Feb-2026/19/DyPage/c546d270-0198-44bc-9371-0276a5cb929c.pdf,officers,pdf,200,Bihar UDHD Feb 2026 update: Ara commissioner Anju Kumari 9472677217; Md. Jamal Akhtar Ansari 7992379191
+249659,Arrah,https://bhojpur.nic.in/public-utility-category/municipality/,directory,html,200,"district card for Ara Nagar Nigam: address only (Old Police Line, Ara 802301); no own website found"
+248082,Chandrapur,https://chanda.nic.in/en/public-utility-category/municipality/,directory,html,200,"district card: Chandrapur Municipal Corporation, com[dot]chandrapur[at]gmail[dot]com, 07172-250220; own site cmcchandrapur.com no answer (000)"
+251619,Ichalkaranji,https://ichalkaranjimnp.in/official-email-ids/,officers,html,200,official email ids of departments/officers (34 emails)
+251619,Ichalkaranji,https://ichalkaranjimnp.in/contact-us-ichalkaranji/,directory,html,200,contact page (~9 phones)
+251619,Ichalkaranji,https://ichalkaranjimnp.in/,directory,html,200,home page carries ~42 phone numbers (department contacts)
+251619,Ichalkaranji,https://ichalkaranjimnp.in/wp-content/uploads/2023/01/RTI-2005-41B-elecrical-department.pdf,rti,pdf,200,"RTI 4(1)(b) manual, electrical dept (linked from /rti-2005-4-1-b-electrical-dept/, 200); other dept manuals in /wp-content/uploads/2025/02-03/"
+251619,Ichalkaranji,https://ichalkaranjimnp.in/general-election-2025/,councillors,html,200,"election page; 'Election Result 2026' links to a Google Sheet (docs.google.com, not an official domain)"
+251619,Ichalkaranji,https://kolhapur.gov.in/en/public-utility-category/municipal-corporation-municipalities/,directory,html,200,district card with email + phone
+251951,Shivamogga,http://www.shivamoggacity.mrc.gov.in/en/Engwardstaffs,wards,html,200,engineering section ward-wise staff: names of AEE/AE/JE/supervisor per ward (36 wards); no phones
+251951,Shivamogga,http://www.shivamoggacity.mrc.gov.in/en/Revenuestaffs,wards,html,200,revenue section ward-wise staff names
+251951,Shivamogga,http://www.shivamoggacity.mrc.gov.in/en/pio,rti,html,200,"PIO page: the Commissioner, ka.shivamogga.cc@gmail.com"
+251951,Shivamogga,http://www.shivamoggacity.mrc.gov.in/en/apio,rti,html,200,APIO page
+251951,Shivamogga,http://www.shivamoggacity.mrc.gov.in/en/contact-us,directory,html,200,"08182-268506, ka.shivamogga.cc@gmail.com"
+251951,Shivamogga,http://www.shivamoggacity.mrc.gov.in/en/know-your-members,councillors,html,200,page exists but holds no member table (council under administrator?)
+251951,Shivamogga,http://www.shivamoggacity.mrc.gov.in/en/sections,officers,html,200,sections page (section heads)
+248812,Bhilwara,https://lsg.rajasthan.gov.in/ulbbhilwara/,directory,js,200,"Angular shell (2.7 KB); data from POST https://lsg.rajasthan.gov.in/webapi/PublicPortal/DepartmentWebsite/GetDepartmentContactDetail (deptCode 914); district page bhilwara.rajasthan.gov.in/public-utility-category/municipality/ = 000 from India and Germany"
+248699,Alwar,https://lsg.rajasthan.gov.in/ulbalwar/,directory,js,200,"Angular shell; contacts via webapi POST (deptCode 916); alwar.rajasthan.gov.in municipality page = 000 (timeout)"
+248708,Bharatpur,https://lsg.rajasthan.gov.in/mcbharatpur/,directory,js,200,"Angular shell; contacts via webapi POST (deptCode 200); bharatpur.rajasthan.gov.in = 000 (timeout)"
+248741,Sikar,https://lsg.rajasthan.gov.in/ulbsikar/,directory,js,200,"Angular shell; contacts via webapi POST (deptCode 919); sikar.rajasthan.gov.in = 000 (timeout)"
+248778,Pali,https://lsg.rajasthan.gov.in/ulbpali/,directory,js,200,"Angular shell; contacts via webapi POST (deptCode 926); pali.rajasthan.gov.in = 000 (timeout)"
+248812,Bhilwara,https://sec.rajasthan.gov.in/General_ULB_2026.aspx,councillors,html,200,"Rajasthan SEC: ULB general election 2026 page (orders; results via /Announcement.aspx 'Result ULB GE-2026'); same source for Alwar, Bharatpur, Sikar, Pali"
+248699,Alwar,https://sec.rajasthan.gov.in/Announcement.aspx,councillors,html,200,"Rajasthan SEC results page ('Result ULB GE-2026' link); page text shows PS/ZP results; ULB ward winners not confirmed"
