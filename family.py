@@ -92,8 +92,14 @@ if _farf.exists():
 # Booth Level Officers from state CEO lists (blo task; blo_sources.json): India servers and GitHub runners through Indian proxies.
 _blof = HERE / "blo_sources.json"
 if _blof.exists():
+    _blo = json.loads(_blof.read_text())
+    _open = {"KL"}     # states whose lists answer from anywhere: plain GitHub runners, no proxy needed
     PROJECTS.append({"name": f"{FAMILY}-blo", "title": "Booth Level Officers from state Chief Electoral Officer lists", "task": "blo",
                      "target": f"{FAMILY}-blo", "env": {}, "probe": None, "unit_label": "file or page", "record_label": "booth part",
-                     "items": json.loads(_blof.read_text()), "workers": 8, "threads": 1, "delay_ms": 1000, "geo": "IN", "proxy": "IN"})
+                     "items": [i for i in _blo if i["payload"]["state"] not in _open], "workers": 8, "threads": 1, "delay_ms": 1000,
+                     "geo": "IN", "proxy": "IN"})
+    PROJECTS.append({"name": f"{FAMILY}-blo-kl", "title": "Booth Level Officers: Kerala (one request per booth)", "task": "blo",
+                     "target": "www.ceo.kerala.gov.in", "env": {}, "probe": None, "unit_label": "booth", "record_label": "booth",
+                     "items": [i for i in _blo if i["payload"]["state"] == "KL"], "workers": 8, "threads": 1, "delay_ms": 1000})
 
 PROBES = []    # many hosts per project: no single health check would mean anything

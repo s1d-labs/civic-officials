@@ -74,12 +74,19 @@ def run(item, get):
     else:
         if not r.encoding or r.encoding.lower() == "iso-8859-1":
             r.encoding = r.apparent_encoding or "utf-8"
+        text = r.text
+        if kind == "json-html":          # Kerala show_blo: {"selectHtml": "<table>...</table>"}
+            try:
+                text = r.json().get("selectHtml") or ""
+            except ValueError:
+                return [], files, "not JSON"
         n = 0
-        for t in tables(r.text):
+        for t in tables(text):
             for cells in t["rows"]:
                 f = normalise(cells)
-                recs.append((f"blo:{st}:{key}:{n}", {"type": "blo", "state": st, "url": p["url"], "category": t["caption"],
-                                                     **{k: p[k] for k in ("ac_no", "ac_name", "district", "part_no") if k in p},
+                rid = f"blo:{st}:{p['booth_id']}:{n}" if p.get("booth_id") else f"blo:{st}:{key}:{n}"
+                recs.append((rid, {"type": "blo", "state": st, "url": p["url"], "category": t["caption"],
+                                                     **{k: p[k] for k in ("ac_no", "ac_name", "district", "part_no", "station", "booth_id") if k in p},
                                                      "blo_name": f.get("name", ""), "blo_phone": f.get("phone", ""), "cells": cells}))
                 n += 1
     return recs, files, "" if recs else "no rows"
