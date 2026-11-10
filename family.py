@@ -117,7 +117,8 @@ if _cof.exists():
 _ocrf = HERE / "seeds" / "ocr_councillors_tn.json"
 if _ocrf.exists():
     PROJECTS.append({"name": f"{FAMILY}-councillors-ocr", "title": "Elected ward councillors read by OCR (Tamil Nadu 2022)",
-                     "task": "councillors", "target": "tnsec.tn.gov.in", "env": {}, "probe": None, "unit_label": "6 PDF pages",
+                     # own task name: workers whose checkout predates the OCR reader do not know it, so they cannot take these items
+                     "task": "councillors-ocr", "target": "tnsec.tn.gov.in", "env": {}, "probe": None, "unit_label": "6 PDF pages",
                      "record_label": "councillor", "items": json.loads(_ocrf.read_text()), "workers": 8, "threads": 1,
                      "delay_ms": 1000, "proxy": "IN"})
 
