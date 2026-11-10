@@ -61,6 +61,8 @@ def run(item, get):
     if r is None:
         return [], [], "no answer"
     meta = {k: p.get(k, "") for k in ("state", "source", "label")}
+    if p.get("lgd_code"):
+        meta["lgd_code"] = p["lgd_code"]      # a source about one body (big-city officer lists): rows tie to it directly
     key = hashlib.sha1(json.dumps(p, sort_keys=True).encode()).hexdigest()[:16]
     fmt = p.get("fmt", "html")
     recs, files = [], []

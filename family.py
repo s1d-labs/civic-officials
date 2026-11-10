@@ -69,6 +69,13 @@ with open(HERE / "found_sites.csv", newline="", encoding="utf-8") as f:
     _found = list(csv.DictReader(f))
 PROJECTS.append(project("found", "Town sites found by web search (start at the officials page when known)", _found, geo="IN"))
 
+# Officer, ward and councillor pages of India's largest cities (seeds/build_big.py): India servers, start page read.
+_bigf = HERE / "big_sites.csv"
+if _bigf.exists():
+    with open(_bigf, newline="", encoding="utf-8") as f:
+        _big = list(csv.DictReader(f))
+    PROJECTS.append(project("bigcities", "Officer and councillor pages of India's largest cities", _big, geo="IN"))
+
 # Statewide sources of officials (directory task): APIs, contact pages and PDFs that cover many bodies at once (directories.json).
 _dirs = json.loads((HERE / "directories.json").read_text())
 PROJECTS.append({"name": f"{FAMILY}-directories", "title": "Statewide officials directories (APIs, contact pages, PDFs)", "task": "directory",
