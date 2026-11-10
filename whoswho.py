@@ -19,6 +19,7 @@ from urllib.parse import urlsplit
 import requests
 
 from certs_trust import trust
+from forms.aspnet import LegacyTLS
 
 from officials import (PEOPLE_PATH, ajax_rows, candidate_links, common_links, normalise, page_title, pager_blocks, pubutility,
                        row_id, tables, text_people)
@@ -60,7 +61,23 @@ class Site:
     def get(self, url, method="GET", data=None):
         t = time.time()
         try:
-            r = self.s.request(method, url, data=data, timeout=(15, 45), allow_redirects=True)
+            try:
+                r = self.s.request(method, url, data=data, timeout=(15, 45), allow_redirects=True)
+            except requests.exceptions.SSLError as e:
+                # servers that still need TLS legacy renegotiation (Punjab government sites): same request, certificate checks stay on
+                if "renegotiation" not in str(e).lower():
+                    raise
+                self.metric("tls_legacy_retry")
+                self.s.mount(f"https://{urlsplit(url).hostname}/", LegacyTLS())
+                r = self.s.request(method, url, data=data, timeout=(15, 45), allow_redirects=True)
+            except requests.exceptions.ConnectionError as e:
+                # port 443 refused (Karnataka *.mrc.gov.in town sites serve plain http only): ask the same page over http
+                if not url.startswith("https://") or isinstance(e, requests.exceptions.ConnectTimeout) or "refused" not in str(e).lower() \
+                        and "couldn't connect" not in str(e).lower():
+                    raise
+                self.metric("https_refused_http_retry")
+                url = "http://" + url[len("https://"):]
+                r = self.s.request(method, url, data=data, timeout=(15, 45), allow_redirects=True)
             if r.status_code == 406:
                 self.metric("http_406_plain_retry")
                 r = self.s.request(method, url, data=data, timeout=(15, 45), allow_redirects=True, headers={"User-Agent": PLAIN_UA})
