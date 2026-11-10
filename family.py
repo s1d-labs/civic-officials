@@ -112,4 +112,13 @@ if _cof.exists():
                                                               for i in json.loads(f.read_text())],
                      "workers": 4, "threads": 1, "delay_ms": 1000, "geo": "IN"})
 
+# OCR'd results PDFs (Tamil Nadu 2022, legacy font): GitHub runners through Indian proxies (the site answers only from India;
+# OCR needs the runners' cores). One item = 6 pages of one PDF (seeds/ocr_councillors_tn.json).
+_ocrf = HERE / "seeds" / "ocr_councillors_tn.json"
+if _ocrf.exists():
+    PROJECTS.append({"name": f"{FAMILY}-councillors-ocr", "title": "Elected ward councillors read by OCR (Tamil Nadu 2022)",
+                     "task": "councillors", "target": "tnsec.tn.gov.in", "env": {}, "probe": None, "unit_label": "6 PDF pages",
+                     "record_label": "councillor", "items": json.loads(_ocrf.read_text()), "workers": 8, "threads": 1,
+                     "delay_ms": 1000, "proxy": "IN"})
+
 PROBES = []    # many hosts per project: no single health check would mean anything
