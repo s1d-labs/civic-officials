@@ -24,10 +24,17 @@ BODY_TYPE = {"corp": "மாநகராட்சி", "mun": "நகராட�
 
 def tools():
     """Tesseract with Tamil and poppler; installs them on a GitHub runner (sudo without password)."""
-    if shutil.which("tesseract") and shutil.which("pdftoppm"):
+    def ok():
+        # a runner can have tesseract without the Tamil model: then every page reads as nothing ("no winners read")
+        if not (shutil.which("tesseract") and shutil.which("pdftoppm")):
+            return False
+        r = subprocess.run(["tesseract", "--list-langs"], capture_output=True, text=True)
+        return "tam" in (r.stdout + r.stderr).split()
+    if ok():
         return True
     cmd = "sudo -n apt-get update -q && sudo -n apt-get install -y -q tesseract-ocr tesseract-ocr-tam poppler-utils"
-    return subprocess.run(cmd, shell=True, capture_output=True).returncode == 0 and bool(shutil.which("tesseract"))
+    subprocess.run(cmd, shell=True, capture_output=True)
+    return ok()
 
 
 def text_layer(pdf, page):
