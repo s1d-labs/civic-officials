@@ -1,0 +1,82 @@
+[
+ {
+  "key": "up-elected-npp-p1",
+  "payload": {
+   "kind": "form-upch",
+   "state": "UP",
+   "url": "https://localbodies.up.nic.in/pdf/elected-npp.pdf",
+   "first": 1,
+   "last": 6,
+   "lang": "hin",
+   "body_type": "Municipal Council",
+   "body_type_hi": "नगर पालिका परिषद",
+   "election": "Uttar Pradesh urban local bodies (list not dated)"
+  }
+ },
+ {
+  "key": "up-elected-np-p1",
+  "payload": {
+   "kind": "form-upch",
+   "state": "UP",
+   "url": "https://localbodies.up.nic.in/pdf/elected-np.pdf",
+   "first": 1,
+   "last": 6,
+   "lang": "hin",
+   "body_type": "Nagar Panchayat",
+   "body_type_hi": "नगर पंचायत",
+   "election": "Uttar Pradesh urban local bodies (list not dated)"
+  }
+ },
+ {
+  "key": "up-elected-np-p7",
+  "payload": {
+   "kind": "form-upch",
+   "state": "UP",
+   "url": "https://localbodies.up.nic.in/pdf/elected-np.pdf",
+   "first": 7,
+   "last": 12,
+   "lang": "hin",
+   "body_type": "Nagar Panchayat",
+   "body_type_hi": "नगर पंचायत",
+   "election": "Uttar Pradesh urban local bodies (list not dated)"
+  }
+ },
+ {
+  "key": "up-elected-np-p13",
+  "payload": {
+   "kind": "form-upch",
+   "state": "UP",
+   "url": "https://localbodies.up.nic.in/pdf/elected-np.pdf",
+   "first": 13,
+   "last": 16,
+   "lang": "hin",
+   "body_type": "Nagar Panchayat",
+   "body_type_hi": "नगर पंचायत",
+   "election": "Uttar Pradesh urban local bodies (list not dated)"
+  }
+ },
+ {
+  "key": "uk-heads-p1",
+  "payload": {
+   "kind": "form-upch",
+   "state": "UK",
+   "url": "https://cdnbbsr.s3waas.gov.in/s38208974663db80265e9bfe7b222dcb18/uploads/2026/09/202609032047589548.pdf",
+   "first": 1,
+   "last": 6,
+   "lang": "hin",
+   "election": "Uttarakhand urban local bodies 2025 (poll 23.01.2025)"
+  }
+ },
+ {
+  "key": "uk-heads-p7",
+  "payload": {
+   "kind": "form-upch",
+   "state": "UK",
+   "url": "https://cdnbbsr.s3waas.gov.in/s38208974663db80265e9bfe7b222dcb18/uploads/2026/09/202609032047589548.pdf",
+   "first": 7,
+   "last": 11,
+   "lang": "hin",
+   "election": "Uttarakhand urban local bodies 2025 (poll 23.01.2025)"
+  }
+ }
+]

@@ -1,0 +1,116 @@
+[
+ {
+  "key": "hr-2025-20250704337894322",
+  "payload": {
+   "kind": "form-hr",
+   "state": "HR",
+   "url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2025/07/20250704337894322.pdf",
+   "mode": "text",
+   "first": 1,
+   "last": 20,
+   "body_type": "Municipal Corporation",
+   "election": "Haryana 2025 (poll 02.03.2025)"
+  }
+ },
+ {
+  "key": "hr-2025-20250704818052458",
+  "payload": {
+   "kind": "form-hr",
+   "state": "HR",
+   "url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2025/07/20250704818052458.pdf",
+   "mode": "text",
+   "first": 1,
+   "last": 12,
+   "body_type": "Municipal Council",
+   "election": "Haryana 2025 (poll 02.03.2025)"
+  }
+ },
+ {
+  "key": "hr-2025-202507041629123004",
+  "payload": {
+   "kind": "form-hr",
+   "state": "HR",
+   "url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2025/07/202507041629123004.pdf",
+   "mode": "text",
+   "first": 1,
+   "last": 24,
+   "body_type": "Municipal Committee",
+   "election": "Haryana 2025 (poll 02.03.2025)",
+   "replaced": [
+    "kanina-municipal-committee:14"
+   ]
+  }
+ },
+ {
+  "key": "hr-2026-20260521432943498",
+  "payload": {
+   "kind": "form-hr",
+   "state": "HR",
+   "url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2026/05/20260521432943498.pdf",
+   "mode": "ocr",
+   "lang": "eng",
+   "first": 1,
+   "last": 2,
+   "body_type": "Municipal Corporation",
+   "sequential": true,
+   "election": "Haryana 2026 (poll 10.05.2026)"
+  }
+ },
+ {
+  "key": "hr-2026-202605211775525992",
+  "payload": {
+   "kind": "form-hr",
+   "state": "HR",
+   "url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2026/05/202605211775525992.pdf",
+   "mode": "ocr",
+   "lang": "eng",
+   "first": 1,
+   "last": 2,
+   "body_type": "Municipal Committee",
+   "sequential": true,
+   "election": "Haryana 2026 (poll 10.05.2026)"
+  }
+ },
+ {
+  "key": "hr-2026-20260521629385597",
+  "payload": {
+   "kind": "form-hr",
+   "state": "HR",
+   "url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2026/05/20260521629385597.pdf",
+   "mode": "ocr",
+   "lang": "eng",
+   "first": 1,
+   "last": 2,
+   "body_type": "Municipal Council",
+   "sequential": true,
+   "election": "Haryana 2026 (poll 10.05.2026)"
+  }
+ },
+ {
+  "key": "hr-2026-202605211526796482",
+  "payload": {
+   "kind": "form-hr",
+   "state": "HR",
+   "url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2026/05/202605211526796482.pdf",
+   "mode": "ocr",
+   "lang": "eng",
+   "first": 1,
+   "last": 1,
+   "body_type": "",
+   "sequential": false,
+   "election": "Haryana 2026 bye-election (poll 10.05.2026)",
+   "cols": [
+    "sr",
+    "district",
+    "body",
+    "body2",
+    "ward",
+    "name",
+    "father",
+    "office",
+    "category",
+    "party"
+   ]
+  }
+ }
+]

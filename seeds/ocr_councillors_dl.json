@@ -1,0 +1,91 @@
+[
+ {
+  "key": "dl-mcd2022-p1",
+  "payload": {
+   "kind": "form-dl",
+   "state": "DL",
+   "source": "mcd2022",
+   "url": "https://sec.delhi.gov.in/sites/default/files/SEC/generic_multiple_files/mcd_election_result_2022_1.pdf",
+   "first": 1,
+   "last": 6,
+   "lang": "eng",
+   "bye_wards": [
+    35,
+    56,
+    65,
+    74,
+    76,
+    120,
+    128,
+    139,
+    163,
+    164,
+    173,
+    198
+   ]
+  }
+ },
+ {
+  "key": "dl-mcd2022-p7",
+  "payload": {
+   "kind": "form-dl",
+   "state": "DL",
+   "source": "mcd2022",
+   "url": "https://sec.delhi.gov.in/sites/default/files/SEC/generic_multiple_files/mcd_election_result_2022_1.pdf",
+   "first": 7,
+   "last": 12,
+   "lang": "eng",
+   "bye_wards": [
+    35,
+    56,
+    65,
+    74,
+    76,
+    120,
+    128,
+    139,
+    163,
+    164,
+    173,
+    198
+   ]
+  }
+ },
+ {
+  "key": "dl-mcd2022-p13",
+  "payload": {
+   "kind": "form-dl",
+   "state": "DL",
+   "source": "mcd2022",
+   "url": "https://sec.delhi.gov.in/sites/default/files/SEC/generic_multiple_files/mcd_election_result_2022_1.pdf",
+   "first": 13,
+   "last": 16,
+   "lang": "eng",
+   "bye_wards": [
+    35,
+    56,
+    65,
+    74,
+    76,
+    120,
+    128,
+    139,
+    163,
+    164,
+    173,
+    198
+   ]
+  }
+ },
+ {
+  "key": "dl-bye2025",
+  "payload": {
+   "kind": "form-dl",
+   "state": "DL",
+   "source": "bye2025",
+   "url": "https://sec.delhi.gov.in/sites/default/files/SEC/generic_multiple_files/list_of_elected_councillors_bye_election_2025.pdf",
+   "first": 1,
+   "last": 2
+  }
+ }
+]
