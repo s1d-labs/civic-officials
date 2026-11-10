@@ -1,0 +1,54 @@
+[
+ {
+  "key": "od-2022-councillors",
+  "payload": {
+   "kind": "form-od",
+   "state": "OD",
+   "url": "https://sec.odisha.gov.in/uploads/cmsfiles/2551cab2-7121-4ff9-a8a6-5cbf43da1797_NAME-OF-ELECTED-COUNCILLORS-WARD-WISE.pdf",
+   "layout": "list",
+   "label": "Name of Elected Councillors (ward wise), GE to ULBs 2022",
+   "election": "Odisha 2022",
+   "expected": 1884
+  }
+ },
+ {
+  "key": "od-2022-corporators",
+  "payload": {
+   "kind": "form-od",
+   "state": "OD",
+   "url": "https://sec.odisha.gov.in/uploads/cmsfiles/7ca2184a-0667-451f-827b-ff8488f75f87_NAME-OF-ELECTED-CORPORATORS.pdf",
+   "layout": "list",
+   "label": "Name of Elected Corporators, GE to ULBs 2022",
+   "election": "Odisha 2022",
+   "expected": 168
+  }
+ },
+ {
+  "key": "od-2023-hindol-nac",
+  "payload": {
+   "kind": "form-od",
+   "state": "OD",
+   "url": "https://sec.odisha.gov.in/uploads/cmsfiles/577b1a8d-64dd-445f-bf17-8b4a920b07e6_HINDOL-NAC2023-ELECTED-COUNCILLOR-AND-CHAIRPERSON-1_3.pdf",
+   "layout": "votes",
+   "body": "Hindol N.A.C.",
+   "district": "Dhenkanal",
+   "label": "General Election to Hindol NAC, 2023",
+   "election": "Odisha 2023",
+   "expected": 16
+  }
+ },
+ {
+  "key": "od-2023-attabira-nac",
+  "payload": {
+   "kind": "form-od",
+   "state": "OD",
+   "url": "https://sec.odisha.gov.in/uploads/cmsfiles/93429d29-eb4f-40bb-9165-75ff584010e6_ATTABIRA-NAC-2023-ELECTED-COUNCILLOR-AND-CHAIRPERSON_4.pdf",
+   "layout": "votes",
+   "body": "Attabira N.A.C.",
+   "district": "Bargarh",
+   "label": "General Election to Attabira NAC, 2023",
+   "election": "Odisha 2023",
+   "expected": 12
+  }
+ }
+]

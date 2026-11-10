@@ -1,0 +1,28 @@
+[
+ {
+  "key": "as-2022-municipal-boards",
+  "payload": {
+   "kind": "form-as_",
+   "state": "AS",
+   "url": "https://sec.assam.gov.in/pdf/reports/Municipal-Election-2022.pdf",
+   "layout": "gazette",
+   "label": "Municipal Board Election 2022 report, gazette lists of winners (80 boards)",
+   "election": "Assam 2022",
+   "expected": 976
+  }
+ },
+ {
+  "key": "as-2022-gmc",
+  "payload": {
+   "kind": "form-as_",
+   "state": "AS",
+   "url": "https://sec.assam.gov.in/pdf/reports/GMC-Election-2022.pdf",
+   "layout": "gmc",
+   "body": "Guwahati Municipal Corporation",
+   "district": "Kamrup Metropolitan",
+   "label": "GMC Election Report 2022",
+   "election": "Assam 2022",
+   "expected": 60
+  }
+ }
+]
