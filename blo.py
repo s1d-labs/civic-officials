@@ -178,7 +178,7 @@ def main():
                 break
             item = items[0]
             if item.get("attempts", 0) > 3:
-                hub.failure("blo", item["key"], "gave up after 3 attempts", url=item["payload"]["url"])
+                hub.failure("blo", item["key"], "gave up after 3 attempts", url=item["payload"].get("url", ""))
                 hub.complete([item["key"]], "done", fetched=0)
                 continue
             try:
@@ -190,7 +190,7 @@ def main():
             for rid, data in recs:
                 hub.record(rid, data)
             if why and not recs:
-                hub.failure("blo", item["key"], why, url=item["payload"]["url"])
+                hub.failure("blo", item["key"], why, url=item["payload"].get("url", ""))
                 hub.complete([item["key"]], "failed", error=why)
             else:
                 hub.complete([item["key"]], "done", fetched=len(recs))
