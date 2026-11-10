@@ -1,0 +1,1478 @@
+[
+ {
+  "key": "tg-01-1-adilabad",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "01",
+   "district": "Adilabad",
+   "ulb_id": "1",
+   "ulb": "Adilabad",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-02-2-asifabad",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "02",
+   "district": "Komaram Bheem Asifabad",
+   "ulb_id": "2",
+   "ulb": "Asifabad",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-02-1-kaghaznagar",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "02",
+   "district": "Komaram Bheem Asifabad",
+   "ulb_id": "1",
+   "ulb": "Kaghaznagar",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-03-1-bellampally",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "03",
+   "district": "Mancherial",
+   "ulb_id": "1",
+   "ulb": "Bellampally",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-03-4-chennur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "03",
+   "district": "Mancherial",
+   "ulb_id": "4",
+   "ulb": "Chennur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-03-7-kyathanpally",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "03",
+   "district": "Mancherial",
+   "ulb_id": "7",
+   "ulb": "Kyathanpally",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-03-5-laxettipet",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "03",
+   "district": "Mancherial",
+   "ulb_id": "5",
+   "ulb": "Laxettipet",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-03-8-mancherial-mc",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "03",
+   "district": "Mancherial",
+   "ulb_id": "8",
+   "ulb": "Mancherial MC",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-04-1-bhainsa",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "04",
+   "district": "Nirmal",
+   "ulb_id": "1",
+   "ulb": "BHAINSA",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-04-3-khanapur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "04",
+   "district": "Nirmal",
+   "ulb_id": "3",
+   "ulb": "Khanapur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-04-2-nirmal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "04",
+   "district": "Nirmal",
+   "ulb_id": "2",
+   "ulb": "Nirmal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-05-1-armoor",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "05",
+   "district": "Nizamabad",
+   "ulb_id": "1",
+   "ulb": "Armoor",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-05-4-bheemgal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "05",
+   "district": "Nizamabad",
+   "ulb_id": "4",
+   "ulb": "Bheemgal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-05-2-bodhan",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "05",
+   "district": "Nizamabad",
+   "ulb_id": "2",
+   "ulb": "Bodhan",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-05-3-nizamabad-mc",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "05",
+   "district": "Nizamabad",
+   "ulb_id": "3",
+   "ulb": "Nizamabad MC",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-06-5-dharmapuri",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "06",
+   "district": "Jagtial",
+   "ulb_id": "5",
+   "ulb": "Dharmapuri",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-06-1-jagtiyal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "06",
+   "district": "Jagtial",
+   "ulb_id": "1",
+   "ulb": "Jagtiyal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-06-2-korutla",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "06",
+   "district": "Jagtial",
+   "ulb_id": "2",
+   "ulb": "Korutla",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-06-3-metpalli",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "06",
+   "district": "Jagtial",
+   "ulb_id": "3",
+   "ulb": "Metpalli",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-06-4-raikal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "06",
+   "district": "Jagtial",
+   "ulb_id": "4",
+   "ulb": "Raikal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-07-3-manthani",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "07",
+   "district": "Peddapalli",
+   "ulb_id": "3",
+   "ulb": "Manthani",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-07-1-peddapalli",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "07",
+   "district": "Peddapalli",
+   "ulb_id": "1",
+   "ulb": "Peddapalli",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-07-2-ramagundam-mc",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "07",
+   "district": "Peddapalli",
+   "ulb_id": "2",
+   "ulb": "Ramagundam MC",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-07-4-sulthanabad",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "07",
+   "district": "Peddapalli",
+   "ulb_id": "4",
+   "ulb": "Sulthanabad",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-08-1-bhupalapally",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "08",
+   "district": "Jayashankar Bhupalpally",
+   "ulb_id": "1",
+   "ulb": "Bhupalapally",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-09-5-aswaraopeta",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "09",
+   "district": "BHADRADRI KOTHGUDEM",
+   "ulb_id": "5",
+   "ulb": "Aswaraopeta",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-09-1-kothagudem-mc",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "09",
+   "district": "BHADRADRI KOTHGUDEM",
+   "ulb_id": "1",
+   "ulb": "Kothagudem MC",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-09-2-yellandu",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "09",
+   "district": "BHADRADRI KOTHGUDEM",
+   "ulb_id": "2",
+   "ulb": "Yellandu",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-10-2-dornakal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "10",
+   "district": "Mahabubabad",
+   "ulb_id": "2",
+   "ulb": "Dornakal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-10-5-kesamudram",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "10",
+   "district": "Mahabubabad",
+   "ulb_id": "5",
+   "ulb": "Kesamudram",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-10-1-mahabubabad",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "10",
+   "district": "Mahabubabad",
+   "ulb_id": "1",
+   "ulb": "Mahabubabad",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-10-3-maripeda",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "10",
+   "district": "Mahabubabad",
+   "ulb_id": "3",
+   "ulb": "Maripeda",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-10-4-thorrur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "10",
+   "district": "Mahabubabad",
+   "ulb_id": "4",
+   "ulb": "Thorrur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-11-1-narsampet",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "11",
+   "district": "Warangal",
+   "ulb_id": "1",
+   "ulb": "Narsampet",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-11-3-wardhannapet",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "11",
+   "district": "Warangal",
+   "ulb_id": "3",
+   "ulb": "Wardhannapet",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-12-2-parakal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "12",
+   "district": "Hanumakonda",
+   "ulb_id": "2",
+   "ulb": "Parakal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-13-4-choppandandi",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "13",
+   "district": "Karimnagar",
+   "ulb_id": "4",
+   "ulb": "Choppandandi",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-13-1-huzurabad",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "13",
+   "district": "Karimnagar",
+   "ulb_id": "1",
+   "ulb": "Huzurabad",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-13-2-jammikunta",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "13",
+   "district": "Karimnagar",
+   "ulb_id": "2",
+   "ulb": "Jammikunta",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-13-3-karimnagar-mc",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "13",
+   "district": "Karimnagar",
+   "ulb_id": "3",
+   "ulb": "Karimnagar MC",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-14-1-sircilla",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "14",
+   "district": "Rajanna Sircilla",
+   "ulb_id": "1",
+   "ulb": "Sircilla",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-14-2-vemulawada",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "14",
+   "district": "Rajanna Sircilla",
+   "ulb_id": "2",
+   "ulb": "Vemulawada",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-15-2-banswada",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "15",
+   "district": "Kamareddy",
+   "ulb_id": "2",
+   "ulb": "Banswada",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-15-4-bichkunda",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "15",
+   "district": "Kamareddy",
+   "ulb_id": "4",
+   "ulb": "Bichkunda",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-15-1-kamareddy",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "15",
+   "district": "Kamareddy",
+   "ulb_id": "1",
+   "ulb": "Kamareddy",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-15-3-yellareddy",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "15",
+   "district": "Kamareddy",
+   "ulb_id": "3",
+   "ulb": "Yellareddy",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-4-andole-jogipet",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "4",
+   "ulb": "Andole-Jogipet",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-10-gaddapotharam",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "10",
+   "ulb": "Gaddapotharam",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-11-gummadidala",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "11",
+   "ulb": "Gummadidala",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-14-indresham",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "14",
+   "ulb": "Indresham",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-12-isnapur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "12",
+   "ulb": "Isnapur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-13-jinnaram",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "13",
+   "ulb": "Jinnaram",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-9-kohir",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "9",
+   "ulb": "Kohir",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-5-narayankhed",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "5",
+   "ulb": "Narayankhed",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-2-sadasivapet",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "2",
+   "ulb": "Sadasivapet",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-1-sangareddy",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "1",
+   "ulb": "Sangareddy",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-16-3-zaheerabad",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "ulb_id": "3",
+   "ulb": "Zaheerabad",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-17-1-medak",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "17",
+   "district": "Medak",
+   "ulb_id": "1",
+   "ulb": "Medak",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-17-4-narsapur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "17",
+   "district": "Medak",
+   "ulb_id": "4",
+   "ulb": "Narsapur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-17-3-ramyampet",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "17",
+   "district": "Medak",
+   "ulb_id": "3",
+   "ulb": "Ramyampet",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-17-2-thoopran",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "17",
+   "district": "Medak",
+   "ulb_id": "2",
+   "ulb": "Thoopran",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-18-5-cherial",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "18",
+   "district": "Siddipet",
+   "ulb_id": "5",
+   "ulb": "Cherial",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-18-4-dubbaka",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "18",
+   "district": "Siddipet",
+   "ulb_id": "4",
+   "ulb": "Dubbaka",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-18-1-gajwel",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "18",
+   "district": "Siddipet",
+   "ulb_id": "1",
+   "ulb": "Gajwel",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-18-3-husnabad",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "18",
+   "district": "Siddipet",
+   "ulb_id": "3",
+   "ulb": "Husnabad",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-19-1-jangaon",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "19",
+   "district": "Jangaon",
+   "ulb_id": "1",
+   "ulb": "Jangaon",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-19-2-station-ghanpur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "19",
+   "district": "Jangaon",
+   "ulb_id": "2",
+   "ulb": "Station Ghanpur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-20-4-alair",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "20",
+   "district": "Yadadri Bhongiri",
+   "ulb_id": "4",
+   "ulb": "Alair",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-20-1-bhongir",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "20",
+   "district": "Yadadri Bhongiri",
+   "ulb_id": "1",
+   "ulb": "Bhongir",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-20-3-choutuppal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "20",
+   "district": "Yadadri Bhongiri",
+   "ulb_id": "3",
+   "ulb": "Choutuppal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-20-2-mothkur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "20",
+   "district": "Yadadri Bhongiri",
+   "ulb_id": "2",
+   "ulb": "Mothkur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-20-5-pochampally",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "20",
+   "district": "Yadadri Bhongiri",
+   "ulb_id": "5",
+   "ulb": "Pochampally",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-20-6-yadagirigutta",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "20",
+   "district": "Yadadri Bhongiri",
+   "ulb_id": "6",
+   "ulb": "Yadagirigutta",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-21-14-aliyabad",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "21",
+   "district": "Medchal-Malkajgiri",
+   "ulb_id": "14",
+   "ulb": "Aliyabad",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-21-15-muduchinthlapally",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "21",
+   "district": "Medchal-Malkajgiri",
+   "ulb_id": "15",
+   "ulb": "Muduchinthlapally",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-21-16-yellampet",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "21",
+   "district": "Medchal-Malkajgiri",
+   "ulb_id": "16",
+   "ulb": "Yellampet",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-23-9-amangal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "23",
+   "district": "Rangareddy",
+   "ulb_id": "9",
+   "ulb": "Amangal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-23-18-chevella",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "23",
+   "district": "Rangareddy",
+   "ulb_id": "18",
+   "ulb": "Chevella",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-23-1-ibrahimpatnam",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "23",
+   "district": "Rangareddy",
+   "ulb_id": "1",
+   "ulb": "Ibrahimpatnam",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-23-19-moinabad",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "23",
+   "district": "Rangareddy",
+   "ulb_id": "19",
+   "ulb": "Moinabad",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-23-2-shadnagar",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "23",
+   "district": "Rangareddy",
+   "ulb_id": "2",
+   "ulb": "Shadnagar",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-23-8-shankarpally",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "23",
+   "district": "Rangareddy",
+   "ulb_id": "8",
+   "ulb": "Shankarpally",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-24-4-kodangal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "24",
+   "district": "Vikarabad",
+   "ulb_id": "4",
+   "ulb": "Kodangal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-24-3-parigi",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "24",
+   "district": "Vikarabad",
+   "ulb_id": "3",
+   "ulb": "Parigi",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-24-1-tandur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "24",
+   "district": "Vikarabad",
+   "ulb_id": "1",
+   "ulb": "Tandur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-24-2-vikarabad",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "24",
+   "district": "Vikarabad",
+   "ulb_id": "2",
+   "ulb": "Vikarabad",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-25-5-bhoothpur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "25",
+   "district": "Mahabubnagar",
+   "ulb_id": "5",
+   "ulb": "Bhoothpur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-25-6-devarkadara",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "25",
+   "district": "Mahabubnagar",
+   "ulb_id": "6",
+   "ulb": "Devarkadara",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-25-7-mahabubnagar-mc",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "25",
+   "district": "Mahabubnagar",
+   "ulb_id": "7",
+   "ulb": "Mahabubnagar MC",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-26-4-alampur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "26",
+   "district": "Jogulamba Gadwal",
+   "ulb_id": "4",
+   "ulb": "Alampur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-26-1-gadwal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "26",
+   "district": "Jogulamba Gadwal",
+   "ulb_id": "1",
+   "ulb": "Gadwal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-26-2-ieeja",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "26",
+   "district": "Jogulamba Gadwal",
+   "ulb_id": "2",
+   "ulb": "Ieeja",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-26-3-waddepalle",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "26",
+   "district": "Jogulamba Gadwal",
+   "ulb_id": "3",
+   "ulb": "Waddepalle",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-27-5-amarchinta",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "27",
+   "district": "Wanaparthy",
+   "ulb_id": "5",
+   "ulb": "Amarchinta",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-27-4-atmakur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "27",
+   "district": "Wanaparthy",
+   "ulb_id": "4",
+   "ulb": "Atmakur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-27-2-kothakota",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "27",
+   "district": "Wanaparthy",
+   "ulb_id": "2",
+   "ulb": "Kothakota",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-27-3-pebbair",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "27",
+   "district": "Wanaparthy",
+   "ulb_id": "3",
+   "ulb": "Pebbair",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-27-1-wanaparthy",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "27",
+   "district": "Wanaparthy",
+   "ulb_id": "1",
+   "ulb": "Wanaparthy",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-28-2-kalwakurthy",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "28",
+   "district": "Nagarkurnool",
+   "ulb_id": "2",
+   "ulb": "Kalwakurthy",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-28-4-kollapur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "28",
+   "district": "Nagarkurnool",
+   "ulb_id": "4",
+   "ulb": "Kollapur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-28-3-nagarkurnool",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "28",
+   "district": "Nagarkurnool",
+   "ulb_id": "3",
+   "ulb": "Nagarkurnool",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-29-6-chandur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "29",
+   "district": "Nalgonda",
+   "ulb_id": "6",
+   "ulb": "Chandur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-29-5-chityal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "29",
+   "district": "Nalgonda",
+   "ulb_id": "5",
+   "ulb": "Chityal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-29-1-devarakonda",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "29",
+   "district": "Nalgonda",
+   "ulb_id": "1",
+   "ulb": "Devarakonda",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-29-8-haliya",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "29",
+   "district": "Nalgonda",
+   "ulb_id": "8",
+   "ulb": "Haliya",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-29-2-miryalguda",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "29",
+   "district": "Nalgonda",
+   "ulb_id": "2",
+   "ulb": "Miryalguda",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-29-3-nalgonda-mc",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "29",
+   "district": "Nalgonda",
+   "ulb_id": "3",
+   "ulb": "Nalgonda MC",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-29-7-nandikonda",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "29",
+   "district": "Nalgonda",
+   "ulb_id": "7",
+   "ulb": "Nandikonda",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-30-1-huzurnagar",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "30",
+   "district": "Suryapet",
+   "ulb_id": "1",
+   "ulb": "Huzurnagar",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-30-2-kodada",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "30",
+   "district": "Suryapet",
+   "ulb_id": "2",
+   "ulb": "Kodada",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-30-4-neredcherla",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "30",
+   "district": "Suryapet",
+   "ulb_id": "4",
+   "ulb": "Neredcherla",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-30-3-suryapet",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "30",
+   "district": "Suryapet",
+   "ulb_id": "3",
+   "ulb": "Suryapet",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-30-5-tirumalagiri",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "30",
+   "district": "Suryapet",
+   "ulb_id": "5",
+   "ulb": "Tirumalagiri",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-31-5-edulapuram",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "31",
+   "district": "Khammam",
+   "ulb_id": "5",
+   "ulb": "Edulapuram",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-31-6-kalluru-municipality",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "31",
+   "district": "Khammam",
+   "ulb_id": "6",
+   "ulb": "Kalluru Municipality",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-31-3-madhira",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "31",
+   "district": "Khammam",
+   "ulb_id": "3",
+   "ulb": "Madhira",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-31-1-sathupalli",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "31",
+   "district": "Khammam",
+   "ulb_id": "1",
+   "ulb": "Sathupalli",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-31-4-wyra",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "31",
+   "district": "Khammam",
+   "ulb_id": "4",
+   "ulb": "Wyra",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-32-2-mulugu",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "32",
+   "district": "Mulugu",
+   "ulb_id": "2",
+   "ulb": "Mulugu",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-33-2-kosgi",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "33",
+   "district": "Narayanpet",
+   "ulb_id": "2",
+   "ulb": "Kosgi",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-33-4-maddur",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "33",
+   "district": "Narayanpet",
+   "ulb_id": "4",
+   "ulb": "Maddur",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-33-1-makthal",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "33",
+   "district": "Narayanpet",
+   "ulb_id": "1",
+   "ulb": "Makthal",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ },
+ {
+  "key": "tg-33-3-narayanpet",
+  "payload": {
+   "kind": "form-tg",
+   "state": "TG",
+   "district_id": "33",
+   "district": "Narayanpet",
+   "ulb_id": "3",
+   "ulb": "Narayanpet",
+   "url": "https://tsec.gov.in/knowPRUrban.do"
+  }
+ }
+]
