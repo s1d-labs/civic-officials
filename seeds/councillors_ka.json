@@ -1,0 +1,4620 @@
+[
+ {
+  "key": "ka-ballari-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://ballaricity.mrc.gov.in/en/council-members",
+   "host": "ballaricity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ballari City Corporation",
+   "body_type": "City Corporation",
+   "district": "Ballari",
+   "lgd_code": "251927",
+   "slug": "ballari-city-corporation"
+  }
+ },
+ {
+  "key": "ka-challakere-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://challakerecity.mrc.gov.in/en/council-members",
+   "host": "challakerecity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Challakere City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Chitradurga",
+   "lgd_code": "251933",
+   "slug": "challakere-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-davanagere-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://davanagerecity.mrc.gov.in/en/council-members",
+   "host": "davanagerecity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Davanagere City Corporation",
+   "body_type": "City Corporation",
+   "district": "Davanagere",
+   "lgd_code": "251941",
+   "slug": "davanagere-city-corporation"
+  }
+ },
+ {
+  "key": "ka-hubballi-dharwad-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://hdmc.mrc.gov.in/en/council-members",
+   "host": "hdmc.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hubballi-Dharwad City Corporation",
+   "body_type": "City Corporation",
+   "district": "Dharwad",
+   "lgd_code": "251893",
+   "slug": "hubballi-dharwad-city-corporation"
+  }
+ },
+ {
+  "key": "ka-nanjangud-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://nanjanaguducity.mrc.gov.in/en/council-members",
+   "host": "nanjanaguducity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Nanjangud City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Mysuru",
+   "lgd_code": "252050",
+   "slug": "nanjangud-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-nipani-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://nippanicity.mrc.gov.in/en/council-members",
+   "host": "nippanicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Nipani City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251809",
+   "slug": "nipani-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-sagar-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://sagaracity.mrc.gov.in/en/council-members",
+   "host": "sagaracity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sagar City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Shivamogga",
+   "lgd_code": "251945",
+   "slug": "sagar-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-shahpur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://shahapuracity.mrc.gov.in/en/council-members",
+   "host": "shahapuracity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Shahpur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Yadgir",
+   "lgd_code": "251861",
+   "slug": "shahpur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-tumakuru-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://tumakurucity.mrc.gov.in/en/council-members",
+   "host": "tumakurucity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Tumakuru City Corporation",
+   "body_type": "City Corporation",
+   "district": "Tumakuru",
+   "lgd_code": "251973",
+   "slug": "tumakuru-city-corporation"
+  }
+ },
+ {
+  "key": "ka-afzalpur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.afzalpurtown.mrc.gov.in/en/council-members",
+   "host": "www.afzalpurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Afzalpur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Kalaburagi",
+   "lgd_code": "251849",
+   "slug": "afzalpur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-ainapur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ainapurtown.mrc.gov.in/en/council-members",
+   "host": "www.ainapurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ainapur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "276618",
+   "slug": "ainapur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-ajjampura-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ajjampuratown.mrc.gov.in/en/council-members",
+   "host": "www.ajjampuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ajjampura Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Chikkamagaluru",
+   "lgd_code": "296977",
+   "slug": "ajjampura-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-aland-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.alandatown.mrc.gov.in/en/council-members",
+   "host": "www.alandatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Aland Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Kalaburagi",
+   "lgd_code": "251848",
+   "slug": "aland-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-alamela-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.almeltown.mrc.gov.in/en/council-members",
+   "host": "www.almeltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Alamela Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayapura",
+   "lgd_code": "276540",
+   "slug": "alamela-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-alnavar-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.alnavartown.mrc.gov.in/en/council-members",
+   "host": "www.alnavartown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Alnavar Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dharwad",
+   "lgd_code": "251894",
+   "slug": "alnavar-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-alur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.alurtown.mrc.gov.in/en/council-members",
+   "host": "www.alurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Alur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Hassan",
+   "lgd_code": "252013",
+   "slug": "alur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-anavatti-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.anavattitown.mrc.gov.in/en/council-members",
+   "host": "www.anavattitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Anavatti Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Shivamogga",
+   "lgd_code": "299181",
+   "slug": "anavatti-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-anekal-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.anekaltown.mrc.gov.in/en/council-members",
+   "host": "www.anekaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Anekal Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru Urban",
+   "lgd_code": "253189",
+   "slug": "anekal-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-ankalagi-akkathangerahal-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ankalagiakkathangerahaalatown.mrc.gov.in/en/council-members",
+   "host": "www.ankalagiakkathangerahaalatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ankalagi-Akkathangerahal Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "299329",
+   "slug": "ankalagi-akkathangerahal-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-ankola-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ankolatown.mrc.gov.in/en/council-members",
+   "host": "www.ankolatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ankola Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Uttara Kannada",
+   "lgd_code": "251906",
+   "slug": "ankola-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-annigeri-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.annigeritown.mrc.gov.in/en/council-members",
+   "host": "www.annigeritown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Annigeri Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Dharwad",
+   "lgd_code": "251896",
+   "slug": "annigeri-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-arabhavi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.arabhavitown.mrc.gov.in/en/council-members",
+   "host": "www.arabhavitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Arabhavi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "276577",
+   "slug": "arabhavi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-arsikere-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.arasikerecity.mrc.gov.in/en/council-members",
+   "host": "www.arasikerecity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Arsikere City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Hassan",
+   "lgd_code": "252010",
+   "slug": "arsikere-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-arkalgud-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.arkalgudtown.mrc.gov.in/en/council-members",
+   "host": "www.arkalgudtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Arkalgud Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Hassan",
+   "lgd_code": "252014",
+   "slug": "arkalgud-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-athni-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.athanitown.mrc.gov.in/en/council-members",
+   "host": "www.athanitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Athni Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251812",
+   "slug": "athni-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-attibele-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.attibeletown.mrc.gov.in/en/council-members",
+   "host": "www.attibeletown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Attibele Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru Urban",
+   "lgd_code": "276539",
+   "slug": "attibele-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-aurad-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.auradtown.mrc.gov.in/en/council-members",
+   "host": "www.auradtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Aurad Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bidar",
+   "lgd_code": "251866",
+   "slug": "aurad-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-babaleshwar-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.babaleshwartown.mrc.gov.in/en/council-members",
+   "host": "www.babaleshwartown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Babaleshwar Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayapura",
+   "lgd_code": "299327",
+   "slug": "babaleshwar-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-badami-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.badamitown.mrc.gov.in/en/council-members",
+   "host": "www.badamitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Badami Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bagalkote",
+   "lgd_code": "251837",
+   "slug": "badami-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bagalkot-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bagalkotecity.mrc.gov.in/en/council-members",
+   "host": "www.bagalkotecity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bagalkot City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bagalkote",
+   "lgd_code": "251839",
+   "slug": "bagalkot-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bagepalli-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bagepallitown.mrc.gov.in/en/council-members",
+   "host": "www.bagepallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bagepalli Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Chikkaballapura",
+   "lgd_code": "251981",
+   "slug": "bagepalli-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bail-hongal-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bailhongalacity.mrc.gov.in/en/council-members",
+   "host": "www.bailhongalacity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bail Hongal City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251827",
+   "slug": "bail-hongal-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bainduru-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.baindurutown.mrc.gov.in/en/council-members",
+   "host": "www.baindurutown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bainduru Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Udupi",
+   "lgd_code": "297129",
+   "slug": "bainduru-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-bajape-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bajapetown.mrc.gov.in/en/council-members",
+   "host": "www.bajapetown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bajape Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dakshina Kannada",
+   "lgd_code": "299320",
+   "slug": "bajape-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-balaganur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.balaganurtown.mrc.gov.in/en/council-members",
+   "host": "www.balaganurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Balaganur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Raichur",
+   "lgd_code": "276523",
+   "slug": "balaganur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-bangarpete-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bangarpetcity.mrc.gov.in/en/council-members",
+   "host": "www.bangarpetcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bangarpete City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Kolar",
+   "lgd_code": "299416",
+   "slug": "bangarpete-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bankapura-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bankapurtown.mrc.gov.in/en/council-members",
+   "host": "www.bankapurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bankapura Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Haveri",
+   "lgd_code": "251913",
+   "slug": "bankapura-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bannur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bannurtown.mrc.gov.in/en/council-members",
+   "host": "www.bannurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bannur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Mysuru",
+   "lgd_code": "252051",
+   "slug": "bannur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bantval-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bantwaltown.mrc.gov.in/en/council-members",
+   "host": "www.bantwaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bantval Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Dakshina Kannada",
+   "lgd_code": "252033",
+   "slug": "bantval-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-basavakalyan-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.basavakalyancity.mrc.gov.in/en/council-members",
+   "host": "www.basavakalyancity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Basavakalyan City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bidar",
+   "lgd_code": "251864",
+   "slug": "basavakalyan-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-basavana-bagevadi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.basavanabagewaditown.mrc.gov.in/en/council-members",
+   "host": "www.basavanabagewaditown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Basavana Bagevadi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Vijayapura",
+   "lgd_code": "251845",
+   "slug": "basavana-bagevadi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bashettihalli-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bashettihallitown.mrc.gov.in/en/council-members",
+   "host": "www.bashettihallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bashettihalli Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Bengaluru Rural",
+   "lgd_code": "299169",
+   "slug": "bashettihalli-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-belagali-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.belagalitown.mrc.gov.in/en/council-members",
+   "host": "www.belagalitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Belagali Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Bagalkote",
+   "lgd_code": "276529",
+   "slug": "belagali-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-belagavi-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.belagavicity.mrc.gov.in/en/council-members",
+   "host": "www.belagavicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Belagavi City Corporation",
+   "body_type": "City Corporation",
+   "district": "Belagavi",
+   "lgd_code": "251824",
+   "slug": "belagavi-city-corporation"
+  }
+ },
+ {
+  "key": "ka-belluru-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bellurutown.mrc.gov.in/en/council-members",
+   "host": "www.bellurutown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Belluru Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Mandya",
+   "lgd_code": "276602",
+   "slug": "belluru-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-beltangadi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.belthangaditown.mrc.gov.in/en/council-members",
+   "host": "www.belthangaditown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Beltangadi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dakshina Kannada",
+   "lgd_code": "252034",
+   "slug": "beltangadi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-belur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.belurtown.mrc.gov.in/en/council-members",
+   "host": "www.belurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Belur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Hassan",
+   "lgd_code": "252009",
+   "slug": "belur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bhadravati-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bhadravathicity.mrc.gov.in/en/council-members",
+   "host": "www.bhadravathicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bhadravati City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Shivamogga",
+   "lgd_code": "251952",
+   "slug": "bhadravati-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bhagyanagara-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bhagyanagartown.mrc.gov.in/en/council-members",
+   "host": "www.bhagyanagartown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bhagyanagara Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Koppal",
+   "lgd_code": "276604",
+   "slug": "bhagyanagara-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-bhatkal-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bhatkalcity.mrc.gov.in/en/council-members",
+   "host": "www.bhatkalcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bhatkal City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Uttara Kannada",
+   "lgd_code": "251911",
+   "slug": "bhatkal-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bidadi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bidaditown.mrc.gov.in/en/council-members",
+   "host": "www.bidaditown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bidadi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru South",
+   "lgd_code": "276526",
+   "slug": "bidadi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bidar-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bidarcity.mrc.gov.in/en/council-members",
+   "host": "www.bidarcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bidar City Corporation",
+   "body_type": "City Corporation",
+   "district": "Bidar",
+   "lgd_code": "251867",
+   "slug": "bidar-city-corporation"
+  }
+ },
+ {
+  "key": "ka-bilgi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bilagitown.mrc.gov.in/en/council-members",
+   "host": "www.bilagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bilgi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Bagalkote",
+   "lgd_code": "251834",
+   "slug": "bilgi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-birur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.birurtown.mrc.gov.in/en/council-members",
+   "host": "www.birurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Birur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Chikkamagaluru",
+   "lgd_code": "251963",
+   "slug": "birur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-bogadi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bogaditown.mrc.gov.in/en/council-members",
+   "host": "www.bogaditown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bogadi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Mysuru",
+   "lgd_code": "299334",
+   "slug": "bogadi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-bommasandra-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.bommasandratown.mrc.gov.in/en/council-members",
+   "host": "www.bommasandratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Bommasandra Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru Urban",
+   "lgd_code": "276537",
+   "slug": "bommasandra-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-boragaon-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.boragaontown.mrc.gov.in/en/council-members",
+   "host": "www.boragaontown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Boragaon Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "276583",
+   "slug": "boragaon-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-byadgi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.byadagitown.mrc.gov.in/en/council-members",
+   "host": "www.byadagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Byadgi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Haveri",
+   "lgd_code": "251917",
+   "slug": "byadgi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chadachana-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chadachanatown.mrc.gov.in/en/council-members",
+   "host": "www.chadachanatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chadachana Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayapura",
+   "lgd_code": "276559",
+   "slug": "chadachana-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-chamarajanagar-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chamarajanagaracity.mrc.gov.in/en/council-members",
+   "host": "www.chamarajanagaracity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chamarajanagar City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Chamarajanagar",
+   "lgd_code": "252054",
+   "slug": "chamarajanagar-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chandapura-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chandapuratown.mrc.gov.in/en/council-members",
+   "host": "www.chandapuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chandapura Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru Urban",
+   "lgd_code": "276533",
+   "slug": "chandapura-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-channagiri-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.channagiritown.mrc.gov.in/en/council-members",
+   "host": "www.channagiritown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Channagiri Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Davanagere",
+   "lgd_code": "251943",
+   "slug": "channagiri-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-channapatna-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.channapatnacity.mrc.gov.in/en/council-members",
+   "host": "www.channapatnacity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Channapatna City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bengaluru South",
+   "lgd_code": "253185",
+   "slug": "channapatna-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-channarayapatna-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.channarayapatnatown.mrc.gov.in/en/council-members",
+   "host": "www.channarayapatnatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Channarayapatna Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Hassan",
+   "lgd_code": "252016",
+   "slug": "channarayapatna-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chennammana-kittur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chennamman-kitturtown.mrc.gov.in/en/council-members",
+   "host": "www.chennamman-kitturtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chennammana Kittur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "276578",
+   "slug": "chennammana-kittur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-chikkamagaluru-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chickamagalurcity.mrc.gov.in/en/council-members",
+   "host": "www.chickamagalurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chikkamagaluru City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Chikkamagaluru",
+   "lgd_code": "251965",
+   "slug": "chikkamagaluru-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chik-ballapur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chikkaballapurcity.mrc.gov.in/en/council-members",
+   "host": "www.chikkaballapurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chik Ballapur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Chikkaballapura",
+   "lgd_code": "251979",
+   "slug": "chik-ballapur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chikkabanavara-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chikkabanavaratown.mrc.gov.in/en/council-members",
+   "host": "www.chikkabanavaratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chikkabanavara Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru Urban",
+   "lgd_code": "299318",
+   "slug": "chikkabanavara-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chiknayakanhalli-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chikkanayakanahallitown.mrc.gov.in/en/council-members",
+   "host": "www.chikkanayakanahallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chiknayakanhalli Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Tumakuru",
+   "lgd_code": "251968",
+   "slug": "chiknayakanhalli-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chikodi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chikkoditown.mrc.gov.in/en/council-members",
+   "host": "www.chikkoditown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chikodi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251811",
+   "slug": "chikodi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chinchali-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chinchalitown.mrc.gov.in/en/council-members",
+   "host": "www.chinchalitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chinchali Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "276477",
+   "slug": "chinchali-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-chincholi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chincholitown.mrc.gov.in/en/council-members",
+   "host": "www.chincholitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chincholi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Kalaburagi",
+   "lgd_code": "276568",
+   "slug": "chincholi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chintamani-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chintamanicity.mrc.gov.in/en/council-members",
+   "host": "www.chintamanicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chintamani City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Chikkaballapura",
+   "lgd_code": "251983",
+   "slug": "chintamani-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chitradurga-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chitradurgacity.mrc.gov.in/en/council-members",
+   "host": "www.chitradurgacity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chitradurga City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Chitradurga",
+   "lgd_code": "251934",
+   "slug": "chitradurga-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chittaguppa-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chittaguppatown.mrc.gov.in/en/council-members",
+   "host": "www.chittaguppatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chittaguppa Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bidar",
+   "slug": "chittaguppa-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-chittapura-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.chittapuratown.mrc.gov.in/en/council-members",
+   "host": "www.chittapuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Chittapura Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Kalaburagi",
+   "lgd_code": "251853",
+   "slug": "chittapura-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-dandeli-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.dandelicity.mrc.gov.in/en/council-members",
+   "host": "www.dandelicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Dandeli City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Uttara Kannada",
+   "lgd_code": "251899",
+   "slug": "dandeli-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-devadurga-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.devadurgatown.mrc.gov.in/en/council-members",
+   "host": "www.devadurgatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Devadurga Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Raichur",
+   "lgd_code": "251874",
+   "slug": "devadurga-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-devanahalli-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.devanahallitown.mrc.gov.in/en/council-members",
+   "host": "www.devanahallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Devanahalli Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru Rural",
+   "lgd_code": "251994",
+   "slug": "devanahalli-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-devarahipparagi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.devarahipparagitown.mrc.gov.in/en/council-members",
+   "host": "www.devarahipparagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Devarahipparagi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayapura",
+   "lgd_code": "276558",
+   "slug": "devarahipparagi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-dod-ballapur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.doddaballapurcity.mrc.gov.in/en/council-members",
+   "host": "www.doddaballapurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Dod Ballapur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bengaluru Rural",
+   "lgd_code": "251992",
+   "slug": "dod-ballapur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-doddathoguru-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.doddathogurutown.mrc.gov.in/en/council-members",
+   "host": "www.doddathogurutown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Doddathoguru Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Bengaluru Urban",
+   "lgd_code": "301176",
+   "slug": "doddathoguru-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-examba-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.exambatown.mrc.gov.in/en/council-members",
+   "host": "www.exambatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Examba Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "276575",
+   "slug": "examba-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-gadag-betigeri-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.gadag-betagericity.mrc.gov.in/en/council-members",
+   "host": "www.gadag-betagericity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Gadag-Betigeri City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Gadag",
+   "lgd_code": "251888",
+   "slug": "gadag-betigeri-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-gajendragarh-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.gajendragadatown.mrc.gov.in/en/council-members",
+   "host": "www.gajendragadatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Gajendragarh Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Gadag",
+   "lgd_code": "251886",
+   "slug": "gajendragarh-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-gangawati-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.gangavathicity.mrc.gov.in/en/council-members",
+   "host": "www.gangavathicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Gangawati City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Koppal",
+   "lgd_code": "251881",
+   "slug": "gangawati-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-ghataprabha-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ghataprabhatown.mrc.gov.in/en/council-members",
+   "host": "www.ghataprabhatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ghataprabha Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "276574",
+   "slug": "ghataprabha-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-gokak-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.gokakcity.mrc.gov.in/en/council-members",
+   "host": "www.gokakcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Gokak City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251818",
+   "slug": "gokak-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-gauribidanur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.gowribidanurcity.mrc.gov.in/en/council-members",
+   "host": "www.gowribidanurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Gauribidanur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Chikkaballapura",
+   "lgd_code": "251978",
+   "slug": "gauribidanur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-gubbi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.gubbitown.mrc.gov.in/en/council-members",
+   "host": "www.gubbitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Gubbi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Tumakuru",
+   "lgd_code": "251974",
+   "slug": "gubbi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-gudibanda-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.gudibandetown.mrc.gov.in/en/council-members",
+   "host": "www.gudibandetown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Gudibanda Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Chikkaballapura",
+   "lgd_code": "251980",
+   "slug": "gudibanda-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-guledgudda-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.guledaguddatown.mrc.gov.in/en/council-members",
+   "host": "www.guledaguddatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Guledgudda Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bagalkote",
+   "lgd_code": "251838",
+   "slug": "guledgudda-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-gundlupet-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.gundlupettown.mrc.gov.in/en/council-members",
+   "host": "www.gundlupettown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Gundlupet Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Chamarajanagar",
+   "lgd_code": "252053",
+   "slug": "gundlupet-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-gurmatkal-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.gurumitkaltown.mrc.gov.in/en/council-members",
+   "host": "www.gurumitkaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Gurmatkal Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Yadgir",
+   "lgd_code": "251862",
+   "slug": "gurmatkal-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-guttal-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.guttaltown.mrc.gov.in/en/council-members",
+   "host": "www.guttaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Guttal Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Haveri",
+   "lgd_code": "276521",
+   "slug": "guttal-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-hagaribommanahalli-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hagaribommanahallitown.mrc.gov.in/en/council-members",
+   "host": "www.hagaribommanahallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hagaribommanahalli Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Vijayanagara",
+   "lgd_code": "276535",
+   "slug": "hagaribommanahalli-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hallikheda-b-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.halikhedatown.mrc.gov.in/en/council-members",
+   "host": "www.halikhedatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hallikheda (B) Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bidar",
+   "lgd_code": "277668",
+   "slug": "hallikheda-b-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-haliyal-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.haliyalatown.mrc.gov.in/en/council-members",
+   "host": "www.haliyalatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Haliyal Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Uttara Kannada",
+   "lgd_code": "251901",
+   "slug": "haliyal-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hangal-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hanagaltown.mrc.gov.in/en/council-members",
+   "host": "www.hanagaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hangal Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Haveri",
+   "lgd_code": "251915",
+   "slug": "hangal-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hanur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hanurtown.mrc.gov.in/en/council-members",
+   "host": "www.hanurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hanur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Chamarajanagar",
+   "lgd_code": "253130",
+   "slug": "hanur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-harapanahalli-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.harapanahallicity.mrc.gov.in/en/council-members",
+   "host": "www.harapanahallicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Harapanahalli City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Vijayanagara",
+   "lgd_code": "251939",
+   "slug": "harapanahalli-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-harihar-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hariharcity.mrc.gov.in/en/council-members",
+   "host": "www.hariharcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Harihar City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Davanagere",
+   "lgd_code": "251938",
+   "slug": "harihar-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-harohalli-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.harohallitown.mrc.gov.in/en/council-members",
+   "host": "www.harohallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Harohalli Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Bengaluru South",
+   "lgd_code": "299326",
+   "slug": "harohalli-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-harogeri-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.harugeritown.mrc.gov.in/en/council-members",
+   "host": "www.harugeritown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Harogeri Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "276569",
+   "slug": "harogeri-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hassan-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hassancity.mrc.gov.in/en/council-members",
+   "host": "www.hassancity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hassan City Corporation",
+   "body_type": "City Corporation",
+   "district": "Hassan",
+   "lgd_code": "252012",
+   "slug": "hassan-city-corporation"
+  }
+ },
+ {
+  "key": "ka-haveri-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.havericity.mrc.gov.in/en/council-members",
+   "host": "www.havericity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Haveri City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Haveri",
+   "lgd_code": "251916",
+   "slug": "haveri-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-heggadadevankote-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hdkotetown.mrc.gov.in/en/council-members",
+   "host": "www.hdkotetown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Heggadadevankote Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Mysuru",
+   "lgd_code": "252049",
+   "slug": "heggadadevankote-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hebbugodi-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hebbagodicity.mrc.gov.in/en/council-members",
+   "host": "www.hebbagodicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hebbugodi City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bengaluru Urban",
+   "lgd_code": "276463",
+   "slug": "hebbugodi-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hirekerur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hirekerurtown.mrc.gov.in/en/council-members",
+   "host": "www.hirekerurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hirekerur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Haveri",
+   "lgd_code": "251918",
+   "slug": "hirekerur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-hiriyur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hiriyurcity.mrc.gov.in/en/council-members",
+   "host": "www.hiriyurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hiriyur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Chitradurga",
+   "lgd_code": "251937",
+   "slug": "hiriyur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-holalkere-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.holalkeretown.mrc.gov.in/en/council-members",
+   "host": "www.holalkeretown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Holalkere Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Chitradurga",
+   "lgd_code": "251935",
+   "slug": "holalkere-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-holehonnuru-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.holehonnurutown.mrc.gov.in/en/council-members",
+   "host": "www.holehonnurutown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Holehonnuru Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Shivamogga",
+   "lgd_code": "299180",
+   "slug": "holehonnuru-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-hole-narsipur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.holenarasipurtown.mrc.gov.in/en/council-members",
+   "host": "www.holenarasipurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hole Narsipur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Hassan",
+   "lgd_code": "252015",
+   "slug": "hole-narsipur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-honnali-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.honnalitown.mrc.gov.in/en/council-members",
+   "host": "www.honnalitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Honnali Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Davanagere",
+   "lgd_code": "251942",
+   "slug": "honnali-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-honavar-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.honnavaratown.mrc.gov.in/en/council-members",
+   "host": "www.honnavaratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Honavar Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Uttara Kannada",
+   "lgd_code": "251909",
+   "slug": "honavar-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-hootagalli-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hootagallicity.mrc.gov.in/en/council-members",
+   "host": "www.hootagallicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hootagalli City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Mysuru",
+   "lgd_code": "299335",
+   "slug": "hootagalli-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hoovina-hadagalli-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hoovinahadagalitown.mrc.gov.in/en/council-members",
+   "host": "www.hoovinahadagalitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hoovina Hadagalli Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Vijayanagara",
+   "lgd_code": "251921",
+   "slug": "hoovina-hadagalli-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hosdurga-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hosadurgatown.mrc.gov.in/en/council-members",
+   "host": "www.hosadurgatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hosdurga Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Chitradurga",
+   "lgd_code": "251936",
+   "slug": "hosdurga-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hosakote-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hosakotecity.mrc.gov.in/en/council-members",
+   "host": "www.hosakotecity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hosakote City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bengaluru Rural",
+   "lgd_code": "251995",
+   "slug": "hosakote-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hosanagara-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hosanagaratown.mrc.gov.in/en/council-members",
+   "host": "www.hosanagaratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hosanagara Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Shivamogga",
+   "lgd_code": "251949",
+   "slug": "hosanagara-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-hosapete-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hospetcity.mrc.gov.in/en/council-members",
+   "host": "www.hospetcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hosapete City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Vijayanagara",
+   "lgd_code": "251922",
+   "slug": "hosapete-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hukeri-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hukkeritown.mrc.gov.in/en/council-members",
+   "host": "www.hukkeritown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hukeri Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251820",
+   "slug": "hukeri-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-huliyaru-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.huliyartown.mrc.gov.in/en/council-members",
+   "host": "www.huliyartown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Huliyaru Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Tumakuru",
+   "lgd_code": "297133",
+   "slug": "huliyaru-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-hunasagi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hunasagitown.mrc.gov.in/en/council-members",
+   "host": "www.hunasagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hunasagi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Yadgir",
+   "lgd_code": "296976",
+   "slug": "hunasagi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-hunasamaranahalli-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hunasamaranahallitown.mrc.gov.in/en/council-members",
+   "host": "www.hunasamaranahallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hunasamaranahalli Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru Urban",
+   "lgd_code": "299319",
+   "slug": "hunasamaranahalli-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hungund-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hungundtown.mrc.gov.in/en/council-members",
+   "host": "www.hungundtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hungund Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bagalkote",
+   "lgd_code": "251840",
+   "slug": "hungund-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hunsur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.hunsurcity.mrc.gov.in/en/council-members",
+   "host": "www.hunsurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hunsur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Mysuru",
+   "lgd_code": "252043",
+   "slug": "hunsur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-hatti-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.huttitown.mrc.gov.in/en/council-members",
+   "host": "www.huttitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Hatti Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Raichur",
+   "lgd_code": "251873",
+   "slug": "hatti-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-ilkal-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ilkalcity.mrc.gov.in/en/council-members",
+   "host": "www.ilkalcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ilkal City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bagalkote",
+   "lgd_code": "251841",
+   "slug": "ilkal-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-indi-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.indicity.mrc.gov.in/en/council-members",
+   "host": "www.indicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Indi City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Vijayapura",
+   "lgd_code": "251843",
+   "slug": "indi-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-jagalur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.jagalurtown.mrc.gov.in/en/council-members",
+   "host": "www.jagalurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Jagalur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Davanagere",
+   "lgd_code": "251940",
+   "slug": "jagalur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-jali-town-panchayath",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.jalitown.mrc.gov.in/en/council-members",
+   "host": "www.jalitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Jali Town Panchayath",
+   "body_type": "Town Panchayat",
+   "district": "Uttara Kannada",
+   "slug": "jali-town-panchayath"
+  }
+ },
+ {
+  "key": "ka-jamkhandi-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.jamkhandicity.mrc.gov.in/en/council-members",
+   "host": "www.jamkhandicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Jamkhandi City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bagalkote",
+   "lgd_code": "251832",
+   "slug": "jamkhandi-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-jevargi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.jewargitown.mrc.gov.in/en/council-members",
+   "host": "www.jewargitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Jevargi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Kalaburagi",
+   "lgd_code": "251858",
+   "slug": "jevargi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-jigani-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.jiganitown.mrc.gov.in/en/council-members",
+   "host": "www.jiganitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Jigani Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru Urban",
+   "lgd_code": "276464",
+   "slug": "jigani-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-jog-kargal-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.jogkargaltown.mrc.gov.in/en/council-members",
+   "host": "www.jogkargaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Jog-Kargal Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Shivamogga",
+   "lgd_code": "263293",
+   "slug": "jog-kargal-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kabbur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kabburtown.mrc.gov.in/en/council-members",
+   "host": "www.kabburtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kabbur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "276483",
+   "slug": "kabbur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kadaba-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kadabatown.mrc.gov.in/en/council-members",
+   "host": "www.kadabatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kadaba Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dakshina Kannada",
+   "lgd_code": "296954",
+   "slug": "kadaba-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kadakola-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kadakolatown.mrc.gov.in/en/council-members",
+   "host": "www.kadakolatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kadakola Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Mysuru",
+   "lgd_code": "299323",
+   "slug": "kadakola-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kadur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kadurtown.mrc.gov.in/en/council-members",
+   "host": "www.kadurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kadur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Chikkamagaluru",
+   "lgd_code": "251964",
+   "slug": "kadur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kagawada-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kagawadatown.mrc.gov.in/en/council-members",
+   "host": "www.kagawadatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kagawada Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "299331",
+   "slug": "kagawada-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kakkera-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kakkeratown.mrc.gov.in/en/council-members",
+   "host": "www.kakkeratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kakkera Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Yadgir",
+   "lgd_code": "276560",
+   "slug": "kakkera-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kalaburagi-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kalaburagicity.mrc.gov.in/en/council-members",
+   "host": "www.kalaburagicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kalaburagi City Corporation",
+   "body_type": "City Corporation",
+   "district": "Kalaburagi",
+   "lgd_code": "248127",
+   "slug": "kalaburagi-city-corporation"
+  }
+ },
+ {
+  "key": "ka-kalghatgi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kalaghatagitown.mrc.gov.in/en/council-members",
+   "host": "www.kalaghatagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kalghatgi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dharwad",
+   "lgd_code": "251897",
+   "slug": "kalghatgi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kalagi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kalagitown.mrc.gov.in/en/council-members",
+   "host": "www.kalagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kalagi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Kalaburagi",
+   "lgd_code": "296978",
+   "slug": "kalagi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kallolli-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kallollitown.mrc.gov.in/en/council-members",
+   "host": "www.kallollitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kallolli Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "276576",
+   "slug": "kallolli-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kamalapura-kalburgi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kamalapura-kbgtown.mrc.gov.in/en/council-members",
+   "host": "www.kamalapura-kbgtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kamalapura Kalburgi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Kalaburagi",
+   "lgd_code": "301080",
+   "slug": "kamalapura-kalburgi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kamalapura-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kamalapuratown.mrc.gov.in/en/council-members",
+   "host": "www.kamalapuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kamalapura Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Vijayanagara",
+   "lgd_code": "276611",
+   "slug": "kamalapura-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kamatagi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kamatagitown.mrc.gov.in/en/council-members",
+   "host": "www.kamatagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kamatagi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Bagalkote",
+   "lgd_code": "301079",
+   "slug": "kamatagi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kampli-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kamplitown.mrc.gov.in/en/council-members",
+   "host": "www.kamplitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kampli Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Ballari",
+   "lgd_code": "251924",
+   "slug": "kampli-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kanakgiri-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kanakagiritown.mrc.gov.in/en/council-members",
+   "host": "www.kanakagiritown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kanakgiri Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Koppal",
+   "lgd_code": "276599",
+   "slug": "kanakgiri-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kanakpura-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kanakapuracity.mrc.gov.in/en/council-members",
+   "host": "www.kanakapuracity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kanakpura City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bengaluru South",
+   "lgd_code": "253188",
+   "slug": "kanakpura-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kankanavadi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kankanawaditown.mrc.gov.in/en/council-members",
+   "host": "www.kankanawaditown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kankanavadi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "276567",
+   "slug": "kankanavadi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-karatagi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.karatagitown.mrc.gov.in/en/council-members",
+   "host": "www.karatagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Karatagi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Koppal",
+   "lgd_code": "276496",
+   "slug": "karatagi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-karkal-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.karkalatown.mrc.gov.in/en/council-members",
+   "host": "www.karkalatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Karkal Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Udupi",
+   "lgd_code": "251958",
+   "slug": "karkal-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-karwar-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.karwarcity.mrc.gov.in/en/council-members",
+   "host": "www.karwarcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Karwar City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Uttara Kannada",
+   "lgd_code": "251900",
+   "slug": "karwar-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kapu-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kauptown.mrc.gov.in/en/council-members",
+   "host": "www.kauptown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kapu Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Udupi",
+   "lgd_code": "301055",
+   "slug": "kapu-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kavital-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kavitalatown.mrc.gov.in/en/council-members",
+   "host": "www.kavitalatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kavital Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Raichur",
+   "lgd_code": "276522",
+   "slug": "kavital-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kembhavi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kembhavitown.mrc.gov.in/en/council-members",
+   "host": "www.kembhavitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kembhavi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Yadgir",
+   "lgd_code": "276516",
+   "slug": "kembhavi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kerur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kerurtown.mrc.gov.in/en/council-members",
+   "host": "www.kerurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kerur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Bagalkote",
+   "lgd_code": "251836",
+   "slug": "kerur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-khanapur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.khanapurtown.mrc.gov.in/en/council-members",
+   "host": "www.khanapurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Khanapur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "251825",
+   "slug": "khanapur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kinnigoli-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kinnigolitown.mrc.gov.in/en/council-members",
+   "host": "www.kinnigolitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kinnigoli Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dakshina Kannada",
+   "lgd_code": "299321",
+   "slug": "kinnigoli-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kolar-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kolarcity.mrc.gov.in/en/council-members",
+   "host": "www.kolarcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kolar City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Kolar",
+   "lgd_code": "251985",
+   "slug": "kolar-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kolhara-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kolhartown.mrc.gov.in/en/council-members",
+   "host": "www.kolhartown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kolhara Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayapura",
+   "lgd_code": "276543",
+   "slug": "kolhara-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kollegal-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kollegalacity.mrc.gov.in/en/council-members",
+   "host": "www.kollegalacity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kollegal City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Chamarajanagar",
+   "lgd_code": "252056",
+   "slug": "kollegal-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-konappanaagrahara-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.konappanaagraharatown.mrc.gov.in/en/council-members",
+   "host": "www.konappanaagraharatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Konappanaagrahara Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru Urban",
+   "lgd_code": "301790",
+   "slug": "konappanaagrahara-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-konnur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.konnurtown.mrc.gov.in/en/council-members",
+   "host": "www.konnurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Konnur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251816",
+   "slug": "konnur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-koppal-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.koppalcity.mrc.gov.in/en/council-members",
+   "host": "www.koppalcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Koppal City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Koppal",
+   "lgd_code": "251882",
+   "slug": "koppal-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-koppa-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.koppatown.mrc.gov.in/en/council-members",
+   "host": "www.koppatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Koppa Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Chikkamagaluru",
+   "lgd_code": "251960",
+   "slug": "koppa-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-koratagere-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.koratageretown.mrc.gov.in/en/council-members",
+   "host": "www.koratageretown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Koratagere Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Tumakuru",
+   "lgd_code": "251972",
+   "slug": "koratagere-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kotekar-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kotekartown.mrc.gov.in/en/council-members",
+   "host": "www.kotekartown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kotekar Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dakshina Kannada",
+   "lgd_code": "276555",
+   "slug": "kotekar-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kotturu-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kotturtown.mrc.gov.in/en/council-members",
+   "host": "www.kotturtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kotturu Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayanagara",
+   "lgd_code": "251931",
+   "slug": "kotturu-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-krishnarajpet-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.krishnarajapetetown.mrc.gov.in/en/council-members",
+   "host": "www.krishnarajapetetown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Krishnarajpet Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Mandya",
+   "lgd_code": "252001",
+   "slug": "krishnarajpet-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kr-nagar-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.krnagaratown.mrc.gov.in/en/council-members",
+   "host": "www.krnagaratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kr Nagar Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Mysuru",
+   "lgd_code": "301081",
+   "slug": "kr-nagar-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kudchi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kudachitown.mrc.gov.in/en/council-members",
+   "host": "www.kudachitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kudchi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251813",
+   "slug": "kudchi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kudligi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kudalagitown.mrc.gov.in/en/council-members",
+   "host": "www.kudalagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kudligi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayanagara",
+   "lgd_code": "251930",
+   "slug": "kudligi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kudutini-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kudathinitown.mrc.gov.in/en/council-members",
+   "host": "www.kudathinitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kudutini Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Ballari",
+   "lgd_code": "276534",
+   "slug": "kudutini-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kukanooru-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kukanurtown.mrc.gov.in/en/council-members",
+   "host": "www.kukanurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kukanooru Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Koppal",
+   "lgd_code": "276497",
+   "slug": "kukanooru-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kumta-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kumatatown.mrc.gov.in/en/council-members",
+   "host": "www.kumatatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kumta Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Uttara Kannada",
+   "lgd_code": "251907",
+   "slug": "kumta-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kundgol-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kundagoltown.mrc.gov.in/en/council-members",
+   "host": "www.kundagoltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kundgol Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dharwad",
+   "lgd_code": "251898",
+   "slug": "kundgol-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-kundapura-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kundapurtown.mrc.gov.in/en/council-members",
+   "host": "www.kundapurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kundapura Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Udupi",
+   "lgd_code": "251953",
+   "slug": "kundapura-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kunigal-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kunigaltown.mrc.gov.in/en/council-members",
+   "host": "www.kunigaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kunigal Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Tumakuru",
+   "lgd_code": "251977",
+   "slug": "kunigal-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kurekuppa-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kurekuppatown.mrc.gov.in/en/council-members",
+   "host": "www.kurekuppatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kurekuppa Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Ballari",
+   "lgd_code": "276538",
+   "slug": "kurekuppa-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kurugodu-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kurugodutown.mrc.gov.in/en/council-members",
+   "host": "www.kurugodutown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kurugodu Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Ballari",
+   "lgd_code": "276532",
+   "slug": "kurugodu-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kushalnagar-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kushalnagartown.mrc.gov.in/en/council-members",
+   "host": "www.kushalnagartown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kushalnagar Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Kodagu",
+   "lgd_code": "252039",
+   "slug": "kushalnagar-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-kushtagi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.kustagitown.mrc.gov.in/en/council-members",
+   "host": "www.kustagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Kushtagi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Koppal",
+   "lgd_code": "251880",
+   "slug": "kushtagi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-lakshmeshwar-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.lakshmishwaratown.mrc.gov.in/en/council-members",
+   "host": "www.lakshmishwaratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Lakshmeshwar Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Gadag",
+   "lgd_code": "251891",
+   "slug": "lakshmeshwar-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-lingasugur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.lingasugurtown.mrc.gov.in/en/council-members",
+   "host": "www.lingasugurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Lingasugur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Raichur",
+   "lgd_code": "251871",
+   "slug": "lingasugur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-lokapura-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.lokapurtown.mrc.gov.in/en/council-members",
+   "host": "www.lokapurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Lokapura Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Bagalkote",
+   "lgd_code": "299317",
+   "slug": "lokapura-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-machhe-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.machchetown.mrc.gov.in/en/council-members",
+   "host": "www.machchetown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Machhe Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "299332",
+   "slug": "machhe-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-madanayakanahalli-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.madanayakanahallicity.mrc.gov.in/en/council-members",
+   "host": "www.madanayakanahallicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Madanayakanahalli City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bengaluru Urban",
+   "lgd_code": "296975",
+   "slug": "madanayakanahalli-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-maddur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.maddurcity.mrc.gov.in/en/council-members",
+   "host": "www.maddurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Maddur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Mandya",
+   "lgd_code": "252006",
+   "slug": "maddur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-madhugiri-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.madhugiritown.mrc.gov.in/en/council-members",
+   "host": "www.madhugiritown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Madhugiri Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Tumakuru",
+   "lgd_code": "251971",
+   "slug": "madhugiri-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-madikeri-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.madikericity.mrc.gov.in/en/council-members",
+   "host": "www.madikericity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Madikeri City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Kodagu",
+   "lgd_code": "252037",
+   "slug": "madikeri-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-magadi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.magaditown.mrc.gov.in/en/council-members",
+   "host": "www.magaditown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Magadi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru South",
+   "lgd_code": "251996",
+   "slug": "magadi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mahalingpur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mahalingapuratown.mrc.gov.in/en/council-members",
+   "host": "www.mahalingapuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mahalingpur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bagalkote",
+   "lgd_code": "251830",
+   "slug": "mahalingpur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-malavalli-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.malavallitown.mrc.gov.in/en/council-members",
+   "host": "www.malavallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Malavalli Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Mandya",
+   "lgd_code": "252007",
+   "slug": "malavalli-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-malebennuru-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.malebennurutown.mrc.gov.in/en/council-members",
+   "host": "www.malebennurutown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Malebennuru Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Davanagere",
+   "lgd_code": "276556",
+   "slug": "malebennuru-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-malur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.malurcity.mrc.gov.in/en/council-members",
+   "host": "www.malurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Malur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Kolar",
+   "lgd_code": "251986",
+   "slug": "malur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-managuli-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.managulitown.mrc.gov.in/en/council-members",
+   "host": "www.managulitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Managuli Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayapura",
+   "lgd_code": "276541",
+   "slug": "managuli-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-mandya-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mandyacity.mrc.gov.in/en/council-members",
+   "host": "www.mandyacity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mandya City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Mandya",
+   "lgd_code": "252005",
+   "slug": "mandya-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mangaluru-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mangalurucity.mrc.gov.in/en/council-members",
+   "host": "www.mangalurucity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mangaluru City Corporation",
+   "body_type": "City Corporation",
+   "district": "Dakshina Kannada",
+   "lgd_code": "252021",
+   "slug": "mangaluru-city-corporation"
+  }
+ },
+ {
+  "key": "ka-manki-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mankitown.mrc.gov.in/en/council-members",
+   "host": "www.mankitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Manki Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Uttara Kannada",
+   "lgd_code": "299328",
+   "slug": "manki-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-manvi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.manvitown.mrc.gov.in/en/council-members",
+   "host": "www.manvitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Manvi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Raichur",
+   "lgd_code": "251877",
+   "slug": "manvi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mariyammanahalli-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mariyammanahallitown.mrc.gov.in/en/council-members",
+   "host": "www.mariyammanahallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mariyammanahalli Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayanagara",
+   "lgd_code": "276474",
+   "slug": "mariyammanahalli-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-maski-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.maskitown.mrc.gov.in/en/council-members",
+   "host": "www.maskitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Maski Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Raichur",
+   "lgd_code": "276519",
+   "slug": "maski-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mkhubballi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mkhubballitown.mrc.gov.in/en/council-members",
+   "host": "www.mkhubballitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mkhubballi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "299417",
+   "slug": "mkhubballi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-molakalmuru-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.molakalmurutown.mrc.gov.in/en/council-members",
+   "host": "www.molakalmurutown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Molakalmuru Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Chitradurga",
+   "lgd_code": "251932",
+   "slug": "molakalmuru-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-mudbidri-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.moodbidritown.mrc.gov.in/en/council-members",
+   "host": "www.moodbidritown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mudbidri Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Dakshina Kannada",
+   "lgd_code": "252018",
+   "slug": "mudbidri-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mudalgi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mudalagitown.mrc.gov.in/en/council-members",
+   "host": "www.mudalagitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mudalgi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251815",
+   "slug": "mudalgi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-muddebihal-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.muddebihaltown.mrc.gov.in/en/council-members",
+   "host": "www.muddebihaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Muddebihal Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Vijayapura",
+   "lgd_code": "251846",
+   "slug": "muddebihal-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mudgal-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mudgaltown.mrc.gov.in/en/council-members",
+   "host": "www.mudgaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mudgal Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Raichur",
+   "lgd_code": "251870",
+   "slug": "mudgal-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mudhol-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mudholcity.mrc.gov.in/en/council-members",
+   "host": "www.mudholcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mudhol City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bagalkote",
+   "lgd_code": "251835",
+   "slug": "mudhol-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mudigere-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mudigeretown.mrc.gov.in/en/council-members",
+   "host": "www.mudigeretown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mudigere Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Chikkamagaluru",
+   "lgd_code": "301082",
+   "slug": "mudigere-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-mugalakoda-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mugalkhodtown.mrc.gov.in/en/council-members",
+   "host": "www.mugalkhodtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mugalakoda Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "276563",
+   "slug": "mugalakoda-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mulgund-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mulagundatown.mrc.gov.in/en/council-members",
+   "host": "www.mulagundatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mulgund Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Gadag",
+   "lgd_code": "251889",
+   "slug": "mulgund-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-mulbagal-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mulbagalcity.mrc.gov.in/en/council-members",
+   "host": "www.mulbagalcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mulbagal City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Kolar",
+   "lgd_code": "251989",
+   "slug": "mulbagal-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mulki-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mulkitown.mrc.gov.in/en/council-members",
+   "host": "www.mulkitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mulki Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dakshina Kannada",
+   "lgd_code": "252017",
+   "slug": "mulki-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-munavalli-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.munavallitown.mrc.gov.in/en/council-members",
+   "host": "www.munavallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Munavalli Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "276564",
+   "slug": "munavalli-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mundgod-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mundagodtown.mrc.gov.in/en/council-members",
+   "host": "www.mundagodtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mundgod Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Uttara Kannada",
+   "lgd_code": "251904",
+   "slug": "mundgod-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-mundargi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mundargitown.mrc.gov.in/en/council-members",
+   "host": "www.mundargitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mundargi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Gadag",
+   "lgd_code": "251892",
+   "slug": "mundargi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-mysuru-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.mysurucity.mrc.gov.in/en/council-members",
+   "host": "www.mysurucity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Mysuru City Corporation",
+   "body_type": "City Corporation",
+   "district": "Mysuru",
+   "lgd_code": "252045",
+   "slug": "mysuru-city-corporation"
+  }
+ },
+ {
+  "key": "ka-nagamangala-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.nagamangalatown.mrc.gov.in/en/council-members",
+   "host": "www.nagamangalatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Nagamangala Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Mandya",
+   "lgd_code": "252002",
+   "slug": "nagamangala-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-naganur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.naganurtown.mrc.gov.in/en/council-members",
+   "host": "www.naganurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Naganur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "301061",
+   "slug": "naganur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-nalatavada-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.nalatawadtown.mrc.gov.in/en/council-members",
+   "host": "www.nalatawadtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Nalatavada Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayapura",
+   "lgd_code": "276544",
+   "slug": "nalatavada-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-nargund-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.naragundatown.mrc.gov.in/en/council-members",
+   "host": "www.naragundatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Nargund Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Gadag",
+   "lgd_code": "251884",
+   "slug": "nargund-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-narasimharajapura-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.narasimharajapuratown.mrc.gov.in/en/council-members",
+   "host": "www.narasimharajapuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Narasimharajapura Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Chikkamagaluru",
+   "lgd_code": "251961",
+   "slug": "narasimharajapura-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-naregal-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.naregaltown.mrc.gov.in/en/council-members",
+   "host": "www.naregaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Naregal Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Gadag",
+   "lgd_code": "251887",
+   "slug": "naregal-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-navalgund-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.navalgundtown.mrc.gov.in/en/council-members",
+   "host": "www.navalgundtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Navalgund Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Dharwad",
+   "lgd_code": "251895",
+   "slug": "navalgund-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-nayakanahatti-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.nayakanahattitown.mrc.gov.in/en/council-members",
+   "host": "www.nayakanahattitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Nayakanahatti Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Chitradurga",
+   "lgd_code": "276542",
+   "slug": "nayakanahatti-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-nelamangala-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.nelamangalacity.mrc.gov.in/en/council-members",
+   "host": "www.nelamangalacity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Nelamangala City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bengaluru Rural",
+   "lgd_code": "251990",
+   "slug": "nelamangala-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-nidagundi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.nidagunditown.mrc.gov.in/en/council-members",
+   "host": "www.nidagunditown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Nidagundi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayapura",
+   "lgd_code": "276557",
+   "slug": "nidagundi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-nyamathi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.nyamathitown.mrc.gov.in/en/council-members",
+   "host": "www.nyamathitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Nyamathi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Davanagere",
+   "lgd_code": "299183",
+   "slug": "nyamathi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-pandavapura-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.pandavapuratown.mrc.gov.in/en/council-members",
+   "host": "www.pandavapuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Pandavapura Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Mandya",
+   "lgd_code": "252003",
+   "slug": "pandavapura-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-pavagada-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.pavagadatown.mrc.gov.in/en/council-members",
+   "host": "www.pavagadatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Pavagada Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Tumakuru",
+   "lgd_code": "251970",
+   "slug": "pavagada-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-peeranawadi-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.peeranawaditown.mrc.gov.in/en/council-members",
+   "host": "www.peeranawaditown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Peeranawadi Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "299333",
+   "slug": "peeranawadi-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-piriyapatna-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.periyapatnatown.mrc.gov.in/en/council-members",
+   "host": "www.periyapatnatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Piriyapatna Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Mysuru",
+   "lgd_code": "252042",
+   "slug": "piriyapatna-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-puttur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.putturcity.mrc.gov.in/en/council-members",
+   "host": "www.putturcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Puttur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Dakshina Kannada",
+   "lgd_code": "252035",
+   "slug": "puttur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-rabkavi-banhatti-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.rabkavi-banahatticity.mrc.gov.in/en/council-members",
+   "host": "www.rabkavi-banahatticity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Rabkavi-Banhatti City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bagalkote",
+   "lgd_code": "251833",
+   "slug": "rabkavi-banhatti-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-raybag-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.raibagtown.mrc.gov.in/en/council-members",
+   "host": "www.raibagtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Raybag Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "251814",
+   "slug": "raybag-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-raichur-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.raichurcity.mrc.gov.in/en/council-members",
+   "host": "www.raichurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Raichur City Corporation",
+   "body_type": "City Corporation",
+   "district": "Raichur",
+   "lgd_code": "251876",
+   "slug": "raichur-city-corporation"
+  }
+ },
+ {
+  "key": "ka-ramanagara-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ramanagaracity.mrc.gov.in/en/council-members",
+   "host": "www.ramanagaracity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ramanagara City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Bengaluru South",
+   "lgd_code": "253186",
+   "slug": "ramanagara-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-ramdurg-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ramdurgatown.mrc.gov.in/en/council-members",
+   "host": "www.ramdurgatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ramdurg Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251829",
+   "slug": "ramdurg-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-rammanahalli-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.rammanahallitown.mrc.gov.in/en/council-members",
+   "host": "www.rammanahallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Rammanahalli Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Mysuru",
+   "lgd_code": "299322",
+   "slug": "rammanahalli-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-ranibennur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ranebennurcity.mrc.gov.in/en/council-members",
+   "host": "www.ranebennurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ranibennur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Haveri",
+   "lgd_code": "251919",
+   "slug": "ranibennur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-rattihalli-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.rattihallitown.mrc.gov.in/en/council-members",
+   "host": "www.rattihallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Rattihalli Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Haveri",
+   "lgd_code": "296955",
+   "slug": "rattihalli-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-robertson-pet-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.robertsonpetcity.mrc.gov.in/en/council-members",
+   "host": "www.robertsonpetcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Robertson Pet City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Kolar",
+   "lgd_code": "251988",
+   "slug": "robertson-pet-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-ron-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ronatown.mrc.gov.in/en/council-members",
+   "host": "www.ronatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ron Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Gadag",
+   "lgd_code": "251885",
+   "slug": "ron-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-sadalgi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sadalgatown.mrc.gov.in/en/council-members",
+   "host": "www.sadalgatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sadalgi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251810",
+   "slug": "sadalgi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-sakleshpur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sakaleshpuratown.mrc.gov.in/en/council-members",
+   "host": "www.sakaleshpuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sakleshpur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Hassan",
+   "lgd_code": "252008",
+   "slug": "sakleshpur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-saligram-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.saligramatown.mrc.gov.in/en/council-members",
+   "host": "www.saligramatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Saligram Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Udupi",
+   "lgd_code": "251954",
+   "slug": "saligram-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-sandur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sandoortown.mrc.gov.in/en/council-members",
+   "host": "www.sandoortown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sandur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Ballari",
+   "lgd_code": "251929",
+   "slug": "sandur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-sankeshwar-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sankeshwaratown.mrc.gov.in/en/council-members",
+   "host": "www.sankeshwaratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sankeshwar Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251819",
+   "slug": "sankeshwar-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-saragur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sargurtown.mrc.gov.in/en/council-members",
+   "host": "www.sargurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Saragur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Mysuru",
+   "lgd_code": "253132",
+   "slug": "saragur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-saundatti-yellamma-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.saundatticity.mrc.gov.in/en/council-members",
+   "host": "www.saundatticity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Saundatti-Yellamma City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "251828",
+   "slug": "saundatti-yellamma-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-savanur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.savanurtown.mrc.gov.in/en/council-members",
+   "host": "www.savanurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Savanur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Haveri",
+   "lgd_code": "251914",
+   "slug": "savanur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-sedam-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sedamcity.mrc.gov.in/en/council-members",
+   "host": "www.sedamcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sedam City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Kalaburagi",
+   "lgd_code": "251852",
+   "slug": "sedam-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-shahabad-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.shahabadcity.mrc.gov.in/en/council-members",
+   "host": "www.shahabadcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Shahabad City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Kalaburagi",
+   "lgd_code": "251855",
+   "slug": "shahabad-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-shedbala-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.shedbaltown.mrc.gov.in/en/council-members",
+   "host": "www.shedbaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Shedbala Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "276579",
+   "slug": "shedbala-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-sidlaghatta-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.shidlaghattacity.mrc.gov.in/en/council-members",
+   "host": "www.shidlaghattacity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sidlaghatta City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Chikkaballapura",
+   "lgd_code": "251982",
+   "slug": "sidlaghatta-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-shiggaon-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.shiggaontown.mrc.gov.in/en/council-members",
+   "host": "www.shiggaontown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Shiggaon Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Haveri",
+   "lgd_code": "251912",
+   "slug": "shiggaon-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-shikarpur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.shikaripuratown.mrc.gov.in/en/council-members",
+   "host": "www.shikaripuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Shikarpur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Shivamogga",
+   "lgd_code": "251948",
+   "slug": "shikarpur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-shirahatti-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.shirahattitown.mrc.gov.in/en/council-members",
+   "host": "www.shirahattitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Shirahatti Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Gadag",
+   "lgd_code": "251890",
+   "slug": "shirahatti-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-siralkoppa-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.shiralakoppatown.mrc.gov.in/en/council-members",
+   "host": "www.shiralakoppatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Siralkoppa Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Shivamogga",
+   "lgd_code": "251947",
+   "slug": "siralkoppa-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-shiruru-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.shirurtown.mrc.gov.in/en/council-members",
+   "host": "www.shirurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Shiruru Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Bagalkote",
+   "lgd_code": "299179",
+   "slug": "shiruru-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-shivamogga-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.shivamoggacity.mrc.gov.in/en/council-members",
+   "host": "www.shivamoggacity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Shivamogga City Corporation",
+   "body_type": "City Corporation",
+   "district": "Shivamogga",
+   "lgd_code": "251951",
+   "slug": "shivamogga-city-corporation"
+  }
+ },
+ {
+  "key": "ka-sringeri-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.shringeritown.mrc.gov.in/en/council-members",
+   "host": "www.shringeritown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sringeri Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Chikkamagaluru",
+   "lgd_code": "251959",
+   "slug": "sringeri-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-siddapur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.siddapuratown.mrc.gov.in/en/council-members",
+   "host": "www.siddapuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Siddapur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Uttara Kannada",
+   "lgd_code": "251908",
+   "slug": "siddapur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-sindgi-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sindagicity.mrc.gov.in/en/council-members",
+   "host": "www.sindagicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sindgi City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Vijayapura",
+   "lgd_code": "251844",
+   "slug": "sindgi-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-sindhnur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sindhanurcity.mrc.gov.in/en/council-members",
+   "host": "www.sindhanurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sindhnur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Raichur",
+   "lgd_code": "251878",
+   "slug": "sindhnur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-sira-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.siracity.mrc.gov.in/en/council-members",
+   "host": "www.siracity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sira City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Tumakuru",
+   "lgd_code": "251969",
+   "slug": "sira-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-siravara-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sirawartown.mrc.gov.in/en/council-members",
+   "host": "www.sirawartown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Siravara Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Raichur",
+   "lgd_code": "276605",
+   "slug": "siravara-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-sirsi-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sirsicity.mrc.gov.in/en/council-members",
+   "host": "www.sirsicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sirsi City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Uttara Kannada",
+   "lgd_code": "251905",
+   "slug": "sirsi-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-siruguppa-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.siruguppacity.mrc.gov.in/en/council-members",
+   "host": "www.siruguppacity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Siruguppa City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Ballari",
+   "lgd_code": "251925",
+   "slug": "siruguppa-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-someshwar-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.someshwaratown.mrc.gov.in/en/council-members",
+   "host": "www.someshwaratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Someshwar Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Dakshina Kannada",
+   "lgd_code": "252029",
+   "slug": "someshwar-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-somvarpet-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.somwarpettown.mrc.gov.in/en/council-members",
+   "host": "www.somwarpettown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Somvarpet Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Kodagu",
+   "lgd_code": "252038",
+   "slug": "somvarpet-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-sorab-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sorabatown.mrc.gov.in/en/council-members",
+   "host": "www.sorabatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sorab Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Shivamogga",
+   "lgd_code": "251946",
+   "slug": "sorab-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-srinivaspur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.srinivasapuratown.mrc.gov.in/en/council-members",
+   "host": "www.srinivasapuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Srinivaspur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Kolar",
+   "lgd_code": "251984",
+   "slug": "srinivaspur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-srirampura-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.srirampuratown.mrc.gov.in/en/council-members",
+   "host": "www.srirampuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Srirampura Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Mysuru",
+   "lgd_code": "299325",
+   "slug": "srirampura-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-shrirangapattana-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.srirangapatnatown.mrc.gov.in/en/council-members",
+   "host": "www.srirangapatnatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Shrirangapattana Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Mandya",
+   "lgd_code": "252004",
+   "slug": "shrirangapattana-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-sulya-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.sulliatown.mrc.gov.in/en/council-members",
+   "host": "www.sulliatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Sulya Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dakshina Kannada",
+   "lgd_code": "252036",
+   "slug": "sulya-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-surapur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.surpurcity.mrc.gov.in/en/council-members",
+   "host": "www.surpurcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Surapur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Yadgir",
+   "lgd_code": "251859",
+   "slug": "surapur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-talikota-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.talikotetown.mrc.gov.in/en/council-members",
+   "host": "www.talikotetown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Talikota Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Vijayapura",
+   "lgd_code": "251847",
+   "slug": "talikota-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-tarikere-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.tarikeretown.mrc.gov.in/en/council-members",
+   "host": "www.tarikeretown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Tarikere Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Chikkamagaluru",
+   "lgd_code": "251962",
+   "slug": "tarikere-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-tavaragera-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.tavarageratown.mrc.gov.in/en/council-members",
+   "host": "www.tavarageratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Tavaragera Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Koppal",
+   "lgd_code": "276601",
+   "slug": "tavaragera-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-tekkalakote-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.tekkalakotetown.mrc.gov.in/en/council-members",
+   "host": "www.tekkalakotetown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Tekkalakote Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Ballari",
+   "lgd_code": "251926",
+   "slug": "tekkalakote-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-terdal-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.terdaltown.mrc.gov.in/en/council-members",
+   "host": "www.terdaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Terdal Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bagalkote",
+   "lgd_code": "251831",
+   "slug": "terdal-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-tirthahalli-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.thirthahallitown.mrc.gov.in/en/council-members",
+   "host": "www.thirthahallitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Tirthahalli Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Shivamogga",
+   "lgd_code": "251950",
+   "slug": "tirthahalli-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-tikota-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.tikotatown.mrc.gov.in/en/council-members",
+   "host": "www.tikotatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Tikota Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Vijayapura",
+   "lgd_code": "297131",
+   "slug": "tikota-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-tiptur-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.tipturcity.mrc.gov.in/en/council-members",
+   "host": "www.tipturcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Tiptur City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Tumakuru",
+   "lgd_code": "251975",
+   "slug": "tiptur-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-tirumakudal-narsipur-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.tnarasipuratown.mrc.gov.in/en/council-members",
+   "host": "www.tnarasipuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Tirumakudal - Narsipur Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Mysuru",
+   "lgd_code": "252052",
+   "slug": "tirumakudal-narsipur-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-turuvekere-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.turuvekeretown.mrc.gov.in/en/council-members",
+   "host": "www.turuvekeretown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Turuvekere Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Tumakuru",
+   "lgd_code": "251976",
+   "slug": "turuvekere-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-turvihal-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.turvihaltown.mrc.gov.in/en/council-members",
+   "host": "www.turvihaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Turvihal Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Raichur",
+   "lgd_code": "276524",
+   "slug": "turvihal-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-udupi-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.udupicity.mrc.gov.in/en/council-members",
+   "host": "www.udupicity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Udupi City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Udupi",
+   "lgd_code": "251955",
+   "slug": "udupi-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-ugar-khurda-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ugar-khurdtown.mrc.gov.in/en/council-members",
+   "host": "www.ugar-khurdtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ugar Khurda Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Belagavi",
+   "lgd_code": "276565",
+   "slug": "ugar-khurda-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-ullal-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.ullalcity.mrc.gov.in/en/council-members",
+   "host": "www.ullalcity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Ullal City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Dakshina Kannada",
+   "lgd_code": "252027",
+   "slug": "ullal-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-vemgal-kurugol-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.vemagal-kurugaltown.mrc.gov.in/en/council-members",
+   "host": "www.vemagal-kurugaltown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Vemgal-Kurugol Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Kolar",
+   "lgd_code": "301054",
+   "slug": "vemgal-kurugol-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-vijayapura-city-corporation",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.vijayapuracity.mrc.gov.in/en/council-members",
+   "host": "www.vijayapuracity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Vijayapura City Corporation",
+   "body_type": "City Corporation",
+   "district": "Vijayapura",
+   "lgd_code": "251993",
+   "slug": "vijayapura-city-corporation"
+  }
+ },
+ {
+  "key": "ka-vijayapura-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.vijayapuratown.mrc.gov.in/en/council-members",
+   "host": "www.vijayapuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Vijayapura Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Bengaluru Rural",
+   "lgd_code": "251842",
+   "slug": "vijayapura-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-virajpet-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.virajpettown.mrc.gov.in/en/council-members",
+   "host": "www.virajpettown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Virajpet Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Kodagu",
+   "lgd_code": "252040",
+   "slug": "virajpet-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-vitla-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.vitlatown.mrc.gov.in/en/council-members",
+   "host": "www.vitlatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Vitla Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Dakshina Kannada",
+   "lgd_code": "276554",
+   "slug": "vitla-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-wadi-town-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.waditown.mrc.gov.in/en/council-members",
+   "host": "www.waditown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Wadi Town Municipal Council",
+   "body_type": "Town Municipal Council",
+   "district": "Kalaburagi",
+   "lgd_code": "251856",
+   "slug": "wadi-town-municipal-council"
+  }
+ },
+ {
+  "key": "ka-yadgir-city-municipal-council",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.yadgircity.mrc.gov.in/en/council-members",
+   "host": "www.yadgircity.mrc.gov.in",
+   "path": "council-members",
+   "body": "Yadgir City Municipal Council",
+   "body_type": "City Municipal Council",
+   "district": "Yadgir",
+   "lgd_code": "251863",
+   "slug": "yadgir-city-municipal-council"
+  }
+ },
+ {
+  "key": "ka-yadrami-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.yadramitown.mrc.gov.in/en/council-members",
+   "host": "www.yadramitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Yadrami Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Kalaburagi",
+   "lgd_code": "297132",
+   "slug": "yadrami-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-yaragatti-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.yaragattitown.mrc.gov.in/en/council-members",
+   "host": "www.yaragattitown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Yaragatti Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Belagavi",
+   "lgd_code": "299330",
+   "slug": "yaragatti-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-yelandur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.yelandurtown.mrc.gov.in/en/council-members",
+   "host": "www.yelandurtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Yelandur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Chamarajanagar",
+   "lgd_code": "252055",
+   "slug": "yelandur-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-yelburga-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.yelburgatown.mrc.gov.in/en/council-members",
+   "host": "www.yelburgatown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Yelburga Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Koppal",
+   "lgd_code": "251879",
+   "slug": "yelburga-town-panchayat"
+  }
+ },
+ {
+  "key": "ka-yellapur-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.yellapuratown.mrc.gov.in/en/council-members",
+   "host": "www.yellapuratown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Yellapur Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Uttara Kannada",
+   "lgd_code": "251903",
+   "slug": "yellapur-town-panchayat"
+  }
+ }
+]
