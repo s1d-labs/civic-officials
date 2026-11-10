@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="nFxTvQmCZcLipqvBZY8th6NFaXatdnAhbuH96Y6S">
+
+    <title>Members - UDD Website</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js" defer></script>
+
+
+    <meta name="description" content="" />
+    <meta name="og:title" content="" />
+    <meta name="og:type" content="article" />
+    <meta name="og:url" content="https://tezpur.assamurban.in/members" />
+    <meta name="og:site_name" content="Tezpur MB" />
+    <meta name="og:description" content="" />
+
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700&display=swap"
+        rel="stylesheet">
+     
+    <!-- Livewire Styles -->
+<style >
+    [wire\:loading], [wire\:loading\.delay], [wire\:loading\.inline-block], [wire\:loading\.inline], [wire\:loading\.block], [wire\:loading\.flex], [wire\:loading\.table], [wire\:loading\.grid], [wire\:loading\.inline-flex] {
+        display: none;
+    }
+
+    [wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short], [wire\:loading\.delay\.long], [wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest] {
+        display:none;
+    }
+
+    [wire\:offline] {
+        display: none;
+    }
+
+    [wire\:dirty]:not(textarea):not(input):not(select) {
+        display: none;
+    }
+
+    input:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill {
+        animation-duration: 50000s;
+        animation-name: livewireautofill;
+    }
+
+    @keyframes livewireautofill { from {} }
+</style>
+    <link rel="stylesheet" href="/css/front.css">
+    <style>
+        .scroll-element {
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            left: 0%;
+            top: 0%;
+        }
+        .primary {
+            animation: primary 15s linear infinite;
+        }
+        .secondary {
+            animation: secondary 15s linear infinite;
+        }
+        @keyframes primary {
+            from {
+                left: 0%;
+            }
+            to {
+                left: -100%;
+            }
+        }
+        @keyframes secondary {
+            from {
+                left: 100%;
+            }
+            to {
+                left: 0%;
+            }
+        }
+    </style>
+    <style>
+	/*!
+		* pace.js v1.2.4 | Default theme
+		* https://github.com/CodeByZach/pace/
+		* Licensed MIT © HubSpot, Inc.
+		*/
+	.pace {
+		-webkit-pointer-events: none;
+		pointer-events: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		user-select: none
+	}
+
+	.pace-inactive {
+		display: none
+	}
+
+	.pace .pace-progress {
+		background: coral;
+		position: fixed;
+		z-index: 2000;
+		top: 0;
+		right: 100%;
+		width: 100%;
+		height: 3px
+	}
+</style>
+
+    <!-- Scripts -->
+    <!-- Livewire Scripts -->
+
+<script src="/vendor/livewire/livewire.js?id=de3fca26689cb5a39af4" data-turbo-eval="false" data-turbolinks-eval="false" ></script>
+<script data-turbo-eval="false" data-turbolinks-eval="false" >
+    if (window.livewire) {
+	    console.warn('Livewire: It looks like Livewire\'s @livewireScripts JavaScript assets have already been loaded. Make sure you aren\'t loading them twice.')
+	}
+
+    window.livewire = new Livewire();
+    window.livewire.devTools(true);
+    window.Livewire = window.livewire;
+    window.livewire_app_url = '';
+    window.livewire_token = 'nFxTvQmCZcLipqvBZY8th6NFaXatdnAhbuH96Y6S';
+
+	/* Make sure Livewire loads first. */
+	if (window.Alpine) {
+	    /* Defer showing the warning so it doesn't get buried under downstream errors. */
+	    document.addEventListener("DOMContentLoaded", function () {
+	        setTimeout(function() {
+	            console.warn("Livewire: It looks like AlpineJS has already been loaded. Make sure Livewire\'s scripts are loaded before Alpine.\\n\\n Reference docs for more info: http://laravel-livewire.com/docs/alpine-js")
+	        })
+	    });
+	}
+
+	/* Make Alpine wait until Livewire is finished rendering to do its thing. */
+    window.deferLoadingAlpine = function (callback) {
+        window.addEventListener('livewire:load', function () {
+            callback();
+        });
+    };
+
+    let started = false;
+
+    window.addEventListener('alpine:initializing', function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (! started) {
+            window.livewire.start();
+
+            started = true;
+        }
+    });
+</script>
+    <script defer src="https://unpkg.com/@alpinejs/intersect@3.9.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.9.0/dist/cdn.min.js"></script>
+    </head>
+
+<body>
+    <div class="font-sans text-slate-900 antialiased flex flex-col w-full min-h-screen bg-gradient-to-b from-sky-100">
+
+                
+        <div class="py-1.5 bg-slate-700">
+            <div class="md:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="text-sm text-sky-100">
+                                                <div class="flex space-x-2 items-center">
+                            <svg class="shrink-0 h-4 w-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 6V12L16 14M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>                                
+                            <span>Office Hours: Mon-Sat 10:00 AM - 6:00 PM</span>
+                        </div>
+                                            </div>
+                    <div class="text-sm md:text-right text-sky-100 flex space-x-4 items-center md:justify-end">
+                                                <div class="flex space-x-2 items-center">
+                            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.0497 6C15.0264 6.19057 15.924 6.66826 16.6277 7.37194C17.3314 8.07561 17.8091 8.97326 17.9997 9.95M14.0497 2C16.0789 2.22544 17.9713 3.13417 19.4159 4.57701C20.8606 6.01984 21.7717 7.91101 21.9997 9.94M10.2266 13.8631C9.02506 12.6615 8.07627 11.3028 7.38028 9.85323C7.32041 9.72854 7.29048 9.66619 7.26748 9.5873C7.18576 9.30695 7.24446 8.96269 7.41447 8.72526C7.46231 8.65845 7.51947 8.60129 7.63378 8.48698C7.98338 8.13737 8.15819 7.96257 8.27247 7.78679C8.70347 7.1239 8.70347 6.26932 8.27247 5.60643C8.15819 5.43065 7.98338 5.25585 7.63378 4.90624L7.43891 4.71137C6.90747 4.17993 6.64174 3.91421 6.35636 3.76987C5.7888 3.4828 5.11854 3.4828 4.55098 3.76987C4.2656 3.91421 3.99987 4.17993 3.46843 4.71137L3.3108 4.86901C2.78117 5.39863 2.51636 5.66344 2.31411 6.02348C2.08969 6.42298 1.92833 7.04347 1.9297 7.5017C1.93092 7.91464 2.01103 8.19687 2.17124 8.76131C3.03221 11.7947 4.65668 14.6571 7.04466 17.045C9.43264 19.433 12.295 21.0575 15.3284 21.9185C15.8928 22.0787 16.1751 22.1588 16.588 22.16C17.0462 22.1614 17.6667 22 18.0662 21.7756C18.4263 21.5733 18.6911 21.3085 19.2207 20.7789L19.3783 20.6213C19.9098 20.0898 20.1755 19.8241 20.3198 19.5387C20.6069 18.9712 20.6069 18.3009 20.3198 17.7333C20.1755 17.448 19.9098 17.1822 19.3783 16.6508L19.1835 16.4559C18.8339 16.1063 18.6591 15.9315 18.4833 15.8172C17.8204 15.3862 16.9658 15.3862 16.3029 15.8172C16.1271 15.9315 15.9523 16.1063 15.6027 16.4559C15.4884 16.5702 15.4313 16.6274 15.3644 16.6752C15.127 16.8453 14.7828 16.904 14.5024 16.8222C14.4235 16.7992 14.3612 16.7693 14.2365 16.7094C12.7869 16.0134 11.4282 15.0646 10.2266 13.8631Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg> 
+                            <div><a href="tel:9435080593" class="hover:underline">9435080593</a></div>
+                        </div>
+                        
+                                                <div class="flex space-x-2 items-center">
+                            <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                            <div><a href="mailto:chairmantmb@gmail.com" class="hover:underline">chairmantmb@gmail.com</a></div>
+                        </div>
+                                                
+                        <div class="pl-2 border-l border-slate-600">
+                                                            <a class="truncate hover:underline text-slate-100" href="https://tezpur.assamurban.in/login">Login</a>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div x-data="{
+	openMobileMenu: false,
+	showDropdown: false,
+	shadow: false,
+	showShadow() {
+		this.shadow = this.$el.getBoundingClientRect().top == 0
+			&& window.scrollY > 0
+	}
+}" x-cloak
+	:class="{'shadow duration-1000 backdrop-filter backdrop-blur backdrop-contrast-100': shadow}"
+	class="bg-white w-full transition-all md:py-1.5" style="z-index: 650">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8" x-on:click.away="openMobileMenu = false" x-cloak>
+		<nav class="relative flex items-center justify-around w-full h-16">
+			<div class="flex items-center justify-between flex-1 md:flex-none">
+				<a href="https://tezpur.assamurban.in" aria-label="Home">
+											<div class="flex items-center space-x-2 h-12">
+	<div class="font-semibold leading-none text-slate-800 text-xl">
+					<img src="https://assamurban.in/storage/o01JiL0cBFQPgKOXsHqoxSf2eWIRaKH6b8MUAQiQ.jpg" alt="logo" loading="lazy" class="h-12 object-fit">
+			</div>
+</div>
+									</a>
+				<div class="-mr-2 flex items-center md:hidden" x-on:click="openMobileMenu = !openMobileMenu">
+					<button type="button"
+						class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-white focus:outline-none focus:bg-slate-100 focus:text-slate-500 transition duration-150 ease-in-out"
+						id="main-menu" aria-label="Main menu" aria-haspopup="true">
+						<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16" />
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<div class="hidden md:flex md:flex-1 text-right w-full md:items-center md:justify-end space-x-3">
+				<a class="block" href="https://digitalindia.gov.in" target="_blank" rel="noreferer noopener">
+					<img src="https://tezpur.assamurban.in/img/digital_india_logo.svg" alt="digital-india-logo" class="object-fit h-12">
+				</a>
+				<a class="block" href="https://g20.org" target="_blank" rel="noreferer noopener">
+					<img src="https://tezpur.assamurban.in/img/g20-logo.png" alt="g20-logo" class="object-fit h-12">
+				</a>
+				<a class="block" href="https://swachhbharat.mygov.in" target="_blank" rel="noreferer noopener">
+					<img src="https://tezpur.assamurban.in/img/swach-bharat.png" alt="swach-bharat" class="object-fit">
+				</a>
+			</div>
+
+			
+		</nav>
+
+		<div x-show="openMobileMenu" x-transition:enter="transition ease-out duration-150"
+			x-transition:enter-start="opacity-0 transform scale-95"
+			x-transition:enter-end="opacity-100 transform scale-100"
+			x-transition:leave="transition ease-in duration-100"
+			x-transition:leave-start="opacity-100 transform scale-100"
+			x-transition:leave-end="opacity-0 transform scale-95"
+			class="absolute z-40 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+			<div class="rounded-lg shadow-md border">
+				<div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical"
+					aria-labelledby="main-menu">
+					<div class="px-5 pt-2 flex items-center justify-between">
+						<div>
+							<div class="flex items-center space-x-2 h-12">
+	<div class="font-semibold leading-none text-slate-800">
+					<img src="https://assamurban.in/storage/o01JiL0cBFQPgKOXsHqoxSf2eWIRaKH6b8MUAQiQ.jpg" alt="logo" loading="lazy" class="h-12 object-fit">
+			</div>
+</div>
+						</div>
+						<div class="-mr-2">
+							<button x-on:click="openMobileMenu = !openMobileMenu" type="button"
+								class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100 focus:outline-none focus:bg-slate-100 focus:text-slate-500 transition duration-150 ease-in-out"
+								aria-label="Close menu">
+								<svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+										d="M6 18L18 6M6 6l12 12" />
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="px-2 pt-2 pb-3 border-t mt-2">
+																					<a href="https://tezpur.assamurban.in"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in"
+>
+	Home
+</a>
+									 
+																					<div class="inline-flex items-center group pl-3">About</div>
+								<div class="ml-3 pl-1 border-l">
+																			<a href="https://tezpur.assamurban.in/about-us"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/about-us"
+>
+	About Us
+</a>
+																				<a href="https://tezpur.assamurban.in/members"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out bg-slate-50 text-sky-600" href="https://tezpur.assamurban.in/members"
+>
+	Members
+</a>
+																				<a href="https://tezpur.assamurban.in/office-staff"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/office-staff"
+>
+	Office Staff
+</a>
+																		</div>
+								 
+																					<div class="inline-flex items-center group pl-3">Important Links</div>
+								<div class="ml-3 pl-1 border-l">
+																			<a href="https://tezpur.assamurban.in/places-to-visit"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/places-to-visit"
+>
+	Places to Visit
+</a>
+																				<a href="https://tezpur.assamurban.in/key-persons"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/key-persons"
+>
+	Key Persons
+</a>
+																				<a href="https://tezpur.assamurban.in/properties"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/properties"
+>
+	Properties
+</a>
+																				<a href="https://tezpur.assamurban.in/assets"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/assets"
+>
+	Assets
+</a>
+																		</div>
+								 
+																					<a href="https://tezpur.assamurban.in/services"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/services"
+>
+	Services
+</a>
+									 
+																					<a href="https://tezpur.assamurban.in/news/all"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/news/all"
+>
+	News
+</a>
+									 
+																					<a href="https://tezpur.assamurban.in/taxdemand"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/taxdemand"
+>
+	Tax Demand
+</a>
+									 
+																					<a href="https://tezpur.assamurban.in/gallery"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/gallery"
+>
+	Gallery
+</a>
+									 
+																					<a href="https://tezpur.assamurban.in/projects"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/projects"
+>
+	Projects
+</a>
+									 
+																					<a href="https://tezpur.assamurban.in/tenders"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/tenders"
+>
+	Tenders
+</a>
+									 
+																					<a href="https://tezpur.assamurban.in/downloads"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/downloads"
+>
+	Downloads
+</a>
+									 
+																					<a href="https://tezpur.assamurban.in/ulb-map"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/ulb-map"
+>
+	ULB Map
+</a>
+									 
+																					<a href="https://tezpur.assamurban.in/contact"
+	class="mt-1 block px-3 py-2 rounded-md text-base font-medium hover:text-sky-600 hover:bg-slate-50 focus:outline-none focus:text-sky-600 focus:bg-slate-50 transition duration-150 ease-in-out text-slate-700" href="https://tezpur.assamurban.in/contact"
+>
+	Contact
+</a>
+									 
+						
+													<div class="border-t pt-4 pb-2 mt-2">
+								<a  href="https://assamurban.in/login" class="font-medium transition duration-150 ease-in-out bg-sky-600 text-white px-4 py-2.5 hover:bg-sky-700 rounded-md truncate block text-center shadow mt-2">Log in</a>
+							</div>
+											</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+        <div class="hidden md:block bg-sky-900 md:sticky md:top-0 md:relative md:z-50">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+		<div class="flex w-full items-center py-2">
+			<div class="flex-1 flex flex-wrap items-center">
+				
+				
+															<a 
+	href="https://tezpur.assamurban.in" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md text-white hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in">
+	Home
+
+	</a>
+						
+						
+						 
+															<div class="relative group" x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false"
+            x-on:mouseenter="open = true"
+        x-on:mouseleave="open = false"
+    >
+    <div @click="open = ! open">
+        <a 
+	href="#0" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md inline-flex text-white items-center group-hover:bg-yellow-600 group-hover:text-white" href="#0">
+	About<svg class="rotate-90 w-4 h-4 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>chevron-right</title><g fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+
+	</a>
+    </div>
+
+    <div x-show="open"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            class="absolute z-50 mt-0 -mr-1 w-48 rounded-md shadow-lg origin-top-left left-0"
+            style="display: none;"
+            @click="open = false">
+        <div class="rounded-md ring-1 ring-black ring-opacity-5 mt-1 py-1 bg-white">
+            <div class="px-1 space-y-px">
+																			<a class="block px-4 py-2 text-sm leading-5 focus:outline-none transition duration-150 ease-in-out text-slate-800 rounded-md text-slate-800 flex items-center font-medium hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/about-us">About Us</a>
+																			<a class="block px-4 py-2 text-sm leading-5 focus:outline-none transition duration-150 ease-in-out bg-yellow-600 text-white rounded-md text-slate-800 flex items-center font-medium hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/members">Members</a>
+																			<a class="block px-4 py-2 text-sm leading-5 focus:outline-none transition duration-150 ease-in-out text-slate-800 rounded-md text-slate-800 flex items-center font-medium hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/office-staff">Office Staff</a>
+																	</div>
+        </div>
+    </div>
+</div>
+						 
+															<div class="relative group" x-data="{ open: false }" @click.outside="open = false" @close.stop="open = false"
+            x-on:mouseenter="open = true"
+        x-on:mouseleave="open = false"
+    >
+    <div @click="open = ! open">
+        <a 
+	href="#0" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md inline-flex text-white items-center group-hover:bg-yellow-600 group-hover:text-white" href="#0">
+	Important Links<svg class="rotate-90 w-4 h-4 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><title>chevron-right</title><g fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></g></svg>
+
+	</a>
+    </div>
+
+    <div x-show="open"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="transform opacity-0 scale-95"
+            x-transition:enter-end="transform opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-75"
+            x-transition:leave-start="transform opacity-100 scale-100"
+            x-transition:leave-end="transform opacity-0 scale-95"
+            class="absolute z-50 mt-0 -mr-1 w-48 rounded-md shadow-lg origin-top-left left-0"
+            style="display: none;"
+            @click="open = false">
+        <div class="rounded-md ring-1 ring-black ring-opacity-5 mt-1 py-1 bg-white">
+            <div class="px-1 space-y-px">
+																			<a class="block px-4 py-2 text-sm leading-5 focus:outline-none transition duration-150 ease-in-out text-slate-800 rounded-md text-slate-800 flex items-center font-medium hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/places-to-visit">Places to Visit</a>
+																			<a class="block px-4 py-2 text-sm leading-5 focus:outline-none transition duration-150 ease-in-out text-slate-800 rounded-md text-slate-800 flex items-center font-medium hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/key-persons">Key Persons</a>
+																			<a class="block px-4 py-2 text-sm leading-5 focus:outline-none transition duration-150 ease-in-out text-slate-800 rounded-md text-slate-800 flex items-center font-medium hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/properties">Properties</a>
+																			<a class="block px-4 py-2 text-sm leading-5 focus:outline-none transition duration-150 ease-in-out text-slate-800 rounded-md text-slate-800 flex items-center font-medium hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/assets">Assets</a>
+																	</div>
+        </div>
+    </div>
+</div>
+						 
+															<a 
+	href="https://tezpur.assamurban.in/services" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md text-white hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/services">
+	Services
+
+	</a>
+						
+						
+						 
+															<a 
+	href="https://tezpur.assamurban.in/news/all" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md text-white hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/news/all">
+	News
+
+	</a>
+						
+						
+						 
+															<a 
+	href="https://tezpur.assamurban.in/taxdemand" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md text-white hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/taxdemand">
+	Tax Demand
+
+	</a>
+						
+						
+						 
+															<a 
+	href="https://tezpur.assamurban.in/gallery" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md text-white hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/gallery">
+	Gallery
+
+	</a>
+						
+						
+						 
+															<a 
+	href="https://tezpur.assamurban.in/projects" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md text-white hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/projects">
+	Projects
+
+	</a>
+						
+						
+						 
+															<a 
+	href="https://tezpur.assamurban.in/tenders" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md text-white hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/tenders">
+	Tenders
+
+	</a>
+						
+						
+						 
+															<a 
+	href="https://tezpur.assamurban.in/downloads" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md text-white hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/downloads">
+	Downloads
+
+	</a>
+						
+						
+						 
+															<a 
+	href="https://tezpur.assamurban.in/ulb-map" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md text-white hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/ulb-map">
+	ULB Map
+
+	</a>
+						
+						
+						 
+															<a 
+	href="https://tezpur.assamurban.in/contact" 
+	class="relative py-1 font-semibold transition-all duration-150 ease-in-out text-slate-200 text-sm leading-6 px-2 mr-3 rounded-md text-white hover:bg-yellow-600 hover:text-white" href="https://tezpur.assamurban.in/contact">
+	Contact
+
+	</a>
+						
+						
+						 
+							</div>
+		  
+			
+		</div>
+	</div>
+
+	
+</div>
+        
+        <div class="flex-1 overflow-x-hidden">
+            <div class="py-10 md:py-16 bg-sky-800 relative overflow-hidden">
+	<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative z-10 w-full">
+	<h2 class="text-2xl md:text-4xl font-medium font-serif text-sky-50 text-left">Members</h2>
+			
+							<div class="text-left mt-3 text-lg prose prose-sky text-sky-100 max-w-none">Details about the Municipal Board Elected Representative.</div>
+</div>
+
+	<div class="absolute inset-0 w-full h-full grid grid-cols-12" x-data="{
+        multiplesOfFour(number) {
+          return [4, 10, 14, 29, 32, 47, 51, 80, 100].includes(number);
+        }
+      }" x-cloak>
+		<template x-for="i in 600">als ar
+			<div class="h-16 border border-sky-500/10"
+				:class="{ 'border-sky-200/20' : multiplesOfFour(i), 'border-l-0 border-b-0' : !multiplesOfFour(i) }">
+			</div>
+		</template>
+	</div>
+</div>
+	<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-10 md:py-16">
+	<div class="mb-10">
+				<div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-10 w-full">
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/a50uL2IMUyht9Hq4CPhUaWnajUQn2xlluLI8WPG3.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Prajanoo Bhatacharjyya</h3>
+							<p class="text-slate-500 text-sm">Chairman</p>
+							<p class="text-slate-500 text-sm">9435080593</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/VAOiaSayJoXFzqqFy1Fp4Rk8ejEMbsqQ7s0Q7H32.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Sangita Ghosh Bose</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">6001147148</p>
+																					<p class="text-slate-500 text-sm">12</p>
+													</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/ZicGVv09RrbnipbEwEsBiGJUnQbBpjh0zEGVSN8q.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Dr. Joysankar Hazarika</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9435183772</p>
+														<p class="text-slate-500 text-sm">Ward No. 2</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/e7WhtKZmgdSD8c9XYZfPEjIrTSMjpmmXqCl9sjcK.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Sri Amarendra Sarma</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9954193988</p>
+																					<p class="text-slate-500 text-sm">3</p>
+													</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/tiOpikdaKnyJScHGHRoESy3Xyr6XDlMs0qaxkmyo.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Sri Ishan Borah</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9435220720</p>
+														<p class="text-slate-500 text-sm">Ward No. 4</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/ObxhNTKpphfRZHXj1saGPP9FLYITQA2VJ06qCdNn.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Sri Dibyajyoti Das</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">8258091083</p>
+														<p class="text-slate-500 text-sm">Ward No. 5</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/2lnhoMbptHX3oTp58hRyjM33pP31N35zFoGVTadN.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Smti Suman Das</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9706430162</p>
+														<p class="text-slate-500 text-sm">Ward No. 6</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/QAhLoOg04XCPXuv8UPd2AfCSaJ9eslVZzShfNpRU.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Sri Ramen Tamuli</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9706426459</p>
+														<p class="text-slate-500 text-sm">Ward No. 7</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/API5tI6RzvLO3w5aAnt8R0v6bfzDaCBFBFwvzqFd.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Smti Priyalata Devi Karmakar</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">6000070695</p>
+														<p class="text-slate-500 text-sm">Ward No. 8</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/4Oy7GkeGwWw6T3K4keNZNIjDyUDdHQIIwTpAls2b.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Smti Joshi Nath Saha</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9101934228</p>
+														<p class="text-slate-500 text-sm">Ward No. 9</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/KqmJHh3rTuybkW1meUfUVwvSEVdgDHQScjCvuJTE.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Sri Paras Nath Ray</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9435081142</p>
+														<p class="text-slate-500 text-sm">Ward No. 10</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/PxpuY7E83kjitKaiOxeNm9Ua0M89CTYcE77Cu3le.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Smti Rumi Bhagawaty</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9957716783</p>
+														<p class="text-slate-500 text-sm">Ward No. 11</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/33knCQTnedKXPci4qwETFpD1NRYno2dJzlXLg5CJ.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Smti Debasree Bhowmick</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9706181071</p>
+														<p class="text-slate-500 text-sm">Ward No. 13</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/KhqfBjtlNfg20gkwJ0xi88JIz1j9jpS0TdfDxy7D.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Sri sanjay Ghosh</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">6003731925</p>
+														<p class="text-slate-500 text-sm">Ward No. 14</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/H2Vc6ph5xTrYoBO8zfQhJCVruVs6vrWFBGY2r1mJ.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Smti Santana Biswas</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9707360855</p>
+														<p class="text-slate-500 text-sm">Ward No. 16</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/lQOcZtIPh1vLhfOoUBGCvAspZEvPFAxTgESner4i.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Smti Madhushmita Hazarika deka</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9365040074</p>
+														<p class="text-slate-500 text-sm">Ward No. 17</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/tZmQMFE1GigkXituL8BXBNrNXur1uaOGYPE7m0yS.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Smti Dipa Mani Saikia</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9435467740</p>
+														<p class="text-slate-500 text-sm">Ward No. 18</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://sumatoimg.nyc3.digitaloceanspaces.com/uddwebsites/uploads/0Hz1yrZnWPnKZcq7vNs3VAVnnDuXhwA6LF350kgT.jpg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Smti Rinku Mani Lahkar</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9706214227</p>
+														<p class="text-slate-500 text-sm">Ward No. 19</p>
+																				</div>
+											<div>
+							<div class="bg-slate-100 h-56 mb-2 rounded overflow-hidden border">
+								<img 
+									src="https://tezpur.assamurban.in/img/avatar.svg" 
+									class="h-56 w-full object-cover" 
+									loading="lazy" 
+								/>
+							</div>
+							<h3 class="font-semibold text-slate-800">Sher Alam (Expired)</h3>
+							<p class="text-slate-500 text-sm">Ward Commissioner</p>
+							<p class="text-slate-500 text-sm">9435080593</p>
+														<p class="text-slate-500 text-sm">Ward No. 1</p>
+																				</div>
+									</div>
+			</div>
+</div>
+        </div>
+        
+
+        <div class="overflow-x-hidden border-t bg-white">
+	<div class="relative h-32 overflow-hidden w-screen">
+		<div class="scroll-element primary">
+			<div class="flex items-center overflow-hidden h-32">
+				<a href="http://amrut.gov.in" class="flex-1 flex items-center justify-center">
+					<img src="https://tezpur.assamurban.in/img/AMRUT_logo.jpeg" alt="AMRUT_logo" loading="lazy"
+					class="h-24 mix-blend-multiply object-contain">
+				</a>
+				<a href="http://digitalindia.gov.in" class="flex-1 flex items-center justify-center">
+					<img src="https://tezpur.assamurban.in/img/digital_india_logo.svg" alt="digital-india-power-logo" loading="lazy"
+					class="h-24 mix-blend-multiply object-contain">
+				</a>
+				<a href="https://swachhbharatmission.gov.in/sbmcms/index.htm" class="flex-1 flex items-center justify-center">
+					<img src="https://tezpur.assamurban.in/img/swach_bharat.svg" alt="Swachh-Bharat-Logo" loading="lazy"
+					class="h-24 mix-blend-multiply object-contain">
+				</a>
+				<a href="https://www.nulmassam.in" class="flex-1 flex items-center justify-center">
+					<img src="https://tezpur.assamurban.in/img/nulm-assam-logo.png" alt="nulm-assam-logo" loading="lazy"
+						class="h-24 mix-blend-multiply object-contain">
+				</a>
+				<a href="https://mygov.in" class="flex-1 flex items-center justify-center">
+					<img src="https://tezpur.assamurban.in/img/mygov.png" alt="mygov" loading="lazy" class="h-16 mix-blend-multiply object-contain">
+				</a>
+			</div>
+		</div>
+		<div class="scroll-element secondary">
+			<div class="flex items-center overflow-hidden h-32">
+				<a href="http://amrut.gov.in" class="flex-1 flex items-center justify-center">
+					<img src="https://tezpur.assamurban.in/img/AMRUT_logo.jpeg" alt="AMRUT_logo" loading="lazy"
+					class="h-24 mix-blend-multiply object-contain">
+				</a>
+				<a href="http://digitalindia.gov.in" class="flex-1 flex items-center justify-center">
+					<img src="https://tezpur.assamurban.in/img/digital_india_logo.svg" alt="digital-india-power-logo" loading="lazy"
+					class="h-24 mix-blend-multiply object-contain">
+				</a>
+				<a href="https://swachhbharatmission.gov.in/sbmcms/index.htm" class="flex-1 flex items-center justify-center">
+					<img src="https://tezpur.assamurban.in/img/swach_bharat.svg" alt="Swachh-Bharat-Logo" loading="lazy"
+					class="h-24 mix-blend-multiply object-contain">
+				</a>
+				<a href="https://www.nulmassam.in" class="flex-1 flex items-center justify-center">
+					<img src="https://tezpur.assamurban.in/img/nulm-assam-logo.png" alt="nulm-assam-logo" loading="lazy"
+						class="h-24 mix-blend-multiply object-contain">
+				</a>
+				<a href="https://mygov.in" class="flex-1 flex items-center justify-center">
+					<img src="https://tezpur.assamurban.in/img/mygov.png" alt="mygov" loading="lazy" class="h-16 mix-blend-multiply object-contain">
+				</a>
+			</div>
+		</div>
+	</div>
+</div><footer class="relative">
+    <div class="bg-sky-900">
+      <div class="py-10 md:py-12 max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
+        <div class="mb-10">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-x-8 gap-y-10">
+            <div class="col-span-2 text-white">
+              <div class="font-semibold mb-4">
+                Tezpur MB
+              </div>
+              <div class="text-sm text-sky-100 w-64">
+                <div class="mb-2">Head post office road, Tezpur, Dist- Sonitpur, Assam, Pin- 784001</div>
+                Mon-Sat 10:00 AM - 6:00 PM
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-2 uppercase tracking-wider text-sm text-gray-200 mb-4 uppercase font-semibold">Support</h3>
+
+              <div class="leading-relaxed">
+                <div><span
+                    class="hover:underline text-sky-100 text-sm hover:text-sky-300 transition ease-in-out duration-300">chairmantmb@gmail.com</span>
+                </div>
+                <div><span
+                    class="hover:underline text-sky-100 text-sm hover:text-sky-300 transition ease-in-out duration-300">
+                    9435080593</span></div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-2 uppercase tracking-wider text-sm text-gray-200 mb-4 uppercase font-semibold">Quick
+                Links</h3>
+
+              <div class="text-gray-700 font-2 leading-relaxed">
+                                  <div><a href="https://tezpur.assamurban.in/grievances"
+                      class="hover:underline text-sky-100 text-sm hover:text-sky-300 transition ease-in-out duration-300">Grievance Redressal</a>
+                  </div>
+                  <div><a href="https://tezpur.assamurban.in/grievances/track"
+                    class="hover:underline text-sky-100 text-sm hover:text-sky-300 transition ease-in-out duration-300">Track Grievance</a>
+                  </div>
+                                <div><a href="/privacy-policy"
+                    class="hover:underline text-sky-100 text-sm hover:text-sky-300 transition ease-in-out duration-300">Privacy
+                    Policy</a></div>
+                <div><a href="https://tezpur.assamurban.in/login"
+                    class="hover:underline text-sky-100 text-sm hover:text-sky-300 transition ease-in-out duration-300">Login</a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="font-2 uppercase tracking-wider text-sm text-gray-200 mb-4 uppercase font-semibold">Social</h3>
+
+                            <div class="flex flex-wrap space-x-2">
+                                  <a href="https://twitter.com/tezpur" target="_blank" class="inline-block group">
+                                          <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 fill-current text-sky-100 text-sm hover:text-sky-300" viewBox="0 0 24 24">
+                        <path
+                          d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z">
+                        </path>
+                      </svg>
+                    
+                    
+                                      </a>
+                                  <a href="https://facebook.com/tezpur" target="_blank" class="inline-block group">
+                    
+                                          <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 fill-current text-sky-100 text-sm hover:text-sky-300" viewBox="0 0 24 24">
+                        <path
+                          d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999z">
+                        </path>
+                      </svg>
+                    
+                                      </a>
+                                  <a href="https://instagram.com/tezpur" target="_blank" class="inline-block group">
+                    
+                    
+                                          <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-6 h-6 fill-current text-sky-100 text-sm hover:text-sky-300" viewBox="0 0 256 256">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <circle cx="128" cy="128" r="32"></circle>
+                        <path
+                          d="M172,28H84A56,56,0,0,0,28,84v88a56,56,0,0,0,56,56h88a56,56,0,0,0,56-56V84A56,56,0,0,0,172,28ZM128,176a48,48,0,1,1,48-48A48,48,0,0,1,128,176Zm52-88a12,12,0,1,1,12-12A12,12,0,0,1,180,88Z">
+                        </path>
+                      </svg>
+                                      </a>
+                              </div>
+                          </div>
+          </div>
+        </div>
+
+        <div class="py-10 border-t border-sky-800/50">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+            <p class="text-sky-100 text-sm">Powered by Sumato. Copyrights &copy; 2026. All rights reserved.</p>
+             
+              <p>
+                <a x-data="" href="#0" x-on:click.prevent="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to top" class="flex items-center text-sm text-sky-200 hover:underline space-x-1">
+                   <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-great-blue-200" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><line x1="128" y1="216" x2="128" y2="40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><polyline points="56 112 128 40 200 112" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg><span>Back to top</span>
+                </a>
+            
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.com/widget?wc=siq2d23f719589ed0e5ce243b9a138fc5397ae877279f7f38537036254bcad6e12f" defer></script>
+  </footer>
+  <!-- ./Footer -->
+    </div>
+
+    <div
+	x-data="{
+		notices: [],
+		add(notice) {
+			notice.id = Date.now()
+			this.notices.push(notice)
+		},
+		remove(id) {
+			this.notices = this.notices.filter(notice => notice.id != id)
+		}
+	}"
+	@notify.window="add($event.detail)"
+	x-cloak
+	class="fixed flex flex-col-reverse items-start max-w-sm w-full left-0 right-0 top-0 mx-auto pointer-events-none pb-10 pt-2 space-y-4" style="z-index: 2000">
+	<template x-for="notice in notices" :key="notice.id">
+		<div
+			x-data="{
+				show: false,
+				init() {
+					this.$nextTick(() => this.show = true);
+					setTimeout(() => {
+						this.removeNotice()
+					}, 4500)
+				},
+				removeNotice() {
+					this.show = false
+					setTimeout(() => {
+						this.remove(notice.id)
+					}, 500)
+				}
+			}"
+			x-show="show"
+			x-on:click="removeNotice()"
+			x-transition.duration.500ms
+			style="box-shadow: 0px 2px 8px 0px rgba(99, 99, 99, 0.35); min-width: 320px;"
+			class="cursor-pointer pointer-events-auto rounded-md mx-auto"
+			:class="{ 
+				'bg-slate-800 text-slate-200': ['info-dark', 'success-dark', 'error-dark'].includes(notice.type),  
+				
+				'bg-green-50 text-green-700': notice.type === 'success',
+				'bg-blue-50 text-blue-700': notice.type === 'info',
+				'bg-red-50 text-red-700': notice.type === 'error'
+			}"
+			>
+			<div class="overflow-hidden flex relative pl-3 pr-5 py-2 rounded-md h-12">
+				<div class="flex-shrink-0 mr-3">
+                    <template x-if="['info', 'notice'].includes(notice.type)">
+						<svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm-2,48a12,12,0,1,1-12,12A12,12,0,0,1,126,72Zm10,112h-8a8,8,0,0,1-8-8V128a8,8,0,0,1,0-16h8a8,8,0,0,1,8,8v48a8,8,0,0,1,0,16Z"></path></svg>
+                    </template>
+                    <template x-if="notice.type === 'success'">
+						<svg class="w-8 h-8 fill-current text-green-600" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm49.5,85.8-58.6,56a8.1,8.1,0,0,1-5.6,2.2,7.7,7.7,0,0,1-5.5-2.2l-29.3-28a8,8,0,1,1,11-11.6l23.8,22.7,53.2-50.7a8,8,0,0,1,11,11.6Z"></path></svg>
+                    </template>
+                    <template x-if="notice.type === 'error'">
+						<svg class="w-8 h-8 fill-current text-red-600" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M128,24A104,104,0,1,0,232,128,104.2,104.2,0,0,0,128,24Zm37.7,130.3a8.1,8.1,0,0,1,0,11.4,8.2,8.2,0,0,1-11.4,0L128,139.3l-26.3,26.4a8.2,8.2,0,0,1-11.4,0,8.1,8.1,0,0,1,0-11.4L116.7,128,90.3,101.7a8.1,8.1,0,0,1,11.4-11.4L128,116.7l26.3-26.4a8.1,8.1,0,0,1,11.4,11.4L139.3,128Z"></path></svg>
+                    </template>
+					<template x-if="notice.type === 'success-dark'">
+						<svg class="w-8 h-8 text-green-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16.78 9.7L11.11 15.37C10.97 15.51 10.78 15.59 10.58 15.59C10.38 15.59 10.19 15.51 10.05 15.37L7.22 12.54C6.93 12.25 6.93 11.77 7.22 11.48C7.51 11.19 7.99 11.19 8.28 11.48L10.58 13.78L15.72 8.64C16.01 8.35 16.49 8.35 16.78 8.64C17.07 8.93 17.07 9.4 16.78 9.7Z" fill="currentColor"/></svg>
+                    </template>
+					<template x-if="notice.type === 'error-dark'">
+						<svg class="w-8 h-8 text-red-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM11.25 8C11.25 7.59 11.59 7.25 12 7.25C12.41 7.25 12.75 7.59 12.75 8V13C12.75 13.41 12.41 13.75 12 13.75C11.59 13.75 11.25 13.41 11.25 13V8ZM12.92 16.38C12.87 16.51 12.8 16.61 12.71 16.71C12.61 16.8 12.5 16.87 12.38 16.92C12.26 16.97 12.13 17 12 17C11.87 17 11.74 16.97 11.62 16.92C11.5 16.87 11.39 16.8 11.29 16.71C11.2 16.61 11.13 16.51 11.08 16.38C11.03 16.26 11 16.13 11 16C11 15.87 11.03 15.74 11.08 15.62C11.13 15.5 11.2 15.39 11.29 15.29C11.39 15.2 11.5 15.13 11.62 15.08C11.86 14.98 12.14 14.98 12.38 15.08C12.5 15.13 12.61 15.2 12.71 15.29C12.8 15.39 12.87 15.5 12.92 15.62C12.97 15.74 13 15.87 13 16C13 16.13 12.97 16.26 12.92 16.38Z" fill="currentcolor"/></svg>
+                    </template>
+					<template x-if="notice.type === 'info-dark'">
+						<svg class="w-8 h-8 text-blue-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20.1892 14.0608L19.0592 12.1808C18.8092 11.7708 18.5892 10.9808 18.5892 10.5008V8.63078C18.5892 5.00078 15.6392 2.05078 12.0192 2.05078C8.38923 2.06078 5.43923 5.00078 5.43923 8.63078V10.4908C5.43923 10.9708 5.21923 11.7608 4.97923 12.1708L3.84923 14.0508C3.41923 14.7808 3.31923 15.6108 3.58923 16.3308C3.85923 17.0608 4.46923 17.6408 5.26923 17.9008C6.34923 18.2608 7.43923 18.5208 8.54923 18.7108C8.65923 18.7308 8.76923 18.7408 8.87923 18.7608C9.01923 18.7808 9.16923 18.8008 9.31923 18.8208C9.57923 18.8608 9.83923 18.8908 10.1092 18.9108C10.7392 18.9708 11.3792 19.0008 12.0192 19.0008C12.6492 19.0008 13.2792 18.9708 13.8992 18.9108C14.1292 18.8908 14.3592 18.8708 14.5792 18.8408C14.7592 18.8208 14.9392 18.8008 15.1192 18.7708C15.2292 18.7608 15.3392 18.7408 15.4492 18.7208C16.5692 18.5408 17.6792 18.2608 18.7592 17.9008C19.5292 17.6408 20.1192 17.0608 20.3992 16.3208C20.6792 15.5708 20.5992 14.7508 20.1892 14.0608ZM12.7492 10.0008C12.7492 10.4208 12.4092 10.7608 11.9892 10.7608C11.5692 10.7608 11.2292 10.4208 11.2292 10.0008V6.90078C11.2292 6.48078 11.5692 6.14078 11.9892 6.14078C12.4092 6.14078 12.7492 6.48078 12.7492 6.90078V10.0008Z" fill="currentColor"/>
+							<path d="M14.8297 20.01C14.4097 21.17 13.2997 22 11.9997 22C11.2097 22 10.4297 21.68 9.87969 21.11C9.55969 20.81 9.31969 20.41 9.17969 20C9.30969 20.02 9.43969 20.03 9.57969 20.05C9.80969 20.08 10.0497 20.11 10.2897 20.13C10.8597 20.18 11.4397 20.21 12.0197 20.21C12.5897 20.21 13.1597 20.18 13.7197 20.13C13.9297 20.11 14.1397 20.1 14.3397 20.07C14.4997 20.05 14.6597 20.03 14.8297 20.01Z" fill="currentColor"/>
+							</svg>
+					</template>
+                </div>
+				<div class="flex-1 font-semibold leading-tight flex items-center truncate" x-text="notice.text"></div>
+			</div>
+		</div>
+	</template>
+</div>
+        </body>
+
+</html>

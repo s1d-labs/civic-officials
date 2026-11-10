@@ -183,3 +183,28 @@ def pubutility(html):
             rows.append(cells)
     title = soup.find("h1")
     return [{"caption": " ".join(title.get_text(" ", strip=True).split()) if title else "public utility", "rows": rows}] if rows else []
+
+
+PHONE = re.compile(r"^(?:\+?91[\s-]*)?(?:0\d{2,4}[\s-]?\d{6,8}|[6-9]\d{9})(?:\s*[,/]\s*(?:\+?91[\s-]*)?\d{10})*$")
+ROLE = re.compile(r"chair|commissioner|councillor|counsellor|member|officer|engineer|inspector|secretary|accountant|assistant|clerk|"
+                  r"mayor|president|executive|director|superintendent|manager|head|chief|deputy|vice|ward|"
+                  r"अध्यक्ष|पार्षद|सदस्य|अधिकारी|ಸದಸ್ಯ|ಅಧ್ಯಕ್ಷ", re.I)
+PEOPLE_PATH = re.compile(r"/(members?|office-staffs?|key-persons?|officials?|staffs?|councill?ors?|elected[\w-]*|team)/?$", re.I)
+
+
+def text_people(html):
+    """People shown as cards rather than a table (e.g. assamurban.in /members, /office-staff): in the page text, a phone line whose
+    line above is a role and the line above that a name. Returns [{"caption", "rows"}] or []."""
+    soup = BeautifulSoup(html, "lxml")
+    for t in soup(["script", "style", "nav", "header", "footer"]):
+        t.decompose()
+    lines = [" ".join(x.split()) for x in soup.get_text("\n").split("\n")]
+    lines = [x for x in lines if x]
+    rows = []
+    for i, ln in enumerate(lines):
+        if i >= 2 and PHONE.match(ln) and ROLE.search(lines[i - 1]) and not ROLE.search(lines[i - 2]) and len(lines[i - 2]) <= 60:
+            cell = {"Name": lines[i - 2], "Designation": lines[i - 1], "Phone": ln}
+            if i + 1 < len(lines) and re.match(r"^(ward\s*no\.?\s*)?\d{1,3}$", lines[i + 1], re.I):
+                cell["Ward"] = re.sub(r"\D", "", lines[i + 1])
+            rows.append(cell)
+    return [{"caption": "people", "rows": rows}] if len(rows) >= 2 else []

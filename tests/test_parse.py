@@ -57,3 +57,10 @@ def test_pubutility():
     t = pubutility(read("patna_pubutility_municipality.html"))
     assert t and t[0]["rows"][0]["Office"] == "Patna Municipal Corporation"
     assert normalise(t[0]["rows"][0])["phone"].startswith("+91")
+
+
+def test_text_people_cards():
+    from officials import text_people
+    rows = text_people(read("tezpur_members.html"))[0]["rows"]
+    assert len(rows) >= 15
+    assert rows[0] == {"Name": "Prajanoo Bhatacharjyya", "Designation": "Chairman", "Phone": "9435080593"}
