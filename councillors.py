@@ -4,6 +4,8 @@ body or one file. Payload: {"url", "kind", "state", ...}. Kinds:
   page per member, /public/wyr/view/<member id> (name, post, party, front, votes, margin, ward code, phone, email, address).
 - "pdf": a results file (Andhra Pradesh, Odisha, Assam ...). The file goes to the bucket, each page's text becomes a record
   (parsed later on the box).
+- "seed": {"module": "<xx>"}: runs cforms/<xx>.py items(get) through the hub and stores the queue items it lists as one record
+  ("seed_items"); civic-india/hub_register.sh then queues them. Readers that can list their bodies offer items(get).
 - "form-<xx>": a state reader in cforms/<xx>.py (Punjab, Rajasthan, Telangana, Himachal ...): fetch(payload, get) with
   get(url, method="GET", data=None, headers=None) on one requests session (cookies kept), returning (records, files, why).
 Records: one per member ("councillor:<state>:<ward code or body:ward>"). Every answer is kept in the bucket under councillors/<state>/.
@@ -127,7 +129,15 @@ def pdf(p, get):
     return recs, files, "" if recs else "empty pdf"
 
 
-KINDS = {"kl-body": kl_body, "pdf": pdf}
+def seed(p, get):
+    """List a state's queue items through the hub (no direct requests from a box): cforms/<module>.py items(get) -> one record."""
+    mod = importlib.import_module("cforms." + p["module"])
+    items = mod.items(get)
+    return ([(f"seed:{p['module']}", {"type": "seed_items", "module": p["module"], "items": items, "url": p.get("url", "")})], [],
+            "" if items else "no items")
+
+
+KINDS = {"kl-body": kl_body, "pdf": pdf, "seed": seed}
 
 
 def run(item, get):
