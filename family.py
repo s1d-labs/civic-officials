@@ -108,6 +108,8 @@ _cof = HERE / "councillor_sources.json"
 if _cof.exists():
     PROJECTS.append({"name": f"{FAMILY}-councillors", "title": "Elected ward councillors (State Election Commissions)", "task": "councillors",
                      "target": f"{FAMILY}-councillors", "env": {}, "probe": None, "unit_label": "body or file", "record_label": "councillor",
-                     "items": json.loads(_cof.read_text()), "workers": 4, "threads": 1, "delay_ms": 1000, "geo": "IN"})
+                     "items": json.loads(_cof.read_text()) + [i for f in sorted((HERE / "seeds").glob("councillors_*.json"))
+                                                              for i in json.loads(f.read_text())],
+                     "workers": 4, "threads": 1, "delay_ms": 1000, "geo": "IN"})
 
 PROBES = []    # many hosts per project: no single health check would mean anything
