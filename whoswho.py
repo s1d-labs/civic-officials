@@ -22,6 +22,9 @@ from officials import (PEOPLE_PATH, ajax_rows, candidate_links, common_links, no
                        row_id, tables, text_people)
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
+# Some servers (Jalandhar, Bhiwandi) answer 406 to any "Mozilla/5.0" label that is not a full browser, but serve plain clients.
+# On a 406 we ask once more with this plain label, which says only who we are (owner approved, 2026-11-10).
+PLAIN_UA = "s1d-labs-public-records/1.0 (+https://labs.s1d.me)"
 MAX_PAGES = 25          # pages fetched per site (home page and candidates; AJAX pages are counted apart)
 MAX_AJAX = 300          # ww_pages calls per site
 # A site that fails from a GitHub runner usually refuses foreign IPs: it goes to the -in project (Indian proxies), which retries.
@@ -56,6 +59,9 @@ class Site:
         t = time.time()
         try:
             r = self.s.request(method, url, data=data, timeout=(15, 45), allow_redirects=True)
+            if r.status_code == 406:
+                self.metric("http_406_plain_retry")
+                r = self.s.request(method, url, data=data, timeout=(15, 45), allow_redirects=True, headers={"User-Agent": PLAIN_UA})
         except requests.RequestException as e:
             self.metric("http_error")
             if self.hub:

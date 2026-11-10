@@ -21,6 +21,7 @@ import requests
 from officials import normalise, pubutility, tables
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
+PLAIN_UA = "s1d-labs-public-records/1.0 (+https://labs.s1d.me)"     # one retry on a 406 (see whoswho.py)
 stop = False
 
 
@@ -107,6 +108,9 @@ def main():
         t = time.time()
         try:
             r = s.request(method, url, data=data, timeout=(20, 120))
+            if r.status_code == 406:
+                hub.metric("http_406_plain_retry")
+                r = s.request(method, url, data=data, timeout=(20, 120), headers={"User-Agent": PLAIN_UA})
         except requests.RequestException:
             hub.metric("http_error")
             hub.error()

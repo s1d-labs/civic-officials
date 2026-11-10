@@ -11641,5 +11641,44 @@
    "label": "Kota: officers",
    "lgd_code": "303090"
   }
+ },
+ {
+  "key": "big-73baa854d476",
+  "payload": {
+   "url": "https://mcjalandhar.in/wp-content/uploads/2025/03/Councillor-List-2025-2030.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Jalandhar",
+   "label": "Jalandhar: councillors",
+   "lgd_code": "248296"
+  }
+ },
+ {
+  "key": "big-eb7132971048",
+  "payload": {
+   "url": "https://mcjalandhar.in/wp-content/uploads/2026/07/list-of-PIO-2026.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Jalandhar",
+   "label": "Jalandhar: rti",
+   "lgd_code": "248296"
+  }
+ },
+ {
+  "key": "big-171ea1720559",
+  "payload": {
+   "url": "https://mcjalandhar.in/wp-content/uploads/2024/03/pio-apio.pdf",
+   "method": "GET",
+   "data": null,
+   "fmt": "pdf",
+   "state": "",
+   "source": "Jalandhar",
+   "label": "Jalandhar: rti",
+   "lgd_code": "248296"
+  }
  }
 ]

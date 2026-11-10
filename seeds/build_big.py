@@ -19,7 +19,7 @@ def main():
         for r in csv.DictReader(open(f, newline="", encoding="utf-8")):
             url, fmt, ok = (r.get("url") or "").strip(), (r.get("fmt") or "").strip().lower(), (r.get("verified") or "").strip()
             abroad = "mcdonline.nic.in" in url and ok.startswith("000")     # MCD's portal times out from India, answers from abroad
-            if not url.startswith("http") or not (ok.startswith("200") or abroad) or fmt == "js" or url in seen:
+            if not url.startswith("http") or not (ok.startswith(("200", "406")) or abroad) or fmt == "js" or url in seen:
                 continue
             if abroad:
                 seen.add(url)
