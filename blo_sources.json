@@ -437990,5 +437990,815 @@
    "button": "ctl00$ContentPlaceHolder2$Button60",
    "button_value": "60-Kanchanpur(ST)"
   }
+ },
+ {
+  "key": "jh-ac-001",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Rajmahal",
+   "ac_no": 1,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-002",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Borio",
+   "ac_no": 2,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-004",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Littipara",
+   "ac_no": 4,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-005",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Pakur",
+   "ac_no": 5,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-006",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Maheshpur",
+   "ac_no": 6,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-007",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Shikaripara",
+   "ac_no": 7,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-009",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Jamtara",
+   "ac_no": 9,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-010",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Dumka",
+   "ac_no": 10,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-011",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Jama",
+   "ac_no": 11,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-013",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Madhupur",
+   "ac_no": 13,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-015",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Deoghar",
+   "ac_no": 15,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-016",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Poreyahat",
+   "ac_no": 16,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-017",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Godda",
+   "ac_no": 17,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-018",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Mahagama",
+   "ac_no": 18,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-020",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Barkattha",
+   "ac_no": 20,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-021",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Barhi",
+   "ac_no": 21,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-023",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Ramgarh",
+   "ac_no": 23,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-024",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Mandhu",
+   "ac_no": 24,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-025",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Hazaribagh",
+   "ac_no": 25,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-026",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Simaria",
+   "ac_no": 26,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-027",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Chatra",
+   "ac_no": 27,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-028",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Dhanwar",
+   "ac_no": 28,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-030",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Jamua",
+   "ac_no": 30,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-032",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Giridih",
+   "ac_no": 32,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-034",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Gomia",
+   "ac_no": 34,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-035",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Bermo",
+   "ac_no": 35,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-036",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Bokaro",
+   "ac_no": 36,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-037",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Chandankyari",
+   "ac_no": 37,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-038",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Sindri",
+   "ac_no": 38,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-039",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Nirsa",
+   "ac_no": 39,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-040",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Dhanbad",
+   "ac_no": 40,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-041",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Jharia",
+   "ac_no": 41,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-042",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Tundi",
+   "ac_no": 42,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-043",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Baghmara",
+   "ac_no": 43,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-044",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Baharagora",
+   "ac_no": 44,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-045",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Ghatshila",
+   "ac_no": 45,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-047",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Jugsalai",
+   "ac_no": 47,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-049",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Jamshedpur West",
+   "ac_no": 49,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-050",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Ichagarh",
+   "ac_no": 50,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-051",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Saraikella",
+   "ac_no": 51,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-052",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Chaibasa",
+   "ac_no": 52,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-053",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Majhganon",
+   "ac_no": 53,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-055",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Manoharpur",
+   "ac_no": 55,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-056",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Chakradharpur",
+   "ac_no": 56,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-057",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Kharasawan",
+   "ac_no": 57,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-058",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Tamar",
+   "ac_no": 58,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-059",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Torpa",
+   "ac_no": 59,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-060",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Khunti",
+   "ac_no": 60,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-063",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Ranchi",
+   "ac_no": 63,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-064",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Hatia",
+   "ac_no": 64,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-066",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Mandar",
+   "ac_no": 66,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-067",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Sisai",
+   "ac_no": 67,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-068",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Gumla",
+   "ac_no": 68,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-071",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Kolebira",
+   "ac_no": 71,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-072",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Lohardaga",
+   "ac_no": 72,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-073",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Manika",
+   "ac_no": 73,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-074",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Latehar",
+   "ac_no": 74,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-076",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "DALTONGANJ",
+   "ac_no": 76,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-077",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Bishrampur",
+   "ac_no": 77,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-080",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Garhwa",
+   "ac_no": 80,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-081",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Bhawanathpur",
+   "ac_no": 81,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-022",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Barkagaon",
+   "ac_no": 22,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-019",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Kodarma",
+   "ac_no": 19,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-008",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Nala",
+   "ac_no": 8,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-003",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Barhait",
+   "ac_no": 3,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-014",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Sarath",
+   "ac_no": 14,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-012",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Jarmundi",
+   "ac_no": 12,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-031",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Gandey",
+   "ac_no": 31,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-054",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Jaganathpur",
+   "ac_no": 54,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-065",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Kanke",
+   "ac_no": 65,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-061",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Silli",
+   "ac_no": 61,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-062",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Khijri",
+   "ac_no": 62,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-029",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Bagodar",
+   "ac_no": 29,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-070",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Simdega",
+   "ac_no": 70,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-033",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Dumri",
+   "ac_no": 33,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-069",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Bishunpur",
+   "ac_no": 69,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-048",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Jamshedpur East",
+   "ac_no": 48,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-046",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Potka",
+   "ac_no": 46,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-079",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Hussainabad",
+   "ac_no": 79,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-078",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Chattarpur",
+   "ac_no": 78,
+   "ac_no_unverified": true
+  }
+ },
+ {
+  "key": "jh-ac-075",
+  "payload": {
+   "kind": "form-jh",
+   "state": "JH",
+   "ac": "Panki",
+   "ac_no": 75,
+   "ac_no_unverified": true
+  }
  }
 ]
