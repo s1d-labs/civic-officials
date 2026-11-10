@@ -19,6 +19,8 @@ import time
 
 import requests
 
+from certs_trust import trust
+
 from officials import normalise, tables
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
@@ -91,6 +93,7 @@ def main():
     signal.signal(signal.SIGINT, on_signal)
     signal.signal(signal.SIGTERM, on_signal)
     s = requests.Session()
+    s.verify = trust()
     s.headers.update(HEADERS)
 
     def get(method, url, data):
@@ -148,6 +151,7 @@ def main():
 
 def local(payload):
     s = requests.Session()
+    s.verify = trust()
     s.headers.update(HEADERS)
     recs, files, why = run({"key": "local", "payload": json.loads(payload)}, lambda m, u, d: s.request(m, u, data=d, timeout=(20, 120)))
     print(json.dumps({"why": why, "records": len(recs), "files": [f[0] for f in files]}))

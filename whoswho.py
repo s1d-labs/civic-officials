@@ -18,6 +18,8 @@ from urllib.parse import urlsplit
 
 import requests
 
+from certs_trust import trust
+
 from officials import (PEOPLE_PATH, ajax_rows, candidate_links, common_links, normalise, page_title, pager_blocks, pubutility,
                        row_id, tables, text_people)
 
@@ -234,6 +236,7 @@ def main():
 
 def local(url):
     s = requests.Session()
+    s.verify = trust()
     s.headers.update(HEADERS)
     site = Site(None, s, {"key": url, "payload": {"url": url}}, 0.5)
     ok, why = site.run()
