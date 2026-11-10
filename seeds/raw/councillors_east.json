@@ -1,0 +1,274 @@
+[
+  {
+    "state": "Odisha",
+    "source": "State Election Commission Odisha: Name of Elected Councillors (ward wise), GE to ULBs 2022",
+    "url": "https://sec.odisha.gov.in/uploads/cmsfiles/2551cab2-7121-4ff9-a8a6-5cbf43da1797_NAME-OF-ELECTED-COUNCILLORS-WARD-WISE.pdf",
+    "kind": "pdf",
+    "covers": "All municipalities and NACs elected in March 2022 (about 106 bodies, 1,884 ward rows, 50 pages). Corporations are in a separate PDF.",
+    "election_year": 2022,
+    "fields": ["district", "ulb", "ward_no", "reservation", "name", "party"],
+    "access": "India only (sec.odisha.gov.in times out from Germany)",
+    "sample": [
+      {"district": "ANGUL", "ulb": "Angul Municipality", "ward": "WARD 1", "reservation": "Reserved For Woman", "name": "Sukanti Das", "party": "Biju Janata Dal"},
+      {"district": "ANGUL", "ulb": "Angul Municipality", "ward": "WARD 4", "reservation": "Reserved For Woman", "name": "Anupama Sahu", "party": "Bharatiya Janata Party"},
+      {"district": "ANGUL", "ulb": "Angul Municipality", "ward": "WARD 5", "reservation": "Unreserved", "name": "Ranjit Mandothia", "party": "Biju Janata Dal"}
+    ],
+    "how_to_scrape": "The page /Landing/urbanLocalModelElectionResults loads its file list from GET https://sec.odisha.gov.in/CMS/GetCMSTableData?TableId=66 (JSON; tableData has Title + Download path). Download the PDFs and parse with pdftotext -layout: one line per ward, with fixed columns. The old wp-content URL returns 404 now."
+  },
+  {
+    "state": "Odisha",
+    "source": "State Election Commission Odisha: Name of Elected Corporators, GE to ULBs 2022",
+    "url": "https://sec.odisha.gov.in/uploads/cmsfiles/7ca2184a-0667-451f-827b-ff8488f75f87_NAME-OF-ELECTED-CORPORATORS.pdf",
+    "kind": "pdf",
+    "covers": "3 municipal corporations: Bhubaneswar (67 wards), Cuttack (59), Berhampur (42); 168 rows, 7 pages. The same table also lists mayor and chairperson PDFs.",
+    "election_year": 2022,
+    "fields": ["district", "ulb", "ward_no", "reservation", "name", "party"],
+    "access": "India only",
+    "sample": [
+      {"ulb": "Cuttack Municipal Corporation", "ward": "WARD 1", "reservation": "Reserved For Woman", "name": "BHANU SENAPATI", "party": "Indian National Congress"},
+      {"ulb": "Cuttack Municipal Corporation", "ward": "WARD 2", "reservation": "Reserved For Woman", "name": "PUSPITA MOHANTY", "party": "Biju Janata Dal"},
+      {"ulb": "Cuttack Municipal Corporation", "ward": "WARD 3", "reservation": "Unreserved", "name": "PRADEEP KUMAR ROUT", "party": "Independent"}
+    ],
+    "how_to_scrape": "Same CMS table as above (TableId=66). By-elections after 2022 (Hindol NAC 2023, Attabira NAC 2023, single wards) are in TableId=79 (page /Landing/ULBElectionAfter2014 family); apply them on top of the 2022 list."
+  },
+  {
+    "state": "Odisha",
+    "source": "Bhubaneswar Municipal Corporation: Zones & Wards (corporator per ward, with phone)",
+    "url": "https://www.bmc.gov.in/bmc/zones-wards",
+    "kind": "html-table",
+    "covers": "Bhubaneswar MC, 67 wards, in 3 zone tabs",
+    "election_year": 2022,
+    "fields": ["zone", "ward_no", "ward_area", "name", "phone", "ward_officer", "officer_phone"],
+    "access": "works from Germany",
+    "sample": [
+      {"ward": 1, "name": "Mihir Kumar Rout", "phone": "7008922692"},
+      {"ward": 2, "name": "Monalisa Behera", "phone": "9938819376"},
+      {"ward": 3, "name": "Laxmipriya Parida", "phone": "7008809667"}
+    ],
+    "how_to_scrape": "One GET of the page; the zone tabs are in the same HTML. Parse the cell \"Corporator's Detail\": the name, then a 10-digit phone."
+  },
+  {
+    "state": "Assam",
+    "source": "Assam SEC: Municipal Board Election 2022 report, section 18 'Gazette Notification of Winning Candidates'",
+    "url": "https://sec.assam.gov.in/pdf/reports/Municipal-Election-2022.pdf",
+    "kind": "pdf",
+    "covers": "All 80 municipal boards (about 977 wards), by district. 276 pages, 9.5 MB. The winners are on printed pages 134-203 (PDF pages about 138-207).",
+    "election_year": 2022,
+    "fields": ["district", "municipal_board", "ward_no", "category", "name", "party"],
+    "access": "India only (sec.assam.gov.in times out from Germany)",
+    "sample": [
+      {"board": "Dibrugarh Municipal Board", "ward": "Ward No. 1", "category": "Unreserved", "name": "Gautom Dutta", "party": "BJP"},
+      {"board": "Dibrugarh Municipal Board", "ward": "Ward No. 2", "category": "ST", "name": "Darshan Kumar Das", "party": "BJP"},
+      {"board": "Dibrugarh Municipal Board", "ward": "Ward No. 3", "category": "Women", "name": "Purnima Borah", "party": "BJP"}
+    ],
+    "how_to_scrape": "Download once. pdftotext -layout; find 'duly elected from the Wards of the following Municipal Boards of <District>'; then a numbered board heading ('1. Dibrugarh Municipal Board') and rows 'Ward No. N  Category  Name  Party'. The gazette pages carry Assamese-font junk in the header: ignore it."
+  },
+  {
+    "state": "Assam",
+    "source": "Assam SEC: GMC Election Report 2022, 'List of Winning Candidates of Guwahati Municipal Corporation Election, 2022'",
+    "url": "https://sec.assam.gov.in/pdf/reports/GMC-Election-2022.pdf",
+    "kind": "pdf",
+    "covers": "Guwahati Municipal Corporation, 60 wards. 190 pages, 53 MB. The list is on PDF pages about 186-187; the ward-wise vote counts are on earlier pages.",
+    "election_year": 2022,
+    "fields": ["ward_no", "name", "party"],
+    "access": "India only",
+    "sample": [
+      {"ward": "Ward No. 1", "name": "Hukum Shan Ali Boxi", "party": "AJP"},
+      {"ward": "Ward No. 2", "name": "Mukul Kalita", "party": "BJP"},
+      {"ward": "Ward No. 3", "name": "Kallol Chakraborty", "party": "BJP"}
+    ],
+    "how_to_scrape": "Download once (large). Run pdftotext -layout on the last pages only (-f 180) and parse 'N. Ward No. N  Name  Party'."
+  },
+  {
+    "state": "Assam",
+    "source": "Assam SEC: Silchar Municipal Corporation election 2026 page",
+    "url": "https://sec.assam.gov.in/smc-election-2026",
+    "kind": "pdf",
+    "covers": "Silchar MC (first election as a corporation, October 2026). The page has only a party-wise result press release (a 1-page scanned PDF). It has no ward-wise winners yet.",
+    "election_year": 2026,
+    "fields": ["party", "seats"],
+    "access": "India only",
+    "sample": [],
+    "how_to_scrape": "Watch https://sec.assam.gov.in/smc-election-2026 and https://sec.assam.gov.in/results for a ward-wise winners file. Until then, Silchar has no councillor source."
+  },
+  {
+    "state": "Tripura",
+    "source": "Agartala Municipal Corporation: Councilor List",
+    "url": "https://agartalacity.tripura.gov.in/councilor-list",
+    "kind": "html-table",
+    "covers": "Agartala MC, 51 wards (board elected November 2021), with mayor and mayor-in-council marked",
+    "election_year": 2021,
+    "fields": ["ward_no", "name", "role", "phone"],
+    "access": "India only",
+    "sample": [
+      {"ward": 1, "name": "MITRA RANI DAS MAJUMDER", "phone": "9436556981"},
+      {"ward": 2, "name": "SHARMISTHA BARDHAN", "phone": "9436547502"},
+      {"ward": 3, "name": "JAGADISH DAS", "role": "MAYOR IN COUNCIL", "phone": "7005205890"}
+    ],
+    "how_to_scrape": "One GET; one HTML table (SL. No, Ward No, Name of Corporator, Contact Number). Take the role from the brackets after the name. The PDF cited by Wikipedia (/sites/default/files/member.pdf) returns 'Page Not Found'."
+  },
+  {
+    "state": "Tripura",
+    "source": "Tripura SEC: Municipality Election - Election Results",
+    "url": "https://sec.tripura.gov.in/municipality-election-election-results",
+    "kind": "html-table",
+    "covers": "Statewide ULBs (1 MC, 13 municipal councils, 6 nagar panchayats; 334 seats in 2021). The page is EMPTY now ('no content available'). The 2026 ULB general election is notified (schedule page updated 30-10-2026). Expect results here or on https://sec-results.tripura.gov.in/sec (an SPA; it now shows only the 2026 TTAADC village committee results, through POST /electionresultscheduler/dashboard/get-data).",
+    "election_year": 2026,
+    "fields": [],
+    "access": "India only",
+    "sample": [],
+    "how_to_scrape": "Not ready. Re-check after the 2026 ULB count. If the results SPA is used again, read its constants.js for the API keys and call the same JSON endpoint the page calls. For 2021 there is no statewide ward-wise source; Wikipedia '2021 Tripura municipal elections' has party totals only."
+  },
+  {
+    "state": "Mizoram",
+    "source": "Mizoram SEC: General Election to Aizawl Municipal Corporation 2026, 'POLL DAY REPORT & RESULTS' workbook",
+    "url": "https://sec.mizoram.gov.in/uploads/attachments/2026/05/02cd04c13c4cc92f967c785804441267/ge-to-amc-2026-poll-day-report-result-google-sheet.xlsx",
+    "kind": "pdf",
+    "covers": "Aizawl Municipal Corporation, 19 wards (poll 21-04-2026). The xlsx sheets are Consolidated Result (votes per candidate per polling station), Partywise Result and List of Elected. No source found for Lunglei Municipal Council.",
+    "election_year": 2026,
+    "fields": ["ward_no (roman, with 'Reserved')", "name", "party", "votes per candidate (other sheet)"],
+    "access": "India only (Germany gets 403)",
+    "sample": [
+      {"ward": "I", "name": "VANLALHRIATA", "party": "ZPM"},
+      {"ward": "II (Reserved)", "name": "R LALMAWIPUII", "party": "ZPM"},
+      {"ward": "III", "name": "VANLALFAKA", "party": "ZPM"}
+    ],
+    "how_to_scrape": "kind is really xlsx. Find the link on https://sec.mizoram.gov.in/page/ge-to-amc-2026 (anchor text 'POLL DAY REPORT & RESULTS'). Read sheet 'List of Elected', rows after the header 'Ward No. | Name of Elected Candidate | Party Affiliation'. The event list is https://sec.mizoram.gov.in/page/list-of-elections."
+  },
+  {
+    "state": "Arunachal Pradesh",
+    "source": "Itanagar Municipal Corporation: Committee Members (List of Corporators)",
+    "url": "https://imc.arunachal.gov.in/committeemember.html",
+    "kind": "html-table",
+    "covers": "Itanagar MC, 20 wards (mayor, deputy mayor, corporators). The page has no date; the Dec 2025 election gave BJP 14 of 20 wards, so check that the names are the 2025 board.",
+    "election_year": 2025,
+    "fields": ["name", "role", "ward_no", "phone (icon present, number not in the text)"],
+    "access": "works from Germany",
+    "sample": [
+      {"name": "Smti Likha Nari Tadar", "role": "Mayor", "ward": "Ward No. 16"},
+      {"name": "Shri Tok Tabin Camdir", "role": "Deputy Mayor", "ward": "Ward No. 17"},
+      {"name": "Smti Lokam Sikio", "role": "Corporator", "ward": "Ward No. 01"}
+    ],
+    "how_to_scrape": "One GET (1 MB, mostly inline images). Parse the cards: name, then the label (Mayor/Corporator), then 'Ward No. NN'."
+  },
+  {
+    "state": "Arunachal Pradesh",
+    "source": "Arunachal SEC (secap.nic.in): Local Body Elections 2025 results",
+    "url": "https://secap.nic.in/",
+    "kind": "html-table",
+    "covers": "Itanagar MC (20 wards) and Pasighat Municipal Council (8 wards), poll 15-12-2025. Not checked: the site cannot be opened.",
+    "election_year": 2025,
+    "fields": [],
+    "access": "down (TLS certificate expired 2026-07-29; http redirects to https). Not bypassed.",
+    "sample": [],
+    "how_to_scrape": "Blocked until the SEC renews its certificate. Then look for the municipal results under /docs/."
+  },
+  {
+    "state": "Sikkim",
+    "source": "Gangtok Municipal Corporation website: Hon'ble Councillors tab",
+    "url": "https://gmc.sikkim.gov.in/",
+    "kind": "spa",
+    "covers": "Gangtok MC: 17 ward councillors (plus mayor, deputy mayor and chairman tabs). It includes the BJP winner of the one contested ward in April 2026, so this is the 2026 board.",
+    "election_year": 2026,
+    "fields": ["name", "designation", "ward_name", "phone"],
+    "access": "works from Germany",
+    "sample": [
+      {"name": "Shri Ongden Bhutia", "designation": "Councillor", "ward": "BOJOGHARI-2ND MILE", "phone": "7407545509"},
+      {"name": "Shri Nell Bahadur Chettri", "designation": "Executive Councillor", "ward": "UPPER BURTUK", "phone": "8250184552"},
+      {"name": "Smt. Srijana Chettri", "designation": "Councillor", "ward": "D.P.H", "phone": "8001368278"}
+    ],
+    "how_to_scrape": "The data is hard-coded in the JS bundle. GET the home page, take the /assets/index-*.js name, fetch it, and parse the array literal of {name:\"..\",designation:\"..\",ward:\"..\",contact:\"..\"} objects. The bundle hash changes on every deploy."
+  },
+  {
+    "state": "Sikkim",
+    "source": "Sikkim SEC website",
+    "url": "http://sec.sikkim.gov.in/",
+    "kind": "spa",
+    "covers": "Statewide (63 wards in April 2026; 58 were uncontested). The bundle lists forms, gazettes and a ward reorganisation PDF only. It has no results or elected-member list. Namchi, Mangan, Gyalshing, Rangpo, Singtam, Jorethang and the others have no source found.",
+    "election_year": 2026,
+    "fields": [],
+    "access": "India only, and http only (https gets no answer)",
+    "sample": [],
+    "how_to_scrape": "Nothing to scrape now. The PDFs are /assets/*.pdf names in /assets/index-*.js; re-check for a results PDF."
+  },
+  {
+    "state": "Nagaland",
+    "source": "Nagaland Post: 'ULB election 2024 results declared' (news article, ward-wise winners)",
+    "url": "https://nagalandpost.com/ulb-election-2024-results-declared/",
+    "kind": "html-table",
+    "covers": "About 13 bodies with names (Tseminyu, Meluri, Bhandari, Niuland, Phek, Wokha, Medziphema, Pfutsero, Peren, Tening, Jalukie, Chumoukedima, East Dimapur), about 120 named winners. Kohima, Dimapur, Mokokchung and some town councils have party counts only. The six eastern districts did not vote in 2024 (some polled in 2025).",
+    "election_year": 2024,
+    "fields": ["body", "ward_no", "name", "party"],
+    "access": "works from Germany",
+    "sample": [
+      {"body": "Tseminyu Town Council", "ward": 1, "name": "Senyile Woch", "party": "NDPP"},
+      {"body": "Tseminyu Town Council", "ward": 2, "name": "Kegwalo Magh", "party": "JDU"},
+      {"body": "Tseminyu Town Council", "ward": 3, "name": "Sole Tep", "party": "IND"}
+    ],
+    "how_to_scrape": "kind is really article text, not a table. One GET; parse 'Ward no. N. Name, PARTY.' lines under each body heading. Secondary source only: no Nagaland SEC website was found. Kohima MC (kmc.nagaland.gov.in, Who's Who) and Dimapur MC (dmc.nagaland.gov.in, needs the repo's certs/ intermediates) list no councillors."
+  },
+  {
+    "state": "West Bengal",
+    "source": "West Bengal SEC: municipal election final result",
+    "url": "https://wbsec.gov.in/results/municipal_election_final_result",
+    "kind": "form",
+    "covers": "Statewide: 108 municipalities (Feb 2022) plus the corporations (KMC Dec 2021, Siliguri, Asansol, Bidhannagar, Chandernagore 2022). The best source, but not reachable.",
+    "election_year": 2022,
+    "fields": ["year", "district", "municipality", "ward", "winner", "party"],
+    "access": "down (time-out from Germany and from India; connection refused from a US fetcher, 2026-11-10). archive.wbsec.org returns 503.",
+    "sample": [],
+    "how_to_scrape": "Retry later from India. Per the search engine index there is a year dropdown and per-municipality orders of elected members under /home/order/<token>/N."
+  },
+  {
+    "state": "West Bengal",
+    "source": "Kolkata Municipal Corporation: Councillors page (linked from www.kmcgov.in)",
+    "url": "https://kmc.wb.gov.in/contact-us/councillors",
+    "kind": "html-table",
+    "covers": "KMC, 144 wards (also the Borough Committee link)",
+    "election_year": 2021,
+    "fields": ["ward_no", "name", "borough", "phone (expected)"],
+    "access": "down (time-out from Germany and India, 2026-11-10). The old portal www.kmcgov.in/KMCPortal/jsp/KMCPortalHome1.jsp works from Germany and links here.",
+    "sample": [],
+    "how_to_scrape": "Retry later; one GET when it is up."
+  },
+  {
+    "state": "West Bengal",
+    "source": "Wikipedia: 2021 Kolkata Municipal Corporation election + 2022 Siliguri / Asansol / Bidhannagar / Chandernagore Municipal Corporation election pages",
+    "url": "https://en.wikipedia.org/w/index.php?title=2021_Kolkata_Municipal_Corporation_election&action=raw",
+    "kind": "html-table",
+    "covers": "5 corporations: KMC 144 wards, Siliguri 47, Asansol 106, Bidhannagar 41, Chandernagore 33. Each page has a ward table with winner, runner-up, votes and margin. The other 108 municipalities have no ward-level table ('2022 West Bengal municipal elections' has party totals).",
+    "election_year": 2022,
+    "fields": ["borough", "ward_no", "name", "party", "votes", "runner_up", "margin"],
+    "access": "works from Germany",
+    "sample": [
+      {"body": "Kolkata MC", "ward": 1, "name": "Kartick Chandra Manna", "party": "AITC", "votes": 24421},
+      {"body": "Kolkata MC", "ward": 2, "name": "Kakali Sen", "party": "AITC", "votes": 27503},
+      {"body": "Siliguri MC", "ward": 1, "name": "Sanjay Pathak", "party": "AITC", "votes": 3341}
+    ],
+    "how_to_scrape": "Secondary source. Fetch action=raw for each title (2022_Siliguri_Municipal_Corporation_election etc.) and parse the 'Winner / Runner Up' wikitable. The rows start '|Ward No. N' or '|[[Ward No. N, Kolkata Municipal Corporation|Ward N]]'. Note: Siliguri and KMC also have a candidates table first; use the one with Winner/Runner Up headers. The Asansol MC website (asansolmunicipalcorporation.org) is hijacked by a gambling spam page; Bidhannagar MC (bmcwbgov.in) has no councillor list."
+  },
+  {
+    "state": "Meghalaya",
+    "source": "none: no elected municipal councils",
+    "url": "https://megurban.gov.in/",
+    "kind": "html-table",
+    "covers": "Shillong Municipal Board has had no elected body for decades; Tura, Jowai, Williamnagar, Resubelpara and Baghmara boards are run by CEOs (Meghalaya is exempt from the 74th Amendment). No SEC municipal results exist. The Urban Affairs site lists no councillors.",
+    "election_year": null,
+    "fields": [],
+    "access": "India only",
+    "sample": [],
+    "how_to_scrape": "Nothing to scrape. Local self-government in Meghalaya runs through the Autonomous District Councils (KHADC, JHADC, GHADC), which are not ULBs."
+  },
+  {
+    "state": "Manipur",
+    "source": "none: Manipur SEC website has no results; ULB terms expired",
+    "url": "http://secmanipur.nic.in/",
+    "kind": "html-table",
+    "covers": "Imphal MC (27 wards) and the municipal councils / nagar panchayats. The last elections were 2016-2018; terms expired in 2021 or 2023 and no new ULB election is reported. The SEC site has only forms, acts and a 2017 gazette. imc.mn.gov.in lists no councillors.",
+    "election_year": null,
+    "fields": [],
+    "access": "India only, and http only",
+    "sample": [],
+    "how_to_scrape": "Nothing current to scrape. If an election is held, watch http://secmanipur.nic.in/gazettes.html and whatsnew.html."
+  }
+]

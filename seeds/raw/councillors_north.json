@@ -1,0 +1,219 @@
+[
+  {
+    "state": "Uttar Pradesh",
+    "source": "State Election Commission UP - Urban General Election 2023 declared results (NewWinnerList2023)",
+    "url": "https://sec.up.nic.in/site/NewWinnerList2023.aspx",
+    "kind": "form",
+    "covers": "All 762 ULBs of the 2023 general election (17 nagar nigam, 199 nagar palika parishad, 544 nagar panchayat; about 13,900 ward seats). Post dropdown: nagar nigam parshad, nagar palika parishad sadasya, nagar panchayat sadasya, plus mayor/chairperson.",
+    "election_year": 2023,
+    "fields": ["district", "body", "ward_no", "ward_name", "seat_reservation", "name", "father_or_husband", "caste_category", "education", "party", "gender", "age", "mobile", "votes", "vote_pct", "turnout_pct", "result"],
+    "access": "down",
+    "sample": [
+      {"district": "अयोध्या", "body": "अयोध्या", "ward": "1-अभिरामदास", "name": "मो सुल्तान अंसारी", "party": "निर्दलीय", "mobile": "9598660011", "votes": 895, "result": "सविरोध"},
+      {"district": "अयोध्या", "body": "अयोध्या", "ward": "18-वशिष्ठ कुण्ड", "name": "रंजना यादव", "party": "निर्दलीय", "votes": 1357, "result": "सविरोध"}
+    ],
+    "how_to_scrape": "ASP.NET postback: GET the page, post ctl00$ContentPlaceHolder1$DropDownList1 (8/10/12 = ward member of nigam/palika/panchayat) and ddlDistrict (0 = all), then page with the Next/Last pager. sec.up.nic.in (45.118.50.88) timed out from Germany AND from vpsin on 2026-11-10; the rows above come from the Wayback snapshot web.archive.org/web/20260712172252/https://sec.up.nic.in/site/NewWinnerList2023.aspx (first page only, fetched via vpsin). Retry the live site later; Wayback only has the default view."
+  },
+  {
+    "state": "Bihar",
+    "source": "State Election Commission Bihar - Nagarpalika General Election 2022 results, phase-wise (ResultP1 / ResultP2 / ResultP3), 2023 bye-election (ResultP4) and 2025 general/bye (Result2025)",
+    "url": "https://sec.bihar.gov.in/ForPublic/ResultP2.aspx",
+    "kind": "form",
+    "covers": "All municipal bodies that voted in 2022 (nagar nigam, nagar parishad, nagar panchayat; about 224+ ULBs, 38 districts). Each body only shows results on the page of the phase it voted in (Patna Nagar Nigam = phase 2; phase 1 page says 'counting in progress' for it). Posts: मुख्य पार्षद, उप मुख्य पार्षद, वार्ड पार्षद.",
+    "election_year": 2022,
+    "fields": ["district", "subdivision", "body", "post", "ward_no", "candidate_name", "votes", "winner_flag (विजेता)"],
+    "access": "India only",
+    "sample": [
+      {"district": "पटना", "subdivision": "पटना सदर", "body": "नगर निगम, पटना", "post": "वार्ड पार्षद", "ward_no": 1, "name": "छठिया देवी (विजेता)", "votes": 4533},
+      {"district": "पटना", "body": "नगर निगम, पटना", "ward_no": 1, "name": "रामजी चौधरी", "votes": 3272, "note": "runner-up row, same table lists all candidates"}
+    ],
+    "how_to_scrape": "ASP.NET cascading postbacks on ForPublic/ResultP{1,2,3,4}.aspx and Result2025.aspx: ddl_Post=3 (ward councillor) -> ddlDistrict (e.g. 28 = Patna) -> ddlNPType (1 nigam, 2 parishad, 3 panchayat) -> ddlPanchayat (body id, e.g. 310) -> ddlWard (required) -> btnFilter='Show'. One request per ward; winner row carries '(विजेता)'. No party field (Bihar ULB polls are non-party). Germany gets connection reset; works from vpsin."
+  },
+  {
+    "state": "Rajasthan",
+    "source": "State Election Commission Rajasthan - Winners & Runner-ups, Urban Local Body General Election (period 'SEP 2026')",
+    "url": "https://sec.rajasthan.gov.in/Winner_Runner.aspx?code=CEM",
+    "kind": "form",
+    "covers": "All ULBs of the 2026 ULB general election, 41 districts (e.g. Jaipur district: 19 bodies incl. Jaipur Nagar Nigam, Bagru, Chomu). Winner and runner-up for every ward. By-elections in the same form (Election=2).",
+    "election_year": 2026,
+    "fields": ["district", "ulb", "ward_no", "ward_reservation", "result (Winner/Runner)", "name", "gender", "age", "candidate_category", "party", "votes"],
+    "access": "India only",
+    "sample": [
+      {"district": "JAIPUR", "ulb": "BAGRU NAGAR PALIKA", "ward_no": 1, "reservation": "General", "result": "Winner", "name": "गणेश चौधरी", "gender": "M", "age": 36, "category": "OBC", "party": "BJP", "votes": 211},
+      {"district": "JAIPUR", "ulb": "BAGRU NAGAR PALIKA", "ward_no": 2, "reservation": "General (Woman)", "result": "Winner", "name": "सुनीता देवी", "gender": "F", "age": 40, "party": "BJP", "votes": 219},
+      {"district": "JAIPUR", "ulb": "BAGRU NAGAR PALIKA", "ward_no": 3, "result": "Winner", "name": "रामचंद", "gender": "M", "age": 66, "category": "OBC", "party": "IND", "votes": 303}
+    ],
+    "how_to_scrape": "ASP.NET postbacks: ElecType=2, Election=1, Period=61, DistrictDropDownList (e.g. 17 = Jaipur) -> PanchayatSamitiDropDownList (ULB id, e.g. 11472) returns the whole ULB table (Constituencydrpdwn defaults to --All--). One request per ULB. Related lists on ULB_Election_Reports.aspx: ViewWinnerPledgePDF.aspx, Chairperson Detail. Times out from Germany."
+  },
+  {
+    "state": "Haryana",
+    "source": "State Election Commission Haryana - gazette result notifications of elected Mayor/President and Members (PDF)",
+    "url": "https://cdnbbsr.s3waas.gov.in/s31c6a0198177bfcc9bd93f6aab94aad3c/uploads/2025/07/20250704337894322.pdf",
+    "kind": "pdf",
+    "covers": "2025 (poll 02.03.2025): Municipal Corporations except Panipat (Faridabad, Gurugram, Manesar, Hisar, Karnal, Rohtak, Yamunanagar), 20 pp gazette; plus councils/committees notifications 2025/07/20250704818052458.pdf, 2025/07/202507041629123004.pdf, Panipat and Kalanaur. 2026 (poll 10.05.2026): MCs Ambala, Panchkula, Sonipat (2026/05/20260521432943498.pdf), committees (2026/05/202605211775525992.pdf), council Rewari (2026/05/20260521629385597.pdf), bye-elections. Together these cover all ~88 Haryana ULBs.",
+    "election_year": 2025,
+    "fields": ["district", "body", "ward_no", "name", "father_or_husband", "office (Mayor/Member)", "category (reservation)", "party"],
+    "access": "works from Germany",
+    "sample": [
+      {"district": "Faridabad", "body": "Faridabad MC", "ward_no": 1, "name": "Mukesh Dagar", "father_or_husband": "Bharat Lal Dagar", "office": "Member", "category": "Unreserved", "party": "Bharatiya Janata Party"},
+      {"district": "Faridabad", "body": "Faridabad MC", "ward_no": 4, "name": "Sangeeta Bhardwaj", "father_or_husband": "Gyanender", "office": "Member", "category": "Women", "party": "Bharatiya Janata Party"},
+      {"district": "Ambala", "body": "Ambala MC (2026)", "ward_no": 3, "name": "Manish Anand", "father_or_husband": "Dilbag Rai Anand", "office": "Member", "category": "Unreserved", "party": "Bharatiya Janata Party"}
+    ],
+    "how_to_scrape": "Download the PDFs listed on secharyana.gov.in (homepage 'Notification of Elected Candidates' links and the documents archive secharyana.gov.in/?p=6520). 2025 gazettes are Word-made: the English half has a clean text layer (pdftotext -layout; the Hindi half is Kruti Dev legacy font, skip it). 2026 notifications are scans with a poor OCR layer: re-OCR them."
+  },
+  {
+    "state": "Punjab",
+    "source": "Punjab SEC / LBPAMS public result API - Municipal General Election 2026",
+    "url": "https://lbpams.punjab.gov.in/prodapi/api/ResultDeclarationEndpoint/GetPublicResultReportDetailed1",
+    "kind": "json-api",
+    "covers": "2,140 ward winners in 111 bodies (8 municipal corporations: Barnala, Bathinda, Abohar, Batala, Kapurthala, Moga, Pathankot, Mohali; plus municipal councils and nagar panchayats), poll 26.05.2026. NOT included: the 5 corporations elected Dec 2024 (Amritsar, Jalandhar, Ludhiana, Patiala, Phagwara) - still needs a source.",
+    "election_year": 2026,
+    "fields": ["DistrictName", "LocalBodyName", "WardName", "CandidateName", "FatherName", "PartyName", "TotalVotes", "SecondHighestVotes", "WinningMargin", "WonBy", "Status", "IsUnOppossed", "IsDraw", "IsLuckyDraw", "CandidateImage (URL)"],
+    "access": "India only",
+    "sample": [
+      {"DistrictName": "Amritsar", "LocalBodyName": "Majitha", "WardName": "1 (1)", "CandidateName": "Poonam", "FatherName": "Kulmeet Singh", "PartyName": "Aam Aadmi Party (AAP)", "TotalVotes": 286, "WinningMargin": 10, "Status": "Winner"},
+      {"DistrictName": "Amritsar", "LocalBodyName": "Majitha", "WardName": "2 (2)", "CandidateName": "Sharnjit Kaur", "FatherName": "Charanjit Singh", "PartyName": "Shiromani Akali Dal (SAD)", "TotalVotes": 340, "Status": "Winner"},
+      {"DistrictName": "Amritsar", "LocalBodyName": "Majitha", "WardName": "3 (3)", "CandidateName": "Sukhmeet Kaur", "FatherName": "Kuljit Singh", "PartyName": "Aam Aadmi Party (AAP)", "TotalVotes": 276, "Status": "Winner"}
+    ],
+    "how_to_scrape": "One POST with JSON {\"stateMasterId\":1,\"districtMasterId\":0,\"assemblyMasterId\":0,\"electionTypeMasterIds\":[4,5,6],\"searchText\":\"\",\"pageNumber\":1,\"pageSize\":3000} returns all 2,140 rows (totalCount 2140, tested). Endpoint found in the Next.js page https://lbpams.punjab.gov.in/public-result/. Summary PDFs: sec.punjab.gov.in/en/result-municipal-election-2026/. Times out from Germany."
+  },
+  {
+    "state": "Himachal Pradesh",
+    "source": "State Election Commission HP - DPMIS 'Elected Representatives' search",
+    "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+    "kind": "form",
+    "covers": "All ULBs: level 002 = municipal councils and nagar panchayats, 003 = municipal corporations; terms 2026-2031 (51 municipalities polled 17.05.2026) and 2020-2025/2022-2027 (MC Shimla 2023 etc.). Example: Nahan (Sirmaur) 13 wards. Also PRIs.",
+    "election_year": 2026,
+    "fields": ["term", "start_date", "ward_no", "ward_name", "name", "gender", "age", "address", "mobile"],
+    "access": "India only",
+    "sample": [
+      {"term": "2026-2031", "body": "नाहन", "ward": "1 - 1 ढाबो", "name": "कपिल गर्ग", "gender": "पुरुष", "age": 41, "mobile": "9816073325"},
+      {"term": "2026-2031", "body": "नाहन", "ward": "2 - 2 हरिपुर", "name": "नरेन्द्र सिंह", "gender": "पुरुष", "age": 57, "mobile": "9418086400"},
+      {"term": "2026-2031", "body": "नाहन", "ward": "3 - 3 शांति संगम", "name": "उपमा धीमान", "gender": "महिला", "age": 51, "mobile": "9805496363"}
+    ],
+    "how_to_scrape": "ASP.NET postbacks: rbPriPost=002 (or 003), ddlPriTerm=2026-2031, ddlDis (e.g. 1310 Sirmaur), ddlPanch (body id, e.g. 1310999002 Nahan; '00' = all bodies of the district), rbPost=W, then btnShow='View List'. No party column. Older result PDFs on the En/index.html page (e.g. 'Notification- result mc shimla english.pdf'). Times out from Germany."
+  },
+  {
+    "state": "Uttarakhand",
+    "source": "State Election Commission Uttarakhand - ULB result dashboard 2025",
+    "url": "https://secresult.uk.gov.in/ULB_Result/ElectionResultDashboard_WM",
+    "kind": "form",
+    "covers": "All 100+ ULBs (11 nagar nigam, 46 palika parishad, 48 nagar panchayat; 1,324 member seats), poll 23.01.2025. BUT only party-wise win counts per district/body/ward are shown - no candidate names found.",
+    "election_year": 2025,
+    "fields": ["district", "body", "ward_no", "ward_name", "party_win_counts (no names)"],
+    "access": "India only",
+    "sample": [
+      {"district": "देहरादून", "body": "नगर निगम, देहरादून", "wards": 100, "BJP_won": 64, "IND_won": 13, "INC_won": 23},
+      {"body": "नगर निगम, देहरादून", "ward_list": "(1) मालसी, (2) विजयपुर, (3) रांझावाला ..."}
+    ],
+    "how_to_scrape": "Postbacks on the extensionless URL: ddlDistrict (e.g. 049) -> ddlUlb (e.g. 248430) -> ddlWard. Gives ward lists and party counts only. The server needs legacy TLS renegotiation (OpenSSL 3 refuses by default; worked with an OpenSSL config 'Options = UnsafeLegacyRenegotiation') - flag to the owner whether that is acceptable. For names: no official source found yet; check each nagar nigam site (nn<name>.uk.gov.in) or the Wikipedia 2025 Uttarakhand local elections pages (partial)."
+  },
+  {
+    "state": "Jharkhand",
+    "source": "State Election Commission Jharkhand - Municipal (General) Election 2026 documents",
+    "url": "https://sec.jharkhand.gov.in/MElection.aspx",
+    "kind": "pdf",
+    "covers": "48 ULBs (9 corporations, 20 nagar parishads, 19 nagar panchayats; 1,042 wards), poll 23.02.2026, count 27.02.2026. The 'Results' category is empty for 2026. 'NagarPalika Nirvachan Report 2026' (70 pp, 49 MB, image-only Corel PDF) lists mayor/chair and deputy per body; ward councillors not confirmed in it.",
+    "election_year": 2026,
+    "fields": ["district", "body", "post (chair/deputy)", "name", "category"],
+    "access": "works from Germany",
+    "sample": [
+      {"document": "UserFiles/pdf/7720262373/NagarPalika_Nirvachan_Report_2026.pdf", "page": 44, "content": "table of district, body, chairperson/deputy names (image)"}
+    ],
+    "how_to_scrape": "Site sends no intermediate cert: use a CA bundle with GlobalSign GCC R46 OV TLS CA 2025 (already in civic-officials/certs/, certs_trust.py). Postback MElection.aspx with BulletinTypeDropDown=3, ddlYear=2026, ddlCategory=0 to list files. No ward-councillor list found; news sites (indiatvnews.com ward-wise pages) have partial lists. Report needs OCR."
+  },
+  {
+    "state": "Delhi",
+    "source": "Delhi SEC - MCD General Election 2022 result (list of elected councillors)",
+    "url": "https://sec.delhi.gov.in/sites/default/files/SEC/generic_multiple_files/mcd_election_result_2022_1.pdf",
+    "kind": "pdf",
+    "covers": "MCD, all 250 wards (2022). 16-page SCANNED PDF, no text layer: needs OCR. Page: sec.delhi.gov.in/sec/list-elected-councilors-2022.",
+    "election_year": 2022,
+    "fields": ["ward_no", "ward_name", "name", "party"],
+    "access": "works from Germany",
+    "sample": [
+      {"note": "image-only; rows not read. Use the MyNeta entry below for machine-readable 2022 winners."}
+    ],
+    "how_to_scrape": "Download the PDF and OCR it (Hindi/English). Combine with the 2025 bye-election gazette below for the 12 wards that changed."
+  },
+  {
+    "state": "Delhi",
+    "source": "Delhi SEC - MCD bye-election 30.11.2025, gazette list of elected councillors",
+    "url": "https://sec.delhi.gov.in/sites/default/files/SEC/generic_multiple_files/list_of_elected_councillors_bye_election_2025.pdf",
+    "kind": "pdf",
+    "covers": "12 MCD wards (bye-election 2025).",
+    "election_year": 2025,
+    "fields": ["ward_no", "ward_name", "reservation", "name", "party"],
+    "access": "works from Germany",
+    "sample": [
+      {"ward_no": 35, "ward_name": "Mundka", "reservation": "General", "name": "Anil", "party": "Aam Aadmi Party"},
+      {"ward_no": 56, "ward_name": "Shalimar Bagh-B", "reservation": "Women", "name": "Anita Jain", "party": "Bharatiya Janata Party"},
+      {"ward_no": 76, "ward_name": "Chandni Mahal", "reservation": "General", "name": "Mohammad Imran", "party": "All India Forward Bloc"}
+    ],
+    "how_to_scrape": "pdftotext works but the Hindi text is in Kruti Dev legacy encoding (e.g. 'eqaMdk' = मुंडका): convert with a Kruti Dev -> Unicode mapper. Rows above are decoded by hand."
+  },
+  {
+    "state": "Delhi",
+    "source": "MyNeta (ADR) - Delhi MCD 2022 winners with affidavit data",
+    "url": "https://myneta.info/delhi2022/index.php?action=show_winners&sort=default",
+    "kind": "html-table",
+    "covers": "MCD 2022: 221 of 250 winners (those with analysed affidavits). Also myneta.info/mcd2012 (old 3-corporation MCD).",
+    "election_year": 2022,
+    "fields": ["candidate", "ward (no-name)", "party", "criminal_cases", "education", "assets", "liabilities", "candidate_id link"],
+    "access": "works from Germany",
+    "sample": [
+      {"name": "Sweta Khatri", "ward": "1-NARELA", "party": "AAP", "education": "Graduate"},
+      {"name": "Gagan Choudhary", "ward": "10-JHARODA", "party": "AAP", "education": "Graduate Professional"},
+      {"name": "Raminder Kaur", "ward": "100-FATEH NAGAR", "party": "AAP", "education": "Others"}
+    ],
+    "how_to_scrape": "One GET of the winners page; one HTML table, ward as '<no>-<NAME>'. Behind Cloudflare but served plain HTML to curl."
+  },
+  {
+    "state": "Chandigarh",
+    "source": "Wikipedia - 2021 Chandigarh Municipal Corporation election, ward-wise results",
+    "url": "https://en.wikipedia.org/wiki/2021_Chandigarh_Municipal_Corporation_election",
+    "kind": "html-table",
+    "covers": "MC Chandigarh, all 35 wards (poll 24.12.2021). Party labels as of results day (later defections not shown). Next election due Dec 2026.",
+    "election_year": 2021,
+    "fields": ["ward_no", "name", "party"],
+    "access": "works from Germany",
+    "sample": [
+      {"ward_no": 1, "name": "Jaswinder Kaur", "party": "AAP"},
+      {"ward_no": 2, "name": "Maheshinder Singh Sidhu", "party": "BJP"},
+      {"ward_no": 3, "name": "Dalip Sharma", "party": "BJP"}
+    ],
+    "how_to_scrape": "GET ?action=raw and parse the 'Ward Wise Results' wikitable. Cross-check names with the MC's own list below."
+  },
+  {
+    "state": "Chandigarh",
+    "source": "Municipal Corporation Chandigarh - 'Team' page (mayor, councillors, nominated councillors)",
+    "url": "https://mcchandigarh.gov.in/team.aspx",
+    "kind": "html-table",
+    "covers": "Current 35 elected councillors + 9 nominated (names only, no ward numbers, no party).",
+    "election_year": 2021,
+    "fields": ["name", "designation (mayor/sr. deputy/deputy/councillor/nominated councillor)"],
+    "access": "India only",
+    "sample": [
+      {"name": "Sh. Jasmanpreet Singh", "designation": "Mayor"},
+      {"name": "Sh. Anup Gupta", "designation": "Councillor"},
+      {"name": "Dr. Naresh Panchal", "designation": "Nominated Councilor"}
+    ],
+    "how_to_scrape": "One GET via vpsin; names and roles are in card markup. Join to the Wikipedia ward table by name."
+  },
+  {
+    "state": "Jammu and Kashmir",
+    "source": "State Election Commission J&K - Municipal Elections 2018, result notification (list of duly elected members, all bodies)",
+    "url": "http://secjk.nic.in/MunicipalElectionsContent/mc_election_2018/Result_Notifi_Corp.pdf",
+    "kind": "pdf",
+    "covers": "All ULBs of the 2018 poll (Jammu and Srinagar corporations, councils, committees; about 1,145 wards, some vacant). 86 pages with a text layer. HISTORICAL: these councils' terms ended Nov 2023 and no new ULB election has been held, so there are no sitting councillors now.",
+    "election_year": 2018,
+    "fields": ["body", "ward_no", "ward_name", "reservation", "name", "father_or_husband", "party"],
+    "access": "works from Germany",
+    "sample": [
+      {"body": "Municipal Committee Kupwara", "ward_no": 1, "ward_name": "Jamia Qadeem Darusalam", "reservation": "Women Open", "name": "Shareefa Begum", "father": "Mohd Sultan Mir", "party": "Independent"},
+      {"body": "Municipal Committee Kupwara", "ward_no": 2, "ward_name": "Quat Ul Islam", "reservation": "Open", "name": "Mohd Sayed Masoodi", "father": "Mohd Sadiq Masoodi", "party": "Independent"},
+      {"body": "Municipal Committee Kupwara", "ward_no": 5, "ward_name": "Brunwari", "reservation": "Open", "name": "Mohd. Iqbal Shah", "father": "Gh Nabi Shah", "party": "Independent"}
+    ],
+    "how_to_scrape": "Plain http (https fails: missing intermediate cert). pdftotext -layout, split on 'Municipal Committee/Council/Corporation <name>' headers; names wrap over two lines. 2020 bye-elections: /MunicipalElectionsContent/mc_by-elections2020/."
+  }
+]

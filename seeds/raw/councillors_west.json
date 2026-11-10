@@ -1,0 +1,264 @@
+[
+  {
+    "state": "Maharashtra",
+    "source": "Maharashtra Government e-Gazette (Maharashtra Shasan Rajpatra Part-II, Extra-Ordinary): result notifications of each municipal corporation, issued by each Commissioner under SEC order",
+    "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+    "kind": "form",
+    "covers": "Municipal corporations elected 15-16 Jan 2026 (29 corporations). Seen in one search (Central Section, Part-II, 16-25 Jan 2026): Brihanmumbai (Ext. 11), Thane (17), Navi Mumbai (8), Nashik (12), Kalyan-Dombivli (10), Panvel (9, 18), Vasai-Virar (16), Ulhasnagar (15), Bhiwandi-Nizampur (14), Mira-Bhayandar (13). Corporations outside the Mumbai region may be in the divisional sections. Municipal councils/nagar panchayats (elected Dec 2025): not found in one Pune-division search.",
+    "election_year": "2025-26 (poll 15 Jan 2026, results 16 Jan 2026, gazetted 19-22 Jan 2026)",
+    "fields": ["ward_no (prabhag)", "name", "party", "valid_votes"],
+    "access": "India only (times out from Germany; 200 from vpsin, no captcha, no login)",
+    "sample": [
+      {"body": "Brihanmumbai MC", "ward_no": "1", "name": "रेखा राम यादव", "party": "शिवसेना", "votes": "7544"},
+      {"body": "Brihanmumbai MC", "ward_no": "2", "name": "तेजस्वी अभिषेक घोसाळकर", "party": "भारतीय जनता पार्टी", "votes": "16484"},
+      {"body": "Brihanmumbai MC", "ward_no": "3", "name": "प्रकाश यशवंत दरेकर", "party": "भारतीय जनता पार्टी", "votes": "12325"}
+    ],
+    "how_to_scrape": "ASP.NET form: GET the page, POST back __VIEWSTATE etc. with ctl00$CPH$ddldivision=1 (Central) or 2-7 (divisions), ctl00$CPH$ddlSection=17 (Part-II), ctl00$CPH$ddlGazetteType=1 (Extra-Ordinary), dates DD/MM/YYYY, ctl00$CPH$btnSearch=Search; each row opens its PDF by a __doPostBack on GridView2 LinkButton1. PDFs have a text layer but Devanagari conjuncts extract broken (pdftotext); expect cleanup or OCR."
+  },
+  {
+    "state": "Maharashtra",
+    "source": "OpenCity Urban Data Portal (CKAN): BMC and PMC Election Results 2026 (CSV + copy of the official gazette PDF)",
+    "url": "https://data.opencity.in/dataset/bmc-election-results-2026",
+    "kind": "json-api",
+    "covers": "2 corporations: Brihanmumbai (227 wards, CSV 227 rows) and Pune (dataset pmc-election-results-2026, 4-seat panels with seat letter and reservation). No other Maharashtra corporations found on the portal.",
+    "election_year": "2026",
+    "fields": ["ward_no", "ward_name (PMC)", "seat (PMC)", "reservation (PMC)", "name", "party", "votes (BMC)"],
+    "access": "works from Germany",
+    "sample": [
+      {"body": "Brihanmumbai MC", "ward_no": "1", "name": "Rekha Ram Yadav", "party": "Shiv Sena", "votes": "7544"},
+      {"body": "Pune MC", "ward_no": "1", "ward_name": "Kalas-Dhanori-Lohegaon", "seat": "A", "reservation": "SC (Women)", "name": "Ashwini Rahul Bhandare", "party": "BJP"},
+      {"body": "Pune MC", "ward_no": "1", "seat": "C", "reservation": "OBC (Women)", "name": "Tingre Rekha Chandrakant", "party": "NCP"}
+    ],
+    "how_to_scrape": "CKAN API: https://data.opencity.in/api/3/action/package_show?id=bmc-election-results-2026 (and pmc-election-results-2026); download the resource with format CSV. License listed as public domain."
+  },
+  {
+    "state": "Maharashtra",
+    "source": "Kolhapur Municipal Corporation website: current house members (विद्यमान सभागृहाचे मा. सदस्य)",
+    "url": "https://web.kolhapurcorporation.gov.in/nagarsevakList",
+    "kind": "html-table",
+    "covers": "1 corporation: Kolhapur, 20 prabhags x 4 seats (about 81 members), elected Jan 2026.",
+    "election_year": "2026",
+    "fields": ["prabhag_no", "seat (अ/ब/क/ड)", "name", "photo"],
+    "access": "works from Germany",
+    "sample": [
+      {"prabhag_no": "1", "seat": "अ", "name": "सुभाष राजाराम बुचडे"},
+      {"prabhag_no": "1", "seat": "ब", "name": "पुष्पा निलेश नरुटे"},
+      {"prabhag_no": "1", "seat": "क", "name": "रूपाली अजित पोवार"}
+    ],
+    "how_to_scrape": "One GET; each prabhag is a div.card with h4.card-title 'प्रभाग क्र N', each member a div.profile-card with h3.name and p.designation (seat letter). No party field."
+  },
+  {
+    "state": "Maharashtra",
+    "source": "Solapur Municipal Corporation website: 'नगरसेवक यादी' links to the results gazette (scanned)",
+    "url": "https://www.solapurcorporation.gov.in/smc/pdf/GazetteSearch.pdf",
+    "kind": "pdf",
+    "covers": "1 corporation: Solapur (2026 results gazette, 5 pages).",
+    "election_year": "2026",
+    "fields": ["ward_no", "name", "party", "votes (expected, image only)"],
+    "access": "works from Germany",
+    "sample": [],
+    "how_to_scrape": "Download the PDF; it has no text layer (pdftotext returns nothing), so OCR is needed. Same gazette is also in the e-Gazette (Maharashtra Shasan Rajpatra Part-II)."
+  },
+  {
+    "state": "Maharashtra",
+    "source": "English Wikipedia per-corporation 2026 election articles, section 'Results by ward'",
+    "url": "https://en.wikipedia.org/wiki/2026_Brihanmumbai_Municipal_Corporation_election",
+    "kind": "html-table",
+    "covers": "Full ward tables seen for Brihanmumbai (227 wards: winner, party, votes, runner-up, margin), Pune (about 165 party cells) and Ahmednagar (about 68). Other 2026 articles (Nagpur, Jalna) are shorter. Not every corporation has an article.",
+    "election_year": "2026",
+    "fields": ["ward_no", "ward_area", "name", "party", "votes", "runner_up", "margin"],
+    "access": "works from Germany",
+    "sample": [
+      {"body": "Brihanmumbai MC", "ward_no": "1", "area": "Kandarpada - IC Colony", "name": "Rekha Yadav", "party": "Shiv Sena", "votes": "7,544"},
+      {"body": "Brihanmumbai MC", "ward_no": "2", "area": "Gaondevi - Dahisar (East)", "name": "Tejaswi Ghosalkar", "party": "BJP", "votes": "16,484"},
+      {"body": "Brihanmumbai MC", "ward_no": "3", "area": "Ketkipada - Shailendra Nagar", "name": "Prakash Darekar", "party": "BJP", "votes": "12,325"}
+    ],
+    "how_to_scrape": "Wikitext via https://en.wikipedia.org/w/index.php?title=<article>&action=raw; parse the wikitable after '===Results by ward==='. Secondary source: use to cross-check the gazette, not as the record."
+  },
+  {
+    "state": "Maharashtra",
+    "source": "State Election Commission Maharashtra portal and candidate affidavit search",
+    "url": "https://mahasec.maharashtra.gov.in/",
+    "kind": "form",
+    "covers": "No result documents: 'Recently Completed - Municipal Corporations' lists only ward formation, voter list and election programme orders. Candidate affidavits (all candidates, not winners) at https://mahasecelec.in/MasterSearch.aspx by local body type, division, district.",
+    "election_year": "2025-26",
+    "fields": ["candidate affidavits only"],
+    "access": "works from Germany (the document list page shows a captcha field for its search; the default list loads without it)",
+    "sample": [],
+    "how_to_scrape": "Not a councillor source. Use only to join candidate affidavits (assets, cases) to winners found in the gazette."
+  },
+  {
+    "state": "Gujarat",
+    "source": "State Election Commission Gujarat: Result of Election 2026, municipal corporations (Gujarat Government Gazette Extraordinary Part IV-C, 28 Apr 2026)",
+    "url": "https://sec.gujarat.gov.in/result-muncipality-2026.htm",
+    "kind": "pdf",
+    "covers": "15 municipal corporations (one PDF each): Ahmedabad, Bhavnagar, Gandhidham, Jamnagar, Karamsad-Anand, Mehsana, Morbi, Nadiad, Navsari, Porbandar(-Chhaya), Rajkot, Surat, Surendranagar, Vadodara, Vapi. Gandhinagar MC voted separately in Oct 2026 (result press note PDF only, legacy-font text).",
+    "election_year": "2026 (poll 26 Apr, results 28 Apr 2026)",
+    "fields": ["serial", "ward_no", "seat_no_and_category (e.g. first seat, general woman)", "name", "address", "party"],
+    "access": "India only (sec.gujarat.gov.in times out from Germany; 200 from vpsin)",
+    "sample": [
+      {"body": "Surat MC", "ward_no": "1", "seat": "1st seat, general woman", "name": "Nayanaben Sureshbhai Dobariya", "party": "BJP"},
+      {"body": "Surat MC", "ward_no": "1", "seat": "3rd seat, backward class", "name": "Vijay Ashokbhai Bhatiya", "party": "BJP"},
+      {"body": "Surat MC", "ward_no": "1", "seat": "4th seat, general", "name": "Rajendrabhai Govanbhai Patel", "party": "BJP"}
+    ],
+    "how_to_scrape": "GET the index page, take links images/<city>-corpo.pdf, fetch each from an Indian IP. PDFs (iTextSharp, 10-14 pages) have a text layer but Gujarati glyphs map wrongly (e.g. 'લ' extracts as 'િ'), so names need OCR or a glyph-fix table; sample names above are transliterated by hand."
+  },
+  {
+    "state": "Gujarat",
+    "source": "State Election Commission Gujarat: Result of Election 2026, nagarpalikas (gazette Part IV-C per municipality)",
+    "url": "https://sec.gujarat.gov.in/result-nagarpalika-2026.htm",
+    "kind": "pdf",
+    "covers": "31 nagarpalikas (images/pdf/<town>-np-doc.pdf): Dholka, Amreli, Umreth, Modasa, Palanpur, Bharuch, Mahuva, Botad, Bodeli, Dahod, Khambhalia, Dahegam, Veraval-Patan, Sikka, Keshod, Anjar, Kapadvanj, Kadi, Wankaner, Rajpipla, Gandevi, Godhra, Patan, Gondal, Himmatnagar, Bardoli, Limbdi, Vyara, Dabhoi, Umargam, Bhabhar. Other nagarpalikas (elected Feb 2025 or Oct 2026) not listed on this page.",
+    "election_year": "2026",
+    "fields": ["ward_no", "seat_no_and_category", "name", "address", "party", "unopposed flag in the preamble"],
+    "access": "India only",
+    "sample": [
+      {"body": "Amreli NP", "note": "PDF dated 28 Apr 2026, 14 pages; preamble lists wards/seats won unopposed under rule 13"}
+    ],
+    "how_to_scrape": "Same as the corporation PDFs: list links on the index page, fetch from India, OCR or glyph-fix the Gujarati text."
+  },
+  {
+    "state": "Gujarat",
+    "source": "State Election Commission Gujarat: Result of Election 2021 (6 corporations + 81 nagarpalikas, district PDFs)",
+    "url": "https://sec.gujarat.gov.in/result-election-2021.htm",
+    "kind": "pdf",
+    "covers": "Ahmedabad, Bhavnagar, Jamnagar, Rajkot, Surat, Vadodara (Feb 2021) and 81 nagarpalikas (images/pdf/81-NP-2021.pdf plus district files). Superseded for the corporations by 2026; kept for bodies whose 2026 result is not on the site.",
+    "election_year": "2021",
+    "fields": ["ward_no", "seat", "name", "party"],
+    "access": "India only",
+    "sample": [],
+    "how_to_scrape": "Links images/pdf/Ex-IV-C-<n>-<City>-Election-Result-26-02-2021.pdf and images/pdf/<DISTRICT>-2021.pdf. MyNeta's suratMunCorpGujarat2021 (works from Germany) has the 2021 Surat winners with affidavits, also superseded."
+  },
+  {
+    "state": "Goa",
+    "source": "Goa State Election Commission: General Election to Corporation of the City of Panaji 2026 (list of winning candidates + per-ward result sheets)",
+    "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-corporation-of-city-of-panaji-2026/elected-members-ccp.pdf",
+    "kind": "pdf",
+    "covers": "1 corporation: Panaji (CCP), 30 wards, poll 11 Mar 2026. Ward result sheets ward-1-result-sheet.pdf .. ward-30-result-sheet.pdf and result-sheet-ccp.pdf in the same folder.",
+    "election_year": "2026",
+    "fields": ["ward_no", "category (reservation)", "name"],
+    "access": "India only (403 from Germany, 200 from vpsin)",
+    "sample": [
+      {"ward_no": "I", "category": "ST Women", "name": "ZAMBAULIKAR YUTIKA SHRIKANT"},
+      {"ward_no": "II", "category": "OBC Women", "name": "PO CAROLINA"},
+      {"ward_no": "IV", "category": "General", "name": "MONSERRATE ROHIT"}
+    ],
+    "how_to_scrape": "Index page https://sec.goa.gov.in/elections/previous/corporation-of-the-city-of-panaji/general-election-to-corporation-of-city-of-panaji-2026/ lists the PDFs; text layer is clean (pdftotext -layout). No party (Goa civic polls are formally non-party)."
+  },
+  {
+    "state": "Goa",
+    "source": "Corporation of the City of Panaji website: Elected Members",
+    "url": "https://ccpgoa.com/elected-members/",
+    "kind": "html-table",
+    "covers": "1 corporation: Panaji, Mayor, Deputy Mayor and 30 councillors with postal address.",
+    "election_year": "2026",
+    "fields": ["ward_no", "name", "address"],
+    "access": "works from Germany",
+    "sample": [
+      {"ward_no": "1", "name": "MISS YUTIKA SHRIKANT ZAMBAULIKAR", "address": "H NO. 427, AIVAO, NEAR SATERI TEMPLE, DONAPAULA, TISWADI"},
+      {"ward_no": "2", "name": "SMT. CAROLINA PO", "address": "H.NO. 232, MITRA BAZAR, CARANZALEM, TISWADI"},
+      {"ward_no": "4", "name": "SHRI ROHIT JOE MONSERRATE", "address": "H.NO. 14/203, MIRAMAR, TISWADI (Mayor)"}
+    ],
+    "how_to_scrape": "One GET (1.1 MB, windows-1252 page); the list follows the heading 'Councillors List WARD NO. NAMES OF COUNCILLORS'."
+  },
+  {
+    "state": "Goa",
+    "source": "Goa State Election Commission: municipal council elections (2023 Ponda and Sanquelim; 2021 eleven councils; 2026 eleven councils ongoing)",
+    "url": "https://sec.goa.gov.in/elections/previous/municipal-council/",
+    "kind": "pdf",
+    "covers": "Ponda and Sanquelim (general election 2023: result-sheet-ponda-1.pdf, result-sheet-sanquelim.pdf, all candidates with votes). The 11 councils elected in 2021 (Bicholim, Canacona, Cuncolim, Curchorem-Cacora, Mapusa, Margao, Mormugao, Pernem, Quepem, Sanguem, Valpoi) have finished their 5-year term; their 2026 election is listed as 'ongoing' (final delimitation notice 26 Oct 2026, no poll date yet), so they probably have no elected council now. 2021 files (e.g. Bicholim-winning.pdf, Cuncolim-Result-sheet.pdf) are historical.",
+    "election_year": "2023 (Ponda, Sanquelim); 2021 (expired); 2026 pending",
+    "fields": ["ward_no", "category", "candidate name", "votes", "vote share"],
+    "access": "India only",
+    "sample": [
+      {"body": "Ponda MC", "ward_no": "I", "category": "General", "winner_by_votes": "NAIK ROY RAVI", "votes": "371 (45.24%)"},
+      {"body": "Ponda MC", "ward_no": "II", "category": "General", "winner_by_votes": "DHAVALIKAR VIRENDRA TIMA", "votes": "403 (67.96%)"},
+      {"body": "Ponda MC", "ward_no": "III", "category": "Women", "winner_by_votes": "NAIK JYOTI ARUN", "votes": "263 (39.25%)"}
+    ],
+    "how_to_scrape": "Result sheets list every candidate; take the top vote per ward. Watch https://sec.goa.gov.in/elections/ongoing/general-election-to-11-municipal-councils-2026/ for the 2026 results."
+  },
+  {
+    "state": "Madhya Pradesh",
+    "source": "Indore Municipal Corporation website: Councillors page (Next.js, data embedded as JSON)",
+    "url": "https://imcindore.mp.gov.in/councillors",
+    "kind": "json-api",
+    "covers": "1 corporation: Indore, 85 wards (plus the Chairman). Updated 2026-06-15.",
+    "election_year": "2022",
+    "fields": ["ward_no", "ward_name", "name", "phone", "address", "photo", "designation"],
+    "access": "works from Germany",
+    "sample": [
+      {"ward_no": "1", "ward_name": "Sirpur", "name": "Mr. Mahesh Choudhary", "phone": "+91 9575355333"},
+      {"ward_no": "2", "ward_name": "Chandan Nagar", "name": "Mrs. Fatma Rafiq Khan", "phone": "+91 94250 51166"},
+      {"ward_no": "27", "ward_name": "Pashupati nath", "name": "Mr. Munnalal Yadav", "designation": "Chairman Councillor"}
+    ],
+    "how_to_scrape": "GET the page and read <script id=__NEXT_DATA__>: props.pageProps.data.data.attributes.details[].otherContent {title, phoneNumber, wardNumber, wardName, designation/website = address}. No party field."
+  },
+  {
+    "state": "Madhya Pradesh",
+    "source": "MP State Election Commission (urban body results 2022)",
+    "url": "https://mplocalelection.gov.in/",
+    "kind": "html-table",
+    "covers": "Should cover all 413 ULBs elected July 2022 (16 corporations, 99 nagar palika parishads, 298 nagar parishads), but the site is gone.",
+    "election_year": "2022",
+    "fields": [],
+    "access": "down (DNS does not resolve from Germany or India; last Wayback copy 2023-02-26; mpsec.mp.gov.in, sec.mp.gov.in also do not resolve)",
+    "sample": [],
+    "how_to_scrape": "Blocker. Need the SEC's current domain (ask, or find via an MP district site). By-election result notifications 2025-26 are mirrored on indianemployees.com/gazette-notifications/department/mp-state-election-commission (secondary, not official)."
+  },
+  {
+    "state": "Madhya Pradesh",
+    "source": "MP Urban Development portal and other corporation sites",
+    "url": "https://www.mpurban.gov.in/",
+    "kind": "html-table",
+    "covers": "No councillor list on mpurban.gov.in (only a phone/email directory of CMO offices). mpenagarpalika.gov.in does not answer from India. Bhopal (bmconline.gov.in) is a SAP UI5 single-page app; Ujjain's parshadlist.php is 404; Jabalpur/Gwalior sites did not answer from Germany.",
+    "election_year": "2022",
+    "fields": [],
+    "access": "India only (mpurban.gov.in times out from Germany)",
+    "sample": [],
+    "how_to_scrape": "No statewide councillor source found. Remaining route: corporation sites one by one, or the MP gazette once its site is located."
+  },
+  {
+    "state": "Chhattisgarh",
+    "source": "Urban Administration & Development Dept (uad.cg.gov.in): Parshad search",
+    "url": "https://uad.cg.gov.in/UrbanLocalBodies/ParshadsearchHome.aspx",
+    "kind": "form",
+    "covers": "All ULBs in the dropdown (about 190 bodies, 33 districts; searchable by district, body, body type, party, first-meeting date). BUT the data is the 2019-20 term: Raipur rows show first meeting 06/01/2020 and the 2019 councillors, not the Feb 2025 winners. Statewide schema is good if the department updates it.",
+    "election_year": "2019-20 (stale; 2025 term not loaded for Raipur)",
+    "fields": ["district", "body", "body_type", "name", "ward_no", "ward_name", "address", "email", "office_phone", "mobile", "party", "first_meeting_date"],
+    "access": "India only (times out from Germany), no captcha",
+    "sample": [
+      {"body": "Raipur NN", "ward_no": "1", "ward_name": "वीर सावरकर नगर वार्ड", "name": "श्रीमती कमलेश्वरी वर्मा", "party": "भा.ज.पा.", "first_meeting": "06/01/2020"},
+      {"body": "Raipur NN", "ward_no": "2", "ward_name": "पं. जवाहर लाल नेहरू वार्ड", "name": "श्री घनश्याम क्षत्रिय", "party": "इंडियन नेशनल कांग्रेस", "first_meeting": "06/01/2020"},
+      {"body": "Raipur NN", "ward_no": "3", "ward_name": "संत कबीर दास वार्ड", "name": "श्री नारद कौशल", "party": "भा.ज.पा.", "first_meeting": "06/01/2020"}
+    ],
+    "how_to_scrape": "ASP.NET form: GET, then POST hidden fields + ctl00$ContentPlaceHolder1$ddlNikay=<value> + ctl00$ContentPlaceHolder1$btnNikay=SEARCH; result is an HTML table (Raipur returned 21 rows, so check for paging). Check the first-meeting date per body to tell 2020 data from 2025 data."
+  },
+  {
+    "state": "Chhattisgarh",
+    "source": "UAD Chhattisgarh establishment portal: Election Result (mayors and chairmen, 2025)",
+    "url": "https://cguadestablishment.in/electionresult",
+    "kind": "html-table",
+    "covers": "14 municipal corporations (mayor, party, number of wards) and chairmen of nagar palika/nagar panchayats (with Excel export /export-excelmayor, /export-excelchairman). No ward councillors.",
+    "election_year": "2025",
+    "fields": ["body", "mayor/chairman name", "party", "ward_count"],
+    "access": "works from Germany",
+    "sample": [
+      {"body": "रायपुर", "mayor": "श्रीमती मीनल छगन चौबे", "party": "भाजपा", "wards": "70"},
+      {"body": "भिलाई", "mayor": "श्री नीरज पाल", "party": "कांग्रेस", "wards": "70"},
+      {"body": "कोरबा", "mayor": "श्रीमती संजू देवी राजपूत", "party": "भाजपा", "wards": "67"}
+    ],
+    "how_to_scrape": "Not councillors; useful for the ward count per body and the head of each council (already saved as seeds/raw/chhattisgarh-electionresult.html)."
+  },
+  {
+    "state": "Chhattisgarh",
+    "source": "Chhattisgarh State Election Commission: Nagar Palika election report 2025 (Final Nagar Palika Prativedan 2025)",
+    "url": "https://cgsec.gov.in/BOOKS/Final%20Nagar%20Palika%20Prativedan%202025.pdf",
+    "kind": "pdf",
+    "covers": "Report on the Feb 2025 urban body elections (173 bodies: 10 corporations, 49 nagar palika parishads, 114 nagar panchayats). 327 pages, 254 MB, CorelDRAW export: almost no text layer (Kruti Dev legacy font where present). Unknown if it lists ward winners. cgsec.gov.in otherwise has no 2025 ward result files; its result system cgsecerms.cgstate.gov.in does not answer.",
+    "election_year": "2025",
+    "fields": ["unknown (needs OCR to check)"],
+    "access": "India only (cgsec.gov.in times out from Germany)",
+    "sample": [],
+    "how_to_scrape": "Download from India (254 MB), render pages to images, OCR (Hindi) a few pages to see whether ward-wise winner tables are present before committing to a full OCR."
+  }
+]

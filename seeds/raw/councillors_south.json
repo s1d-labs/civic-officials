@@ -1,0 +1,150 @@
+[
+  {
+    "state": "Kerala",
+    "source": "State Election Commission Kerala, Ward Directory / Elected Members (GE-2025)",
+    "url": "https://sec.kerala.gov.in/public/wiyr",
+    "kind": "html-table",
+    "covers": "All local bodies: 6 municipal corporations (421 members), 87 municipal councils (3,206 members), 941 grama panchayats (17,337), 152 block panchayats (2,267), 14 district panchayats (346). Body types: C, M, G, B, D.",
+    "election_year": 2025,
+    "fields": ["ward_no", "ward_name", "name", "party", "front", "reservation", "age", "votes", "margin", "phone", "email", "address", "ward_code", "serving_since"],
+    "access": "India only",
+    "sample": [
+      {"body": "Kunnamkulam Municipality (M08037), Thrissur", "ward_no": "038", "ward_name": "ANJOOR PALAM", "name": "Dileep Pulikkal", "party": "CPI(M)", "front": "LDF", "votes": 436, "margin": 50, "phone": "9895714789", "serving_since": "13-12-2025"},
+      {"body": "Kunnamkulam Municipality", "ward_no": "001", "ward_name": "Muthuvammal (Malayalam on list page)", "name": "Shanoph N A (Malayalam on list page)", "party": "CPI(M)", "reservation": "General"},
+      {"body": "Kunnamkulam Municipality", "ward_no": "007", "ward_name": "Nadupanthi", "name": "Jisha Baby", "party": "INC", "reservation": "Women"}
+    ],
+    "how_to_scrape": "GET /public/wyrdst/{C|M|G|B|D} (districts) -> /public/wyrlb/{district_no}/{type} (bodies, codes like M08037) -> /public/wyrw/{lb_id} (ward table: ward no, ward name, member, party, reservation; Malayalam) -> /public/wyr/view/{member_id} (English detail page with phone, address, age, votes, margin). About 4,000 detail pages for corporations + municipalities."
+  },
+  {
+    "state": "Kerala",
+    "source": "SEC Kerala TREND results portal (counting results per ward)",
+    "url": "https://sec.kerala.gov.in/public/trend/dashboard",
+    "kind": "html-table",
+    "covers": "Results of GE-2025, bye-elections 2021-2026 and GE-2020, all local bodies.",
+    "election_year": 2025,
+    "fields": ["ward_code", "ward_name", "status", "winner", "votes", "nearest_rival", "rival_votes", "margin", "front"],
+    "access": "India only",
+    "sample": [
+      {"note": "Seen on /public/te/38 (Bye-Election page): 'B01010 Chirayinkeezhu ... LDF THIRUVANANTHAPURAM' rows with Ward Code, Ward Name, Status, Candidate, Votes, Nearest Rival, Votes, Margin"}
+    ],
+    "how_to_scrape": "Secondary to the Ward Directory. /public/onser/trend redirects to /public/te/{election_id}; pick the election from the select list. Use only to cross-check winners and votes."
+  },
+  {
+    "state": "Tamil Nadu",
+    "source": "Tamil Nadu SEC, Urban Local Body Election Results 2022 (district-wise PDFs, Form 27 data)",
+    "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/ulbe2022/ulbe2022.php",
+    "kind": "pdf",
+    "covers": "All 2022 urban bodies in 38 districts: 21 municipal corporations, 138 municipalities, 489 town panchayats (about 12,800 wards). Three PDFs per district: corp_, mun_, tp_. By-elections 2022 under rulbe2022/, Kadambur TP under ulbetp2022/.",
+    "election_year": 2022,
+    "fields": ["district", "body", "ward_no", "reservation", "electors", "votes_polled", "candidate_name", "sex", "father_or_husband_name", "party", "votes", "percent", "result (won/lost/deposit lost)"],
+    "access": "India only",
+    "sample": [
+      {"body": "Coimbatore Corporation", "ward_no": 1, "reservation": "General (Women)", "candidate": "Karpagam R (Tamil; pdftotext drops some vowel signs)", "party": "DMK", "votes": 3993, "percent": 65.53, "result": "won"},
+      {"body": "Coimbatore Corporation", "ward_no": 1, "candidate": "Padmavathi K", "party": "AIADMK", "votes": 1253, "percent": 20.56, "result": "lost"},
+      {"body": "Coimbatore Corporation", "ward_no": 2, "electors": 13419, "votes_polled": 8711, "note": "ward header row"}
+    ],
+    "how_to_scrape": "Static PDFs: https://tnsec.tn.gov.in/tnsec_static/election_results/ulbe2022/{corp|mun|tp}_{district}.pdf, district codes from the select on ulbe2022.php (ari, cbe, chn, ... vpm, vlr). Text is Tamil in a legacy mPDF font: pdftotext loses some vowel signs, so names need OCR or careful glyph mapping; winners are the row with result 'வெற்றி'."
+  },
+  {
+    "state": "Andhra Pradesh",
+    "source": "AP SEC, 2nd Ordinary Elections to ULBs 2026, Proforma X (votes of every candidate, incl. unanimous wards)",
+    "url": "https://sec.ap.gov.in/Uploads/Doc26/Rsls/Results%20-%20Ward%20Members%20Municpal%20Corporations-2026.pdf",
+    "kind": "pdf",
+    "covers": "Poll 01.11.2026, report 04.11.2026. Corporations PDF: 13 corporations, 1,056 'Elected' rows (134 pages). Municipalities PDF (Results - Ward Members, Muncipalities 2026.pdf): about 85 municipalities and nagar panchayats, 3,273 'Elected' rows (297 pages). Some bodies postponed (e.g. Mydukuru).",
+    "election_year": 2026,
+    "fields": ["district", "body", "ward_no", "reservation", "poll_date", "electors", "votes_polled", "invalid", "valid", "candidate_name", "votes", "party", "elected_or_defeated", "remarks"],
+    "access": "India only",
+    "sample": [
+      {"district": "VIZIANAGARAM", "body": "VIZIANAGARAM", "ward_no": 1, "reservation": "ST-General", "name": "CHADURU PARVATHI", "votes": 797, "party": "TDP", "result": "Elected"},
+      {"district": "VIZIANAGARAM", "body": "VIZIANAGARAM", "ward_no": 4, "reservation": "BC-Women", "name": "GORLE RAMA", "votes": 1145, "party": "JANASENA", "result": "Elected"},
+      {"district": "Srikakulam", "body": "Ichapuram", "ward_no": 4, "reservation": "BC-General", "name": "BONDADA MAHESH", "votes": 298, "party": "Independent", "result": "Elected"}
+    ],
+    "how_to_scrape": "Download the two PDFs from https://sec.ap.gov.in/Uploads/Doc26/Rsls/ (paths are listed in the React bundle /static/js/main.*.js; also 'Ward Members-Declaration of Result - 03-11-2026.pdf', 'Mayors - Results 2026.pdf', 'Chairpersons - Results, 2026.pdf'). English text; pdftotext -layout gives one candidate per line, keep rows with 'Elected', carry district/body/ward down from the first row of each ward."
+  },
+  {
+    "state": "Andhra Pradesh",
+    "source": "AP SEC, 2021 elected ward members lists (previous term)",
+    "url": "https://sec.ap.gov.in/Uploads/Doc21/Elected_Ward_Members_MunicipalCorporations.pdf",
+    "kind": "pdf",
+    "covers": "2021 term: 12 corporations and 75 municipalities/NPs (also Elected_Ward_Members_Municipalities.pdf). Superseded by the 2026 results; useful for history only.",
+    "election_year": 2021,
+    "fields": ["body", "ward_no", "name", "party"],
+    "access": "India only",
+    "sample": [],
+    "how_to_scrape": "Not opened in this check (path seen in the site bundle). Use only for history."
+  },
+  {
+    "state": "Telangana",
+    "source": "Telangana SEC, Know Your Public Representative - Urban (Ward Member)",
+    "url": "https://tsec.gov.in/knowPRUrban.do",
+    "kind": "form",
+    "covers": "Ordinary Elections to Municipalities and Municipal Corporations 2026 (poll 11.02.2026, election id 190): 116 municipalities + 7 municipal corporations (ward total not counted here; news reports 2,582 wards in the 116 municipalities). GHMC is not in it (no 2026 GHMC result); older years return no election in this form.",
+    "election_year": 2026,
+    "fields": ["district", "ulb", "ward_no", "reservation", "name", "party", "result_status"],
+    "access": "India only",
+    "sample": [
+      {"district": "Adilabad", "ulb": "Adilabad", "ward_no": 1, "reservation": "SC(W)", "name": "MEERABAI KOTEKAR", "party": "BJP", "status": "Elected"},
+      {"district": "Adilabad", "ulb": "Adilabad", "ward_no": 2, "reservation": "UR(G)", "name": "SHAIK NAHIMATULLAH", "party": "AIMIM", "status": "Elected"},
+      {"district": "Adilabad", "ulb": "Adilabad", "ward_no": 30, "reservation": "UR(G)", "name": "GAJJALA VIJAY KUMAR", "party": "IND", "status": "Elected"}
+    ],
+    "how_to_scrape": "GET knowPRUrban.do (keeps JSESSIONID, read the Struts TOKEN hidden input); POST knowPRUrban.do?mode=getULB&district_id=01..33 for ULB ids; then POST knowPRUrban.se with TOKEN, mode=getULBWMDetails, property(knowYour)=WM, property(year)=2026, property(electionFor)=190, property(district_id), property(ulb_id), property(ward_id)=0, property(typeOfReport)=E (A = all contested candidates). One request per ULB, plain HTML table. No captcha."
+  },
+  {
+    "state": "Telangana",
+    "source": "Telangana SEC, Election Results - Urban (abstract)",
+    "url": "https://tsec.gov.in/AbstractResultReport.do",
+    "kind": "form",
+    "covers": "Party-wise ward totals per ULB for the 2026 election (123 ULBs). No names. Useful as a check of ward counts.",
+    "election_year": 2026,
+    "fields": ["district", "ulb", "wards", "party_counts"],
+    "access": "India only",
+    "sample": [
+      {"district": "Adilabad", "ulb": "Adilabad", "wards": 49, "BJP": 21, "INC": 11, "AIMIM": 6, "BRS": 6, "IND": 5},
+      {"district": "Mancherial", "ulb": "Mancherial MC", "wards": 60, "INC": 44, "BRS": 8, "BJP": 5}
+    ],
+    "how_to_scrape": "POST /AbstractResultReport.se with mode=getData and property(election)=190 (after a GET for the session cookie); one HTML table."
+  },
+  {
+    "state": "Karnataka",
+    "source": "Karnataka ULB websites (KMDS Drupal template on *.mrc.gov.in), 'Know Your Members > Council Members'",
+    "url": "http://mysurucity.mrc.gov.in/en/council-members",
+    "kind": "html-table",
+    "covers": "One site per ULB (corporations, CMCs, TMCs, town panchayats; about 300 bodies on the template). Content varies: Mysuru and Hubballi-Dharwad list corporators with ward and phone; Udupi CMC lists only the Administrator (council term over). Coverage must be checked per body.",
+    "election_year": "2018-2021 (varies by body; many councils have ended)",
+    "fields": ["ward_no", "name", "designation", "phone", "address", "photo"],
+    "access": "India only",
+    "sample": [
+      {"body": "Mysuru City Corporation", "ward_no": "Ward-1", "name": "Smt Lakshmi", "designation": "Corporator", "phone": "9901423340, 8277889401"},
+      {"body": "Mysuru City Corporation", "ward_no": "Ward-3", "name": "Sri K V Sridhar", "designation": "Corporator", "phone": "9900908020, 8277889403"},
+      {"body": "Hubballi-Dharwad Municipal Corporation (www.hdmc.mrc.gov.in)", "ward_no": "Ward No.1", "name": "Smt. Anita Chalageri", "address": "Siddhartha Colony, Police Head Quarters Road Dharwad", "phone": "9743768466"}
+    ],
+    "how_to_scrape": "For each ULB host (pattern {name}city.mrc.gov.in / {name}town.mrc.gov.in; use http://, https often times out) GET /en/council-members and parse the table; skip pages that show 'Name Of Administrator'. The host list must come from KMDS/DMA or from sites.csv."
+  },
+  {
+    "state": "Karnataka",
+    "source": "Karnataka SEC (karsec.karnataka.gov.in) results archive",
+    "url": "https://karsec.karnataka.gov.in/Results/UrbanLocalBodies/CityMunicipal",
+    "kind": "json-api",
+    "covers": "Archive of ULB elections 2013-2020 (and press notes for 2025 by-polls): links to result PDFs. The PDFs seen are party-wise abstracts per ULB in a legacy Kannada (Nudi) font, not ward-wise winner names. 'Elected representatives' pages for GBA, corporations, CMC, TMC, TP use the same grid and return the same archive (GBA: 0 rows).",
+    "election_year": "2018-2020 (archive)",
+    "fields": ["year", "subject", "notification_pdf", "poll_pdf", "result_pdf"],
+    "access": "India only",
+    "sample": [
+      {"year": 2020, "subject": "ULB general election January 2020", "result_pdf": "/FileDoc/PreviousElection/Result/42/Results_ULB_RLB.pdf"},
+      {"year": 2018, "subject": "ULB general election August 2018", "result_pdf": "/FileDoc/PreviousElection/Result/24/ULB Results 2018-Phase-1.pdf"}
+    ],
+    "how_to_scrape": "POST JSON {\"requiresCounts\":true,\"skip\":0,\"take\":200,\"cat\":\"CityMunicipal\"} to /GV/GetResult (cat = MunicipalCorporation | CityMunicipal | TalukMunicipal | PattanaPanchayat | GBA). Not a source of councillor names; no ward-wise list found on the SEC site."
+  },
+  {
+    "state": "Puducherry",
+    "source": "State Election Commission Puducherry",
+    "url": "https://sec.py.gov.in/",
+    "kind": "html-table",
+    "covers": "No elected councils. The last municipal/commune elections were in 2006; the 2021 schedule did not lead to results on the site, and no 2026 local body poll is listed (site updated 23-Apr-2026; only ward maps, polling stations, electoral rolls 2022, delimitation 2021 for 5 municipalities: Puducherry, Oulgaret, Karaikal, Mahe, Yanam).",
+    "election_year": null,
+    "fields": [],
+    "access": "works from Germany",
+    "sample": [],
+    "how_to_scrape": "Nothing to scrape for councillors. Watch the home page 'What's New' / Notifications for a future poll; ward maps (e.g. /pondicherry-municipality-ward-maps) can feed the ward layer."
+  }
+]

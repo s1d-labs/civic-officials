@@ -1,6 +1,6 @@
 {
   "family": "civic-officials",
-  "about": "Officials of Indian districts, cities and police units: Who's Who, directory and contact pages of government sites.",
+  "about": "Officials of Indian districts, cities and police units (Who's Who, directory and contact pages of government sites), Booth Level Officers and elected ward councillors.",
   "setup": [
     "pip install -r requirements.txt"
   ],
@@ -16,6 +16,10 @@
     "blo": [
       "python",
       "blo.py"
+    ],
+    "councillors": [
+      "python",
+      "councillors.py"
     ]
   }
 }

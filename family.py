@@ -102,4 +102,12 @@ if _blof.exists():
                      "target": "www.ceo.kerala.gov.in", "env": {}, "probe": None, "unit_label": "booth", "record_label": "booth",
                      "items": [i for i in _blo if i["payload"]["state"] == "KL"], "workers": 8, "threads": 1, "delay_ms": 1000})
 
+# Elected ward councillors from State Election Commission pages and result files (councillors task; councillor_sources.json):
+# India servers only (every SEC site checked refuses foreign IPs).
+_cof = HERE / "councillor_sources.json"
+if _cof.exists():
+    PROJECTS.append({"name": f"{FAMILY}-councillors", "title": "Elected ward councillors (State Election Commissions)", "task": "councillors",
+                     "target": f"{FAMILY}-councillors", "env": {}, "probe": None, "unit_label": "body or file", "record_label": "councillor",
+                     "items": json.loads(_cof.read_text()), "workers": 4, "threads": 1, "delay_ms": 1000, "geo": "IN"})
+
 PROBES = []    # many hosts per project: no single health check would mean anything
