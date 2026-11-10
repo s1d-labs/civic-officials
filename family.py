@@ -89,4 +89,11 @@ if _farf.exists():
                      "task": "directory", "target": f"{FAMILY}-dir-abroad", "env": {}, "probe": None, "unit_label": "source",
                      "record_label": "official or page", "items": json.loads(_farf.read_text()), "workers": 1, "threads": 1, "delay_ms": 2000})
 
+# Booth Level Officers from state CEO lists (blo task; blo_sources.json): India servers and GitHub runners through Indian proxies.
+_blof = HERE / "blo_sources.json"
+if _blof.exists():
+    PROJECTS.append({"name": f"{FAMILY}-blo", "title": "Booth Level Officers from state Chief Electoral Officer lists", "task": "blo",
+                     "target": f"{FAMILY}-blo", "env": {}, "probe": None, "unit_label": "file or page", "record_label": "booth part",
+                     "items": json.loads(_blof.read_text()), "workers": 8, "threads": 1, "delay_ms": 1000, "geo": "IN", "proxy": "IN"})
+
 PROBES = []    # many hosts per project: no single health check would mean anything
