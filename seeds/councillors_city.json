@@ -1,0 +1,137 @@
+[
+ {
+  "key": "city-mumbai",
+  "payload": {
+   "kind": "form-city",
+   "state": "MH",
+   "source": "opencity",
+   "body": "Municipal Corporation of Greater Mumbai",
+   "district": "Mumbai",
+   "election": "BMC 2026",
+   "url": "https://data.opencity.in/dataset/bmc-election-results-2026",
+   "dataset": "bmc-election-results-2026",
+   "slug": "municipal-corporation-of-greater-mumbai"
+  }
+ },
+ {
+  "key": "city-pune",
+  "payload": {
+   "kind": "form-city",
+   "state": "MH",
+   "source": "opencity",
+   "body": "Pune Municipal Corporation",
+   "district": "Pune",
+   "election": "PMC 2026",
+   "url": "https://data.opencity.in/dataset/pmc-election-results-2026",
+   "dataset": "pmc-election-results-2026",
+   "slug": "pune-municipal-corporation"
+  }
+ },
+ {
+  "key": "city-kolhapur",
+  "payload": {
+   "kind": "form-city",
+   "state": "MH",
+   "source": "kolhapur",
+   "body": "Kolhapur Municipal Corporation",
+   "district": "Kolhapur",
+   "election": "Kolhapur MC 2026",
+   "url": "https://web.kolhapurcorporation.gov.in/nagarsevakList",
+   "slug": "kolhapur-municipal-corporation"
+  }
+ },
+ {
+  "key": "city-indore",
+  "payload": {
+   "kind": "form-city",
+   "state": "MP",
+   "source": "indore",
+   "body": "Indore Municipal Corporation",
+   "district": "Indore",
+   "election": "Indore MC 2022",
+   "url": "https://imcindore.mp.gov.in/councillors",
+   "slug": "indore-municipal-corporation"
+  }
+ },
+ {
+  "key": "city-bhubaneswar",
+  "payload": {
+   "kind": "form-city",
+   "state": "OD",
+   "source": "bbsr",
+   "body": "Bhubaneswar Municipal Corporation",
+   "district": "Khordha",
+   "election": "Odisha 2022",
+   "url": "https://www.bmc.gov.in/bmc/zones-wards",
+   "slug": "bhubaneswar-zones-wards"
+  }
+ },
+ {
+  "key": "city-agartala",
+  "payload": {
+   "kind": "form-city",
+   "state": "TR",
+   "source": "agartala",
+   "body": "Agartala Municipal Corporation",
+   "district": "West Tripura",
+   "election": "Agartala MC 2021",
+   "url": "https://agartalacity.tripura.gov.in/councilor-list",
+   "slug": "agartala-municipal-corporation"
+  }
+ },
+ {
+  "key": "city-gangtok",
+  "payload": {
+   "kind": "form-city",
+   "state": "SK",
+   "source": "gangtok",
+   "body": "Gangtok Municipal Corporation",
+   "district": "Gangtok",
+   "election": "Gangtok MC 2026",
+   "url": "https://gmc.sikkim.gov.in/",
+   "slug": "gangtok-municipal-corporation"
+  }
+ },
+ {
+  "key": "city-itanagar",
+  "payload": {
+   "kind": "form-city",
+   "state": "AR",
+   "source": "itanagar",
+   "body": "Itanagar Municipal Corporation",
+   "district": "Papum Pare",
+   "election": "Itanagar MC 2025",
+   "url": "https://imc.arunachal.gov.in/committeemember.html",
+   "slug": "itanagar-municipal-corporation"
+  }
+ },
+ {
+  "key": "city-panaji",
+  "payload": {
+   "kind": "form-city",
+   "state": "GA",
+   "source": "panaji",
+   "body": "Corporation of the City of Panaji",
+   "district": "North Goa",
+   "election": "CCP 2026",
+   "url": "https://ccpgoa.com/elected-members/",
+   "pdf_url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-corporation-of-city-of-panaji-2026/elected-members-ccp.pdf",
+   "slug": "corporation-of-the-city-of-panaji"
+  }
+ },
+ {
+  "key": "city-chandigarh",
+  "payload": {
+   "kind": "form-city",
+   "state": "CH",
+   "source": "wikipedia",
+   "body": "Municipal Corporation Chandigarh",
+   "district": "Chandigarh",
+   "election": "MC Chandigarh 2021",
+   "title": "2021_Chandigarh_Municipal_Corporation_election",
+   "note": "Party as on results day; later defections not shown.",
+   "slug": "municipal-corporation-chandigarh",
+   "url": "https://en.wikipedia.org/wiki/2021_Chandigarh_Municipal_Corporation_election"
+  }
+ }
+]
