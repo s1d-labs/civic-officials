@@ -4,6 +4,8 @@ One record per sitting member, type "dept_office" (depts.py fields), dept "elect
   level "ac"     MLA of an assembly constituency     office_id "<ST>-AC-<no>"   record "dept:leg_<house>:<ST>-AC-<no>"
   level "pc"     Lok Sabha MP of a constituency      office_id "<ST>-PC-<no>"   record "dept:leg_<house>:<ST>-PC-<no>"
   level "state"  Rajya Sabha MP or nominated member  office_id "<ST>-RS-<slug>" record "dept:leg_<house>:<ST>-RS-<slug>"
+  level "state"  MLC (member of a Legislative Council) office_id "<ST>-LC-<slug>" record "dept:leg_<house>:<ST>-LC-<slug>"
+                 (area = the council constituency: "Agra Division Teachers", "Pratapgarh Local Authorities", "Nominated")
 Common fields: name, party, phone (every number, joined by ", "), email (every address), address (the address in the state:
 constituency office, else residence, else office), source. Extra keys when the source gives them: house, constituency, seat_no
 (the number the source gives), office_address, residence_address, constituency_office, delhi_address, phone_office,
@@ -35,8 +37,9 @@ STATES = {
     "rajasthan": "RJ", "sikkim": "SK", "tamil nadu": "TN", "telangana": "TS", "tripura": "TR", "uttar pradesh": "UP",
     "uttarakhand": "UK", "uttaranchal": "UK", "west bengal": "WB", "nominated": "NM",
 }
-POST = {"AC": "Member of Legislative Assembly", "PC": "Member of Parliament, Lok Sabha", "RS": "Member of Parliament, Rajya Sabha"}
-LEVEL = {"AC": "ac", "PC": "pc", "RS": "state"}
+POST = {"AC": "Member of Legislative Assembly", "PC": "Member of Parliament, Lok Sabha", "RS": "Member of Parliament, Rajya Sabha",
+        "LC": "Member of Legislative Council"}
+LEVEL = {"AC": "ac", "PC": "pc", "RS": "state", "LC": "state"}
 ADDR_ORDER = ("constituency_office", "residence_address", "permanent_address", "office_address", "delhi_address")
 PHONE_KEYS = ("mobile", "phone_office", "phone_residence", "phone_constituency", "phone_delhi")
 
@@ -97,7 +100,7 @@ def _join(*vals):
 
 def member(module, state, kind, no, name, *, constituency="", party="", source="", phone="", email="", address="", post=None,
            note="", **extra):
-    """(record id, data) for one sitting member. kind: AC, PC or RS. no: the seat number on the site (None if unknown).
+    """(record id, data) for one sitting member. kind: AC, PC, RS or LC. no: the seat number on the site (None if unknown).
     phone / email may be given whole; the mobile, phone_* and *_address extras are also folded into phone / address."""
     extra = {k: clean(v) if isinstance(v, str) else v for k, v in extra.items()}
     for k in PHONE_KEYS:
@@ -107,15 +110,15 @@ def member(module, state, kind, no, name, *, constituency="", party="", source="
     email = _join(emails(email), *[emails(extra.get(k, "")) for k in ("email_office", "email_personal")])
     address = clean(address) or next((extra[k] for k in ADDR_ORDER if extra.get(k)), "")
     constituency = clean(constituency)
-    if kind == "RS":
-        key = f"{state}-RS-{slug(name)}"
-        area = ""
+    if kind in ("RS", "LC"):
+        key = f"{state}-{kind}-{slug(name)}"
+        area = constituency if kind == "LC" else ""
     else:
         key = f"{state}-{kind}-{no}" if no else f"{state}-{kind}-x-{slug(constituency or name)}"
         area = f"{no} - {constituency}" if no and constituency else constituency
     return _esw.record(module, key, dept="elected", level=LEVEL[kind], area=area, post=post or POST[kind], name=clean(name),
                        party=clean(party), phone=phone, email=email, address=address, state=state,
-                       office_id=key if (no or kind == "RS") else "", source=source, constituency=constituency,
+                       office_id=key if (no or kind in ("RS", "LC")) else "", source=source, constituency=constituency,
                        seat_note=note, **extra)
 
 

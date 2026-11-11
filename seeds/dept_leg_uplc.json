@@ -1,0 +1,15 @@
+[
+ {
+  "key": "leg_uplc-list",
+  "payload": {
+   "reader": "leg_uplc",
+   "url": "https://uplc.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=1&Assemblyid=1",
+   "host": "uplc.neva.gov.in",
+   "state": "UP",
+   "house": 1,
+   "house_name": "Uttar Pradesh Vidhan Parishad",
+   "kind": "LC",
+   "india_only": false
+  }
+ }
+]

@@ -1,0 +1,15 @@
+[
+ {
+  "key": "leg_ar-list",
+  "payload": {
+   "reader": "leg_ar",
+   "url": "https://arla.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=7&Assemblyid=7",
+   "host": "arla.neva.gov.in",
+   "state": "AR",
+   "house": 7,
+   "house_name": "Arunachal Pradesh Legislative Assembly (8th)",
+   "kind": "AC",
+   "india_only": false
+  }
+ }
+]

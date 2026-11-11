@@ -1,0 +1,15 @@
+[
+ {
+  "key": "leg_wb-list",
+  "payload": {
+   "reader": "leg_wb",
+   "url": "https://wbla.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=18&Assemblyid=18",
+   "host": "wbla.neva.gov.in",
+   "state": "WB",
+   "house": 18,
+   "house_name": "West Bengal Legislative Assembly (18th)",
+   "kind": "AC",
+   "india_only": false
+  }
+ }
+]

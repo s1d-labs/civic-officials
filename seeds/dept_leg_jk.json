@@ -1,0 +1,15 @@
+[
+ {
+  "key": "leg_jk-list",
+  "payload": {
+   "reader": "leg_jk",
+   "url": "https://jkla.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=1&Assemblyid=1",
+   "host": "jkla.neva.gov.in",
+   "state": "JK",
+   "house": 1,
+   "house_name": "Jammu and Kashmir Legislative Assembly (1st, 2024-)",
+   "kind": "AC",
+   "india_only": false
+  }
+ }
+]

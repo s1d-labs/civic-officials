@@ -1,0 +1,15 @@
+[
+ {
+  "key": "leg_hr-list",
+  "payload": {
+   "reader": "leg_hr",
+   "url": "https://hrla.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=15&Assemblyid=15",
+   "host": "hrla.neva.gov.in",
+   "state": "HR",
+   "house": 15,
+   "house_name": "Haryana Vidhan Sabha (15th)",
+   "kind": "AC",
+   "india_only": false
+  }
+ }
+]

@@ -1,0 +1,15 @@
+[
+ {
+  "key": "leg_jh-list",
+  "payload": {
+   "reader": "leg_jh",
+   "url": "https://jhla.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=6&Assemblyid=6",
+   "host": "jhla.neva.gov.in",
+   "state": "JH",
+   "house": 6,
+   "house_name": "Jharkhand Vidhan Sabha (6th)",
+   "kind": "AC",
+   "india_only": false
+  }
+ }
+]

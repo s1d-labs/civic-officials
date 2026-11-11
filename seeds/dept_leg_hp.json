@@ -1,0 +1,15 @@
+[
+ {
+  "key": "leg_hp-list",
+  "payload": {
+   "reader": "leg_hp",
+   "url": "https://hpvs.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=14&Assemblyid=14",
+   "host": "hpvs.neva.gov.in",
+   "state": "HP",
+   "house": 14,
+   "house_name": "Himachal Pradesh Vidhan Sabha (14th)",
+   "kind": "AC",
+   "india_only": false
+  }
+ }
+]
