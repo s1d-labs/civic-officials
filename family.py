@@ -132,7 +132,7 @@ if _ocr:
 if _ocr_tn:
     PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-b", "title": "Tamil Nadu ward councillors by OCR, from the saved results PDFs",
                      "task": "councillors-ocr-b", "target": f"{FAMILY}-councillors-ocr-b", "env": {}, "probe": None,
-                     "unit_label": "6 PDF pages", "record_label": "councillor", "items": _ocr_tn, "workers": 40, "threads": 1,
+                     "unit_label": "6 PDF pages", "record_label": "councillor", "items": _ocr_tn, "workers": 100, "threads": 1,
                      "delay_ms": 0})
 
 # Department offices and officers (depts task, dforms/<module>.py; every seeds/dept_*.json): police stations, power offices,
