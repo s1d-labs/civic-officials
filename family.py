@@ -134,7 +134,8 @@ if _dept:
                      "threads": 1, "delay_ms": 1000, "proxy": "IN"})
     PROJECTS.append({"name": f"{FAMILY}-depts-in", "title": "Department offices that answer only from India",
                      "task": "depts", "target": f"{FAMILY}-depts-in", "env": {}, "probe": None, "unit_label": "source page",
-                     "record_label": "office", "items": [i for i in _dept if i["payload"].get("india_only")], "workers": 4,
-                     "threads": 1, "delay_ms": 1000, "geo": "IN"})
+                     "record_label": "office", "items": [i for i in _dept if i["payload"].get("india_only")], "workers": 8,
+                     "threads": 1, "delay_ms": 1000, "geo": "IN", "proxy": "IN"})
+    # geo + proxy: India servers and GitHub runners through the Indian proxies both take these items
 
 PROBES = []    # many hosts per project: no single health check would mean anything
