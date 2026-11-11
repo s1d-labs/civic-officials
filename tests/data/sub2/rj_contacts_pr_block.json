@@ -1,0 +1,41 @@
+{
+ "IsSuccess": true,
+ "Message": "Data Retrieved Successfully !",
+ "StatusCode": 200,
+ "Exception": "",
+ "Data": {
+  "Data": [
+   {
+    "Id": 13031,
+    "DepartmentTitle": "Panchayati Raj Department",
+    "ContactCategoryName": "Block Office ",
+    "IsPDF": true,
+    "IsData": false,
+    "AttachmentUrl": "https://jankalyanfile.rajasthan.gov.in/Files//Content/UploadFolder/Department/PDF/DEPTContactDetail/2026/Sep/DEPTContactDetail373745a5-0193-41ea-9ee3-1629f3edf43a.pdf",
+    "DesignationName": null,
+    "OfficerName": null
+   },
+   {
+    "Id": 13033,
+    "DepartmentTitle": "Panchayati Raj Department",
+    "ContactCategoryName": "Block Office ",
+    "IsPDF": true,
+    "IsData": false,
+    "AttachmentUrl": "https://jankalyanfile.rajasthan.gov.in/Files//Content/UploadFolder/Department/PDF/DEPTContactDetail/2023/Feb/DEPTContactDetailc8361630-8fcb-4b6a-9f7f-3c4ed8b1d456.pdf",
+    "DesignationName": null,
+    "OfficerName": null
+   },
+   {
+    "Id": 1655,
+    "DepartmentTitle": "Revenue Department",
+    "ContactCategoryName": "Help Line",
+    "IsPDF": true,
+    "IsData": false,
+    "AttachmentUrl": "https://jankalyanfile.rajasthan.gov.in/Files/DEPTContactDetail5d774a61-4f45-4d0e-b44f-71014d8dc1f9.",
+    "DesignationName": null,
+    "OfficerName": ""
+   }
+  ],
+  "TotalRecords": 3
+ }
+}

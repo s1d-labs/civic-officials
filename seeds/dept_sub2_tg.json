@@ -1,0 +1,365 @@
+[
+ {
+  "key": "sub2_tg-adilabad",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://adilabad.telangana.gov.in/",
+   "host": "adilabad.telangana.gov.in",
+   "district": "Adilabad",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-asifabad",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://asifabad.telangana.gov.in/",
+   "host": "asifabad.telangana.gov.in",
+   "district": "Kumuram Bheem Asifabad",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-bhoopalapally",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://bhoopalapally.telangana.gov.in/",
+   "host": "bhoopalapally.telangana.gov.in",
+   "district": "Jayashankar Bhupalapally",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-gadwal",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://gadwal.telangana.gov.in/",
+   "host": "gadwal.telangana.gov.in",
+   "district": "Jogulamba Gadwal",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-hanumakonda",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://hanumakonda.telangana.gov.in/",
+   "host": "hanumakonda.telangana.gov.in",
+   "district": "Hanumakonda",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-hyderabad",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://hyderabad.telangana.gov.in/",
+   "host": "hyderabad.telangana.gov.in",
+   "district": "Hyderabad",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-jagtial",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://jagtial.telangana.gov.in/",
+   "host": "jagtial.telangana.gov.in",
+   "district": "Jagitial",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-jangaon",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://jangaon.telangana.gov.in/",
+   "host": "jangaon.telangana.gov.in",
+   "district": "Jangoan",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-kamareddy",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://kamareddy.telangana.gov.in/",
+   "host": "kamareddy.telangana.gov.in",
+   "district": "Kamareddy",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-karimnagar",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://karimnagar.telangana.gov.in/",
+   "host": "karimnagar.telangana.gov.in",
+   "district": "Karimnagar",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-khammam",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://khammam.telangana.gov.in/",
+   "host": "khammam.telangana.gov.in",
+   "district": "Khammam",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-kothagudem",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://kothagudem.telangana.gov.in/",
+   "host": "kothagudem.telangana.gov.in",
+   "district": "Bhadradri Kothagudem",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-mahabubabad",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://mahabubabad.telangana.gov.in/",
+   "host": "mahabubabad.telangana.gov.in",
+   "district": "Mahabubabad",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-mahabubnagar",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://mahabubnagar.telangana.gov.in/",
+   "host": "mahabubnagar.telangana.gov.in",
+   "district": "Mahabubnagar",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-mancherial",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://mancherial.telangana.gov.in/",
+   "host": "mancherial.telangana.gov.in",
+   "district": "Mancherial",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-medak",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://medak.telangana.gov.in/",
+   "host": "medak.telangana.gov.in",
+   "district": "Medak",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-medchal-malkajgiri",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://medchal-malkajgiri.telangana.gov.in/",
+   "host": "medchal-malkajgiri.telangana.gov.in",
+   "district": "Medchal Malkajgiri",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-mulugu",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://mulugu.telangana.gov.in/",
+   "host": "mulugu.telangana.gov.in",
+   "district": "Mulugu",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-nagarkurnool",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://nagarkurnool.telangana.gov.in/",
+   "host": "nagarkurnool.telangana.gov.in",
+   "district": "Nagarkurnool",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-nalgonda",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://nalgonda.telangana.gov.in/",
+   "host": "nalgonda.telangana.gov.in",
+   "district": "Nalgonda",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-narayanpet",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://narayanpet.telangana.gov.in/",
+   "host": "narayanpet.telangana.gov.in",
+   "district": "Narayanpet",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-nirmal",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://nirmal.telangana.gov.in/",
+   "host": "nirmal.telangana.gov.in",
+   "district": "Nirmal",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-nizamabad",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://nizamabad.telangana.gov.in/",
+   "host": "nizamabad.telangana.gov.in",
+   "district": "Nizamabad",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-peddapalli",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://peddapalli.telangana.gov.in/",
+   "host": "peddapalli.telangana.gov.in",
+   "district": "Peddapalli",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-rajannasircilla",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://rajannasircilla.telangana.gov.in/",
+   "host": "rajannasircilla.telangana.gov.in",
+   "district": "Rajanna Sircilla",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-rangareddy",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://rangareddy.telangana.gov.in/",
+   "host": "rangareddy.telangana.gov.in",
+   "district": "Ranga Reddy",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-sangareddy",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://sangareddy.telangana.gov.in/",
+   "host": "sangareddy.telangana.gov.in",
+   "district": "Sangareddy",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-siddipet",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://siddipet.telangana.gov.in/",
+   "host": "siddipet.telangana.gov.in",
+   "district": "Siddipet",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-suryapet",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://suryapet.telangana.gov.in/",
+   "host": "suryapet.telangana.gov.in",
+   "district": "Suryapet",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-vikarabad",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://vikarabad.telangana.gov.in/",
+   "host": "vikarabad.telangana.gov.in",
+   "district": "Vikarabad",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-wanaparthy",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://wanaparthy.telangana.gov.in/",
+   "host": "wanaparthy.telangana.gov.in",
+   "district": "Wanaparthy",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-warangal",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://warangal.telangana.gov.in/",
+   "host": "warangal.telangana.gov.in",
+   "district": "Warangal",
+   "state": "TG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_tg-yadadri",
+  "payload": {
+   "reader": "sub2_tg",
+   "url": "https://yadadri.telangana.gov.in/",
+   "host": "yadadri.telangana.gov.in",
+   "district": "Yadadri Bhuvanagiri",
+   "state": "TG",
+   "india_only": true
+  }
+ }
+]

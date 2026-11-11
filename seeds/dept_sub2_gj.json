@@ -1,0 +1,32 @@
+[
+ {
+  "key": "sub2_gj_tdo",
+  "payload": {
+   "reader": "sub2_gj",
+   "url": "https://panchayat.gujarat.gov.in/panchayat/documents/Y-423-TDO-Civil-List-2025.pdf",
+   "kind": "tdo",
+   "state": "GJ",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_gj_mamlatdar",
+  "payload": {
+   "reader": "sub2_gj",
+   "url": "https://revenuedepartment.gujarat.gov.in/downloads/Mamlatdar_class_2.pdf",
+   "kind": "mamlatdar",
+   "state": "GJ",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub2_gj_dycollector",
+  "payload": {
+   "reader": "sub2_gj",
+   "url": "https://revenuedepartment.gujarat.gov.in/downloads/Deputy_collector_1.pdf",
+   "kind": "dycollector",
+   "state": "GJ",
+   "india_only": true
+  }
+ }
+]

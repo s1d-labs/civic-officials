@@ -1,0 +1,938 @@
+[
+ {
+  "key": "sub2_up_prd-agra",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "AGRA",
+   "nth": 1,
+   "district": "Agra",
+   "target": "gridEntry1$ctl02$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-firozabad",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "FIROZABAD",
+   "nth": 1,
+   "district": "Firozabad",
+   "target": "gridEntry1$ctl03$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-mainpuri",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "MAINPURI",
+   "nth": 1,
+   "district": "Mainpuri",
+   "target": "gridEntry1$ctl04$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-mathura",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "MATHURA",
+   "nth": 1,
+   "district": "Mathura",
+   "target": "gridEntry1$ctl05$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-aligarh",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "ALIGARH",
+   "nth": 1,
+   "district": "Aligarh",
+   "target": "gridEntry1$ctl07$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-etah",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "ETAH",
+   "nth": 1,
+   "district": "Etah",
+   "target": "gridEntry1$ctl08$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-hathras",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "HATHRAS",
+   "nth": 1,
+   "district": "Hathras",
+   "target": "gridEntry1$ctl09$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-kasganj",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "KASGANJ",
+   "nth": 1,
+   "district": "Kasganj",
+   "target": "gridEntry1$ctl10$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-ambedkar-nagar",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "AMBEDKAR NAGAR",
+   "nth": 1,
+   "district": "Ambedkar Nagar",
+   "target": "gridEntry1$ctl12$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-amethi",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "AMETHI",
+   "nth": 1,
+   "district": "Amethi",
+   "target": "gridEntry1$ctl13$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-ayodhya",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "AYODHYA",
+   "nth": 1,
+   "district": "Ayodhya",
+   "target": "gridEntry1$ctl14$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-barabanki",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BARABANKI",
+   "nth": 1,
+   "district": "Bara Banki",
+   "target": "gridEntry1$ctl15$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-sultanpur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SULTANPUR",
+   "nth": 1,
+   "district": "Sultanpur",
+   "target": "gridEntry1$ctl16$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-azamgarh",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "AZAMGARH",
+   "nth": 1,
+   "district": "Azamgarh",
+   "target": "gridEntry1$ctl18$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-ballia",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BALLIA",
+   "nth": 1,
+   "district": "Ballia",
+   "target": "gridEntry1$ctl19$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-mau",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "MAU",
+   "nth": 1,
+   "district": "Mau",
+   "target": "gridEntry1$ctl20$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-bareilly",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BAREILLY",
+   "nth": 1,
+   "district": "Bareilly",
+   "target": "gridEntry1$ctl22$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-budaun",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BUDAUN",
+   "nth": 1,
+   "district": "Budaun",
+   "target": "gridEntry1$ctl23$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-pilibhit",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "PILIBHIT",
+   "nth": 1,
+   "district": "Pilibhit",
+   "target": "gridEntry1$ctl24$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-shahjahanpur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SHAHJAHANPUR",
+   "nth": 1,
+   "district": "Shahjahanpur",
+   "target": "gridEntry1$ctl25$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-basti",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BASTI",
+   "nth": 1,
+   "district": "Basti",
+   "target": "gridEntry1$ctl27$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-sant-kabeer-nagar",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SANT KABEER NAGAR",
+   "nth": 1,
+   "district": "Sant Kabir Nagar",
+   "target": "gridEntry1$ctl28$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-siddharth-nagar",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SIDDHARTH NAGAR",
+   "nth": 1,
+   "district": "Siddharthnagar",
+   "target": "gridEntry1$ctl29$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-banda",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BANDA",
+   "nth": 1,
+   "district": "Banda",
+   "target": "gridEntry1$ctl31$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-chitrakoot",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "CHITRAKOOT",
+   "nth": 1,
+   "district": "Chitrakoot",
+   "target": "gridEntry1$ctl32$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-hamirpur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "HAMIRPUR",
+   "nth": 1,
+   "district": "Hamirpur",
+   "target": "gridEntry1$ctl33$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-mahoba",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "MAHOBA",
+   "nth": 1,
+   "district": "Mahoba",
+   "target": "gridEntry1$ctl34$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-bahraich",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BAHRAICH",
+   "nth": 1,
+   "district": "Bahraich",
+   "target": "gridEntry1$ctl36$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-balrampur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BALRAMPUR",
+   "nth": 1,
+   "district": "Balrampur",
+   "target": "gridEntry1$ctl37$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-gonda",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "GONDA",
+   "nth": 1,
+   "district": "Gonda",
+   "target": "gridEntry1$ctl38$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-shravasti",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SHRAVASTI",
+   "nth": 1,
+   "district": "Shrawasti",
+   "target": "gridEntry1$ctl39$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-shravasti-2",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SHRAVASTI",
+   "nth": 2,
+   "district": "Shrawasti",
+   "target": "gridEntry1$ctl40$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-deoria",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "DEORIA",
+   "nth": 1,
+   "district": "Deoria",
+   "target": "gridEntry1$ctl42$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-gorakhpur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "GORAKHPUR",
+   "nth": 1,
+   "district": "Gorakhpur",
+   "target": "gridEntry1$ctl43$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-kushi-nagar",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "KUSHI NAGAR",
+   "nth": 1,
+   "district": "Kushinagar",
+   "target": "gridEntry1$ctl44$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-kushi-nagar-2",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "KUSHI NAGAR",
+   "nth": 2,
+   "district": "Kushinagar",
+   "target": "gridEntry1$ctl45$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-maharajganj",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "MAHARAJGANJ",
+   "nth": 1,
+   "district": "Mahrajganj",
+   "target": "gridEntry1$ctl46$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-jalaun",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "JALAUN",
+   "nth": 1,
+   "district": "Jalaun",
+   "target": "gridEntry1$ctl48$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-jhansi",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "JHANSI",
+   "nth": 1,
+   "district": "Jhansi",
+   "target": "gridEntry1$ctl49$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-lalitpur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "LALITPUR",
+   "nth": 1,
+   "district": "Lalitpur",
+   "target": "gridEntry1$ctl50$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-auraiya",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "AURAIYA",
+   "nth": 1,
+   "district": "Auraiya",
+   "target": "gridEntry1$ctl52$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-etawah",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "ETAWAH",
+   "nth": 1,
+   "district": "Etawah",
+   "target": "gridEntry1$ctl53$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-farrukhabad",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "FARRUKHABAD",
+   "nth": 1,
+   "district": "Farrukhabad",
+   "target": "gridEntry1$ctl54$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-kannauj",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "KANNAUJ",
+   "nth": 1,
+   "district": "Kannauj",
+   "target": "gridEntry1$ctl55$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-kanpur-dehat",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "KANPUR DEHAT",
+   "nth": 1,
+   "district": "Kanpur Dehat",
+   "target": "gridEntry1$ctl56$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-kanpur-nagar",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "KANPUR NAGAR",
+   "nth": 1,
+   "district": "Kanpur Nagar",
+   "target": "gridEntry1$ctl57$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-hardoi",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "HARDOI",
+   "nth": 1,
+   "district": "Hardoi",
+   "target": "gridEntry1$ctl59$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-kheri",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "KHERI",
+   "nth": 1,
+   "district": "Kheri",
+   "target": "gridEntry1$ctl60$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-lucknow",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "LUCKNOW",
+   "nth": 1,
+   "district": "Lucknow",
+   "target": "gridEntry1$ctl61$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-rae-bareli",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "RAE BARELI",
+   "nth": 1,
+   "district": "Rae Bareli",
+   "target": "gridEntry1$ctl62$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-sitapur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SITAPUR",
+   "nth": 1,
+   "district": "Sitapur",
+   "target": "gridEntry1$ctl63$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-unnao",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "UNNAO",
+   "nth": 1,
+   "district": "Unnao",
+   "target": "gridEntry1$ctl64$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-baghpat",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BAGHPAT",
+   "nth": 1,
+   "district": "Baghpat",
+   "target": "gridEntry1$ctl66$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-bulandshahr",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BULANDSHAHR",
+   "nth": 1,
+   "district": "Bulandshahr",
+   "target": "gridEntry1$ctl67$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-gautam-buddha-nagar",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "GAUTAM BUDDHA NAGAR",
+   "nth": 1,
+   "district": "Gautam Buddha Nagar",
+   "target": "gridEntry1$ctl68$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-ghaziabad",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "GHAZIABAD",
+   "nth": 1,
+   "district": "Ghaziabad",
+   "target": "gridEntry1$ctl69$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-hapur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "HAPUR",
+   "nth": 1,
+   "district": "Hapur",
+   "target": "gridEntry1$ctl70$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-meerut",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "MEERUT",
+   "nth": 1,
+   "district": "Meerut",
+   "target": "gridEntry1$ctl71$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-mirzapur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "MIRZAPUR",
+   "nth": 1,
+   "district": "Mirzapur",
+   "target": "gridEntry1$ctl73$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-sant-ravidas-nagar-bhadohi",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SANT RAVIDAS NAGAR (BHADOHI)",
+   "nth": 1,
+   "district": "Bhadohi",
+   "target": "gridEntry1$ctl74$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-sonbhadra",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SONBHADRA",
+   "nth": 1,
+   "district": "Sonbhadra",
+   "target": "gridEntry1$ctl75$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-amroha",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "AMROHA",
+   "nth": 1,
+   "district": "Amroha",
+   "target": "gridEntry1$ctl77$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-bijnor",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "BIJNOR",
+   "nth": 1,
+   "district": "Bijnor",
+   "target": "gridEntry1$ctl78$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-moradabad",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "MORADABAD",
+   "nth": 1,
+   "district": "Moradabad",
+   "target": "gridEntry1$ctl79$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-rampur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "RAMPUR",
+   "nth": 1,
+   "district": "Rampur",
+   "target": "gridEntry1$ctl80$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-sambhal",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SAMBHAL",
+   "nth": 1,
+   "district": "Sambhal",
+   "target": "gridEntry1$ctl81$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-fatehpur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "FATEHPUR",
+   "nth": 1,
+   "district": "Fatehpur",
+   "target": "gridEntry1$ctl83$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-kaushambi",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "KAUSHAMBI",
+   "nth": 1,
+   "district": "Kaushambi",
+   "target": "gridEntry1$ctl84$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-pratapgarh",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "PRATAPGARH",
+   "nth": 1,
+   "district": "Pratapgarh",
+   "target": "gridEntry1$ctl85$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-prayagraj",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "PRAYAGRAJ",
+   "nth": 1,
+   "district": "Prayagraj",
+   "target": "gridEntry1$ctl86$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-prayagraj-2",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "PRAYAGRAJ",
+   "nth": 2,
+   "district": "Prayagraj",
+   "target": "gridEntry1$ctl87$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-muzaffarnagar",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "MUZAFFARNAGAR",
+   "nth": 1,
+   "district": "Muzaffarnagar",
+   "target": "gridEntry1$ctl89$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-saharanpur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SAHARANPUR",
+   "nth": 1,
+   "district": "Saharanpur",
+   "target": "gridEntry1$ctl90$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-shamli",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "SHAMLI",
+   "nth": 1,
+   "district": "Shamli",
+   "target": "gridEntry1$ctl91$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-chandauli",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "CHANDAULI",
+   "nth": 1,
+   "district": "Chandauli",
+   "target": "gridEntry1$ctl93$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-ghazipur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "GHAZIPUR",
+   "nth": 1,
+   "district": "Ghazipur",
+   "target": "gridEntry1$ctl94$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-jaunpur",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "JAUNPUR",
+   "nth": 1,
+   "district": "Jaunpur",
+   "target": "gridEntry1$ctl95$ben_name"
+  }
+ },
+ {
+  "key": "sub2_up_prd-varanasi",
+  "payload": {
+   "reader": "sub2_up_prd",
+   "url": "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public",
+   "state": "UP",
+   "district_as_written": "VARANASI",
+   "nth": 1,
+   "district": "Varanasi",
+   "target": "gridEntry1$ctl96$ben_name"
+  }
+ }
+]
