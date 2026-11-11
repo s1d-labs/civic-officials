@@ -1,0 +1,172 @@
+[
+ {
+  "key": "wm2_tngis-ward-boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:ward_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ward_boundary",
+   "page": 500,
+   "fields": {
+    "ward_no": "ward",
+    "ward_name": "ward_name",
+    "body_name": "town_name",
+    "district": "dname"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 1248
+  }
+ },
+ {
+  "key": "wm2_tngis-ulb-ward-boundaries",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:ulb_ward_boundaries",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ulb_ward_boundaries",
+   "page": 500,
+   "fields": {
+    "ward_no": "ward",
+    "body_name": "ulbname"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 2066
+  }
+ },
+ {
+  "key": "wm2_tngis-corporation-ward-boundaries",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:corporation_ward_boundaries",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "corporation_ward_boundaries",
+   "page": 500,
+   "fields": {},
+   "ward_kind": "",
+   "vintage": ""
+  }
+ },
+ {
+  "key": "wm2_tngis-sp-ward-boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "TNGIS_V2:sp_ward_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sp_ward_boundary",
+   "page": 500,
+   "fields": {},
+   "ward_kind": "",
+   "vintage": ""
+  }
+ },
+ {
+  "key": "wm2_tngis-gcc-ward-boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_ward_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_ward_boundary",
+   "page": 500,
+   "fields": {},
+   "ward_kind": "",
+   "vintage": ""
+  }
+ },
+ {
+  "key": "wm2_tngis-chennai-ward",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis:chennai_ward",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "chennai_ward",
+   "page": 500,
+   "fields": {},
+   "ward_kind": "",
+   "vintage": ""
+  }
+ },
+ {
+  "key": "wm2_tngis-coc-ward-boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis:Coc_WardBoundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "coc_ward_boundary",
+   "page": 500,
+   "fields": {},
+   "ward_kind": "",
+   "vintage": ""
+  }
+ },
+ {
+  "key": "wm2_tngis-ward-boundary-cma-spc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "SPC:ward_boundary_cma_spc",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ward_boundary_cma_spc",
+   "page": 500,
+   "fields": {},
+   "ward_kind": "",
+   "vintage": ""
+  }
+ },
+ {
+  "key": "wm2_tngis-ponneri-ward",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "ponneri:Ward",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ponneri_ward",
+   "page": 500,
+   "fields": {},
+   "ward_kind": "",
+   "vintage": ""
+  }
+ },
+ {
+  "key": "wm2_tngis-velankanni-ward",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:bisag_velankanni_ward_tp_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "velankanni_ward",
+   "page": 500,
+   "fields": {},
+   "ward_kind": "",
+   "vintage": ""
+  }
+ }
+]
