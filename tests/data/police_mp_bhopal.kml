@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Commissionerate of Police Bhopal</name>
+    <description/>
+    
+    
+    
+    <Folder>
+      <name>Zone - I</name>
+      <Placemark>
+        <name>TT Nagar Police Station</name>
+        <description><![CDATA[Mobile: 9479990444<br>Telephone: 0755-2677344<br>Email: sho.psttnagar-bpl@mppolice.gov.in]]></description>
+        <styleUrl>#icon-1899-DB4436-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="Mobile">
+            <value>9.479990444E9</value>
+          </Data>
+          <Data name="Telephone">
+            <value>0755-2677344</value>
+          </Data>
+          <Data name="Email">
+            <value>sho.psttnagar-bpl@mppolice.gov.in</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            77.4000175,23.2359122,0
+          </coordinates>
+        </Point>
+      </Placemark><Placemark>
+        <name>Police Thana Kamla Nagar</name>
+        <description><![CDATA[Mobile: 9479990463<br>Telephone: 0755-2774769<br>Email: sho.pskamlanagar-bpl@mppolice.gov.in]]></description>
+        <styleUrl>#icon-1899-DB4436-labelson</styleUrl>
+        <ExtendedData>
+          <Data name="Mobile">
+            <value>9.479990463E9</value>
+          </Data>
+          <Data name="Telephone">
+            <value>0755-2774769</value>
+          </Data>
+          <Data name="Email">
+            <value>sho.pskamlanagar-bpl@mppolice.gov.in</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            77.395534,23.2151458,0
+          </coordinates>
+        </Point>
+      </Placemark></Folder><Folder>
+      <name>MP Police</name>
+      <Placemark>
+        <name>MP Police Headquarters</name>
+        <description><![CDATA[description: <br>address: ]]></description>
+        <styleUrl>#icon-1899-DB4436</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value/>
+          </Data>
+          <Data name="address">
+            <value/>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            77.4102467,23.248465,0
+          </coordinates>
+        </Point>
+      </Placemark></Folder></Document></kml>

@@ -1,0 +1,400 @@
+<html><head><meta charset='utf-8'></head><body><form action="/en/contacts/searchContacts" enctype="multipart/form-data" id="myForm" method="post" role="form">
+<div class="tender-form-panel">
+<div class="tender-form-panel">
+<div class="tender-form-top" style="margin-bottom:5px;">
+<div class="row" id="hideAdvancedContact" style="display:flex;align-items:center;">
+<div class="fpanel col-md-6 col-sm-12">
+<div class="form-group">
+<label class="form-label col-sm-5" style="padding-left:0px">Choose Office</label>
+<div class="col-sm-7">
+<input id="SearchBar" name="SearchBar" type="hidden" value=""/><select class="selectitem form-control" data-val="true" data-val-required="The DepartmentId field is required." id="DepartmentId" name="DepartmentId"><option value="375aad73-1eaf-456e-885e-43f22cc1caa5">Minister's Office</option>
+<option value="a3c131d2-93ac-4f5b-b85e-0475a2f441da">PHE Department</option>
+
+
+</select><input id="DepartmentId" name="DepartmentId" type="hidden" value="00000000-0000-0000-0000-000000000000"/> </div>
+</div>
+</div>
+<div class="col-md-6 col-sm-8 col-xs-8" style="padding-left:0;">
+<div class="tender-form-btm">
+<button class="btn btn-success" id="advancedSearchContact" style="margin-right:0px" type="button">
+<span class="fa fa-search"></span> Advanced Search
+                                                    </button>
+</div>
+</div>
+</div>
+</div>
+<div class="tender-form" id="advancedContactSearch">
+<div class="tender-form-top">
+<div class="row">
+<div class="fpanel col-md-6 col-sm-12">
+<div class="form-group">
+<label class="form-label col-sm-5">Choose Office</label>
+<div class="col-sm-7">
+<select class="selectitem form-control" data-val="true" data-val-required="The AdvancedDepartmentId field is required." id="AdvancedDepartmentId" name="AdvancedDepartmentId" onchange="setForm()"><option value="375aad73-1eaf-456e-885e-43f22cc1caa5">Minister's Office</option>
+<option value="a3c131d2-93ac-4f5b-b85e-0475a2f441da">PHE Department</option>
+<option value="1aa0de04-eabc-4d82-bb9a-67fba9424156">PHE Directorate</option>
+<option value="6742afb9-a9ad-4eb2-bd47-47dd12ff5936">Consultants</option>
+</select><input id="AdvancedDepartmentId" name="AdvancedDepartmentId" type="hidden" value="00000000-0000-0000-0000-000000000000"/> </div>
+</div>
+</div>
+<div class="fpanel col-md-6 col-sm-12">
+<div class="form-group">
+<label class="form-label col-sm-5">District</label>
+<div class="col-sm-7">
+<select class="selectitem form-control" id="District" name="District"><option value="">--All--</option>
+<option>ALIPURDUAR</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</select><input id="District" name="District" type="hidden" value=""/> </div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="fpanel col-md-6 col-sm-12">
+<div class="form-group">
+<label class="form-label col-sm-5">Name</label>
+<div class="col-sm-7">
+<input class="form-control" id="Name" name="Name" type="text" value=""/>
+</div>
+</div>
+</div>
+<div class="fpanel col-md-6 col-sm-12">
+<div class="form-group">
+<label class="form-label col-sm-5">Designation</label>
+<div class="col-sm-7">
+<select class="selectitem form-control" data-val="true" data-val-required="The DesignationId field is required." id="DesignationId" name="DesignationId"><option value="">--All--</option>
+
+
+
+
+
+
+
+<option value="ff054b42-c544-414f-b5f9-0c8653a69032">Assistant Chief Engineer</option>
+<option value="041a7c64-737b-4ce2-a91d-84420380b443">Assistant Engineer</option>
+
+
+
+<option value="0d330fb6-5c0c-4f4b-9454-39fb5cf159d6">Chief Engineer</option>
+<option value="f3533717-593a-4325-8243-e6fcd671b655">Chief Engineer &amp; Director - WSSO</option>
+<option value="098de255-397d-4c63-ac0f-091d66e61770">Chief Engineer &amp; Project Director, PMU, WBDWSIP</option>
+
+
+
+
+
+
+
+
+<option value="72a563d7-fbfd-466c-95e0-043ea58854ba">Deputy Superintending Engineer</option>
+
+<option value="2702ea63-0b32-41d6-b3b2-38256a19bde2">Engineer in Chief</option>
+
+<option value="d7e2f5aa-2a71-4715-b515-7c5367f8ad9d">Executive Engineer</option>
+
+
+
+
+
+<option value="8e6cb43d-776f-4204-9430-d428485b79fb">Junior Engineer</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<option value="ec82aadc-cb42-4ff6-84ef-0159a1d6b9fd">Senior Superintending Engineer</option>
+
+
+
+<option value="bdebebe4-398f-42bf-ad09-62c5799ea59b">Superintending Engineer</option>
+<option value="9e7e8444-259a-44e9-a779-e4f3e9f78ed0">Superintending Engineer (WQ) - WSSO</option>
+
+</select><input id="DesignationId" name="DesignationId" type="hidden" value="00000000-0000-0000-0000-000000000000"/> </div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="fpanel col-md-6 col-sm-12">
+<div class="form-group">
+<label class="form-label col-sm-5">Engineering Wing</label>
+<div class="col-sm-7">
+<select class="selectitem form-control" id="EngineeringWing" name="EngineeringWing"><option value="">--All--</option>
+<option value="C">Civil</option>
+
+</select>
+<input data-val="true" data-val-required="The ZoneId field is required." id="ZoneId" name="ZoneId" type="hidden" value="00000000-0000-0000-0000-000000000000"/>
+</div>
+</div>
+</div>
+<div class="fpanel col-md-6 col-sm-12">
+<div class="form-group">
+<label class="form-label col-sm-5">Circle</label>
+<div class="col-sm-7">
+<select class="selectitem form-control" data-val="true" data-val-required="The CircleId field is required." disabled="disabled" id="CircleId" name="CircleId"><option value="">--All--</option>
+<option value="bc3549f4-d596-4da2-bcaa-db1f5de56ce6">Central Circle</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</select><input id="CircleId" name="CircleId" type="hidden" value="00000000-0000-0000-0000-000000000000"/> </div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="fpanel col-md-6 col-sm-12">
+<div class="form-group">
+<label class="form-label col-sm-5">Division</label>
+<div class="col-sm-7">
+<select class="selectitem form-control" data-val="true" data-val-required="The DivisionId field is required." disabled="disabled" id="DivisionId" name="DivisionId"><option value="">--All--</option>
+<option value="2f201f85-9df5-4c80-9064-cb770ee0841b">Alipore Division</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</select><input id="DivisionId" name="DivisionId" type="hidden" value="00000000-0000-0000-0000-000000000000"/> </div>
+</div>
+</div>
+<div class="fpanel col-md-6 col-sm-12">
+<div class="form-group">
+<label class="form-label col-sm-5">Sub-Division</label>
+<div class="col-sm-7">
+<select class="selectitem form-control" data-val="true" data-val-required="The SubDivisionId field is required." disabled="disabled" id="SubDivisionId" name="SubDivisionId"><option value="">--All--</option>
+<option value="ca205ad4-c761-475f-99b8-092258839d85">AE-Electrical Division</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</select><input id="SubDivisionId" name="SubDivisionId" type="hidden" value="00000000-0000-0000-0000-000000000000"/> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="tender-form-btm">
+<a class="btn btn-warning" href="javascript:void(0)" id="hideContact" style="margin-right:20px"> Hide this</a>
+<button class="btn btn-success" type="submit">
+<span class="fa fa-search"></span> Search
+                                                </button>
+</div>
+</div>
+</div>
+</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8ANywscUSyxBqp4ZO7kVMaOucTNFlRYcb3T2yO_-DBd_2sP3KctR6B6Iryt46KvoM3jnOtU-t3IT-Qc77ww8G3w0GtM2s3weobSYQVypRzmgolOSvXZ13iF269ZhU9YuofsDkRJ4DZEvVPJN-ZIpzaM"/></form></body></html>

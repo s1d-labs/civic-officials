@@ -1,0 +1,296 @@
+[
+ {
+  "key": "power_cescmysore:zonal-office-mysuru",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Zonal%20Office%20-%20Mysuru/en",
+   "office": "Zonal Office - Mysuru",
+   "level": "zone",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_cescmysore:hassan-zonal-office",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Hassan%20Zonal%20Office/en",
+   "office": "Hassan Zonal Office",
+   "level": "zone",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_cescmysore:o-m-circle-mysuru",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/O%26M%20Circle%20-%20Mysuru/en",
+   "office": "O&M Circle - Mysuru",
+   "level": "circle",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_cescmysore:mandya-circle",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Mandya%20Circle/en",
+   "office": "Mandya Circle",
+   "level": "circle",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_cescmysore:hassan-circle",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Hassan%20Circle/en",
+   "office": "Hassan Circle",
+   "level": "circle",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_cescmysore:chamarajanagara-kodagu-circle",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Chamarajanagara-Kodagu%20Circle/en",
+   "office": "Chamarajanagara-Kodagu Circle",
+   "level": "circle",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_cescmysore:n-r-mohalla-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/N%20R%20Mohalla%20Division/en",
+   "office": "N R Mohalla Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "power_cescmysore:vv-mohalla-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/VV%20Mohalla%20Division/en",
+   "office": "VV Mohalla Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "power_cescmysore:nanjangud-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Nanjangud%20Division/en",
+   "office": "Nanjangud Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "power_cescmysore:hunsur-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Hunsur%20Division/en",
+   "office": "Hunsur Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "power_cescmysore:k-r-nagara-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/K%20R%20Nagara%20Division/en",
+   "office": "K R Nagara Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "power_cescmysore:mandya-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Mandya%20Division/en",
+   "office": "Mandya Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "power_cescmysore:madduru-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Madduru%20Division/en",
+   "office": "Madduru Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "power_cescmysore:malavalli-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Malavalli%20Division/en",
+   "office": "Malavalli Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "power_cescmysore:nagamangala-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Nagamangala%20Division/en",
+   "office": "Nagamangala Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "power_cescmysore:pandavapura-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Pandavapura%20Division/en",
+   "office": "Pandavapura Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "power_cescmysore:kr-pete-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/KR%20Pete%20Division/en",
+   "office": "KR Pete Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "power_cescmysore:hassan-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Hassan%20Division/en",
+   "office": "Hassan Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "power_cescmysore:arasikere-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Arasikere%20Division/en",
+   "office": "Arasikere Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "power_cescmysore:channarayapattana-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Channarayapattana%20Division/en",
+   "office": "Channarayapattana Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "power_cescmysore:holenarasipura-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Holenarasipura%20Division/en",
+   "office": "Holenarasipura Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "power_cescmysore:sakaleshapura-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Sakaleshapura%20Division/en",
+   "office": "Sakaleshapura Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "power_cescmysore:chamarajanagara-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Chamarajanagara%20Division/en",
+   "office": "Chamarajanagara Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Chamarajanagara"
+  }
+ },
+ {
+  "key": "power_cescmysore:kollegala-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Kollegala%20Division/en",
+   "office": "Kollegala Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Chamarajanagara"
+  }
+ },
+ {
+  "key": "power_cescmysore:madikeri-division",
+  "payload": {
+   "reader": "power_cescmysore",
+   "url": "https://cescmysore.karnataka.gov.in/new-page/Madikeri%20Division/en",
+   "office": "Madikeri Division",
+   "level": "division",
+   "state": "KA",
+   "india_only": true,
+   "district": "Kodagu"
+  }
+ }
+]

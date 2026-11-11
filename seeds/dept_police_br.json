@@ -1,0 +1,530 @@
+[
+ {
+  "key": "police_br:1-araria",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=1&lang=en",
+   "state": "BR",
+   "district_id": 1,
+   "district": "Araria",
+   "expected": 28,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:2-arwal",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=2&lang=en",
+   "state": "BR",
+   "district_id": 2,
+   "district": "Arwal",
+   "expected": 15,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:3-aurangabad",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=3&lang=en",
+   "state": "BR",
+   "district_id": 3,
+   "district": "Aurangabad",
+   "expected": 34,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:39-bagaha",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=39&lang=en",
+   "state": "BR",
+   "district_id": 39,
+   "district": "Bagaha",
+   "expected": 22,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:4-banka",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=4&lang=en",
+   "state": "BR",
+   "district_id": 4,
+   "district": "Banka",
+   "expected": 23,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:5-begusarai",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=5&lang=en",
+   "state": "BR",
+   "district_id": 5,
+   "district": "Begusarai",
+   "expected": 38,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:38-bettiah",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=38&lang=en",
+   "state": "BR",
+   "district_id": 38,
+   "district": "Bettiah",
+   "expected": 35,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:7-bhagalpur",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=7&lang=en",
+   "state": "BR",
+   "district_id": 7,
+   "district": "Bhagalpur",
+   "expected": 44,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:8-bhojpur",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=8&lang=en",
+   "state": "BR",
+   "district_id": 8,
+   "district": "Bhojpur",
+   "expected": 39,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:9-buxar",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=9&lang=en",
+   "state": "BR",
+   "district_id": 9,
+   "district": "Buxar",
+   "expected": 26,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:10-darbhanga",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=10&lang=en",
+   "state": "BR",
+   "district_id": 10,
+   "district": "Darbhanga",
+   "expected": 38,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:12-gaya",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=12&lang=en",
+   "state": "BR",
+   "district_id": 12,
+   "district": "Gaya",
+   "expected": 60,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:13-gopalganj",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=13&lang=en",
+   "state": "BR",
+   "district_id": 13,
+   "district": "Gopalganj",
+   "expected": 24,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:14-jamui",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=14&lang=en",
+   "state": "BR",
+   "district_id": 14,
+   "district": "Jamui",
+   "expected": 24,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:15-jehanabad",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=15&lang=en",
+   "state": "BR",
+   "district_id": 15,
+   "district": "Jehanabad",
+   "expected": 21,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:6-kaimur",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=6&lang=en",
+   "state": "BR",
+   "district_id": 6,
+   "district": "Kaimur",
+   "expected": 20,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:16-katihar",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=16&lang=en",
+   "state": "BR",
+   "district_id": 16,
+   "district": "Katihar",
+   "expected": 31,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:17-khagaria",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=17&lang=en",
+   "state": "BR",
+   "district_id": 17,
+   "district": "Khagaria",
+   "expected": 22,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:18-kishanganj",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=18&lang=en",
+   "state": "BR",
+   "district_id": 18,
+   "district": "Kishanganj",
+   "expected": 24,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:19-lakhisarai",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=19&lang=en",
+   "state": "BR",
+   "district_id": 19,
+   "district": "Lakhisarai",
+   "expected": 21,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:20-madhepura",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=20&lang=en",
+   "state": "BR",
+   "district_id": 20,
+   "district": "Madhepura",
+   "expected": 25,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:21-madhubani",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=21&lang=en",
+   "state": "BR",
+   "district_id": 21,
+   "district": "Madhubani",
+   "expected": 42,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:11-motihari",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=11&lang=en",
+   "state": "BR",
+   "district_id": 11,
+   "district": "Motihari",
+   "expected": 51,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:22-munger",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=22&lang=en",
+   "state": "BR",
+   "district_id": 22,
+   "district": "Munger",
+   "expected": 26,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:23-muzaffarpur",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=23&lang=en",
+   "state": "BR",
+   "district_id": 23,
+   "district": "Muzaffarpur",
+   "expected": 47,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:24-nalanda",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=24&lang=en",
+   "state": "BR",
+   "district_id": 24,
+   "district": "Nalanda",
+   "expected": 46,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:41-naughachhia",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=41&lang=en",
+   "state": "BR",
+   "district_id": 41,
+   "district": "Naughachhia",
+   "expected": 16,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:25-nawada",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=25&lang=en",
+   "state": "BR",
+   "district_id": 25,
+   "district": "Nawada",
+   "expected": 28,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:26-patna",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=26&lang=en",
+   "state": "BR",
+   "district_id": 26,
+   "district": "Patna",
+   "expected": 88,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:27-purnea",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=27&lang=en",
+   "state": "BR",
+   "district_id": 27,
+   "district": "Purnea",
+   "expected": 38,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:46-rail-jamalpur",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=46&lang=en",
+   "state": "BR",
+   "district_id": 46,
+   "district": "Rail Jamalpur",
+   "expected": 9,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:49-rail-katihar",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=49&lang=en",
+   "state": "BR",
+   "district_id": 49,
+   "district": "Rail Katihar",
+   "expected": 19,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:45-rail-muzaffarpur",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=45&lang=en",
+   "state": "BR",
+   "district_id": 45,
+   "district": "Rail Muzaffarpur",
+   "expected": 18,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:48-rail-patna",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=48&lang=en",
+   "state": "BR",
+   "district_id": 48,
+   "district": "Rail Patna",
+   "expected": 32,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:28-rohtas",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=28&lang=en",
+   "state": "BR",
+   "district_id": 28,
+   "district": "Rohtas",
+   "expected": 50,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:29-saharsa",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=29&lang=en",
+   "state": "BR",
+   "district_id": 29,
+   "district": "Saharsa",
+   "expected": 25,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:30-samastipur",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=30&lang=en",
+   "state": "BR",
+   "district_id": 30,
+   "district": "Samastipur",
+   "expected": 35,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:31-saran",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=31&lang=en",
+   "state": "BR",
+   "district_id": 31,
+   "district": "Saran",
+   "expected": 40,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:32-sheikhpura",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=32&lang=en",
+   "state": "BR",
+   "district_id": 32,
+   "district": "Sheikhpura",
+   "expected": 21,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:33-sheohar",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=33&lang=en",
+   "state": "BR",
+   "district_id": 33,
+   "district": "Sheohar",
+   "expected": 12,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:34-sitamarhi",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=34&lang=en",
+   "state": "BR",
+   "district_id": 34,
+   "district": "Sitamarhi",
+   "expected": 31,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:35-siwan",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=35&lang=en",
+   "state": "BR",
+   "district_id": 35,
+   "district": "Siwan",
+   "expected": 31,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:36-supaul",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=36&lang=en",
+   "state": "BR",
+   "district_id": 36,
+   "district": "Supaul",
+   "expected": 27,
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_br:37-vaishali",
+  "payload": {
+   "reader": "police_br",
+   "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=search&districtId=37&lang=en",
+   "state": "BR",
+   "district_id": 37,
+   "district": "Vaishali",
+   "expected": 34,
+   "india_only": true
+  }
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "key": "power_hescom:sections",
+  "payload": {
+   "reader": "power_hescom",
+   "file": "sections",
+   "url": "https://hescom.karnataka.gov.in/storage/pdf-files/Contact%20Details/Section%20Officers%20Mobile%20Number.pdf",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_hescom:officers",
+  "payload": {
+   "reader": "power_hescom",
+   "file": "officers",
+   "url": "https://hescom.karnataka.gov.in/storage/pdf-files/Announcements/HESCOMOfficersContactInfo.pdf",
+   "state": "KA",
+   "india_only": true
+  }
+ }
+]

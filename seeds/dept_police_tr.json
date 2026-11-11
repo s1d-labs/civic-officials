@@ -1,0 +1,82 @@
+[
+ {
+  "key": "police_tr:dhalai",
+  "payload": {
+   "reader": "police_tr",
+   "url": "https://dhalaipolice.tripura.gov.in/contact",
+   "state": "TR",
+   "district": "Dhalai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_tr:gomati",
+  "payload": {
+   "reader": "police_tr",
+   "url": "https://gomatipolice.tripura.gov.in/contact",
+   "state": "TR",
+   "district": "Gomati",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_tr:khowai",
+  "payload": {
+   "reader": "police_tr",
+   "url": "https://khowaipolice.tripura.gov.in/contact",
+   "state": "TR",
+   "district": "Khowai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_tr:north",
+  "payload": {
+   "reader": "police_tr",
+   "url": "https://northpolice.tripura.gov.in/contact",
+   "state": "TR",
+   "district": "North Tripura",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_tr:south",
+  "payload": {
+   "reader": "police_tr",
+   "url": "https://southpolice.tripura.gov.in/contact",
+   "state": "TR",
+   "district": "South Tripura",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_tr:unakoti",
+  "payload": {
+   "reader": "police_tr",
+   "url": "https://unakotipolice.tripura.gov.in/contact",
+   "state": "TR",
+   "district": "Unakoti",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_tr:sepahijala",
+  "payload": {
+   "reader": "police_tr",
+   "url": "https://sepahijalapolice.tripura.gov.in/contact%20us",
+   "state": "TR",
+   "district": "Sepahijala",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_tr:west",
+  "payload": {
+   "reader": "police_tr",
+   "url": "https://westpolice.tripura.gov.in/node/96",
+   "state": "TR",
+   "district": "West Tripura",
+   "india_only": true
+  }
+ }
+]

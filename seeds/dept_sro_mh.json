@@ -1,0 +1,92 @@
+[
+ {
+  "key": "sro_mh-pune",
+  "payload": {
+   "reader": "sro_mh",
+   "url": "https://igrmaharashtra.gov.in/pdf/documents/offices/Pune%20Div.pdf",
+   "state": "MH",
+   "division": "pune",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sro_mh-mumbai",
+  "payload": {
+   "reader": "sro_mh",
+   "url": "https://igrmaharashtra.gov.in/pdf/documents/offices/Mumbai%20Div.pdf",
+   "state": "MH",
+   "division": "mumbai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sro_mh-thane",
+  "payload": {
+   "reader": "sro_mh",
+   "url": "https://igrmaharashtra.gov.in/pdf/documents/offices/Thane%20Div.pdf",
+   "state": "MH",
+   "division": "thane",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sro_mh-nashik",
+  "payload": {
+   "reader": "sro_mh",
+   "url": "https://igrmaharashtra.gov.in/pdf/documents/offices/Nishik%20Div.pdf",
+   "state": "MH",
+   "division": "nashik",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sro_mh-nagpur",
+  "payload": {
+   "reader": "sro_mh",
+   "url": "https://igrmaharashtra.gov.in/pdf/documents/offices/Nigpur%20Div.pdf",
+   "state": "MH",
+   "division": "nagpur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sro_mh-amravati",
+  "payload": {
+   "reader": "sro_mh",
+   "url": "https://igrmaharashtra.gov.in/pdf/documents/offices/Amravati%20Div.pdf",
+   "state": "MH",
+   "division": "amravati",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sro_mh-aurangabad",
+  "payload": {
+   "reader": "sro_mh",
+   "url": "https://igrmaharashtra.gov.in/pdf/documents/offices/Aurangabad%20Div.pdf",
+   "state": "MH",
+   "division": "aurangabad",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sro_mh-latur",
+  "payload": {
+   "reader": "sro_mh",
+   "url": "https://igrmaharashtra.gov.in/pdf/documents/offices/Latur%20Div.pdf",
+   "state": "MH",
+   "division": "latur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sro_mh-other-cos",
+  "payload": {
+   "reader": "sro_mh",
+   "url": "https://igrmaharashtra.gov.in/pdf/documents/offices/Other%20COS.pdf",
+   "state": "MH",
+   "division": "other-cos",
+   "india_only": true
+  }
+ }
+]

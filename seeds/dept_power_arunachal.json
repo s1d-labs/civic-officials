@@ -1,0 +1,12 @@
+[
+ {
+  "key": "power_arunachal:contact",
+  "payload": {
+   "reader": "power_arunachal",
+   "url": "https://power.arunachal.gov.in/contact.php",
+   "state": "AR",
+   "india_only": true,
+   "expected": 66
+  }
+ }
+]

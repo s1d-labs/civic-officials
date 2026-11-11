@@ -1,0 +1,750 @@
+[
+ {
+  "key": "power_puducherry:ambagarathur-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/ambagarathur-area-contact-details",
+   "section": "AMBAGARATHUR SECTION",
+   "areas": [
+    "Ambagarathur",
+    "Chethur",
+    "Kannapur",
+    "Kumarakudi",
+    "Maadur",
+    "Moppayithangudi",
+    "Nallammbal",
+    "Nallazhundur",
+    "Pandaaravadai",
+    "Thamanangudi",
+    "Thenpidagai",
+    "Vadaku Kottappady"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:ariankuppam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/ariyankuppam-area-contact-details",
+   "section": "ARIANKUPPAM SECTION",
+   "areas": [
+    "Ariyankuppam",
+    "Chinna Veerampattinam",
+    "Manaveli",
+    "Radhakrishna Nagar",
+    "Veerampattinam"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:ashok-nagar-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/ashok-nagar-area-contact-details",
+   "section": "ASHOK NAGAR SECTION",
+   "areas": [
+    "Ashok Nagar",
+    "Chozhan Nagar",
+    "Kumaran Nagar",
+    "Kurunji Nagar"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:bahour-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/arachikuppam-area-contact-details",
+   "section": "BAHOUR SECTION",
+   "areas": [
+    "Arachikuppam",
+    "Bahour",
+    "Irulanchandai",
+    "Kanniakoil",
+    "Nirnayanpet",
+    "Seliamedu"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:boomiyanpet-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/agiz-nagar-area-contact-details",
+   "section": "BOOMIYANPET SECTION",
+   "areas": [
+    "Agiz Nagar",
+    "Deva Nagar",
+    "Jaya Nagar",
+    "Kamban Nagar",
+    "Kaveri Nagar",
+    "Marial Nagar",
+    "Nadesan Nagar",
+    "Pavazakaran Chavady",
+    "Pudu Nagar (Boomianpet)",
+    "Reddiarpalayam",
+    "Victoria Nagar",
+    "Vivekanantha Nagar"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:gorimedu-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/gorimedu-area-contact-details",
+   "section": "GORIMEDU SECTION",
+   "areas": [
+    "Gorimedu",
+    "Kadirkamam",
+    "Pattaianchattram",
+    "Subbaiah Nagar",
+    "Thattanchavady",
+    "V.V.P Nagar"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:kalapet-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/alankuppam-area-contact-details",
+   "section": "KALAPET SECTION",
+   "areas": [
+    "Alankuppam",
+    "Chinna Kalapet",
+    "Ganapathy Chettikulam",
+    "Kanagachettikulam",
+    "Kudapakkam",
+    "Marakkanam Salai",
+    "Pariya Kalapet",
+    "Periya Kalapet",
+    "Pillaichavady"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:karaikal-town-north-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/akkampet-area-contact-details",
+   "section": "KARAIKAL TOWN NORTH SECTION",
+   "areas": [
+    "Akkampet",
+    "Ammankovilpathu",
+    "Ammayar Nagar",
+    "Kalikuppam",
+    "Karaikal Town North",
+    "Karaikalmedu",
+    "Keezhakasakudi",
+    "Keezhakasakudimedu",
+    "Kilinjalmedu",
+    "Konnakaveli",
+    "Koozkuditha Agrakaram",
+    "Kottucherrymedu",
+    "Kottuchery",
+    "Kovilpathu",
+    "Kuppuchetty",
+    "Mandapathur",
+    "Nehru Nagar (Karaikal)",
+    "Nethaji Nagar (Karaikal)",
+    "Pillaitheruvasal",
+    "Poovam",
+    "Pulianthoppu",
+    "Rayanpalayam",
+    "Thalatheru",
+    "Thiruvettekudi"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:karaikal-town-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/karaikal-area-contact-details",
+   "section": "KARAIKAL TOWN SECTION",
+   "areas": [
+    "Karaikal",
+    "Pachur",
+    "Pudhuthurai",
+    "Thakkalur"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:karayambuthur-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/kaduvanur-area-contact-details",
+   "section": "KARAYAMBUTHUR SECTION",
+   "areas": [
+    "Kaduvanur",
+    "Karayambuthur",
+    "Manalmedu",
+    "Melaiyurpettai",
+    "Panayadikuppam",
+    "Rajaji Nagar(Lawspet)",
+    "Seetharama Nagar"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:karikalampakkam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/embalam-area-contact-details",
+   "section": "KARIKALAMPAKKAM SECTION",
+   "areas": [
+    "Embalam",
+    "Kariakalampakkam",
+    "Korkadu",
+    "Manampet",
+    "Nathamedu",
+    "Perangalore",
+    "Sathamangalam",
+    "Sembianpalayam",
+    "Varichikudi"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:kariyamanickam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/earipakkam-area-contact-details",
+   "section": "KARIYAMANICKAM SECTION",
+   "areas": [
+    "Earipakkam",
+    "Kalmadapam",
+    "Kalmandapam",
+    "Kariamanickam",
+    "Madukkarai",
+    "Molapakkam",
+    "Nettapakkam",
+    "Pandasozhanallor",
+    "Sooramangalam"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:katterikuppam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/katterikuppam-area-contact-details",
+   "section": "KATTERIKUPPAM SECTION",
+   "areas": [
+    "Katterikuppam",
+    "Kumarapalayam",
+    "Kuppam",
+    "Lingareddipalayam",
+    "Pudukuppam",
+    "Santhai Pudukuppam",
+    "Suthukeny",
+    "Thethampakkam"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:kirumampakkam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/coravallimedu-area-contact-details",
+   "section": "KIRUMAMPAKKAM SECTION",
+   "areas": [
+    "Coravallimedu",
+    "Kattukuppam",
+    "Kirumampakkam",
+    "Manakuppam",
+    "Mullodai",
+    "Pillaiyarkuppam",
+    "Pinachikuppam",
+    "Pudupet",
+    "Suruliankuppam"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:lawspet-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/ananda-nagar-area-contact-details",
+   "section": "LAWSPET SECTION",
+   "areas": [
+    "Ananda Nagar",
+    "Avvai Nagar",
+    "Karuvadikuppam",
+    "Lawspet",
+    "Pakkumudaiyanpet",
+    "Pethuchettipet",
+    "Sellaperumalpet",
+    "Tagore Nagar"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:mahe-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/chembra-village-area-contact-details",
+   "section": "MAHE SECTION",
+   "areas": [
+    "Chembra Village",
+    "Mahe"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:mudaliarpet-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/mudaliarpet-area-contact-details",
+   "section": "MUDALIARPET SECTION",
+   "areas": [
+    "Mudaliarpet"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:murungapakkam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/angalamman-nagar-area-contact-details",
+   "section": "MURUNGAPAKKAM SECTION",
+   "areas": [
+    "Angalamman Nagar",
+    "Ganapathynagar",
+    "Kompakkam",
+    "Murungapakkam Pet",
+    "Nainar Mandabam",
+    "Nallambal Nagar",
+    "Ottenpalayam",
+    "Papanchavady",
+    "Priyadarshini Nagar",
+    "Pudu Nagar",
+    "Sudhananagar",
+    "Thakka Thoppu",
+    "Velrampet"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:muthialpet-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/muthialpet-area-contact-details",
+   "section": "MUTHIALPET SECTION",
+   "areas": [
+    "Muthialpet"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:muthirapalayam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/delaspet-area-contact-details",
+   "section": "MUTHIRAPALAYAM SECTION",
+   "areas": [
+    "Delaspet",
+    "Dharmapuri",
+    "Gandhinagar",
+    "Iyyankuttipalayam",
+    "Kathirkamam",
+    "Kavoundan Palayam",
+    "Kurumbapet",
+    "Mettupalayam",
+    "Moolakulam",
+    "Muthirapalayam",
+    "Oulgaret",
+    "Pipdic Industrial Estate",
+    "Pitchaveeranpet",
+    "Sockanathanpet",
+    "Thakkakuttai"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:nedungadu-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/adikalanpuram-area-contact-details",
+   "section": "NEDUNGADU SECTION",
+   "areas": [
+    "Adikalanpuram",
+    "Agaramangudi",
+    "Anjur",
+    "Annavasal",
+    "Chembiankal",
+    "Devemapuram",
+    "Keezhavur",
+    "Kilianur(Karaikal)",
+    "Kottagam",
+    "Kottanpakkam",
+    "Kurumbagaram",
+    "Mathalankudi",
+    "Melakasakudi",
+    "Nallathur (Karaikal)",
+    "Narikurumbai",
+    "Nedungadu Area (Karaikal) Contact Details",
+    "Panchatcharam",
+    "Pandaaravaadai(Nedungadu)",
+    "Paruthikudy",
+    "Pathakudi",
+    "Ponpethi",
+    "Puthakudi",
+    "Saravanairuppu",
+    "Serumavilangai",
+    "Suppurayapuram",
+    "Thiruvenkatapuram",
+    "Thondamangalam",
+    "Usuppar",
+    "Vadakattalai (Nedungadu)",
+    "Vadamattam"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:neravi-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/akkaraivattam-area-contact-details",
+   "section": "NERAVI SECTION",
+   "areas": [
+    "Akkaraivattam",
+    "Kakamozhi",
+    "Karukalacherry",
+    "Keezhamanai",
+    "Keezhaoduthurai",
+    "Manjavazhipattu",
+    "Melaoduthurai",
+    "Nadukalampettai",
+    "Naduoduthurai",
+    "Neravy",
+    "Oozhiapathu",
+    "Thootuponamoolai",
+    "Vizhithiyur"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:palloor-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/chalakkara-area-contact-details",
+   "section": "PALLOOR SECTION",
+   "areas": [
+    "Chalakkara",
+    "Cherukallayi",
+    "East Palloor",
+    "Palloor",
+    "Pandakkal"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:ramanathapuram-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/koodapakkam-area-contact-details",
+   "section": "RAMANATHAPURAM SECTION",
+   "areas": [
+    "Koodapakkam",
+    "Patthukannu",
+    "Pillaiarkuppam",
+    "Porayur",
+    "Ramanathapuram",
+    "Senthanatham",
+    "Thondamanatham",
+    "Thuthipet"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:saram-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/ellaipillaichavady-area-contact-details",
+   "section": "SARAM SECTION",
+   "areas": [
+    "Ellaipillaichavady",
+    "Kuyavarpalayam",
+    "Mohan Nagar",
+    "Periyar Nagar",
+    "Pillaithottam",
+    "Saram"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:sedharapet-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/karasur-area-contact-details",
+   "section": "SEDHARAPET SECTION",
+   "areas": [
+    "Karasur",
+    "Sedharapet"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:t-r-pattinam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/ammalchattiram-area-contact-details",
+   "section": "T.R.PATTINAM SECTION",
+   "areas": [
+    "Ammalchattiram",
+    "Idatheru",
+    "Keezhavanjur",
+    "Melavanjur",
+    "Mudalimedu",
+    "Nainikattalai",
+    "North Vanjore",
+    "Pattinacherry",
+    "Polagam",
+    "T.R. Pattinam",
+    "Vadakattalai",
+    "Vadakkuvanjur",
+    "Vanjore"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:thavalakuppam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/abishegapakkam-area-contact-details",
+   "section": "THAVALAKUPPAM SECTION",
+   "areas": [
+    "Abishegapakkam",
+    "Andiyarpalayam",
+    "Korkamedu",
+    "Nallavadu",
+    "Pannithittu",
+    "Pooranakuppam",
+    "T.N.Palayam",
+    "Thavalakuppam",
+    "Thennampalayam"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:thirukkanur-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/chettipet-area-contact-details",
+   "section": "THIRUKKANUR SECTION",
+   "areas": [
+    "Chettipet",
+    "Kodathur",
+    "Koonichempet",
+    "Kunichapet",
+    "Manalipet",
+    "Mannadipet",
+    "Thirukkanur"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:thirunallar-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/agalankannu-area-contact-details",
+   "section": "THIRUNALLAR SECTION",
+   "areas": [
+    "Agalankannu",
+    "Athipadukai",
+    "Ilaingankudi",
+    "Karukkangudi",
+    "Manampettai",
+    "Pettai",
+    "Sellur",
+    "Surakudi",
+    "Thennangudi",
+    "Thenur",
+    "Thirunallar"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:thiruvandarkoil-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/madakadipet-area-contact-details",
+   "section": "THIRUVANDARKOIL SECTION",
+   "areas": [
+    "Madakadipet",
+    "Nallur",
+    "Sanniasikuppam",
+    "Thirubuvani Payalam",
+    "Thiruvandarkoil"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:town-north-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/anna-salai-area-contact-details",
+   "section": "TOWN NORTH SECTION",
+   "areas": [
+    "Anna Salai",
+    "Kuruchikuppam",
+    "Renuka Nagar",
+    "Thiruvalluvar Nagar",
+    "Thiyagaraja street",
+    "V.O.C. Nagar",
+    "Vaithikuppam",
+    "Vazhaikulam",
+    "White Town"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:town-south-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/dubrayapet-area-contact-details",
+   "section": "TOWN SOUTH SECTION",
+   "areas": [
+    "Dubrayapet",
+    "Kolas Nagar",
+    "Nethaji Nagar (Pondicherry)",
+    "Vambakeerapalayam",
+    "Vanarapet"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:vadamangalam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/anandapuram-area-contact-details",
+   "section": "VADAMANGALAM SECTION",
+   "areas": [
+    "Anandapuram",
+    "Ariyur",
+    "Kizhoor",
+    "Mangalam",
+    "Pangoor",
+    "Sivarandhangam",
+    "Thirukanjee",
+    "Uruvaiyar",
+    "Vadamangalam"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:vadhanur-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/puranasinga-palayam-area-contact-details",
+   "section": "VADHANUR SECTION",
+   "areas": [
+    "Puranasinga Palayam",
+    "Sellipet",
+    "Sorapet",
+    "Vadhanur",
+    "Vempupet",
+    "Vinayagampet"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:venkata-nagar-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/brindavanam-area-contact-details",
+   "section": "VENKATA NAGAR SECTION",
+   "areas": [
+    "Brindavanam",
+    "Chellan Nagar",
+    "Chittankudisai",
+    "Elango Nagar",
+    "Kamarajar Nagar",
+    "Kumaragurupallam",
+    "Nehru Nagar",
+    "Rainbow Nagar",
+    "Rajaji Nagar",
+    "Rajarajeswari Nagar",
+    "Santhi Nagar",
+    "Venkata Nagar"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:villianur-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/arasur-area-contact-details",
+   "section": "VILLIANUR SECTION",
+   "areas": [
+    "Arasur",
+    "Arumarthapuram",
+    "Guruvappa Nayagan Palayam",
+    "Kanuvapet",
+    "Odiampet",
+    "Sulthanpet",
+    "Villianur"
+   ],
+   "state": "PY"
+  }
+ },
+ {
+  "key": "power_puducherry:yanam-section",
+  "payload": {
+   "reader": "power_puducherry",
+   "url": "https://electricity.py.gov.in/darialathippa-area-contact-details",
+   "section": "YANAM SECTION",
+   "areas": [
+    "Darialathippa",
+    "Dommetivaripeta",
+    "Giriampeta",
+    "Issukkalava",
+    "Kurusumpeta",
+    "Mettacura",
+    "Parampeta",
+    "Savithri Nagar",
+    "Yanam"
+   ],
+   "state": "PY"
+  }
+ }
+]

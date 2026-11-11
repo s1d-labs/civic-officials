@@ -1,0 +1,38 @@
+[
+ {
+  "key": "ero_mz-p1",
+  "payload": {
+   "reader": "ero_mz",
+   "url": "https://ceo.mizoram.gov.in/officer-contacts?ero_page=1&aero_page=1",
+   "state": "MZ",
+   "page": 1
+  }
+ },
+ {
+  "key": "ero_mz-p2",
+  "payload": {
+   "reader": "ero_mz",
+   "url": "https://ceo.mizoram.gov.in/officer-contacts?ero_page=2&aero_page=2",
+   "state": "MZ",
+   "page": 2
+  }
+ },
+ {
+  "key": "ero_mz-p3",
+  "payload": {
+   "reader": "ero_mz",
+   "url": "https://ceo.mizoram.gov.in/officer-contacts?ero_page=3&aero_page=3",
+   "state": "MZ",
+   "page": 3
+  }
+ },
+ {
+  "key": "ero_mz-p4",
+  "payload": {
+   "reader": "ero_mz",
+   "url": "https://ceo.mizoram.gov.in/officer-contacts?ero_page=4&aero_page=4",
+   "state": "MZ",
+   "page": 4
+  }
+ }
+]

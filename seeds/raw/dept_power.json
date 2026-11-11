@@ -1,0 +1,2293 @@
+[
+ {
+  "discom": "PVVNL (Paschimanchal Vidyut Vitran Nigam)",
+  "states": [
+   "Uttar Pradesh (west: Meerut, Ghaziabad, Gautam Buddha Nagar, Bulandshahr, Hapur, Baghpat, Muzaffarnagar, Shamli, Saharanpur, Moradabad, Amroha, Rampur, Sambhal, Bijnor)"
+  ],
+  "source": "PVVNL website: Office Hierarchy per district + Officers Phone Directory JSON",
+  "url": "https://pvvnl.org/office_hierarchy/Ghaziabad ; https://pvvnl.org/read_data/{1..28}",
+  "kind": "html table (office_hierarchy/<District>) + json api (read_data/<zone id>)",
+  "level": "zone, circle, division, sub-division (SDO)",
+  "covers": "14 districts; office_hierarchy/Meerut 75 rows incl. 33 SDO rows, Ghaziabad 88 rows; read_data/7 (Noida zone) 50 rows. Estimate about 1,000 rows, about 250 sub-divisions",
+  "fields": [
+   "name",
+   "designation",
+   "office/area",
+   "district",
+   "email",
+   "mobile",
+   "updated_date (json)"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "name": "Sanjay Kumar Singh",
+    "designation": "SDO 1 Modinagar",
+    "area": "EDD Modinagar",
+    "email": "sdo1.modinagar@pvvnl.org",
+    "mobile": "9193320453"
+   },
+   {
+    "name": "Anil Kumar Singh",
+    "designation": "Superintending Engineer",
+    "area": "EUDC-1 Ghaziabad",
+    "mobile": "9193320111"
+   },
+   {
+    "name": "Mohit Dixit",
+    "designation": "Executive Engineer",
+    "area": "Electricity Urban Distribution Division (Technical), 11KV & LT Network, Stadium, Gautam Buddha Nagar",
+    "district": "GAUTAM BUDDHA NAGAR",
+    "mobile": "7290056180"
+   }
+  ],
+  "how_to_scrape": "GET https://pvvnl.org/office_hierarchy/<District> for each of the 14 districts (English names; the Hindi page is /hi/office_hierarchy/<District>); parse the single table (S.No, Name, Designation, Area, Twitter, Email, Contact). Also GET https://pvvnl.org/read_data/<id> (ids in the Who-Is-Who page buttons: 25 HQ, 1-12, 27, 28) -> JSON list with district field. 'Vacant' and '---' mean empty.",
+  "region": "north"
+ },
+ {
+  "discom": "MVVNL (Madhyanchal Vidyut Vitran Nigam)",
+  "states": [
+   "Uttar Pradesh (central: Lucknow, Ayodhya, Bareilly, Devipatan zones)"
+  ],
+  "source": "MVVNL website Directory page",
+  "url": "https://mvvnl.in/post/en/directory?cd=NQA2AA%3d%3d",
+  "kind": "html table (one page, all zones) + PDF for Lucknow LESA",
+  "level": "zone, circle, division, sub-division (EDSD)",
+  "covers": "653 table rows; about 166 Assistant Engineer (sub-division) rows, 79 EE rows. LESA (Lucknow city) is in a separate PDF: https://mvvnl.in/site/writereaddata/siteContent/202512061655264596Lesa-Direcotary_061225.pdf",
+  "fields": [
+   "name",
+   "designation",
+   "area name (office)",
+   "mobile",
+   "email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "name": "SANDEEP KUMAR YADAV",
+    "designation": "Assistant Engineer(D)",
+    "office": "EDSD-II Khargupur( Aryanagar)",
+    "mobile": "9415901515",
+    "email": "uppclsdo2@gmail.com"
+   },
+   {
+    "name": "ANOOP KUMAR SRIVASTAVA",
+    "designation": "Assistant Engineer(D)",
+    "office": "EDSD-I GONDA",
+    "mobile": "9415901519",
+    "email": "anoopsrivas0105@gmail.com"
+   },
+   {
+    "name": "RAGHVENDRA SAHU",
+    "designation": "Assistant Engineer(D)",
+    "office": "EDSD-II GONDA TOWN",
+    "mobile": "9415901520",
+    "email": "sdo3edd1@gmail.com"
+   }
+  ],
+  "how_to_scrape": "One GET of the directory page; rows are grouped under zone/circle header rows (carry them down). Abbreviations are in the last rows: EDC circle, EDD division, EDSD sub-division. Fetch the LESA PDF separately for Lucknow city and parse with pdftotext -layout.",
+  "region": "north"
+ },
+ {
+  "discom": "DVVNL (Dakshinanchal Vidyut Vitran Nigam)",
+  "states": [
+   "Uttar Pradesh (south-west: Agra, Aligarh, Kanpur rural, Jhansi, Banda zones)"
+  ],
+  "source": "DVVNL Contact List (ASP.NET) with CSV export",
+  "url": "https://www.dvvnl.org/ContactListNew1.aspx",
+  "kind": "html (postback per zone) + csv export (Outlook format)",
+  "level": "zone, circle, division, sub-division (EDSD), sub-station (JE)",
+  "covers": "CSV has 1,466 contacts: 965 JE, 241 AE (sub-divisions), 121 EE, 37 SE, 8 CE. Zone pages list SE/EE with district",
+  "fields": [
+   "name",
+   "designation",
+   "office type (EDSD/EDD)",
+   "office name",
+   "district (zone view)",
+   "mobile",
+   "email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "name": "Er. Raj kumar Bharti",
+    "designation": "AE",
+    "office": "EDSD Chitrakoot",
+    "mobile": "9415909217",
+    "email": "sdomau3@gmail.com"
+   },
+   {
+    "name": "Abhishek Singh",
+    "designation": "EE",
+    "district": "FIROZABAD",
+    "office": "EDD-I, FIROZABAD",
+    "mobile": "9193304851",
+    "email": "xen.firozabad@dvvnl.org"
+   },
+   {
+    "name": "Er. Prabhakar Pandey",
+    "designation": "SE",
+    "district": "FIROZABAD",
+    "office": "EDC, FIROZABAD",
+    "mobile": "9193303460",
+    "email": "seedcfzd03463@gmail.com"
+   }
+  ],
+  "how_to_scrape": "GET the page with a cookie jar, copy the hidden fields (__VIEWSTATE etc.), POST back with __EVENTTARGET=ctl00$ContentPlaceHolder1$lnkDownload -> ContactList.csv (Outlook columns: First Name = name, Job Title = designation, Business Street = office type, Business Street 2 = office name, Mobile Phone, E-mail Address). Without the session cookie the POST times out. Zone views: __EVENTTARGET lnkagra1/lnkagra2/lnkaligarh/lnkbanda/lnkjhansi/lnkkanpur (adds district). Old Kruti Dev PDF (uploadfiles/Officer List Final.pdf, 14 pp, 258 rows, division level) is a fallback.",
+  "region": "north"
+ },
+ {
+  "discom": "PuVVNL (Purvanchal Vidyut Vitran Nigam)",
+  "states": [
+   "Uttar Pradesh (east: Varanasi, Gorakhpur, Prayagraj, Azamgarh, Mirzapur, Basti zones)"
+  ],
+  "source": "PuVVNL website directory (linked from uppcl.org)",
+  "url": "http://puvvnl.up.nic.in/directory.asp",
+  "kind": "none (site unreachable)",
+  "level": "unknown",
+  "covers": "unknown",
+  "fields": [],
+  "access": "down: connection timeout from Germany and from the India server (164.100.68.235), 2026-11-11",
+  "sample": [],
+  "how_to_scrape": "Tried https/http puvvnl.up.nic.in (/ and /directory.asp) from both boxes: timeouts. puvvnl.co.in is an unrelated GoDaddy page; puvvnl.up.gov.in does not resolve. Retry later; search found a 'Substation wise Gorakhpur Zone JEs Mobile Nos' page on the same site. Third-party lists (indiacustomercare) exist but are not official.",
+  "region": "north"
+ },
+ {
+  "discom": "KESCO (Kanpur Electricity Supply Company)",
+  "states": [
+   "Uttar Pradesh (Kanpur city)"
+  ],
+  "source": "KESCO website",
+  "url": "https://kesco.co.in/",
+  "kind": "none (site unreachable)",
+  "level": "unknown",
+  "covers": "unknown",
+  "fields": [],
+  "access": "down: timeout from Germany; from India one attempt returned an expired TLS certificate, a second timed out",
+  "sample": [],
+  "how_to_scrape": "No directory reached. Retry later; do not bypass the certificate error. Kanpur city divisions (Panki, Naubasta, Azad Nagar, Krishna Nagar ...) are only in third-party lists.",
+  "region": "north"
+ },
+ {
+  "discom": "NPCL (Noida Power Company)",
+  "states": [
+   "Uttar Pradesh (Greater Noida)"
+  ],
+  "source": "noidapower.com React app: area-wise escalation matrix (getAreaWiseInformation)",
+  "url": "https://noidapower.com/",
+  "kind": "spa",
+  "level": "area: shift engineer, area JE, area in-charge, division head, zonal head",
+  "covers": "unknown",
+  "fields": [
+   "zone",
+   "area",
+   "contacts per escalation level"
+  ],
+  "access": "page loads from Germany (www. has a broken TLS chain; bare noidapower.com works), but the API call sends a Bearer token from sessionStorage, likely only after consumer sign-in",
+  "sample": [],
+  "how_to_scrape": "Not scrapable without a session token (no login allowed). The bundle /static/js/main.*.js names levels CALL_CENTRE_1ST_LEVEL .. ZONAL_HEAD_6TH_LEVEL. Only customer care office addresses (Knowledge Park-I, Techzone-IV, Tugalpur) are public in the FAQ.",
+  "region": "north"
+ },
+ {
+  "discom": "UPCL (Uttarakhand Power Corporation)",
+  "states": [
+   "Uttarakhand"
+  ],
+  "source": "upcl.uk.gov.in: Contact details of other UPCL officials (zone PDFs) + Contact list of SE and above",
+  "url": "https://upcl.uk.gov.in/contact-details-of-other-upcl-officials/",
+  "kind": "pdf (4 zone PDFs on cdnbbsr.s3waas.gov.in) + html",
+  "level": "division, sub-division, sub-station, 11 kV feeder",
+  "covers": "4 zones (Haridwar, Kumaon, Garhwal, Rudrapur), each a 4-page PDF 'Distribution Offices upto S/s Level'; plus 'Details of JEs of 11 kV Feeder with Feeder Codes'. All districts",
+  "fields": [
+   "division",
+   "sub-division",
+   "sub-station",
+   "sub-station phone",
+   "feeder",
+   "JE mobile",
+   "SDO mobile",
+   "EE mobile"
+  ],
+  "access": "works from Germany (upcl.uk.gov.in and s3waas CDN); old www.upcl.org times out here, works from India",
+  "sample": [
+   {
+    "zone": "Haridwar",
+    "sub_division": "BHADRABAD",
+    "sub_station": "Bhadrabad",
+    "sub_station_phone": "7535026995",
+    "feeder": "RL Bahadrabad",
+    "je_mobile": "9412073711"
+   },
+   {
+    "zone": "Haridwar",
+    "sub_division": "JWALAPUR-2",
+    "sub_station": "Shivalik Nagar",
+    "sub_station_phone": "9412071286",
+    "je_mobile": "9410393424"
+   }
+  ],
+  "how_to_scrape": "GET the listing page, take the 6 PDF links, pdftotext -layout. No officer names, only numbers; division/sub-division cells span rows (carry down). Names of SE and above: https://upcl.uk.gov.in/contact-list-of-se-and-above/.",
+  "region": "north"
+ },
+ {
+  "discom": "HPSEBL (Himachal Pradesh State Electricity Board)",
+  "states": [
+   "Himachal Pradesh"
+  ],
+  "source": "HPSEBL: Contact Details of Field Officers (Operation / Generation ...)",
+  "url": "https://www.hpseb.in/irj/go/km/docs/internet/New_Website/Pages/contactlist.html",
+  "kind": "html table (one page)",
+  "level": "zone, circle, division, sub-division",
+  "covers": "629 rows; 327 officer rows with sub-division; all zones (Shimla, Hamirpur, Kangra, Mandi ...)",
+  "fields": [
+   "name",
+   "sub-division",
+   "landline",
+   "mobile",
+   "division head (Sr. XEN) block"
+  ],
+  "access": "India only (timeout from Germany; works via vpsin)",
+  "sample": [
+   {
+    "division": "SOLAN",
+    "name": "Er. Hiamshu Mehta",
+    "sub_division": "Solan-I",
+    "landline": "01792-223611",
+    "mobile": "9817320820"
+   },
+   {
+    "division": "SOLAN",
+    "name": "Er. Chandan Sharma",
+    "sub_division": "Kandaghat",
+    "landline": "01792-256128",
+    "mobile": "7807048563"
+   },
+   {
+    "division": "PARWANOO (Sr Executive Engineer Electrical)",
+    "name": "Er. Vikas Gupta",
+    "landline": "01792-233104 235417",
+    "mobile": "7018020491"
+   }
+  ],
+  "how_to_scrape": "One GET via the India server; parse tables: header rows carry zone/circle/division, 4-cell rows (Name, Subdivison, Landline, Mobile) are sub-division AEs. Email list: Pages/email.html + PDF Emailid/Email-id.xls.pdf.",
+  "region": "north"
+ },
+ {
+  "discom": "PSPCL (Punjab State Power Corporation)",
+  "states": [
+   "Punjab"
+  ],
+  "source": "PSPCL Contact HoDs page",
+  "url": "https://www.pspcl.in/Otherlinks/Contact-Hods.aspx",
+  "kind": "html table",
+  "level": "zone, circle (Dy.CE/SE); no sub-division or division names",
+  "covers": "499 rows; all distribution circles (e.g. Amritsar city, Gurdaspur, Tarn Taran, Jalandhar, Hoshiarpur, Ludhiana east/west ...)",
+  "fields": [
+   "office",
+   "designation",
+   "email",
+   "landline",
+   "mobile"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "office": "DISTRIBUTION CIRCLE, JALANDHAR",
+    "designation": "Dy.CE",
+    "email": "se-ds-jalandhar@pspcl.in",
+    "landline": "2225847, Fax-2235615",
+    "mobile": "96461-16004"
+   },
+   {
+    "office": "DISTRIBUTION, PSPCL, CIRCLE GURDASPUR",
+    "designation": "Dy.CE",
+    "email": "se-ds-gurdaspur@pspcl.in",
+    "landline": "Tel.Fax: 245464",
+    "mobile": "96461-13007"
+   }
+  ],
+  "how_to_scrape": "One GET; header rows give the office, following rows give designation/email/phones; mostly no personal names. GAP: no division (Sr. XEN) or sub-division (AEE/SDO) directory found on pspcl.in; only press notes of complaint-centre numbers.",
+  "region": "north"
+ },
+ {
+  "discom": "DHBVN (Dakshin Haryana Bijli Vitran Nigam)",
+  "states": [
+   "Haryana (south: Hisar, Sirsa, Bhiwani, Jind, Fatehabad, Faridabad, Palwal, Gurugram, Narnaul, Rewari)"
+  ],
+  "source": "DHBVN contact-us: Contact List as per RTS Act-2014, one PDF per circle",
+  "url": "https://dhbvn.org.in/staticContent/contactus/FRTRTS/RTS_<Circle>_Circle.pdf",
+  "kind": "pdf (11 circle PDFs)",
+  "level": "circle, division, sub-division, JE / complaint centre, linemen per shift",
+  "covers": "11 circles: Bhiwani, Faridabad, Fatehabad, GGNI, GGNII, Hisar, Jind, Narnaul, Palwal, Rewari, Sirsa (Faridabad PDF 4 pages)",
+  "fields": [
+   "SE name+mobile",
+   "division",
+   "division officer",
+   "email",
+   "mobile",
+   "sub-division",
+   "JE/in-charge",
+   "complaint centre + number",
+   "lineman per shift"
+  ],
+  "access": "India only (timeout from Germany; works via vpsin)",
+  "sample": [
+   {
+    "circle": "Faridabad",
+    "se_mobile": "9540954700",
+    "sub_division": "East",
+    "officer": "K C Dhiman",
+    "mobile": "9540954968",
+    "email": "sdoopeastfaridabad@dhbvn.org.in"
+   },
+   {
+    "circle": "Faridabad",
+    "complaint_centre": "Sector-16",
+    "cc_mobile": "9540954977",
+    "je": "Bharat Bhusan",
+    "je_mobile": "9540954974"
+   }
+  ],
+  "how_to_scrape": "Via India: GET https://dhbvn.org.in/web/portal/contact-us, collect the FRTRTS PDF links, pdftotext -layout. Wide multi-line cells: use pdfplumber tables. Email is written x[at]dhbvn[dot]org[dot]in.",
+  "region": "north"
+ },
+ {
+  "discom": "UHBVN (Uttar Haryana Bijli Vitran Nigam)",
+  "states": [
+   "Haryana (north: Ambala, Panchkula, Yamunanagar, Kurukshetra, Kaithal, Karnal, Panipat, Sonipat, Rohtak, Jhajjar)"
+  ],
+  "source": "UHBVN contact-us: telephone numbers per operation circle (PDF)",
+  "url": "https://uhbvn.org.in/staticContent/documents/contact_us/<Circle>.pdf",
+  "kind": "pdf (10 operation circle PDFs + HQ, CGRF, stores, construction)",
+  "level": "circle, division (XEN), sub-division (SDO), Bijli Suvidha Kendra",
+  "covers": "10 operation circles: Ambala, Jhajjar, Kaithal, Karnal, Kurukshetra, Panchkula, Panipat, Rohtak, Sonipat, Yamunanagar. Karnal = 2 pages, about 30 offices",
+  "fields": [
+   "office",
+   "address",
+   "officer name + designation",
+   "office phone",
+   "mobile",
+   "email"
+  ],
+  "access": "India only (timeout from Germany; works via vpsin)",
+  "sample": [
+   {
+    "office": "SDO (Opration) S/D Taraori",
+    "address": "33KV S/Stn. Taraori",
+    "officer": "Sh. Virender Kumar, AEE",
+    "phone": "01745-242047",
+    "mobile": "9354726319",
+    "email": "sdooptaraori@uhbvn.org.in"
+   },
+   {
+    "office": "SDO (Opration) City S/D Karnal",
+    "address": "33KV S/Stn. Old Power House, Karnal",
+    "officer": "Sh. Vijay Vats, AE",
+    "phone": "0184-2257940",
+    "mobile": "9354761641",
+    "email": "sdoopcitykarnal@uhbvn.org.in"
+   },
+   {
+    "office": "XEN City Divn., KARNAL",
+    "address": "Power House colony, Karnal",
+    "officer": "Sh. Ramesh Kumar, XEN",
+    "phone": "0184-2265001",
+    "mobile": "9354761637",
+    "email": "xenopcitykarnal@uhbvn.org.in"
+   }
+  ],
+  "how_to_scrape": "Via India: GET https://uhbvn.org.in/web/portal/contact-us, take staticContent/documents/contact_us/*.pdf, pdftotext -layout. Clean table with Sr. No; 'XEN <name>' lines are division headers. Best-quality source in this region.",
+  "region": "north"
+ },
+ {
+  "discom": "BRPL (BSES Rajdhani Power)",
+  "states": [
+   "Delhi (south and west)"
+  ],
+  "source": "bsesdelhi.com BRPL: Divisional Offices, O&M Offices, Sub Division Offices",
+  "url": "https://www.bsesdelhi.com/web/brpl/sub-division-offices",
+  "kind": "html table",
+  "level": "division, sub-division (no officers)",
+  "covers": "23 divisions (divisional-offices), 26 O&M offices, 92 sub-divisions with revenue district + lat/long",
+  "fields": [
+   "revenue district",
+   "division",
+   "sub-division",
+   "address",
+   "latitude",
+   "longitude"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "revenue_district": "New Delhi",
+    "division": "ALAKNANDA",
+    "sub_division": "DDA FLATS KALKAJI",
+    "address": "J1-BLOCK DDA FLAT, KALKAJI",
+    "lat": "28.52650956",
+    "lon": "77.25565922"
+   },
+   {
+    "revenue_district": "South",
+    "division": "KHANPUR",
+    "sub_division": "PUL PEHLADPUR",
+    "address": "VISHWAKARMA COLONY NO.2,NEAR PETROL PUMP,PUL PEHLADPUR",
+    "lat": "28.50058502",
+    "lon": "77.2868632"
+   }
+  ],
+  "how_to_scrape": "GET the three pages (/web/brpl/divisional-offices, /operations-maintenance-offices, /sub-division-offices); one table each. No names or phones: GAP for the officer; lat/long allows ward mapping directly.",
+  "region": "north"
+ },
+ {
+  "discom": "BYPL (BSES Yamuna Power)",
+  "states": [
+   "Delhi (east and central)"
+  ],
+  "source": "bsesdelhi.com BYPL: Divisional Offices + Operation & Maintenance Offices",
+  "url": "https://www.bsesdelhi.com/web/bypl/divisional-offices",
+  "kind": "html table",
+  "level": "division (no officers)",
+  "covers": "14 divisions (Chandni Chowk, Dariya Ganj ...); no sub-division page (404)",
+  "fields": [
+   "division",
+   "address"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "division": "CHANDNI CHOWK",
+    "address": "Substation Bldng, Near Town Hall, New Delhi 110006"
+   },
+   {
+    "division": "DARIYA GANJ",
+    "address": "Kamla Market Office, Asaf Ali Marg New Delhi 110001"
+   }
+  ],
+  "how_to_scrape": "GET /web/bypl/divisional-offices and /web/bypl/operation-maintenance-offices. GAP: no officer names, no phones, no sub-divisions.",
+  "region": "north"
+ },
+ {
+  "discom": "TPDDL (Tata Power Delhi Distribution)",
+  "states": [
+   "Delhi (north and north-west)"
+  ],
+  "source": "Updated Customer Care Centres List PDF (district offices with district/circle managers, per search snippet)",
+  "url": "https://www.tatapower-ddl.com/UploadedDocuments/Updated%20Customer%20Care%20Centres%20List.pdf",
+  "kind": "pdf",
+  "level": "district (zone) offices",
+  "covers": "unknown (search snippet names Moti Nagar, Civil Lines, Kirari, Rohini, Narela, Mangolpuri ...)",
+  "fields": [
+   "district office",
+   "phone",
+   "district manager",
+   "circle manager"
+  ],
+  "access": "blocked: WAF (AppTrana) returns 406 to curl and to WebFetch from Germany and from India; only a browser user agent would pass, which the rules do not allow",
+  "sample": [],
+  "how_to_scrape": "Not fetched. Needs the owner's decision (e.g. a manual download) or another route. Do not fake a browser User-Agent.",
+  "region": "north"
+ },
+ {
+  "discom": "NDMC Electricity Department",
+  "states": [
+   "Delhi (NDMC area)"
+  ],
+  "source": "NDMC Electricity Department I / II contacts",
+  "url": "https://www.ndmc.gov.in/departments/electricity_i_contacts.aspx",
+  "kind": "html table",
+  "level": "EE / AE / JE (department I and II; no area column)",
+  "covers": "electricity_i_contacts 65 officer rows (54 AE/JE); department II at electricity_ii_contacts.aspx; HoDs in contact_us/contact_us.aspx",
+  "fields": [
+   "name",
+   "designation",
+   "phone / extension",
+   "email"
+  ],
+  "access": "India only (timeout from Germany; works via vpsin)",
+  "sample": [
+   {
+    "name": "Er, Gaurav Kaushik",
+    "designation": "EE (Elect.)",
+    "phone": "1806380697 Extn: 1143366",
+    "email": "gaurav.316328@ndmc.gov.in"
+   },
+   {
+    "name": "Er, Nitin Rana (Addl. Charge)",
+    "designation": "AE (Elect.)",
+    "phone": "1806380663 Extn: 51898112",
+    "email": "nitin.316325@ndmc.gov.in"
+   }
+  ],
+  "how_to_scrape": "Via India: GET electricity_i_contacts.aspx and electricity_ii_contacts.aspx; one table each. GAP: no area/zone served per officer; check electricity_i_hierarchy.aspx for the zone split.",
+  "region": "north"
+ },
+ {
+  "discom": "CPDL (Chandigarh Power Distribution, RPSG; was UT Electricity Dept)",
+  "states": [
+   "Chandigarh"
+  ],
+  "source": "chandigarhpower.com (React app)",
+  "url": "https://www.chandigarhpower.com/contact-us",
+  "kind": "spa",
+  "level": "none found",
+  "covers": "press: 10 sub-division offices, 14 complaint centres; not listed on the site",
+  "fields": [],
+  "access": "works from Germany",
+  "sample": [],
+  "how_to_scrape": "The bundle /static/js/main.*.js has routes (contact-us, complaint-portal ...) but no office list or phone strings; sub-division appears only as a field of the consumer account form. GAP: no public office directory.",
+  "region": "north"
+ },
+ {
+  "discom": "JPDCL (Jammu Power Distribution Corporation)",
+  "states": [
+   "Jammu and Kashmir (Jammu division)"
+  ],
+  "source": "jpdcl.jk.gov.in (single-page site)",
+  "url": "https://jpdcl.jk.gov.in/",
+  "kind": "none",
+  "level": "none found",
+  "covers": "none",
+  "fields": [],
+  "access": "works from Germany",
+  "sample": [],
+  "how_to_scrape": "Home page has only leadership, notices, grievance portal (grievance.jpdcl.co.in), WSS. jpdcl.co.in does not resolve. GAP: no office directory. Fallback: district NIC pages or the KPDCL-style directory if JPDCL adds one.",
+  "region": "north"
+ },
+ {
+  "discom": "KPDCL (Kashmir Power Distribution Corporation)",
+  "states": [
+   "Jammu and Kashmir (Kashmir division)"
+  ],
+  "source": "KPDCL Officers Directory",
+  "url": "https://kpdcl.jk.gov.in/page/SGpLSUxqeFdPSG82c2g0ZzhlRHRVQT09",
+  "kind": "html table (one page, client-side pagination)",
+  "level": "circle, division, sub-division (SDO)",
+  "covers": "127 rows: 47 SDO offices + 13 STD-SDO, 25 division offices, 6 circles; 12 districts (Pulwama 22, Baramulla 19, Srinagar 17 ...). Srinagar looks incomplete",
+  "fields": [
+   "district",
+   "department",
+   "circle",
+   "division",
+   "office",
+   "sub-division",
+   "designation",
+   "name",
+   "phone"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "district": "Ganderbal",
+    "circle": "O&M Circle-Ganderbal",
+    "division": "ED-Ganderbal",
+    "office": "SDO Office",
+    "sub_division": "Kangan-SDO",
+    "designation": "Assistant Executive Engineer",
+    "name": "Er. Farooq Ahmad Raina",
+    "phone": "7006285325"
+   },
+   {
+    "district": "Pulwama",
+    "circle": "O&M Circle-Pulwama",
+    "division": "ED-Pulwama",
+    "office": "SDO Office",
+    "sub_division": "Rajpora-SDO",
+    "designation": "Assistant Executive Engineer",
+    "name": "Er. Showkat Hussain",
+    "phone": "8082167395"
+   }
+  ],
+  "how_to_scrape": "One GET; all rows are in the HTML (pagination is client-side). Columns as listed; the best structured source in this region together with UHBVN.",
+  "region": "north"
+ },
+ {
+  "discom": "Ladakh PDD (Power Development Department)",
+  "states": [
+   "Ladakh"
+  ],
+  "source": "ladakh.gov.in Power Development Department page",
+  "url": "https://ladakh.gov.in/power-development-department/",
+  "kind": "html table",
+  "level": "circle, division (EE), a few AEE",
+  "covers": "41 rows; distribution divisions Leh and Kargil, sub-transmission, civil divisions",
+  "fields": [
+   "name",
+   "designation (office)",
+   "email",
+   "phone"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "name": "Er. Anwar Hussain",
+    "designation": "Executive Engineer Electric Distribution Division Leh",
+    "email": "xenedleh@gmail.com",
+    "phone": "8899220849"
+   },
+   {
+    "name": "Er. Feroz Ahmad Wani",
+    "designation": "Executive Engineer, Electric Distribution Division Kargil",
+    "email": "xenpddkgl2@gmail.com",
+    "phone": "7006831417"
+   }
+  ],
+  "how_to_scrape": "One GET (http 301 -> /power-development-department/); parse tables. Division level only; enough for Leh and Kargil towns.",
+  "region": "north"
+ },
+ {
+  "discom": "JVVNL (Jaipur Vidyut Vitran Nigam)",
+  "states": [
+   "Rajasthan"
+  ],
+  "source": "Rajasthan energy department portal, Telephone Directory (Jankalyan web API)",
+  "url": "https://energy.rajasthan.gov.in/webapi/api/JankalyanHome/GetTelephoneDirectory",
+  "kind": "json api",
+  "level": "sub-division (AEN O&M) + 33/11 kV GSS / feeder phones under each AEN; also XEN divisions and SE circles",
+  "covers": "3,374 rows; 208 distinct AEN sub-division posts (O&M, A-I/A-II etc.), 172 XEN rows, 240 SE rows; whole JVVNL area (Jaipur, Alwar, Bharatpur, Kota, Baran, Bundi, Dausa, Tonk ...) plus Energy Dept/RVPN/JdVVNL/AVVNL headquarters posts",
+  "fields": [
+   "S.No.",
+   "Name (officer name, or GSS/place name for substation rows)",
+   "Designation (contains office + town, e.g. 'AEN (O&M) Bassi')",
+   "Office Name (parent office)",
+   "Mobile No.",
+   "Landline No.",
+   "Email ([at]/[dot] obfuscated)"
+  ],
+  "access": "India only (connection times out from Germany); plain GET, no parameters, one request returns the whole list",
+  "sample": [
+   {
+    "Name": "R.C. Meena",
+    "Designation": "XEN (O&M) J.Ramgarh",
+    "Office Name": "SE (JPDC North)",
+    "Mobile No.": "9413389638",
+    "Email": "xenjmr[at]gmail[dot]com"
+   },
+   {
+    "Name": "Ramdev Saini",
+    "Designation": "AEN (O&M) Bassi",
+    "Office Name": "SE (JPDC North)",
+    "Mobile No.": "9413390324",
+    "Email": "aenbassi[at]jvvnl[dot]org"
+   },
+   {
+    "Name": "Tunga",
+    "Designation": "AEN (O&M) Bassi",
+    "Office Name": "AEN (O&M) Bassi",
+    "Mobile No.": "9414034820"
+   }
+  ],
+  "how_to_scrape": "One GET from an India IP; JSON list. Collapse whitespace (fields are space-padded). Parse town from Designation after the bracket ('AEN (O&M) Bassi' -> Bassi). Rows whose Office Name equals an AEN post and whose Name is a place are GSS/section phones of that sub-division. De-obfuscate emails ([at]->@, [dot]->.). The same SPA runs energy.rajasthan.gov.in/avvnl and /jdvvnl but the API takes no department parameter: this list is JVVNL's.",
+  "region": "west"
+ },
+ {
+  "discom": "AVVNL (Ajmer Vidyut Vitran Nigam)",
+  "states": [
+   "Rajasthan"
+  ],
+  "source": "none found on official site",
+  "url": "https://energy.rajasthan.gov.in/avvnl",
+  "kind": "none",
+  "level": "headquarters only",
+  "covers": "The shared energy.rajasthan.gov.in telephone directory has ~35 Ajmer rows (ZCE/ACE/SE headquarters), no AVVNL sub-divisions",
+  "fields": [],
+  "access": "India only",
+  "sample": [],
+  "how_to_scrape": "Tried: energy.rajasthan.gov.in/avvnl (same Angular Jankalyan app as JVVNL, same API, JVVNL data); GetTelephoneDirectory with deptCode/departmentCode params (ignored); GetWebDirectory (lists department websites only); web search (only third-party aggregators such as indiacustomercare.com with AEN (O&M) lists). Next: look for a 'Contact Us'/RTI PIO page inside the avvnl SPA routes (GetDepartmentContactCategoryDetail needs a dept code), or RTI section 4(1)(b) PDFs.",
+  "region": "west"
+ },
+ {
+  "discom": "JdVVNL (Jodhpur Vidyut Vitran Nigam)",
+  "states": [
+   "Rajasthan"
+  ],
+  "source": "none found on official site",
+  "url": "https://energy.rajasthan.gov.in/jdvvnl",
+  "kind": "none",
+  "level": "headquarters only",
+  "covers": "~23 Jodhpur headquarters rows (ZCE, ACE, SE, CAO) inside the JVVNL-style telephone directory API; no sub-divisions",
+  "fields": [],
+  "access": "India only",
+  "sample": [
+   {
+    "Name": "P.S. Choudhary",
+    "Designation": "ZCE (JZ) Jodhpur",
+    "Email": "ce_jdz[at]yahoo[dot]co[dot]in"
+   }
+  ],
+  "how_to_scrape": "Same as AVVNL: the shared portal API only carries JdVVNL headquarters. Gap. Next: SPA contact pages per department code, RTI PIO lists.",
+  "region": "west"
+ },
+ {
+  "discom": "MPMKVVCL (MP Madhya Kshetra, Central Discom, Bhopal)",
+  "states": [
+   "Madhya Pradesh"
+  ],
+  "source": "portal.mpcz.in / mpcz.co.in",
+  "url": "https://portal.mpcz.in",
+  "kind": "none",
+  "level": "unknown",
+  "covers": "not reached",
+  "fields": [],
+  "access": "blocked: mpcz.co.in resets TLS from Germany and India; portal.mpcz.in serves an incomplete certificate chain (curl: unable to get local issuer certificate). Not bypassed (cert checks on).",
+  "sample": [],
+  "how_to_scrape": "Gap. Retry with a client that fetches missing intermediates (AIA), e.g. a real browser via playwright from India, which keeps certificate validation. Third-party lists (complainthub) show City Circle/Division Bhopal contacts exist somewhere.",
+  "region": "west"
+ },
+ {
+  "discom": "MPPKVVCL (MP Poorv Kshetra, East Discom, Jabalpur)",
+  "states": [
+   "Madhya Pradesh"
+  ],
+  "source": "mpez.co.in Employee Directory (Power BI publish-to-web report)",
+  "url": "https://mpez.co.in/empdir",
+  "kind": "spa",
+  "level": "unknown (employee directory; likely all offices)",
+  "covers": "not counted: data sits in a public Power BI report (app.powerbi.com/view?r=eyJrIjoiMGIzOGZkZmYtYThmZC00NWU0LWFlOTEtY2U4ZTI1ZDdlYmFjIi...)",
+  "fields": [
+   "unknown (Power BI visual)"
+  ],
+  "access": "India only for mpez.co.in (times out from Germany); Power BI itself is global",
+  "sample": [],
+  "how_to_scrape": "Open the Power BI public view in a headless browser and export the table visual, or use the publish-to-web querydata API (no login). Not tried further here. RTI page /rtiact has only /rtiactdtl/N pages (PDF viewer).",
+  "region": "west"
+ },
+ {
+  "discom": "MPPKVVCL (MP Paschim Kshetra, West Discom, Indore)",
+  "states": [
+   "Madhya Pradesh"
+  ],
+  "source": "mpwz.co.in RTI Employee Directory PDFs (Corporate Office, Indore Region, Ujjain Region)",
+  "url": "https://www.mpwz.co.in/assets/img/pdf/RTI_Employee_Directory_Indore_Region.pdf",
+  "kind": "pdf",
+  "level": "circle / division (RTI PIO and APIO officers, April 2023)",
+  "covers": "3 PDFs; Indore Region = 8 scanned pages",
+  "fields": [
+   "office",
+   "officer",
+   "designation",
+   "phone (as scanned)"
+  ],
+  "access": "India only (www.mpwz.co.in times out from Germany)",
+  "sample": [
+   {
+    "note": "page 1 is the covering letter No. 3182 dated 18.04.2023 from CE (Indore Region) listing RTI officers of all circles/divisions; rows are on the scanned pages 2-8"
+   }
+  ],
+  "how_to_scrape": "Download the 3 PDFs from India; they are 300 dpi JPEG scans (no text layer): OCR (Hindi + English). Data is from 2023 and RTI-officer only, so no section/DC-level engineers. The Angular site also has a contactus table ('Name & Designation', 'Contact No.') with headquarters posts only.",
+  "region": "west"
+ },
+ {
+  "discom": "CSPDCL (Chhattisgarh State Power Distribution Co.)",
+  "states": [
+   "Chhattisgarh"
+  ],
+  "source": "web.cspdcl.co.in Telephone Directory (React SPA, office tree API)",
+  "url": "https://escapi.cspdcl.co.in/urja/teldir/public/getOfficeDetails",
+  "kind": "json api",
+  "level": "office tree down to OFFICE_LVL_ID 6 (likely distribution centre); employees per office",
+  "covers": "not counted: API returned 502 Bad Gateway on 3 tries (2026-11-11)",
+  "fields": [
+   "OFFICE_ID",
+   "UPPER_OFFICE_ID",
+   "OFFICE_LVL_ID",
+   "Office",
+   "employees (getOfficeEmployees/{officeId})",
+   "contact details (getOfficeContactDetails/{officeId})"
+  ],
+  "access": "India only for web.cspdcl.co.in (Germany times out); API backend down at test time",
+  "sample": [],
+  "how_to_scrape": "Endpoints found in chunk 3578.1cf8501c.chunk.js (base https://escapi.cspdcl.co.in/urja): /teldir/public/getOfficeDetails (all offices), /teldir/public/getSubOffices/{id}, /teldir/public/getOfficeEmployees/{id}, /teldir/public/getOfficeEmployees/byModId/{id}, /teldir/public/getOfficeEmployeesEITC/{id}, /teldir/public/getOfficeContactDetails/{id}. Retry later from India; one call for offices, then one per office at low rate. Also /focDetails/cities + /focDetails/record/ = fuse call centres per city.",
+  "region": "west"
+ },
+ {
+  "discom": "MGVCL (Madhya Gujarat Vij Company)",
+  "states": [
+   "Gujarat"
+  ],
+  "source": "mgvcl.com Contact Us",
+  "url": "https://www.mgvcl.com/contact-us.php",
+  "kind": "html table",
+  "level": "sub-division (also circle and division offices)",
+  "covers": "~214 table rows, 135 distinct office e-mails (mostly sdo.* sub-divisions) across Anand, Baroda City, Baroda O&M, Godhra, Nadiad circles",
+  "fields": [
+   "Location (office name with town)",
+   "Phone",
+   "Fault Center No",
+   "Email ID"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "Location": "Anand (O&M) Division",
+    "Phone": "02692-247503",
+    "Fault Center No": "02692-247503",
+    "Email ID": "do.anand@gebmail.com"
+   },
+   {
+    "Location": "Anand (North) Sub Div.",
+    "Phone": "02692-247803",
+    "Fault Center No": "02692-247803",
+    "Email ID": "sdo.anand.north@gebmail.com"
+   },
+   {
+    "Location": "Umreth (Rural) Sub Div.",
+    "Phone": "02692-276291",
+    "Email ID": "umreth.rural@gebmail.com"
+   }
+  ],
+  "how_to_scrape": "One GET; parse <tr> rows (4 cells). No officer names. Town = text before 'Sub Div.'/'Division'.",
+  "region": "west"
+ },
+ {
+  "discom": "DGVCL (Dakshin Gujarat Vij Company)",
+  "states": [
+   "Gujarat"
+  ],
+  "source": "dgvcl.com (GUVNL template, expected contact-us.php like MGVCL)",
+  "url": "https://www.dgvcl.com/contact-us.php",
+  "kind": "none",
+  "level": "unknown",
+  "covers": "not reached",
+  "fields": [],
+  "access": "blocked to curl from Germany and India (TLS handshake reset, SSL_ERROR_SYSCALL), probably a TLS-fingerprint filter",
+  "sample": [],
+  "how_to_scrape": "Gap. Try a real Chromium (playwright) from India without header spoofing; if it loads, parse the same 4-column table as MGVCL.",
+  "region": "west"
+ },
+ {
+  "discom": "PGVCL (Paschim Gujarat Vij Company)",
+  "states": [
+   "Gujarat"
+  ],
+  "source": "pgvcl.com (GUVNL template)",
+  "url": "https://www.pgvcl.com/contact-us.php",
+  "kind": "none",
+  "level": "unknown",
+  "covers": "not reached",
+  "fields": [],
+  "access": "blocked to curl from Germany and India (TLS reset); one India attempt on www got 'unable to get local issuer certificate'",
+  "sample": [],
+  "how_to_scrape": "Gap. Same as DGVCL (browser from India). Third-party copies show sub-division fault-centre/JE/DE numbers exist.",
+  "region": "west"
+ },
+ {
+  "discom": "UGVCL (Uttar Gujarat Vij Company)",
+  "states": [
+   "Gujarat"
+  ],
+  "source": "ugvcl.com (GUVNL template)",
+  "url": "https://www.ugvcl.com/contact-us.php",
+  "kind": "none",
+  "level": "unknown",
+  "covers": "not reached",
+  "fields": [],
+  "access": "blocked: incomplete certificate chain (unable to get local issuer certificate) from Germany and India; not bypassed",
+  "sample": [],
+  "how_to_scrape": "Gap. A browser that fetches the missing intermediate (AIA) keeps validation on; then parse like MGVCL.",
+  "region": "west"
+ },
+ {
+  "discom": "Torrent Power (Ahmedabad-Gandhinagar, Surat; also DNH&DD, Bhiwandi, Agra)",
+  "states": [
+   "Gujarat",
+   "Dadra and Nagar Haveli and Daman and Diu",
+   "Maharashtra",
+   "Uttar Pradesh"
+  ],
+  "source": "torrentpower.com Contact Us - Distribution",
+  "url": "https://www.torrentpower.com/index.php/site/info/contactus_dist",
+  "kind": "html table",
+  "level": "city head office only",
+  "covers": "4 city offices (Ahmedabad, Surat, Bhiwandi, Agra); no zones, no officers",
+  "fields": [
+   "city",
+   "address",
+   "phone"
+  ],
+  "access": "India only (403 from Germany)",
+  "sample": [
+   {
+    "city": "Ahmedabad",
+    "address": "Sola Road, Naranpura, Ahmedabad - 380 013",
+    "phone": "+91 90 9999 1912"
+   },
+   {
+    "city": "Surat",
+    "address": "Torrent House, Station Road, Surat-395003",
+    "phone": "+91 90 9999 1912"
+   }
+  ],
+  "how_to_scrape": "One GET. Gap for zone / customer-care-centre level; connect.torrentpower.com has no office list. DNH&DD (Torrent since April 2022; dnhddpdcl.in no longer resolves): only toll-free 18002705551 and connect.dnhdd@torrentpower.com found.",
+  "region": "west"
+ },
+ {
+  "discom": "MSEDCL (Mahavitaran)",
+  "states": [
+   "Maharashtra"
+  ],
+  "source": "mahadiscom.in: (a) Executive Engineer Team page; (b) zone-wise RTI lists of APIO/PIO/AA (Jan 2026)",
+  "url": "https://www.mahadiscom.in/en/executive-engineer-of-msedcl/",
+  "kind": "html table + pdf",
+  "level": "(a) division (EE per division with circle); (b) sub-division (JE/Dy.EE/Addl.EE per sub-division office, with division EE and circle SE)",
+  "covers": "(a) 543 rows: EE name, circle/region, division or post, mobile; (b) 16 zone PDFs + corporate office (Akola, Amravati, Baramati, Bhandup, Chandrapur, Chh. Sambhajinagar, Gondia, Jalgaon, Kalyan, Kolhapur, Latur, Nagpur, Nanded, Nashik, Pune, Ratnagiri); Pune PDF 16 pages ~66 offices, Nanded ~27+ offices; est. 700-1,000 offices state-wide",
+  "fields": [
+   "office name + address",
+   "officer name",
+   "designation",
+   "RTI role",
+   "mobile",
+   "landline (circle/zone)",
+   "email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "Executive Engineer Name": "Shri. Prasad Mahatole",
+    "Circle": "Chhatrapati Sambhajinagar Urban",
+    "Division": "Chhatrapati Sambhajinagar Urban -I",
+    "Contact": "7066042444"
+   },
+   {
+    "office": "Kothrud Sub Dn. Office, Near MIT College, Pune",
+    "officer": "Rajesh Jagdishchandra Kale",
+    "designation": "Addl. Ex. Engineer",
+    "role": "PIO & System Administrator",
+    "mobile": "7875767856",
+    "email": "Sdo4613@gmail.com"
+   },
+   {
+    "office": "MSEDCL, Sub Division Hingoli-431513",
+    "officer": "Ranjit Baburao Deshmukh",
+    "designation": "Dy. Executive Engineer",
+    "role": "PIO",
+    "mobile": "7875764520",
+    "email": "sdo2381@ho.mahadiscom.in"
+   }
+  ],
+  "how_to_scrape": "(a) one GET, parse 4-cell <tr> rows; header rows repeat per block (Region/Zone/Circle). (b) list page https://www.mahadiscom.in/en/list-of-apios-pios-and-aa-under-right-to-information-act-2005/ links /wp-content/uploads/2026/01/<Zone>-Zone-APIO-PIO-AA-English.pdf; text PDFs, pdftotext -layout, but each zone uses a different column order: parse per zone. Section-office level (JE of section) not listed except as APIO.",
+  "region": "west"
+ },
+ {
+  "discom": "BEST Undertaking (Electric Supply)",
+  "states": [
+   "Maharashtra (Mumbai island city)"
+  ],
+  "source": "bestundertaking.com ward-wise officers of fuse controls",
+  "url": "https://www.bestundertaking.com/pdf/WARDWISE-LIST-OF-OFFICERS-OF-FUST-CONTROLS.pdf",
+  "kind": "pdf",
+  "level": "fuse control per MCGM ward (A, B, C, D, E, F/S, F/N, G/S, G/N)",
+  "covers": "9 wards/fuse controls; companion PDFs: off-supply complaint numbers per fuse control, billing-complaint officers per ward",
+  "fields": [
+   "ward",
+   "fuse control name",
+   "Dy. Chief Engineer / Divisional Engineer name + mobile",
+   "responsible B-grade officer (Sub Engr./Dy. Engr.) name + mobile"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "ward": "A",
+    "fuse_control": "COLABA",
+    "divisional_engineer": "Shri S.S. Kulkarni, Mob. 7738049980",
+    "b_grade_officer": "Shri A.Y. Salvi, Sub Engr.(P), Mob. 8080812741"
+   },
+   {
+    "ward": "C",
+    "fuse_control": "PATHAKWADI",
+    "divisional_engineer": "Shri P.S. Narkhede, Mob. 9969875888",
+    "b_grade_officer": "Shri A.T. Sonawane, Sub Engr.(P), Mob. 7977710409"
+   },
+   {
+    "ward": "G/N",
+    "fuse_control": "MAHIM (Dharavi FC operated from Mahim FC)",
+    "divisional_engineer": "Shri J.L. Pawar, Mob. 9702261112",
+    "b_grade_officer": "Mr. N.A. Khan, Sub Engr., Mob. 8097691905"
+   }
+  ],
+  "how_to_scrape": "3 small text PDFs (WARDWISE-LIST-OF-OFFICERS-OF-FUST-CONTROLS.pdf, Contacts-Off-supply-complaints-Fuse-Controllers-Listnew-new.pdf, Contacts-Billing-complaints-Billing-Complaints-officers-listnew1.pdf); pdftotext -layout; hand-check (9 rows). Keys map 1:1 to MCGM ward letters.",
+  "region": "west"
+ },
+ {
+  "discom": "Adani Electricity Mumbai Ltd (AEML)",
+  "states": [
+   "Maharashtra (Mumbai suburbs, Mira-Bhayandar)"
+  ],
+  "source": "adanielectricity.com Office Locations",
+  "url": "https://www.adanielectricity.com/general-information/office-locations",
+  "kind": "html table",
+  "level": "division office (address only)",
+  "covers": "7 offices: Andheri-MIDC, Borivali-Kandivali, Chembur-Tilaknagar, Malad-Dindoshi, Mira Bhaindar, Powai-Saki, Vandre-Bandra",
+  "fields": [
+   "location",
+   "address",
+   "map link"
+  ],
+  "access": "India only (403 from Germany)",
+  "sample": [
+   {
+    "Location": "Andheri-MIDC",
+    "Address": "Adani Electricity Mumbai Ltd, E-4(ii), MIDC Area, Marol, Near MIDC Police Station ..."
+   },
+   {
+    "Location": "Borivali-Kandivali",
+    "Address": "Adani Electricity Mumbai Ltd, Ground Floor, Shimpoli Junction of Shimpoli Road ..."
+   }
+  ],
+  "how_to_scrape": "One GET from India, parse the 3-cell table. No officer names or phones; complaint-escalation-matrix page has no table in static HTML (JS-loaded); /help-and-support/our-centers lists customer care centres.",
+  "region": "west"
+ },
+ {
+  "discom": "Tata Power (Mumbai distribution)",
+  "states": [
+   "Maharashtra (Mumbai)"
+  ],
+  "source": "tatapower.com",
+  "url": "https://www.tatapower.com",
+  "kind": "none",
+  "level": "unknown",
+  "covers": "not reached",
+  "fields": [],
+  "access": "blocked: HTTP 406 Not Acceptable to curl from Germany and India (server filters non-browser clients); not bypassed",
+  "sample": [],
+  "how_to_scrape": "Gap. Needs a real browser fetch; Tata Power Mumbai publishes only customer-care centres, no engineer directory known.",
+  "region": "west"
+ },
+ {
+  "discom": "Goa Electricity Department",
+  "states": [
+   "Goa"
+  ],
+  "source": "Official Telephone Directory 2026-27",
+  "url": "https://www.goaelectricity.gov.in/wp-content/uploads/2026/06/Telephone-Directory-2026-27-1.pdf",
+  "kind": "pdf",
+  "level": "section (S/O, Junior Engineer) + sub-division (Asst. Engineer) + division (Exec. Engineer) + circle",
+  "covers": "37 pages, ~625 numbered entries; 48 sub-division offices, 96 Junior Engineer entries (section offices by village/town, substations)",
+  "fields": [
+   "officer name",
+   "designation + office/place",
+   "mobile",
+   "office landline",
+   "fax",
+   "email"
+  ],
+  "access": "India only (403 from Germany)",
+  "sample": [
+   {
+    "officer": "Shri Anish Naik",
+    "designation": "JE St.Cruz S/O",
+    "mobile": "7796633129",
+    "landline": "2445098"
+   },
+   {
+    "officer": "Rohan Kirlapkar",
+    "designation": "Junior Engineer, S/O GoaVelha",
+    "mobile": "8380015044",
+    "landline": "2219153",
+    "email": "rohan.k@goaelectricity.gov.in"
+   },
+   {
+    "officer": "Shri Pradip Naik",
+    "designation": "Exe. Engineer, Elect, (EHV) CEE's Office, Panaji",
+    "mobile": "7796633105",
+    "email": "Secom-elec.goa@nic.in"
+   }
+  ],
+  "how_to_scrape": "Download once from India; text PDF, pdftotext -layout; entries are numbered within office blocks headed 'Office of the Sub-Divisional Engineer, Sub-Division -IV, Taleigao' etc.; name/designation wrap over 2-4 lines, join until the next number. Email column wraps (join halves).",
+  "region": "west"
+ },
+ {
+  "discom": "DNH&DD Power Distribution (Torrent Power DNH&DD)",
+  "states": [
+   "Dadra and Nagar Haveli and Daman and Diu"
+  ],
+  "source": "none",
+  "url": "https://www.torrentpower.com/index.php/site/info/contactus_dist",
+  "kind": "none",
+  "level": "none",
+  "covers": "Torrent's distribution contact page does not list DNH&DD; old dnhddpdcl.in does not resolve",
+  "fields": [],
+  "access": "India only",
+  "sample": [],
+  "how_to_scrape": "Gap. Only toll-free 18002705551 / connect.dnhdd@torrentpower.com (third-party). Sub-station numbers on complainthub are from the pre-2022 DNHDDPDCL.",
+  "region": "west"
+ },
+ {
+  "discom": "BESCOM",
+  "states": [
+   "Karnataka"
+  ],
+  "source": "BESCOM website, Contact Us, office-wise contact details (4 zone pages). Same source as cityofficials.bengawalk.com (github.com/Vonter/city-officials static/blr/officials.json cites it; boundaries from data.opencity.in/dataset/bescom-boundary-maps)",
+  "url": "https://bescom.karnataka.gov.in/new-page/Contact%20-%20Us%20-%20BMASZ/en",
+  "kind": "html table",
+  "level": "section (O&M unit)",
+  "covers": "4 zone pages (BMANZ, BMASZ, BRAZ, CTAZ): about 9 circles, 32 divisions, 146 sub-divisions, 528 O&M sections",
+  "fields": [
+   "office (heading above each table)",
+   "designation",
+   "mobile",
+   "std code",
+   "landline",
+   "email",
+   "office address",
+   "lat/long column (mostly empty)"
+  ],
+  "access": "India only (times out from Germany; works from vpsin)",
+  "sample": [
+   {
+    "office": "O&M - Chikkapete (West)",
+    "designation": "AE",
+    "mobile": "9449844394",
+    "email": "aechickpete_tmkrcsd1@bescom.co.in",
+    "address": "Bescom Office, Vinayaka nagar 2nd cross tumkur town."
+   },
+   {
+    "office": "O&M - Central (Sriramanagar)",
+    "designation": "Section Officer",
+    "mobile": "9449843500 7019440719",
+    "landline": "0816-2278225",
+    "email": "aecentral_tmkrcsd1@bescom.co.in",
+    "address": "Near Sarvodhaya college, Kothi thopu, Tumkur town"
+   },
+   {
+    "office": "S3 Sub Division / O&M - Austin Town",
+    "designation": "AEE",
+    "mobile": "8277893183",
+    "email": "bcss17aee@gmail.com"
+   }
+  ],
+  "how_to_scrape": "Fetch the 4 zone pages from India: new-page/Contact%20-%20Us%20-%20BMANZ/en, Contact%20-%20Us%20-%20BMASZ/en, Contact%20Us%20-%20BRAZ/en, Contact%20Us%20-%20CTAZ/en (index at /301/Contact%20Us/en; /new-page/Contact%20Us/en 307s there). Split HTML on <table>; the text just before each table is the office name (CIRCLE / Division / Sub Division / 'O&M - X'); rows = designation, mobile, std, phone, email, address. No officer names. Join sections to wards with the opencity BESCOM section boundaries.",
+  "region": "south"
+ },
+ {
+  "discom": "MESCOM",
+  "states": [
+   "Karnataka"
+  ],
+  "source": "MESCOM website, Contact Us > Subdivision and Sections (also divisional, zonal/circle pages)",
+  "url": "https://mescom.karnataka.gov.in/15/subdivision-and-sections/en",
+  "kind": "html table",
+  "level": "section",
+  "covers": "64 sub-divisions, 243 sections (Dakshina Kannada, Udupi, Shivamogga, Chikkamagaluru)",
+  "fields": [
+   "office",
+   "designation",
+   "email",
+   "contact no (landline + mobile)",
+   "address",
+   "map link"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "office": "Mallikatte Section",
+    "designation": "Assistant Engineer (O&M) Junior Engineer (O&M)",
+    "email": "somallikatte@mesco.in",
+    "contact": "9448289579 9448289590",
+    "address": "O&M Section Office, MESCOM, Mallikatte, Kadri, Mangalore"
+   },
+   {
+    "office": "Attavara Sub-division",
+    "designation": "Assistant Executive Engineer (Ele)",
+    "email": "aeeattavara@mesco.in",
+    "contact": "0824-2421833 9448289430",
+    "address": "O&M Sub-division, MESCOM, Attavara, Mangalore"
+   },
+   {
+    "office": "Nehru Maidan Section",
+    "designation": "Assistant Engineer (O&M) Junior Engineer (O&M)",
+    "email": "sonehrumaidan@mesco.in",
+    "contact": "9448289589 9480841372",
+    "address": "O&M Section Office, MESCOM, Neharu Maidan, Mangalore"
+   }
+  ],
+  "how_to_scrape": "One GET from India. Rows with 6 cells start a new office (office, designation, email, phone, address, map); following 5-cell rows are more staff of the same office. Also /14/divisional-offices/en and /17/zonal-and-circle-offices/en. No officer names.",
+  "region": "south"
+ },
+ {
+  "discom": "HESCOM",
+  "states": [
+   "Karnataka"
+  ],
+  "source": "HESCOM website Contact menu: 'Section Officers contact details' PDF + 'Zone Circle Division and Subdivision Officers Contact Details' PDF",
+  "url": "https://hescom.karnataka.gov.in/storage/pdf-files/Contact%20Details/Section%20Officers%20Mobile%20Number.pdf",
+  "kind": "pdf (text layer)",
+  "level": "section",
+  "covers": "about 309 sections (9-page PDF); second PDF (3 pages, ~150 numbers) lists zone, circle, division and sub-division officers",
+  "fields": [
+   "section name",
+   "landline",
+   "section officer mobile"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "section": "Chanakyapuri",
+    "landline": "0836-2265815",
+    "mobile": "9480881042"
+   },
+   {
+    "section": "Vidyut Nagar",
+    "landline": "0836-2204260/2203083",
+    "mobile": "9480881045"
+   },
+   {
+    "subdivision": "Hubli CSD-1",
+    "aee_mobile": "9448370229",
+    "division": "Hubli (U)",
+    "ee_mobile": "9448370228"
+   }
+  ],
+  "how_to_scrape": "Download both PDFs from India; pdftotext -layout. Section PDF: rows 'n  name  landline  mobile' (numbering restarts per division; division names are not printed, so infer from the order or the officers PDF). Officers PDF is a wide zone>circle>district>division>sub-division layout: parse by column positions. Contact menu links from https://hescom.karnataka.gov.in/en nav. No names.",
+  "region": "south"
+ },
+ {
+  "discom": "GESCOM",
+  "states": [
+   "Karnataka"
+  ],
+  "source": "GESCOM website: O&M Division page (EE mobiles); O&M Circles, O&M Zones pages",
+  "url": "https://gescom.karnataka.gov.in/198/o&m-division/en",
+  "kind": "html table",
+  "level": "division",
+  "covers": "17 O&M divisions (Kalaburagi, Bidar, Raichur, Ballari, Koppal, Yadgir, Vijayanagara); no public sub-division or section list found",
+  "fields": [
+   "place/district",
+   "designation",
+   "mobile"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "office": "KALABURAGI CITY DIVISION",
+    "designation": "Executive Engineer El",
+    "mobile": "9449597321"
+   },
+   {
+    "office": "SEDAM",
+    "designation": "Executive Engineer El",
+    "mobile": "9448998819"
+   },
+   {
+    "office": "GANGAVATHI",
+    "designation": "Executive Engineer El",
+    "mobile": "9448994900"
+   }
+  ],
+  "how_to_scrape": "One GET from India per page (/198/o&m-division/en, /200/o-and-m-circles/en, /163/o-and-m-zones/en). Gap: sub-division/section officers. The PIO/APIO list (storage/pdf-files/RTI/PIOs & APIOs.pdf, 7 pages) is a scan without text (OCR would give sub-division AEEs). Third-party indiacustomercare.com copies exist; do not use them as source.",
+  "region": "south"
+ },
+ {
+  "discom": "CESC Mysore",
+  "states": [
+   "Karnataka"
+  ],
+  "source": "CESC website Contact Us: one page per zone, circle and division",
+  "url": "https://cescmysore.karnataka.gov.in/new-page/N%20R%20Mohalla%20Division/en",
+  "kind": "html table",
+  "level": "section",
+  "covers": "26 contact pages (corporate, 2 zones, 4 circles, 19 divisions); NR Mohalla Division alone lists 10 sub-divisions and 28 section officers (Mysuru, Mandya, Hassan, Chamarajanagar, Kodagu)",
+  "fields": [
+   "office (heading row)",
+   "office address",
+   "designation (section name inside it)",
+   "mobile",
+   "landline",
+   "fax",
+   "email"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "office": "NR Mohalla Division",
+    "designation": "Executive Engineer ( Elecl)",
+    "mobile": "9448994740",
+    "landline": "2434165",
+    "email": "eeenrm@cescmysore.org"
+   },
+   {
+    "office": "Chamundipuram Subdivision",
+    "designation": "Asst.Exe. Engr (Elecl)",
+    "mobile": "9448994745",
+    "email": "aeecpm@cescmysore.org"
+   },
+   {
+    "office": "Chamundipuram Subdivision",
+    "designation": "Section Officer - Lakshmipuram AE",
+    "mobile": "9448994774",
+    "email": "solakshmipuram@cescmysore.org"
+   }
+  ],
+  "how_to_scrape": "GET https://cescmysore.karnataka.gov.in/2/contact-us/en (India) for the 26 'new-page/<Name>/en' links; GET each. Rows with 1 cell = sub-division heading, 'Address :' rows = office address, other rows = sl, designation, mobile, landline, fax, email. Section name is in the designation text ('Section Officer - <name> AE/JE'). No names.",
+  "region": "south"
+ },
+ {
+  "discom": "KSEB",
+  "states": [
+   "Kerala"
+  ],
+  "source": "KSEB website Contact page: section office search (circle/division/sub-division/section dropdowns, POST /searchsection)",
+  "url": "https://kseb.in/contact",
+  "kind": "html (server-rendered cards via public search form)",
+  "level": "section",
+  "covers": "776 section offices (selectsection options), about 220 sub-divisions, 75 divisions, 26 circles (each option list has English + Malayalam values)",
+  "fields": [
+   "section office",
+   "section code",
+   "phone",
+   "office email",
+   "sub-division + email",
+   "division + email + phone",
+   "circle + email + phone",
+   "region"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "section": "Amballoor",
+    "code": "5552",
+    "phone": "4842740314",
+    "email": "mltyeb@gmail.com",
+    "subdivision": "Chottanikara (aeecka@gmail.com)",
+    "division": "Tripunithura (edtpna@gmail.com, 4842777866)",
+    "circle": "Ernakulam (dceekm@gmail.com, 4842392868)",
+    "region": "DC"
+   },
+   {
+    "section": "Arakkunnam",
+    "code": "5553",
+    "phone": "4842749300",
+    "email": "arkmeb@gmail.com",
+    "subdivision": "Chottanikara",
+    "division": "Tripunithura",
+    "circle": "Ernakulam"
+   },
+   {
+    "section": "Adimali",
+    "code": "5617",
+    "phone": "4864222184",
+    "email": "aeadimaly@gmail.com",
+    "subdivision": "Chithirapuram",
+    "division": "Adimali (4864274422)"
+   }
+  ],
+  "how_to_scrape": "From India: GET /contact (keep cookie, read hidden _token), then one POST /searchsection per circle (_token, selectcircle=<English circle name>, other selects empty): about 26 POSTs, no captcha. Parse 'Section Office:' cards. Phones lack the leading 0 (STD code). No officer names or mobiles. (The 'Know Your Section' consumer lookup has a captcha: do not use.)",
+  "region": "south"
+ },
+ {
+  "discom": "TNPDCL (ex-TANGEDCO)",
+  "states": [
+   "Tamil Nadu"
+  ],
+  "source": "TNPDCL website, Reach us > Contact Information (one big page, accordion per region/circle)",
+  "url": "https://www.tnpdcl.org/en/tnpdcl/reach-us/contact-information/",
+  "kind": "html table",
+  "level": "section",
+  "covers": "about 4,200 rows: 45 SE (circles), 196 EE (divisions), 770 AEE (sub-divisions), about 2,860 AE/JE section offices, all 12 regions",
+  "fields": [
+   "designation / office name / address (one cell)",
+   "landline / mobile",
+   "email"
+  ],
+  "access": "Works from Germany",
+  "sample": [
+   {
+    "designation": "Assistant Engineer",
+    "office": "Ayanavaram",
+    "address": "28,Mettu Street, Ayanavaram Chennai -600 023",
+    "phone": "044-26044-7711 / 9280076254",
+    "email": "chn064ae@tnebnet.org"
+   },
+   {
+    "designation": "Assistant Engineer",
+    "office": "O&M / Thottiam",
+    "address": "Thottiyam Panchayat union office, 37, Trichy Main Road,Thottiam - 621 215",
+    "phone": "04326255145 / 9445853605",
+    "email": "trm296ae@tnebnet.org"
+   },
+   {
+    "designation": "Assistant Executive Engineer",
+    "office": "D, Devakottai",
+    "address": "TNPDCL,Devakottai-630302",
+    "phone": "04561273457 / 9445853086",
+    "email": "mds4601aee3@tnebnet.org"
+   }
+  ],
+  "how_to_scrape": "One GET (6 MB). Strip HTML comments; rows are S.No, 'Designation / Office / Address', phone, email. The circle comes from the accordion heading (#tggNNN anchors, e.g. 'Chennai Electricity Distribution Circle/North/Chennai'). Email local part encodes circle code + section number. Names only for top posts. bengawalk's Chennai map has tneb_region..tneb_section boundaries (static/chennai/boundaries_tneb_*.json) to join on.",
+  "region": "south"
+ },
+ {
+  "discom": "TGSPDCL",
+  "states": [
+   "Telangana"
+  ],
+  "source": "TGSPDCL website, Contact Us > Official Contact Numbers (React SPA backed by a JSON API, 'DATA SOURCE: SAP-HR')",
+  "url": "https://tgsouthernpower.org/api/contacts/official-contacts",
+  "kind": "json api",
+  "level": "section",
+  "covers": "2,253 posts in 28 zones/circles, 181 units (divisions); 475 'AE/OP/<section>' operation sections, 124 'ADE/OP/<sub-division>' (updateDate 2026-11-04)",
+  "fields": [
+   "circle",
+   "division (section name)",
+   "unit",
+   "postId",
+   "postName",
+   "empName",
+   "contact",
+   "isShow"
+  ],
+  "access": "Works from Germany",
+  "sample": [
+   {
+    "circle": "HYD SOUTH",
+    "division": "ASMANGADH DIVISION",
+    "postName": "AE/OP/SAIDABAD 83",
+    "empName": "NAVID ALI MOHD",
+    "contact": "8712470625"
+   },
+   {
+    "circle": "HYD SOUTH",
+    "division": "ASMANGADH DIVISION",
+    "postName": "AE/OP/SALIM NAGAR 84",
+    "empName": "Narender Panthangi",
+    "contact": "8712470623"
+   },
+   {
+    "circle": "BANJARA HILLS",
+    "division": "BANJARAHILLS DIVISION",
+    "postName": "ADE/OP/AMEERPET",
+    "empName": "BALA KRISHNA M",
+    "contact": "8712468952"
+   }
+  ],
+  "how_to_scrape": "One GET with 'Accept: application/json' (the page's own fetch). JSON: circles[].sections[].entries[]. Officer NAMES included. Respect the page's display rule (function DK in the bundle): show a contact only when isShow != 0 AND it starts with 87124 (official CUG); otherwise the page shows '—'. Section name = postName after 'AE/OP/'.",
+  "region": "south"
+ },
+ {
+  "discom": "TGNPDCL",
+  "states": [
+   "Telangana"
+  ],
+  "source": "TGNPDCL website Contact Us: one PDF per circle via /DocView/contacts/<n>",
+  "url": "https://tgnpdcl.com/DocView/contacts/2",
+  "kind": "pdf (text layer)",
+  "level": "section",
+  "covers": "17 PDFs (corporate + 16 operation circles); Hanamkonda PDF has 127 numbers incl. AE/OP and AE/D section officers",
+  "fields": [
+   "circle",
+   "designation (with section / sub-division / division name)",
+   "phone",
+   "email (some)"
+  ],
+  "access": "India only (tgnpdcl.com times out from Germany)",
+  "sample": [
+   {
+    "circle": "Hanamkonda",
+    "designation": "Superintending Engineer/Op./HNK",
+    "phone": "8712484447",
+    "email": "seopwgl@tgnpdcl.com"
+   },
+   {
+    "circle": "Hanamkonda",
+    "designation": "Assistant Engineer/OP/Dharmasagar",
+    "phone": "8712484548"
+   },
+   {
+    "circle": "Hanamkonda",
+    "designation": "Assistant Engineer/D/SUBEDARI",
+    "phone": "8712484703"
+   }
+  ],
+  "how_to_scrape": "GET https://tgnpdcl.com/Menu/ContactUs (India) for openDoc('contacts','N') ids, then GET /DocView/contacts/N (application/pdf). pdftotext -layout; rows 'sl circle designation phone email'; table blocks follow the division/sub-division order. No names. (www.tsnpdcl.in is a separate WordPress site, not the discom.)",
+  "region": "south"
+ },
+ {
+  "discom": "APSPDCL",
+  "states": [
+   "Andhra Pradesh"
+  ],
+  "source": "APSPDCL website Phone Numbers page (one panel per circle)",
+  "url": "https://www.apspdcl.in/phonenumbers.php",
+  "kind": "html table",
+  "level": "section (mixed with staff posts)",
+  "covers": "1,105 numbers: corporate + 9 circles (Tirupati, Chittoor, Nellore, Sri Sathya Sai, Anantapur, Kurnool, Nandyal, Kadapa, Annamayya); about 380 AE rows, about 65 ADE rows",
+  "fields": [
+   "circle (panel title)",
+   "designation incl. office name",
+   "contact number"
+  ],
+  "access": "Works from Germany",
+  "sample": [
+   {
+    "circle": "CHITTOOR CIRCLE",
+    "designation": "AE OPN ARAGONDA",
+    "contact": "9440811846"
+   },
+   {
+    "circle": "CHITTOOR CIRCLE",
+    "designation": "AE Town Bangarupallem",
+    "contact": "9440811834"
+   },
+   {
+    "designation": "A.D.E/Opn./Guntakal",
+    "contact": "94408 13214"
+   }
+  ],
+  "how_to_scrape": "One GET. Panel titles (h4.panel-title) give the circle; rows = #, designation, number. Office name is free text inside the designation (AE OPN X / AE Rural X / A.D.E/Opn./X): normalise with regex. No names, no email, no address.",
+  "region": "south"
+ },
+ {
+  "discom": "APEPDCL",
+  "states": [
+   "Andhra Pradesh"
+  ],
+  "source": "APEPDCL website circle contact pages (contactsNew?type=XXX) with AJAX fragments per division",
+  "url": "https://www.apeasternpower.com/getContactDetialsByType?type=Operation%20Division%20-%20Zone1(Visakhapatnam)&circle=Visakhapatnam",
+  "kind": "html fragment (ajax)",
+  "level": "section",
+  "covers": "11 circles (VSP, VZM, SKL, ASR, AKP, PVP, KKD, KON, RJY/East Godavari, ELR, WGD); Visakhapatnam has 6 headings; Zone-1 alone has 19 rows (EE, Dy.EE sub-divisions, AE/AEE O sections)",
+  "fields": [
+   "designation/office",
+   "std code",
+   "office no",
+   "mobile",
+   "email"
+  ],
+  "access": "Works from Germany",
+  "sample": [
+   {
+    "designation": "AEE/O/Siripuram",
+    "office_no": "2739061",
+    "mobile": "9440812559",
+    "email": "aee_opn_srpm@apeasternpower.com"
+   },
+   {
+    "designation": "Dy.EE/ O/Seethammadhara",
+    "office_no": "2550335",
+    "mobile": "9440812498",
+    "email": "dee_opn_stmd@apeasternpower.com"
+   },
+   {
+    "designation": "AE/ O/ HB colony",
+    "office_no": "2727144",
+    "mobile": "9440817646",
+    "email": "aee_opn_hbclny@apeasternpower.com"
+   }
+  ],
+  "how_to_scrape": "GET contactsNew?type=<code> for each circle; read headTitle attributes of the accordion links; GET getContactDetialsByType?type=<headTitle>&circle=<circle name in page JS>. Section = text after 'O/' in designation. Sub-division heads are Dy.EE rows. No names.",
+  "region": "south"
+ },
+ {
+  "discom": "APCPDCL",
+  "states": [
+   "Andhra Pradesh"
+  ],
+  "source": "APCPDCL website Phone Numbers: one page per circle (contact-phno-<circle>.php)",
+  "url": "https://apcpdcl.in/contact-phno-guntur.php",
+  "kind": "html table",
+  "level": "section",
+  "covers": "corporate + 8 circles (Krishna, NTR, CRDA, Guntur, Bapatla, Palnadu, Prakasam); home page states 253 sections; Guntur page 196 rows",
+  "fields": [
+   "designation incl. office",
+   "mobile",
+   "email (obfuscated [at]/[dot])"
+  ],
+  "access": "India only (apcpdcl.in times out from Germany)",
+  "sample": [
+   {
+    "designation": "SE/Opn/Guntur",
+    "phone": "0863 2241402",
+    "email": "seopn_gnt@apcpdcl.in"
+   },
+   {
+    "designation": "AEE/O/KARLAPALEM",
+    "mobile": "9440812319",
+    "email": "aeopn_kpl@apcpdcl.in"
+   },
+   {
+    "designation": "AE/O/NAGARAM",
+    "mobile": "9440812313",
+    "email": "aeopn_ngm@apcpdcl.in"
+   }
+  ],
+  "how_to_scrape": "From India GET phone-numbers.php for the 9 contact-phno-*.php links (corporate, krishna, vjayawada, crda, guntur, bapatla, palnadu, ongole), then each page: rows S.No, designation, number, mail (replace [at]/[dot]). Section = text after 'AE/O/' or 'AEE/O/'. No names.",
+  "region": "south"
+ },
+ {
+  "discom": "Puducherry Electricity Department",
+  "states": [
+   "Puducherry"
+  ],
+  "source": "Electricity Department website, Area Contact Information (area -> section -> officers)",
+  "url": "https://electricity.py.gov.in/area-contact-information",
+  "kind": "html table",
+  "level": "section, with the areas (villages/localities) each section serves",
+  "covers": "40 sections, 334 area pages; also sub-offices pages per circle and per-EE contact PDFs (sites/default/files/N-Contact-Details_EEx.pdf)",
+  "fields": [
+   "section",
+   "areas served",
+   "EE (division) address+phone+mobile",
+   "AEE (O&M sub-division) address+phone+mobile",
+   "JE (section) address+phone+mobile",
+   "revenue JAO"
+  ],
+  "access": "Works from Germany",
+  "sample": [
+   {
+    "section": "ARIANKUPPAM SECTION",
+    "area": "Ariyankuppam",
+    "je": "Junior Engineer (Ariyankuppam O&M), Madha Koil Street, Ariyankuppam Puducherry - 605 007, Phone 260 0340, Mobile +91-94890 80375",
+    "aee": "Assistant Executive Engineer (Rural South O&M), Marapalam, Mobile +91-94890 80391",
+    "ee": "Executive Engineer-IX (O&M), Marapalam, Mobile +91-94890 80390"
+   },
+   {
+    "section": "AMBAGARATHUR SECTION",
+    "areas": "Ambagarathur, Chethur, Kannapur, Kumarakudi, Maadur, Moppayithangudi, Nallammbal, Nallazhundur, Pandaaravadai, Thamanangudi, Thenpidagai, Vadaku Kottappady"
+   }
+  ],
+  "how_to_scrape": "GET the index (one page, 334 rows: section, areas, link). The area pages repeat per section, so fetch only one area page per section (40 GETs) for the EE/AEE/JE contact cells. Parse 'Phone Office:' and 'Mobile:' from each cell. No names. Best area-to-office mapping of the region.",
+  "region": "south"
+ },
+ {
+  "discom": "WBSEDCL",
+  "states": [
+   "WB"
+  ],
+  "source": "WBSEDCL website, Contact Us > Customer Care Centres (+ Important Phone Numbers page for zones/regions)",
+  "url": "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/Contact_Customer_Care.html",
+  "kind": "html table",
+  "level": "customer care centre (= supply/section office) under division; zone and regional office on Imp_Phone_Number.html",
+  "covers": "495 customer care centres in all divisions of WBSEDCL (all WB outside CESC/IPCL areas); 5 zones + regional offices on https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/Imp_Phone_Number.html (77 rows)",
+  "fields": [
+   "division",
+   "office (CCC name = town/locality)",
+   "landline"
+  ],
+  "access": "works from Germany (home page times out from Germany, the static CCC page answers); India works too",
+  "sample": [
+   {
+    "division": "BIDHAN NAGAR-I",
+    "office": "BIDHANNAGAR - I",
+    "telephone": "2359-9215/2337-0887"
+   },
+   {
+    "division": "ASANSOL",
+    "office": "ASANSOL-I",
+    "telephone": "0341-2284339"
+   },
+   {
+    "division": "D. DINAJPUR",
+    "office": "GANGARAMPUR",
+    "telephone": "03521-255040"
+   }
+  ],
+  "how_to_scrape": "One GET of the static HTML; parse <tr> rows (3 cells: division, CCC, telephone). No officer names or mobiles. District portals (e.g. alipurduar.gov.in/public-utility-category/electricity/) list some CCC mobiles 8900795xxx as extra source.",
+  "region": "east"
+ },
+ {
+  "discom": "CESC Limited (Kolkata)",
+  "states": [
+   "WB"
+  ],
+  "source": "cesc.co.in Connect With Us > Regional Offices / District Offices",
+  "url": "https://www.cesc.co.in/districtOffices",
+  "kind": "html table",
+  "level": "district office (CESC's O&M unit) and regional office",
+  "covers": "10 district offices + 6 regional offices (https://www.cesc.co.in/regionalOffices) for Kolkata, Howrah, Hooghly licence area; also cashOffices, paymentKiosks pages",
+  "fields": [
+   "office",
+   "address",
+   "landline"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "office": "Calcutta South",
+    "address": "6, Mandeville Gardens Kolkata 700 019",
+    "phone": "2485 6100"
+   },
+   {
+    "office": "North Suburban",
+    "address": "32, B.T. Road, Kamarhati Kolkata 700 058",
+    "phone": "2553 7581 / 85"
+   },
+   {
+    "office": "Serampore",
+    "address": "1, G.T. Road, Mahesh, Serampore Hooghly-712 202",
+    "phone": "2662 3453"
+   }
+  ],
+  "how_to_scrape": "GET /regionalOffices and /districtOffices, parse the single table. No officer names. Office-to-ward area map not published; map by district office name.",
+  "region": "east"
+ },
+ {
+  "discom": "IPCL (India Power Corporation, Asansol/Dishergarh)",
+  "states": [
+   "WB"
+  ],
+  "source": "none found",
+  "url": "https://www.indiapower.com/",
+  "kind": "none",
+  "level": "none",
+  "covers": "",
+  "fields": [],
+  "access": "indiapower.com is an Angular SPA (works from Germany); ipcl.co.in is a parked domain",
+  "sample": [],
+  "how_to_scrape": "Tried ipcl.co.in (parked, for sale), indiapower.com home (SPA, no office list in HTML), web search. Only helpline 1800 102 3783 and ccasansol@indiapower.com via aggregators. Small licensee; skip or read the SPA's JS bundle later.",
+  "region": "east"
+ },
+ {
+  "discom": "NBPDCL",
+  "states": [
+   "BR"
+  ],
+  "source": "NBPDCL website Phone Directory (Telephone Directory)",
+  "url": "https://nbpdcl.co.in/frmHelplineNumbers.aspx",
+  "kind": "html table (collapsible tree)",
+  "level": "section (ESS/PSS, JEE) + sub-division (AEE) + division (EEE) + circle/area (ESE, DGM) + division control rooms",
+  "covers": "~1,480 rows: 553 JEE, 250 SBO (sub-station), 134 AEE, ~60 EEE, ESE/area heads, control rooms; all North Bihar districts",
+  "fields": [
+   "place of posting / office (e.g. ESS Kasba)",
+   "designation",
+   "mobile",
+   "landline (some)"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "office": "ESS, Kasba",
+    "designation": "JEE",
+    "mobile": "7763818846"
+   },
+   {
+    "office": "DGM cum ESE Tirhut Area",
+    "place": "Muzaffarpur",
+    "mobile": "7763815366"
+   },
+   {
+    "office": "Divisional Control Room, Muzaffarpur (U-1)",
+    "mobile": "9264456432",
+    "phone": "0621-2210001"
+   }
+  ],
+  "how_to_scrape": "One GET; nested <ul> tree of division > tables; parse every <tr> with 3-4 cells, carry the nearest 'Division-XXX' heading as parent. Column order varies by block (office/designation swapped); detect designation by regex JEE|AEE|EEE|ESE|SBO. Mostly no personal names.",
+  "region": "east"
+ },
+ {
+  "discom": "SBPDCL",
+  "states": [
+   "BR"
+  ],
+  "source": "SBPDCL website Phone Directory (fuse call centres + officers)",
+  "url": "https://www.sbpdcl.co.in/frmHelplineNumbers.aspx",
+  "kind": "html table (collapsible tree)",
+  "level": "fuse call centre (locality) + section (ESS, JEE) + sub-division (AEE) + division (EEE) + circle (ESE)",
+  "covers": "~1,580 rows: fuse call centres per division (Patna PESU localities), 391 JEE ESS posts, 131 JEE(Revenue), AEE/EEE per ESSD/ESD, 329 PSS, 11 ESE circles; all South Bihar",
+  "fields": [
+   "division",
+   "office / locality",
+   "designation",
+   "officer name (EEE/AEE blocks)",
+   "mobile"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "division": "ASHIANA",
+    "fuse_call_centre": "Ashiana nagar",
+    "mobile": "7763814441"
+   },
+   {
+    "designation": "JEE",
+    "office": "ESS, MeenaBazar 1",
+    "mobile": "7763814143"
+   },
+   {
+    "name": "NIRMAL KUMAR",
+    "designation": "EEE",
+    "mobile": "7763814555"
+   }
+  ],
+  "how_to_scrape": "Same layout as NBPDCL: one GET, parse <tr> rows under each 'Division-XXX' heading. Also frmFuseCallDetails.aspx (fuse call centres). Contact page links 'Contact details of Local officers' to the same directory.",
+  "region": "east"
+ },
+ {
+  "discom": "JBVNL",
+  "states": [
+   "JH"
+  ],
+  "source": "JBVNL Know Your Officers",
+  "url": "https://jbvnl.co.in/know-your-officers",
+  "kind": "html table",
+  "level": "section (Junior Manager) + sub-division (Manager) + division (Senior Manager) + circle (DGM) + area board (GM)",
+  "covers": "277 sections, 108 sub-divisions, 44 divisions, 15 circles, 7 area boards; all Jharkhand",
+  "fields": [
+   "office type",
+   "designation",
+   "office name (place)",
+   "mobile",
+   "email",
+   "alternate email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "type": "Section",
+    "designation": "Junior Manager",
+    "office": "ADITYAPUR-I",
+    "mobile": "9431135953",
+    "email": "jmeso.adpr1@jbvnl.co.in"
+   },
+   {
+    "type": "Division",
+    "designation": "Senior Manager",
+    "office": "CHAS",
+    "mobile": "9431135813",
+    "email": "eee.chas@jbvnl.co.in"
+   },
+   {
+    "type": "",
+    "designation": "General Manager",
+    "office": "RANCHI",
+    "email": "gm.ranchi@jbvnl.co.in"
+   }
+  ],
+  "how_to_scrape": "One GET (~500 KB); parse <tr> rows. No officer names and no section->division parent column; derive parents from email codes or the order of rows. HQ officers at /hqofficer.",
+  "region": "east"
+ },
+ {
+  "discom": "TPCODL",
+  "states": [
+   "OD"
+  ],
+  "source": "TPCODL RTI PIO and Appellate Authority list (PDF)",
+  "url": "https://www.tpcentralodisha.com/Editor_UploadedDocuments/RTI/PIO_Appellate_Authority.pdf",
+  "kind": "pdf",
+  "level": "division (Divisional Manager = PIO) and circle (circle head = first appellate)",
+  "covers": "20 divisions in 5 circles (Bhubaneswar-1/2, Cuttack, Dhenkanal, Paradeep ...); names + email, no phones",
+  "fields": [
+   "circle",
+   "division office",
+   "officer name",
+   "employee id",
+   "email",
+   "designation",
+   "appellate authority name"
+  ],
+  "access": "India only (tpcentralodisha.com times out from Germany)",
+  "sample": [
+   {
+    "circle": "Bhubaneswar Circle-1",
+    "division": "BCDD-2, Bhubaneswar",
+    "name": "Mr Subrat Sahoo",
+    "designation": "DIVISIONAL MANAGER",
+    "email": "SUBRAT.SAHOO@TPCENTRALODISHA.COM"
+   },
+   {
+    "circle": "Bhubaneswar Circle-2",
+    "division": "PED, Puri",
+    "name": "Mr Smrutiranjan Swain",
+    "email": "SMRUTIRANJAN.SWAIN@TPCENTRALODISHA.COM"
+   },
+   {
+    "circle": "Cuttack Circle",
+    "division": "CDD 1-Ranihat",
+    "name": "Mr Sanjay Mohanty",
+    "email": "SANJAY.MOHANTY@TPCENTRALODISHA.COM"
+   }
+  ],
+  "how_to_scrape": "Fetch via India server; pdftotext -layout; rows wrap over 2-3 lines, group by email. Contact-us 'Level 2 Divisional Manager' buttons on the TP Odisha sites are dead links (href=#). No section/sub-division list found.",
+  "region": "east"
+ },
+ {
+  "discom": "TPSODL",
+  "states": [
+   "OD"
+  ],
+  "source": "TPSODL RTI manual (Section 4(1)(b)) PDF",
+  "url": "https://tpsouthernodisha.com/Editor_UploadedDocuments/Content/RTI_Eng_Manual16.09.2025.pdf",
+  "kind": "pdf",
+  "level": "circle (SE) + division (EE); manual states 6 circles, 19 divisions, 51 sub-divisions, 135 sections but lists only circle/division heads",
+  "covers": "6 circles + 19 divisions of South Odisha (Ganjam, Gajapati, Kandhamal, Boudh, Rayagada, Koraput, Nabarangpur, Malkangiri)",
+  "fields": [
+   "office name",
+   "designation",
+   "address",
+   "officer name",
+   "mobile",
+   "email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "office": "BED-II, BERHAMPUR",
+    "designation": "Executive Engineer",
+    "address": "Corporation Road, BERHAMPUR",
+    "name": "Ms. Archana Dhar",
+    "mobile": "9437959802",
+    "email": "Archana.Dhar@tpsouthernodisha.com"
+   },
+   {
+    "office": "GNED, CHATRAPUR",
+    "designation": "Executive Engineer",
+    "name": "Mr. Rakesh Kumar Patra",
+    "mobile": "9437959788"
+   },
+   {
+    "office": "Electrical Circle, Berhampur",
+    "designation": "Superintending Engineer",
+    "name": "Mr. Chandan Das",
+    "mobile": "8114395710"
+   }
+  ],
+  "how_to_scrape": "Download PDF (33 pp), pdftotext -layout, pages with 'OFFICE NAME DESIGNATION ADDRESS NAME OF THE HOD MOBILE NO e-mail ID'; email is split across lines, rejoin. Division-to-block mapping in the same manual (pp 1-2).",
+  "region": "east"
+ },
+ {
+  "discom": "TPWODL",
+  "states": [
+   "OD"
+  ],
+  "source": "none found (circle office addresses only, Bill Inward Reception Desk page)",
+  "url": "https://www.tpwesternodisha.com/contactus.aspx",
+  "kind": "none",
+  "level": "circle (addresses only)",
+  "covers": "",
+  "fields": [
+   "circle office address"
+  ],
+  "access": "works from Germany",
+  "sample": [],
+  "how_to_scrape": "contactus.aspx has the same dead 'Contact Details' buttons as TPSODL and no PDF/xlsx. Web search found only tender PDFs and the vendor-zone BIRD desk page (circle office addresses, Sambalpur/Bolangir). Try its RTI manual if published (not linked from home page).",
+  "region": "east"
+ },
+ {
+  "discom": "TPNODL",
+  "states": [
+   "OD"
+  ],
+  "source": "TPNODL Contact Us workbook (xlsx)",
+  "url": "https://www.tpnodl.com/xl/contact/Worksheet-in-TPNODL-Contact-Us.xlsx",
+  "kind": "xlsx",
+  "level": "circle (SE) + division (EE)",
+  "covers": "5 circles (Balasore, Bhadrak, Baripada, Jajpur Road, Keonjhar) + 16 divisions; North Odisha",
+  "fields": [
+   "circle",
+   "division",
+   "office address",
+   "officer name",
+   "designation",
+   "mobile",
+   "email"
+  ],
+  "access": "India only (tpnodl.com times out from Germany)",
+  "sample": [
+   {
+    "circle": "Balasore",
+    "division": "BED Balasore",
+    "address": "Office of the Executive Engineer, Balasore Electrical Division, At- Thermal Colony, Balia, PO- Sovarampur, Dist- Balasore, Pin-756001",
+    "name": "Mr. Jitendra Behera",
+    "designation": "Executive Engineer",
+    "mobile": "9438906099"
+   },
+   {
+    "circle": "Baripada",
+    "division": "UED Udala",
+    "name": "Mr. Sanjay Kumar Das",
+    "mobile": "9438906101",
+    "email": "sanjay.das@tpnodl.com"
+   },
+   {
+    "circle": "Bhadrak Circle",
+    "name": "Mr. Bhupendra Nath Sahoo",
+    "designation": "Superintendent Engineer",
+    "mobile": "9438906328"
+   }
+  ],
+  "how_to_scrape": "Fetch via India server; 2 sheets (circles, divisions); read with openpyxl or unzip sharedStrings. Linked from https://www.tpnodl.com/contactus.aspx.",
+  "region": "east"
+ },
+ {
+  "discom": "APDCL",
+  "states": [
+   "AS"
+  ],
+  "source": "APDCL website Contact page JSON API",
+  "url": "https://www.apdcl.org/website/api/web/allContact",
+  "kind": "json api",
+  "level": "sub-division (SDE/AGM) + division (AGM) + circle + zone + IRCA + T&C divisions + district AGM(Project)",
+  "covers": "320 entries: 158 sub-divisions, 45 divisions, 20 circles, 8 zones, 17 IRCA, 19 T&C, 35 district AGMs, 18 HQ officials; all Assam",
+  "fields": [
+   "zone",
+   "circle",
+   "division",
+   "sub-division",
+   "officer name",
+   "phone",
+   "mobile",
+   "email",
+   "updated_time"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "circle_name": "GEC-I",
+    "division_name": "Guwahati (Central)",
+    "sd_name": "Ulubari",
+    "contact_person": "Shri Biplab Das",
+    "mobile": "9954192006",
+    "email": "sdeulubari@gmail.com; sde.ulubari_esd@apdcl.org",
+    "type": 5
+   },
+   {
+    "circle_name": "GEC-I",
+    "division_name": "Guwahati (Central)",
+    "sd_name": "Paltan Bazar",
+    "contact_person": "Shri Atul Choudhury",
+    "mobile": "7636894989",
+    "type": 5
+   },
+   {
+    "circle_name": "GEC-I",
+    "division_name": "Guwahati (Central)",
+    "contact_person": "Shri Nitul Kr Haloi",
+    "phone": "0361 2521694(O)",
+    "mobile": "9864093115",
+    "type": 4
+   }
+  ],
+  "how_to_scrape": "One GET of the JSON; field type: 1 HQ, 2 zone, 3 circle, 4 division, 5 sub-division, 6 IRCA, 7 T&C, 8 AGM(Project). Page: https://www.apdcl.org/website/Contact#subdivision. Best source in this region.",
+  "region": "east"
+ },
+ {
+  "discom": "TSECL",
+  "states": [
+   "TR"
+  ],
+  "source": "TSECL CGRO notification (scanned PDF) + contact page (HQ only)",
+  "url": "https://tsecl.in/sites/default/files/2024-11/Notification.pdf",
+  "kind": "pdf (scanned)",
+  "level": "circle/district (Addl. GM, Tier-II grievance officers); HQ officers on https://tsecl.in/contact_us",
+  "covers": "HQ + Tier-II officers per district/circle (3 pp); no division/sub-division (ESD) list found",
+  "fields": [
+   "district",
+   "designated officer (designation)",
+   "office address",
+   "landline",
+   "mobile"
+  ],
+  "access": "India only (tsecl.in times out from Germany)",
+  "sample": [
+   {
+    "place": "Head Quarter",
+    "officer": "G.M. (Technical)",
+    "address": "Corporate office, TSECL, Agartala.",
+    "mobile": "9436127125"
+   },
+   {
+    "name": "Mr. Biswajit Basu",
+    "designation": "Managing Director",
+    "phone": "0381 2318001/2319427",
+    "email": "managing.director@tsecl.in"
+   },
+   {
+    "name": "Mr. Sisir Debbarma",
+    "designation": "DGM(Corporate)",
+    "phone": "6033132107",
+    "email": "dgm.corporate@tsecl.in"
+   }
+  ],
+  "how_to_scrape": "Scanned PDF: needs OCR (pdftotext gives garbled text). No ESD (sub-division) directory on the site; bidyutbandhu.com consumer portal not checked.",
+  "region": "east"
+ },
+ {
+  "discom": "MePDCL",
+  "states": [
+   "ML"
+  ],
+  "source": "MeECL Contact details page > Official Contact Numbers of MePDCL Officers (Eastern Zone, Western Zone PDFs)",
+  "url": "https://meecl.nic.in/wp-content/uploads/2024/08/Official-Contact-Numbers-of-MePDCL-Officers-Eastern-Zone.pdf",
+  "kind": "pdf (text)",
+  "level": "sub-division (AEE) + division (EE) + circle (SE) + zone (CE)",
+  "covers": "~79 offices: 52 Eastern Zone + 27 Western Zone (https://meecl.nic.in/wp-content/uploads/2024/08/Official-Contact-Numbers-of-MePDCL-Officers-Western-Zone.pdf); emails in Official-Email-IDs.pdf (2025-07)",
+  "fields": [
+   "circle",
+   "designation & office (place)",
+   "mobile"
+  ],
+  "access": "India only (meecl.nic.in times out from Germany; slow from India too, use -m 60)",
+  "sample": [
+   {
+    "circle": "Ri Bhoi Distribution Circle",
+    "office": "Assistant Executive Engineer, Nongpoh Urban Distribution Sub-Division",
+    "mobile": "7085648929"
+   },
+   {
+    "circle": "Tura Distribution Circle",
+    "office": "Executive Engineer, Tura Distribution Division",
+    "mobile": "9245048609"
+   },
+   {
+    "circle": "West Garo Hills Distribution Circle",
+    "office": "Assistant Executive Engineer, Ampati Distribution Sub-Division",
+    "mobile": "7085647822"
+   }
+  ],
+  "how_to_scrape": "Fetch the 2 PDFs (+ email PDF) via India server; pdftotext -layout; circle headings are lines without a number; rows 'N  Designation, Office  Mobile'. No names.",
+  "region": "east"
+ },
+ {
+  "discom": "MSPDCL",
+  "states": [
+   "MN"
+  ],
+  "source": "none found",
+  "url": "https://mspdcl.com/",
+  "kind": "none",
+  "level": "none",
+  "covers": "",
+  "fields": [],
+  "access": "mspdcl.com reachable but hijacked (gambling spam content on /contacts/)",
+  "sample": [],
+  "how_to_scrape": "Official domain now serves spam; no directory. Leads: Annual Administrative Report https://assembly.mn.gov.in/user/pages/files/administrative-reports/AAR-MSPDCL%202025-26.pdf (may list divisions), district portals (jiribam.nic.in/mspdcl-jiribam, tamenglong.nic.in).",
+  "region": "east"
+ },
+ {
+  "discom": "Power & Electricity Department, Mizoram",
+  "states": [
+   "MZ"
+  ],
+  "source": "P&E Dept 'List of P&E Officers' page (content is one PNG image)",
+  "url": "https://power.mizoram.gov.in/page/list-of-pe-officers",
+  "kind": "image (png)",
+  "level": "unknown until OCR (officer list image /uploads/attachments/2026/07/6b05641544976a58f27699ec2e4109f6/mes-final.png)",
+  "covers": "unknown; contact-us gives HQ only",
+  "fields": [
+   "(image)"
+  ],
+  "access": "India only (403 from Germany)",
+  "sample": [
+   {
+    "office": "Engineer-in-Chief, Kawlphetha Building, New Secretariat Complex, Khatla, Aizawl 796001",
+    "phone": "0389 2321650 / 2322174 / 2310169"
+   }
+  ],
+  "how_to_scrape": "Download the PNG via India server and OCR it; also check /page/whos-who1638442690 (no table in HTML). Low value.",
+  "region": "east"
+ },
+ {
+  "discom": "Energy & Power Department, Sikkim",
+  "states": [
+   "SK"
+  ],
+  "source": "none reachable",
+  "url": "https://power.sikkim.gov.in/",
+  "kind": "none",
+  "level": "none",
+  "covers": "",
+  "fields": [],
+  "access": "certificate check fails from India and Germany (unable to get local issuer certificate); not fetched by rule",
+  "sample": [],
+  "how_to_scrape": "power.sikkim.gov.in has a broken TLS chain; sikkimpower.org is hijacked (gambling content). Retry later or ask for a different source (district portals).",
+  "region": "east"
+ },
+ {
+  "discom": "Department of Power, Nagaland",
+  "states": [
+   "NL"
+  ],
+  "source": "none reachable",
+  "url": "https://dpnagaland.gov.in/",
+  "kind": "none",
+  "level": "none",
+  "covers": "",
+  "fields": [],
+  "access": "DNS does not resolve (from India and Germany)",
+  "sample": [
+   {
+    "office": "EE (Power) Kiphire",
+    "name": "Khrichusa Kire",
+    "mobile": "+918132869623",
+    "source": "https://kiphire.nic.in/power/ (search result, not fetched)"
+   }
+  ],
+  "how_to_scrape": "Department site is down. District NIC portals (kiphire.nic.in/power/ etc.) list the local EE/SDO; would need one fetch per district (12 districts).",
+  "region": "east"
+ },
+ {
+  "discom": "Department of Power, Arunachal Pradesh",
+  "states": [
+   "AR"
+  ],
+  "source": "DoP Arunachal Contact page",
+  "url": "https://power.arunachal.gov.in/contact.php",
+  "kind": "html table",
+  "level": "sub-division (Asstt Engr, by town) + division (EE) + circle (SE) + electrical inspectors",
+  "covers": "~120 rows: 34 division/circle headings, ~85 officers (59 with mobile); all districts",
+  "fields": [
+   "division heading",
+   "officer name",
+   "designation + place",
+   "mobile",
+   "email"
+  ],
+  "access": "India only (times out from Germany)",
+  "sample": [
+   {
+    "division": "TAWANG ELECTRICAL DIVISION, TAWANG",
+    "name": "Shri Mindu Phuntso",
+    "designation": "Asstt Engr, Tawang",
+    "mobile": "9402974243"
+   },
+   {
+    "division": "BOMDILA ELECTRICAL DIVISION, BOMDILA",
+    "name": "Shri Phurpa Wangyal",
+    "designation": "Executive Engineer",
+    "mobile": "9436055340",
+    "email": "electdivn_bdl [at] yahoo [dot] com"
+   },
+   {
+    "division": "BOMDILA ELECTRICAL DIVISION, BOMDILA",
+    "name": "Shri R V Rao",
+    "designation": "Asstt Engr, Dirang",
+    "mobile": "9436045099"
+   }
+  ],
+  "how_to_scrape": "One GET via India server; parse <tr>; 1-cell rows are division/circle headings, 4-cell rows officers under them. Town served is in the designation ('Asstt Engr, Lumla').",
+  "region": "east"
+ },
+ {
+  "discom": "Electricity Department, Andaman & Nicobar",
+  "states": [
+   "AN"
+  ],
+  "source": "Vidyut A&N Contact Us",
+  "url": "https://vidyut.andamannicobar.gov.in/Forms/ContactUs.aspx",
+  "kind": "html table",
+  "level": "division (EE) + circle (SE)",
+  "covers": "8 rows: SE + 7 EE divisions (last updated 10/10/2023); 38 AE sub-divisions not listed",
+  "fields": [
+   "officer name + designation (division)",
+   "mobile",
+   "landline",
+   "email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "officer": "Smti. Deepa Nair, Executive Engineer (NRSE Division)",
+    "mobile": "9474250091",
+    "phone": "03192-230207 | 230276",
+    "email": "eenrse@gmail.com"
+   },
+   {
+    "officer": "Shri. Nageshwar Rao, Executive Engineer (PG Division)",
+    "mobile": "9434272746",
+    "phone": "03192-240197",
+    "email": "eepg.and@nic.in"
+   }
+  ],
+  "how_to_scrape": "One GET; parse the numbered rows. No ward relevance except Sri Vijaya Puram (Port Blair) divisions.",
+  "region": "east"
+ }
+]

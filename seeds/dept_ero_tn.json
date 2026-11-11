@@ -1,0 +1,924 @@
+[
+ {
+  "key": "ero_tn-deo",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/DEO.aspx",
+   "state": "TN",
+   "page": "deo",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d1",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "1",
+   "district": "Thiruvallur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d2",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "2",
+   "district": "Chennai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d3",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "3",
+   "district": "Kancheepuram",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d4",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "4",
+   "district": "Vellore",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d5",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "5",
+   "district": "Krishnagiri",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d6",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "6",
+   "district": "Dharmapuri",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d7",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "7",
+   "district": "Tiruvannamalai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d8",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "8",
+   "district": "Viluppuram",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d9",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "9",
+   "district": "Salem",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d10",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "10",
+   "district": "Namakkal",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d11",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "11",
+   "district": "Erode",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d12",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "12",
+   "district": "The Nilgiris",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d13",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "13",
+   "district": "Coimbatore",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d14",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "14",
+   "district": "Dindigul",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d15",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "15",
+   "district": "Karur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d16",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "16",
+   "district": "Tiruchirappalli",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d17",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "17",
+   "district": "Perambalur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d18",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "18",
+   "district": "Cuddalore",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d19",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "19",
+   "district": "Nagapattinam",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d20",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "20",
+   "district": "Thiruvarur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d21",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "21",
+   "district": "Thanjavur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d22",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "22",
+   "district": "Pudukkottai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d23",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "23",
+   "district": "Sivaganga",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d24",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "24",
+   "district": "Madurai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d25",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "25",
+   "district": "Theni",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d26",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "26",
+   "district": "Virudhunagar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d27",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "27",
+   "district": "Ramanathapuram",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d28",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "28",
+   "district": "Thoothukudi",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d29",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "29",
+   "district": "Tirunelveli",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d30",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "30",
+   "district": "Kanniyakumari",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d31",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "31",
+   "district": "Ariyalur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d32",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "32",
+   "district": "Tiruppur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d33",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "33",
+   "district": "Kallakurichi",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d34",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "34",
+   "district": "Tenkasi",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d35",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "35",
+   "district": "Chengalpattu",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d36",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "36",
+   "district": "Tirupathur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d37",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "37",
+   "district": "Ranipet",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-ero-d38",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/ERO.aspx",
+   "state": "TN",
+   "page": "ero",
+   "district_value": "38",
+   "district": "Mayiladuthurai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d1",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "1",
+   "district": "Thiruvallur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d2",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "2",
+   "district": "Chennai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d3",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "3",
+   "district": "Kancheepuram",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d4",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "4",
+   "district": "Vellore",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d5",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "5",
+   "district": "Krishnagiri",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d6",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "6",
+   "district": "Dharmapuri",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d7",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "7",
+   "district": "Tiruvannamalai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d8",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "8",
+   "district": "Viluppuram",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d9",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "9",
+   "district": "Salem",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d10",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "10",
+   "district": "Namakkal",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d11",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "11",
+   "district": "Erode",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d12",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "12",
+   "district": "The Nilgiris",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d13",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "13",
+   "district": "Coimbatore",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d14",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "14",
+   "district": "Dindigul",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d15",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "15",
+   "district": "Karur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d16",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "16",
+   "district": "Tiruchirappalli",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d17",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "17",
+   "district": "Perambalur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d18",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "18",
+   "district": "Cuddalore",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d19",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "19",
+   "district": "Nagapattinam",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d20",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "20",
+   "district": "Thiruvarur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d21",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "21",
+   "district": "Thanjavur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d22",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "22",
+   "district": "Pudukkottai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d23",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "23",
+   "district": "Sivaganga",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d24",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "24",
+   "district": "Madurai",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d25",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "25",
+   "district": "Theni",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d26",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "26",
+   "district": "Virudhunagar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d27",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "27",
+   "district": "Ramanathapuram",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d28",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "28",
+   "district": "Thoothukudi",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d29",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "29",
+   "district": "Tirunelveli",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d30",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "30",
+   "district": "Kanniyakumari",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d31",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "31",
+   "district": "Ariyalur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d32",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "32",
+   "district": "Tiruppur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d33",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "33",
+   "district": "Kallakurichi",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d34",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "34",
+   "district": "Tenkasi",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d35",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "35",
+   "district": "Chengalpattu",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d36",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "36",
+   "district": "Tirupathur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d37",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "37",
+   "district": "Ranipet",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tn-aero-d38",
+  "payload": {
+   "reader": "ero_tn",
+   "url": "https://www.erolls.tn.gov.in/acwithcandidate_be2019/AERO.aspx",
+   "state": "TN",
+   "page": "aero",
+   "district_value": "38",
+   "district": "Mayiladuthurai",
+   "india_only": true
+  }
+ }
+]

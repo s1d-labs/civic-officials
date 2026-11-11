@@ -1,0 +1,29 @@
+[
+ {
+  "key": "water_uk-p1",
+  "payload": {
+   "reader": "water_uk",
+   "url": "https://ujs.uk.gov.in/whos-who/",
+   "state": "UK",
+   "page": 1
+  }
+ },
+ {
+  "key": "water_uk-p2",
+  "payload": {
+   "reader": "water_uk",
+   "url": "https://ujs.uk.gov.in/whos-who/page/2/",
+   "state": "UK",
+   "page": 2
+  }
+ },
+ {
+  "key": "water_uk-p3",
+  "payload": {
+   "reader": "water_uk",
+   "url": "https://ujs.uk.gov.in/whos-who/page/3/",
+   "state": "UK",
+   "page": 3
+  }
+ }
+]

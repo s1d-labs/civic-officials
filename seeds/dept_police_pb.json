@@ -1,0 +1,310 @@
+[
+ {
+  "key": "police_pb:25521-amritsar",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25521&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25521",
+   "district": "AMRITSAR",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25536-amritsar-rural",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25536&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25536",
+   "district": "AMRITSAR RURAL",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25883-barnala",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25883&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25883",
+   "district": "BARNALA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25537-batala",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25537&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25537",
+   "district": "BATALA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25523-bathinda",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25523&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25523",
+   "district": "BATHINDA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25534-faridkot",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25534&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25534",
+   "district": "FARIDKOT",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25540-fatehgarh-sahib",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25540&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25540",
+   "district": "FATEHGARH SAHIB",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25810-fazilka",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25810&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25810",
+   "district": "FAZILKA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25525-ferozepur",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25525&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25525",
+   "district": "FEROZEPUR",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25526-gurdaspur",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25526&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25526",
+   "district": "GURDASPUR",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25527-hoshiarpur",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25527&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25527",
+   "district": "HOSHIARPUR",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25528-jalandhar-city",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25528&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25528",
+   "district": "JALANDHAR CITY",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25945-jalandhar-rural",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25945&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25945",
+   "district": "JALANDHAR RURAL",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25529-kapurthala",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25529&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25529",
+   "district": "KAPURTHALA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25882-khanna",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25882&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25882",
+   "district": "KHANNA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25530-ludhiana-city",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25530&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25530",
+   "district": "LUDHIANA CITY",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25881-ludhiana-rural",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25881&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25881",
+   "district": "LUDHIANA RURAL",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25979-malerkotla",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25979&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25979",
+   "district": "MALERKOTLA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25539-mansa",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25539&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25539",
+   "district": "MANSA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25921-moga",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25921&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25921",
+   "district": "MOGA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25817-pathankot",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25817&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25817",
+   "district": "PATHANKOT",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25531-patiala",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25531&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25531",
+   "district": "PATIALA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25532-rupnagar",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25532&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25532",
+   "district": "RUPNAGAR",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25533-sangrur",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25533&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25533",
+   "district": "SANGRUR",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25903-sas-nagar",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25903&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25903",
+   "district": "SAS NAGAR",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25884-sbs-nagar",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25884&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25884",
+   "district": "SBS NAGAR",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25885-sri-muktsar-sahib",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25885&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25885",
+   "district": "SRI MUKTSAR SAHIB",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_pb:25538-tarn-taran",
+  "payload": {
+   "reader": "police_pb",
+   "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25538&officeType=PSOC",
+   "state": "PB",
+   "district_code": "25538",
+   "district": "TARN TARAN",
+   "india_only": true
+  }
+ }
+]

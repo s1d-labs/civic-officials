@@ -1,0 +1,22 @@
+[
+ {
+  "key": "ero_tr-ero",
+  "payload": {
+   "reader": "ero_tr",
+   "url": "https://erms.tripura.gov.in/encoretripura/outviews/viewERO.aspx",
+   "state": "TR",
+   "page": "ero",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_tr-aero",
+  "payload": {
+   "reader": "ero_tr",
+   "url": "https://erms.tripura.gov.in/encoretripura/outviews/viewEROAERO.aspx",
+   "state": "TR",
+   "page": "aero",
+   "india_only": true
+  }
+ }
+]

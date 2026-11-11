@@ -1,0 +1,20 @@
+[
+ {
+  "key": "power_mvvnl:directory",
+  "payload": {
+   "reader": "power_mvvnl",
+   "part": "directory",
+   "url": "https://mvvnl.in/post/en/directory?cd=NQA2AA%3d%3d",
+   "state": "UP"
+  }
+ },
+ {
+  "key": "power_mvvnl:lesa",
+  "payload": {
+   "reader": "power_mvvnl",
+   "part": "lesa",
+   "url": "https://mvvnl.in/site/writereaddata/siteContent/202512061655264596Lesa-Direcotary_061225.pdf",
+   "state": "UP"
+  }
+ }
+]

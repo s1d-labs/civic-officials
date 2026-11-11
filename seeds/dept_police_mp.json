@@ -1,0 +1,470 @@
+[
+ {
+  "key": "police_mp:agarmalwa",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://agarmalwa.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Agar Malwa"
+  }
+ },
+ {
+  "key": "police_mp:alirajpur",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://alirajpur.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Alirajpur"
+  }
+ },
+ {
+  "key": "police_mp:anuppur",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://anuppur.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Anuppur"
+  }
+ },
+ {
+  "key": "police_mp:ashoknagar",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://ashoknagar.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Ashoknagar"
+  }
+ },
+ {
+  "key": "police_mp:badwani",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://badwani.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Barwani"
+  }
+ },
+ {
+  "key": "police_mp:balaghat",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://balaghat.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Balaghat"
+  }
+ },
+ {
+  "key": "police_mp:betul",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://betul.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Betul"
+  }
+ },
+ {
+  "key": "police_mp:bhind",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://bhind.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Bhind"
+  }
+ },
+ {
+  "key": "police_mp:bhopal",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://bhopal.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Bhopal"
+  }
+ },
+ {
+  "key": "police_mp:burhanpur",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://burhanpur.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Burhanpur"
+  }
+ },
+ {
+  "key": "police_mp:chhatarpur",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://chhatarpur.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Chhatarpur"
+  }
+ },
+ {
+  "key": "police_mp:chhindwara",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://chhindwara.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Chhindwara"
+  }
+ },
+ {
+  "key": "police_mp:damoh",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://damoh.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Damoh"
+  }
+ },
+ {
+  "key": "police_mp:datia",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://datia.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Datia"
+  }
+ },
+ {
+  "key": "police_mp:dewas",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://dewas.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Dewas"
+  }
+ },
+ {
+  "key": "police_mp:dhar",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://dhar.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Dhar"
+  }
+ },
+ {
+  "key": "police_mp:dindori",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://dindori.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Dindori"
+  }
+ },
+ {
+  "key": "police_mp:guna",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://guna.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Guna"
+  }
+ },
+ {
+  "key": "police_mp:gwalior",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://gwalior.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Gwalior"
+  }
+ },
+ {
+  "key": "police_mp:harda",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://harda.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Harda"
+  }
+ },
+ {
+  "key": "police_mp:indore",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://indore.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Indore"
+  }
+ },
+ {
+  "key": "police_mp:jabalpur",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://jabalpur.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Jabalpur"
+  }
+ },
+ {
+  "key": "police_mp:jhabua",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://jhabua.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Jhabua"
+  }
+ },
+ {
+  "key": "police_mp:katni",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://katni.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Katni"
+  }
+ },
+ {
+  "key": "police_mp:khandwa",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://khandwa.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Khandwa"
+  }
+ },
+ {
+  "key": "police_mp:khargone",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://khargone.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Khargone"
+  }
+ },
+ {
+  "key": "police_mp:mandla",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://mandla.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Mandla"
+  }
+ },
+ {
+  "key": "police_mp:mandsour",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://mandsour.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Mandsaur"
+  }
+ },
+ {
+  "key": "police_mp:mauganj",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://mauganj.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Mauganj"
+  }
+ },
+ {
+  "key": "police_mp:morena",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://morena.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Morena"
+  }
+ },
+ {
+  "key": "police_mp:narmadapuram",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://narmadapuram.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Narmadapuram"
+  }
+ },
+ {
+  "key": "police_mp:narsinghpur",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://narsinghpur.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Narsinghpur"
+  }
+ },
+ {
+  "key": "police_mp:neemuch",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://neemuch.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Neemuch"
+  }
+ },
+ {
+  "key": "police_mp:pandhurna",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://pandhurna.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Pandhurna"
+  }
+ },
+ {
+  "key": "police_mp:raisen",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://raisen.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Raisen"
+  }
+ },
+ {
+  "key": "police_mp:rajgarh",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://rajgarh.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Rajgarh"
+  }
+ },
+ {
+  "key": "police_mp:ratlam",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://ratlam.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Ratlam"
+  }
+ },
+ {
+  "key": "police_mp:rewa",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://rewa.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Rewa"
+  }
+ },
+ {
+  "key": "police_mp:sagar",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://sagar.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Sagar"
+  }
+ },
+ {
+  "key": "police_mp:satna",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://satna.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Satna"
+  }
+ },
+ {
+  "key": "police_mp:sehore",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://sehore.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Sehore"
+  }
+ },
+ {
+  "key": "police_mp:seoni",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://seoni.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Seoni"
+  }
+ },
+ {
+  "key": "police_mp:shahdol",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://shahdol.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Shahdol"
+  }
+ },
+ {
+  "key": "police_mp:shajapur",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://shajapur.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Shajapur"
+  }
+ },
+ {
+  "key": "police_mp:sheopur",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://sheopur.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Sheopur"
+  }
+ },
+ {
+  "key": "police_mp:shivpuri",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://shivpuri.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Shivpuri"
+  }
+ },
+ {
+  "key": "police_mp:sidhi",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://sidhi.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Sidhi"
+  }
+ },
+ {
+  "key": "police_mp:singroli",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://singroli.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Singrauli"
+  }
+ },
+ {
+  "key": "police_mp:tikamgarh",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://tikamgarh.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Tikamgarh"
+  }
+ },
+ {
+  "key": "police_mp:ujjain",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://ujjain.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Ujjain"
+  }
+ },
+ {
+  "key": "police_mp:umaria",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://umaria.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Umaria"
+  }
+ },
+ {
+  "key": "police_mp:vidisha",
+  "payload": {
+   "reader": "police_mp",
+   "url": "https://vidisha.mppolice.gov.in/",
+   "state": "MP",
+   "district": "Vidisha"
+  }
+ }
+]

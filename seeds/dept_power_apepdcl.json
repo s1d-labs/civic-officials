@@ -1,0 +1,101 @@
+[
+ {
+  "key": "power_apepdcl:vsp",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=VSP",
+   "circle_code": "VSP",
+   "state": "AP"
+  }
+ },
+ {
+  "key": "power_apepdcl:vzm",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=VZM",
+   "circle_code": "VZM",
+   "state": "AP"
+  }
+ },
+ {
+  "key": "power_apepdcl:skl",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=SKL",
+   "circle_code": "SKL",
+   "state": "AP"
+  }
+ },
+ {
+  "key": "power_apepdcl:asr",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=ASR",
+   "circle_code": "ASR",
+   "state": "AP"
+  }
+ },
+ {
+  "key": "power_apepdcl:akp",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=AKP",
+   "circle_code": "AKP",
+   "state": "AP"
+  }
+ },
+ {
+  "key": "power_apepdcl:pvp",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=PVP",
+   "circle_code": "PVP",
+   "state": "AP"
+  }
+ },
+ {
+  "key": "power_apepdcl:kkd",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=KKD",
+   "circle_code": "KKD",
+   "state": "AP"
+  }
+ },
+ {
+  "key": "power_apepdcl:kon",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=KON",
+   "circle_code": "KON",
+   "state": "AP"
+  }
+ },
+ {
+  "key": "power_apepdcl:rjy",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=RJY",
+   "circle_code": "RJY",
+   "state": "AP"
+  }
+ },
+ {
+  "key": "power_apepdcl:elr",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=ELR",
+   "circle_code": "ELR",
+   "state": "AP"
+  }
+ },
+ {
+  "key": "power_apepdcl:wgd",
+  "payload": {
+   "reader": "power_apepdcl",
+   "url": "https://www.apeasternpower.com/contactsNew?type=WGD",
+   "circle_code": "WGD",
+   "state": "AP"
+  }
+ }
+]

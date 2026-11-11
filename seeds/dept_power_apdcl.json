@@ -1,0 +1,11 @@
+[
+ {
+  "key": "power_apdcl:allContact",
+  "payload": {
+   "reader": "power_apdcl",
+   "url": "https://www.apdcl.org/website/api/web/allContact",
+   "state": "AS",
+   "expected": 230
+  }
+ }
+]

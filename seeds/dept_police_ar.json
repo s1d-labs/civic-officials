@@ -1,0 +1,92 @@
+[
+ {
+  "key": "police_ar:tirap",
+  "payload": {
+   "reader": "police_ar",
+   "url": "https://tirap.nic.in/public-utility-category/police-station/",
+   "district": "Tirap",
+   "form": "cards",
+   "state": "AR"
+  }
+ },
+ {
+  "key": "police_ar:eastsiang",
+  "payload": {
+   "reader": "police_ar",
+   "url": "https://eastsiang.nic.in/police/",
+   "district": "East Siang",
+   "form": "tables",
+   "state": "AR"
+  }
+ },
+ {
+  "key": "police_ar:kurungkumey",
+  "payload": {
+   "reader": "police_ar",
+   "url": "https://kurungkumey.nic.in/police/",
+   "district": "Kurung Kumey",
+   "form": "tables",
+   "state": "AR"
+  }
+ },
+ {
+  "key": "police_ar:uppersiang",
+  "payload": {
+   "reader": "police_ar",
+   "url": "https://uppersiang.nic.in/police/",
+   "district": "Upper Siang",
+   "form": "tables",
+   "state": "AR"
+  }
+ },
+ {
+  "key": "police_ar:lohit",
+  "payload": {
+   "reader": "police_ar",
+   "url": "https://lohit.nic.in/police/",
+   "district": "Lohit",
+   "form": "tables",
+   "state": "AR"
+  }
+ },
+ {
+  "key": "police_ar:changlang",
+  "payload": {
+   "reader": "police_ar",
+   "url": "https://changlang.nic.in/police/",
+   "district": "Changlang",
+   "form": "tables",
+   "state": "AR"
+  }
+ },
+ {
+  "key": "police_ar:dibangvalley",
+  "payload": {
+   "reader": "police_ar",
+   "url": "https://dibangvalley.nic.in/police/",
+   "district": "Dibang Valley",
+   "form": "tables",
+   "state": "AR"
+  }
+ },
+ {
+  "key": "police_ar:itanagar",
+  "payload": {
+   "reader": "police_ar",
+   "url": "https://itanagar.nic.in/capital-police/contacts/",
+   "district": "Itanagar Capital",
+   "form": "list",
+   "state": "AR"
+  }
+ },
+ {
+  "key": "police_ar:tawang",
+  "payload": {
+   "reader": "police_ar",
+   "url": "https://tawang.nic.in/police/",
+   "district": "Tawang",
+   "form": "blocks",
+   "state": "AR"
+  }
+ }
+]

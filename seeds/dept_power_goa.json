@@ -1,0 +1,12 @@
+[
+ {
+  "key": "power_goa:telephone-directory-2026-27",
+  "payload": {
+   "reader": "power_goa",
+   "url": "https://www.goaelectricity.gov.in/wp-content/uploads/2026/06/Telephone-Directory-2026-27-1.pdf",
+   "state": "GA",
+   "india_only": true,
+   "expected": 600
+  }
+ }
+]

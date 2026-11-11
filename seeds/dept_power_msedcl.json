@@ -1,0 +1,182 @@
+[
+ {
+  "key": "power_msedcl:executive-engineers",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "ee",
+   "url": "https://www.mahadiscom.in/en/executive-engineer-of-msedcl/",
+   "state": "MH",
+   "expected": 300
+  }
+ },
+ {
+  "key": "power_msedcl:rti-akola",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Akola",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Akola-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-amravati",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Amravati",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Amravati-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-baramati",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Baramati",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Baramati-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-bhandup",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Bhandup",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Bhandup-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-chandrapur",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Chandrapur",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Chandrapur-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-chatrapati-sambhajinagar",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Chatrapati Sambhajinagar",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Chatrapati-Sambhajinagar-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-corporate-office",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Corporate Office",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Corporate-Office-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-gondia",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Gondia",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Gondia-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-jalgaon",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Jalgaon",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Jalgaon-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-kalyan",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Kalyan",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Kalyan-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-kolhapur",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Kolhapur",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Kolhapur-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-latur",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Latur",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Latur-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-nagpur",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Nagpur",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Nagpur-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-nanded",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Nanded",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Nanded-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-nashik",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Nashik",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Nashik-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-pune",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Pune",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Pune-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "power_msedcl:rti-ratnagiri",
+  "payload": {
+   "reader": "power_msedcl",
+   "kind": "zone",
+   "zone": "Ratnagiri",
+   "url": "https://www.mahadiscom.in/wp-content/uploads/2026/01/Ratnagiri-Zone-APIO-PIO-AA-English.pdf",
+   "state": "MH"
+  }
+ }
+]

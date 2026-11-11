@@ -1,0 +1,22 @@
+[
+ {
+  "key": "water_ka-kuwsdb",
+  "payload": {
+   "reader": "water_ka",
+   "page": "kuwsdb",
+   "url": "https://kuwsdb.karnataka.gov.in/1/know-your-office/en",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "water_ka-bwssb",
+  "payload": {
+   "reader": "water_ka",
+   "page": "bwssb",
+   "url": "https://bwssb.karnataka.gov.in/7/service-station/en",
+   "state": "KA",
+   "india_only": true
+  }
+ }
+]

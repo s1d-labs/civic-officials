@@ -1,0 +1,275 @@
+[
+ {
+  "key": "police_hr:statewide",
+  "payload": {
+   "reader": "police_hr",
+   "url": "https://haryanapolice.gov.in/static/DistrictTelephone",
+   "state": "HR",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-ambala",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://ambala.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "ambala",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-bhiwani",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://bhiwani.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "bhiwani",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-charkhidadri",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://charkhidadri.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "charkhidadri",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-dabwali",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://dabwali.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "dabwali",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-faridabad",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://faridabad.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "faridabad",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-fatehabad",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://fatehabad.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "fatehabad",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-gurugram",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://gurugram.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "gurugram",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-hansi",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://hansi.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "hansi",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-hisar",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://hisar.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "hisar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-jhajjar",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://jhajjar.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "jhajjar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-jind",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://jind.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "jind",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-kaithal",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://kaithal.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "kaithal",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-karnal",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://karnal.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "karnal",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-kurukshetra",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://kurukshetra.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "kurukshetra",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-mahendergarh",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://mahendergarh.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "mahendergarh",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-mewat",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://mewat.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "mewat",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-palwal",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://palwal.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "palwal",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-panchkula",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://panchkula.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "panchkula",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-panipat",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://panipat.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "panipat",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-rewari",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://rewari.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "rewari",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-rohtak",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://rohtak.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "rohtak",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-sirsa",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://sirsa.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "sirsa",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-sonipat",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://sonipat.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "sonipat",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_hr:sho-yamunanagar",
+  "payload": {
+   "reader": "police_hr",
+   "kind": "sho",
+   "url": "https://yamunanagar.haryanapolice.gov.in/SHOContact.html",
+   "state": "HR",
+   "district": "yamunanagar",
+   "india_only": true
+  }
+ }
+]

@@ -1,0 +1,11 @@
+[
+ {
+  "key": "police_ld:police-stations",
+  "payload": {
+   "reader": "police_ld",
+   "url": "https://lakshadweeppolice.gov.in/police_stations",
+   "charter": "https://www.lakshadweeppolice.gov.in/downloads/citizen_charter_v2.pdf",
+   "state": "LD"
+  }
+ }
+]

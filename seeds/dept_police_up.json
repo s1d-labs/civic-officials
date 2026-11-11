@@ -1,0 +1,110 @@
+[
+ {
+  "key": "police_up:prayagraj",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://prayagraj.nic.in/police/",
+   "state": "UP",
+   "district": "Prayagraj"
+  }
+ },
+ {
+  "key": "police_up:gautam-buddh-nagar",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://gbnagar.nic.in/police/",
+   "state": "UP",
+   "district": "Gautam Buddh Nagar"
+  }
+ },
+ {
+  "key": "police_up:ghaziabad",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://ghaziabad.nic.in/en/police/",
+   "state": "UP",
+   "district": "Ghaziabad"
+  }
+ },
+ {
+  "key": "police_up:amroha",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://amroha.nic.in/police-station/",
+   "state": "UP",
+   "district": "Amroha"
+  }
+ },
+ {
+  "key": "police_up:azamgarh",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://azamgarh.nic.in/police/",
+   "state": "UP",
+   "district": "Azamgarh"
+  }
+ },
+ {
+  "key": "police_up:basti",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://basti.nic.in/police/",
+   "state": "UP",
+   "district": "Basti"
+  }
+ },
+ {
+  "key": "police_up:fatehpur",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://fatehpur.nic.in/police-stations/",
+   "state": "UP",
+   "district": "Fatehpur"
+  }
+ },
+ {
+  "key": "police_up:gorakhpur",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://gorakhpur.nic.in/police-thana/",
+   "state": "UP",
+   "district": "Gorakhpur"
+  }
+ },
+ {
+  "key": "police_up:kanpur-dehat",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://kanpurdehat.nic.in/police/",
+   "state": "UP",
+   "district": "Kanpur Dehat"
+  }
+ },
+ {
+  "key": "police_up:saharanpur",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://saharanpur.nic.in/police/",
+   "state": "UP",
+   "district": "Saharanpur"
+  }
+ },
+ {
+  "key": "police_up:kaushambi",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://prayagrajdivision.nic.in/district-kaushambi-police/",
+   "state": "UP",
+   "district": "Kaushambi"
+  }
+ },
+ {
+  "key": "police_up:pratapgarh",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://prayagrajdivision.nic.in/police-stations-of-pratapgarh-district/",
+   "state": "UP",
+   "district": "Pratapgarh"
+  }
+ }
+]

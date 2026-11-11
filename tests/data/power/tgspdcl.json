@@ -1,0 +1,184 @@
+{
+ "updateDate": "2026-11-04T11:34:26.000+05:30",
+ "circles": [
+  {
+   "id": "metro-zone",
+   "name": "METRO ZONE",
+   "sections": [
+    {
+     "name": "METRO ZONE",
+     "entries": [
+      {
+       "unit": "CE/METRO ZONE",
+       "postId": "20035961",
+       "postName": "CE/METRO ZONE",
+       "empName": "KARUNAKAR BABU PULIPATI",
+       "contact": "8712468831",
+       "isShow": 1
+      },
+      {
+       "unit": "CE/METRO ZONE",
+       "postId": "20035964",
+       "postName": "DE/T/METRO ZONE",
+       "empName": "Anand Pavan Babu Sampath",
+       "contact": "8712468834",
+       "isShow": 1
+      },
+      {
+       "unit": "CE/METRO ZONE",
+       "postId": "20035962",
+       "postName": "DE/CABLES/METRO ZONE",
+       "empName": "Siva Rama Prasad Bolleddula",
+       "contact": "8712468839",
+       "isShow": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "banjara-hills",
+   "name": "BANJARA HILLS",
+   "sections": [
+    {
+     "name": "SE OP BANJARAHILLS HYD",
+     "entries": [
+      {
+       "unit": "SE/Op/Banjarahills(HYDN)",
+       "postId": "20035001",
+       "postName": "SE/OP/Banjarahills(HYDN)",
+       "empName": "SURENDERNATH SUCHENDERNATH EDH",
+       "contact": "8712468922",
+       "isShow": 1
+      },
+      {
+       "unit": "SE/Op/Banjarahills(HYDN)",
+       "postId": "20035008",
+       "postName": "DE/TECH/Banjarahills",
+       "empName": "VENKAT RAMA RAO AKKINEPALLY",
+       "contact": "8712468923",
+       "isShow": 1
+      }
+     ]
+    },
+    {
+     "name": "BANJARAHILLS DIVISION",
+     "entries": [
+      {
+       "unit": "ADE/STORES/Banjarahills",
+       "postId": "20035018",
+       "postName": "ADE/STORES/HYDN",
+       "empName": "Praveen Kumar Lingampally",
+       "contact": "8712468954",
+       "isShow": 1
+      },
+      {
+       "unit": "ADE/STORES/Banjarahills",
+       "postId": "20035051",
+       "postName": "AE/TRANSPORT&INDOOR/ERG",
+       "empName": "VIJAYA BHASKAR REDDY BATTU",
+       "contact": "8712468971",
+       "isShow": 1
+      },
+      {
+       "unit": "ADE/STORES/Banjarahills",
+       "postId": "20035052",
+       "postName": "AE/OUTDOOR STORES/ERG",
+       "empName": "RAJASHEKAR REDDY VOOTKURI",
+       "contact": "8712468970",
+       "isShow": 1
+      },
+      {
+       "unit": "DE/OP/Banjarahills",
+       "postId": "20035005",
+       "postName": "DE/OP/ERRAGADDA",
+       "empName": "HANMANTH REDDY PODDUTURI",
+       "contact": "8712468949",
+       "isShow": 1
+      },
+      {
+       "unit": "DE/OP/Banjarahills",
+       "postId": "20035098",
+       "postName": "AE/TECH/DO/ERRAGADDA",
+       "empName": "Bharathi Nalamati",
+       "contact": "8712468967",
+       "isShow": 1
+      },
+      {
+       "unit": "DE/OP/Banjarahills",
+       "postId": "20090038",
+       "postName": "ADE/CSC/Ameerpet",
+       "empName": "Swathi Boddepalli",
+       "contact": "8712468969",
+       "isShow": 1
+      },
+      {
+       "unit": "DE/OP/Banjarahills",
+       "postId": "20035099",
+       "postName": "AE/ICSC/AMEERPET/ERG DIV",
+       "empName": "",
+       "contact": "8121525364",
+       "isShow": 1
+      },
+      {
+       "unit": "ADE/OP/AMEERPET",
+       "postId": "20035019",
+       "postName": "ADE/OP/AMEERPET",
+       "empName": "BALA KRISHNA M",
+       "contact": "8712468952",
+       "isShow": 1
+      },
+      {
+       "unit": "AE/OP/AMEERPET 10",
+       "postId": "20035060",
+       "postName": "AE/OP/AMEERPET 10",
+       "empName": "SAMBASIVA RAO BATTULA",
+       "contact": "8712468959",
+       "isShow": 1
+      },
+      {
+       "unit": "AE/OP/S. K. NAGAR 12",
+       "postId": "20035061",
+       "postName": "AE/OP/S. K. NAGAR 12",
+       "empName": "Tirupathi Rao SANGAM",
+       "contact": "8712468957",
+       "isShow": 0
+      },
+      {
+       "unit": "AE/OP/YOUSUFGUDA 20",
+       "postId": "20035062",
+       "postName": "AE/OP/YOUSUFGUDA 20",
+       "empName": "John Peter Daram",
+       "contact": "8712468964",
+       "isShow": 1
+      },
+      {
+       "unit": "ADE/OP/BANJARAHILLS",
+       "postId": "20035020",
+       "postName": "ADE/OP/BANJARAHILLS",
+       "empName": "RAMESH GANDAM",
+       "contact": "8712468950",
+       "isShow": 1
+      },
+      {
+       "unit": "AE/OP/BANJARA HILLS 11",
+       "postId": "20035066",
+       "postName": "AE/OP/BANJARA HILLS 11",
+       "empName": "ANIL SEETHALA",
+       "contact": "8712468958",
+       "isShow": 1
+      },
+      {
+       "unit": "AE/OP/FILM NAGAR 23",
+       "postId": "20035114",
+       "postName": "AE/OP/FILM NAGAR 23",
+       "empName": "VENKATA NARSIMHA RAO RAMISETTY",
+       "contact": "9440812872",
+       "isShow": 1
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

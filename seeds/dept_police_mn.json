@@ -1,0 +1,21 @@
+[
+ {
+  "key": "police_mn:imphal-east",
+  "payload": {
+   "reader": "police_mn",
+   "form": "helpline",
+   "url": "https://imphaleast.nic.in/?p=2780",
+   "state": "MN",
+   "district": "Imphal East"
+  }
+ },
+ {
+  "key": "police_mn:control-rooms",
+  "payload": {
+   "reader": "police_mn",
+   "form": "controlrooms",
+   "url": "https://manipurpolice.gov.in/?page_id=3257",
+   "state": "MN"
+  }
+ }
+]

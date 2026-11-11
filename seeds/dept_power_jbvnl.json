@@ -1,0 +1,18 @@
+[
+ {
+  "key": "power_jbvnl:know-your-officers",
+  "payload": {
+   "reader": "power_jbvnl",
+   "url": "https://jbvnl.co.in/know-your-officers",
+   "state": "JH"
+  }
+ },
+ {
+  "key": "power_jbvnl:hqofficer",
+  "payload": {
+   "reader": "power_jbvnl",
+   "url": "https://jbvnl.co.in/hqofficer",
+   "state": "JH"
+  }
+ }
+]

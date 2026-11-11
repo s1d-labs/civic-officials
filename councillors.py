@@ -149,7 +149,9 @@ def run(item, get):
     return KINDS[p["kind"]](p, get)
 
 
-def main():
+def main(run_fn=None, task="councillors"):
+    """The pool loop; depts.py reuses it with its own run_fn and failure kind."""
+    run_fn = run_fn or run
     from scrape_hub_client import HubClient
     project = os.environ["SCRAPE_POOL_PROJECT"]
     deadline = time.time() + float(os.environ.get("SCRAPE_MAX_HOURS", "1")) * 3600 - 300
@@ -195,11 +197,11 @@ def main():
             item = items[0]
             url = item["payload"].get("url", "")
             if item.get("attempts", 0) > 3:
-                hub.failure("councillors", item["key"], "gave up after 3 attempts", url=url)
+                hub.failure(task, item["key"], "gave up after 3 attempts", url=url)
                 hub.complete([item["key"]], "done", fetched=0)
                 continue
             try:
-                recs, files, why = run(item, get)
+                recs, files, why = run_fn(item, get)
             except Exception as e:
                 recs, files, why = [], [], f"{type(e).__name__}: {e}"[:200]
             for attempt in range(5):
@@ -209,7 +211,7 @@ def main():
                     for rid, data in recs:
                         hub.record(rid, data)
                     if why and not recs:
-                        hub.failure("councillors", item["key"], why, url=url)
+                        hub.failure(task, item["key"], why, url=url)
                         hub.complete([item["key"]], "failed", error=why)
                     else:
                         hub.complete([item["key"]], "done", fetched=len(recs))
@@ -222,7 +224,7 @@ def main():
         raise
 
 
-def local(payload):
+def local(payload, run_fn=None):
     s = requests.Session()
     s.verify = trust()
     s.headers.update(HEADERS)
@@ -233,7 +235,7 @@ def local(payload):
         if r.status_code == 200 and (not r.encoding or r.encoding.lower() == "iso-8859-1"):
             r.encoding = r.apparent_encoding or "utf-8"
         return r if r.status_code == 200 else None
-    recs, files, why = run({"key": "local", "payload": json.loads(payload)}, get)
+    recs, files, why = (run_fn or run)({"key": "local", "payload": json.loads(payload)}, get)
     print(json.dumps({"why": why, "records": len(recs), "files": [f[0] for f in files]}))
     for rid, d in recs[:3]:
         print(rid, {k: d.get(k) for k in ("name", "position", "party", "ward_no", "ward_name", "ward_code", "phone", "body", "page")})

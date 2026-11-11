@@ -1,0 +1,12 @@
+[
+ {
+  "key": "power_jvvnl:telephone-directory",
+  "payload": {
+   "reader": "power_jvvnl",
+   "url": "https://energy.rajasthan.gov.in/webapi/api/JankalyanHome/GetTelephoneDirectory",
+   "state": "RJ",
+   "india_only": true,
+   "expected": 2000
+  }
+ }
+]

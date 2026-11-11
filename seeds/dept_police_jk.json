@@ -1,0 +1,56 @@
+[
+ {
+  "key": "police_jk:jammu",
+  "payload": {
+   "reader": "police_jk",
+   "url": "https://jammu.nic.in/police-stations/",
+   "district": "Jammu",
+   "state": "JK"
+  }
+ },
+ {
+  "key": "police_jk:udhampur",
+  "payload": {
+   "reader": "police_jk",
+   "url": "https://udhampur.nic.in/police/",
+   "district": "Udhampur",
+   "state": "JK"
+  }
+ },
+ {
+  "key": "police_jk:budgam",
+  "payload": {
+   "reader": "police_jk",
+   "url": "https://budgam.nic.in/police/",
+   "district": "Budgam",
+   "state": "JK"
+  }
+ },
+ {
+  "key": "police_jk:ganderbal",
+  "payload": {
+   "reader": "police_jk",
+   "url": "https://ganderbal.nic.in/police-directory/",
+   "district": "Ganderbal",
+   "state": "JK"
+  }
+ },
+ {
+  "key": "police_jk:anantnag",
+  "payload": {
+   "reader": "police_jk",
+   "url": "https://anantnag.nic.in/police-info/",
+   "district": "Anantnag",
+   "state": "JK"
+  }
+ },
+ {
+  "key": "police_jk:baramulla",
+  "payload": {
+   "reader": "police_jk",
+   "url": "https://baramulla.nic.in/police/",
+   "district": "Baramulla",
+   "state": "JK"
+  }
+ }
+]

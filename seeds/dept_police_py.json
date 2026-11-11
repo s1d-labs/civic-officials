@@ -1,0 +1,10 @@
+[
+ {
+  "key": "police_py:stations",
+  "payload": {
+   "reader": "police_py",
+   "url": "https://police.py.gov.in/get_station.php",
+   "state": "PY"
+  }
+ }
+]

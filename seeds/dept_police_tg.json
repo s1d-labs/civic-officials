@@ -1,0 +1,56 @@
+[
+ {
+  "key": "police_tg:hyderabad",
+  "payload": {
+   "reader": "police_tg",
+   "url": "https://hyderabad.telangana.gov.in/public-utility-category/police-stations/",
+   "state": "TG",
+   "district": "Hyderabad"
+  }
+ },
+ {
+  "key": "police_tg:jogulamba-gadwal",
+  "payload": {
+   "reader": "police_tg",
+   "url": "https://gadwal.telangana.gov.in/police/",
+   "state": "TG",
+   "district": "Jogulamba Gadwal"
+  }
+ },
+ {
+  "key": "police_tg:jangaon",
+  "payload": {
+   "reader": "police_tg",
+   "url": "https://jangaon.telangana.gov.in/public-utility-category/police-stations/",
+   "state": "TG",
+   "district": "Jangaon"
+  }
+ },
+ {
+  "key": "police_tg:medak",
+  "payload": {
+   "reader": "police_tg",
+   "url": "https://medak.telangana.gov.in/police/",
+   "state": "TG",
+   "district": "Medak"
+  }
+ },
+ {
+  "key": "police_tg:siddipet",
+  "payload": {
+   "reader": "police_tg",
+   "url": "https://siddipet.telangana.gov.in/police/",
+   "state": "TG",
+   "district": "Siddipet"
+  }
+ },
+ {
+  "key": "police_tg:nizamabad",
+  "payload": {
+   "reader": "police_tg",
+   "url": "https://nizamabad.telangana.gov.in/police-commissionerate-2/",
+   "state": "TG",
+   "district": "Nizamabad"
+  }
+ }
+]

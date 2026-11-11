@@ -1,0 +1,3179 @@
+[
+ {
+  "state": "Andaman and Nicobar Islands",
+  "source": "A&N Police RTI 17-point manual (Police Suo Motu.pdf) - 'Police Stations with Landline Phone Numbers'",
+  "url": "https://andamannicobar.gov.in/pdf/Police%20Suo%20Motu.pdf",
+  "kind": "pdf",
+  "covers": "all 25 PS (South Andaman, N&M Andaman, Nicobar) + 7 out posts",
+  "fields": [
+   "station",
+   "landline"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "PS Aberdeen Bazar",
+    "landline": "03192-232400"
+   },
+   {
+    "station": "PS Chatham",
+    "landline": "03192-232232"
+   },
+   {
+    "station": "PS Ograbraj",
+    "landline": "03192-224934, 09531856271"
+   }
+  ],
+  "how_to_scrape": "Download the PDF, pdftotext -layout, take the block after the heading 'Police Stations with Landline Phone Numbers' (around line 736): 'N. PS <name>  <STD-number>'. The same PDF has IPS officers' and DySPs' mobiles.",
+  "verified": true,
+  "notes": "No SHO names. The A&N police website domains tried (police.andaman.gov.in, police.andamannicobar.gov.in, police.and.nic.in) do not resolve or time out; the PDF sits on the UT portal andamannicobar.gov.in.",
+  "state_code": "AN",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "police station",
+  "format": "pdf",
+  "rows_estimate": 25,
+  "last_updated": "2025-05-19 (PDF ModDate; the document shows no date)",
+  "in_archive": "no (host saved, this PDF not saved)",
+  "regional_script": "none",
+  "checked": "3 rows (Aberdeen Bazar, Chatham, Ograbraj) read from the live PDF today: on page",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "PS Aberdeen Bazar",
+    "post": "Station (landline)",
+    "name": null,
+    "name_regional": null,
+    "phone": "03192-232400",
+    "email": null,
+    "source": "https://andamannicobar.gov.in/pdf/Police%20Suo%20Motu.pdf",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "PS Chatham",
+    "post": "Station (landline)",
+    "name": null,
+    "name_regional": null,
+    "phone": "03192-232232",
+    "email": null,
+    "source": "https://andamannicobar.gov.in/pdf/Police%20Suo%20Motu.pdf",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "PS Ograbraj",
+    "post": "Station (landline)",
+    "name": null,
+    "name_regional": null,
+    "phone": "03192-224934, 09531856271",
+    "email": null,
+    "source": "https://andamannicobar.gov.in/pdf/Police%20Suo%20Motu.pdf",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Andhra Pradesh",
+  "source": "AP Police citizen portal - Police Stations table API",
+  "url": "https://citizen.appolice.gov.in/our-organization/police-stations",
+  "kind": "json-api",
+  "covers": "all 999 PS statewide (totalCount 999; 30 districts/commissionerates incl. GRP)",
+  "fields": [
+   "station",
+   "district",
+   "sdpo_office",
+   "circle_office",
+   "address",
+   "mobile",
+   "lat",
+   "lng"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "district": "Alluri Sitharama Raju",
+    "sdpoOffice": "Chintapalli SDPO",
+    "circleOffice": "Chintapalli Circle",
+    "stationName": "Annavaram",
+    "address": "Annavaram village",
+    "phone": 9440904237,
+    "latitude": 17.79058,
+    "longitude": 82.395825
+   },
+   {
+    "district": "Alluri Sitharama Raju",
+    "sdpoOffice": "Paderu SDPO",
+    "circleOffice": "Araku Circle",
+    "stationName": "Araku",
+    "address": "Arakuvalley Village & mandal, ASR District",
+    "phone": 9440904225,
+    "latitude": 18.3211383,
+    "longitude": 82.8821388
+   },
+   {
+    "district": "Alluri Sitharama Raju",
+    "sdpoOffice": "Chintapalli SDPO",
+    "circleOffice": "Chintapalli Circle",
+    "stationName": "Chinthapalli",
+    "address": "Chinthapalli  village & Mandal,ASR Dist",
+    "phone": 9440904238,
+    "latitude": 17.8703869,
+    "longitude": 82.3458882
+   }
+  ],
+  "how_to_scrape": "First GET https://citizen.appolice.gov.in/public/session/init with a cookie jar (sets a 'visitor' cookie; without it the API answers 'Please reload the browser!'). Then GET /public/organization/police-station-table?offset=0&limit=N (pager offset/limit; filters district, sdpoOffice, circleOffice, stationName). Filter lists: /public/organization/police-station-table/filter.",
+  "verified": true,
+  "notes": "Phone is the station/SHO CUG mobile (9440xxxxxx); no officer names. /public/citizen/police-directories and /our-organization/higher-officials-contacts answer 'Un Authoried access!' (need citizen login: skipped). Note: session/init returns the portal's Facebook page access token in clear text (site's own leak; not used). Germany: timeout.",
+  "state_code": "AP",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none on the source (points: latitude/longitude per station)",
+  "area_field": "stationName (+ circleOffice, sdpoOffice, district)",
+  "format": "json api",
+  "rows_estimate": 999,
+  "last_updated": "2026-07-14 (updatedAt on the rows)",
+  "in_archive": "no (only the portal home page, saved 2026-11-05)",
+  "regional_script": "none (te i18n exists for the page, rows are English)",
+  "checked": "3 rows (Annavaram, Araku, Chinthapalli) read from the live API today via vpsin: on page",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Annavaram",
+    "post": "Station (CUG)",
+    "name": null,
+    "name_regional": null,
+    "phone": "9440904237",
+    "email": null,
+    "source": "https://citizen.appolice.gov.in/our-organization/police-stations",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Araku",
+    "post": "Station (CUG)",
+    "name": null,
+    "name_regional": null,
+    "phone": "9440904225",
+    "email": null,
+    "source": "https://citizen.appolice.gov.in/our-organization/police-stations",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Chinthapalli",
+    "post": "Station (CUG)",
+    "name": null,
+    "name_regional": null,
+    "phone": "9440904238",
+    "email": null,
+    "source": "https://citizen.appolice.gov.in/our-organization/police-stations",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": "2026-10-26",
+  "in_archive": "yes, saved 2026-11-05",
+  "regional_script": "none",
+  "checked": "3 rows (9862810168, 8118952433, 9612452304) compared with the archive copy of 2026-11-05: all match.",
+  "notes": "No OC names. arunpol.nic.in has only senior officers (contactdir.html: DGP..Dy.SP) and SP pages per district (districts/*.html); police_tele.html is a wireless list without numbers. arunpol HTTPS fails the chain check; http:// works.",
+  "state": "Arunachal Pradesh",
+  "source": "District NIC S3WaaS 'Police Station' utility pages (e.g. Tirap)",
+  "url": "https://tirap.nic.in/public-utility-category/police-station/",
+  "kind": "per-district-html",
+  "format": "html cards",
+  "covers": "per district; Tirap 7 PS with phone; ~26 districts on the same template",
+  "rows_estimate": 7,
+  "fields": [
+   "station",
+   "address",
+   "phone",
+   "pincode"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "Police Station, Borduria",
+    "address": "Borduria, District- Tirap, Arunachal Pradesh- 792130",
+    "phone": "9862810168"
+   },
+   {
+    "station": "Police Station, Dadam",
+    "address": "Dadam Circle, Via- Khonsa, District- Tirap",
+    "phone": "8118952433"
+   },
+   {
+    "station": "Police Station, Deomali",
+    "address": "Deomali, District- Tirap, Arunachal Pradesh- 792129",
+    "phone": "9612452304"
+   }
+  ],
+  "how_to_scrape": "https://<district>.nic.in/public-utility-category/police-station/ (S3WaaS; some districts use /police/). Parse the cards: title, address, 'Phone :' value. Paged with /page/N/.",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": null,
+  "in_archive": "no (archive.s1d.me has no police.assam.gov.in)",
+  "regional_script": "none",
+  "checked": "All *.assam.gov.in hosts refused/timed out from Germany, vpsin and the US fetcher on 2026-11-11; no Wayback copy of the Guwahati page.",
+  "notes": "Assam State Data Centre hosts (103.158.205.x) refuse this box, vpsin and Anthropic's fetcher. Retry from another Indian IP (proxy).",
+  "state": "Assam",
+  "source": "none reachable",
+  "url": "https://police.assam.gov.in/",
+  "kind": "none",
+  "format": "none",
+  "covers": "none",
+  "rows_estimate": null,
+  "fields": [],
+  "access": "blocked",
+  "sample": [],
+  "how_to_scrape": "Candidates: police.assam.gov.in/about-us/detail/contact-number-of-police-officers-police-commissionerate-guwahati-assam (Guwahati OCs); district PDFs under /sites/default/files/swf_utility_folder/departments/assampolice_webcomindia_org_oid_8/menu/about_us/ (e.g. 'New Phone list of Sonitpur Police District 03-11-2018.pdf'); district portals <district>.assam.gov.in (e.g. cachar.assam.gov.in/information-and-services/police-%26-fire-service).",
+  "verified": false,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": null,
+  "in_archive": "no (archive.s1d.me has only the SPA shell of police.bihar.gov.in)",
+  "regional_script": "hi",
+  "checked": "Fetched live from vpsin 2026-11-11: district sum 1380, Patna 88 rows; Kotwali, Gandhi Maidan, Kadamkuan rows shown. No archive copy to compare.",
+  "notes": "No SHO names. Germany: connection reset. Found in the SPA bundle /js/index.*.js (also FieldOfficerHandler.ashx for SP/DSP, PhqContactHandler.ashx for HQ).",
+  "state": "Bihar",
+  "source": "Bihar Police - PoliceStationHandler JSON API",
+  "url": "https://police.bihar.gov.in/PoliceStationHandler.ashx?action=getalldistricts&lang=en",
+  "kind": "json-api",
+  "format": "json api",
+  "covers": "all 1380 PS/OP/cyber/traffic/women thanas in 44 police districts (incl. rail); Patna 88",
+  "rows_estimate": 1380,
+  "fields": [
+   "ps_id",
+   "station",
+   "station_hi",
+   "district",
+   "district_id",
+   "email",
+   "mobile"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "ps_id": 702,
+    "ps_name_en": "Kotwali",
+    "ps_name_hi": "कोतवाली",
+    "district_name": "Patna",
+    "email": "ps.kotwali-pat-bih@nic.in",
+    "mobile": "9031825879"
+   },
+   {
+    "ps_id": 685,
+    "ps_name_en": "Gandhi Maidan",
+    "ps_name_hi": "गांधी मैदान",
+    "district_name": "Patna",
+    "email": "sho-gm-bih@nic.in",
+    "mobile": "9031825890"
+   },
+   {
+    "ps_id": 695,
+    "ps_name_en": "Kadamkuan",
+    "ps_name_hi": "कदमकुआं",
+    "district_name": "Patna",
+    "email": "ps.kadamkuan-pat-bih@nic.in",
+    "mobile": "9031825887"
+   }
+  ],
+  "how_to_scrape": "GET ?action=getalldistricts&lang=en -> 44 districts {id,name,station_count}; then GET ?action=search&districtId=<id>&lang=en -> data[] of stations. 45 requests total. Mobiles are the SHO CUG numbers (9031xxxxxx).",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": null,
+  "in_archive": "no (this url not in archive.s1d.me)",
+  "regional_script": "none",
+  "checked": "Fetched live from Germany 2026-11-11; numbers are in the same 90318xxxxx CUG series as the state API.",
+  "notes": "'Name' column holds the designation, not a person. The state API is better.",
+  "state": "Bihar",
+  "source": "District NIC S3WaaS pages (e.g. Madhubani police-station)",
+  "url": "https://madhubani.nic.in/department/police-station/",
+  "kind": "per-district-html",
+  "format": "html table",
+  "covers": "per district; Madhubani page shows 10 rows (paged)",
+  "rows_estimate": 10,
+  "fields": [
+   "designation",
+   "email",
+   "mobile"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "name": "SHO Cyber",
+    "email": "shocyberps[dot]md[at]bihar[dot]gov[dot]in",
+    "mobile": "9031827566"
+   },
+   {
+    "name": "SHO Narahiya",
+    "email": "shonarahiya[dot]md[at]bihar[dot]gov[dot]in",
+    "mobile": "9031827565"
+   },
+   {
+    "name": "SHO Lalmaniya",
+    "email": "sholalmaniya[dot]md[at]bihar[dot]gov[dot]in",
+    "mobile": "9031827564"
+   }
+  ],
+  "how_to_scrape": "https://<district>.nic.in/department/police-station/ (S3WaaS directory). Same CUG numbers as the state API; use only as a cross-check.",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": null,
+  "format": "html",
+  "rows_estimate": 0,
+  "last_updated": null,
+  "in_archive": "no (host not saved)",
+  "regional_script": "none",
+  "checked": "live page read: helplines only, no SHO",
+  "state": "Chandigarh",
+  "source": "Chandigarh Police portal",
+  "url": "https://portal.chandigarhpolice.gov.in/public/Home/EmergencyContacts",
+  "kind": "none",
+  "covers": "0 PS (helplines only)",
+  "fields": [],
+  "access": "works from Germany",
+  "sample": [],
+  "how_to_scrape": "No station directory on the portal. ebeat.chandigarhpolice.gov.in needs login.",
+  "verified": true,
+  "notes": "No official SHO list found. Third-party pages (indiacustomercare) show SHO mobiles 97795809NN (e.g. PS-11 9779580911), unverified. For PS-to-sector mapping use https://chandigarhdistrict.nic.in/subdivision-blocks/ (PS jurisdiction by sector, no contacts, saved in archive 2026-11-05).",
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Chhattisgarh",
+  "state_code": "CG",
+  "source": "CG district NIC S3WaaS sites - Police page (BSNL CUG per station)",
+  "url": "https://durg.gov.in/en/police/",
+  "kind": "per-district-html",
+  "covers": "per district: Durg 43 rows (35 PS/outposts + SP/ASP/CSP/SDOP); archive copies with 9479xxxxxx CUG numbers also for Korba (26), Gariaband (20), Bilaspur (19), Kondagaon (13), Balrampur directory (31)",
+  "fields": [
+   "station",
+   "std",
+   "landline",
+   "mobile"
+  ],
+  "access": "India only (durg.gov.in timed out from Germany and vpsin on 2026-11-11; archive copy works)",
+  "sample": [
+   {
+    "station": "SUPELA",
+    "std": "788",
+    "landline": "2292731",
+    "mobile": "94791-92027"
+   },
+   {
+    "station": "BHILAI NAGAR",
+    "std": "788",
+    "landline": "2283251",
+    "mobile": "94791-92022"
+   },
+   {
+    "station": "MOHAN NAGAR",
+    "std": "788",
+    "landline": "2210570",
+    "mobile": "94791-92020"
+   }
+  ],
+  "how_to_scrape": "Read the archive copy: `bash archive.sh text URL`. URL forms on S3WaaS district sites: /en/police/, /en/about-district/administrative-setup/police/, /en/public-utility-category/police-station/ (find with `bash archive.sh search \"police station 94791\"`). One table: S.No, RANK/LOCATION/POLICE STATION, STD, TELEPHONE, BSNL Mobile.",
+  "verified": true,
+  "notes": "Chhattisgarh police CUG series 94791-9xxxx (BSNL). No officer names: the mobile belongs to the post (SHO/TI of the station). Page dates vary (Korba 2018-05-28, Bilaspur 2020-06-12, Gariaband 2019-09-16, Kondagaon 2024-05-15, Durg 2023-11-10), so check numbers against a second source.",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "RANK/LOCATION/POLICE STATION column",
+  "format": "html table",
+  "rows_estimate": 400,
+  "last_updated": "2023-11-10",
+  "in_archive": "yes, saved 2026-11-05 (durg, korba, kondagaon), 2026-11-06 (balrampur)",
+  "regional_script": "none (Hindi copies at /पुलिस/)",
+  "checked": "3 rows (Supela, Bhilai Nagar, Mohan Nagar) read from the archive copy of 2026-11-05; live page unreachable, so not compared",
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Chhattisgarh",
+  "source": "Raipur district NIC S3WaaS site - Police Station",
+  "url": "https://raipur.gov.in/en/police-station/",
+  "kind": "html-table",
+  "covers": "Raipur district, 32 PS (several rows without a number)",
+  "fields": [
+   "station",
+   "phone"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "Civil Line Police Station",
+    "phone": "7714247123"
+   },
+   {
+    "station": "Kotwali Police Station",
+    "phone": "7714247121"
+   },
+   {
+    "station": "Gudhiyari Police Station",
+    "phone": "9407924310"
+   }
+  ],
+  "how_to_scrape": "One GET, single HTML table (SN, Police Station, Phone Number). Numbers lack the leading 0 (0771-4247123).",
+  "verified": true,
+  "notes": "Page is ~3 years old; no officer names. Other CG districts have no such page at /en/police-station/ (bilaspur, korba 404); durg.gov.in/en/police/ exists per search but timed out from Germany and India. cgpolice.gov.in refused/timed out from both Germany and India.",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "seen": "2026-11-11",
+  "state_code": "CG",
+  "area_field": "Police Station column",
+  "format": "html table",
+  "rows_estimate": 32,
+  "last_updated": null,
+  "in_archive": "no (raipur.gov.in has 2026-11-05 captures, but not this page)",
+  "regional_script": "none",
+  "checked": "3 rows (Civil Line, Kotwali, Gudhiyari) read live 2026-11-11; no archive copy"
+ },
+ {
+  "state": "Chhattisgarh",
+  "source": "Chhattisgarh Police (cgpolice.gov.in)",
+  "url": "https://cgpolice.gov.in/",
+  "kind": "none",
+  "covers": "statewide, unknown",
+  "fields": [],
+  "access": "blocked",
+  "sample": [],
+  "how_to_scrape": "Site unreachable: connection refused (port 80/443) from vpsin, timeout from Germany, at 2026-11-11.",
+  "verified": false,
+  "notes": "Search shows cgpolice.gov.in/helpline-numbers exists. Retry later; district police pages (e.g. Durg) may carry SHO numbers.",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "seen": "2026-11-11",
+  "state_code": "CG",
+  "area_field": null,
+  "format": "none",
+  "rows_estimate": null,
+  "last_updated": null,
+  "in_archive": "no (cgpolice.gov.in, www.cgpolice.gov.in: none)",
+  "regional_script": "hi",
+  "checked": "not checked: site unreachable"
+ },
+ {
+  "state": "Dadra and Nagar Haveli and Daman and Diu",
+  "source": "UT Police (NIC S3WaaS) - Police Station",
+  "url": "https://police.ddd.gov.in/police-station/",
+  "kind": "html-table",
+  "covers": "7 PS listed (Daman 3, Diu 2, DNH 2)",
+  "fields": [
+   "station",
+   "address",
+   "landline"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "Nani Daman Police Station",
+    "address": "Nani Daman Char Rasta, Nani Daman",
+    "landline": "0260-2254999"
+   },
+   {
+    "station": "Silvassa Police Station",
+    "address": "Vapi-Silvassa Main Road, Zanda Chowk, Silvassa, DNH",
+    "landline": "0260-2652033"
+   },
+   {
+    "station": "Diu Police Station",
+    "address": "1st floor, Fort Road, near Collector office, Diu",
+    "landline": "02875-252133"
+   }
+  ],
+  "how_to_scrape": "One GET; S3WaaS 'organization' cards: title + 'Address – ... Phone – ...' text. 'View Details' links go to /organization/<slug>/ pages.",
+  "verified": true,
+  "notes": "Page last updated 05.03.2021; no officer names or mobiles; some PS (e.g. Dadra, Naroli, Kachigam) may be missing. /whos-who/ lists senior officers only (not checked).",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "seen": "2026-11-11",
+  "state_code": "DH",
+  "area_field": "card title",
+  "format": "html page (S3WaaS cards)",
+  "rows_estimate": 7,
+  "last_updated": "2021-03-05",
+  "in_archive": "yes, saved 2026-11-06 (page + /division/<ps>/ pages)",
+  "regional_script": "gu",
+  "checked": "3 rows: Nani Daman, Vanakbara, Diu live 2026-11-11 = archive 2026-11-06 (addresses and phones match)"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": null,
+  "format": "html",
+  "rows_estimate": 0,
+  "last_updated": "2026-10-19",
+  "in_archive": "yes, saved 2026-11-05 (same content)",
+  "regional_script": "none",
+  "checked": "3 district pages fetched live (central, west, dwarka): no SHO, phone or station table",
+  "state": "Delhi",
+  "source": "Delhi Police new site, Know Your Police Station / district pages",
+  "url": "https://delhipolice.gov.in/traffic-unit-know-your-police-station.html",
+  "kind": "none",
+  "covers": "0 PS with contacts (district pages show only DCP message and PS count)",
+  "fields": [
+   "district"
+  ],
+  "access": "works from Germany",
+  "sample": [],
+  "how_to_scrape": "District selector goes to e.g. https://delhipolice.gov.in/central-police-station-details.html; these pages hold no station rows, SHO names or phones.",
+  "verified": true,
+  "notes": "Site redesigned Oct 2026; old PDFs (doc/helpline.pdf, RTImanualFiles/*Manual*.pdf) now 404. telephone-directory.html has helplines only. districts.delhipolice.gov.in returns 504 from Germany and India. cctns.delhipolice.gov.in citizen services need login. Cyber police stations only: https://cyber.delhipolice.gov.in/Districtcybercell.html (15 cyber PS, phone + email, works from Germany). No official SHO list found.",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "subdivision",
+  "boundary": "none",
+  "area_field": "Sub-Division heading",
+  "format": "html table",
+  "rows_estimate": 19,
+  "last_updated": "2026-07-10",
+  "in_archive": "yes, saved 2026-11-10",
+  "regional_script": "none",
+  "checked": "3 rows read on live page; archive copy exists",
+  "state": "Delhi",
+  "source": "DM New Delhi (revenue district) police station list",
+  "url": "https://dmnewdelhi.delhi.gov.in/police-station/",
+  "kind": "html-table",
+  "covers": "New Delhi revenue district, 19 PS names (no contacts)",
+  "fields": [
+   "station",
+   "subdivision"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "subdivision": "New Delhi",
+    "station": "North Avenue"
+   },
+   {
+    "subdivision": "New Delhi",
+    "station": "Chanakya Puri"
+   },
+   {
+    "subdivision": "DELHI CANTT",
+    "station": "Naraina"
+   }
+  ],
+  "how_to_scrape": "One S3WaaS page per revenue district (dm<district>.delhi.gov.in/police-station/); table per subdivision. Names only: use for PS-to-subdivision mapping.",
+  "verified": true,
+  "notes": "No SHO or phone. Other 10 revenue districts probably have the same page; not checked.",
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Goa",
+  "source": "Goa Police citizen portal - per police station pages",
+  "url": "https://citizen.goapolice.gov.in/web/guest/<name>-police-station",
+  "kind": "per-district-html",
+  "covers": "all Goa, 46 police-station links on the portal home (incl. special units like ANC, ATS, coastal PS)",
+  "fields": [
+   "station",
+   "sho_name",
+   "rank",
+   "landline",
+   "mobile",
+   "email",
+   "fax",
+   "map_link"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "ANJUNA POLICE STATION",
+    "sho_name": "SURAJ H. GAWAS",
+    "rank": "Police Inspector",
+    "landline": "0832-2273233",
+    "mobile": "7875756027",
+    "email": "pianjuna[at]goapolice[dot]gov[dot]in"
+   },
+   {
+    "station": "COLVA POLICE STATION",
+    "sho_name": "VIKRAM NAIK",
+    "rank": "Police Inspector",
+    "landline": "0832-2788396",
+    "mobile": "7875756040",
+    "email": "pi-colva[at]goapolice[dot]gov[dot]in"
+   }
+  ],
+  "how_to_scrape": "Read the station links (href=\"/web/guest/...-police-station...\") from https://citizen.goapolice.gov.in/ (some contain spaces), GET each, regex 'INCHARGE: NAME , RANK Contact No: X Mobile No: Y Email: Z'.",
+  "verified": true,
+  "notes": "Mobiles are the official 7875756xxx CUG series. The portal's linked PDFs (Directory 16.01.2023, contact numbers 08.06.2023) returned a 'User Verification' HTML page, not the PDF: not used. www.goapolice.gov.in timed out from Germany. The 'Last Modified Date' changes every day (likely generated), so it does not date the data.",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "seen": "2026-11-11",
+  "state_code": "GA",
+  "area_field": "'<NAME> POLICE STATION' heading",
+  "format": "html page per station",
+  "rows_estimate": 46,
+  "last_updated": "2026-11-10",
+  "in_archive": "yes, 46 police-station pages saved 2026-11-06",
+  "regional_script": "none",
+  "checked": "3 rows: Anjuna and Colva live 2026-11-11 = archive 2026-11-06 (name, rank, landline, mobile, email all match); Calangute from the archive only (PARESH G. NAIK, 7875756031)"
+ },
+ {
+  "state": "Gujarat",
+  "source": "Gujarat Police unit sites - CMS org chart (vahivati malkhu) per commissionerate/district",
+  "url": "https://cpahmedabad.gujarat.gov.in/cpahmedabad/CMS.aspx?orgchart=true&designation_id=<id>",
+  "kind": "per-district-html",
+  "covers": "Ahmedabad City: 164 designations, 94 PI posts, ~69 PS; Surat City org chart 188 designation links; same CMS on cpvadodara, cprajkot and police.gujarat.gov.in/dgp",
+  "fields": [
+   "sho_name",
+   "rank",
+   "station",
+   "address",
+   "landline",
+   "mobile",
+   "email"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "sho_name": "શ્રી એન.એ.દેસાઈ",
+    "rank": "પોલીસ ઇન્‍સ્‍પેકટર-૧ (PI-1)",
+    "station": "નવરંગપુરા (Navrangpura)",
+    "address": "માઉન્‍ટ કાર્મેલ સ્‍કૂલ પછી, રેલ્‍વે ક્રોસીંગની બાજુમાં, નવરંગપુરા, અમદાવાદ-૩૮૦ ૦૦૯",
+    "landline": "૨૬૪૪૦૬૯૮, ૬૩૫૯૬૨૫૨૧૯",
+    "mobile": "૯૮૯૮૫ ૦૦૯૪૩, ૬૩૫૯૬૨૫૨૦૫",
+    "email": "polstn-navrang-ahd[at]gujarat[dot]gov[dot]in"
+   },
+   {
+    "sho_name": "",
+    "rank": "પોલીસ ઇન્‍સ્‍પેકટર-૨ (PI-2)",
+    "station": "કારંજ (Karanj)",
+    "landline": "079-25507580 25501212",
+    "mobile": "-",
+    "email": "polstn-kar-ahd[at]gujarat[dot]gov[dot]in"
+   }
+  ],
+  "how_to_scrape": "GET <unit>/CMS.aspx?orgchart=true -> tree of links CMS.aspx?orgchart=true&designation_id=N with designation text 'પોલીસ ઇન્સ્પેકટર (STATION)'. Keep PI designations, GET each detail page and read the 'ઓફિસ સંપર્ક' block (નામ, હોદ્દો, સરનામું, ફોન, મોબાઇલ, ઇ-મેઇલ). ~100 requests per big city.",
+  "verified": true,
+  "notes": "Gujarati text and Gujarati digits. Some posts have no name or mobile. Unit hosts: cpahmedabad, cpsurat, cpvadodara, cprajkot (.gujarat.gov.in/<host>/); district SP unit paths not confirmed. All *.gujarat.gov.in police hosts time out from Germany; fine from vpsin. Station emails follow polstn-<code>-<dist>@gujarat.gov.in. District SP units use the same CMS at sp<district>.gujarat.gov.in/sp<district>/ (spahmedabad, spbhavnagar, spdahod seen in the archive).",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "seen": "2026-11-11",
+  "state_code": "GJ",
+  "area_field": "station name in brackets in the designation text, e.g. 'પોલીસ ઇન્સ્પેકટર (નવરંગપુરા)'",
+  "format": "aspx form (CMS.aspx pages)",
+  "rows_estimate": 69,
+  "last_updated": null,
+  "in_archive": "partly: cpsurat 444 urls, spahmedabad 548, spbhavnagar 344 (1 orgchart url), cpahmedabad 3; designation pages not saved",
+  "regional_script": "gu",
+  "checked": "2 rows read live via vpsin 2026-11-11 (Navrangpura PI-1 with name and mobile; Karanj PI-2 without name or mobile); not compared with the archive (no copy)"
+ },
+ {
+  "state": "Gujarat",
+  "source": "Gujarat Police - find your police station (CMS.aspx?Search=PS)",
+  "url": "https://police.gujarat.gov.in/dgp/CMS.aspx?Search=PS",
+  "kind": "spa",
+  "covers": "statewide lookup by district > taluka > village (count not seen)",
+  "fields": [
+   "district",
+   "taluka",
+   "village",
+   "station"
+  ],
+  "access": "India only",
+  "sample": [],
+  "how_to_scrape": "ASP.NET cascading dropdowns (district -> taluka -> village) loaded by postback/AJAX; would need many postbacks. Useful only for village->PS mapping, not for officer names.",
+  "verified": false,
+  "notes": "Page fetched (district list seen: 30 units incl. city commissionerates); the station result itself was not tested.",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (village to police station lookup)",
+  "seen": "2026-11-11",
+  "state_code": "GJ",
+  "area_field": "village / society",
+  "format": "aspx form",
+  "rows_estimate": null,
+  "last_updated": null,
+  "in_archive": "no",
+  "regional_script": "gu",
+  "checked": "not checked: no station result fetched"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "station name; district from header row",
+  "format": "html table",
+  "rows_estimate": 413,
+  "last_updated": "2025-04-01",
+  "in_archive": "no (only homepage saved)",
+  "regional_script": "none",
+  "checked": "404 of 413 rows have a 10-digit mobile; 3 sample rows copied from the live page fetched via vpsin",
+  "state": "Haryana",
+  "source": "Haryana Police statewide 'Telephone Number of Police Station'",
+  "url": "https://haryanapolice.gov.in/static/DistrictTelephone.aspx",
+  "kind": "html-table",
+  "covers": "statewide, 413 rows (all commissionerates + districts, incl. women and cyber PS, ACB)",
+  "fields": [
+   "station",
+   "district",
+   "landline",
+   "mobile",
+   "email"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "district": "Faridabad (CP)",
+    "station": "P.S. Old Faridabad",
+    "landline": "(0129)- 2296824",
+    "mobile": "9582200123",
+    "email": "shooldfbd-hry[at]nic[dot]in"
+   },
+   {
+    "district": "Faridabad (CP)",
+    "station": "P.S. Central, Faridabad",
+    "landline": "(0129)- 2285967",
+    "mobile": "9582200120",
+    "email": "shocentralfbd-hry[at]nic[dot]in"
+   },
+   {
+    "district": "Ambala",
+    "station": "P.S. Ambala Cantt.",
+    "landline": "(0171)-2618045",
+    "mobile": "9729990125",
+    "email": "shoambcantt-hry[at]nic[dot]in"
+   }
+  ],
+  "how_to_scrape": "One GET (530 KB). Parse <tr> rows whose first cell is a number; district header rows ('COMMISSIONERATE OF X' / 'DISTRICT X') precede each block. Decode [at]/[dot]. Mobile is the SHO CUG; no SHO name.",
+  "verified": true,
+  "notes": "Port 443 refuses connections from Germany. Page footer: 'Updated on 01.04.2025'. No SHO names here: see district SHOContact pages.",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "Police Station",
+  "format": "html table",
+  "rows_estimate": 250,
+  "last_updated": null,
+  "in_archive": "yes, faridabad saved 2026-11-05 (+7 districts)",
+  "regional_script": "none",
+  "checked": "live Faridabad (via vpsin) mobiles 9582200120/121/123 match the statewide table",
+  "state": "Haryana",
+  "source": "Haryana district police sites, SHOs Contact List",
+  "url": "https://faridabad.haryanapolice.gov.in/SHOContact.html",
+  "kind": "per-district-html",
+  "covers": "Faridabad 34 PS with SHO name+rank; archive also has SHOContact.html for ambala, hisar, jind, karnal, kurukshetra, mewat, panipat",
+  "fields": [
+   "station",
+   "sho_name",
+   "rank",
+   "landline",
+   "email",
+   "mobile"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "sho_name": "Insp. Satbir Singh",
+    "station": "PS Central FBD",
+    "landline": "2285967",
+    "email": "shocentralfbd-hry@nic.in",
+    "mobile": "9582200120"
+   },
+   {
+    "sho_name": "Insp. Rakesh Kumar",
+    "station": "PS Sarai Khawaja FBD",
+    "landline": "2275400",
+    "email": "shosaraikhawaja-hry@nic.in",
+    "mobile": "9582200121"
+   },
+   {
+    "sho_name": "Insp. Vishnu Mittar",
+    "station": "PS Old FBD",
+    "landline": "2296824",
+    "email": "shooldfbd-hry@nic.in",
+    "mobile": "9582200123"
+   }
+  ],
+  "how_to_scrape": "URL pattern https://<district>.haryanapolice.gov.in/SHOContact.html (also PS_<Name>.html per station). Table columns: Sr, SHO Name & Rank, Police Station, Office Tel, Email, Mobile. Join to the statewide table by mobile number.",
+  "verified": true,
+  "notes": "Gurugram, Nuh, Yamunanagar, Mahendergarh subdomains not in archive; coverage per district must be tested.",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "district",
+  "boundary": "none",
+  "area_field": null,
+  "format": "aspx form",
+  "rows_estimate": null,
+  "last_updated": null,
+  "in_archive": "no",
+  "regional_script": "none",
+  "checked": "static page fetched via vpsin: HQ/range officers only; district data not seen",
+  "state": "Himachal Pradesh",
+  "source": "HP Police citizen portal telephone directory (District Offices tab)",
+  "url": "https://citizenportal.hppolice.gov.in/citizen/openTeleDir.htm",
+  "kind": "spa",
+  "covers": "16 police districts; station rows load per district by XHR (not fetched)",
+  "fields": [
+   "officer",
+   "designation",
+   "landline",
+   "mobile",
+   "email"
+  ],
+  "access": "India only",
+  "sample": [],
+  "how_to_scrape": "District buttons (ids 12242..12955) POST getTelDirDistDetails.htm {districtCd} with the page's CSRFGuard 'stov' token; a plain POST returns 404. Needs a browser session; not done.",
+  "verified": false,
+  "notes": "hppolice.gov.in certificate does not match (curl 60), so not fetched. The automatic permission check refused the token-replay POST; owner decides. District S3WaaS pages (e.g. hphamirpur.nic.in/divisions/police/) list SP/SDPO only.",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "Police Station X",
+  "format": "html",
+  "rows_estimate": 40,
+  "last_updated": "2026-04-13",
+  "in_archive": "yes, saved 2026-11-06",
+  "regional_script": "none",
+  "checked": "3 rows on live page; archive copy has the same text",
+  "state": "Jammu and Kashmir",
+  "source": "District S3WaaS police pages (Udhampur: SHO list)",
+  "url": "https://udhampur.nic.in/police/",
+  "kind": "per-district-html",
+  "covers": "Udhampur 10 PS with SHO name+rank+mobile; Baramulla 12 PS mobiles only; Kathua/Jammu/Srinagar/Samba pages empty",
+  "fields": [
+   "sho_name",
+   "rank",
+   "station",
+   "mobile",
+   "landline"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "rank": "Insp.",
+    "sho_name": "Raghubir Singh",
+    "station": "Police Station Udhampur",
+    "mobile": "9419134268",
+    "landline": "01992-270725"
+   },
+   {
+    "rank": "Insp.",
+    "sho_name": "Nishad Ahmed Sombria",
+    "station": "Police Station Rehambal",
+    "mobile": "7006676152",
+    "landline": "01992-242012"
+   },
+   {
+    "rank": "Insp.",
+    "sho_name": "Jaswinder Singh",
+    "station": "Police Station Chenani",
+    "mobile": "8803783308",
+    "landline": "01992-285513"
+   }
+  ],
+  "how_to_scrape": "https://<district>.nic.in/police/ (some districts use <district>.gov.in); free-text list 'N. Insp. NAME SHO Police Station X MOBILE LANDLINE (O)'. Regex per line; template differs per district.",
+  "verified": true,
+  "notes": "jkpolice.gov.in times out from Germany and India and is not in the archive.",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "Name of Police Stations",
+  "format": "html table",
+  "rows_estimate": 17,
+  "last_updated": "2025-07-31",
+  "in_archive": "yes, saved 2026-11-05",
+  "regional_script": "none",
+  "checked": "3 rows on live page match the archive copy",
+  "state": "Jammu and Kashmir",
+  "source": "Baramulla district police page",
+  "url": "https://baramulla.nic.in/police/",
+  "kind": "per-district-html",
+  "covers": "Baramulla 12 PS + SDPOs, station mobile only",
+  "fields": [
+   "station",
+   "mobile"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "PS Baramulla",
+    "mobile": "9596767710"
+   },
+   {
+    "station": "PS Gulmarg",
+    "mobile": "9596767715"
+   },
+   {
+    "station": "PS Uri",
+    "mobile": "9596767718"
+   }
+  ],
+  "how_to_scrape": "Single table S.no / Name of Police Stations / Contact Numbers.",
+  "verified": true,
+  "notes": "No SHO names.",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": null,
+  "in_archive": "yes, saved 2026-11-05",
+  "regional_script": "none",
+  "checked": "3 rows (9431706336, 9431706170, 8987790623) compared with the archive copy of 2026-11-05: all match.",
+  "notes": "No officer names. Germany times out.",
+  "state": "Jharkhand",
+  "source": "Jharkhand Police - Contact Police Station",
+  "url": "https://www.jhpolice.gov.in/police-station",
+  "kind": "html-table",
+  "format": "html table",
+  "covers": "statewide, 638 PS/OP rows in 27 tables (24 districts + Rail Jamshedpur, Rail Dhanbad, zone)",
+  "rows_estimate": 638,
+  "fields": [
+   "station",
+   "std_code",
+   "office_no",
+   "residence_no",
+   "mobile",
+   "district"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "district": "Ranchi",
+    "station": "Argora PS",
+    "code": "0651",
+    "office": "2242132",
+    "mobile": "9431706170"
+   },
+   {
+    "district": "Ranchi",
+    "station": "Airport PS",
+    "code": "0651",
+    "office": "",
+    "mobile": "8987790623"
+   },
+   {
+    "district": "Giridih",
+    "station": "Ahilyapur PS",
+    "code": "",
+    "office": "",
+    "mobile": "9431706336"
+   }
+  ],
+  "how_to_scrape": "One page (Drupal view). Each <table> has a <caption> with the district; columns views-field-title / thana-code / thana-office-no / thana-resi-no / thana-mobile-no. Optional filter field_thana_district_nid.",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Karnataka",
+  "source": "KSP Police Station Locator (home-fetch API)",
+  "url": "https://ksp.karnataka.gov.in/pslocator/en",
+  "kind": "json-api",
+  "covers": "all 41 KSP units/districts statewide (incl. Bengaluru City 178 PS rows incl. traffic/women/CEN; Gadag 16); est. ~1,100+ PS",
+  "fields": [
+   "station",
+   "district",
+   "circle_or_subdivision",
+   "address",
+   "landline",
+   "email",
+   "lat",
+   "lng"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "station": "Adugodi PS",
+    "district": "Bengaluru City",
+    "address": "Adugodi Police Station, Hosur Lashkar Road, B",
+    "email": "adugodibcp@ksp.gov.in",
+    "landline": "080-22942069",
+    "circle": "Madivala Sub-Division",
+    "lat": 12.94143,
+    "lng": 77.61154
+   },
+   {
+    "station": "Betageri PS",
+    "district": "Gadag",
+    "address": "OLD PHQ, HEALTHCAMP, BETAGERI-GADAG",
+    "email": "betagerigdg@ksp.gov.in",
+    "landline": "08372-246333",
+    "circle": "Betageri Circle",
+    "lat": 15.445417,
+    "lng": 75.647606
+   },
+   {
+    "station": "Gadag Town PS",
+    "district": "Gadag",
+    "address": "OPP OLD BUSSTAND, GADAG",
+    "email": "towngdg@ksp.gov.in",
+    "landline": "08372-238333",
+    "circle": "Gadag Town Circle",
+    "lat": 15.42923,
+    "lng": 75.63263
+   }
+  ],
+  "how_to_scrape": "GET https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=N&dependent=district_row_id for N=1..41 (district ids are the <option>s on /pslocator/en). Returns <option value=\"ADDRESS!@#$%EMAIL!@#$%PHONE!@#$%CIRCLE!@#$%LAT!@#$%LNG\">STATION</option>; split on '!@#$%'. 41 requests total.",
+  "verified": true,
+  "notes": "No officer names or mobiles; landline + station email + coordinates only. Some rows are placeholders (email@ksp.gov.in, 88888-888888, lat 0). bengawalk's Bengaluru police lat/lng match these coordinates. Times out from Germany.",
+  "state_code": "KA",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none on the source (points: lat/lng per station); jurisdictions for Bengaluru only: OpenCity 'Bengaluru Police Jurisdictions Map' (police-jurisdiction-maps-for-major-cities-of-india)",
+  "area_field": "option text (station) + circle field",
+  "format": "json api (HTML <option> fragment)",
+  "rows_estimate": 1100,
+  "last_updated": "2026-11-09 (site footer 'Last Updated: 09-11-2026 01:16 PM'; not specific to the list)",
+  "in_archive": "no (host saved 2026-11-06, but not /pslocator or /home-fetch)",
+  "regional_script": "kn (site has /kn pages; the station list is English)",
+  "checked": "3 rows (Adugodi PS, Betageri PS, Gadag Town PS) read from the live API today; Adugodi lat/lng 12.94143,77.61154 also matches bengawalk's officials.json",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Adugodi PS",
+    "post": "Station (landline)",
+    "name": null,
+    "name_regional": null,
+    "phone": "080-22942069",
+    "email": "adugodibcp@ksp.gov.in",
+    "source": "https://ksp.karnataka.gov.in/pslocator/en",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Betageri PS",
+    "post": "Station (landline)",
+    "name": null,
+    "name_regional": null,
+    "phone": "08372-246333",
+    "email": "betagerigdg@ksp.gov.in",
+    "source": "https://ksp.karnataka.gov.in/pslocator/en",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Gadag Town PS",
+    "post": "Station (landline)",
+    "name": null,
+    "name_regional": null,
+    "phone": "08372-238333",
+    "email": "towngdg@ksp.gov.in",
+    "source": "https://ksp.karnataka.gov.in/pslocator/en",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Karnataka",
+  "source": "Bengaluru City Police (BCP) Law & Order contacts page",
+  "url": "https://bcp.karnataka.gov.in/24/law-&-order-/en",
+  "kind": "html-table",
+  "covers": "Bengaluru city, ~110-130 PI (station inspector) rows across 11 divisions plus DCP/ACP rows",
+  "fields": [
+   "station",
+   "rank",
+   "mobile",
+   "landline"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "station": "PI SESHADRIPURAM PS",
+    "rank": "PI",
+    "mobile": "9480801125",
+    "landline": "080-22942586 080-22942082"
+   },
+   {
+    "station": "PI HIGH GROUND PS",
+    "rank": "PI",
+    "mobile": "9480801126",
+    "landline": "080-22942587 080-22942083"
+   },
+   {
+    "station": "PI VYALIKAVAL PS",
+    "rank": "PI",
+    "mobile": "9480801128",
+    "landline": "080-22942588 080-22942084"
+   }
+  ],
+  "how_to_scrape": "One page, several <table>s (one per division) with columns SL No | Police Station | Mobile Number | Phone Number. Row label starts with rank (PI/ACP/DCP); the page content appears twice, so de-duplicate.",
+  "verified": true,
+  "notes": "This is the page bengawalk (cityofficials.bengawalk.com/blr/officials.json) cites for 78 of its police_city rows; the rest it took from OpenCity's 'Bengaluru City Police Officers Contact Numbers' CSV; traffic from btp.karnataka.gov.in/btp_map_locations. No names (designation-based CUG mobiles 94808xxxxx). bcp.karnataka.gov.in sends a wrong intermediate certificate: it verified only after adding GlobalSign's own 'GCC R46 OV TLS CA 2025' intermediate (from secure.globalsign.com, the cert's AIA URL) to the CA bundle; times out from Germany. Copy with emails: OpenCity PDF 'Bengaluru Police Stations - Traffic and Crime - Contacts 2025' (data.opencity.in/dataset/bengaluru-city-police-contact-info, 100 'PI ... PS' rows, works from Germany).",
+  "state_code": "KA",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "OpenCity 'Bengaluru Police Jurisdictions Map' (data.opencity.in/dataset/police-jurisdiction-maps-for-major-cities-of-india); bengawalk uses PS jurisdiction polygons",
+  "area_field": "Police Station (label 'PI <NAME> PS')",
+  "format": "html table",
+  "rows_estimate": 120,
+  "last_updated": null,
+  "in_archive": "no (host saved 2026-11-06, this page not saved)",
+  "regional_script": "kn (/kn version of the page exists; bengawalk has Kannada names)",
+  "checked": "3 rows (Seshadripuram, High Ground, Vyalikaval) read from the live page today via vpsin; the same mobiles appear in the OpenCity 2025 PDF: all match",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Seshadripuram",
+    "post": "PI (SHO)",
+    "name": null,
+    "name_regional": null,
+    "phone": "9480801125; 080-22942586",
+    "email": "sspurambcp@ksp.gov.in (from OpenCity 2025 PDF)",
+    "source": "https://bcp.karnataka.gov.in/24/law-&-order-/en",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "High Ground",
+    "post": "PI (SHO)",
+    "name": null,
+    "name_regional": null,
+    "phone": "9480801126; 080-22942587",
+    "email": "hgroundbcp@ksp.gov.in (from OpenCity 2025 PDF)",
+    "source": "https://bcp.karnataka.gov.in/24/law-&-order-/en",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Vyalikaval",
+    "post": "PI (SHO)",
+    "name": null,
+    "name_regional": null,
+    "phone": "9480801128; 080-22942588",
+    "email": "vkavalbcp@ksp.gov.in (from OpenCity 2025 PDF)",
+    "source": "https://bcp.karnataka.gov.in/24/law-&-order-/en",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Kerala",
+  "source": "Kerala Police Connectivity Pages 2025 (statewide telephone directory PDF, State Police Media Centre)",
+  "url": "https://keralapolice.gov.in/storage/pages/custom/ckFiles/file/RDBrCgXQ7yDQqKfazhg9MphN8DWUdgGcXFThGhoy.pdf",
+  "kind": "pdf",
+  "covers": "all PS statewide (~480-540 PS rows across all city/rural districts; updated to 31 Mar 2025)",
+  "fields": [
+   "station",
+   "district",
+   "vpn_code",
+   "mobile",
+   "std",
+   "landline"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "Museum PS",
+    "district": "Thiruvananthapuram City",
+    "vpn": "10121",
+    "mobile": "94979 87006",
+    "mobile_2": "94979 80039",
+    "std": "0471",
+    "landline": "2315096"
+   },
+   {
+    "station": "Fort PS",
+    "district": "Thiruvananthapuram City",
+    "vpn": "10134",
+    "mobile": "94979 87010",
+    "mobile_2": "94979 80044",
+    "std": "0471",
+    "landline": "2461105"
+   },
+   {
+    "station": "Cantonment PS",
+    "district": "Thiruvananthapuram City",
+    "vpn": "10119",
+    "mobile": "94979 87000",
+    "mobile_2": "94979 80040",
+    "std": "0471",
+    "landline": "2330248"
+   }
+  ],
+  "how_to_scrape": "Download the 2 MB PDF; pdftotext -layout. Rows: 'NAME PS  VPN  94979 xxxxx  STD  OFFICE' with an optional second mobile on the next line; district comes from the section headings. ~8,200 text lines.",
+  "verified": true,
+  "notes": "No names. First mobile = SHO CUG (matches the SHO numbers in the district SPIO lists, e.g. Fort SHO 9497987010); second line is probably the station's own CUG. 'For private circulation' header, but published on the official site.",
+  "state_code": "KL",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none on the source; no official PS polygons found",
+  "area_field": "station name (section heading = police district)",
+  "format": "pdf",
+  "rows_estimate": 500,
+  "last_updated": "2025-03-31 ('updated upto 31st March 2025')",
+  "in_archive": "yes, saved 2026-11-05 (binary PDF; archive text helper returns raw bytes, so compared with the live download)",
+  "regional_script": "none",
+  "checked": "3 rows (Museum PS, Fort PS, Cantonment PS) read from the live PDF; first mobiles match the SHO mobiles in the TVM City SPIO list: all match",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Museum PS",
+    "post": "SHO (CUG)",
+    "name": null,
+    "name_regional": null,
+    "phone": "94979 87006; 0471 2315096",
+    "email": null,
+    "source": "https://keralapolice.gov.in/storage/pages/custom/ckFiles/file/RDBrCgXQ7yDQqKfazhg9MphN8DWUdgGcXFThGhoy.pdf",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Fort PS",
+    "post": "SHO (CUG)",
+    "name": null,
+    "name_regional": null,
+    "phone": "94979 87010; 0471 2461105",
+    "email": null,
+    "source": "https://keralapolice.gov.in/storage/pages/custom/ckFiles/file/RDBrCgXQ7yDQqKfazhg9MphN8DWUdgGcXFThGhoy.pdf",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Cantonment PS",
+    "post": "SHO (CUG)",
+    "name": null,
+    "name_regional": null,
+    "phone": "94979 87000; 0471 2330248",
+    "email": null,
+    "source": "https://keralapolice.gov.in/storage/pages/custom/ckFiles/file/RDBrCgXQ7yDQqKfazhg9MphN8DWUdgGcXFThGhoy.pdf",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Kerala",
+  "source": "District police RTI/SPIO lists (SHO = SPIO), per-district subdomains",
+  "url": "https://tvmcity.keralapolice.gov.in/storage-tvmcity_keralapolice_gov_in/pages/custom/table/table-7v2ouv2eU8OGb6Bi74nvKgon9.pdf",
+  "kind": "per-district-html",
+  "covers": "Thiruvananthapuram City 24 SHO rows in this PDF; one such list per district (~20 police districts)",
+  "fields": [
+   "station",
+   "designation",
+   "sho_name",
+   "mobile",
+   "email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "Cantonment",
+    "designation": "SHO",
+    "sho_name": "Jayakrishnan S",
+    "mobile": "9497987000",
+    "email": "shoctmntpstvm.pol@kerala.gov.in"
+   },
+   {
+    "station": "Peroorkada",
+    "designation": "SHO",
+    "sho_name": "Arun G",
+    "mobile": "9497987005",
+    "email": "shoprkdapstvm.pol@kerala.gov.in"
+   },
+   {
+    "station": "Fort",
+    "designation": "SHO Fort",
+    "sho_name": "Anil Kumar L",
+    "mobile": "9497987010",
+    "email": "shofortps.pol@kerala.gov.in"
+   }
+  ],
+  "how_to_scrape": "Each district site <district>.keralapolice.gov.in (tvmcity, kochicity, ernakulamrural, ...) has an RTI page (e.g. /page/information-as-per-right-to-information-act) linking table PDFs under /storage-<host>/pages/custom/table/table-<id>.pdf. Find the SPIO PDF per district, pdftotext -layout; name cells wrap over 2-3 lines.",
+  "verified": true,
+  "notes": "Gives SHO NAMES + official email, which the statewide directory lacks. keralapolice.gov.in timed out on a second request; keep requests slow.",
+  "state_code": "KL",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "UNITS",
+  "format": "pdf",
+  "rows_estimate": 24,
+  "last_updated": null,
+  "in_archive": "no (host saved 2026-11-05, this PDF not saved)",
+  "regional_script": "none",
+  "checked": "3 rows (Cantonment, Peroorkada, Fort) read from the live PDF; mobiles equal the statewide directory's SHO mobiles: all match",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Cantonment",
+    "post": "SHO",
+    "name": "Jayakrishnan S",
+    "name_regional": null,
+    "phone": "9497987000",
+    "email": "shoctmntpstvm.pol@kerala.gov.in",
+    "source": "https://tvmcity.keralapolice.gov.in/storage-tvmcity_keralapolice_gov_in/pages/custom/table/table-7v2ouv2eU8OGb6Bi74nvKgon9.pdf",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Peroorkada",
+    "post": "SHO",
+    "name": "Arun G",
+    "name_regional": null,
+    "phone": "9497987005",
+    "email": "shoprkdapstvm.pol@kerala.gov.in",
+    "source": "https://tvmcity.keralapolice.gov.in/storage-tvmcity_keralapolice_gov_in/pages/custom/table/table-7v2ouv2eU8OGb6Bi74nvKgon9.pdf",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Fort",
+    "post": "SHO",
+    "name": "Anil Kumar L",
+    "name_regional": null,
+    "phone": "9497987010",
+    "email": "shofortps.pol@kerala.gov.in",
+    "source": "https://tvmcity.keralapolice.gov.in/storage-tvmcity_keralapolice_gov_in/pages/custom/table/table-7v2ouv2eU8OGb6Bi74nvKgon9.pdf",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "Name of Police Station",
+  "format": "html table",
+  "rows_estimate": 25,
+  "last_updated": null,
+  "in_archive": "yes, saved 2026-11-05",
+  "regional_script": "none",
+  "checked": "3 rows on live page match the archive copy",
+  "state": "Ladakh",
+  "source": "Ladakh Police, Police Stations and Police Posts",
+  "url": "https://police.ladakh.gov.in/pages/policestations.html",
+  "kind": "html-table",
+  "covers": "all of Ladakh: 11 PS (Leh 5, Kargil 6) + 14 police posts, with SHO name, rank, mobile",
+  "fields": [
+   "station",
+   "district",
+   "sho_name",
+   "rank",
+   "mobile"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "district": "Leh",
+    "station": "PS Leh",
+    "sho_name": "Manzoor Hussain",
+    "rank": "Insp",
+    "mobile": "9541900283"
+   },
+   {
+    "district": "Leh",
+    "station": "PS Nubra",
+    "sho_name": "Iftikar Hussain",
+    "rank": "Insp",
+    "mobile": "9541900285"
+   },
+   {
+    "district": "Kargil",
+    "station": "PS Kargil",
+    "sho_name": "Saddat",
+    "rank": "Insp",
+    "mobile": "9541902334"
+   }
+  ],
+  "how_to_scrape": "One page, four tables (PS Leh, PP Leh, PS Kargil, PP Kargil): Name of Police Station / Name of SHO / Rank / Contact Details.",
+  "verified": true,
+  "notes": "W/PS Kargil mobile 9544902328 looks like a typo of the 954190xxxx series; keep as published.",
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Lakshadweep",
+  "source": "Lakshadweep Police - HQ and Police Stations + Citizen Charter",
+  "url": "https://lakshadweeppolice.gov.in/police_stations",
+  "kind": "html-table",
+  "covers": "all 9 PS (Kavaratti, Agatti, Androth, Amini, Minicoy, Kiltan, Chetlat, Kadmath, Kalpeni)",
+  "fields": [
+   "station",
+   "sho_name",
+   "rank"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "PS Kavaratti",
+    "sho_name": "Shri RM Ali Akber",
+    "rank": "CI(SHO)"
+   },
+   {
+    "station": "PS Kalpeni",
+    "sho_name": "Shri TP Mohammed Khaleel",
+    "rank": "SI(SHO)"
+   },
+   {
+    "station": "PS Agatti",
+    "sho_name": "Shri PP Ashik",
+    "rank": "CI(SHO)"
+   }
+  ],
+  "how_to_scrape": "One HTML page, second <table> = Sl No | Name of Police Station | SHO Name | Designation (row 1 lacks the station name: Kadmath by elimination). Phones: citizen charter PDF https://www.lakshadweeppolice.gov.in/downloads/citizen_charter_v2.pdf lists 'OIC Police Station, <island>' office/residence landlines (e.g. Kavaratti 04896-262232, Minicoy 04892-222232, Kalpeni 04895-252292) and emails ps.oic<code>-lk@nic.in.",
+  "verified": true,
+  "notes": "Join the two sources by island name. Lakshadweep has no city wards; useful only for completeness.",
+  "state_code": "LD",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (one PS per island: island boundary = PS area)",
+  "area_field": "Name of Police Station",
+  "format": "html table (+ pdf for phones)",
+  "rows_estimate": 9,
+  "last_updated": "phones: citizen charter PDF dated 2018-10-12 (PDF metadata); SHO page shows no date",
+  "in_archive": "no (host saved 2026-11-05, this page not saved)",
+  "regional_script": "none",
+  "checked": "3 rows (Kavaratti, Kalpeni, Agatti) read from the live page; landlines from the live citizen charter: on page",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Kavaratti",
+    "post": "CI (SHO)",
+    "name": "Shri RM Ali Akber",
+    "name_regional": null,
+    "phone": "04896-262232",
+    "email": "ps.oic.kvt-lk@nic.in",
+    "source": "https://lakshadweeppolice.gov.in/police_stations",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Kalpeni",
+    "post": "SI (SHO)",
+    "name": "Shri TP Mohammed Khaleel",
+    "name_regional": null,
+    "phone": "04895-252292",
+    "email": "ps.oicklp-lk@nic.in",
+    "source": "https://lakshadweeppolice.gov.in/police_stations",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Agatti",
+    "post": "CI (SHO)",
+    "name": "Shri PP Ashik",
+    "name_regional": null,
+    "phone": "04894-242260",
+    "email": "ps.oicagt-lk@nic.in",
+    "source": "https://lakshadweeppolice.gov.in/police_stations",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Madhya Pradesh",
+  "source": "MP district police sites - embedded Google My Maps (KML export)",
+  "url": "https://www.google.com/maps/d/kml?mid=<mid>&forcekml=1",
+  "kind": "per-district-html",
+  "covers": "per district: Bhopal commissionerate 48 placemarks, Indore 31, Jabalpur 41 (55 district sites <district>.mppolice.gov.in)",
+  "fields": [
+   "station",
+   "mobile",
+   "landline",
+   "email",
+   "lat",
+   "lon",
+   "zone"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "TT Nagar Police Station",
+    "zone": "Zone - I",
+    "mobile": "9479990444",
+    "landline": "0755-2677344",
+    "email": "sho.psttnagar-bpl@mppolice.gov.in",
+    "lon_lat": "77.4000175,23.2359122"
+   },
+   {
+    "station": "Azad Nagar Police Station",
+    "mobile": "7049108537",
+    "landline": "7312711108",
+    "email": "sho.psazadnagar-ind@mppolice.gov.in"
+   },
+   {
+    "station": "Adhartal Police Station",
+    "mobile": "7587616131",
+    "landline": "0761-2676383",
+    "email": "ps.adhartal-jbp@mppolice.gov.in"
+   }
+  ],
+  "how_to_scrape": "GET https://<district>.mppolice.gov.in/, find the iframe 'google.com/maps/d/u/0/embed?mid=<mid>' (section #KYPS 'Know your police station'), then GET the KML with mid. Each Placemark: name, CDATA description 'Mobile: .. Telephone: .. Email: ..', ExtendedData, Point coordinates; Folder = zone.",
+  "verified": true,
+  "notes": "Mobiles are official station CUG numbers (e.g. Bhopal 9479990xxx); no SHO names. Some placemarks are blank (Indore Sadar Bazar). The map is owned by the district police but hosted on Google. www.mppolice.gov.in (state) timed out from Germany and India. rows_estimate is 55 districts x ~35 placemarks; last_updated is the Bhopal page footer date only. Archive search for 'थाना प्रभारी मोबाइल' on mppolice hosts finds press releases, not directories.",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (station points: lon/lat in the KML)",
+  "seen": "2026-11-11",
+  "state_code": "MP",
+  "area_field": "Placemark name; Folder = zone",
+  "format": "kml (Google My Maps export)",
+  "rows_estimate": 2000,
+  "last_updated": "2023-08-11",
+  "in_archive": "partly: district home pages saved (e.g. bhopal.mppolice.gov.in 256 urls, 2026-11-05) with the map id; the KML itself is not saved",
+  "regional_script": "hi",
+  "checked": "3 rows read live 2026-11-11 (Bhopal TT Nagar, Indore Azad Nagar, Jabalpur Adhartal): mobile, landline, email present; not compared with the archive"
+ },
+ {
+  "state": "Maharashtra",
+  "source": "Mumbai Police - Police Station Incharge",
+  "url": "https://mumbaipolice.gov.in/Police_incharge",
+  "kind": "html-table",
+  "covers": "Greater Mumbai commissionerate, ~113 station in-charge cards (5 pages: 4x24 + 17)",
+  "fields": [
+   "station",
+   "sho_name",
+   "rank",
+   "landline",
+   "fax",
+   "mobile",
+   "email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "आरे",
+    "sho_name": "रविंद्र पाटील",
+    "rank": "व. पो. नि. (Sr. PI)",
+    "landline": "२९२७२४८५",
+    "mobile": "+91८९७६९५२४२५",
+    "email": "ps[dot]aareysub[dot]mum[at]mahapolice[dot]gov[dot]in"
+   },
+   {
+    "station": "मलबार हिल",
+    "sho_name": "कुंडलिक गाढवे",
+    "rank": "व. पो. नि. (Sr. PI)",
+    "landline": "२३६३५५१७, २३६३५५१३",
+    "mobile": "+91८१०८५४४६९९",
+    "email": "ps[dot]malabarhill[dot]mum[at]mahapolice[dot]gov[dot]in"
+   },
+   {
+    "station": "ना.म.जोशी मार्ग",
+    "sho_name": "विलास राणे",
+    "rank": "व. पो. नि. (Sr. PI)",
+    "landline": "०२२२३०८५७३२",
+    "mobile": "+91८९७६९४७२२४",
+    "email": "ps.nmjoshimarg.mum@mahapolice.gov.in"
+   }
+  ],
+  "how_to_scrape": "GET https://mumbaipolice.gov.in/Police_incharge?page=1..5. Split on class=\"senior-officer-item\": name in <h4 title>, rank in <p title>, station in '<b> ( ... )</b>', phones in href=\"tel:...\" (landline, fax, mobile in that order), email in mailto (often obfuscated [dot]/[at]).",
+  "verified": true,
+  "notes": "Default language Marathi; digits are Devanagari (convert to ASCII). Mobiles look like official CUG series (8976xxxxxx). Per-station pages also exist at /policestation?ps=N.",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "seen": "2026-11-11",
+  "state_code": "MH",
+  "area_field": "station name in '( ... )' under the officer name",
+  "format": "html table",
+  "rows_estimate": 113,
+  "last_updated": null,
+  "in_archive": "no (archive has 621 mumbaipolice.gov.in urls, but not /Police_incharge)",
+  "regional_script": "mr",
+  "checked": "3 rows read from the live page 2026-11-11 (Aarey, Malabar Hill, N.M. Joshi Marg): name, rank, landline, mobile, email present; no archive copy to compare"
+ },
+ {
+  "state": "Maharashtra",
+  "source": "Pune City Police - admin API",
+  "url": "https://admin.punepolice.gov.in/api/ps",
+  "kind": "json-api",
+  "covers": "Pune City commissionerate, 45 PS",
+  "fields": [
+   "station",
+   "station_mr",
+   "address",
+   "landline",
+   "email",
+   "sho_name",
+   "rank",
+   "mobile",
+   "zone",
+   "division",
+   "division_phone",
+   "chowki_names_phones",
+   "map_link"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "id": 1,
+    "name": "Alankar",
+    "phone": "02025445003",
+    "email": "ps.alankar-pune@gov.in",
+    "oname": "Ulhas Guabrao kadam",
+    "opost": "Police Inspector",
+    "omobile": "8888821877",
+    "name_zo": "Zone III",
+    "name_di": "Sinhagad Road Division",
+    "phone_div": "02027487777"
+   },
+   {
+    "id": 34,
+    "name": "आंबेगाव",
+    "email": "psambegao.pune@mahapolice.gov.in",
+    "address": "सर्वे नं .१२.१ सन  फॅन्टीसी  सोसायटी ,लेक व्हिस्टा सोसायटी मागे शनीनगर चौक आंबेगाव  खुर्द पुणे"
+   }
+  ],
+  "how_to_scrape": "GET /api/ps -> {ps:[45 stations with id,name,address,phone,email,map_link]}. Then GET /api/ps?ps=<id> per station -> list with one object incl. oname/oname_mr, opost, omobile (in-charge), zone, division, chowki phones. 46 small JSON requests total.",
+  "verified": true,
+  "notes": "Public JSON API used by the punepolice.gov.in React SPA. 'phone' in the list endpoint is HTML-entity Devanagari; detail endpoint has ASCII. Officer record may lag transfers (check updated_at). Also /api/Divisional_officers and /api/Senior_Officers exist. Station record updated_at 2019-02-02; the page itself shows no date.",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "seen": "2026-11-11",
+  "state_code": "MH",
+  "area_field": "name / name_mr",
+  "format": "json api",
+  "rows_estimate": 45,
+  "last_updated": null,
+  "in_archive": "no (punepolice.gov.in: 2 urls only; admin.punepolice.gov.in: none)",
+  "regional_script": "mr",
+  "checked": "1 detail row (Alankar) and 2 list rows read live 2026-11-11: detail has officer name, post, mobile; list rows match the detail id 1; no archive copy"
+ },
+ {
+  "state": "Maharashtra",
+  "source": "Thane City Police - stations server action + jurisdiction pages",
+  "url": "https://thanepolice.gov.in/en/about/jurisdiction-map/<station-uuid>",
+  "kind": "spa",
+  "covers": "Thane commissionerate, 36 PS",
+  "fields": [
+   "station",
+   "station_mr",
+   "address",
+   "lat",
+   "lon",
+   "landline",
+   "sho_name",
+   "rank",
+   "mobile"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "Ambernath",
+    "address": "Kalyan - Badlapur Rd, Near Ambernath Municipal Council office, Ambernath (West), Maharashtra 421501",
+    "latitude": "19.211315",
+    "longitude": "73.189292",
+    "contactNo": "0251-2682310",
+    "sho_name": "Shri. Shabbir Sayyed",
+    "rank": "Senior Inspector of Police",
+    "mobile": "8007965786"
+   },
+   {
+    "station": "Badlapur (East)",
+    "address": "Shivaji Chowk road, Badlapur MIDC, badlapur (E) Maharashtra 421503",
+    "latitude": "19.157923",
+    "longitude": "73.239351",
+    "contactNo": "0251-2690297"
+   }
+  ],
+  "how_to_scrape": "Station list: the site's own public Next.js server action getStationsPublic: POST https://thanepolice.gov.in/en with header Next-Action: 00160983f651b10ed5d34a21ff0d61330241759f1e, body [] -> RSC text, line '1:' is a JSON array (id,name,nameMr,address,latitude,longitude,contactNo). Officer: GET /en/about/jurisdiction-map/<id>, parse 'Shri. NAME - MOBILE' + rank div.",
+  "verified": true,
+  "notes": "Site was rebuilt (Nov 2026, Next.js); old /policestation?ps=N URLs now 404. The action id changes with each deploy: re-read it from the StationSelector JS chunk (createServerReference(...,'getStationsPublic')).",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (station points: latitude/longitude)",
+  "seen": "2026-11-11",
+  "state_code": "MH",
+  "area_field": "name / nameMr",
+  "format": "json api (Next.js server action) + html page per station",
+  "rows_estimate": 36,
+  "last_updated": "2026-11-02",
+  "in_archive": "partly: 84 thanepolice.gov.in urls, old site layout (/jurisdiction-map, /divisional-acps), not the new per-station pages",
+  "regional_script": "mr",
+  "checked": "3 rows: Ambernath and Badlapur (East) from the station list and the Ambernath station page, live 2026-11-11: list contactNo and page officer agree with the station; no archive copy of the new pages"
+ },
+ {
+  "state": "Maharashtra",
+  "source": "Nagpur City Police - police-stations.php",
+  "url": "https://www.nagpurpolice.gov.in/police-stations.php",
+  "kind": "html-table",
+  "covers": "Nagpur City commissionerate, 37 station cards (one page)",
+  "fields": [
+   "station",
+   "landline",
+   "email",
+   "sho_name",
+   "map_link"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "अजनी पोलीस ठाणे",
+    "landline": "2746555  2706361",
+    "email": "ajanipst.ngp@gmail.com",
+    "sho_name": "श्री. नितीचंद्र राजकुमार"
+   },
+   {
+    "station": "अंबाझरी पोलीस स्टेशन",
+    "landline": "0712-2560008",
+    "email": "ps.ambazari.ngp@mahapolice.gov.in",
+    "sho_name": "Shri Vinod Godbole"
+   },
+   {
+    "station": "सीताबर्डी पोलीस स्टेशन",
+    "landline": "0712-2560001",
+    "email": "ps.sitabuldi.ngp@mahapolice.gov.in",
+    "sho_name": "श्री. सुहास राऊत"
+   }
+  ],
+  "how_to_scrape": "One GET. Split on class=\"station-card\": h3.station-name, span.info-text after fa-phone, mailto, div.officer-name (title 'प्रभारी अधिकारी' = officer in charge), Google Maps link.",
+  "verified": true,
+  "notes": "No mobile numbers and no rank; names mix Marathi and English. Nagpur Rural has per-station pages at nagpurgraminpolice.gov.in/en/policestation&pi=<base64 id> (not verified here). No statewide Maharashtra station list found on mahapolice.gov.in (only control-room PDFs).",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "seen": "2026-11-11",
+  "state_code": "MH",
+  "area_field": "h3.station-name",
+  "format": "html table",
+  "rows_estimate": 37,
+  "last_updated": null,
+  "in_archive": "no (www.nagpurpolice.gov.in: none)",
+  "regional_script": "mr",
+  "checked": "3 rows (Ajni, Ambazari, Sitabuldi) read live 2026-11-11: station, landline, email, officer name present; no archive copy"
+ },
+ {
+  "state": "Maharashtra",
+  "state_code": "MH",
+  "source": "Jalgaon District Police - police-stations?id=N (district police site template)",
+  "url": "https://jalgaonpolice.gov.in/police-stations?id=<N>",
+  "kind": "per-district-html",
+  "covers": "Jalgaon district, 37 PS (38 saved station urls in the archive)",
+  "fields": [
+   "station",
+   "sho_name",
+   "rank",
+   "mobile",
+   "landline",
+   "email",
+   "address",
+   "subdivision",
+   "digipin"
+  ],
+  "access": "works from the archive (live not tried)",
+  "sample": [
+   {
+    "station": "नशिराबाद पोलीस ठाणे",
+    "sho_name": "योगिता म नारखेडे",
+    "rank": "सहायक पोलीस निरीक्षक",
+    "mobile": "88579 7016 (as saved; digits look cut)",
+    "landline": "02572356333",
+    "email": "ps.nashirabad.jal@mahapolice.gov.in",
+    "subdivision": "उपविभागीय पोलीस अधिकारी, भुसावळ विभाग",
+    "digipin": "3MM-936-K4K7"
+   }
+  ],
+  "how_to_scrape": "List ids from the station dropdown on /police-stations, then GET (or read the archive copy of) /police-stations?id=N. Text block: station, officer name, rank, mobile, landline, email, address, SDPO.",
+  "verified": true,
+  "notes": "Shows the officer in charge with rank and mobile for each station of a Maharashtra rural district. Other Maharashtra district police sites may use the same template; not checked. Nagpur Rural (nagpurgraminpolice.gov.in, 650 archive urls) has per-station pages too.",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "station name heading",
+  "format": "html page per station",
+  "rows_estimate": 37,
+  "last_updated": null,
+  "in_archive": "yes, saved 2026-11-09",
+  "regional_script": "mr",
+  "checked": "1 row (Nashirabad) read from the archive copy of 2026-11-09; live not compared",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "district",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "office",
+  "last_updated": null,
+  "in_archive": "no (archive.s1d.me has no manipurpolice.gov.in)",
+  "regional_script": "none",
+  "checked": "Fetched live from Germany 2026-11-11; no archive copy.",
+  "notes": "Manipur has ~93 PS; no statewide PS phone list found.",
+  "state": "Manipur",
+  "source": "Manipur Police - Police Control Room list",
+  "url": "https://manipurpolice.gov.in/?page_id=3257",
+  "kind": "html-table",
+  "format": "html table",
+  "covers": "17 district control rooms + DG CR + ERSS (no per-PS rows)",
+  "rows_estimate": 18,
+  "fields": [
+   "office",
+   "telephone",
+   "fax"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "office": "Imphal West Control Room",
+    "telephone": "0385-2450214 +916009030422"
+   },
+   {
+    "office": "Imphal East Control Room",
+    "telephone": "0385-2452669 +917085368633"
+   },
+   {
+    "office": "Thoubal Control Room",
+    "telephone": "03848-223901 +916009889112"
+   }
+  ],
+  "how_to_scrape": "One WordPress page; one table.",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": "2025-05-02",
+  "in_archive": "yes, saved 2026-11-06",
+  "regional_script": "none",
+  "checked": "3 rows compared with the archive copy of 2026-11-06: all match.",
+  "notes": "Small. Imphal West equivalent not checked.",
+  "state": "Manipur",
+  "source": "Imphal East district NIC helpline page",
+  "url": "https://imphaleast.nic.in/?p=2780",
+  "kind": "per-district-html",
+  "format": "html table",
+  "covers": "Imphal East, 4 OC landlines + control room",
+  "rows_estimate": 5,
+  "fields": [
+   "post",
+   "station",
+   "phone"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "post": "Police Station – OC Porompat",
+    "phone": "0385-2442447"
+   },
+   {
+    "post": "Police Station – OC Irilbung",
+    "phone": "0385-2055633"
+   },
+   {
+    "post": "Police Station – OC Lamlai",
+    "phone": "0385-2055634"
+   }
+  ],
+  "how_to_scrape": "S3WaaS helpline page per district: https://<district>.nic.in/helpline/ or ?p=2780.",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": "2024-09-16",
+  "in_archive": "yes, saved 2026-11-07",
+  "regional_script": "none",
+  "checked": "3 station names compared with the archive copy of 2026-11-07: all match.",
+  "notes": "Names only. District 'Contact Us' pages (e.g. /east-khasi-hills-district, /ri-bhoi-district) now return 'Access denied'. /telephone-directory lists HQ officers only. Use as a station list; phones must come from elsewhere.",
+  "state": "Meghalaya",
+  "source": "Meghalaya Police - Know Your Police Station",
+  "url": "https://megpolice.gov.in/know-your-police-station",
+  "kind": "html-table",
+  "format": "html table",
+  "covers": "78 PS names by district (no phones/officers)",
+  "rows_estimate": 78,
+  "fields": [
+   "district",
+   "station"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "district": "East Khasi Hills D.E.F",
+    "station": "Shillong Sadar PS"
+   },
+   {
+    "district": "East Khasi Hills D.E.F",
+    "station": "Laitumkhrah PS"
+   },
+   {
+    "district": "West Khasi Hills D.E.F",
+    "station": "Nongstoin PS"
+   }
+  ],
+  "how_to_scrape": "One page; tables per range, 'table-heading' rows give the district, cells give station names (links are '#').",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": null,
+  "in_archive": "no (archive has only a 403 for the host root)",
+  "regional_script": "none",
+  "checked": "Fetched live from vpsin 2026-11-11 (Germany gets 403). No archive copy.",
+  "notes": "Numbers are post CUGs (690931xxxx). No names.",
+  "state": "Mizoram",
+  "source": "Mizoram Police - Contact List of PS/OP",
+  "url": "https://police.mizoram.gov.in/page/contact-numbers-of-police-stations-and-outposts",
+  "kind": "html-table",
+  "format": "html table",
+  "covers": "statewide, 45 PS + 16 OP with OC numbers",
+  "rows_estimate": 61,
+  "fields": [
+   "district",
+   "station",
+   "oc_phone"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "district": "Aizawl",
+    "station": "Aizawl PS",
+    "oc_phone": "6909316438"
+   },
+   {
+    "district": "Aizawl",
+    "station": "Bawngkawn PS",
+    "oc_phone": "6909316439"
+   },
+   {
+    "district": "Aizawl",
+    "station": "Kulikawn PS",
+    "oc_phone": "6909316440"
+   }
+  ],
+  "how_to_scrape": "One page, one table: District | Police Stations/Outposts | PS/OC Number; district cell uses rowspan (carry it down).",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": "2026-06-05",
+  "in_archive": "yes, saved 2026-11-05",
+  "regional_script": "none",
+  "checked": "3 rows compared with the archive copy of 2026-11-05: all match.",
+  "notes": "police.nagaland.gov.in (India only) 'Telephone Directory' (/nagaland-police-headquarters/) lists HQ posts only. Dimapur Police site dimapurpolice.in does not resolve.",
+  "state": "Nagaland",
+  "source": "Kohima district NIC helpline (OC numbers)",
+  "url": "https://kohima.nic.in/helpline/",
+  "kind": "per-district-html",
+  "format": "html table",
+  "covers": "Kohima district, 7 PS OCs + PS lines (~20 rows)",
+  "rows_estimate": 20,
+  "fields": [
+   "post",
+   "phone"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "post": "OC North PS",
+    "phone": "7005986008"
+   },
+   {
+    "post": "OC South PS",
+    "phone": "7005986009"
+   },
+   {
+    "post": "OC Khuzama PS",
+    "phone": "7005986010"
+   }
+  ],
+  "how_to_scrape": "S3WaaS helpline page per district: https://<district>.nic.in/helpline/ (also mokokchung.nic.in/police/).",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": "2026-11-10",
+  "in_archive": "no",
+  "regional_script": "none",
+  "checked": "Fetched live from vpsin 2026-11-11; page shows 'Updated 2026-11-10'. No archive copy.",
+  "notes": "Statewide odishapolice.gov.in (incl. 2016 CUG PDF /sites/default/files/PDF/CUG Mobile Numbers dt 08.11.16..pdf) refused from Germany, India and US. Bhubaneswar-Cuttack Commissionerate site (bhubaneswarcuttackpolice.gov.in/important-contact-number) lists only CP/DCP/ACP; its Know-Your-Police-Station page has no table.",
+  "state": "Odisha",
+  "source": "District portal RTI PIO table (Jharsuguda district police)",
+  "url": "https://jharsuguda.odisha.gov.in/en/administartive-setup/distrcit-police",
+  "kind": "per-district-html",
+  "format": "html table",
+  "covers": "Jharsuguda district, ~12 PS with IIC name + phone",
+  "rows_estimate": 12,
+  "fields": [
+   "station",
+   "iic_name",
+   "rank",
+   "phone",
+   "si_name"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "station": "Jharsuguda P.S.",
+    "iic": "Inspector S.Bala,IIC",
+    "phone": "06645-272736"
+   },
+   {
+    "station": "Sadar P.S.",
+    "iic": "Inspector S.Mohanty IIC",
+    "phone": "06645-270007"
+   },
+   {
+    "station": "Badmal P.S.",
+    "iic": "Inspr.Amitav Panda ,IIC",
+    "phone": "06645-277069"
+   }
+  ],
+  "how_to_scrape": "https://<district>.odisha.gov.in/en/administartive-setup/distrcit-police (the spelling is the site's). Other districts may use another path; check each district portal.",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": null,
+  "in_archive": "no",
+  "regional_script": "none",
+  "checked": "Not fetched: odishapolice.gov.in refused from Germany, vpsin and the US fetcher on 2026-11-11.",
+  "notes": "Search snippets show rows like '94 IIC Kandarpur P.S. 82803-38351', 'Kharavelanagar P.S. 82803-38308'. Try later from another Indian IP.",
+  "state": "Odisha",
+  "source": "Odisha Police CUG mobile numbers PDF (2016)",
+  "url": "https://www.odishapolice.gov.in/sites/default/files/PDF/CUG%20Mobile%20Numbers%20dt%20%2008.11.16..pdf",
+  "kind": "pdf",
+  "format": "pdf",
+  "covers": "statewide IIC CUG numbers (8280338xxx series) as of 2016; count unknown",
+  "rows_estimate": null,
+  "fields": [
+   "designation",
+   "station",
+   "mobile"
+  ],
+  "access": "blocked",
+  "sample": [],
+  "how_to_scrape": "Single PDF; pdftotext -layout. Numbers are post-based CUGs, so they may still be valid.",
+  "verified": false,
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Puducherry",
+  "source": "Puducherry Police 'Know your police station' (get_station.php + station.php)",
+  "url": "https://police.py.gov.in/kyps.php",
+  "kind": "json-api",
+  "covers": "all 57 PS/units UT-wide (Puducherry, Karaikal, Mahe, Yanam)",
+  "fields": [
+   "station",
+   "district",
+   "ps_code",
+   "oic_name",
+   "rank",
+   "landline",
+   "email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "GRAND BAZAR",
+    "district": "PUDUCHERRY",
+    "ps_code": "26002016",
+    "oic": "A. Jayasankar, Inspector of Police",
+    "phone": "0413 - 2338876",
+    "email": "gbps@py.gov.in"
+   },
+   {
+    "station": "ORLEANPET",
+    "district": "PUDUCHERRY",
+    "ps_code": "26002021",
+    "oic": "Karthikeyan, Inspector of Police",
+    "phone": "0413 -2205657",
+    "email": "orlps@py.gov.in"
+   },
+   {
+    "station": "COASTAL PS KARAIKAL",
+    "district": "KARAIKAL",
+    "ps_code": "26001012",
+    "oic": "R. Marie Christian Paul, Inspector of Police.",
+    "phone": "04368-224750",
+    "email": "coastl.kkl@py.gov.in"
+   }
+  ],
+  "how_to_scrape": "GET https://police.py.gov.in/get_station.php -> JSON [{id, district, ps_code, ps_name}] (57). Then GET station.php?id=<id> and parse the 'Officer In Charge' / 'Phone:' / 'Email:' block. 58 requests.",
+  "verified": true,
+  "notes": "Names + rank + landline + official email. Senior officers (DGP..SP) with phones: police.py.gov.in/senior-officer-address.php. 'Police Officers Contact Numbers' link on the home page is a 404.",
+  "state_code": "PY",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "ps_name",
+  "format": "json api + html page per station",
+  "rows_estimate": 57,
+  "last_updated": null,
+  "in_archive": "partly (kyps.php and policestation.php saved 2026-11-06; station.php pages and get_station.php not saved)",
+  "regional_script": "none (site has ta/hi/fr/te/ml menus; station data English)",
+  "checked": "3 rows (Grand Bazar, Orleanpet, Coastal PS Karaikal) read from the live station pages today: on page",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Grand Bazar",
+    "post": "Inspector of Police (OIC)",
+    "name": "A. Jayasankar",
+    "name_regional": null,
+    "phone": "0413-2338876",
+    "email": "gbps@py.gov.in",
+    "source": "https://police.py.gov.in/station.php?id=29",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Orleanpet",
+    "post": "Inspector of Police (OIC)",
+    "name": "Karthikeyan",
+    "name_regional": null,
+    "phone": "0413-2205657",
+    "email": "orlps@py.gov.in",
+    "source": "https://police.py.gov.in/station.php?id=34",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Coastal PS Karaikal",
+    "post": "Inspector of Police (OIC)",
+    "name": "R. Marie Christian Paul",
+    "name_regional": null,
+    "phone": "04368-224750",
+    "email": "coastl.kkl@py.gov.in",
+    "source": "https://police.py.gov.in/station.php?id=12",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "cctnsPsName",
+  "format": "json api",
+  "rows_estimate": 430,
+  "last_updated": null,
+  "in_archive": "no",
+  "regional_script": "pa",
+  "checked": "2 districts fetched via vpsin; 3 rows copied from the JSON; Barnala SHO 'Amrik Singh' SI also appears on the Barnala district page (PS Bhadaur there vs Tapa here: check)",
+  "state": "Punjab",
+  "source": "PP Saanjh portal JSON API (fetchSaanjhDetails)",
+  "url": "https://saanjh.punjabpolice.gov.in/reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=25883&officeType=PSOC",
+  "kind": "json-api",
+  "covers": "statewide, 28 police districts; Barnala 12 rows (11 with SHO), Ludhiana City 28 rows (6 with SHO); est. ~430 PS",
+  "fields": [
+   "station",
+   "district",
+   "sho_name",
+   "rank",
+   "mobile",
+   "landline",
+   "email",
+   "address",
+   "lat",
+   "lon",
+   "sho_posted_since",
+   "mhc_name",
+   "mhc_mobile",
+   "name_pa"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "district": "BARNALA",
+    "station": "TAPPA MANDI",
+    "shoRank": "SI",
+    "shoName": "Amrik Singh",
+    "shoMobile": "7508018190",
+    "shoPostedSince": "2026-07-15",
+    "psEmail": "psoctapa@gmail.com"
+   },
+   {
+    "district": "LUDHIANA CITY",
+    "station": "SHIMLAPURI",
+    "shoRank": "SI",
+    "shoName": "BALBIR SINGH",
+    "shoMobile": "7837018613",
+    "psPhone": "01612532860",
+    "psEmail": "SHOPSSHIMLAPURILDH@GMAIL.COM",
+    "lat": 30.88876,
+    "lon": 75.861465
+   },
+   {
+    "district": "LUDHIANA CITY",
+    "station": "MODEL TOWN",
+    "shoRank": "INSP.",
+    "shoName": "GURSHINDER KAUR",
+    "shoMobile": "7837018911",
+    "psPhone": "01612503501",
+    "psEmail": "psmdtl@gmail.com"
+   }
+  ],
+  "how_to_scrape": "GET /citizen-master/master/districts/25 for the 28 cctnsDistrictCode values, then GET /reports-master/master/fetchSaanjhDetails?cctnsDistrictCd=<code>&officeType=PSOC (also WOMEN_CELL,WOMEN_PS). Public, no auth; 29 requests total. Punjabi names in *Pn fields.",
+  "verified": true,
+  "notes": "Endpoints found in the portal's own JS bundle (index-GKU8lXjl.js). Some lat/lon values are malformed (3.02980608E8). SHO fields empty for many Ludhiana rows. punjabpolice.gov.in (128.185.189.6) and most district subdomains refuse connections from Germany and India today.",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "Designation (SHO PS X)",
+  "format": "html table",
+  "rows_estimate": 12,
+  "last_updated": null,
+  "in_archive": "yes, saved 2026-11-06",
+  "regional_script": "none",
+  "checked": "3 rows on live page match the archive copy of 2026-11-06",
+  "state": "Punjab",
+  "source": "Punjab district police sites, SHOs & MHCs page",
+  "url": "https://barnala.punjabpolice.gov.in/shos-mhcs",
+  "kind": "per-district-html",
+  "covers": "Barnala 11 PS + CIA/cyber/PP rows; same template on other <district>.punjabpolice.gov.in sites (most unreachable today)",
+  "fields": [
+   "sho_name",
+   "rank",
+   "station",
+   "mobile",
+   "mhc_mobile",
+   "email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "sho_name": "INSP LAKHVIR SINGH",
+    "post": "SHO PS CITY-1 BARNALA",
+    "mobile": "75081-79014",
+    "mhc_mobile": "86999-87805",
+    "email": "ps[dot]cty[dot]brn[dot]police[at]punjab[dot]gov[dot]in"
+   },
+   {
+    "sho_name": "SI CHARANJIT SINGH",
+    "post": "SHO PS CITY-2 BARNALA",
+    "mobile": "75081-79008",
+    "mhc_mobile": "62846-00650",
+    "email": "pscity2-bnl[at]punjabpolice[dot]gov[dot]in"
+   },
+   {
+    "sho_name": "SI AJAIB SINGH",
+    "post": "SHO PS THULLIWAL",
+    "mobile": "75081-79028",
+    "mhc_mobile": "94178-14510"
+   }
+  ],
+  "how_to_scrape": "https://<district>.punjabpolice.gov.in/shos-mhcs; one table. Rank is the prefix of the name cell (INSP/SI/ASI). Barnala, Kapurthala, SAS Nagar, Jalandhar City, Malerkotla resolve to own hosts; Kapurthala/SAS Nagar use other templates.",
+  "verified": true,
+  "notes": "Use as cross-check for the Saanjh API.",
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Rajasthan",
+  "source": "Jodhpur Police Commissionerate - city zones map",
+  "url": "https://jodhpurpolice.rajasthan.gov.in/city-zones",
+  "kind": "html-table",
+  "covers": "Jodhpur commissionerate (East + West), 29 PS",
+  "fields": [
+   "station",
+   "landline",
+   "lat",
+   "lon"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "station": "Police Station Ratanada",
+    "landline": "0291-2650767",
+    "lat": "26.272412493646435",
+    "lon": "73.03735044227848"
+   },
+   {
+    "station": "Police Station Sardarpura",
+    "landline": "0291-2650757",
+    "lat": "26.27601976793592",
+    "lon": "73.00886591095893"
+   },
+   {
+    "station": "Police Station Udai Mandir",
+    "landline": "0291-2650753"
+   }
+  ],
+  "how_to_scrape": "One GET from India. SVG map elements carry latitude/logitude attributes; text 'Police Station NAME | Tel. : 0291-XXXXXXX'. Regex on the tag-stripped text.",
+  "verified": true,
+  "notes": "No officer names or mobiles. Only Jodhpur has such a city site (kotapolice.rajasthan.gov.in does not resolve; jaipurpolice.rajasthan.gov.in is a Jankalyan Angular shell).",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (station points: latitude/logitude attributes)",
+  "seen": "2026-11-11",
+  "state_code": "RJ",
+  "area_field": "'Police Station <NAME>' text in the SVG map",
+  "format": "html (svg map)",
+  "rows_estimate": 29,
+  "last_updated": null,
+  "in_archive": "no (jodhpurpolice.rajasthan.gov.in: none)",
+  "regional_script": "none",
+  "checked": "3 rows (Ratanada, Sardarpura, Udai Mandir) read live via vpsin 2026-11-11; no archive copy"
+ },
+ {
+  "state": "Rajasthan",
+  "source": "Rajasthan Police portal (police.rajasthan.gov.in/portal)",
+  "url": "https://police.rajasthan.gov.in/",
+  "kind": "none",
+  "covers": "statewide (~900+ PS) if it were usable",
+  "fields": [],
+  "access": "India only",
+  "sample": [],
+  "how_to_scrape": "Not usable: Angular SPA; its data API (psa-rajpolice/ .NET + Strapi) uses obfuscated config with encryption keys and client credentials. The old site police.rajasthan.gov.in/old/ (CLG member lists by thana) returns 'Service Unavailable'.",
+  "verified": false,
+  "notes": "Times out from Germany. No official statewide SHO/CUG list found by search; only third-party aggregators (indiacustomercare.com). RajCop app not tried. Next options: district Jankalyan portals (<district>.rajasthan.gov.in) or RTI 4(1)(b) PDFs.",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "seen": "2026-11-11",
+  "state_code": "RJ",
+  "area_field": null,
+  "format": "spa (encrypted api)",
+  "rows_estimate": null,
+  "last_updated": null,
+  "in_archive": "no (police.rajasthan.gov.in, jaipur/jodhpur.rajasthan.gov.in: none; archive search 'थानाधिकारी', 'थाना प्रभारी', 'SHO police station' on Rajasthan hosts: no directory)",
+  "regional_script": "hi",
+  "checked": "not checked: no data"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": null,
+  "in_archive": "yes, saved 2026-11-11",
+  "regional_script": "none",
+  "checked": "3 rows compared with the archive copy of 2026-11-11: all match.",
+  "notes": "Server omits its intermediate certificate (GlobalSign GCC R6 AlphaSSL CA 2025). Verified by adding that intermediate from the cert's AIA URL to the CA bundle (--cacert), checks kept on. Germany times out. No names.",
+  "state": "Sikkim",
+  "source": "Sikkim Police - Telephone Police Officers",
+  "url": "https://police.sikkim.gov.in/visitor/telephonepolice",
+  "kind": "html-table",
+  "format": "html table",
+  "covers": "statewide, 27 SHO rows (all PS) + SP/SDPO/HQ",
+  "rows_estimate": 27,
+  "fields": [
+   "rank_post",
+   "mobile",
+   "email"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "post": "SHO/PAKYONG",
+    "mobile": "9046245030",
+    "email": "ocpakyong [at]sikkimpolice[dot]nic[dot]in"
+   },
+   {
+    "post": "SHO/RANGPO",
+    "mobile": "9046245031",
+    "email": "ocrangpo [at]sikkimpolice[dot]nic[dot]in"
+   },
+   {
+    "post": "SHO/SADAR",
+    "mobile": "9046245038",
+    "email": "ocgangtok [at]sikkimpolice[dot]nic[dot]in"
+   }
+  ],
+  "how_to_scrape": "One page, one table: Sl.No | Rank | Official Mobile Number | Official Email ID. Rows 'SHO/<station>' are stations.",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Tamil Nadu",
+  "source": "TN Police citizen portal 'Contact Us' API (police.tn.gov.in/digigov)",
+  "url": "https://www.police.tn.gov.in/citizenportal/contactus",
+  "kind": "json-api",
+  "covers": "statewide by unit: 'City' = 9 commissionerates (Chennai 469 rows / 245 units, 236 Inspector rows), 'District' and 'Special Units' also; est. ~1,500 PS",
+  "fields": [
+   "unit_or_station",
+   "designation",
+   "officer_name",
+   "mobile",
+   "email",
+   "address"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "unitName": "ADYAR",
+    "designationName": "INSPECTOR OF POLICE",
+    "empName": "RAJA M",
+    "contactNo": "9498100163"
+   },
+   {
+    "unitName": "AWPS  ADYAR",
+    "designationName": "INSPECTOR OF POLICE",
+    "empName": "Suthanthiradevi T",
+    "contactNo": "9498100187",
+    "email": "police@tncctns.gov.in"
+   },
+   {
+    "unitName": "MYLAPORE",
+    "designationName": "INSPECTOR OF POLICE",
+    "empName": "RAVI M MARIMUTHU",
+    "contactNo": "9498133705"
+   }
+  ],
+  "how_to_scrape": "Base https://www.police.tn.gov.in/digigov. GET /contactUs/getUnit (3=District, 7=City, 26=Special Units); GET /contactUs/getDistrict?officeTypeId=7 (Chennai City = 70002111); GET /contactUs/getContactUsGrid?unitId=7&dsgnId=&psId=&distId=70002111&villageId= -> responseObject.data[] {unitName, designationName, empName, contactNo, email, address}. Also /contactUs/getPoliceStation?prntOrgId=<distId>.",
+  "verified": true,
+  "notes": "Officer names + mobiles, but noisy: designations are wrong in places (many station staff listed as 'INSPECTOR GENERAL OF POLICE'), several inspectors per station (L&O, crime, traffic not split), placeholders (9999999999). Many contactNo/email values are PERSONAL (gmail, non-CUG numbers); only 94981xxxxx are CUG. Filter to CUG before publishing. Old hosts tnpolice.gov.in / eservices.tnpolice.gov.in have an EXPIRED certificate (24 Sep 2026); their http:// page redirects to www.police.tn.gov.in. Germany: timeout.",
+  "state_code": "TN",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "Chennai only: OpenCity 'Chennai Police Jurisdictions Map' (dataset chennai-police-jurisdictions); elsewhere none",
+  "area_field": "unitName",
+  "format": "json api",
+  "rows_estimate": 4000,
+  "last_updated": null,
+  "in_archive": "no (host not in the archive)",
+  "regional_script": "ta (JS has nameOFOfficerTamil fields; contactUs grid returns English only)",
+  "checked": "3 rows (Adyar, AWPS Adyar, Mylapore) read from the live API today via vpsin: on page; data quality is low (wrong designations, several inspectors per unit, personal numbers)",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Adyar",
+    "post": "Inspector of Police",
+    "name": "RAJA M",
+    "name_regional": null,
+    "phone": "9498100163",
+    "email": "victer_raja@yahoo.co.in",
+    "source": "https://www.police.tn.gov.in/citizenportal/contactus",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": "personal email; CUG mobile"
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "AWPS Adyar",
+    "post": "Inspector of Police",
+    "name": "Suthanthiradevi T",
+    "name_regional": null,
+    "phone": "9498100187",
+    "email": "police@tncctns.gov.in",
+    "source": "https://www.police.tn.gov.in/citizenportal/contactus",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": "All Women PS"
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Mylapore",
+    "post": "Inspector of Police",
+    "name": "RAVI M MARIMUTHU",
+    "name_regional": null,
+    "phone": "9498133705",
+    "email": null,
+    "source": "https://www.police.tn.gov.in/citizenportal/contactus",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Tamil Nadu",
+  "source": "Greater Chennai Police station landlines (OpenCity copy)",
+  "url": "https://data.opencity.in/dataset/chennai-police-stations",
+  "kind": "html-table",
+  "covers": "Greater Chennai Police, 243 rows (122 Law & Order, 71 Crime, 44 Traffic, 6 out posts) with station codes",
+  "fields": [
+   "zone",
+   "subdivision",
+   "station_code",
+   "type",
+   "station",
+   "landline"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "Zone": "EAST",
+    "Sub division": "Triplicane",
+    "Code": "D1",
+    "Type": "Law & Order",
+    "Station Name": "Triplicane",
+    "Contact No.": "044 23452655"
+   },
+   {
+    "Zone": "EAST",
+    "Sub division": "Triplicane",
+    "Code": "D2",
+    "Type": "Law & Order",
+    "Station Name": "Anna Salai",
+    "Contact No.": "044 23452661"
+   },
+   {
+    "Zone": "EAST",
+    "Sub division": "Royapettah",
+    "Code": "D3",
+    "Type": "Law & Order",
+    "Station Name": "Ice House",
+    "Contact No.": "044 23452555"
+   }
+  ],
+  "how_to_scrape": "CSV download: data.opencity.in/dataset/cbb342c2-02d1-42f8-9052-d1891a64ec13/resource/7c919587-2e4d-4cb5-b541-3ca42c11f0a3/download/b0729b83-a4f4-4dff-898e-6e7c6cdd4e7f.csv (+ KML station map and All Women PS CSV in the same dataset).",
+  "verified": true,
+  "notes": "Not an official site (OpenCity re-publication; original GCP source not checked). Station code D1, D2 ... is the GCP code and joins to OpenCity's 'Chennai Police Jurisdictions Map'. District S3WaaS sites (e.g. viluppuram.nic.in/department/police-department/) list some 'Inspector of Police, <PS>' rows with CUG 94981xxxxx + sho.<ps>@tncctns.gov.in, but only a handful per district.",
+  "state_code": "TN",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "OpenCity 'Chennai Police Jurisdictions Map' (same publisher; station code D1, D2 ... joins)",
+  "area_field": "Station Name + Code",
+  "format": "csv (OpenCity CKAN)",
+  "rows_estimate": 243,
+  "last_updated": "2025-11-25 (OpenCity resource last_modified; original date unknown)",
+  "in_archive": "no (not a government site)",
+  "regional_script": "none",
+  "checked": "3 rows (Triplicane D1, Anna Salai D2, Ice House D3) read from the CSV today; not compared with a GCP page (no official copy found)",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Triplicane (D1)",
+    "post": "Station L&O (landline)",
+    "name": null,
+    "name_regional": null,
+    "phone": "044 23452655",
+    "email": null,
+    "source": "https://data.opencity.in/dataset/chennai-police-stations",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Anna Salai (D2)",
+    "post": "Station L&O (landline)",
+    "name": null,
+    "name_regional": null,
+    "phone": "044 23452661",
+    "email": null,
+    "source": "https://data.opencity.in/dataset/chennai-police-stations",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Ice House (D3)",
+    "post": "Station L&O (landline)",
+    "name": null,
+    "name_regional": null,
+    "phone": "044 23452555",
+    "email": null,
+    "source": "https://data.opencity.in/dataset/chennai-police-stations",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Telangana",
+  "source": "Hyderabad district portal (S3WaaS) - Public Utilities: Police Stations",
+  "url": "https://hyderabad.telangana.gov.in/public-utility-category/police-stations/",
+  "kind": "html-table",
+  "covers": "Hyderabad City, 19-20 PS on 2 pages (of ~75-100 PS in the commissionerate); partial",
+  "fields": [
+   "station",
+   "address",
+   "sho_email",
+   "phone",
+   "pincode",
+   "old_hyderabadpolice_url"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "ABIDS Police Station",
+    "email": "sho_abd@hyd.tspolice.gov.in",
+    "phone": "9490616303",
+    "pincode": "500001"
+   },
+   {
+    "station": "Afzalgunj Police Station",
+    "email": "sho_aflg@hyd.tspolice.gov.in",
+    "phone": "9490616248",
+    "pincode": "500012"
+   },
+   {
+    "station": "Amberpet Police Station",
+    "email": "sho_ambt@hyd.tspolice.gov.in",
+    "phone": "9490616381",
+    "pincode": "500013"
+   }
+  ],
+  "how_to_scrape": "Two pages: .../police-stations/ and .../police-stations/page/2/. Each entry: '<NAME> Police Station', 'Email : sho_x[at]hyd[dot]tspolice[dot]gov[dot]in', 'Phone : 94906xxxxx', 'Website Link', 'Pincode'. Undo the [at]/[dot] masking.",
+  "verified": true,
+  "notes": "Found with archive.s1d.me search. Phone = SHO CUG (94906xxxxx). Entry 'Website Link' points to hyderabadpolice.gov.in/ps/<name>ps.htm (that site refuses this box and vpsin).",
+  "state_code": "TG",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "OpenCity 'Hyderabad Police Jurisdictions Map'",
+  "area_field": "station title",
+  "format": "html list",
+  "rows_estimate": 20,
+  "last_updated": "2026-11-05 ('Last Updated: 05.11.2026', site footer)",
+  "in_archive": "yes, saved 2026-11-05 (both pages)",
+  "regional_script": "te (Telugu version of the site)",
+  "checked": "3 rows (Abids, Afzalgunj, Amberpet) in the archive copy and in the live page today: all match",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Abids",
+    "post": "SHO",
+    "name": null,
+    "name_regional": null,
+    "phone": "9490616303",
+    "email": "sho_abd@hyd.tspolice.gov.in",
+    "source": "https://hyderabad.telangana.gov.in/public-utility-category/police-stations/",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Afzalgunj",
+    "post": "SHO",
+    "name": null,
+    "name_regional": null,
+    "phone": "9490616248",
+    "email": "sho_aflg@hyd.tspolice.gov.in",
+    "source": "https://hyderabad.telangana.gov.in/public-utility-category/police-stations/",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Amberpet",
+    "post": "SHO",
+    "name": null,
+    "name_regional": null,
+    "phone": "9490616381",
+    "email": "sho_ambt@hyd.tspolice.gov.in",
+    "source": "https://hyderabad.telangana.gov.in/public-utility-category/police-stations/",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": ""
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Telangana",
+  "source": "District portals <district>.telangana.gov.in/police/ (example Jogulamba Gadwal)",
+  "url": "https://gadwal.telangana.gov.in/police/",
+  "kind": "per-district-html",
+  "covers": "Jogulamba Gadwal 16 PS + circles; other districts vary (Karimnagar's page is prose only, links to tspolice.gov.in/karimnagar)",
+  "fields": [
+   "office",
+   "sho_email",
+   "mobile",
+   "landline"
+  ],
+  "access": "archive only (live host did not resolve from Germany)",
+  "sample": [
+   {
+    "office": "Rajoli PS",
+    "email": "sho-rjl-jlmb@tspolice.gov.in",
+    "mobile": "9440904767",
+    "landline": "08502-243733"
+   },
+   {
+    "office": "Aize PS",
+    "email": "sho-aiz-jlmb@tspolice.gov.in",
+    "mobile": "9440904778",
+    "landline": "08546-278633"
+   },
+   {
+    "office": "Manopad PS",
+    "email": "sho-mnp-jlmb@tspolice.gov.in",
+    "mobile": "9490619616",
+    "landline": "08502-246333"
+   }
+  ],
+  "how_to_scrape": "Read each district portal's /police/ page from archive.s1d.me (bash archive.sh text URL); table Sl.No | Name of the office | Email ID | Mobile No | Land No. Live host did not resolve from this box today.",
+  "verified": true,
+  "notes": "Verified from the archive copy only (live DNS failed from Germany). 'Last Updated: 25.05.2021' on the page, so numbers may be old.",
+  "state_code": "TG",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none on the source; OpenCity TG PS points (names, mandal)",
+  "area_field": "Name of the office",
+  "format": "html table",
+  "rows_estimate": 16,
+  "last_updated": "2021-05-25 ('Last Updated: 25.05.2021')",
+  "in_archive": "yes, saved 2026-11-05",
+  "regional_script": "te",
+  "checked": "3 rows (Rajoli, Aize, Manopad) in the archive copy: on page; live page not reachable (DNS)",
+  "sample_tagged": [
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Rajoli",
+    "post": "SHO",
+    "name": null,
+    "name_regional": null,
+    "phone": "9440904767; 08502-243733",
+    "email": "sho-rjl-jlmb@tspolice.gov.in",
+    "source": "https://gadwal.telangana.gov.in/police/",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": "archive copy only"
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Aize",
+    "post": "SHO",
+    "name": null,
+    "name_regional": null,
+    "phone": "9440904778; 08546-278633",
+    "email": "sho-aiz-jlmb@tspolice.gov.in",
+    "source": "https://gadwal.telangana.gov.in/police/",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": "archive copy only"
+   },
+   {
+    "dept": "police",
+    "level": "police_station",
+    "area": "Manopad",
+    "post": "SHO",
+    "name": null,
+    "name_regional": null,
+    "phone": "9490619616; 08502-246333",
+    "email": "sho-mnp-jlmb@tspolice.gov.in",
+    "source": "https://gadwal.telangana.gov.in/police/",
+    "seen": "2026-11-11",
+    "status": "on page",
+    "notes": "archive copy only"
+   }
+  ],
+  "seen": "2026-11-11"
+ },
+ {
+  "state": "Telangana",
+  "source": "Hyderabad City Police PS contacts / Cyberabad 'know your police station' / TS Police",
+  "url": "https://www.hyderabadpolice.gov.in/pscontacts.html",
+  "kind": "none",
+  "covers": "none fetched (Hyderabad ~75-100 PS, Cyberabad, Rachakonda, TG statewide ~800 PS)",
+  "fields": [],
+  "access": "blocked",
+  "sample": [],
+  "how_to_scrape": "Candidate patterns: hyderabadpolice.gov.in/pscontacts.html (single table); cyberabadpolice.gov.in/Cyberabadpolice/know-your-police-station/<station>-ps.html (per-PS page: inspector name, cell, landline, PS official number 8712663xxx, sho-<ps>@tspolice.gov.in per search snippet); tspolice.gov.in.",
+  "verified": false,
+  "notes": "hyderabadpolice.gov.in and cyberabadpolice.gov.in time out from Germany AND from vpsin (India), also via WebFetch (443 refused). www.tspolice.gov.in fails TLS ('unsafe legacy renegotiation'), tgpolice.gov.in and rachakondapolice.telangana.gov.in do not resolve. Wayback has pscontacts.html (2022-12-08) but archive.org returned 429 here. Only usable data found: OpenCity 'hyderabad-and-telangana-police-stations' GeoJSON (799 TG + 176 Hyderabad PS points, names/mandal/ward, NO phones; works from Germany). Station emails follow sho-<ps>-<zone>@tspolice.gov.in; CUG mobiles 87126xxxxx (per aggregator snippets, unverified). archive.s1d.me has no captures of these hosts either; searches found only the district-portal pages listed above.",
+  "state_code": "TG",
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "OpenCity 'Hyderabad Police Jurisdictions Map' + 'hyderabad-and-telangana-police-stations' GeoJSON points (799 TG + 176 Hyderabad, no phones)",
+  "area_field": null,
+  "format": "html table (not fetched)",
+  "rows_estimate": null,
+  "last_updated": null,
+  "in_archive": "no (no captures of hyderabadpolice.gov.in, cyberabadpolice.gov.in, tspolice.gov.in or rachakondapolice.telangana.gov.in)",
+  "regional_script": "te",
+  "checked": "not checked: no copy reachable",
+  "sample_tagged": [],
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": "2026-07-29",
+  "in_archive": "yes, dhalai saved 2026-11-06; west saved (10 urls), others not checked",
+  "regional_script": "none",
+  "checked": "Dhalai: 3 rows compared with the archive copy of 2026-11-06: all match. West rows read live from vpsin 2026-11-11.",
+  "notes": "Best in the region: officer names + ranks. last_updated from article:modified meta (Dhalai 2026-07-29, West 2026-09-28). North district page has only 1 O/C row. Germany times out.",
+  "state": "Tripura",
+  "source": "Tripura district police sites - Contact pages (O/C name, rank, phone, email)",
+  "url": "https://dhalaipolice.tripura.gov.in/contact",
+  "kind": "per-district-html",
+  "format": "html table",
+  "covers": "8 district sites, ~90 O/C rows (West 28, South 14, Dhalai 14, Gomati 10, Sepahijala 9, Khowai 8, Unakoti 6, North 1)",
+  "rows_estimate": 90,
+  "fields": [
+   "officer_name",
+   "rank",
+   "post_station",
+   "email",
+   "office_address",
+   "mobile",
+   "landline"
+  ],
+  "access": "India only",
+  "sample": [
+   {
+    "name": "Inspr.(UB) Suman Acharjee",
+    "post": "O/C Kamalpur PS",
+    "email": "ockamalpurps tripurapolice [dot] nic [dot] in",
+    "mobile": "9862660054"
+   },
+   {
+    "name": "Inspr. (UB) Dipak Das",
+    "post": "O/C Salema PS",
+    "mobile": "9436468437"
+   },
+   {
+    "name": "Inspr. Sanjit Sen",
+    "post": "O/C West Agartala PS",
+    "landline": "0381-2385765",
+    "mobile": "6033434070",
+    "email": "ocwestagt tripurapolice [dot] nic [dot] in",
+    "source": "https://westpolice.tripura.gov.in/node/96"
+   }
+  ],
+  "how_to_scrape": "https://<d>police.tripura.gov.in/contact for d in dhalai, gomati, khowai, north, south, unakoti; sepahijalapolice.tripura.gov.in/contact%20us; westpolice.tripura.gov.in/node/96. Rows whose post starts 'O/C' or 'I/C' are stations; column order differs per district.",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": null,
+  "format": "pdf",
+  "rows_estimate": 1550,
+  "last_updated": "2023-09-12",
+  "in_archive": "no",
+  "regional_script": "none",
+  "checked": "not possible: uppolice.gov.in TLS handshake hangs from Germany and the India VPS (2026-11-11)",
+  "state": "Uttar Pradesh",
+  "source": "UP Police 'List of Police Station of Districts with Contact Details' PDF (2023)",
+  "url": "https://uppolice.gov.in/site/writereaddata/siteContent/CONTACT%20US/202309121508159960PS_LIST.pdf",
+  "kind": "pdf",
+  "covers": "statewide per search snippet (all districts, ~1,550 PS); not downloaded",
+  "fields": [
+   "district",
+   "office_type",
+   "station",
+   "email",
+   "mobile"
+  ],
+  "access": "blocked",
+  "sample": [],
+  "how_to_scrape": "Download the PDF and pdftotext -layout; columns S.No / District / Office Type / Office Name / NIC Email / Mobile. Older version: .../telephone/202008191506276870Email_CUG_PS.pdf (2020).",
+  "verified": false,
+  "notes": "Search snippets say many mobile cells are blank. Archive has uppolice.gov.in PoliceStationList.pdf (2021, names + CCTNS codes only, ~1,550 rows) and 45 frmOfficials.aspx?<district> pages (officers down to CO/circle with CUG; no SHOs).",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": "Police Station Name",
+  "format": "html table",
+  "rows_estimate": 42,
+  "last_updated": "2023-09-23",
+  "in_archive": "yes, saved 2026-11-09",
+  "regional_script": "hi",
+  "checked": "3 rows on live page match the archive copy of 2026-11-09",
+  "state": "Uttar Pradesh",
+  "source": "District S3WaaS police pages (Prayagraj: PS with in-charge CUG)",
+  "url": "https://prayagraj.nic.in/police/",
+  "kind": "per-district-html",
+  "covers": "Prayagraj commissionerate 42 PS; G.B. Nagar 27 PS CUG (gbnagar.nic.in/police/); other districts vary (azamgarh, gorakhpur/police-thana, ghaziabad/en/police, amroha/police-station, fatehpur/police-stations)",
+  "fields": [
+   "station",
+   "circle",
+   "mobile",
+   "landline",
+   "email"
+  ],
+  "access": "works from Germany",
+  "sample": [
+   {
+    "station": "Khuldabad",
+    "circle": "A.C.P. (Kotwali)",
+    "mobile": "9454402837",
+    "landline": "0532-2655603",
+    "email": "so[hyphen]khuldabad[dot]ah[at]nic[dot]in"
+   },
+   {
+    "station": "Kotwali",
+    "circle": "A.C.P. (Kotwali)",
+    "mobile": "9454402839",
+    "landline": "0532-2240900",
+    "email": "so[hyphen]kotwali[dot]ah[at]nic[dot]in"
+   },
+   {
+    "station": "Civil lines",
+    "circle": "A.C.P. (Civil Lines)",
+    "mobile": "9454402822",
+    "landline": "0532-2560904",
+    "email": "so[hyphen]civilline[dot]ah[at]nic[dot]in"
+   }
+  ],
+  "how_to_scrape": "Per district https://<district>.nic.in/<police|police-station|police-thana>/; S3WaaS table 'Police Station Details'. Use archive.sh search 'thana CUG' to list districts. CUG 94544xxxxx is tied to the post, not the person; no SHO names.",
+  "verified": true,
+  "notes": "Many district pages are older (Azamgarh 2020, only CO level).",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none",
+  "area_field": null,
+  "format": null,
+  "rows_estimate": null,
+  "last_updated": null,
+  "in_archive": "yes, homepage only (saved 2026-11-05), no station pages",
+  "regional_script": "none",
+  "checked": "none possible",
+  "state": "Uttarakhand",
+  "source": "Uttarakhand Police main site",
+  "url": "https://uttarakhandpolice.uk.gov.in/",
+  "kind": "none",
+  "covers": "not reached",
+  "fields": [],
+  "access": "blocked",
+  "sample": [],
+  "how_to_scrape": "Server needs unsafe legacy TLS renegotiation (OpenSSL error 0A000152 from India VPS; port 443 refuses from Germany). Not bypassed.",
+  "verified": false,
+  "notes": "District S3WaaS pages dehradun/haridwar/nainital/usnagar/almora/tehri/pauri .nic.in/police/ return 200 but hold no mobile numbers. Web search budget ran out before more candidates were tried. Next: a client with legacy renegotiation (certificate checks kept), owner to approve.",
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": null,
+  "in_archive": "no (archive.s1d.me has no kolkatapolice.gov.in); Wayback copy 2026-06-21 read",
+  "regional_script": "none",
+  "checked": "Live site refused from Germany, India (vpsin) and the US fetcher (connect refused/timeout, 2026-11-11). Rows read from the Wayback copy of 2026-06-21 (id_ raw). No live compare possible.",
+  "notes": "Data is ~5 months old. Re-check when the site is back; try from an Indian residential/proxy IP. Station names are English; no Bengali.",
+  "state": "West Bengal",
+  "source": "Kolkata Police - Units page (all PS with OC + Addl OC)",
+  "url": "https://kolkatapolice.gov.in/units/",
+  "kind": "html-table",
+  "format": "html table",
+  "covers": "Kolkata Police, 89 PS (incl. Bhangar division and women PS)",
+  "rows_estimate": 89,
+  "fields": [
+   "station",
+   "oc_name",
+   "oc_phone",
+   "addl_oc_name",
+   "addl_oc_phone",
+   "email"
+  ],
+  "access": "blocked",
+  "sample": [
+   {
+    "station": "Purba Jadavpur",
+    "oc_name": "SHRI SHAIBAL ROY",
+    "oc_phone": "033-2426 7345 / 6292258801",
+    "addl_oc_name": "SHRI PRITI PROKASH BISWAS",
+    "addl_oc_phone": "033-2416 0423",
+    "email": "ps.pjadavpur@kolkatapolice.gov.in"
+   },
+   {
+    "station": "Pragati Maidan",
+    "oc_name": "SHRI BABAI BHATTACHARJEE",
+    "oc_phone": "033-2285 0500 / 6292258805",
+    "addl_oc_name": "SHRI SANAT CHATTAPADHYAY",
+    "addl_oc_phone": "033-2285 1507",
+    "email": "ps.pragatimdn@kolkatapolice.gov.in"
+   },
+   {
+    "station": "Madhabpur",
+    "oc_name": "SHRI SOURAV DUTTA",
+    "oc_phone": "7044899727",
+    "addl_oc_name": "SHRI KAJAL GHOSH",
+    "addl_oc_phone": "",
+    "email": "madhabpur.ps@kolkatapolice.gov.in"
+   }
+  ],
+  "how_to_scrape": "One page. Tables whose header row starts 'Police Station | OC Name | OC Phone No(s). | Addl. OC Name | Addl. OC Phone No(s). | PS Email' hold the stations; other tables (header 'Office / Section') are DC/AC offices. Per-PS detail pages also exist at /know-police-station/page/N.",
+  "verified": true,
+  "seen": "2026-11-11"
+ },
+ {
+  "dept": "police",
+  "level": "police_station",
+  "boundary": "none (no police-station polygons found on this site)",
+  "area_field": "station",
+  "last_updated": null,
+  "in_archive": "no (archive.s1d.me has no wbpolice.gov.in); Wayback copy 2026-07-15 read (page 1 only)",
+  "regional_script": "none",
+  "checked": "Live site refused from Germany, India and the US (2026-11-11). Page 1 rows read from Wayback 2026-07-15. Not compared live.",
+  "notes": "No OC names for PS. Postback paging needs the live site. Commissionerates (Howrah, Bidhannagar, Barrackpore, Asansol-Durgapur, Siliguri, Chandannagar) also have their own sites; not checked.",
+  "state": "West Bengal",
+  "source": "WB Police - Important Telephone Numbers (statewide)",
+  "url": "https://wbpolice.gov.in/wbp/Common/WBP_ContactList.aspx",
+  "kind": "html-table",
+  "format": "aspx form",
+  "covers": "statewide, 1254 records (SP, SDPO, PS, control rooms); ~480 PS in the station dropdown; district police + commissionerates (excl. Kolkata Police)",
+  "rows_estimate": 1254,
+  "fields": [
+   "office",
+   "name",
+   "telephone"
+  ],
+  "access": "blocked",
+  "sample": [
+   {
+    "office": "Alipurduar PS",
+    "name": "",
+    "telephone": "03564 - 255100"
+   },
+   {
+    "office": "Falakata PS",
+    "name": "",
+    "telephone": "03563 - 260242"
+   },
+   {
+    "office": "Madarihat PS",
+    "name": "",
+    "telephone": "03563 - 262223"
+   }
+  ],
+  "how_to_scrape": "ASP.NET GridView ctl00$ContentPlaceHolder1$grid_contactus, paged by __doPostBack('...grid_contactus','Page$N') with __VIEWSTATE; filters Unit Type / Office / Police Station dropdowns. Station rows have the PS name and phone; the Name column is mostly empty for PS (names only for SP etc.).",
+  "verified": true,
+  "seen": "2026-11-11"
+ }
+]

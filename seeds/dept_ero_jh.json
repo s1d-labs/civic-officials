@@ -1,0 +1,22 @@
+[
+ {
+  "key": "ero_jh-ero",
+  "payload": {
+   "reader": "ero_jh",
+   "url": "https://ceojh.jharkhand.gov.in/linkinfo/EROOfficecontact.aspx",
+   "state": "JH",
+   "page": "ero",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_jh-aero",
+  "payload": {
+   "reader": "ero_jh",
+   "url": "https://ceojh.jharkhand.gov.in/linkinfo/AEROOfficecontact.aspx",
+   "state": "JH",
+   "page": "aero",
+   "india_only": true
+  }
+ }
+]

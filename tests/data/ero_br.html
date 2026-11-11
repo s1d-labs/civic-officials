@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><head>
+<title>RO/ERO Contact Details-OFFICE OF THE CHIEF ELECTORAL OFFICER, BIHAR</title>
+</head><body class="ipsApp ipsApp_front ipsJS_none ipsClearfix Scroll-Style">
+<div class="my-1" id="header"></div>
+<main class="container-fluid my-5">
+<div class="table-container mx-auto">
+<div class="filter-bar">
+<select id="districtSelect" onchange="updateAssemblies()">
+<option value="">Select District</option>
+</select>
+<select disabled="" id="assemblySelect" onchange="filterTable()">
+<option value="">Select Assembly</option>
+</select>
+<button onclick="resetFilters()">Reset</button>
+</div>
+<div class="table-responsive">
+<table class="table table-striped table-hover table-bordered align-middle" id="eroTable">
+<thead>
+<tr>
+<th>Sl. No.</th>
+<th>District</th>
+<th>Assembly</th>
+<th>RO/ERO Name</th>
+<th>Office Address</th>
+<th>Mobile No.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Sl. No.">1</td>
+<td data-label="District">ARARIA</td>
+<td data-label="Assembly">Narpatganj</td>
+<td data-label="RO/ERO Name">AMIT KUMAR</td>
+<td data-label="Office Address">SDO OFFICE, FORBESGANJ</td>
+<td data-label="Mobile No.">9031672236</td>
+</tr>
+<tr>
+<td data-label="Sl. No.">2</td>
+<td data-label="District">ARARIA</td>
+<td data-label="Assembly">Raniganj</td>
+<td data-label="RO/ERO Name">AS PRATIK</td>
+<td data-label="Office Address">SUBDIVISION ARARIA</td>
+<td data-label="Mobile No.">9031672237</td>
+</tr>
+<tr>
+<td data-label="Sl. No.">3</td>
+<td data-label="District">ARARIA</td>
+<td data-label="Assembly">Forbesganj</td>
+<td data-label="RO/ERO Name">RANJEET KUMAR RANJAN</td>
+<td data-label="Office Address">SUB DIVISION OFFICE FORBESGANJ</td>
+<td data-label="Mobile No.">9473191368</td>
+</tr>
+<tr>
+<td data-label="Sl. No.">4</td>
+<td data-label="District">ARARIA</td>
+<td data-label="Assembly">Araria</td>
+<td data-label="RO/ERO Name">RAVI PRAKASH</td>
+<td data-label="Office Address">Sdo Office Araria</td>
+<td data-label="Mobile No.">9473191367</td>
+</tr>
+<tr>
+<td data-label="Sl. No.">5</td>
+<td data-label="District">ARARIA</td>
+<td data-label="Assembly">Jokihat</td>
+<td data-label="RO/ERO Name">Anil Kumar Jha</td>
+<td data-label="Office Address">COLLECTORATE ARARIA</td>
+<td data-label="Mobile No.">9473191366</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card-view" id="cardContainer"></div>
+</div>
+</main>
+<div class="m-0 p-0" id="footer" style="background-color:#3498DB"></div>
+</body></html>

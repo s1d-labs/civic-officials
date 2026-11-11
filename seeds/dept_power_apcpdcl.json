@@ -1,0 +1,81 @@
+[
+ {
+  "key": "power_apcpdcl:corporate",
+  "payload": {
+   "reader": "power_apcpdcl",
+   "url": "https://apcpdcl.in/contact-phno-corporate.php",
+   "state": "AP",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_apcpdcl:krishna",
+  "payload": {
+   "reader": "power_apcpdcl",
+   "url": "https://apcpdcl.in/contact-phno-krishna.php",
+   "circle": "Krishna",
+   "state": "AP",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_apcpdcl:vjayawada",
+  "payload": {
+   "reader": "power_apcpdcl",
+   "url": "https://apcpdcl.in/contact-phno-vjayawada.php",
+   "circle": "NTR",
+   "state": "AP",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_apcpdcl:crda",
+  "payload": {
+   "reader": "power_apcpdcl",
+   "url": "https://apcpdcl.in/contact-phno-crda.php",
+   "circle": "CRDA",
+   "state": "AP",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_apcpdcl:guntur",
+  "payload": {
+   "reader": "power_apcpdcl",
+   "url": "https://apcpdcl.in/contact-phno-guntur.php",
+   "circle": "Guntur",
+   "state": "AP",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_apcpdcl:bapatla",
+  "payload": {
+   "reader": "power_apcpdcl",
+   "url": "https://apcpdcl.in/contact-phno-bapatla.php",
+   "circle": "Bapatla",
+   "state": "AP",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_apcpdcl:palnadu",
+  "payload": {
+   "reader": "power_apcpdcl",
+   "url": "https://apcpdcl.in/contact-phno-palnadu.php",
+   "circle": "Palnadu",
+   "state": "AP",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_apcpdcl:ongole",
+  "payload": {
+   "reader": "power_apcpdcl",
+   "url": "https://apcpdcl.in/contact-phno-ongole.php",
+   "circle": "Prakasam",
+   "state": "AP",
+   "india_only": true
+  }
+ }
+]

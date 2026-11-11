@@ -1,0 +1,32 @@
+[
+ {
+  "key": "power_mescom:zones",
+  "payload": {
+   "reader": "power_mescom",
+   "page": "zones",
+   "url": "https://mescom.karnataka.gov.in/17/zonal-and-circle-offices/en",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_mescom:divisions",
+  "payload": {
+   "reader": "power_mescom",
+   "page": "divisions",
+   "url": "https://mescom.karnataka.gov.in/14/divisional-offices/en",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_mescom:sections",
+  "payload": {
+   "reader": "power_mescom",
+   "page": "sections",
+   "url": "https://mescom.karnataka.gov.in/15/subdivision-and-sections/en",
+   "state": "KA",
+   "india_only": true
+  }
+ }
+]

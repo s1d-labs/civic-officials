@@ -1,0 +1,29 @@
+[
+ {
+  "key": "police_nl:kohima",
+  "payload": {
+   "reader": "police_nl",
+   "url": "https://kohima.nic.in/helpline/",
+   "state": "NL",
+   "district": "Kohima"
+  }
+ },
+ {
+  "key": "police_nl:dimapur",
+  "payload": {
+   "reader": "police_nl",
+   "url": "https://dimapur.nic.in/helpline/",
+   "state": "NL",
+   "district": "Dimapur"
+  }
+ },
+ {
+  "key": "police_nl:phek",
+  "payload": {
+   "reader": "police_nl",
+   "url": "https://phek.nic.in/helpline/",
+   "state": "NL",
+   "district": "Phek"
+  }
+ }
+]

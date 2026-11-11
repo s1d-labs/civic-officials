@@ -1,0 +1,19 @@
+[
+ {
+  "key": "water_hp",
+  "payload": {
+   "reader": "water_hp",
+   "url": "https://services.hp.gov.in/hpcivil/TelephoneDirectory/GetDataViewPV",
+   "state": "HP",
+   "india_only": true,
+   "form": {
+    "TabId": "2",
+    "OfficerNm": "",
+    "DepartmentId": "B22",
+    "DepartmentNm": "",
+    "Designation": "",
+    "PhoneNo": ""
+   }
+  }
+ }
+]

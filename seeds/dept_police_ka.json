@@ -1,0 +1,463 @@
+[
+ {
+  "key": "police_ka:1-bagalkot",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=1&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "1",
+   "district": "Bagalkot",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:2-ballari",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=2&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "2",
+   "district": "Ballari",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:3-belagavi-city",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=3&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "3",
+   "district": "Belagavi City",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:4-belagavi-dist",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=4&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "4",
+   "district": "Belagavi Dist",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:5-bengaluru-city",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=5&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "5",
+   "district": "Bengaluru City",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:6-bengaluru-dist",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=6&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "6",
+   "district": "Bengaluru Dist",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:7-bidar",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=7&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "7",
+   "district": "Bidar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:8-chamarajanagar",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=8&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "8",
+   "district": "Chamarajanagar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:9-chickballapura",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=9&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "9",
+   "district": "Chickballapura",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:10-chikkamagaluru",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=10&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "10",
+   "district": "Chikkamagaluru",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:11-chitradurga",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=11&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "11",
+   "district": "Chitradurga",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:12-cid",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=12&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "12",
+   "district": "CID",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:13-coastal-security-police",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=13&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "13",
+   "district": "Coastal Security Police",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:14-dakshina-kannada",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=14&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "14",
+   "district": "Dakshina Kannada",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:15-davanagere",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=15&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "15",
+   "district": "Davanagere",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:16-dharwad",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=16&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "16",
+   "district": "Dharwad",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:17-gadag",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=17&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "17",
+   "district": "Gadag",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:18-hassan",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=18&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "18",
+   "district": "Hassan",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:19-haveri",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=19&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "19",
+   "district": "Haveri",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:20-hubballi-dharwad-city",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=20&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "20",
+   "district": "Hubballi Dharwad City",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:21-isd-bengaluru",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=21&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "21",
+   "district": "ISD Bengaluru",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:22-k-g-f",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=22&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "22",
+   "district": "K.G.F",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:23-kalaburagi",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=23&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "23",
+   "district": "Kalaburagi",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:24-kalaburagi-city",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=24&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "24",
+   "district": "Kalaburagi City",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:25-karnataka-railways",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=25&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "25",
+   "district": "Karnataka Railways",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:26-kodagu",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=26&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "26",
+   "district": "Kodagu",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:27-kolar",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=27&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "27",
+   "district": "Kolar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:28-koppal",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=28&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "28",
+   "district": "Koppal",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:29-mandya",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=29&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "29",
+   "district": "Mandya",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:30-mangaluru-city",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=30&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "30",
+   "district": "Mangaluru City",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:31-mysuru-city",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=31&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "31",
+   "district": "Mysuru City",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:32-mysuru-dist",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=32&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "32",
+   "district": "Mysuru Dist",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:33-raichur",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=33&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "33",
+   "district": "Raichur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:34-bengaluru-south",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=34&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "34",
+   "district": "Bengaluru South",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:35-shivamogga",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=35&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "35",
+   "district": "Shivamogga",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:36-tumakuru",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=36&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "36",
+   "district": "Tumakuru",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:37-udupi",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=37&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "37",
+   "district": "Udupi",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:38-uttara-kannada",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=38&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "38",
+   "district": "Uttara Kannada",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:39-vijayapur",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=39&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "39",
+   "district": "Vijayapur",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:40-yadgir",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=40&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "40",
+   "district": "Yadgir",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:41-vijayanagara",
+  "payload": {
+   "reader": "police_ka",
+   "url": "https://ksp.karnataka.gov.in/home-fetch?select=district_id&value=41&dependent=district_row_id",
+   "state": "KA",
+   "district_id": "41",
+   "district": "Vijayanagara",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_ka:bcp",
+  "payload": {
+   "reader": "police_ka",
+   "kind": "bcp",
+   "url": "https://bcp.karnataka.gov.in/24/law-&-order-/en",
+   "state": "KA",
+   "india_only": true
+  }
+ }
+]

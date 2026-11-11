@@ -1,0 +1,11 @@
+[
+ {
+  "key": "power_tgspdcl:official-contacts",
+  "payload": {
+   "reader": "power_tgspdcl",
+   "url": "https://tgsouthernpower.org/api/contacts/official-contacts",
+   "state": "TG",
+   "expected": 700
+  }
+ }
+]

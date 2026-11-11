@@ -1,0 +1,11 @@
+[
+ {
+  "key": "police_ap:police-station-table",
+  "payload": {
+   "reader": "police_ap",
+   "url": "https://citizen.appolice.gov.in/our-organization/police-stations",
+   "state": "AP",
+   "india_only": true
+  }
+ }
+]

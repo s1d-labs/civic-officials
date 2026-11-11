@@ -1,0 +1,86 @@
+[
+ {
+  "key": "police_cg:raipur",
+  "payload": {
+   "reader": "police_cg",
+   "url": "https://raipur.gov.in/en/police-station/",
+   "state": "CG",
+   "district": "Raipur",
+   "std_prefix": "771"
+  }
+ },
+ {
+  "key": "police_cg:durg",
+  "payload": {
+   "reader": "police_cg",
+   "url": "https://durg.gov.in/en/police/",
+   "state": "CG",
+   "district": "Durg",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police_cg:korba",
+  "payload": {
+   "reader": "police_cg",
+   "url": "https://korba.gov.in/en/police/",
+   "state": "CG",
+   "district": "Korba"
+  }
+ },
+ {
+  "key": "police_cg:gariaband",
+  "payload": {
+   "reader": "police_cg",
+   "url": "https://gariaband.gov.in/en/about-district/administrative-setup/police/",
+   "state": "CG",
+   "district": "Gariaband"
+  }
+ },
+ {
+  "key": "police_cg:bilaspur",
+  "payload": {
+   "reader": "police_cg",
+   "url": "https://bilaspur.gov.in/en/about-district/administrative-setup/police/",
+   "state": "CG",
+   "district": "Bilaspur"
+  }
+ },
+ {
+  "key": "police_cg:kondagaon",
+  "payload": {
+   "reader": "police_cg",
+   "url": "https://kondagaon.gov.in/en/police/",
+   "state": "CG",
+   "district": "Kondagaon"
+  }
+ },
+ {
+  "key": "police_cg:balodabazar",
+  "payload": {
+   "reader": "police_cg",
+   "url": "https://balodabazar.gov.in/en/about-district/administrative-setup/police/",
+   "state": "CG",
+   "district": "Balodabazar-Bhatapara"
+  }
+ },
+ {
+  "key": "police_cg:balrampur",
+  "payload": {
+   "reader": "police_cg",
+   "url": "https://balrampur.gov.in/en/directory/",
+   "state": "CG",
+   "district": "Balrampur-Ramanujganj",
+   "police_only": true
+  }
+ },
+ {
+  "key": "police_cg:gaurela-pendra-marwahi",
+  "payload": {
+   "reader": "police_cg",
+   "url": "https://gaurela-pendra-marwahi.cg.gov.in/public-utility-category/police-station/",
+   "state": "CG",
+   "district": "Gaurela-Pendra-Marwahi"
+  }
+ }
+]

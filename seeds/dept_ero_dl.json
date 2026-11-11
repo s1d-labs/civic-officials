@@ -1,0 +1,22 @@
+[
+ {
+  "key": "ero_dl-ero",
+  "payload": {
+   "reader": "ero_dl",
+   "url": "https://ceodelhinet.nic.in/ceodelhiweb/EROContactn.aspx",
+   "state": "DL",
+   "page": "ero",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ero_dl-aero",
+  "payload": {
+   "reader": "ero_dl",
+   "url": "https://ceodelhinet.nic.in/ceodelhiweb/NewContactPagen.aspx",
+   "state": "DL",
+   "page": "aero",
+   "india_only": true
+  }
+ }
+]

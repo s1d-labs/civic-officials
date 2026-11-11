@@ -1,0 +1,24 @@
+[
+ {
+  "key": "power_mepdcl:eastern-zone",
+  "payload": {
+   "reader": "power_mepdcl",
+   "url": "https://meecl.nic.in/wp-content/uploads/2024/08/Official-Contact-Numbers-of-MePDCL-Officers-Eastern-Zone.pdf",
+   "state": "ML",
+   "zone": "Eastern",
+   "india_only": true,
+   "expected": 51
+  }
+ },
+ {
+  "key": "power_mepdcl:western-zone",
+  "payload": {
+   "reader": "power_mepdcl",
+   "url": "https://meecl.nic.in/wp-content/uploads/2024/08/Official-Contact-Numbers-of-MePDCL-Officers-Western-Zone.pdf",
+   "state": "ML",
+   "zone": "Western",
+   "india_only": true,
+   "expected": 26
+  }
+ }
+]

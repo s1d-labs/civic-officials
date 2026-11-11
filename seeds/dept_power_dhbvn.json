@@ -1,0 +1,112 @@
+[
+ {
+  "key": "power_dhbvn:bhiwani",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/bhiwani.pdf",
+   "state": "HR",
+   "circle": "bhiwani",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_dhbvn:faridabad",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/faridabad.pdf",
+   "state": "HR",
+   "circle": "faridabad",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_dhbvn:fatehabad",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/fatehabad.pdf",
+   "state": "HR",
+   "circle": "fatehabad",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_dhbvn:gurugram-1",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/gurugram-1.pdf",
+   "state": "HR",
+   "circle": "gurugram-1",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_dhbvn:gurugram-2",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/gurugram-2.pdf",
+   "state": "HR",
+   "circle": "gurugram-2",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_dhbvn:hisar",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/hisar.pdf",
+   "state": "HR",
+   "circle": "hisar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_dhbvn:jind",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/jind.pdf",
+   "state": "HR",
+   "circle": "jind",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_dhbvn:narnaul",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/narnaul.pdf",
+   "state": "HR",
+   "circle": "narnaul",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_dhbvn:palwal",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/palwal.pdf",
+   "state": "HR",
+   "circle": "palwal",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_dhbvn:rewari",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/rewari.pdf",
+   "state": "HR",
+   "circle": "rewari",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power_dhbvn:sirsa",
+  "payload": {
+   "reader": "power_dhbvn",
+   "url": "https://dhbvn.org.in/staticContent/contactus/sirsa.pdf",
+   "state": "HR",
+   "circle": "sirsa",
+   "india_only": true
+  }
+ }
+]
