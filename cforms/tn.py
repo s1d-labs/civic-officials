@@ -14,6 +14,8 @@ import shutil
 import subprocess
 import tempfile
 
+import requests
+
 WIN_TEXT = ("ெவற்ற", "வெற்றி")           # "won" in the text layer (legacy glyph order) and in OCR
 GENDER = re.compile(r"^(பெண்|பெ[ணன]்?|ஆ[ணனஸ]்?|ஆனன்|ஆன்|திருநங்கை)$")   # with common OCR slips (ஆன், ஆஸ், ஆனன்)
 PARTY = {"தி.மு.க": "DMK", "அ.இ.அ.தி.மு.க": "AIADMK", "பா.ஜ.க": "BJP", "இ.தே.கா": "INC", "சுயேட்சை": "Independent",
@@ -121,19 +123,38 @@ def page_records(p, page, layer, text):
     return recs
 
 
+def stored(p, get):
+    """The PDF from the bucket when the item names its saved copy (payload "stored": "<project>/councillors/TN/<key>.pdf"):
+    then no request goes to tnsec.tn.gov.in, so the item needs neither an Indian proxy nor an India server."""
+    hub, k = getattr(get, "hub", None), p.get("stored")
+    if not hub or not k:
+        return None
+    try:
+        url = hub.read_urls(k.split("/", 1)[0], [k])[k]
+        r = requests.get(url, timeout=(20, 180))
+        if r.status_code == 200 and r.content[:5] == b"%PDF-":
+            return r.content
+    except Exception:  # noqa: BLE001 - fall back to the site
+        pass
+    return None
+
+
 def fetch(p, get):
     if not tools():
         return [], [], "tesseract not available"
-    r = get(p["url"])
-    if r is None:
-        return [], [], "no answer"
     key = hashlib.sha1(p["url"].encode()).hexdigest()[:12]
-    files = [(f"councillors/TN/{key}.pdf", r.content, "application/pdf")] if int(p.get("first", 1)) == 1 else []
+    content = stored(p, get)
+    if content is None:
+        r = get(p["url"])
+        if r is None:
+            return [], [], "no answer"
+        content = r.content
+    files = [(f"councillors/TN/{key}.pdf", content, "application/pdf")] if int(p.get("first", 1)) == 1 and not p.get("stored") else []
     recs = []
     with tempfile.TemporaryDirectory() as tmp:
         pdf = os.path.join(tmp, "r.pdf")
         with open(pdf, "wb") as f:
-            f.write(r.content)
+            f.write(content)
         pages = list(range(int(p.get("first", 1)), int(p.get("last", 1)) + 1))
         with concurrent.futures.ThreadPoolExecutor(max(1, os.cpu_count() or 1)) as ex:
             texts = dict(zip(pages, ex.map(lambda pg: (text_layer(pdf, pg), ocr(pdf, pg, tmp)), pages)))

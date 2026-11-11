@@ -181,6 +181,7 @@ def main(run_fn=None, task="councillors"):
         if not r.encoding or r.encoding.lower() == "iso-8859-1":
             r.encoding = r.apparent_encoding or "utf-8"
         return r
+    get.hub = hub      # readers that keep their source files in the bucket (cforms/tn.py) read them back through the hub
 
     try:
         while time.time() < deadline and not stop:

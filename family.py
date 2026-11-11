@@ -5,6 +5,7 @@ police units. One project per kind; one queue item per site. The work runs on Gi
 Sites that do not answer from abroad go to the `-in` project, which runs through the hub's Indian proxies: list their domains in
 retry_in.txt and run Setup again.
 """
+import hashlib
 import csv
 import json
 from pathlib import Path
@@ -116,12 +117,23 @@ if _cof.exists():
 # proxies (some sites answer only from India; OCR needs the runners' cores). One item = at most 6 pages of one PDF
 # (every seeds/ocr_councillors_*.json).
 _ocr = [i for f in sorted((HERE / "seeds").glob("ocr_councillors_*.json")) for i in json.loads(f.read_text())]
+# Tamil Nadu: every results PDF is already in the bucket (the first item of each file saved it), so its items read the saved copy
+# and need no Indian proxy: any GitHub runner can take them (project -ocr-b, own task name so older checkouts cannot).
+_ocr_tn = [{"key": i["key"], "payload": {**i["payload"], "stored": "civic-officials-councillors-ocr/councillors/TN/"
+                                         + hashlib.sha1(i["payload"]["url"].encode()).hexdigest()[:12] + ".pdf"}}
+           for i in _ocr if i["payload"].get("state") == "TN"]
+_ocr = [i for i in _ocr if i["payload"].get("state") != "TN"]
 if _ocr:
     PROJECTS.append({"name": f"{FAMILY}-councillors-ocr", "title": "Elected ward councillors read by OCR (scanned results files)",
                      # own task name: workers whose checkout predates the OCR reader do not know it, so they cannot take these items
                      "task": "councillors-ocr", "target": f"{FAMILY}-councillors-ocr", "env": {}, "probe": None,
                      "unit_label": "6 PDF pages", "record_label": "councillor", "items": _ocr, "workers": 8, "threads": 1,
                      "delay_ms": 1000, "proxy": "IN"})
+if _ocr_tn:
+    PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-b", "title": "Tamil Nadu ward councillors by OCR, from the saved results PDFs",
+                     "task": "councillors-ocr-b", "target": f"{FAMILY}-councillors-ocr-b", "env": {}, "probe": None,
+                     "unit_label": "6 PDF pages", "record_label": "councillor", "items": _ocr_tn, "workers": 40, "threads": 1,
+                     "delay_ms": 0})
 
 # Department offices and officers (depts task, dforms/<module>.py; every seeds/dept_*.json): police stations, power offices,
 # EROs, sub-registrars, water offices. Both projects run on the India servers and on GitHub runners through the Indian proxies;
