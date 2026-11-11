@@ -1,0 +1,742 @@
+[
+ {
+  "key": "police2s_mh:akolapolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://akolapolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "akolapolice",
+   "district": "Akola"
+  }
+ },
+ {
+  "key": "police2s_mh:akolapolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://akolapolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "akolapolice",
+   "district": "Akola"
+  }
+ },
+ {
+  "key": "police2s_mh:amravatiruralpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://amravatiruralpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "amravatiruralpolice",
+   "district": "Amravati"
+  }
+ },
+ {
+  "key": "police2s_mh:amravatiruralpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://amravatiruralpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "amravatiruralpolice",
+   "district": "Amravati"
+  }
+ },
+ {
+  "key": "police2s_mh:buldhanapolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://buldhanapolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "buldhanapolice",
+   "district": "Buldhana"
+  }
+ },
+ {
+  "key": "police2s_mh:buldhanapolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://buldhanapolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "buldhanapolice",
+   "district": "Buldhana"
+  }
+ },
+ {
+  "key": "police2s_mh:chandrapurpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://chandrapurpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "chandrapurpolice",
+   "district": "Chandrapur"
+  }
+ },
+ {
+  "key": "police2s_mh:chandrapurpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://chandrapurpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "chandrapurpolice",
+   "district": "Chandrapur"
+  }
+ },
+ {
+  "key": "police2s_mh:dhulepolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://dhulepolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "dhulepolice",
+   "district": "Dhule"
+  }
+ },
+ {
+  "key": "police2s_mh:dhulepolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://dhulepolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "dhulepolice",
+   "district": "Dhule"
+  }
+ },
+ {
+  "key": "police2s_mh:gadchirolipolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://gadchirolipolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "gadchirolipolice",
+   "district": "Gadchiroli"
+  }
+ },
+ {
+  "key": "police2s_mh:gadchirolipolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://gadchirolipolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "gadchirolipolice",
+   "district": "Gadchiroli"
+  }
+ },
+ {
+  "key": "police2s_mh:gondiapolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://gondiapolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "gondiapolice",
+   "district": "Gondia"
+  }
+ },
+ {
+  "key": "police2s_mh:gondiapolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://gondiapolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "gondiapolice",
+   "district": "Gondia"
+  }
+ },
+ {
+  "key": "police2s_mh:kolhapurpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://kolhapurpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "kolhapurpolice",
+   "district": "Kolhapur"
+  }
+ },
+ {
+  "key": "police2s_mh:kolhapurpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://kolhapurpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "kolhapurpolice",
+   "district": "Kolhapur"
+  }
+ },
+ {
+  "key": "police2s_mh:laturpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://laturpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "laturpolice",
+   "district": "Latur"
+  }
+ },
+ {
+  "key": "police2s_mh:laturpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://laturpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "laturpolice",
+   "district": "Latur"
+  }
+ },
+ {
+  "key": "police2s_mh:nandedpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://nandedpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "nandedpolice",
+   "district": "Nanded"
+  }
+ },
+ {
+  "key": "police2s_mh:nandedpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://nandedpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "nandedpolice",
+   "district": "Nanded"
+  }
+ },
+ {
+  "key": "police2s_mh:dharashiv:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://dharashiv.mahapolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "dharashiv",
+   "district": "Dharashiv"
+  }
+ },
+ {
+  "key": "police2s_mh:dharashiv:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://dharashiv.mahapolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "dharashiv",
+   "district": "Dharashiv"
+  }
+ },
+ {
+  "key": "police2s_mh:palgharpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://palgharpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "palgharpolice",
+   "district": "Palghar"
+  }
+ },
+ {
+  "key": "police2s_mh:palgharpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://palgharpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "palgharpolice",
+   "district": "Palghar"
+  }
+ },
+ {
+  "key": "police2s_mh:parbhanipolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://parbhanipolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "parbhanipolice",
+   "district": "Parbhani"
+  }
+ },
+ {
+  "key": "police2s_mh:parbhanipolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://parbhanipolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "parbhanipolice",
+   "district": "Parbhani"
+  }
+ },
+ {
+  "key": "police2s_mh:puneruralpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://puneruralpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "puneruralpolice",
+   "district": "Pune"
+  }
+ },
+ {
+  "key": "police2s_mh:puneruralpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://puneruralpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "puneruralpolice",
+   "district": "Pune"
+  }
+ },
+ {
+  "key": "police2s_mh:ratnagiripolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://ratnagiripolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "ratnagiripolice",
+   "district": "Ratnagiri"
+  }
+ },
+ {
+  "key": "police2s_mh:ratnagiripolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://ratnagiripolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "ratnagiripolice",
+   "district": "Ratnagiri"
+  }
+ },
+ {
+  "key": "police2s_mh:sindhudurgpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://sindhudurgpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "sindhudurgpolice",
+   "district": "Sindhudurg"
+  }
+ },
+ {
+  "key": "police2s_mh:sindhudurgpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://sindhudurgpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "sindhudurgpolice",
+   "district": "Sindhudurg"
+  }
+ },
+ {
+  "key": "police2s_mh:solapurpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://solapurpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "solapurpolice",
+   "district": "Solapur"
+  }
+ },
+ {
+  "key": "police2s_mh:solapurpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://solapurpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "solapurpolice",
+   "district": "Solapur"
+  }
+ },
+ {
+  "key": "police2s_mh:thaneruralpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://thaneruralpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "thaneruralpolice",
+   "district": "Thane"
+  }
+ },
+ {
+  "key": "police2s_mh:thaneruralpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://thaneruralpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "thaneruralpolice",
+   "district": "Thane"
+  }
+ },
+ {
+  "key": "police2s_mh:wardhapolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://wardhapolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "wardhapolice",
+   "district": "Wardha"
+  }
+ },
+ {
+  "key": "police2s_mh:wardhapolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://wardhapolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "wardhapolice",
+   "district": "Wardha"
+  }
+ },
+ {
+  "key": "police2s_mh:washimpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://washimpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "washimpolice",
+   "district": "Washim"
+  }
+ },
+ {
+  "key": "police2s_mh:washimpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://washimpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "washimpolice",
+   "district": "Washim"
+  }
+ },
+ {
+  "key": "police2s_mh:nashikruralpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://nashikruralpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "nashikruralpolice",
+   "district": "Nashik"
+  }
+ },
+ {
+  "key": "police2s_mh:nashikruralpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://nashikruralpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "nashikruralpolice",
+   "district": "Nashik"
+  }
+ },
+ {
+  "key": "police2s_mh:ahmednagardistpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://www.ahmednagardistpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "ahmednagardistpolice",
+   "district": "Ahilyanagar"
+  }
+ },
+ {
+  "key": "police2s_mh:ahmednagardistpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://www.ahmednagardistpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "ahmednagardistpolice",
+   "district": "Ahilyanagar"
+  }
+ },
+ {
+  "key": "police2s_mh:beedpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://www.beedpolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "beedpolice",
+   "district": "Beed"
+  }
+ },
+ {
+  "key": "police2s_mh:beedpolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://www.beedpolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "beedpolice",
+   "district": "Beed"
+  }
+ },
+ {
+  "key": "police2s_mh:bhandarapolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://www.bhandarapolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "bhandarapolice",
+   "district": "Bhandara"
+  }
+ },
+ {
+  "key": "police2s_mh:bhandarapolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://www.bhandarapolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "bhandarapolice",
+   "district": "Bhandara"
+  }
+ },
+ {
+  "key": "police2s_mh:nandurbar:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://nandurbar.mahapolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "nandurbar",
+   "district": "Nandurbar"
+  }
+ },
+ {
+  "key": "police2s_mh:nandurbar:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://nandurbar.mahapolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "nandurbar",
+   "district": "Nandurbar"
+  }
+ },
+ {
+  "key": "police2s_mh:hingolipolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://hingolipolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "hingolipolice",
+   "district": "Hingoli"
+  }
+ },
+ {
+  "key": "police2s_mh:hingolipolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://hingolipolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "hingolipolice",
+   "district": "Hingoli"
+  }
+ },
+ {
+  "key": "police2s_mh:jalnapolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://jalnapolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "jalnapolice",
+   "district": "Jalna"
+  }
+ },
+ {
+  "key": "police2s_mh:jalnapolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://jalnapolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "jalnapolice",
+   "district": "Jalna"
+  }
+ },
+ {
+  "key": "police2s_mh:navimumbaipolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://navimumbaipolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "navimumbaipolice",
+   "district": "Thane",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2s_mh:navimumbaipolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://navimumbaipolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "navimumbaipolice",
+   "district": "Thane",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2s_mh:mbvv:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://mbvv.mahapolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "mbvv",
+   "district": "Palghar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2s_mh:mbvv:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://mbvv.mahapolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "mbvv",
+   "district": "Palghar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2s_mh:nashikcitypolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://nashikcitypolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "nashikcitypolice",
+   "district": "Nashik"
+  }
+ },
+ {
+  "key": "police2s_mh:nashikcitypolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://nashikcitypolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "nashikcitypolice",
+   "district": "Nashik"
+  }
+ },
+ {
+  "key": "police2s_mh:solapurcitypolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://solapurcitypolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "solapurcitypolice",
+   "district": "Solapur"
+  }
+ },
+ {
+  "key": "police2s_mh:solapurcitypolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://solapurcitypolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "solapurcitypolice",
+   "district": "Solapur"
+  }
+ },
+ {
+  "key": "police2s_mh:pcpc:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://pcpc.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "pcpc",
+   "district": "Pune"
+  }
+ },
+ {
+  "key": "police2s_mh:pcpc:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://pcpc.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "pcpc",
+   "district": "Pune"
+  }
+ },
+ {
+  "key": "police2s_mh:aurangabadcitypolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://aurangabadcitypolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "aurangabadcitypolice",
+   "district": "Chhatrapati Sambhajinagar"
+  }
+ },
+ {
+  "key": "police2s_mh:aurangabadcitypolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://aurangabadcitypolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "aurangabadcitypolice",
+   "district": "Chhatrapati Sambhajinagar"
+  }
+ },
+ {
+  "key": "police2s_mh:punerailwaypolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://punerailwaypolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "punerailwaypolice"
+  }
+ },
+ {
+  "key": "police2s_mh:punerailwaypolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://punerailwaypolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "punerailwaypolice"
+  }
+ },
+ {
+  "key": "police2s_mh:csnrailway:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://csnrailway.mahapolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "csnrailway"
+  }
+ },
+ {
+  "key": "police2s_mh:csnrailway:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://csnrailway.mahapolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "csnrailway"
+  }
+ },
+ {
+  "key": "police2s_mh:mumbairlypolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://mumbairlypolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "mumbairlypolice",
+   "district": "Mumbai"
+  }
+ },
+ {
+  "key": "police2s_mh:mumbairlypolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://mumbairlypolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "mumbairlypolice",
+   "district": "Mumbai"
+  }
+ },
+ {
+  "key": "police2s_mh:nagpurrailwaypolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://www.nagpurrailwaypolice.gov.in/en/about/police-station-incharge",
+   "state": "MH",
+   "key": "nagpurrailwaypolice",
+   "district": "Nagpur"
+  }
+ },
+ {
+  "key": "police2s_mh:nagpurrailwaypolice:senior-officers",
+  "payload": {
+   "reader": "police2s_mh",
+   "url": "https://www.nagpurrailwaypolice.gov.in/en/about/senior-officers",
+   "state": "MH",
+   "key": "nagpurrailwaypolice",
+   "district": "Nagpur"
+  }
+ }
+]

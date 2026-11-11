@@ -1,0 +1,29 @@
+[
+ {
+  "key": "police2s_tg:kamareddy",
+  "payload": {
+   "reader": "police2s_tg",
+   "url": "https://kamareddy.telangana.gov.in/public-utility-category/police/",
+   "state": "TG",
+   "district": "Kamareddy"
+  }
+ },
+ {
+  "key": "police2s_tg:nirmal",
+  "payload": {
+   "reader": "police2s_tg",
+   "url": "https://nirmal.telangana.gov.in/police-contact-directory/",
+   "state": "TG",
+   "district": "Nirmal"
+  }
+ },
+ {
+  "key": "police2s_tg:rajanna-sircilla",
+  "payload": {
+   "reader": "police2s_tg",
+   "url": "https://rajannasircilla.telangana.gov.in/police/",
+   "state": "TG",
+   "district": "Rajanna Sircilla"
+  }
+ }
+]

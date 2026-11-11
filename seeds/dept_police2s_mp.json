@@ -1,0 +1,470 @@
+[
+ {
+  "key": "police2s_mp:agarmalwa:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://agarmalwa.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Agar Malwa"
+  }
+ },
+ {
+  "key": "police2s_mp:alirajpur:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://alirajpur.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Alirajpur"
+  }
+ },
+ {
+  "key": "police2s_mp:anuppur:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://anuppur.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Anuppur"
+  }
+ },
+ {
+  "key": "police2s_mp:ashoknagar:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://ashoknagar.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Ashoknagar"
+  }
+ },
+ {
+  "key": "police2s_mp:badwani:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://badwani.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Barwani"
+  }
+ },
+ {
+  "key": "police2s_mp:balaghat:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://balaghat.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Balaghat"
+  }
+ },
+ {
+  "key": "police2s_mp:betul:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://betul.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Betul"
+  }
+ },
+ {
+  "key": "police2s_mp:bhind:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://bhind.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Bhind"
+  }
+ },
+ {
+  "key": "police2s_mp:bhopal:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://bhopal.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Bhopal"
+  }
+ },
+ {
+  "key": "police2s_mp:burhanpur:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://burhanpur.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Burhanpur"
+  }
+ },
+ {
+  "key": "police2s_mp:chhatarpur:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://chhatarpur.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Chhatarpur"
+  }
+ },
+ {
+  "key": "police2s_mp:chhindwara:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://chhindwara.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Chhindwara"
+  }
+ },
+ {
+  "key": "police2s_mp:damoh:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://damoh.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Damoh"
+  }
+ },
+ {
+  "key": "police2s_mp:datia:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://datia.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Datia"
+  }
+ },
+ {
+  "key": "police2s_mp:dewas:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://dewas.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Dewas"
+  }
+ },
+ {
+  "key": "police2s_mp:dhar:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://dhar.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Dhar"
+  }
+ },
+ {
+  "key": "police2s_mp:dindori:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://dindori.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Dindori"
+  }
+ },
+ {
+  "key": "police2s_mp:guna:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://guna.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Guna"
+  }
+ },
+ {
+  "key": "police2s_mp:gwalior:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://gwalior.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Gwalior"
+  }
+ },
+ {
+  "key": "police2s_mp:harda:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://harda.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Harda"
+  }
+ },
+ {
+  "key": "police2s_mp:indore:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://indore.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Indore"
+  }
+ },
+ {
+  "key": "police2s_mp:jabalpur:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://jabalpur.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Jabalpur"
+  }
+ },
+ {
+  "key": "police2s_mp:jhabua:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://jhabua.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Jhabua"
+  }
+ },
+ {
+  "key": "police2s_mp:katni:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://katni.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Katni"
+  }
+ },
+ {
+  "key": "police2s_mp:khandwa:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://khandwa.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Khandwa"
+  }
+ },
+ {
+  "key": "police2s_mp:khargone:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://khargone.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Khargone"
+  }
+ },
+ {
+  "key": "police2s_mp:mandla:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://mandla.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Mandla"
+  }
+ },
+ {
+  "key": "police2s_mp:mandsour:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://mandsour.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Mandsaur"
+  }
+ },
+ {
+  "key": "police2s_mp:mauganj:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://mauganj.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Mauganj"
+  }
+ },
+ {
+  "key": "police2s_mp:morena:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://morena.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Morena"
+  }
+ },
+ {
+  "key": "police2s_mp:narmadapuram:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://narmadapuram.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Narmadapuram"
+  }
+ },
+ {
+  "key": "police2s_mp:narsinghpur:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://narsinghpur.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Narsinghpur"
+  }
+ },
+ {
+  "key": "police2s_mp:neemuch:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://neemuch.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Neemuch"
+  }
+ },
+ {
+  "key": "police2s_mp:pandhurna:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://pandhurna.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Pandhurna"
+  }
+ },
+ {
+  "key": "police2s_mp:raisen:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://raisen.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Raisen"
+  }
+ },
+ {
+  "key": "police2s_mp:rajgarh:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://rajgarh.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Rajgarh"
+  }
+ },
+ {
+  "key": "police2s_mp:ratlam:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://ratlam.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Ratlam"
+  }
+ },
+ {
+  "key": "police2s_mp:rewa:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://rewa.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Rewa"
+  }
+ },
+ {
+  "key": "police2s_mp:sagar:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://sagar.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Sagar"
+  }
+ },
+ {
+  "key": "police2s_mp:satna:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://satna.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Satna"
+  }
+ },
+ {
+  "key": "police2s_mp:sehore:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://sehore.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Sehore"
+  }
+ },
+ {
+  "key": "police2s_mp:seoni:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://seoni.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Seoni"
+  }
+ },
+ {
+  "key": "police2s_mp:shahdol:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://shahdol.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Shahdol"
+  }
+ },
+ {
+  "key": "police2s_mp:shajapur:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://shajapur.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Shajapur"
+  }
+ },
+ {
+  "key": "police2s_mp:sheopur:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://sheopur.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Sheopur"
+  }
+ },
+ {
+  "key": "police2s_mp:shivpuri:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://shivpuri.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Shivpuri"
+  }
+ },
+ {
+  "key": "police2s_mp:sidhi:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://sidhi.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Sidhi"
+  }
+ },
+ {
+  "key": "police2s_mp:singroli:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://singroli.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Singrauli"
+  }
+ },
+ {
+  "key": "police2s_mp:tikamgarh:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://tikamgarh.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Tikamgarh"
+  }
+ },
+ {
+  "key": "police2s_mp:ujjain:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://ujjain.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Ujjain"
+  }
+ },
+ {
+  "key": "police2s_mp:vidisha:officers-list",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://vidisha.mppolice.gov.in/officers-list/",
+   "state": "MP",
+   "district": "Vidisha"
+  }
+ },
+ {
+  "key": "police2s_mp:indore:contact",
+  "payload": {
+   "reader": "police2s_mp",
+   "url": "https://indore.mppolice.gov.in/contact/",
+   "state": "MP",
+   "district": "Indore"
+  }
+ }
+]

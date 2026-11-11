@@ -1,0 +1,155 @@
+[
+ {
+  "key": "police2s_gj:spgandhinagar",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spgandhinagar.gujarat.gov.in/spgandhinagar/CMS.aspx?orgchart=true",
+   "unit": "spgandhinagar",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Gandhinagar"
+  }
+ },
+ {
+  "key": "police2s_gj:spmehsana",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spmehsana.gujarat.gov.in/spmehsana/CMS.aspx?orgchart=true",
+   "unit": "spmehsana",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Mehsana"
+  }
+ },
+ {
+  "key": "police2s_gj:spporbandar",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spporbandar.gujarat.gov.in/spporbandar/CMS.aspx?orgchart=true",
+   "unit": "spporbandar",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Porbandar"
+  }
+ },
+ {
+  "key": "police2s_gj:spsabarkantha",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spsabarkantha.gujarat.gov.in/spsabarkantha/CMS.aspx?orgchart=true",
+   "unit": "spsabarkantha",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Sabarkantha"
+  }
+ },
+ {
+  "key": "police2s_gj:spsurat",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spsurat.gujarat.gov.in/spsurat/CMS.aspx?orgchart=true",
+   "unit": "spsurat",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Surat"
+  }
+ },
+ {
+  "key": "police2s_gj:spamreli",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spamreli.gujarat.gov.in/spamreli/CMS.aspx?orgchart=true",
+   "unit": "spamreli",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Amreli"
+  }
+ },
+ {
+  "key": "police2s_gj:spanand",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spanand.gujarat.gov.in/spanand/CMS.aspx?orgchart=true",
+   "unit": "spanand",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Anand"
+  }
+ },
+ {
+  "key": "police2s_gj:sparavalli",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://sparavalli.gujarat.gov.in/sparavalli/CMS.aspx?orgchart=true",
+   "unit": "sparavalli",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Aravalli"
+  }
+ },
+ {
+  "key": "police2s_gj:spbotad",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spbotad.gujarat.gov.in/spbotad/CMS.aspx?orgchart=true",
+   "unit": "spbotad",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Botad"
+  }
+ },
+ {
+  "key": "police2s_gj:spchhotaudepur",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spchhotaudepur.gujarat.gov.in/spchhotaudepur/CMS.aspx?orgchart=true",
+   "unit": "spchhotaudepur",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Chhota Udepur"
+  }
+ },
+ {
+  "key": "police2s_gj:spmahisagar",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spmahisagar.gujarat.gov.in/spmahisagar/CMS.aspx?orgchart=true",
+   "unit": "spmahisagar",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Mahisagar"
+  }
+ },
+ {
+  "key": "police2s_gj:spmorbi",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://spmorbi.gujarat.gov.in/spmorbi/CMS.aspx?orgchart=true",
+   "unit": "spmorbi",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Morbi"
+  }
+ },
+ {
+  "key": "police2s_gj:sptapi",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://sptapi.gujarat.gov.in/sptapi/CMS.aspx?orgchart=true",
+   "unit": "sptapi",
+   "state": "GJ",
+   "india_only": true,
+   "district": "Tapi"
+  }
+ },
+ {
+  "key": "police2s_gj:sprailway",
+  "payload": {
+   "reader": "police2s_gj",
+   "url": "https://sprailway.gujarat.gov.in/sprailway/CMS.aspx?orgchart=true",
+   "unit": "sprailway",
+   "state": "GJ",
+   "india_only": true
+  }
+ }
+]

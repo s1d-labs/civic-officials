@@ -1,0 +1,321 @@
+[
+ {
+  "key": "police2s_kl:alappuzha:who-is-who-kannur-rural",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://alappuzha.keralapolice.gov.in/who-is-who-kannur-rural",
+   "state": "KL",
+   "unit": "alappuzha",
+   "kind": "cards",
+   "district": "Alappuzha"
+  }
+ },
+ {
+  "key": "police2s_kl:coastal:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://coastal.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "coastal",
+   "kind": "cards"
+  }
+ },
+ {
+  "key": "police2s_kl:ernakulamrural:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://ernakulamrural.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "ernakulamrural",
+   "kind": "cards",
+   "district": "Ernakulam"
+  }
+ },
+ {
+  "key": "police2s_kl:idukki:who-is-who-kannur-rural",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://idukki.keralapolice.gov.in/who-is-who-kannur-rural",
+   "state": "KL",
+   "unit": "idukki",
+   "kind": "cards",
+   "district": "Idukki"
+  }
+ },
+ {
+  "key": "police2s_kl:kannurrural:who-is-who-kannur-rural",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kannurrural.keralapolice.gov.in/who-is-who-kannur-rural",
+   "state": "KL",
+   "unit": "kannurrural",
+   "kind": "cards",
+   "district": "Kannur"
+  }
+ },
+ {
+  "key": "police2s_kl:kasaragod:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kasaragod.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "kasaragod",
+   "kind": "cards",
+   "district": "Kasaragod"
+  }
+ },
+ {
+  "key": "police2s_kl:kochicity:law-and-order-kochi-city",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kochicity.keralapolice.gov.in/law-and-order-kochi-city",
+   "state": "KL",
+   "unit": "kochicity",
+   "kind": "cards",
+   "district": "Ernakulam"
+  }
+ },
+ {
+  "key": "police2s_kl:kochicity:shos",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kochicity.keralapolice.gov.in/shos",
+   "state": "KL",
+   "unit": "kochicity",
+   "kind": "cards",
+   "district": "Ernakulam"
+  }
+ },
+ {
+  "key": "police2s_kl:kochicity:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kochicity.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "kochicity",
+   "kind": "cards",
+   "district": "Ernakulam"
+  }
+ },
+ {
+  "key": "police2s_kl:kollamrural:circle-inspectors",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kollamrural.keralapolice.gov.in/circle-inspectors",
+   "state": "KL",
+   "unit": "kollamrural",
+   "kind": "cards",
+   "district": "Kollam"
+  }
+ },
+ {
+  "key": "police2s_kl:kollamrural:station-house-officers",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kollamrural.keralapolice.gov.in/station-house-officers",
+   "state": "KL",
+   "unit": "kollamrural",
+   "kind": "cards",
+   "district": "Kollam"
+  }
+ },
+ {
+  "key": "police2s_kl:kottayam:who-is-who-kannur-rural",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kottayam.keralapolice.gov.in/who-is-who-kannur-rural",
+   "state": "KL",
+   "unit": "kottayam",
+   "kind": "cards",
+   "district": "Kottayam"
+  }
+ },
+ {
+  "key": "police2s_kl:kozhikodecity:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kozhikodecity.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "kozhikodecity",
+   "kind": "cards",
+   "district": "Kozhikode"
+  }
+ },
+ {
+  "key": "police2s_kl:kozhikoderural:law-and-order-kannur-rural",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kozhikoderural.keralapolice.gov.in/law-and-order-kannur-rural",
+   "state": "KL",
+   "unit": "kozhikoderural",
+   "kind": "cards",
+   "district": "Kozhikode"
+  }
+ },
+ {
+  "key": "police2s_kl:kozhikoderural:who-is-who-kannur-rural",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kozhikoderural.keralapolice.gov.in/who-is-who-kannur-rural",
+   "state": "KL",
+   "unit": "kozhikoderural",
+   "kind": "cards",
+   "district": "Kozhikode"
+  }
+ },
+ {
+  "key": "police2s_kl:malappuram:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://malappuram.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "malappuram",
+   "kind": "cards",
+   "district": "Malappuram"
+  }
+ },
+ {
+  "key": "police2s_kl:palakkad:circle-office",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://palakkad.keralapolice.gov.in/circle-office",
+   "state": "KL",
+   "unit": "palakkad",
+   "kind": "cards",
+   "district": "Palakkad"
+  }
+ },
+ {
+  "key": "police2s_kl:palakkad:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://palakkad.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "palakkad",
+   "kind": "cards",
+   "district": "Palakkad"
+  }
+ },
+ {
+  "key": "police2s_kl:pathanamthitta:who-is-who-pathanamthitta",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://pathanamthitta.keralapolice.gov.in/who-is-who-pathanamthitta",
+   "state": "KL",
+   "unit": "pathanamthitta",
+   "kind": "cards",
+   "district": "Pathanamthitta"
+  }
+ },
+ {
+  "key": "police2s_kl:thrissurcity:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://thrissurcity.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "thrissurcity",
+   "kind": "cards",
+   "district": "Thrissur"
+  }
+ },
+ {
+  "key": "police2s_kl:thrissurrural:law-and-order-of-thrissur-rural",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://thrissurrural.keralapolice.gov.in/law-and-order-of-thrissur-rural",
+   "state": "KL",
+   "unit": "thrissurrural",
+   "kind": "cards",
+   "district": "Thrissur"
+  }
+ },
+ {
+  "key": "police2s_kl:thrissurrural:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://thrissurrural.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "thrissurrural",
+   "kind": "cards",
+   "district": "Thrissur"
+  }
+ },
+ {
+  "key": "police2s_kl:tvmcity:who-is-who-trivandrum-city",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://tvmcity.keralapolice.gov.in/who-is-who-trivandrum-city",
+   "state": "KL",
+   "unit": "tvmcity",
+   "kind": "cards",
+   "district": "Thiruvananthapuram"
+  }
+ },
+ {
+  "key": "police2s_kl:tvmrural:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://tvmrural.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "tvmrural",
+   "kind": "cards",
+   "district": "Thiruvananthapuram"
+  }
+ },
+ {
+  "key": "police2s_kl:wayanad:who-is-who",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://wayanad.keralapolice.gov.in/who-is-who",
+   "state": "KL",
+   "unit": "wayanad",
+   "kind": "cards",
+   "district": "Wayanad"
+  }
+ },
+ {
+  "key": "police2s_kl:kollamcity:station-kollam-city",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kollamcity.keralapolice.gov.in/station-kollam-city",
+   "state": "KL",
+   "unit": "kollamcity",
+   "kind": "blocks",
+   "district": "Kollam"
+  }
+ },
+ {
+  "key": "police2s_kl:kollamcity:who-is-who-kollam-city",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kollamcity.keralapolice.gov.in/who-is-who-kollam-city",
+   "state": "KL",
+   "unit": "kollamcity",
+   "kind": "blocks",
+   "district": "Kollam"
+  }
+ },
+ {
+  "key": "police2s_kl:coastal:kerala-coastal-police-stations-and-ishos",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://coastal.keralapolice.gov.in/kerala-coastal-police-stations-and-ishos",
+   "state": "KL",
+   "unit": "coastal",
+   "kind": "table",
+   "level": "police_station",
+   "post": "ISHO"
+  }
+ },
+ {
+  "key": "police2s_kl:kasaragod:law-and-order",
+  "payload": {
+   "reader": "police2s_kl",
+   "url": "https://kasaragod.keralapolice.gov.in/law-and-order",
+   "state": "KL",
+   "unit": "kasaragod",
+   "kind": "table",
+   "district": "Kasaragod"
+  }
+ }
+]

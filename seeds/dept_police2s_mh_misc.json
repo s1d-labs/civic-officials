@@ -1,0 +1,304 @@
+[
+ {
+  "key": "police2s_mh_misc:amravaticitypolice:spi",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://amravaticitypolice.gov.in/designations_spi.php",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Amravati"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:amravaticitypolice:acp",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://amravaticitypolice.gov.in/designations11.php?rank_name=ACP",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Amravati"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:amravaticitypolice:dcp",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://amravaticitypolice.gov.in/designations11.php?rank_name=DCP",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Amravati"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:amravaticitypolice:contacts",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://amravaticitypolice.gov.in/contacts.php",
+   "kind": "table",
+   "state": "MH",
+   "district": "Amravati"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:nagpurgraminpolice:contact-list",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://nagpurgraminpolice.gov.in/contact-list/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Nagpur"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:yavatmalpolice:police-station-incharge",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://yavatmalpolice.gov.in/officers/police-station-incharge",
+   "kind": "ranked",
+   "state": "MH",
+   "district": "Yavatmal"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:ashta-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/ashta-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Ashta Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:atpadi-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/atpadi-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Atpadi Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:bhilawadi-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/bhilawadi-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Bhilawadi Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:chinchani-wangi-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/chinchani-wangi-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Chinchani Wangi Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:jath-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/jath-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Jath Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:kadegaon-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/kadegaon-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Kadegaon Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:kasegaon-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/kasegaon-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Kasegaon Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:kavathemahankal-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/kavathemahankal-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Kavathemahankal Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:kokrud-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/kokrud-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Kokrud Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:kundal-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/kundal-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Kundal Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:kurlap-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/kurlap-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Kurlap Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:mahtma-gandhi-chouk-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/mahtma-gandhi-chouk-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Mahtma Gandhi Chouk Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:midc-kupwad-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/midc-kupwad-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Midc Kupwad Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:miraj-city-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/miraj-city-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Miraj City Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:miraj-rural-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/miraj-rural-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Miraj Rural Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:palus-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/palus-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Palus Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:sangli-city-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/sangli-city-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Sangli City Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:sangli-rural-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/sangli-rural-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Sangli Rural Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:shirala-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/shirala-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Shirala Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:tasgaon-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/tasgaon-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Tasgaon Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:umadi-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/umadi-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Umadi Police Station"
+  }
+ },
+ {
+  "key": "police2s_mh_misc:sanglipolice:vita-police-station",
+  "payload": {
+   "reader": "police2s_mh_misc",
+   "url": "https://www.sanglipolice.gov.in/vita-police-station/",
+   "kind": "labels",
+   "state": "MH",
+   "district": "Sangli",
+   "station": "Vita Police Station"
+  }
+ }
+]
