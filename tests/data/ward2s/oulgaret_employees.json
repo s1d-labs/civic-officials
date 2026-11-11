@@ -1,0 +1,7 @@
+{"module": "ward2s_oulgaret",
+ "payload": {"reader": "ward2s_oulgaret", "url": "https://oulmun.in/sites/default/files/2026-10/listofemployees.pdf", "state": "PY"},
+ "pages": "oulgaret_employees.pages",
+ "min_records": 15,
+ "expect": [{"post": "^Executive Engineer$", "name": "Malaivasan", "level": "body"},
+            {"post": "Sanitary Inspector", "name": "Sundararassou"},
+            {"post": "Bill Collector", "name": "Ravi"}]}

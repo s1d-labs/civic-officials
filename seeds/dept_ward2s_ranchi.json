@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ward2s_ranchi-tax-collectors",
+  "payload": {
+   "reader": "ward2s_ranchi",
+   "url": "https://municipalservices.jharkhand.gov.in/CitizenProperty/list_tax_collector",
+   "state": "JH",
+   "kind": "tax"
+  }
+ },
+ {
+  "key": "ward2s_ranchi-contacts",
+  "payload": {
+   "reader": "ward2s_ranchi",
+   "url": "https://ranchimunicipal.com/docs/RMC_Contact.pdf",
+   "state": "JH",
+   "kind": "contacts"
+  }
+ }
+]

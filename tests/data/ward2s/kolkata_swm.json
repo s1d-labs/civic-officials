@@ -1,0 +1,5 @@
+{"module": "ward2s_kolkata", "payload": {"reader": "ward2s_kolkata", "url": "https://www.kmcgov.in/KMCPortal/downloads/DETAILS_OF_DEPUTY_DIRECTORS_ASSISTANT_DIRECTORS_AND_COMPACTOR_STATIONS.pdf", "state": "WB"},
+ "pages": "kolkata_swm.pages",
+ "min_records": 20,
+ "expect": [{"post": "^Deputy Director-II", "name": "PRABIR GHOSH", "level": "zone"},
+            {"post": "Assistant Director", "name": "CHITTARANJAN MONDAL", "level": "zone"}]}

@@ -1,0 +1,23 @@
+{
+ "module": "ward2s_tnurban",
+ "payload": {
+  "reader": "ward2s_tnurban",
+  "url": "https://www.tnurbantree.tn.gov.in/tirunelveli/office-staffs/",
+  "state": "TN",
+  "city": "tirunelveli",
+  "india_only": true
+ },
+ "routes": {
+  "https://www.tnurbantree.tn.gov.in/tirunelveli/office-staffs/": "tnurban_tirunelveli.html"
+ },
+ "min_records": 20,
+ "expect": [
+  {
+   "post": "Assistant Commissioner \\(Ward\\)",
+   "name": "Chandramohan"
+  },
+  {
+   "post": "Engineer"
+  }
+ ]
+}

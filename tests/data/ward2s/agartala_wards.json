@@ -1,0 +1,4 @@
+{"module": "ward2s_agartala", "payload": {"reader": "ward2s_agartala", "url": "https://agartalacity.tripura.gov.in/ward", "page": "ward-secretaries", "state": "TR", "india_only": true},
+ "routes": {"https://agartalacity.tripura.gov.in/ward": "agartala_wards.html"},
+ "min_records": 10, "min_wards": 10,
+ "expect": [{"post": "Ward Secretary", "name": "Bhanu Dhanuk", "wards": ["1"], "level": "ward"}]}

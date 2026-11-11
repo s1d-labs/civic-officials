@@ -1,0 +1,5 @@
+{"module": "ward2s_thrissur",
+ "payload": {"reader": "ward2s_thrissur", "url": "https://thrissurcorporation.lsgkerala.gov.in/en/address/12", "state": "KL"},
+ "routes": {"https://thrissurcorporation.lsgkerala.gov.in/en/address/12": "thrissur_address.html"},
+ "min_records": 6,
+ "expect": [{"post": "^Zonal Office$", "level": "zone"}, {"post": "Electricity Department", "level": "body"}]}

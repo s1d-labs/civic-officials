@@ -1,0 +1,22 @@
+[
+ {
+  "key": "ward2s_agartala-ward-secretaries",
+  "payload": {
+   "reader": "ward2s_agartala",
+   "url": "https://agartalacity.tripura.gov.in/ward",
+   "page": "ward-secretaries",
+   "state": "TR",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward2s_agartala-zone-offices",
+  "payload": {
+   "reader": "ward2s_agartala",
+   "url": "https://agartalacity.tripura.gov.in/zonal_office",
+   "page": "zone-offices",
+   "state": "TR",
+   "india_only": true
+  }
+ }
+]

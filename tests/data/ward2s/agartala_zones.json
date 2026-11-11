@@ -1,0 +1,4 @@
+{"module": "ward2s_agartala", "payload": {"reader": "ward2s_agartala", "url": "https://agartalacity.tripura.gov.in/zonal_office", "page": "zone-offices", "state": "TR", "india_only": true},
+ "routes": {"https://agartalacity.tripura.gov.in/zonal_office": "agartala_zones.html"},
+ "min_records": 4,
+ "expect": [{"post": "Zone Office", "level": "zone"}]}

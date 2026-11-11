@@ -1,0 +1,42 @@
+[
+ {
+  "key": "ward2s_shillong-whos-who",
+  "payload": {
+   "reader": "ward2s_shillong",
+   "url": "https://smb.gov.in/other_menu/whos_who.html",
+   "page": "whos-who",
+   "state": "ML",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward2s_shillong-public-works",
+  "payload": {
+   "reader": "ward2s_shillong",
+   "url": "https://smb.gov.in/department/public_works.html",
+   "page": "public-works",
+   "state": "ML",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward2s_shillong-water-works",
+  "payload": {
+   "reader": "ward2s_shillong",
+   "url": "https://smb.gov.in/department/water_works.html",
+   "page": "water-works",
+   "state": "ML",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward2s_shillong-health-sanitation",
+  "payload": {
+   "reader": "ward2s_shillong",
+   "url": "https://smb.gov.in/department/health_sanitation.html",
+   "page": "health-sanitation",
+   "state": "ML",
+   "india_only": true
+  }
+ }
+]

@@ -1,0 +1,43 @@
+{
+ "module": "ward2s_chennai",
+ "payload": {
+  "reader": "ward2s_chennai",
+  "url": "https://chennaicorporation.gov.in/gcc/pdf/Relief_Center_details.pdf",
+  "state": "TN"
+ },
+ "pages": "chennai_relief.pages",
+ "min_records": 15,
+ "min_wards": 10,
+ "expect": [
+  {
+   "post": "^Tax Collector$",
+   "name": "DHARANIRAJ",
+   "wards": [
+    "1",
+    "2"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "SRO",
+   "name": "ARJUNAN",
+   "wards": [
+    "1"
+   ]
+  },
+  {
+   "post": "^Sanitary Inspector$",
+   "name": "Deepika",
+   "wards": [
+    "109"
+   ]
+  },
+  {
+   "post": "Conservancy Inspector",
+   "name": "Narenthiran Babu",
+   "wards": [
+    "109"
+   ]
+  }
+ ]
+}

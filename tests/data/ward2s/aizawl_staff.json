@@ -1,0 +1,4 @@
+{"module": "ward2s_aizawl", "payload": {"reader": "ward2s_aizawl", "url": "https://amcmizoram.com/page/list-of-officers-staff", "state": "MZ"},
+ "routes": {"https://amcmizoram.com/page/list-of-officers-staff": "aizawl_staff.html"},
+ "min_records": 20,
+ "expect": [{"post": "Junior Engineer", "name": "Lalrinchhana Ralte", "level": "body"}, {"post": "Asst. Engineer", "name": "Lallawmkima"}]}

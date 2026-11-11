@@ -1,0 +1,32 @@
+{
+ "module": "ward2s_chas",
+ "payload": {
+  "reader": "ward2s_chas",
+  "url": "https://chasmunicipalcorporation.com/key-contacts",
+  "state": "JH"
+ },
+ "routes": {
+  "https://chasmunicipalcorporation.com/key-contacts": "chas_contacts.html"
+ },
+ "min_records": 20,
+ "expect": [
+  {
+   "post": "^Zonal Officer$",
+   "name": "फरहत अनीसी",
+   "level": "zone"
+  },
+  {
+   "post": "^Sanitary Supervisor$",
+   "name": "Ravi Shankar Kumar",
+   "level": "body"
+  },
+  {
+   "post": "Revenue Inspector",
+   "name": "Megha"
+  },
+  {
+   "post": "Assistant Municipal Commissioner",
+   "name": "SMITA KIRAN"
+  }
+ ]
+}

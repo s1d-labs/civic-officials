@@ -1,0 +1,7 @@
+{"module": "ward2s_tgcorp",
+ "payload": {"reader": "ward2s_tgcorp", "url": "https://ramagundamcorporation.telangana.gov.in//pages/staff-directory", "state": "TG",
+             "city": "ramagundam"},
+ "routes": {"https://ramagundamcorporation.telangana.gov.in//pages/staff-directory": "tgcorp_ramagundam.html"},
+ "min_records": 7,
+ "expect": [{"post": "Commissioner", "name": "Arunasri", "level": "body"},
+            {"post": "Ward officer", "name": "Sampath Kumar", "level": "body"}]}

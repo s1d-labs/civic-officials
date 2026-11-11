@@ -1,0 +1,4 @@
+{"module": "ward2s_shillong", "payload": {"reader": "ward2s_shillong", "url": "https://smb.gov.in/department/public_works.html", "page": "public-works", "state": "ML", "india_only": true},
+ "routes": {"https://smb.gov.in/department/public_works.html": "shillong_pw.html"},
+ "min_records": 6, "min_wards": 20,
+ "expect": [{"post": "Engineer", "name": "E.G. Binan", "wards": ["1", "6"], "level": "ward"}]}

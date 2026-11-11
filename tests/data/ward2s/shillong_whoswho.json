@@ -1,0 +1,5 @@
+{"module": "ward2s_shillong", "payload": {"reader": "ward2s_shillong", "url": "https://smb.gov.in/other_menu/whos_who.html", "page": "whos-who", "state": "ML", "india_only": true},
+ "routes": {"https://smb.gov.in/other_menu/whos_who.html": "shillong_whoswho.html"},
+ "min_records": 9, "min_wards": 27,
+ "expect": [{"post": "Assistant Manager", "name": "C. Slong", "wards": ["16", "18", "19", "20", "21"], "level": "zone"},
+            {"post": "Water Works Inspector", "name": "Marbaniang", "level": "division"}]}

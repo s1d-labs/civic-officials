@@ -1,0 +1,5 @@
+{"module": "ward2s_cuttack", "payload": {"reader": "ward2s_cuttack", "url": "https://cmccuttack.odisha.gov.in/index.php/ward/ward-1/", "ward": "1", "state": "OD", "india_only": true},
+ "routes": {"https://cmccuttack.odisha.gov.in/index.php/ward/ward-1/": "cuttack_w1.html"},
+ "min_records": 4, "min_wards": 1,
+ "expect": [{"post": "Ward Officer", "name": "DILLIP KUMAR SWAIN", "wards": ["1"], "level": "ward"},
+            {"post": "MPHS", "name": "PRAVAT KUMAR PAITAL", "wards": ["1"]}]}

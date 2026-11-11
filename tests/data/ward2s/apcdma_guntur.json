@@ -1,0 +1,8 @@
+{"module": "ward2s_apcdma",
+ "payload": {"reader": "ward2s_apcdma", "url": "https://apcmms.ap.gov.in/apiv1/open/department/list/41", "state": "AP", "city": "guntur",
+             "india_only": true},
+ "routes": {"https://apcmms.ap.gov.in/apiv1/open/department/list/41": "apcdma_guntur_api.txt"},
+ "min_records": 20,
+ "expect": [{"post": "Revenue Inspector", "name": "PHANIDARAM", "level": "body"},
+            {"post": "Sanitary Inspector", "level": "body"},
+            {"post": "Assistant Engineer", "level": "body"}]}

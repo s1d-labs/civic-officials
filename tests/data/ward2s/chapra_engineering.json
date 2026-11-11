@@ -1,0 +1,20 @@
+{
+ "module": "ward2s_chapra",
+ "payload": {
+  "reader": "ward2s_chapra",
+  "url": "https://chapranagarnigam.com/Engineering.aspx",
+  "state": "BR",
+  "page": "engineering"
+ },
+ "routes": {
+  "https://chapranagarnigam.com/Engineering.aspx": "chapra_engineering.html"
+ },
+ "min_records": 9,
+ "expect": [
+  {
+   "post": "^Assistant Engineer$",
+   "name": "Rahul Kumar Singh",
+   "level": "body"
+  }
+ ]
+}

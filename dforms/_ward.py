@@ -94,7 +94,7 @@ def record(module, key, seen, *, body, lgd, state, level, area, post, source, na
     return _esw.record(module, unique(key, seen), dept="town_body", level=level, area=_esw.clean(area), post=post, name=name,
                        phone=_esw.phones(phone) if phone else "", email=_esw.emails(email) if email else "", state=state,
                        district=district, address=_esw.clean(address) or None, body=body, local_body_code=lgd, wards=w or None,
-                       zone=_esw.clean(zone) or None, wing=wing or wing_of(post), role=role_of(post),
+                       zone=_esw.clean(zone) or None, wing=wing or wing_of(post), role=extra.pop("role", None) or role_of(post),
                        vacant=extra.pop("vacant", None) or (True if re.match(r"(?i)vacant", raw) else None),
                        source=source, **extra)
 

@@ -1,0 +1,8 @@
+{"module": "ward2s_gwmc",
+ "payload": {"reader": "ward2s_gwmc", "url": "https://gwmc.gov.in/KnowUrAreaServicePerson.aspx", "state": "TG", "india_only": true,
+             "house_ward": 11},
+ "routes": {"https://gwmc.gov.in/KnowUrAreaServicePerson.aspx": "gwmc_hno_11_25_462.html"},
+ "min_records": 25, "min_wards": 1,
+ "expect": [{"post": "Ward Officer", "name": "SANDEEP REDDY", "wards": ["23"], "level": "ward"},
+            {"post": "Sanitary Inspector", "name": "PRAKASH", "wards": ["23"]},
+            {"post": "Bill Collector", "name": "AKHIL RAJA", "wards": ["23"]}]}

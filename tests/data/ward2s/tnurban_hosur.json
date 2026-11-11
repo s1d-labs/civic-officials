@@ -1,0 +1,25 @@
+{
+ "module": "ward2s_tnurban",
+ "payload": {
+  "reader": "ward2s_tnurban",
+  "url": "https://www.tnurbantree.tn.gov.in/hosur/office-staffs/",
+  "state": "TN",
+  "city": "hosur",
+  "india_only": true
+ },
+ "routes": {
+  "https://www.tnurbantree.tn.gov.in/hosur/office-staffs/": "tnurban_hosur.html"
+ },
+ "min_records": 35,
+ "expect": [
+  {
+   "post": "^Sanitary Inspector$",
+   "name": "Udhaya",
+   "level": "body"
+  },
+  {
+   "post": "Assistant Engineer",
+   "name": "MANIRAJA"
+  }
+ ]
+}

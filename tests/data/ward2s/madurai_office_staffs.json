@@ -1,0 +1,61 @@
+{
+ "module": "ward2s_madurai",
+ "payload": {
+  "reader": "ward2s_madurai",
+  "url": "https://www.tnurbantree.tn.gov.in/madurai/office-staffs/",
+  "state": "TN",
+  "india_only": true
+ },
+ "routes": {
+  "https://www.tnurbantree.tn.gov.in/madurai/office-staffs/": "madurai_office_staffs.html"
+ },
+ "min_records": 50,
+ "min_wards": 40,
+ "expect": [
+  {
+   "post": "^Executive Engineer$",
+   "name": "Sekar",
+   "level": "zone",
+   "wards": [
+    "1",
+    "23"
+   ]
+  },
+  {
+   "post": "Junior Engineer",
+   "name": "Manian",
+   "level": "ward",
+   "wards": [
+    "1",
+    "2",
+    "23"
+   ]
+  },
+  {
+   "post": "Fitter",
+   "level": "ward",
+   "wards": [
+    "3",
+    "4"
+   ]
+  },
+  {
+   "post": "^Sanitary Inspector$",
+   "name": "Muralitharan",
+   "level": "ward",
+   "wards": [
+    "1",
+    "5"
+   ]
+  },
+  {
+   "post": "Sanitary Officer",
+   "name": "Vijayakumar",
+   "level": "zone",
+   "wards": [
+    "1",
+    "23"
+   ]
+  }
+ ]
+}

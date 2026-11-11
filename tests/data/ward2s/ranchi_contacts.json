@@ -1,0 +1,26 @@
+{
+ "module": "ward2s_ranchi",
+ "payload": {
+  "reader": "ward2s_ranchi",
+  "url": "https://ranchimunicipal.com/docs/RMC_Contact.pdf",
+  "state": "JH",
+  "kind": "contacts"
+ },
+ "pages": "ranchi_contacts.pages",
+ "min_records": 53,
+ "expect": [
+  {
+   "post": "^Assistant Municipal Commissioner$",
+   "name": "SURAJ PRAKASH SINGH CHOUDHARY",
+   "level": "body"
+  },
+  {
+   "post": "^Junior Engineer$",
+   "name": "RAHUL OROAN"
+  },
+  {
+   "post": "Assistant Public Health Officer",
+   "name": "KIRAN KUMARI"
+  }
+ ]
+}

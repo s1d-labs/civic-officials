@@ -1,0 +1,4 @@
+{"module": "ward2s_kohima", "payload": {"reader": "ward2s_kohima", "url": "https://kmc.nagaland.gov.in/index.php/employee-details/", "state": "NL"},
+ "routes": {"https://kmc.nagaland.gov.in/index.php/employee-details/": "kohima_emp.html"},
+ "min_records": 10,
+ "expect": [{"post": "Sanitary Inspector", "name": "Neilhouphrelie", "level": "body"}, {"post": "Tax Collector", "name": "Bio"}]}

@@ -1,0 +1,38 @@
+{
+ "module": "ward2s_bhagalpur",
+ "payload": {
+  "reader": "ward2s_bhagalpur",
+  "url": "https://bhagalpurnagarnigam.in/wp-content/uploads/2024/09/List-of-Helath-Inchage-and-Others-1.pdf",
+  "state": "BR"
+ },
+ "pages": "bhagalpur_health.pages",
+ "min_records": 55,
+ "min_wards": 51,
+ "expect": [
+  {
+   "post": "Zonal In-charge",
+   "name": "Santosh Kumar Das",
+   "wards": [
+    "1",
+    "13"
+   ],
+   "level": "zone"
+  },
+  {
+   "post": "Ward In-charge",
+   "name": "विनोद दास",
+   "wards": [
+    "1"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Ward In-charge",
+   "name": "मनोज मोदी",
+   "wards": [
+    "51"
+   ],
+   "level": "ward"
+  }
+ ]
+}

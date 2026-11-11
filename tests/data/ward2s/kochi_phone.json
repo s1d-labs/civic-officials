@@ -1,0 +1,9 @@
+{"module": "ward2s_kochi",
+ "payload": {"reader": "ward2s_kochi", "url": "https://kochicorporation.lsgkerala.gov.in/en/phone-numbers/404", "state": "KL"},
+ "routes": {"https://kochicorporation.lsgkerala.gov.in/en/phone-numbers/404": "kochi_phone.html"},
+ "min_records": 25,
+ "expect": [{"post": "^Zonal Office$", "level": "zone"},
+            {"post": "Health Inspector", "name": "SHAJI MS", "level": "circle"},
+            {"post": "Revenue Inspector", "name": "SAJEEV P M", "level": "zone"},
+            {"post": "Superintending Engineer", "name": "DAVID D MORRIS", "level": "body"},
+            {"post": "Assistant Executive Engineer", "name": "SANUKUTTAN"}]}

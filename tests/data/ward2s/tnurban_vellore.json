@@ -1,0 +1,28 @@
+{
+ "module": "ward2s_tnurban",
+ "payload": {
+  "reader": "ward2s_tnurban",
+  "url": "https://www.tnurbantree.tn.gov.in/vellore/office-staffs/",
+  "state": "TN",
+  "city": "vellore",
+  "india_only": true
+ },
+ "routes": {
+  "https://www.tnurbantree.tn.gov.in/vellore/office-staffs/": "tnurban_vellore.html"
+ },
+ "min_records": 50,
+ "expect": [
+  {
+   "post": "Assistant Executive Engineer",
+   "level": "zone"
+  },
+  {
+   "post": "Sanitary Inspector",
+   "level": "zone"
+  },
+  {
+   "post": "City Engineer",
+   "level": "body"
+  }
+ ]
+}

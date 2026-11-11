@@ -1,0 +1,4 @@
+{"module": "ward2s_sambalpur", "payload": {"reader": "ward2s_sambalpur", "url": "https://smcsambalpur.nic.in/ward-officer-list/", "state": "OD"},
+ "routes": {"https://smcsambalpur.nic.in/ward-officer-list/": "sambalpur_wards.html"},
+ "min_records": 12, "min_wards": 12,
+ "expect": [{"post": "Ward Officer", "name": "Rupam Dharua", "wards": ["1"], "level": "ward"}]}

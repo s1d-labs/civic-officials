@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ward2s_chapra-administrative",
+  "payload": {
+   "reader": "ward2s_chapra",
+   "url": "https://chapranagarnigam.com/Administrative.aspx",
+   "state": "BR",
+   "page": "administrative"
+  }
+ },
+ {
+  "key": "ward2s_chapra-engineering",
+  "payload": {
+   "reader": "ward2s_chapra",
+   "url": "https://chapranagarnigam.com/Engineering.aspx",
+   "state": "BR",
+   "page": "engineering"
+  }
+ }
+]

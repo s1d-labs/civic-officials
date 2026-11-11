@@ -1,0 +1,34 @@
+{
+ "module": "ward2s_ranchi",
+ "payload": {
+  "reader": "ward2s_ranchi",
+  "url": "https://municipalservices.jharkhand.gov.in/CitizenProperty/list_tax_collector",
+  "state": "JH",
+  "kind": "tax"
+ },
+ "routes": {
+  "https://municipalservices.jharkhand.gov.in/CitizenProperty/list_tax_collector": "ranchi_tax.html"
+ },
+ "min_records": 21,
+ "min_wards": 55,
+ "expect": [
+  {
+   "post": "Tax Collector",
+   "name": "Deepak Kumar Soni",
+   "wards": [
+    "1",
+    "2"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Tax Collector",
+   "name": "Tribhuvan Kumar",
+   "wards": [
+    "53",
+    "54",
+    "55"
+   ]
+  }
+ ]
+}

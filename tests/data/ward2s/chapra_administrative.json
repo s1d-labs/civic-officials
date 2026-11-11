@@ -1,0 +1,20 @@
+{
+ "module": "ward2s_chapra",
+ "payload": {
+  "reader": "ward2s_chapra",
+  "url": "https://chapranagarnigam.com/Administrative.aspx",
+  "state": "BR",
+  "page": "administrative"
+ },
+ "routes": {
+  "https://chapranagarnigam.com/Administrative.aspx": "chapra_administrative.html"
+ },
+ "min_records": 12,
+ "expect": [
+  {
+   "post": "^Deputy Municipal Commissioner$",
+   "name": "Arshad Imam",
+   "level": "body"
+  }
+ ]
+}

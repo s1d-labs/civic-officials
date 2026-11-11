@@ -1,0 +1,65 @@
+[
+ {
+  "key": "ward2s_tgcorp-karimnagar",
+  "payload": {
+   "reader": "ward2s_tgcorp",
+   "url": "https://karimnagarcorporation.telangana.gov.in//pages/staff-directory",
+   "state": "TG",
+   "city": "karimnagar"
+  }
+ },
+ {
+  "key": "ward2s_tgcorp-khammam",
+  "payload": {
+   "reader": "ward2s_tgcorp",
+   "url": "https://khammamcorporation.telangana.gov.in//pages/staff-directory",
+   "state": "TG",
+   "city": "khammam"
+  }
+ },
+ {
+  "key": "ward2s_tgcorp-nizamabad",
+  "payload": {
+   "reader": "ward2s_tgcorp",
+   "url": "https://nizamabadcorporation.telangana.gov.in//pages/staff-directory",
+   "state": "TG",
+   "city": "nizamabad"
+  }
+ },
+ {
+  "key": "ward2s_tgcorp-ramagundam",
+  "payload": {
+   "reader": "ward2s_tgcorp",
+   "url": "https://ramagundamcorporation.telangana.gov.in//pages/staff-directory",
+   "state": "TG",
+   "city": "ramagundam"
+  }
+ },
+ {
+  "key": "ward2s_tgcorp-meerpet",
+  "payload": {
+   "reader": "ward2s_tgcorp",
+   "url": "https://meerpetcorporation.telangana.gov.in//pages/staff-directory",
+   "state": "TG",
+   "city": "meerpet"
+  }
+ },
+ {
+  "key": "ward2s_tgcorp-badangpet",
+  "payload": {
+   "reader": "ward2s_tgcorp",
+   "url": "https://badangpetcorporation.telangana.gov.in//pages/staff-directory",
+   "state": "TG",
+   "city": "badangpet"
+  }
+ },
+ {
+  "key": "ward2s_tgcorp-bandlagudajagir",
+  "payload": {
+   "reader": "ward2s_tgcorp",
+   "url": "https://bandlagudajagircorporation.telangana.gov.in//pages/staff-directory",
+   "state": "TG",
+   "city": "bandlagudajagir"
+  }
+ }
+]

@@ -1,0 +1,8 @@
+{"module": "ward2s_ghmc",
+ "payload": {"reader": "ward2s_ghmc", "url": "https://www.ghmc.gov.in/KeyContacts.aspx", "state": "TG", "india_only": true},
+ "routes": {"https://www.ghmc.gov.in/KeyContacts.aspx": "ghmc_keycontacts.html"},
+ "min_records": 20,
+ "expect": [{"post": "Zonal Commissioner", "name": "Chandrakala", "level": "zone"},
+            {"post": "Deputy Commissioner", "name": "J\\. Uma", "level": "circle"},
+            {"post": "Executive Engineer", "name": "Vijaya Kumar", "level": "circle"},
+            {"post": "Sanitation officer", "name": "Ganga Prasad", "level": "circle"}]}

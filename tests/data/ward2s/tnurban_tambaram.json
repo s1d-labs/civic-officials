@@ -1,0 +1,33 @@
+{
+ "module": "ward2s_tnurban",
+ "payload": {
+  "reader": "ward2s_tnurban",
+  "url": "https://www.tnurbantree.tn.gov.in/tambaram/officers-detail/",
+  "state": "TN",
+  "city": "tambaram",
+  "india_only": true
+ },
+ "routes": {
+  "https://www.tnurbantree.tn.gov.in/tambaram/officers-detail/": "tnurban_tambaram.html"
+ },
+ "min_records": 15,
+ "min_wards": 60,
+ "expect": [
+  {
+   "post": "Executive Engineer",
+   "level": "zone",
+   "wards": [
+    "1",
+    "31"
+   ]
+  },
+  {
+   "post": "Sanitary Officer",
+   "level": "zone",
+   "wards": [
+    "45",
+    "70"
+   ]
+  }
+ ]
+}
