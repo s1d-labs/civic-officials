@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ward2n_mumbai-ac",
+  "payload": {
+   "reader": "ward2n_mumbai",
+   "url": "https://portal.mcgm.gov.in/irj/portal/anonymous/qlListofAsstMC",
+   "areas_url": "https://raw.githubusercontent.com/Vonter/city-officials/main/static/mumbai/boundaries_bmc_prabhag.json",
+   "state": "MH"
+  }
+ },
+ {
+  "key": "ward2n_mumbai-dmc",
+  "payload": {
+   "reader": "ward2n_mumbai",
+   "url": "https://portal.mcgm.gov.in/irj/portal/anonymous/qlListofDeputyMC",
+   "areas_url": "https://raw.githubusercontent.com/Vonter/city-officials/main/static/mumbai/boundaries_bmc_prabhag.json",
+   "state": "MH"
+  }
+ }
+]

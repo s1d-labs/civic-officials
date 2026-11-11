@@ -35,8 +35,8 @@ def check(recs, module):
         assert d.get("post") and d.get("area"), d
         assert d.get("name") or d.get("name_regional") or d.get("phone") or d.get("email") or d.get("address") or d.get("vacant"), d
         assert all(isinstance(w, str) and re.fullmatch(r"\d{1,3}[A-Z]?(-[A-Z0-9]+)?", w) for w in d.get("wards") or []), d
-        if d["level"] == "ward":
-            assert d.get("wards"), d
+        if d["level"] == "ward":    # a ward office lists its wards, or says why it cannot (wards_note)
+            assert d.get("wards") or d.get("wards_note"), d
 
 
 @pytest.mark.parametrize("path", CASES, ids=[p.stem for p in CASES])

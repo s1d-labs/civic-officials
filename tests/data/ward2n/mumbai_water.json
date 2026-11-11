@@ -1,0 +1,7 @@
+{"module": "ward2n_mumbai_water",
+ "payload": {"reader": "ward2n_mumbai_water", "url": "https://portal.mcgm.gov.in/irj/portal/anonymous/qlwrdd", "ward": "D", "state": "MH"},
+ "routes": {"https://portal.mcgm.gov.in/irj/portal/anonymous/qlwrdd": "../ward_mumbai/docs_d.html",
+            "https://portal.mcgm.gov.in/irj/go/km/docs/documents/D%20Ward/Water%20Dept.pdf": "../ward_mumbai/d_water.pdf"},
+ "min_records": 7, "min_wards": 6,
+ "expect": [{"post": "Assistant Engineer \\(Water Works\\)", "name": "Prashant V\\. Bagwe", "wards": ["214", "219"], "level": "ward"},
+            {"post": "Junior Engineer", "name": "Madhur M\\. Sagar", "wards": ["216", "218"], "level": "ward"}]}

@@ -1,0 +1,10 @@
+{"module": "ward2n_mumbai",
+ "payload": {"reader": "ward2n_mumbai", "url": "https://portal.mcgm.gov.in/irj/portal/anonymous/qlListofAsstMC",
+             "areas_url": "https://raw.githubusercontent.com/Vonter/city-officials/main/static/mumbai/boundaries_bmc_prabhag.json",
+             "state": "MH"},
+ "routes": {"https://portal.mcgm.gov.in/irj/portal/anonymous/qlListofAsstMC": "../ward_mumbai/ac_list.html",
+            "https://raw.githubusercontent.com/Vonter/city-officials/main/static/mumbai/boundaries_bmc_prabhag.json": "../ward_mumbai/prabhag_topo.json"},
+ "min_records": 32, "min_wards": 227,
+ "expect": [{"post": "Assistant Municipal Commissioner", "name": "Santosh G\\. Salunke", "wards": ["214", "219"], "level": "ward"},
+            {"post": "Assistant Municipal Commissioner", "name": "Arti Golekar", "wards": ["19", "31"], "level": "ward"},
+            {"post": "Assistant Commissioner \\(Estate\\)", "name": "Pruthviraj C\\. Chauhan", "level": "body"}]}
