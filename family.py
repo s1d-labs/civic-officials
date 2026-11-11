@@ -142,12 +142,12 @@ _dept = [i for f in sorted((HERE / "seeds").glob("dept_*.json")) for i in json.l
 if _dept:
     PROJECTS.append({"name": f"{FAMILY}-depts", "title": "Department offices: police, power, ERO, sub-registrar, water (all India)",
                      "task": "depts", "target": f"{FAMILY}-depts", "env": {}, "probe": None, "unit_label": "source page",
-                     "record_label": "office", "items": [i for i in _dept if not i["payload"].get("india_only")], "workers": 8,
+                     "record_label": "office", "items": [i for i in _dept if not i["payload"].get("india_only")], "workers": 24,
                      # geo + proxy: the India servers (fast, direct) and GitHub runners through the proxies both take these
                      "threads": 1, "delay_ms": 1000, "geo": "IN", "proxy": "IN"})
     PROJECTS.append({"name": f"{FAMILY}-depts-in", "title": "Department offices that answer only from India",
                      "task": "depts", "target": f"{FAMILY}-depts-in", "env": {}, "probe": None, "unit_label": "source page",
-                     "record_label": "office", "items": [i for i in _dept if i["payload"].get("india_only")], "workers": 8,
+                     "record_label": "office", "items": [i for i in _dept if i["payload"].get("india_only")], "workers": 24,
                      "threads": 1, "delay_ms": 1000, "geo": "IN", "proxy": "IN"})
     # geo + proxy: India servers and GitHub runners through the Indian proxies both take these items
 
