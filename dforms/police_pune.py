@@ -26,6 +26,8 @@ def ph(s):
 
 def station(base, d):
     """base: the row of the list; d: the detail object (may be {})."""
+    # the API gives some phone numbers as JSON numbers: text for the phone and email helpers
+    base, d = ({k: str(v) if isinstance(v, (int, float)) and not isinstance(v, bool) else v for k, v in x.items()} for x in (base, d))
     sid = base.get("id") or d.get("id")
     lat, lon = latlon(d.get("map_link") or base.get("map_link"))
     name_en, name_mr = d.get("name"), d.get("name_mr") or base.get("name")
