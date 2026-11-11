@@ -1,0 +1,985 @@
+[
+ {
+  "key": "police2n_up:commagr",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commagr&cd=MgA3ADQA",
+   "state": "UP",
+   "unit": "commagr",
+   "district": "Agra"
+  }
+ },
+ {
+  "key": "police2n_up:commgbngr",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commgbngr&cd=NAA0ADQANwA%3D",
+   "state": "UP",
+   "unit": "commgbngr",
+   "district": "Gautam Buddh Nagar"
+  }
+ },
+ {
+  "key": "police2n_up:commgzb",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commgzb&cd=OQAwADMA",
+   "state": "UP",
+   "unit": "commgzb",
+   "district": "Ghaziabad"
+  }
+ },
+ {
+  "key": "police2n_up:commknp",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commknp&cd=NAA1ADEANgA%3D",
+   "state": "UP",
+   "unit": "commknp",
+   "district": "Kanpur Nagar"
+  }
+ },
+ {
+  "key": "police2n_up:commlko",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commlko&cd=NAA0ADQANgA%3D",
+   "state": "UP",
+   "unit": "commlko",
+   "district": "Lucknow"
+  }
+ },
+ {
+  "key": "police2n_up:commprg",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commprg&cd=MwA1ADIA",
+   "state": "UP",
+   "unit": "commprg",
+   "district": "Prayagraj"
+  }
+ },
+ {
+  "key": "police2n_up:commvns",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commvns&cd=NAA1ADIAMgA%3D",
+   "state": "UP",
+   "unit": "commvns",
+   "district": "Varanasi"
+  }
+ },
+ {
+  "key": "police2n_up:firozabad",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?firozabad&cd=MgA4ADEA",
+   "state": "UP",
+   "unit": "firozabad",
+   "district": "Firozabad"
+  }
+ },
+ {
+  "key": "police2n_up:mainpuri",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?mainpuri&cd=MgA4ADgA",
+   "state": "UP",
+   "unit": "mainpuri",
+   "district": "Mainpuri"
+  }
+ },
+ {
+  "key": "police2n_up:mathura",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?mathura&cd=MgA5ADUA",
+   "state": "UP",
+   "unit": "mathura",
+   "district": "Mathura"
+  }
+ },
+ {
+  "key": "police2n_up:aligarh",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?aligarh&cd=MwAwADkA",
+   "state": "UP",
+   "unit": "aligarh",
+   "district": "Aligarh"
+  }
+ },
+ {
+  "key": "police2n_up:etah",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?etah&cd=MwAxADcA",
+   "state": "UP",
+   "unit": "etah",
+   "district": "Etah"
+  }
+ },
+ {
+  "key": "police2n_up:kasganj",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kasganj&cd=MwAyADQA",
+   "state": "UP",
+   "unit": "kasganj",
+   "district": "Kasganj"
+  }
+ },
+ {
+  "key": "police2n_up:hathras",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?hathras&cd=MwAzADEA",
+   "state": "UP",
+   "unit": "hathras",
+   "district": "Hathras"
+  }
+ },
+ {
+  "key": "police2n_up:sambhal",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?sambhal&cd=NAAzADMA",
+   "state": "UP",
+   "unit": "sambhal",
+   "district": "Sambhal"
+  }
+ },
+ {
+  "key": "police2n_up:bijnor",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bijnor&cd=NAA0ADAA",
+   "state": "UP",
+   "unit": "bijnor",
+   "district": "Bijnor"
+  }
+ },
+ {
+  "key": "police2n_up:amroha",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?amroha&cd=NAA0ADcA",
+   "state": "UP",
+   "unit": "amroha",
+   "district": "Amroha"
+  }
+ },
+ {
+  "key": "police2n_up:moradabad",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?moradabad&cd=NAA1ADQA",
+   "state": "UP",
+   "unit": "moradabad",
+   "district": "Moradabad"
+  }
+ },
+ {
+  "key": "police2n_up:rampur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rampur&cd=NAA2ADEA",
+   "state": "UP",
+   "unit": "rampur",
+   "district": "Rampur"
+  }
+ },
+ {
+  "key": "police2n_up:bareilly",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bareilly&cd=NAA3ADUA",
+   "state": "UP",
+   "unit": "bareilly",
+   "district": "Bareilly"
+  }
+ },
+ {
+  "key": "police2n_up:budaun",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?budaun&cd=NAA4ADIA",
+   "state": "UP",
+   "unit": "budaun",
+   "district": "Budaun"
+  }
+ },
+ {
+  "key": "police2n_up:pilibhit",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?pilibhit&cd=NAA4ADkA",
+   "state": "UP",
+   "unit": "pilibhit",
+   "district": "Pilibhit"
+  }
+ },
+ {
+  "key": "police2n_up:shahjahanpur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?shahjahanpur&cd=NAA5ADYA",
+   "state": "UP",
+   "unit": "shahjahanpur",
+   "district": "Shahjahanpur"
+  }
+ },
+ {
+  "key": "police2n_up:bahraich",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bahraich&cd=NgAwADEA",
+   "state": "UP",
+   "unit": "bahraich",
+   "district": "Bahraich"
+  }
+ },
+ {
+  "key": "police2n_up:balrampur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?balrampur&cd=NQA5ADQA",
+   "state": "UP",
+   "unit": "balrampur",
+   "district": "Balrampur"
+  }
+ },
+ {
+  "key": "police2n_up:gonda",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?gonda&cd=NQA4ADcA",
+   "state": "UP",
+   "unit": "gonda",
+   "district": "Gonda"
+  }
+ },
+ {
+  "key": "police2n_up:basti",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?basti&cd=NQA2ADYA",
+   "state": "UP",
+   "unit": "basti",
+   "district": "Basti"
+  }
+ },
+ {
+  "key": "police2n_up:kabirngr",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kabirngr&cd=NQA1ADkA",
+   "state": "UP",
+   "unit": "kabirngr",
+   "district": "Sant Kabir Nagar"
+  }
+ },
+ {
+  "key": "police2n_up:sidharthngr",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?sidharthngr&cd=NQA1ADIA",
+   "state": "UP",
+   "unit": "sidharthngr",
+   "district": "Siddharthnagar"
+  }
+ },
+ {
+  "key": "police2n_up:deoria",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?deoria&cd=NQAzADgA",
+   "state": "UP",
+   "unit": "deoria",
+   "district": "Deoria"
+  }
+ },
+ {
+  "key": "police2n_up:gorakhpur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?gorakhpur&cd=NQAzADEA",
+   "state": "UP",
+   "unit": "gorakhpur",
+   "district": "Gorakhpur"
+  }
+ },
+ {
+  "key": "police2n_up:maharajganj",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?maharajganj&cd=NQAyADUA",
+   "state": "UP",
+   "unit": "maharajganj",
+   "district": "Maharajganj"
+  }
+ },
+ {
+  "key": "police2n_up:padrona",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?padrona&cd=NQAxADcA",
+   "state": "UP",
+   "unit": "padrona",
+   "district": "Kushinagar"
+  }
+ },
+ {
+  "key": "police2n_up:auraiya",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?auraiya&cd=NgA0ADEA",
+   "state": "UP",
+   "unit": "auraiya",
+   "district": "Auraiya"
+  }
+ },
+ {
+  "key": "police2n_up:etawah",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?etawah&cd=NgA0ADgA",
+   "state": "UP",
+   "unit": "etawah",
+   "district": "Etawah"
+  }
+ },
+ {
+  "key": "police2n_up:fatehgarh",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?fatehgarh&cd=NgA1ADUA",
+   "state": "UP",
+   "unit": "fatehgarh",
+   "district": "Farrukhabad"
+  }
+ },
+ {
+  "key": "police2n_up:kannauj",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kannauj&cd=NgA2ADkA",
+   "state": "UP",
+   "unit": "kannauj",
+   "district": "Kannauj"
+  }
+ },
+ {
+  "key": "police2n_up:ramabaingr",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?ramabaingr&cd=NgA3ADUA",
+   "state": "UP",
+   "unit": "ramabaingr",
+   "district": "Kanpur Dehat"
+  }
+ },
+ {
+  "key": "police2n_up:jalaun",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?jalaun&cd=NgA5ADEA",
+   "state": "UP",
+   "unit": "jalaun",
+   "district": "Jalaun"
+  }
+ },
+ {
+  "key": "police2n_up:jhansi",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?jhansi&cd=NgA5ADgA",
+   "state": "UP",
+   "unit": "jhansi",
+   "district": "Jhansi"
+  }
+ },
+ {
+  "key": "police2n_up:lalitpur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?lalitpur&cd=NwAwADUA",
+   "state": "UP",
+   "unit": "lalitpur",
+   "district": "Lalitpur"
+  }
+ },
+ {
+  "key": "police2n_up:hardoi",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?hardoi&cd=NwAyADYA",
+   "state": "UP",
+   "unit": "hardoi",
+   "district": "Hardoi"
+  }
+ },
+ {
+  "key": "police2n_up:kheri",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kheri&cd=NwA0ADMA",
+   "state": "UP",
+   "unit": "kheri",
+   "district": "Lakhimpur Kheri"
+  }
+ },
+ {
+  "key": "police2n_up:raebareli",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?raebareli&cd=NwA1ADcA",
+   "state": "UP",
+   "unit": "raebareli",
+   "district": "Rae Bareli"
+  }
+ },
+ {
+  "key": "police2n_up:sitapur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?sitapur&cd=NwA2ADUA",
+   "state": "UP",
+   "unit": "sitapur",
+   "district": "Sitapur"
+  }
+ },
+ {
+  "key": "police2n_up:unnao",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?unnao&cd=NwA3ADIA",
+   "state": "UP",
+   "unit": "unnao",
+   "district": "Unnao"
+  }
+ },
+ {
+  "key": "police2n_up:ambedkarngr",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?ambedkarngr&cd=NwA4ADYA",
+   "state": "UP",
+   "unit": "ambedkarngr",
+   "district": "Ambedkar Nagar"
+  }
+ },
+ {
+  "key": "police2n_up:barabanki",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?barabanki&cd=NwA5ADMA",
+   "state": "UP",
+   "unit": "barabanki",
+   "district": "Barabanki"
+  }
+ },
+ {
+  "key": "police2n_up:amethi",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?amethi&cd=OAAwADAA",
+   "state": "UP",
+   "unit": "amethi",
+   "district": "Amethi"
+  }
+ },
+ {
+  "key": "police2n_up:faizabad",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?faizabad&cd=OAAwADcA",
+   "state": "UP",
+   "unit": "faizabad",
+   "district": "Ayodhya"
+  }
+ },
+ {
+  "key": "police2n_up:sultanpur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?sultanpur&cd=OAAyADUA",
+   "state": "UP",
+   "unit": "sultanpur",
+   "district": "Sultanpur"
+  }
+ },
+ {
+  "key": "police2n_up:muzaffarngr",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?muzaffarngr&cd=OAA0ADYA",
+   "state": "UP",
+   "unit": "muzaffarngr",
+   "district": "Muzaffarnagar"
+  }
+ },
+ {
+  "key": "police2n_up:shamli",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?shamli&cd=OAA1ADUA",
+   "state": "UP",
+   "unit": "shamli",
+   "district": "Shamli"
+  }
+ },
+ {
+  "key": "police2n_up:saharanpur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?saharanpur&cd=OAA2ADMA",
+   "state": "UP",
+   "unit": "saharanpur",
+   "district": "Saharanpur"
+  }
+ },
+ {
+  "key": "police2n_up:bagpat",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bagpat&cd=OAA3ADkA",
+   "state": "UP",
+   "unit": "bagpat",
+   "district": "Baghpat"
+  }
+ },
+ {
+  "key": "police2n_up:bulandshahr",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bulandshahr&cd=OAA4ADcA",
+   "state": "UP",
+   "unit": "bulandshahr",
+   "district": "Bulandshahr"
+  }
+ },
+ {
+  "key": "police2n_up:hapur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?hapur&cd=OQAzADcA",
+   "state": "UP",
+   "unit": "hapur",
+   "district": "Hapur"
+  }
+ },
+ {
+  "key": "police2n_up:meerut",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?meerut&cd=OQAzADAA",
+   "state": "UP",
+   "unit": "meerut",
+   "district": "Meerut"
+  }
+ },
+ {
+  "key": "police2n_up:fatehpur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?fatehpur&cd=MwA1ADkA",
+   "state": "UP",
+   "unit": "fatehpur",
+   "district": "Fatehpur"
+  }
+ },
+ {
+  "key": "police2n_up:kaushambi",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kaushambi&cd=MwA2ADYA",
+   "state": "UP",
+   "unit": "kaushambi",
+   "district": "Kaushambi"
+  }
+ },
+ {
+  "key": "police2n_up:pratapgarh",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?pratapgarh&cd=MwA3ADYA",
+   "state": "UP",
+   "unit": "pratapgarh",
+   "district": "Pratapgarh"
+  }
+ },
+ {
+  "key": "police2n_up:banda",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?banda&cd=MwA5ADAA",
+   "state": "UP",
+   "unit": "banda",
+   "district": "Banda"
+  }
+ },
+ {
+  "key": "police2n_up:chitrakoot",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?chitrakoot&cd=MwA5ADcA",
+   "state": "UP",
+   "unit": "chitrakoot",
+   "district": "Chitrakoot"
+  }
+ },
+ {
+  "key": "police2n_up:hamirpur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?hamirpur&cd=NAAwADQA",
+   "state": "UP",
+   "unit": "hamirpur",
+   "district": "Hamirpur"
+  }
+ },
+ {
+  "key": "police2n_up:mahoba",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?mahoba&cd=NAAxADEA",
+   "state": "UP",
+   "unit": "mahoba",
+   "district": "Mahoba"
+  }
+ },
+ {
+  "key": "police2n_up:azamgarh",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?azamgarh&cd=OQA2ADAA",
+   "state": "UP",
+   "unit": "azamgarh",
+   "district": "Azamgarh"
+  }
+ },
+ {
+  "key": "police2n_up:ballia",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?ballia&cd=OQA2ADcA",
+   "state": "UP",
+   "unit": "ballia",
+   "district": "Ballia"
+  }
+ },
+ {
+  "key": "police2n_up:mau",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?mau&cd=OQA3ADUA",
+   "state": "UP",
+   "unit": "mau",
+   "district": "Mau"
+  }
+ },
+ {
+  "key": "police2n_up:chandauli",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?chandauli&cd=OQA4ADkA",
+   "state": "UP",
+   "unit": "chandauli",
+   "district": "Chandauli"
+  }
+ },
+ {
+  "key": "police2n_up:ghazipur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?ghazipur&cd=OQA5ADcA",
+   "state": "UP",
+   "unit": "ghazipur",
+   "district": "Ghazipur"
+  }
+ },
+ {
+  "key": "police2n_up:jaunpur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?jaunpur&cd=MQAwADAANAA%3D",
+   "state": "UP",
+   "unit": "jaunpur",
+   "district": "Jaunpur"
+  }
+ },
+ {
+  "key": "police2n_up:bhadoi",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bhadoi&cd=MQAwADIANQA%3D",
+   "state": "UP",
+   "unit": "bhadoi",
+   "district": "Bhadohi"
+  }
+ },
+ {
+  "key": "police2n_up:mirzapur",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?mirzapur&cd=MQAwADMAMwA%3D",
+   "state": "UP",
+   "unit": "mirzapur",
+   "district": "Mirzapur"
+  }
+ },
+ {
+  "key": "police2n_up:sonbhadra",
+  "payload": {
+   "reader": "police2n_up",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?sonbhadra&cd=MQAwADQAMAA%3D",
+   "state": "UP",
+   "unit": "sonbhadra",
+   "district": "Sonbhadra"
+  }
+ },
+ {
+  "key": "police2n_up:dir-agra-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://agra.nic.in/police/",
+   "state": "UP",
+   "district": "Agra"
+  }
+ },
+ {
+  "key": "police2n_up:dir-ballia-nic-in-contact-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://ballia.nic.in/contact-directory/",
+   "state": "UP",
+   "district": "Ballia"
+  }
+ },
+ {
+  "key": "police2n_up:dir-balrampur-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://balrampur.nic.in/police/",
+   "state": "UP",
+   "district": "Balrampur"
+  }
+ },
+ {
+  "key": "police2n_up:dir-banda-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://banda.nic.in/police/",
+   "state": "UP",
+   "district": "Banda"
+  }
+ },
+ {
+  "key": "police2n_up:dir-chandauli-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://chandauli.nic.in/police/",
+   "state": "UP",
+   "district": "Chandauli"
+  }
+ },
+ {
+  "key": "police2n_up:dir-chitrakoot-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://chitrakoot.nic.in/police/",
+   "state": "UP",
+   "district": "Chitrakoot"
+  }
+ },
+ {
+  "key": "police2n_up:dir-etah-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://etah.nic.in/police/",
+   "state": "UP",
+   "district": "Etah"
+  }
+ },
+ {
+  "key": "police2n_up:dir-farrukhabad-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://farrukhabad.nic.in/police/",
+   "state": "UP",
+   "district": "Farrukhabad"
+  }
+ },
+ {
+  "key": "police2n_up:dir-ghazipur-nic-in-contact-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://ghazipur.nic.in/contact-directory/",
+   "state": "UP",
+   "district": "Ghazipur"
+  }
+ },
+ {
+  "key": "police2n_up:dir-gonda-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://gonda.nic.in/police/",
+   "state": "UP",
+   "district": "Gonda"
+  }
+ },
+ {
+  "key": "police2n_up:dir-hamirpur-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://hamirpur.nic.in/police/",
+   "state": "UP",
+   "district": "Hamirpur"
+  }
+ },
+ {
+  "key": "police2n_up:dir-hapur-nic-in-police-department",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://hapur.nic.in/police-department/",
+   "state": "UP",
+   "district": "Hapur"
+  }
+ },
+ {
+  "key": "police2n_up:dir-hathras-nic-in-police-stations",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://hathras.nic.in/police-stations/",
+   "state": "UP",
+   "district": "Hathras"
+  }
+ },
+ {
+  "key": "police2n_up:dir-jalaun-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://jalaun.nic.in/police/",
+   "state": "UP",
+   "district": "Jalaun"
+  }
+ },
+ {
+  "key": "police2n_up:dir-jhansi-nic-in-police-station",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://jhansi.nic.in/police-station/",
+   "state": "UP",
+   "district": "Jhansi"
+  }
+ },
+ {
+  "key": "police2n_up:dir-kanpurnagar-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://kanpurnagar.nic.in/police/",
+   "state": "UP",
+   "district": "Kanpur Nagar"
+  }
+ },
+ {
+  "key": "police2n_up:dir-kaushambi-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://kaushambi.nic.in/police/",
+   "state": "UP",
+   "district": "Kaushambi"
+  }
+ },
+ {
+  "key": "police2n_up:dir-kushinagar-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://kushinagar.nic.in/police/",
+   "state": "UP",
+   "district": "Kushinagar"
+  }
+ },
+ {
+  "key": "police2n_up:dir-lalitpur-nic-in-en-police-station",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://lalitpur.nic.in/en/police-station/",
+   "state": "UP",
+   "district": "Lalitpur"
+  }
+ },
+ {
+  "key": "police2n_up:dir-mainpuri-nic-in-contact-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://mainpuri.nic.in/contact-directory/",
+   "state": "UP",
+   "district": "Mainpuri"
+  }
+ },
+ {
+  "key": "police2n_up:dir-mathura-nic-in-police-station",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://mathura.nic.in/police-station/",
+   "state": "UP",
+   "district": "Mathura"
+  }
+ },
+ {
+  "key": "police2n_up:dir-mau-nic-in-en-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://mau.nic.in/en/directory/",
+   "state": "UP",
+   "district": "Mau"
+  }
+ },
+ {
+  "key": "police2n_up:dir-moradabad-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://moradabad.nic.in/police/",
+   "state": "UP",
+   "district": "Moradabad"
+  }
+ },
+ {
+  "key": "police2n_up:dir-pilibhit-nic-in-police-department",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://pilibhit.nic.in/police-department/",
+   "state": "UP",
+   "district": "Pilibhit"
+  }
+ },
+ {
+  "key": "police2n_up:dir-sambhal-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://sambhal.nic.in/police/",
+   "state": "UP",
+   "district": "Sambhal"
+  }
+ },
+ {
+  "key": "police2n_up:dir-siddharthnagar-nic-in-administrative-setup-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://siddharthnagar.nic.in/administrative-setup/police/",
+   "state": "UP",
+   "district": "Siddharthnagar"
+  }
+ },
+ {
+  "key": "police2n_up:dir-unnao-nic-in-contact-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://unnao.nic.in/contact-directory/",
+   "state": "UP",
+   "district": "Unnao"
+  }
+ }
+]

@@ -1,0 +1,29 @@
+[
+ {
+  "key": "police2n_uk:dir-almora-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://almora.nic.in/police/",
+   "state": "UK",
+   "district": "Almora"
+  }
+ },
+ {
+  "key": "police2n_uk:dir-bageshwar-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://bageshwar.nic.in/police/",
+   "state": "UK",
+   "district": "Bageshwar"
+  }
+ },
+ {
+  "key": "police2n_uk:dir-uttarkashi-nic-in-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://uttarkashi.nic.in/directory/",
+   "state": "UK",
+   "district": "Uttarkashi"
+  }
+ }
+]

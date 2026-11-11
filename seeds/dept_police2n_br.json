@@ -1,0 +1,164 @@
+[
+ {
+  "key": "police2n_br:dir-araria-nic-in-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://araria.nic.in/directory/",
+   "state": "BR",
+   "district": "Araria"
+  }
+ },
+ {
+  "key": "police2n_br:dir-arwal-nic-in-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://arwal.nic.in/directory/",
+   "state": "BR",
+   "district": "Arwal"
+  }
+ },
+ {
+  "key": "police2n_br:dir-begusarai-nic-in-contact-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://begusarai.nic.in/contact-directory/",
+   "state": "BR",
+   "district": "Begusarai"
+  }
+ },
+ {
+  "key": "police2n_br:dir-bhagalpur-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://bhagalpur.nic.in/police/",
+   "state": "BR",
+   "district": "Bhagalpur"
+  }
+ },
+ {
+  "key": "police2n_br:dir-bhojpur-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://bhojpur.nic.in/police/",
+   "state": "BR",
+   "district": "Bhojpur"
+  }
+ },
+ {
+  "key": "police2n_br:dir-gopalganj-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://gopalganj.nic.in/police/",
+   "state": "BR",
+   "district": "Gopalganj"
+  }
+ },
+ {
+  "key": "police2n_br:dir-jamui-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://jamui.nic.in/police/",
+   "state": "BR",
+   "district": "Jamui"
+  }
+ },
+ {
+  "key": "police2n_br:dir-khagaria-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://khagaria.nic.in/police/",
+   "state": "BR",
+   "district": "Khagaria"
+  }
+ },
+ {
+  "key": "police2n_br:dir-lakhisarai-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://lakhisarai.nic.in/police/",
+   "state": "BR",
+   "district": "Lakhisarai"
+  }
+ },
+ {
+  "key": "police2n_br:dir-muzaffarpur-nic-in-about-district-administrative-setup-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://muzaffarpur.nic.in/about-district/administrative-setup/police/",
+   "state": "BR",
+   "district": "Muzaffarpur"
+  }
+ },
+ {
+  "key": "police2n_br:dir-nawada-nic-in-contact-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://nawada.nic.in/contact-directory/",
+   "state": "BR",
+   "district": "Nawada"
+  }
+ },
+ {
+  "key": "police2n_br:dir-rohtas-nic-in-contact-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://rohtas.nic.in/contact-directory/",
+   "state": "BR",
+   "district": "Rohtas"
+  }
+ },
+ {
+  "key": "police2n_br:dir-samastipur-nic-in-contact-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://samastipur.nic.in/contact-directory/",
+   "state": "BR",
+   "district": "Samastipur"
+  }
+ },
+ {
+  "key": "police2n_br:dir-saran-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://saran.nic.in/police/",
+   "state": "BR",
+   "district": "Saran"
+  }
+ },
+ {
+  "key": "police2n_br:dir-sheohar-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://sheohar.nic.in/police/",
+   "state": "BR",
+   "district": "Sheohar"
+  }
+ },
+ {
+  "key": "police2n_br:dir-sitamarhi-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://sitamarhi.nic.in/police/",
+   "state": "BR",
+   "district": "Sitamarhi"
+  }
+ },
+ {
+  "key": "police2n_br:dir-siwan-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://siwan.nic.in/police/",
+   "state": "BR",
+   "district": "Siwan"
+  }
+ },
+ {
+  "key": "police2n_br:dir-vaishali-nic-in-contact-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://vaishali.nic.in/contact-directory/",
+   "state": "BR",
+   "district": "Vaishali"
+  }
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "key": "police2n_mz:dir-aizawl-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://aizawl.nic.in/police/",
+   "state": "MZ",
+   "district": "Aizawl"
+  }
+ },
+ {
+  "key": "police2n_mz:dir-champhai-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://champhai.nic.in/police/",
+   "state": "MZ",
+   "district": "Champhai"
+  }
+ },
+ {
+  "key": "police2n_mz:dir-lunglei-nic-in-helpline",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://lunglei.nic.in/helpline/",
+   "state": "MZ",
+   "district": "Lunglei"
+  }
+ },
+ {
+  "key": "police2n_mz:dir-serchhip-nic-in-mz-public-utility-category-police-station",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://serchhip.nic.in/mz/public-utility-category/police-station/",
+   "state": "MZ",
+   "district": "Serchhip"
+  }
+ }
+]

@@ -1,0 +1,29 @@
+[
+ {
+  "key": "police2n_hr:dir-faridabad-nic-in-public-utility-category-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://faridabad.nic.in/public-utility-category/police/",
+   "state": "HR",
+   "district": "Faridabad"
+  }
+ },
+ {
+  "key": "police2n_hr:dir-nuh-gov-in-public-utility-category-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://nuh.gov.in/public-utility-category/police/",
+   "state": "HR",
+   "district": "Nuh"
+  }
+ },
+ {
+  "key": "police2n_hr:dir-sirsa-gov-in-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://sirsa.gov.in/directory/",
+   "state": "HR",
+   "district": "Sirsa"
+  }
+ }
+]

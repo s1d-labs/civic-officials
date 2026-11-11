@@ -1,0 +1,71 @@
+[
+ {
+  "key": "police2n_ml:jowai-contacts",
+  "payload": {
+   "reader": "police2n_ml",
+   "form": "contacts",
+   "url": "https://jowaipolice.gov.in/contacts.html",
+   "state": "ML",
+   "district": "West Jaintia Hills",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2n_ml:shillong-contacts",
+  "payload": {
+   "reader": "police2n_ml",
+   "form": "shillong",
+   "url": "https://shillongpolice.gov.in/contacts.html",
+   "state": "ML",
+   "district": "East Khasi Hills",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2n_ml:megpolice-stations",
+  "payload": {
+   "reader": "police2n_ml",
+   "form": "stations",
+   "url": "https://megpolice.gov.in/know-your-police-station",
+   "state": "ML",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2n_ml:megpolice-directory",
+  "payload": {
+   "reader": "police2n_ml",
+   "form": "directory",
+   "url": "https://megpolice.gov.in/telephone-directory",
+   "state": "ML",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2n_ml:dir-southgarohills-gov-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://southgarohills.gov.in/police/",
+   "state": "ML",
+   "district": "South Garo Hills"
+  }
+ },
+ {
+  "key": "police2n_ml:dir-westgarohills-gov-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://westgarohills.gov.in/police/",
+   "state": "ML",
+   "district": "West Garo Hills"
+  }
+ },
+ {
+  "key": "police2n_ml:dir-westkhasihills-gov-in-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://westkhasihills.gov.in/directory/",
+   "state": "ML",
+   "district": "West Khasi Hills"
+  }
+ }
+]

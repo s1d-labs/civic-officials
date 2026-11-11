@@ -1,0 +1,47 @@
+[
+ {
+  "key": "police2n_jh:dir-bokaro-nic-in-public-utility-category-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://bokaro.nic.in/public-utility-category/police/",
+   "state": "JH",
+   "district": "Bokaro"
+  }
+ },
+ {
+  "key": "police2n_jh:dir-garhwa-nic-in-police-station",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://garhwa.nic.in/police-station/",
+   "state": "JH",
+   "district": "Garhwa"
+  }
+ },
+ {
+  "key": "police2n_jh:dir-latehar-nic-in-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://latehar.nic.in/directory/",
+   "state": "JH",
+   "district": "Latehar"
+  }
+ },
+ {
+  "key": "police2n_jh:dir-pakur-nic-in-services-police-station",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://pakur.nic.in/services/police-station/",
+   "state": "JH",
+   "district": "Pakur"
+  }
+ },
+ {
+  "key": "police2n_jh:dir-ranchi-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://ranchi.nic.in/police/",
+   "state": "JH",
+   "district": "Ranchi"
+  }
+ }
+]

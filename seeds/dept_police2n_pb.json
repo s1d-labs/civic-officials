@@ -1,0 +1,124 @@
+[
+ {
+  "key": "police2n_pb:barnala-officers-list",
+  "payload": {
+   "reader": "police2n_pb",
+   "url": "https://barnala.punjabpolice.gov.in/officers-list",
+   "state": "PB",
+   "district": "Barnala",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2n_pb:barnala-shos-mhcs",
+  "payload": {
+   "reader": "police2n_pb",
+   "url": "https://barnala.punjabpolice.gov.in/shos-mhcs",
+   "state": "PB",
+   "district": "Barnala",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2n_pb:malerkotla-officers-list",
+  "payload": {
+   "reader": "police2n_pb",
+   "url": "https://malerkotla.punjabpolice.gov.in/officers-list/",
+   "state": "PB",
+   "district": "Malerkotla",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2n_pb:malerkotla-shos-mhcs",
+  "payload": {
+   "reader": "police2n_pb",
+   "url": "https://malerkotla.punjabpolice.gov.in/shos-mhcs/",
+   "state": "PB",
+   "district": "Malerkotla",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2n_pb:jalandharcity-officers-contact",
+  "payload": {
+   "reader": "police2n_pb",
+   "url": "https://jalandharcity.punjabpolice.gov.in/officers-contact/",
+   "state": "PB",
+   "district": "Jalandhar",
+   "india_only": true
+  }
+ },
+ {
+  "key": "police2n_pb:dir-fatehgarhsahib-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://fatehgarhsahib.nic.in/police/",
+   "state": "PB",
+   "district": "Fatehgarh Sahib"
+  }
+ },
+ {
+  "key": "police2n_pb:dir-ferozepur-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://ferozepur.nic.in/police/",
+   "state": "PB",
+   "district": "Ferozepur"
+  }
+ },
+ {
+  "key": "police2n_pb:dir-jalandhar-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://jalandhar.nic.in/police/",
+   "state": "PB",
+   "district": "Jalandhar"
+  }
+ },
+ {
+  "key": "police2n_pb:dir-mansa-nic-in-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://mansa.nic.in/directory/",
+   "state": "PB",
+   "district": "Mansa"
+  }
+ },
+ {
+  "key": "police2n_pb:dir-moga-nic-in-about-district-administrative-setup-police-station",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://moga.nic.in/about-district/administrative-setup/police-station/",
+   "state": "PB",
+   "district": "Moga"
+  }
+ },
+ {
+  "key": "police2n_pb:dir-rupnagar-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://rupnagar.nic.in/police/",
+   "state": "PB",
+   "district": "Rupnagar"
+  }
+ },
+ {
+  "key": "police2n_pb:dir-sasnagar-nic-in-public-utility-category-police-station",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://sasnagar.nic.in/public-utility-category/police-station/",
+   "state": "PB",
+   "district": "S.A.S Nagar"
+  }
+ },
+ {
+  "key": "police2n_pb:dir-tarntaran-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://tarntaran.nic.in/police/",
+   "state": "PB",
+   "district": "Tarn Taran"
+  }
+ }
+]

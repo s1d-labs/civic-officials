@@ -1,0 +1,29 @@
+[
+ {
+  "key": "police2n_nl:dir-chumoukedima-nic-in-police-station",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://chumoukedima.nic.in/police-station/",
+   "state": "NL",
+   "district": "Chumoukedima"
+  }
+ },
+ {
+  "key": "police2n_nl:dir-tseminyu-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://tseminyu.nic.in/police/",
+   "state": "NL",
+   "district": "Tseminyu"
+  }
+ },
+ {
+  "key": "police2n_nl:dir-tuensang-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://tuensang.nic.in/police/",
+   "state": "NL",
+   "district": "Tuensang"
+  }
+ }
+]

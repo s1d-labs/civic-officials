@@ -1,0 +1,40 @@
+[
+ {
+  "key": "police2n_wb:purbamedinipur-stations",
+  "payload": {
+   "reader": "police2n_wb",
+   "form": "stations",
+   "url": "https://www.purbamedinipurpolice.gov.in/police-stations/",
+   "state": "WB",
+   "district": "Purba Medinipur"
+  }
+ },
+ {
+  "key": "police2n_wb:purbamedinipur-directory",
+  "payload": {
+   "reader": "police2n_wb",
+   "form": "directory",
+   "url": "https://www.purbamedinipurpolice.gov.in/telephone-directory/",
+   "state": "WB",
+   "district": "Purba Medinipur"
+  }
+ },
+ {
+  "key": "police2n_wb:dir-bankura-gov-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://bankura.gov.in/police/",
+   "state": "WB",
+   "district": "Bankura"
+  }
+ },
+ {
+  "key": "police2n_wb:dir-purulia-gov-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://purulia.gov.in/police/",
+   "state": "WB",
+   "district": "Purulia"
+  }
+ }
+]

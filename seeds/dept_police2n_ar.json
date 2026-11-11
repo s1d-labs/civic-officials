@@ -1,0 +1,20 @@
+[
+ {
+  "key": "police2n_ar:dir-namsai-nic-in-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://namsai.nic.in/directory/",
+   "state": "AR",
+   "district": "Namsai"
+  }
+ },
+ {
+  "key": "police2n_ar:dir-shiyomi-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://shiyomi.nic.in/police/",
+   "state": "AR",
+   "district": "Shi Yomi"
+  }
+ }
+]

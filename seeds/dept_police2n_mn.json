@@ -1,0 +1,38 @@
+[
+ {
+  "key": "police2n_mn:dir-imphalwest-nic-in-police-stations",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://imphalwest.nic.in/police-stations/",
+   "state": "MN",
+   "district": "Imphal West"
+  }
+ },
+ {
+  "key": "police2n_mn:dir-kakching-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://kakching.nic.in/police/",
+   "state": "MN",
+   "district": "Kakching"
+  }
+ },
+ {
+  "key": "police2n_mn:dir-kangpokpi-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://kangpokpi.nic.in/police/",
+   "state": "MN",
+   "district": "Kangpokpi"
+  }
+ },
+ {
+  "key": "police2n_mn:dir-tengnoupal-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://tengnoupal.nic.in/police/",
+   "state": "MN",
+   "district": "Tengnoupal"
+  }
+ }
+]

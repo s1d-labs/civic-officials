@@ -1,0 +1,29 @@
+[
+ {
+  "key": "police2n_tr:dir-gomati-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://gomati.nic.in/police/",
+   "state": "TR",
+   "district": "Gomati"
+  }
+ },
+ {
+  "key": "police2n_tr:dir-northtripura-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://northtripura.nic.in/police/",
+   "state": "TR",
+   "district": "North Tripura"
+  }
+ },
+ {
+  "key": "police2n_tr:dir-westtripura-nic-in-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://westtripura.nic.in/police/",
+   "state": "TR",
+   "district": "West Tripura"
+  }
+ }
+]
