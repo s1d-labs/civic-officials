@@ -25,7 +25,7 @@ DEVANAGARI = re.compile(r"[ऀ-ॿ]")
 
 
 def items(get=None):
-    return [{"key": f"{MODULE}-gazette", "payload": {"reader": MODULE, "url": URL, "state": "MH", "india_only": False}}]
+    return [{"key": f"{MODULE}-gazette", "payload": {"reader": MODULE, "url": URL, "state": "MH", "india_only": True}}]     # pdftotext: the India servers have it, the GitHub runners do not
 
 
 def rows(pages):
