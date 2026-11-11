@@ -1,0 +1,5044 @@
+[
+ {
+  "key": "nicobars.andaman.nic.in",
+  "payload": {
+   "url": "https://nicobars.andaman.nic.in",
+   "name": "Nicobars",
+   "kind": "District administration",
+   "state": "AN",
+   "jurisdiction": "Andaman And Nicobar Islands",
+   "district_code": "603",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "nicobars.andaman.nic.in/police",
+  "payload": {
+   "url": "https://nicobars.andaman.nic.in/police/",
+   "name": "Nicobars",
+   "kind": "District administration",
+   "state": "AN",
+   "jurisdiction": "Andaman And Nicobar Islands",
+   "district_code": "603",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "northmiddle.andaman.nic.in",
+  "payload": {
+   "url": "https://northmiddle.andaman.nic.in",
+   "name": "North And Middle Andaman",
+   "kind": "District administration",
+   "state": "AN",
+   "jurisdiction": "Andaman And Nicobar Islands",
+   "district_code": "632",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "northmiddle.andaman.nic.in/health",
+  "payload": {
+   "url": "https://northmiddle.andaman.nic.in/health/",
+   "name": "North And Middle Andaman",
+   "kind": "District administration",
+   "state": "AN",
+   "jurisdiction": "Andaman And Nicobar Islands",
+   "district_code": "632",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "northmiddle.andaman.nic.in/police",
+  "payload": {
+   "url": "https://northmiddle.andaman.nic.in/police/",
+   "name": "North And Middle Andaman",
+   "kind": "District administration",
+   "state": "AN",
+   "jurisdiction": "Andaman And Nicobar Islands",
+   "district_code": "632",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "northmiddle.andaman.nic.in/officers-contact",
+  "payload": {
+   "url": "https://northmiddle.andaman.nic.in/officers-contact/",
+   "name": "North And Middle Andaman",
+   "kind": "District administration",
+   "state": "AN",
+   "jurisdiction": "Andaman And Nicobar Islands",
+   "district_code": "632",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "southandaman.nic.in",
+  "payload": {
+   "url": "https://southandaman.nic.in",
+   "name": "South Andamans",
+   "kind": "District administration",
+   "state": "AN",
+   "jurisdiction": "Andaman And Nicobar Islands",
+   "district_code": "602",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "southandaman.nic.in/health",
+  "payload": {
+   "url": "https://southandaman.nic.in/health/",
+   "name": "South Andamans",
+   "kind": "District administration",
+   "state": "AN",
+   "jurisdiction": "Andaman And Nicobar Islands",
+   "district_code": "602",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "southandaman.nic.in/police",
+  "payload": {
+   "url": "https://southandaman.nic.in/police/",
+   "name": "South Andamans",
+   "kind": "District administration",
+   "state": "AN",
+   "jurisdiction": "Andaman And Nicobar Islands",
+   "district_code": "602",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "allurisitharamaraju.ap.gov.in",
+  "payload": {
+   "url": "https://allurisitharamaraju.ap.gov.in",
+   "name": "Alluri Sitharama Raju",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "745",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "anakapalli.ap.gov.in",
+  "payload": {
+   "url": "https://anakapalli.ap.gov.in",
+   "name": "Anakapalli",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "744",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "anakapalli.ap.gov.in/health",
+  "payload": {
+   "url": "https://anakapalli.ap.gov.in/health/",
+   "name": "Anakapalli",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "744",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "anakapalli.ap.gov.in/govt-officials",
+  "payload": {
+   "url": "https://anakapalli.ap.gov.in/govt-officials/",
+   "name": "Anakapalli",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "744",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "anakapalli.ap.gov.in/district-officers",
+  "payload": {
+   "url": "https://anakapalli.ap.gov.in/district-officers/",
+   "name": "Anakapalli",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "744",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ananthapuramu.ap.gov.in",
+  "payload": {
+   "url": "https://ananthapuramu.ap.gov.in",
+   "name": "Ananthapuramu",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "502",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ananthapuramu.ap.gov.in/police",
+  "payload": {
+   "url": "https://ananthapuramu.ap.gov.in/police/",
+   "name": "Ananthapuramu",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "502",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ananthapuramu.ap.gov.in/contact-district-officers",
+  "payload": {
+   "url": "https://ananthapuramu.ap.gov.in/contact-district-officers/",
+   "name": "Ananthapuramu",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "502",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "markapuram.ap.gov.in",
+  "payload": {
+   "url": "https://markapuram.ap.gov.in",
+   "name": "Markapuram",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "790",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "polavaram.ap.gov.in",
+  "payload": {
+   "url": "https://polavaram.ap.gov.in",
+   "name": "Polavaram",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "791",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "visakhapatnam.ap.gov.in",
+  "payload": {
+   "url": "https://visakhapatnam.ap.gov.in",
+   "name": "Visakhapatnam",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "520",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "visakhapatnam.ap.gov.in/health",
+  "payload": {
+   "url": "https://visakhapatnam.ap.gov.in/health/",
+   "name": "Visakhapatnam",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "520",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "visakhapatnam.ap.gov.in/govt-officials",
+  "payload": {
+   "url": "https://visakhapatnam.ap.gov.in/govt-officials/",
+   "name": "Visakhapatnam",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "520",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "visakhapatnam.ap.gov.in/district-officers",
+  "payload": {
+   "url": "https://visakhapatnam.ap.gov.in/district-officers/",
+   "name": "Visakhapatnam",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "520",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "anjaw.nic.in",
+  "payload": {
+   "url": "https://anjaw.nic.in",
+   "name": "Anjaw",
+   "kind": "District administration",
+   "state": "AR",
+   "jurisdiction": "Arunachal Pradesh",
+   "district_code": "628",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "anjaw.nic.in/police",
+  "payload": {
+   "url": "https://anjaw.nic.in/police/",
+   "name": "Anjaw",
+   "kind": "District administration",
+   "state": "AR",
+   "jurisdiction": "Arunachal Pradesh",
+   "district_code": "628",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "changlang.nic.in",
+  "payload": {
+   "url": "https://changlang.nic.in",
+   "name": "Changlang",
+   "kind": "District administration",
+   "state": "AR",
+   "jurisdiction": "Arunachal Pradesh",
+   "district_code": "229",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "changlang.nic.in/police",
+  "payload": {
+   "url": "https://changlang.nic.in/police/",
+   "name": "Changlang",
+   "kind": "District administration",
+   "state": "AR",
+   "jurisdiction": "Arunachal Pradesh",
+   "district_code": "229",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kamle.nic.in",
+  "payload": {
+   "url": "https://kamle.nic.in",
+   "name": "Kamle",
+   "kind": "District administration",
+   "state": "AR",
+   "jurisdiction": "Arunachal Pradesh",
+   "district_code": "718",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "kurungkumey.nic.in",
+  "payload": {
+   "url": "https://kurungkumey.nic.in",
+   "name": "Kurung Kumey",
+   "kind": "District administration",
+   "state": "AR",
+   "jurisdiction": "Arunachal Pradesh",
+   "district_code": "233",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "kurungkumey.nic.in/health",
+  "payload": {
+   "url": "https://kurungkumey.nic.in/health/",
+   "name": "Kurung Kumey",
+   "kind": "District administration",
+   "state": "AR",
+   "jurisdiction": "Arunachal Pradesh",
+   "district_code": "233",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kurungkumey.nic.in/police",
+  "payload": {
+   "url": "https://kurungkumey.nic.in/police/",
+   "name": "Kurung Kumey",
+   "kind": "District administration",
+   "state": "AR",
+   "jurisdiction": "Arunachal Pradesh",
+   "district_code": "233",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bajali.assam.gov.in",
+  "payload": {
+   "url": "https://bajali.assam.gov.in",
+   "name": "Bajali",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "739",
+   "route": "india"
+  }
+ },
+ {
+  "key": "baksa.assam.gov.in",
+  "payload": {
+   "url": "https://baksa.assam.gov.in",
+   "name": "Baksa",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "616",
+   "route": "india"
+  }
+ },
+ {
+  "key": "barpeta.assam.gov.in",
+  "payload": {
+   "url": "https://barpeta.assam.gov.in",
+   "name": "Barpeta",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "280",
+   "route": "india"
+  }
+ },
+ {
+  "key": "biswanath.gov.in",
+  "payload": {
+   "url": "https://biswanath.gov.in",
+   "name": "Biswanath",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "705",
+   "route": "india"
+  }
+ },
+ {
+  "key": "biswanath.assam.gov.in",
+  "payload": {
+   "url": "https://biswanath.assam.gov.in",
+   "name": "Biswanath",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "705",
+   "route": "india"
+  }
+ },
+ {
+  "key": "bongaigaon.gov.in",
+  "payload": {
+   "url": "https://bongaigaon.gov.in",
+   "name": "Bongaigaon",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "281",
+   "route": "india"
+  }
+ },
+ {
+  "key": "bongaigaon.assam.gov.in",
+  "payload": {
+   "url": "https://bongaigaon.assam.gov.in",
+   "name": "Bongaigaon",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "281",
+   "route": "india"
+  }
+ },
+ {
+  "key": "cachar.gov.in",
+  "payload": {
+   "url": "https://cachar.gov.in",
+   "name": "Cachar",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "282",
+   "route": "india"
+  }
+ },
+ {
+  "key": "cachar.assam.gov.in",
+  "payload": {
+   "url": "https://cachar.assam.gov.in",
+   "name": "Cachar",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "282",
+   "route": "india"
+  }
+ },
+ {
+  "key": "charaideo.gov.in",
+  "payload": {
+   "url": "https://charaideo.gov.in",
+   "name": "Charaideo",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "708",
+   "route": "india"
+  }
+ },
+ {
+  "key": "charaideo.assam.gov.in",
+  "payload": {
+   "url": "https://charaideo.assam.gov.in",
+   "name": "Charaideo",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "708",
+   "route": "india"
+  }
+ },
+ {
+  "key": "chirang.assam.gov.in",
+  "payload": {
+   "url": "https://chirang.assam.gov.in",
+   "name": "Chirang",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "612",
+   "route": "india"
+  }
+ },
+ {
+  "key": "darrang.gov.in",
+  "payload": {
+   "url": "https://darrang.gov.in",
+   "name": "Darrang",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "283",
+   "route": "india"
+  }
+ },
+ {
+  "key": "darrang.assam.gov.in",
+  "payload": {
+   "url": "https://darrang.assam.gov.in",
+   "name": "Darrang",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "283",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dhemaji.gov.in",
+  "payload": {
+   "url": "https://dhemaji.gov.in",
+   "name": "Dhemaji",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "284",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dhemaji.assam.gov.in",
+  "payload": {
+   "url": "https://dhemaji.assam.gov.in",
+   "name": "Dhemaji",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "284",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dhubri.gov.in",
+  "payload": {
+   "url": "https://dhubri.gov.in",
+   "name": "Dhubri",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "285",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dhubri.assam.gov.in",
+  "payload": {
+   "url": "https://dhubri.assam.gov.in",
+   "name": "Dhubri",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "285",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dibrugarh.assam.gov.in",
+  "payload": {
+   "url": "https://dibrugarh.assam.gov.in",
+   "name": "Dibrugarh",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "286",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dimahasao.assam.gov.in",
+  "payload": {
+   "url": "https://dimahasao.assam.gov.in",
+   "name": "Dima Hasao",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "299",
+   "route": "india"
+  }
+ },
+ {
+  "key": "goalpara.assam.gov.in",
+  "payload": {
+   "url": "https://goalpara.assam.gov.in",
+   "name": "Goalpara",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "287",
+   "route": "india"
+  }
+ },
+ {
+  "key": "golaghat.gov.in",
+  "payload": {
+   "url": "https://golaghat.gov.in",
+   "name": "Golaghat",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "288",
+   "route": "india"
+  }
+ },
+ {
+  "key": "golaghat.assam.gov.in",
+  "payload": {
+   "url": "https://golaghat.assam.gov.in",
+   "name": "Golaghat",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "288",
+   "route": "india"
+  }
+ },
+ {
+  "key": "hailakandi.assam.gov.in",
+  "payload": {
+   "url": "https://hailakandi.assam.gov.in",
+   "name": "Hailakandi",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "289",
+   "route": "india"
+  }
+ },
+ {
+  "key": "hojai.assam.gov.in",
+  "payload": {
+   "url": "https://hojai.assam.gov.in",
+   "name": "Hojai",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "709",
+   "route": "india"
+  }
+ },
+ {
+  "key": "jorhat.assam.gov.in",
+  "payload": {
+   "url": "https://jorhat.assam.gov.in",
+   "name": "Jorhat",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "290",
+   "route": "india"
+  }
+ },
+ {
+  "key": "kamrup.assam.gov.in",
+  "payload": {
+   "url": "https://kamrup.assam.gov.in",
+   "name": "Kamrup",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "291",
+   "route": "india"
+  }
+ },
+ {
+  "key": "kamrupmetro.assam.gov.in",
+  "payload": {
+   "url": "https://kamrupmetro.assam.gov.in",
+   "name": "Kamrup Metro",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "618",
+   "route": "india"
+  }
+ },
+ {
+  "key": "karbianglong.gov.in",
+  "payload": {
+   "url": "https://karbianglong.gov.in",
+   "name": "Karbi Anglong",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "292",
+   "route": "india"
+  }
+ },
+ {
+  "key": "karbianglong.assam.gov.in",
+  "payload": {
+   "url": "https://karbianglong.assam.gov.in",
+   "name": "Karbi Anglong",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "292",
+   "route": "india"
+  }
+ },
+ {
+  "key": "kokrajhar.assam.gov.in",
+  "payload": {
+   "url": "https://kokrajhar.assam.gov.in",
+   "name": "Kokrajhar",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "294",
+   "route": "india"
+  }
+ },
+ {
+  "key": "majuli.gov.in",
+  "payload": {
+   "url": "https://majuli.gov.in",
+   "name": "Majuli",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "706",
+   "route": "india"
+  }
+ },
+ {
+  "key": "majuli.assam.gov.in",
+  "payload": {
+   "url": "https://majuli.assam.gov.in",
+   "name": "Majuli",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "706",
+   "route": "india"
+  }
+ },
+ {
+  "key": "morigaon.gov.in",
+  "payload": {
+   "url": "https://morigaon.gov.in",
+   "name": "Marigaon",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "296",
+   "route": "india"
+  }
+ },
+ {
+  "key": "morigaon.assam.gov.in",
+  "payload": {
+   "url": "https://morigaon.assam.gov.in",
+   "name": "Marigaon",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "296",
+   "route": "india"
+  }
+ },
+ {
+  "key": "nagaon.assam.gov.in",
+  "payload": {
+   "url": "https://nagaon.assam.gov.in",
+   "name": "Nagaon",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "297",
+   "route": "india"
+  }
+ },
+ {
+  "key": "nalbari.gov.in",
+  "payload": {
+   "url": "https://nalbari.gov.in",
+   "name": "Nalbari",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "298",
+   "route": "india"
+  }
+ },
+ {
+  "key": "nalbari.assam.gov.in",
+  "payload": {
+   "url": "https://nalbari.assam.gov.in",
+   "name": "Nalbari",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "298",
+   "route": "india"
+  }
+ },
+ {
+  "key": "sivasagar.assam.gov.in",
+  "payload": {
+   "url": "https://sivasagar.assam.gov.in",
+   "name": "Sivasagar",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "300",
+   "route": "india"
+  }
+ },
+ {
+  "key": "sonitpur.gov.in",
+  "payload": {
+   "url": "https://sonitpur.gov.in",
+   "name": "Sonitpur",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "301",
+   "route": "india"
+  }
+ },
+ {
+  "key": "sonitpur.assam.gov.in",
+  "payload": {
+   "url": "https://sonitpur.assam.gov.in",
+   "name": "Sonitpur",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "301",
+   "route": "india"
+  }
+ },
+ {
+  "key": "southsalmaramankachar.assam.gov.in",
+  "payload": {
+   "url": "https://southsalmaramankachar.assam.gov.in",
+   "name": "South Salmara Mancachar",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "707",
+   "route": "india"
+  }
+ },
+ {
+  "key": "karimganj.gov.in",
+  "payload": {
+   "url": "https://karimganj.gov.in",
+   "name": "Sribhumi",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "293",
+   "route": "india"
+  }
+ },
+ {
+  "key": "tamulpur.assam.gov.in",
+  "payload": {
+   "url": "https://tamulpur.assam.gov.in",
+   "name": "Tamulpur",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "756",
+   "route": "india"
+  }
+ },
+ {
+  "key": "tinsukia.assam.gov.in",
+  "payload": {
+   "url": "https://tinsukia.assam.gov.in",
+   "name": "Tinsukia",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "302",
+   "route": "india"
+  }
+ },
+ {
+  "key": "udalguri.assam.gov.in",
+  "payload": {
+   "url": "https://udalguri.assam.gov.in",
+   "name": "Udalguri",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "617",
+   "route": "india"
+  }
+ },
+ {
+  "key": "westkarbianglong.assam.gov.in",
+  "payload": {
+   "url": "https://westkarbianglong.assam.gov.in",
+   "name": "West Karbi Anglong",
+   "kind": "District administration",
+   "state": "AS",
+   "jurisdiction": "Assam",
+   "district_code": "710",
+   "route": "india"
+  }
+ },
+ {
+  "key": "araria.nic.in",
+  "payload": {
+   "url": "https://araria.nic.in",
+   "name": "Araria",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "188",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "araria.nic.in/health",
+  "payload": {
+   "url": "https://araria.nic.in/health/",
+   "name": "Araria",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "188",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "araria.nic.in/district-administrationrti",
+  "payload": {
+   "url": "https://araria.nic.in/district-administrationrti/",
+   "name": "Araria",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "188",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "araria.nic.in/about-district/whos-who/district-magistrate",
+  "payload": {
+   "url": "https://araria.nic.in/about-district/whos-who/district-magistrate/",
+   "name": "Araria",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "188",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "arwal.nic.in",
+  "payload": {
+   "url": "https://arwal.nic.in",
+   "name": "Arwal",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "611",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "arwal.nic.in/health",
+  "payload": {
+   "url": "https://arwal.nic.in/health/",
+   "name": "Arwal",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "611",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "arwal.nic.in/police",
+  "payload": {
+   "url": "https://arwal.nic.in/police/",
+   "name": "Arwal",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "611",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "arwal.nic.in/police-administrationrti",
+  "payload": {
+   "url": "https://arwal.nic.in/police-administrationrti/",
+   "name": "Arwal",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "611",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "aurangabad.bih.nic.in",
+  "payload": {
+   "url": "https://aurangabad.bih.nic.in",
+   "name": "Aurangabad",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "189",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "aurangabad.bih.nic.in/health",
+  "payload": {
+   "url": "https://aurangabad.bih.nic.in/health/",
+   "name": "Aurangabad",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "189",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "aurangabad.bih.nic.in/police",
+  "payload": {
+   "url": "https://aurangabad.bih.nic.in/police/",
+   "name": "Aurangabad",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "189",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "aurangabad.bih.nic.in/police-administration-rti",
+  "payload": {
+   "url": "https://aurangabad.bih.nic.in/police-administration-rti/",
+   "name": "Aurangabad",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "189",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chandigarhdistrict.nic.in",
+  "payload": {
+   "url": "https://chandigarhdistrict.nic.in",
+   "name": "Chandigarh",
+   "kind": "District administration",
+   "state": "CH",
+   "jurisdiction": "Chandigarh",
+   "district_code": "44",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "chandigarhdistrict.nic.in/police",
+  "payload": {
+   "url": "https://chandigarhdistrict.nic.in/police/",
+   "name": "Chandigarh",
+   "kind": "District administration",
+   "state": "CH",
+   "jurisdiction": "Chandigarh",
+   "district_code": "44",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chandigarhdistrict.nic.in/contact-dc",
+  "payload": {
+   "url": "https://chandigarhdistrict.nic.in/contact-dc/",
+   "name": "Chandigarh",
+   "kind": "District administration",
+   "state": "CH",
+   "jurisdiction": "Chandigarh",
+   "district_code": "44",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "manendragarh-chirmiri-bharatpur.cg.gov.in",
+  "payload": {
+   "url": "https://manendragarh-chirmiri-bharatpur.cg.gov.in",
+   "name": "Manendragarh-Chirmiri-Bharatpur(M C B)",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "760",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "raigarh.gov.in",
+  "payload": {
+   "url": "https://raigarh.gov.in",
+   "name": "Raigarh",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "386",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "raigarh.gov.in/en/departments/health",
+  "payload": {
+   "url": "https://raigarh.gov.in/en/departments/health/",
+   "name": "Raigarh",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "386",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "raigarh.gov.in/en/about-district/administrative-setup/police",
+  "payload": {
+   "url": "https://raigarh.gov.in/en/about-district/administrative-setup/police/",
+   "name": "Raigarh",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "386",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "sakti.cg.gov.in",
+  "payload": {
+   "url": "https://sakti.cg.gov.in",
+   "name": "Sakti",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "762",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "sakti.cg.gov.in/en/health",
+  "payload": {
+   "url": "https://sakti.cg.gov.in/en/health/",
+   "name": "Sakti",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "762",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "sakti.cg.gov.in/en/police",
+  "payload": {
+   "url": "https://sakti.cg.gov.in/en/police/",
+   "name": "Sakti",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "762",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "sakti.cg.gov.in/en/dm-contact",
+  "payload": {
+   "url": "https://sakti.cg.gov.in/en/dm-contact/",
+   "name": "Sakti",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "762",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dccentral.delhi.gov.in",
+  "payload": {
+   "url": "https://dccentral.delhi.gov.in",
+   "name": "Central",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "77",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dccentral.delhi.gov.in/en/dccentral/contact-us",
+  "payload": {
+   "url": "https://dccentral.delhi.gov.in/en/dccentral/contact-us",
+   "name": "Central",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "77",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dmcentral.delhi.gov.in",
+  "payload": {
+   "url": "https://dmcentral.delhi.gov.in",
+   "name": "Central",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "77",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dmcentralnorth.delhi.gov.in",
+  "payload": {
+   "url": "https://dmcentralnorth.delhi.gov.in",
+   "name": "Central North",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "796",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dmeast.delhi.gov.in",
+  "payload": {
+   "url": "https://dmeast.delhi.gov.in",
+   "name": "East",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "78",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dmeast.delhi.gov.in/police",
+  "payload": {
+   "url": "https://dmeast.delhi.gov.in/police/",
+   "name": "East",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "78",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dmeast.delhi.gov.in/contact-us-election",
+  "payload": {
+   "url": "https://dmeast.delhi.gov.in/contact-us-election/",
+   "name": "East",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "78",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dmolddelhi.delhi.gov.in",
+  "payload": {
+   "url": "https://dmolddelhi.delhi.gov.in",
+   "name": "Old Delhi",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "795",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dmouternorth.delhi.gov.in",
+  "payload": {
+   "url": "https://dmouternorth.delhi.gov.in",
+   "name": "Outer North",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "794",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dmwest.delhi.gov.in",
+  "payload": {
+   "url": "https://dmwest.delhi.gov.in",
+   "name": "West",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "85",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dmwest.delhi.gov.in/police",
+  "payload": {
+   "url": "https://dmwest.delhi.gov.in/police/",
+   "name": "West",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "85",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dmwest.delhi.gov.in/telephone",
+  "payload": {
+   "url": "https://dmwest.delhi.gov.in/telephone/",
+   "name": "West",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "85",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dmwest.delhi.gov.in/contact-us-2",
+  "payload": {
+   "url": "https://dmwest.delhi.gov.in/contact-us-2/",
+   "name": "West",
+   "kind": "District administration",
+   "state": "DL",
+   "jurisdiction": "Delhi",
+   "district_code": "85",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kushavati.goa.gov.in",
+  "payload": {
+   "url": "https://kushavati.goa.gov.in",
+   "name": "Kushavati",
+   "kind": "District administration",
+   "state": "GA",
+   "jurisdiction": "Goa",
+   "district_code": "793",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "northgoa.gov.in",
+  "payload": {
+   "url": "https://northgoa.gov.in",
+   "name": "North Goa",
+   "kind": "District administration",
+   "state": "GA",
+   "jurisdiction": "Goa",
+   "district_code": "551",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "southgoa.nic.in",
+  "payload": {
+   "url": "https://southgoa.nic.in",
+   "name": "South Goa",
+   "kind": "District administration",
+   "state": "GA",
+   "jurisdiction": "Goa",
+   "district_code": "552",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "southgoa.nic.in/public-grievances-officers",
+  "payload": {
+   "url": "https://southgoa.nic.in/public-grievances-officers/",
+   "name": "South Goa",
+   "kind": "District administration",
+   "state": "GA",
+   "jurisdiction": "Goa",
+   "district_code": "552",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "southgoa.nic.in/public-utility-category/police",
+  "payload": {
+   "url": "https://southgoa.nic.in/public-utility-category/police/",
+   "name": "South Goa",
+   "kind": "District administration",
+   "state": "GA",
+   "jurisdiction": "Goa",
+   "district_code": "552",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "vavtharad.nic.in",
+  "payload": {
+   "url": "https://vavtharad.nic.in",
+   "name": "Vav-Tharad",
+   "kind": "District administration",
+   "state": "GJ",
+   "jurisdiction": "Gujarat",
+   "district_code": "789",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ambala.gov.in",
+  "payload": {
+   "url": "https://ambala.gov.in",
+   "name": "Ambala",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "58",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "bhiwani.gov.in",
+  "payload": {
+   "url": "https://bhiwani.gov.in",
+   "name": "Bhiwani",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "59",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "bhiwani.gov.in/telephone-directory",
+  "payload": {
+   "url": "https://bhiwani.gov.in/telephone-directory/",
+   "name": "Bhiwani",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "59",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bhiwani.gov.in/dowry-prohibition-officers-contact-details-for-bhiwani-district",
+  "payload": {
+   "url": "https://bhiwani.gov.in/dowry-prohibition-officers-contact-details-for-bhiwani-district/",
+   "name": "Bhiwani",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "59",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bhiwani.gov.in/contact",
+  "payload": {
+   "url": "https://bhiwani.gov.in/contact/",
+   "name": "Bhiwani",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "59",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "charkhidadri.gov.in",
+  "payload": {
+   "url": "https://charkhidadri.gov.in",
+   "name": "Charkhi Dadri",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "701",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "charkhidadri.gov.in/telephone-directory",
+  "payload": {
+   "url": "https://charkhidadri.gov.in/telephone-directory/",
+   "name": "Charkhi Dadri",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "701",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "charkhidadri.gov.in/district-revenue-officer",
+  "payload": {
+   "url": "https://charkhidadri.gov.in/district-revenue-officer/",
+   "name": "Charkhi Dadri",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "701",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "fatehabad.nic.in",
+  "payload": {
+   "url": "https://fatehabad.nic.in",
+   "name": "Fatehabad",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "61",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "fatehabad.nic.in/police",
+  "payload": {
+   "url": "https://fatehabad.nic.in/police/",
+   "name": "Fatehabad",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "61",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "fatehabad.nic.in/telephone-directory",
+  "payload": {
+   "url": "https://fatehabad.nic.in/telephone-directory/",
+   "name": "Fatehabad",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "61",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "hansi.haryana.gov.in",
+  "payload": {
+   "url": "https://hansi.haryana.gov.in",
+   "name": "Hansi",
+   "kind": "District administration",
+   "state": "HR",
+   "jurisdiction": "Haryana",
+   "district_code": "792",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "hpbilaspur.nic.in",
+  "payload": {
+   "url": "https://hpbilaspur.nic.in",
+   "name": "Bilaspur",
+   "kind": "District administration",
+   "state": "HP",
+   "jurisdiction": "Himachal Pradesh",
+   "district_code": "15",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "hpchamba.nic.in",
+  "payload": {
+   "url": "https://hpchamba.nic.in",
+   "name": "Chamba",
+   "kind": "District administration",
+   "state": "HP",
+   "jurisdiction": "Himachal Pradesh",
+   "district_code": "16",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "hpchamba.nic.in/police",
+  "payload": {
+   "url": "https://hpchamba.nic.in/police/",
+   "name": "Chamba",
+   "kind": "District administration",
+   "state": "HP",
+   "jurisdiction": "Himachal Pradesh",
+   "district_code": "16",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "hphamirpur.nic.in",
+  "payload": {
+   "url": "https://hphamirpur.nic.in",
+   "name": "Hamirpur",
+   "kind": "District administration",
+   "state": "HP",
+   "jurisdiction": "Himachal Pradesh",
+   "district_code": "17",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "hphamirpur.nic.in/health",
+  "payload": {
+   "url": "https://hphamirpur.nic.in/health/",
+   "name": "Hamirpur",
+   "kind": "District administration",
+   "state": "HP",
+   "jurisdiction": "Himachal Pradesh",
+   "district_code": "17",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "hphamirpur.nic.in/police",
+  "payload": {
+   "url": "https://hphamirpur.nic.in/police/",
+   "name": "Hamirpur",
+   "kind": "District administration",
+   "state": "HP",
+   "jurisdiction": "Himachal Pradesh",
+   "district_code": "17",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "hphamirpur.nic.in/public-utility-category/police",
+  "payload": {
+   "url": "https://hphamirpur.nic.in/public-utility-category/police/",
+   "name": "Hamirpur",
+   "kind": "District administration",
+   "state": "HP",
+   "jurisdiction": "Himachal Pradesh",
+   "district_code": "17",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "pulwama.gov.in",
+  "payload": {
+   "url": "https://pulwama.gov.in",
+   "name": "Pulwama",
+   "kind": "District administration",
+   "state": "JK",
+   "jurisdiction": "Jammu And Kashmir",
+   "district_code": "11",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pulwama.gov.in/police",
+  "payload": {
+   "url": "https://pulwama.gov.in/police/",
+   "name": "Pulwama",
+   "kind": "District administration",
+   "state": "JK",
+   "jurisdiction": "Jammu And Kashmir",
+   "district_code": "11",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "pulwama.gov.in/grievance-redressal-officer",
+  "payload": {
+   "url": "https://pulwama.gov.in/grievance-redressal-officer/",
+   "name": "Pulwama",
+   "kind": "District administration",
+   "state": "JK",
+   "jurisdiction": "Jammu And Kashmir",
+   "district_code": "11",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "pulwama.gov.in/emergency-contact",
+  "payload": {
+   "url": "https://pulwama.gov.in/emergency-contact/",
+   "name": "Pulwama",
+   "kind": "District administration",
+   "state": "JK",
+   "jurisdiction": "Jammu And Kashmir",
+   "district_code": "11",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bokaro.nic.in",
+  "payload": {
+   "url": "https://bokaro.nic.in",
+   "name": "Bokaro",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "322",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "bokaro.nic.in/health",
+  "payload": {
+   "url": "https://bokaro.nic.in/health/",
+   "name": "Bokaro",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "322",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bokaro.nic.in/police",
+  "payload": {
+   "url": "https://bokaro.nic.in/police/",
+   "name": "Bokaro",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "322",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bokaro.nic.in/telephone-directory",
+  "payload": {
+   "url": "https://bokaro.nic.in/telephone-directory/",
+   "name": "Bokaro",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "322",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chatra.nic.in",
+  "payload": {
+   "url": "https://chatra.nic.in",
+   "name": "Chatra",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "323",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "chatra.nic.in/health",
+  "payload": {
+   "url": "https://chatra.nic.in/health/",
+   "name": "Chatra",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "323",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chatra.nic.in/police",
+  "payload": {
+   "url": "https://chatra.nic.in/police/",
+   "name": "Chatra",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "323",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chatra.nic.in/officials-directory",
+  "payload": {
+   "url": "https://chatra.nic.in/officials-directory/",
+   "name": "Chatra",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "323",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "deoghar.nic.in",
+  "payload": {
+   "url": "https://deoghar.nic.in",
+   "name": "Deoghar",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "324",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "deoghar.nic.in/health",
+  "payload": {
+   "url": "https://deoghar.nic.in/health/",
+   "name": "Deoghar",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "324",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "deoghar.nic.in/police",
+  "payload": {
+   "url": "https://deoghar.nic.in/police/",
+   "name": "Deoghar",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "324",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "deoghar.nic.in/telephone-directory",
+  "payload": {
+   "url": "https://deoghar.nic.in/telephone-directory/",
+   "name": "Deoghar",
+   "kind": "District administration",
+   "state": "JH",
+   "jurisdiction": "Jharkhand",
+   "district_code": "324",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bagalkot.nic.in",
+  "payload": {
+   "url": "https://bagalkot.nic.in",
+   "name": "Bagalkote",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "524",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ballari.nic.in",
+  "payload": {
+   "url": "https://ballari.nic.in",
+   "name": "Ballari",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "528",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ballari.nic.in/en/health",
+  "payload": {
+   "url": "https://ballari.nic.in/en/health/",
+   "name": "Ballari",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "528",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ballari.nic.in/en/telephone-2",
+  "payload": {
+   "url": "https://ballari.nic.in/en/telephone-2/",
+   "name": "Ballari",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "528",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "belagavi.nic.in",
+  "payload": {
+   "url": "https://belagavi.nic.in",
+   "name": "Belagavi",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "527",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "belagavi.nic.in/en/health",
+  "payload": {
+   "url": "https://belagavi.nic.in/en/health/",
+   "name": "Belagavi",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "527",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "belagavi.nic.in/en/police",
+  "payload": {
+   "url": "https://belagavi.nic.in/en/police/",
+   "name": "Belagavi",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "527",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "belagavi.nic.in/en/regarding-the-publication-of-the-final-selection-list-for-various-vacant-posts-of-doctors-paramedical-staff-in-hospitals-on-outsourcing-basis-under-the-pm-abhim-scheme",
+  "payload": {
+   "url": "https://belagavi.nic.in/en/regarding-the-publication-of-the-final-selection-list-for-various-vacant-posts-of-doctors-paramedical-staff-in-hospitals-on-outsourcing-basis-under-the-pm-abhim-scheme/",
+   "name": "Belagavi",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "527",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bengalurusouth.nic.in",
+  "payload": {
+   "url": "https://bengalurusouth.nic.in",
+   "name": "Bengaluru South",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "631",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "bengalurusouth.nic.in/en/health",
+  "payload": {
+   "url": "https://bengalurusouth.nic.in/en/health/",
+   "name": "Bengaluru South",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "631",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bengalurusouth.nic.in/en/police",
+  "payload": {
+   "url": "https://bengalurusouth.nic.in/en/police/",
+   "name": "Bengaluru South",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "631",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bengalurusouth.nic.in/en/directory-2",
+  "payload": {
+   "url": "https://bengalurusouth.nic.in/en/directory-2/",
+   "name": "Bengaluru South",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "631",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "gadag.nic.in",
+  "payload": {
+   "url": "https://gadag.nic.in",
+   "name": "Gadag",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "537",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gadag.nic.in/en/police",
+  "payload": {
+   "url": "https://gadag.nic.in/en/police/",
+   "name": "Gadag",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "537",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "gadag.nic.in/en/district_officers_tp",
+  "payload": {
+   "url": "https://gadag.nic.in/en/district_officers_tp/",
+   "name": "Gadag",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "537",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "uttarakannada.nic.in",
+  "payload": {
+   "url": "https://uttarakannada.nic.in",
+   "name": "Uttara Kannada",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "550",
+   "route": "india"
+  }
+ },
+ {
+  "key": "uttarakannada.nic.in/en/district-administration",
+  "payload": {
+   "url": "https://uttarakannada.nic.in/en/district-administration/",
+   "name": "Uttara Kannada",
+   "kind": "District administration",
+   "state": "KA",
+   "jurisdiction": "Karnataka",
+   "district_code": "550",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "alappuzha.nic.in",
+  "payload": {
+   "url": "https://alappuzha.nic.in",
+   "name": "Alappuzha",
+   "kind": "District administration",
+   "state": "KL",
+   "jurisdiction": "Kerala",
+   "district_code": "554",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ernakulam.nic.in",
+  "payload": {
+   "url": "https://ernakulam.nic.in",
+   "name": "Ernakulam",
+   "kind": "District administration",
+   "state": "KL",
+   "jurisdiction": "Kerala",
+   "district_code": "555",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ernakulam.nic.in/en/contact",
+  "payload": {
+   "url": "https://ernakulam.nic.in/en/contact/",
+   "name": "Ernakulam",
+   "kind": "District administration",
+   "state": "KL",
+   "jurisdiction": "Kerala",
+   "district_code": "555",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "idukki.nic.in",
+  "payload": {
+   "url": "https://idukki.nic.in",
+   "name": "Idukki",
+   "kind": "District administration",
+   "state": "KL",
+   "jurisdiction": "Kerala",
+   "district_code": "556",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "idukki.nic.in/en/police",
+  "payload": {
+   "url": "https://idukki.nic.in/en/police/",
+   "name": "Idukki",
+   "kind": "District administration",
+   "state": "KL",
+   "jurisdiction": "Kerala",
+   "district_code": "556",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "idukki.nic.in/en/contacts",
+  "payload": {
+   "url": "https://idukki.nic.in/en/contacts/",
+   "name": "Idukki",
+   "kind": "District administration",
+   "state": "KL",
+   "jurisdiction": "Kerala",
+   "district_code": "556",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "idukki.nic.in/contact-us-ml",
+  "payload": {
+   "url": "https://idukki.nic.in/contact-us-ml/",
+   "name": "Idukki",
+   "kind": "District administration",
+   "state": "KL",
+   "jurisdiction": "Kerala",
+   "district_code": "556",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kargil.nic.in",
+  "payload": {
+   "url": "https://kargil.nic.in",
+   "name": "Kargil",
+   "kind": "District administration",
+   "state": "LA",
+   "jurisdiction": "Ladakh",
+   "district_code": "6",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "kargil.nic.in/health",
+  "payload": {
+   "url": "https://kargil.nic.in/health/",
+   "name": "Kargil",
+   "kind": "District administration",
+   "state": "LA",
+   "jurisdiction": "Ladakh",
+   "district_code": "6",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kargil.nic.in/police",
+  "payload": {
+   "url": "https://kargil.nic.in/police/",
+   "name": "Kargil",
+   "kind": "District administration",
+   "state": "LA",
+   "jurisdiction": "Ladakh",
+   "district_code": "6",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "leh.nic.in",
+  "payload": {
+   "url": "https://leh.nic.in",
+   "name": "Leh Ladakh",
+   "kind": "District administration",
+   "state": "LA",
+   "jurisdiction": "Ladakh",
+   "district_code": "9",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "leh.nic.in/departments/health",
+  "payload": {
+   "url": "https://leh.nic.in/departments/health/",
+   "name": "Leh Ladakh",
+   "kind": "District administration",
+   "state": "LA",
+   "jurisdiction": "Ladakh",
+   "district_code": "9",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "leh.nic.in/about-district/administrative-setup/police",
+  "payload": {
+   "url": "https://leh.nic.in/about-district/administrative-setup/police/",
+   "name": "Leh Ladakh",
+   "kind": "District administration",
+   "state": "LA",
+   "jurisdiction": "Ladakh",
+   "district_code": "9",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "leh.nic.in/tele-directory",
+  "payload": {
+   "url": "https://leh.nic.in/tele-directory/",
+   "name": "Leh Ladakh",
+   "kind": "District administration",
+   "state": "LA",
+   "jurisdiction": "Ladakh",
+   "district_code": "9",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "lakshadweep.gov.in",
+  "payload": {
+   "url": "https://lakshadweep.gov.in",
+   "name": "Lakshadweep District",
+   "kind": "District administration",
+   "state": "LD",
+   "jurisdiction": "Lakshadweep",
+   "district_code": "553",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "lakshadweep.gov.in/departments/police",
+  "payload": {
+   "url": "https://lakshadweep.gov.in/departments/police/",
+   "name": "Lakshadweep District",
+   "kind": "District administration",
+   "state": "LD",
+   "jurisdiction": "Lakshadweep",
+   "district_code": "553",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "lakshadweep.gov.in/about-lakshadweep/whos-who",
+  "payload": {
+   "url": "https://lakshadweep.gov.in/about-lakshadweep/whos-who/",
+   "name": "Lakshadweep District",
+   "kind": "District administration",
+   "state": "LD",
+   "jurisdiction": "Lakshadweep",
+   "district_code": "553",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "lakshadweep.gov.in/departments-new/department-of-general-administration-protocol",
+  "payload": {
+   "url": "https://lakshadweep.gov.in/departments-new/department-of-general-administration-protocol/",
+   "name": "Lakshadweep District",
+   "kind": "District administration",
+   "state": "LD",
+   "jurisdiction": "Lakshadweep",
+   "district_code": "553",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ahmednagar.nic.in",
+  "payload": {
+   "url": "https://ahmednagar.nic.in",
+   "name": "Ahilyanagar",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "466",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ahilyanagar.maharashtra.gov.in",
+  "payload": {
+   "url": "https://ahilyanagar.maharashtra.gov.in",
+   "name": "Ahilyanagar",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "466",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "chhatrapatisambhajinagar.maharashtra.gov.in",
+  "payload": {
+   "url": "https://chhatrapatisambhajinagar.maharashtra.gov.in",
+   "name": "Chhatrapati Sambhajinagar",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "469",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "bishnupur.nic.in",
+  "payload": {
+   "url": "https://bishnupur.nic.in",
+   "name": "Bishnupur",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "252",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "bishnupur.nic.in/service-category/health",
+  "payload": {
+   "url": "https://bishnupur.nic.in/service-category/health/",
+   "name": "Bishnupur",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "252",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bishnupur.nic.in/dlos-and-other-officials",
+  "payload": {
+   "url": "https://bishnupur.nic.in/dlos-and-other-officials/",
+   "name": "Bishnupur",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "252",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bishnupur.nic.in/mn/contact-toubiyu",
+  "payload": {
+   "url": "https://bishnupur.nic.in/mn/contact-toubiyu/",
+   "name": "Bishnupur",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "252",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chandel.nic.in",
+  "payload": {
+   "url": "https://chandel.nic.in",
+   "name": "Chandel",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "253",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "chandel.nic.in/district-election-officer",
+  "payload": {
+   "url": "https://chandel.nic.in/district-election-officer/",
+   "name": "Chandel",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "253",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chandel.nic.in/dc-contact",
+  "payload": {
+   "url": "https://chandel.nic.in/dc-contact/",
+   "name": "Chandel",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "253",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chandel.nic.in/chandel.nic.in/dc-contact",
+  "payload": {
+   "url": "https://chandel.nic.in/chandel.nic.in/dc-contact/",
+   "name": "Chandel",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "253",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "churachandpur.nic.in",
+  "payload": {
+   "url": "https://churachandpur.nic.in",
+   "name": "Churachandpur",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "254",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "churachandpur.nic.in/district-election-officer",
+  "payload": {
+   "url": "https://churachandpur.nic.in/district-election-officer/",
+   "name": "Churachandpur",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "254",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "churachandpur.nic.in/district-election-officer-page",
+  "payload": {
+   "url": "https://churachandpur.nic.in/district-election-officer-page/",
+   "name": "Churachandpur",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "254",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "churachandpur.nic.in/contact-dc",
+  "payload": {
+   "url": "https://churachandpur.nic.in/contact-dc/",
+   "name": "Churachandpur",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "254",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "jiribam.nic.in",
+  "payload": {
+   "url": "https://jiribam.nic.in",
+   "name": "Jiribam",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "713",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "jiribam.nic.in/health",
+  "payload": {
+   "url": "https://jiribam.nic.in/health/",
+   "name": "Jiribam",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "713",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "jiribam.nic.in/dc-contact",
+  "payload": {
+   "url": "https://jiribam.nic.in/dc-contact/",
+   "name": "Jiribam",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "713",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "noney.nic.in",
+  "payload": {
+   "url": "https://noney.nic.in",
+   "name": "Noney",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "714",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "noney.nic.in/health",
+  "payload": {
+   "url": "https://noney.nic.in/health/",
+   "name": "Noney",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "714",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "noney.nic.in/police",
+  "payload": {
+   "url": "https://noney.nic.in/police/",
+   "name": "Noney",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "714",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "noney.nic.in/about-district/whos-who/directory",
+  "payload": {
+   "url": "https://noney.nic.in/about-district/whos-who/directory/",
+   "name": "Noney",
+   "kind": "District administration",
+   "state": "MN",
+   "jurisdiction": "Manipur",
+   "district_code": "714",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastgarohills.gov.in",
+  "payload": {
+   "url": "https://eastgarohills.gov.in",
+   "name": "East Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "273",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "eastgarohills.gov.in/police",
+  "payload": {
+   "url": "https://eastgarohills.gov.in/police/",
+   "name": "East Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "273",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastgarohills.gov.in/grt/whos-who-3egh",
+  "payload": {
+   "url": "https://eastgarohills.gov.in/grt/whos-who-3egh/",
+   "name": "East Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "273",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastgarohills.gov.in/grt/contact-nic-grt",
+  "payload": {
+   "url": "https://eastgarohills.gov.in/grt/contact-nic-grt/",
+   "name": "East Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "273",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastjaintiahills.gov.in",
+  "payload": {
+   "url": "https://eastjaintiahills.gov.in",
+   "name": "East Jaintia Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "657",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "eastjaintiahills.gov.in/health",
+  "payload": {
+   "url": "https://eastjaintiahills.gov.in/health/",
+   "name": "East Jaintia Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "657",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastjaintiahills.gov.in/departments/health",
+  "payload": {
+   "url": "https://eastjaintiahills.gov.in/departments/health/",
+   "name": "East Jaintia Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "657",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastjaintiahills.gov.in/departments/police",
+  "payload": {
+   "url": "https://eastjaintiahills.gov.in/departments/police/",
+   "name": "East Jaintia Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "657",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastkhasihills.gov.in",
+  "payload": {
+   "url": "https://eastkhasihills.gov.in",
+   "name": "East Khasi Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "274",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "eastkhasihills.gov.in/police",
+  "payload": {
+   "url": "https://eastkhasihills.gov.in/police/",
+   "name": "East Khasi Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "274",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastkhasihills.gov.in/electoral-registration-officers-and-assistant-electoral-registration-officers",
+  "payload": {
+   "url": "https://eastkhasihills.gov.in/electoral-registration-officers-and-assistant-electoral-registration-officers/",
+   "name": "East Khasi Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "274",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastkhasihills.gov.in/kha/ka-directory",
+  "payload": {
+   "url": "https://eastkhasihills.gov.in/kha/ka-directory/",
+   "name": "East Khasi Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "274",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "southwestgarohills.gov.in",
+  "payload": {
+   "url": "https://southwestgarohills.gov.in",
+   "name": "South West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "663",
+   "route": "india"
+  }
+ },
+ {
+  "key": "southwestgarohills.gov.in/health",
+  "payload": {
+   "url": "https://southwestgarohills.gov.in/health/",
+   "name": "South West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "663",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "southwestgarohills.gov.in/police",
+  "payload": {
+   "url": "https://southwestgarohills.gov.in/police/",
+   "name": "South West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "663",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "southwestgarohills.gov.in/grt/directory-rang",
+  "payload": {
+   "url": "https://southwestgarohills.gov.in/grt/directory-rang/",
+   "name": "South West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "663",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "westgarohills.gov.in",
+  "payload": {
+   "url": "https://westgarohills.gov.in",
+   "name": "West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "278",
+   "route": "india"
+  }
+ },
+ {
+  "key": "westgarohills.gov.in/health",
+  "payload": {
+   "url": "https://westgarohills.gov.in/health/",
+   "name": "West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "278",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "westgarohills.gov.in/police",
+  "payload": {
+   "url": "https://westgarohills.gov.in/police/",
+   "name": "West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "278",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "westgarohills.gov.in/grt/administrationko-reteani",
+  "payload": {
+   "url": "https://westgarohills.gov.in/grt/administrationko-reteani/",
+   "name": "West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "278",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "aizawl.nic.in",
+  "payload": {
+   "url": "https://aizawl.nic.in",
+   "name": "Aizawl",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "261",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "aizawl.nic.in/police",
+  "payload": {
+   "url": "https://aizawl.nic.in/police/",
+   "name": "Aizawl",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "261",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "aizawl.nic.in/list-of-zonal-officer",
+  "payload": {
+   "url": "https://aizawl.nic.in/list-of-zonal-officer/",
+   "name": "Aizawl",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "261",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "aizawl.nic.in/mz/list-of-zonal-officer-2",
+  "payload": {
+   "url": "https://aizawl.nic.in/mz/list-of-zonal-officer-2/",
+   "name": "Aizawl",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "261",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "champhai.nic.in",
+  "payload": {
+   "url": "https://champhai.nic.in",
+   "name": "Champhai",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "262",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "champhai.nic.in/health",
+  "payload": {
+   "url": "https://champhai.nic.in/health/",
+   "name": "Champhai",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "262",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "champhai.nic.in/police",
+  "payload": {
+   "url": "https://champhai.nic.in/police/",
+   "name": "Champhai",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "262",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "champhai.nic.in/technical-assistant-multi-tasking-staff-recruitment-notice",
+  "payload": {
+   "url": "https://champhai.nic.in/technical-assistant-multi-tasking-staff-recruitment-notice/",
+   "name": "Champhai",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "262",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "hnahthial.mizoram.gov.in",
+  "payload": {
+   "url": "https://hnahthial.mizoram.gov.in",
+   "name": "Hnahthial",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "726",
+   "route": "india"
+  }
+ },
+ {
+  "key": "khawzawl.mizoram.gov.in",
+  "payload": {
+   "url": "https://khawzawl.mizoram.gov.in",
+   "name": "Khawzawl",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "728",
+   "route": "india"
+  }
+ },
+ {
+  "key": "saitual.nic.in",
+  "payload": {
+   "url": "https://saitual.nic.in",
+   "name": "Saitual",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "727",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "chumoukedima.nic.in",
+  "payload": {
+   "url": "https://chumoukedima.nic.in",
+   "name": "Chumoukedima",
+   "kind": "District administration",
+   "state": "NL",
+   "jurisdiction": "Nagaland",
+   "district_code": "758",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "chumoukedima.nic.in/health",
+  "payload": {
+   "url": "https://chumoukedima.nic.in/health/",
+   "name": "Chumoukedima",
+   "kind": "District administration",
+   "state": "NL",
+   "jurisdiction": "Nagaland",
+   "district_code": "758",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dimapur.nic.in",
+  "payload": {
+   "url": "https://dimapur.nic.in",
+   "name": "Dimapur",
+   "kind": "District administration",
+   "state": "NL",
+   "jurisdiction": "Nagaland",
+   "district_code": "244",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dimapur.nic.in/police",
+  "payload": {
+   "url": "https://dimapur.nic.in/police/",
+   "name": "Dimapur",
+   "kind": "District administration",
+   "state": "NL",
+   "jurisdiction": "Nagaland",
+   "district_code": "244",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kiphire.nic.in",
+  "payload": {
+   "url": "https://kiphire.nic.in",
+   "name": "Kiphire",
+   "kind": "District administration",
+   "state": "NL",
+   "jurisdiction": "Nagaland",
+   "district_code": "614",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "kiphire.nic.in/health",
+  "payload": {
+   "url": "https://kiphire.nic.in/health/",
+   "name": "Kiphire",
+   "kind": "District administration",
+   "state": "NL",
+   "jurisdiction": "Nagaland",
+   "district_code": "614",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kiphire.nic.in/police",
+  "payload": {
+   "url": "https://kiphire.nic.in/police/",
+   "name": "Kiphire",
+   "kind": "District administration",
+   "state": "NL",
+   "jurisdiction": "Nagaland",
+   "district_code": "614",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kiphire.nic.in/district-administration-kiphire-conducts-plantation-drive-on-world-environment-day",
+  "payload": {
+   "url": "https://kiphire.nic.in/district-administration-kiphire-conducts-plantation-drive-on-world-environment-day/",
+   "name": "Kiphire",
+   "kind": "District administration",
+   "state": "NL",
+   "jurisdiction": "Nagaland",
+   "district_code": "614",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "niuland.nic.in",
+  "payload": {
+   "url": "https://niuland.nic.in",
+   "name": "Niuland",
+   "kind": "District administration",
+   "state": "NL",
+   "jurisdiction": "Nagaland",
+   "district_code": "764",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "balangir.odisha.gov.in",
+  "payload": {
+   "url": "https://balangir.odisha.gov.in",
+   "name": "Balangir",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "345",
+   "route": "india"
+  }
+ },
+ {
+  "key": "bhadrak.odisha.gov.in",
+  "payload": {
+   "url": "https://bhadrak.odisha.gov.in",
+   "name": "Bhadrak",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "348",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dhenkanal.odisha.gov.in",
+  "payload": {
+   "url": "https://dhenkanal.odisha.gov.in",
+   "name": "Dhenkanal",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "352",
+   "route": "india"
+  }
+ },
+ {
+  "key": "gajapati.odisha.gov.in",
+  "payload": {
+   "url": "https://gajapati.odisha.gov.in",
+   "name": "Gajapati",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "353",
+   "route": "india"
+  }
+ },
+ {
+  "key": "ganjam.odisha.gov.in",
+  "payload": {
+   "url": "https://ganjam.odisha.gov.in",
+   "name": "Ganjam",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "354",
+   "route": "india"
+  }
+ },
+ {
+  "key": "jajpur.odisha.gov.in",
+  "payload": {
+   "url": "https://jajpur.odisha.gov.in",
+   "name": "Jajpur",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "356",
+   "route": "india"
+  }
+ },
+ {
+  "key": "jharsuguda.odisha.gov.in",
+  "payload": {
+   "url": "https://jharsuguda.odisha.gov.in",
+   "name": "Jharsuguda",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "357",
+   "route": "india"
+  }
+ },
+ {
+  "key": "kalahandi.odisha.gov.in",
+  "payload": {
+   "url": "https://kalahandi.odisha.gov.in",
+   "name": "Kalahandi",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "358",
+   "route": "india"
+  }
+ },
+ {
+  "key": "kandhamal.odisha.gov.in",
+  "payload": {
+   "url": "https://kandhamal.odisha.gov.in",
+   "name": "Kandhamala",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "359",
+   "route": "india"
+  }
+ },
+ {
+  "key": "kendujhar.odisha.gov.in",
+  "payload": {
+   "url": "https://kendujhar.odisha.gov.in",
+   "name": "Kendujhar",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "361",
+   "route": "india"
+  }
+ },
+ {
+  "key": "khordha.odisha.gov.in",
+  "payload": {
+   "url": "https://khordha.odisha.gov.in",
+   "name": "Khordha",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "362",
+   "route": "india"
+  }
+ },
+ {
+  "key": "nuapada.odisha.gov.in",
+  "payload": {
+   "url": "https://nuapada.odisha.gov.in",
+   "name": "Nuapada",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "368",
+   "route": "india"
+  }
+ },
+ {
+  "key": "puri.odisha.gov.in",
+  "payload": {
+   "url": "https://puri.odisha.gov.in",
+   "name": "Puri",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "369",
+   "route": "india"
+  }
+ },
+ {
+  "key": "karaikal.gov.in",
+  "payload": {
+   "url": "https://karaikal.gov.in",
+   "name": "Karaikal",
+   "kind": "District administration",
+   "state": "PY",
+   "jurisdiction": "Puducherry",
+   "district_code": "598",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "karaikal.gov.in/contact-police",
+  "payload": {
+   "url": "https://karaikal.gov.in/contact-police/",
+   "name": "Karaikal",
+   "kind": "District administration",
+   "state": "PY",
+   "jurisdiction": "Puducherry",
+   "district_code": "598",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "karaikal.gov.in/contact-public-works",
+  "payload": {
+   "url": "https://karaikal.gov.in/contact-public-works/",
+   "name": "Karaikal",
+   "kind": "District administration",
+   "state": "PY",
+   "jurisdiction": "Puducherry",
+   "district_code": "598",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "karaikal.gov.in/general-administration",
+  "payload": {
+   "url": "https://karaikal.gov.in/general-administration/",
+   "name": "Karaikal",
+   "kind": "District administration",
+   "state": "PY",
+   "jurisdiction": "Puducherry",
+   "district_code": "598",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "puducherry-dt.gov.in",
+  "payload": {
+   "url": "https://puducherry-dt.gov.in",
+   "name": "Puducherry",
+   "kind": "District administration",
+   "state": "PY",
+   "jurisdiction": "Puducherry",
+   "district_code": "600",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "amritsar.nic.in",
+  "payload": {
+   "url": "https://amritsar.nic.in",
+   "name": "Amritsar",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "27",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "amritsar.nic.in/health",
+  "payload": {
+   "url": "https://amritsar.nic.in/health/",
+   "name": "Amritsar",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "27",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "amritsar.nic.in/contact-directory",
+  "payload": {
+   "url": "https://amritsar.nic.in/contact-directory/",
+   "name": "Amritsar",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "27",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "amritsar.nic.in/district-administration",
+  "payload": {
+   "url": "https://amritsar.nic.in/district-administration/",
+   "name": "Amritsar",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "27",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "barnala.gov.in",
+  "payload": {
+   "url": "https://barnala.gov.in",
+   "name": "Barnala",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "605",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "barnala.gov.in/departments/health",
+  "payload": {
+   "url": "https://barnala.gov.in/departments/health/",
+   "name": "Barnala",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "605",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "barnala.gov.in/about-district/list-of-rti-officers-at-dc-office-barnala",
+  "payload": {
+   "url": "https://barnala.gov.in/about-district/list-of-rti-officers-at-dc-office-barnala/",
+   "name": "Barnala",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "605",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "barnala.gov.in/administration",
+  "payload": {
+   "url": "https://barnala.gov.in/administration/",
+   "name": "Barnala",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "605",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bathinda.nic.in",
+  "payload": {
+   "url": "https://bathinda.nic.in",
+   "name": "Bathinda",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "28",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "bathinda.nic.in/health",
+  "payload": {
+   "url": "https://bathinda.nic.in/health/",
+   "name": "Bathinda",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "28",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bathinda.nic.in/administration",
+  "payload": {
+   "url": "https://bathinda.nic.in/administration/",
+   "name": "Bathinda",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "28",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bathinda.nic.in/role-of-district-administration",
+  "payload": {
+   "url": "https://bathinda.nic.in/role-of-district-administration/",
+   "name": "Bathinda",
+   "kind": "District administration",
+   "state": "PB",
+   "jurisdiction": "Punjab",
+   "district_code": "28",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ajmer.rajasthan.gov.in",
+  "payload": {
+   "url": "https://ajmer.rajasthan.gov.in",
+   "name": "Ajmer",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "86",
+   "route": "india"
+  }
+ },
+ {
+  "key": "alwar.rajasthan.gov.in",
+  "payload": {
+   "url": "https://alwar.rajasthan.gov.in",
+   "name": "Alwar",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "87",
+   "route": "india"
+  }
+ },
+ {
+  "key": "balotra.rajasthan.gov.in",
+  "payload": {
+   "url": "https://balotra.rajasthan.gov.in",
+   "name": "Balotra",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "775",
+   "route": "india"
+  }
+ },
+ {
+  "key": "banswara.rajasthan.gov.in",
+  "payload": {
+   "url": "https://banswara.rajasthan.gov.in",
+   "name": "Banswara",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "88",
+   "route": "india"
+  }
+ },
+ {
+  "key": "baran.rajasthan.gov.in",
+  "payload": {
+   "url": "https://baran.rajasthan.gov.in",
+   "name": "Baran",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "89",
+   "route": "india"
+  }
+ },
+ {
+  "key": "barmer.rajasthan.gov.in",
+  "payload": {
+   "url": "https://barmer.rajasthan.gov.in",
+   "name": "Barmer",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "90",
+   "route": "india"
+  }
+ },
+ {
+  "key": "beawar.rajasthan.gov.in",
+  "payload": {
+   "url": "https://beawar.rajasthan.gov.in",
+   "name": "Beawar",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "774",
+   "route": "india"
+  }
+ },
+ {
+  "key": "bharatpur.rajasthan.gov.in",
+  "payload": {
+   "url": "https://bharatpur.rajasthan.gov.in",
+   "name": "Bharatpur",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "91",
+   "route": "india"
+  }
+ },
+ {
+  "key": "bhilwara.rajasthan.gov.in",
+  "payload": {
+   "url": "https://bhilwara.rajasthan.gov.in",
+   "name": "Bhilwara",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "92",
+   "route": "india"
+  }
+ },
+ {
+  "key": "bikaner.rajasthan.gov.in",
+  "payload": {
+   "url": "https://bikaner.rajasthan.gov.in",
+   "name": "Bikaner",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "93",
+   "route": "india"
+  }
+ },
+ {
+  "key": "bundi.rajasthan.gov.in",
+  "payload": {
+   "url": "https://bundi.rajasthan.gov.in",
+   "name": "Bundi",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "94",
+   "route": "india"
+  }
+ },
+ {
+  "key": "chittorgarh.rajasthan.gov.in",
+  "payload": {
+   "url": "https://chittorgarh.rajasthan.gov.in",
+   "name": "Chittorgarh",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "95",
+   "route": "india"
+  }
+ },
+ {
+  "key": "churu.rajasthan.gov.in",
+  "payload": {
+   "url": "https://churu.rajasthan.gov.in",
+   "name": "Churu",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "96",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dausa.rajasthan.gov.in",
+  "payload": {
+   "url": "https://dausa.rajasthan.gov.in",
+   "name": "Dausa",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "97",
+   "route": "india"
+  }
+ },
+ {
+  "key": "deeg.rajasthan.gov.in",
+  "payload": {
+   "url": "https://deeg.rajasthan.gov.in",
+   "name": "Deeg",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "767",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dholpur.rajasthan.gov.in",
+  "payload": {
+   "url": "https://dholpur.rajasthan.gov.in",
+   "name": "Dholpur",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "98",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dungarpur.rajasthan.gov.in",
+  "payload": {
+   "url": "https://dungarpur.rajasthan.gov.in",
+   "name": "Dungarpur",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "99",
+   "route": "india"
+  }
+ },
+ {
+  "key": "sriganganagar.rajasthan.gov.in",
+  "payload": {
+   "url": "https://sriganganagar.rajasthan.gov.in",
+   "name": "Ganganagar",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "100",
+   "route": "india"
+  }
+ },
+ {
+  "key": "hanumangarh.rajasthan.gov.in",
+  "payload": {
+   "url": "https://hanumangarh.rajasthan.gov.in",
+   "name": "Hanumangarh",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "101",
+   "route": "india"
+  }
+ },
+ {
+  "key": "jaipur.rajasthan.gov.in",
+  "payload": {
+   "url": "https://jaipur.rajasthan.gov.in",
+   "name": "Jaipur",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "102",
+   "route": "india"
+  }
+ },
+ {
+  "key": "jaisalmer.rajasthan.gov.in",
+  "payload": {
+   "url": "https://jaisalmer.rajasthan.gov.in",
+   "name": "Jaisalmer",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "103",
+   "route": "india"
+  }
+ },
+ {
+  "key": "jalore.rajasthan.gov.in",
+  "payload": {
+   "url": "https://jalore.rajasthan.gov.in",
+   "name": "Jalore",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "104",
+   "route": "india"
+  }
+ },
+ {
+  "key": "jhalawar.rajasthan.gov.in",
+  "payload": {
+   "url": "https://jhalawar.rajasthan.gov.in",
+   "name": "Jhalawar",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "105",
+   "route": "india"
+  }
+ },
+ {
+  "key": "jhunjhunu.rajasthan.gov.in",
+  "payload": {
+   "url": "https://jhunjhunu.rajasthan.gov.in",
+   "name": "Jhunjhunu",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "106",
+   "route": "india"
+  }
+ },
+ {
+  "key": "jodhpur.rajasthan.gov.in",
+  "payload": {
+   "url": "https://jodhpur.rajasthan.gov.in",
+   "name": "Jodhpur",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "107",
+   "route": "india"
+  }
+ },
+ {
+  "key": "karauli.rajasthan.gov.in",
+  "payload": {
+   "url": "https://karauli.rajasthan.gov.in",
+   "name": "Karauli",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "108",
+   "route": "india"
+  }
+ },
+ {
+  "key": "khairthaltijara.rajasthan.gov.in",
+  "payload": {
+   "url": "https://khairthaltijara.rajasthan.gov.in",
+   "name": "Khairthal-Tijara",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "770",
+   "route": "india"
+  }
+ },
+ {
+  "key": "kota.rajasthan.gov.in",
+  "payload": {
+   "url": "https://kota.rajasthan.gov.in",
+   "name": "Kota",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "109",
+   "route": "india"
+  }
+ },
+ {
+  "key": "kotputlibehror.rajasthan.gov.in",
+  "payload": {
+   "url": "https://kotputlibehror.rajasthan.gov.in",
+   "name": "Kotputli-Behror",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "782",
+   "route": "india"
+  }
+ },
+ {
+  "key": "nagaur.rajasthan.gov.in",
+  "payload": {
+   "url": "https://nagaur.rajasthan.gov.in",
+   "name": "Nagaur",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "110",
+   "route": "india"
+  }
+ },
+ {
+  "key": "pali.rajasthan.gov.in",
+  "payload": {
+   "url": "https://pali.rajasthan.gov.in",
+   "name": "Pali",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "111",
+   "route": "india"
+  }
+ },
+ {
+  "key": "phalodi.rajasthan.gov.in",
+  "payload": {
+   "url": "https://phalodi.rajasthan.gov.in",
+   "name": "Phalodi",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "772",
+   "route": "india"
+  }
+ },
+ {
+  "key": "pratapgarh.rajasthan.gov.in",
+  "payload": {
+   "url": "https://pratapgarh.rajasthan.gov.in",
+   "name": "Pratapgarh",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "629",
+   "route": "india"
+  }
+ },
+ {
+  "key": "rajsamand.rajasthan.gov.in",
+  "payload": {
+   "url": "https://rajsamand.rajasthan.gov.in",
+   "name": "Rajsamand",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "112",
+   "route": "india"
+  }
+ },
+ {
+  "key": "salumber.rajasthan.gov.in",
+  "payload": {
+   "url": "https://salumber.rajasthan.gov.in",
+   "name": "Salumbar",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "777",
+   "route": "india"
+  }
+ },
+ {
+  "key": "sawaimadhopur.rajasthan.gov.in",
+  "payload": {
+   "url": "https://sawaimadhopur.rajasthan.gov.in",
+   "name": "Sawai Madhopur",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "113",
+   "route": "india"
+  }
+ },
+ {
+  "key": "sikar.rajasthan.gov.in",
+  "payload": {
+   "url": "https://sikar.rajasthan.gov.in",
+   "name": "Sikar",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "114",
+   "route": "india"
+  }
+ },
+ {
+  "key": "sirohi.rajasthan.gov.in",
+  "payload": {
+   "url": "https://sirohi.rajasthan.gov.in",
+   "name": "Sirohi",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "115",
+   "route": "india"
+  }
+ },
+ {
+  "key": "tonk.rajasthan.gov.in",
+  "payload": {
+   "url": "https://tonk.rajasthan.gov.in",
+   "name": "Tonk",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "116",
+   "route": "india"
+  }
+ },
+ {
+  "key": "udaipur.rajasthan.gov.in",
+  "payload": {
+   "url": "https://udaipur.rajasthan.gov.in",
+   "name": "Udaipur",
+   "kind": "District administration",
+   "state": "RJ",
+   "jurisdiction": "Rajasthan",
+   "district_code": "117",
+   "route": "india"
+  }
+ },
+ {
+  "key": "eastsikkim.nic.in",
+  "payload": {
+   "url": "https://eastsikkim.nic.in",
+   "name": "Gangtok",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "225",
+   "route": "india"
+  }
+ },
+ {
+  "key": "gyalshing.nic.in",
+  "payload": {
+   "url": "https://gyalshing.nic.in",
+   "name": "Gyalshing",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "228",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gyalshing.nic.in/brief-resume/whos-who",
+  "payload": {
+   "url": "https://gyalshing.nic.in/brief-resume/whos-who/",
+   "name": "Gyalshing",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "228",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "gyalshing.nic.in/district-administration",
+  "payload": {
+   "url": "https://gyalshing.nic.in/district-administration/",
+   "name": "Gyalshing",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "228",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "mangan.nic.in",
+  "payload": {
+   "url": "https://mangan.nic.in",
+   "name": "Mangan",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "226",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "namchi.nic.in",
+  "payload": {
+   "url": "https://namchi.nic.in",
+   "name": "Namchi",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "227",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "namchi.nic.in/contact-directory-2",
+  "payload": {
+   "url": "https://namchi.nic.in/contact-directory-2/",
+   "name": "Namchi",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "227",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "namchi.nic.in/district-administration",
+  "payload": {
+   "url": "https://namchi.nic.in/district-administration/",
+   "name": "Namchi",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "227",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "namchi.nic.in/district-administration/dm-succession-list",
+  "payload": {
+   "url": "https://namchi.nic.in/district-administration/dm-succession-list/",
+   "name": "Namchi",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "227",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ariyalur.nic.in",
+  "payload": {
+   "url": "https://ariyalur.nic.in",
+   "name": "Ariyalur",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "610",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ariyalur.nic.in/contact-directory",
+  "payload": {
+   "url": "https://ariyalur.nic.in/contact-directory/",
+   "name": "Ariyalur",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "610",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ariyalur.nic.in/about-district/administrative-setup/revenue-administration",
+  "payload": {
+   "url": "https://ariyalur.nic.in/about-district/administrative-setup/revenue-administration/",
+   "name": "Ariyalur",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "610",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ariyalur.nic.in/about-district/administrative-setup/district-administration",
+  "payload": {
+   "url": "https://ariyalur.nic.in/about-district/administrative-setup/district-administration/",
+   "name": "Ariyalur",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "610",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chengalpattu.nic.in",
+  "payload": {
+   "url": "https://chengalpattu.nic.in",
+   "name": "Chengalpattu",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "730",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "chengalpattu.nic.in/contact-directory",
+  "payload": {
+   "url": "https://chengalpattu.nic.in/contact-directory/",
+   "name": "Chengalpattu",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "730",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chengalpattu.nic.in/administrative-setup/revenue-administration",
+  "payload": {
+   "url": "https://chengalpattu.nic.in/administrative-setup/revenue-administration/",
+   "name": "Chengalpattu",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "730",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chennai.nic.in",
+  "payload": {
+   "url": "https://chennai.nic.in",
+   "name": "Chennai",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "568",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "chennai.nic.in/contact-directory2",
+  "payload": {
+   "url": "https://chennai.nic.in/contact-directory2/",
+   "name": "Chennai",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "568",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chennai.nic.in/district-administration",
+  "payload": {
+   "url": "https://chennai.nic.in/district-administration/",
+   "name": "Chennai",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "568",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chennai.nic.in/administrative-setup__trashed/revenue-administration",
+  "payload": {
+   "url": "https://chennai.nic.in/administrative-setup__trashed/revenue-administration/",
+   "name": "Chennai",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "568",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ranipet.nic.in",
+  "payload": {
+   "url": "https://ranipet.nic.in",
+   "name": "Ranipet",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "731",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ranipet.nic.in/health",
+  "payload": {
+   "url": "https://ranipet.nic.in/health/",
+   "name": "Ranipet",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "731",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ranipet.nic.in/contact-directory",
+  "payload": {
+   "url": "https://ranipet.nic.in/contact-directory/",
+   "name": "Ranipet",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "731",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ranipet.nic.in/revenue-administration",
+  "payload": {
+   "url": "https://ranipet.nic.in/revenue-administration/",
+   "name": "Ranipet",
+   "kind": "District administration",
+   "state": "TN",
+   "jurisdiction": "Tamil Nadu",
+   "district_code": "731",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "adilabad.telangana.gov.in",
+  "payload": {
+   "url": "https://adilabad.telangana.gov.in",
+   "name": "Adilabad",
+   "kind": "District administration",
+   "state": "TS",
+   "jurisdiction": "Telangana",
+   "district_code": "501",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "adilabad.telangana.gov.in/contact-directory",
+  "payload": {
+   "url": "https://adilabad.telangana.gov.in/contact-directory/",
+   "name": "Adilabad",
+   "kind": "District administration",
+   "state": "TS",
+   "jurisdiction": "Telangana",
+   "district_code": "501",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "adilabad.telangana.gov.in/nic-contact",
+  "payload": {
+   "url": "https://adilabad.telangana.gov.in/nic-contact/",
+   "name": "Adilabad",
+   "kind": "District administration",
+   "state": "TS",
+   "jurisdiction": "Telangana",
+   "district_code": "501",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kothagudem.telangana.gov.in",
+  "payload": {
+   "url": "https://kothagudem.telangana.gov.in",
+   "name": "Bhadradri Kothagudem",
+   "kind": "District administration",
+   "state": "TS",
+   "jurisdiction": "Telangana",
+   "district_code": "690",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "hanumakonda.telangana.gov.in",
+  "payload": {
+   "url": "https://hanumakonda.telangana.gov.in",
+   "name": "Hanumakonda",
+   "kind": "District administration",
+   "state": "TS",
+   "jurisdiction": "Telangana",
+   "district_code": "686",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dnh.gov.in",
+  "payload": {
+   "url": "https://dnh.gov.in",
+   "name": "Dadra And Nagar Haveli",
+   "kind": "District administration",
+   "state": "DH",
+   "jurisdiction": "The Dadra And Nagar Haveli And Daman And Diu",
+   "district_code": "465",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "daman.nic.in",
+  "payload": {
+   "url": "https://daman.nic.in",
+   "name": "Daman",
+   "kind": "District administration",
+   "state": "DH",
+   "jurisdiction": "The Dadra And Nagar Haveli And Daman And Diu",
+   "district_code": "463",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "diu.gov.in",
+  "payload": {
+   "url": "https://diu.gov.in",
+   "name": "Diu",
+   "kind": "District administration",
+   "state": "DH",
+   "jurisdiction": "The Dadra And Nagar Haveli And Daman And Diu",
+   "district_code": "464",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "diu.gov.in/important-numbers",
+  "payload": {
+   "url": "https://diu.gov.in/important-numbers/",
+   "name": "Diu",
+   "kind": "District administration",
+   "state": "DH",
+   "jurisdiction": "The Dadra And Nagar Haveli And Daman And Diu",
+   "district_code": "464",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dhalai.nic.in",
+  "payload": {
+   "url": "https://dhalai.nic.in",
+   "name": "Dhalai",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "269",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dhalai.nic.in/health",
+  "payload": {
+   "url": "https://dhalai.nic.in/health/",
+   "name": "Dhalai",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "269",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dhalai.nic.in/police",
+  "payload": {
+   "url": "https://dhalai.nic.in/police/",
+   "name": "Dhalai",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "269",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dhalai.nic.in/departments/election/election-officer-details",
+  "payload": {
+   "url": "https://dhalai.nic.in/departments/election/election-officer-details/",
+   "name": "Dhalai",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "269",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "gomati.nic.in",
+  "payload": {
+   "url": "https://gomati.nic.in",
+   "name": "Gomati",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "654",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gomati.nic.in/health",
+  "payload": {
+   "url": "https://gomati.nic.in/health/",
+   "name": "Gomati",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "654",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "gomati.nic.in/police",
+  "payload": {
+   "url": "https://gomati.nic.in/police/",
+   "name": "Gomati",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "654",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "gomati.nic.in/sector-officer",
+  "payload": {
+   "url": "https://gomati.nic.in/sector-officer/",
+   "name": "Gomati",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "654",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "khowai.nic.in",
+  "payload": {
+   "url": "https://khowai.nic.in",
+   "name": "Khowai",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "652",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "khowai.nic.in/health",
+  "payload": {
+   "url": "https://khowai.nic.in/health/",
+   "name": "Khowai",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "652",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "khowai.nic.in/police",
+  "payload": {
+   "url": "https://khowai.nic.in/police/",
+   "name": "Khowai",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "652",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "khowai.nic.in/revenue-administration",
+  "payload": {
+   "url": "https://khowai.nic.in/revenue-administration/",
+   "name": "Khowai",
+   "kind": "District administration",
+   "state": "TR",
+   "jurisdiction": "Tripura",
+   "district_code": "652",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "almora.nic.in",
+  "payload": {
+   "url": "https://almora.nic.in",
+   "name": "Almora",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "45",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "almora.nic.in/police",
+  "payload": {
+   "url": "https://almora.nic.in/police/",
+   "name": "Almora",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "45",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "almora.nic.in/government-officers",
+  "payload": {
+   "url": "https://almora.nic.in/government-officers/",
+   "name": "Almora",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "45",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "almora.nic.in/district-level-officers",
+  "payload": {
+   "url": "https://almora.nic.in/district-level-officers/",
+   "name": "Almora",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "45",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bageshwar.nic.in",
+  "payload": {
+   "url": "https://bageshwar.nic.in",
+   "name": "Bageshwar",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "46",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "bageshwar.nic.in/police",
+  "payload": {
+   "url": "https://bageshwar.nic.in/police/",
+   "name": "Bageshwar",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "46",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bageshwar.nic.in/district-education-officer",
+  "payload": {
+   "url": "https://bageshwar.nic.in/district-education-officer/",
+   "name": "Bageshwar",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "46",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bageshwar.nic.in/whoswho/name-of-the-official",
+  "payload": {
+   "url": "https://bageshwar.nic.in/whoswho/name-of-the-official/",
+   "name": "Bageshwar",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "46",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chamoli.gov.in",
+  "payload": {
+   "url": "https://chamoli.gov.in",
+   "name": "Chamoli",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "47",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "chamoli.gov.in/police",
+  "payload": {
+   "url": "https://chamoli.gov.in/police/",
+   "name": "Chamoli",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "47",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chamoli.gov.in/officers",
+  "payload": {
+   "url": "https://chamoli.gov.in/officers/",
+   "name": "Chamoli",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "47",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "chamoli.gov.in/police-officers",
+  "payload": {
+   "url": "https://chamoli.gov.in/police-officers/",
+   "name": "Chamoli",
+   "kind": "District administration",
+   "state": "UK",
+   "jurisdiction": "Uttarakhand",
+   "district_code": "47",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "agra.nic.in",
+  "payload": {
+   "url": "https://agra.nic.in",
+   "name": "Agra",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "118",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "agra.nic.in/police",
+  "payload": {
+   "url": "https://agra.nic.in/police/",
+   "name": "Agra",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "118",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "agra.nic.in/blo-supervisor-officer-list",
+  "payload": {
+   "url": "https://agra.nic.in/blo-supervisor-officer-list/",
+   "name": "Agra",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "118",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "aligarh.nic.in",
+  "payload": {
+   "url": "https://aligarh.nic.in",
+   "name": "Aligarh",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "119",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "aligarh.nic.in/health",
+  "payload": {
+   "url": "https://aligarh.nic.in/health/",
+   "name": "Aligarh",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "119",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "aligarh.nic.in/police",
+  "payload": {
+   "url": "https://aligarh.nic.in/police/",
+   "name": "Aligarh",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "119",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "aligarh.nic.in/telephone",
+  "payload": {
+   "url": "https://aligarh.nic.in/telephone/",
+   "name": "Aligarh",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "119",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ambedkarnagar.nic.in",
+  "payload": {
+   "url": "https://ambedkarnagar.nic.in",
+   "name": "Ambedkar Nagar",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "121",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ambedkarnagar.nic.in/health",
+  "payload": {
+   "url": "https://ambedkarnagar.nic.in/health/",
+   "name": "Ambedkar Nagar",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "121",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ambedkarnagar.nic.in/police",
+  "payload": {
+   "url": "https://ambedkarnagar.nic.in/police/",
+   "name": "Ambedkar Nagar",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "121",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ambedkarnagar.nic.in/returning-officer-detail",
+  "payload": {
+   "url": "https://ambedkarnagar.nic.in/returning-officer-detail/",
+   "name": "Ambedkar Nagar",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "district_code": "121",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "alipurduar.gov.in",
+  "payload": {
+   "url": "https://alipurduar.gov.in",
+   "name": "Alipurduar",
+   "kind": "District administration",
+   "state": "WB",
+   "jurisdiction": "West Bengal",
+   "district_code": "664",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "bankura.gov.in",
+  "payload": {
+   "url": "https://bankura.gov.in",
+   "name": "Bankura",
+   "kind": "District administration",
+   "state": "WB",
+   "jurisdiction": "West Bengal",
+   "district_code": "305",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "bankura.gov.in/police",
+  "payload": {
+   "url": "https://bankura.gov.in/police/",
+   "name": "Bankura",
+   "kind": "District administration",
+   "state": "WB",
+   "jurisdiction": "West Bengal",
+   "district_code": "305",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "birbhum.gov.in",
+  "payload": {
+   "url": "https://birbhum.gov.in",
+   "name": "Birbhum",
+   "kind": "District administration",
+   "state": "WB",
+   "jurisdiction": "West Bengal",
+   "district_code": "307",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "birbhum.gov.in/health",
+  "payload": {
+   "url": "https://birbhum.gov.in/health/",
+   "name": "Birbhum",
+   "kind": "District administration",
+   "state": "WB",
+   "jurisdiction": "West Bengal",
+   "district_code": "307",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "birbhum.gov.in/district-youth-officer",
+  "payload": {
+   "url": "https://birbhum.gov.in/district-youth-officer/",
+   "name": "Birbhum",
+   "kind": "District administration",
+   "state": "WB",
+   "jurisdiction": "West Bengal",
+   "district_code": "307",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "birbhum.gov.in/contact-details",
+  "payload": {
+   "url": "https://birbhum.gov.in/contact-details/",
+   "name": "Birbhum",
+   "kind": "District administration",
+   "state": "WB",
+   "jurisdiction": "West Bengal",
+   "district_code": "307",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "darjeeling.gov.in",
+  "payload": {
+   "url": "https://darjeeling.gov.in",
+   "name": "Darjeeling",
+   "kind": "District administration",
+   "state": "WB",
+   "jurisdiction": "West Bengal",
+   "district_code": "309",
+   "route": "india"
+  }
+ },
+ {
+  "key": "purbamedinipur.gov.in",
+  "payload": {
+   "url": "https://purbamedinipur.gov.in",
+   "name": "Purba Medinipur",
+   "kind": "District administration",
+   "state": "WB",
+   "jurisdiction": "West Bengal",
+   "district_code": "317",
+   "route": "india"
+  }
+ },
+ {
+  "key": "khagaria.nic.in/district-contact-directory",
+  "payload": {
+   "url": "https://khagaria.nic.in/district-contact-directory/",
+   "name": "Khagaria",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "route": "abroad",
+   "read_start": "1",
+   "review": "1"
+  }
+ },
+ {
+  "key": "sheohar.nic.in/sheohar-contact-directory",
+  "payload": {
+   "url": "https://sheohar.nic.in/sheohar-contact-directory/",
+   "name": "Sheohar",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "route": "abroad",
+   "read_start": "1",
+   "review": "1"
+  }
+ },
+ {
+  "key": "begusarai.nic.in/health",
+  "payload": {
+   "url": "https://begusarai.nic.in/health/",
+   "name": "Begusarai",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "route": "abroad",
+   "read_start": "1",
+   "review": "1"
+  }
+ },
+ {
+  "key": "lakhisarai.nic.in/health",
+  "payload": {
+   "url": "https://lakhisarai.nic.in/health/",
+   "name": "Lakhisarai",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "route": "abroad",
+   "read_start": "1",
+   "review": "1"
+  }
+ },
+ {
+  "key": "hathras.nic.in/telephone",
+  "payload": {
+   "url": "https://hathras.nic.in/telephone/",
+   "name": "Hathras",
+   "kind": "District administration",
+   "state": "UP",
+   "jurisdiction": "Uttar Pradesh",
+   "route": "abroad",
+   "read_start": "1",
+   "review": "1"
+  }
+ }
+]

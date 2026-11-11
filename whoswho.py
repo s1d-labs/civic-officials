@@ -10,6 +10,7 @@ import gzip
 import hashlib
 import json
 import os
+import re
 import signal
 import sys
 import threading
@@ -33,6 +34,10 @@ MAX_AJAX = 300          # ww_pages calls per site
 # A site that fails from a GitHub runner usually refuses foreign IPs: it goes to the -in project (Indian proxies), which retries.
 RETRY = os.environ.get("SCRAPE_POOL_PROJECT", "").endswith(("-in", "-geo", "-platforms", "-found", "-bigcities"))
 MAX_ATTEMPTS = 3
+# A web server's own placeholder, not the site: through the Indian proxies an https failure fell back to http:// and got these
+# pages (193 sites in civic-officials-in, 2026-11-09: Rajasthan, Assam, Odisha district portals), which ended as "done" with 0 rows.
+DEFAULT_PAGE = re.compile(r"^(welcome to nginx!?|web server'?s default page|apache2 \w+ default page.*|test page for the .*http server.*|"
+                          r"it works!?|iis windows server|index of /|403 forbidden|404 not found|502 bad gateway|503 service .*)$", re.I)
 stop = False
 
 
@@ -148,6 +153,9 @@ class Site:
             home, why = self.get("http://" + self.url[8:])
         if home is None:
             return False, why or "home page did not load"
+        if DEFAULT_PAGE.match(page_title(home.text)):
+            self.metric("server_default_page")
+            return False, f"server default page ({page_title(home.text)[:40]}) at {home.url}"
         base = home.url
         self.site = (urlsplit(base).hostname or self.site).lower().removeprefix("www.")
         todo = candidate_links(home.text, base, self.site)

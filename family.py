@@ -152,3 +152,13 @@ if _dept:
     # geo + proxy: India servers and GitHub runners through the Indian proxies both take these items
 
 PROBES = []    # many hosts per project: no single health check would mean anything
+
+# District portals that no project read before (seeds/directories_missing.json, 2026-11-11): whoswho items in the sites.csv item
+# format. "route" abroad = answered from Germany (GitHub runners); india = India servers and the Indian proxies.
+_dmf = HERE / "seeds" / "directories_missing.json"
+if _dmf.exists():
+    _dm = json.loads(_dmf.read_text())
+    for _suffix, _route, _extra in (("dm-abroad", "abroad", {}), ("dm-in", "india", {"geo": "IN", "proxy": "IN"})):
+        _p = project(_suffix, f"District officers: portals not read before ({_route})", [], **_extra)
+        _p["items"] = [i for i in _dm if i["payload"]["route"] == _route]
+        PROJECTS.append(_p)

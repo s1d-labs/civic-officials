@@ -63,11 +63,13 @@ def deobfuscate(s):
 
 
 FIELD = {
-    "name": re.compile(r"^(name|officer|officer'?s? name|name of (the )?officer|नाम|अधिकारी का नाम|ಹೆಸರು|பெயர்)$", re.I),
-    "designation": re.compile(r"(designation|post|पद|ಹುದ್ದೆ|பதவி)", re.I),
-    "email": re.compile(r"(e-?mail|ई-?मेल|ಇಮೇಲ್)", re.I),
-    "phone": re.compile(r"(phone|mobile|contact|tel|फ़ोन|फोन|मोबाइल|ದೂರವಾಣಿ|தொலைபேசி)", re.I),
-    "address": re.compile(r"(address|पता|ವಿಳಾಸ|முகவரி)", re.I),
+    "name": re.compile(r"^(name|officer|officer'?s? name|name of (the )?officer|नाम|अधिकारी का नाम|ಹೆಸರು|பெயர்|ନାମ)$", re.I),
+    "designation": re.compile(r"(designation|post|पद|ಹುದ್ದೆ|பதவி|ପଦବୀ)", re.I),
+    "email": re.compile(r"(e-?mail|ई-?मेल|ಇಮೇಲ್|ଇମେଲ)", re.I),
+    "phone": re.compile(r"(phone|mobile|contact|tel|फ़ोन|फोन|मोबाइल|ದೂರವಾಣಿ|தொலைபேசி|ଦୂରଭାଷ|ଦୁରଭାଷ|ମୋବାଇଲ)", re.I),
+    "address": re.compile(r"(address|पता|ವಿಳಾಸ|முகவரி|ଠିକଣା)", re.I),
+    # the office or department a row is about (lists without a post column: "Name of Office", "Department Name", "विभाग नाम")
+    "department": re.compile(r"(department|^office$|name of (the )?office$|office name|विभाग|ବିଭାଗ|କାର୍ଯ୍ୟାଳୟ)", re.I),
 }
 
 
@@ -93,6 +95,13 @@ def tables(html):
         if not trs:
             continue
         head = [" ".join(c.get_text(" ", strip=True).split()) for c in trs[0].find_all(["th", "td"])]
+        title = ""
+        # a title row above the header row (one cell, often with colspan: "District Administration" | Sl no. | Name | ...):
+        # the title becomes the caption and the next row is the header (Bihar contact directories, found by the review agents)
+        if len(trs) > 2 and sum(1 for h in head if h) == 1:
+            nxt = [" ".join(c.get_text(" ", strip=True).split()) for c in trs[1].find_all(["th", "td"])]
+            if sum(1 for h in nxt if h) >= 2 and any(rx.search(h) for h in nxt for rx in FIELD.values()):
+                title, head, trs = next(h for h in head if h), nxt, trs[1:]
         if not any(head) or len(head) < 2:
             continue
         rows = []
@@ -101,7 +110,7 @@ def tables(html):
             if any(cells):
                 rows.append({(head[i] if i < len(head) and head[i] else f"col{i}"): v for i, v in enumerate(cells)})
         if rows:
-            out.append({"caption": " ".join(cap.get_text(" ", strip=True).split()) if cap else "", "headers": head, "rows": rows})
+            out.append({"caption": " ".join(cap.get_text(" ", strip=True).split()) if cap else title, "headers": head, "rows": rows})
     return out
 
 
