@@ -1,0 +1,41 @@
+[
+ {
+  "key": "blo2-dd-dnh",
+  "payload": {
+   "kind": "form-blo2_dd",
+   "state": "DD",
+   "url": "https://ceodaman.nic.in/Document-2023/DNHBLO.pdf",
+   "layout": "dnh",
+   "ac_no": 1,
+   "ac_name": "Dadra and Nagar Haveli",
+   "district": "Dadra and Nagar Haveli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "blo2-dd-daman",
+  "payload": {
+   "kind": "form-blo2_dd",
+   "state": "DD",
+   "url": "https://ceodaman.nic.in/Document-2023/DMNBLO.pdf",
+   "layout": "daman",
+   "ac_no": 2,
+   "ac_name": "Daman and Diu",
+   "district": "Daman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "blo2-dd-diu",
+  "payload": {
+   "kind": "form-blo2_dd",
+   "state": "DD",
+   "url": "https://ceodaman.nic.in/Document-2023/DIUBLO.pdf",
+   "layout": "diu",
+   "ac_no": 2,
+   "ac_name": "Daman and Diu",
+   "district": "Diu",
+   "india_only": false
+  }
+ }
+]

@@ -103,6 +103,18 @@ if _blof.exists():
                      "target": "www.ceo.kerala.gov.in", "env": {}, "probe": None, "unit_label": "booth", "record_label": "booth",
                      "items": [i for i in _blo if i["payload"]["state"] == "KL"], "workers": 8, "threads": 1, "delay_ms": 1000})
 
+# BLO lists from district websites and CEO pages (blo2 readers in forms/blo2_*.py; seeds/blo2_*.json); own task name so older
+# checkouts cannot take them. Scanned PDFs (kind "pdf") are saved in India for a later OCR task.
+_b2 = [i for f in sorted((HERE / "seeds").glob("blo2_*.json")) for i in json.loads(f.read_text())]
+if _b2:
+    PROJECTS.append({"name": f"{FAMILY}-blo2", "title": "Booth Level Officers: district lists and CEO pages (blo2)", "task": "blo2",
+                     "target": f"{FAMILY}-blo2", "env": {}, "probe": None, "unit_label": "file or page", "record_label": "booth part",
+                     "items": [i for i in _b2 if i["payload"]["kind"] != "pdf"], "workers": 4, "threads": 1, "delay_ms": 1000})
+    PROJECTS.append({"name": f"{FAMILY}-blo2-in", "title": "Booth Level Officers: scanned district PDFs saved once (India)", "task": "blo2",
+                     "target": f"{FAMILY}-blo2-in", "env": {}, "probe": None, "unit_label": "file", "record_label": "page",
+                     "items": [i for i in _b2 if i["payload"]["kind"] == "pdf"], "workers": 2, "threads": 1, "delay_ms": 1000,
+                     "geo": "IN", "proxy": "IN"})
+
 # Elected ward councillors from State Election Commission pages and result files (councillors task; councillor_sources.json):
 # India servers only (every SEC site checked refuses foreign IPs).
 _cof = HERE / "councillor_sources.json"
