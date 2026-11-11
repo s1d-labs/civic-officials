@@ -1,0 +1,8 @@
+{"module": "ward_coimbatore",
+ "payload": {"reader": "ward_coimbatore", "url": "https://ccmc.gov.in/index.php/central-zone/central-zone-officers-details", "state": "TN", "zone": "central"},
+ "routes": {"https://ccmc.gov.in/index.php/central-zone/central-zone-officers-details": "coimbatore_central.html"},
+ "min_records": 30, "min_wards": 20,
+ "expect": [{"post": "Assistant Commissioner", "name": "Ganeshan", "level": "zone", "wards": ["31", "84"]},
+            {"post": "Sanitary Inspector", "name": "Jayaparvathi", "level": "ward", "wards": ["62", "63", "64", "65", "66"]},
+            {"post": "Water Supply", "name": "Sakthivel", "level": "ward", "wards": ["31", "84"]},
+            {"post": "Bill Collector", "name": "Sabari", "wards": ["84"]}]}

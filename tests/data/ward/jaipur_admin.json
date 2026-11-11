@@ -1,0 +1,7 @@
+{"module": "ward_jaipur",
+ "payload": {"reader": "ward_jaipur", "url": "https://jaipurmc.org/PDF/Others/jp_AdminContList.pdf", "state": "RJ"},
+ "pages": "jaipur_admin.pages",
+ "min_records": 15,
+ "expect": [{"post": "Deputy Commissioner", "name": "बिजेन्द्र सिंह"},
+            {"post": "Deputy Commissioner", "name": "पवन कुमार शर्मा"},
+            {"post": "Revenue Officer", "name": "गीता कारनानी"}]}

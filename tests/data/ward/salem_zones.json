@@ -1,0 +1,7 @@
+{"module": "ward_salem",
+ "payload": {"reader": "ward_salem", "url": "https://www.salemcorporation.gov.in/zonal-officers.php", "state": "TN"},
+ "routes": {"https://www.salemcorporation.gov.in/zonal-officers.php": "salem_zones.html"},
+ "min_records": 40,
+ "expect": [{"post": "Assistant Commissioner", "name": "Sureshkumar", "level": "zone"},
+            {"post": "Sanitary Inspector", "name": "Prakash"},
+            {"post": "Revenue Inspector", "name": "Maatheshwaran"}]}

@@ -1,0 +1,5 @@
+{"module": "ward_vadodara",
+ "payload": {"reader": "ward_vadodara", "url": "https://vmc.gov.in/vmcengwing.aspx", "state": "GJ", "kind": "engineering", "india_only": true},
+ "routes": {"https://vmc.gov.in/vmcengwing.aspx": "vadodara_eng.html"},
+ "min_records": 6, "min_wards": 4,
+ "expect": [{"post": "Deputy Engineer", "name": "RAKESH SOLANKI", "wards": ["4"]}]}

@@ -1,0 +1,8 @@
+{"module": "ward_kanpur",
+ "payload": {"reader": "ward_kanpur", "url": "https://kmc.up.nic.in/key-contacts.html", "zone_pdf": "https://kmc.up.nic.in/PDF_Files/others/zonewardlist.pdf", "state": "UP", "india_only": true},
+ "routes": {"https://kmc.up.nic.in/key-contacts.html": "kanpur_kc.html"},
+ "min_records": 40,
+ "expect": [{"post": "Zonal Officer", "name": "अनुपम त्रिपाठी"},
+            {"post": "Zonal Sanitation Officer", "name": "आशीष बाजपेयी"},
+            {"post": "Junior Engineer", "name": "बालेन्द्र सिंह"},
+            {"post": "Executive Engineer", "name": "आर0के0सिंह"}]}

@@ -1,0 +1,431 @@
+[
+ {
+  "key": "ward_kamrc-hubballi-dharwad-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://hdmc.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "hubballi-dharwad",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-hubballi-dharwad-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://hdmc.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "hubballi-dharwad",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-hubballi-dharwad-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://hdmc.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "hubballi-dharwad",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-mysuru-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.mysurucity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "mysuru",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-mysuru-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.mysurucity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "mysuru",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-mysuru-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.mysurucity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "mysuru",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-kalaburagi-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.kalaburagicity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "kalaburagi",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-kalaburagi-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.kalaburagicity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "kalaburagi",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-kalaburagi-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.kalaburagicity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "kalaburagi",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-mangaluru-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.mangalurucity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "mangaluru",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-mangaluru-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.mangalurucity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "mangaluru",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-mangaluru-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.mangalurucity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "mangaluru",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-belagavi-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.belagavicity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "belagavi",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-belagavi-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.belagavicity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "belagavi",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-belagavi-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.belagavicity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "belagavi",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-davanagere-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://davanagerecity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "davanagere",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-davanagere-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://davanagerecity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "davanagere",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-davanagere-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://davanagerecity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "davanagere",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-ballari-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://ballaricity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "ballari",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-ballari-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://ballaricity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "ballari",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-ballari-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://ballaricity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "ballari",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-shivamogga-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.shivamoggacity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "shivamogga",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-shivamogga-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.shivamoggacity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "shivamogga",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-shivamogga-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.shivamoggacity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "shivamogga",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-tumakuru-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://tumakurucity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "tumakuru",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-tumakuru-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://tumakurucity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "tumakuru",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-tumakuru-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://tumakurucity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "tumakuru",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-raichur-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.raichurcity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "raichur",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-raichur-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.raichurcity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "raichur",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-raichur-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.raichurcity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "raichur",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-bidar-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.bidarcity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "bidar",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-bidar-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.bidarcity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "bidar",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-bidar-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.bidarcity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "bidar",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-hassan-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.hassancity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "hassan",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-hassan-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.hassancity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "hassan",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-hassan-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.hassancity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "hassan",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-vijayapura-engwardstaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.vijayapuracity.mrc.gov.in/en/Engwardstaffs",
+   "state": "KA",
+   "city": "vijayapura",
+   "page": "Engwardstaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-vijayapura-revenuestaffs",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.vijayapuracity.mrc.gov.in/en/Revenuestaffs",
+   "state": "KA",
+   "city": "vijayapura",
+   "page": "Revenuestaffs",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_kamrc-vijayapura-wardwise_staff_details",
+  "payload": {
+   "reader": "ward_kamrc",
+   "url": "http://www.vijayapuracity.mrc.gov.in/en/wardwise_staff_details",
+   "state": "KA",
+   "city": "vijayapura",
+   "page": "wardwise_staff_details",
+   "india_only": true
+  }
+ }
+]

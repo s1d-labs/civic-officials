@@ -1,0 +1,47 @@
+[
+ {
+  "key": "ward_coimbatore-central",
+  "payload": {
+   "reader": "ward_coimbatore",
+   "url": "https://ccmc.gov.in/index.php/central-zone/central-zone-officers-details",
+   "state": "TN",
+   "zone": "central"
+  }
+ },
+ {
+  "key": "ward_coimbatore-east",
+  "payload": {
+   "reader": "ward_coimbatore",
+   "url": "https://ccmc.gov.in/index.php/east-zone/east-zone-officers-details",
+   "state": "TN",
+   "zone": "east"
+  }
+ },
+ {
+  "key": "ward_coimbatore-north",
+  "payload": {
+   "reader": "ward_coimbatore",
+   "url": "https://ccmc.gov.in/index.php/north-zone/north-zone-officers-details",
+   "state": "TN",
+   "zone": "north"
+  }
+ },
+ {
+  "key": "ward_coimbatore-south",
+  "payload": {
+   "reader": "ward_coimbatore",
+   "url": "https://ccmc.gov.in/index.php/south-zone/south-zone-officers-details",
+   "state": "TN",
+   "zone": "south"
+  }
+ },
+ {
+  "key": "ward_coimbatore-west",
+  "payload": {
+   "reader": "ward_coimbatore",
+   "url": "https://ccmc.gov.in/index.php/west-zone/west-zone-officers-details",
+   "state": "TN",
+   "zone": "west"
+  }
+ }
+]

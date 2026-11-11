@@ -1,0 +1,8 @@
+{"module": "ward_meerut",
+ "payload": {"reader": "ward_meerut", "url": "https://meerutnagarnigam.com/downloads/Wardwise-Sanitary-Inspector-And-Safai-Supervisor-List.pdf", "state": "UP"},
+ "pages": "meerut_sanitation.pages",
+ "min_records": 25, "min_wards": 80,
+ "expect": [{"post": "Sanitary and Food Inspector", "name": "प्रवेश कुमार", "wards": ["1", "2", "5"]},
+            {"post": "Sanitation Supervisor", "name": "सुधीर कुमार", "wards": ["1"]},
+            {"post": "City Health Officer", "name": "गजेन्द्र सिंह", "level": "body"},
+            {"post": "Sanitary and Food Inspector", "name": "ऋषिपाल", "wards": ["3", "90"]}]}

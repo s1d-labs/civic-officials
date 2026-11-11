@@ -1,0 +1,7 @@
+{"module": "ward_kamrc",
+ "payload": {"reader": "ward_kamrc", "url": "http://www.shivamoggacity.mrc.gov.in/en/Engwardstaffs", "state": "KA", "city": "shivamogga", "page": "Engwardstaffs", "india_only": true},
+ "routes": {"http://www.shivamoggacity.mrc.gov.in/en/Engwardstaffs": "kamrc_shivamogga_eng.html"},
+ "min_records": 20, "min_wards": 35,
+ "expect": [{"post": "AE / JE \\(Civil\\)", "name": "Arunkumar N", "level": "ward", "wards": ["1"]},
+            {"post": "AEE \\(Civil\\)", "name": "Lakshmi", "wards": ["1", "2", "3"]},
+            {"post": "Valve man", "name": "Nagaraj M H", "wards": ["1"]}]}

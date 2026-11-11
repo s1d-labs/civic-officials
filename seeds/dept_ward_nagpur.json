@@ -1,0 +1,101 @@
+[
+ {
+  "key": "ward_nagpur-laxmi-nagar",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/laxmi-nagar",
+   "state": "MH",
+   "zone_no": 1
+  }
+ },
+ {
+  "key": "ward_nagpur-dharampeth",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/dharampeth",
+   "state": "MH",
+   "zone_no": 2
+  }
+ },
+ {
+  "key": "ward_nagpur-hanuman-nagar",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/hanuman-nagar",
+   "state": "MH",
+   "zone_no": 3
+  }
+ },
+ {
+  "key": "ward_nagpur-dhantoli",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/dhantoli",
+   "state": "MH",
+   "zone_no": 4
+  }
+ },
+ {
+  "key": "ward_nagpur-nehru-nagar",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/nehru-nagar",
+   "state": "MH",
+   "zone_no": 5
+  }
+ },
+ {
+  "key": "ward_nagpur-gandhi-bagh",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/gandhi-bagh",
+   "state": "MH",
+   "zone_no": 6
+  }
+ },
+ {
+  "key": "ward_nagpur-satranjipura",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/satranjipura",
+   "state": "MH",
+   "zone_no": 7
+  }
+ },
+ {
+  "key": "ward_nagpur-lakadganj",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/lakadganj",
+   "state": "MH",
+   "zone_no": 8
+  }
+ },
+ {
+  "key": "ward_nagpur-ashi-nagar",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/ashi-nagar",
+   "state": "MH",
+   "zone_no": 9
+  }
+ },
+ {
+  "key": "ward_nagpur-mangalwari",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/mangalwari",
+   "state": "MH",
+   "zone_no": 10
+  }
+ },
+ {
+  "key": "ward_nagpur-zonal-officers",
+  "payload": {
+   "reader": "ward_nagpur",
+   "url": "https://nmcnagpur.gov.in/zonal-officers",
+   "state": "MH",
+   "kind": "zonal-officers"
+  }
+ }
+]

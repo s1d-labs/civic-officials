@@ -1,0 +1,8 @@
+{"module": "ward_nagpur",
+ "payload": {"reader": "ward_nagpur", "url": "https://nmcnagpur.gov.in/laxmi-nagar", "state": "MH", "zone_no": 1},
+ "routes": {"https://nmcnagpur.gov.in/laxmi-nagar": "nagpur_laxmi.html"},
+ "min_records": 20,
+ "expect": [{"post": "Assistant Commissioner", "name": "Dhanajay Jadhav", "level": "zone"},
+            {"post": "Sanitation Inspector", "name": "Akash Rangari"},
+            {"post": "Tax inspector", "name": "Sanjay Gudadhe"},
+            {"post": "Executive Engineer", "name": "Bundhade"}]}

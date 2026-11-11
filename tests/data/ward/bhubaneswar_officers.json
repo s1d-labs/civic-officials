@@ -1,0 +1,6 @@
+{"module": "ward_bhubaneswar",
+ "payload": {"reader": "ward_bhubaneswar", "url": "https://www.bmc.gov.in/bmc/officers-profile", "state": "OD", "kind": "officers-profile"},
+ "routes": {"https://www.bmc.gov.in/bmc/officers-profile": "bhubaneswar_officers.html"},
+ "min_records": 12,
+ "expect": [{"post": "Asst. Commissioner \\(North Zone\\)", "name": "Deepti Singh", "wards": ["1"]},
+            {"post": "Executive Engineer \\(Division - III\\)", "name": "Sarangi", "level": "division"}]}

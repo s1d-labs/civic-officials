@@ -1,0 +1,32 @@
+[
+ {
+  "key": "ward_vadodara-vmcengwing",
+  "payload": {
+   "reader": "ward_vadodara",
+   "url": "https://vmc.gov.in/vmcengwing.aspx",
+   "state": "GJ",
+   "kind": "engineering",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_vadodara-vmcrevwing",
+  "payload": {
+   "reader": "ward_vadodara",
+   "url": "https://vmc.gov.in/vmcrevwing.aspx",
+   "state": "GJ",
+   "kind": "revenue",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward_vadodara-viewcontactwardoffices",
+  "payload": {
+   "reader": "ward_vadodara",
+   "url": "https://vmc.gov.in/ViewContactWardOffices.aspx",
+   "state": "GJ",
+   "kind": "offices",
+   "india_only": true
+  }
+ }
+]

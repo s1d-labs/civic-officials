@@ -1,0 +1,22 @@
+[
+ {
+  "key": "ulb_tn-tp",
+  "payload": {
+   "reader": "ulb_tn",
+   "kind": "tp",
+   "url": "https://townpanchayat.in/town_panchayat_officials_contact_numbers.php",
+   "state": "TN",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb_tn-cma",
+  "payload": {
+   "reader": "ulb_tn",
+   "kind": "cma",
+   "url": "https://www.tnurbantree.tn.gov.in/municipal-e-mail-ids/",
+   "state": "TN",
+   "india_only": false
+  }
+ }
+]

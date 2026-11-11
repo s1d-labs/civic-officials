@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ward_bhubaneswar-zones-wards",
+  "payload": {
+   "reader": "ward_bhubaneswar",
+   "url": "https://www.bmc.gov.in/bmc/zones-wards",
+   "state": "OD",
+   "kind": "zones-wards"
+  }
+ },
+ {
+  "key": "ward_bhubaneswar-officers-profile",
+  "payload": {
+   "reader": "ward_bhubaneswar",
+   "url": "https://www.bmc.gov.in/bmc/officers-profile",
+   "state": "OD",
+   "kind": "officers-profile"
+  }
+ }
+]

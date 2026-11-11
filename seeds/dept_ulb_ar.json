@@ -1,0 +1,26 @@
+[
+ {
+  "key": "ulb_ar-imc-officers",
+  "payload": {
+   "reader": "ulb_ar",
+   "url": "https://imc.arunachal.gov.in/Officers.html",
+   "kind": "officers",
+   "body": "Itanagar Municipal Corporation",
+   "district": "Papum Pare",
+   "state": "AR",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb_ar-imc-members",
+  "payload": {
+   "reader": "ulb_ar",
+   "url": "https://imc.arunachal.gov.in/committeemember.html",
+   "kind": "members",
+   "body": "Itanagar Municipal Corporation",
+   "district": "Papum Pare",
+   "state": "AR",
+   "india_only": false
+  }
+ }
+]

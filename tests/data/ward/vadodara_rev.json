@@ -1,0 +1,5 @@
+{"module": "ward_vadodara",
+ "payload": {"reader": "ward_vadodara", "url": "https://vmc.gov.in/vmcrevwing.aspx", "state": "GJ", "kind": "revenue", "india_only": true},
+ "routes": {"https://vmc.gov.in/vmcrevwing.aspx": "vadodara_rev.html"},
+ "min_records": 6, "min_wards": 4,
+ "expect": [{"post": "Ward Officer", "name": "KRISHNA G SOLANKI", "wards": ["4"]}, {"post": "Revenue Officer", "name": "BHARGAV"}]}

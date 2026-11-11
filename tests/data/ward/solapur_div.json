@@ -1,0 +1,5 @@
+{"module": "ward_solapur",
+ "payload": {"reader": "ward_solapur", "url": "https://www.solapurcorporation.gov.in/smc/divisional_office_english.aspx", "state": "MH"},
+ "routes": {"https://www.solapurcorporation.gov.in/smc/divisional_office_english.aspx": "solapur_div.html"},
+ "min_records": 8,
+ "expect": [{"post": "Divisional Officer No.2", "name": "Bakshi"}]}

@@ -1,0 +1,83 @@
+[
+ {
+  "key": "ward_surat-west-zone",
+  "payload": {
+   "reader": "ward_surat",
+   "url": "https://www.suratmunicipal.gov.in/Zones/West/WestZone",
+   "state": "GJ",
+   "zone": "West Zone"
+  }
+ },
+ {
+  "key": "ward_surat-central-zone",
+  "payload": {
+   "reader": "ward_surat",
+   "url": "https://www.suratmunicipal.gov.in/Zones/Central/CentralZone",
+   "state": "GJ",
+   "zone": "Central Zone"
+  }
+ },
+ {
+  "key": "ward_surat-north-zone",
+  "payload": {
+   "reader": "ward_surat",
+   "url": "https://www.suratmunicipal.gov.in/Zones/North/NorthZone",
+   "state": "GJ",
+   "zone": "North Zone"
+  }
+ },
+ {
+  "key": "ward_surat-east-zone-a",
+  "payload": {
+   "reader": "ward_surat",
+   "url": "https://www.suratmunicipal.gov.in/Zones/East/EastZoneA",
+   "state": "GJ",
+   "zone": "East Zone A"
+  }
+ },
+ {
+  "key": "ward_surat-east-zone-b",
+  "payload": {
+   "reader": "ward_surat",
+   "url": "https://www.suratmunicipal.gov.in/Zones/East/EastZoneB",
+   "state": "GJ",
+   "zone": "East Zone B"
+  }
+ },
+ {
+  "key": "ward_surat-south-zone-a",
+  "payload": {
+   "reader": "ward_surat",
+   "url": "https://www.suratmunicipal.gov.in/Zones/South/SouthZoneA",
+   "state": "GJ",
+   "zone": "South Zone A"
+  }
+ },
+ {
+  "key": "ward_surat-south-zone-b",
+  "payload": {
+   "reader": "ward_surat",
+   "url": "https://www.suratmunicipal.gov.in/Zones/South/SouthZoneB",
+   "state": "GJ",
+   "zone": "South Zone B"
+  }
+ },
+ {
+  "key": "ward_surat-south-west-zone",
+  "payload": {
+   "reader": "ward_surat",
+   "url": "https://www.suratmunicipal.gov.in/Zones/SouthWest/SouthWestZone",
+   "state": "GJ",
+   "zone": "South West Zone"
+  }
+ },
+ {
+  "key": "ward_surat-south-east-zone",
+  "payload": {
+   "reader": "ward_surat",
+   "url": "https://www.suratmunicipal.gov.in/Zones/SouthEast/SouthEastZone",
+   "state": "GJ",
+   "zone": "South East Zone"
+  }
+ }
+]

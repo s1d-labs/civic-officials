@@ -1,0 +1,7 @@
+{"module": "ward_ludhiana",
+ "payload": {"reader": "ward_ludhiana", "url": "https://mcludhiana.gov.in/StaffList.aspx", "state": "PB"},
+ "routes": {"https://mcludhiana.gov.in/StaffList.aspx": "ludhiana_staff.html"},
+ "min_records": 30,
+ "expect": [{"post": "Zonal Commissioner", "name": "Jasdev Singh Sekhon"},
+            {"post": "C.S.I", "name": "RAVI DOGRA"},
+            {"post": "Superintendent Engineer", "name": "Gupta"}]}

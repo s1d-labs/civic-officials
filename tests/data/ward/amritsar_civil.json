@@ -1,0 +1,7 @@
+{"module": "ward_amritsar",
+ "payload": {"reader": "ward_amritsar", "url": "https://www.amritsarcorp.com/NoticePDF/Civil-Update-14-9-26.pdf", "state": "PB", "kind": "civil"},
+ "pages": "amritsar_civil.pages",
+ "min_records": 30, "min_wards": 80,
+ "expect": [{"post": "SDO-WEST", "name": "Anudeepak Singh", "wards": ["1", "79", "85"]},
+            {"post": "JE-NORTH", "name": "Rohit Pathania", "wards": ["6", "7", "10"]},
+            {"post": "XEN-SOUTH", "name": "Manjit Singh", "level": "zone"}]}

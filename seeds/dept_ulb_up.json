@@ -1,0 +1,32 @@
+[
+ {
+  "key": "ulb_up-nn",
+  "payload": {
+   "reader": "ulb_up",
+   "kind": "nn",
+   "url": "https://localbodies.up.nic.in/listnn.htm",
+   "state": "UP",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb_up-npp",
+  "payload": {
+   "reader": "ulb_up",
+   "kind": "npp",
+   "url": "https://localbodies.up.nic.in/pdf/elected-npp.pdf",
+   "state": "UP",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb_up-np",
+  "payload": {
+   "reader": "ulb_up",
+   "kind": "np",
+   "url": "https://localbodies.up.nic.in/pdf/elected-np.pdf",
+   "state": "UP",
+   "india_only": false
+  }
+ }
+]

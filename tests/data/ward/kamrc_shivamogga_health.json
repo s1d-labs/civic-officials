@@ -1,0 +1,6 @@
+{"module": "ward_kamrc",
+ "payload": {"reader": "ward_kamrc", "url": "http://www.shivamoggacity.mrc.gov.in/en/wardwise_staff_details", "state": "KA", "city": "shivamogga", "page": "wardwise_staff_details", "india_only": true},
+ "routes": {"http://www.shivamoggacity.mrc.gov.in/en/wardwise_staff_details": "kamrc_shivamogga_health.html"},
+ "min_records": 15, "min_wards": 35,
+ "expect": [{"post": "Sr. Health Inspector", "name": "Venugopal", "wards": ["1"]},
+            {"post": "Jr. Health Inspector", "name": "Shivamurthappa", "wards": ["35"]}]}

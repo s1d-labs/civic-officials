@@ -1,0 +1,52 @@
+[
+ {
+  "key": "ward_trichy-zone1",
+  "payload": {
+   "reader": "ward_trichy",
+   "url": "https://www.trichycorporation.gov.in/landing/wardofficers/1",
+   "zonal": "https://www.trichycorporation.gov.in/landing/zonaladmins/1",
+   "state": "TN",
+   "zone_no": 1
+  }
+ },
+ {
+  "key": "ward_trichy-zone2",
+  "payload": {
+   "reader": "ward_trichy",
+   "url": "https://www.trichycorporation.gov.in/landing/wardofficers/2",
+   "zonal": "https://www.trichycorporation.gov.in/landing/zonaladmins/2",
+   "state": "TN",
+   "zone_no": 2
+  }
+ },
+ {
+  "key": "ward_trichy-zone3",
+  "payload": {
+   "reader": "ward_trichy",
+   "url": "https://www.trichycorporation.gov.in/landing/wardofficers/3",
+   "zonal": "https://www.trichycorporation.gov.in/landing/zonaladmins/3",
+   "state": "TN",
+   "zone_no": 3
+  }
+ },
+ {
+  "key": "ward_trichy-zone4",
+  "payload": {
+   "reader": "ward_trichy",
+   "url": "https://www.trichycorporation.gov.in/landing/wardofficers/4",
+   "zonal": "https://www.trichycorporation.gov.in/landing/zonaladmins/4",
+   "state": "TN",
+   "zone_no": 4
+  }
+ },
+ {
+  "key": "ward_trichy-zone5",
+  "payload": {
+   "reader": "ward_trichy",
+   "url": "https://www.trichycorporation.gov.in/landing/wardofficers/5",
+   "zonal": "https://www.trichycorporation.gov.in/landing/zonaladmins/5",
+   "state": "TN",
+   "zone_no": 5
+  }
+ }
+]

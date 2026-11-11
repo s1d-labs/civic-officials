@@ -1,0 +1,7 @@
+{"module": "ward_trichy",
+ "payload": {"reader": "ward_trichy", "url": "https://www.trichycorporation.gov.in/landing/wardofficers/1", "zonal": "https://www.trichycorporation.gov.in/landing/zonaladmins/1", "state": "TN", "zone_no": 1},
+ "routes": {"https://www.trichycorporation.gov.in/landing/wardofficers/1": "trichy_ward1.html", "https://www.trichycorporation.gov.in/landing/zonaladmins/1": "trichy_zonal1.html"},
+ "min_records": 14, "min_wards": 12,
+ "expect": [{"post": "Junior Engineer", "name": "Rajendran", "level": "ward", "wards": ["1", "2", "3"]},
+            {"post": "Sanitary Inspector", "name": "Saranya", "wards": ["14", "19", "21"]},
+            {"post": "Asst. Commissioner", "name": "Sasikala", "level": "zone", "wards": ["1", "21"]}]}

@@ -1,0 +1,6 @@
+{"module": "ward_vasaivirar",
+ "payload": {"reader": "ward_vasaivirar", "url": "https://vvcmc.in/contacts/", "state": "MH"},
+ "routes": {"https://vvcmc.in/contacts/": "vasaivirar_contacts.html"},
+ "min_records": 12,
+ "expect": [{"post": "Assistant Commissioner", "name": "विजय शिंदे"},
+            {"post": "Deputy Commissioner", "name": "करूणा जुईकर"}]}

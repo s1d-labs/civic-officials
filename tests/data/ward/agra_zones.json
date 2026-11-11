@@ -1,0 +1,5 @@
+{"module": "ward_agra",
+ "payload": {"reader": "ward_agra", "url": "https://nagarnigamagra.com/zones-wards/", "state": "UP"},
+ "routes": {"https://nagarnigamagra.com/zones-wards/": "agra_zones.html"},
+ "min_records": 4, "min_wards": 95,
+ "expect": [{"post": "Zone Office", "wards": ["1", "14", "17"]}]}

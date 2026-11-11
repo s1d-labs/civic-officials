@@ -1,0 +1,6 @@
+{"module": "ward_srinagar",
+ "payload": {"reader": "ward_srinagar", "url": "https://smcsrinagar.jk.gov.in/Home/KnowWardOfficer", "state": "JK"},
+ "routes": {"https://smcsrinagar.jk.gov.in/Home/KnowWardOfficer": "srinagar_wo.html"},
+ "min_records": 25, "min_wards": 35,
+ "expect": [{"post": "Ward Officer", "name": "Urfan Hussain Joo", "wards": ["1"]},
+            {"post": "Ward Officer", "name": "Ashiq Hussain", "wards": ["9", "11"]}]}

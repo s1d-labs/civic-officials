@@ -1,0 +1,5 @@
+{"module": "ward_patna",
+ "payload": {"reader": "ward_patna", "url": "https://www.pmc.bihar.gov.in/CircleOfficials.aspx", "state": "BR"},
+ "routes": {"https://www.pmc.bihar.gov.in/CircleOfficials.aspx": "patna_circles.html"},
+ "min_records": 25,
+ "expect": [{"post": "Executive Officer"}, {"post": "Chief Sanitory Inspector"}]}

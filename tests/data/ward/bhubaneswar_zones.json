@@ -1,0 +1,6 @@
+{"module": "ward_bhubaneswar",
+ "payload": {"reader": "ward_bhubaneswar", "url": "https://www.bmc.gov.in/bmc/zones-wards", "state": "OD", "kind": "zones-wards"},
+ "routes": {"https://www.bmc.gov.in/bmc/zones-wards": "bhubaneswar_zones.html"},
+ "min_records": 3, "min_wards": 67,
+ "expect": [{"post": "Deputy Commissioner", "name": "Manmath Kumar Nayak", "level": "zone", "wards": ["1", "26"]},
+            {"post": "Deputy Commissioner", "name": "Pranab Kumar Behera", "wards": ["28", "67"]}]}

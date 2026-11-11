@@ -1,0 +1,5 @@
+{"module": "ward_vadodara",
+ "payload": {"reader": "ward_vadodara", "url": "https://vmc.gov.in/ViewContactWardOffices.aspx", "state": "GJ", "kind": "offices", "india_only": true},
+ "routes": {"https://vmc.gov.in/ViewContactWardOffices.aspx": "vadodara_offices.html"},
+ "min_records": 6, "min_wards": 4,
+ "expect": [{"post": "Ward Office", "wards": ["14"]}]}

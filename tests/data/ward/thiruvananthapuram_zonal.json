@@ -1,0 +1,5 @@
+{"module": "ward_thiruvananthapuram",
+ "payload": {"reader": "ward_thiruvananthapuram", "url": "https://tmc.lsgkerala.gov.in/en/corporation-zonal-offices", "state": "KL"},
+ "routes": {"https://tmc.lsgkerala.gov.in/en/corporation-zonal-offices": "thiruvananthapuram_zonal.html"},
+ "min_records": 11,
+ "expect": [{"post": "Zonal Office", "level": "zone"}]}

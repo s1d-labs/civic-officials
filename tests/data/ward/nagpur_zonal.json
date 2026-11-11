@@ -1,0 +1,5 @@
+{"module": "ward_nagpur",
+ "payload": {"reader": "ward_nagpur", "url": "https://nmcnagpur.gov.in/zonal-officers", "state": "MH", "kind": "zonal-officers"},
+ "routes": {"https://nmcnagpur.gov.in/zonal-officers": "nagpur_zonal.html"},
+ "min_records": 10,
+ "expect": [{"post": "Zonal Officer", "name": "Pramod Atram"}]}

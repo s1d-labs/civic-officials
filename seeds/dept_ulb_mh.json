@@ -1,0 +1,46 @@
+[
+ {
+  "key": "ulb_mh-chandrapur",
+  "payload": {
+   "reader": "ulb_mh",
+   "kind": "table",
+   "district": "Chandrapur",
+   "url": "https://chanda.nic.in/en/nagar-palika-department/",
+   "state": "MH",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb_mh-pune",
+  "payload": {
+   "reader": "ulb_mh",
+   "kind": "table",
+   "district": "Pune",
+   "url": "https://pune.gov.in/en/nagarpalika-branch/",
+   "state": "MH",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb_mh-satara-1",
+  "payload": {
+   "reader": "ulb_mh",
+   "kind": "cards",
+   "district": "Satara",
+   "url": "https://www.satara.gov.in/en/public-utility-category/muincipal-councils/",
+   "state": "MH",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb_mh-satara-2",
+  "payload": {
+   "reader": "ulb_mh",
+   "kind": "cards",
+   "district": "Satara",
+   "url": "https://www.satara.gov.in/en/public-utility-category/muincipal-councils/page/2/",
+   "state": "MH",
+   "india_only": false
+  }
+ }
+]

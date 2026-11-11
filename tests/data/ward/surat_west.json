@@ -1,0 +1,8 @@
+{"module": "ward_surat",
+ "payload": {"reader": "ward_surat", "url": "https://www.suratmunicipal.gov.in/Zones/West/WestZone", "state": "GJ", "zone": "West Zone"},
+ "routes": {"https://www.suratmunicipal.gov.in/Zones/West/WestZone": "surat_west.html"},
+ "min_records": 14,
+ "expect": [{"post": "Zonal Chief", "name": "Chavda", "level": "zone"},
+            {"post": "Assistant Mun. Commissioner", "name": "Parul J Rana"},
+            {"post": "Food Safety Officer", "name": "Sailor"},
+            {"post": "Deputy Engineer \\(Electrical\\)", "name": "Soham"}]}
