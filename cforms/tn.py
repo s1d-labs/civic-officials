@@ -13,6 +13,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+import time
 
 import requests
 
@@ -34,8 +35,14 @@ def tools():
         return "tam" in (r.stdout + r.stderr).split()
     if ok():
         return True
-    cmd = "sudo -n apt-get update -q && sudo -n apt-get install -y -q tesseract-ocr tesseract-ocr-tam poppler-utils"
-    subprocess.run(cmd, shell=True, capture_output=True)
+    # a runner job runs two processes: while one installs, the other must wait for the apt lock, not fail every item it claims
+    cmd = ("sudo -n apt-get -o DPkg::Lock::Timeout=600 update -q && sudo -n apt-get -o DPkg::Lock::Timeout=600 install -y -q "
+           "tesseract-ocr tesseract-ocr-tam poppler-utils")
+    for _ in range(3):
+        subprocess.run(cmd, shell=True, capture_output=True)
+        if ok():
+            return True
+        time.sleep(30)
     return ok()
 
 
