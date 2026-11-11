@@ -1,0 +1,962 @@
+[
+ {
+  "key": "civic_csc_kl-p000",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/0",
+   "state": "KL",
+   "india_only": false,
+   "page": 0,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p001",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/1",
+   "state": "KL",
+   "india_only": false,
+   "page": 1,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p002",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/2",
+   "state": "KL",
+   "india_only": false,
+   "page": 2,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p003",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/3",
+   "state": "KL",
+   "india_only": false,
+   "page": 3,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p004",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/4",
+   "state": "KL",
+   "india_only": false,
+   "page": 4,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p005",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/5",
+   "state": "KL",
+   "india_only": false,
+   "page": 5,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p006",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/6",
+   "state": "KL",
+   "india_only": false,
+   "page": 6,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p007",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/7",
+   "state": "KL",
+   "india_only": false,
+   "page": 7,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p008",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/8",
+   "state": "KL",
+   "india_only": false,
+   "page": 8,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p009",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/9",
+   "state": "KL",
+   "india_only": false,
+   "page": 9,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p010",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/10",
+   "state": "KL",
+   "india_only": false,
+   "page": 10,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p011",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/11",
+   "state": "KL",
+   "india_only": false,
+   "page": 11,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p012",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/12",
+   "state": "KL",
+   "india_only": false,
+   "page": 12,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p013",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/13",
+   "state": "KL",
+   "india_only": false,
+   "page": 13,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p014",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/14",
+   "state": "KL",
+   "india_only": false,
+   "page": 14,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p015",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/15",
+   "state": "KL",
+   "india_only": false,
+   "page": 15,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p016",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/16",
+   "state": "KL",
+   "india_only": false,
+   "page": 16,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p017",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/17",
+   "state": "KL",
+   "india_only": false,
+   "page": 17,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p018",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/18",
+   "state": "KL",
+   "india_only": false,
+   "page": 18,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p019",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/19",
+   "state": "KL",
+   "india_only": false,
+   "page": 19,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p020",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/20",
+   "state": "KL",
+   "india_only": false,
+   "page": 20,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p021",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/21",
+   "state": "KL",
+   "india_only": false,
+   "page": 21,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p022",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/22",
+   "state": "KL",
+   "india_only": false,
+   "page": 22,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p023",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/23",
+   "state": "KL",
+   "india_only": false,
+   "page": 23,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p024",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/24",
+   "state": "KL",
+   "india_only": false,
+   "page": 24,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p025",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/25",
+   "state": "KL",
+   "india_only": false,
+   "page": 25,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p026",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/26",
+   "state": "KL",
+   "india_only": false,
+   "page": 26,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p027",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/27",
+   "state": "KL",
+   "india_only": false,
+   "page": 27,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p028",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/28",
+   "state": "KL",
+   "india_only": false,
+   "page": 28,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p029",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/29",
+   "state": "KL",
+   "india_only": false,
+   "page": 29,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p030",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/30",
+   "state": "KL",
+   "india_only": false,
+   "page": 30,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p031",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/31",
+   "state": "KL",
+   "india_only": false,
+   "page": 31,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p032",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/32",
+   "state": "KL",
+   "india_only": false,
+   "page": 32,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p033",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/33",
+   "state": "KL",
+   "india_only": false,
+   "page": 33,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p034",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/34",
+   "state": "KL",
+   "india_only": false,
+   "page": 34,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p035",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/35",
+   "state": "KL",
+   "india_only": false,
+   "page": 35,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p036",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/36",
+   "state": "KL",
+   "india_only": false,
+   "page": 36,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p037",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/37",
+   "state": "KL",
+   "india_only": false,
+   "page": 37,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p038",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/38",
+   "state": "KL",
+   "india_only": false,
+   "page": 38,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p039",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/39",
+   "state": "KL",
+   "india_only": false,
+   "page": 39,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p040",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/40",
+   "state": "KL",
+   "india_only": false,
+   "page": 40,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p041",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/41",
+   "state": "KL",
+   "india_only": false,
+   "page": 41,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p042",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/42",
+   "state": "KL",
+   "india_only": false,
+   "page": 42,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p043",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/43",
+   "state": "KL",
+   "india_only": false,
+   "page": 43,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p044",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/44",
+   "state": "KL",
+   "india_only": false,
+   "page": 44,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p045",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/45",
+   "state": "KL",
+   "india_only": false,
+   "page": 45,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p046",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/46",
+   "state": "KL",
+   "india_only": false,
+   "page": 46,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p047",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/47",
+   "state": "KL",
+   "india_only": false,
+   "page": 47,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p048",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/48",
+   "state": "KL",
+   "india_only": false,
+   "page": 48,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p049",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/49",
+   "state": "KL",
+   "india_only": false,
+   "page": 49,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p050",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/50",
+   "state": "KL",
+   "india_only": false,
+   "page": 50,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p051",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/51",
+   "state": "KL",
+   "india_only": false,
+   "page": 51,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p052",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/52",
+   "state": "KL",
+   "india_only": false,
+   "page": 52,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p053",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/53",
+   "state": "KL",
+   "india_only": false,
+   "page": 53,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p054",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/54",
+   "state": "KL",
+   "india_only": false,
+   "page": 54,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p055",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/55",
+   "state": "KL",
+   "india_only": false,
+   "page": 55,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p056",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/56",
+   "state": "KL",
+   "india_only": false,
+   "page": 56,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p057",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/57",
+   "state": "KL",
+   "india_only": false,
+   "page": 57,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p058",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/58",
+   "state": "KL",
+   "india_only": false,
+   "page": 58,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p059",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/59",
+   "state": "KL",
+   "india_only": false,
+   "page": 59,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p060",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/60",
+   "state": "KL",
+   "india_only": false,
+   "page": 60,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p061",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/61",
+   "state": "KL",
+   "india_only": false,
+   "page": 61,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p062",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/62",
+   "state": "KL",
+   "india_only": false,
+   "page": 62,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p063",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/63",
+   "state": "KL",
+   "india_only": false,
+   "page": 63,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p064",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/64",
+   "state": "KL",
+   "india_only": false,
+   "page": 64,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p065",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/65",
+   "state": "KL",
+   "india_only": false,
+   "page": 65,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p066",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/66",
+   "state": "KL",
+   "india_only": false,
+   "page": 66,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p067",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/67",
+   "state": "KL",
+   "india_only": false,
+   "page": 67,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p068",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/68",
+   "state": "KL",
+   "india_only": false,
+   "page": 68,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p069",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/69",
+   "state": "KL",
+   "india_only": false,
+   "page": 69,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p070",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/70",
+   "state": "KL",
+   "india_only": false,
+   "page": 70,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p071",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/71",
+   "state": "KL",
+   "india_only": false,
+   "page": 71,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p072",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/72",
+   "state": "KL",
+   "india_only": false,
+   "page": 72,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p073",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/73",
+   "state": "KL",
+   "india_only": false,
+   "page": 73,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p074",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/74",
+   "state": "KL",
+   "india_only": false,
+   "page": 74,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p075",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/75",
+   "state": "KL",
+   "india_only": false,
+   "page": 75,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p076",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/76",
+   "state": "KL",
+   "india_only": false,
+   "page": 76,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p077",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/77",
+   "state": "KL",
+   "india_only": false,
+   "page": 77,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p078",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/78",
+   "state": "KL",
+   "india_only": false,
+   "page": 78,
+   "details": true,
+   "expected": 42
+  }
+ },
+ {
+  "key": "civic_csc_kl-p079",
+  "payload": {
+   "reader": "civic_csc_kl",
+   "url": "https://akshaya.kerala.gov.in/centers/79",
+   "state": "KL",
+   "india_only": false,
+   "page": 79,
+   "details": true,
+   "expected": 42
+  }
+ }
+]

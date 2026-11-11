@@ -1,0 +1,2059 @@
+[
+ {
+  "key": "civic_health_in-hd-000001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+1+AND+objectid+%3C+2001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 1,
+   "hi": 2001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-002001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+2001+AND+objectid+%3C+4001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 2001,
+   "hi": 4001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-004001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+4001+AND+objectid+%3C+6001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 4001,
+   "hi": 6001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-006001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+6001+AND+objectid+%3C+8001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 6001,
+   "hi": 8001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-008001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+8001+AND+objectid+%3C+10001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 8001,
+   "hi": 10001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-010001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+10001+AND+objectid+%3C+12001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 10001,
+   "hi": 12001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-012001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+12001+AND+objectid+%3C+14001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 12001,
+   "hi": 14001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-014001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+14001+AND+objectid+%3C+16001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 14001,
+   "hi": 16001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-016001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+16001+AND+objectid+%3C+18001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 16001,
+   "hi": 18001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-018001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+18001+AND+objectid+%3C+20001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 18001,
+   "hi": 20001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-020001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+20001+AND+objectid+%3C+22001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 20001,
+   "hi": 22001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-022001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+22001+AND+objectid+%3C+24001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 22001,
+   "hi": 24001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-024001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+24001+AND+objectid+%3C+26001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 24001,
+   "hi": 26001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-026001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+26001+AND+objectid+%3C+28001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 26001,
+   "hi": 28001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-028001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+28001+AND+objectid+%3C+30001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 28001,
+   "hi": 30001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-030001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+30001+AND+objectid+%3C+32001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 30001,
+   "hi": 32001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-032001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+32001+AND+objectid+%3C+34001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 32001,
+   "hi": 34001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-034001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+34001+AND+objectid+%3C+36001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 34001,
+   "hi": 36001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-036001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+36001+AND+objectid+%3C+38001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 36001,
+   "hi": 38001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-038001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+38001+AND+objectid+%3C+40001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 38001,
+   "hi": 40001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-040001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+40001+AND+objectid+%3C+42001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 40001,
+   "hi": 42001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-042001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+42001+AND+objectid+%3C+44001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 42001,
+   "hi": 44001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-044001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+44001+AND+objectid+%3C+46001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 44001,
+   "hi": 46001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-046001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+46001+AND+objectid+%3C+48001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 46001,
+   "hi": 48001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-048001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+48001+AND+objectid+%3C+50001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 48001,
+   "hi": 50001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-050001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+50001+AND+objectid+%3C+52001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 50001,
+   "hi": 52001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-052001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+52001+AND+objectid+%3C+54001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 52001,
+   "hi": 54001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-054001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+54001+AND+objectid+%3C+56001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 54001,
+   "hi": 56001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-056001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+56001+AND+objectid+%3C+58001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 56001,
+   "hi": 58001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-058001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+58001+AND+objectid+%3C+60001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 58001,
+   "hi": 60001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-060001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+60001+AND+objectid+%3C+62001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 60001,
+   "hi": 62001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-062001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+62001+AND+objectid+%3C+64001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 62001,
+   "hi": 64001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-064001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+64001+AND+objectid+%3C+66001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 64001,
+   "hi": 66001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-066001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+66001+AND+objectid+%3C+68001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 66001,
+   "hi": 68001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-068001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+68001+AND+objectid+%3C+70001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 68001,
+   "hi": 70001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-070001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+70001+AND+objectid+%3C+72001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 70001,
+   "hi": 72001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-072001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+72001+AND+objectid+%3C+74001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 72001,
+   "hi": 74001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-074001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+74001+AND+objectid+%3C+76001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 74001,
+   "hi": 76001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-076001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+76001+AND+objectid+%3C+78001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 76001,
+   "hi": 78001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-078001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+78001+AND+objectid+%3C+80001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 78001,
+   "hi": 80001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-080001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+80001+AND+objectid+%3C+82001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 80001,
+   "hi": 82001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-082001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+82001+AND+objectid+%3C+84001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 82001,
+   "hi": 84001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-084001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+84001+AND+objectid+%3C+86001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 84001,
+   "hi": 86001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-086001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+86001+AND+objectid+%3C+88001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 86001,
+   "hi": 88001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-088001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+88001+AND+objectid+%3C+90001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 88001,
+   "hi": 90001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-090001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+90001+AND+objectid+%3C+92001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 90001,
+   "hi": 92001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-092001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+92001+AND+objectid+%3C+94001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 92001,
+   "hi": 94001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-094001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+94001+AND+objectid+%3C+96001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 94001,
+   "hi": 96001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-096001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+96001+AND+objectid+%3C+98001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 96001,
+   "hi": 98001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-098001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+98001+AND+objectid+%3C+100001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 98001,
+   "hi": 100001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-100001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+100001+AND+objectid+%3C+102001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 100001,
+   "hi": 102001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-102001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+102001+AND+objectid+%3C+104001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 102001,
+   "hi": 104001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-104001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+104001+AND+objectid+%3C+106001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 104001,
+   "hi": 106001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-106001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+106001+AND+objectid+%3C+108001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 106001,
+   "hi": 108001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-108001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+108001+AND+objectid+%3C+110001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 108001,
+   "hi": 110001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-110001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+110001+AND+objectid+%3C+112001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 110001,
+   "hi": 112001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-112001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+112001+AND+objectid+%3C+114001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 112001,
+   "hi": 114001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-114001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+114001+AND+objectid+%3C+116001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 114001,
+   "hi": 116001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-116001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+116001+AND+objectid+%3C+118001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 116001,
+   "hi": 118001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-118001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+118001+AND+objectid+%3C+120001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 118001,
+   "hi": 120001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-120001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+120001+AND+objectid+%3C+122001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 120001,
+   "hi": 122001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-122001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+122001+AND+objectid+%3C+124001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 122001,
+   "hi": 124001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-124001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+124001+AND+objectid+%3C+126001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 124001,
+   "hi": 126001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-126001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+126001+AND+objectid+%3C+128001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 126001,
+   "hi": 128001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-128001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+128001+AND+objectid+%3C+130001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 128001,
+   "hi": 130001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-130001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+130001+AND+objectid+%3C+132001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 130001,
+   "hi": 132001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-132001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+132001+AND+objectid+%3C+134001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 132001,
+   "hi": 134001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-134001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+134001+AND+objectid+%3C+136001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 134001,
+   "hi": 136001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-136001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+136001+AND+objectid+%3C+138001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 136001,
+   "hi": 138001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-138001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+138001+AND+objectid+%3C+140001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 138001,
+   "hi": 140001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-140001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+140001+AND+objectid+%3C+142001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 140001,
+   "hi": 142001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-142001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+142001+AND+objectid+%3C+144001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 142001,
+   "hi": 144001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-144001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+144001+AND+objectid+%3C+146001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 144001,
+   "hi": 146001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-146001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+146001+AND+objectid+%3C+148001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 146001,
+   "hi": 148001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-148001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+148001+AND+objectid+%3C+150001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 148001,
+   "hi": 150001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-150001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+150001+AND+objectid+%3C+152001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 150001,
+   "hi": 152001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-152001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+152001+AND+objectid+%3C+154001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 152001,
+   "hi": 154001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-154001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+154001+AND+objectid+%3C+156001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 154001,
+   "hi": 156001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-156001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+156001+AND+objectid+%3C+158001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 156001,
+   "hi": 158001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-158001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+158001+AND+objectid+%3C+160001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 158001,
+   "hi": 160001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-160001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+160001+AND+objectid+%3C+162001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 160001,
+   "hi": 162001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-162001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+162001+AND+objectid+%3C+164001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 162001,
+   "hi": 164001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-164001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+164001+AND+objectid+%3C+166001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 164001,
+   "hi": 166001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-166001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+166001+AND+objectid+%3C+168001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 166001,
+   "hi": 168001
+  }
+ },
+ {
+  "key": "civic_health_in-hd-168001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0/query?where=objectid+%3E%3D+168001+AND+objectid+%3C+170001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=false",
+   "state": "IN",
+   "layer": "directory",
+   "lo": 168001,
+   "hi": 170001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-000001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+1+AND+objectid+%3C+2001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 1,
+   "hi": 2001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-002001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+2001+AND+objectid+%3C+4001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 2001,
+   "hi": 4001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-004001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+4001+AND+objectid+%3C+6001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 4001,
+   "hi": 6001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-006001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+6001+AND+objectid+%3C+8001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 6001,
+   "hi": 8001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-008001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+8001+AND+objectid+%3C+10001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 8001,
+   "hi": 10001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-010001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+10001+AND+objectid+%3C+12001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 10001,
+   "hi": 12001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-012001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+12001+AND+objectid+%3C+14001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 12001,
+   "hi": 14001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-014001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+14001+AND+objectid+%3C+16001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 14001,
+   "hi": 16001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-016001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+16001+AND+objectid+%3C+18001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 16001,
+   "hi": 18001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-018001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+18001+AND+objectid+%3C+20001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 18001,
+   "hi": 20001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-020001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+20001+AND+objectid+%3C+22001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 20001,
+   "hi": 22001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-022001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+22001+AND+objectid+%3C+24001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 22001,
+   "hi": 24001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-024001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+24001+AND+objectid+%3C+26001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 24001,
+   "hi": 26001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-026001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+26001+AND+objectid+%3C+28001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 26001,
+   "hi": 28001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-028001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+28001+AND+objectid+%3C+30001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 28001,
+   "hi": 30001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-030001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+30001+AND+objectid+%3C+32001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 30001,
+   "hi": 32001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-032001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+32001+AND+objectid+%3C+34001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 32001,
+   "hi": 34001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-034001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+34001+AND+objectid+%3C+36001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 34001,
+   "hi": 36001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-036001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+36001+AND+objectid+%3C+38001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 36001,
+   "hi": 38001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-038001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+38001+AND+objectid+%3C+40001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 38001,
+   "hi": 40001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-040001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+40001+AND+objectid+%3C+42001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 40001,
+   "hi": 42001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-042001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+42001+AND+objectid+%3C+44001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 42001,
+   "hi": 44001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-044001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+44001+AND+objectid+%3C+46001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 44001,
+   "hi": 46001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-046001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+46001+AND+objectid+%3C+48001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 46001,
+   "hi": 48001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-048001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+48001+AND+objectid+%3C+50001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 48001,
+   "hi": 50001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-050001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+50001+AND+objectid+%3C+52001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 50001,
+   "hi": 52001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-052001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+52001+AND+objectid+%3C+54001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 52001,
+   "hi": 54001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-054001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+54001+AND+objectid+%3C+56001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 54001,
+   "hi": 56001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-056001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+56001+AND+objectid+%3C+58001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 56001,
+   "hi": 58001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-058001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+58001+AND+objectid+%3C+60001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 58001,
+   "hi": 60001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-060001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+60001+AND+objectid+%3C+62001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 60001,
+   "hi": 62001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-062001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+62001+AND+objectid+%3C+64001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 62001,
+   "hi": 64001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-064001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+64001+AND+objectid+%3C+66001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 64001,
+   "hi": 66001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-066001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+66001+AND+objectid+%3C+68001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 66001,
+   "hi": 68001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-068001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+68001+AND+objectid+%3C+70001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 68001,
+   "hi": 70001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-070001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+70001+AND+objectid+%3C+72001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 70001,
+   "hi": 72001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-072001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+72001+AND+objectid+%3C+74001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 72001,
+   "hi": 74001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-074001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+74001+AND+objectid+%3C+76001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 74001,
+   "hi": 76001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-076001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+76001+AND+objectid+%3C+78001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 76001,
+   "hi": 78001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-078001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+78001+AND+objectid+%3C+80001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 78001,
+   "hi": 80001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-080001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+80001+AND+objectid+%3C+82001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 80001,
+   "hi": 82001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-082001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+82001+AND+objectid+%3C+84001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 82001,
+   "hi": 84001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-084001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+84001+AND+objectid+%3C+86001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 84001,
+   "hi": 86001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-086001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+86001+AND+objectid+%3C+88001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 86001,
+   "hi": 88001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-088001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+88001+AND+objectid+%3C+90001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 88001,
+   "hi": 90001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-090001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+90001+AND+objectid+%3C+92001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 90001,
+   "hi": 92001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-092001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+92001+AND+objectid+%3C+94001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 92001,
+   "hi": 94001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-094001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+94001+AND+objectid+%3C+96001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 94001,
+   "hi": 96001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-096001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+96001+AND+objectid+%3C+98001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 96001,
+   "hi": 98001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-098001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+98001+AND+objectid+%3C+100001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 98001,
+   "hi": 100001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-100001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+100001+AND+objectid+%3C+102001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 100001,
+   "hi": 102001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-102001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+102001+AND+objectid+%3C+104001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 102001,
+   "hi": 104001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-104001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+104001+AND+objectid+%3C+106001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 104001,
+   "hi": 106001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-106001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+106001+AND+objectid+%3C+108001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 106001,
+   "hi": 108001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-108001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+108001+AND+objectid+%3C+110001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 108001,
+   "hi": 110001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-110001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+110001+AND+objectid+%3C+112001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 110001,
+   "hi": 112001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-112001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+112001+AND+objectid+%3C+114001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 112001,
+   "hi": 114001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-114001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+114001+AND+objectid+%3C+116001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 114001,
+   "hi": 116001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-116001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+116001+AND+objectid+%3C+118001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 116001,
+   "hi": 118001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-118001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+118001+AND+objectid+%3C+120001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 118001,
+   "hi": 120001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-120001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+120001+AND+objectid+%3C+122001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 120001,
+   "hi": 122001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-122001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+122001+AND+objectid+%3C+124001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 122001,
+   "hi": 124001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-124001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+124001+AND+objectid+%3C+126001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 124001,
+   "hi": 126001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-126001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+126001+AND+objectid+%3C+128001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 126001,
+   "hi": 128001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-128001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+128001+AND+objectid+%3C+130001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 128001,
+   "hi": 130001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-130001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+130001+AND+objectid+%3C+132001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 130001,
+   "hi": 132001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-132001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+132001+AND+objectid+%3C+134001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 132001,
+   "hi": 134001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-134001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+134001+AND+objectid+%3C+136001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 134001,
+   "hi": 136001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-136001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+136001+AND+objectid+%3C+138001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 136001,
+   "hi": 138001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-138001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+138001+AND+objectid+%3C+140001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 138001,
+   "hi": 140001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-140001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+140001+AND+objectid+%3C+142001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 140001,
+   "hi": 142001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-142001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+142001+AND+objectid+%3C+144001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 142001,
+   "hi": 144001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-144001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+144001+AND+objectid+%3C+146001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 144001,
+   "hi": 146001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-146001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+146001+AND+objectid+%3C+148001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 146001,
+   "hi": 148001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-148001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+148001+AND+objectid+%3C+150001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 148001,
+   "hi": 150001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-150001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+150001+AND+objectid+%3C+152001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 150001,
+   "hi": 152001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-152001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+152001+AND+objectid+%3C+154001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 152001,
+   "hi": 154001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-154001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+154001+AND+objectid+%3C+156001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 154001,
+   "hi": 156001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-156001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+156001+AND+objectid+%3C+158001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 156001,
+   "hi": 158001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-158001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+158001+AND+objectid+%3C+160001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 158001,
+   "hi": 160001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-160001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+160001+AND+objectid+%3C+162001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 160001,
+   "hi": 162001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-162001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+162001+AND+objectid+%3C+164001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 162001,
+   "hi": 164001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-164001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+164001+AND+objectid+%3C+166001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 164001,
+   "hi": 166001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-166001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+166001+AND+objectid+%3C+168001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 166001,
+   "hi": 168001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-168001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+168001+AND+objectid+%3C+170001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 168001,
+   "hi": 170001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-170001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+170001+AND+objectid+%3C+172001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 170001,
+   "hi": 172001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-172001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+172001+AND+objectid+%3C+174001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 172001,
+   "hi": 174001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-174001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+174001+AND+objectid+%3C+176001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 174001,
+   "hi": 176001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-176001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+176001+AND+objectid+%3C+178001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 176001,
+   "hi": 178001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-178001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+178001+AND+objectid+%3C+180001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 178001,
+   "hi": 180001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-180001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+180001+AND+objectid+%3C+182001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 180001,
+   "hi": 182001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-182001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+182001+AND+objectid+%3C+184001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 182001,
+   "hi": 184001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-184001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+184001+AND+objectid+%3C+186001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 184001,
+   "hi": 186001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-186001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+186001+AND+objectid+%3C+188001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 186001,
+   "hi": 188001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-188001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+188001+AND+objectid+%3C+190001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 188001,
+   "hi": 190001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-190001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+190001+AND+objectid+%3C+192001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 190001,
+   "hi": 192001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-192001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+192001+AND+objectid+%3C+194001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 192001,
+   "hi": 194001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-194001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+194001+AND+objectid+%3C+196001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 194001,
+   "hi": 196001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-196001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+196001+AND+objectid+%3C+198001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 196001,
+   "hi": 198001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-198001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+198001+AND+objectid+%3C+200001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 198001,
+   "hi": 200001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-200001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+200001+AND+objectid+%3C+202001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 200001,
+   "hi": 202001
+  }
+ },
+ {
+  "key": "civic_health_in-hc-202001",
+  "payload": {
+   "reader": "civic_health_in",
+   "url": "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0/query?where=objectid+%3E%3D+202001+AND+objectid+%3C+204001&outFields=%2A&orderByFields=objectid&resultRecordCount=2000&f=json&returnGeometry=true&outSR=4326",
+   "state": "IN",
+   "layer": "centres",
+   "lo": 202001,
+   "hi": 204001
+  }
+ }
+]

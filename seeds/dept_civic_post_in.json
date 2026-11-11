@@ -1,0 +1,998 @@
+[
+ {
+  "key": "civic_post_in-000001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D1+AND+objectid%3C%3D2000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 1,
+   "hi": 2000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-002001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D2001+AND+objectid%3C%3D4000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 2001,
+   "hi": 4000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-004001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D4001+AND+objectid%3C%3D6000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 4001,
+   "hi": 6000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-006001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D6001+AND+objectid%3C%3D8000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 6001,
+   "hi": 8000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-008001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D8001+AND+objectid%3C%3D10000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 8001,
+   "hi": 10000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-010001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D10001+AND+objectid%3C%3D12000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 10001,
+   "hi": 12000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-012001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D12001+AND+objectid%3C%3D14000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 12001,
+   "hi": 14000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-014001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D14001+AND+objectid%3C%3D16000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 14001,
+   "hi": 16000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-016001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D16001+AND+objectid%3C%3D18000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 16001,
+   "hi": 18000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-018001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D18001+AND+objectid%3C%3D20000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 18001,
+   "hi": 20000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-020001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D20001+AND+objectid%3C%3D22000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 20001,
+   "hi": 22000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-022001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D22001+AND+objectid%3C%3D24000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 22001,
+   "hi": 24000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-024001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D24001+AND+objectid%3C%3D26000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 24001,
+   "hi": 26000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-026001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D26001+AND+objectid%3C%3D28000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 26001,
+   "hi": 28000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-028001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D28001+AND+objectid%3C%3D30000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 28001,
+   "hi": 30000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-030001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D30001+AND+objectid%3C%3D32000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 30001,
+   "hi": 32000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-032001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D32001+AND+objectid%3C%3D34000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 32001,
+   "hi": 34000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-034001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D34001+AND+objectid%3C%3D36000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 34001,
+   "hi": 36000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-036001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D36001+AND+objectid%3C%3D38000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 36001,
+   "hi": 38000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-038001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D38001+AND+objectid%3C%3D40000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 38001,
+   "hi": 40000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-040001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D40001+AND+objectid%3C%3D42000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 40001,
+   "hi": 42000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-042001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D42001+AND+objectid%3C%3D44000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 42001,
+   "hi": 44000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-044001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D44001+AND+objectid%3C%3D46000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 44001,
+   "hi": 46000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-046001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D46001+AND+objectid%3C%3D48000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 46001,
+   "hi": 48000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-048001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D48001+AND+objectid%3C%3D50000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 48001,
+   "hi": 50000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-050001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D50001+AND+objectid%3C%3D52000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 50001,
+   "hi": 52000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-052001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D52001+AND+objectid%3C%3D54000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 52001,
+   "hi": 54000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-054001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D54001+AND+objectid%3C%3D56000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 54001,
+   "hi": 56000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-056001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D56001+AND+objectid%3C%3D58000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 56001,
+   "hi": 58000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-058001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D58001+AND+objectid%3C%3D60000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 58001,
+   "hi": 60000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-060001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D60001+AND+objectid%3C%3D62000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 60001,
+   "hi": 62000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-062001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D62001+AND+objectid%3C%3D64000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 62001,
+   "hi": 64000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-064001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D64001+AND+objectid%3C%3D66000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 64001,
+   "hi": 66000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-066001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D66001+AND+objectid%3C%3D68000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 66001,
+   "hi": 68000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-068001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D68001+AND+objectid%3C%3D70000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 68001,
+   "hi": 70000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-070001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D70001+AND+objectid%3C%3D72000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 70001,
+   "hi": 72000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-072001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D72001+AND+objectid%3C%3D74000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 72001,
+   "hi": 74000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-074001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D74001+AND+objectid%3C%3D76000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 74001,
+   "hi": 76000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-076001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D76001+AND+objectid%3C%3D78000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 76001,
+   "hi": 78000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-078001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D78001+AND+objectid%3C%3D80000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 78001,
+   "hi": 80000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-080001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D80001+AND+objectid%3C%3D82000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 80001,
+   "hi": 82000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-082001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D82001+AND+objectid%3C%3D84000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 82001,
+   "hi": 84000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-084001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D84001+AND+objectid%3C%3D86000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 84001,
+   "hi": 86000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-086001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D86001+AND+objectid%3C%3D88000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 86001,
+   "hi": 88000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-088001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D88001+AND+objectid%3C%3D90000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 88001,
+   "hi": 90000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-090001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D90001+AND+objectid%3C%3D92000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 90001,
+   "hi": 92000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-092001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D92001+AND+objectid%3C%3D94000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 92001,
+   "hi": 94000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-094001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D94001+AND+objectid%3C%3D96000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 94001,
+   "hi": 96000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-096001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D96001+AND+objectid%3C%3D98000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 96001,
+   "hi": 98000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-098001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D98001+AND+objectid%3C%3D100000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 98001,
+   "hi": 100000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-100001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D100001+AND+objectid%3C%3D102000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 100001,
+   "hi": 102000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-102001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D102001+AND+objectid%3C%3D104000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 102001,
+   "hi": 104000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-104001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D104001+AND+objectid%3C%3D106000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 104001,
+   "hi": 106000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-106001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D106001+AND+objectid%3C%3D108000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 106001,
+   "hi": 108000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-108001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D108001+AND+objectid%3C%3D110000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 108001,
+   "hi": 110000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-110001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D110001+AND+objectid%3C%3D112000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 110001,
+   "hi": 112000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-112001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D112001+AND+objectid%3C%3D114000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 112001,
+   "hi": 114000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-114001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D114001+AND+objectid%3C%3D116000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 114001,
+   "hi": 116000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-116001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D116001+AND+objectid%3C%3D118000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 116001,
+   "hi": 118000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-118001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D118001+AND+objectid%3C%3D120000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 118001,
+   "hi": 120000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-120001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D120001+AND+objectid%3C%3D122000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 120001,
+   "hi": 122000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-122001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D122001+AND+objectid%3C%3D124000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 122001,
+   "hi": 124000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-124001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D124001+AND+objectid%3C%3D126000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 124001,
+   "hi": 126000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-126001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D126001+AND+objectid%3C%3D128000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 126001,
+   "hi": 128000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-128001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D128001+AND+objectid%3C%3D130000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 128001,
+   "hi": 130000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-130001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D130001+AND+objectid%3C%3D132000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 130001,
+   "hi": 132000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-132001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D132001+AND+objectid%3C%3D134000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 132001,
+   "hi": 134000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-134001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D134001+AND+objectid%3C%3D136000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 134001,
+   "hi": 136000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-136001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D136001+AND+objectid%3C%3D138000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 136001,
+   "hi": 138000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-138001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D138001+AND+objectid%3C%3D140000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 138001,
+   "hi": 140000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-140001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D140001+AND+objectid%3C%3D142000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 140001,
+   "hi": 142000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-142001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D142001+AND+objectid%3C%3D144000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 142001,
+   "hi": 144000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-144001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D144001+AND+objectid%3C%3D146000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 144001,
+   "hi": 146000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-146001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D146001+AND+objectid%3C%3D148000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 146001,
+   "hi": 148000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-148001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D148001+AND+objectid%3C%3D150000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 148001,
+   "hi": 150000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-150001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D150001+AND+objectid%3C%3D152000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 150001,
+   "hi": 152000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-152001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D152001+AND+objectid%3C%3D154000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 152001,
+   "hi": 154000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-154001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D154001+AND+objectid%3C%3D156000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 154001,
+   "hi": 156000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-156001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D156001+AND+objectid%3C%3D158000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 156001,
+   "hi": 158000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-158001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D158001+AND+objectid%3C%3D160000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 158001,
+   "hi": 160000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-160001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D160001+AND+objectid%3C%3D162000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 160001,
+   "hi": 162000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-162001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D162001+AND+objectid%3C%3D164000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 162001,
+   "hi": 164000,
+   "expected": 2000
+  }
+ },
+ {
+  "key": "civic_post_in-164001",
+  "payload": {
+   "reader": "civic_post_in",
+   "url": "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query?where=objectid%3E%3D164001+AND+objectid%3C%3D166000&outFields=%2A&returnGeometry=false&orderByFields=objectid&resultRecordCount=2000&f=json",
+   "state": "IN",
+   "india_only": false,
+   "lo": 164001,
+   "hi": 166000,
+   "expected": 2000
+  }
+ }
+]

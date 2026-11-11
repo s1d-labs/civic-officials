@@ -1,0 +1,1361 @@
+[
+ {
+  "key": "civic_anganwadi_kl-adoormunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://adoormunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252253",
+   "body": "Adoor Municipality",
+   "body_type": "urban",
+   "district": "Pathanamthitta",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-alappuzhamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://alappuzhamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252247",
+   "body": "Alappuzha Municipality",
+   "body_type": "urban",
+   "district": "Alappuzha",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-aluvamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://aluvamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252211",
+   "body": "Aluva Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-angamalymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://angamalymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252208",
+   "body": "Angamaly Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-anthurmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://anthurmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272915",
+   "body": "Anthur Municipality",
+   "body_type": "urban",
+   "district": "Kannur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-attingalmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://attingalmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252258",
+   "body": "Attingal Municipality",
+   "body_type": "urban",
+   "district": "Thiruvananthapuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-chalakudymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://chalakudymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252205",
+   "body": "Chalakudy Municipality",
+   "body_type": "urban",
+   "district": "Thrissur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-changanasserymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://changanasserymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252239",
+   "body": "Changanassery Municipality",
+   "body_type": "urban",
+   "district": "Kottayam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-chavakkadmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://chavakkadmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252181",
+   "body": "Chavakkad Municipality",
+   "body_type": "urban",
+   "district": "Thrissur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-chengannurmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://chengannurmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252249",
+   "body": "Chengannur Municipality",
+   "body_type": "urban",
+   "district": "Alappuzha",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-cherpulasserymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://cherpulasserymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272906",
+   "body": "Cherpulassery Municipality",
+   "body_type": "urban",
+   "district": "Palakkad",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-cherthalamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://cherthalamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252242",
+   "body": "Cherthala Municipality",
+   "body_type": "urban",
+   "district": "Alappuzha",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-chitturthathamangalammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://chitturthathamangalammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252178",
+   "body": "Chittur-Thathamangalam Municipality",
+   "body_type": "urban",
+   "district": "Palakkad",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-eloormunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://eloormunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252218",
+   "body": "Eloor Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-erattupettamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://erattupettamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272892",
+   "body": "Erattupetta Municipality",
+   "body_type": "urban",
+   "district": "Kottayam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-ettumanoormunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://ettumanoormunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272891",
+   "body": "Ettumanoor Municipality",
+   "body_type": "urban",
+   "district": "Kottayam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-ferokemunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://ferokemunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272900",
+   "body": "Feroke Municipality",
+   "body_type": "urban",
+   "district": "Kozhikode",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-guruvayoormunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://guruvayoormunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252184",
+   "body": "Guruvayoor Municipality",
+   "body_type": "urban",
+   "district": "Thrissur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-haripadmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://haripadmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272880",
+   "body": "Harippad Municipality",
+   "body_type": "urban",
+   "district": "Alappuzha",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-irinjalakudamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://irinjalakudamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252204",
+   "body": "Irinjalakuda Municipality",
+   "body_type": "urban",
+   "district": "Thrissur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-irittymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://irittymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272890",
+   "body": "Iritty Municipality",
+   "body_type": "urban",
+   "district": "Kannur",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kalamasserymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kalamasserymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252224",
+   "body": "Kalamassery Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kalpettamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kalpettamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252155",
+   "body": "Kalpetta Municipality",
+   "body_type": "urban",
+   "district": "Wayanad",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kanhangadmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kanhangadmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252110",
+   "body": "Kanhangad Municipality",
+   "body_type": "urban",
+   "district": "Kasaragod",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kannurcorporation",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kannurcorporation.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252125",
+   "body": "Kannur Municipal Corporation",
+   "body_type": "urban",
+   "district": "Kannur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-karunagappallymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://karunagappallymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "259707",
+   "body": "Karunagappally Municipality",
+   "body_type": "urban",
+   "district": "Kollam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kasaragodmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kasaragodmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252108",
+   "body": "Kasaragod Municipality",
+   "body_type": "urban",
+   "district": "Kasaragod",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kattappanamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kattappanamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272883",
+   "body": "Kattappana Municipality",
+   "body_type": "urban",
+   "district": "Idukki",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kayamkulammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kayamkulammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252248",
+   "body": "Kayamkulam Municipality",
+   "body_type": "urban",
+   "district": "Alappuzha",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kochicorporation",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kochicorporation.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252220",
+   "body": "Kochi Municipal Corporation",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kodungallurmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kodungallurmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252200",
+   "body": "Kodungallur Municipality",
+   "body_type": "urban",
+   "district": "Thrissur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-koduvallymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://koduvallymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272897",
+   "body": "Koduvally Municipality",
+   "body_type": "urban",
+   "district": "Kozhikode",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kollamcorporation",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kollamcorporation.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252255",
+   "body": "Kollam Municipal Corporation",
+   "body_type": "urban",
+   "district": "Kollam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kondottymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kondottymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272901",
+   "body": "Kondotty Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-koothattukulammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://koothattukulammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272881",
+   "body": "Koothattukulam Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-koothuparambamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://koothuparambamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252144",
+   "body": "Koothuparamba Municipality",
+   "body_type": "urban",
+   "district": "Kannur",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kothamangalammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kothamangalammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252231",
+   "body": "Kothamangalam Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kottakkalmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kottakkalmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "259709",
+   "body": "Kottakkal Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kottarakkaramunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kottarakkaramunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272889",
+   "body": "Kottarakkara Municipality",
+   "body_type": "urban",
+   "district": "Kollam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kottayammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kottayammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252238",
+   "body": "Kottayam Municipality",
+   "body_type": "urban",
+   "district": "Kottayam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-koyilandymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://koyilandymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252159",
+   "body": "Koyilandy Municipality",
+   "body_type": "urban",
+   "district": "Kozhikode",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kozhikodecorporation",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kozhikodecorporation.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252160",
+   "body": "Kozhikode Municipal Corporation",
+   "body_type": "urban",
+   "district": "Kozhikode",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-kunnamkulammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://kunnamkulammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252180",
+   "body": "Kunnamkulam Municipality",
+   "body_type": "urban",
+   "district": "Thrissur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-malappurammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://malappurammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252170",
+   "body": "Malappuram Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-mananthavadymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://mananthavadymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272910",
+   "body": "Mananthavady Municipality",
+   "body_type": "urban",
+   "district": "Wayanad",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-manjerimunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://manjerimunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252169",
+   "body": "Manjeri Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-mannarkadmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://mannarkadmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272907",
+   "body": "Mannarkad Municipality",
+   "body_type": "urban",
+   "district": "Palakkad",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-maradumunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://maradumunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252226",
+   "body": "Maradu Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-mattannurmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://mattannurmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252139",
+   "body": "Mattannur Municipality",
+   "body_type": "urban",
+   "district": "Kannur",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-mavelikkaramunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://mavelikkaramunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252250",
+   "body": "Mavelikkara Municipality",
+   "body_type": "urban",
+   "district": "Alappuzha",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-mukkammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://mukkammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272898",
+   "body": "Mukkom Municipality",
+   "body_type": "urban",
+   "district": "Kozhikode",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-muvattupuzhamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://muvattupuzhamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252230",
+   "body": "Muvattupuzha Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-nedumangadmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://nedumangadmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252259",
+   "body": "Nedumangad Municipality",
+   "body_type": "urban",
+   "district": "Thiruvananthapuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-neyyattinkaramunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://neyyattinkaramunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252261",
+   "body": "Neyyattinkara Municipality",
+   "body_type": "urban",
+   "district": "Thiruvananthapuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-nilamburmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://nilamburmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "259710",
+   "body": "Nilambur Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-nileshwarmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://nileshwarmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "259711",
+   "body": "Nileshwar Municipality",
+   "body_type": "urban",
+   "district": "Kasaragod",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-ottappalammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://ottappalammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252175",
+   "body": "Ottappalam Municipality",
+   "body_type": "urban",
+   "district": "Palakkad",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-palamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://palamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252234",
+   "body": "Palai Municipality",
+   "body_type": "urban",
+   "district": "Kottayam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-palakkadmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://palakkadmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252176",
+   "body": "Palakkad Municipality",
+   "body_type": "urban",
+   "district": "Palakkad",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-pandalammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://pandalammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272908",
+   "body": "Pandalam Municipality",
+   "body_type": "urban",
+   "district": "Pathanamthitta",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-panoormunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://panoormunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272885",
+   "body": "Panoor Municipality",
+   "body_type": "urban",
+   "district": "Kannur",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-parappanangadimunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://parappanangadimunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272912",
+   "body": "Parappanangadi Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-paravoormunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://paravoormunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252256",
+   "body": "Paravoor Municipality",
+   "body_type": "urban",
+   "district": "Kollam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-northparavurmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://northparavurmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252215",
+   "body": "Paravur Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-pathanamthittamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://pathanamthittamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252252",
+   "body": "Pathanamthitta Municipality",
+   "body_type": "urban",
+   "district": "Pathanamthitta",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-pattambimunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://pattambimunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272905",
+   "body": "Pattambi Municipality",
+   "body_type": "urban",
+   "district": "Palakkad",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-payyanurmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://payyanurmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252111",
+   "body": "Payyannur Municipality",
+   "body_type": "urban",
+   "district": "Kannur",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-payyolimunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://payyolimunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272896",
+   "body": "Payyoli Municipality",
+   "body_type": "urban",
+   "district": "Kozhikode",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-perinthalmannamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://perinthalmannamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252171",
+   "body": "Perinthalmanna Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-perumbavoormunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://perumbavoormunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252207",
+   "body": "Perumbavoor Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-piravommunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://piravommunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272882",
+   "body": "Piravom Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-ponnanimunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://ponnanimunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252173",
+   "body": "Ponnani Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-punalurmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://punalurmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252254",
+   "body": "Punalur Municipality",
+   "body_type": "urban",
+   "district": "Kollam",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-ramanattukaramunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://ramanattukaramunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272899",
+   "body": "Ramanattukara Municipality",
+   "body_type": "urban",
+   "district": "Kozhikode",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-shoranurmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://shoranurmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252174",
+   "body": "Shoranur Municipality",
+   "body_type": "urban",
+   "district": "Palakkad",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-sreekandapurammunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://sreekandapurammunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272884",
+   "body": "Sreekandapuram Municipality",
+   "body_type": "urban",
+   "district": "Kannur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-sulthanbatherymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://sulthanbatherymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272911",
+   "body": "Sulthanbathery Municipality",
+   "body_type": "urban",
+   "district": "Wayanad",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-taliparambamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://taliparambamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252112",
+   "body": "Taliparamba Municipality",
+   "body_type": "urban",
+   "district": "Kannur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-tanurmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://tanurmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272904",
+   "body": "Tanur Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-thalasserymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://thalasserymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252149",
+   "body": "Thalassery Municipality",
+   "body_type": "urban",
+   "district": "Kannur",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-thiruvallamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://thiruvallamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252251",
+   "body": "Thiruvalla Municipality",
+   "body_type": "urban",
+   "district": "Pathanamthitta",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-thiruvananthapuramcorporation",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://thiruvananthapuramcorporation.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252260",
+   "body": "Thiruvananthapuram Municipal Corporation",
+   "body_type": "urban",
+   "district": "Thiruvananthapuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-thodupuzhamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://thodupuzhamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252233",
+   "body": "Thodupuzha Municipality",
+   "body_type": "urban",
+   "district": "Idukki",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-thrikkakaramunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://thrikkakaramunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "259708",
+   "body": "Thrikkakara Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-thrippunithuramunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://thrippunithuramunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252227",
+   "body": "Thrippunithura Municipality",
+   "body_type": "urban",
+   "district": "Ernakulam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-thrissurcorporation",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://thrissurcorporation.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252194",
+   "body": "Thrissur Municipal Corporation",
+   "body_type": "urban",
+   "district": "Thrissur",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-tirurmunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://tirurmunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252172",
+   "body": "Tirur Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-tirurangadimunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://tirurangadimunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272903",
+   "body": "Tirurangadi Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-vaikommunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://vaikommunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252236",
+   "body": "Vaikom Municipality",
+   "body_type": "urban",
+   "district": "Kottayam",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-valancherymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://valancherymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272902",
+   "body": "Valanchery Municipality",
+   "body_type": "urban",
+   "district": "Malappuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-varkalamunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://varkalamunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252257",
+   "body": "Varkala Municipality",
+   "body_type": "urban",
+   "district": "Thiruvananthapuram",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-vatakaramunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://vatakaramunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "252157",
+   "body": "Vatakara Municipality",
+   "body_type": "urban",
+   "district": "Kozhikode",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-wadakkancherymunicipality",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://wadakkancherymunicipality.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "local_body_code": "272909",
+   "body": "Wadakkanchery Municipality",
+   "body_type": "urban",
+   "district": "Thrissur",
+   "host_in_archive": false
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-adatpanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://adatpanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-adichanalloorpanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://adichanalloorpanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-adimalypanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://adimalypanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-agalipanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://agalipanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-aikaranadpanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://aikaranadpanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-ajanurpanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://ajanurpanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-akalakunnampanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://akalakunnampanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-akathetharapanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://akathetharapanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-alagappanagarpanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://alagappanagarpanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-alakodepanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://alakodepanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-alamkodepanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://alamkodepanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-alanallurpanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://alanallurpanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-alangadpanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://alangadpanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-alapanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://alapanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ },
+ {
+  "key": "civic_anganwadi_kl-alappadpanchayat",
+  "payload": {
+   "reader": "civic_anganwadi_kl",
+   "url": "https://alappadpanchayat.lsgkerala.gov.in/en/page/anganwady-details",
+   "state": "KL",
+   "body_type": "grama_panchayat",
+   "host_in_archive": true
+  }
+ }
+]

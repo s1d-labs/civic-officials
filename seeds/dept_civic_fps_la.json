@@ -1,0 +1,22 @@
+[
+ {
+  "key": "civic_fps_la-1004",
+  "payload": {
+   "reader": "civic_fps_la",
+   "url": "https://epos.ladakh.gov.in",
+   "state": "LA",
+   "dist_code": "1004",
+   "district": "KARGIL"
+  }
+ },
+ {
+  "key": "civic_fps_la-1003",
+  "payload": {
+   "reader": "civic_fps_la",
+   "url": "https://epos.ladakh.gov.in",
+   "state": "LA",
+   "dist_code": "1003",
+   "district": "LEH"
+  }
+ }
+]

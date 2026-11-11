@@ -1,0 +1,12 @@
+[
+ {
+  "key": "civic_fire_py",
+  "payload": {
+   "reader": "civic_fire_py",
+   "url": "https://fire.py.gov.in/sites/default/files/directory-officers-and-employees.pdf",
+   "state": "PY",
+   "india_only": false,
+   "expected": 16
+  }
+ }
+]

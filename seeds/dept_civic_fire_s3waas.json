@@ -1,0 +1,112 @@
+[
+ {
+  "key": "civic_fire_s3waas-howrah.gov.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://howrah.gov.in/public-utility-category/fire-service/",
+   "state": "WB",
+   "district": "Howrah",
+   "india_only": false
+  }
+ },
+ {
+  "key": "civic_fire_s3waas-jagtial.telangana.gov.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://jagtial.telangana.gov.in/public-utility-category/fire-station/",
+   "state": "TG",
+   "district": "Jagitial",
+   "india_only": false
+  }
+ },
+ {
+  "key": "civic_fire_s3waas-jalpaiguri.gov.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://jalpaiguri.gov.in/public-utility-category/fire-station/",
+   "state": "WB",
+   "district": "Jalpaiguri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "civic_fire_s3waas-kalimpong.gov.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://kalimpong.gov.in/public-utility-category/fire-station/",
+   "state": "WB",
+   "district": "Kalimpong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "civic_fire_s3waas-krishnagiri.nic.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://krishnagiri.nic.in/public-utility-category/fire-service/",
+   "state": "TN",
+   "district": "Krishnagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "civic_fire_s3waas-malda.gov.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://malda.gov.in/public-utility-category/fire-brigade/",
+   "state": "WB",
+   "district": "Malda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "civic_fire_s3waas-nizamabad.telangana.gov.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://nizamabad.telangana.gov.in/public-utility-category/fire/",
+   "state": "TG",
+   "district": "Nizamabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "civic_fire_s3waas-northtripura.nic.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://northtripura.nic.in/public-utility-category/fire-station/",
+   "state": "TR",
+   "district": "North Tripura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "civic_fire_s3waas-palamu.nic.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://palamu.nic.in/public-utility-category/fire-station/",
+   "state": "JH",
+   "district": "Palamu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "civic_fire_s3waas-tuensang.nic.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://tuensang.nic.in/public-utility-category/fire/",
+   "state": "NL",
+   "district": "Tuensang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "civic_fire_s3waas-wayanad.gov.in",
+  "payload": {
+   "reader": "civic_fire_s3waas",
+   "url": "https://wayanad.gov.in/en/public-utility-category/fire-station/",
+   "state": "KL",
+   "district": "Wayanad",
+   "india_only": false
+  }
+ }
+]

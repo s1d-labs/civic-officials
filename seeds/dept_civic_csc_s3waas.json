@@ -1,0 +1,434 @@
+[
+ {
+  "key": "civic_csc_s3waas-balaghat.nic.in-e0-a4-b2-e0-a5-8b-e0-a4-95-e0-a4-b8-e0-a5-87-e0-a4-b5-e0-a4-",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://balaghat.nic.in/public-utility-category/%e0%a4%b2%e0%a5%8b%e0%a4%95-%e0%a4%b8%e0%a5%87%e0%a4%b5%e0%a4%be-%e0%a4%95%e0%a5%87%e0%a4%82%e0%a4%a6%e0%a5%8d%e0%a4%b0/",
+   "state": "MP",
+   "district": "Balaghat",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-bijapur.gov.in-lsewa-setu-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://bijapur.gov.in/en/public-utility-category/lsewa-setu-kendra/",
+   "state": "CG",
+   "district": "Bijapur",
+   "india_only": false,
+   "centre_type": "Sewa Setu Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-bilaspur.gov.in-lok-sewa-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://bilaspur.gov.in/en/public-utility-category/lok-sewa-kendra/",
+   "state": "CG",
+   "district": "Bilaspur",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-chikkamagaluru.nic.in-jana-snehi-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://chikkamagaluru.nic.in/en/public-utility-category/jana-snehi-kendra/",
+   "state": "KA",
+   "district": "Chikkamagaluru",
+   "india_only": false,
+   "centre_type": "Jana Snehi Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-durg.gov.in-lok-sewa-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://durg.gov.in/en/public-utility-category/lok-sewa-kendra/",
+   "state": "CG",
+   "district": "Durg",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-etah.nic.in-e0-a4-9c-e0-a4-a8-e0-a4-b8-e0-a5-87-e0-a4-b5-e0-a4-be-e0-a4-",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://etah.nic.in/hi/public-utility-category/%e0%a4%9c%e0%a4%a8-%e0%a4%b8%e0%a5%87%e0%a4%b5%e0%a4%be-%e0%a4%95%e0%a5%87%e0%a4%a8%e0%a5%8d%e0%a4%a6%e0%a5%8d%e0%a4%b0/",
+   "state": "UP",
+   "district": "Etah",
+   "india_only": false,
+   "centre_type": "Jan Seva Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-gariaband.gov.in-e0-a4-b2-e0-a5-8b-e0-a4-95-e0-a4-b8-e0-a5-87-e0-a4-b5-e0-a4-",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://gariaband.gov.in/public-utility-category/%e0%a4%b2%e0%a5%8b%e0%a4%95-%e0%a4%b8%e0%a5%87%e0%a4%b5%e0%a4%be-%e0%a4%95%e0%a5%87%e0%a4%82%e0%a4%a6%e0%a5%8d%e0%a4%b0/",
+   "state": "CG",
+   "district": "Gariyaband",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-gaurela-pendra-marwahi.cg.gov.in-lok-sewa-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://gaurela-pendra-marwahi.cg.gov.in/public-utility-category/lok-sewa-kendra/",
+   "state": "CG",
+   "district": "Gaurela-Pendra-Marwahi",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-hyderabad.telangana.gov.in-meeseva-centers-en",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://hyderabad.telangana.gov.in/public-utility-category/meeseva-centers-en/",
+   "state": "TG",
+   "district": "Hyderabad",
+   "india_only": false,
+   "centre_type": "MeeSeva centre",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-imphalwest.nic.in-csc",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://imphalwest.nic.in/public-utility-category/csc/",
+   "state": "MN",
+   "district": "Imphal West",
+   "india_only": false,
+   "centre_type": "Common Service Centre",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-janjgir-champa.gov.in-e0-a4-b8-e0-a5-87-e0-a4-b5-e0-a4-be-e0-a4-b8-e0-a5-87-e0-a4-",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://janjgir-champa.gov.in/public-utility-category/%e0%a4%b8%e0%a5%87%e0%a4%b5%e0%a4%be-%e0%a4%b8%e0%a5%87%e0%a4%a4%e0%a5%81-%e0%a4%95%e0%a5%87%e0%a4%82%e0%a4%a6%e0%a5%8d%e0%a4%b0/",
+   "state": "CG",
+   "district": "Janjgir-Champa",
+   "india_only": false,
+   "centre_type": "Sewa Setu Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-kaithal.gov.in-atal-seva-kendra-rural",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://kaithal.gov.in/public-utility-category/atal-seva-kendra-rural/",
+   "state": "HR",
+   "district": "Kaithal",
+   "india_only": false,
+   "centre_type": "Atal Seva Kendra",
+   "operator_first": true
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-kaithal.gov.in-atal-seva-kendraurban",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://kaithal.gov.in/public-utility-category/atal-seva-kendraurban/",
+   "state": "HR",
+   "district": "Kaithal",
+   "india_only": false,
+   "centre_type": "Atal Seva Kendra",
+   "operator_first": true
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-kaithal.gov.in-saral-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://kaithal.gov.in/public-utility-category/saral-kendra/",
+   "state": "HR",
+   "district": "Kaithal",
+   "india_only": false,
+   "centre_type": "Antyodaya SARAL Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-karnal.gov.in-antyodaya-sewa-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://karnal.gov.in/public-utility-category/antyodaya-sewa-kendra/",
+   "state": "HR",
+   "district": "Karnal",
+   "india_only": false,
+   "centre_type": "Antyodaya SARAL Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-kawardha.gov.in-lok-seva-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://kawardha.gov.in/en/public-utility-category/lok-seva-kendra/",
+   "state": "CG",
+   "district": "Kabeerdham",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-kondagaon.gov.in-lok-sewa-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://kondagaon.gov.in/en/public-utility-category/lok_sewa_kendra/",
+   "state": "CG",
+   "district": "Kondagaon",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-korea.gov.in-lok-sewa-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://korea.gov.in/en/public-utility-category/lok-sewa-kendra/",
+   "state": "CG",
+   "district": "Korea",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-malda.gov.in-bangla-sahayata-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://malda.gov.in/public-utility-category/bangla-sahayata-kendra/",
+   "state": "WB",
+   "district": "Malda",
+   "india_only": false,
+   "centre_type": "Bangla Sahayata Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-mansa.nic.in-sewa-kender",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://mansa.nic.in/public-utility-category/sewa-kender/",
+   "state": "PB",
+   "district": "Mansa",
+   "india_only": false,
+   "centre_type": "Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-nadia.gov.in-csc",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://nadia.gov.in/public-utility-category/csc/",
+   "state": "WB",
+   "district": "Nadia",
+   "india_only": false,
+   "centre_type": "Common Service Centre",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-nuh.gov.in-csc",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://nuh.gov.in/public-utility-category/csc/",
+   "state": "HR",
+   "district": "Nuh",
+   "india_only": false,
+   "centre_type": "Common Service Centre",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-palamu.nic.in-csc",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://palamu.nic.in/public-utility-category/csc/",
+   "state": "JH",
+   "district": "Palamu",
+   "india_only": false,
+   "centre_type": "Common Service Centre",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-palwal.gov.in-atal-seva-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://palwal.gov.in/public-utility-category/atal-seva-kendra/",
+   "state": "HR",
+   "district": "Palwal",
+   "india_only": false,
+   "centre_type": "Atal Seva Kendra",
+   "operator_first": true
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-panipat.gov.in-atal-seva-kendra-rural",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://panipat.gov.in/public-utility-category/atal-seva-kendra-rural/",
+   "state": "HR",
+   "district": "Panipat",
+   "india_only": false,
+   "centre_type": "Atal Seva Kendra",
+   "operator_first": true
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-raigarh.gov.in-sewa-setu-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://raigarh.gov.in/en/public-utility-category/sewa-setu-kendra/",
+   "state": "CG",
+   "district": "Raigarh",
+   "india_only": false,
+   "centre_type": "Sewa Setu Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-rewari.gov.in-saral-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://rewari.gov.in/public-utility-category/saral-kendra/",
+   "state": "HR",
+   "district": "Rewari",
+   "india_only": false,
+   "centre_type": "Antyodaya SARAL Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-rohtak.gov.in-atal-seva-kendra-r",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://rohtak.gov.in/public-utility-category/atal-seva-kendra-r/",
+   "state": "HR",
+   "district": "Rohtak",
+   "india_only": false,
+   "centre_type": "Atal Seva Kendra",
+   "operator_first": true
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-rohtak.gov.in-atal-seva-kendra-u",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://rohtak.gov.in/public-utility-category/atal-seva-kendra-u/",
+   "state": "HR",
+   "district": "Rohtak",
+   "india_only": false,
+   "centre_type": "Atal Seva Kendra",
+   "operator_first": true
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-sasnagar.nic.in-saanjh-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://sasnagar.nic.in/public-utility-category/saanjh-kendra/",
+   "state": "PB",
+   "district": "S.A.S Nagar",
+   "india_only": false,
+   "centre_type": "Saanjh Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-singrauli.nic.in-lokseva-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://singrauli.nic.in/en/public-utility-category/lokseva-kendra/",
+   "state": "MP",
+   "district": "Singrauli",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-sonipat.gov.in-saral-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://sonipat.gov.in/public-utility-category/saral-kendra/",
+   "state": "HR",
+   "district": "Sonipat",
+   "india_only": false,
+   "centre_type": "Antyodaya SARAL Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-sukma.gov.in-e0-a4-b2-e0-a5-8b-e0-a4-95-e0-a4-b8-e0-a5-87-e0-a4-b5-e0-a4-",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://sukma.gov.in/public-utility-category/%e0%a4%b2%e0%a5%8b%e0%a4%95-%e0%a4%b8%e0%a5%87%e0%a4%b5%e0%a4%be-%e0%a4%95%e0%a5%87%e0%a4%82%e0%a4%a6%e0%a5%8d%e0%a4%b0/",
+   "state": "CG",
+   "district": "Sukma",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-surajpur.nic.in-lok-sewa-kendra",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://surajpur.nic.in/en/public-utility-category/lok-sewa-kendra/",
+   "state": "CG",
+   "district": "Surajpur",
+   "india_only": false,
+   "centre_type": "Lok Sewa Kendra",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-tamenglong.nic.in-csc",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://tamenglong.nic.in/public-utility-category/csc/",
+   "state": "MN",
+   "district": "Tamenglong",
+   "india_only": false,
+   "centre_type": "Common Service Centre",
+   "operator_first": false
+  }
+ },
+ {
+  "key": "civic_csc_s3waas-ukhrul.nic.in-cscs",
+  "payload": {
+   "reader": "civic_csc_s3waas",
+   "url": "https://ukhrul.nic.in/public-utility-category/cscs/",
+   "state": "MN",
+   "district": "Ukhrul",
+   "india_only": false,
+   "centre_type": "Common Service Centre",
+   "operator_first": false
+  }
+ }
+]

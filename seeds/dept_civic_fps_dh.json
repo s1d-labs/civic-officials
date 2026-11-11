@@ -1,0 +1,32 @@
+[
+ {
+  "key": "civic_fps_dh-496",
+  "payload": {
+   "reader": "civic_fps_dh",
+   "url": "https://epos.ddd.gov.in",
+   "state": "DH",
+   "dist_code": "496",
+   "district": "Dadar Nagar Haveli"
+  }
+ },
+ {
+  "key": "civic_fps_dh-495",
+  "payload": {
+   "reader": "civic_fps_dh",
+   "url": "https://epos.ddd.gov.in",
+   "state": "DH",
+   "dist_code": "495",
+   "district": "Daman"
+  }
+ },
+ {
+  "key": "civic_fps_dh-494",
+  "payload": {
+   "reader": "civic_fps_dh",
+   "url": "https://epos.ddd.gov.in",
+   "state": "DH",
+   "dist_code": "494",
+   "district": "Diu"
+  }
+ }
+]

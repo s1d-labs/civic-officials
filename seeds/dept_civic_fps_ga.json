@@ -1,0 +1,32 @@
+[
+ {
+  "key": "civic_fps_ga-1793",
+  "payload": {
+   "reader": "civic_fps_ga",
+   "url": "https://epos.goa.gov.in",
+   "state": "GA",
+   "dist_code": "1793",
+   "district": "KUSHAVATI"
+  }
+ },
+ {
+  "key": "civic_fps_ga-1585",
+  "payload": {
+   "reader": "civic_fps_ga",
+   "url": "https://epos.goa.gov.in",
+   "state": "GA",
+   "dist_code": "1585",
+   "district": "NORTH GOA"
+  }
+ },
+ {
+  "key": "civic_fps_ga-1586",
+  "payload": {
+   "reader": "civic_fps_ga",
+   "url": "https://epos.goa.gov.in",
+   "state": "GA",
+   "dist_code": "1586",
+   "district": "SOUTH GOA"
+  }
+ }
+]
