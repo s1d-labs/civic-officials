@@ -35,13 +35,34 @@ def _cell(tr, field):
 
 
 def landline(std, num):
-    num = re.sub(r"\D", "", num or "")
-    if not num:
-        return None
+    """'0651' + '2242132' -> '0651-2242132'. Placeholders ('0', '0, 0', '--') give None; an STD code without its 0 ('6542')
+    gets it back. A cell with several numbers ('253290, 86339') gives the first; see landlines() for all of them."""
+    nums, _ = landlines(std, num)
+    return nums[0] if nums else None
+
+
+def landlines(std, cell):
+    """(phones, short numbers) of one cell: each number of 6+ digits with the STD code; parts of 1-5 digits that are not
+    placeholders ('86339', '7265': short police exchange numbers, not dialable alone) are given apart."""
     std = re.sub(r"\D", "", std or "")
-    if len(num) == 10 and num[0] in "6789":
-        return num
-    return f"{std}-{num}" if std else num
+    if set(std) <= {"0"}:
+        std = ""
+    elif not std.startswith("0"):
+        std = "0" + std
+    out, short = [], []
+    for part in re.split(r"[,;/&]|\bor\b", cell or ""):
+        num = re.sub(r"\D", "", part)
+        if not num or set(num) == {"0"}:
+            continue
+        if len(num) < 6:
+            short.append(num)
+        elif len(num) == 10 and num[0] in "6789":
+            out.append(num)
+        elif num.startswith("0") and len(num) >= 10:
+            out.append(num)
+        else:
+            out.append(f"{std}-{num}" if std else num)
+    return out, short
 
 
 def parse(html, nid, district=None, url=URL):
@@ -56,10 +77,13 @@ def parse(html, nid, district=None, url=URL):
                 continue
             a = tr.find("td", class_="views-field-title").find("a", href=True)
             std = _cell(tr, "field-thana-code")
-            nums = [landline(std, _cell(tr, "field-thana-office-no")), landline(std, _cell(tr, "field-thana-resi-no"))]
-            allp = (phones(_cell(tr, "field-thana-mobile-no")) or "").split(", ") + nums   # landlines kept as built: phones()
+            office, short = landlines(std, _cell(tr, "field-thana-office-no"))
+            resi, short2 = landlines(std, _cell(tr, "field-thana-resi-no"))
+            mob = [n for n in (phones(_cell(tr, "field-thana-mobile-no")) or "").split(", ") if n and set(re.sub(r"\D", "", n)) != {"0"}]
+            allp = mob + office + resi                                                      # landlines kept as built: phones()
             allp = [n for i, n in enumerate(allp) if n and n not in allp[:i]]               # misreads '06542-222222'
             recs.append(rec(M, f"{nid}:{slug(st)}", area=st, post="Officer in charge (station mobile)", phone=", ".join(allp) or None,
+                            short_numbers=", ".join(short + short2) or None,
                             state="JH", district=dist, office_id=a["href"].rsplit("/", 1)[-1] if a else None, source=url))
     return uniq(recs)
 

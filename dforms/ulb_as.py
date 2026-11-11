@@ -16,6 +16,11 @@ Pages show no date. They answer from outside India (checked from Germany 2026-11
 writes it, with the type word split off into body_type ("Barpeta Rd.MB" -> area "Barpeta Rd.", body_type "MB"; "Lakhipur MB(Cachar)"
 -> "Lakhipur (Cachar)"; the list's own text is kept in list_name): sql/86 compares civic.skel() of the area, and a trailing "MB"
 made 10 bodies fail. District = the platform's district (older names: Karimganj, Morigaon).
+Card names often carry the post or the service after a comma ("Dayaram Nath , Peon", "KAKOLI DAS, AUAS"): split_name() keeps the
+name and gives the rest as the post (cards whose post is only "Office Staff"), "designation" (when the card has its own post),
+"service" (AUAS, AUFS, AUES, ...) or "note" (a remark in brackets). Placeholders ("N/A", "A/A"), fake numbers (9999999999,
+1234567890) and the PIN code in the footer phone ("Barpeta-781301") are left out; a footer with a template e-mail (@example.net)
+also has a template address and number ("1057 Brekke Well", Hamren), so none of it is used.
 """
 import re
 
@@ -66,6 +71,45 @@ TYPE = re.compile(r"(?i)^(.*?)\s*\b(MB|Municipal Corporation)\b\s*(\(.*\))?$")
 STAFF = re.compile(r"(?i)^(office\s*staff|staff|employee|others?)$")
 
 
+PLACEHOLDER = re.compile(r"(?i)^(n\s*/?\s*a|a\s*/\s*a|nil|none|null|not available|-+|\.+)$")
+SERVICE = re.compile(r"^\(?\s*(A\.?U\.?A\.?S|A\.?U\.?F\.?S|A\.?U\.?E\.?S|A\.?U\.?S|A\.?C\.?S|A\.?F\.?S)\.?\s*\)?\.?$", re.I)
+TEMPLATE_MAIL = re.compile(r"(?i)@example\.(com|net|org)\b")
+
+
+def real(s):
+    """'' for page placeholders ('N/A', 'A/A', '-')."""
+    s = _esw.clean(s)
+    return "" if PLACEHOLDER.match(s) else s
+
+
+def fake_number(n):
+    d = re.sub(r"\D", "", n)
+    return len(set(d)) == 1 or d in ("1234567890", "0123456789", "9876543210")
+
+
+def good_phones(s, pins=()):
+    """_esw.phones() without fake numbers and PIN codes."""
+    out = [x for x in (_esw.phones(s) or "").split(", ") if x and not fake_number(x)
+           and not (re.fullmatch(r"\d{6}", x) and (x in pins or x.startswith("78")))]
+    return ", ".join(out)
+
+
+def split_name(name):
+    """'Dayaram Nath , Peon' -> ('Dayaram Nath', {'designation': 'Peon'}); 'KAKOLI DAS, AUAS' -> ('KAKOLI DAS', {'service': 'AUAS'});
+    'Parag Dutta, (Already Retired ...)' -> ('Parag Dutta', {'note': 'Already Retired ...'})."""
+    name = real(name)
+    if "," not in name:
+        return name, {}
+    head, tail = (_esw.clean(x).strip(" ,.") for x in name.split(",", 1))
+    if not head or not tail:
+        return head or tail, {}
+    if SERVICE.match(tail):
+        return head, {"service": re.sub(r"[().\s]", "", tail).upper()}
+    if tail.startswith("(") and tail.endswith(")"):
+        return head, {"note": _esw.clean(tail[1:-1]).strip(" ,")}
+    return head, {"designation": tail}
+
+
 def items(get=None):
     out = []
     for district, s in BODIES.items():
@@ -110,8 +154,13 @@ def footer(html):
         return "", "", ""
     addr = f.find("div", class_="mb-2")
     text = f.get_text(" | ")
-    return (_esw.clean(addr.get_text(" ")) if addr else "", _esw.phones(re.sub(r"(?i)pin\s*:?-?\s*\d{6}", " ", text.split("Quick")[0])),
-            _esw.emails(text.split("Quick")[0]))
+    top = text.split("Quick")[0]
+    address = _esw.clean(addr.get_text(" ")) if addr else ""
+    if TEMPLATE_MAIL.search(top):                    # the template's sample footer (fake address, number and e-mail)
+        return "", "", ""
+    pins = set(re.findall(r"(?<!\d)(\d{6})(?!\d)", address))
+    top = re.sub(r"(?i)pin\s*:?-?\s*\d{6}|(?<=[A-Za-z])\s*-\s*\d{6}(?!\d)", " ", top)
+    return address, good_phones(top, pins), _esw.emails(top)
 
 
 def split(lines):
@@ -121,12 +170,12 @@ def split(lines):
         if i == 0:
             cat = x
         elif not phone and re.fullmatch(r"[\d\s+,/-]{6,}", x):
-            phone = x
+            phone = good_phones(x)
         elif re.match(r"(?i)^ward\s*no", x):
             ward = _esw.clean(re.sub(r"(?i)^ward\s*no\.?\s*(ward\s*no\.?)?", "", x))
         else:
             rest.append(x)
-    return cat, phone, ward, ", ".join(rest)
+    return real(cat), phone, ward, real(", ".join(rest))
 
 
 def parse(staff_html, members_html=None, body="", district=None, url="", members_url=""):
@@ -136,19 +185,27 @@ def parse(staff_html, members_html=None, body="", district=None, url="", members
     common = {"district": district, "body_type": btype, "list_name": list_name}
     for name, lines in cards(staff_html):
         cat, phone, ward, detail = split(lines)
+        name, more = split_name(name)
         post, section = (detail, None) if STAFF.match(cat) and detail else (cat or detail, detail if cat else None)
+        des = more.pop("designation", None)
+        if des and (not post or STAFF.match(post)):
+            post = des                                   # "Dayaram Nath , Peon" on an "Office Staff" card: the post is Peon
+        elif des and _esw.slug(des) != _esw.slug(post or ""):
+            more["designation"] = des
         if not post or not (name or phone):
             continue
         recs.append(_ulb.record(MODULE, STATE, body, post, seen, name=name, phone=phone, source=url, **common,
-                                section=section, ward=ward or None))
+                                section=section, ward=ward or None, **more))
         if head is None and recs[-1][1]["role"] == "head":
             head = len(recs) - 1
     for name, lines in cards(members_html or ""):
         cat, phone, ward, detail = split(lines)
+        name, more = split_name(name)
+        more.pop("designation", None)
         if not KEEP_MEMBER.search(cat) or not (name or phone):
             continue
         recs.append(_ulb.record(MODULE, STATE, body, cat, seen, name=name, phone=phone, source=members_url, **common,
-                                ward=ward or None))
+                                ward=ward or None, **more))
     addr, ophone, oemail = footer(staff_html)
     if head is not None:
         rid, d = recs[head]

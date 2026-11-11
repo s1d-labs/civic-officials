@@ -7,7 +7,9 @@ Two pages per zone N = 1..5 (one queue item reads both):
                             Revenue Officer, Superintendent, Sanitary Officer ...), phones, and the office ("Ward Committee
                             Office-I, Srirangam Zone, ...").
 Records: section engineers at level "ward" (wards from the card); zone officers at level "zone" with wards = every ward of that
-zone's engineers (the ward-to-zone mapping). "Vacant" posts are kept with vacant = true. Record ids:
+zone's engineers (the ward-to-zone mapping). Every zonaladmins/N page (seen 2026-11-11 for N = 1, 3, 4, 5) also shows the zone I
+officers ("Ward Committee Office-I, Srirangam Zone"): a zone officer card is kept only when its "Ward Committee Office-<roman>"
+is zone N (cards without the office number are kept). "Vacant" posts are kept with vacant = true. Record ids:
 dept:ward_trichy:z<N>:<post slug>:<name slug>.
 """
 import re
@@ -46,6 +48,18 @@ def cards(html):
     return out
 
 
+ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8}
+
+
+def office_zone(text):
+    """'Ward Committee Office-I, Srirangam Zone' -> 1; None when the text has no office number."""
+    m = re.search(r"(?i)Ward\s*Committee\s*Office\s*[-–]?\s*([IVX]+|\d)\b", text or "")
+    if not m:
+        return None
+    v = m.group(1).upper()
+    return int(v) if v.isdigit() else ROMAN.get(v)
+
+
 def parse(ward_html, zonal_html, p):
     n = p.get("zone_no") or int(re.search(r"/(\d+)$", p["url"]).group(1))
     seen, recs, allw, zname = set(), [], [], None
@@ -60,6 +74,10 @@ def parse(ward_html, zonal_html, p):
                                  post=post, name=name, phone=", ".join(x for x in (mobile, office) if x), wards=wards,
                                  zone=f"Zone {n}", office=section or None, source=p["url"]))
     for name, post, office, mobile, rest in cards(zonal_html or ""):
+        oz = office_zone(rest)
+        if oz is not None and oz != n:
+            continue                                     # zone I's officers, repeated on the page of zone n
+        name = name.strip(" ,;")
         m = re.search(r"([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)\s+Zone", rest)
         zname = zname or (m.group(0) if m else None)
         recs.append(_ward.record(MODULE, f"z{n}:{_esw.slug(post)}:{_esw.slug(name) or 'n'}", seen, body=BODY, lgd=LGD, state=STATE,

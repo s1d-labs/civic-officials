@@ -5,8 +5,10 @@ selectcircle=<English circle name> and the other selects empty. The answer lists
 an off-canvas table: Section Office, Section Code, Phone, Office email, Sub Division (name + email), Division (name, email, phone),
 Circle (name, email, phone), Region. The 'Know Your Section' consumer lookup (captcha) is not used.
 Records: one per section (level section, office_id = section code), plus one per sub-division, division and circle (the same
-id from every section that names it). About 776 sections, ~220 sub-divisions, 75 divisions, 26 circles. Phones lack the
-leading 0 of the STD code: written as given. No officer names.
+id from every section that names it). About 776 sections, ~220 sub-divisions, 75 divisions, 26 circles. The site stores the
+landlines as numbers, so the leading 0 of the STD code is lost ("4772245532"): std0() puts it back on a 10-digit number that does
+not start with 6-9 (Kerala STD codes are 04xx; mobiles start with 6-9). A sub-division / division / circle that the sections
+spell two ways ("North Paravur" / "NorthParavur") keeps one record (the first spelling). No officer names.
 """
 import re
 
@@ -23,10 +25,17 @@ def lines(td):
     return [clean(x) for x in td.get_text("\n", strip=True).split("\n") if clean(x)]
 
 
+def std0(p):
+    """'4772245532, 9496010101' -> '04772245532, 9496010101': a 10-digit landline that lost the leading 0 of its STD code."""
+    if not p:
+        return p
+    return ", ".join("0" + x if re.fullmatch(r"[1-5]\d{9}", x) else x for x in p.split(", "))
+
+
 def unit(ls):
     """['Alappuzha', 'eealpy@gmail.com', '4772243487'] -> (name, email, phone)."""
     name = next((x for x in ls if "@" not in x and not re.fullmatch(r"[\d\s+-]+", x)), None)
-    return name, email(" ".join(x for x in ls if "@" in x)), phone(*[x for x in ls if re.fullmatch(r"[\d\s+-]{6,}", x)])
+    return name, email(" ".join(x for x in ls if "@" in x)), std0(phone(*[x for x in ls if re.fullmatch(r"[\d\s+-]{6,}", x)]))
 
 
 def parse(html, circle_asked, url=BASE + "searchsection"):
@@ -47,7 +56,7 @@ def parse(html, circle_asked, url=BASE + "searchsection"):
         region = (d.get("region") or [None])[0]
         code = (d.get("code") or [None])[0]
         out.add(f"section:{code or sec}", "section", sec, post="Section Office", office_id=code,
-                phone_=phone(*d.get("phone", [])), email_=email(" ".join(d.get("email", []))),
+                phone_=std0(phone(*d.get("phone", []))), email_=email(" ".join(d.get("email", []))),
                 parents={"zone": region, "circle": ci, "division": dv, "subdivision": sd})
         if sd:
             out.add(f"subdivision:{dv}:{sd}", "subdivision", sd, post="Sub Division Office", email_=sde, phone_=sdp,
@@ -58,12 +67,14 @@ def parse(html, circle_asked, url=BASE + "searchsection"):
         if ci:
             out.add(f"circle:{ci}", "circle", ci, post="Circle Office", email_=cie, phone_=cip, parents={"zone": region})
     # a sub-division / division / circle named by several sections: keep one record per id (the first)
+    # (the same office spelt with or without a blank: the slug without hyphens)
     seen, recs = set(), []
     for rid, dd in out.recs:
         base = rid.split("~")[0]
-        if base in seen and not rid.startswith("dept:power_kseb:section-"):
+        key = base.replace("-", "")
+        if key in seen and not rid.startswith("dept:power_kseb:section-"):
             continue
-        seen.add(base)
+        seen.add(key)
         recs.append((base if not rid.startswith("dept:power_kseb:section-") else rid, dd))
     return recs
 

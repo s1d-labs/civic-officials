@@ -1,0 +1,22 @@
+[
+ {
+  "key": "leg_ml-page-0",
+  "payload": {
+   "reader": "leg_ml",
+   "url": "https://meghalaya.gov.in/key-contacts/mla?page=0",
+   "state": "ML",
+   "page": 0,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_ml-page-1",
+  "payload": {
+   "reader": "leg_ml",
+   "url": "https://meghalaya.gov.in/key-contacts/mla?page=1",
+   "state": "ML",
+   "page": 1,
+   "india_only": false
+  }
+ }
+]

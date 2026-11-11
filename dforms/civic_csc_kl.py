@@ -7,6 +7,9 @@ from akshaya.kerala.gov.in "Locate Akshaya Centers". About 2,800 centres.
   point (Maplace locations: lat, lon). The archive (archive.s1d.me) holds about 1,990 of these pages, saved 2026-11-10.
 One queue item = one list page and the centre pages of its cards (43 requests). Answers from anywhere.
 Record ids: dept:civic_csc_kl:<centre code> (or the site id when a card has no code).
+The site writes some values run together; the reader splits them: two mobiles with no separator ("90202773999446680882" ->
+9020277399, 9446680882), two emails with no separator ("sajnaboban@gmail.comsajna_magfil@yahoo.co.in"), and puts back the
+leading 0 of an STD code that the site lost ("4872998822" -> 04872998822: 10 digits, first digit 1-5, is not a mobile).
 """
 import re
 
@@ -21,6 +24,38 @@ def items(get=None):
     return [{"key": f"{MODULE}-p{n:03d}", "payload": {"reader": MODULE, "url": f"{BASE}/centers/{n}", "state": "KL",
                                                       "india_only": False, "page": n, "details": True, "expected": 42}}
             for n in range(PAGES)]
+
+
+TLD = r"(?:co\.in|gov\.in|nic\.in|ac\.in|org\.in|net\.in|com|org|net|in)"
+
+
+def split_emails(t):
+    """'a@gmail.comb_c@yahoo.co.in' -> 'a@gmail.com b_c@yahoo.co.in': a domain end that runs into the next address."""
+    return re.sub(r"(@[\w-]+(?:\.[\w-]+)*?\." + TLD + r")(?=[\w.+-]+@)", r"\1 ", _esw.deob(t or ""), flags=re.I)
+
+
+def split_numbers(t):
+    """Digit runs of 20 or more digits split into numbers: 0 + 10 digits is a landline, a first digit 6-9 starts a mobile
+    (10 digits), 1-5 a landline that lost its 0 (10 digits)."""
+    def cut(m):
+        d, out = m.group(), []
+        while len(d) >= 10:
+            n = 11 if d[0] == "0" else 10
+            out.append(d[:n])
+            d = d[n:]
+        return ", ".join(out + ([d] if d else []))
+    return re.sub(r"(?<!\d)\d{20,}(?!\d)", cut, t or "")
+
+
+def fix_phones(t):
+    """_esw.phones() of the text after split_numbers(), with the lost STD 0 put back."""
+    out = []
+    for x in filter(None, _esw.phones(split_numbers(t)).split(", ")):
+        if re.fullmatch(r"[1-5]\d{9}", x):
+            x = "0" + x
+        if x not in out:
+            out.append(x)
+    return ", ".join(out)
 
 
 def cards(html):
@@ -41,7 +76,7 @@ def cards(html):
         out.append({"id": m.group(1), "slug": m.group(2), "url": f"{BASE}/centers/{m.group(1)}/{m.group(2)}",
                     "code": _esw.clean(code.get_text(" ")) if code else "",
                     "place": _esw.clean(h5.get_text(" ")).strip(" ,") if h5 else "", "district": district,
-                    "phone": _esw.phones(ph.get_text(" ")) if ph else ""})
+                    "phone": fix_phones(ph.get_text(" ")) if ph else ""})
     return out
 
 
@@ -63,8 +98,8 @@ def detail(html):
         adr = office.find("address")
         d["address"] = _esw.clean(adr.get_text(" ")).rstrip(" -") if adr else ""
         lis = office.find_all("li")
-        d["phone"] = _esw.phones(lis[1].get_text(" ")) if len(lis) > 1 else ""
-        d["email"] = _esw.emails(lis[2].get_text(" ")) if len(lis) > 2 else ""
+        d["phone"] = fix_phones(lis[1].get_text(" ")) if len(lis) > 1 else ""
+        d["email"] = _esw.emails(split_emails(lis[2].get_text(" "))) if len(lis) > 2 else ""
     staff = block(soup, "Staff in Charge")
     if staff:
         staff.find("h2").extract()
@@ -77,8 +112,8 @@ def detail(html):
         rest = [x for x in lines if x not in mail and not re.fullmatch(r"[\d\s,+-]+", x)]
         d["staff"] = rest[0] if rest else ""
         d["staff_place"] = ", ".join(rest[1:])
-        d["staff_phone"] = _esw.phones(*tel)
-        d["staff_email"] = _esw.emails(" ".join(mail))
+        d["staff_phone"] = fix_phones(" ".join(tel))
+        d["staff_email"] = _esw.emails(split_emails(" ".join(mail)))
     m = re.search(r"lat\s*:\s*(-?[\d.]+)\s*,\s*lon\s*:\s*(-?[\d.]+)", html)
     if m:
         d["lat"], d["lon"] = _civic.lat(m.group(1)), _civic.lon(m.group(2))
@@ -94,7 +129,7 @@ def record(c, d, list_url):
     return _civic.record(
         MODULE, key, "csc", dept="digital_services", level="facility", area=c.get("place") or d.get("name"),
         office=d.get("name") or f"Akshaya Centre {c.get('place')}", post="Staff in Charge (Akshaya entrepreneur)",
-        name=d.get("staff"), staff_place=d.get("staff_place"), phone=_esw.phones(phone), email=email, address=d.get("address"),
+        name=d.get("staff"), staff_place=d.get("staff_place"), phone=fix_phones(phone), email=email, address=d.get("address"),
         district=c.get("district"), state="KL", office_id=key, site_id=c.get("id"), lat=d.get("lat"), lon=d.get("lon"),
         source=c["url"] if d else list_url, list_source=list_url, scheme="Akshaya (Common Service Centre, Kerala)")
 

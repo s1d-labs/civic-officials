@@ -107,9 +107,9 @@ def test_ero_ld():
     p = _seed("ero_ld")
     recs, _ = _run("ero_ld", p, {p["url"]: "ero_ld.html"})
     ero = recs["dept:ero_ld:LD-PC-1:ero"]
-    assert ero["name"] == "Shri. Avinash Singh, DANICS" and ero["phone"] == "4896262384, 9540334204" and ero["level"] == "pc"
+    assert ero["name"] == "Shri. Avinash Singh, DANICS" and ero["phone"] == "04896262384, 9540334204" and ero["level"] == "pc"
     a = recs["dept:ero_ld:LD-AERO-chetlat"]
-    assert a["area"] == "Chetlat" and a["phone"] == "4899276232, 9446801792"
+    assert a["area"] == "Chetlat" and a["phone"] == "04899276232, 9446801792"    # the page drops the STD 0
     assert len(recs) == 4                                   # BLO rows are left out
 
 

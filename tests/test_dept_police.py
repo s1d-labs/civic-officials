@@ -175,6 +175,26 @@ def test_pb():
     check_seed("police_pb")
 
 
+def test_pb_rank_and_belt_in_name():
+    # shoName cells that carry the rank, the belt number and a phone; a station landline without its STD 0
+    from dforms import police_pb
+    rows = [{"id": 547, "cctnsPsName": "PS WOMEN", "shoName": "SHO SI Sone No. 44/FR\xa0", "shoMobile": "8872642161", "psPhone": "9780001776"},
+            {"id": 548, "cctnsPsName": "PS WOMEN", "shoName": "Insp/SHO Rupinder Kaur, 07/LR\xa0, 90400-83000.\xa0",
+             "psPhone": "8360453404, 8556019272\xa0"},
+            {"id": 552, "cctnsPsName": "Women Police Station Malerkotla", "shoName": "Insp. Manjeet Kaur, 59/LRT\xa0"},
+            {"id": 12, "cctnsPsName": "X", "shoName": "SI BALWINDER SINGH ", "shoRank": "SI", "mhcName": "LR ASI MANVINDER SINGH"},
+            {"id": 247, "cctnsPsName": "MEHATPUR", "shoName": "RAVINDER SINGH", "shoMobile": "9877234846", "psPhone": "1821513909"}]
+    d = dict(police_pb.parse(rows, "1"))
+    a = d["dept:police_pb:1:547"]
+    assert (a["name"], a["rank"], a["belt_no"], a["phone"]) == ("Sone", "SI", "44/FR", "8872642161, 9780001776")
+    b = d["dept:police_pb:1:548"]
+    assert (b["name"], b["rank"], b["belt_no"]) == ("Rupinder Kaur", "Insp", "07/LR") and b["phone"].startswith("9040083000, ")
+    assert (d["dept:police_pb:1:552"]["name"], d["dept:police_pb:1:552"]["rank"]) == ("Manjeet Kaur", "Insp.")
+    c = d["dept:police_pb:1:12"]
+    assert (c["name"], c["rank"], c["mhc_name"], c["mhc_rank"]) == ("BALWINDER SINGH", "SI", "MANVINDER SINGH", "LR ASI")
+    assert d["dept:police_pb:1:247"]["phone"] == "9877234846, 01821513909"
+
+
 def test_hr_state():
     from dforms import police_hr
     recs, files, why = police_hr.fetch({"reader": "police_hr", "url": police_hr.URL}, FakeGet({police_hr.URL: "police_hr_state.html"}))
@@ -200,6 +220,27 @@ def test_hr_sho():
     assert pp["office_type"] == "police post" and pp["rank"] == "ASI" and pp["name"] == "Amit Kumar"
 
 
+def test_hr_sho_rank_after_post():
+    # Yamunanagar writes "SHO INSP Manoj Kumar", Faridabad "Insp.Parkash Chand" (no blank after the dot): the rank goes to "rank"
+    from dforms import police_hr
+    url = "https://yamunanagar.haryanapolice.gov.in/SHOContact.html"
+    recs, _, why = police_hr.fetch({"reader": "police_hr", "kind": "sho", "district": "yamunanagar", "url": url},
+                                   FakeGet({url: "police_hr_yamunanagar.html"}))
+    check_common(recs, "police_hr", "HR")
+    d = dict(recs)
+    c = d["dept:police_hr:sho:yamunanagar:ps-city-yamunanagar"]
+    assert c["name"] == "Manoj Kumar" and c["rank"] == "INSP" and c["post"] == "SHO" and c["phone"] == "8818000120, 01732-237620"
+    assert d["dept:police_hr:sho:yamunanagar:ps-sadar-yamunanagar"]["name"] == "Kamaljeet Singh"
+    html = ("<table><tr><th>Sr. No.</th><th>SHO Name &amp; Rank</th><th>Police Station</th><th>Office Tel. No.</th><th>Email</th>"
+            "<th>Mobile No.</th></tr><tr><td>1</td><td>Insp.Parkash Chand</td><td>PS Sadar Ballabgarh FBD</td><td>-</td><td>-</td>"
+            "<td>7290000000</td></tr><tr><td>2</td><td>L/Insp.Sunita Devi</td><td>PS Women Ballabgarh</td><td>-</td><td>-</td><td>-</td></tr>"
+            "<tr><td>3</td><td>SHO Ram Kumar</td><td>PS Sector 8</td><td>-</td><td>-</td><td>-</td></tr></table>")
+    f = dict(police_hr.parse_sho(html, "faridabad", "u"))
+    assert (f["dept:police_hr:sho:faridabad:ps-sadar-ballabgarh-fbd"]["name"], f["dept:police_hr:sho:faridabad:ps-sadar-ballabgarh-fbd"]["rank"]) == ("Parkash Chand", "Insp.")
+    assert (f["dept:police_hr:sho:faridabad:ps-women-ballabgarh"]["name"], f["dept:police_hr:sho:faridabad:ps-women-ballabgarh"]["rank"]) == ("Sunita Devi", "L/Insp.")
+    assert f["dept:police_hr:sho:faridabad:ps-sector-8"]["name"] == "Ram Kumar"
+
+
 def test_hr_phone_workaround():
     from dforms.police_hr import ph
     assert ph("08372-278213") == "08372-278213"
@@ -215,6 +256,24 @@ def test_jh():
     assert d["phone"] == "9798922221" and d["district"] == "Pakur" and d["office_id"].startswith("amrapadha-ps-")
     assert police_jh.landline("0651", "2242132") == "0651-2242132"
     check_seed("police_jh")
+
+
+def test_jh_placeholders():
+    # the list writes "0" for a missing landline: no "0657-0" or "0" phones; an STD code without its 0 gets it back;
+    # "253290, 86339" is a number and a short exchange number, not one 11-digit number
+    from dforms import police_jh
+    assert police_jh.landline("0657", "0") is None and police_jh.landline("0326", "0, 0") is None and police_jh.landline("--", "") is None
+    assert police_jh.landline("6542", "230768") == "06542-230768" and police_jh.landline("0-6553", "254500") == "06553-254500"
+    assert police_jh.landlines("06542", "253290, 86339") == (["06542-253290"], ["86339"])
+    html = ("<table><caption>Deoghar</caption><tr><td class='views-field-title'><a href='/police-station/madhupur-ps-1'>Madhupur PS</a></td>"
+            "<td class='views-field-field-thana-code'></td><td class='views-field-field-thana-office-no'>0</td>"
+            "<td class='views-field-field-thana-resi-no'></td><td class='views-field-field-thana-mobile-no'>9470591056</td></tr>"
+            "<tr><td class='views-field-title'><a href='/police-station/rail-ps-2'>Rail P.S. Chakulia</a></td>"
+            "<td class='views-field-field-thana-code'>0657</td><td class='views-field-field-thana-office-no'>0</td>"
+            "<td class='views-field-field-thana-resi-no'>0</td><td class='views-field-field-thana-mobile-no'>--</td></tr></table>")
+    d = dict(police_jh.parse(html, "383"))
+    assert d["dept:police_jh:383:madhupur-ps"]["phone"] == "9470591056"
+    assert not d["dept:police_jh:383:rail-p-s-chakulia"].get("phone")
 
 
 # --- PDFs and small states/UTs: Kerala, A&N, Puducherry, Mizoram, Sikkim, Lakshadweep, DNH&DD, Arunachal, J&K ---------

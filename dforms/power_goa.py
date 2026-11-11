@@ -7,7 +7,8 @@ Elect. Div- I, Panaji", "Office of the Sub-Divisional Engineer, Sub-Div-I, Corli
 together: "N." starts an entry, then the name/designation lines, then phones, then e-mails (wrapped: "...gov.i" + "n").
 Records: one per entry (about 620): the block's level (circle / division / subdivision), and level section for Junior Engineers,
 "Section Office <place>" (complaint centres) and "Sub-Station <place>" in a sub-division block. Name = text before the first comma
-when it is a person. Record id dept:power_goa:<block>-<entry no>.
+when it is a person; "Shri. X (Jr. Engineer), Navelim Section Office" keeps the bracketed post whole in the post. PBX lines
+"(0832)2426022" + "ext. 115" are phones, not post text. Record id dept:power_goa:<block>-<entry no>.
 """
 import re
 
@@ -70,7 +71,11 @@ def entries(pages):
             open_head = False
             continue
         open_head = False
-        if m and head and int(m.group(1)) == (cur[1] + 1 if cur else 1):
+        nxt = cur[1] + 1 if cur else 1
+        if m and head and (int(m.group(1)) == nxt or (cur is None or nxt < int(m.group(1)) <= nxt + 2)
+                           and re.match(r"[A-Z]", m.group(2))):
+            # (a number may be missing: "2 Accounts Section" is followed by "4 Establishment Section"; a block may go on with
+            # the numbers of the block before it: "Sub Div-II, Cuncolim" starts at 12)
             cur = [head, int(m.group(1)), [], [], []]
             out.append(cur)
             s = m.group(2).strip()
@@ -78,10 +83,19 @@ def entries(pages):
                 continue
         if cur is None:
             continue
-        rest = []
+        rest, ext = [], False
         for tok in re.split(r"\s+", s):
             t = tok.strip(",;")
-            if PHONE.match(t):
+            if ext and re.fullmatch(r"\d{2,4}", t) and cur[3]:
+                cur[3][-1] += f" ext. {t}"           # a PBX line: "(0832)2426022" + "ext. 115"
+                ext = False
+                continue
+            ext = False
+            if re.fullmatch(r"(?i)ext\.?", t):
+                ext = True
+            elif re.fullmatch(r"\(0\d{2,4}\)\s?\d{6,8}", t):
+                cur[3].append(t)
+            elif PHONE.match(t):
                 cur[3].append(PHONE.match(t).group(1))
             elif "@" in t:
                 cur[4].append(t)
@@ -112,18 +126,44 @@ def split_name(txt):
     if not m or m.start() == 0:
         return None, txt
     name = txt[:m.start()].strip(" ,")
+    des = txt[m.start():].strip(" ,")
+    if name.endswith("("):                     # "Shri. X (Jr. Engineer), Navelim Section Office": the post is in brackets
+        name = name.rstrip(" ,(")
+        des = unbracket(des)
+    q = re.search(r"\s*\(([A-Za-z&. ]{2,8})\)$", name)
+    if q and not re.match(r"(?i)(Shri|Smt|Kum|Mr|Ms|Dr)\.?$", q.group(1)):
+        name = name[:q.start()].strip(" ,")    # "Bhanudas Kerkar (COM)" + "Asst. Engineer": the bracket belongs to the post
+        des = f"{des} ({q.group(1)})"
     if (re.search(r"Section|Station|Office|Complaint", name, re.I) or len(name) < 3
             or re.match(r"(?i)(Section|Secton|Sub\s*-?\s*Station|Sub\s*-?\s*Store|Office|Technical)", txt[m.start():])
             and not re.match(r"(?i)(Shri|Smt|Kum|Mr|Ms|Dr)\b", name)):
         return None, txt
-    return name, txt[m.start():].strip(" ,")
+    return name, des
+
+
+def unbracket(des):
+    """Drop the first ")" that has no "(" before it: "Jr. Engineer), Navelim Section Office" -> "Jr. Engineer, Navelim ..."."""
+    depth = 0
+    for i, c in enumerate(des):
+        depth += {"(": 1, ")": -1}.get(c, 0)
+        if depth < 0:
+            des = des[:i] + des[i + 1:]
+            break
+    des = re.sub(r"(\w)\(", r"\1 (", re.sub(r"\)\(", ") (", des))
+    return " ".join(des.split()).strip(" ,")
 
 
 def parse_pages(pages, source=URL):
     out = Out("power_goa", "GA", source, discom="Electricity Department, Goa")
     circle = division = None
+    keys, last, key = set(), None, None
     for head, n, lines, phones, mails in entries(pages):
         lvl, area = block_of(head)
+        if head != last:                         # a new block; two blocks may have one heading ("Sub Div-I," with no place,
+            last, key = head, slug(head)         # in Div-XIII and in Div-XV): the second one's key names its division
+            if key in keys:
+                key = slug(f"{division or circle or ''} {head}")
+            keys.add(key)
         if lvl == "other":
             continue
         if lvl == "circle":
@@ -147,7 +187,10 @@ def parse_pages(pages, source=URL):
                "division": division if elvl in ("subdivision", "section") else None,
                "subdivision": area if elvl == "section" else None}
         mail = email(" ".join(mails).replace("/", " ")) if mails else None
-        out.add(f"{slug(head)}-{n}", elvl, earea, post=des, name=name, phone_=", ".join(dict.fromkeys(phones)) or None,
+        rid = f"{key}-{n}"
+        if len(rid) > 80:                         # Out.add cuts a key at 80 characters: keep the entry number on the end
+            rid = f"{key[:79 - len(str(n))].rstrip('-')}-{n}"
+        out.add(rid, elvl, earea, post=des, name=name, phone_=", ".join(dict.fromkeys(phones)) or None,
                 email_=mail, parents=par, office=head, entry=n)
     return out.recs
 

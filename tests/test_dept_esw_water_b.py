@@ -1,3 +1,5 @@
+import re
+
 from esw_common import *  # noqa: F401,F403
 
 
@@ -32,9 +34,11 @@ def test_water_uk():
 
 def test_water_dl():
     seed = _w6_seed("water_dl")
-    assert len(seed) == 68 and {i["payload"]["ac"] for i in seed} == set(range(1, 71)) - {38, 40}
-    p = next(i["payload"] for i in seed if i["payload"]["ac"] == 11)
-    recs = _w6_fetch("water_dl", {p["url"]: "water_dl_ac11.pdf"}, p)
+    assert len(seed) == 1 and len(seed[0]["payload"]["urls"]) == 68
+    assert {int(re.search(r"ac_(\d+)_", u).group(1)) for u in seed[0]["payload"]["urls"]} == set(range(1, 71)) - {38, 40}
+    url = next(u for u in seed[0]["payload"]["urls"] if "/ac_11_" in u)
+    p = {"reader": "water_dl", "url": url, "state": "DL", "ac": 11}      # an old one-file queue item still works
+    recs = _w6_fetch("water_dl", {url: "water_dl_ac11.pdf"}, p)
     ee = recs["dept:water_dl:DL-AC-11:ee:ee-c-22"]
     assert ee["name"] == "Sh. S.K Dhaiya" and ee["phone"] == "9971168047" and ee["level"] == "division"
     assert ee["ac"] == "DL-AC-11" and ee["office_id"] == "DL-DJB-ee-c-22"
@@ -45,6 +49,43 @@ def test_water_dl():
     assert ppp["name"] == "Smt. Kamlesh Manchanda" and ppp["section"] == "PPP Area"
     assert recs["dept:water_dl:DL-AC-11:ce:ce-maintenance-i-ce-west"]["name"] == "Sh. SK Dahiya"
     assert len(recs) == 11
+
+
+def test_water_dl_one_record_per_officer():
+    # the same officers are listed in the file of every constituency they serve: one record each, all constituencies in "acs"
+    seed = _w6_seed("water_dl")[0]["payload"]
+    u11 = next(u for u in seed["urls"] if "/ac_11_" in u)
+    u12 = next(u for u in seed["urls"] if "/ac_12_" in u)
+    p = dict(seed, urls=[u11, u12])
+    recs = _w6_fetch("water_dl", {u11: "water_dl_ac11.pdf", u12: "water_dl_ac11.pdf"}, p)
+    assert len(recs) == 11 and all(d["acs"] == ["DL-AC-11", "DL-AC-12"] for d in recs.values())
+    ee = recs["dept:water_dl:DL-AC-11:ee:ee-c-22"]
+    assert ee["ac"] == "DL-AC-11" and ee["name"] == "Sh. S.K Dhaiya"
+    assert recs["dept:water_dl:DL-AC-11:ae:2"]["area"].startswith("11 - Nangloi Jat, 12 - ")
+    # a file that does not answer fails the item (no short constituency lists)
+    recs, files, why = mod("water_dl").fetch(p, fake_get({u11: "water_dl_ac11.pdf"}))
+    assert recs == [] and "no answer" in why
+
+
+def test_water_dl_merge_names():
+    m = mod("water_dl")
+    a = {"name": "Sh. SK Dahiya", "post": "CE(Maintenance)-I CE(West)", "ac": "DL-AC-10", "phone": "9650291401", "level": "zone"}
+    b = {"name": "Sh SK Dahiya", "post": "CE (Maintenance)-I CE (West)", "ac": "DL-AC-11", "phone": "9650291401", "level": "zone",
+         "section": "PPP Area"}
+    c = {"name": "Sh. N.K. Dargan", "post": "SE (Proj) W-I", "ac": "DL-AC-11", "level": "circle"}
+    out = m.merge([("x:10", a), ("x:11", b), ("y:11", c)])
+    assert [r for r, _ in out] == ["x:10", "y:11"] and out[0][1]["acs"] == ["DL-AC-10", "DL-AC-11"]
+    assert out[0][1]["phone"] == "9650291401" and out[0][1]["sections"] == ["", "PPP Area"]
+
+
+def test_water_dl_phone_in_name():
+    people = mod("water_dl")._people
+    assert people(["Sh. Amit Prajapati 8851283671"]) == [{"name": ["Sh. Amit Prajapati"], "posts": [], "phones": ["8851283671"]}]
+    two = people(["Sh.Anshu 62077 53525 Sh. Sourav 8853495254"])
+    assert [p["name"] for p in two] == [["Sh.Anshu"], ["Sh. Sourav"]] and two[0]["phones"] == ["62077 53525"]
+    two = people(["Sh. Manoj Kumar Bairwa(9650888215) Sh.Akshay Kumar", "9455811307"])
+    assert [(p["name"], p["phones"]) for p in two] == [(["Sh. Manoj Kumar Bairwa"], ["9650888215"]), (["Sh.Akshay Kumar"], ["9455811307"])]
+    assert people(["Sh. Gaurav", "931543474"])[0]["phones"] == ["931543474"]
 
 
 def test_water_dl_people():

@@ -5,6 +5,10 @@ ctl00$ContentPlaceHolder1$lnkDownload -> ContactList.csv (about 1,466 rows: 965 
 Columns used: First Name = officer, Job Title = designation (CE zone, SE circle, EE division, AE sub-division, JE sub-station
 / section), Business Street + Business Street 2 = office type and place ("EDSD" + "Dibiyapur"), Mobile Phone, Business Phone,
 E-mail Address. No district column. Rows of the M.D. office are level "state".
+The CSV repeats some contacts with the office or name in other letter case or spacing ("ACHALDA" / "Achalda", "prabhu park" /
+"Prabhupark", "Shivnath Sharma" / "Shiv Nath Sharma"): a row with the same designation, office, phone and name (letters only)
+as a row before is skipped (before, it became "...~2" or a second id). Other people on one post or one phone keep their rows. A phone number written
+into the name cell ("Ramesh Kumar Maurya  8004933068") is taken out of the name.
 Record id dept:power_dvvnl:<designation>:<office>.
 """
 import csv
@@ -28,6 +32,7 @@ def level(post, office):
 
 def parse_csv(text, url=URL):
     out = Out(MOD, "UP", url, discom="DVVNL")
+    seen = set()
     for row in csv.DictReader(io.StringIO(text.lstrip("﻿"))):
         post = clean(row.get("Job Title"))
         a, b = clean(row.get("Business Street")), clean(row.get("Business Street 2"))
@@ -35,8 +40,14 @@ def parse_csv(text, url=URL):
         lvl = level(post, office)
         if not lvl or not office:
             continue
-        out.add(f"{post}:{office}", lvl, office, post=post, name=row.get("First Name"),
-                phone_=phone(row.get("Mobile Phone"), row.get("Business Phone"), row.get("Primary Phone")),
+        name = clean(re.sub(r"\s*\+?\d[\d -]{5,}\d\s*", " ", row.get("First Name") or ""))
+        ph = phone(row.get("Mobile Phone"), row.get("Business Phone"), row.get("Primary Phone"))
+        key = (re.sub(r"[^a-z]", "", post.lower()), re.sub(r"[^a-z0-9]", "", office.lower()), re.sub(r"\D", "", ph or ""),
+               re.sub(r"[^a-z]", "", re.sub(r"(?i)^(er|shri|sri)\.?\s+", "", name or "").lower()))
+        if key in seen:
+            continue
+        seen.add(key)
+        out.add(f"{post}:{office}", lvl, office, post=post, name=name, phone_=ph,
                 email_=email(row.get("E-mail Address")), address=clean(row.get("Business City")))
     return out.recs
 

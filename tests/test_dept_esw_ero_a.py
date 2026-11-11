@@ -34,6 +34,20 @@ def test_ero_kl():
     assert "DEPUTY COLLECTOR, ELECTION" not in [d.get("designation") for d in recs.values()]
 
 
+def test_ero_kl_std0():
+    # the page writes office landlines without the STD 0 ("4936229255" = 04936 229255, Vythiri); mobiles stay as written
+    html = ('<div id="Dist_Wayanad"><table><tr><th>#</th><th>Location</th><th>Name</th><th>Designation</th><th>Phone Number</th>'
+            '<th>Email</th><th>Mobile</th></tr><tr><td>9</td><td>Kalpetta</td><td>SIVADASAN M</td><td>AERO &amp; Tahsildar, Vythiry</td>'
+            '<td>4936229255</td><td>erokpta@gmail.com</td><td>9447097705</td></tr><tr><td>8</td><td>Kalpetta</td><td>MANOJ KUMAR</td>'
+            '<td>ERO &amp; Deputy Collector (LR), Collectorate, Wayanad</td><td>9946330317</td><td>a@gmail.com</td><td>9946330317</td>'
+            '</tr></table></div>')
+    recs = dict(mod("ero_kl").parse(html))
+    phones = sorted(d["phone"] for d in recs.values())
+    assert phones == ["04936229255, 9447097705", "9946330317"], phones
+    f = mod("ero_kl").std0
+    assert f("0471-2300121") == "0471-2300121" and f("+91 4936229255") == "+91 4936229255"
+
+
 def test_ero_kl_alias():
     assert mod("ero_kl").ALIAS["vatakara"] == "vadakara"
     from dforms import _esw

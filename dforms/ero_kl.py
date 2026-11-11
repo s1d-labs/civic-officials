@@ -19,6 +19,18 @@ ROLE = re.compile(r"^\s*(A?ERO|DEO)\b\s*(?:&|and|,|-)?\s*(.*)$", re.I)
 POST = {"ERO": "Electoral Registration Officer", "AERO": "Assistant Electoral Registration Officer", "DEO": "District Election Officer"}
 
 
+def std0(s):
+    """An office landline whose leading 0 the source dropped gets it back: "4936229255" -> "04936229255" (STD code + number,
+    10 digits, not starting with 6-9 as a mobile number does). Mobile numbers, numbers after "+91" and numbers with their 0
+    stay as written."""
+    def fix(m):
+        before = m.string[:m.start()].rstrip(" -")
+        if len(m.group(1) + m.group(3)) != 10 or before.endswith(("+91", "+", "91")):
+            return m.group(0)
+        return "0" + m.group(0)
+    return re.sub(r"(?<![\d+])([1-5]\d{1,4})(\s*-\s*)?(\d{5,8})(?!\d)", fix, s or "")
+
+
 def items(get=None):
     return [{"key": MODULE, "payload": {"reader": MODULE, "url": URL, "state": "KL"}}]
 
@@ -41,7 +53,7 @@ def parse(html, url=URL):
             role, desig = m.group(1).upper(), m.group(2).strip(" ,&")
             loc = c.get("location", "")
             f = dict(dept="elections", post=POST[role], designation=desig, name=c.get("name"),
-                     phone=_esw.phones(c.get("phone number"), c.get("mobile")), email=_esw.emails(c.get("email")),
+                     phone=_esw.phones(std0(c.get("phone number")), c.get("mobile")), email=_esw.emails(c.get("email")),
                      state="KL", district=district, source=url)
             if role == "DEO":
                 key = f"KL-DEO-{_esw.slug(district)}"

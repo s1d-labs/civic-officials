@@ -1,0 +1,92 @@
+[
+ {
+  "key": "leg_rs-p1",
+  "payload": {
+   "reader": "leg_rs",
+   "url": "https://sansad.in/api_rs/member/sitting-members?page=1&size=300&locale=en",
+   "state": "IN",
+   "page": 1,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_rs-p2",
+  "payload": {
+   "reader": "leg_rs",
+   "url": "https://sansad.in/api_rs/member/sitting-members?page=2&size=300&locale=en",
+   "state": "IN",
+   "page": 2,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_rs-p3",
+  "payload": {
+   "reader": "leg_rs",
+   "url": "https://sansad.in/api_rs/member/sitting-members?page=3&size=300&locale=en",
+   "state": "IN",
+   "page": 3,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_rs-p4",
+  "payload": {
+   "reader": "leg_rs",
+   "url": "https://sansad.in/api_rs/member/sitting-members?page=4&size=300&locale=en",
+   "state": "IN",
+   "page": 4,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_rs-p5",
+  "payload": {
+   "reader": "leg_rs",
+   "url": "https://sansad.in/api_rs/member/sitting-members?page=5&size=300&locale=en",
+   "state": "IN",
+   "page": 5,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_rs-p6",
+  "payload": {
+   "reader": "leg_rs",
+   "url": "https://sansad.in/api_rs/member/sitting-members?page=6&size=300&locale=en",
+   "state": "IN",
+   "page": 6,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_rs-p7",
+  "payload": {
+   "reader": "leg_rs",
+   "url": "https://sansad.in/api_rs/member/sitting-members?page=7&size=300&locale=en",
+   "state": "IN",
+   "page": 7,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_rs-p8",
+  "payload": {
+   "reader": "leg_rs",
+   "url": "https://sansad.in/api_rs/member/sitting-members?page=8&size=300&locale=en",
+   "state": "IN",
+   "page": 8,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_rs-p9",
+  "payload": {
+   "reader": "leg_rs",
+   "url": "https://sansad.in/api_rs/member/sitting-members?page=9&size=300&locale=en",
+   "state": "IN",
+   "page": 9,
+   "india_only": false
+  }
+ }
+]

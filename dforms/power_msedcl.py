@@ -4,7 +4,8 @@
   Region / Zone / Circle, Division, Contact). Header rows "Executive Engineer Name | Zone | | Contact" start a zone block, whose
   next row names the zone; "Circle | Division" blocks list one EE per division. Kept: the O&M divisions (level division, name +
   mobile, parents zone and circle). Not kept: non-area posts (Admin & Safety, Testing, CGRF, Civil, Enquiry, Training ...).
-  last_updated = the page's dateModified.
+  last_updated = the page's dateModified. The page carries the list twice (an older and a newer accordion, the same rows):
+  a row whose circle, division and phone were read already is skipped, so no "~2" copies.
 - "zone": one of the 17 RTI lists (16 zones + corporate office) "<Zone>-Zone-APIO-PIO-AA-English.pdf" from
   /en/list-of-apios-pios-and-aa-under-right-to-information-act-2005/: zone, circle, division and sub-division offices with the
   PIO (EE / Dy.EE) and APIO (JE / AE) names, phones and the sub-division email (sdoNNNN@...). Each zone uses its own column
@@ -27,7 +28,7 @@ def parse_ee(html, source=URL):
     m = re.search(r'"dateModified":"(\d{4}-\d{2}-\d{2})', html) or re.search(r'modified_time" content="(\d{4}-\d{2}-\d{2})', html)
     out = Out("power_msedcl", "MH", source, discom="MSEDCL", last_updated=m.group(1) if m else None)
     soup = BeautifulSoup(html, "lxml")
-    mode, zone = None, None
+    mode, zone, seen = None, None, set()
     for tr in soup.find_all("tr"):
         c = cells(tr)
         if len(c) < 4:
@@ -41,6 +42,10 @@ def parse_ee(html, source=URL):
             continue
         if mode != "circle" or not clean(div) or NOT_AREA.search(div):
             continue
+        key = (slug(where), slug(div), re.sub(r"\D", "", mob or ""))
+        if key in seen:                  # the page holds the whole list twice (two accordion copies); one division is also
+            continue                     # listed twice in a circle with the same phone ("Latur | Latur | 7875762011")
+        seen.add(key)
         name = re.sub(r"\s*\(I/C\)\s*$", " (I/C)", name)
         out.add(f"division-{where}-{div}", "division", div, post="Executive Engineer", name=name, phone_=phone(mob),
                 parents={"zone": zone, "circle": where})

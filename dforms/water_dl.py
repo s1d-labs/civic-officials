@@ -3,8 +3,15 @@ inline-files/ac_<no>_<name>[_n].pdf, linked from /jalboard/summer-action-plan-20
 Germany and India. Page 2 or 3 of each file holds the officer table: five columns "Name of CE", "Name of SE (C)", "Name of EE (C)",
 "Name of AE (C)", "Name of JE (C)", each cell with name lines, a post line ("CE(Maintenance)-II", "SE (C)-11", "EE (C)-33") and a
 mobile; a cell can hold two or more officers, and some files add rows under a heading (e.g. "PPP Area"). The rest of the file is
-the colony-wise supply hours and the tanker list (kept in the bucket file, not parsed here). One queue item = one file.
-Record ids: dept:water_dl:DL-AC-<no>:<ce|se|ee|ae|je>:<slug of the post or n>[:<slug of heading>]. Extra key "ac" = "DL-AC-<no>".
+the colony-wise supply hours and the tanker list (kept in the bucket file, not parsed here).
+One officer (a CE, SE or EE, and some AEs and JEs) is listed in the file of every constituency he serves. One queue item therefore
+reads all 68 files and gives one record per officer (same name and post): "acs" lists every constituency ("DL-AC-<no>"), "ac" is
+the first, the area of an AE or JE names all of them, and "sections" lists the headings ("PPP Area") when they differ. When a
+file does not answer, the item fails (and is tried again), so no officer gets a short list. An item with "url" (one file, the old queue items) still reads that
+file alone. A phone written on the name line ("Sh. Amit Prajapati 8851283671", "Bairwa(9650888215) Sh.Akshay Kumar") is cut off
+the name; two officers on one line become two records.
+Record ids: dept:water_dl:DL-AC-<no>:<ce|se|ee|ae|je>:<slug of the post or n>[:<slug of heading>], <no> = the officer's first
+constituency.
 """
 import re
 
@@ -37,11 +44,8 @@ ORG = "Delhi Jal Board"
 
 
 def items(get=None):
-    out = []
-    for f in FILES:
-        no = int(f.split("_")[1])
-        out.append({"key": f"{MODULE}-ac{no}", "payload": {"reader": MODULE, "url": BASE + f + ".pdf", "state": "DL", "ac": no}})
-    return out
+    return [{"key": f"{MODULE}-all", "payload": {"reader": MODULE, "url": INDEX, "urls": [BASE + f + ".pdf" for f in FILES],
+                                                  "state": "DL"}}]                # "url": the page that links the files
 
 
 def _runs(line):
@@ -49,14 +53,38 @@ def _runs(line):
     return [(m.start(), m.group(0).strip()) for m in re.finditer(r"\S+(?: \S+)*", line)]
 
 
-def _people(lines):
-    """One cell's lines -> [{"name", "posts", "phones"}]: a name line after a phone starts the next officer."""
-    out, cur = [], None
+INLINE_PHONE = re.compile(r"\(?\s*(\d(?:\s?\d){7,11})\s*\)?")
+
+
+def _split(lines):
+    """(text, is_phone) of each line; a line with a name and a phone ("Sh. Amit Prajapati 8851283671", "Sh.Anshu 62077 53525
+    Sh. Sourav 8853495254") gives the name and the phone as separate lines."""
     for t in lines:
         t = _esw.clean(t)
         if not t or t.upper() in ("NA", "N/A", "-"):
             continue
-        if PHONE.match(t):
+        if not re.search(r"[A-Za-z]", t):
+            yield t, bool(PHONE.match(t) or re.fullmatch(r"\(?\s*\d(?:\s?\d){7,11}\s*\)?", t))   # "931543474": a short mobile
+            continue
+        if not INLINE_PHONE.search(t):
+            yield t, False
+            continue
+        at = 0
+        for m in INLINE_PHONE.finditer(t):
+            head = t[at:m.start()].strip(" ,;:-")
+            if head:
+                yield head, False
+            yield m.group(1), True
+            at = m.end()
+        if t[at:].strip(" ,;:-"):
+            yield t[at:].strip(" ,;:-"), False
+
+
+def _people(lines):
+    """One cell's lines -> [{"name", "posts", "phones"}]: a name line after a phone starts the next officer."""
+    out, cur = [], None
+    for t, is_phone in _split(lines):
+        if is_phone:
             if cur is None:
                 cur = {"name": [], "posts": [], "phones": []}
                 out.append(cur)
@@ -144,14 +172,61 @@ def parse(pages, p):
     return recs
 
 
-def fetch(p, get):
-    r = get(p["url"])
+def _key(d):
+    """The same officer in several files: the same name (without "Sh."/"Smt." and punctuation) and the same post."""
+    name = re.sub(r"(?i)^(sh|shri|smt|ms|mr|dr|er)\b\.?", "", (d.get("name") or "").strip())
+    return re.sub(r"[^a-z]", "", name.lower()), _esw.slug(d.get("post"))
+
+
+def merge(recs):
+    """One record per officer: the first file's record (lowest constituency) with "acs" = every constituency it is listed in;
+    an AE's or JE's area (the constituency) names all of them. Records without a name are not merged."""
+    out, seen = [], {}
+    for rid, d in recs:
+        k = _key(d)
+        if not k[0] or k not in seen:
+            d = dict(d, acs=[d["ac"]])
+            seen.setdefault(k, d) if k[0] else None
+            out.append((rid, d))
+            continue
+        first = seen[k]
+        if d["ac"] not in first["acs"]:
+            first["acs"].append(d["ac"])
+            if d.get("level") in ("subdivision", "section") and d.get("area") and d["area"] not in first["area"]:
+                first["area"] = f"{first['area']}, {d['area']}"
+        if d.get("section") and d["section"] != first.get("section"):
+            first["sections"] = sorted({first.get("section") or "", d["section"]} | set(first.get("sections") or []))
+        for ph in (d.get("phone") or "").split(", "):
+            if ph and ph not in (first.get("phone") or ""):
+                first["phone"] = f"{first['phone']}, {ph}" if first.get("phone") else ph
+    return out
+
+
+def _one(url, p, get):
+    r = get(url)
     if r is None:
-        return [], [], "no answer"
-    no = p.get("ac") or re.search(r"ac_(\d+)_", p["url"]).group(1)
-    files = [_esw.keep(MODULE, f"sap2026-ac{no}", r.content, "pdf")]
+        return None, None, "no answer"
+    no = (p.get("ac") if p.get("url") else None) or re.search(r"ac_(\d+)_", url).group(1)
+    file = _esw.keep(MODULE, f"sap2026-ac{no}", r.content, "pdf")
     pages = _esw.pdf_pages(r.content)
     if not pages:
-        return [], files, "not a readable pdf"
-    recs = parse(pages, p)
-    return recs, files, "" if recs else "no officer table"
+        return [], file, "not a readable pdf"
+    return parse(pages, dict(p, url=url, ac=int(no))), file, ""
+
+
+def fetch(p, get):
+    urls = p.get("urls") or [p["url"]]
+    recs, files, why = [], [], []
+    for url in urls:
+        rs, file, w = _one(url, p, get)
+        if file:
+            files.append(file)
+        if w:
+            why.append(f"{url.rsplit('/', 1)[-1]}: {w}")
+        recs += rs or []
+    if len(urls) > 1 and any(w.endswith("no answer") for w in why):
+        return [], files, "; ".join(why)                 # a file is missing: the constituency lists would be short; try again
+    recs = merge(recs)
+    if not recs:
+        return [], files, "; ".join(why) or "no officer table"
+    return recs, files, "; ".join(why) if len(urls) > 1 else ""

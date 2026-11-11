@@ -112,6 +112,24 @@ def test_dvvnl():
     assert md["email"] == "md@dvvnl.org" and md["phone"] == "9412719664"
 
 
+def test_dvvnl_rows_twice():
+    # the CSV repeats contacts with the office or name in other case or spacing: they were "je-achalda~2", "je-prabhupark";
+    # a phone written into the name cell stayed in the name
+    from dforms import power_dvvnl
+    cols = ["Title", "First Name", "Job Title", "Business Street", "Business Street 2", "Mobile Phone"]
+    rows = [["", "Pradeep kumar", "JE", "ACHALDA", "", "9412740065"], ["", "Pradeep kumar", "JE", "Achalda", "", "9412740065"],
+            ["", "veer bahadur singh", "JE", "prabhu park", "", "9412748733"], ["", "Veer Bahadur Singh", "JE", "Prabhupark", "", "9412748733"],
+            ["", "Ramesh Kumar Maurya  8004933068", "JE", "taalgram", "", "8004933068"],
+            ["", "Ramesh Kumar Maurya", "JE", "taalgram", "", "8004933068"],
+            ["", "Balram", "JE", "Growth Center", "", "9453044073"], ["", "MOHD.ISLAM", "JE", "Growth Center", "", "8004931813"]]
+    text = "\n".join(",".join(r) for r in [cols] + rows) + "\n"
+    recs = power_dvvnl.parse_csv(text)
+    ids = [r for r, _ in recs]
+    assert len(recs) == 5 and not any("~" in i for i in ids if "growth" not in i) and "dept:power_dvvnl:je-prabhupark" not in ids
+    assert next(d for _, d in recs if d["area"] == "taalgram")["name"] == "Ramesh Kumar Maurya"
+    assert {d["name"] for _, d in recs if d["area"] == "Growth Center"} == {"Balram", "MOHD.ISLAM"}   # two people: both kept
+
+
 def test_uhbvn(monkeypatch):
     from dforms import power_uhbvn
     monkeypatch.setattr(power_uhbvn, "layout_pages", lambda content: (text_pages_g1("uhbvn_karnal.txt"), "pdftotext"))
@@ -140,6 +158,36 @@ def test_dhbvn(monkeypatch):
     assert g["email"] == "xenopgreaterfaridabad@dhbvn.org.in"     # the address is cut over two lines in the pdf
     assert "email" not in by_area_g1(recs, "Dhoj")[0]
     assert by_area_g1(recs, "Hardware Chowk Faridabad")[0]["name"] == "Er. Mohit Yadav"
+
+
+def test_dhbvn_rows_not_merged():
+    # Hisar: offices named "S/D Adampur", "CCC, Civil Line" (no "SDO" first word) and office names printed above or below the
+    # officer line used to run into one row ("S/D Adampur S/D Barwala ..." with nine names); each office is one row now
+    from dforms import power_dhbvn
+    recs = power_dhbvn.parse_text(text_pages_g1("dhbvn_hisar.txt"), "hisar", "u")
+    assert len(recs) == 23 and all(d["name"].count("Er.") <= 1 for _, d in recs)
+    assert check_g1(recs, "power_dhbvn") == {"circle", "division", "subdivision"}
+    d2 = by_area_g1(recs, "Division-II, Hisar")[0]
+    assert d2["level"] == "division" and d2["name"] == "Er. Vinit Kumar" and d2["email"] == "xenop2hisar@dhbvn.org.in"
+    ad = by_area_g1(recs, "Adampur")[0]
+    assert ad["name"] == "Er. Deepesh" and ad["post"] == "AE" and ad["phone"] == "01669-242268, 9812452607"
+    assert ad["parents"]["division"] == "Division-II, Hisar"
+    cl = by_area_g1(recs, "CCC, Civil Line Hisar")[0]                      # name printed above and below the officer line
+    assert cl["name"] == "Er. Manish" and cl["email"] == "sdoopcivillinehisar@dhbvn.org.in"
+    sw = by_area_g1(recs, "Siswal")[0]                                     # officer line first, office below it
+    assert sw["name"] == "Er. Pardeep Kumar Soni" and sw["post"] == "AE"
+    assert by_area_g1(recs, "Hansi")[0]["level"] == "division"
+    # Rewari: the header is on three lines and the addresses are cut over the lines above and below the officer line
+    rw = power_dhbvn.parse_text(text_pages_g1("dhbvn_rewari.txt"), "rewari", "u")
+    assert len(rw) == 12
+    c1 = by_area_g1(rw, "City No.1 Rewari")[0]
+    assert c1["name"] == "Er. Jatin Kumar" and c1["email"] == "sdoopcity1rewari@dhbvn.org.in" and c1["phone"] == "01274-298785, 9992111802"
+    berli = by_area_g1(rw, "Berli Khurd")[0]
+    assert berli["level"] == "subdivision" and berli["email"] == "sdoopberli@dhbvn.org.in" and "name" not in berli
+    kosli = {d["level"]: d for d in by_area_g1(rw, "Kosli")}
+    assert kosli["division"]["email"] == "xenopkosli@dhbvn.org.in" and kosli["subdivision"]["email"] == "sdoopkosli@dhbvn.org.in"
+    dh = {d["level"]: d for d in by_area_g1(rw, "Dharuhera")}
+    assert dh["division"]["email"] == "xenopdharuhera@dhbvn.org.in" and dh["division"]["name"] == "Er. Dharmender Ruhil"
 
 
 def test_hpsebl():
@@ -265,11 +313,21 @@ def test_msedcl_ee():
     recs, _, why = power_msedcl.fetch({"reader": "power_msedcl", "kind": "ee"}, fake_g2({"executive-engineer": "msedcl_ee.html"}))
     assert not why
     d = check_g2(recs, "power_msedcl")
-    assert all(x["level"] == "division" for x in d.values()) and len(d) == 16
+    assert all(x["level"] == "division" for x in d.values()) and len(d) == 15     # "Latur | Latur | 7875762011" is listed twice
+    assert "dept:power_msedcl:division-latur-latur~2" not in d and d["dept:power_msedcl:division-latur-latur"]["name"] == "Shri. Anirudh Ghatge"
     x = d["dept:power_msedcl:division-chhatrapati-sambhajinagar-rural-kannad"]
     assert x["name"] == "Shri. Ramesh Waghchaure" and x["phone"] == "7875764012" and x["last_updated"] == "2026-07-27"
     assert x["parents"] == {"zone": "Chatrapati Sambhajinagar", "circle": "Chhatrapati Sambhajinagar Rural"}
     assert not any("Admin" in x["area"] for x in d.values())
+
+
+def test_msedcl_ee_page_twice():
+    # the live page holds the whole list twice (two accordion copies): every division came out a second time as "~2"
+    html = (DATA / "msedcl_ee.html").read_text()
+    body = html[html.index("<body"):html.rindex("</body>")]
+    twice = html.replace("</body>", body[body.index(">") + 1:] + "</body>")
+    recs = power_msedcl.parse_ee(twice)
+    assert len(recs) == 15 and not any("~" in r for r, _ in recs)
 
 
 def test_msedcl_zone_pdf():
@@ -292,6 +350,25 @@ def test_goa():
     kudnem = [x for x in d.values() if x["area"] == "Kudnem"]
     assert kudnem and all(x["level"] == "section" for x in kudnem)
     assert any(x.get("email") == "aecom.sd3div5@goaelectricity.gov.in" for x in d.values())    # wrapped address joined
+
+
+def test_goa_brackets_pbx_and_numbers():
+    # "Shri. X (Jr. Engineer), Navelim Section Office": the reader cut the name at "(" ("Shri. X (" / "Jr. Engineer), ...");
+    # PBX lines "(0832)2426022 ext. 115" went into the post; a missing entry number (3) ran entries 2 and 4 into one;
+    # a block that starts at 3 ("Sub Div-I, Xeldem") was lost
+    recs = power_goa.parse_pages(json.loads((DATA / "goa_brackets.json").read_text()))
+    d = check_g2(recs, "power_goa")
+    by_name = {x.get("name"): x for x in d.values() if x.get("name")}
+    assert not any(n.endswith("(") for n in by_name) and not any(")" in x["post"] and "(" not in x["post"] for x in d.values())
+    assert by_name["Shri. Andre Joao Do P.S. De Souza"]["post"] == "Assistant Engineer"
+    assert by_name["Shri. Gauri V. Dhulaji"]["post"] == "Assistant Engineer (Tech)"
+    assert by_name["Shri. Sanjeel Prabhudessai"]["post"] == "Jr. Engineer, Navelim Section Office"
+    assert by_name["Shri. Sharad Naik"]["post"] == "Asst. Engineer (O&M)"
+    posts = {x["post"]: x for x in d.values()}
+    acc = posts["Accounts Section"]
+    assert acc["phone"] == "(0832)2426022 ext. 120, (0832)2426421 ext. 120, (0832)2422353 ext. 120" and acc["email"] == "se2@goaelectricity.gov.in"
+    assert posts["Establishment Section"]["entry"] == 4 and "(0832)" not in " ".join(posts)
+    assert by_name["Shri Rajesh Bhagat"]["entry"] == 3 and by_name["Shri Manoj Gaounkar"]["phone"] == "8380015314"
 
 
 def test_mepdcl():
@@ -393,9 +470,31 @@ def test_kseb():
     assert why == "" and get.calls[1][2]["_token"] == "TESTTOKEN" and get.calls[1][2]["selectcircle"] == "Alappuzha"
     check_g3(recs, files)
     s = by_g3(recs, level="section", office_id="5501")[0]
-    assert s["area"] == "Alappuzha North" and s["phone"] == "4772245532" and s["email"] == "aenorthalp@gmail.com"
+    assert s["area"] == "Alappuzha North" and s["phone"] == "04772245532" and s["email"] == "aenorthalp@gmail.com"
     assert s["parents"]["division"] == "Alappuzha" and s["parents"]["circle"] == "Alappuzha"
     assert len(by_g3(recs, level="section")) == 3 and len(by_g3(recs, level="circle")) == 1
+    assert by_g3(recs, level="division")[0]["phone"] == "04772243487"
+
+
+def test_kseb_std0_and_spellings():
+    # the site stores landlines as numbers ("4842838010"): the STD code's 0 comes back; mobiles stay as they are
+    assert power_kseb.std0("4842838010, 9496010101") == "04842838010, 9496010101"
+    assert power_kseb.std0("04842838010") == "04842838010" and power_kseb.std0(None) is None
+
+    def table(sec, code, sub, div):
+        rows = {"Section Office:": sec, "Section Code:": code, "Phone:": "4842838010",
+                "Sub Division:": f"<p>{sub}<br/>sd@x.in</p>", "Division:": f"<p>{div}<br/>dv@x.in<br/>4842519797</p>",
+                "Circle:": "<p>Perumbavoor<br/>c@x.in</p>", "Region:": "CC"}
+        return '<table class="section-details-table">' + "".join(f"<tr><th>{k}</th><td>{v}</td></tr>" for k, v in rows.items()) \
+            + "</table>"
+    html = "<html><body>" + table("Aluva", "1", "Aluva Town", "North Paravur") + table("Edathala", "2", "AluvaTown", "NorthParavur") \
+        + "</body></html>"
+    recs = power_kseb.parse(html, "Perumbavoor")
+    ids = [r for r, _ in recs]
+    assert "dept:power_kseb:division-north-paravur" in ids and "dept:power_kseb:division-northparavur" not in ids
+    assert "dept:power_kseb:subdivision-north-paravur-aluva-town" in ids
+    assert not any(i.startswith("dept:power_kseb:subdivision-northparavur") for i in ids)
+    assert len(recs) == 5 and all(d.get("phone", "0").startswith("0") for _, d in recs)
 
 
 def test_mescom():
@@ -523,6 +622,25 @@ def test_apspdcl():
     assert by["COMPANY SECRETARY"]["level"] == "state"
 
 
+def test_apspdcl_office_twice():
+    # one office listed twice with the post written two ways ("AE / O / Panyam", "AE/O/PANYAM"), and the Ananathapur panel
+    # repeating a Sri Sathya Sai office: the second copy was a second record ("...~2"); another number for one post stays
+    from dforms import power_apspdcl as m
+
+    def panel(title, rows):
+        body = "".join(f"<tr><td>{i}</td><td>{d}</td><td>{n}</td></tr>" for i, (d, n) in enumerate(rows, 1))
+        return f'<div class="panel"><h4 class="panel-title">{title}</h4><table><tbody>{body}</tbody></table></div>'
+    html = "<html><body>" + panel("SRI SATHYA SAI CIRCLE", [("AE/O/PENUKONDA", "9440813308")]) \
+        + panel("ANANATHAPUR CIRCLE", [("A.E/O/PENUKONDA", "9440813308"), ("AE/O/Anantapur", "9440813300")]) \
+        + panel("KURNOOL CIRCLE", [("AE / O / Panyam", "94408 13411"), ("AE/O/PANYAM", "94408 13411"),
+                                   ("AE / SPM / Kurnool", "94408 13351"), ("AE / SPM / Kurnool", "94408 13352")]) + "</body></html>"
+    recs, files, why = m.fetch({"url": m.URL}, lambda url, **k: Resp_g4(html.encode()))
+    ids = [r for r, _ in recs]
+    assert why == "" and len(recs) == 5
+    assert "dept:power_apspdcl:sri-sathya-sai-ae-o-penukonda" in ids and not any("penukonda" in i and "ananathapur" in i for i in ids)
+    assert "dept:power_apspdcl:kurnool-ae-o-panyam~2" not in ids and "dept:power_apspdcl:kurnool-ae-spm-kurnool~2" in ids
+
+
 def test_apepdcl():
     from dforms import power_apepdcl as m
     get = fake_g4({"Zone1": "apepdcl_zone1.html", "contactsNew": "apepdcl_index.html"})
@@ -583,6 +701,46 @@ def test_sbpdcl():
     fuse = next(d for d in rows if d["area"] == "Khajpura")
     assert fuse["post"] == "Fuse Call Centre" and fuse["parents"] == {"division": "ASHIANA"}
     assert next(d for d in rows if d["post"] == "ESE")["level"] == "circle"
+
+
+def bihar_page_g4(blocks):
+    """A frmHelplineNumbers page: [(heading, [row cells])] -> html, nested the way the site nests circles and divisions."""
+    def table(rows):
+        return "<table>" + "".join("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>" for r in rows) + "</table>"
+    return "<html><body><ul>" + "".join(f'<li><span class="caret">{h}</span><ul class="nested">{table(rows)}</ul></li>'
+                                        for h, rows in blocks) + "</ul></body></html>"
+
+
+def test_nbpdcl_twice_and_post_in_name():
+    # the page lists some offices twice, once with the cells in the other order: the second copy was "...~2";
+    # some name cells carry the post: "Sri Santosh Kumar,JEE (S)" | "ESS Patori"
+    from dforms import power_nbpdcl as m
+    html = bihar_page_g4([("Circle-Purnia", []), ("Division-Purnea(West)", [
+        ["Line Bazar", "JEE", "7763814901", ""], ["JEE", "ESS, Line Bazar", "7763814901", ""],
+        ["Dhamdaha", "JEE", "7763814904", ""], ["Dhamdaha", "JEE", "7763814904", ""]]),
+        ("Circle-Samastipur", []), ("Division-Dalsinghsarai", [["Sri Santosh Kumar,JEE (S)", "ESS Patori", "7763814941", ""]])])
+    recs, files, why = m.fetch({"url": m.URL}, lambda url, **k: Resp_g4(html.encode()))
+    check_g4(recs, files, why, "power_nbpdcl")
+    assert len(recs) == 3 and not any("~" in r for r, _ in recs)
+    pat = next(d for _, d in recs if d["area"] == "Patori")
+    assert pat["name"] == "Sri Santosh Kumar" and pat["post"] == "JEE (S), ESS Patori" and pat["phone"] == "7763814941"
+
+
+def test_sbpdcl_swapped_headquarters():
+    # headquarters rows with the name in the designation cell; a "PSS | PSS" row with no place and no phone
+    from dforms import power_sbpdcl as m
+    html = bihar_page_g4([("Headquarter", [["SRI AJAY YADAV, IAS", "CHAIRMAN-CUM- MD, BSPHCL", "6122504036"],
+                                           ["OSD TO CMD", "BHUPENDRA UMRAO", "7763814001"],
+                                           ["DEPUTY SECRETARY", "VINAY KUMAR THAKUR", "7763814559"],
+                                           ["CE (O&M)", "RAJ KUMAR", "9262390710"], ["CE-(O&M)", "RAJ KUMAR", "9262390710"]]),
+                          ("Circle-Bhagalpur", []), ("Division-Amarpur", [["PSS", "PSS", ""], ["JEE", "ESS, Amarpur", "7763815000"]])])
+    recs, files, why = m.fetch({"url": m.URL}, lambda url, **k: Resp_g4(html.encode()))
+    check_g4(recs, files, why, "power_sbpdcl")
+    by = {d.get("name"): d for _, d in recs}
+    assert by["SRI AJAY YADAV, IAS"]["post"] == "CHAIRMAN-CUM- MD, BSPHCL"
+    assert by["BHUPENDRA UMRAO"]["post"] == "OSD TO CMD" and by["VINAY KUMAR THAKUR"]["post"] == "DEPUTY SECRETARY"
+    assert len([d for d in by.values() if d.get("name") == "RAJ KUMAR"]) == 1 and len(recs) == 5
+    assert not any(d["area"] == "PSS" for _, d in recs)
 
 
 def test_jbvnl():

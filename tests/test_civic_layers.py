@@ -182,6 +182,51 @@ def test_masks():
     assert F.name_of("-NA-") == "" and F.name_of(" Hiramoni  Rajbongshi") == "Hiramoni Rajbongshi"
 
 
+def test_fps_name_faults():
+    """Data-quality review 2026-11-11 (rows from the saved JK, AS, AP and BR device lists): a mobile written in the name moves to
+    the phone; labels and codes ("Fps", "PACX", a shop id, "VA0725332B303768") give no name; "FPS IS <id> IS ALSO TAGGE",
+    "IC 18", "Ic No.0746026 dealer" and a trailing comma leave the name; 10-digit numbers that cannot be mobiles are no phone."""
+    import dforms._civic_fps as F
+    device = json.loads((DATA / "civic_fps_names.json").read_text())
+    d = {k.rsplit(":", 1)[1]: v for k, v in F.sp_parse(device, {}, "civic_fps_jk", "JK", "https://epos.jk.gov.in")}
+    check_records([(f"dept:civic_fps_jk:{k}", v) for k, v in d.items()], "civic_fps_jk", "food_supplies")
+    assert "100200100017" not in d                                                  # "Fps", masked mobile: nothing to keep
+    assert (d["100200200043"]["name"], d["100200200043"]["phone"]) == ("FPS WATERHAIL-B (MUSHTAQ AHMAD)", "7889612561")
+    assert (d["100201100003"]["name"], d["100201100003"]["phone"]) == ("FPS LALPORA(MOHD AMIN QURESHI)", "6005893552")
+    assert (d["100201200002"]["name"], d["100201200002"]["phone"]) == ("GRD Zabgulla (Sajad Ahmad Dinda", "9906060301")
+    r = d["101200200032"]                                                           # a mistyped 9-digit mobile: out of the name
+    assert r["name"] == "SAMBOORA C CB- RAFIYA FAROOQ" and r["name_number"] == "990623760" and "phone" not in r
+    assert (d["130700100641"]["name"], d["130700100641"]["post"]) == ("Dharam Das Dhandari", "FPS nominee")   # AS: id as name
+    assert d["131300300161"]["name"] == "BUDHESWAR GOGOI" and "name_number" not in d["131300300161"]
+    assert d["1052005"]["name"] == "Anuradha"                                       # AP: trailing comma
+    assert (d["0746025"]["name"], d["0746025"]["post"], d["0746025"]["phone"]) == ("V.SrinivasaRao", "FPS nominee", "9666706699")
+    assert (d["1318017"]["name"], d["1318017"]["phone"]) == ("U. Raghavaiah", "9849488376")
+    assert (d["0782002"]["name"], d["0782002"]["post"]) == ("Ramesh", "FPS nominee")
+    assert d["120700100033"]["name"] == "USMAN ANSARI TAG SUBHITA DEVI" and "phone" not in d["120700100033"]   # BR 9999999999
+    assert "phone" not in d["120700500738"]                                         # BR 2222222222
+    r = d["122100100054"]                                                           # BR "PACX": no name, the dealer phone stays
+    assert "name" not in r and r["phone"] == "8873983252" and r["post"] == "FPS dealer" and r["nominee_1"] == "maheshwar ray"
+    assert F.unmasked("3090090924") == "" and F.unmasked("1901001000") == "" and F.unmasked("8969690685") == "8969690685"
+    assert F.unmasked("0612-2233445") == "0612-2233445"
+    assert F.split_name("NITIN JAGANNATH KOR 9272888265 ASOLE NR") == ("NITIN JAGANNATH KOR ASOLE NR", "9272888265")
+    assert F.split_name("Ichhapur IC") == ("Ichhapur IC", "") and F.split_name("PACs Aurahi Purab")[0] == "PACs Aurahi Purab"
+
+
+def test_fps_jsp_name_faults():
+    """MP: a longitude in the dealer cell ("77.528877") is no name (the nominee stands in, or the shop has no row); MH: a mobile in
+    the dealer cell is the dealer's phone; a trailing comma leaves the name."""
+    import dforms._civic_fps as F
+    mp = dict(F.jsp_parse((DATA / "civic_fps_mp_names.html").read_text(), "civic_fps_mp", "MP", "https://epos.mp.gov.in"))
+    check_records(list(mp.items()), "civic_fps_mp", "food_supplies")
+    assert "dept:civic_fps_mp:0505046" not in mp and mp["dept:civic_fps_mp:0505045"]["name"] == "Ramsingh parihar"
+    assert (mp["dept:civic_fps_mp:0505048"]["name"], mp["dept:civic_fps_mp:0505048"]["post"]) == ("Girraj Singh Dhakad", "FPS nominee")
+    mh = dict(F.jsp_parse((DATA / "civic_fps_mh_names.html").read_text(), "civic_fps_mh", "MH", "https://epos.mahafood.gov.in"))
+    check_records(list(mh.items()), "civic_fps_mh", "food_supplies")
+    r = mh["dept:civic_fps_mh:151521800431"]
+    assert (r["name"], r["phone"], r["nominee_1"]) == ("LAXMAN DEVRAO(MURMI)", "9552481105", "Mangalbai Laxman Mhaske")
+    assert mh["dept:civic_fps_mh:150307770109"]["name"] == "V.S.Nichit"
+
+
 def test_seed_files_b():
     """Every seeds/dept_civic_fps_*.json / dept_civic_lpg_*.json: unique keys, an existing reader, url and state."""
     keys = []
@@ -292,6 +337,24 @@ def test_csc_kl():
     assert a["phone"] == "9447918141, 9747265983" and a["email"] == "akshayakulamavu062@gmail.com, samaxn3@gmail.com"
     assert a["source"].startswith("https://akshaya.kerala.gov.in/centers/3008/") and a["district"] == "Kannur"
     assert b["area"] == "Ettikkulam" and b["phone"] == "6282044785" and "name" not in b and b["source"].endswith("/centers/1")
+
+
+def test_csc_kl_joined_values():
+    """Data-quality review 2026-11-11 (centre page 2352, saved copy): two mobiles and two emails that the site writes with no
+    separator are split; a landline that lost its STD 0 gets it back; a good number stays as written."""
+    m = mod("civic_csc_kl")
+    d = m.detail((DATA / "civic_csc_kl_joined.html").read_text())
+    assert d["phone"] == "9020277399, 9446680882" and d["staff_phone"] == ""                  # the staff phone "0" is no phone
+    assert d["email"] == "sajnaboban@gmail.com, sajna_magfil@yahoo.co.in" and d["staff_email"] == "deepankuran1@gmail.com"
+    c = {"id": "2352", "slug": "annoor", "url": "https://akshaya.kerala.gov.in/centers/2352/annoor", "code": "KNR217",
+         "place": "Annoor", "district": "Kannur", "phone": m.fix_phones("90202773999446680882")}
+    rid, r = m.record(c, d, "https://akshaya.kerala.gov.in/centers/1")
+    assert r["phone"] == "9020277399, 9446680882" and r["email"].count("@") == 3
+    assert m.fix_phones("4872998822") == "04872998822" and m.fix_phones("4962695307, 9645686986") == "04962695307, 9645686986"
+    assert m.fix_phones("91427084179995773470") == "9142708417, 9995773470" and m.fix_phones("0478 2572067") == "0478 2572067"
+    assert m.split_emails("preemano11koodali@gmail.comkoodalikn1091@gmail.com") == \
+        "preemano11koodali@gmail.com koodalikn1091@gmail.com"
+    assert m.split_emails("john.common@gmail.com") == "john.common@gmail.com"
 
 
 def test_csc_kl_past_the_end():
@@ -465,6 +528,24 @@ def test_health_in():
         return "outStatistics" in u
     its = m.items(fake_get({stats: "civic_health_in_max.json"}))                        # both layers answer max 165111 here
     assert len(its) == 166 and its[82]["payload"]["lo"] == 164001 and its[83]["payload"]["layer"] == "centres"
+
+
+def test_health_in_faults():
+    """Data-quality review 2026-11-11: the landline column lost the leading STD 0 ("2184254444"); PINs and 0-only numbers are no
+    phone; the post is the facility type the source gives (it named every facility "Medical Officer" before)."""
+    m = mod("civic_health_in")
+    d = dict(m.parse(json.loads((DATA / "civic_health_in_faults.json").read_text())))
+    check_facilities(list(d.items()), "civic_health_in", "health", "health")
+    ph = {k.rsplit("-", 1)[1]: v.get("phone") for k, v in d.items()}
+    assert ph["8093"] == "02184254444" and ph["160313"] == "05315-245188" and ph["37227"] == "04371 291191"
+    assert ph["160826"] == "03325000000" and ph["4031"] == "02483-231497"            # "91" + number; a good number stays as is
+    assert ph["4134"] is None and ph["8927"] is None and ph["4043"] is None          # 07263-000000, the PIN 735228, "0"
+    post = {k.rsplit("-", 1)[1]: v["post"] for k, v in d.items()}
+    assert post["8093"] == "Primary health centre" and post["4043"] == "Health sub centre"
+    assert post["4031"] == "Community health centre" and post["5167"] == "Health facility"
+    assert "Medical Officer" not in post.values()
+    assert m.post_of("Sub-District Hospital") == "Sub-District Hospital" and m.post_of("PHC") == "Primary health centre"
+    assert m.post_of("Sub Centre") == "Health sub centre" and m.post_of("") == "Health facility"
 
 
 def test_health_dl(monkeypatch):

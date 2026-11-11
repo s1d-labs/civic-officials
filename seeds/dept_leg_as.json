@@ -1,0 +1,79 @@
+[
+ {
+  "key": "leg_as-page-1",
+  "payload": {
+   "reader": "leg_as",
+   "url": "https://assambidhansabha.org/members?page=1",
+   "state": "AS",
+   "page": 1,
+   "details": true,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_as-page-2",
+  "payload": {
+   "reader": "leg_as",
+   "url": "https://assambidhansabha.org/members?page=2",
+   "state": "AS",
+   "page": 2,
+   "details": true,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_as-page-3",
+  "payload": {
+   "reader": "leg_as",
+   "url": "https://assambidhansabha.org/members?page=3",
+   "state": "AS",
+   "page": 3,
+   "details": true,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_as-page-4",
+  "payload": {
+   "reader": "leg_as",
+   "url": "https://assambidhansabha.org/members?page=4",
+   "state": "AS",
+   "page": 4,
+   "details": true,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_as-page-5",
+  "payload": {
+   "reader": "leg_as",
+   "url": "https://assambidhansabha.org/members?page=5",
+   "state": "AS",
+   "page": 5,
+   "details": true,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_as-page-6",
+  "payload": {
+   "reader": "leg_as",
+   "url": "https://assambidhansabha.org/members?page=6",
+   "state": "AS",
+   "page": 6,
+   "details": true,
+   "india_only": false
+  }
+ },
+ {
+  "key": "leg_as-page-7",
+  "payload": {
+   "reader": "leg_as",
+   "url": "https://assambidhansabha.org/members?page=7",
+   "state": "AS",
+   "page": 7,
+   "details": true,
+   "india_only": false
+  }
+ }
+]

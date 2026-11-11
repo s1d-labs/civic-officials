@@ -13,6 +13,18 @@ MODULE = "ero_ld"
 URL = "https://ceolakshadweep.gov.in/ero-aero-blo"
 
 
+def std0(s):
+    """An office landline whose leading 0 the source dropped gets it back: "4936229255" -> "04936229255" (STD code + number,
+    10 digits, not starting with 6-9 as a mobile number does). Mobile numbers, numbers after "+91" and numbers with their 0
+    stay as written."""
+    def fix(m):
+        before = m.string[:m.start()].rstrip(" -")
+        if len(m.group(1) + m.group(3)) != 10 or before.endswith(("+91", "+", "91")):
+            return m.group(0)
+        return "0" + m.group(0)
+    return re.sub(r"(?<![\d+])([1-5]\d{1,4})(\s*-\s*)?(\d{5,8})(?!\d)", fix, s or "")
+
+
 def items(get=None):
     return [{"key": MODULE, "payload": {"reader": MODULE, "url": URL, "state": "LD"}}]
 
@@ -30,7 +42,7 @@ def parse(html, url=URL):
             area = re.sub(r"(?i)\s*only\s*$", "", c.get("defining area", "")).strip()
             if not name:
                 continue
-            phone = _esw.phones(c.get("office number"), c.get("mobile number"))
+            phone = _esw.phones(std0(c.get("office number")), c.get("mobile number"))
             if re.match(r"(?i)^electoral registration officer|^ero\b", desig):
                 key = "LD-PC-1:ero"
                 f = dict(level="pc", area="1 - Lakshadweep", post="Electoral Registration Officer", office_id="LD-PC-1")

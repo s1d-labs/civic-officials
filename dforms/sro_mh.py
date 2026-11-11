@@ -6,6 +6,10 @@ time. The column order differs from file to file, so the reader does not use pos
 (pypdf layout mode) into columns at the blank gutters, gives each record the lines between its row number and the next, and
 names the columns by their content (e-mail, PIN, landline, coordinates, office time; then of the text columns the longest is the
 address, the next the office, the first two the DIG and the district). Landlines that the sheet turned into "2.17E+09" are dropped.
+Where the gutters between the e-mail, PIN, landline, coordinate and time columns move from row to row, the page-wide columns join
+them into one cell; the reader then cuts the columns again from that record's own lines, and in any case sorts the parts of an
+e-mail cell by kind (mail_cell). A landline whose leading 0 the sheet dropped ("2512- 688722", "2484221511": an STD code and
+number of 10 digits that does not start like a mobile number) gets the 0 back (std0).
 Record ids: dept:sro_mh:MH-SRO-<slug of district>-<slug of office>.
 """
 import re
@@ -19,6 +23,7 @@ FILES = {"pune": "Pune Div.pdf", "mumbai": "Mumbai Div.pdf", "thane": "Thane Div
          "other-cos": "Other COS.pdf"}
 ANCHOR = re.compile(r"^\s{0,4}(\d{1,3})(?=\s{2,}\S|\s*$)")
 HEADER = re.compile(r"Pincode|Lattitude|Latitude|Longitude|Mail ID|Holidays|Name of", re.I)
+HEAD_WORDS = {"No", "No.", "Office", "Landline", "ID", "Time", "and", "weekly", "Holidays"}
 TIME = re.compile(r"\b(AM|PM|Am|Pm)\b|Sunday|Saturday|\(Every|Holiday")
 
 
@@ -49,6 +54,24 @@ def columns(lines):
     return out
 
 
+def refine(cols, block):
+    """The page's columns, with the column that holds the e-mail cut again at the gutters of one record's own lines (the
+    other columns stay as they are, so the headings still name them)."""
+    bc = columns([l for l in block if l.strip()])
+    out = []
+    for a, b in cols:
+        has_at = any("@" in l[a:b] for l in block)
+        inner = []
+        for x, y in bc:
+            if x < b and y > a:
+                if inner and max(a, x) - inner[-1][1] <= 2:
+                    inner[-1][1] = min(b, y)             # words two blanks apart: one cell ("SINGH  SQUARE,")
+                else:
+                    inner.append([max(a, x), min(b, y)])
+        out.extend(inner if has_at and len(inner) > 1 else [[a, b]])
+    return out
+
+
 def cells(block, cols):
     """Text of each column in one record's lines, top to bottom."""
     out = [[] for _ in cols]
@@ -72,7 +95,7 @@ def coord(s):
     m = re.match(r"^(\d{1,2}\.\d{3,})", s)
     if m:
         return float(m.group(1))
-    m = re.match(r"^(\d{1,2})[°\"'.:](\d{1,2})['.:](\d{1,2}(?:\.\d+)?)?", s)
+    m = re.match(r"^(\d{1,2})[°\"'`.:](\d{1,2})['`.:](\d{1,2}(?:\.\d+)?)?", s)
     if m:
         d, mi, se = int(m.group(1)), int(m.group(2)), float(m.group(3) or 0)
         if mi < 60 and se < 60:
@@ -91,20 +114,37 @@ def classify(texts, cols=None, labels=None):
         if i == 0 and ANCHOR.match(parts[0]) and len(joined) <= 4:
             continue
         if "@" in squeezed and "email" not in f:
-            m = re.match(r"^(\d{6})(?=[A-Za-z])", squeezed)
-            if m:                                        # PIN and e-mail one blank apart: one column
-                f.setdefault("pincode", m.group(1))
-                squeezed = squeezed[6:]
-            f["email"] = squeezed
-        elif TIME.search(joined):
-            f["time"] = joined
+            m = mail_cell(parts)
+            f["email"] = m["mail"]
+            if m["pin"]:
+                f.setdefault("pincode", m["pin"])
+            if m["phone"] and "landline" not in f:
+                f["landline"] = m["phone"]
+            if m["coords"]:
+                f.setdefault("coords", []).extend(m["coords"])
+            if m["time"] and "time" not in f:
+                f["time"] = m["time"]
+            if m["mixed"]:
+                f["mixed"] = True
+        elif TIME.search(joined):                        # a coordinate can share the office time's cell: ",77.706575"
+            co = [x for x in parts if COORD_PART.fullmatch(x) and coord(x.lstrip(",")) is not None and coord(x.lstrip(",")) > 5]
+            if co:
+                f.setdefault("coords", []).extend(coord(x.lstrip(",")) for x in co)
+            f["time"] = " ".join(x for x in parts if x not in co)
         elif re.fullmatch(r"\d{3}\s?\d{3}( \d{3}\s?\d{3})*", joined):
             f.setdefault("pincode", joined.split(" ")[0])
-        elif re.fullmatch(r"[\d°\"'.:,\s]+[NE]?(\s*[NE°])*", joined) and coord(parts[0]) is not None and coord(parts[0]) > 5:
-            f.setdefault("coords", []).append(coord(parts[0]))
+        elif COORD_PART.fullmatch(joined) and coord(parts[0].lstrip(",")) is not None and coord(parts[0].lstrip(",")) > 5:
+            f.setdefault("coords", []).append(coord(parts[0].lstrip(",")))
         elif re.fullmatch(r"(NA|[\d\s/,+()-]+|\d\.\d+E\+\d+)(\s+(NA|[\d\s/,+()-]+))*", joined):
             if "E+" not in joined and "NA" != joined.strip():
                 f["landline"] = squeezed if re.fullmatch(r"0\d{2,4}-", parts[0]) else joined
+        elif re.search(r"\d{5}", joined) and all(PHONE_PART.fullmatch(x) or COORD_PART.fullmatch(x) for x in joined.split()):
+            m = mail_cell(joined.split())                # a landline and a coordinate in one cell: "02552-242060 20°18'19"N"
+            if m["phone"] and "landline" not in f:
+                f["landline"] = m["phone"]
+            f.setdefault("coords", []).extend(m["coords"])
+            if m["pin"]:
+                f.setdefault("pincode", m["pin"])
         else:
             text_cols.append(joined)
             if cols and labels:
@@ -116,6 +156,65 @@ def classify(texts, cols=None, labels=None):
     f["text"] = text_cols
     f["named"] = named
     return f
+
+
+COORD_PART = re.compile(r"[\d°\"'`.:,\s]+[NE°`\"\s]*")
+PHONE_PART = re.compile(r"(NA|na|N\.A\.?|[\d\s/,+()-]+|\d\.\d+E\+\d+)")
+
+
+def mail_cell(parts):
+    """The parts of a cell that holds an e-mail, sorted by kind. When the page-wide columns join the e-mail column with the
+    columns beside it, the cell also holds the PIN, the landline, the coordinates and the office time ("sr.pulgaon@igr...gov.in",
+    "7158282040", "20.72560903", "78.321038", "09:45 AM ..."). The e-mail is the part with "@" and the pieces of an address that
+    wraps over lines ("jdr.latur@igrmaharashtra.g" + "ov.in"); other words ("mixed") are text of other columns."""
+    out = {"mail": "", "pin": None, "phone": "", "coords": [], "time": "", "mixed": False}
+    mail, phone, seen_at = [], [], False
+    for k, p in enumerate(parts):
+        q = p.strip()
+        m = re.match(r"^(\d{3}\s?\d{3})\s*(?=[A-Za-z][^\s@]*@)", q)
+        if m:                                            # PIN and e-mail one blank apart: "411015 dig.pune@igrmahar"
+            out["pin"] = out["pin"] or m.group(1).replace(" ", "")
+            q = q[m.end():]
+        nxt = parts[k + 1].strip() if k + 1 < len(parts) else ""
+        if "@" in q:
+            mail.append(q.replace(" ", ""))
+            seen_at = True
+        elif not seen_at and nxt.startswith("@") and re.fullmatch(r"[\w.-]+", q):
+            mail.append(q)                               # "sr.vasmat" + "@igrmaharashtra.gov.in"
+        elif TIME.search(q):
+            out["time"] = (out["time"] + " " + q).strip()
+        elif re.fullmatch(r"\d{3}\s?\d{3}", q):
+            out["pin"] = out["pin"] or q.replace(" ", "")
+        elif re.fullmatch(r"\d*\s*[NE]", q):
+            pass                                         # the end of a coordinate: "79.376731" + "6 E"
+        elif COORD_PART.fullmatch(q) and coord(q.lstrip(",")) is not None and coord(q.lstrip(",")) > 5:
+            out["coords"].append(coord(q.lstrip(",")))
+        elif PHONE_PART.fullmatch(q) and re.search(r"\d", q):
+            phone.append(q)
+        elif seen_at and re.fullmatch(r"[\w.,/@-]+", q) and re.search(r"[a-z]", q):
+            mail.append(q)                               # the rest of a wrapped address: "ov.in", "n", ".in"
+        elif PHONE_PART.fullmatch(q):
+            pass                                         # "NA"
+        else:
+            out["mixed"] = True
+    out["mail"] = "".join(mail)
+    if phone:
+        out["phone"] = "".join(phone) if re.fullmatch(r"0\d{2,4}-", phone[0]) else " ".join(phone)
+    return out
+
+
+def std0(s):
+    """A landline whose leading 0 the sheet dropped gets it back: "2512- 688722" -> "02512-688722", "2484221511" -> "02484221511".
+    Only an STD code + number of 10 digits that does not start with 6-9 (a mobile number) is changed."""
+    out = []
+    for x in [x.strip() for x in s.split(",")] if s else []:
+        m = re.fullmatch(r"([1-5]\d{1,4})\s*-\s*(\d{5,8})", x)
+        if m and len(m.group(1) + m.group(2)) == 10:
+            x = f"0{m.group(1)}-{m.group(2)}"
+        elif re.fullmatch(r"[1-5]\d{9}", x):
+            x = "0" + x
+        out.append(x)
+    return ", ".join(out)
 
 
 def header_labels(lines):
@@ -140,8 +239,8 @@ def parse_pages(pages, url, division=None):
         head = max([i for i, l in enumerate(lines[:first]) if HEADER.search(l)] or [-1])
         if head >= 0:
             labels = header_labels(lines[:head + 1]) or labels
-            while head + 1 < first and lines[head + 1].strip() in ("No", "No.", "Office", "No Office", "Office No"):
-                head += 1
+            while head + 1 < first and lines[head + 1].strip() and set(lines[head + 1].split()) <= HEAD_WORDS:
+                head += 1                                # the heading's second line: "No ... Landline No"
         body = [l for l in lines[head + 1:]]
         anchors = [i - head - 1 for i in anchors if i > head]
         cols = columns([l for l in body if l.strip()])
@@ -152,13 +251,26 @@ def parse_pages(pages, url, division=None):
             hi = len(body) if k == len(anchors) - 1 else cut(body, a, anchors[k + 1])
             block = [l for l in body[lo:hi] if l.strip()]
             f = classify(cells(block, cols), cols, labels)
+            if f.get("mixed"):                           # the page's columns joined the e-mail with other cells: cut that
+                rc = refine(cols, block)                 # column again at the gutters of this row's own lines
+                if rc != cols:
+                    g = classify(cells(block, rc), rc, labels)
+                    if not g.get("mixed"):
+                        f = g
             sr = ANCHOR.match(body[a]).group(1)
             t = f["text"]
             named = f.get("named", {})
+            if labels and len(t) == len(labels) and set(named) != set(labels):
+                named = dict(zip(sorted(labels, key=labels.get), t))   # one text cell per heading: name them in heading order
             if len(t) < 2 and not named.get("office"):
                 continue
             if named.get("office") and named.get("address"):
                 addr, office, dig, dist = named["address"], named["office"], named.get("dig", ""), named.get("district", "")
+                small = [x for x in t if x not in (addr, office)]
+                if not dig and small:                    # a narrow DIG / JDR cell that its heading does not reach
+                    dig = small[0]
+                if not dist and small:
+                    dist = small[1] if len(small) > 1 else small[0]
             else:                                        # no headings: the longest text is the address, the next the office
                 addr = max(t, key=len)
                 rest = [x for x in t if x is not addr]
@@ -193,7 +305,7 @@ def parse_pages(pages, url, division=None):
         lon = co[1] if len(co) > 1 and 72 < co[1] < 81 else None
         pin = f.get("pincode") or ""
         recs.append(_esw.record(MODULE, key, dept="registration", level=level, area=area or office, post=post, office=office,
-                                dig=row["dig"], phone=_esw.phones(f.get("landline", "")), email=_esw.emails(f.get("email", "")),
+                                dig=row["dig"], phone=std0(_esw.phones(f.get("landline", ""))), email=_esw.emails(f.get("email", "")),
                                 address=addr if pin in addr else f"{addr} {pin}", pincode=pin, state="MH", district=dist,
                                 office_id=key, source=url, lat=lat, lon=lon, sr_no=row["sr"], division=division,
                                 office_time=f.get("time")))

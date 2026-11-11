@@ -108,3 +108,37 @@ def test_kanpur_zone_wards():
     zw = mod("ward_kanpur").zone_wards((WARD / "kanpur_zonewardlist.txt").read_text())
     assert {z: len(w) for z, w in zw.items()} == {1: 18, 2: 21, 3: 18, 4: 14, 5: 18, 6: 20}
     assert "1" in zw[1] and "11" in zw[2] and "110" in zw[4] and "8" in zw[6]
+
+
+def test_kamrc_phone_out_of_name():
+    # Ballari writes "MAHINDRA, 8073055190" and "RAMANJI/TIRUPAL, 9980634475/7348898878" in one cell: the numbers leave the name
+    case = json.loads((WARD / "kamrc_ballari_eng.json").read_text())
+    recs = dict(mod("ward_kamrc").fetch(case["payload"], fake_get(routes_of(case)))[0])
+    assert not [d["name"] for d in recs.values() if re.search(r"\d", d["name"])]
+    by = {(d["post"], d["name"]): d for d in recs.values()}
+    assert by[("Supervisor", "MAHINDRA")]["phone"] == "8073055190"
+    assert by[("Valve man", "RAMANJI")]["phone"] == "9980634475" and by[("Valve man", "TIRUPAL")]["phone"] == "7348898878"
+    # "DASHARATH ,DEVENDRA, 9980722483": two names, one number: the number is the group's
+    assert by[("Valve man", "DASHARATH")].get("phone") in (None, "") and by[("Valve man", "DASHARATH")]["group_phones"] == "9980722483"
+    people = mod("ward_kamrc").people
+    assert people("KUBENDRA RAVI PRASAD, 7411129910 9686401467") == [("KUBENDRA RAVI PRASAD", "7411129910, 9686401467", None, None)]
+
+
+def test_kamrc_names_on_lines_and_label():
+    # Davanagere: "Veeresh | Nagaraj | ..." are several valve men; "From Jalsiri distribution channel" is a note, not a name
+    case = json.loads((WARD / "kamrc_davanagere_eng.json").read_text())
+    recs = dict(mod("ward_kamrc").fetch(case["payload"], fake_get(routes_of(case)))[0])
+    assert not [d["name"] for d in recs.values() if "|" in d["name"] or "Jalsiri" in d["name"]]
+    n = next(d for d in recs.values() if d["name"] == "Nagendrappa")
+    assert n["note"] == "From Jalsiri distribution channel"
+
+
+def test_trichy_zone_officers_only_on_their_zone():
+    # every zonaladmins/N page shows the zone I (Srirangam) officers: zone 3 keeps none of them, zone 1 keeps all
+    case = json.loads((WARD / "trichy_zone3.json").read_text())
+    recs = dict(mod("ward_trichy").fetch(case["payload"], fake_get(routes_of(case)))[0])
+    assert recs and all(d["level"] == "ward" and d["zone"] == "Zone 3" for d in recs.values())
+    assert not [d for d in recs.values() if "Srirangam" in (d.get("address") or "") + d["area"] + d.get("zone", "")]
+    one = dict(mod("ward_trichy").fetch(*(lambda c: (c["payload"], fake_get(routes_of(c))))(json.loads((WARD / "trichy_zone1.json").read_text())))[0])
+    ac = [d for d in one.values() if d["post"] == "Asst. Commissioner"]
+    assert len(ac) == 1 and ac[0]["name"] == "Tmt. T. Sasikala M.B.A., M.Phil."      # trailing "," dropped

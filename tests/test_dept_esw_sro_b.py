@@ -1,3 +1,5 @@
+import re
+
 from esw_common import *  # noqa: F401,F403
 
 # ---- Sub-registrars: Tamil Nadu, Gujarat, Maharashtra, Uttar Pradesh (dforms/sro_tn, sro_gj, sro_mh, sro_up)
@@ -85,6 +87,39 @@ def test_sro_mh(monkeypatch):
     assert d[64]["area"] == "Mahabaleshwar" and d[65]["area"] == "Khandala"          # a name broken over two rows' lines
     assert "phone" not in d[62]                                                        # "2.17E+09" in the sheet: dropped
     assert d[116]["area"] == "Mangalwedha" and d[116]["district"] == "Solapur" and d[116]["lon"] == 75.45393
+
+
+def test_sro_mh_merged_cells(monkeypatch):
+    # Nagpur (page 1): the gutters between e-mail, landline, latitude and longitude move from row to row, so the page-wide
+    # columns join them; the reader took "sr.nagpur2@igrmaharashtra.gov.in0712274424221.136047179.10843509" as the e-mail.
+    # Thane (page 5): the sheet dropped the STD code's 0 ("2512-" over "688722").
+    p = {"reader": "sro_mh", "url": "https://igrmaharashtra.gov.in/pdf/documents/offices/x.pdf", "state": "MH", "division": "nagpur"}
+    _pdf_text(monkeypatch, "sro_mh", "sro_mh_merged.txt")
+    recs, files, why = mod("sro_mh").fetch(p, _pdf_get(p["url"]))
+    check_records(recs, "sro_mh", "registration")
+    d = {v["sr_no"]: v for _, v in recs}
+    assert sorted(d) == [1, 2, 3, 4, 5, 6, 25, 26, 27]
+    for v in d.values():
+        assert not v.get("email") or re.fullmatch(r"[a-z0-9.]+@igrmaharashtra\.gov\.in", v["email"]), v["email"]
+    n = d[4]
+    assert n["email"] == "sr.nagpur2@igrmaharashtra.gov.in" and n["phone"] == "07122744242" and n["pincode"] == "440009"
+    assert n["lat"] == 21.1360471 and n["lon"] == 79.108435 and n["office_time"].startswith("09:45 AM")
+    assert d[1]["post"] == "DIG of Registration" and d[1]["lon"] == 79.07165        # the heading's "Landline No" is not row 1
+    assert d[26]["phone"] == "02512-688722" and d[25]["phone"] == "02512-690716"
+    assert d[26]["email"] == "sr.ulhasnager3@igrmaharashtra.gov.in" and "email" not in d[27]   # "Not Available"
+
+
+def test_sro_mh_cells():
+    m = mod("sro_mh")
+    c = m.mail_cell(["441904", "jdr.bhandara@igrmaharashtra.gov.in", "07184-252438", "21.156489", "79.654204", "09:45 AM to 06:15 PM"])
+    assert c["mail"] == "jdr.bhandara@igrmaharashtra.gov.in" and c["phone"] == "07184-252438" and c["pin"] == "441904"
+    assert c["coords"] == [21.156489, 79.654204] and c["time"] == "09:45 AM to 06:15 PM" and not c["mixed"]
+    c = m.mail_cell(["jdr.chandrapur@igrmaharashtra.gov.i", "79.299799", "442401", "n", "07172-254360", "19.9643072 N", "E"])
+    assert c["mail"] == "jdr.chandrapur@igrmaharashtra.gov.in" and c["phone"] == "07172-254360" and c["pin"] == "442401"
+    assert m.mail_cell(["sr.vasmat", "@igrmaharashtra.gov.in"])["mail"] == "sr.vasmat@igrmaharashtra.gov.in"
+    assert m.mail_cell(["Collector office compound,Nagar road beed", "431122", "jdr.beed@igrmaharashtra.gov.in"])["mixed"]
+    assert m.std0("2512- 688722") == "02512-688722" and m.std0("2484221511") == "02484221511"
+    assert m.std0("7158282040") == "7158282040" and m.std0("22630742") == "22630742" and m.std0("0253-2457252") == "0253-2457252"
 
 
 def test_sro_mh_coord():

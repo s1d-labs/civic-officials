@@ -14,11 +14,18 @@ statename, districtname, subdistrictname, facilitytype (PHC, Sub Centre, CHC, ..
 
 One queue item = one objectid range of 2,000 rows (the layers' maxRecordCount): where=objectid >= a AND objectid < b, outFields=*,
 f=json. items(get) asks each layer's max objectid and cuts ranges.
-Records: dept health, level facility, layer health, area = facility name, post "Medical Officer" (the post in charge; the source
-names nobody), facility_type, phone = landline, address, PIN, district, block, taluka / sub-district, location_type, ownership,
-lat/lon. Record ids: dept:civic_health_in:hd-<objectid> (directory), dept:civic_health_in:hc-<objectid> (centres).
+Records: dept health, level facility, layer health, area = facility name, post = the facility type as the source gives it
+("Health sub centre", "Primary health centre", "Community health centre", "Health facility" for "Others", else the type as
+written; the source names no officer, so no post is inferred), facility_type, phone = landline, address, PIN, district,
+block, taluka / sub-district, location_type, ownership, lat/lon.
+The landline column lost the leading 0 of many STD codes ("2184254444" for 02184-254444: the source once held it as a
+number): a 10-digit number that is not a mobile (first digit 1-5) gets its 0 back ("5315-245188", "4371 291191" too; "91" +
+10 digits becomes 0 + 10 digits); a number equal to the PIN (the record's or one in its address) and a 0-only placeholder
+("07263-000000", "0") are left out.
+Record ids: dept:civic_health_in:hd-<objectid> (directory), dept:civic_health_in:hc-<objectid> (centres).
 """
 import json
+import re
 import urllib.parse
 
 from dforms import _esw
@@ -73,6 +80,38 @@ def val(v):
     return "" if v.lower() in EMPTY else v
 
 
+def post_of(ft):
+    """The facility type as the post (sql/86b A3): the source names the facility, not the officer in charge."""
+    t = _esw.clean(ft)
+    if re.match(r"(?i)sub\s*-?\s*cent", t):
+        return "Health sub centre"
+    if re.match(r"(?i)(phc\b|primary health)", t):
+        return "Primary health centre"
+    if re.match(r"(?i)(chc\b|community health)", t):
+        return "Community health centre"
+    if not t or re.fullmatch(r"(?i)others?", t):
+        return "Health facility"
+    return t
+
+
+def landline(v, pin="", addr=""):
+    """The landline column as phones: the lost STD 0 put back (10 digits, first digit 1-5: "2184254444", "5315-245188",
+    "4371 291191"; "91" + 10 digits: "913325000000"), PINs (the record's own or one in its address) and 0-only placeholders left out."""
+    out = []
+    pins = set(re.findall(r"(?<!\d)\d{6}(?!\d)", addr)) | ({pin} if pin else set())
+    for x in filter(None, _esw.phones(v).split(", ")):
+        d = re.sub(r"\D", "", x)
+        if d in pins or re.search(r"(?:^|[-\s])0+$", x) or re.fullmatch(r"0*", d):
+            continue
+        if re.fullmatch(r"91[1-5]\d{9}", d):
+            x = d = "0" + d[2:]
+        if re.fullmatch(r"[1-5]\d{9}", d) and re.fullmatch(r"\d{2,5}[\s-]?\d{5,8}", x):
+            x = "0" + x
+        if x not in out:
+            out.append(x)
+    return ", ".join(out)
+
+
 def in_india(lat, lon):
     return isinstance(lat, (int, float)) and isinstance(lon, (int, float)) and 6 <= lat <= 38 and 68 <= lon <= 98
 
@@ -92,7 +131,7 @@ def parse(doc, url=LAYER, layer="directory"):
             ok = in_india(lat, lon)
             st = val(a.get("statename"))
             recs.append(_esw.record(MODULE, f"{tag}-{oid}", dept="health", level="facility", layer="health", area=name,
-                                    post="Medical Officer", facility_type=val(a.get("facilitytype")),
+                                    post=post_of(val(a.get("facilitytype"))), facility_type=val(a.get("facilitytype")),
                                     address=val(a.get("facilityaddress")), location_type=val(a.get("locationtype")),
                                     ownership=val(a.get("typeoffacility")), notional=val(a.get("notionalphysical")),
                                     state=STATE.get(st.lower(), st), state_name=st, district=val(a.get("districtname")),
@@ -109,8 +148,8 @@ def parse(doc, url=LAYER, layer="directory"):
         lat, lon = a.get("lat"), a.get("lon")
         ok = in_india(lat, lon)
         recs.append(_esw.record(MODULE, f"{tag}-{oid}", dept="health", level="facility", layer="health", area=name,
-                                post="Medical Officer", facility_type=val(a.get("facility_type")),
-                                phone=_esw.phones(val(a.get("landline_number"))), address=", ".join(x for x in (addr, pin) if x),
+                                post=post_of(val(a.get("facility_type"))), facility_type=val(a.get("facility_type")),
+                                phone=landline(val(a.get("landline_number")), pin, addr), address=", ".join(x for x in (addr, pin) if x),
                                 pin=pin, state=STATE.get(st.lower(), st), state_name=st, district=val(a.get("district_name")),
                                 block=val(a.get("block_name")), subdistrict=val(a.get("taluka_name")), office_id=f"{tag}-{oid}",
                                 lat=lat if ok else None, lon=lon if ok else None, source=f"{LAYER}?objectid={oid}"))

@@ -6,7 +6,10 @@ over the posts) and one row per ward:
   /en/Revenuestaffs           Revenue: Revenue Officer, Asst. Revenue Officer, Revenue Inspector, Bill Collector
   /en/wardwise_staff_details  Health: Sr. / Jr. Health Inspector, Supervisor, "PKs Nos" (number of pourakarmikas: a count, kept
                               as the extra key "pourakarmikas" on the ward's health inspector records)
-The pages give names only (no phones). Sample: shivamoggacity.mrc.gov.in, live from India 2026-11-11 (page shows "Last Updated
+Most pages give names only; some (Ballari engineering) write "NAME, mobile" or "A, B, C, m1/m2/m3" in a cell: people() takes the
+numbers out of the name (one name: all its numbers; as many names as numbers: paired in order; else the numbers go to every name
+of the cell as "group_phones"). Cells with several names on lines ("Veeresh | Nagaraj", Davanagere) give one record per name;
+the line "From Jalsiri distribution channel" (the ward's water comes from the Jalsiri scheme) is a note, not a name. Sample: shivamoggacity.mrc.gov.in, live from India 2026-11-11 (page shows "Last Updated
 On Mon 2 Feb 2026"); the hub's whoswho task read the same pages for these bodies on 2026-11-09 (civic.official). When /en/ has no
 table, the reader tries /kn/ (names in Kannada: name and name_regional carry the same text).
 Records: level "ward", one per officer and post with the wards that officer covers (the ward table of the body = its 35-82 wards).
@@ -35,7 +38,30 @@ BODIES = {
     "vijayapura": ("www.vijayapuracity.mrc.gov.in", "Vijayapura City Corporation", "251993", "Vijayapura"),
 }
 PAGES = {"Engwardstaffs": "engineering", "Revenuestaffs": "revenue", "wardwise_staff_details": "health"}
-NAMESPLIT = re.compile(r"\s*(?:,|&|/|\band\b)\s*(?=[A-Za-zಀ-೿]{2})")
+NAMESPLIT = re.compile(r"\s*(?:,|&|/|\||\band\b)\s*(?=[A-Za-zಀ-೿]{2})")
+PHONE = re.compile(r"(?<![\d-])(?:\+?91[\s-]?)?[6-9]\d{9}(?!\d)|(?<!\d)0\d{2,4}[\s-]?\d{6,8}(?!\d)")
+LABEL = re.compile(r"(?i)^from\b|\bchannel\b|\bdistribution\b")
+
+
+def people(cell):
+    """[(name, phones, group_phones, note)] of one cell. 'MAHINDRA, 8073055190' -> [('MAHINDRA', '8073055190', None, None)];
+    'RAMANJI/TIRUPAL, 9980634475/7348898878' -> pairs; 'DASHARATH ,DEVENDRA, 9980722483' -> both with group_phones."""
+    nums = [re.sub(r"[\s-]", "", n) if n.startswith(("+", "9", "8", "7", "6")) else n for n in PHONE.findall(cell)]
+    nums = [re.sub(r"^\+?91(?=[6-9]\d{9}$)", "", n) for n in nums]
+    text = PHONE.sub(" ", cell)
+    text = re.sub(r"[\s,/|&]+$", "", text)
+    names, notes = [], []
+    for name in NAMESPLIT.split(text):
+        name = _esw.clean(name).strip(" .,/|")
+        if len(name) < 2 or re.fullmatch(r"[-–.\d\s]*|(?i:nil|na|n/a)", name):
+            continue
+        (notes if LABEL.search(name) else names).append(name)
+    note = "; ".join(notes) or None
+    if len(names) == 1:
+        return [(names[0], ", ".join(nums) or None, None, note)]
+    if names and len(names) == len(nums):
+        return [(n, x, None, note) for n, x in zip(names, nums)]
+    return [(n, None, ", ".join(nums) or None, note) for n in names]
 
 
 def items(get=None):
@@ -86,13 +112,15 @@ def parse(html, p):
                 continue
             if not cell or re.fullmatch(r"[-–.\d\s]*|(?i:nil|na|n/a)", cell):
                 continue
-            for name in NAMESPLIT.split(cell):
-                name = name.strip(" .,")
-                if len(name) < 2:
-                    continue
-                g = groups.setdefault((post, name.lower().replace(" ", "").replace(".", "")), {"post": post, "name": name, "wards": []})
+            for name, phone, group_phones, note in people(cell):
+                g = groups.setdefault((post, name.lower().replace(" ", "").replace(".", "")),
+                                      {"post": post, "name": name, "wards": [], "phones": [], "group_phones": [], "notes": []})
                 if ward not in g["wards"]:
                     g["wards"].append(ward)
+                for k, v in (("phones", phone), ("group_phones", group_phones), ("notes", note)):
+                    for x in (v.split(", ") if v and k != "notes" else [v] if v else []):
+                        if x not in g[k]:
+                            g[k].append(x)
     seen, recs = set(), []
     for g in groups.values():
         regional = bool(re.search(r"[ಀ-೿]", g["name"]))
@@ -104,10 +132,14 @@ def parse(html, p):
             n = sum(pks.get(w, 0) for w in g["wards"])
             if n:
                 extra["pourakarmikas"] = n
+        if g["group_phones"]:
+            extra["group_phones"] = ", ".join(x for x in g["group_phones"] if x not in g["phones"]) or None
+        if g["notes"]:
+            extra["note"] = "; ".join(g["notes"])
         area = ("Ward " if len(g["wards"]) == 1 else "Wards ") + ", ".join(g["wards"])
         recs.append(_ward.record(MODULE, f"{city}:{_esw.slug(page)}:{_esw.slug(g['post'])}:{_esw.slug(g['name']) or 'n'}", seen,
                                  body=body, lgd=lgd, state=STATE, district=district, level="ward", area=area, post=g["post"],
-                                 name=g["name"], name_regional=g["name"] if regional else None,
+                                 name=g["name"], name_regional=g["name"] if regional else None, phone=", ".join(g["phones"]) or None,
                                  wards=g["wards"], wing=wing, source=p["url"], **extra))
     return recs
 

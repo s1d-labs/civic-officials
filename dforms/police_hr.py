@@ -21,8 +21,10 @@ DISTRICTS = ["ambala", "bhiwani", "charkhidadri", "dabwali", "faridabad", "fateh
              "jind", "kaithal", "karnal", "kurukshetra", "mahendergarh", "mewat", "palwal", "panchkula", "panipat", "rewari",
              "rohtak", "sirsa", "sonipat", "yamunanagar"]
 STD = re.compile(r"(?<!\d)\(?(0\d{2,4})\)?(\s*-\s*|\s+|\)\s*)(\d{6,8})(?!\d)")
-RANK = re.compile(r"^((?:L/|P/|W/|LADY\s+|LADIES\s+)?(?:INSP(?:ECTOR)?|SUB\s+INSPECTOR|E?S\.?I|A\.?S\.?I|P\.?S\.?I|H\.?C|E/?ASI|E/?SI|DSP|"
-                  r"CONST|CT)\.?)\s+", re.I)
+# the rank before the name: "SI Ram", "Insp.Parkash" (no blank after the dot), also after the post: "SHO INSP Manoj Kumar"
+RANK = re.compile(r"^(?:SHO\b\s*[/,:-]?\s*)?((?:L/|P/|W/|LADY\s+|LADIES\s+)?(?:INSP(?:ECTOR)?|SUB\s+INSPECTOR|E?S\.?I|A\.?S\.?I|P\.?S\.?I|"
+                  r"H\.?C|E/?ASI|E/?SI|DSP|CONST|CT)\.?)(?:(?<=\.)\s*|\s+)(?=\S)", re.I)
+POST_FIRST = re.compile(r"^SHO\b\s*[/,:-]?\s*(?=\S)", re.I)    # "SHO Ram Kumar": the post, not part of the name
 
 
 def ph(*cells):
@@ -111,6 +113,8 @@ def parse_sho(html, district, url):
                 m = RANK.match(who)
                 if m:
                     rank, who = clean(m.group(1)), clean(who[m.end():])
+                else:
+                    who = clean(POST_FIRST.sub("", who)) or None
             is_post = post_table or bool(re.match(r"^P\.?P\b", st, re.I))
             recs.append(rec(M, f"sho:{slug(district)}:{slug(st)}", area=st, office_type="police post" if is_post else "police station",
                             post="Officer in charge" if is_post else "SHO", name=who, rank=rank, phone=ph(cell(mob_i), cell(tel_i)),

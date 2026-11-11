@@ -14,6 +14,11 @@
 
 One queue item = one state (all districts) or one district ("dist_code" in the payload). Record ids: dept:<module>:<fps_id>.
 Shops with ids that start with 123456789 are the vendor's test shops ("srinivas", "Harish Sharma") and are left out.
+Name cells are cleaned (name_of / split_name): a mobile written in the name ("FPS QUMROO(Zahida Akhter)9906625865", JK and MH)
+moves to the phone; labels and codes that are not names ("PACX", "PACS", "FPS", "---", a longitude "77.539566" (MP), a shop id
+"130900220142") give no name; a shop id or in-charge note after the name ("... FPS ID 131300300154 IS ALSO TAGGE" (AS),
+"... IC 39", "... Ic No.0781159 dealer" (AP)) and a trailing comma are cut. A 10-digit number that is not a mobile (first digit
+0-5: "3090090924") or one digit ten times ("9999999999") is no phone (BR). A shop with no name but a phone is kept.
 """
 import datetime
 import json
@@ -26,17 +31,47 @@ TEST_ID = re.compile(r"^123456789")
 MASKED = re.compile(r"[Xx*]{2,}")
 
 
+MOBILE = re.compile(r"(?<![\d])(?:\+?91[\s-]?)?([6-9]\d{4}\s?\d{5})(?![\d])")
+LABEL = re.compile(r"(?i)(-+|\.+|fps|pac[sx]|-?na-?|n/a|null|nil|[\d\s.,:/-]+|(?=[a-z]*\d)(?=\d*[a-z])[a-z\d]{8,})")
+SHOP_NOTE = re.compile(r"(?i)\s+fps\s+(id|is)\b.*$|[\s,]+ic\b(\s*(no|shop)\b)?[\s.]*\d[\d.]*(\s+(dealer|incharge\w*))?\s*$")
+
+
 def unmasked(v):
-    """A phone value that the source shows in full; '' for masked (XXXXX-X9494), '-NA-' or empty values."""
+    """A phone value that the source shows in full; '' for masked (XXXXX-X9494), '-NA-' or empty values, and for 10-digit
+    numbers that cannot be a mobile (first digit 0-5) or are one digit repeated (9999999999)."""
     v = _esw.clean(v)
-    if not v or MASKED.search(v) or len(re.sub(r"\D", "", v)) < 10:
+    d = re.sub(r"\D", "", v)
+    if not v or MASKED.search(v) or len(d) < 10:
+        return ""
+    if len(d) == 10 and (d[0] not in "6789" or len(set(d)) == 1):
         return ""
     return v
 
 
+def split_name(v, numbers=None):
+    """(name, mobile) from a name cell: a mobile written in the name moves out; labels and codes give no name. Other digit
+    runs of 7 to 12 digits (mistyped or cut mobiles: "990623760", "94699679061") also leave the name; they go to the list
+    `numbers` when one is given (the record keeps them as name_number, as written)."""
+    v = SHOP_NOTE.sub("", _esw.clean(v))
+    phones = [re.sub(r"\s", "", m.group(1)) for m in MOBILE.finditer(v)]
+    v = MOBILE.sub(" ", v)
+    other = re.findall(r"(?<![^\W_])(?<!\d\.)\d{7,12}(?![^\W_])(?!\.\d)", v) if re.search(r"[^\W\d_]", v) else []
+    if numbers is not None:
+        numbers += other
+    if phones or other:
+        v = re.sub(r"(?<![^\W_])(?<!\d\.)\d{7,12}(?![^\W_])(?!\.\d)", " ", v)
+        v = re.sub(r"[\s,.:-]*\(\s*[\s,.:-]*\)", "", v)                  # "( )" and "(, )" left by the number
+        v = re.sub(r"[\s,.:-]+\)", ")", v)                               # "(MUSHTAQ AHMAD )" -> "(MUSHTAQ AHMAD)"
+        v = re.sub(r"[\s,.:-]+(\]|$)", r"\1", _esw.clean(re.sub(r"-\s+-", "-", v)))
+    v = _esw.clean(re.sub(r"[\s,;]+$", "", v))
+    if not v or LABEL.fullmatch(v):
+        v = ""
+    ph = ", ".join(x for x in dict.fromkeys(p for p in phones if unmasked(p)))
+    return v, ph
+
+
 def name_of(v):
-    v = _esw.clean(v)
-    return "" if v.upper() in ("-NA-", "NA", "N/A", "NULL", "-") else v
+    return split_name(v)[0]
 
 
 def _json(r):
@@ -102,18 +137,22 @@ def sp_parse(device, offices, module, state, base, dist_code="", district=""):
             continue
         seen.add(fid)
         afso_code, afso, owner = offices.get(fid, ("", "", ""))
-        name = name_of(x.get("del_name")) or owner
-        n1, n2 = name_of(x.get("nom_1_name")), name_of(x.get("nom_2_name"))
-        post = POST
-        if not name and n1:
-            name, post = n1, "FPS nominee"
+        nums = []
+        name, name_ph = split_name(x.get("del_name"), nums)
         if not name:
+            name, name_ph = split_name(owner, nums)
+        (n1, n1_ph), (n2, n2_ph) = split_name(x.get("nom_1_name")), split_name(x.get("nom_2_name"))
+        post, phone = POST, unmasked(x.get("del_mob")) or name_ph
+        if not name and n1 and not phone:            # a dealer with a phone but only a label ("PACX") stays the dealer
+            name, post, phone = n1, "FPS nominee", unmasked(x.get("nom_1_mob")) or n1_ph
+        if not name and not phone:
             continue
         recs.append(_esw.record(
             module, fid, dept="food_supplies", level="facility", layer="fps", area=afso or district, post=post, name=name,
-            phone=unmasked(x.get("del_mob")), state=state, district=district, subdistrict=afso, block=afso, afso_code=afso_code,
+            phone=phone, state=state, district=district, subdistrict=afso, block=afso, afso_code=afso_code,
             fps_id=fid, office_id=fid, terminal_id=_esw.clean(x.get("terminal_id")), dist_code=dist_code or x.get("dist_code"),
-            nominee_1=n1, nominee_1_phone=unmasked(x.get("nom_1_mob")), nominee_2=n2, nominee_2_phone=unmasked(x.get("nom_2_mob")),
+            nominee_1=n1, nominee_1_phone=unmasked(x.get("nom_1_mob")) or n1_ph, nominee_2=n2,
+            nominee_2_phone=unmasked(x.get("nom_2_mob")) or n2_ph, name_number=", ".join(nums),
             source=src))
     return recs
 
@@ -168,25 +207,28 @@ def jsp_parse(html, module, state, base, dist_code="", district=""):
         if TEST_ID.match(fid) or fid in seen:
             continue
         seen.add(fid)
-        names, phone_after = [], {}
+        names, phone_after, nums = [], {}, []
         for c in rest:                       # a mobile column may follow a name when a state shows it
             if re.fullmatch(r"[\dXx*+\- ]{8,}", c) and re.search(r"\d", c):
                 if names:
                     phone_after.setdefault(len(names) - 1, unmasked(c))
             else:
-                names.append(name_of(c))
+                n, ph = split_name(c, nums if not names else None)   # a mobile in the name cell (MH): that person's phone
+                names.append(n)
+                if ph:
+                    phone_after.setdefault(len(names) - 1, ph)
         names += [""] * 3
         dealer, n1, n2 = names[0], names[1], names[2]
         dealer_phone = phone_after.get(0, "")
         post = POST
-        if not dealer and n1:
-            dealer, post = n1, "FPS nominee"
-        if not dealer:
+        if not dealer and n1 and not dealer_phone:
+            dealer, post, dealer_phone = n1, "FPS nominee", phone_after.get(1, "")
+        if not dealer and not dealer_phone:
             continue
         recs.append(_esw.record(
             module, fid, dept="food_supplies", level="facility", layer="fps", area=district, post=post, name=dealer,
-            phone=dealer_phone if post == POST else "", state=state, district=district, fps_id=fid, office_id=fid, terminal_id=term,
-            dist_code=dist_code, nominee_1=n1, nominee_2=n2, source=src))
+            phone=dealer_phone, state=state, district=district, fps_id=fid, office_id=fid, terminal_id=term,
+            dist_code=dist_code, nominee_1=n1, nominee_2=n2, name_number=", ".join(nums), source=src))
     return recs
 
 

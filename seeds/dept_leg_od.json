@@ -1,0 +1,11 @@
+[
+ {
+  "key": "leg_od-list",
+  "payload": {
+   "reader": "leg_od",
+   "url": "https://assembly.odisha.gov.in/MemberofAssembly.aspx",
+   "state": "OD",
+   "india_only": true
+  }
+ }
+]
