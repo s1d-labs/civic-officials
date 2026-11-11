@@ -1,0 +1,25 @@
+[
+ {
+  "key": "wm2_apsac-maud-ward-boundary",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://apsac.ap.gov.in/gisserver/rest/services/MAUD_ULB/Vector_Data1/MapServer/1",
+   "where": "1=1",
+   "oid": "objectid_12",
+   "page": 500,
+   "state": "28",
+   "india_only": false,
+   "source": "apsac_maud",
+   "chunk": "ward_boundary",
+   "fields": {
+    "ward_no": "rev_wrd_no",
+    "body_name": "tn_name",
+    "body_code": "ulb_code",
+    "district": "dis_name"
+   },
+   "ward_kind": "revenue",
+   "vintage": "2018-06-01",
+   "expect": 2594
+  }
+ }
+]

@@ -1,0 +1,2371 @@
+[
+ {
+  "key": "wm2_pdf-py-karaikal-karaikalmunicipalityfull",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/karaikalmunicipalityfull.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "",
+   "all": true,
+   "stage": "draft",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/karaikalmunicipalityfull.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "Karaikal Municipality Full Map",
+   "has_map_in_civic": false,
+   "trace": {
+    "rgb": "184,8,88,110",
+    "wards": 17
+   }
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-01keezhakasakudy",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/01keezhakasakudy.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "1",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/01keezhakasakudy.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "01 Keezhakasakudy",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-02thalatheru",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/02thalatheru.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "2",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/02thalatheru.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "02 Thalatheru",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-03ammankoilpathu",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/03ammankoilpathu.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "3",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/03ammankoilpathu.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "03 Ammankoilpathu",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-04koilpathu",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/04koilpathu.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "4",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/04koilpathu.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "04 Koilpathu",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-05nehrunagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/05nehrunagar.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "5",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/05nehrunagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "05 Nehru Nagar",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-06puliankottaisalai",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/06puliankottaisalai.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "6",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/06puliankottaisalai.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "06 Puliankottai Salai",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-07oppilamaniyarkoil",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/07oppilamaniyarkoil.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "7",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/07oppilamaniyarkoil.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "07 Oppilamaniyar Koil",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-08valatheru",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/08valatheru.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "8",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/08valatheru.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "08 Valatheru",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-09maideenpalli",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/09maideenpalli.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "9",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/09maideenpalli.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "09 Maideenpalli",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-10ammaiyarkoil",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/10ammaiyarkoil.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "10",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/10ammaiyarkoil.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "10 Ammaiyarkoil",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-11kadarsulthan",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/11kadarsulthan.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "11",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/11kadarsulthan.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "11 Kadarsulthan",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-12kothukulam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/12kothukulam.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "12",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/12kothukulam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "12 Kothukulam",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-13anthoniyarkoil",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/13anthoniyarkoil.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "13",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/13anthoniyarkoil.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "13 Anthoniyar Koil",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-14madhkadi",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/14madhkadi.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "14",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/14madhkadi.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "14 Madhkadi",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-15dharmapuram",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/15dharmapuram.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "15",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/15dharmapuram.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "15 Dharmapuram",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-16oduthurai",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/16oduthurai.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "16",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/16oduthurai.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "16 Oduthurai",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-karaikal-17akkaraivattam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/17akkaraivattam.pdf",
+   "state": "PY",
+   "body": "253096",
+   "body_name": "Karaikal",
+   "ward": "17",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "karaikal-municipality-ward-maps/17akkaraivattam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "17 Akkaraivattam",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-mahe-01pandakkal-north",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/01pandakkal-north.pdf",
+   "state": "PY",
+   "body": "253095",
+   "body_name": "Mahe",
+   "ward": "1",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "mahe-municipality-ward-maps/01pandakkal-north.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "01 Pandakkal (North)",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-mahe-02pandakkal-south",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/02pandakkal-south.pdf",
+   "state": "PY",
+   "body": "253095",
+   "body_name": "Mahe",
+   "ward": "2",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "mahe-municipality-ward-maps/02pandakkal-south.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "02 Pandakkal (South)",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-mahe-03chalakkara-north",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/03chalakkara-north.pdf",
+   "state": "PY",
+   "body": "253095",
+   "body_name": "Mahe",
+   "ward": "3",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "mahe-municipality-ward-maps/03chalakkara-north.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "03 Chalakkara (North)",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-mahe-04palloor-west",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/04palloor-west.pdf",
+   "state": "PY",
+   "body": "253095",
+   "body_name": "Mahe",
+   "ward": "4",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "mahe-municipality-ward-maps/04palloor-west.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "04 Palloor (West)",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-mahe-05palloor-north",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/05palloor-north.pdf",
+   "state": "PY",
+   "body": "253095",
+   "body_name": "Mahe",
+   "ward": "5",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "mahe-municipality-ward-maps/05palloor-north.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "05 Palloor (North)",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-mahe-06palloor-south",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/06palloor-south.pdf",
+   "state": "PY",
+   "body": "253095",
+   "body_name": "Mahe",
+   "ward": "6",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "mahe-municipality-ward-maps/06palloor-south.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "06 Palloor (South)",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-mahe-07chalakkara-south",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/07chalakkara-south.pdf",
+   "state": "PY",
+   "body": "253095",
+   "body_name": "Mahe",
+   "ward": "7",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "mahe-municipality-ward-maps/07chalakkara-south.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "07 Chalakkara (South)",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-mahe-08mahe-north",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/08mahe-north.pdf",
+   "state": "PY",
+   "body": "253095",
+   "body_name": "Mahe",
+   "ward": "8",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "mahe-municipality-ward-maps/08mahe-north.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "08 Mahe (North)",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-mahe-09mahe-west",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/09mahe-west.pdf",
+   "state": "PY",
+   "body": "253095",
+   "body_name": "Mahe",
+   "ward": "9",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "mahe-municipality-ward-maps/09mahe-west.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "09 Mahe (West)",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-mahe-10mahe-south",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/10mahe-south.pdf",
+   "state": "PY",
+   "body": "253095",
+   "body_name": "Mahe",
+   "ward": "10",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "mahe-municipality-ward-maps/10mahe-south.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "10 Mahe (South)",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-yanammunicipality",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/yanammunicipality.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "",
+   "all": true,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/yanammunicipality.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "Yanam Municipality Full Map",
+   "has_map_in_civic": false,
+   "trace": {
+    "color": "red",
+    "wards": 14,
+    "ref_hint": "lgd_subdistrict:5908 fits badly (IoU 0.65)"
+   }
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-01kanakalapeta",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/01kanakalapeta.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "1",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/01kanakalapeta.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "01 Kanakalapeta",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-02bheemnagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/02bheemnagar.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "2",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/02bheemnagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "02 Bheem Nagar",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-03mettakurunorth",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/03mettakurunorth.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "3",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/03mettakurunorth.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "03 Mettakuru North",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-04mettakurusouth",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/04mettakurusouth.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "4",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/04mettakurusouth.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "04 Mettakuru South",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-05ambedkarnagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/05ambedkarnagar.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "5",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/05ambedkarnagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "05 Ambedkar Nagar",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-06pillaraya",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/06pillaraya.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "6",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/06pillaraya.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "06 Pillaraya",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-07agraharam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/07agraharam.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "7",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/07agraharam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "07 Agraharam",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-08pedapudi",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/08pedapudi.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "8",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/08pedapudi.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "08 Pedapudi",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-09pydikondal",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/09pydikondal.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "9",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/09pydikondal.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "09 Pydikondal",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-10kurusampeta",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/10kurusampeta.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "10",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/10kurusampeta.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "10 Kurusampeta",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-11farampeta",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/11farampeta.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "11",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/11farampeta.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "11 Farampeta",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-12dariyalathippa",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/12dariyalathippa.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "12",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/12dariyalathippa.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "12 Dariyalathippa",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-13guiriampet",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/13guiriampet.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "13",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/13guiriampet.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "13 Guiriampet.pdf",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-yanam-14savithrinagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/14savithrinagar.pdf",
+   "state": "PY",
+   "body": "253092",
+   "body_name": "Yanam",
+   "ward": "14",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "yanam-municipality-ward-maps/14savithrinagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "14 Savithri Nagar",
+   "has_map_in_civic": false
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-muthialpetwest",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/muthialpetwest.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "1",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/muthialpetwest.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "01 Muthialpet (West)",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-muthialpeteast",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/muthialpeteast.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "2",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/muthialpeteast.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "02 Muthialpet (East)",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-solainagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/solainagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "3",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/solainagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "03 Solai Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-vaithikuppam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/vaithikuppam.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "4",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/vaithikuppam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "04 Vaithikuppam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-vocnagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/vocnagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "5",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/vocnagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "05 V.O.C Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-thiruvalluvarnagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/thiruvalluvarnagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "6",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/thiruvalluvarnagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "06 Thiruvalluvar Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-perumalkoil",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/perumalkoil.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "7",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/perumalkoil.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "07 PerumalKoil",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-kurusukuppam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/kurusukuppam.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "8",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/kurusukuppam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "08 Kurusukuppam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-rajbhavan",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/rajbhavan.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "9",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/rajbhavan.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "09 Raj Bhavan",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-cathedral",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/cathedral.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "10",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/cathedral.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "10 Cathedral",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-goubertnagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/goubertnagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "11",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/goubertnagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "11 Goubert Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-elangonagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/elangonagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "12",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/elangonagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "12 Elango Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-pudupalayam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/pudupalayam.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "13",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/pudupalayam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "13 Pudupalayam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-pillaithottam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/pillaithottam.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "14",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/pillaithottam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "14 Pillaithottam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-sakthinagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/sakthinagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "15",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/sakthinagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "15 Sakthi Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-annanagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/annanagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "16",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/annanagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "16 Anna Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-nellithope",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/nellithope.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "17",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/nellithope.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "17 Nellithope",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-orleanpet",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/orleanpet.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "18",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/orleanpet.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "18 Orleanpet",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-vanarapet",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/vanarapet.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "19",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/vanarapet.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "19 Vanarapet",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-periapalli",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/periapalli.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "20",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/periapalli.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "20 Periapalli",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-vambakeerapalayam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/vambakeerapalayam.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "21",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/vambakeerapalayam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "21 VambakeeraPalayam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-colasnagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/colasnagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "22",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/colasnagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "22 Colas Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-nethajinagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/nethajinagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "23",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/nethajinagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "23 Nethaji Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-viduthalainagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/viduthalainagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "24",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/viduthalainagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "24 Viduthalai Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-mudaliarpet",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/mudaliarpet.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "25",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/mudaliarpet.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "25 Mudaliarpet",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-bharathidasannagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/bharathidasannagar.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "26",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/bharathidasannagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "2W Bharathidasan Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-ozhandaikeerapalayameast",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/ozhandaikeerapalayameast.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "27",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/ozhandaikeerapalayameast.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "27 Ozhandai Keerapalayam (East)",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-ozhandaikeerapalayamwest",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/ozhandaikeerapalayamwest.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "28",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/ozhandaikeerapalayamwest.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "28 Ozhandai Keerapalayam (West)",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-nainarmandapam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/nainarmandapam.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "29",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/nainarmandapam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "29 NainarMandapam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-thengaithittu",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/thengaithittu.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "30",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/thengaithittu.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "30 Thengaithittu",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-murungapakkameast",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/murungapakkameast.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "31",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/murungapakkameast.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "31 Murungapakkam (East)",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-murungapakkamwest",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/murungapakkamwest.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "32",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/murungapakkamwest.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "32 Murungapakkam (West)",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-pondicherry-kombakkam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/kombakkam.pdf",
+   "state": "PY",
+   "body": "253094",
+   "body_name": "Pondicherry",
+   "ward": "33",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "pondicherry-municipality-ward-maps/kombakkam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "33 Kombakkam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-alankuppam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/alankuppam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "1",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/alankuppam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "01 Alankuppam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-ganapathichettikulam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/ganapathichettikulam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "2",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/ganapathichettikulam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "02 Ganapathichettikulam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-kalapet",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/kalapet.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "3",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/kalapet.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "03 Kalapet",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-pillaichavady",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/pillaichavady.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "4",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/pillaichavady.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "04 Pillaichavady",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-samipillaithottam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/samipillaithottam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "5",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/samipillaithottam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "05 Samipillaithottam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-karuvadikuppam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/karuvadikuppam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "6",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/karuvadikuppam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "06 Karuvadikuppam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-pethuchettypet",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/pethuchettypet.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "7",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/pethuchettypet.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "07 Pethuchettypet",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-santhinagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/santhinagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "8",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/santhinagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "08 Santhi Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-navarkulam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/navarkulam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "9",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/navarkulam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "09 Navarkulam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-lawspet",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/lawspet.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "10",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/lawspet.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "10 Lawspet",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-krishnanagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/krishnanagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "11",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/krishnanagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "11 Krishna Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-rainbownagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/rainbownagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "12",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/rainbownagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "12 Rainbow Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-kamarajnagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/kamarajnagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "13",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/kamarajnagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "13 Kamaraj Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-brindhavanam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/brindhavanam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "14",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/brindhavanam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "14 Brindhavanam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-saram",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/saram.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "15",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/saram.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "15 Saram",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-vinobanagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/vinobanagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "16",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/vinobanagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "16 Vinoba Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-ashoknagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/ashoknagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "17",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/ashoknagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "17 Ashok Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-rajajinagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/rajajinagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "18",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/rajajinagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "18 Rajaji Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-kumarannagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/kumarannagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "19",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/kumarannagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "19 Kumaran Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-kurinjinagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/kurinjinagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "20",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/kurinjinagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "20 Kurinji Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-pakkamudayanpet",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/pakkamudayanpet.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "21",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/pakkamudayanpet.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "21 Pakkamudayanpet",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-thattanchavady",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/thattanchavady.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "22",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/thattanchavady.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "22 Thattanchavady",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-thilaspet",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/thilaspet.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "23",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/thilaspet.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "23 Thilaspet",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-coundanpalayam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/coundanpalayam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "24",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/coundanpalayam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "24 Coundanpalayam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-kathirkamam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/kathirkamam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "25",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/kathirkamam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "25 Kathirkamam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-veemacoundanpalayam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/veemacoundanpalayam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "26",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/veemacoundanpalayam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "26 Veemacoundanpalayam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-indiranagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/indiranagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "27",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/indiranagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "27 Indira Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-vpsinghnagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/vpsinghnagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "28",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/vpsinghnagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "28 V.P. Singh Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-meenatchipet",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/meenatchipet.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "29",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/meenatchipet.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "29 Meenatchipet",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-shanmugapuram",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/shanmugapuram.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "30",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/shanmugapuram.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "30 Shanmugapuram",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-muthirapalayam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/muthirapalayam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "31",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/muthirapalayam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "31 Muthirapalayam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-gandhithirunallur",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/gandhithirunallur.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "32",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/gandhithirunallur.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "32 Gandhithirunallur",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-dharmapuri",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/dharmapuri.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "33",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/dharmapuri.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "33 Dharmapuri",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-drradhakrishnannagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/drradhakrishnannagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "34",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/drradhakrishnannagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "34 Dr. Radhakrishnan Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-arumbathapuram",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/arumbathapuram.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "35",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/arumbathapuram.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "35 Arumbathapuram",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-oulgaretnorth",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/oulgaretnorth.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "36",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/oulgaretnorth.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "36 Oulgaret North",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-oulgaretsouth",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/oulgaretsouth.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "37",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/oulgaretsouth.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "37 Oulgaret South",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-reddiyarpalayam",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/reddiyarpalayam.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "38",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/reddiyarpalayam.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "38 Reddiyarpalayam",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-moogambigainagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/moogambigainagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "39",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/moogambigainagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "39 Moogambigai Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-ellapillaichavady",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/ellapillaichavady.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "40",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/ellapillaichavady.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "40 Ellapillaichavady",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-jawaharnagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/jawaharnagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "41",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/jawaharnagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "41 Jawahar Nagar",
+   "has_map_in_civic": true
+  }
+ },
+ {
+  "key": "wm2_pdf-py-oulgaret-nadesannagar",
+  "payload": {
+   "reader": "wm_geopdf",
+   "url": "https://sec.py.gov.in/sites/default/files/nadesannagar.pdf",
+   "state": "PY",
+   "body": "253093",
+   "body_name": "Ozhukarai",
+   "ward": "42",
+   "all": false,
+   "stage": "",
+   "source": "sec.py.gov.in",
+   "path": "oulgaret-municipality-ward-maps/nadesannagar.pdf",
+   "india_only": false,
+   "kind": "vector",
+   "georeferenced": false,
+   "title": "42 Nadesan Nagar",
+   "has_map_in_civic": true
+  }
+ }
+]

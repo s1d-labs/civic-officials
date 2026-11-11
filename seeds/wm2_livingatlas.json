@@ -1,0 +1,807 @@
+[
+ {
+  "key": "wm2_livingatlas-1",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Jammu And Kashmir'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "1",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 151
+  }
+ },
+ {
+  "key": "wm2_livingatlas-2",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Himachal Pradesh'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "2",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 42
+  }
+ },
+ {
+  "key": "wm2_livingatlas-3",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Punjab'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "3",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 242
+  }
+ },
+ {
+  "key": "wm2_livingatlas-4",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Chandigarh'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "4",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 35
+  }
+ },
+ {
+  "key": "wm2_livingatlas-5",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Uttarakhand'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "5",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 200
+  }
+ },
+ {
+  "key": "wm2_livingatlas-6",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Haryana'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "6",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 402
+  }
+ },
+ {
+  "key": "wm2_livingatlas-7",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Delhi'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "7",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 252
+  }
+ },
+ {
+  "key": "wm2_livingatlas-8",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Rajasthan'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "8",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 1020
+  }
+ },
+ {
+  "key": "wm2_livingatlas-9",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Uttar Pradesh'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "9",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 1104
+  }
+ },
+ {
+  "key": "wm2_livingatlas-10",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Bihar'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "10",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 4013
+  }
+ },
+ {
+  "key": "wm2_livingatlas-11",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Sikkim'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "11",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 26
+  }
+ },
+ {
+  "key": "wm2_livingatlas-12",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Arunachal Pradesh'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "12",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 28
+  }
+ },
+ {
+  "key": "wm2_livingatlas-13",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Nagaland'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "13",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 19
+  }
+ },
+ {
+  "key": "wm2_livingatlas-14",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Manipur'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "14",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 126
+  }
+ },
+ {
+  "key": "wm2_livingatlas-15",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Mizoram'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "15",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 19
+  }
+ },
+ {
+  "key": "wm2_livingatlas-16",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Tripura'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "16",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 51
+  }
+ },
+ {
+  "key": "wm2_livingatlas-17",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Meghalaya'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "17",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 27
+  }
+ },
+ {
+  "key": "wm2_livingatlas-18",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Assam'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "18",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 117
+  }
+ },
+ {
+  "key": "wm2_livingatlas-19",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='West Bengal'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "19",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 161
+  }
+ },
+ {
+  "key": "wm2_livingatlas-20",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Jharkhand'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "20",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 89
+  }
+ },
+ {
+  "key": "wm2_livingatlas-21",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Odisha'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "21",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 132
+  }
+ },
+ {
+  "key": "wm2_livingatlas-22",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Chhattisgarh'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "22",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 362
+  }
+ },
+ {
+  "key": "wm2_livingatlas-23",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Madhya Pradesh'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "23",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 521
+  }
+ },
+ {
+  "key": "wm2_livingatlas-24",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Gujarat'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "24",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 124
+  }
+ },
+ {
+  "key": "wm2_livingatlas-27",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Maharashtra'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "27",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 1119
+  }
+ },
+ {
+  "key": "wm2_livingatlas-28",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Andhra Pradesh'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "28",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 361
+  }
+ },
+ {
+  "key": "wm2_livingatlas-29",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Karnataka'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "29",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 6970
+  }
+ },
+ {
+  "key": "wm2_livingatlas-30",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Goa'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "30",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 30
+  }
+ },
+ {
+  "key": "wm2_livingatlas-32",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Kerala'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "32",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 3391
+  }
+ },
+ {
+  "key": "wm2_livingatlas-33",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Tamil Nadu'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "33",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 737
+  }
+ },
+ {
+  "key": "wm2_livingatlas-34",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Puducherry'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "34",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 33
+  }
+ },
+ {
+  "key": "wm2_livingatlas-35",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Andaman And Nicobar Islands'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "35",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 24
+  }
+ },
+ {
+  "key": "wm2_livingatlas-36",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Telangana'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "36",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 269
+  }
+ },
+ {
+  "key": "wm2_livingatlas-37",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='Ladakh'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "37",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 13
+  }
+ },
+ {
+  "key": "wm2_livingatlas-38",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://livingatlas.esri.in/server1/rest/services/Wards/India_Ward_Boundaries/MapServer/0",
+   "where": "state='The Dadra And Nagar Haveli And Daman And Diu'",
+   "oid": "objectid",
+   "page": 1000,
+   "state": "38",
+   "india_only": false,
+   "source": "livingatlas_iwb",
+   "chunk": "india_ward_boundaries",
+   "fields": {
+    "ward_no": "code",
+    "ward_name": "name",
+    "body_name": "town",
+    "district": "district"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 27
+  }
+ }
+]

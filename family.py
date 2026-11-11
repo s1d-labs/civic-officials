@@ -172,12 +172,18 @@ if _open:
 
 # Ward map files (GeoPDFs, PDF maps) saved once to the bucket (wardmaps task = depts.py, dforms/wm_geopdf.py; seeds/wm_*.json):
 # civic-india wm_geopdf.py converts the saved copies to ward GeoJSON (2026-11-11: Okeskar/Maha_Election_2025, 975 files, 5.7 GB).
-_wm = [i for f in sorted((HERE / "seeds").glob("wm_*.json")) for i in json.loads(f.read_text())]
+# seeds/wm2_*.json (2026-11-11): the SBM-Urban live ward layer per state, Esri India Living Atlas wards, APSAC, Puducherry SEC
+# ward PDFs, Rajasthan LSG 2019 maps; their India-only items go to the -wardmaps-in project
+_wm = [i for f in sorted((HERE / "seeds").glob("wm*_*.json")) for i in json.loads(f.read_text())]
 if _wm:
     PROJECTS.append({"name": f"{FAMILY}-wardmaps", "title": "Ward map files (GeoPDFs, PDF maps) saved once to the bucket",
                      "task": "wardmaps", "target": f"{FAMILY}-wardmaps", "env": {}, "probe": None, "unit_label": "file",
                      "record_label": "file", "items": [i for i in _wm if not i["payload"].get("india_only")],
                      "workers": 4, "threads": 1, "delay_ms": 500})
+    PROJECTS.append({"name": f"{FAMILY}-wardmaps-in", "title": "Ward map files and layers that answer only from India",
+                     "task": "wardmaps", "target": f"{FAMILY}-wardmaps-in", "env": {}, "probe": None, "unit_label": "file",
+                     "record_label": "file", "items": [i for i in _wm if i["payload"].get("india_only")],
+                     "workers": 4, "threads": 1, "delay_ms": 1000, "geo": "IN", "proxy": "IN"})
 
 PROBES = []    # many hosts per project: no single health check would mean anything
 

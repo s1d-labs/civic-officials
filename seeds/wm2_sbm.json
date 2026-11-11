@@ -1,0 +1,605 @@
+[
+ {
+  "key": "wm2_sbm-1-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "1"
+  }
+ },
+ {
+  "key": "wm2_sbm-2-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "2"
+  }
+ },
+ {
+  "key": "wm2_sbm-3-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "3",
+   "ulb_to": "800269"
+  }
+ },
+ {
+  "key": "wm2_sbm-3-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "3",
+   "ulb_from": "800269"
+  }
+ },
+ {
+  "key": "wm2_sbm-4-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "4"
+  }
+ },
+ {
+  "key": "wm2_sbm-5-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "5"
+  }
+ },
+ {
+  "key": "wm2_sbm-6-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "6"
+  }
+ },
+ {
+  "key": "wm2_sbm-7-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "7"
+  }
+ },
+ {
+  "key": "wm2_sbm-8-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "8",
+   "ulb_to": "800515"
+  }
+ },
+ {
+  "key": "wm2_sbm-8-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "8",
+   "ulb_from": "800515",
+   "ulb_to": "800587"
+  }
+ },
+ {
+  "key": "wm2_sbm-8-03",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "8",
+   "ulb_from": "800587"
+  }
+ },
+ {
+  "key": "wm2_sbm-9-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "9",
+   "ulb_to": "800748"
+  }
+ },
+ {
+  "key": "wm2_sbm-9-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "9",
+   "ulb_from": "800748",
+   "ulb_to": "800899"
+  }
+ },
+ {
+  "key": "wm2_sbm-9-03",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "9",
+   "ulb_from": "800899",
+   "ulb_to": "801039"
+  }
+ },
+ {
+  "key": "wm2_sbm-9-04",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "9",
+   "ulb_from": "801039",
+   "ulb_to": "801188"
+  }
+ },
+ {
+  "key": "wm2_sbm-9-05",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "9",
+   "ulb_from": "801188",
+   "ulb_to": "900741"
+  }
+ },
+ {
+  "key": "wm2_sbm-9-06",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "9",
+   "ulb_from": "900741"
+  }
+ },
+ {
+  "key": "wm2_sbm-10-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "10"
+  }
+ },
+ {
+  "key": "wm2_sbm-11-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "11"
+  }
+ },
+ {
+  "key": "wm2_sbm-13-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "13"
+  }
+ },
+ {
+  "key": "wm2_sbm-14-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "14"
+  }
+ },
+ {
+  "key": "wm2_sbm-15-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "15"
+  }
+ },
+ {
+  "key": "wm2_sbm-16-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "16"
+  }
+ },
+ {
+  "key": "wm2_sbm-18-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "18"
+  }
+ },
+ {
+  "key": "wm2_sbm-19-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "19"
+  }
+ },
+ {
+  "key": "wm2_sbm-20-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "20"
+  }
+ },
+ {
+  "key": "wm2_sbm-21-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "21"
+  }
+ },
+ {
+  "key": "wm2_sbm-22-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "22",
+   "ulb_to": "802043"
+  }
+ },
+ {
+  "key": "wm2_sbm-22-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "22",
+   "ulb_from": "802043"
+  }
+ },
+ {
+  "key": "wm2_sbm-23-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "23",
+   "ulb_to": "802230"
+  }
+ },
+ {
+  "key": "wm2_sbm-23-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "23",
+   "ulb_from": "802230",
+   "ulb_to": "802401"
+  }
+ },
+ {
+  "key": "wm2_sbm-23-03",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "23",
+   "ulb_from": "802401"
+  }
+ },
+ {
+  "key": "wm2_sbm-24-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "24"
+  }
+ },
+ {
+  "key": "wm2_sbm-25-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "25"
+  }
+ },
+ {
+  "key": "wm2_sbm-27-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "27",
+   "ulb_to": "802790"
+  }
+ },
+ {
+  "key": "wm2_sbm-27-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "27",
+   "ulb_from": "802790",
+   "ulb_to": "900290"
+  }
+ },
+ {
+  "key": "wm2_sbm-27-03",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "27",
+   "ulb_from": "900290"
+  }
+ },
+ {
+  "key": "wm2_sbm-28-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "28",
+   "ulb_to": "803014"
+  }
+ },
+ {
+  "key": "wm2_sbm-28-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "28",
+   "ulb_from": "803014"
+  }
+ },
+ {
+  "key": "wm2_sbm-29-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "29",
+   "ulb_to": "803109"
+  }
+ },
+ {
+  "key": "wm2_sbm-29-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "29",
+   "ulb_from": "803109",
+   "ulb_to": "803196"
+  }
+ },
+ {
+  "key": "wm2_sbm-29-03",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "29",
+   "ulb_from": "803196"
+  }
+ },
+ {
+  "key": "wm2_sbm-30-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "30"
+  }
+ },
+ {
+  "key": "wm2_sbm-32-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "32",
+   "ulb_to": "900218"
+  }
+ },
+ {
+  "key": "wm2_sbm-32-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "32",
+   "ulb_from": "900218"
+  }
+ },
+ {
+  "key": "wm2_sbm-33-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "33",
+   "ulb_to": "803670"
+  }
+ },
+ {
+  "key": "wm2_sbm-33-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "33",
+   "ulb_from": "803670"
+  }
+ },
+ {
+  "key": "wm2_sbm-34-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "34"
+  }
+ },
+ {
+  "key": "wm2_sbm-35-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "35"
+  }
+ },
+ {
+  "key": "wm2_sbm-36-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "36",
+   "ulb_to": "900571"
+  }
+ },
+ {
+  "key": "wm2_sbm-36-02",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "36",
+   "ulb_from": "900571"
+  }
+ },
+ {
+  "key": "wm2_sbm-38-01",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "38"
+  }
+ },
+ {
+  "key": "wm2_sbm-rest",
+  "payload": {
+   "reader": "wm2_sbm",
+   "url": "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3",
+   "india_only": true,
+   "page": 1000,
+   "state": "rest",
+   "not_states": [
+    "1",
+    "10",
+    "11",
+    "13",
+    "14",
+    "15",
+    "16",
+    "18",
+    "19",
+    "2",
+    "20",
+    "21",
+    "22",
+    "23",
+    "24",
+    "25",
+    "27",
+    "28",
+    "29",
+    "3",
+    "30",
+    "32",
+    "33",
+    "34",
+    "35",
+    "36",
+    "38",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+   ]
+  }
+ }
+]
