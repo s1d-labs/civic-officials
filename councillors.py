@@ -221,6 +221,14 @@ def main(run_fn=None, task="councillors"):
             before = set(getattr(s, "unverified_hosts", ()))
             try:
                 recs, files, why = run_fn(item, get)
+            except ModuleNotFoundError as e:
+                if not str(getattr(e, "name", "") or "").startswith(("dforms.", "cforms.", "forms.")):
+                    raise
+                # a reader pushed after this job checked out the family: give the item back untouched and end the job, so a
+                # job with the new checkout takes it (old jobs used to burn all 3 attempts of every new item)
+                hub.metric("old_checkout")
+                hub.complete([item["key"]], "pending", error=f"old checkout: {e.name}")
+                break
             except Exception as e:
                 recs, files, why = [], [], f"{type(e).__name__}: {e}"[:200]
             if set(getattr(s, "unverified_hosts", ())) - before or getattr(s, "unverified_hosts", None) and \
