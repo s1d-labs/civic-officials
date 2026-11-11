@@ -1,0 +1,532 @@
+[
+ {
+  "key": "cn-uk-2025-members",
+  "payload": {
+   "kind": "form-cn_uk",
+   "state": "UK",
+   "url": "https://cdnbbsr.s3waas.gov.in/s38208974663db80265e9bfe7b222dcb18/uploads/2026/06/202609031174499502.pdf",
+   "election": "Uttarakhand urban local bodies general election 2024-25 (poll 23.01.2025)",
+   "bodies": {
+    "नगरनिगमदेहरादून": {
+     "body_en": "Dehradun",
+     "district": "Dehradun",
+     "body_type": "Municipal Corporation"
+    },
+    "नगरनिगमऋषिकेश": {
+     "body_en": "Rishikesh",
+     "district": "Dehradun",
+     "body_type": "Municipal Corporation"
+    },
+    "नगरपालिकापरिषदविकासनगर": {
+     "body_en": "Vikasnagar",
+     "district": "Dehradun",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदमसूरी": {
+     "body_en": "Mussoorie",
+     "district": "Dehradun",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदहरबर्टपुर": {
+     "body_en": "Herbertpur",
+     "district": "Dehradun",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदडोईवाला": {
+     "body_en": "Doiwala",
+     "district": "Dehradun",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतसेलाकूई": {
+     "body_en": "Selaqui(Central Hope Town)",
+     "district": "Dehradun",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरनिगमहरिद्वार": {
+     "body_en": "Haridwar",
+     "district": "Haridwar",
+     "body_type": "Municipal Corporation"
+    },
+    "नगरनिगमरूडकी": {
+     "body_en": "Roorkee",
+     "district": "Haridwar",
+     "body_type": "Municipal Corporation"
+    },
+    "नगरपालिकापरिषदमंगलौर": {
+     "body_en": "Manglaur",
+     "district": "Haridwar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदलक्सर": {
+     "body_en": "Laksar",
+     "district": "Haridwar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदशिवालिकनगर": {
+     "body_en": "Shivalik Nagar",
+     "district": "Haridwar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतझबरेडा": {
+     "body_en": "Jhabrera",
+     "district": "Haridwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतलण्ढौरा": {
+     "body_en": "Landhaura",
+     "district": "Haridwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतभगवानपुर": {
+     "body_en": "Bhagwanpur",
+     "district": "Haridwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतपिरानकलियर": {
+     "body_en": "Piran Kaliyar",
+     "district": "Haridwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतढण्ढेरा": {
+     "body_en": "Dhandera",
+     "district": "Haridwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतइमलीखेडा": {
+     "body_en": "Imlikhera",
+     "district": "Haridwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतपाडलीगुर्जर": {
+     "body_en": "Padali Gurjar",
+     "district": "Haridwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतरामपुर": {
+     "body_en": "Rampur",
+     "district": "Haridwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतसुल्तानपुरआदमपुर": {
+     "body_en": "Sultanpur-Adampur",
+     "district": "Haridwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपालिकापरिषदबाड़ाहाट": {
+     "body_en": "Barahat-Uttarkashi",
+     "district": "Uttarkashi",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदबड़कोट": {
+     "body_en": "Barkot",
+     "district": "Uttarkashi",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदचिन्यालीसौड़": {
+     "body_en": "Chiniyalisaur",
+     "district": "Uttarkashi",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदपुरोला": {
+     "body_en": "Purola",
+     "district": "Uttarkashi",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतनौगॉनौगॉव": {
+     "body_en": "Naugaon",
+     "district": "Uttarkashi",
+     "body_type": "Nagar Panchayat",
+     "body_local": "नौगांव"
+    },
+    "नगरपालिकापरिषदचमोली-गोपेश्वर": {
+     "body_en": "Chamoli Gopeshwar",
+     "district": "Chamoli",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदज्योतिर्मठ": {
+     "body_en": "Joshimath",
+     "district": "Chamoli",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदगौचर": {
+     "body_en": "Gochar",
+     "district": "Chamoli",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदकर्णप्रयाग": {
+     "body_en": "Karnaprayag",
+     "district": "Chamoli",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतनन्दप्रयाग": {
+     "body_en": "Nandprayag",
+     "district": "Chamoli",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतपोखरी": {
+     "body_en": "Pokhari",
+     "district": "Chamoli",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतगैरसैंण": {
+     "body_en": "Gairsain",
+     "district": "Chamoli",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतथराली": {
+     "body_en": "Tharali",
+     "district": "Chamoli",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतपीपलकोटी": {
+     "body_en": "Pipalkoti",
+     "district": "Chamoli",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतनन्दानगर": {
+     "body_en": "Nandanagar",
+     "district": "Chamoli",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपालिकापरिषदनईटिहरी": {
+     "body_en": "Tehri",
+     "district": "Tehri Garhwal",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदचम्बा": {
+     "body_en": "Chamba",
+     "district": "Tehri Garhwal",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषददेवप्रयाग": {
+     "body_en": "Devprayag",
+     "district": "Tehri Garhwal",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदमुनिकीती": {
+     "body_en": "Munikireti-Dhalwala",
+     "district": "Tehri Garhwal",
+     "body_type": "Municipal Council",
+     "body_local": "मुनि की रेती"
+    },
+    "नगरपंचायतकीर्तिनगर": {
+     "body_en": "Kirtinagar",
+     "district": "Tehri Garhwal",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतघनसाली": {
+     "body_en": "Ghansali",
+     "district": "Tehri Garhwal",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतगजा": {
+     "body_en": "Gaja",
+     "district": "Tehri Garhwal",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतलम्बगांव": {
+     "body_en": "Lambgaon",
+     "district": "Tehri Garhwal",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतचमियाला": {
+     "body_en": "Chamiyala",
+     "district": "Tehri Garhwal",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायततपोवन": {
+     "body_en": "Tapovan",
+     "district": "Tehri Garhwal",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपालिकापरिषदनरेन्द्रनगर": {
+     "body_en": "Narendranagar",
+     "district": "Tehri Garhwal",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदरूद्रप्रयाग": {
+     "body_en": "Rudraprayag",
+     "district": "Rudraprayag",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतअगस्त्यमुनि": {
+     "body_en": "Augustmuni",
+     "district": "Rudraprayag",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतऊखीमठ": {
+     "body_en": "Ukhimath",
+     "district": "Rudraprayag",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायततिलवाड़ा": {
+     "body_en": "Tilwara",
+     "district": "Rudraprayag",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतगुप्तकाशी": {
+     "body_en": "Guptkashi",
+     "district": "Rudraprayag",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरनिगमकोटद्वार": {
+     "body_en": "Kanvnagri Kotdwar",
+     "district": "Pauri Garhwal",
+     "body_type": "Municipal Corporation"
+    },
+    "नगरनिगमश्रीनगर": {
+     "body_en": "Srinagar",
+     "district": "Pauri Garhwal",
+     "body_type": "Municipal Corporation"
+    },
+    "नगरपालिकापरिषदपौड़ी": {
+     "body_en": "Pauri",
+     "district": "Pauri Garhwal",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषददुगड्डा": {
+     "body_en": "Dogadda",
+     "district": "Pauri Garhwal",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतजौंकस्वर्गाश्रम": {
+     "body_en": "Swargashram Jonk",
+     "district": "Pauri Garhwal",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतसतपुली": {
+     "body_en": "Satpuli",
+     "district": "Pauri Garhwal",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतथलीसैंण": {
+     "body_en": "Thalisain",
+     "district": "Pauri Garhwal",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरनिगमपिथौरागढ़": {
+     "body_en": "Pithoragarh",
+     "district": "Pithoragarh",
+     "body_type": "Municipal Corporation"
+    },
+    "नगरपालिकापरिषदधारचूला": {
+     "body_en": "Dharchula",
+     "district": "Pithoragarh",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदडीडीहाट": {
+     "body_en": "Didihat",
+     "district": "Pithoragarh",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदगंगोलीहाट": {
+     "body_en": "Gangolihat",
+     "district": "Pithoragarh",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदबेरीनाग": {
+     "body_en": "Berinag",
+     "district": "Pithoragarh",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतमुनस्यारी": {
+     "body_en": "Munsyari",
+     "district": "Pithoragarh",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपालिकापरिषदटनकपुर": {
+     "body_en": "Tanakpur",
+     "district": "Champawat",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदचम्पावत": {
+     "body_en": "Champawat",
+     "district": "Champawat",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदलोहाघाट": {
+     "body_en": "Lohaghat",
+     "district": "Champawat",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतबनबसा": {
+     "body_en": "Banbasa",
+     "district": "Champawat",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतपाटी": {
+     "body_en": "Pati",
+     "district": "Champawat",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरनिगमअल्मोड़ा": {
+     "body_en": "Almora",
+     "district": "Almora",
+     "body_type": "Municipal Corporation"
+    },
+    "नगरपालिकापरिषदरानीखेत-चिलियानौला": {
+     "body_en": "Ranikhet Chiliyanaula",
+     "district": "Almora",
+     "body_type": "Municipal Council",
+     "body_local": "रानीखेत-चिलियानौला"
+    },
+    "नगरपंचायतद्वाराहाट": {
+     "body_en": "Dwarahat",
+     "district": "Almora",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतभिकियासैंण": {
+     "body_en": "Bhikiyasain",
+     "district": "Almora",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतचौखुटिया": {
+     "body_en": "Chaukhutiya",
+     "district": "Almora",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपालिकापरिषदबागेश्वर": {
+     "body_en": "Bageshwar",
+     "district": "Bageshwar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतकपकोट": {
+     "body_en": "Kapkot",
+     "district": "Bageshwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतगरूड": {
+     "body_en": "Garud",
+     "district": "Bageshwar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरनिगमहल्द्वानी-काठगोदाम": {
+     "body_en": "Haldwani-Cumkathgodam",
+     "district": "Nainital",
+     "body_type": "Municipal Corporation",
+     "body_local": "हल्द्वानी-काठगोदाम"
+    },
+    "नगरपालिकापरिषदनैनीताल": {
+     "body_en": "Nainital",
+     "district": "Nainital",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदरामनगर": {
+     "body_en": "Ramnagar",
+     "district": "Nainital",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदभवाली": {
+     "body_en": "Bhowali",
+     "district": "Nainital",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदभीमताल": {
+     "body_en": "Bhimtal",
+     "district": "Nainital",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदकालाढूंगी": {
+     "body_en": "Kaladhungi",
+     "district": "Nainital",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतलालकुंआ": {
+     "body_en": "Lalkuan",
+     "district": "Nainital",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरनिगमरुद्रपुर": {
+     "body_en": "Rudrapur",
+     "district": "Udham Singh Nagar",
+     "body_type": "Municipal Corporation"
+    },
+    "नगरनिगमकाशीपुर": {
+     "body_en": "Kashipur",
+     "district": "Udham Singh Nagar",
+     "body_type": "Municipal Corporation"
+    },
+    "नगरपालिकापरिषदगदरपुर": {
+     "body_en": "Gadarpur",
+     "district": "Udham Singh Nagar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदजसपुर": {
+     "body_en": "Jaspur",
+     "district": "Udham Singh Nagar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदबाजपुर": {
+     "body_en": "Bajpur",
+     "district": "Udham Singh Nagar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदसितारगंज": {
+     "body_en": "Sitarganj",
+     "district": "Udham Singh Nagar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदखटीमा": {
+     "body_en": "Khatima",
+     "district": "Udham Singh Nagar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदमहुआखेड़ागंज": {
+     "body_en": "Mahua Kheraganj",
+     "district": "Udham Singh Nagar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपालिकापरिषदनगला": {
+     "body_en": "Nagla",
+     "district": "Udham Singh Nagar",
+     "body_type": "Municipal Council"
+    },
+    "नगरपंचायतमहुआडाबरा": {
+     "body_en": "Mahua Dabra Haripura",
+     "district": "Udham Singh Nagar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतसुल्तानपुर": {
+     "body_en": "Sultanpur",
+     "district": "Udham Singh Nagar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतकेलाखेड़ा": {
+     "body_en": "Kela Khera",
+     "district": "Udham Singh Nagar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतदिनेशपुर": {
+     "body_en": "Dineshpur",
+     "district": "Udham Singh Nagar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतशक्तिगढ़": {
+     "body_en": "Shaktigarh",
+     "district": "Udham Singh Nagar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतनानकमत्ता": {
+     "body_en": "Nanakmatta",
+     "district": "Udham Singh Nagar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतगूलरभोज": {
+     "body_en": "Gularbhoj",
+     "district": "Udham Singh Nagar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतलालपुर": {
+     "body_en": "Lalpur",
+     "district": "Udham Singh Nagar",
+     "body_type": "Nagar Panchayat"
+    },
+    "नगरपंचायतगढीनेगी": {
+     "body_en": "Garhinegi",
+     "district": "Udham Singh Nagar",
+     "body_type": "Nagar Panchayat"
+    }
+   }
+  }
+ }
+]
