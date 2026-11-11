@@ -1,0 +1,101 @@
+[
+ {
+  "key": "cr-body-up-banda-npp",
+  "payload": {
+   "kind": "form-cr_body",
+   "state": "UP",
+   "slug": "banda-npp",
+   "body": "Banda",
+   "body_type": "Municipal Council",
+   "district": "Banda",
+   "lgd_code": "249334",
+   "url": "http://nppbanda.in/members.php",
+   "election": "UP urban local bodies general election 2023 (member list on the body's own site)"
+  }
+ },
+ {
+  "key": "cr-body-up-fatehpur-npp",
+  "payload": {
+   "kind": "form-cr_body",
+   "state": "UP",
+   "slug": "fatehpur-npp",
+   "body": "Fatehpur",
+   "body_type": "Municipal Council",
+   "district": "Fatehpur",
+   "lgd_code": "249347",
+   "url": "http://nppfatehpur.com/content/board_of_members.html",
+   "election": "UP urban local bodies general election 2023 (member list on the body's own site)"
+  }
+ },
+ {
+  "key": "cr-body-up-khairabad-npp",
+  "payload": {
+   "kind": "form-cr_body",
+   "state": "UP",
+   "slug": "khairabad-npp",
+   "body": "Khairabad",
+   "body_type": "Municipal Council",
+   "district": "Sitapur",
+   "lgd_code": "249188",
+   "url": "http://khairabadnpp.in/page/member-list",
+   "election": "UP urban local bodies general election 2023 (member list on the body's own site)"
+  }
+ },
+ {
+  "key": "cr-body-up-firozabad",
+  "payload": {
+   "kind": "form-cr_body",
+   "state": "UP",
+   "slug": "firozabad",
+   "body": "Firozabad",
+   "body_type": "Municipal Corporation",
+   "district": "Firozabad",
+   "lgd_code": "249079",
+   "url": "https://firozabadnagarnigam.com/Parshads.aspx",
+   "election": "UP urban local bodies general election 2023 (member list on the body's own site)"
+  }
+ },
+ {
+  "key": "cr-body-gj-chanasma",
+  "payload": {
+   "kind": "form-cr_body",
+   "state": "GJ",
+   "slug": "chanasma",
+   "body": "Chanasma",
+   "body_type": "Municipality",
+   "district": "Patan",
+   "lgd_code": "251062",
+   "url": "https://chanasmanagarpalika.org/Members_List.html",
+   "election": "Gujarat municipal general election 16.02.2025 (member list on the nagarpalika's own site)"
+  }
+ },
+ {
+  "key": "cr-body-wb-budge-budge",
+  "payload": {
+   "kind": "form-cr_body",
+   "state": "WB",
+   "slug": "budge-budge",
+   "body": "Budge Budge",
+   "body_type": "Municipality",
+   "district": "South 24 Parganas",
+   "lgd_code": "250301",
+   "url": "https://budgebudgemunicipality.org/board of councillors.php",
+   "election": "West Bengal municipal general election 27.02.2022 (member list on the municipality's own site)"
+  }
+ },
+ {
+  "key": "cr-body-wb-konnagar",
+  "payload": {
+   "kind": "form-cr_body",
+   "state": "WB",
+   "slug": "konnagar",
+   "body": "Konnagar",
+   "body_type": "Municipality",
+   "district": "Hooghly",
+   "lgd_code": "250178",
+   "url": "https://www.konnagarmunicipality.org/councillors.php",
+   "election": "West Bengal municipal general election 27.02.2022 (member list on the municipality's own site)",
+   "note": "partial: 8 of 20 wards named on the page"
+  }
+ }
+]

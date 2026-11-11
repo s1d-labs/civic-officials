@@ -1,0 +1,4927 @@
+{
+"note": "Uttar Pradesh: SEC district ids of NewWinnerList2023.aspx (Hindi name, LGD district) and the LGD urban bodies (code, name, district, type), from DB civic 2026-11-11 (civic.ulb, superseded_by is null).",
+"districts": {
+"50": [
+"अमेठी",
+"Amethi"
+],
+"53": [
+"अम्बेडकर नगर",
+"Ambedkar Nagar"
+],
+"11": [
+"अमरोहा",
+"Amroha"
+],
+"54": [
+"अयोध्या",
+"Ayodhya"
+],
+"19": [
+"अलीगढ़",
+"Aligarh"
+],
+"24": [
+"आगरा",
+"Agra"
+],
+"66": [
+"आजमगढ़",
+"Azamgarh"
+],
+"29": [
+"इटावा",
+"Etawah"
+],
+"45": [
+"उन्नाव",
+"Unnao"
+],
+"21": [
+"एटा",
+"Etah"
+],
+"30": [
+"औरैया",
+"Auraiya"
+],
+"28": [
+"कन्नौज",
+"Kannauj"
+],
+"64": [
+"कुशीनगर",
+"Kushinagar"
+],
+"32": [
+"कानपुर देहात",
+"Kanpur Dehat"
+],
+"31": [
+"कानपुर नगर",
+"Kanpur Nagar"
+],
+"22": [
+"कासगंज",
+"Kasganj"
+],
+"41": [
+"कौशाम्बी",
+"Kaushambi"
+],
+"6": [
+"गाजियाबाद",
+"Ghaziabad"
+],
+"69": [
+"गाज़ीपुर",
+"Ghazipur"
+],
+"58": [
+"गोंडा",
+"Gonda"
+],
+"62": [
+"गोरखपुर",
+"Gorakhpur"
+],
+"7": [
+"गौतमबुद्ध नगर",
+"Gautam Buddha Nagar"
+],
+"70": [
+"चन्दौली",
+"Chandauli"
+],
+"39": [
+"चित्रकूट",
+"Chitrakoot"
+],
+"33": [
+"जालौन",
+"Jalaun"
+],
+"72": [
+"जौनपुर",
+"Jaunpur"
+],
+"35": [
+"झांसी",
+"Jhansi"
+],
+"65": [
+"देवरिया",
+"Deoria"
+],
+"43": [
+"प्रतापगढ़",
+"Pratapgarh"
+],
+"42": [
+"प्रयागराज",
+"Prayagraj"
+],
+"16": [
+"पीलीभीत",
+"Pilibhit"
+],
+"40": [
+"फतेहपुर",
+"Fatehpur"
+],
+"27": [
+"फ़र्रुखाबाद",
+"Farrukhabad"
+],
+"25": [
+"फिरोज़ाबाद",
+"Firozabad"
+],
+"18": [
+"बदायूं",
+"Budaun"
+],
+"15": [
+"बरेली",
+"Bareilly"
+],
+"8": [
+"बुलंदशहर",
+"Bulandshahr"
+],
+"57": [
+"बलरामपुर",
+"Balrampur"
+],
+"68": [
+"बलिया",
+"Ballia"
+],
+"59": [
+"बस्ती",
+"Basti"
+],
+"55": [
+"बहराइच",
+"Bahraich"
+],
+"5": [
+"बागपत",
+"Baghpat"
+],
+"38": [
+"बांदा",
+"Banda"
+],
+"51": [
+"बाराबंकी",
+"Bara Banki"
+],
+"10": [
+"बिजनौर",
+"Bijnor"
+],
+"73": [
+"भदोही",
+"Bhadohi"
+],
+"67": [
+"मऊ",
+"Mau"
+],
+"2": [
+"मुज़फ्फरनगर",
+"Muzaffarnagar"
+],
+"23": [
+"मथुरा",
+"Mathura"
+],
+"26": [
+"मैनपुरी",
+"Mainpuri"
+],
+"4": [
+"मेरठ",
+"Meerut"
+],
+"12": [
+"मुरादाबाद",
+"Moradabad"
+],
+"63": [
+"महराजगंज",
+"Mahrajganj"
+],
+"36": [
+"महोबा",
+"Mahoba"
+],
+"74": [
+"मीरजापुर",
+"Mirzapur"
+],
+"13": [
+"रामपुर",
+"Rampur"
+],
+"44": [
+"रायबरेली",
+"Rae Bareli"
+],
+"47": [
+"लखनऊ",
+"Lucknow"
+],
+"49": [
+"लखीमपुर खीरी",
+"Kheri"
+],
+"34": [
+"ललितपुर",
+"Lalitpur"
+],
+"71": [
+"वाराणसी",
+"Varanasi"
+],
+"56": [
+"श्रावस्ती",
+"Shrawasti"
+],
+"3": [
+"शामली",
+"Shamli"
+],
+"17": [
+"शाहजहांपुर",
+"Shahjahanpur"
+],
+"61": [
+"सन्त कबीर नगर",
+"Sant Kabir Nagar"
+],
+"14": [
+"सम्भल",
+"Sambhal"
+],
+"52": [
+"सुलतानपुर",
+"Sultanpur"
+],
+"1": [
+"सहारनपुर",
+"Saharanpur"
+],
+"60": [
+"सिद्धार्थ नगर",
+"Siddharthnagar"
+],
+"48": [
+"सीतापुर",
+"Sitapur"
+],
+"75": [
+"सोनभद्र",
+"Sonbhadra"
+],
+"37": [
+"हमीरपुर",
+"Hamirpur"
+],
+"46": [
+"हरदोई",
+"Hardoi"
+],
+"20": [
+"हाथरस",
+"Hathras"
+],
+"9": [
+"हापुड़",
+"Hapur"
+]
+},
+"bodies": [
+[
+"248145",
+"Domariyaganj",
+"Siddharthnagar",
+"Town Panchayat"
+],
+[
+"248870",
+"Behat",
+"Saharanpur",
+"Town Panchayat"
+],
+[
+"248873",
+"Saharanpur",
+"Saharanpur",
+"Municipal Corporation"
+],
+[
+"248874",
+"Sultanpur Chilkana",
+"Saharanpur",
+"Town Panchayat"
+],
+[
+"248875",
+"Sarsawan",
+"Saharanpur",
+"Municipality"
+],
+[
+"248876",
+"Nakur",
+"Saharanpur",
+"Municipality"
+],
+[
+"248877",
+"Ambehta",
+"Saharanpur",
+"Town Panchayat"
+],
+[
+"248878",
+"Gangoh",
+"Saharanpur",
+"Municipality"
+],
+[
+"248879",
+"Titron",
+"Saharanpur",
+"Town Panchayat"
+],
+[
+"248880",
+"Nanauta",
+"Saharanpur",
+"Town Panchayat"
+],
+[
+"248881",
+"Rampur Maniharan",
+"Saharanpur",
+"Town Panchayat"
+],
+[
+"248882",
+"Deoband",
+"Saharanpur",
+"Municipality"
+],
+[
+"248883",
+"Unn",
+"Shamli",
+"Town Panchayat"
+],
+[
+"248884",
+"Jhinjhana",
+"Shamli",
+"Town Panchayat"
+],
+[
+"248885",
+"Kairana",
+"Shamli",
+"Municipality"
+],
+[
+"248886",
+"Kandhla",
+"Shamli",
+"Municipality"
+],
+[
+"248887",
+"Ailum",
+"Shamli",
+"Town Panchayat"
+],
+[
+"248888",
+"Shamli",
+"Shamli",
+"Municipality"
+],
+[
+"248889",
+"Banat",
+"Shamli",
+"Town Panchayat"
+],
+[
+"248890",
+"Garhi Pukhta",
+"Shamli",
+"Town Panchayat"
+],
+[
+"248891",
+"Thana Bhawan",
+"Shamli",
+"Town Panchayat"
+],
+[
+"248892",
+"Jalalabad(Bijnor)",
+"Bijnor",
+"Town Panchayat"
+],
+[
+"248893",
+"Purquazi",
+"Muzaffarnagar",
+"Town Panchayat"
+],
+[
+"248894",
+"Charthaval",
+"Muzaffarnagar",
+"Town Panchayat"
+],
+[
+"248895",
+"Muzaffarnagar",
+"Muzaffarnagar",
+"Municipality"
+],
+[
+"248896",
+"Sisauli",
+"Muzaffarnagar",
+"Town Panchayat"
+],
+[
+"248897",
+"Budhana",
+"Muzaffarnagar",
+"Town Panchayat"
+],
+[
+"248898",
+"Shahpur",
+"Muzaffarnagar",
+"Town Panchayat"
+],
+[
+"248899",
+"Khatauli",
+"Muzaffarnagar",
+"Municipality"
+],
+[
+"248901",
+"Jansath",
+"Muzaffarnagar",
+"Town Panchayat"
+],
+[
+"248902",
+"Bhokarhedi",
+"Muzaffarnagar",
+"Town Panchayat"
+],
+[
+"248903",
+"Meerapur",
+"Muzaffarnagar",
+"Town Panchayat"
+],
+[
+"248904",
+"Sahanpur",
+"Bijnor",
+"Town Panchayat"
+],
+[
+"248905",
+"Najibabad",
+"Bijnor",
+"Municipality"
+],
+[
+"248907",
+"Jalalabad(Shamli)",
+"Bijnor",
+"Town Panchayat"
+],
+[
+"248908",
+"Kiratpur",
+"Bijnor",
+"Municipality"
+],
+[
+"248909",
+"Mandawar",
+"Bijnor",
+"Town Panchayat"
+],
+[
+"248910",
+"Bijnor",
+"Bijnor",
+"Municipality"
+],
+[
+"248913",
+"Jhalu",
+"Bijnor",
+"Town Panchayat"
+],
+[
+"248914",
+"Haldaur",
+"Bijnor",
+"Municipality"
+],
+[
+"248915",
+"Nagina",
+"Bijnor",
+"Municipality"
+],
+[
+"248916",
+"Warhapur",
+"Bijnor",
+"Town Panchayat"
+],
+[
+"248917",
+"Afzalgarh",
+"Bijnor",
+"Municipality"
+],
+[
+"248918",
+"Sherkot",
+"Bijnor",
+"Municipality"
+],
+[
+"248919",
+"Dhampur",
+"Bijnor",
+"Municipality"
+],
+[
+"248920",
+"Nehtaur",
+"Bijnor",
+"Municipality"
+],
+[
+"248921",
+"Seohara",
+"Bijnor",
+"Municipality"
+],
+[
+"248922",
+"Sahaspur",
+"Bijnor",
+"Town Panchayat"
+],
+[
+"248923",
+"Noorpur",
+"Bijnor",
+"Municipality"
+],
+[
+"248924",
+"Chandpur",
+"Bijnor",
+"Municipality"
+],
+[
+"248925",
+"Thakurdwara",
+"Moradabad",
+"Municipality"
+],
+[
+"248926",
+"Kanth(Moradabad)",
+"Moradabad",
+"Town Panchayat"
+],
+[
+"248927",
+"Umri Kalan",
+"Moradabad",
+"Town Panchayat"
+],
+[
+"248928",
+"Bhojpur Dharampur",
+"Moradabad",
+"Town Panchayat"
+],
+[
+"248929",
+"Moradabad",
+"Moradabad",
+"Municipal Corporation"
+],
+[
+"248930",
+"Kundarki",
+"Moradabad",
+"Town Panchayat"
+],
+[
+"248931",
+"Bilari",
+"Moradabad",
+"Municipality"
+],
+[
+"248933",
+"Sirsi",
+"Sambhal",
+"Town Panchayat"
+],
+[
+"248934",
+"Sambhal",
+"Sambhal",
+"Municipality"
+],
+[
+"248935",
+"Bahjoi",
+"Sambhal",
+"Municipality"
+],
+[
+"248936",
+"Narauli",
+"Sambhal",
+"Town Panchayat"
+],
+[
+"248937",
+"Chandausi",
+"Sambhal",
+"Municipality"
+],
+[
+"248938",
+"Maswasi",
+"Rampur",
+"Town Panchayat"
+],
+[
+"248939",
+"Suar",
+"Rampur",
+"Municipality"
+],
+[
+"248940",
+"Tanda",
+"Rampur",
+"Municipality"
+],
+[
+"248941",
+"Bilaspur",
+"Rampur",
+"Municipality"
+],
+[
+"248942",
+"Kemri",
+"Rampur",
+"Town Panchayat"
+],
+[
+"248943",
+"Rampur",
+"Rampur",
+"Municipality"
+],
+[
+"248944",
+"Shahbad",
+"Rampur",
+"Town Panchayat"
+],
+[
+"248945",
+"Milak",
+"Rampur",
+"Municipality"
+],
+[
+"248946",
+"Dhanaura",
+"Amroha",
+"Municipality"
+],
+[
+"248947",
+"Bachhraon",
+"Amroha",
+"Municipality"
+],
+[
+"248949",
+"Naugawan Sadat",
+"Amroha",
+"Town Panchayat"
+],
+[
+"248950",
+"Amroha",
+"Amroha",
+"Municipality"
+],
+[
+"248951",
+"Joya",
+"Amroha",
+"Town Panchayat"
+],
+[
+"248952",
+"Hasanpur",
+"Amroha",
+"Municipality"
+],
+[
+"248953",
+"Ujhari",
+"Amroha",
+"Town Panchayat"
+],
+[
+"248954",
+"Karnawal",
+"Meerut",
+"Town Panchayat"
+],
+[
+"248955",
+"Sardhana",
+"Meerut",
+"Municipality"
+],
+[
+"248956",
+"Daurala",
+"Meerut",
+"Town Panchayat"
+],
+[
+"248957",
+"Lawar",
+"Meerut",
+"Town Panchayat"
+],
+[
+"248958",
+"Phalauda",
+"Meerut",
+"Town Panchayat"
+],
+[
+"248959",
+"Bahsuma",
+"Meerut",
+"Town Panchayat"
+],
+[
+"248960",
+"Hastinapur",
+"Meerut",
+"Town Panchayat"
+],
+[
+"248961",
+"Mawana",
+"Meerut",
+"Municipality"
+],
+[
+"248962",
+"Parikshitgarh",
+"Meerut",
+"Town Panchayat"
+],
+[
+"248963",
+"Kithaur",
+"Meerut",
+"Town Panchayat"
+],
+[
+"248964",
+"Meerut",
+"Meerut",
+"Municipal Corporation"
+],
+[
+"248967",
+"Sewalkhas",
+"Meerut",
+"Town Panchayat"
+],
+[
+"248968",
+"Kharkhoda",
+"Meerut",
+"Town Panchayat"
+],
+[
+"248969",
+"Chhaprauli",
+"Baghpat",
+"Town Panchayat"
+],
+[
+"248970",
+"Tikri",
+"Baghpat",
+"Town Panchayat"
+],
+[
+"248971",
+"Doghat",
+"Baghpat",
+"Town Panchayat"
+],
+[
+"248972",
+"Baraut",
+"Baghpat",
+"Municipality"
+],
+[
+"248973",
+"Baghpat",
+"Baghpat",
+"Municipality"
+],
+[
+"248974",
+"Agarwal Mandi",
+"Baghpat",
+"Town Panchayat"
+],
+[
+"248975",
+"Aminagar Sarai",
+"Baghpat",
+"Town Panchayat"
+],
+[
+"248977",
+"Patla",
+"Ghaziabad",
+"Town Panchayat"
+],
+[
+"248978",
+"Niwari",
+"Ghaziabad",
+"Town Panchayat"
+],
+[
+"248981",
+"Modinagar",
+"Ghaziabad",
+"Municipality"
+],
+[
+"248982",
+"Faridnagar",
+"Ghaziabad",
+"Town Panchayat"
+],
+[
+"248983",
+"Muradnagar",
+"Ghaziabad",
+"Municipality"
+],
+[
+"248985",
+"Loni",
+"Ghaziabad",
+"Municipality"
+],
+[
+"248988",
+"Ghaziabad",
+"Ghaziabad",
+"Municipal Corporation"
+],
+[
+"248989",
+"Dasna",
+"Ghaziabad",
+"Town Panchayat"
+],
+[
+"248990",
+"Pilkhuwa",
+"Hapur",
+"Municipality"
+],
+[
+"248991",
+"Hapur",
+"Hapur",
+"Municipality"
+],
+[
+"248992",
+"Babugarh",
+"Hapur",
+"Town Panchayat"
+],
+[
+"248993",
+"Garhmukteshwar",
+"Hapur",
+"Municipality"
+],
+[
+"248996",
+"Dadri",
+"Gautam Buddha Nagar",
+"Municipality"
+],
+[
+"248997",
+"Bilaspur",
+"Gautam Buddha Nagar",
+"Town Panchayat"
+],
+[
+"248998",
+"Dankaur",
+"Gautam Buddha Nagar",
+"Town Panchayat"
+],
+[
+"248999",
+"Kakod",
+"Bulandshahr",
+"Town Panchayat"
+],
+[
+"249000",
+"Rabupura",
+"Gautam Buddha Nagar",
+"Town Panchayat"
+],
+[
+"249001",
+"Jahangirpur",
+"Gautam Buddha Nagar",
+"Town Panchayat"
+],
+[
+"249002",
+"Jewar",
+"Gautam Buddha Nagar",
+"Town Panchayat"
+],
+[
+"249003",
+"Sikandrabad",
+"Bulandshahr",
+"Municipality"
+],
+[
+"249004",
+"Aurangabad",
+"Bulandshahr",
+"Town Panchayat"
+],
+[
+"249005",
+"Bulandshahr",
+"Bulandshahr",
+"Municipality"
+],
+[
+"249006",
+"Gulaothi",
+"Bulandshahr",
+"Municipality"
+],
+[
+"249007",
+"Bhawan Bahadur Nagar",
+"Bulandshahr",
+"Town Panchayat"
+],
+[
+"249008",
+"Siana",
+"Bulandshahr",
+"Municipality"
+],
+[
+"249009",
+"Bugrasi",
+"Bulandshahr",
+"Town Panchayat"
+],
+[
+"249010",
+"Khanpur",
+"Bulandshahr",
+"Town Panchayat"
+],
+[
+"249011",
+"Anupshahr",
+"Bulandshahr",
+"Municipality"
+],
+[
+"249012",
+"Jahangirabad",
+"Bulandshahr",
+"Municipality"
+],
+[
+"249013",
+"Debai",
+"Bulandshahr",
+"Municipality"
+],
+[
+"249014",
+"Naraura",
+"Bulandshahr",
+"Town Panchayat"
+],
+[
+"249015",
+"Shikarpur",
+"Bulandshahr",
+"Municipality"
+],
+[
+"249016",
+"Pahasu",
+"Bulandshahr",
+"Town Panchayat"
+],
+[
+"249017",
+"Chhatari",
+"Bulandshahr",
+"Town Panchayat"
+],
+[
+"249018",
+"Khurja",
+"Bulandshahr",
+"Municipality"
+],
+[
+"249019",
+"Jatari",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"249020",
+"Khair",
+"Aligarh",
+"Municipality"
+],
+[
+"249022",
+"Atrauli",
+"Aligarh",
+"Municipality"
+],
+[
+"249023",
+"Chharra Rafatpur",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"249024",
+"Harduaganj",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"249025",
+"Aligarh",
+"Aligarh",
+"Municipal Corporation"
+],
+[
+"249026",
+"Jalali",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"249027",
+"Kauriaganj",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"249028",
+"Pilkhana",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"249029",
+"Vijaigarh",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"249030",
+"Iglas",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"249031",
+"Beswan",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"249032",
+"Sasni",
+"Hathras",
+"Town Panchayat"
+],
+[
+"249033",
+"Sikandra Rao",
+"Hathras",
+"Municipality"
+],
+[
+"249034",
+"Purdilnagar",
+"Hathras",
+"Town Panchayat"
+],
+[
+"249035",
+"Hasayan",
+"Hathras",
+"Town Panchayat"
+],
+[
+"249036",
+"Mendu",
+"Hathras",
+"Town Panchayat"
+],
+[
+"249037",
+"Hathras",
+"Hathras",
+"Municipality"
+],
+[
+"249038",
+"Mursan",
+"Hathras",
+"Town Panchayat"
+],
+[
+"249039",
+"Sadabad",
+"Hathras",
+"Town Panchayat"
+],
+[
+"249040",
+"Sahpau",
+"Hathras",
+"Town Panchayat"
+],
+[
+"249041",
+"Kosi Kalan",
+"Mathura",
+"Municipality"
+],
+[
+"249042",
+"Nandgaon",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249043",
+"Barsana",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249044",
+"Chhata",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249045",
+"Chaumuha",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249046",
+"Bajna",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249047",
+"Raya",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249049",
+"Radhakund",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249050",
+"Govardhan",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249051",
+"Saunkh",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249052",
+"Mathura-Vrindavan",
+"Mathura",
+"Municipal Corporation"
+],
+[
+"249055",
+"Gokul",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249056",
+"Mahaban",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249057",
+"Baldeo",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249058",
+"Farah",
+"Mathura",
+"Town Panchayat"
+],
+[
+"249059",
+"Etmadpur",
+"Agra",
+"Municipality"
+],
+[
+"249060",
+"Dayalbagh",
+"Agra",
+"Town Panchayat"
+],
+[
+"249061",
+"Swamibagh",
+"Agra",
+"Town Panchayat"
+],
+[
+"249062",
+"Agra",
+"Agra",
+"Municipal Corporation"
+],
+[
+"249066",
+"Achhnera",
+"Agra",
+"Municipality"
+],
+[
+"249067",
+"Kiraoli",
+"Agra",
+"Town Panchayat"
+],
+[
+"249068",
+"Fatehpur Sikri",
+"Agra",
+"Municipality"
+],
+[
+"249069",
+"Jagner",
+"Agra",
+"Town Panchayat"
+],
+[
+"249070",
+"Khairragarh",
+"Agra",
+"Town Panchayat"
+],
+[
+"249071",
+"Shamsabad",
+"Agra",
+"Municipality"
+],
+[
+"249072",
+"Fatehabad",
+"Agra",
+"Town Panchayat"
+],
+[
+"249073",
+"Pinahat",
+"Agra",
+"Town Panchayat"
+],
+[
+"249074",
+"Bah",
+"Agra",
+"Municipality"
+],
+[
+"249075",
+"Tundla",
+"Firozabad",
+"Municipality"
+],
+[
+"249079",
+"Firozabad",
+"Firozabad",
+"Municipal Corporation"
+],
+[
+"249080",
+"Fariha",
+"Firozabad",
+"Town Panchayat"
+],
+[
+"249081",
+"Jasrana",
+"Firozabad",
+"Town Panchayat"
+],
+[
+"249082",
+"Shikohabad",
+"Firozabad",
+"Municipality"
+],
+[
+"249083",
+"Sirsaganj",
+"Firozabad",
+"Municipality"
+],
+[
+"249084",
+"Soron",
+"Kasganj",
+"Municipality"
+],
+[
+"249085",
+"Bilram",
+"Kasganj",
+"Town Panchayat"
+],
+[
+"249086",
+"Kaasganj",
+"Kasganj",
+"Municipality"
+],
+[
+"249087",
+"Sahawar",
+"Kasganj",
+"Town Panchayat"
+],
+[
+"249088",
+"Amanpur",
+"Kasganj",
+"Town Panchayat"
+],
+[
+"249089",
+"Mohanpur",
+"Kasganj",
+"Town Panchayat"
+],
+[
+"249090",
+"Ganj Dundwara",
+"Kasganj",
+"Municipality"
+],
+[
+"249091",
+"Patiyali",
+"Kasganj",
+"Town Panchayat"
+],
+[
+"249092",
+"Sidhpura",
+"Kasganj",
+"Town Panchayat"
+],
+[
+"249093",
+"Bhargain",
+"Kasganj",
+"Town Panchayat"
+],
+[
+"249094",
+"Raja Ka Rampur",
+"Etah",
+"Town Panchayat"
+],
+[
+"249095",
+"Aliganj",
+"Etah",
+"Municipality"
+],
+[
+"249096",
+"Jaithara",
+"Etah",
+"Town Panchayat"
+],
+[
+"249097",
+"Sakit",
+"Etah",
+"Town Panchayat"
+],
+[
+"249098",
+"Etah",
+"Etah",
+"Municipality"
+],
+[
+"249099",
+"Marehra",
+"Etah",
+"Municipality"
+],
+[
+"249100",
+"Nidhauli Kalan",
+"Etah",
+"Town Panchayat"
+],
+[
+"249101",
+"Jalesar",
+"Etah",
+"Municipality"
+],
+[
+"249102",
+"Awagarh",
+"Etah",
+"Town Panchayat"
+],
+[
+"249103",
+"Kuraoli",
+"Mainpuri",
+"Town Panchayat"
+],
+[
+"249104",
+"Jyoti Khuria",
+"Mainpuri",
+"Town Panchayat"
+],
+[
+"249105",
+"Ghiraur",
+"Mainpuri",
+"Town Panchayat"
+],
+[
+"249106",
+"Mainpuri",
+"Mainpuri",
+"Municipality"
+],
+[
+"249107",
+"Karhal",
+"Mainpuri",
+"Town Panchayat"
+],
+[
+"249108",
+"Bhogaon",
+"Mainpuri",
+"Town Panchayat"
+],
+[
+"249109",
+"Bewar",
+"Mainpuri",
+"Town Panchayat"
+],
+[
+"249110",
+"Kusmara",
+"Mainpuri",
+"Town Panchayat"
+],
+[
+"249111",
+"Kishni",
+"Mainpuri",
+"Town Panchayat"
+],
+[
+"249112",
+"Gawan",
+"Sambhal",
+"Town Panchayat"
+],
+[
+"249114",
+"Gunnaur",
+"Sambhal",
+"Town Panchayat"
+],
+[
+"249115",
+"Islamnagar",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249116",
+"Faizganj",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249117",
+"Mundia",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249118",
+"Bisauli",
+"Budaun",
+"Municipality"
+],
+[
+"249119",
+"Saidpur(Badaun)",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249120",
+"Wazirganj",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249121",
+"Rudayan",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249122",
+"Bilsi",
+"Budaun",
+"Municipality"
+],
+[
+"249123",
+"Sahaswan",
+"Budaun",
+"Municipality"
+],
+[
+"249124",
+"Kachhla",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249125",
+"Ujhani",
+"Budaun",
+"Municipality"
+],
+[
+"249126",
+"Budaun",
+"Budaun",
+"Municipality"
+],
+[
+"249127",
+"Kunwargaon",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249128",
+"Gulariya",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249129",
+"Sakhanu",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249130",
+"Kakrala",
+"Budaun",
+"Municipality"
+],
+[
+"249131",
+"Allapur",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249133",
+"Usawan",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249134",
+"Usehat",
+"Budaun",
+"Town Panchayat"
+],
+[
+"249135",
+"Bahedi",
+"Bareilly",
+"Municipality"
+],
+[
+"249136",
+"Faridpur(Bareilly)",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249137",
+"Richha",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249138",
+"Deoranian",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249139",
+"Shergarh",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249140",
+"Shishgarh",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249141",
+"Mirganj",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249142",
+"Fatehganj Pashchimi",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249143",
+"Shahi",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249144",
+"Bisharatganj",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249145",
+"Aonla",
+"Bareilly",
+"Municipality"
+],
+[
+"249146",
+"Sirauli",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249147",
+"Dhaura Tanda",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249149",
+"Bareilly",
+"Bareilly",
+"Municipal Corporation"
+],
+[
+"249151",
+"Thiriya Nizamat Khan",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249152",
+"Rithora",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249153",
+"Sainthal",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249154",
+"Nawabganj(Bareilly)",
+"Bareilly",
+"Municipality"
+],
+[
+"249155",
+"Fatehganj Purvi",
+"Bareilly",
+"Town Panchayat"
+],
+[
+"249156",
+"Faridpur",
+"Bareilly",
+"Municipality"
+],
+[
+"249157",
+"Gularia Bhindara",
+"Pilibhit",
+"Town Panchayat"
+],
+[
+"249158",
+"Nyoria Husainpur",
+"Pilibhit",
+"Town Panchayat"
+],
+[
+"249159",
+"Jahanabad",
+"Pilibhit",
+"Town Panchayat"
+],
+[
+"249160",
+"Pilibhit",
+"Pilibhit",
+"Municipality"
+],
+[
+"249161",
+"Barkhera",
+"Pilibhit",
+"Town Panchayat"
+],
+[
+"249162",
+"Bisalpur",
+"Pilibhit",
+"Municipality"
+],
+[
+"249163",
+"Bilsanda",
+"Pilibhit",
+"Town Panchayat"
+],
+[
+"249164",
+"Kalinagar",
+"Pilibhit",
+"Town Panchayat"
+],
+[
+"249165",
+"Puranpur",
+"Pilibhit",
+"Municipality"
+],
+[
+"249166",
+"Khutar",
+"Shahjahanpur",
+"Town Panchayat"
+],
+[
+"249167",
+"Powayan",
+"Shahjahanpur",
+"Municipality"
+],
+[
+"249168",
+"Khudaganj",
+"Shahjahanpur",
+"Town Panchayat"
+],
+[
+"249169",
+"Katra",
+"Shahjahanpur",
+"Town Panchayat"
+],
+[
+"249170",
+"Tilhar",
+"Shahjahanpur",
+"Municipality"
+],
+[
+"249173",
+"Kanth(Shahjhanpur)",
+"Shahjahanpur",
+"Town Panchayat"
+],
+[
+"249174",
+"Jalalabad",
+"Shahjahanpur",
+"Municipality"
+],
+[
+"249175",
+"Allahganj",
+"Shahjahanpur",
+"Town Panchayat"
+],
+[
+"249176",
+"Palia Kalan",
+"Kheri",
+"Municipality"
+],
+[
+"249177",
+"Singahi Bhiraura",
+"Kheri",
+"Town Panchayat"
+],
+[
+"249178",
+"Mailani",
+"Kheri",
+"Town Panchayat"
+],
+[
+"249179",
+"Gola Gokarannath",
+"Kheri",
+"Municipality"
+],
+[
+"249180",
+"Mohammadi",
+"Kheri",
+"Municipality"
+],
+[
+"249181",
+"Barbar",
+"Kheri",
+"Town Panchayat"
+],
+[
+"249182",
+"Lakhimpur",
+"Kheri",
+"Municipality"
+],
+[
+"249183",
+"Kheri",
+"Kheri",
+"Town Panchayat"
+],
+[
+"249184",
+"Oel Dhakwa",
+"Kheri",
+"Town Panchayat"
+],
+[
+"249185",
+"Dhaurahara",
+"Kheri",
+"Town Panchayat"
+],
+[
+"249186",
+"Maholi",
+"Sitapur",
+"Town Panchayat"
+],
+[
+"249187",
+"Misrikh Cum Neemsar",
+"Sitapur",
+"Municipality"
+],
+[
+"249188",
+"Khairabad",
+"Sitapur",
+"Municipality"
+],
+[
+"249189",
+"Sitapur",
+"Sitapur",
+"Municipality"
+],
+[
+"249190",
+"Hargaon",
+"Sitapur",
+"Town Panchayat"
+],
+[
+"249191",
+"Laharpur",
+"Sitapur",
+"Municipality"
+],
+[
+"249192",
+"Tambaur Cum Ahmadabad",
+"Sitapur",
+"Town Panchayat"
+],
+[
+"249193",
+"Biswan",
+"Sitapur",
+"Municipality"
+],
+[
+"249194",
+"Mahmudabad",
+"Sitapur",
+"Municipality"
+],
+[
+"249195",
+"Paintepur",
+"Sitapur",
+"Town Panchayat"
+],
+[
+"249196",
+"Sidhauli",
+"Sitapur",
+"Town Panchayat"
+],
+[
+"249197",
+"Shahabad",
+"Hardoi",
+"Municipality"
+],
+[
+"249198",
+"Pihani",
+"Hardoi",
+"Municipality"
+],
+[
+"249199",
+"Pali (Hardoi)",
+"Hardoi",
+"Town Panchayat"
+],
+[
+"249200",
+"Gopamau",
+"Hardoi",
+"Town Panchayat"
+],
+[
+"249201",
+"Hardoi",
+"Hardoi",
+"Municipality"
+],
+[
+"249202",
+"Sandi",
+"Hardoi",
+"Municipality"
+],
+[
+"249203",
+"Bilgram",
+"Hardoi",
+"Municipality"
+],
+[
+"249204",
+"Madhoganj",
+"Hardoi",
+"Town Panchayat"
+],
+[
+"249205",
+"Mallawan",
+"Hardoi",
+"Municipality"
+],
+[
+"249206",
+"Kursath (Unnao)",
+"Hardoi",
+"Town Panchayat"
+],
+[
+"249207",
+"Kachhauna Patseni",
+"Hardoi",
+"Town Panchayat"
+],
+[
+"249208",
+"Beniganj",
+"Hardoi",
+"Town Panchayat"
+],
+[
+"249209",
+"Sandila",
+"Hardoi",
+"Municipality"
+],
+[
+"249211",
+"Ganj Muradabad",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249212",
+"Bangarmau",
+"Unnao",
+"Municipality"
+],
+[
+"249213",
+"Fatehpur Chaurasi",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249214",
+"Ugu",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249215",
+"Safipur",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249216",
+"Kursath (Hardoi)",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249217",
+"Auras",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249218",
+"Hyderabad",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249219",
+"Rasulabaad(Unnao)",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249220",
+"Mohan",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249221",
+"Nyotini",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249222",
+"Nawabganj (Unnao)",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249223",
+"Unnao",
+"Unnao",
+"Municipality"
+],
+[
+"249226",
+"Purwa",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249227",
+"Maurawan",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249228",
+"Bighapur",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249229",
+"Bhagwant Nagar",
+"Unnao",
+"Town Panchayat"
+],
+[
+"249230",
+"Malihabad",
+"Lucknow",
+"Town Panchayat"
+],
+[
+"249231",
+"Mahona",
+"Lucknow",
+"Town Panchayat"
+],
+[
+"249232",
+"Itaunja",
+"Lucknow",
+"Town Panchayat"
+],
+[
+"249233",
+"Kakori",
+"Lucknow",
+"Town Panchayat"
+],
+[
+"249234",
+"Lucknow",
+"Lucknow",
+"Municipal Corporation"
+],
+[
+"249235",
+"Gosainganj (Ayodhya)",
+"Lucknow",
+"Town Panchayat"
+],
+[
+"249236",
+"Amethi(Lucknow)",
+"Lucknow",
+"Town Panchayat"
+],
+[
+"249237",
+"Nagram",
+"Lucknow",
+"Town Panchayat"
+],
+[
+"249238",
+"Bachhrawan",
+"Rae Bareli",
+"Town Panchayat"
+],
+[
+"249239",
+"Maharajganj(Azamgarh)",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"249240",
+"Jais",
+"Amethi",
+"Municipality"
+],
+[
+"249241",
+"Rae Bareli",
+"Rae Bareli",
+"Municipality"
+],
+[
+"249242",
+"Lalganj",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"249243",
+"Dalmau",
+"Rae Bareli",
+"Town Panchayat"
+],
+[
+"249244",
+"Unchahar",
+"Rae Bareli",
+"Town Panchayat"
+],
+[
+"249245",
+"Parsadepur",
+"Rae Bareli",
+"Town Panchayat"
+],
+[
+"249246",
+"Salon",
+"Rae Bareli",
+"Town Panchayat"
+],
+[
+"249247",
+"Kampil",
+"Farrukhabad",
+"Town Panchayat"
+],
+[
+"249248",
+"Kaimganj",
+"Farrukhabad",
+"Municipality"
+],
+[
+"249250",
+"Farrukhabad",
+"Farrukhabad",
+"Municipality"
+],
+[
+"249251",
+"Mohammadabad Gohna",
+"Mau",
+"Town Panchayat"
+],
+[
+"249252",
+"Kamalganj",
+"Farrukhabad",
+"Town Panchayat"
+],
+[
+"249253",
+"Samdhan",
+"Kannauj",
+"Town Panchayat"
+],
+[
+"249254",
+"Gursahaiganj",
+"Kannauj",
+"Municipality"
+],
+[
+"249255",
+"Sikanderpur (Kannauj)",
+"Kannauj",
+"Town Panchayat"
+],
+[
+"249256",
+"Chhibramau",
+"Kannauj",
+"Municipality"
+],
+[
+"249257",
+"Saurikh",
+"Kannauj",
+"Town Panchayat"
+],
+[
+"249258",
+"Talgram",
+"Kannauj",
+"Town Panchayat"
+],
+[
+"249259",
+"Kannauj",
+"Kannauj",
+"Municipality"
+],
+[
+"249260",
+"Tirwaganj",
+"Kannauj",
+"Town Panchayat"
+],
+[
+"249261",
+"Jaswantnagar",
+"Etawah",
+"Municipality"
+],
+[
+"249262",
+"Etawah",
+"Etawah",
+"Municipality"
+],
+[
+"249263",
+"Ekdil",
+"Etawah",
+"Town Panchayat"
+],
+[
+"249264",
+"Bharthana",
+"Etawah",
+"Municipality"
+],
+[
+"249265",
+"Bakewar",
+"Etawah",
+"Town Panchayat"
+],
+[
+"249266",
+"Lakhna",
+"Etawah",
+"Town Panchayat"
+],
+[
+"249267",
+"Bidhuna",
+"Auraiya",
+"Town Panchayat"
+],
+[
+"249268",
+"Achhalda",
+"Auraiya",
+"Town Panchayat"
+],
+[
+"249269",
+"Babarpur Ajitmal",
+"Auraiya",
+"Town Panchayat"
+],
+[
+"249270",
+"Atasu",
+"Auraiya",
+"Town Panchayat"
+],
+[
+"249271",
+"Phaphund",
+"Auraiya",
+"Town Panchayat"
+],
+[
+"249272",
+"Dibiyapur",
+"Auraiya",
+"Town Panchayat"
+],
+[
+"249273",
+"Auraiya",
+"Auraiya",
+"Municipality"
+],
+[
+"249275",
+"Shivli",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"249276",
+"Rura",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"249277",
+"Akbarpur",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"249279",
+"Pukhrayan",
+"Kanpur Dehat",
+"Municipality"
+],
+[
+"249282",
+"Bilhaur",
+"Kanpur Nagar",
+"Municipality"
+],
+[
+"249283",
+"Shivrajpur",
+"Kanpur Nagar",
+"Town Panchayat"
+],
+[
+"249285",
+"Bithoor",
+"Kanpur Nagar",
+"Town Panchayat"
+],
+[
+"249286",
+"Kanpur",
+"Kanpur Nagar",
+"Municipal Corporation"
+],
+[
+"249290",
+"Ghatampur",
+"Kanpur Nagar",
+"Municipality"
+],
+[
+"249291",
+"Rampura",
+"Jalaun",
+"Town Panchayat"
+],
+[
+"249292",
+"Umri",
+"Jalaun",
+"Town Panchayat"
+],
+[
+"249293",
+"Madhogarh",
+"Jalaun",
+"Town Panchayat"
+],
+[
+"249294",
+"Jalaun",
+"Jalaun",
+"Municipality"
+],
+[
+"249295",
+"Kalpi",
+"Jalaun",
+"Municipality"
+],
+[
+"249296",
+"Kadaura",
+"Jalaun",
+"Town Panchayat"
+],
+[
+"249297",
+"Orai",
+"Jalaun",
+"Municipality"
+],
+[
+"249298",
+"Kotra",
+"Jalaun",
+"Town Panchayat"
+],
+[
+"249299",
+"Konch",
+"Jalaun",
+"Municipality"
+],
+[
+"249300",
+"Nadigaon",
+"Jalaun",
+"Town Panchayat"
+],
+[
+"249301",
+"Samthar",
+"Jhansi",
+"Municipality"
+],
+[
+"249302",
+"Moth",
+"Jhansi",
+"Town Panchayat"
+],
+[
+"249303",
+"Chirgaon",
+"Jhansi",
+"Municipality"
+],
+[
+"249304",
+"Erich",
+"Jhansi",
+"Town Panchayat"
+],
+[
+"249305",
+"Gursarai",
+"Jhansi",
+"Municipality"
+],
+[
+"249306",
+"Garautha",
+"Jhansi",
+"Town Panchayat"
+],
+[
+"249307",
+"Tondi Fatehpur",
+"Jhansi",
+"Town Panchayat"
+],
+[
+"249308",
+"Mauranipur",
+"Jhansi",
+"Municipality"
+],
+[
+"249309",
+"Ranipur",
+"Jhansi",
+"Town Panchayat"
+],
+[
+"249310",
+"Kathera",
+"Jhansi",
+"Town Panchayat"
+],
+[
+"249311",
+"Barua Sagar",
+"Jhansi",
+"Municipality"
+],
+[
+"249313",
+"Bada Gaon",
+"Jhansi",
+"Town Panchayat"
+],
+[
+"249314",
+"Jhansi",
+"Jhansi",
+"Municipal Corporation"
+],
+[
+"249317",
+"Talbehat",
+"Lalitpur",
+"Town Panchayat"
+],
+[
+"249318",
+"Lalitpur",
+"Lalitpur",
+"Municipality"
+],
+[
+"249319",
+"Pali (Lalitpur)",
+"Lalitpur",
+"Town Panchayat"
+],
+[
+"249320",
+"Mahroni",
+"Lalitpur",
+"Town Panchayat"
+],
+[
+"249321",
+"Kurara",
+"Hamirpur",
+"Town Panchayat"
+],
+[
+"249322",
+"Hamirpur",
+"Hamirpur",
+"Municipality"
+],
+[
+"249323",
+"Sumerpur",
+"Hamirpur",
+"Town Panchayat"
+],
+[
+"249324",
+"Sarila",
+"Hamirpur",
+"Town Panchayat"
+],
+[
+"249325",
+"Gohand",
+"Hamirpur",
+"Town Panchayat"
+],
+[
+"249326",
+"Rath",
+"Hamirpur",
+"Municipality"
+],
+[
+"249327",
+"Maudaha",
+"Hamirpur",
+"Municipality"
+],
+[
+"249328",
+"Kulpahar",
+"Mahoba",
+"Town Panchayat"
+],
+[
+"249329",
+"Kharela",
+"Mahoba",
+"Town Panchayat"
+],
+[
+"249330",
+"Charkhari",
+"Mahoba",
+"Municipality"
+],
+[
+"249331",
+"Mahoba",
+"Mahoba",
+"Municipality"
+],
+[
+"249332",
+"Kabrai",
+"Mahoba",
+"Town Panchayat"
+],
+[
+"249333",
+"Mataundh",
+"Banda",
+"Town Panchayat"
+],
+[
+"249334",
+"Banda",
+"Banda",
+"Municipality"
+],
+[
+"249335",
+"Tindwari",
+"Banda",
+"Town Panchayat"
+],
+[
+"249336",
+"Baberu",
+"Banda",
+"Town Panchayat"
+],
+[
+"249337",
+"Oran",
+"Banda",
+"Town Panchayat"
+],
+[
+"249338",
+"Bisanda Buzurg",
+"Banda",
+"Town Panchayat"
+],
+[
+"249339",
+"Atarra",
+"Banda",
+"Municipality"
+],
+[
+"249340",
+"Naraini",
+"Banda",
+"Town Panchayat"
+],
+[
+"249341",
+"Manikpur Sarhat (Chitrakoot)",
+"Chitrakoot",
+"Town Panchayat"
+],
+[
+"249342",
+"Chitrakoot Dham - Karwi",
+"Chitrakoot",
+"Municipality"
+],
+[
+"249343",
+"Rajapur",
+"Chitrakoot",
+"Town Panchayat"
+],
+[
+"249344",
+"Kora Jahanabad",
+"Fatehpur",
+"Town Panchayat"
+],
+[
+"249345",
+"Bindki",
+"Fatehpur",
+"Municipality"
+],
+[
+"249346",
+"Bahuwa",
+"Fatehpur",
+"Town Panchayat"
+],
+[
+"249347",
+"Fatehpur(Fatehpur)",
+"Fatehpur",
+"Municipality"
+],
+[
+"249348",
+"Khaga",
+"Fatehpur",
+"Town Panchayat"
+],
+[
+"249349",
+"Kishunpur",
+"Fatehpur",
+"Town Panchayat"
+],
+[
+"249350",
+"Manikpur(Pratapgarh)",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"249351",
+"Kunda",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"249352",
+"Antu",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"249353",
+"Belha",
+"Pratapgarh",
+"Municipality"
+],
+[
+"249354",
+"Pratapgarh City",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"249355",
+"Katra Medniganj",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"249356",
+"Patti",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"249357",
+"Ajhuwa",
+"Kaushambi",
+"Town Panchayat"
+],
+[
+"249358",
+"Sirathu",
+"Kaushambi",
+"Town Panchayat"
+],
+[
+"249359",
+"Manjhanpur",
+"Kaushambi",
+"Municipality"
+],
+[
+"249360",
+"Karari",
+"Kaushambi",
+"Town Panchayat"
+],
+[
+"249361",
+"Bharwari(Kaushambi)",
+"Kaushambi",
+"Municipality"
+],
+[
+"249362",
+"Chail",
+"Kaushambi",
+"Town Panchayat"
+],
+[
+"249363",
+"Sarai Aquil",
+"Kaushambi",
+"Town Panchayat"
+],
+[
+"249364",
+"Mau Aima",
+"Prayagraj",
+"Town Panchayat"
+],
+[
+"249365",
+"Lal Gopal Ganj",
+"Prayagraj",
+"Town Panchayat"
+],
+[
+"249368",
+"Phulpur",
+"Prayagraj",
+"Town Panchayat"
+],
+[
+"249369",
+"Prayagraj",
+"Prayagraj",
+"Municipal Corporation"
+],
+[
+"249370",
+"Shankargarh",
+"Prayagraj",
+"Town Panchayat"
+],
+[
+"249372",
+"Handia",
+"Prayagraj",
+"Town Panchayat"
+],
+[
+"249373",
+"Sirsa",
+"Prayagraj",
+"Town Panchayat"
+],
+[
+"249374",
+"Bharatganj",
+"Prayagraj",
+"Town Panchayat"
+],
+[
+"249375",
+"Koraon",
+"Prayagraj",
+"Town Panchayat"
+],
+[
+"249376",
+"Fatehpur(Barabanki)",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"249377",
+"Ramnagar",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"249378",
+"Dewa",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"249380",
+"Banki",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"249381",
+"Satrikh",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"249382",
+"Zaidpur",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"249384",
+"Tikait Nagar",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"249385",
+"Dariyabad",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"249386",
+"Siddhaur",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"249387",
+"Haidergarh",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"249388",
+"Rudauli",
+"Ayodhya",
+"Municipality"
+],
+[
+"249389",
+"Bhadarsa",
+"Ayodhya",
+"Town Panchayat"
+],
+[
+"249391",
+"Ayodhya",
+"Ayodhya",
+"Municipal Corporation"
+],
+[
+"249392",
+"Gosainganj (Lucknow)",
+"Ayodhya",
+"Town Panchayat"
+],
+[
+"249393",
+"Bikapur",
+"Ayodhya",
+"Town Panchayat"
+],
+[
+"249394",
+"Iltifatganj Bazar",
+"Ambedkar Nagar",
+"Town Panchayat"
+],
+[
+"249396",
+"Tanda (Ambedkar Nagar)",
+"Ambedkar Nagar",
+"Municipality"
+],
+[
+"249398",
+"Ashrafpur Kichhauchha",
+"Ambedkar Nagar",
+"Town Panchayat"
+],
+[
+"249399",
+"Jalalpur",
+"Ambedkar Nagar",
+"Municipality"
+],
+[
+"249400",
+"Akbarpur",
+"Ambedkar Nagar",
+"Municipality"
+],
+[
+"249401",
+"Musafirkhana",
+"Amethi",
+"Town Panchayat"
+],
+[
+"249402",
+"Amethi(Amethi)",
+"Amethi",
+"Town Panchayat"
+],
+[
+"249404",
+"Sultanpur",
+"Sultanpur",
+"Municipality"
+],
+[
+"249405",
+"Koeripur",
+"Sultanpur",
+"Town Panchayat"
+],
+[
+"249406",
+"Dostpur",
+"Sultanpur",
+"Town Panchayat"
+],
+[
+"249407",
+"Kadipur",
+"Sultanpur",
+"Town Panchayat"
+],
+[
+"249408",
+"Nanpara",
+"Bahraich",
+"Municipality"
+],
+[
+"249409",
+"Risia Bazar",
+"Bahraich",
+"Town Panchayat"
+],
+[
+"249410",
+"Bahraich",
+"Bahraich",
+"Municipality"
+],
+[
+"249411",
+"Jarwal",
+"Bahraich",
+"Town Panchayat"
+],
+[
+"249412",
+"Sukrauli",
+"Kushinagar",
+"Town Panchayat"
+],
+[
+"249413",
+"Ikauna",
+"Shrawasti",
+"Town Panchayat"
+],
+[
+"249414",
+"Balrampur",
+"Balrampur",
+"Municipality"
+],
+[
+"249415",
+"Tulsipur",
+"Balrampur",
+"Town Panchayat"
+],
+[
+"249416",
+"Pachperwa",
+"Balrampur",
+"Town Panchayat"
+],
+[
+"249417",
+"Utraula",
+"Balrampur",
+"Municipality"
+],
+[
+"249418",
+"Khargupur",
+"Gonda",
+"Town Panchayat"
+],
+[
+"249419",
+"Gonda",
+"Gonda",
+"Municipality"
+],
+[
+"249420",
+"Katra Bazar",
+"Gonda",
+"Town Panchayat"
+],
+[
+"249421",
+"Colonelganj",
+"Gonda",
+"Municipality"
+],
+[
+"249422",
+"Nawabganj(Gonda)",
+"Gonda",
+"Municipality"
+],
+[
+"249423",
+"Mankapur",
+"Gonda",
+"Town Panchayat"
+],
+[
+"249426",
+"Shohratgarh",
+"Siddharthnagar",
+"Town Panchayat"
+],
+[
+"249427",
+"Siddharth Nagar (Tetri Bazar)",
+"Siddharthnagar",
+"Municipality"
+],
+[
+"249428",
+"Baansi",
+"Siddharthnagar",
+"Municipality"
+],
+[
+"249429",
+"Harraiya",
+"Basti",
+"Town Panchayat"
+],
+[
+"249430",
+"Basti",
+"Basti",
+"Municipality"
+],
+[
+"249431",
+"Mehdawal",
+"Sant Kabir Nagar",
+"Town Panchayat"
+],
+[
+"249433",
+"Khalilabad",
+"Sant Kabir Nagar",
+"Municipality"
+],
+[
+"249434",
+"Maghar",
+"Sant Kabir Nagar",
+"Town Panchayat"
+],
+[
+"249435",
+"Hariharpur",
+"Sant Kabir Nagar",
+"Town Panchayat"
+],
+[
+"249436",
+"Nautanwa",
+"Mahrajganj",
+"Municipality"
+],
+[
+"249437",
+"Nichlaul",
+"Mahrajganj",
+"Town Panchayat"
+],
+[
+"249438",
+"Siswa Bazar",
+"Mahrajganj",
+"Municipality"
+],
+[
+"249439",
+"Anandnagar",
+"Mahrajganj",
+"Town Panchayat"
+],
+[
+"249440",
+"Ghughuli",
+"Mahrajganj",
+"Town Panchayat"
+],
+[
+"249441",
+"Maharajganj",
+"Mahrajganj",
+"Municipality"
+],
+[
+"249442",
+"Pipiganj",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"249443",
+"Sahjanwa",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"249444",
+"Gorakhpur",
+"Gorakhpur",
+"Municipal Corporation"
+],
+[
+"249446",
+"Pipraich",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"249447",
+"Mundera Bazar",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"249448",
+"Bansgaon",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"249449",
+"Gola Bazar",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"249450",
+"Barhalganj",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"249451",
+"Khadda",
+"Kushinagar",
+"Town Panchayat"
+],
+[
+"249452",
+"Padrauna",
+"Kushinagar",
+"Municipality"
+],
+[
+"249453",
+"Ramkola",
+"Kushinagar",
+"Town Panchayat"
+],
+[
+"249454",
+"Kaptanganj",
+"Kushinagar",
+"Town Panchayat"
+],
+[
+"249457",
+"Sewarhi",
+"Kushinagar",
+"Town Panchayat"
+],
+[
+"249458",
+"Gauri Bazar",
+"Deoria",
+"Town Panchayat"
+],
+[
+"249459",
+"Rampur Karkhana",
+"Deoria",
+"Town Panchayat"
+],
+[
+"249460",
+"Deoria",
+"Deoria",
+"Municipality"
+],
+[
+"249461",
+"Rudrapur",
+"Deoria",
+"Town Panchayat"
+],
+[
+"249462",
+"Gaura Barhaj",
+"Deoria",
+"Municipality"
+],
+[
+"249463",
+"Badhani Bazar",
+"Deoria",
+"Town Panchayat"
+],
+[
+"249464",
+"Majhauliraj",
+"Deoria",
+"Town Panchayat"
+],
+[
+"249465",
+"Salempur",
+"Deoria",
+"Town Panchayat"
+],
+[
+"249466",
+"Lar",
+"Deoria",
+"Town Panchayat"
+],
+[
+"249467",
+"Bhatpar Rani",
+"Deoria",
+"Town Panchayat"
+],
+[
+"249468",
+"Atraulia",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"249469",
+"Maharajganj(Raibareilly)",
+"Rae Bareli",
+"Town Panchayat"
+],
+[
+"249470",
+"Bilariaganj",
+"Azamgarh",
+"Municipality"
+],
+[
+"249471",
+"Jiyanpur",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"249472",
+"Azmatgarh",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"249474",
+"Mubarakpur",
+"Azamgarh",
+"Municipality"
+],
+[
+"249477",
+"Azamgarh",
+"Azamgarh",
+"Municipality"
+],
+[
+"249478",
+"Nizamabad",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"249479",
+"Sarai Mir",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"249480",
+"Phoolpur",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"249481",
+"Katghar Lalganj",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"249482",
+"Mehnagar",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"249483",
+"Dohrighat",
+"Mau",
+"Town Panchayat"
+],
+[
+"249484",
+"Amila",
+"Mau",
+"Town Panchayat"
+],
+[
+"249485",
+"Ghosi",
+"Mau",
+"Town Panchayat"
+],
+[
+"249486",
+"Kopaganj",
+"Mau",
+"Town Panchayat"
+],
+[
+"249487",
+"Adari",
+"Mau",
+"Town Panchayat"
+],
+[
+"249488",
+"Maunath Bhanjan",
+"Mau",
+"Municipality"
+],
+[
+"249490",
+"Mohammadabad (Farrukhabad)",
+"Farrukhabad",
+"Town Panchayat"
+],
+[
+"249492",
+"Belthara Road",
+"Ballia",
+"Town Panchayat"
+],
+[
+"249493",
+"Sikanderpur (Ballia)",
+"Ballia",
+"Town Panchayat"
+],
+[
+"249494",
+"Maniyar",
+"Ballia",
+"Town Panchayat"
+],
+[
+"249495",
+"Rasra",
+"Ballia",
+"Municipality"
+],
+[
+"249496",
+"Chitbara Gaon",
+"Ballia",
+"Town Panchayat"
+],
+[
+"249497",
+"Ballia",
+"Ballia",
+"Municipality"
+],
+[
+"249498",
+"Bansdih",
+"Ballia",
+"Town Panchayat"
+],
+[
+"249499",
+"Sahatwar",
+"Ballia",
+"Town Panchayat"
+],
+[
+"249500",
+"Reoti",
+"Ballia",
+"Town Panchayat"
+],
+[
+"249501",
+"Shahganj",
+"Jaunpur",
+"Municipality"
+],
+[
+"249502",
+"Kheta Sarai",
+"Jaunpur",
+"Town Panchayat"
+],
+[
+"249503",
+"Mungra Badshahpur",
+"Jaunpur",
+"Municipality"
+],
+[
+"249504",
+"Machhlishahr",
+"Jaunpur",
+"Town Panchayat"
+],
+[
+"249505",
+"Jaunpur",
+"Jaunpur",
+"Municipality"
+],
+[
+"249507",
+"Mariahu",
+"Jaunpur",
+"Town Panchayat"
+],
+[
+"249508",
+"Kerakat",
+"Jaunpur",
+"Town Panchayat"
+],
+[
+"249509",
+"Sadat",
+"Ghazipur",
+"Town Panchayat"
+],
+[
+"249510",
+"Saidpur(Gazipur)",
+"Ghazipur",
+"Town Panchayat"
+],
+[
+"249511",
+"Jangipur",
+"Ghazipur",
+"Town Panchayat"
+],
+[
+"249512",
+"Ghazipur",
+"Ghazipur",
+"Municipality"
+],
+[
+"249513",
+"Bahadurganj",
+"Ghazipur",
+"Town Panchayat"
+],
+[
+"249514",
+"Mohammadabad(Gazipur)",
+"Ghazipur",
+"Municipality"
+],
+[
+"249515",
+"Dildarnagar Fatehpur Bazar",
+"Ghazipur",
+"Town Panchayat"
+],
+[
+"249516",
+"Zamania",
+"Ghazipur",
+"Municipality"
+],
+[
+"249518",
+"Pt Deen Dayal Nagar(Mughalsarai)",
+"Chandauli",
+"Municipality"
+],
+[
+"249520",
+"Chandauli",
+"Chandauli",
+"Town Panchayat"
+],
+[
+"249521",
+"Saiyad Raja",
+"Chandauli",
+"Town Panchayat"
+],
+[
+"249522",
+"Chakia",
+"Chandauli",
+"Town Panchayat"
+],
+[
+"249524",
+"Gangapur",
+"Varanasi",
+"Town Panchayat"
+],
+[
+"249531",
+"Varanasi",
+"Varanasi",
+"Municipal Corporation"
+],
+[
+"249533",
+"Suriyawan",
+"Bhadohi",
+"Town Panchayat"
+],
+[
+"249534",
+"Nai Bazar",
+"Bhadohi",
+"Town Panchayat"
+],
+[
+"249535",
+"Bhadohi",
+"Bhadohi",
+"Municipality"
+],
+[
+"249536",
+"Gyanpur",
+"Bhadohi",
+"Town Panchayat"
+],
+[
+"249537",
+"Gopi Ganj",
+"Bhadohi",
+"Municipality"
+],
+[
+"249538",
+"Khamaria",
+"Bhadohi",
+"Town Panchayat"
+],
+[
+"249539",
+"Ghosia Bazar",
+"Bhadohi",
+"Town Panchayat"
+],
+[
+"249540",
+"Mirzapur-Cum-Vindhyachal",
+"Mirzapur",
+"Municipality"
+],
+[
+"249542",
+"Kachhwa",
+"Mirzapur",
+"Town Panchayat"
+],
+[
+"249543",
+"Chunar",
+"Mirzapur",
+"Municipality"
+],
+[
+"249545",
+"Ahraura",
+"Mirzapur",
+"Municipality"
+],
+[
+"249546",
+"Ghorawal",
+"Sonbhadra",
+"Town Panchayat"
+],
+[
+"249547",
+"Robertsganj",
+"Sonbhadra",
+"Municipality"
+],
+[
+"249548",
+"Chukradhumra",
+"Sonbhadra",
+"Town Panchayat"
+],
+[
+"249549",
+"Chopan",
+"Sonbhadra",
+"Town Panchayat"
+],
+[
+"249550",
+"Obra",
+"Sonbhadra",
+"Town Panchayat"
+],
+[
+"249551",
+"Dudhi",
+"Sonbhadra",
+"Town Panchayat"
+],
+[
+"249552",
+"Renukoot",
+"Sonbhadra",
+"Town Panchayat"
+],
+[
+"249553",
+"Pipri",
+"Sonbhadra",
+"Town Panchayat"
+],
+[
+"253113",
+"Hathgam",
+"Fatehpur",
+"Town Panchayat"
+],
+[
+"253131",
+"Subeha",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"257826",
+"Uska Bazar",
+"Siddharthnagar",
+"Town Panchayat"
+],
+[
+"263348",
+"Derapur",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"263350",
+"Babralaa",
+"Sambhal",
+"Town Panchayat"
+],
+[
+"263351",
+"Bkt",
+"Lucknow",
+"Town Panchayat"
+],
+[
+"263352",
+"Rasulabaad(Kanpur Dehat)",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"263353",
+"Amraudhaa",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"263354",
+"Jhinjhak",
+"Kanpur Dehat",
+"Municipality"
+],
+[
+"263355",
+"Sikandara",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"263356",
+"Mahul",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"263358",
+"Badlapur",
+"Jaunpur",
+"Town Panchayat"
+],
+[
+"263359",
+"Rudhauli Bazar",
+"Basti",
+"Town Panchayat"
+],
+[
+"270654",
+"Walidpur",
+"Mau",
+"Town Panchayat"
+],
+[
+"274820",
+"Khoda Makanpur",
+"Ghaziabad",
+"Municipality"
+],
+[
+"274822",
+"Yeida",
+"Gautam Buddha Nagar",
+"Notified Area Council"
+],
+[
+"274823",
+"Gnida",
+"Gautam Buddha Nagar",
+"Notified Area Council"
+],
+[
+"276425",
+"Gauriganj",
+"Amethi",
+"Municipality"
+],
+[
+"277139",
+"Sonauli",
+"Mahrajganj",
+"Town Panchayat"
+],
+[
+"277185",
+"Bairia",
+"Ballia",
+"Town Panchayat"
+],
+[
+"277186",
+"Belhara",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"277188",
+"Eka",
+"Firozabad",
+"Town Panchayat"
+],
+[
+"277189",
+"Chirayakot",
+"Mau",
+"Town Panchayat"
+],
+[
+"277192",
+"Raniganj",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"277531",
+"Laalganj",
+"Rae Bareli",
+"Town Panchayat"
+],
+[
+"281989",
+"Bariyarpur",
+"Deoria",
+"Town Panchayat"
+],
+[
+"289237",
+"Bankti",
+"Basti",
+"Town Panchayat"
+],
+[
+"290250",
+"Pakbara",
+"Moradabad",
+"Town Panchayat"
+],
+[
+"290251",
+"Dhakia",
+"Moradabad",
+"Town Panchayat"
+],
+[
+"296986",
+"Chhutmalpura",
+"Saharanpur",
+"Town Panchayat"
+],
+[
+"297020",
+"Hata",
+"Kushinagar",
+"Municipality"
+],
+[
+"297022",
+"Gangaghat",
+"Unnao",
+"Municipality"
+],
+[
+"297023",
+"Khekada",
+"Baghpat",
+"Municipality"
+],
+[
+"297024",
+"Kushinagar",
+"Kushinagar",
+"Municipality"
+],
+[
+"297025",
+"Bhinga",
+"Shrawasti",
+"Municipality"
+],
+[
+"297026",
+"Dataganj",
+"Budaun",
+"Municipality"
+],
+[
+"297027",
+"Gajralua",
+"Amroha",
+"Municipality"
+],
+[
+"297029",
+"Campierganj",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"297031",
+"Ganeshpur",
+"Basti",
+"Town Panchayat"
+],
+[
+"297032",
+"Shamshabad",
+"Farrukhabad",
+"Town Panchayat"
+],
+[
+"297033",
+"Madrak",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"297034",
+"Gaurabadshahpur",
+"Jaunpur",
+"Town Panchayat"
+],
+[
+"297036",
+"Tamkuhi Raj",
+"Kushinagar",
+"Town Panchayat"
+],
+[
+"297037",
+"Rajpur",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"297038",
+"Lambhua",
+"Sultanpur",
+"Town Panchayat"
+],
+[
+"297039",
+"Mohanlalganj",
+"Lucknow",
+"Town Panchayat"
+],
+[
+"297040",
+"Partawal",
+"Mahrajganj",
+"Town Panchayat"
+],
+[
+"297041",
+"Paniyara",
+"Mahrajganj",
+"Town Panchayat"
+],
+[
+"297042",
+"Kohdaur",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"297044",
+"Dala Bazar",
+"Sonbhadra",
+"Town Panchayat"
+],
+[
+"297045",
+"Pisawa",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"297046",
+"Pakadia Naugawa",
+"Pilibhit",
+"Town Panchayat"
+],
+[
+"297047",
+"Narpat Nagar Doondawala",
+"Rampur",
+"Town Panchayat"
+],
+[
+"297048",
+"Banthra",
+"Lucknow",
+"Town Panchayat"
+],
+[
+"297049",
+"Nigohi",
+"Shahjahanpur",
+"Town Panchayat"
+],
+[
+"297050",
+"Biskohar",
+"Siddharthnagar",
+"Town Panchayat"
+],
+[
+"297051",
+"Kapilavastu",
+"Siddharthnagar",
+"Town Panchayat"
+],
+[
+"297053",
+"Baghnagar Urf Bakhira",
+"Sant Kabir Nagar",
+"Town Panchayat"
+],
+[
+"297054",
+"Suwansa Bazar",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"297055",
+"Ait",
+"Jalaun",
+"Town Panchayat"
+],
+[
+"297056",
+"Badhani Chafa",
+"Siddharthnagar",
+"Town Panchayat"
+],
+[
+"297057",
+"Banda",
+"Shahjahanpur",
+"Town Panchayat"
+],
+[
+"297058",
+"Barnahal",
+"Mainpuri",
+"Town Panchayat"
+],
+[
+"297059",
+"Belhar Kala",
+"Sant Kabir Nagar",
+"Town Panchayat"
+],
+[
+"297060",
+"Bhanpur Kaswa",
+"Basti",
+"Town Panchayat"
+],
+[
+"297061",
+"Bharatbhari",
+"Siddharthnagar",
+"Town Panchayat"
+],
+[
+"297062",
+"Brijmanganj",
+"Mahrajganj",
+"Town Panchayat"
+],
+[
+"297063",
+"Dahagwan",
+"Budaun",
+"Town Panchayat"
+],
+[
+"297064",
+"Daranagar",
+"Kaushambi",
+"Town Panchayat"
+],
+[
+"297065",
+"Fazilnagar",
+"Kushinagar",
+"Town Panchayat"
+],
+[
+"297066",
+"Gaayghat",
+"Basti",
+"Town Panchayat"
+],
+[
+"297067",
+"Itwa",
+"Siddharthnagar",
+"Town Panchayat"
+],
+[
+"297068",
+"Kachgaon",
+"Jaunpur",
+"Town Panchayat"
+],
+[
+"297070",
+"Payagpur",
+"Bahraich",
+"Town Panchayat"
+],
+[
+"297071",
+"Agawanpur",
+"Moradabad",
+"Town Panchayat"
+],
+[
+"297073",
+"Babhnan Bazar",
+"Basti",
+"Town Panchayat"
+],
+[
+"297075",
+"Boodhanpur",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"297076",
+"Chandaus",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"297077",
+"Chhitauni",
+"Kushinagar",
+"Town Panchayat"
+],
+[
+"297078",
+"Duddhi",
+"Kushinagar",
+"Town Panchayat"
+],
+[
+"297079",
+"Khiwai",
+"Meerut",
+"Town Panchayat"
+],
+[
+"297081",
+"Makkhanpur",
+"Firozabad",
+"Town Panchayat"
+],
+[
+"297083",
+"Nagra",
+"Ballia",
+"Town Panchayat"
+],
+[
+"297084",
+"Nasirabad",
+"Rae Bareli",
+"Town Panchayat"
+],
+[
+"297085",
+"Nighasan",
+"Kheri",
+"Town Panchayat"
+],
+[
+"297086",
+"Poorav Pashchim Shareera",
+"Kaushambi",
+"Town Panchayat"
+],
+[
+"297087",
+"Prithviganj",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"297088",
+"Rampur (Jaunpur)",
+"Jaunpur",
+"Town Panchayat"
+],
+[
+"297089",
+"Raniya",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"297090",
+"Saifani",
+"Rampur",
+"Town Panchayat"
+],
+[
+"297091",
+"Zafrabad",
+"Jaunpur",
+"Town Panchayat"
+],
+[
+"297495",
+"Kasba Sangrampur Urf Unwal",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"297623",
+"Asothar",
+"Fatehpur",
+"Town Panchayat"
+],
+[
+"297651",
+"Musanagar",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"297714",
+"Said Nagli",
+"Amroha",
+"Town Panchayat"
+],
+[
+"297735",
+"Nawabganj",
+"Farrukhabad",
+"Town Panchayat"
+],
+[
+"297756",
+"Khirauni(Suchittaganj)",
+"Ayodhya",
+"Town Panchayat"
+],
+[
+"297758",
+"Kumarganj",
+"Ayodhya",
+"Town Panchayat"
+],
+[
+"297802",
+"Shahjahanpur",
+"Shahjahanpur",
+"Municipal Corporation"
+],
+[
+"297807",
+"Kalan",
+"Shahjahanpur",
+"Town Panchayat"
+],
+[
+"297820",
+"Rataul",
+"Baghpat",
+"Town Panchayat"
+],
+[
+"297861",
+"Ratsar Kala",
+"Ballia",
+"Town Panchayat"
+],
+[
+"297864",
+"Kanchausi",
+"Kanpur Dehat",
+"Town Panchayat"
+],
+[
+"297922",
+"Achal Ganj",
+"Unnao",
+"Town Panchayat"
+],
+[
+"298093",
+"Munderwa",
+"Basti",
+"Town Panchayat"
+],
+[
+"298095",
+"Nagar Bazar",
+"Basti",
+"Town Panchayat"
+],
+[
+"298096",
+"Kaptanganj Basti",
+"Basti",
+"Town Panchayat"
+],
+[
+"298115",
+"Gabhana",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"298915",
+"Chauk",
+"Mahrajganj",
+"Town Panchayat"
+],
+[
+"298935",
+"Jahagirganj",
+"Ambedkar Nagar",
+"Town Panchayat"
+],
+[
+"299009",
+"Charwa",
+"Kaushambi",
+"Town Panchayat"
+],
+[
+"299010",
+"Mau Mustkil",
+"Chitrakoot",
+"Town Panchayat"
+],
+[
+"299012",
+"Ramganj (Pratapgarh)",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"299013",
+"Dhakwa (Pratapgarh)",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"299017",
+"Kaisharganj",
+"Bahraich",
+"Town Panchayat"
+],
+[
+"299018",
+"Barauli",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"299023",
+"Jawan Sikandpur",
+"Aligarh",
+"Town Panchayat"
+],
+[
+"299027",
+"Mahmoodpur Mafi",
+"Moradabad",
+"Town Panchayat"
+],
+[
+"299053",
+"Anpara",
+"Sonbhadra",
+"Town Panchayat"
+],
+[
+"299069",
+"Dadiyal",
+"Rampur",
+"Town Panchayat"
+],
+[
+"299071",
+"Kurthijafarpur",
+"Mau",
+"Town Panchayat"
+],
+[
+"299081",
+"Ram Sanehi Ghat",
+"Bara Banki",
+"Town Panchayat"
+],
+[
+"300509",
+"Rajesultanpur",
+"Ambedkar Nagar",
+"Town Panchayat"
+],
+[
+"300510",
+"Martinganj",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"300511",
+"Rupaideeha",
+"Bahraich",
+"Town Panchayat"
+],
+[
+"300512",
+"Gaisari",
+"Balrampur",
+"Town Panchayat"
+],
+[
+"300532",
+"Hainsar Bazar Dhanghata",
+"Sant Kabir Nagar",
+"Town Panchayat"
+],
+[
+"300651",
+"Sankisa Basantpur",
+"Farrukhabad",
+"Town Panchayat"
+],
+[
+"300652",
+"Khimsepur",
+"Farrukhabad",
+"Town Panchayat"
+],
+[
+"300693",
+"Garwara",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"300705",
+"Mathauli",
+"Kushinagar",
+"Town Panchayat"
+],
+[
+"300707",
+"Heeraganj Bazaar",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"300713",
+"Mirhachi",
+"Etah",
+"Town Panchayat"
+],
+[
+"300719",
+"Bhira",
+"Kheri",
+"Town Panchayat"
+],
+[
+"300721",
+"Uruwa Bazar",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"300729",
+"Bhaluani",
+"Deoria",
+"Town Panchayat"
+],
+[
+"300739",
+"Shivgarh",
+"Rae Bareli",
+"Town Panchayat"
+],
+[
+"300750",
+"Ghaghsarabazar",
+"Gorakhpur",
+"Town Panchayat"
+],
+[
+"300768",
+"Baitalpur",
+"Deoria",
+"Town Panchayat"
+],
+[
+"300772",
+"Derva(Pratapgarh)",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"300774",
+"Mandhata(Pratapgarh)",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"300776",
+"Katra Gulab Singh",
+"Pratapgarh",
+"Town Panchayat"
+],
+[
+"300779",
+"Hetimpur",
+"Deoria",
+"Town Panchayat"
+],
+[
+"300782",
+"Pathardewa",
+"Deoria",
+"Town Panchayat"
+],
+[
+"300789",
+"Madanpur",
+"Deoria",
+"Town Panchayat"
+],
+[
+"300807",
+"Tarkulwa",
+"Deoria",
+"Town Panchayat"
+],
+[
+"300833",
+"Karikan Dhata",
+"Fatehpur",
+"Town Panchayat"
+],
+[
+"300839",
+"Khakhareru",
+"Fatehpur",
+"Town Panchayat"
+],
+[
+"300865",
+"Maa Kamakhya",
+"Ayodhya",
+"Town Panchayat"
+],
+[
+"300930",
+"Mihinpurwa",
+"Bahraich",
+"Town Panchayat"
+],
+[
+"301012",
+"Tarabganj",
+"Gonda",
+"Town Panchayat"
+],
+[
+"301014",
+"Belsar",
+"Gonda",
+"Town Panchayat"
+],
+[
+"301016",
+"Dhanepur",
+"Gonda",
+"Town Panchayat"
+],
+[
+"301210",
+"Noida",
+"Gautam Buddha Nagar",
+"Notified Area Council"
+],
+[
+"301241",
+"Jhansi Railway Settlement",
+"Jhansi",
+"Notified Area Council"
+],
+[
+"301242",
+"Banaras Locomotive Works",
+"Varanasi",
+"Notified Area Council"
+],
+[
+"301243",
+"Pt. Deen Dayal Upadhyaya Nagar",
+"Chandauli",
+"Notified Area Council"
+],
+[
+"301244",
+"Hindalco Industries Ltd. Renukoot",
+"Sonbhadra",
+"Notified Area Council"
+],
+[
+"301245",
+"Paraspur",
+"Gonda",
+"Town Panchayat"
+],
+[
+"301249",
+"Grasim Industries Ltd",
+"Sonbhadra",
+"Notified Area Council"
+],
+[
+"301253",
+"Jahanaganj",
+"Azamgarh",
+"Town Panchayat"
+],
+[
+"301254",
+"Madhuban",
+"Mau",
+"Town Panchayat"
+],
+[
+"301349",
+"Shahjaganpur",
+"Meerut",
+"Town Panchayat"
+],
+[
+"301363",
+"Dharamsinghwa",
+"Sant Kabir Nagar",
+"Town Panchayat"
+],
+[
+"301364",
+"Harra",
+"Meerut",
+"Town Panchayat"
+],
+[
+"301389",
+"Nawabganj (Bara Banki)",
+"Bara Banki",
+"Municipality"
+],
+[
+"301390",
+"Barhni Bazar",
+"Siddharthnagar",
+"Town Panchayat"
+]
+]
+}
