@@ -1,0 +1,100 @@
+[
+ {
+  "key": "sub3_mh_aero-p001",
+  "payload": {
+   "reader": "sub3_mh_aero",
+   "url": "https://ceoelection.maharashtra.gov.in/Downloads/PDF/AERO%20for%20all%20AC%20in%20Maharashtra.pdf",
+   "state": "MH",
+   "first": 1,
+   "last": 10,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/sub3_mh_aero/aero.pdf",
+   "expected": 0
+  }
+ },
+ {
+  "key": "sub3_mh_aero-p011",
+  "payload": {
+   "reader": "sub3_mh_aero",
+   "url": "https://ceoelection.maharashtra.gov.in/Downloads/PDF/AERO%20for%20all%20AC%20in%20Maharashtra.pdf",
+   "state": "MH",
+   "first": 11,
+   "last": 20,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/sub3_mh_aero/aero.pdf",
+   "expected": 0
+  }
+ },
+ {
+  "key": "sub3_mh_aero-p021",
+  "payload": {
+   "reader": "sub3_mh_aero",
+   "url": "https://ceoelection.maharashtra.gov.in/Downloads/PDF/AERO%20for%20all%20AC%20in%20Maharashtra.pdf",
+   "state": "MH",
+   "first": 21,
+   "last": 30,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/sub3_mh_aero/aero.pdf",
+   "expected": 0
+  }
+ },
+ {
+  "key": "sub3_mh_aero-p031",
+  "payload": {
+   "reader": "sub3_mh_aero",
+   "url": "https://ceoelection.maharashtra.gov.in/Downloads/PDF/AERO%20for%20all%20AC%20in%20Maharashtra.pdf",
+   "state": "MH",
+   "first": 31,
+   "last": 40,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/sub3_mh_aero/aero.pdf",
+   "expected": 0
+  }
+ },
+ {
+  "key": "sub3_mh_aero-p041",
+  "payload": {
+   "reader": "sub3_mh_aero",
+   "url": "https://ceoelection.maharashtra.gov.in/Downloads/PDF/AERO%20for%20all%20AC%20in%20Maharashtra.pdf",
+   "state": "MH",
+   "first": 41,
+   "last": 50,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/sub3_mh_aero/aero.pdf",
+   "expected": 0
+  }
+ },
+ {
+  "key": "sub3_mh_aero-p051",
+  "payload": {
+   "reader": "sub3_mh_aero",
+   "url": "https://ceoelection.maharashtra.gov.in/Downloads/PDF/AERO%20for%20all%20AC%20in%20Maharashtra.pdf",
+   "state": "MH",
+   "first": 51,
+   "last": 60,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/sub3_mh_aero/aero.pdf",
+   "expected": 0
+  }
+ },
+ {
+  "key": "sub3_mh_aero-p061",
+  "payload": {
+   "reader": "sub3_mh_aero",
+   "url": "https://ceoelection.maharashtra.gov.in/Downloads/PDF/AERO%20for%20all%20AC%20in%20Maharashtra.pdf",
+   "state": "MH",
+   "first": 61,
+   "last": 70,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/sub3_mh_aero/aero.pdf",
+   "expected": 0
+  }
+ }
+]

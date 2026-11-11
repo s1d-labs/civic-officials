@@ -1,0 +1,35 @@
+[
+ {
+  "key": "sub3_br_bdo",
+  "payload": {
+   "reader": "sub3_br",
+   "url": "https://betastate.bihar.gov.in/rdd/DyPageView?PageTitleID=1573",
+   "kind": "bdo",
+   "state": "BR",
+   "india_only": true,
+   "expected": 534
+  }
+ },
+ {
+  "key": "sub3_br_co",
+  "payload": {
+   "reader": "sub3_br",
+   "url": "https://betastate.bihar.gov.in/lrc/DyPageView?PageTitleID=10428",
+   "kind": "co",
+   "state": "BR",
+   "india_only": true,
+   "expected": 537
+  }
+ },
+ {
+  "key": "sub3_br_dclr",
+  "payload": {
+   "reader": "sub3_br",
+   "url": "https://betastate.bihar.gov.in/lrc/DyPageView?PageTitleID=10424",
+   "kind": "dclr",
+   "state": "BR",
+   "india_only": true,
+   "expected": 101
+  }
+ }
+]
