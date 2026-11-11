@@ -1,0 +1,21 @@
+[
+ {
+  "key": "field_food_s3waas-kodagu-nic-in-en-food-safety-and-standards-authority-of-india",
+  "payload": {
+   "reader": "field_food_s3waas",
+   "url": "https://kodagu.nic.in/en/food-safety-and-standards-authority-of-india/",
+   "state": "KA",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2025-01-10",
+   "expect": {
+    "rows": 4,
+    "named": 4,
+    "phones": 4,
+    "levels": {
+     "district": 1,
+     "circle": 3
+    }
+   }
+  }
+ }
+]

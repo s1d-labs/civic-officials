@@ -5348,5 +5348,239 @@
    "route": "india",
    "read_start": "1"
   }
+ },
+ {
+  "key": "balangir.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://balangir.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Balangir",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "345",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "bhadrak.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://bhadrak.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Bhadrak",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "348",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dhenkanal.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://dhenkanal.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Dhenkanal",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "352",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "gajapati.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://gajapati.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Gajapati",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "353",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ganjam.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://ganjam.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Ganjam",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "354",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "jajpur.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://jajpur.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Jajpur",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "356",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "jharsuguda.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://jharsuguda.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Jharsuguda",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "357",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kandhamal.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://kandhamal.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Kandhamala",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "359",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "kendujhar.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://kendujhar.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Kendujhar",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "361",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "khordha.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://khordha.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Khordha",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "362",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "nuapada.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://nuapada.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Nuapada",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "368",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "puri.odisha.gov.in/en/who-s-who",
+  "payload": {
+   "url": "https://puri.odisha.gov.in/en/about-district/who-s-who",
+   "name": "Puri",
+   "kind": "District administration",
+   "state": "OD",
+   "jurisdiction": "Odisha",
+   "district_code": "369",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dharashiv.maharashtra.gov.in/whos-who",
+  "payload": {
+   "url": "https://dharashiv.maharashtra.gov.in/whos-who/",
+   "name": "Dharashiv",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "488",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "markapuram.ap.gov.in/contact-directory",
+  "payload": {
+   "url": "https://markapuram.ap.gov.in/contact-directory/",
+   "name": "Markapuram",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "790",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "markapuram.ap.gov.in/whos-who",
+  "payload": {
+   "url": "https://markapuram.ap.gov.in/about-district/whos-who/",
+   "name": "Markapuram",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "790",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "s351ef186e18dc00c2d31982567235c559.s3waas.gov.in/whos-who",
+  "payload": {
+   "url": "https://s351ef186e18dc00c2d31982567235c559.s3waas.gov.in/about-district/whos-who/",
+   "name": "Khairagarh-Chhuikhadan-Gandai",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "759",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "ddd.gov.in/directory",
+  "payload": {
+   "url": "https://ddd.gov.in/directory/",
+   "name": "Daman",
+   "kind": "District administration",
+   "state": "DH",
+   "jurisdiction": "The Dadra And Nagar Haveli And Daman And Diu",
+   "district_code": "463",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "aurangabad.bih.nic.in/block-level",
+  "payload": {
+   "url": "https://aurangabad.bih.nic.in/block-level/",
+   "name": "Aurangabad",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "189",
+   "route": "india",
+   "read_start": "1"
+  }
  }
 ]

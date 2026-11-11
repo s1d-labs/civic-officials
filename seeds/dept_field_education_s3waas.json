@@ -1,0 +1,312 @@
+[
+ {
+  "key": "field_education_s3waas-bagpat-nic-in-department-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://bagpat.nic.in/department/education/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2026-11-07",
+   "expect": {
+    "rows": 5,
+    "named": 5,
+    "phones": 5,
+    "levels": {
+     "district": 1,
+     "block": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-chitradurga-nic-in-en-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://chitradurga.nic.in/en/education/",
+   "state": "KA",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2018-09-29",
+   "expect": {
+    "rows": 6,
+    "named": 0,
+    "phones": 6,
+    "levels": {
+     "block": 6
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-datia-nic-in-en-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://datia.nic.in/en/education/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2019-08-06",
+   "expect": {
+    "rows": 10,
+    "named": 10,
+    "phones": 10,
+    "levels": {
+     "district": 10
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-erode-nic-in-departments-school-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://erode.nic.in/departments/school-education/",
+   "state": "TN",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2024-06-06",
+   "expect": {
+    "rows": 5,
+    "named": 4,
+    "phones": 1,
+    "levels": {
+     "district": 1,
+     "block": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-gopalganj-nic-in-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://gopalganj.nic.in/education/",
+   "state": "BR",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2026-09-26",
+   "expect": {
+    "rows": 14,
+    "named": 14,
+    "phones": 14,
+    "levels": {
+     "district": 1,
+     "block": 13
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-hapur-nic-in-education-department",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://hapur.nic.in/education-department/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2025-01-23",
+   "expect": {
+    "rows": 6,
+    "named": 0,
+    "phones": 6,
+    "levels": {
+     "district": 4,
+     "block": 2
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-khargone-nic-in-en-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://khargone.nic.in/en/education/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2021-12-06",
+   "expect": {
+    "rows": 18,
+    "named": 0,
+    "phones": 18,
+    "levels": {
+     "block": 18
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-kodagu-nic-in-en-departments-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://kodagu.nic.in/en/departments/education/",
+   "state": "KA",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2023-03-13",
+   "expect": {
+    "rows": 3,
+    "named": 3,
+    "phones": 3,
+    "levels": {
+     "block": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-mahasamund-gov-in-en-departments-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://mahasamund.gov.in/en/departments/education/",
+   "state": "CG",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-11-26",
+   "expect": {
+    "rows": 16,
+    "named": 16,
+    "phones": 0,
+    "levels": {
+     "district": 1,
+     "block": 15
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-mandya-nic-in-en-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://mandya.nic.in/en/education/",
+   "state": "KA",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2022-12-13",
+   "expect": {
+    "rows": 8,
+    "named": 0,
+    "phones": 8,
+    "levels": {
+     "block": 8
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-nmcnagpur-gov-in-education-department",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://nmcnagpur.gov.in/education-department",
+   "state": "MH",
+   "in_archive": "yes, saved 2026-11-11",
+   "expect": {
+    "rows": 13,
+    "named": 13,
+    "phones": 13,
+    "levels": {
+     "district": 13
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-palakkad-nic-in-en-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://palakkad.nic.in/en/education/",
+   "state": "KL",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2018-05-26",
+   "expect": {
+    "rows": 4,
+    "named": 1,
+    "phones": 3,
+    "levels": {
+     "district": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-siddharthnagar-nic-in-administrative-setup-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://siddharthnagar.nic.in/administrative-setup/education/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2018-06-18",
+   "expect": {
+    "rows": 14,
+    "named": 0,
+    "phones": 14,
+    "levels": {
+     "block": 14
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-thoothukudi-nic-in-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://thoothukudi.nic.in/education/",
+   "state": "TN",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-03-14",
+   "expect": {
+    "rows": 12,
+    "named": 0,
+    "phones": 12,
+    "levels": {
+     "section": 12
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-tiruppur-nic-in-departments-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://tiruppur.nic.in/departments/education",
+   "state": "TN",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2026-10-08",
+   "expect": {
+    "rows": 16,
+    "named": 0,
+    "phones": 16,
+    "levels": {
+     "block": 16
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-tumkur-nic-in-en-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://tumkur.nic.in/en/education/",
+   "state": "KA",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-03-12",
+   "expect": {
+    "rows": 4,
+    "named": 3,
+    "phones": 4,
+    "levels": {
+     "block": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_education_s3waas-unakoti-nic-in-education",
+  "payload": {
+   "reader": "field_education_s3waas",
+   "url": "https://unakoti.nic.in/education/",
+   "state": "TR",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2022-04-05",
+   "expect": {
+    "rows": 5,
+    "named": 5,
+    "phones": 5,
+    "levels": {
+     "district": 5
+    }
+   }
+  }
+ }
+]

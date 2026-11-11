@@ -1,0 +1,28 @@
+[
+ {
+  "key": "field_food_dl-drugs",
+  "payload": {
+   "reader": "field_food_dl",
+   "url": "https://drugs.delhi.gov.in/drugs/whos-who",
+   "state": "DL",
+   "source": "drugs",
+   "in_archive": "yes, saved 2026-11-05",
+   "expect": {
+    "rows": 42
+   }
+  }
+ },
+ {
+  "key": "field_food_dl-food",
+  "payload": {
+   "reader": "field_food_dl",
+   "url": "https://foodsafety.delhi.gov.in/sites/default/files/Foodsafety/circulars-orders/know_your_officials.pdf",
+   "state": "DL",
+   "source": "food",
+   "in_archive": "yes",
+   "expect": {
+    "rows": 21
+   }
+  }
+ }
+]

@@ -1,0 +1,168 @@
+[
+ {
+  "key": "field_icds_s3waas-bangalorerural-nic-in-en-women-and-child-welfare-department",
+  "payload": {
+   "reader": "field_icds_s3waas",
+   "url": "https://bangalorerural.nic.in/en/women-and-child-welfare-department/",
+   "state": "KA",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2023-09-29",
+   "expect": {
+    "rows": 6,
+    "named": 6,
+    "phones": 6,
+    "levels": {
+     "district": 2,
+     "block": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_icds_s3waas-bhojpur-nic-in-child-development-project-officer",
+  "payload": {
+   "reader": "field_icds_s3waas",
+   "url": "https://bhojpur.nic.in/child-development-project-officer/",
+   "state": "BR",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2019-10-18",
+   "expect": {
+    "rows": 15,
+    "named": 0,
+    "phones": 15,
+    "levels": {
+     "block": 15
+    }
+   }
+  }
+ },
+ {
+  "key": "field_icds_s3waas-coochbehar-gov-in-icds-2",
+  "payload": {
+   "reader": "field_icds_s3waas",
+   "url": "https://coochbehar.gov.in/icds-2/",
+   "state": "WB",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2022-09-15",
+   "expect": {
+    "rows": 21,
+    "named": 21,
+    "phones": 20,
+    "levels": {
+     "facility": 21
+    }
+   }
+  }
+ },
+ {
+  "key": "field_icds_s3waas-datia-nic-in-en-departments-women-and-child-development-department",
+  "payload": {
+   "reader": "field_icds_s3waas",
+   "url": "https://datia.nic.in/en/departments/women-and-child-development-department/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2026-07-20",
+   "expect": {
+    "rows": 6,
+    "named": 6,
+    "phones": 6,
+    "levels": {
+     "district": 1,
+     "block": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_icds_s3waas-dhar-nic-in-en-women-child-development-department",
+  "payload": {
+   "reader": "field_icds_s3waas",
+   "url": "https://dhar.nic.in/en/women-child-development-department/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-06-23",
+   "expect": {
+    "rows": 17,
+    "named": 17,
+    "phones": 0,
+    "levels": {
+     "district": 1,
+     "block": 16
+    }
+   }
+  }
+ },
+ {
+  "key": "field_icds_s3waas-khargone-nic-in-en-women-and-child-development",
+  "payload": {
+   "reader": "field_icds_s3waas",
+   "url": "https://khargone.nic.in/en/women-and-child-development/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2023-03-15",
+   "expect": {
+    "rows": 11,
+    "named": 0,
+    "phones": 11,
+    "levels": {
+     "block": 11
+    }
+   }
+  }
+ },
+ {
+  "key": "field_icds_s3waas-reasi-nic-in-icds",
+  "payload": {
+   "reader": "field_icds_s3waas",
+   "url": "https://reasi.nic.in/icds/",
+   "state": "JK",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2024-11-14",
+   "expect": {
+    "rows": 5,
+    "named": 5,
+    "phones": 5,
+    "levels": {
+     "block": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_icds_s3waas-unakoti-nic-in-social-welfare-social-education",
+  "payload": {
+   "reader": "field_icds_s3waas",
+   "url": "https://unakoti.nic.in/social-welfare-social-education/",
+   "state": "TR",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2018-07-27",
+   "expect": {
+    "rows": 6,
+    "named": 0,
+    "phones": 6,
+    "levels": {
+     "facility": 6
+    }
+   }
+  }
+ },
+ {
+  "key": "field_icds_s3waas-suratmunicipal-gov-in-departments-icds",
+  "payload": {
+   "reader": "field_icds_s3waas",
+   "url": "https://www.suratmunicipal.gov.in/Departments/ICDS",
+   "state": "GJ",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2026-01-12",
+   "expect": {
+    "rows": 10,
+    "named": 10,
+    "phones": 10,
+    "levels": {
+     "district": 1,
+     "block": 9
+    }
+   }
+  }
+ }
+]

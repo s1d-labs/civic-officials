@@ -1,0 +1,1074 @@
+[
+ {
+  "key": "field_health_s3waas-balaghat-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://balaghat.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2021-09-12",
+   "expect": {
+    "rows": 5,
+    "named": 0,
+    "phones": 5,
+    "levels": {
+     "district": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-banda-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://banda.nic.in/health/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-02-17",
+   "expect": {
+    "rows": 4,
+    "named": 0,
+    "phones": 4,
+    "levels": {
+     "district": 2,
+     "facility": 2
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-bandipore-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://bandipore.nic.in/health/",
+   "state": "JK",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2025-09-27",
+   "expect": {
+    "rows": 104,
+    "named": 104,
+    "phones": 103,
+    "levels": {
+     "facility": 104
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-banka-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://banka.nic.in/health/",
+   "state": "BR",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2026-03-06",
+   "expect": {
+    "rows": 15,
+    "named": 15,
+    "phones": 15,
+    "levels": {
+     "district": 8,
+     "facility": 7
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-barabanki-nic-in-departments-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://barabanki.nic.in/departments/health/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2021-01-27",
+   "expect": {
+    "rows": 3,
+    "named": 0,
+    "phones": 3,
+    "levels": {
+     "facility": 1,
+     "district": 2
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-bhojpur-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://bhojpur.nic.in/health/",
+   "state": "BR",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2025-07-10",
+   "expect": {
+    "rows": 16,
+    "named": 0,
+    "phones": 16,
+    "levels": {
+     "district": 1,
+     "facility": 15
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-bijapur-gov-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://bijapur.gov.in/en/health/",
+   "state": "CG",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2021-05-12",
+   "expect": {
+    "rows": 3,
+    "named": 0,
+    "phones": 3,
+    "levels": {
+     "facility": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-buxar-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://buxar.nic.in/health/",
+   "state": "BR",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-07-26",
+   "expect": {
+    "rows": 28,
+    "named": 28,
+    "phones": 28,
+    "levels": {
+     "district": 14,
+     "facility": 14
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-datia-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://datia.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2020-07-20",
+   "expect": {
+    "rows": 5,
+    "named": 0,
+    "phones": 5,
+    "levels": {
+     "facility": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-dharmapuri-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://dharmapuri.nic.in/health/",
+   "state": "TN",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2026-09-25",
+   "expect": {
+    "rows": 20,
+    "named": 20,
+    "phones": 0,
+    "levels": {
+     "facility": 20
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-dmnorthwest-delhi-gov-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://dmnorthwest.delhi.gov.in/health/",
+   "state": "DL",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2020-08-27",
+   "expect": {
+    "rows": 10,
+    "named": 0,
+    "phones": 10,
+    "levels": {
+     "facility": 10
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-dmnorthwest-delhi-gov-in-list-of-dispensary",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://dmnorthwest.delhi.gov.in/list-of-dispensary/",
+   "state": "DL",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2020-11-24",
+   "expect": {
+    "rows": 194,
+    "named": 194,
+    "phones": 0,
+    "levels": {
+     "facility": 194
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-eastgarohills-gov-in-departments-health-department",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://eastgarohills.gov.in/departments/health-department/",
+   "state": "ML",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-03-07",
+   "expect": {
+    "rows": 11,
+    "named": 11,
+    "phones": 1,
+    "levels": {
+     "district": 10,
+     "facility": 1
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-fatehpur-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://fatehpur.nic.in/health/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2026-05-25",
+   "expect": {
+    "rows": 4,
+    "named": 0,
+    "phones": 4,
+    "levels": {
+     "district": 2,
+     "facility": 2
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-ghaziabad-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://ghaziabad.nic.in/en/health/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2024-11-14",
+   "expect": {
+    "rows": 4,
+    "named": 0,
+    "phones": 4,
+    "levels": {
+     "facility": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-gopalganj-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://gopalganj.nic.in/health/",
+   "state": "BR",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2026-10-13",
+   "expect": {
+    "rows": 8,
+    "named": 8,
+    "phones": 8,
+    "levels": {
+     "district": 6,
+     "facility": 2
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-hamirpur-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://hamirpur.nic.in/health/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-07",
+   "last_updated_seen": "2026-06-20",
+   "expect": {
+    "rows": 8,
+    "named": 1,
+    "phones": 8,
+    "levels": {
+     "facility": 4,
+     "district": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-hapur-nic-in-health-department",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://hapur.nic.in/health-department/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2025-08-08",
+   "expect": {
+    "rows": 13,
+    "named": 0,
+    "phones": 13,
+    "levels": {
+     "facility": 10,
+     "district": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-harda-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://harda.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2024-07-22",
+   "expect": {
+    "rows": 15,
+    "named": 13,
+    "phones": 5,
+    "levels": {
+     "facility": 15
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-haridwar-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://haridwar.nic.in/health/",
+   "state": "UK",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2024-10-08",
+   "expect": {
+    "rows": 25,
+    "named": 0,
+    "phones": 25,
+    "levels": {
+     "facility": 25
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-hpkangra-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://hpkangra.nic.in/health/",
+   "state": "HP",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2024-04-04",
+   "expect": {
+    "rows": 20,
+    "named": 0,
+    "phones": 20,
+    "levels": {
+     "facility": 20
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-hpmandi-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://hpmandi.nic.in/health/",
+   "state": "HP",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2021-06-11",
+   "expect": {
+    "rows": 12,
+    "named": 0,
+    "phones": 12,
+    "levels": {
+     "district": 1,
+     "block": 11
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-hpuna-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://hpuna.nic.in/health/",
+   "state": "HP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2026-10-28",
+   "expect": {
+    "rows": 6,
+    "named": 0,
+    "phones": 6,
+    "levels": {
+     "district": 1,
+     "block": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-imphaleast-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://imphaleast.nic.in/health/",
+   "state": "MN",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2018-07-04",
+   "expect": {
+    "rows": 10,
+    "named": 10,
+    "phones": 0,
+    "levels": {
+     "facility": 10
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-jabalpur-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://jabalpur.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2019-07-12",
+   "expect": {
+    "rows": 4,
+    "named": 0,
+    "phones": 4,
+    "levels": {
+     "facility": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-jalaun-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://jalaun.nic.in/health/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2024-03-04",
+   "expect": {
+    "rows": 3,
+    "named": 3,
+    "phones": 3,
+    "levels": {
+     "district": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-jamui-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://jamui.nic.in/health/",
+   "state": "BR",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2021-05-18",
+   "expect": {
+    "rows": 57,
+    "named": 0,
+    "phones": 57,
+    "levels": {
+     "facility": 57
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-jhargram-gov-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://jhargram.gov.in/health/",
+   "state": "WB",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-04-17",
+   "expect": {
+    "rows": 46,
+    "named": 46,
+    "phones": 46,
+    "levels": {
+     "district": 17,
+     "facility": 29
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-kaimur-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://kaimur.nic.in/health/",
+   "state": "BR",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2018-04-04",
+   "expect": {
+    "rows": 12,
+    "named": 0,
+    "phones": 12,
+    "levels": {
+     "facility": 12
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-kanniyakumari-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://kanniyakumari.nic.in/health/",
+   "state": "TN",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2022-06-01",
+   "expect": {
+    "rows": 47,
+    "named": 0,
+    "phones": 47,
+    "levels": {
+     "facility": 47
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-kasargod-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://kasargod.nic.in/en/health/",
+   "state": "KL",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2024-09-20",
+   "expect": {
+    "rows": 6,
+    "named": 6,
+    "phones": 6,
+    "levels": {
+     "facility": 6
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-khandwa-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://khandwa.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2021-11-17",
+   "expect": {
+    "rows": 3,
+    "named": 1,
+    "phones": 3,
+    "levels": {
+     "district": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-khargone-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://khargone.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2023-01-31",
+   "expect": {
+    "rows": 12,
+    "named": 0,
+    "phones": 12,
+    "levels": {
+     "district": 1,
+     "facility": 11
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-kurnool-ap-gov-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://kurnool.ap.gov.in/health/",
+   "state": "AP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-06-24",
+   "expect": {
+    "rows": 30,
+    "named": 0,
+    "phones": 30,
+    "levels": {
+     "facility": 27,
+     "district": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-kushinagar-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://kushinagar.nic.in/health/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2024-12-20",
+   "expect": {
+    "rows": 16,
+    "named": 16,
+    "phones": 16,
+    "levels": {
+     "facility": 16
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-lakhisarai-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://lakhisarai.nic.in/health/",
+   "state": "BR",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2024-01-06",
+   "expect": {
+    "rows": 5,
+    "named": 5,
+    "phones": 5,
+    "levels": {
+     "facility": 2,
+     "district": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-latehar-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://latehar.nic.in/health/",
+   "state": "JH",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2025-09-23",
+   "expect": {
+    "rows": 10,
+    "named": 0,
+    "phones": 10,
+    "levels": {
+     "facility": 10
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-lawngtlai-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://lawngtlai.nic.in/health/",
+   "state": "MZ",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2019-09-06",
+   "expect": {
+    "rows": 5,
+    "named": 5,
+    "phones": 0,
+    "levels": {
+     "facility": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-ludhiana-nic-in-departments-state-govt-civil-surgeon",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://ludhiana.nic.in/departments/state-govt/civil-surgeon/",
+   "state": "PB",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2020-10-13",
+   "expect": {
+    "rows": 27,
+    "named": 0,
+    "phones": 27,
+    "levels": {
+     "district": 12,
+     "facility": 15
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-mahasamund-gov-in-en-departments-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://mahasamund.gov.in/en/departments/health/",
+   "state": "CG",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-10-15",
+   "expect": {
+    "rows": 4,
+    "named": 0,
+    "phones": 4,
+    "levels": {
+     "district": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-nirmal-telangana-gov-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://nirmal.telangana.gov.in/health/",
+   "state": "TS",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-04-02",
+   "expect": {
+    "rows": 43,
+    "named": 42,
+    "phones": 39,
+    "levels": {
+     "district": 36,
+     "facility": 7
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-pathanamthitta-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://pathanamthitta.nic.in/en/health/",
+   "state": "KL",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-07-25",
+   "expect": {
+    "rows": 4,
+    "named": 4,
+    "phones": 4,
+    "levels": {
+     "facility": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-patiala-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://patiala.nic.in/health/",
+   "state": "PB",
+   "in_archive": "yes, saved 2026-11-07",
+   "last_updated_seen": "2025-05-19",
+   "expect": {
+    "rows": 10,
+    "named": 0,
+    "phones": 10,
+    "levels": {
+     "facility": 10
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-prayagraj-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://prayagraj.nic.in/health/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2020-10-22",
+   "expect": {
+    "rows": 6,
+    "named": 0,
+    "phones": 6,
+    "levels": {
+     "district": 1,
+     "facility": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-rewa-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://rewa.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2019-07-23",
+   "expect": {
+    "rows": 3,
+    "named": 3,
+    "phones": 0,
+    "levels": {
+     "district": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-rohtas-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://rohtas.nic.in/health/",
+   "state": "BR",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2023-07-28",
+   "expect": {
+    "rows": 4,
+    "named": 0,
+    "phones": 4,
+    "levels": {
+     "district": 2,
+     "facility": 2
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-sehore-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://sehore.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2025-08-08",
+   "expect": {
+    "rows": 7,
+    "named": 7,
+    "phones": 7,
+    "levels": {
+     "district": 1,
+     "facility": 6
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-seoni-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://seoni.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2019-07-08",
+   "expect": {
+    "rows": 9,
+    "named": 0,
+    "phones": 9,
+    "levels": {
+     "facility": 9
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-sheopur-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://sheopur.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2026-09-30",
+   "expect": {
+    "rows": 3,
+    "named": 3,
+    "phones": 3,
+    "levels": {
+     "facility": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-southtripura-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://southtripura.nic.in/health/",
+   "state": "TR",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2024-12-03",
+   "expect": {
+    "rows": 4,
+    "named": 4,
+    "phones": 4,
+    "levels": {
+     "district": 1,
+     "facility": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-southwestgarohills-gov-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://southwestgarohills.gov.in/health/",
+   "state": "ML",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2023-06-16",
+   "expect": {
+    "rows": 4,
+    "named": 4,
+    "phones": 0,
+    "levels": {
+     "district": 2,
+     "facility": 2
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-sukma-gov-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://sukma.gov.in/en/health/",
+   "state": "CG",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2024-12-26",
+   "expect": {
+    "rows": 61,
+    "named": 61,
+    "phones": 61,
+    "levels": {
+     "district": 3,
+     "facility": 58
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-udhampur-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://udhampur.nic.in/health/",
+   "state": "JK",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2025-09-02",
+   "expect": {
+    "rows": 12,
+    "named": 12,
+    "phones": 12,
+    "levels": {
+     "district": 4,
+     "facility": 2,
+     "block": 6
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-umaria-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://umaria.nic.in/en/health/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2020-07-13",
+   "expect": {
+    "rows": 3,
+    "named": 1,
+    "phones": 3,
+    "levels": {
+     "district": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-unakoti-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://unakoti.nic.in/health/",
+   "state": "TR",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2023-06-23",
+   "expect": {
+    "rows": 15,
+    "named": 1,
+    "phones": 15,
+    "levels": {
+     "facility": 15
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-unnao-nic-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://unnao.nic.in/health/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2024-10-24",
+   "expect": {
+    "rows": 3,
+    "named": 0,
+    "phones": 3,
+    "levels": {
+     "facility": 2,
+     "district": 1
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-westgarohills-gov-in-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://westgarohills.gov.in/health/",
+   "state": "ML",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-05-29",
+   "expect": {
+    "rows": 13,
+    "named": 13,
+    "phones": 0,
+    "levels": {
+     "district": 10,
+     "facility": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_health_s3waas-zunheboto-nic-in-en-health",
+  "payload": {
+   "reader": "field_health_s3waas",
+   "url": "https://zunheboto.nic.in/en/health/",
+   "state": "NL",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-10-17",
+   "expect": {
+    "rows": 5,
+    "named": 5,
+    "phones": 0,
+    "levels": {
+     "facility": 5
+    }
+   }
+  }
+ }
+]

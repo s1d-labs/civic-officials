@@ -1,0 +1,1089 @@
+[
+ {
+  "key": "field_revenue_s3waas-anantnag-nic-in-know-your-patwari",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://anantnag.nic.in/know-your-patwari/",
+   "state": "JK",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-04-08",
+   "expect": {
+    "rows": 12,
+    "named": 12,
+    "phones": 12,
+    "levels": {
+     "section": 3,
+     "subdistrict": 9
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-ayodhya-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://ayodhya.nic.in/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2021-02-18",
+   "expect": {
+    "rows": 5,
+    "named": 0,
+    "phones": 5,
+    "levels": {
+     "subdistrict": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-basti-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://basti.nic.in/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2018-06-19",
+   "expect": {
+    "rows": 4,
+    "named": 0,
+    "phones": 4,
+    "levels": {
+     "subdistrict": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-bhavnagar-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://bhavnagar.nic.in/tehsil/",
+   "state": "GJ",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2018-08-08",
+   "expect": {
+    "rows": 11,
+    "named": 0,
+    "phones": 11,
+    "levels": {
+     "subdistrict": 11
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-devbhumidwarka-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://devbhumidwarka.nic.in/tehsil/",
+   "state": "GJ",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2026-02-03",
+   "expect": {
+    "rows": 4,
+    "named": 0,
+    "phones": 4,
+    "levels": {
+     "subdistrict": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-doda-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://doda.nic.in/tehsil/",
+   "state": "JK",
+   "in_archive": "yes, saved 2026-11-11",
+   "last_updated_seen": "2022-01-15",
+   "expect": {
+    "rows": 17,
+    "named": 17,
+    "phones": 3,
+    "levels": {
+     "subdistrict": 17
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-etah-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://etah.nic.in/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2018-09-06",
+   "expect": {
+    "rows": 3,
+    "named": 3,
+    "phones": 3,
+    "levels": {
+     "subdistrict": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-farrukhabad-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://farrukhabad.nic.in/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2020-02-19",
+   "expect": {
+    "rows": 5,
+    "named": 0,
+    "phones": 5,
+    "levels": {
+     "subdistrict": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-ganderbal-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://ganderbal.nic.in/tehsil/",
+   "state": "JK",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-09-28",
+   "expect": {
+    "rows": 5,
+    "named": 5,
+    "phones": 5,
+    "levels": {
+     "subdistrict": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-guna-nic-in-en-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://guna.nic.in/en/tehsil/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-08-01",
+   "expect": {
+    "rows": 7,
+    "named": 0,
+    "phones": 7,
+    "levels": {
+     "subdistrict": 7
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hamirpur-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://hamirpur.nic.in/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-07",
+   "last_updated_seen": "2026-06-10",
+   "expect": {
+    "rows": 4,
+    "named": 0,
+    "phones": 4,
+    "levels": {
+     "subdistrict": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hapur-nic-in-revenue-department",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://hapur.nic.in/revenue-department/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2025-07-28",
+   "expect": {
+    "rows": 9,
+    "named": 0,
+    "phones": 9,
+    "levels": {
+     "subdistrict": 9
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hardoi-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://hardoi.nic.in/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-10",
+   "last_updated_seen": "2022-09-21",
+   "expect": {
+    "rows": 5,
+    "named": 0,
+    "phones": 5,
+    "levels": {
+     "subdistrict": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-jagtial-telangana-gov-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://jagtial.telangana.gov.in/tehsil/",
+   "state": "TS",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-10-15",
+   "expect": {
+    "rows": 20,
+    "named": 20,
+    "phones": 20,
+    "levels": {
+     "subdistrict": 20
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-jamnagar-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://jamnagar.nic.in/tehsil/",
+   "state": "GJ",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-03-13",
+   "expect": {
+    "rows": 7,
+    "named": 0,
+    "phones": 7,
+    "levels": {
+     "subdistrict": 7
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-kannauj-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://kannauj.nic.in/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-06-06",
+   "expect": {
+    "rows": 3,
+    "named": 0,
+    "phones": 3,
+    "levels": {
+     "subdistrict": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-kanpurdehat-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://kanpurdehat.nic.in/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-09-25",
+   "expect": {
+    "rows": 6,
+    "named": 0,
+    "phones": 6,
+    "levels": {
+     "subdistrict": 6
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-kaushambi-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://kaushambi.nic.in/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2025-12-16",
+   "expect": {
+    "rows": 3,
+    "named": 0,
+    "phones": 3,
+    "levels": {
+     "subdistrict": 3
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-khammam-telangana-gov-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://khammam.telangana.gov.in/tehsil/",
+   "state": "TS",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2026-09-15",
+   "expect": {
+    "rows": 4,
+    "named": 4,
+    "phones": 4,
+    "levels": {
+     "district": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-kheri-nic-in-revenuedirectory",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://kheri.nic.in/revenuedirectory/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-07",
+   "last_updated_seen": "2026-01-30",
+   "expect": {
+    "rows": 6,
+    "named": 2,
+    "phones": 5,
+    "levels": {
+     "subdistrict": 6
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-koderma-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://koderma.nic.in/tehsil/",
+   "state": "JH",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-01-31",
+   "expect": {
+    "rows": 6,
+    "named": 0,
+    "phones": 6,
+    "levels": {
+     "circle": 6
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-mahesana-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://mahesana.nic.in/tehsil/",
+   "state": "GJ",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2018-10-06",
+   "expect": {
+    "rows": 8,
+    "named": 0,
+    "phones": 8,
+    "levels": {
+     "subdistrict": 8
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-mathura-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://mathura.nic.in/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2025-05-26",
+   "expect": {
+    "rows": 5,
+    "named": 0,
+    "phones": 5,
+    "levels": {
+     "subdistrict": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-medak-telangana-gov-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://medak.telangana.gov.in/tehsil/",
+   "state": "TS",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2025-09-26",
+   "expect": {
+    "rows": 20,
+    "named": 0,
+    "phones": 20,
+    "levels": {
+     "subdistrict": 20
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-nalgonda-telangana-gov-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://nalgonda.telangana.gov.in/tehsil/",
+   "state": "TS",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-07-28",
+   "expect": {
+    "rows": 4,
+    "named": 0,
+    "phones": 4,
+    "levels": {
+     "subdistrict": 4
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-narmada-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://narmada.nic.in/tehsil/",
+   "state": "GJ",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2025-12-12",
+   "expect": {
+    "rows": 6,
+    "named": 0,
+    "phones": 6,
+    "levels": {
+     "subdistrict": 6
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-nirmal-telangana-gov-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://nirmal.telangana.gov.in/tehsil/",
+   "state": "TS",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2020-10-06",
+   "expect": {
+    "rows": 19,
+    "named": 0,
+    "phones": 19,
+    "levels": {
+     "subdistrict": 19
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-patan-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://patan.nic.in/tehsil/",
+   "state": "GJ",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2026-06-01",
+   "expect": {
+    "rows": 10,
+    "named": 10,
+    "phones": 10,
+    "levels": {
+     "subdistrict": 9,
+     "section": 1
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-perambalur-nic-in-revenue-inspector-ri-contact-details",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://perambalur.nic.in/revenue-inspector-ri-contact-details/",
+   "state": "TN",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2023-02-16",
+   "post": "Revenue Inspector",
+   "expect": {
+    "rows": 11,
+    "named": 0,
+    "phones": 11,
+    "levels": {
+     "circle": 11
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-perambalur-nic-in-vao-contact-directory",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://perambalur.nic.in/vao-contact-directory/",
+   "state": "TN",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2023-02-15",
+   "post": "Village Administrative Officer",
+   "expect": {
+    "rows": 152,
+    "named": 0,
+    "phones": 152,
+    "levels": {
+     "section": 152
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-pilibhit-nic-in-tehsils",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://pilibhit.nic.in/tehsils/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2020-09-24",
+   "expect": {
+    "rows": 5,
+    "named": 0,
+    "phones": 5,
+    "levels": {
+     "subdistrict": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-pulwama-gov-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://pulwama.gov.in/tehsil/",
+   "state": "JK",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2025-08-23",
+   "expect": {
+    "rows": 8,
+    "named": 0,
+    "phones": 8,
+    "levels": {
+     "subdistrict": 8
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-rajannasircilla-telangana-gov-in-revenue",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://rajannasircilla.telangana.gov.in/revenue/",
+   "state": "TS",
+   "in_archive": "yes, saved 2026-11-11",
+   "last_updated_seen": "2026-11-07",
+   "expect": {
+    "rows": 14,
+    "named": 14,
+    "phones": 14,
+    "levels": {
+     "district": 2,
+     "circle": 12
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-rajkot-nic-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://rajkot.nic.in/tehsil/",
+   "state": "GJ",
+   "in_archive": "yes, saved 2026-11-06",
+   "last_updated_seen": "2018-09-12",
+   "expect": {
+    "rows": 14,
+    "named": 0,
+    "phones": 14,
+    "levels": {
+     "subdistrict": 14
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-shopian-nic-in-know-your-patwari",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://shopian.nic.in/know-your-patwari/",
+   "state": "JK",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2022-09-12",
+   "expect": {
+    "rows": 50,
+    "named": 50,
+    "phones": 50,
+    "levels": {
+     "section": 50
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-shopian-nic-in-tehsils",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://shopian.nic.in/tehsils/",
+   "state": "JK",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2024-12-05",
+   "expect": {
+    "rows": 7,
+    "named": 7,
+    "phones": 7,
+    "levels": {
+     "subdistrict": 7
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-siddharthnagar-nic-in-administrative-setup-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://siddharthnagar.nic.in/administrative-setup/tehsil/",
+   "state": "UP",
+   "in_archive": "yes, saved 2026-11-09",
+   "last_updated_seen": "2021-01-30",
+   "expect": {
+    "rows": 5,
+    "named": 0,
+    "phones": 5,
+    "levels": {
+     "subdistrict": 5
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-siddipet-telangana-gov-in-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://siddipet.telangana.gov.in/tehsil/",
+   "state": "TS",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-03-24",
+   "expect": {
+    "rows": 26,
+    "named": 0,
+    "phones": 26,
+    "levels": {
+     "subdistrict": 26
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-vidisha-nic-in-en-tehsil",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://vidisha.nic.in/en/tehsil/",
+   "state": "MP",
+   "in_archive": "yes, saved 2026-11-05",
+   "last_updated_seen": "2026-11-03",
+   "expect": {
+    "rows": 12,
+    "named": 0,
+    "phones": 12,
+    "levels": {
+     "subdistrict": 12
+    }
+   }
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090594pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090594.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf1",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090572pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090572.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf2",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090598pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090598.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf3",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090577pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090577.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf4",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090576pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090576.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf5",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090591pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090591.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf6",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090571pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090571.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf7",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090552pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090552.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf8",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090563pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090563.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf9",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090527pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090527.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf10",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-gurdaspur-pdf-2022090522pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090522.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/",
+   "tag": "gurdaspur-pdf11",
+   "note": "text PDF, one per tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hoshiarpur-pdf-2018050831pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3c5ab0bc60ac7929182aadd08703f1ec6/uploads/2018/05/2018050831.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://hoshiarpur.nic.in/know-your-patwari/",
+   "tag": "hoshiarpur-pdf1",
+   "note": "text PDF, one per tehsil / sub tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hoshiarpur-pdf-2018050859pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3c5ab0bc60ac7929182aadd08703f1ec6/uploads/2018/05/2018050859.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://hoshiarpur.nic.in/know-your-patwari/",
+   "tag": "hoshiarpur-pdf2",
+   "note": "text PDF, one per tehsil / sub tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hoshiarpur-pdf-2018050855pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3c5ab0bc60ac7929182aadd08703f1ec6/uploads/2018/05/2018050855.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://hoshiarpur.nic.in/know-your-patwari/",
+   "tag": "hoshiarpur-pdf3",
+   "note": "text PDF, one per tehsil / sub tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hoshiarpur-pdf-2018050897pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3c5ab0bc60ac7929182aadd08703f1ec6/uploads/2018/05/2018050897.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://hoshiarpur.nic.in/know-your-patwari/",
+   "tag": "hoshiarpur-pdf4",
+   "note": "text PDF, one per tehsil / sub tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hoshiarpur-pdf-2018050843pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3c5ab0bc60ac7929182aadd08703f1ec6/uploads/2018/05/2018050843.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://hoshiarpur.nic.in/know-your-patwari/",
+   "tag": "hoshiarpur-pdf5",
+   "note": "text PDF, one per tehsil / sub tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hoshiarpur-pdf-2018050874pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3c5ab0bc60ac7929182aadd08703f1ec6/uploads/2018/05/2018050874.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://hoshiarpur.nic.in/know-your-patwari/",
+   "tag": "hoshiarpur-pdf6",
+   "note": "text PDF, one per tehsil / sub tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hoshiarpur-pdf-2018050858pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3c5ab0bc60ac7929182aadd08703f1ec6/uploads/2018/05/2018050858.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://hoshiarpur.nic.in/know-your-patwari/",
+   "tag": "hoshiarpur-pdf7",
+   "note": "text PDF, one per tehsil / sub tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hoshiarpur-pdf-2018050873pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3c5ab0bc60ac7929182aadd08703f1ec6/uploads/2018/05/2018050873.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://hoshiarpur.nic.in/know-your-patwari/",
+   "tag": "hoshiarpur-pdf8",
+   "note": "text PDF, one per tehsil / sub tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hoshiarpur-pdf-20180508311pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3c5ab0bc60ac7929182aadd08703f1ec6/uploads/2018/05/2018050831-1.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://hoshiarpur.nic.in/know-your-patwari/",
+   "tag": "hoshiarpur-pdf9",
+   "note": "text PDF, one per tehsil / sub tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-hoshiarpur-pdf-2018050828pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3c5ab0bc60ac7929182aadd08703f1ec6/uploads/2018/05/2018050828.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://hoshiarpur.nic.in/know-your-patwari/",
+   "tag": "hoshiarpur-pdf10",
+   "note": "text PDF, one per tehsil / sub tehsil",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-thoothukudi-pdf-17712376216636pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s3019d385eb67632a7e958e23f24bd07d7/uploads/2026/02/17712376216636.pdf",
+   "state": "TN",
+   "post": "Village Administrative Officer",
+   "page": "https://thoothukudi.nic.in/vao-and-firka-ri-phone-numbers/",
+   "tag": "thoothukudi-pdf1",
+   "note": "text PDF; second table = firka RIs",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-poonch-pdf-17522323714425pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s31905aedab9bf2477edc068a355bba31a/uploads/2025/07/17522323714425.pdf",
+   "state": "JK",
+   "page": "https://poonch.nic.in/revenue-directory/",
+   "tag": "poonch-pdf1",
+   "note": "text PDF, revenue hierarchy to girdawar / patwari",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-poonch-pdf-2025010311pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s31905aedab9bf2477edc068a355bba31a/uploads/2025/01/2025010311.pdf",
+   "state": "JK",
+   "page": "https://poonch.nic.in/revenue-directory/",
+   "tag": "poonch-pdf2",
+   "note": "text PDF, revenue hierarchy to girdawar / patwari",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)"
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-pathankot-pdf-2022081642pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s320f07591c6fcb220ffe637cda29bb3f6/uploads/2022/08/2022081642.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://pathankot.nic.in/list-of-patwaris/",
+   "tag": "pathankot-pdf1",
+   "note": "SCANNED: no text layer, needs OCR",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)",
+   "needs_ocr": true
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-pathankot-pdf-2022090657pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s320f07591c6fcb220ffe637cda29bb3f6/uploads/2022/09/2022090657.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://pathankot.nic.in/list-of-patwaris/",
+   "tag": "pathankot-pdf2",
+   "note": "SCANNED: no text layer, needs OCR",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)",
+   "needs_ocr": true
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-pathankot-pdf-2022090721pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s320f07591c6fcb220ffe637cda29bb3f6/uploads/2022/09/2022090721.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://pathankot.nic.in/list-of-patwaris/",
+   "tag": "pathankot-pdf3",
+   "note": "SCANNED: no text layer, needs OCR",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)",
+   "needs_ocr": true
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-pathankot-pdf-2022092861pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s320f07591c6fcb220ffe637cda29bb3f6/uploads/2022/09/2022092861.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://pathankot.nic.in/list-of-patwaris/",
+   "tag": "pathankot-pdf4",
+   "note": "SCANNED: no text layer, needs OCR",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)",
+   "needs_ocr": true
+  }
+ },
+ {
+  "key": "field_revenue_s3waas-ludhiana-pdf-17788482563667pdf",
+  "payload": {
+   "reader": "field_revenue_s3waas",
+   "url": "https://cdn.s3waas.gov.in/s363923f49e5241343aa7acb6a06a751e7/uploads/2026/05/17788482563667.pdf",
+   "state": "PB",
+   "post": "Patwari",
+   "page": "https://ludhiana.nic.in/document/list-of-patwari-and-kanungos-district-ludhiana/",
+   "tag": "ludhiana-pdf1",
+   "note": "SCANNED: no text layer, needs OCR",
+   "in_archive": "no (cdn.s3waas.gov.in files are not in the archive)",
+   "needs_ocr": true
+  }
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "key": "field_health_tr-who-is-who",
+  "payload": {
+   "reader": "field_health_tr",
+   "url": "http://health.tripura.gov.in/who_is_who",
+   "state": "TR",
+   "in_archive": "yes, saved 2026-11",
+   "expect": {
+    "rows": 33
+   }
+  }
+ }
+]

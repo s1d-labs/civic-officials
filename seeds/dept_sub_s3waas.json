@@ -1,0 +1,8769 @@
+[
+ {
+  "key": "sub_s3waas-azamgarh.nic.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://azamgarh.nic.in/public-utility-category/blocks/",
+   "kind": "block",
+   "state": "UP",
+   "district": "Azamgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-azamgarh.nic.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://azamgarh.nic.in/public-utility-category/tehsil/",
+   "kind": "tehsil",
+   "state": "UP",
+   "district": "Azamgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-farrukhabad.nic.in-subdivision",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://farrukhabad.nic.in/public-utility-category/tehsil-sub-division/",
+   "kind": "subdivision",
+   "state": "UP",
+   "district": "Farrukhabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-farrukhabad.nic.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://farrukhabad.nic.in/hi/public-utility-category/%e0%a4%a4%e0%a4%b9%e0%a4%b8%e0%a5%80%e0%a4%b2/",
+   "kind": "tehsil",
+   "state": "UP",
+   "district": "Farrukhabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gaurela-pendra-marwahi.cg.gov.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gaurela-pendra-marwahi.cg.gov.in/public-utility-category/tehsil/",
+   "kind": "tehsil",
+   "state": "CG",
+   "district": "Gaurela-Pendra-Marwahi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kalimpong.gov.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kalimpong.gov.in/public-utility-category/blocks/",
+   "kind": "block",
+   "state": "WB",
+   "district": "Kalimpong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kamjong.nic.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kamjong.nic.in/public-utility-category/block/",
+   "kind": "block",
+   "state": "MN",
+   "district": "Kamjong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kannauj.nic.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kannauj.nic.in/public-utility-category/blocks/",
+   "kind": "block",
+   "state": "UP",
+   "district": "Kannauj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kannauj.nic.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kannauj.nic.in/public-utility-category/tehsils/",
+   "kind": "tehsil",
+   "state": "UP",
+   "district": "Kannauj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kasganj.nic.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kasganj.nic.in/public-utility-category/tehsil/",
+   "kind": "tehsil",
+   "state": "UP",
+   "district": "Kasganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kaushambi.nic.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kaushambi.nic.in/public-utility-category/block/",
+   "kind": "block",
+   "state": "UP",
+   "district": "Kaushambi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kaushambi.nic.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kaushambi.nic.in/public-utility-category/tehsil/",
+   "kind": "tehsil",
+   "state": "UP",
+   "district": "Kaushambi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mirzapur.nic.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mirzapur.nic.in/public-utility-category/blocks/",
+   "kind": "block",
+   "state": "UP",
+   "district": "Mirzapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mirzapur.nic.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mirzapur.nic.in/public-utility-category/tehsil/",
+   "kind": "tehsil",
+   "state": "UP",
+   "district": "Mirzapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nandurbar.gov.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nandurbar.gov.in/en/public-utility-category/tahsil-office/",
+   "kind": "tehsil",
+   "state": "MH",
+   "district": "Nandurbar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-panipat.gov.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://panipat.gov.in/public-utility-category/block/",
+   "kind": "block",
+   "state": "HR",
+   "district": "Panipat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-raigad.gov.in-subdivision",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://raigad.gov.in/en/public-utility-category/sub-divisional-offices/",
+   "kind": "subdivision",
+   "state": "MH",
+   "district": "Raigad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-raigad.gov.in-subdivision-2",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://raigad.gov.in/public-utility-category/sdokaryalay/",
+   "kind": "subdivision",
+   "state": "MH",
+   "district": "Raigad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-raigad.gov.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://raigad.gov.in/en/public-utility-category/tahasils-offices/",
+   "kind": "tehsil",
+   "state": "MH",
+   "district": "Raigad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-raigad.gov.in-tehsil-2",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://raigad.gov.in/public-utility-category/tahasilkaryalay/",
+   "kind": "tehsil",
+   "state": "MH",
+   "district": "Raigad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rampur.nic.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rampur.nic.in/public-utility-category/blocks/",
+   "kind": "block",
+   "state": "UP",
+   "district": "Rampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rampur.nic.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rampur.nic.in/public-utility-category/tehsils/",
+   "kind": "tehsil",
+   "state": "UP",
+   "district": "Rampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-samba.gov.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://samba.gov.in/public-utility-category/block/",
+   "kind": "block",
+   "state": "JK",
+   "district": "Samba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-samba.gov.in-subdivision",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://samba.gov.in/public-utility-category/sdm/",
+   "kind": "subdivision",
+   "state": "JK",
+   "district": "Samba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-samba.gov.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://samba.gov.in/public-utility-category/tehsil/",
+   "kind": "tehsil",
+   "state": "JK",
+   "district": "Samba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sangrur.nic.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sangrur.nic.in/public-utility-category/blocks/",
+   "kind": "block",
+   "state": "PB",
+   "district": "Sangrur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sangrur.nic.in-subdivision",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sangrur.nic.in/public-utility-category/subdivisions/",
+   "kind": "subdivision",
+   "state": "PB",
+   "district": "Sangrur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-seraikela.nic.in-subdivision",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://seraikela.nic.in/public-utility-category/subdivision/",
+   "kind": "subdivision",
+   "state": "JH",
+   "district": "Saraikela Kharsawan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shahjahanpur.nic.in-block",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shahjahanpur.nic.in/public-utility-category/blocks/",
+   "kind": "block",
+   "state": "UP",
+   "district": "Shahjahanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shahjahanpur.nic.in-tehsil",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shahjahanpur.nic.in/public-utility-category/tehsils/",
+   "kind": "tehsil",
+   "state": "UP",
+   "district": "Shahjahanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-annamayya.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://annamayya.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Annamayya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bapatla.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bapatla.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Bapatla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chittoor.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chittoor.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Chittoor",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-eastgodavari.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://eastgodavari.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "East Godavari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-eluru.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://eluru.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Eluru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-guntur.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://guntur.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Guntur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kadapa.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kadapa.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Y.S.R. Kadapa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kakinada.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kakinada.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Kakinada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-konaseema.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://konaseema.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Dr. B.R. Ambedkar Konaseema",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-krishna.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://krishna.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Krishna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kurnool.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kurnool.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Kurnool",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nandyal.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nandyal.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Nandyal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ntr.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ntr.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Ntr",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-palnadu.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://palnadu.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Palnadu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-parvathipurammanyam.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://parvathipurammanyam.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Parvathipuram Manyam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-prakasam.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://prakasam.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Prakasam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-spsnellore.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://spsnellore.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Sri Potti Sriramulu Nellore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-srikakulam.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://srikakulam.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Srikakulam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-srisathyasai.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://srisathyasai.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Sri Sathya Sai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tirupati.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tirupati.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Tirupati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-vizianagaram.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://vizianagaram.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Vizianagaram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-westgodavari.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://westgodavari.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "West Godavari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dibangvalley.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dibangvalley.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Dibang Valley",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-eastkameng.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://eastkameng.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "East Kameng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-eastsiang.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://eastsiang.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "East Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kradaadi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kradaadi.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Kra Daadi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kurungkumey.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kurungkumey.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Kurung Kumey",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-lohit.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://lohit.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Lohit",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-longding.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://longding.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Longding",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-lowersubansiri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://lowersubansiri.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Lower Subansiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-namsai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://namsai.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Namsai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-papumpare.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://papumpare.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Papum Pare",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-roing.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://roing.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Lower Dibang Valley",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shiyomi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shiyomi.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Shi Yomi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-siang.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://siang.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tawang.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tawang.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Tawang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tirap.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tirap.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Tirap",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-uppersiang.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://uppersiang.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Upper Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-uppersubansiri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://uppersubansiri.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Upper Subansiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-westkameng.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://westkameng.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "West Kameng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-westsiang.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://westsiang.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "West Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-biswanath.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://biswanath.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Biswanath",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bongaigaon.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bongaigaon.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Bongaigaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-cachar.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://cachar.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Cachar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-charaideo.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://charaideo.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Charaideo",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chirang.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chirang.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Chirang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-darrang.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://darrang.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Darrang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dhemaji.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dhemaji.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Dhemaji",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dhubri.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dhubri.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Dhubri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dibrugarh.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dibrugarh.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Dibrugarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dimahasao.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dimahasao.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Dima Hasao",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-goalpara.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://goalpara.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Goalpara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-golaghat.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://golaghat.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Golaghat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hailakandi.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hailakandi.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Hailakandi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hojai.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hojai.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Hojai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jorhat.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jorhat.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Jorhat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kamrup.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kamrup.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Kamrup",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kamrupmetro.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kamrupmetro.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Kamrup Metro",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-karbianglong.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://karbianglong.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Karbi Anglong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-karimganj.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://karimganj.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Sribhumi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kokrajhar.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kokrajhar.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Kokrajhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-lakhimpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://lakhimpur.nic.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Lakhimpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-majuli.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://majuli.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Majuli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-morigaon.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://morigaon.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Marigaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nagaon.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nagaon.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Nagaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nalbari.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nalbari.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Nalbari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sivasagar.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sivasagar.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Sivasagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sonitpur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sonitpur.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Sonitpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-southsalmaramankachar.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://southsalmaramankachar.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "South Salmara Mancachar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tinsukia.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tinsukia.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Tinsukia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-udalguri.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://udalguri.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Udalguri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-westkarbianglong.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://westkarbianglong.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "West Karbi Anglong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-banka.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://banka.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Banka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-begusarai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://begusarai.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Begusarai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhagalpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhagalpur.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Bhagalpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhojpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhojpur.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Bhojpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-buxar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://buxar.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Buxar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-darbhanga.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://darbhanga.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Darbhanga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-eastchamparan.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://eastchamparan.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Purbi Champaran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gaya.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gaya.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Gaya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gopalganj.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gopalganj.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Gopalganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jamui.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jamui.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Jamui",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jehanabad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jehanabad.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Jehanabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kaimur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kaimur.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Kaimur (Bhabua)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-katihar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://katihar.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Katihar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-khagaria.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://khagaria.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Khagaria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kishanganj.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kishanganj.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Kishanganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-lakhisarai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://lakhisarai.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Lakhisarai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-madhepura.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://madhepura.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Madhepura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-madhubani.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://madhubani.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Madhubani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-munger.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://munger.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Munger",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-muzaffarpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://muzaffarpur.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Muzaffarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nalanda.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nalanda.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Nalanda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nawada.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nawada.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Nawada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-patna.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://patna.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Patna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-purnea.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://purnea.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Purnia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rohtas.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rohtas.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Rohtas",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-saharsa.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://saharsa.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Saharsa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-samastipur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://samastipur.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Samastipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-saran.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://saran.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Saran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sheikhpura.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sheikhpura.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Sheikhpura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sheohar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sheohar.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Sheohar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sitamarhi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sitamarhi.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Sitamarhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-siwan.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://siwan.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Siwan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-supaul.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://supaul.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Supaul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-vaishali.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://vaishali.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Vaishali",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-westchamparan.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://westchamparan.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Pashchim Champaran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bastar.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bastar.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Bastar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bemetara.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bemetara.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Bemetara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bijapur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bijapur.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Bijapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bilaspur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bilaspur.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Bilaspur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dantewada.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dantewada.nic.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Dakshin Bastar Dantewada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dhamtari.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dhamtari.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Dhamtari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-durg.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://durg.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Durg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gariaband.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gariaband.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Gariyaband",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-janjgir-champa.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://janjgir-champa.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Janjgir-Champa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jashpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jashpur.nic.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Jashpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kanker.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kanker.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Uttar Bastar Kanker",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kawardha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kawardha.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Kabeerdham",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kondagaon.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kondagaon.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Kondagaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-korba.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://korba.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Korba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-korea.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://korea.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Korea",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mahasamund.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mahasamund.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Mahasamund",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mohla-manpur-ambagarhchowki.cg.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mohla-manpur-ambagarhchowki.cg.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Mohla-Manpur-Ambagarh Chouki",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mungeli.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mungeli.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Mungeli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-narayanpur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://narayanpur.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Narayanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-raigarh.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://raigarh.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Raigarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-raipur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://raipur.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Raipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rajnandgaon.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rajnandgaon.nic.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Rajnandgaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sukma.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sukma.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Sukma",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-surajpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://surajpur.nic.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Surajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-surguja.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://surguja.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Surguja",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dcwestrev.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dcwestrev.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "West",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmnewdelhi.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmnewdelhi.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "New Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmnorth.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmnorth.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "North",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmnortheast.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmnortheast.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "North East",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmnorthwest.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmnorthwest.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "North West",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmsouth.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmsouth.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "South",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmsoutheast.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmsoutheast.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "South East",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmsouthwest.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmsouthwest.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "South West",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-arvalli.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://arvalli.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Arvalli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-banaskantha.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://banaskantha.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Banas Kantha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bharuch.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bharuch.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Bharuch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhavnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhavnagar.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Bhavnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-botad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://botad.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Botad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chhotaudepur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chhotaudepur.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Chhotaudepur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dahod.gujarat.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dahod.gujarat.gov.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Dahod",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dangs.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dangs.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Dangs",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-devbhumidwarka.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://devbhumidwarka.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Devbhumi Dwarka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gandhinagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gandhinagar.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Gandhinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-girsomnath.gujarat.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://girsomnath.gujarat.gov.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Gir Somnath",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jamnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jamnagar.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Jamnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-junagadh.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://junagadh.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Junagadh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kachchh.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kachchh.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Kachchh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kheda.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kheda.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Kheda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mahesana.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mahesana.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Mahesana",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mahisagar.gujarat.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mahisagar.gujarat.gov.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Mahisagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-morbi.gujarat.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://morbi.gujarat.gov.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Morbi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-narmada.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://narmada.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Narmada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-navsari.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://navsari.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Navsari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-panchmahals.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://panchmahals.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Panch Mahals",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-patan.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://patan.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Patan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-porbandar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://porbandar.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Porbandar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rajkot.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rajkot.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Rajkot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sabarkantha.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sabarkantha.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Sabar Kantha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-surat.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://surat.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Surat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-surendranagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://surendranagar.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Surendranagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tapi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tapi.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Tapi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-vadodara.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://vadodara.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Vadodara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-valsad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://valsad.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Valsad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hpkangra.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hpkangra.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Kangra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hpkinnaur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hpkinnaur.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Kinnaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hpkullu.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hpkullu.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Kullu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hplahaulspiti.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hplahaulspiti.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Lahaul And Spiti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hpmandi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hpmandi.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Mandi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hpshimla.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hpshimla.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Shimla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hpsirmaur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hpsirmaur.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Sirmaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hpsolan.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hpsolan.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Solan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hpuna.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hpuna.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Una",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-faridabad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://faridabad.nic.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Faridabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-fatehabad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://fatehabad.nic.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Fatehabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gurugram.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gurugram.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Gurugram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hisar.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hisar.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Hisar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jhajjar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jhajjar.nic.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Jhajjar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jind.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jind.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Jind",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kaithal.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kaithal.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Kaithal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-karnal.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://karnal.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Karnal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kurukshetra.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kurukshetra.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Kurukshetra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mahendragarh.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mahendragarh.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Mahendragarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nuh.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nuh.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Nuh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-palwal.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://palwal.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Palwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-panchkula.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://panchkula.nic.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Panchkula",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rewari.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rewari.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Rewari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rohtak.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rohtak.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Rohtak",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sirsa.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sirsa.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Sirsa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sonipat.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sonipat.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Sonipat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-yamunanagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://yamunanagar.nic.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Yamunanagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chaibasa.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chaibasa.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "West Singhbhum",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dhanbad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dhanbad.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Dhanbad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dumka.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dumka.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Dumka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-garhwa.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://garhwa.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Garhwa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-giridih.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://giridih.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Giridih",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-godda.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://godda.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Godda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gumla.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gumla.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Gumla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hazaribag.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hazaribag.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Hazaribagh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jamshedpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jamshedpur.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "East Singhbum",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jamtara.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jamtara.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Jamtara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-khunti.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://khunti.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Khunti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-koderma.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://koderma.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Koderma",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-latehar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://latehar.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Latehar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-lohardaga.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://lohardaga.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Lohardaga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pakur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pakur.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Pakur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-palamu.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://palamu.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Palamu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ramgarh.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ramgarh.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Ramgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ranchi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ranchi.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Ranchi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sahibganj.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sahibganj.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Sahebganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-simdega.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://simdega.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Simdega",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-budgam.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://budgam.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Budgam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-doda.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://doda.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Doda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ganderbal.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ganderbal.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Ganderbal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jammu.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jammu.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Jammu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kathua.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kathua.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Kathua",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kishtwar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kishtwar.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Kishtwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kulgam.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kulgam.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Kulgam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kupwara.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kupwara.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Kupwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-poonch.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://poonch.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Poonch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pulwama.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pulwama.gov.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Pulwama",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rajouri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rajouri.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Rajouri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ramban.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ramban.gov.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Ramban",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-reasi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://reasi.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Reasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shopian.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shopian.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Shopian",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-srinagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://srinagar.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Srinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-udhampur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://udhampur.nic.in/",
+   "discover": true,
+   "state": "JK",
+   "district": "Udhampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bangalorerural.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bangalorerural.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Bengaluru Rural",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bengaluruurban.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bengaluruurban.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Bengaluru Urban",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bidar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bidar.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Bidar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chamrajnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chamrajnagar.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Chamarajanagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chikkaballapur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chikkaballapur.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Chikkaballapura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chikkamagaluru.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chikkamagaluru.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Chikkamagaluru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chitradurga.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chitradurga.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Chitradurga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-davanagere.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://davanagere.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Davanagere",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dharwad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dharwad.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Dharwad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dk.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dk.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Dakshina Kannada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gadag.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gadag.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Gadag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hassan.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hassan.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Hassan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-haveri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://haveri.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Haveri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kalaburagi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kalaburagi.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Kalaburagi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kodagu.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kodagu.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Kodagu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kolar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kolar.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Kolar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-koppal.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://koppal.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Koppal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mandya.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mandya.nic.in/en/",
+   "discover": true,
+   "state": "KA",
+   "district": "Mandya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mysore.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mysore.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Mysuru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-raichur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://raichur.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Raichur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ramanagara.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ramanagara.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Bengaluru South",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shimoga.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shimoga.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Shivamogga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shivamogga.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shivamogga.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ, ಕರ್ನಾಟಕ ಸರ್ಕಾರ | ಕರ್ನಾಟಕದ ಆಹಾರ ಕಣಜ | India",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tumkur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tumkur.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Tumakuru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-udupi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://udupi.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Udupi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-uttarakannada.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://uttarakannada.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Uttara Kannada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-vijayanagara.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://vijayanagara.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Vijayanagara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-vijayapura.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://vijayapura.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Vijayapura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-yadgir.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://yadgir.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Yadgir",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kannur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kannur.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Kannur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kasargod.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kasargod.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Kasaragod",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kollam.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kollam.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Kollam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kottayam.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kottayam.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Kottayam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kozhikode.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kozhikode.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Kozhikode",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-malappuram.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://malappuram.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Malappuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-palakkad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://palakkad.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Palakkad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pathanamthitta.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pathanamthitta.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Pathanamthitta",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-thrissur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://thrissur.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Thrissur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-trivandrum.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://trivandrum.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Thiruvananthapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-wayanad.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://wayanad.gov.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Wayanad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-aurangabad.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://aurangabad.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Chhatrapati Sambhajinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-beed.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://beed.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Beed",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhandara.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhandara.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Bhandara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-buldhana.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://buldhana.nic.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Buldhana",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chanda.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chanda.nic.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Chandrapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dhule.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dhule.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Dhule",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gadchiroli.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gadchiroli.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Gadchiroli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gondia.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gondia.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Gondia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hingoli.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hingoli.nic.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Hingoli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jalgaon.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jalgaon.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Jalgaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jalna.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jalna.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Jalna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kolhapur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kolhapur.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Kolhapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-latur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://latur.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Latur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mumbaicity.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mumbaicity.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Mumbai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mumbaisuburban.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mumbaisuburban.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Mumbai Suburban",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nagpur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nagpur.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Nagpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nanded.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nanded.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Nanded",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nashik.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nashik.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Nashik",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-osmanabad.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://osmanabad.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Dharashiv",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-palghar.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://palghar.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Palghar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-parbhani.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://parbhani.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Parbhani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pune.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pune.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Pune",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ratnagiri.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ratnagiri.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Ratnagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sangli.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sangli.nic.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Sangli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sindhudurg.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sindhudurg.nic.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Sindhudurg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-solapur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://solapur.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Solapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-thane.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://thane.nic.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Thane",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-wardha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://wardha.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Wardha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-washim.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://washim.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Washim",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-satara.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://www.satara.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Satara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-yavatmal.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://yavatmal.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Yavatmal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-northgarohills.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://northgarohills.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "North Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ribhoi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ribhoi.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "Ri Bhoi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-southgarohills.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://southgarohills.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "South Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-southwestgarohills.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://southwestgarohills.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "South West Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-southwestkhasihills.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://southwestkhasihills.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "South West Khasi Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-westgarohills.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://westgarohills.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "West Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-westjaintiahills.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://westjaintiahills.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "West Jaintia Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-westkhasihills.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://westkhasihills.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "West Khasi Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-imphaleast.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://imphaleast.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Imphal East",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-imphalwest.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://imphalwest.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Imphal West",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kakching.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kakching.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Kakching",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kangpokpi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kangpokpi.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Kangpokpi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pherzawl.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pherzawl.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Pherzawl",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-senapati.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://senapati.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Senapati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tamenglong.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tamenglong.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Tamenglong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tengnoupal.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tengnoupal.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Tengnoupal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-thoubal.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://thoubal.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Thoubal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ukhrul.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ukhrul.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Ukhrul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ashoknagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ashoknagar.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Ashoknagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-balaghat.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://balaghat.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Balaghat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-barwani.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://barwani.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Barwani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-betul.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://betul.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Betul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhind.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhind.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Bhind",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhopal.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhopal.nic.in/en/dm-profiles/",
+   "discover": true,
+   "state": "MP",
+   "district": "Bhopal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-burhanpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://burhanpur.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Burhanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chhatarpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chhatarpur.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Chhatarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chhindwara.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chhindwara.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Chhindwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-damoh.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://damoh.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Damoh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-datia.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://datia.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Datia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dewas.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dewas.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Dewas",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dhar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dhar.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Dhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dindori.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dindori.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Dindori",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-guna.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://guna.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Guna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gwalior.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gwalior.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Gwalior",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-harda.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://harda.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Harda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-indore.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://indore.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Indore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jabalpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jabalpur.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Jabalpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jhabua.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jhabua.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Jhabua",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-katni.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://katni.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Katni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-khandwa.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://khandwa.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Khandwa (East Nimar)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-khargone.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://khargone.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Khargone (West Nimar)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mandla.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mandla.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Mandla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mandsaur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mandsaur.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Mandsaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mauganj.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mauganj.nic.in/en/",
+   "discover": true,
+   "state": "MP",
+   "district": "MAUGANJ",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-morena.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://morena.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Morena",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-narmadapuram.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://narmadapuram.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Narmadapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-narsinghpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://narsinghpur.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Narsimhapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-neemuch.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://neemuch.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Neemuch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-niwari.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://niwari.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Niwari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-panna.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://panna.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Panna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-raisen.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://raisen.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Raisen",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rajgarh.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rajgarh.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Rajgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ratlam.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ratlam.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Ratlam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rewa.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rewa.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Rewa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sagar.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Sagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-satna.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://satna.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Satna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sehore.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sehore.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Sehore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-seoni.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://seoni.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Seoni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shahdol.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shahdol.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Shahdol",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shajapur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shajapur.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Shajapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sheopur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sheopur.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Sheopur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shivpuri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shivpuri.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Shivpuri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sidhi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sidhi.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Sidhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-singrauli.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://singrauli.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Singrauli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tikamgarh.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tikamgarh.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Tikamgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ujjain.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ujjain.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Ujjain",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-umaria.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://umaria.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Umaria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-vidisha.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://vidisha.nic.in/",
+   "discover": true,
+   "state": "MP",
+   "district": "Vidisha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kolasib.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kolasib.nic.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Kolasib",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-lawngtlai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://lawngtlai.nic.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Lawngtlai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-lunglei.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://lunglei.nic.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Lunglei",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mamit.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mamit.nic.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Mamit",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-serchhip.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://serchhip.nic.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Serchhip",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-siaha.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://siaha.nic.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Siaha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kohima.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kohima.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Kohima",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-longleng.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://longleng.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Longleng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mokokchung.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mokokchung.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Mokokchung",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mon.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mon.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Mon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-noklak.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://noklak.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Noklak",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-peren-district.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://peren-district.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Peren",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-phek.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://phek.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Phek",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shamator.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shamator.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Shamator",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tseminyu.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tseminyu.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Tseminyu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tuensang.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tuensang.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Tuensang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-wokha.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://wokha.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Wokha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-zunheboto.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://zunheboto.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Zunheboto",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bargarh.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bargarh.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Baragada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhadrak.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhadrak.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Bhadrak",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-boudh.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://boudh.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Boudh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-cuttack.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://cuttack.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Kataka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-deogarh.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://deogarh.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Debagada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dhenkanal.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dhenkanal.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Dhenkanal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gajapati.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gajapati.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Gajapati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ganjam.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ganjam.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Ganjam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jagatsinghpur.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jagatsinghpur.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Jagatsinghapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jajpur.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jajpur.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Jajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jharsuguda.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jharsuguda.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Jharsuguda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kalahandi.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kalahandi.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Kalahandi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kandhamal.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kandhamal.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Kandhamala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kendrapara.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kendrapara.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Kendrapada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kendujhar.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kendujhar.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Kendujhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-khordha.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://khordha.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Khordha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-koraput.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://koraput.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Koraput",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-malkangiri.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://malkangiri.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Malkangiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mayurbhanj.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mayurbhanj.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Mayurbhanj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nabarangpur.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nabarangpur.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Nabarangpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nayagarh.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nayagarh.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Nayagada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nuapada.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nuapada.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Nuapada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-puri.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://puri.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Puri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rayagada.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rayagada.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Rayagada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sambalpur.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sambalpur.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Sambalpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-subarnapur.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://subarnapur.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Subarnapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sundargarh.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sundargarh.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Sundaragada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-faridkot.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://faridkot.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Faridkot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-fatehgarhsahib.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://fatehgarhsahib.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Fatehgarh Sahib",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-fazilka.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://fazilka.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Fazilka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ferozepur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ferozepur.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Ferozepur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gurdaspur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gurdaspur.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Gurdaspur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hoshiarpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hoshiarpur.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Hoshiarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jalandhar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jalandhar.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Jalandhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kapurthala.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kapurthala.gov.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Kapurthala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ludhiana.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ludhiana.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Ludhiana",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-malerkotla.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://malerkotla.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Malerkotla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mansa.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mansa.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Mansa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-moga.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://moga.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Moga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-muktsar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://muktsar.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Sri Muktsar Sahib",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nawanshahr.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nawanshahr.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Shahid Bhagat Singh Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pathankot.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pathankot.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Pathankot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-patiala.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://patiala.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Patiala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rupnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rupnagar.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Rupnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sasnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sasnagar.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "S.A.S Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tarntaran.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tarntaran.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Tarn Taran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-banswara.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://banswara.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Banswara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-baran.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://baran.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Baran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-barmer.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://barmer.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Barmer",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-beawar.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://beawar.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Beawar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bharatpur.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bharatpur.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Bharatpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhilwara.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhilwara.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Bhilwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bikaner.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bikaner.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Bikaner",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bundi.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bundi.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Bundi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chittorgarh.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chittorgarh.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Chittorgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-churu.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://churu.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Churu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dausa.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dausa.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Dausa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-deeg.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://deeg.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Deeg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dholpur.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dholpur.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Dholpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dungarpur.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dungarpur.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Dungarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hanumangarh.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hanumangarh.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Hanumangarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jaipur.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jaipur.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Jaipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jaisalmer.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jaisalmer.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Jaisalmer",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jalore.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jalore.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Jalore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jhalawar.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jhalawar.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Jhalawar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jhunjhunu.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jhunjhunu.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Jhunjhunu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jodhpur.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jodhpur.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Jodhpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-karauli.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://karauli.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Karauli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-khairthaltijara.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://khairthaltijara.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Khairthal-Tijara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kota.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kota.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Kota",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kotputlibehror.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kotputlibehror.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Kotputli-Behror",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nagaur.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nagaur.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Nagaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pali.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pali.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Pali",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-phalodi.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://phalodi.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Phalodi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pratapgarh.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pratapgarh.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Pratapgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rajsamand.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rajsamand.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Rajsamand",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-salumber.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://salumber.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Salumbar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sawaimadhopur.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sawaimadhopur.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Sawai Madhopur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sikar.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sikar.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Sikar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sirohi.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sirohi.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Sirohi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sriganganagar.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sriganganagar.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Ganganagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tonk.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tonk.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Tonk",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-udaipur.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://udaipur.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Udaipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-soreng.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://soreng.nic.in/",
+   "discover": true,
+   "state": "SK",
+   "district": "Soreng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-coimbatore.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://coimbatore.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Coimbatore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-cuddalore.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://cuddalore.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Cuddalore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dharmapuri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dharmapuri.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Dharmapuri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dindigul.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dindigul.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Dindigul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-erode.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://erode.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Erode",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kallakurichi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kallakurichi.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Kallakurichi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kancheepuram.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kancheepuram.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Kancheepuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kanniyakumari.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kanniyakumari.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Kanniyakumari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-karur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://karur.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Karur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-krishnagiri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://krishnagiri.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Krishnagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-madurai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://madurai.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Madurai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mayiladuthurai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mayiladuthurai.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Mayiladuthurai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-namakkal.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://namakkal.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Namakkal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nilgiris.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nilgiris.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "The Nilgiris",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-perambalur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://perambalur.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Perambalur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pudukkottai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pudukkottai.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Pudukkottai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ramanathapuram.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ramanathapuram.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Ramanathapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-salem.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://salem.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Salem",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sivaganga.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sivaganga.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Sivaganga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tenkasi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tenkasi.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Tenkasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-thanjavur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://thanjavur.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Thanjavur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-theni.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://theni.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Theni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-thoothukudi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://thoothukudi.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Thoothukkudi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tiruchirappalli.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tiruchirappalli.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Tiruchirappalli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tirunelveli.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tirunelveli.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Tirunelveli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tirupathur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tirupathur.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Tirupathur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tiruppur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tiruppur.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Tiruppur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tiruvallur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tiruvallur.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Thiruvallur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tiruvannamalai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tiruvannamalai.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Tiruvannamalai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tiruvarur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tiruvarur.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Thiruvarur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-vellore.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://vellore.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Vellore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-viluppuram.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://viluppuram.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Viluppuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-virudhunagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://virudhunagar.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Virudhunagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nagapattinam.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://www.nagapattinam.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Nagapattinam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-northtripura.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://northtripura.nic.in/",
+   "discover": true,
+   "state": "TR",
+   "district": "North Tripura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sepahijala.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sepahijala.nic.in/",
+   "discover": true,
+   "state": "TR",
+   "district": "Sepahijala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-southtripura.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://southtripura.nic.in/",
+   "discover": true,
+   "state": "TR",
+   "district": "South Tripura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-unakoti.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://unakoti.nic.in/",
+   "discover": true,
+   "state": "TR",
+   "district": "Unakoti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-westtripura.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://westtripura.nic.in/",
+   "discover": true,
+   "state": "TR",
+   "district": "West Tripura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-asifabad.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://asifabad.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Kumuram Bheem Asifabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhoopalapally.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhoopalapally.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Jayashankar Bhupalapally",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gadwal.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gadwal.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Jogulamba Gadwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hyderabad.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hyderabad.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Hyderabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jagtial.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jagtial.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Jagitial",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jangaon.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jangaon.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Jangoan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kamareddy.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kamareddy.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Kamareddy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-karimnagar.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://karimnagar.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Karimnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-khammam.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://khammam.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Khammam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mahabubabad.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mahabubabad.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Mahabubabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mahabubnagar.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mahabubnagar.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Mahabubnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mancherial.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mancherial.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Mancherial",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-medak.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://medak.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Medak",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-medchal-malkajgiri.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://medchal-malkajgiri.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Medchal Malkajgiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mulugu.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mulugu.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Mulugu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nagarkurnool.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nagarkurnool.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Nagarkurnool",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nalgonda.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nalgonda.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Nalgonda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-narayanpet.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://narayanpet.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Narayanpet",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nirmal.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nirmal.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Nirmal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nizamabad.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nizamabad.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Nizamabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-peddapalli.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://peddapalli.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Peddapalli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rajannasircilla.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rajannasircilla.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Rajanna Sircilla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rangareddy.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rangareddy.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Ranga Reddy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sangareddy.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sangareddy.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Sangareddy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-siddipet.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://siddipet.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Siddipet",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-suryapet.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://suryapet.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Suryapet",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-vikarabad.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://vikarabad.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Vikarabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-wanaparthy.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://wanaparthy.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Wanaparthy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-warangal.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://warangal.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Warangal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-yadadri.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://yadadri.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Yadadri Bhuvanagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-champawat.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://champawat.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Champawat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dehradun.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dehradun.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Dehradun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-haridwar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://haridwar.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Haridwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nainital.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nainital.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Nainital",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pauri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pauri.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Pauri Garhwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pithoragarh.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pithoragarh.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Pithoragarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-rudraprayag.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://rudraprayag.gov.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Rudraprayag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-tehri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tehri.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Tehri Garhwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-usnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://usnagar.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Udham Singh Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-uttarkashi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://uttarkashi.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Uttarkashi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-amethi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://amethi.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Amethi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-amroha.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://amroha.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Amroha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-auraiya.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://auraiya.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Auraiya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ayodhya.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ayodhya.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Ayodhya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bagpat.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bagpat.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Baghpat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bahraich.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bahraich.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Bahraich",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ballia.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ballia.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Ballia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-balrampur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://balrampur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Balrampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-banda.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://banda.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Banda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-barabanki.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://barabanki.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Bara Banki",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bareilly.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bareilly.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Bareilly",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-basti.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://basti.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Basti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhadohi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhadohi.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Bhadohi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bijnor.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bijnor.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Bijnor",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-budaun.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://budaun.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Budaun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bulandshahar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bulandshahar.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Bulandshahr",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chandauli.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chandauli.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Chandauli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chitrakoot.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chitrakoot.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Chitrakoot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-deoria.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://deoria.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Deoria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-etah.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://etah.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Etah",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-etawah.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://etawah.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Etawah",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-fatehpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://fatehpur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Fatehpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-firozabad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://firozabad.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Firozabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gbnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gbnagar.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Gautam Buddha Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ghaziabad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ghaziabad.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Ghaziabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ghazipur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ghazipur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Ghazipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gonda.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gonda.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Gonda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gorakhpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gorakhpur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Gorakhpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hamirpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hamirpur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Hamirpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hapur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hapur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Hapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hardoi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hardoi.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Hardoi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hathras.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hathras.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Hathras",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jalaun.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jalaun.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Jalaun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jaunpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jaunpur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Jaunpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jhansi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jhansi.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Jhansi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kanpurdehat.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kanpurdehat.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Kanpur Dehat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kanpurnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kanpurnagar.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Kanpur Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kheri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kheri.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Kheri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kushinagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kushinagar.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Kushinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-lalitpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://lalitpur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Lalitpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-lucknow.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://lucknow.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Lucknow",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-maharajganj.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://maharajganj.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Mahrajganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mahoba.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mahoba.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Mahoba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mainpuri.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mainpuri.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Mainpuri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mathura.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mathura.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Mathura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mau.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mau.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Mau",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-meerut.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://meerut.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Meerut",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-moradabad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://moradabad.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Moradabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-muzaffarnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://muzaffarnagar.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Muzaffarnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pilibhit.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pilibhit.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Pilibhit",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-pratapgarh.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://pratapgarh.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Pratapgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-prayagraj.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://prayagraj.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Prayagraj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-raebareli.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://raebareli.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Rae Bareli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-saharanpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://saharanpur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Saharanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sambhal.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sambhal.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Sambhal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shamli.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shamli.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Shamli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-shravasti.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://shravasti.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Shrawasti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-siddharthnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://siddharthnagar.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Siddharthnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sitapur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sitapur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Sitapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sknagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sknagar.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Sant Kabir Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sonbhadra.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sonbhadra.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Sonbhadra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sultanpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sultanpur.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Sultanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-unnao.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://unnao.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Unnao",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-varanasi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://varanasi.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Varanasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-coochbehar.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://coochbehar.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Cooch Behar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-darjeeling.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://darjeeling.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Darjeeling",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ddinajpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ddinajpur.nic.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Dakshin Dinajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hooghly.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hooghly.nic.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Hooghly",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-howrah.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://howrah.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Howrah",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jalpaiguri.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jalpaiguri.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Jalpaiguri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jhargram.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jhargram.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Jhargram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-malda.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://malda.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Malda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-murshidabad.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://murshidabad.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Murshidabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nadia.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nadia.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Nadia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-north24parganas.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://north24parganas.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "North 24 Parganas",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-paschimbardhaman.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://paschimbardhaman.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Paschim Bardhaman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-paschimmedinipur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://paschimmedinipur.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Paschim Medinipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-purbabardhaman.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://purbabardhaman.nic.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Purba Bardhaman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-purbamedinipur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://purbamedinipur.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Purba Medinipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-purulia.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://purulia.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Purulia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-s24pgs.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://s24pgs.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "South 24 Parganas",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-uttardinajpur.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://uttardinajpur.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Uttar Dinajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-nicobars.andaman.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nicobars.andaman.nic.in/",
+   "discover": true,
+   "state": "AN",
+   "district": "Nicobars",
+   "district_code": "603",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-northmiddle.andaman.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://northmiddle.andaman.nic.in/",
+   "discover": true,
+   "state": "AN",
+   "district": "North And Middle Andaman",
+   "district_code": "632",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-southandaman.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://southandaman.nic.in/",
+   "discover": true,
+   "state": "AN",
+   "district": "South Andamans",
+   "district_code": "602",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-allurisitharamaraju.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://allurisitharamaraju.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Alluri Sitharama Raju",
+   "district_code": "745",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-anakapalli.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://anakapalli.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Anakapalli",
+   "district_code": "744",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ananthapuramu.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ananthapuramu.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Ananthapuramu",
+   "district_code": "502",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-markapuram.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://markapuram.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Markapuram",
+   "district_code": "790",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-polavaram.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://polavaram.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Polavaram",
+   "district_code": "791",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-visakhapatnam.ap.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://visakhapatnam.ap.gov.in/",
+   "discover": true,
+   "state": "AP",
+   "district": "Visakhapatnam",
+   "district_code": "520",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-anjaw.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://anjaw.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Anjaw",
+   "district_code": "628",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-changlang.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://changlang.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Changlang",
+   "district_code": "229",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kamle.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kamle.nic.in/",
+   "discover": true,
+   "state": "AR",
+   "district": "Kamle",
+   "district_code": "718",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bajali.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bajali.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Bajali",
+   "district_code": "739",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-baksa.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://baksa.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Baksa",
+   "district_code": "616",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-barpeta.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://barpeta.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Barpeta",
+   "district_code": "280",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-biswanath.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://biswanath.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Biswanath",
+   "district_code": "705",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-bongaigaon.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bongaigaon.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Bongaigaon",
+   "district_code": "281",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-cachar.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://cachar.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Cachar",
+   "district_code": "282",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-charaideo.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://charaideo.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Charaideo",
+   "district_code": "708",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-darrang.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://darrang.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Darrang",
+   "district_code": "283",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-dhemaji.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dhemaji.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Dhemaji",
+   "district_code": "284",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-dhubri.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dhubri.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Dhubri",
+   "district_code": "285",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-golaghat.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://golaghat.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Golaghat",
+   "district_code": "288",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-karbianglong.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://karbianglong.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Karbi Anglong",
+   "district_code": "292",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-majuli.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://majuli.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Majuli",
+   "district_code": "706",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-morigaon.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://morigaon.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Marigaon",
+   "district_code": "296",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-nalbari.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://nalbari.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Nalbari",
+   "district_code": "298",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-sonitpur.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sonitpur.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Sonitpur",
+   "district_code": "301",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-tamulpur.assam.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://tamulpur.assam.gov.in/",
+   "discover": true,
+   "state": "AS",
+   "district": "Tamulpur",
+   "district_code": "756",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-araria.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://araria.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Araria",
+   "district_code": "188",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-arwal.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://arwal.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Arwal",
+   "district_code": "611",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-aurangabad.bih.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://aurangabad.bih.nic.in/",
+   "discover": true,
+   "state": "BR",
+   "district": "Aurangabad",
+   "district_code": "189",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chandigarhdistrict.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chandigarhdistrict.nic.in/",
+   "discover": true,
+   "state": "CH",
+   "district": "Chandigarh",
+   "district_code": "44",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-manendragarh-chirmiri-bharatpur.cg.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://manendragarh-chirmiri-bharatpur.cg.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Manendragarh-Chirmiri-Bharatpur(M C B)",
+   "district_code": "760",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-sakti.cg.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://sakti.cg.gov.in/",
+   "discover": true,
+   "state": "CG",
+   "district": "Sakti",
+   "district_code": "762",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dccentral.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dccentral.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "Central",
+   "district_code": "77",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmcentral.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmcentral.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "Central",
+   "district_code": "77",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmcentralnorth.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmcentralnorth.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "Central North",
+   "district_code": "796",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmeast.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmeast.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "East",
+   "district_code": "78",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmolddelhi.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmolddelhi.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "Old Delhi",
+   "district_code": "795",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmouternorth.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmouternorth.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "Outer North",
+   "district_code": "794",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dmwest.delhi.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dmwest.delhi.gov.in/",
+   "discover": true,
+   "state": "DL",
+   "district": "West",
+   "district_code": "85",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kushavati.goa.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kushavati.goa.gov.in/",
+   "discover": true,
+   "state": "GA",
+   "district": "Kushavati",
+   "district_code": "793",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-northgoa.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://northgoa.gov.in/",
+   "discover": true,
+   "state": "GA",
+   "district": "North Goa",
+   "district_code": "551",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-southgoa.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://southgoa.nic.in/",
+   "discover": true,
+   "state": "GA",
+   "district": "South Goa",
+   "district_code": "552",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-vavtharad.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://vavtharad.nic.in/",
+   "discover": true,
+   "state": "GJ",
+   "district": "Vav-Tharad",
+   "district_code": "789",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ambala.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ambala.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Ambala",
+   "district_code": "58",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bhiwani.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bhiwani.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Bhiwani",
+   "district_code": "59",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-charkhidadri.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://charkhidadri.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Charkhi Dadri",
+   "district_code": "701",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hansi.haryana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hansi.haryana.gov.in/",
+   "discover": true,
+   "state": "HR",
+   "district": "Hansi",
+   "district_code": "792",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hpbilaspur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hpbilaspur.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Bilaspur",
+   "district_code": "15",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hpchamba.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hpchamba.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Chamba",
+   "district_code": "16",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hphamirpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hphamirpur.nic.in/",
+   "discover": true,
+   "state": "HP",
+   "district": "Hamirpur",
+   "district_code": "17",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bokaro.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bokaro.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Bokaro",
+   "district_code": "322",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chatra.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chatra.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Chatra",
+   "district_code": "323",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-deoghar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://deoghar.nic.in/",
+   "discover": true,
+   "state": "JH",
+   "district": "Deoghar",
+   "district_code": "324",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bagalkot.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bagalkot.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Bagalkote",
+   "district_code": "524",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ballari.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ballari.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Ballari",
+   "district_code": "528",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-belagavi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://belagavi.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Belagavi",
+   "district_code": "527",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bengalurusouth.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bengalurusouth.nic.in/",
+   "discover": true,
+   "state": "KA",
+   "district": "Bengaluru South",
+   "district_code": "631",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-alappuzha.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://alappuzha.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Alappuzha",
+   "district_code": "554",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ernakulam.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ernakulam.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Ernakulam",
+   "district_code": "555",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-idukki.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://idukki.nic.in/",
+   "discover": true,
+   "state": "KL",
+   "district": "Idukki",
+   "district_code": "556",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kargil.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kargil.nic.in/",
+   "discover": true,
+   "state": "LA",
+   "district": "Kargil",
+   "district_code": "6",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-leh.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://leh.nic.in/",
+   "discover": true,
+   "state": "LA",
+   "district": "Leh Ladakh",
+   "district_code": "9",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-lakshadweep.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://lakshadweep.gov.in/",
+   "discover": true,
+   "state": "LD",
+   "district": "Lakshadweep District",
+   "district_code": "553",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ahmednagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ahmednagar.nic.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Ahilyanagar",
+   "district_code": "466",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ahilyanagar.maharashtra.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ahilyanagar.maharashtra.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Ahilyanagar",
+   "district_code": "466",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chhatrapatisambhajinagar.maharashtra.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chhatrapatisambhajinagar.maharashtra.gov.in/",
+   "discover": true,
+   "state": "MH",
+   "district": "Chhatrapati Sambhajinagar",
+   "district_code": "469",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bishnupur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bishnupur.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Bishnupur",
+   "district_code": "252",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chandel.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chandel.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Chandel",
+   "district_code": "253",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-churachandpur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://churachandpur.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Churachandpur",
+   "district_code": "254",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-jiribam.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://jiribam.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Jiribam",
+   "district_code": "713",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-noney.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://noney.nic.in/",
+   "discover": true,
+   "state": "MN",
+   "district": "Noney",
+   "district_code": "714",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-eastgarohills.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://eastgarohills.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "East Garo Hills",
+   "district_code": "273",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-eastjaintiahills.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://eastjaintiahills.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "East Jaintia Hills",
+   "district_code": "657",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-eastkhasihills.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://eastkhasihills.gov.in/",
+   "discover": true,
+   "state": "ML",
+   "district": "East Khasi Hills",
+   "district_code": "274",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-aizawl.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://aizawl.nic.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Aizawl",
+   "district_code": "261",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-champhai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://champhai.nic.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Champhai",
+   "district_code": "262",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hnahthial.mizoram.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hnahthial.mizoram.gov.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Hnahthial",
+   "district_code": "726",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-khawzawl.mizoram.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://khawzawl.mizoram.gov.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Khawzawl",
+   "district_code": "728",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-saitual.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://saitual.nic.in/",
+   "discover": true,
+   "state": "MZ",
+   "district": "Saitual",
+   "district_code": "727",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chumoukedima.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chumoukedima.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Chumoukedima",
+   "district_code": "758",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dimapur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dimapur.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Dimapur",
+   "district_code": "244",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kiphire.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kiphire.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Kiphire",
+   "district_code": "614",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-niuland.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://niuland.nic.in/",
+   "discover": true,
+   "state": "NL",
+   "district": "Niuland",
+   "district_code": "764",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-balangir.odisha.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://balangir.odisha.gov.in/",
+   "discover": true,
+   "state": "OD",
+   "district": "Balangir",
+   "district_code": "345",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-karaikal.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://karaikal.gov.in/",
+   "discover": true,
+   "state": "PY",
+   "district": "Karaikal",
+   "district_code": "598",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-puducherry-dt.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://puducherry-dt.gov.in/",
+   "discover": true,
+   "state": "PY",
+   "district": "Puducherry",
+   "district_code": "600",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-amritsar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://amritsar.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Amritsar",
+   "district_code": "27",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-barnala.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://barnala.gov.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Barnala",
+   "district_code": "605",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bathinda.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bathinda.nic.in/",
+   "discover": true,
+   "state": "PB",
+   "district": "Bathinda",
+   "district_code": "28",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ajmer.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ajmer.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Ajmer",
+   "district_code": "86",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-alwar.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://alwar.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Alwar",
+   "district_code": "87",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-balotra.rajasthan.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://balotra.rajasthan.gov.in/",
+   "discover": true,
+   "state": "RJ",
+   "district": "Balotra",
+   "district_code": "775",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-eastsikkim.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://eastsikkim.nic.in/",
+   "discover": true,
+   "state": "SK",
+   "district": "Gangtok",
+   "district_code": "225",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_s3waas-gyalshing.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gyalshing.nic.in/",
+   "discover": true,
+   "state": "SK",
+   "district": "Gyalshing",
+   "district_code": "228",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-mangan.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://mangan.nic.in/",
+   "discover": true,
+   "state": "SK",
+   "district": "Mangan",
+   "district_code": "226",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-namchi.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://namchi.nic.in/",
+   "discover": true,
+   "state": "SK",
+   "district": "Namchi",
+   "district_code": "227",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ariyalur.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ariyalur.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Ariyalur",
+   "district_code": "610",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chengalpattu.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chengalpattu.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Chengalpattu",
+   "district_code": "730",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chennai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chennai.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Chennai",
+   "district_code": "568",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ranipet.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ranipet.nic.in/",
+   "discover": true,
+   "state": "TN",
+   "district": "Ranipet",
+   "district_code": "731",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-adilabad.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://adilabad.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Adilabad",
+   "district_code": "501",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-kothagudem.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://kothagudem.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Bhadradri Kothagudem",
+   "district_code": "690",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-hanumakonda.telangana.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://hanumakonda.telangana.gov.in/",
+   "discover": true,
+   "state": "TS",
+   "district": "Hanumakonda",
+   "district_code": "686",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dnh.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dnh.gov.in/",
+   "discover": true,
+   "state": "DH",
+   "district": "Dadra And Nagar Haveli",
+   "district_code": "465",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-daman.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://daman.nic.in/",
+   "discover": true,
+   "state": "DH",
+   "district": "Daman",
+   "district_code": "463",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-diu.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://diu.gov.in/",
+   "discover": true,
+   "state": "DH",
+   "district": "Diu",
+   "district_code": "464",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-dhalai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://dhalai.nic.in/",
+   "discover": true,
+   "state": "TR",
+   "district": "Dhalai",
+   "district_code": "269",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-gomati.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://gomati.nic.in/",
+   "discover": true,
+   "state": "TR",
+   "district": "Gomati",
+   "district_code": "654",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-khowai.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://khowai.nic.in/",
+   "discover": true,
+   "state": "TR",
+   "district": "Khowai",
+   "district_code": "652",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-almora.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://almora.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Almora",
+   "district_code": "45",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bageshwar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bageshwar.nic.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Bageshwar",
+   "district_code": "46",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-chamoli.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://chamoli.gov.in/",
+   "discover": true,
+   "state": "UK",
+   "district": "Chamoli",
+   "district_code": "47",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-agra.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://agra.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Agra",
+   "district_code": "118",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-aligarh.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://aligarh.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Aligarh",
+   "district_code": "119",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-ambedkarnagar.nic.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://ambedkarnagar.nic.in/",
+   "discover": true,
+   "state": "UP",
+   "district": "Ambedkar Nagar",
+   "district_code": "121",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-alipurduar.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://alipurduar.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Alipurduar",
+   "district_code": "664",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-bankura.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://bankura.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Bankura",
+   "district_code": "305",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub_s3waas-birbhum.gov.in",
+  "payload": {
+   "reader": "sub_s3waas",
+   "url": "https://birbhum.gov.in/",
+   "discover": true,
+   "state": "WB",
+   "district": "Birbhum",
+   "district_code": "307",
+   "india_only": false
+  }
+ }
+]

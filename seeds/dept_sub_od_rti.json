@@ -1,0 +1,362 @@
+[
+ {
+  "key": "sub_od_rti_1",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/1",
+   "district_id": 1,
+   "district": "Anugola",
+   "district_code": "344",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_2",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/2",
+   "district_id": 2,
+   "district": "Baleshwar",
+   "district_code": "346",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_3",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/3",
+   "district_id": 3,
+   "district": "Baragada",
+   "district_code": "347",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_4",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/4",
+   "district_id": 4,
+   "district": "Bhadrak",
+   "district_code": "348",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_5",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/5",
+   "district_id": 5,
+   "district": "Balangir",
+   "district_code": "345",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_6",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/6",
+   "district_id": 6,
+   "district": "Boudh",
+   "district_code": "349",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_7",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/7",
+   "district_id": 7,
+   "district": "Kataka",
+   "district_code": "350",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_8",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/8",
+   "district_id": 8,
+   "district": "Debagada",
+   "district_code": "351",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_9",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/9",
+   "district_id": 9,
+   "district": "Dhenkanal",
+   "district_code": "352",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_10",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/10",
+   "district_id": 10,
+   "district": "Gajapati",
+   "district_code": "353",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_11",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/11",
+   "district_id": 11,
+   "district": "Ganjam",
+   "district_code": "354",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_12",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/12",
+   "district_id": 12,
+   "district": "Jagatsinghapur",
+   "district_code": "355",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_13",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/13",
+   "district_id": 13,
+   "district": "Jajpur",
+   "district_code": "356",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_14",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/14",
+   "district_id": 14,
+   "district": "Jharsuguda",
+   "district_code": "357",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_15",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/15",
+   "district_id": 15,
+   "district": "Kalahandi",
+   "district_code": "358",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_16",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/16",
+   "district_id": 16,
+   "district": "Kandhamala",
+   "district_code": "359",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_17",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/17",
+   "district_id": 17,
+   "district": "Kendrapada",
+   "district_code": "360",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_18",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/18",
+   "district_id": 18,
+   "district": "Kendujhar",
+   "district_code": "361",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_19",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/19",
+   "district_id": 19,
+   "district": "Khordha",
+   "district_code": "362",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_20",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/20",
+   "district_id": 20,
+   "district": "Koraput",
+   "district_code": "363",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_21",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/21",
+   "district_id": 21,
+   "district": "Malkangiri",
+   "district_code": "364",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_22",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/22",
+   "district_id": 22,
+   "district": "Mayurbhanj",
+   "district_code": "365",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_23",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/23",
+   "district_id": 23,
+   "district": "Nabarangpur",
+   "district_code": "366",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_24",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/24",
+   "district_id": 24,
+   "district": "Nayagada",
+   "district_code": "367",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_25",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/25",
+   "district_id": 25,
+   "district": "Nuapada",
+   "district_code": "368",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_26",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/26",
+   "district_id": 26,
+   "district": "Puri",
+   "district_code": "369",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_27",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/27",
+   "district_id": 27,
+   "district": "Rayagada",
+   "district_code": "370",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_28",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/28",
+   "district_id": 28,
+   "district": "Sambalpur",
+   "district_code": "371",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_29",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/29",
+   "district_id": 29,
+   "district": "Subarnapur",
+   "district_code": "372",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_od_rti_30",
+  "payload": {
+   "reader": "sub_od_rti",
+   "url": "https://rtiodisha.gov.in/Districts/30",
+   "district_id": 30,
+   "district": "Sundaragada",
+   "district_code": "373",
+   "state": "OD",
+   "india_only": true
+  }
+ }
+]

@@ -63,10 +63,10 @@ def deobfuscate(s):
 
 
 FIELD = {
-    "name": re.compile(r"^(name|officer|officer'?s? name|name of (the )?officer|नाम|अधिकारी का नाम|ಹೆಸರು|பெயர்|ନାମ)$", re.I),
+    "name": re.compile(r"^(name|officer|officer'?s? name|name of (the )?officer|नाम|नाव|अधिकाऱ्याचे नाव|अधिकारी का नाम|ಹೆಸರು|பெயர்|ନାମ)$", re.I),
     "designation": re.compile(r"(designation|post|पद|ಹುದ್ದೆ|பதவி|ପଦବୀ)", re.I),
     "email": re.compile(r"(e-?mail|ई-?मेल|ಇಮೇಲ್|ଇମେଲ)", re.I),
-    "phone": re.compile(r"(phone|mobile|contact|tel|फ़ोन|फोन|मोबाइल|ದೂರವಾಣಿ|தொலைபேசி|ଦୂରଭାଷ|ଦୁରଭାଷ|ମୋବାଇଲ)", re.I),
+    "phone": re.compile(r"(phone|mobile|contact|tel|फ़ोन|फोन|मोबाइल|दूरध्वनी|भ्रमणध्वनी|ದೂರವಾಣಿ|தொலைபேசி|ଦୂରଭାଷ|ଦୁରଭାଷ|ମୋବାଇଲ)", re.I),
     "address": re.compile(r"(address|पता|ವಿಳಾಸ|முகவரி|ଠିକଣା)", re.I),
     # the office or department a row is about (lists without a post column: "Name of Office", "Department Name", "विभाग नाम")
     "department": re.compile(r"(department|^office$|name of (the )?office$|office name|विभाग|ବିଭାଗ|କାର୍ଯ୍ୟାଳୟ)", re.I),
