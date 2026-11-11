@@ -32,6 +32,10 @@
     "councillors-ocr-b": [
       "python",
       "councillors.py"
+    ],
+    "wardmaps": [
+      "python",
+      "depts.py"
     ]
   }
 }

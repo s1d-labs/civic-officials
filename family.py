@@ -151,6 +151,15 @@ if _dept:
                      "threads": 1, "delay_ms": 1000, "geo": "IN", "proxy": "IN"})
     # geo + proxy: India servers and GitHub runners through the Indian proxies both take these items
 
+# Ward map files (GeoPDFs, PDF maps) saved once to the bucket (wardmaps task = depts.py, dforms/wm_geopdf.py; seeds/wm_*.json):
+# civic-india wm_geopdf.py converts the saved copies to ward GeoJSON (2026-11-11: Okeskar/Maha_Election_2025, 975 files, 5.7 GB).
+_wm = [i for f in sorted((HERE / "seeds").glob("wm_*.json")) for i in json.loads(f.read_text())]
+if _wm:
+    PROJECTS.append({"name": f"{FAMILY}-wardmaps", "title": "Ward map files (GeoPDFs, PDF maps) saved once to the bucket",
+                     "task": "wardmaps", "target": f"{FAMILY}-wardmaps", "env": {}, "probe": None, "unit_label": "file",
+                     "record_label": "file", "items": [i for i in _wm if not i["payload"].get("india_only")],
+                     "workers": 4, "threads": 1, "delay_ms": 500})
+
 PROBES = []    # many hosts per project: no single health check would mean anything
 
 # District portals that no project read before (seeds/directories_missing.json, 2026-11-11): whoswho items in the sites.csv item
