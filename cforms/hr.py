@@ -144,8 +144,9 @@ def shear(data, w, h, slope, fill=255):
     return out
 
 
-def grid(pgm, binarize=True):
-    """Ruled table lines: (vertical x centres, horizontal y centres, x0, x1, image with lines erased)."""
+def grid(pgm, binarize=True, hcover=0.75, hrun=0.75):
+    """Ruled table lines: (vertical x centres, horizontal y centres, x0, x1, image with lines erased). A horizontal line
+    covers hcover of a column's width, with one unbroken piece of hrun of it (lower both for faint, broken rules)."""
     w, h, data = read_pgm(pgm)
     bits = data.translate(LINE)
     slope = -lean(bits, w, h)
@@ -169,11 +170,11 @@ def grid(pgm, binarize=True):
         a, b = vl[i] + 8, vl[i + 1] - 8
         if b - a < 20:
             continue
-        need = max(40, int(0.75 * (b - a)))
+        need, run = max(40, int(hcover * (b - a))), max(40, int(hrun * (b - a)))
         ys = []
         for y in range(max(0, top - 20), h - 3):     # not limited at the bottom: lines fade in some scans
             r = _pool([bits[(y + k) * w + a:(y + k) * w + b] for k in range(3)])
-            if r.count(1) >= need and max(map(len, r.split(b"\x00"))) >= need:
+            if r.count(1) >= need and max(map(len, r.split(b"\x00"))) >= run:
                 ys.append(y)
         found += [((g0 + g1) // 2 + 1, i, g0, g1) for g0, g1 in _groups(ys)]
     found.sort()
@@ -217,8 +218,13 @@ def words(png, lang, psm="6"):
 
 def table(pdf, page, tmp, lang, psm="6", binarize=True):
     """One scanned page -> list of rows; row = {"cells": [text per column], "new": [line above crosses column?]}."""
-    pgm = render(pdf, page, tmp)
-    vl, hl, crosses, _, clean_pgm = grid(pgm, binarize)
+    return table_pgm(render(pdf, page, tmp), lang, psm, binarize)
+
+
+def table_pgm(pgm, lang, psm="6", binarize=True, meta=None, **grid_kw):
+    """table() on a page image that is already rendered (forms/blo2_ocr.py straightens it first). meta (a dict), when
+    given, gets the lines ("vl", "hl") and each column's image ("strips": [(path, x offset, y offset)]) for a second reading."""
+    vl, hl, crosses, _, clean_pgm = grid(pgm, binarize, **grid_kw)
     if len(vl) < 3 or len(hl) < 2:
         return []
     ncol = len(vl) - 1
@@ -240,6 +246,8 @@ def table(pdf, page, tmp, lang, psm="6", binarize=True):
 
     with concurrent.futures.ThreadPoolExecutor(3) as ex:
         ws = [x for col in ex.map(strip, range(ncol)) for x in col]
+    if meta is not None:
+        meta.update(vl=vl, hl=hl, strips=[(f"{clean_pgm[:-4]}-c{i}.pgm", vl[i] + 5 - pad, y0 - pad) for i in range(ncol)])
     rows = [{"cells": [[] for _ in range(ncol)], "new": crosses[a], "y": a} for a in hl[:-1]]
     for cx, cy, t, conf in ws:
         if conf < 20 or not (vl[0] < cx < vl[-1] and hl[0] < cy < hl[-1]):
@@ -247,7 +255,11 @@ def table(pdf, page, tmp, lang, psm="6", binarize=True):
         ri = max(i for i, a in enumerate(hl[:-1]) if a <= cy)
         ci = max(i for i, a in enumerate(vl[:-1]) if a <= cx)
         rows[ri]["cells"][ci].append((cy, cx, t))
+        rows[ri].setdefault("conf", [None] * ncol)
+        c0 = rows[ri]["conf"][ci]
+        rows[ri]["conf"][ci] = conf if c0 is None else min(c0, conf)     # lowest word confidence in the cell
     for r in rows:
+        r.setdefault("conf", [None] * ncol)
         cells = []
         for c in r["cells"]:
             c.sort()

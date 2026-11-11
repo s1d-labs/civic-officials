@@ -115,6 +115,17 @@ if _b2:
                      "items": [i for i in _b2 if i["payload"]["kind"] == "pdf"], "workers": 2, "threads": 1, "delay_ms": 1000,
                      "geo": "IN", "proxy": "IN"})
 
+# Scanned BLO lists and lists whose text layer cannot be read (legacy or Type 3 fonts), read by OCR (forms/blo2_ocr.py;
+# seeds/blo2ocr.json, made by seeds/build_blo2ocr.py). The items read the PDF saved in the bucket ("stored"), else fetch it
+# once from cdn.s3waas.gov.in (answers from abroad) and save it: plain GitHub runners, no proxy. Own task name, so older
+# checkouts cannot take them.
+_b2o = HERE / "seeds" / "blo2ocr.json"
+if _b2o.exists():
+    PROJECTS.append({"name": f"{FAMILY}-blo2-ocr", "title": "Booth Level Officers: scanned district lists read by OCR",
+                     "task": "blo2-ocr", "target": f"{FAMILY}-blo2-ocr", "env": {}, "probe": None, "unit_label": "file",
+                     "record_label": "booth part", "items": json.loads(_b2o.read_text()), "workers": 8, "threads": 1,
+                     "delay_ms": 500})
+
 # Elected ward councillors from State Election Commission pages and result files (councillors task; councillor_sources.json):
 # India servers only (every SEC site checked refuses foreign IPs).
 _cof = HERE / "councillor_sources.json"

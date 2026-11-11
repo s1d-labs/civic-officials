@@ -7,10 +7,14 @@ column verbatim in "cells". Text comes from pypdf in layout mode (columns stay a
 - A data line has at least (columns - 2) fields and a part number or a 10-digit mobile.
 - Short lines between data lines are parts of wrapped cells (e.g. "Anganwadi" above "worker"): they are added in front
   of the next data line's cell in the same column.
-- Scanned PDFs (no text) raise "scanned", so the item fails visibly; seed those as blo.py kind "pdf" for OCR.
+- Every fetched PDF is saved to the bucket (store_path: blo2/<state>/<sha1(url)[:12]>.pdf in the project), also when it
+  cannot be read here. Scanned PDFs (no text) end with "scanned: no text layer, needs OCR"; PDFs whose text pypdf cannot
+  lay out (legacy fonts such as Kruti Dev, Type 3 fonts) end with "text layer unreadable". forms/blo2_ocr.py reads the
+  saved copy of both by OCR (task blo2-ocr).
 Payload: {"kind": "form-blo2_pdf", "state", "url", "district", "ac_no", "ac_name", "list_date", "source_page", "label"}.
 cdn.s3waas.gov.in answered from Germany on 2026-11-11 (no India proxy needed).
 """
+import hashlib
 import io
 import re
 
@@ -187,12 +191,41 @@ def pages_of(pdf_bytes):
     return [(pg.extract_text(extraction_mode="layout") or "") for pg in PdfReader(io.BytesIO(pdf_bytes)).pages]
 
 
-def fetch(s, p):
+def store_path(p):
+    """Where the fetched PDF is saved, relative to the project (forms/blo2_ocr.py reads it back from there)."""
+    return f"blo2/{p.get('state', 'xx')}/{hashlib.sha1(p['url'].encode()).hexdigest()[:12]}.pdf"
+
+
+def unreadable(pdf_bytes, pages):
+    """'' when the layout text has content; else why the file needs OCR."""
+    if any(t.strip() for t in pages):
+        return ""
+    try:
+        plain = "".join((pg.extract_text() or "") for pg in PdfReader(io.BytesIO(pdf_bytes)).pages)
+    except Exception:  # noqa: BLE001
+        plain = ""
+    if plain.strip():
+        return "text layer unreadable (legacy or Type 3 font), needs OCR"
+    return "scanned: no text layer, needs OCR"
+
+
+def read(s, p, hub=None):
+    """(rows, files, why): the rows, the PDF to save, and why there are no rows."""
     r = s.get(p["url"], timeout=(20, 180))
     r.raise_for_status()
     if not r.content.startswith(b"%PDF"):
-        raise RuntimeError("not a PDF")
+        return [], [], "not a PDF"
+    files = [(store_path(p), r.content, "application/pdf")]
     pages = pages_of(r.content)
-    if not any(t.strip() for t in pages):
-        raise RuntimeError("scanned: no text layer, needs OCR")
-    return rows_from_pages(pages, p)
+    why = unreadable(r.content, pages)
+    if why:
+        return [], files, why
+    rows = rows_from_pages(pages, p)
+    return rows, files, "" if rows else "no rows"
+
+
+def fetch(s, p):
+    rows, _, why = read(s, p)
+    if why and not rows:
+        raise RuntimeError(why)
+    return rows

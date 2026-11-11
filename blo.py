@@ -75,15 +75,21 @@ def form_rows(p, rows):
         rec = {"type": "blo", "state": p["state"], "url": p.get("url", ""), "ac_no": r.get("ac_no", p.get("ac_no")),
                "ac_name": r.get("ac_name", p.get("ac_name")), "district": r.get("district", p.get("district")), "part_no": part,
                "station": r.get("station") or station, "blo_name": r.get("blo_name") or name, "blo_phone": r.get("blo_phone") or phone,
-               **({"designation": r["designation"]} if r.get("designation") else {}), "cells": c}
+               **({"designation": r["designation"]} if r.get("designation") else {}),
+               **{k: r[k] for k in ("ocr", "page") if k in r}, "cells": c}
         out.append((f"blo:{p['state']}:{rec['ac_no']}:{part or i}", rec))
     return out
 
 
-def run_form(item):
+def run_form(item, get=None):
+    """forms/<x>.py: read(session, payload, hub) -> (rows, files, why) when the reader saves files (blo2_pdf, blo2_ocr),
+    else fetch(session, payload) -> rows."""
     p = item["payload"]
     mod = importlib.import_module("forms." + p["kind"].split("-", 1)[1])
     s = mod.new_session() if hasattr(mod, "new_session") else aspnet.session()
+    if hasattr(mod, "read"):
+        rows, files, why = mod.read(s, p, getattr(get, "hub", None))
+        return form_rows(p, rows), files, "" if rows else (why or "no rows")
     rows = mod.fetch(s, p)
     return form_rows(p, rows), [], "" if rows else "no rows"
 
@@ -91,7 +97,7 @@ def run_form(item):
 def run(item, get):
     p = item["payload"]
     if p.get("kind", "").startswith("form-"):
-        return run_form(item)
+        return run_form(item, get)
     r = get(p.get("method", "GET"), p["url"], p.get("data"))
     if r is None:
         return [], [], "no answer"
@@ -167,6 +173,7 @@ def main():
                 hub.block()
             return None
         return r
+    get.hub = hub      # readers that keep their files in the bucket (forms/blo2_ocr.py) read them back through the hub
 
     try:
         while time.time() < deadline and not stop:
