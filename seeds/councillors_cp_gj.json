@@ -1,0 +1,6 @@
+[
+ {"key": "cp-gj-bhavnagar", "payload": {"kind": "form-cp_gj", "state": "GJ", "layout": "bmc", "body": "Bhavnagar Municipal Corporation", "lgd_code": "251165", "url": "https://bmcgujarat.com/en/corporation/elected-wings/elected-body-councillor/"}},
+ {"key": "cp-gj-surat", "payload": {"kind": "form-cp_gj", "state": "GJ", "layout": "smc", "body": "Surat Municipal Corporation", "lgd_code": "251231", "url": "https://www.suratmunicipal.gov.in/Corporation/Corp_list"}},
+ {"key": "cp-gj-rajkot", "payload": {"kind": "form-cp_gj", "state": "GJ", "layout": "rmc", "body": "Rajkot Municipal Corporation", "lgd_code": "251120", "url": "https://www.rmc.gov.in/ElectedBody"}},
+ {"key": "cp-gj-vadodara", "payload": {"kind": "form-cp_gj", "state": "GJ", "layout": "vmcpdf", "body": "Vadodara Municipal Corporation", "lgd_code": "251209", "india_only": true, "url": "https://vmc.gov.in/pdf/2026/Muni_sab_2026website.pdf"}}
+]
