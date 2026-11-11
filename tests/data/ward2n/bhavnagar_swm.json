@@ -1,0 +1,7 @@
+{"module": "ward2n_bhavnagar",
+ "payload": {"reader": "ward2n_bhavnagar", "url": "https://bmcgujarat.com/en/contact-us/swm-ward-offices/", "state": "GJ", "page": "swm-ward-offices"},
+ "routes": {"https://bmcgujarat.com/en/contact-us/swm-ward-offices/": "bhavnagar_swm.html"},
+ "min_records": 15, "min_wards": 13,
+ "expect": [{"post": "^Sanitary Inspector", "name": "Mohammadhanif U Mansuri", "wards": ["13"], "level": "ward"},
+            {"post": "Chief Sanitary Inspector", "name": "J.B.Garchar", "wards": ["10", "4"], "level": "zone"},
+            {"post": "Chief Sanitary Inspector", "name": "Gautambhai Baraiya", "wards": ["1", "7"]}]}

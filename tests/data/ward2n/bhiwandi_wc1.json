@@ -1,0 +1,24 @@
+{
+ "module": "ward2n_bhiwandi",
+ "payload": {
+  "reader": "ward2n_bhiwandi",
+  "url": "https://www.bncmc.gov.in/department.php?department_id=53",
+  "state": "MH",
+  "office": 1
+ },
+ "routes": {
+  "https://www.bncmc.gov.in/department.php?department_id=53": "bhiwandi_wc1.html"
+ },
+ "min_records": 2,
+ "expect": [
+  {
+   "post": "Assistant Commissioner",
+   "name": "Sameer Jaware",
+   "level": "zone"
+  },
+  {
+   "post": "Office Superintendent",
+   "name": "Laxman Kokani"
+  }
+ ]
+}

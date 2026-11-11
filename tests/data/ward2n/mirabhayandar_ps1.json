@@ -1,0 +1,34 @@
+{
+ "module": "ward2n_mirabhayandar",
+ "payload": {
+  "reader": "ward2n_mirabhayandar",
+  "url": "https://mbmc.gov.in/ward-committee-no-1-",
+  "state": "MH",
+  "office": 1
+ },
+ "routes": {
+  "https://mbmc.gov.in/ward-committee-no-1-": "mirabhayandar_ps1.html"
+ },
+ "min_records": 50,
+ "min_wards": 3,
+ "expect": [
+  {
+   "post": "Ward Officer",
+   "name": "दिपाली जोशी",
+   "wards": [
+    "8",
+    "23",
+    "24"
+   ],
+   "level": "zone"
+  },
+  {
+   "post": "Junior Engineer",
+   "name": "सतिश तांडेल"
+  },
+  {
+   "post": "Tax Inspector",
+   "name": "क्लिफर्ड परेरा"
+  }
+ ]
+}

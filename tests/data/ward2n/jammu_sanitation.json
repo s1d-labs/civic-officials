@@ -1,0 +1,32 @@
+{
+ "module": "ward2n_jammu",
+ "payload": {
+  "reader": "ward2n_jammu",
+  "url": "https://jmc.jk.gov.in/contactus.aspx?type=Sanitation",
+  "page": "Sanitation",
+  "state": "JK"
+ },
+ "routes": {
+  "https://jmc.jk.gov.in/contactus.aspx?type=Sanitation": "jammu_sanitation.html"
+ },
+ "min_records": 46,
+ "expect": [
+  {
+   "post": "Sanitation Supervisor",
+   "name": "Gulshan",
+   "wards": [
+    "1"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Sanitary Inspector",
+   "name": "Subash Chander",
+   "wards": [
+    "1",
+    "2",
+    "3"
+   ]
+  }
+ ]
+}

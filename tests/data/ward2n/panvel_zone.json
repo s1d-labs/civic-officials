@@ -1,0 +1,23 @@
+{
+ "module": "ward2n_panvel",
+ "payload": {
+  "reader": "ward2n_panvel",
+  "url": "https://panvelcorporation.maharashtra.gov.in/Zone_Office",
+  "state": "MH"
+ },
+ "routes": {
+  "https://panvelcorporation.maharashtra.gov.in/Zone_Office": "panvel_zone.html"
+ },
+ "min_records": 4,
+ "expect": [
+  {
+   "post": "Ward Officer",
+   "name": "Rupali Mane",
+   "level": "zone"
+  },
+  {
+   "post": "Ward Officer",
+   "name": "Subodh Thanekar"
+  }
+ ]
+}

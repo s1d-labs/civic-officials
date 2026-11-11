@@ -1,0 +1,33 @@
+{
+ "module": "ward2n_mathura",
+ "payload": {
+  "reader": "ward2n_mathura",
+  "url": "http://nnmvonline.in/OfficerList.aspx",
+  "state": "UP"
+ },
+ "routes": {
+  "http://nnmvonline.in/OfficerList.aspx": "mathura_officers.html"
+ },
+ "min_records": 8,
+ "expect": [
+  {
+   "post": "Assistant Engineer",
+   "name": "Anoop Sood",
+   "level": "zone"
+  },
+  {
+   "post": "Revenue Inspector",
+   "name": "Mukesh Singh",
+   "level": "zone"
+  },
+  {
+   "post": "Zonal Sanitary Officer",
+   "name": "Mahesh Chandra"
+  },
+  {
+   "post": "Clerk",
+   "name": "Mahaveer$",
+   "level": "zone"
+  }
+ ]
+}

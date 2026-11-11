@@ -1,0 +1,24 @@
+{
+ "module": "ward2n_lucknow",
+ "payload": {
+  "reader": "ward2n_lucknow",
+  "url": "https://lmc.up.nic.in/pdf/DoorbhasSuchi.pdf",
+  "state": "UP"
+ },
+ "pages": "lucknow_doorbhas.pages",
+ "min_records": 18,
+ "expect": [
+  {
+   "post": "^Zonal Officer$",
+   "name": "शिल्पा कुमारी"
+  },
+  {
+   "post": "Executive Engineer",
+   "name": "अतुल मिश्रा"
+  },
+  {
+   "post": "Tahsildar",
+   "name": "संजय सिंह"
+  }
+ ]
+}

@@ -1,0 +1,254 @@
+[
+ {
+  "key": "central_gst-mumbai-appeal-appeal-i",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/appeal/appeal-i",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Appeal I (Appeal Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-appeal-appeal-ii",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/appeal/appeal-ii",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Appeal Ii (Appeal Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-appeal-appeal-iii",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/appeal/appeal-iii",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Appeal Iii (Appeal Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-appeal-appeal-raigad",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/appeal/appeal-raigad",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Appeal Raigad (Appeal Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-appeal-appeal-thane",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/appeal/appeal-thane",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Appeal Thane (Appeal Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-audit-audit-i",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/audit/audit-i",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Audit I (Audit Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-audit-audit-ii",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/audit/audit-ii",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Audit Ii (Audit Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-audit-audit-iii",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/audit/audit-iii",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Audit Iii (Audit Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-audit-audit-raigad",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/audit/audit-raigad",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Audit Raigad (Audit Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-audit-audit-thane",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/audit/audit-thane",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Audit Thane (Audit Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-belapur",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/belapur",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Belapur (Executive Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-bhiwandi",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/bhiwandi",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Bhiwandi (Executive Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-mumbai-central",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/mumbai-central",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Mumbai Central (Executive Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-mumbai-east",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/mumbai-east",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Mumbai East (Executive Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-mumbai-south",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/mumbai-south",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Mumbai South (Executive Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-mumbai-west",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/mumbai-west",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Mumbai West (Executive Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-navi-mumbai",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/navi-mumbai",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Navi Mumbai (Executive Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-palghar",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/palghar",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Palghar (Executive Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-pcco",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/pcco",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Mumbai Zone, Principal Chief Commissioner Office",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-raigad",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/raigad",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Raigad (Executive Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_gst-mumbai-executive-thane",
+  "payload": {
+   "reader": "central_gst",
+   "url": "https://cgstmumbai.gov.in/en/commissionerate/executive/thane",
+   "state": "MH",
+   "zone": "mumbai",
+   "area": "CGST Thane (Executive Commissionerate)",
+   "std": "022",
+   "india_only": false
+  }
+ }
+]

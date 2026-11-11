@@ -1,0 +1,5 @@
+{"module": "ward2n_jamnagar",
+ "payload": {"reader": "ward2n_jamnagar", "url": "https://www.mcjamnagar.com/Services/trn_civiccentre.aspx?SID=INFO", "state": "GJ"},
+ "routes": {"https://www.mcjamnagar.com/Services/trn_civiccentre.aspx?SID=INFO": "jamnagar_cc.html"},
+ "min_records": 6,
+ "expect": [{"post": "Civic Centre", "level": "zone"}]}

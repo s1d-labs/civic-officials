@@ -1,0 +1,5 @@
+{"module": "ward2n_rewa",
+ "payload": {"reader": "ward2n_rewa", "url": "https://rewanagarnigam.org/civil-zone-1/", "state": "MP", "zone": 1},
+ "routes": {"https://rewanagarnigam.org/civil-zone-1/": "rewa_zone1.html"},
+ "min_records": 2,
+ "expect": [{"post": "Executive Engineer", "name": "Rajesh Singh"}, {"post": "Assistant Engineer", "name": "Rajesh Mishra"}]}

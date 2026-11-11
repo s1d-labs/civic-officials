@@ -1,0 +1,38 @@
+[
+ {
+  "key": "ward2n_malegaon-wo1",
+  "payload": {
+   "reader": "ward2n_malegaon",
+   "url": "https://malegaoncorporation.org/mmc/ward-office-no-1",
+   "state": "MH",
+   "office": 1
+  }
+ },
+ {
+  "key": "ward2n_malegaon-wo2",
+  "payload": {
+   "reader": "ward2n_malegaon",
+   "url": "https://malegaoncorporation.org/mmc/ward-office-no-2",
+   "state": "MH",
+   "office": 2
+  }
+ },
+ {
+  "key": "ward2n_malegaon-wo3",
+  "payload": {
+   "reader": "ward2n_malegaon",
+   "url": "https://malegaoncorporation.org/mmc/ward-office-3",
+   "state": "MH",
+   "office": 3
+  }
+ },
+ {
+  "key": "ward2n_malegaon-wo4",
+  "payload": {
+   "reader": "ward2n_malegaon",
+   "url": "https://malegaoncorporation.org/mmc/ward-office-no-4",
+   "state": "MH",
+   "office": 4
+  }
+ }
+]

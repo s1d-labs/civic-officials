@@ -1,0 +1,5 @@
+{"module": "ward2n_nashik",
+ "payload": {"reader": "ward2n_nashik", "url": "https://nmc.gov.in/home/getfrontpage/233/11/M", "state": "MH", "india_only": true},
+ "routes": {"https://nmc.gov.in/home/getfrontpage/233/11/M": "nashik_road.html"},
+ "min_records": 1,
+ "expect": [{"post": "Divisional Officer", "name": "प्रज्ञा त्रिभुवन"}]}

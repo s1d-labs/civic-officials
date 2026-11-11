@@ -1,0 +1,22 @@
+{
+ "module": "ward2n_ambala",
+ "payload": {
+  "reader": "ward2n_ambala",
+  "url": "https://mcambala.in/directory/office-directory",
+  "state": "HR"
+ },
+ "routes": {
+  "https://mcambala.in/directory/office-directory": "ambala_directory.html"
+ },
+ "min_records": 8,
+ "expect": [
+  {
+   "post": "Additional\\ Municipal\\ Comissioner",
+   "name": "Sh\\.\\ Deepak\\ Sura"
+  },
+  {
+   "post": "Municipal Commissioner",
+   "name": "Virender"
+  }
+ ]
+}

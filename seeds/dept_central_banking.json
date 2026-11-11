@@ -1,0 +1,362 @@
+[
+ {
+  "key": "central_banking-AN",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "AN",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-AP",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "AP",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-AR",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "AR",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-AS",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "AS",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-BR",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "BR",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-CH",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "CH",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-CG",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "CG",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-DH",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "DH",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-DL",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "DL",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-GA",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "GA",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-GJ",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "GJ",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-HR",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "HR",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-HP",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "HP",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-JK",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "JK",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-JH",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "JH",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-KA",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "KA",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-KL",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "KL",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-LA",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "LA",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-LD",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "LD",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-MP",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "MP",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-MH",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "MH",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-MN",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "MN",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-ML",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "ML",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-MZ",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "MZ",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-NL",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "NL",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-OD",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "OD",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-PY",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "PY",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-PB",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "PB",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-RJ",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "RJ",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-SK",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "SK",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-TN",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "TN",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-TG",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "TG",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-TR",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "TR",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-UP",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "UP",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-UK",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "UK",
+   "india_only": false,
+   "open": true
+  }
+ },
+ {
+  "key": "central_banking-WB",
+  "payload": {
+   "reader": "central_banking",
+   "url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+   "state": "WB",
+   "india_only": false,
+   "open": true
+  }
+ }
+]

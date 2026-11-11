@@ -1,0 +1,38 @@
+[
+ {
+  "key": "ward2n_jalgaon-ps1",
+  "payload": {
+   "reader": "ward2n_jalgaon",
+   "url": "https://jcmc.gov.in/OfficersWardOfficer1_M.html",
+   "state": "MH",
+   "office": 1
+  }
+ },
+ {
+  "key": "ward2n_jalgaon-ps2",
+  "payload": {
+   "reader": "ward2n_jalgaon",
+   "url": "https://jcmc.gov.in/OfficersWardOfficer2_M.html",
+   "state": "MH",
+   "office": 2
+  }
+ },
+ {
+  "key": "ward2n_jalgaon-ps3",
+  "payload": {
+   "reader": "ward2n_jalgaon",
+   "url": "https://jcmc.gov.in/OfficersWardOfficer3_M.html",
+   "state": "MH",
+   "office": 3
+  }
+ },
+ {
+  "key": "ward2n_jalgaon-ps4",
+  "payload": {
+   "reader": "ward2n_jalgaon",
+   "url": "https://jcmc.gov.in/OfficersWardOfficer4_M.html",
+   "state": "MH",
+   "office": 4
+  }
+ }
+]

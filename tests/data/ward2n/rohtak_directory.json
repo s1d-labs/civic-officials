@@ -1,0 +1,18 @@
+{
+ "module": "ward2n_rohtak",
+ "payload": {
+  "reader": "ward2n_rohtak",
+  "url": "https://mcrohtak.in/index.php/officer-directory",
+  "state": "HR"
+ },
+ "routes": {
+  "https://mcrohtak.in/index.php/officer-directory": "rohtak_directory.html"
+ },
+ "min_records": 8,
+ "expect": [
+  {
+   "post": "Joint\\ Commissioner",
+   "name": "Smt\\.\\ Namita\\ Kumari,\\ HCS"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "module": "ward2n_sangli",
+ "payload": {
+  "reader": "ward2n_sangli",
+  "url": "https://www.smkc.gov.in/SMKCSection_new.aspx?deptcode=55",
+  "state": "MH",
+  "office": 1
+ },
+ "routes": {
+  "https://www.smkc.gov.in/SMKCSection_new.aspx?deptcode=55": "sangli_wc1.html"
+ },
+ "min_records": 2,
+ "expect": [
+  {
+   "post": "Ward Officer",
+   "name": "Gondhale",
+   "level": "zone"
+  },
+  {
+   "post": "Office Head",
+   "name": "Rajesh Ramchandra Shinde"
+  }
+ ]
+}

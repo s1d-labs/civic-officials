@@ -1,0 +1,32 @@
+{
+ "module": "ward2n_sonipat",
+ "payload": {
+  "reader": "ward2n_sonipat",
+  "url": "https://mcsonipat.in/officers-directory",
+  "state": "HR"
+ },
+ "routes": {
+  "https://mcsonipat.in/officers-directory": "sonipat_directory.html"
+ },
+ "min_records": 8,
+ "expect": [
+  {
+   "post": "^SI$",
+   "name": "Sundar Singh",
+   "wards": [
+    "1",
+    "7"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Junior Engineer",
+   "name": "Amit Sharma",
+   "wards": [
+    "7",
+    "11"
+   ]
+  }
+ ],
+ "min_wards": 15
+}

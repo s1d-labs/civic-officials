@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ward2n_nashik-administration",
+  "payload": {
+   "reader": "ward2n_nashik",
+   "url": "https://nmc.gov.in/home/getfrontpage/2/1000/M",
+   "state": "MH",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ward2n_nashik-nashik-road",
+  "payload": {
+   "reader": "ward2n_nashik",
+   "url": "https://nmc.gov.in/home/getfrontpage/233/11/M",
+   "state": "MH",
+   "india_only": true
+  }
+ }
+]

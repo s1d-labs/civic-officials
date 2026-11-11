@@ -1,0 +1,6 @@
+{"module": "ward2n_bhopal",
+ "payload": {"reader": "ward2n_bhopal", "url": "https://www.bmconline.gov.in/sap/opu/odata/sap/ZHP_ADMIN_SRV/ZHP_TELEPHONE_LISTSet?$filter=TeleType%20eq%20%2702%27&$format=json", "state": "MP"},
+ "routes": {"https://www.bmconline.gov.in/sap/opu/odata/sap/ZHP_ADMIN_SRV/ZHP_TELEPHONE_LISTSet?$filter=TeleType%20eq%20%2702%27&$format=json": "bhopal_zone.txt"},
+ "min_records": 10,
+ "expect": [{"post": "^Zonal Officer$", "name": "नीरज कुमार नामदेव"},
+            {"post": "Sanitation In Charge"}, {"post": "Water Works, Sewage"}]}

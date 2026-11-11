@@ -1,0 +1,34 @@
+{
+ "module": "ward2n_chandigarh",
+ "payload": {
+  "reader": "ward2n_chandigarh",
+  "url": "https://mcchandigarh.gov.in/upload/List%20of%20CSI.pdf",
+  "state": "CH",
+  "india_only": true
+ },
+ "pages": "chandigarh_csi.pages",
+ "min_records": 30,
+ "min_wards": 20,
+ "expect": [
+  {
+   "post": "Sanitary Inspector",
+   "name": "RAKESH KUMAR SOOD",
+   "wards": [
+    "2"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Sanitary Inspector",
+   "name": "SUNIL KUMAR",
+   "wards": [
+    "8",
+    "20"
+   ]
+  },
+  {
+   "post": "Chief Sanitary Inspector",
+   "name": "Gulab Singh"
+  }
+ ]
+}

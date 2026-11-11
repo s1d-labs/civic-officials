@@ -1,0 +1,8 @@
+{"module": "ward2n_panaji",
+ "payload": {"reader": "ward2n_panaji", "url": "https://ccpgoa.com/ccp-at-your-disposal/", "state": "GA", "page": "ccp-at-your-disposal"},
+ "routes": {"https://ccpgoa.com/ccp-at-your-disposal/": "panaji_disposal.html"},
+ "min_records": 20, "min_wards": 30,
+ "expect": [{"post": "Supervisor", "name": "Talash Kuttikar", "wards": ["1", "15"], "level": "ward"},
+            {"post": "Supervisor", "name": "Talash Kuttikar", "wards": ["16", "30"]},
+            {"post": "Municipal Inspector", "name": "Dattaram Balekar", "level": "body"},
+            {"post": "Revenue Officer", "name": "Ramdas Palkar"}]}

@@ -1,0 +1,38 @@
+[
+ {
+  "key": "ward2n_jammu-sanitation",
+  "payload": {
+   "reader": "ward2n_jammu",
+   "url": "https://jmc.jk.gov.in/contactus.aspx?type=Sanitation",
+   "page": "Sanitation",
+   "state": "JK"
+  }
+ },
+ {
+  "key": "ward2n_jammu-works",
+  "payload": {
+   "reader": "ward2n_jammu",
+   "url": "https://jmc.jk.gov.in/contactus.aspx?type=Works",
+   "page": "Works",
+   "state": "JK"
+  }
+ },
+ {
+  "key": "ward2n_jammu-officers",
+  "payload": {
+   "reader": "ward2n_jammu",
+   "url": "https://jmc.jk.gov.in/contactus.aspx?type=Officers",
+   "page": "Officers",
+   "state": "JK"
+  }
+ },
+ {
+  "key": "ward2n_jammu-enforcement",
+  "payload": {
+   "reader": "ward2n_jammu",
+   "url": "https://jmc.jk.gov.in/contactus.aspx?type=Enforcement",
+   "page": "Enforcement",
+   "state": "JK"
+  }
+ }
+]

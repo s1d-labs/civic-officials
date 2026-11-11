@@ -1,0 +1,5 @@
+{"module": "ward2n_bhavnagar",
+ "payload": {"reader": "ward2n_bhavnagar", "url": "https://bmcgujarat.com/en/contact-us/bmc-officials/", "state": "GJ", "page": "bmc-officials"},
+ "routes": {"https://bmcgujarat.com/en/contact-us/bmc-officials/": "bhavnagar_officials.html"},
+ "min_records": 3,
+ "expect": [{"post": "House Tax", "name": "V.A.Gohil", "level": "zone"}, {"post": "House Tax", "name": "Bhanuben"}]}

@@ -1,0 +1,18 @@
+{
+ "module": "ward2n_manesar",
+ "payload": {
+  "reader": "ward2n_manesar",
+  "url": "https://mcmanesar.in/index.php/officers-directory",
+  "state": "HR"
+ },
+ "routes": {
+  "https://mcmanesar.in/index.php/officers-directory": "manesar_directory.html"
+ },
+ "min_records": 8,
+ "expect": [
+  {
+   "post": "Joint\\ Commissioner",
+   "name": "Sh\\.\\ Puneet,\\ HCS"
+  }
+ ]
+}

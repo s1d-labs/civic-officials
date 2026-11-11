@@ -1,0 +1,188 @@
+[
+ {
+  "key": "central_transport-UK-almora",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-almora/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Almora",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-bageshwar",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-bageshwar/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Bageshwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-dehradun",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-dehradun/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Dehradun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-haldwani",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-haldwani/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Nainital",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-haridwar",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-haridwar/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Haridwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-karanprayag",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-karanprayag/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Chamoli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-kotdwar",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-kotdwar/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Pauri Garhwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-pauri",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-pauri/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Pauri Garhwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-pithoragarh",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-pithoragarh/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Pithoragarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-rishikesh",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-rishikesh/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Dehradun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-rudraprayag",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-rudraprayag/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Rudraprayag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-tanakpur",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-tanakpur/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Champawat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-tehri",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-tehri/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Tehri Garhwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-udhamsinghnagar",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-udhamsinghnagar/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Udham Singh Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-uttarkashi",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-uttarkashi/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Uttarkashi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-UK-vikasnagar",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.uk.gov.in/organization/office-vikasnagar/",
+   "state": "UK",
+   "site": "uk",
+   "district": "Dehradun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "central_transport-MH-regional-offices",
+  "payload": {
+   "reader": "central_transport",
+   "url": "https://transport.maharashtra.gov.in/1184/Regional-Offices",
+   "state": "MH",
+   "site": "mh",
+   "india_only": false
+  }
+ }
+]

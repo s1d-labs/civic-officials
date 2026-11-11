@@ -1,0 +1,110 @@
+[
+ {
+  "key": "ward2n_mcd-shahdara-south-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=08e68a86-d9c6-4894-a5fa-43b1c3dce041",
+   "zone": "Shahdara South Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-civil-lines-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=33588ce9-0e78-4ed5-a356-0edbe494fa46",
+   "zone": "Civil Lines Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-rohini-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=344a5905-d3f0-41e5-b4e9-7a4d9bf5b45b",
+   "zone": "Rohini Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-west-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=3e636f52-ae9f-48c6-80dc-70763595b80f",
+   "zone": "West Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-shahdara-north-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=40792a42-b3c6-491e-ba3d-053422edd5bc",
+   "zone": "Shahdara North Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-keshav-puram-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=521027b0-072e-40e9-b1c0-72c2ab94f49f",
+   "zone": "Keshav Puram Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-central-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=601e37f8-dbf3-4719-93c6-1a90095d3bbe",
+   "zone": "Central Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-south-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=63d07957-0dc3-4f7d-ae1b-5dadc4f46536",
+   "zone": "South Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-karol-bagh-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=808a4f82-3915-49e1-a7e7-6b1bbe608bda",
+   "zone": "Karol Bagh Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-narela-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=adad17f8-0e47-4a7c-99e0-0960c9ad651d",
+   "zone": "Narela Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-najafgarh-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=adbbaa4a-7c94-4e24-b6e7-91c1c6c79911",
+   "zone": "Najafgarh Zone",
+   "state": "DL"
+  }
+ },
+ {
+  "key": "ward2n_mcd-city-sp-zone",
+  "payload": {
+   "reader": "ward2n_mcd",
+   "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=d973d9b8-967c-41a9-b898-533093ebf33e",
+   "zone": "City-SP Zone",
+   "state": "DL"
+  }
+ }
+]

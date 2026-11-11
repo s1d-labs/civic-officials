@@ -1,0 +1,7312 @@
+[
+ {
+  "key": "court_dcourts-southandaman.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://southandaman.dcourts.gov.in/",
+   "state": "AN",
+   "district": "South Andaman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-anantapur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://anantapur.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Anantpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chittoor.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chittoor.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Chittoor",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-eastgodavari.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://eastgodavari.dcourts.gov.in/",
+   "state": "AP",
+   "district": "East Godavari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-guntur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://guntur.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Guntur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kadapa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kadapa.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Kadapa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-krishna.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://krishna.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Krishna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kurnool.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kurnool.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Kurnool",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-prakasam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://prakasam.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Prakasam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-spsrnellore.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://spsrnellore.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Nellore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-srikakulam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://srikakulam.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Srikakulam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-visakhapatnam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://visakhapatnam.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Vishakhapatnam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-vizianagaram.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://vizianagaram.dcourts.gov.in/",
+   "state": "AP",
+   "district": "Vizianagaram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-westgodavari.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://westgodavari.dcourts.gov.in/",
+   "state": "AP",
+   "district": "West Godavari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-aalo.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://aalo.dcourts.gov.in/",
+   "state": "AR",
+   "district": "West Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-anini.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://anini.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Dibang Valley",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-basar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://basar.dcourts.gov.in/",
+   "state": "AR",
+   "district": "LepaRada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bomdila.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bomdila.dcourts.gov.in/",
+   "state": "AR",
+   "district": "West Kameng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-changlang.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://changlang.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Changlang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-daporijo.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://daporijo.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Upper Subansiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hawai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hawai.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Anjaw",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-khonsa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://khonsa.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Tirap",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-koloriang.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://koloriang.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Kurung Kumey",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-longding.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://longding.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Longding",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-namsai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://namsai.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Namsai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-palin.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://palin.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Kra Daddi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pangin.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pangin.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pasighat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pasighat.dcourts.gov.in/",
+   "state": "AR",
+   "district": "East Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-roing.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://roing.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Lower Dibang Valley",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-seppa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://seppa.dcourts.gov.in/",
+   "state": "AR",
+   "district": "East Kameng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tawang.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tawang.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Tawang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tezu.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tezu.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Lohit",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-yingkiong.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://yingkiong.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Upper Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-yupia.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://yupia.dcourts.gov.in/",
+   "state": "AR",
+   "district": "District and Sessions Court, Yupia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ziro.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ziro.dcourts.gov.in/",
+   "state": "AR",
+   "district": "Lower Subansiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bajali.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bajali.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Bajali",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-baksa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://baksa.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Baksa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-barpeta.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://barpeta.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Barpeta",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-biswanath.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://biswanath.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Biswanath",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bongaigaon.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bongaigaon.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Bongaigaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-cachar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://cachar.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Cachar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-charaideo.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://charaideo.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Charaideo",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chirang.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chirang.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Chirang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-darrang.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://darrang.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Darrang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dhemaji.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dhemaji.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Dhemaji",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dhubri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dhubri.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Dhubri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dibrugarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dibrugarh.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Dibrugarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dimahasao.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dimahasao.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Dima Hasao",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-goalpara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://goalpara.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Goalpara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-golaghat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://golaghat.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Golaghat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hailakandi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hailakandi.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Hailakandi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hojai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hojai.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Hojai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jorhat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jorhat.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Jorhat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kamrup.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kamrup.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Kamrup",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kamrupmetro.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kamrupmetro.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Kamrup Metropolitan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-karbianglong.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://karbianglong.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Karbi Anglong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-karimganj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://karimganj.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Karimganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kokrajhar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kokrajhar.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Kokrajhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-lakhimpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://lakhimpur.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Lakhimpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-majuli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://majuli.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Majuli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-morigaon.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://morigaon.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Morigaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nagaon.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nagaon.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Nagaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nalbari.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nalbari.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Nalbari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sivasagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sivasagar.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Sivasagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sonitpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sonitpur.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Sonitpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-southsalmara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://southsalmara.dcourts.gov.in/",
+   "state": "AS",
+   "district": "South Salmara-Mankachar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tinsukia.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tinsukia.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Tinsukia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-udalguri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://udalguri.dcourts.gov.in/",
+   "state": "AS",
+   "district": "Udalguri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-westkarbianglong.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://westkarbianglong.dcourts.gov.in/",
+   "state": "AS",
+   "district": "West Karbi Anglong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-araria.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://araria.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Araria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-aurangabad.bih.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://aurangabad.bih.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Aurangabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-banka.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://banka.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Banka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-begusarai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://begusarai.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Begusarai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bettiah.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bettiah.dcourts.gov.in/",
+   "state": "BR",
+   "district": "West Champaran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhabua.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhabua.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Kaimur (Bhabua)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhagalpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhagalpur.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Bhagalpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhojpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhojpur.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Bhojpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-buxar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://buxar.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Buxar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-darbhanga.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://darbhanga.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Darbhanga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gaya.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gaya.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Gaya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gopalganj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gopalganj.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Gopalganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jamui.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jamui.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Jamui",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jehanabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jehanabad.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Jehanabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-katihar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://katihar.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Katihar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-khagaria.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://khagaria.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Khagaria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kishanganj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kishanganj.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Kishanganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-lakhisarai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://lakhisarai.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Lakhisarai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-madhepura.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://madhepura.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Madhepura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-madhubani.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://madhubani.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Madhubani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-motihari.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://motihari.dcourts.gov.in/",
+   "state": "BR",
+   "district": "East Champaran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-munger.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://munger.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Munger",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-muzaffarpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://muzaffarpur.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Muzaffarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nalanda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nalanda.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Nalanda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nawada.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nawada.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Nawada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-patna.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://patna.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Patna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-purnea.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://purnea.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Purnea",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rohtas.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rohtas.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Rohtas",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-saharsa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://saharsa.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Saharsa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-samastipur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://samastipur.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Samastipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-saran.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://saran.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Saran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sheikhpura.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sheikhpura.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Sheikhpura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sheohar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sheohar.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Sheohar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sitamarhi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sitamarhi.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Sitamarhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-siwan.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://siwan.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Siwan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-supaul.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://supaul.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Supaul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-vaishali.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://vaishali.dcourts.gov.in/",
+   "state": "BR",
+   "district": "Vaishali",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-balod.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://balod.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Balod",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-balodabazar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://balodabazar.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Balodabazar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-balrampur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://balrampur.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Balrampur_CHG",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bastar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bastar.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Bastar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bemetara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bemetara.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Bemetara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bilaspur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bilaspur.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Bilaspur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dantewada.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dantewada.dcourts.gov.in/",
+   "state": "CG",
+   "district": "South Bastar-Dantewada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dhamtari.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dhamtari.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Dhamtari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-durg.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://durg.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Durg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-janjgir.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://janjgir.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Janjgir-Champa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jashpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jashpur.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Jashpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kabirdham.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kabirdham.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Kabirdham-Kawardha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kanker.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kanker.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Norh Bastar-Kanker",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-korba.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://korba.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Korba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-korea.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://korea.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Korea",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mahasamund.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mahasamund.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Mahasamund",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mungeli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mungeli.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Mungeli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-raigarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://raigarh.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Raigarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-raipur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://raipur.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Raipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rajnandgaon.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rajnandgaon.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Rajnandgaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-surajpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://surajpur.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Surajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-surguja.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://surguja.dcourts.gov.in/",
+   "state": "CG",
+   "district": "Surguja",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chandigarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chandigarh.dcourts.gov.in/",
+   "state": "CH",
+   "district": "Chandigarh District Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-daman.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://daman.dcourts.gov.in/",
+   "state": "DH",
+   "district": "Daman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-diu.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://diu.dcourts.gov.in/",
+   "state": "DH",
+   "district": "Diu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-silvassa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://silvassa.dcourts.gov.in/",
+   "state": "DH",
+   "district": "Dadra and Nagar Haveli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-centraldelhi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://centraldelhi.dcourts.gov.in/",
+   "state": "DL",
+   "district": "Delhi Family Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-eastdelhi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://eastdelhi.dcourts.gov.in/",
+   "state": "DL",
+   "district": "East Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-newdelhi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://newdelhi.dcourts.gov.in/",
+   "state": "DL",
+   "district": "New Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-northdelhi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://northdelhi.dcourts.gov.in/",
+   "state": "DL",
+   "district": "North Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-northeast.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://northeast.dcourts.gov.in/",
+   "state": "DL",
+   "district": "North East Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rohini.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rohini.dcourts.gov.in/",
+   "state": "DL",
+   "district": "North West Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shahdara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shahdara.dcourts.gov.in/",
+   "state": "DL",
+   "district": "Shahdara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-southdelhi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://southdelhi.dcourts.gov.in/",
+   "state": "DL",
+   "district": "South Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-southeastdelhi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://southeastdelhi.dcourts.gov.in/",
+   "state": "DL",
+   "district": "South East Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-southwestdelhi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://southwestdelhi.dcourts.gov.in/",
+   "state": "DL",
+   "district": "South West Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-westdelhi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://westdelhi.dcourts.gov.in/",
+   "state": "DL",
+   "district": "West Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dcngoa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dcngoa.dcourts.gov.in/",
+   "state": "GA",
+   "district": "North Goa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dcsgoa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dcsgoa.dcourts.gov.in/",
+   "state": "GA",
+   "district": "South Goa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ahmedabad-ccc.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ahmedabad-ccc.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "City Civil &amp; Sessions Court, Ahmedabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ahmedabad-mmc.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ahmedabad-mmc.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Metropolitan Magistrates Court, Ahmedabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ahmedabad-rural.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ahmedabad-rural.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Ahmedabad (Rural)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-amreli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://amreli.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Amreli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-anand.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://anand.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Anand",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-aravalli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://aravalli.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Aravalli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-banaskantha.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://banaskantha.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Banaskantha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bharuch.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bharuch.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Bharuch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhavnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhavnagar.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Bhavnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-botad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://botad.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Botad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chhotaudepur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chhotaudepur.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Chhota Udepur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dahod.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dahod.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Dahod",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-devbhumidwarka.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://devbhumidwarka.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Devbhumi Dwarka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gandhinagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gandhinagar.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Gandhinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-girsomnath.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://girsomnath.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Gir Somnath",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-indcourtguj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://indcourtguj.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Industrial/Labour Courts of Gujarat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jamnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jamnagar.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Jamnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-junagadh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://junagadh.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Junagadh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kachchh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kachchh.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Kutch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kheda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kheda.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Kheda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mahesana.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mahesana.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Mehsana",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mahisagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mahisagar.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Mahisagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-morbi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://morbi.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Morbi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-narmada.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://narmada.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Narmada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-navsari.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://navsari.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Navsari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-panchmahals.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://panchmahals.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Panchmahals",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-patan.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://patan.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Patan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-porbandar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://porbandar.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Porbandar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rajkot.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rajkot.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Rajkot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sabarkantha.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sabarkantha.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Sabarkantha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-surat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://surat.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Surat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-surendranagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://surendranagar.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Surendranagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tapi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tapi.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Tapi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-vadodara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://vadodara.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Vadodara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-valsad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://valsad.dcourts.gov.in/",
+   "state": "GJ",
+   "district": "Valsad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bilaspurhp.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bilaspurhp.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Bilaspur HP",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chamba.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chamba.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Chamba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hamirpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hamirpur.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Hamirpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kangra.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kangra.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Kangra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kinnaur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kinnaur.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Kinnaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kullu.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kullu.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Kullu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mandi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mandi.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Mandi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shimla.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shimla.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Shimla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sirmaur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sirmaur.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Sirmaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-solan.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://solan.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Solan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-una.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://una.dcourts.gov.in/",
+   "state": "HP",
+   "district": "Una",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ambala.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ambala.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Ambala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhiwani.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhiwani.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Bhiwani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-charkhidadri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://charkhidadri.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Charkhi Dadri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-faridabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://faridabad.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Faridabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-fatehabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://fatehabad.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Fatehabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gurugram.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gurugram.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Gurgaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hisar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hisar.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Hisar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jhajjar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jhajjar.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Jhajjar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jind.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jind.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Jind",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kaithal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kaithal.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Kaithal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-karnal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://karnal.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Karnal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kurukshetra.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kurukshetra.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Kurukshetra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-narnaul.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://narnaul.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Mahendragarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nuh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nuh.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Mewat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-palwal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://palwal.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Palwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-panchkula.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://panchkula.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Panchkula",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-panipat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://panipat.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Panipat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rewari.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rewari.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Rewari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rohtak.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rohtak.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Rohtak",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sirsa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sirsa.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Sirsa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sonepat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sonepat.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Sonipat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-yamunanagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://yamunanagar.dcourts.gov.in/",
+   "state": "HR",
+   "district": "Yamunanagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bokaro.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bokaro.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Bokaro",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chaibasa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chaibasa.dcourts.gov.in/",
+   "state": "JH",
+   "district": "West Singhbhum",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chatra.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chatra.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Chatra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-deoghar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://deoghar.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Deoghar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dhanbad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dhanbad.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Dhanbad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dumka.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dumka.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Dumka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-garhwa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://garhwa.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Garhwa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-giridih.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://giridih.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Giridih",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-godda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://godda.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Godda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gumla.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gumla.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Gumla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hazaribag.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hazaribag.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Hazaribag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jamshedpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jamshedpur.dcourts.gov.in/",
+   "state": "JH",
+   "district": "East Singhbhum",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jamtara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jamtara.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Jamtara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-khunti.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://khunti.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Khunti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-koderma.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://koderma.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Koderma",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-latehar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://latehar.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Latehar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-lohardaga.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://lohardaga.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Lohardaga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pakur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pakur.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Pakur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-palamu.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://palamu.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Palamu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ramgarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ramgarh.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Ramgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ranchi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ranchi.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Ranchi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sahibganj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sahibganj.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Sahibganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-seraikella.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://seraikella.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Seraikela-Kharsawan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-simdega.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://simdega.dcourts.gov.in/",
+   "state": "JH",
+   "district": "Simdega",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-anantnag.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://anantnag.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Anantnag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bandipora.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bandipora.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Bandipora",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-baramulla.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://baramulla.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Baramula",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhaderwah.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhaderwah.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Doda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-budgam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://budgam.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Badgam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ganderbal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ganderbal.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Ganderbal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jammu.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jammu.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Jammu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kathua.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kathua.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Kathua",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kishtwar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kishtwar.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Kishtwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kulgam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kulgam.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Kulgam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kupwara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kupwara.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Kupwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-poonch.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://poonch.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Poonch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pulwama.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pulwama.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Pulwama",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rajouri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rajouri.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Rajouri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ramban.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ramban.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Ramban",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-reasi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://reasi.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Reasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-samba.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://samba.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Samba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shopian.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shopian.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Shopian",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-srinagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://srinagar.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Srinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-udhampur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://udhampur.dcourts.gov.in/",
+   "state": "JK",
+   "district": "Udhampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bagalkot.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bagalkot.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Bagalkot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ballari.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ballari.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Ballari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-belagavi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://belagavi.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Belagavi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bengaluru.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bengaluru.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Bengaluru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bengalururural.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bengalururural.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Bengaluru Rural",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bidar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bidar.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Bidar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chamarajanagara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chamarajanagara.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Chamrajanagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chikkaballapur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chikkaballapur.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Chikballapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chikkamagaluru.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chikkamagaluru.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Chikkamagaluru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chitradurga.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chitradurga.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Chitradurga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-davanagere.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://davanagere.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Davangere",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dharwad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dharwad.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Dharwad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dk.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dk.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Dakshina Kannada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gadag.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gadag.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Gadag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hassan.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hassan.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Hassan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-haveri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://haveri.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Haveri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kalaburagi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kalaburagi.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Kalaburagi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kodagu.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kodagu.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Kodagu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kolar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kolar.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Kolar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-koppal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://koppal.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Koppal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mandya.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mandya.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Mandya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mysuru.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mysuru.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Mysuru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-raichur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://raichur.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Raichur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ramanagara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ramanagara.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Ramnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shivamogga.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shivamogga.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Shivamogga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tumakuru.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tumakuru.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Tumakuru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-udupi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://udupi.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Udupi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-uttarakannada.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://uttarakannada.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Uttara Kannada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-vijayanagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://vijayanagar.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Vijayanagara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-vijayapura.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://vijayapura.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Vijayapura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-yadgir.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://yadgir.dcourts.gov.in/",
+   "state": "KA",
+   "district": "Yadgir",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-alappuzha.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://alappuzha.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Alappuzha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ernakulam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ernakulam.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Ernakulam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-idukki.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://idukki.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Idukki",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kannur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kannur.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Kannur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kasaragod.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kasaragod.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Kasargod",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kollam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kollam.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Kollam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kottayam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kottayam.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Kottayam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kozhikode.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kozhikode.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Kozhikode",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-malappuram.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://malappuram.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Malappuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-palakkad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://palakkad.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Palakkad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pathanamthitta.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pathanamthitta.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Pathanamthitta",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-thiruvananthapuram.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://thiruvananthapuram.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Thiruvananthapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-thrissur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://thrissur.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Thrissur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-wayanad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://wayanad.dcourts.gov.in/",
+   "state": "KL",
+   "district": "Wayanad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kargil.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kargil.dcourts.gov.in/",
+   "state": "LA",
+   "district": "Kargil",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-leh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://leh.dcourts.gov.in/",
+   "state": "LA",
+   "district": "Leh Ladakh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kavaratti.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kavaratti.dcourts.gov.in/",
+   "state": "LD",
+   "district": "District Court Kavaratti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ahmednagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ahmednagar.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Ahmednagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-akola.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://akola.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Akola",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-amravati.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://amravati.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Amravati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-aurangabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://aurangabad.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Aurangabad Maharashtra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-beed.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://beed.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Beed",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhandara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhandara.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Bhandara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-buldana.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://buldana.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Buldhana",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-cccmumbai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://cccmumbai.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Mumbai CityCivil Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chandrapur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chandrapur.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Chandrapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-cmmmumbai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://cmmmumbai.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Mumbai CMM Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dhule.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dhule.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Dhule",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gadchiroli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gadchiroli.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Gadchiroli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gondia.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gondia.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Gondia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-indus.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://indus.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Maharashtra IndustrialLabour Courts",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jalgaon.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jalgaon.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Jalgaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jalna.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jalna.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Jalna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kolhapur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kolhapur.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Kolhapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-latur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://latur.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Latur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mahafc.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mahafc.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Maharashtra Family Courts",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mahcoop.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mahcoop.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Maharashtra CoOperative Courts",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mumact.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mumact.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Mumbai MotorAccident Claims Tribunal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nagpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nagpur.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Nagpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nanded.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nanded.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Nanded",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nandurbar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nandurbar.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Nandurbar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nashik.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nashik.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Nashik",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-osmanabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://osmanabad.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Osmanabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-parbhani.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://parbhani.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Parbhani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pune.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pune.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Pune",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-raigad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://raigad.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Raigad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ratnagiri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ratnagiri.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Ratnagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sangli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sangli.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Sangli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-satara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://satara.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Satara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sccmumbai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sccmumbai.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Mumbai SmallCause Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sindhudurg.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sindhudurg.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Sindhudurg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-solapur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://solapur.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Solapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-thane.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://thane.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Thane",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-wardha.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://wardha.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Wardha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-washim.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://washim.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Washim",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-yavatmal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://yavatmal.dcourts.gov.in/",
+   "state": "MH",
+   "district": "Yavatmal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ampati.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ampati.dcourts.gov.in/",
+   "state": "ML",
+   "district": "South West Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-baghmara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://baghmara.dcourts.gov.in/",
+   "state": "ML",
+   "district": "South Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jowai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jowai.dcourts.gov.in/",
+   "state": "ML",
+   "district": "West Jiantia Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-khliehriat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://khliehriat.dcourts.gov.in/",
+   "state": "ML",
+   "district": "East Jaintia Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mawkyrwat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mawkyrwat.dcourts.gov.in/",
+   "state": "ML",
+   "district": "South West Khasi Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nongpoh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nongpoh.dcourts.gov.in/",
+   "state": "ML",
+   "district": "Ri-Bhoi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nongstoin.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nongstoin.dcourts.gov.in/",
+   "state": "ML",
+   "district": "West Khasi Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-resubelpara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://resubelpara.dcourts.gov.in/",
+   "state": "ML",
+   "district": "North Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shillong.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shillong.dcourts.gov.in/",
+   "state": "ML",
+   "district": "East Khasi Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tura.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tura.dcourts.gov.in/",
+   "state": "ML",
+   "district": "West Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-williamnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://williamnagar.dcourts.gov.in/",
+   "state": "ML",
+   "district": "East Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bishnupur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bishnupur.dcourts.gov.in/",
+   "state": "MN",
+   "district": "Bishnupur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-churachandpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://churachandpur.dcourts.gov.in/",
+   "state": "MN",
+   "district": "Churachandpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-imphaleast.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://imphaleast.dcourts.gov.in/",
+   "state": "MN",
+   "district": "Imphal East",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-imphalwest.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://imphalwest.dcourts.gov.in/",
+   "state": "MN",
+   "district": "Imphal West",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-senapati.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://senapati.dcourts.gov.in/",
+   "state": "MN",
+   "district": "Senapati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tamenglong.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tamenglong.dcourts.gov.in/",
+   "state": "MN",
+   "district": "Tamenglong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-thoubal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://thoubal.dcourts.gov.in/",
+   "state": "MN",
+   "district": "Thoubal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ukhrul.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ukhrul.dcourts.gov.in/",
+   "state": "MN",
+   "district": "Ukhrul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-alirajpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://alirajpur.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Alirajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-anuppur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://anuppur.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Anuppur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ashoknagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ashoknagar.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Ashoknagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-balaghat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://balaghat.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Balaghat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-barwani.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://barwani.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Barwani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-betul.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://betul.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Betul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhind.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhind.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Bhind",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhopal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhopal.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Bhopal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-burhanpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://burhanpur.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Burhanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chhatarpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chhatarpur.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Chhatarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chhindwara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chhindwara.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Chhindwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-damoh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://damoh.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Damoh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-datia.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://datia.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Datia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dewas.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dewas.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Dewas",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dhar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dhar.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Dhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dindori.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dindori.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Dindori",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-guna.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://guna.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Guna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gwalior.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gwalior.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Gwalior",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-harda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://harda.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Harda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-indore.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://indore.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Indore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jabalpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jabalpur.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Jabalpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jhabua.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jhabua.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Jhabua",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-katni.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://katni.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Katni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-khandwa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://khandwa.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Khandwa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mandla.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mandla.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Mandla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mandleshwar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mandleshwar.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Khargone",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mandsaur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mandsaur.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Mandsaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-morena.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://morena.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Morena",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-narmadapuram.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://narmadapuram.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Hoshangabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-narsinghpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://narsinghpur.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Narsinghpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-neemuch.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://neemuch.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Neemuch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-panna.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://panna.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Panna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-raisen.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://raisen.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Raisen",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rajgarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rajgarh.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Rajgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ratlam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ratlam.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Ratlam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rewa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rewa.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Rewa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sagar.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Sagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-satna.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://satna.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Satna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sehore.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sehore.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Sehore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-seoni.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://seoni.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Seoni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shahdol.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shahdol.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Shahdol",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shajapur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shajapur.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Shajapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sheopur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sheopur.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Sheopur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shivpuri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shivpuri.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Shivpuri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sidhi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sidhi.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Sidhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-singrauli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://singrauli.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Singrauli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tikamgarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tikamgarh.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Tikamgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ujjain.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ujjain.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Ujjain",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-umaria.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://umaria.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Umaria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-vidisha.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://vidisha.dcourts.gov.in/",
+   "state": "MP",
+   "district": "Vidisha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-aizawl.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://aizawl.dcourts.gov.in/",
+   "state": "MZ",
+   "district": "Aizawl",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-champhai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://champhai.dcourts.gov.in/",
+   "state": "MZ",
+   "district": "Champhai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kolasib.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kolasib.dcourts.gov.in/",
+   "state": "MZ",
+   "district": "Kolasib",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-lawngtlai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://lawngtlai.dcourts.gov.in/",
+   "state": "MZ",
+   "district": "Lawngtlai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-lunglei.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://lunglei.dcourts.gov.in/",
+   "state": "MZ",
+   "district": "Lunglei",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mamit.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mamit.dcourts.gov.in/",
+   "state": "MZ",
+   "district": "Mamit",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-serchhip.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://serchhip.dcourts.gov.in/",
+   "state": "MZ",
+   "district": "Serchhip",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-siaha.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://siaha.dcourts.gov.in/",
+   "state": "MZ",
+   "district": "Saiha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dimapur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dimapur.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Dimapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kiphire.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kiphire.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Kiphire",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kohima.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kohima.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Kohima",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-longleng.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://longleng.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Longleng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mokokchung.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mokokchung.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Mokokchung",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mon.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mon.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Mon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-peren.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://peren.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Peren",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-phek.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://phek.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Phek",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tuensang.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tuensang.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Tuensang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-wokha.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://wokha.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Wokha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-zunheboto.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://zunheboto.dcourts.gov.in/",
+   "state": "NL",
+   "district": "Zunheboto",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-angul.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://angul.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Angul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-balangir.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://balangir.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Balangir",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-balasore.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://balasore.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Balasore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bargarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bargarh.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Bargarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhadrak.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhadrak.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Bhadrak",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-boudh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://boudh.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Boudh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-cuttack.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://cuttack.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Cuttack",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-deogarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://deogarh.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Deogarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dhenkanal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dhenkanal.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Dhenkanal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gajapati.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gajapati.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Gajapati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ganjam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ganjam.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Ganjam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jagatsinghpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jagatsinghpur.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Jagatsinghapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jajpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jajpur.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Jajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jharsuguda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jharsuguda.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Jharsuguda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kalahandi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kalahandi.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Kalahandi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kandhamal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kandhamal.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Kandhamal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kendrapara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kendrapara.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Kendrapara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-keonjhar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://keonjhar.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Kendujhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-khurda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://khurda.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Khordha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-koraput.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://koraput.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Koraput",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-malkangiri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://malkangiri.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Malkangiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mayurbhanj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mayurbhanj.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Mayurbhanj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nabarangpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nabarangpur.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Nabarangpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nayagarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nayagarh.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Nayagarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nuapada.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nuapada.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Nuapada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-puri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://puri.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Puri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rayagada.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rayagada.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Rayagada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sambalpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sambalpur.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Sambalpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sonepur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sonepur.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Subarnapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sundargarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sundargarh.dcourts.gov.in/",
+   "state": "OD",
+   "district": "Sundargarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-amritsar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://amritsar.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Amritsar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-barnala.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://barnala.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Barnala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bathinda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bathinda.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Bathinda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-faridkot.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://faridkot.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Faridkot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-fatehgarhsahib.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://fatehgarhsahib.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Fatehgarh Sahib",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-fazilka.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://fazilka.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Fazilka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ferozepur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ferozepur.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Ferozepur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gurdaspur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gurdaspur.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Gurdaspur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hoshiarpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hoshiarpur.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Hoshiarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jalandhar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jalandhar.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Jalandhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kapurthala.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kapurthala.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Kapurthala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ludhiana.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ludhiana.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Ludhiana",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-malerkotla.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://malerkotla.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Malerkotla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mansa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mansa.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Mansa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-moga.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://moga.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Moga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-muktsarsahib.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://muktsarsahib.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Sri Muktsar Sahib",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pathankot.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pathankot.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Pathankot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-patiala.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://patiala.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Patiala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rupnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rupnagar.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Rupnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sangrur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sangrur.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Sangrur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sasnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sasnagar.dcourts.gov.in/",
+   "state": "PB",
+   "district": "SAS Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sbsnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sbsnagar.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Nawanshahr",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tarntaran.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tarntaran.dcourts.gov.in/",
+   "state": "PB",
+   "district": "Tarn Taran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-karaikal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://karaikal.dcourts.gov.in/",
+   "state": "PY",
+   "district": "Karikal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mahe.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mahe.dcourts.gov.in/",
+   "state": "PY",
+   "district": "Mahe",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-puducherry.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://puducherry.dcourts.gov.in/",
+   "state": "PY",
+   "district": "Pondicherry",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-yanam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://yanam.dcourts.gov.in/",
+   "state": "PY",
+   "district": "Yanam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ajmer.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ajmer.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Ajmer",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-alwar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://alwar.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Alwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-balotra.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://balotra.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Balotra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-banswara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://banswara.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Banswara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-baran.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://baran.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Baran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-barmer.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://barmer.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Barmer",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-beawar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://beawar.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Beawar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bharatpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bharatpur.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Bharatpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhilwara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhilwara.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Bhilwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bikaner.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bikaner.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Bikaner",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bundi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bundi.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Bundi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chittorgarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chittorgarh.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Chittorgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-churu.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://churu.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Churu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dausa.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dausa.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Dausa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-deeg.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://deeg.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Deeg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dholpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dholpur.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Dholpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-didwanakuchaman.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://didwanakuchaman.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Didwana",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dungarpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dungarpur.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Dungarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ganganagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ganganagar.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Sri Ganganagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hanumangarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hanumangarh.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Hanumangarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jaipurdistrict.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jaipurdistrict.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Jaipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jaipurmetro1.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jaipurmetro1.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Jaipur Metro-I",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jaipurmetro2.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jaipurmetro2.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Jaipur Metro-II",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jaisalmer.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jaisalmer.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Jaisalmer",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jalore.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jalore.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Jalore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jhalawar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jhalawar.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Jhalawar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jhunjhunu.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jhunjhunu.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Jhunjhunu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jodhpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jodhpur.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Jodhpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jodhpurmetro.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jodhpurmetro.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Jodhpur Metro",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-karauli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://karauli.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Karauli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-khairthaltijara.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://khairthaltijara.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Khairthaltijara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kota.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kota.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Kota",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kotputlibehror.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kotputlibehror.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "kotputlibehror",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nagaur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nagaur.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Nagaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pali.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pali.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Pali",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-phalodi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://phalodi.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Phalodi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pratapgarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pratapgarh.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Pratapgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rajsamand.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rajsamand.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Rajsamand",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-salumbar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://salumbar.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Salumbar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sawaimadhopur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sawaimadhopur.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Sawai Madhopur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sikar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sikar.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Sikar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sirohi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sirohi.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Sirohi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tonk.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tonk.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Tonk",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-udaipur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://udaipur.dcourts.gov.in/",
+   "state": "RJ",
+   "district": "Udaipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gangtok.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gangtok.dcourts.gov.in/",
+   "state": "SK",
+   "district": "East Sikkim",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gyalshing.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gyalshing.dcourts.gov.in/",
+   "state": "SK",
+   "district": "West Sikkim",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mangan.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mangan.dcourts.gov.in/",
+   "state": "SK",
+   "district": "North Sikkim",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-namchi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://namchi.dcourts.gov.in/",
+   "state": "SK",
+   "district": "District &amp; Sessions Court, Namchi, Sikkim",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-adilabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://adilabad.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Adilabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-asifabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://asifabad.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Kumuram Bheem Asifabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhupalapally.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhupalapally.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Jayashankar Bhupalapally",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gadwal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gadwal.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Jogulamba Gadwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hanumakonda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hanumakonda.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Hanumakonda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hcbi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hcbi.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Hyderabad-Prl. CBI Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hccc.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hccc.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Hyderabad-City Civil Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hcscc.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hcscc.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Hyderabad-City Small Cause Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hmsj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hmsj.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Hyderabad-Metropolitan Sessions Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hydifc.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hydifc.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Hyderabad-Integrated Family Courts",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jagitial.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jagitial.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Jagitial",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jangoan.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jangoan.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Jangoan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kamareddy.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kamareddy.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Kamareddy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-karimnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://karimnagar.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Karimnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-khammam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://khammam.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Khammam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kothagudem.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kothagudem.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Bhadradri Kothagudem",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mahabubabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mahabubabad.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Mahabubabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mahabubnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mahabubnagar.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Mahboobnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mancherial.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mancherial.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Mancherial",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-medak.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://medak.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Medak",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-medchalmalkajgiri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://medchalmalkajgiri.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Medchal Malkajgiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mulugu.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mulugu.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Mulugu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nagarkurnool.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nagarkurnool.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Nagarkurnool",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nalgonda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nalgonda.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Nalgonda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-narayanpet.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://narayanpet.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Narayanpet",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nirmal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nirmal.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Nirmal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nizamabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nizamabad.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Nizamabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-peddapalli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://peddapalli.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Peddapalli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rajannasircilla.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rajannasircilla.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Rajanna Sircilla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rangareddy.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rangareddy.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Rangareddy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sangareddy.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sangareddy.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Sangareddy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-siddipet.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://siddipet.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Siddipet",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-suryapet.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://suryapet.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Suryapet",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-vikarabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://vikarabad.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Vikarabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-wanaparthy.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://wanaparthy.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Wanaparthy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-warangal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://warangal.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Warangal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-yadadri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://yadadri.dcourts.gov.in/",
+   "state": "TG",
+   "district": "Yadadri Bhuvanagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ariyalur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ariyalur.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Ariyalur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chengalpattu.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chengalpattu.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Chengalpattu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chennai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chennai.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Chennai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-coimbatore.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://coimbatore.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Coimbatore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-cuddalore.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://cuddalore.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Cuddalore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dharmapuri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dharmapuri.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Dharmapuri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dindigul.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dindigul.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Dindigul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-erode.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://erode.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Erode",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kallakurichi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kallakurichi.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Kallakurichi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kanchipuram.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kanchipuram.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Kanchipuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kanniyakumari.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kanniyakumari.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Kanyakumari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-karur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://karur.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Karur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-krishnagiri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://krishnagiri.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Krishnagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-madurai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://madurai.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Madurai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mayiladuthurai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mayiladuthurai.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Mayiladuthurai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nagapattinam.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nagapattinam.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Nagapattinam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-namakkal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://namakkal.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Namakkal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nilgiris.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nilgiris.dcourts.gov.in/",
+   "state": "TN",
+   "district": "The Nilgiris",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-perambalur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://perambalur.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Perambalur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pudukkottai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pudukkottai.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Pudukkottai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ramanathapuram.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ramanathapuram.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Ramanathapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ranipet.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ranipet.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Ranipet",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-salem.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://salem.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Salem",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sivagangai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sivagangai.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Sivaganga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tenkasi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tenkasi.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Tenkasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-thanjavur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://thanjavur.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Thanjavur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-theni.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://theni.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Theni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-thoothukudi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://thoothukudi.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Thoothukudi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tiruchirappalli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tiruchirappalli.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Tiruchirappalli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tirunelveli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tirunelveli.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Tirunelveli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tiruppur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tiruppur.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Tiruppur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tiruvallur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tiruvallur.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Tiruvallur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tiruvannamalai.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tiruvannamalai.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Tiruvannamalai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tiruvarur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tiruvarur.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Tiruvarur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-vellore.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://vellore.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Vellore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-viluppuram.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://viluppuram.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Viluppuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-virudhunagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://virudhunagar.dcourts.gov.in/",
+   "state": "TN",
+   "district": "Virudhunagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dhalaitrp.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dhalaitrp.dcourts.gov.in/",
+   "state": "TR",
+   "district": "Dhalai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gomatitrp.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gomatitrp.dcourts.gov.in/",
+   "state": "TR",
+   "district": "Gomati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-khowaitrp.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://khowaitrp.dcourts.gov.in/",
+   "state": "TR",
+   "district": "Khowai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-northtripura.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://northtripura.dcourts.gov.in/",
+   "state": "TR",
+   "district": "North Tripura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sepahijalatrp.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sepahijalatrp.dcourts.gov.in/",
+   "state": "TR",
+   "district": "Sepahijala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-southtripura.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://southtripura.dcourts.gov.in/",
+   "state": "TR",
+   "district": "South Tripura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-unakotitrp.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://unakotitrp.dcourts.gov.in/",
+   "state": "TR",
+   "district": "Unakoti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-westtripura.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://westtripura.dcourts.gov.in/",
+   "state": "TR",
+   "district": "West Tripura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-almora.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://almora.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Almora",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bageshwar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bageshwar.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Bageshwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chamoli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chamoli.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Chamoli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-champawat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://champawat.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Champawat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dehradun.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dehradun.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Dehradun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-haridwar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://haridwar.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Haridwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nainital.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nainital.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Nainital",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-paurigarhwal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://paurigarhwal.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Pauri Garhwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pithoragarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pithoragarh.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Pithoragarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rudraprayag.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rudraprayag.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Rudraprayag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-tehrigarhwal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://tehrigarhwal.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Tehri Garhwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-usnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://usnagar.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Udham Singh Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-uttarkashi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://uttarkashi.dcourts.gov.in/",
+   "state": "UK",
+   "district": "Uttarkashi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-agra.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://agra.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Agra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-aligarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://aligarh.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Aligarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ambedkarnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ambedkarnagar.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Ambedkar Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-amroha.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://amroha.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Jyotiba Phule Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-auraiya.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://auraiya.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Auraiya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ayodhya.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ayodhya.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Faizabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-azamgarh.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://azamgarh.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Azamgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-baghpat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://baghpat.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Bagpat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bahraich.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bahraich.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Bahraich",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ballia.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ballia.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Ballia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-balrampurup.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://balrampurup.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Balrampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-banda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://banda.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Banda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-barabanki.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://barabanki.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Barabanki",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bareilly.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bareilly.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Bareilly",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-basti.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://basti.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Basti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bhadohi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bhadohi.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Bhadohi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bijnor.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bijnor.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Bijnor",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-budaun.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://budaun.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Budaun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bulandshahar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bulandshahar.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Bulandshahar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chandauli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chandauli.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Chandauli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-chitrakoot.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://chitrakoot.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Chitrakoot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-deoria.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://deoria.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Deoria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-etah.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://etah.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Etah",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-etawah.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://etawah.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Etawah",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-farrukhabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://farrukhabad.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Farrukhabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-fatehpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://fatehpur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Fatehpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-firozabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://firozabad.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Firozabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gbnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gbnagar.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Gautam Buddha Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ghaziabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ghaziabad.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Ghaziabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-ghazipur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://ghazipur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Ghazipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gonda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gonda.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Gonda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-gorakhpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://gorakhpur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Gorakhpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hamirpurup.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hamirpurup.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Hamirpur UP",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hapur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hapur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Hapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hardoi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hardoi.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Hardoi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hathras.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hathras.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Hathras",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jalaun.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jalaun.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Jalaun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jaunpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jaunpur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Jaunpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jhansi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jhansi.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Jhansi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kannauj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kannauj.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Kannauj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kanpurdehat.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kanpurdehat.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Kanpur Dehat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kanpurnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kanpurnagar.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Kanpur Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kasganj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kasganj.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Kanshiramnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kaushambi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kaushambi.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Kaushambi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kheri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kheri.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Kheri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kushinagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kushinagar.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Kushinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-lalitpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://lalitpur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Lalitpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-lucknow.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://lucknow.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Lucknow",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-maharajganj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://maharajganj.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Maharajganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mahoba.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mahoba.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Mahoba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mainpuri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mainpuri.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Mainpuri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mathura.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mathura.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Mathura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mau.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mau.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Mau",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-meerut.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://meerut.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Meerut",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-mirzapur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://mirzapur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Mirzapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-moradabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://moradabad.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Moradabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-muzaffarnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://muzaffarnagar.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Muzaffarnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pilibhit.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pilibhit.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Pilibhit",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-pratapgarhup.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://pratapgarhup.dcourts.gov.in/",
+   "state": "UP",
+   "district": "PratapgarhDistrict",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-prayagraj.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://prayagraj.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Allahabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-raebareli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://raebareli.dcourts.gov.in/",
+   "state": "UP",
+   "district": "RaeBareli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-rampur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://rampur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Rampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-saharanpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://saharanpur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Saharanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sambhal.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sambhal.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Sambhal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-santkabirnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://santkabirnagar.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Sant Kabir Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shahjahanpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shahjahanpur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Shahjahanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shamli.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shamli.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Shamli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-shravasti.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://shravasti.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Shravasti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-siddharthnagar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://siddharthnagar.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Siddharthnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sitapur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sitapur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Sitapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sonbhadra.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sonbhadra.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Sonbhadra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-sultanpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://sultanpur.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Sultanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-unnao.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://unnao.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Unnao",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-varanasi.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://varanasi.dcourts.gov.in/",
+   "state": "UP",
+   "district": "Varanasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-alipurduar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://alipurduar.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Alipurduar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-bankura.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://bankura.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Bankura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-birbhum.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://birbhum.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Birbhum",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-citycivilcourtcalcutta.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://citycivilcourtcalcutta.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Kolkata-City Civil Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-citysessions.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://citysessions.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Kolkata-City Sessions Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-coochbehar.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://coochbehar.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Cooch Behar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-dakshindinajpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://dakshindinajpur.dcourts.gov.in/",
+   "state": "WB",
+   "district": "South Dinajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-darjeeling.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://darjeeling.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Darjeeling",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-hooghly.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://hooghly.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Hooghly",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-howrah.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://howrah.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Howrah",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jalpaiguri.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jalpaiguri.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Jalpaiguri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-jhargram.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://jhargram.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Jhargram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-kalimpong.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://kalimpong.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Kalimpong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-malda.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://malda.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Malda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-murshidabad.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://murshidabad.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Murshidabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-nadia.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://nadia.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Nadia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-north24parganas.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://north24parganas.dcourts.gov.in/",
+   "state": "WB",
+   "district": "North 24 Parganas",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-northdinajpur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://northdinajpur.dcourts.gov.in/",
+   "state": "WB",
+   "district": "North Dinajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-paschimbardhaman.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://paschimbardhaman.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Paschim Bardhaman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-paschimmedinipur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://paschimmedinipur.dcourts.gov.in/",
+   "state": "WB",
+   "district": "West Medinipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-psccourt.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://psccourt.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Kolkata-Presidency Small Causes Court",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-purbabardhaman.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://purbabardhaman.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Purba Bardhaman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-purbamedinipur.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://purbamedinipur.dcourts.gov.in/",
+   "state": "WB",
+   "district": "East Medinipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-purulia.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://purulia.dcourts.gov.in/",
+   "state": "WB",
+   "district": "Purulia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "court_dcourts-south24parganas.dcourts.gov.in",
+  "payload": {
+   "reader": "court_dcourts",
+   "url": "https://south24parganas.dcourts.gov.in/",
+   "state": "WB",
+   "district": "South 24 Parganas",
+   "india_only": false
+  }
+ }
+]

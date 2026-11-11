@@ -1,0 +1,8 @@
+{"module": "ward2n_pimprichinchwad",
+ "payload": {"reader": "ward2n_pimprichinchwad", "url": "https://www.pcmcindia.gov.in/ward_info", "state": "MH"},
+ "routes": {"https://www.pcmcindia.gov.in/ward_info": "pimprichinchwad_ward_info.html",
+            "https://www.pcmcindia.gov.in/departments-details?Id=21": "pimprichinchwad_dep21.html"},
+ "min_records": 4,
+ "min_wards": 8,
+ "expect": [{"post": "Zonal Office", "wards": ["13", "14", "15"]},
+            {"post": "Assistant Commissioner", "name": "निवेदिता भानुदास घार्गे", "wards": ["13"]}]}

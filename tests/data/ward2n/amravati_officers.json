@@ -1,0 +1,23 @@
+{
+ "module": "ward2n_amravati",
+ "payload": {
+  "reader": "ward2n_amravati",
+  "url": "https://amravaticorporation.in/administrative-officers/",
+  "state": "MH"
+ },
+ "routes": {
+  "https://amravaticorporation.in/administrative-officers/": "amravati_officers.html"
+ },
+ "min_records": 9,
+ "expect": [
+  {
+   "post": "Assistant Commissioner",
+   "name": "मनोज शहाळे",
+   "level": "zone"
+  },
+  {
+   "post": "Deputy Engineer",
+   "name": "आशिष अवसरे"
+  }
+ ]
+}

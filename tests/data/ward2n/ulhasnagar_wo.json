@@ -1,0 +1,23 @@
+{
+ "module": "ward2n_ulhasnagar",
+ "payload": {
+  "reader": "ward2n_ulhasnagar",
+  "url": "https://umc.gov.in/api/api/ward-offices?lang=en",
+  "state": "MH"
+ },
+ "routes": {
+  "https://umc.gov.in/api/api/ward-offices?lang=en": "ulhasnagar_wo.json.txt"
+ },
+ "min_records": 4,
+ "expect": [
+  {
+   "post": "Ward Officer",
+   "name": "Ajay Sabale",
+   "level": "zone"
+  },
+  {
+   "post": "Ward Officer",
+   "name": "Manish Hiware"
+  }
+ ]
+}

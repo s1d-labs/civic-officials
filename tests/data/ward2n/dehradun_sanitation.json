@@ -1,0 +1,32 @@
+{
+ "module": "ward2n_dehradun",
+ "payload": {
+  "reader": "ward2n_dehradun",
+  "url": "https://nndehradun.uk.gov.in/sanitation-section/",
+  "state": "UK",
+  "page": "sanitation-section"
+ },
+ "routes": {
+  "https://nndehradun.uk.gov.in/sanitation-section/": "dehradun_sanitation.html"
+ },
+ "min_records": 14,
+ "min_wards": 12,
+ "expect": [
+  {
+   "post": "Sanitation Supervisor",
+   "name": "Sonu",
+   "wards": [
+    "4"
+   ]
+  },
+  {
+   "post": "Sanitation Inspector",
+   "name": "Manish Daryal",
+   "wards": [
+    "1",
+    "2",
+    "4"
+   ]
+  }
+ ]
+}

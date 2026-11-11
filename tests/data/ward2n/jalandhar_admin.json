@@ -1,0 +1,26 @@
+{
+ "module": "ward2n_jalandhar",
+ "payload": {
+  "reader": "ward2n_jalandhar",
+  "url": "https://mcjalandhar.in/administration/",
+  "state": "PB"
+ },
+ "routes": {
+  "https://mcjalandhar.in/administration/": "jalandhar_admin.html"
+ },
+ "min_records": 20,
+ "expect": [
+  {
+   "post": "Chief Sanitary Inspector",
+   "name": "Soni Gill"
+  },
+  {
+   "post": "Joint Commissioner",
+   "name": "Mandeep Kaur"
+  },
+  {
+   "post": "Asst. Town Planner",
+   "name": "Vikas Dua"
+  }
+ ]
+}

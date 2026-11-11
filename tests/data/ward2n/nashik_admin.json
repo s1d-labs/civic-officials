@@ -1,0 +1,5 @@
+{"module": "ward2n_nashik",
+ "payload": {"reader": "ward2n_nashik", "url": "https://nmc.gov.in/home/getfrontpage/2/1000/M", "state": "MH", "india_only": true},
+ "routes": {"https://nmc.gov.in/home/getfrontpage/2/1000/M": "nashik_admin.html"},
+ "min_records": 10,
+ "expect": [{"post": "Divisional Office"}, {"post": "Executive Engineer \\(PWD\\)"}, {"post": "Water Supply"}]}

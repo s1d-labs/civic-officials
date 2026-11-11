@@ -1,0 +1,6 @@
+{"module": "ward2n_vapi",
+ "payload": {"reader": "ward2n_vapi", "url": "https://vapicity.in/contactdetailsofsubsanitaryinspectors", "state": "GJ"},
+ "routes": {"https://vapicity.in/contactdetailsofsubsanitaryinspectors": "vapi_ssi.html"},
+ "min_records": 13, "min_wards": 13,
+ "expect": [{"post": "Sub Sanitary Inspector", "name": "રવિ દિલીપભાઈ પટેલ", "wards": ["2"], "level": "ward"},
+            {"post": "Sub Sanitary Inspector", "name": "અંકિત", "wards": ["10", "11"]}]}

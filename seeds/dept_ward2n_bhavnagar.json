@@ -1,0 +1,29 @@
+[
+ {
+  "key": "ward2n_bhavnagar-swm-ward-offices",
+  "payload": {
+   "reader": "ward2n_bhavnagar",
+   "url": "https://bmcgujarat.com/en/contact-us/swm-ward-offices/",
+   "state": "GJ",
+   "page": "swm-ward-offices"
+  }
+ },
+ {
+  "key": "ward2n_bhavnagar-drainage-ward-offices",
+  "payload": {
+   "reader": "ward2n_bhavnagar",
+   "url": "https://bmcgujarat.com/en/contact-us/drainage-ward-offices/",
+   "state": "GJ",
+   "page": "drainage-ward-offices"
+  }
+ },
+ {
+  "key": "ward2n_bhavnagar-bmc-officials",
+  "payload": {
+   "reader": "ward2n_bhavnagar",
+   "url": "https://bmcgujarat.com/en/contact-us/bmc-officials/",
+   "state": "GJ",
+   "page": "bmc-officials"
+  }
+ }
+]

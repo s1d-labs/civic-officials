@@ -1,0 +1,18 @@
+{
+ "module": "ward2n_gorakhpur",
+ "payload": {
+  "reader": "ward2n_gorakhpur",
+  "url": "https://gorakhpurnagarnigam.up.gov.in/contact.aspx",
+  "state": "UP"
+ },
+ "routes": {
+  "https://gorakhpurnagarnigam.up.gov.in/contact.aspx": "gorakhpur_contact.html"
+ },
+ "min_records": 5,
+ "expect": [
+  {
+   "post": "Zonal Office",
+   "level": "zone"
+  }
+ ]
+}

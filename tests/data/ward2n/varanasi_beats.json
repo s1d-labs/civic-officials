@@ -1,0 +1,33 @@
+{
+ "module": "ward2n_varanasi",
+ "payload": {
+  "reader": "ward2n_varanasi",
+  "url": "https://nnvns.org.in/nnvns/attachments/article/84/All_100_Ward_Beat_List.pdf",
+  "state": "UP"
+ },
+ "pages": "varanasi_beats.pages",
+ "min_records": 4,
+ "expect": [
+  {
+   "post": "Sanitary and Food Inspector",
+   "name": "Jitendra Singh",
+   "wards": [
+    "1"
+   ]
+  },
+  {
+   "post": "Sanitation Supervisor",
+   "name": "Yogesh Maurya",
+   "wards": [
+    "1"
+   ]
+  },
+  {
+   "post": "Sanitary and Food Inspector",
+   "name": "Anushree",
+   "wards": [
+    "4"
+   ]
+  }
+ ]
+}

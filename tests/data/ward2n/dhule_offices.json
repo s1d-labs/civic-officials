@@ -1,0 +1,38 @@
+{
+ "module": "ward2n_dhule",
+ "payload": {
+  "reader": "ward2n_dhule",
+  "url": "https://dhulecorporation.org/dmc/ward-committee-office-1",
+  "state": "MH"
+ },
+ "routes": {
+  "https://dhulecorporation.org/dmc/ward-committee-office-1": "dhule_offices.html"
+ },
+ "min_records": 4,
+ "min_wards": 19,
+ "expect": [
+  {
+   "post": "Ward Officer",
+   "name": "किशोर शिंदे",
+   "wards": [
+    "1",
+    "2",
+    "4",
+    "5",
+    "6",
+    "7"
+   ],
+   "level": "zone"
+  },
+  {
+   "post": "Ward Officer",
+   "name": "किशोर वाघ",
+   "wards": [
+    "8",
+    "9",
+    "10",
+    "17"
+   ]
+  }
+ ]
+}

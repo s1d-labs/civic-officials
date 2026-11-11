@@ -1,0 +1,5 @@
+{"module": "ward2n_raipur",
+ "payload": {"reader": "ward2n_raipur", "url": "https://mcraipur.in/site/contactus", "state": "CG"},
+ "routes": {"https://mcraipur.in/site/contactus": "raipur_contactus.html"},
+ "min_records": 10,
+ "expect": [{"post": "Revenue Coordinator", "name": "KOMESH DEWANGAN"}, {"post": "Revenue Coordinator", "name": "PINTU RAJPUT"}]}

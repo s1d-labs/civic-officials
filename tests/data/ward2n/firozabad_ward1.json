@@ -1,0 +1,30 @@
+{
+ "module": "ward2n_firozabad",
+ "payload": {
+  "reader": "ward2n_firozabad",
+  "url": "http://firozabadnagarnigam.com/SafaiKaramcharis.aspx?ctid=1",
+  "state": "UP",
+  "ward": "1"
+ },
+ "routes": {
+  "http://firozabadnagarnigam.com/SafaiKaramcharis.aspx?ctid=1": "firozabad_ward1.html"
+ },
+ "min_records": 3,
+ "expect": [
+  {
+   "post": "Zonal Sanitary Officer",
+   "name": "दलवीर सिंह",
+   "wards": [
+    "1"
+   ]
+  },
+  {
+   "post": "Sanitary and Food Inspector",
+   "name": "मनोज कुमार"
+  },
+  {
+   "post": "Sanitation Supervisor",
+   "name": "सत्यप्रकाश"
+  }
+ ]
+}

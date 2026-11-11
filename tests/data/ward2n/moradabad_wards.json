@@ -1,0 +1,28 @@
+{
+ "module": "ward2n_moradabad",
+ "payload": {
+  "reader": "ward2n_moradabad",
+  "url": "https://nagarnigammoradabad.in/assets/files/ulb_ward_detail.pdf",
+  "state": "UP"
+ },
+ "pages": "moradabad_wards.pages",
+ "min_records": 68,
+ "min_wards": 68,
+ "expect": [
+  {
+   "post": "Sanitation Supervisor",
+   "name": "सुनील लश्करी",
+   "wards": [
+    "1"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Sanitation Supervisor",
+   "name": "शरीफ अहमद",
+   "wards": [
+    "4"
+   ]
+  }
+ ]
+}

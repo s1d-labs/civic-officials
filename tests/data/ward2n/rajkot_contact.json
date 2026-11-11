@@ -1,0 +1,5 @@
+{"module": "ward2n_rajkot",
+ "payload": {"reader": "ward2n_rajkot", "url": "https://www.rmc.gov.in/ContactUS", "state": "GJ"},
+ "routes": {"https://www.rmc.gov.in/ContactUS": "rajkot_contact.html"},
+ "min_records": 3,
+ "expect": [{"post": "Deputy Municipal Commissioner", "level": "zone"}]}

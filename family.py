@@ -142,7 +142,7 @@ _dept = [i for f in sorted((HERE / "seeds").glob("dept_*.json")) for i in json.l
 if _dept:
     PROJECTS.append({"name": f"{FAMILY}-depts", "title": "Department offices: police, power, ERO, sub-registrar, water (all India)",
                      "task": "depts", "target": f"{FAMILY}-depts", "env": {}, "probe": None, "unit_label": "source page",
-                     "record_label": "office", "items": [i for i in _dept if not i["payload"].get("india_only")], "workers": 24,
+                     "record_label": "office", "items": [i for i in _dept if not i["payload"].get("india_only") and not i["payload"].get("open")], "workers": 24,
                      # geo + proxy: the India servers (fast, direct) and GitHub runners through the proxies both take these
                      "threads": 1, "delay_ms": 1000, "geo": "IN", "proxy": "IN"})
     PROJECTS.append({"name": f"{FAMILY}-depts-in", "title": "Department offices that answer only from India",
@@ -150,6 +150,13 @@ if _dept:
                      "record_label": "office", "items": [i for i in _dept if i["payload"].get("india_only")], "workers": 24,
                      "threads": 1, "delay_ms": 1000, "geo": "IN", "proxy": "IN"})
     # geo + proxy: India servers and GitHub runners through the Indian proxies both take these items
+
+# Open sources (public files on GitHub and the like, payload "open": no geoblock): plain GitHub runners, no proxy, no India server
+_open = [i for i in _dept if i["payload"].get("open") and not i["payload"].get("india_only")]
+if _open:
+    PROJECTS.append({"name": f"{FAMILY}-depts-open", "title": "Department offices from open files (no geoblock)", "task": "depts",
+                     "target": f"{FAMILY}-depts-open", "env": {}, "probe": None, "unit_label": "file", "record_label": "office",
+                     "items": _open, "workers": 8, "threads": 1, "delay_ms": 500})
 
 # Ward map files (GeoPDFs, PDF maps) saved once to the bucket (wardmaps task = depts.py, dforms/wm_geopdf.py; seeds/wm_*.json):
 # civic-india wm_geopdf.py converts the saved copies to ward GeoJSON (2026-11-11: Okeskar/Maha_Election_2025, 975 files, 5.7 GB).

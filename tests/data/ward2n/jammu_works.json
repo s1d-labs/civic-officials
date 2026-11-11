@@ -1,0 +1,32 @@
+{
+ "module": "ward2n_jammu",
+ "payload": {
+  "reader": "ward2n_jammu",
+  "url": "https://jmc.jk.gov.in/contactus.aspx?type=Works",
+  "page": "Works",
+  "state": "JK"
+ },
+ "routes": {
+  "https://jmc.jk.gov.in/contactus.aspx?type=Works": "jammu_works.html"
+ },
+ "min_records": 18,
+ "expect": [
+  {
+   "post": "Executive Engineer",
+   "name": "Rajesh Kumar",
+   "wards": [
+    "1",
+    "11",
+    "71"
+   ]
+  },
+  {
+   "post": "Junior Engineer",
+   "name": "Mukesh Kumar",
+   "wards": [
+    "1",
+    "4"
+   ]
+  }
+ ]
+}

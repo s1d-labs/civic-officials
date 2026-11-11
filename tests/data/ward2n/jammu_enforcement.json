@@ -1,0 +1,28 @@
+{
+ "module": "ward2n_jammu",
+ "payload": {
+  "reader": "ward2n_jammu",
+  "url": "https://jmc.jk.gov.in/contactus.aspx?type=Enforcement",
+  "page": "Enforcement",
+  "state": "JK"
+ },
+ "routes": {
+  "https://jmc.jk.gov.in/contactus.aspx?type=Enforcement": "jammu_enforcement.html"
+ },
+ "min_records": 5,
+ "expect": [
+  {
+   "post": "Enforcement Inspector",
+   "name": "Ramesh kumar",
+   "wards": [
+    "1",
+    "71"
+   ]
+  },
+  {
+   "post": "Enforcement Officer",
+   "name": "Zaffar Iqbal",
+   "level": "zone"
+  }
+ ]
+}

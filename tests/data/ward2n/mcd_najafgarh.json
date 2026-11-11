@@ -1,0 +1,36 @@
+{
+ "module": "ward2n_mcd",
+ "payload": {
+  "reader": "ward2n_mcd",
+  "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=adbbaa4a-7c94-4e24-b6e7-91c1c6c79911",
+  "zone": "Najafgarh Zone",
+  "state": "DL"
+ },
+ "routes": {
+  "https://mcdonline.nic.in/portal/showSubMenu?menuguide=adbbaa4a-7c94-4e24-b6e7-91c1c6c79911": "mcd_najafgarh_sub.txt",
+  "https://mcdonline.nic.in/portal/showContent?menuguide=ccd063c0-10d1-4aa5-9f08-0b2dfe38677a": "mcd_najafgarh_kc.txt"
+ },
+ "min_records": 20,
+ "expect": [
+  {
+   "post": "^Deputy Commissioner$",
+   "name": "Shasvat Saurabh"
+  },
+  {
+   "post": "Jt. A&C",
+   "name": "Ajay Kumar"
+  },
+  {
+   "post": "Ex. Engg. \\(M-I\\)",
+   "name": "R C Sharma"
+  },
+  {
+   "post": "CSI",
+   "name": "Virender Dagar"
+  },
+  {
+   "post": "DHO",
+   "name": "Santosh Kumar Tomer"
+  }
+ ]
+}

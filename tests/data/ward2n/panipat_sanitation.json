@@ -1,0 +1,33 @@
+{
+ "module": "ward2n_panipat",
+ "payload": {
+  "reader": "ward2n_panipat",
+  "url": "https://nagarnigampanipat.in/sanitation-structure/",
+  "state": "HR"
+ },
+ "routes": {
+  "https://nagarnigampanipat.in/sanitation-structure/": "panipat_sanitation.html"
+ },
+ "min_records": 40,
+ "min_wards": 26,
+ "expect": [
+  {
+   "post": "Assistant Sanitary Inspector",
+   "name": "Parmjeet Singh",
+   "wards": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5"
+   ]
+  },
+  {
+   "post": "Daroga",
+   "name": "Fakir Chand",
+   "wards": [
+    "8"
+   ]
+  }
+ ]
+}

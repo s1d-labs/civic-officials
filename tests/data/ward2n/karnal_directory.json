@@ -1,0 +1,22 @@
+{
+ "module": "ward2n_karnal",
+ "payload": {
+  "reader": "ward2n_karnal",
+  "url": "https://mckarnal.co.in/index.php/office-directory",
+  "state": "HR"
+ },
+ "routes": {
+  "https://mckarnal.co.in/index.php/office-directory": "karnal_directory.html"
+ },
+ "min_records": 8,
+ "expect": [
+  {
+   "post": "Sanitary Inspector",
+   "name": "Usha Rani"
+  },
+  {
+   "post": "Joint Commissioner",
+   "name": "Daljit Singh"
+  }
+ ]
+}

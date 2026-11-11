@@ -1,0 +1,7 @@
+{"module": "ward2n_surendranagar",
+ "payload": {"reader": "ward2n_surendranagar", "url": "https://snmcgujarat.com/zones_wards", "state": "GJ"},
+ "routes": {"https://snmcgujarat.com/zones_wards": "surendranagar_zones.html"},
+ "min_records": 28,
+ "expect": [{"post": "Deputy Commissioner", "name": "Gautamkumar K. Makwana", "level": "zone"},
+            {"post": "Zonal Officer, Tax Branch", "name": "Takhatsinh Rathod"},
+            {"post": "Zonal Officer, Town Planning", "name": "Nikunj Viroja"}]}

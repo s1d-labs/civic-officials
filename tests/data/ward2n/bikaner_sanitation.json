@@ -1,0 +1,55 @@
+{
+ "module": "ward2n_bikaner",
+ "payload": {
+  "reader": "ward2n_bikaner",
+  "url": "https://bikanermc.org/PDF/Ward_Wise_List_Jamadar.pdf?v1",
+  "contact_url": "https://bikanermc.org/PDF/ContactList.pdf?v1",
+  "state": "RJ"
+ },
+ "pages": "bikaner_sanitation.pages",
+ "min_records": 30,
+ "min_wards": 15,
+ "expect": [
+  {
+   "post": "Sanitation Jamadar",
+   "name": "महावीर थेमत",
+   "wards": [
+    "15"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Sanitation In-charge",
+   "name": "बी.डी. व्यास",
+   "wards": [
+    "2",
+    "22"
+   ],
+   "level": "circle"
+  },
+  {
+   "post": "Sanitation In-charge",
+   "name": "^बुलाक सियोता$",
+   "wards": [
+    "15",
+    "41"
+   ]
+  },
+  {
+   "post": "^Executive Engineer$",
+   "name": "पवन बंसल"
+  },
+  {
+   "post": "Assistant Engineer",
+   "name": "नजीर गौरी"
+  },
+  {
+   "post": "Revenue Inspector",
+   "name": "अर्चना भादू"
+  },
+  {
+   "post": "Assistant Administrative Officer",
+   "name": "बी.डी. व्यास"
+  }
+ ]
+}

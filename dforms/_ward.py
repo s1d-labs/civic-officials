@@ -33,6 +33,7 @@ WINGS = (
 )
 HEAD = re.compile(r"(?i)\b(zonal\s*(officer|commissioner|head)|zone\s*officer|ward\s*officer|assistant\s*commissioner|"
                   r"asst\.?\s*commissioner|deputy\s*commissioner|zonal\s*deputy\s*commissioner|additional\s*commissioner|"
+                  r"deputy\s*municipal\s*commissioner|joint\s*commissioner|"
                   r"assistant\s*municipal\s*commissioner|executive\s*officer|borough\s*(executive|officer)|"
                   r"prabhag\s*adhikari|sahayak\s*ayukt|upayukt)\b|सहायक\s*आयुक्त|प्रभाग\s*अधिकारी|क्षेत्रीय\s*अधिकारी|"
                   r"झोनल\s*अधिकारी|उपायुक्त|जोनल\s*अधिकारी")

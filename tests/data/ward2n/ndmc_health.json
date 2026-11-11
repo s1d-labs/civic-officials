@@ -1,0 +1,28 @@
+{
+ "module": "ward2n_ndmc",
+ "payload": {
+  "reader": "ward2n_ndmc",
+  "url": "https://ndmc.gov.in/departments/Departments/Health/DataHealthDepartment-19062023.pdf",
+  "state": "DL"
+ },
+ "pages": "ndmc_health.pages",
+ "min_records": 29,
+ "expect": [
+  {
+   "post": "^CSI$",
+   "name": "Naresh Yadav"
+  },
+  {
+   "post": "^SI-I$",
+   "name": "Ram Pal Yadav"
+  },
+  {
+   "post": "ASI-III",
+   "name": "Nitin Kishore Sharma"
+  },
+  {
+   "post": "Medical Officer of Health",
+   "name": "R.P.Sati"
+  }
+ ]
+}

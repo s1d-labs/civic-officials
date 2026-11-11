@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ward2n_dehradun-sanitation-section",
+  "payload": {
+   "reader": "ward2n_dehradun",
+   "url": "https://nndehradun.uk.gov.in/sanitation-section/",
+   "state": "UK",
+   "page": "sanitation-section"
+  }
+ },
+ {
+  "key": "ward2n_dehradun-list-of-supervisors",
+  "payload": {
+   "reader": "ward2n_dehradun",
+   "url": "https://nndehradun.uk.gov.in/list-of-supervisors/",
+   "state": "UK",
+   "page": "list-of-supervisors"
+  }
+ }
+]

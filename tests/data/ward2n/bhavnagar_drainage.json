@@ -1,0 +1,7 @@
+{"module": "ward2n_bhavnagar",
+ "payload": {"reader": "ward2n_bhavnagar", "url": "https://bmcgujarat.com/en/contact-us/drainage-ward-offices/", "state": "GJ", "page": "drainage-ward-offices"},
+ "routes": {"https://bmcgujarat.com/en/contact-us/drainage-ward-offices/": "bhavnagar_drainage.html",
+            "https://bmcgujarat.com/en/contact-us/drainage-ward-offices/?page=2": "bhavnagar_drainage_p2.html"},
+ "min_records": 13, "min_wards": 13,
+ "expect": [{"post": "Sub Sanitary Inspector", "name": "Ravaiya Parthkumar", "wards": ["1"], "level": "ward"},
+            {"post": "Drainage", "wards": ["13"]}]}

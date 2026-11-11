@@ -1,0 +1,38 @@
+[
+ {
+  "key": "ward2n_ahilyanagar-zone1",
+  "payload": {
+   "reader": "ward2n_ahilyanagar",
+   "url": "https://amc.gov.in/zone-1/",
+   "state": "MH",
+   "office": 1
+  }
+ },
+ {
+  "key": "ward2n_ahilyanagar-zone2",
+  "payload": {
+   "reader": "ward2n_ahilyanagar",
+   "url": "https://amc.gov.in/zone-2/",
+   "state": "MH",
+   "office": 2
+  }
+ },
+ {
+  "key": "ward2n_ahilyanagar-zone3",
+  "payload": {
+   "reader": "ward2n_ahilyanagar",
+   "url": "https://amc.gov.in/zone-3/",
+   "state": "MH",
+   "office": 3
+  }
+ },
+ {
+  "key": "ward2n_ahilyanagar-zone4",
+  "payload": {
+   "reader": "ward2n_ahilyanagar",
+   "url": "https://amc.gov.in/zone-4/",
+   "state": "MH",
+   "office": 4
+  }
+ }
+]

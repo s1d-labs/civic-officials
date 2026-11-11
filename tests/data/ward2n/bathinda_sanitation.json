@@ -1,0 +1,24 @@
+{
+ "module": "ward2n_bathinda",
+ "payload": {
+  "reader": "ward2n_bathinda",
+  "url": "https://mcbathinda.com/DepartmentServices.aspx?S=3",
+  "branch": "Sanitation",
+  "state": "PB"
+ },
+ "routes": {
+  "https://mcbathinda.com/DepartmentServices.aspx?S=3": "bathinda_sanitation.html"
+ },
+ "min_records": 15,
+ "expect": [
+  {
+   "post": "Chief Sanitary Inspector",
+   "name": "Satish kumar",
+   "level": "zone"
+  },
+  {
+   "post": "Sanitary Supervisor",
+   "name": "Rakesh Kumar"
+  }
+ ]
+}

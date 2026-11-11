@@ -1,0 +1,5 @@
+{"module": "ward2n_nadiad",
+ "payload": {"reader": "ward2n_nadiad", "url": "https://nadiadnmc.in/Home/ViewMethod/wERIaYNvUeVa7WS4JaTDyw~~", "state": "GJ", "page": "civic-centres"},
+ "routes": {"https://nadiadnmc.in/Home/ViewMethod/wERIaYNvUeVa7WS4JaTDyw~~": "nadiad_centres.html"},
+ "min_records": 12,
+ "expect": [{"post": "Civic Centre", "level": "zone"}]}

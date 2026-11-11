@@ -1,0 +1,24 @@
+{
+ "module": "ward2n_jammu",
+ "payload": {
+  "reader": "ward2n_jammu",
+  "url": "https://jmc.jk.gov.in/contactus.aspx?type=Officers",
+  "page": "Officers",
+  "state": "JK"
+ },
+ "routes": {
+  "https://jmc.jk.gov.in/contactus.aspx?type=Officers": "jammu_officers.html"
+ },
+ "min_records": 9,
+ "expect": [
+  {
+   "post": "Commissioner",
+   "name": "Ayushi Sudan"
+  },
+  {
+   "post": "Deputy Comm. \\(North\\)",
+   "name": "Sanjay Badyal",
+   "level": "zone"
+  }
+ ]
+}

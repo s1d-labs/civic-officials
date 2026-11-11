@@ -1,0 +1,6 @@
+{"module": "ward2n_nadiad",
+ "payload": {"reader": "ward2n_nadiad", "url": "https://nadiadnmc.in/Home/ViewMethod/XGmqpSvedpqbTYkhfuV14A~~", "state": "GJ", "page": "officials"},
+ "routes": {"https://nadiadnmc.in/Home/ViewMethod/XGmqpSvedpqbTYkhfuV14A~~": "nadiad_officials.html"},
+ "min_records": 2,
+ "expect": [{"post": "Deputy Municipal Commissioner", "name": "Vimalkumar K. Gadhavi", "level": "zone"},
+            {"post": "Deputy Municipal Commissioner", "name": "Rudresh Hudad"}]}

@@ -1,0 +1,41 @@
+{
+ "module": "ward2n_gurugram",
+ "payload": {
+  "reader": "ward2n_gurugram",
+  "url": "https://www.mcg.gov.in/",
+  "state": "HR"
+ },
+ "routes": {
+  "https://www.mcg.gov.in/": "gurugram_home.html",
+  "https://www.mcg.gov.in/assets/index-BanOZ_xD.js": "gurugram_bundle.txt"
+ },
+ "min_records": 35,
+ "min_wards": 30,
+ "expect": [
+  {
+   "post": "Joint Commissioner-I$",
+   "name": "Sapna Yadav",
+   "wards": [
+    "11",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18"
+   ],
+   "level": "zone"
+  },
+  {
+   "post": "Zonal Taxation Officer-V",
+   "name": "Gulshan",
+   "wards": [
+    "1",
+    "36"
+   ]
+  },
+  {
+   "post": "Executive Engineer-III",
+   "name": "Hitesh Dahiya"
+  }
+ ]
+}

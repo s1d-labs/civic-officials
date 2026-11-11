@@ -1,0 +1,20 @@
+{
+ "module": "ward2n_jalgaon",
+ "payload": {
+  "reader": "ward2n_jalgaon",
+  "url": "https://jcmc.gov.in/OfficersWardOfficer2_M.html",
+  "state": "MH",
+  "office": 2
+ },
+ "routes": {
+  "https://jcmc.gov.in/OfficersWardOfficer2_M.html": "jalgaon_ps2.html"
+ },
+ "min_records": 1,
+ "expect": [
+  {
+   "post": "Ward Officer",
+   "name": "प्रसाद पुराणिक",
+   "level": "zone"
+  }
+ ]
+}

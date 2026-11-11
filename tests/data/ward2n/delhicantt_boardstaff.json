@@ -1,0 +1,22 @@
+{
+ "module": "ward2n_delhicantt",
+ "payload": {
+  "reader": "ward2n_delhicantt",
+  "url": "https://delhi.cantt.gov.in/boardstaff/",
+  "state": "DL"
+ },
+ "routes": {
+  "https://delhi.cantt.gov.in/boardstaff/": "delhicantt_boardstaff.html"
+ },
+ "min_records": 8,
+ "expect": [
+  {
+   "post": "Executive Engineer",
+   "name": "Rakesh Rana"
+  },
+  {
+   "post": "Junior Engineer",
+   "name": "Sachin Kumar"
+  }
+ ]
+}

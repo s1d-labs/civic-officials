@@ -1,0 +1,38 @@
+[
+ {
+  "key": "ward2n_rewa-civil-zone-1",
+  "payload": {
+   "reader": "ward2n_rewa",
+   "url": "https://rewanagarnigam.org/civil-zone-1/",
+   "state": "MP",
+   "zone": 1
+  }
+ },
+ {
+  "key": "ward2n_rewa-civil-zone-2",
+  "payload": {
+   "reader": "ward2n_rewa",
+   "url": "https://rewanagarnigam.org/civil-zone-2/",
+   "state": "MP",
+   "zone": 2
+  }
+ },
+ {
+  "key": "ward2n_rewa-civil-zone-3",
+  "payload": {
+   "reader": "ward2n_rewa",
+   "url": "https://rewanagarnigam.org/civil-zone-3/",
+   "state": "MP",
+   "zone": 3
+  }
+ },
+ {
+  "key": "ward2n_rewa-civil-zone-4",
+  "payload": {
+   "reader": "ward2n_rewa",
+   "url": "https://rewanagarnigam.org/civil-zone-4/",
+   "state": "MP",
+   "zone": 4
+  }
+ }
+]

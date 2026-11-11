@@ -1,0 +1,8 @@
+{"module": "ward2n_bhilai",
+ "payload": {"reader": "ward2n_bhilai", "url": "https://bhilainagarnigam.com/officersno.pdf", "state": "CG"},
+ "pages": "bhilai_officers.pages",
+ "min_records": 12,
+ "expect": [{"post": "^Zone Commissioner$", "name": "अजय राजपूत"},
+            {"post": "Zone Commissioner", "name": "येशा लहरे"},
+            {"post": "Zone Assistant Health Officer", "name": "अंकित सक्सेना"},
+            {"post": "Assistant Revenue Officer", "name": "सुनील जोशी"}]}

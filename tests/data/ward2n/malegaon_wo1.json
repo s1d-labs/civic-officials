@@ -1,0 +1,20 @@
+{
+ "module": "ward2n_malegaon",
+ "payload": {
+  "reader": "ward2n_malegaon",
+  "url": "https://malegaoncorporation.org/mmc/ward-office-no-1",
+  "state": "MH",
+  "office": 1
+ },
+ "routes": {
+  "https://malegaoncorporation.org/mmc/ward-office-no-1": "malegaon_wo1.html"
+ },
+ "min_records": 1,
+ "expect": [
+  {
+   "post": "Ward Officer",
+   "name": "सचिन पुंडलीक भामरे",
+   "level": "zone"
+  }
+ ]
+}

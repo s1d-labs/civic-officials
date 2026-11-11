@@ -1,0 +1,40 @@
+{
+ "module": "ward2n_kota",
+ "payload": {
+  "reader": "ward2n_kota",
+  "url": "https://kotamc.org/PDF/Kota_North.pdf",
+  "state": "RJ"
+ },
+ "pages": "kota_north.pages",
+ "min_records": 40,
+ "expect": [
+  {
+   "post": "^Commissioner$",
+   "name": "अनुराग भार्गव"
+  },
+  {
+   "post": "Executive Engineer",
+   "name": "प्रखर गोयल"
+  },
+  {
+   "post": "Junior Engineer \\(Mechanical\\)",
+   "name": "अजीत सिंह"
+  },
+  {
+   "post": "^Junior Engineer$",
+   "name": "अनुराधा गुप्ता"
+  },
+  {
+   "post": "Revenue Inspector",
+   "name": "मोहित अग्निहोत्री"
+  },
+  {
+   "post": "Junior Assistant",
+   "name": "अनिशा खानम"
+  },
+  {
+   "post": "Assistant Town Planner",
+   "name": "अनुपमा कौशल"
+  }
+ ]
+}

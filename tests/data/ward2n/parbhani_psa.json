@@ -1,0 +1,20 @@
+{
+ "module": "ward2n_parbhani",
+ "payload": {
+  "reader": "ward2n_parbhani",
+  "url": "https://pcmcparbhani.org/pcmc/assistant-commissioner-ward-committee-a",
+  "state": "MH",
+  "office": "a"
+ },
+ "routes": {
+  "https://pcmcparbhani.org/pcmc/assistant-commissioner-ward-committee-a": "parbhani_psa.html"
+ },
+ "min_records": 1,
+ "expect": [
+  {
+   "post": "Assistant Commissioner",
+   "name": "Syed Zubair Hashmi",
+   "level": "zone"
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+{"module": "ward2n_panaji",
+ "payload": {"reader": "ward2n_panaji", "url": "https://ccpgoa.com/sanitation-related-works/", "state": "GA", "page": "sanitation-related-works"},
+ "routes": {"https://ccpgoa.com/sanitation-related-works/": "panaji_sanitation.html"},
+ "min_records": 1,
+ "expect": [{"post": "Sanitary Inspector", "name": "Somnath Dessai"}]}

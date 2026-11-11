@@ -1,0 +1,24 @@
+{
+ "module": "ward2n_dehradun",
+ "payload": {
+  "reader": "ward2n_dehradun",
+  "url": "https://nndehradun.uk.gov.in/list-of-supervisors/",
+  "state": "UK",
+  "page": "list-of-supervisors"
+ },
+ "routes": {
+  "https://nndehradun.uk.gov.in/list-of-supervisors/": "dehradun_list.html"
+ },
+ "min_records": 6,
+ "min_wards": 50,
+ "expect": [
+  {
+   "post": "Sanitation Inspector",
+   "name": "Pushpa Aswal",
+   "wards": [
+    "26",
+    "38"
+   ]
+  }
+ ]
+}

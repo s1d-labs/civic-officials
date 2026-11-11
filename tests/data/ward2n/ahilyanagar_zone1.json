@@ -1,0 +1,20 @@
+{
+ "module": "ward2n_ahilyanagar",
+ "payload": {
+  "reader": "ward2n_ahilyanagar",
+  "url": "https://amc.gov.in/zone-1/",
+  "state": "MH",
+  "office": 1
+ },
+ "routes": {
+  "https://amc.gov.in/zone-1/": "ahilyanagar_zone1.html"
+ },
+ "min_records": 1,
+ "expect": [
+  {
+   "post": "Ward Officer",
+   "name": "गणेश वाकळे",
+   "level": "zone"
+  }
+ ]
+}

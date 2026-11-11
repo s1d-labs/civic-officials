@@ -1,0 +1,40 @@
+{
+ "module": "ward2n_kolhapur",
+ "payload": {
+  "reader": "ward2n_kolhapur",
+  "url": "https://web.kolhapurcorporation.gov.in/contact",
+  "state": "MH"
+ },
+ "routes": {
+  "https://web.kolhapurcorporation.gov.in/contact": "kolhapur_contact.html"
+ },
+ "min_records": 20,
+ "min_wards": 20,
+ "expect": [
+  {
+   "post": "Assistant Commissioner",
+   "name": "विजय पाटील",
+   "level": "zone"
+  },
+  {
+   "post": "^Health Inspector",
+   "name": "नंदकुमार पाटील",
+   "wards": [
+    "47",
+    "55",
+    "56",
+    "57",
+    "69"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Branch Engineer",
+   "name": "महानंदा सूर्यवंशी"
+  },
+  {
+   "post": "Tax Superintendent",
+   "name": "अर्चना प्रभावळे"
+  }
+ ]
+}

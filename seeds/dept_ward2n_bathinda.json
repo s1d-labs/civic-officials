@@ -1,0 +1,164 @@
+[
+ {
+  "key": "ward2n_bathinda-water-supply-sewerage",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=1",
+   "branch": "Water Supply & Sewerage",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-street-lights",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=2",
+   "branch": "Street Lights",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-sanitation",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=3",
+   "branch": "Sanitation",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-fire-brigade",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=4",
+   "branch": "Fire Brigade",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-horticulture",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=5",
+   "branch": "Horticulture",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-engineering-branch",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=6",
+   "branch": "Engineering Branch",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-birth-death",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=7",
+   "branch": "Birth & Death",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-house-tax-property-tax",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=8",
+   "branch": "House Tax / Property Tax",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-licence",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=9",
+   "branch": "Licence",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-tehbazari-advertisement-branch",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=11",
+   "branch": "Tehbazari & Advertisement Branch",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-building-branch",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=13",
+   "branch": "Building Branch",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-rent-branch",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=14",
+   "branch": "Rent Branch",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-accounts-branch",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=15",
+   "branch": "Accounts Branch",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-geographic-information-system-gis",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=16",
+   "branch": "Geographic Information System (GIS)",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-store",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=17",
+   "branch": "Store",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-national-urban-livelihoods-mission-nulm",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=18",
+   "branch": "National Urban Livelihoods Mission (NULM)",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-pradhan-mantri-awas-yojana-pmay",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=19",
+   "branch": "Pradhan Mantri Awas Yojana (PMAY)",
+   "state": "PB"
+  }
+ },
+ {
+  "key": "ward2n_bathinda-general-branch",
+  "payload": {
+   "reader": "ward2n_bathinda",
+   "url": "https://mcbathinda.com/DepartmentServices.aspx?S=20",
+   "branch": "General Branch",
+   "state": "PB"
+  }
+ }
+]

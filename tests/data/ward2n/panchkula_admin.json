@@ -1,0 +1,22 @@
+{
+ "module": "ward2n_panchkula",
+ "payload": {
+  "reader": "ward2n_panchkula",
+  "url": "https://mcpanchkula.in/Administrative_Officer.aspx",
+  "state": "HR"
+ },
+ "routes": {
+  "https://mcpanchkula.in/Administrative_Officer.aspx": "panchkula_admin.html"
+ },
+ "min_records": 20,
+ "expect": [
+  {
+   "post": "Chief Sanitary Inspector",
+   "name": "Anil Kumar Nain"
+  },
+  {
+   "post": "Executive Engineer - II",
+   "name": "Sumit Malik"
+  }
+ ]
+}

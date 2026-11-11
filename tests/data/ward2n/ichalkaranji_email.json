@@ -1,0 +1,18 @@
+{
+ "module": "ward2n_ichalkaranji",
+ "payload": {
+  "reader": "ward2n_ichalkaranji",
+  "url": "https://ichalkaranjimnp.in/official-email-ids/",
+  "state": "MH"
+ },
+ "routes": {
+  "https://ichalkaranjimnp.in/official-email-ids/": "ichalkaranji_email.html"
+ },
+ "min_records": 4,
+ "expect": [
+  {
+   "post": "Divisional Office",
+   "level": "zone"
+  }
+ ]
+}

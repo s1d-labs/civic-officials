@@ -1,0 +1,23 @@
+{
+ "module": "ward2n_faridabad",
+ "payload": {
+  "reader": "ward2n_faridabad",
+  "url": "https://mcfaridabad.in/",
+  "state": "HR"
+ },
+ "routes": {
+  "https://mcfaridabad.in/": "faridabad_home.html",
+  "https://mcfaridabad.in/assets/index-CpgGuKIG.js": "faridabad_bundle.txt"
+ },
+ "min_records": 10,
+ "expect": [
+  {
+   "post": "Zonal Officer",
+   "name": "Deepa Pabbi"
+  },
+  {
+   "post": "Joint Commissioner \\(NIT\\)",
+   "name": "Jeetinder Joshi"
+  }
+ ]
+}

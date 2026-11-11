@@ -1,0 +1,7 @@
+{"module": "ward2n_indore",
+ "payload": {"reader": "ward2n_indore", "url": "https://imcindore.mp.gov.in/contact", "state": "MP"},
+ "routes": {"https://imcindore.mp.gov.in/contact": "indore_contact.html"},
+ "min_records": 14, "min_wards": 13,
+ "expect": [{"post": "^Zonal Officer$", "name": "Vinod Agrawal", "wards": ["7", "9", "10", "16"]},
+            {"post": "Assistant Revenue Officer", "name": "Abir Rewal", "wards": ["31", "35", "36"]},
+            {"post": "Chief Sanitary Inspector"}]}
