@@ -1,0 +1,56 @@
+[
+ {
+  "key": "ulb2_hr-ambala-248491",
+  "payload": {
+   "reader": "ulb2_hr",
+   "url": "https://mcambala.in/",
+   "state": "HR",
+   "body": "Ambala",
+   "district": "Ambala",
+   "lgd_code": "248491",
+   "body_type": "Municipal Corporation",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb2_hr-gurugram-248576",
+  "payload": {
+   "reader": "ulb2_hr",
+   "url": "https://www.mcg.gov.in/",
+   "state": "HR",
+   "body": "Gurugram",
+   "district": "Gurugram",
+   "lgd_code": "248576",
+   "body_type": "Municipal Corporation",
+   "india_only": false,
+   "match": "Gurugram|Gurgaon"
+  }
+ },
+ {
+  "key": "ulb2_hr-palwal-248586",
+  "payload": {
+   "reader": "ulb2_hr",
+   "url": "https://mcpalwal.in/",
+   "state": "HR",
+   "body": "Palwal",
+   "district": "Palwal",
+   "lgd_code": "248586",
+   "body_type": "Municipal Council",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb2_hr-farrukhnagar-248574",
+  "payload": {
+   "reader": "ulb2_hr",
+   "url": "https://mcfarukhnagar.in/",
+   "state": "HR",
+   "body": "Farrukhnagar",
+   "district": "Gurugram",
+   "lgd_code": "248574",
+   "body_type": "Municipal Committee",
+   "india_only": false,
+   "match": "Farrukhnagar|Farukhnagar|Farrukh Nagar|Farukh Nagar"
+  }
+ }
+]

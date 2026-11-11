@@ -1,0 +1,26 @@
+[
+ {
+  "key": "ulb2_py-yanam",
+  "payload": {
+   "reader": "ulb2_py",
+   "kind": "directory",
+   "url": "https://yanam.gov.in/directory/",
+   "state": "PY",
+   "district": "Yanam",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ulb2_py-oulgaret",
+  "payload": {
+   "reader": "ulb2_py",
+   "kind": "home",
+   "url": "https://oulmun.in/",
+   "state": "PY",
+   "district": "Puducherry",
+   "body": "Oulgaret",
+   "lgd_code": "253093",
+   "india_only": false
+  }
+ }
+]

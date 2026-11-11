@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ulb2_nl-mokokchung-contacts",
+  "payload": {
+   "reader": "ulb2_nl",
+   "url": "https://mokokchung.nic.in/district-administration-contact-details/",
+   "district": "Mokokchung",
+   "state": "NL",
+   "rules": [
+    [
+     "\\badministrator\\s+(MMC|mokokchung\\s+municipal)",
+     "Mokokchung",
+     "249717",
+     "Municipal Council"
+    ]
+   ],
+   "india_only": false
+  }
+ }
+]

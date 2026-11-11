@@ -1,0 +1,534 @@
+[
+ {
+  "key": "ulb2_as-basugaon",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://basugaon.assamurban.in/office-staff",
+   "members": "https://basugaon.assamurban.in/members",
+   "body": "Basugaon MB",
+   "district": "Chirang",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249823"
+  }
+ },
+ {
+  "key": "ulb2_as-bihpuria",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://bihpuria.assamurban.in/office-staff",
+   "members": "https://bihpuria.assamurban.in/members",
+   "body": "Bihpuria MB",
+   "district": "Lakhimpur",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249881"
+  }
+ },
+ {
+  "key": "ulb2_as-bilasipara",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://bilasipara.assamurban.in/office-staff",
+   "members": "https://bilasipara.assamurban.in/members",
+   "body": "Bilasipara MB",
+   "district": "Dhubri",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "300488"
+  }
+ },
+ {
+  "key": "ulb2_as-bongaigaon",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://bongaigaon.assamurban.in/office-staff",
+   "members": "https://bongaigaon.assamurban.in/members",
+   "body": "Bongaigaon MB",
+   "district": "Bongaigaon",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249836"
+  }
+ },
+ {
+  "key": "ulb2_as-chapakhowa",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://chapakhowa.assamurban.in/office-staff",
+   "members": "https://chapakhowa.assamurban.in/members",
+   "body": "Chapakhowa MB",
+   "district": "Tinsukia",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "259861"
+  }
+ },
+ {
+  "key": "ulb2_as-dhekiajuli",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://dhekiajuli.assamurban.in/office-staff",
+   "members": "https://dhekiajuli.assamurban.in/members",
+   "body": "Dhekiajuli MB",
+   "district": "Sonitpur",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249875"
+  }
+ },
+ {
+  "key": "ulb2_as-digboi",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://digboi.assamurban.in/office-staff",
+   "members": "https://digboi.assamurban.in/members",
+   "body": "Digboi MB",
+   "district": "Tinsukia",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249890"
+  }
+ },
+ {
+  "key": "ulb2_as-doomdooma",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://doomdooma.assamurban.in/office-staff",
+   "members": "https://doomdooma.assamurban.in/members",
+   "body": "Doom Dooma MB",
+   "district": "Tinsukia",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249886"
+  }
+ },
+ {
+  "key": "ulb2_as-fakiragram",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://fakiragram.assamurban.in/office-staff",
+   "members": "https://fakiragram.assamurban.in/members",
+   "body": "Fakiragram MB",
+   "district": "Kokrajhar",
+   "state": "AS",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb2_as-gauripur",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://gauripur.assamurban.in/office-staff",
+   "members": "https://gauripur.assamurban.in/members",
+   "body": "Gauripur MB",
+   "district": "Dhubri",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249826"
+  }
+ },
+ {
+  "key": "ulb2_as-golukganj",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://golukganj.assamurban.in/office-staff",
+   "members": "https://golukganj.assamurban.in/members",
+   "body": "Golukganj MB",
+   "district": "Dhubri",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "300491"
+  }
+ },
+ {
+  "key": "ulb2_as-gossaigaon",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://gossaigaon.assamurban.in/office-staff",
+   "members": "https://gossaigaon.assamurban.in/members",
+   "body": "Gossaigaon MB",
+   "district": "Kokrajhar",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249821"
+  }
+ },
+ {
+  "key": "ulb2_as-hojai",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://hojai.assamurban.in/office-staff",
+   "members": "https://hojai.assamurban.in/members",
+   "body": "Hojai MB",
+   "district": "Hojai",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249870"
+  }
+ },
+ {
+  "key": "ulb2_as-howly",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://howly.assamurban.in/office-staff",
+   "members": "https://howly.assamurban.in/members",
+   "body": "Howly MB",
+   "district": "Barpeta",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249844"
+  }
+ },
+ {
+  "key": "ulb2_as-jorhat",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://jorhat.assamurban.in/office-staff",
+   "members": "https://jorhat.assamurban.in/members",
+   "body": "Jorhat MB",
+   "district": "Jorhat",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249912"
+  }
+ },
+ {
+  "key": "ulb2_as-kajalgaon",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://kajalgaon.assamurban.in/office-staff",
+   "members": "https://kajalgaon.assamurban.in/members",
+   "body": "Kajalgaon MB",
+   "district": "Chirang",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "296999"
+  }
+ },
+ {
+  "key": "ulb2_as-lakhipurcachar",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://lakhipurcachar.assamurban.in/office-staff",
+   "members": "https://lakhipurcachar.assamurban.in/members",
+   "body": "Lakhipur MB(Cachar)",
+   "district": "Cachar",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249939"
+  }
+ },
+ {
+  "key": "ulb2_as-lala",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://lala.assamurban.in/office-staff",
+   "members": "https://lala.assamurban.in/members",
+   "body": "Lala MB",
+   "district": "Hailakandi",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249945"
+  }
+ },
+ {
+  "key": "ulb2_as-langhin",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://langhin.assamurban.in/office-staff",
+   "members": "https://langhin.assamurban.in/members",
+   "body": "Langhin MB",
+   "district": "Karbi-Anglong",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "277148"
+  }
+ },
+ {
+  "key": "ulb2_as-lanka",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://lanka.assamurban.in/office-staff",
+   "members": "https://lanka.assamurban.in/members",
+   "body": "Lanka MB",
+   "district": "Hojai",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "300495"
+  }
+ },
+ {
+  "key": "ulb2_as-lumding",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://lumding.assamurban.in/office-staff",
+   "members": "https://lumding.assamurban.in/members",
+   "body": "Lumding MB",
+   "district": "Hojai",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249872"
+  }
+ },
+ {
+  "key": "ulb2_as-moran",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://moran.assamurban.in/office-staff",
+   "members": "https://moran.assamurban.in/members",
+   "body": "Moran MB",
+   "district": "Charaideo",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249902"
+  }
+ },
+ {
+  "key": "ulb2_as-nagaon",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://nagaon.assamurban.in/office-staff",
+   "members": "https://nagaon.assamurban.in/members",
+   "body": "Nagaon MB",
+   "district": "Nagaon",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249866"
+  }
+ },
+ {
+  "key": "ulb2_as-naharkatia",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://naharkatia.assamurban.in/office-staff",
+   "members": "https://naharkatia.assamurban.in/members",
+   "body": "Naharkatia MB",
+   "district": "Dibrugarh",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249903"
+  }
+ },
+ {
+  "key": "ulb2_as-namrup",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://namrup.assamurban.in/office-staff",
+   "members": "https://namrup.assamurban.in/members",
+   "body": "Namrup MB",
+   "district": "Dibrugarh",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249904"
+  }
+ },
+ {
+  "key": "ulb2_as-narayanpur",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://narayanpur.assamurban.in/office-staff",
+   "members": "https://narayanpur.assamurban.in/members",
+   "body": "Narayanpur MB",
+   "district": "Lakhimpur",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "253212"
+  }
+ },
+ {
+  "key": "ulb2_as-raha",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://raha.assamurban.in/office-staff",
+   "members": "https://raha.assamurban.in/members",
+   "body": "Raha MB",
+   "district": "Nagaon",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "271990"
+  }
+ },
+ {
+  "key": "ulb2_as-sarupathar",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://sarupathar.assamurban.in/office-staff",
+   "members": "https://sarupathar.assamurban.in/members",
+   "body": "Sarupathar MB",
+   "district": "Golaghat",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249921"
+  }
+ },
+ {
+  "key": "ulb2_as-sipajhar",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://sipajhar.assamurban.in/office-staff",
+   "members": "https://sipajhar.assamurban.in/members",
+   "body": "Sipajhar MB",
+   "district": "Darrang",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "296992"
+  }
+ },
+ {
+  "key": "ulb2_as-sorbhog",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://sorbhog.assamurban.in/office-staff",
+   "members": "https://sorbhog.assamurban.in/members",
+   "body": "Sorbhog MB",
+   "district": "Barpeta",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249842"
+  }
+ },
+ {
+  "key": "ulb2_as-biswanathchariali",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://biswanathchariali.assamurban.in/office-staff",
+   "members": "https://biswanathchariali.assamurban.in/members",
+   "body": "B. Chariali MB",
+   "district": "Biswanath",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249879"
+  }
+ },
+ {
+  "key": "ulb2_as-kampur",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://kampur.assamurban.in/office-staff",
+   "members": "https://kampur.assamurban.in/members",
+   "body": "Kampur MB",
+   "district": "Nagaon",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249869"
+  }
+ },
+ {
+  "key": "ulb2_as-northguwahati",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://northguwahati.assamurban.in/office-staff",
+   "members": "https://northguwahati.assamurban.in/members",
+   "body": "N.Guwahati MB",
+   "district": "Kamrup",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249855"
+  }
+ },
+ {
+  "key": "ulb2_as-nlakhimpur",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://nlakhimpur.assamurban.in/office-staff",
+   "members": "https://nlakhimpur.assamurban.in/members",
+   "body": "N.Lakhimpur MB",
+   "district": "Lakhimpur",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249882"
+  }
+ },
+ {
+  "key": "ulb2_as-patacharkuchi",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://patacharkuchi.assamurban.in/office-staff",
+   "members": "https://patacharkuchi.assamurban.in/members",
+   "body": "Patacharkuchi MB",
+   "district": "Barpeta",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "262892"
+  }
+ },
+ {
+  "key": "ulb2_as-pathsala",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://pathsala.assamurban.in/office-staff",
+   "members": "https://pathsala.assamurban.in/members",
+   "body": "Pathsala MB",
+   "district": "Barpeta",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249847"
+  }
+ },
+ {
+  "key": "ulb2_as-sootea",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://sootea.assamurban.in/office-staff",
+   "members": "https://sootea.assamurban.in/members",
+   "body": "Sootea MB",
+   "district": "Biswanath",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "277151"
+  }
+ },
+ {
+  "key": "ulb2_as-teok",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://teok.assamurban.in/office-staff",
+   "members": "https://teok.assamurban.in/members",
+   "body": "Teok MB",
+   "district": "Jorhat",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "263017"
+  }
+ },
+ {
+  "key": "ulb2_as-titabar",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://titabar.assamurban.in/office-staff",
+   "members": "https://titabar.assamurban.in/members",
+   "body": "Titabar MB",
+   "district": "Jorhat",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249916"
+  }
+ },
+ {
+  "key": "ulb2_as-badarpur",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://badarpur.assamurban.in/office-staff",
+   "members": "https://badarpur.assamurban.in/members",
+   "body": "Badarpur MB",
+   "district": "Karimganj",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249941"
+  }
+ },
+ {
+  "key": "ulb2_as-karimganj",
+  "payload": {
+   "reader": "ulb2_as",
+   "url": "https://karimganj.assamurban.in/office-staff",
+   "members": "https://karimganj.assamurban.in/members",
+   "body": "Karimganj MB",
+   "district": "Karimganj",
+   "state": "AS",
+   "india_only": false,
+   "lgd_code": "249940"
+  }
+ }
+]

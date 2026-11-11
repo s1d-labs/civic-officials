@@ -1,0 +1,36 @@
+[
+ {
+  "key": "ulb2_mh-sec-president",
+  "payload": {
+   "reader": "ulb2_mh",
+   "kind": "sec_president",
+   "url": "https://mahasec.maharashtra.gov.in/Upload/PDF/President.pdf",
+   "state": "MH",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb2_mh-nashik-mc",
+  "payload": {
+   "reader": "ulb2_mh",
+   "kind": "office_list",
+   "url": "https://nashik.gov.in/en/municipal-council/",
+   "state": "MH",
+   "india_only": false,
+   "district": "Nashik",
+   "body_type": "Municipal Council"
+  }
+ },
+ {
+  "key": "ulb2_mh-nashik-np",
+  "payload": {
+   "reader": "ulb2_mh",
+   "kind": "office_list",
+   "url": "https://nashik.gov.in/en/nagar-panchayat/",
+   "state": "MH",
+   "india_only": false,
+   "district": "Nashik",
+   "body_type": "Nagar Panchayat"
+  }
+ }
+]

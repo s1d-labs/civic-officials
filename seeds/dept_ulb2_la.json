@@ -1,0 +1,28 @@
+[
+ {
+  "key": "ulb2_la-leh",
+  "payload": {
+   "reader": "ulb2_la",
+   "url": "https://leh.nic.in/directory/",
+   "state": "LA",
+   "body": "Leh",
+   "district": "Leh Ladakh",
+   "lgd_code": "248177",
+   "body_type": "Municipal Committee",
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb2_la-kargil",
+  "payload": {
+   "reader": "ulb2_la",
+   "url": "https://kargil.nic.in/directory/",
+   "state": "LA",
+   "body": "Kargil",
+   "district": "Kargil",
+   "lgd_code": "248178",
+   "body_type": "Municipal Committee",
+   "india_only": false
+  }
+ }
+]

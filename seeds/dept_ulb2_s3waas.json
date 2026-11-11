@@ -1,0 +1,4710 @@
+[
+ {
+  "key": "ulb2_s3waas-amethi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://amethi.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Amethi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-amroha.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://amroha.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Amroha",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-arvalli.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://arvalli.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Arvalli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ayodhya.nic.in-hi-45231d6a",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ayodhya.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "UP",
+   "district": "Ayodhya",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-azamgarh.nic.in-hi-842178d5",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://azamgarh.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%93%e0%a4%82/",
+   "state": "UP",
+   "district": "Azamgarh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bagpat.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bagpat.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Baghpat",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-balaghat.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://balaghat.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Balaghat",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ballia.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ballia.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Ballia",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-balrampur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://balrampur.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Balrampur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-banaskantha.nic.in-gu-49cc3426",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://banaskantha.nic.in/gu/public-utility-category/%e0%aa%a8%e0%aa%97%e0%aa%b0%e0%aa%aa%e0%aa%be%e0%aa%b2%e0%aa%bf%e0%aa%95%e0%aa%be%e0%aa%93/",
+   "state": "GJ",
+   "district": "Banas Kantha",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-banda.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://banda.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Banda",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bangalorerural.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bangalorerural.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Bengaluru Rural",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-banka.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://banka.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Banka",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-barabanki.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://barabanki.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Bara Banki",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bareilly.nic.in-nagar-nigam",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bareilly.nic.in/public-utility-category/nagar-nigam/",
+   "state": "UP",
+   "district": "Bareilly",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-barwani.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://barwani.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Barwani",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-basti.nic.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://basti.nic.in/public-utility-category/municipalities/",
+   "state": "UP",
+   "district": "Basti",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-beed.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://beed.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Beed",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-begusarai.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://begusarai.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Begusarai",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bemetara.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bemetara.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Bemetara",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-betul.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://betul.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Betul",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bhadohi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bhadohi.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Bhadohi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bhagalpur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bhagalpur.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Bhagalpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bhandara.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bhandara.gov.in/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Bhandara",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bhandara.gov.in-nagar-panchayat",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bhandara.gov.in/public-utility-category/nagar-panchayat/",
+   "state": "MH",
+   "district": "Bhandara",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bharuch.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bharuch.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Bharuch",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bhavnagar.nic.in-municipal-corporation",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bhavnagar.nic.in/public-utility-category/municipal-corporation/",
+   "state": "GJ",
+   "district": "Bhavnagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bhavnagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bhavnagar.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Bhavnagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bhind.nic.in-1bca50be",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bhind.nic.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MP",
+   "district": "Bhind",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bhojpur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bhojpur.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Bhojpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bhopal.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bhopal.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Bhopal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bidar.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bidar.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Bidar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bijapur.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bijapur.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Bijapur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bijnor.nic.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bijnor.nic.in/public-utility-category/municipalities/",
+   "state": "UP",
+   "district": "Bijnor",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bilaspur.gov.in-en-urban-body",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bilaspur.gov.in/en/public-utility-category/urban-body/",
+   "state": "CG",
+   "district": "Bilaspur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-botad.nic.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://botad.nic.in/public-utility-category/municipalities/",
+   "state": "GJ",
+   "district": "Botad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-budgam.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://budgam.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Budgam",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-bulandshahar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://bulandshahar.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Bulandshahr",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-buldhana.nic.in-12da8cf1",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://buldhana.nic.in/public-utility-category/%E0%A4%A8%E0%A4%97%E0%A4%B0%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE/",
+   "state": "MH",
+   "district": "Buldhana",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-burhanpur.nic.in-1bca50be",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://burhanpur.nic.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MP",
+   "district": "Burhanpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-buxar.nic.in-nagar-panchayat",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://buxar.nic.in/public-utility-category/nagar-panchayat/",
+   "state": "BR",
+   "district": "Buxar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-buxar.nic.in-nagar-parishad",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://buxar.nic.in/public-utility-category/nagar-parishad/",
+   "state": "BR",
+   "district": "Buxar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-chaibasa.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://chaibasa.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "West Singhbhum",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-champawat.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://champawat.nic.in/public-utility-category/municipality/",
+   "state": "UK",
+   "district": "Champawat",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-chanda.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://chanda.nic.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Chandrapur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-chandauli.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://chandauli.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Chandauli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-chhatarpur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://chhatarpur.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Chhatarpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-chhindwara.nic.in-1bca50be",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://chhindwara.nic.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MP",
+   "district": "Chhindwara",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-chhindwara.nic.in-52e25c97",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://chhindwara.nic.in/public-utility-category/%E0%A4%A8%E0%A4%97%E0%A4%B0-%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE/",
+   "state": "MP",
+   "district": "Chhindwara",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-chikkaballapur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://chikkaballapur.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Chikkaballapura",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-chikkamagaluru.nic.in-e31fccf9",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://chikkamagaluru.nic.in/public-utility-category/%e0%b2%aa%e0%b3%81%e0%b2%b0%e0%b2%b8%e0%b2%ad%e0%b3%86%e0%b2%97%e0%b2%b3%e0%b3%81/",
+   "state": "KA",
+   "district": "Chikkamagaluru",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-chitradurga.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://chitradurga.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Chitradurga",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-chittoor.ap.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://chittoor.ap.gov.in/public-utility-category/municipality/",
+   "state": "AP",
+   "district": "Chittoor",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-coimbatore.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://coimbatore.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Coimbatore",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-coochbehar.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://coochbehar.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Cooch Behar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-cuddalore.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://cuddalore.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Cuddalore",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-damoh.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://damoh.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Damoh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dantewada.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dantewada.nic.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Dakshin Bastar Dantewada",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-darjeeling.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://darjeeling.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Darjeeling",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-datia.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://datia.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Datia",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-davanagere.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://davanagere.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Davanagere",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ddinajpur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ddinajpur.nic.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Dakshin Dinajpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dehradun.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dehradun.nic.in/public-utility-category/municipality/",
+   "state": "UK",
+   "district": "Dehradun",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-deoria.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://deoria.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Deoria",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-devbhumidwarka.nic.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://devbhumidwarka.nic.in/public-utility-category/municipalities/",
+   "state": "GJ",
+   "district": "Devbhumi Dwarka",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dewas.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dewas.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Dewas",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dhamtari.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dhamtari.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Dhamtari",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dhanbad.nic.in-hi-45231d6a",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dhanbad.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "JH",
+   "district": "Dhanbad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dhar.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dhar.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Dhar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dharmapuri.nic.in-ta-be3c0151",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dharmapuri.nic.in/ta/public-utility-category/%e0%ae%a8%e0%ae%95%e0%ae%b0%e0%ae%be%e0%ae%9f%e0%af%8d%e0%ae%9a%e0%ae%bf%e0%ae%95%e0%ae%b3%e0%af%8d/",
+   "state": "TN",
+   "district": "Dharmapuri",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dharwad.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dharwad.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Dharwad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dhule.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dhule.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Dhule",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dindigul.nic.in-corporation-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dindigul.nic.in/public-utility-category/corporation-municipality/",
+   "state": "TN",
+   "district": "Dindigul",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dindori.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dindori.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Dindori",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dmnewdelhi.delhi.gov.in-hi-45231d6a",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dmnewdelhi.delhi.gov.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "DL",
+   "district": "New Delhi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dmnorth.delhi.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dmnorth.delhi.gov.in/public-utility-category/municipality/",
+   "state": "DL",
+   "district": "North",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dmnortheast.delhi.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dmnortheast.delhi.gov.in/public-utility-category/municipality/",
+   "state": "DL",
+   "district": "North East",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-doda.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://doda.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Doda",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-dumka.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://dumka.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Dumka",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-durg.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://durg.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Durg",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-eastchamparan.nic.in-urban-local-bodies",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://eastchamparan.nic.in/public-utility-category/urban-local-bodies/",
+   "state": "BR",
+   "district": "Purbi Champaran",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-erode.nic.in-ta-be3c0151",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://erode.nic.in/ta/public-utility-category/%e0%ae%a8%e0%ae%95%e0%ae%b0%e0%ae%be%e0%ae%9f%e0%af%8d%e0%ae%9a%e0%ae%bf%e0%ae%95%e0%ae%b3%e0%af%8d/",
+   "state": "TN",
+   "district": "Erode",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-etah.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://etah.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Etah",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-etawah.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://etawah.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Etawah",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-faridabad.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://faridabad.nic.in/public-utility-category/municipality/",
+   "state": "HR",
+   "district": "Faridabad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-farrukhabad.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://farrukhabad.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Farrukhabad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-fatehgarhsahib.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://fatehgarhsahib.nic.in/public-utility-category/municipality/",
+   "state": "PB",
+   "district": "Fatehgarh Sahib",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-fatehpur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://fatehpur.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Fatehpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-firozabad.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://firozabad.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Firozabad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gadag.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gadag.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Gadag",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gadchiroli.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gadchiroli.gov.in/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Gadchiroli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gadchiroli.gov.in-nagar-panchayat",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gadchiroli.gov.in/public-utility-category/nagar-panchayat/",
+   "state": "MH",
+   "district": "Gadchiroli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gadwal.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gadwal.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Jogulamba Gadwal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ganderbal.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ganderbal.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Ganderbal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gandhinagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gandhinagar.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Gandhinagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-garhwa.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://garhwa.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Garhwa",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gariaband.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gariaband.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Gariyaband",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gaurela-pendra-marwahi.cg.gov.in-hi-ad89d232",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gaurela-pendra-marwahi.cg.gov.in/hi/public-utility-category/%e0%a4%b6%e0%a4%b9%e0%a4%b0%e0%a5%80-%e0%a4%a8%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%af/",
+   "state": "CG",
+   "district": "Gaurela-Pendra-Marwahi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gaya.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gaya.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Gaya",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gbnagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gbnagar.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Gautam Buddha Nagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ghaziabad.nic.in-242b685f",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ghaziabad.nic.in/public-utility-category/%E0%A4%A8%E0%A4%97%E0%A4%B0-%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE%E0%A4%AF%E0%A5%87%E0%A4%82/",
+   "state": "UP",
+   "district": "Ghaziabad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-giridih.nic.in-hi-f5c1d12d",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://giridih.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%a8%e0%a4%bf%e0%a4%97%e0%a4%ae/",
+   "state": "JH",
+   "district": "Giridih",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-godda.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://godda.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Godda",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gondia.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gondia.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Gondia",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gopalganj.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gopalganj.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Gopalganj",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gorakhpur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gorakhpur.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Gorakhpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gumla.nic.in-hi-45231d6a",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gumla.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "JH",
+   "district": "Gumla",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-guna.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://guna.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Guna",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-guntur.ap.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://guntur.ap.gov.in/public-utility-category/municipality/",
+   "state": "AP",
+   "district": "Guntur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gurdaspur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gurdaspur.nic.in/public-utility-category/municipality/",
+   "state": "PB",
+   "district": "Gurdaspur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-gwalior.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://gwalior.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Gwalior",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hamirpur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hamirpur.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Hamirpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hapur.nic.in-hi-329bb47b",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hapur.nic.in/hi/public-utility-category/%E0%A4%A8%E0%A4%97%E0%A4%B0-%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE/",
+   "state": "UP",
+   "district": "Hapur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-harda.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://harda.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Harda",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-haridwar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://haridwar.nic.in/public-utility-category/municipality/",
+   "state": "UK",
+   "district": "Haridwar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hassan.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hassan.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Hassan",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hathras.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hathras.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Hathras",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-haveri.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://haveri.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Haveri",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hazaribag.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hazaribag.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Hazaribagh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hingoli.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hingoli.nic.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Hingoli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hisar.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hisar.gov.in/public-utility-category/municipality/",
+   "state": "HR",
+   "district": "Hisar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hooghly.nic.in-corporation",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hooghly.nic.in/public-utility-category/corporation/",
+   "state": "WB",
+   "district": "Hooghly",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hoshiarpur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hoshiarpur.nic.in/public-utility-category/municipality/",
+   "state": "PB",
+   "district": "Hoshiarpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-howrah.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://howrah.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Howrah",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hpkangra.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hpkangra.nic.in/public-utility-category/municipality/",
+   "state": "HP",
+   "district": "Kangra",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hpkullu.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hpkullu.nic.in/public-utility-category/municipality/",
+   "state": "HP",
+   "district": "Kullu",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hpmandi.nic.in-hi-ad89d232",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hpmandi.nic.in/hi/public-utility-category/%e0%a4%b6%e0%a4%b9%e0%a4%b0%e0%a5%80-%e0%a4%a8%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%af/",
+   "state": "HP",
+   "district": "Mandi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hpsirmaur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hpsirmaur.nic.in/public-utility-category/municipality/",
+   "state": "HP",
+   "district": "Sirmaur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hpsolan.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hpsolan.nic.in/public-utility-category/municipality/",
+   "state": "HP",
+   "district": "Solan",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hpuna.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hpuna.nic.in/public-utility-category/municipality/",
+   "state": "HP",
+   "district": "Una",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-hyderabad.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://hyderabad.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Hyderabad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-imphaleast.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://imphaleast.nic.in/public-utility-category/municipality/",
+   "state": "MN",
+   "district": "Imphal East",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-imphalwest.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://imphalwest.nic.in/public-utility-category/municipality/",
+   "state": "MN",
+   "district": "Imphal West",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-indore.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://indore.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Indore",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jabalpur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jabalpur.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Jabalpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jagtial.telangana.gov.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jagtial.telangana.gov.in/public-utility-category/municipalities/",
+   "state": "TG",
+   "district": "Jagitial",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jalaun.nic.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jalaun.nic.in/public-utility-category/municipalities/",
+   "state": "UP",
+   "district": "Jalaun",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jalgaon.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jalgaon.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Jalgaon",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jalna.gov.in-ebd5a57b",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jalna.gov.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MH",
+   "district": "Jalna",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jalna.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jalna.gov.in/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Jalna",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jalpaiguri.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jalpaiguri.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Jalpaiguri",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jammu.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jammu.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Jammu",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jamnagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jamnagar.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Jamnagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jamtara.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jamtara.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Jamtara",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jamui.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jamui.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Jamui",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jangaon.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jangaon.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Jangoan",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-janjgir-champa.gov.in-1bca50be",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://janjgir-champa.gov.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "CG",
+   "district": "Janjgir-Champa",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-janjgir-champa.gov.in-52e25c97",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://janjgir-champa.gov.in/public-utility-category/%E0%A4%A8%E0%A4%97%E0%A4%B0-%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE/",
+   "state": "CG",
+   "district": "Janjgir-Champa",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jashpur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jashpur.nic.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Jashpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jaunpur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jaunpur.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Jaunpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jehanabad.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jehanabad.nic.in/en/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Jehanabad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jhabua.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jhabua.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Jhabua",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jhajjar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jhajjar.nic.in/public-utility-category/municipality/",
+   "state": "HR",
+   "district": "Jhajjar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jhansi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jhansi.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Jhansi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jhansi.nic.in-nagarnigam",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jhansi.nic.in/public-utility-category/nagarnigam/",
+   "state": "UP",
+   "district": "Jhansi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jhansi.nic.in-nagarpanchayat",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jhansi.nic.in/public-utility-category/nagarpanchayat/",
+   "state": "UP",
+   "district": "Jhansi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jhargram.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jhargram.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Jhargram",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-jind.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://jind.gov.in/public-utility-category/municipality/",
+   "state": "HR",
+   "district": "Jind",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-junagadh.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://junagadh.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Junagadh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kachchh.nic.in-municipal-corporations",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kachchh.nic.in/public-utility-category/municipal-corporations/",
+   "state": "GJ",
+   "district": "Kachchh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kachchh.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kachchh.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Kachchh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kaimur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kaimur.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Kaimur (Bhabua)",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kaithal.gov.in-municipal-council-municipal-committees",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kaithal.gov.in/public-utility-category/municipal-council-municipal-committees/",
+   "state": "HR",
+   "district": "Kaithal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kakching.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kakching.nic.in/public-utility-category/municipality/",
+   "state": "MN",
+   "district": "Kakching",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kalaburagi.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kalaburagi.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Kalaburagi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kalimpong.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kalimpong.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Kalimpong",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kallakurichi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kallakurichi.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Kallakurichi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kamareddy.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kamareddy.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Kamareddy",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kancheepuram.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kancheepuram.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Kancheepuram",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kannauj.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kannauj.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Kannauj",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kannur.nic.in-en-corporation",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kannur.nic.in/en/public-utility-category/corporation/",
+   "state": "KL",
+   "district": "Kannur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kannur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kannur.nic.in/en/public-utility-category/municipality/",
+   "state": "KL",
+   "district": "Kannur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kanpurnagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kanpurnagar.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Kanpur Nagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-karimnagar.telangana.gov.in-85d7902d",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://karimnagar.telangana.gov.in/public-utility-category/%e0%b0%aa%e0%b1%81%e0%b0%b0%e0%b0%aa%e0%b0%be%e0%b0%b2%e0%b0%95/",
+   "state": "TG",
+   "district": "Karimnagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-karimnagar.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://karimnagar.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Karimnagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-karnal.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://karnal.gov.in/public-utility-category/municipality/",
+   "state": "HR",
+   "district": "Karnal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-karur.nic.in-corporation",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://karur.nic.in/public-utility-category/corporation/",
+   "state": "TN",
+   "district": "Karur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-karur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://karur.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Karur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kasargod.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kasargod.nic.in/en/public-utility-category/municipality/",
+   "state": "KL",
+   "district": "Kasaragod",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kathua.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kathua.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Kathua",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-katni.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://katni.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Katni",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kaushambi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kaushambi.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Kaushambi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kawardha.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kawardha.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Kabeerdham",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-khagaria.nic.in-hi-45231d6a",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://khagaria.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "BR",
+   "district": "Khagaria",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-khammam.telangana.gov.in-municipal-corporation",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://khammam.telangana.gov.in/public-utility-category/municipal-corporation/",
+   "state": "TG",
+   "district": "Khammam",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-khammam.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://khammam.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Khammam",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-khandwa.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://khandwa.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Khandwa (East Nimar)",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-khargone.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://khargone.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Khargone (West Nimar)",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kheda.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kheda.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Kheda",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kheri.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kheri.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Kheri",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-khunti.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://khunti.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Khunti",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kishanganj.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kishanganj.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Kishanganj",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kishtwar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kishtwar.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Kishtwar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kodagu.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kodagu.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Kodagu",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-koderma.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://koderma.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Koderma",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kohima.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kohima.nic.in/public-utility-category/municipality/",
+   "state": "NL",
+   "district": "Kohima",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kolhapur.gov.in-en-municipal-corporation-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kolhapur.gov.in/en/public-utility-category/municipal-corporation-municipalities/",
+   "state": "MH",
+   "district": "Kolhapur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kollam.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kollam.nic.in/en/public-utility-category/municipality/",
+   "state": "KL",
+   "district": "Kollam",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kondagaon.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kondagaon.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Kondagaon",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-koppal.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://koppal.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Koppal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-korba.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://korba.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Korba",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-korea.gov.in-en-urban",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://korea.gov.in/en/public-utility-category/urban/",
+   "state": "CG",
+   "district": "Korea",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kozhikode.nic.in-96ecc39f",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kozhikode.nic.in/public-utility-category/%e0%b4%a8%e0%b4%97%e0%b4%b0%e0%b4%b8%e0%b4%ad%e0%b4%95%e0%b4%b3%e0%b5%8d/",
+   "state": "KL",
+   "district": "Kozhikode",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kozhikode.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kozhikode.nic.in/public-utility-category/municipality/",
+   "state": "KL",
+   "district": "Kozhikode",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-krishnagiri.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://krishnagiri.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Krishnagiri",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kulgam.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kulgam.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Kulgam",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kurnool.ap.gov.in-te-70a5ab16",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kurnool.ap.gov.in/te/public-utility-category/%e0%b0%aa%e0%b1%81%e0%b0%b0%e0%b0%aa%e0%b0%be%e0%b0%b2%e0%b0%95/",
+   "state": "AP",
+   "district": "Kurnool",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-kushinagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://kushinagar.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Kushinagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-lakhisarai.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://lakhisarai.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Lakhisarai",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-lalitpur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://lalitpur.nic.in/en/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Lalitpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-latur.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://latur.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Latur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-lohardaga.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://lohardaga.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Lohardaga",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-longleng.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://longleng.nic.in/public-utility-category/municipality/",
+   "state": "NL",
+   "district": "Longleng",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-lucknow.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://lucknow.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Lucknow",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ludhiana.nic.in-pa-0a2fe905",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ludhiana.nic.in/pa/public-utility-category/%e0%a8%a8%e0%a8%97%e0%a8%b0-%e0%a8%95%e0%a9%8c%e0%a8%82%e0%a8%b8%e0%a8%b2%e0%a8%be%e0%a8%82/",
+   "state": "PB",
+   "district": "Ludhiana",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ludhiana.nic.in-pa-34daed9b",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ludhiana.nic.in/pa/public-utility-category/%e0%a8%a8%e0%a8%97%e0%a8%b0-%e0%a8%a8%e0%a8%bf%e0%a8%97%e0%a8%ae-%e0%a8%9c%e0%a8%bc%e0%a9%8b%e0%a8%a8/",
+   "state": "PB",
+   "district": "Ludhiana",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ludhiana.nic.in-pa-3cc7e8f2",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ludhiana.nic.in/pa/public-utility-category/%e0%a8%a8%e0%a8%97%e0%a8%b0-%e0%a8%aa%e0%a9%b0%e0%a8%9a%e0%a8%be%e0%a8%87%e0%a8%a4%e0%a8%be%e0%a8%82/",
+   "state": "PB",
+   "district": "Ludhiana",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-madurai.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://madurai.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Madurai",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-maharajganj.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://maharajganj.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Mahrajganj",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mahasamund.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mahasamund.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Mahasamund",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mahendragarh.gov.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mahendragarh.gov.in/public-utility-category/municipalities/",
+   "state": "HR",
+   "district": "Mahendragarh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mahesana.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mahesana.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Mahesana",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mahoba.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mahoba.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Mahoba",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mainpuri.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mainpuri.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Mainpuri",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-malappuram.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://malappuram.nic.in/en/public-utility-category/municipality/",
+   "state": "KL",
+   "district": "Malappuram",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-malda.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://malda.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Malda",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-malerkotla.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://malerkotla.nic.in/public-utility-category/municipality/",
+   "state": "PB",
+   "district": "Malerkotla",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mancherial.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mancherial.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Mancherial",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mandla.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mandla.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Mandla",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mandsaur.nic.in-1bca50be",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mandsaur.nic.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MP",
+   "district": "Mandsaur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mandsaur.nic.in-52e25c97",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mandsaur.nic.in/public-utility-category/%E0%A4%A8%E0%A4%97%E0%A4%B0-%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE/",
+   "state": "MP",
+   "district": "Mandsaur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mansa.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mansa.nic.in/public-utility-category/municipality/",
+   "state": "PB",
+   "district": "Mansa",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mathura.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mathura.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Mathura",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mau.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mau.nic.in/en/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Mau",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mayiladuthurai.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mayiladuthurai.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Mayiladuthurai",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-medak.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://medak.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Medak",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-medchal-malkajgiri.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://medchal-malkajgiri.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Medchal Malkajgiri",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-meerut.nic.in-hi-842178d5",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://meerut.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%93%e0%a4%82/",
+   "state": "UP",
+   "district": "Meerut",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mirzapur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mirzapur.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Mirzapur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-moga.nic.in-corporation-municipalities-nagar-panchayat",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://moga.nic.in/public-utility-category/corporation-municipalities-nagar-panchayat/",
+   "state": "PB",
+   "district": "Moga",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mohla-manpur-ambagarhchowki.cg.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mohla-manpur-ambagarhchowki.cg.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Mohla-Manpur-Ambagarh Chouki",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-moradabad.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://moradabad.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Moradabad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-morena.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://morena.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Morena",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-muktsar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://muktsar.nic.in/public-utility-category/municipality/",
+   "state": "PB",
+   "district": "Sri Muktsar Sahib",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mumbaicity.gov.in-en-municipal-corporation",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mumbaicity.gov.in/en/public-utility-category/municipal-corporation/",
+   "state": "MH",
+   "district": "Mumbai",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mumbaisuburban.gov.in-en-municipal-corporation",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mumbaisuburban.gov.in/en/public-utility-category/municipal-corporation/",
+   "state": "MH",
+   "district": "Mumbai Suburban",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mungeli.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mungeli.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Mungeli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mungeli.gov.in-en-nagar-panchayat",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mungeli.gov.in/en/public-utility-category/nagar-panchayat/",
+   "state": "CG",
+   "district": "Mungeli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-munger.nic.in-hi-45231d6a",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://munger.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "BR",
+   "district": "Munger",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-murshidabad.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://murshidabad.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Murshidabad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-mysore.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://mysore.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Mysuru",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nadia.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nadia.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Nadia",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nainital.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nainital.nic.in/public-utility-category/municipality/",
+   "state": "UK",
+   "district": "Nainital",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nalgonda.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nalgonda.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Nalgonda",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-namakkal.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://namakkal.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Namakkal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nanded.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nanded.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Nanded",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nandurbar.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nandurbar.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Nandurbar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nandurbar.gov.in-en-nagar-panchayat",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nandurbar.gov.in/en/public-utility-category/nagar-panchayat/",
+   "state": "MH",
+   "district": "Nandurbar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nandyal.ap.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nandyal.ap.gov.in/public-utility-category/municipality/",
+   "state": "AP",
+   "district": "Nandyal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-narmada.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://narmada.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Narmada",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-narsinghpur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://narsinghpur.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Narsimhapur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-navsari.nic.in-municipal-corporations",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://navsari.nic.in/public-utility-category/municipal-corporations/",
+   "state": "GJ",
+   "district": "Navsari",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nawada.nic.in-urban-local-bodies",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nawada.nic.in/public-utility-category/urban-local-bodies/",
+   "state": "BR",
+   "district": "Nawada",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-neemuch.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://neemuch.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Neemuch",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nirmal.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nirmal.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Nirmal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nizamabad.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nizamabad.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Nizamabad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-northgarohills.gov.in-grt-municipalityrang",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://northgarohills.gov.in/grt/public-utility-category/municipalityrang/",
+   "state": "ML",
+   "district": "North Garo Hills",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-northtripura.nic.in-ebd5a57b",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://northtripura.nic.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "TR",
+   "district": "North Tripura",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-northtripura.nic.in-d4f3d9d4",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://northtripura.nic.in/public-utility-category/%e0%a6%aa%e0%a7%8c%e0%a6%b0%e0%a6%b8%e0%a6%ad%e0%a6%be/",
+   "state": "TR",
+   "district": "North Tripura",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-northtripura.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://northtripura.nic.in/public-utility-category/municipality/",
+   "state": "TR",
+   "district": "North Tripura",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ntr.ap.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ntr.ap.gov.in/public-utility-category/municipality/",
+   "state": "AP",
+   "district": "Ntr",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-nuh.gov.in-municipal-committees",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://nuh.gov.in/public-utility-category/municipal-committees/",
+   "state": "HR",
+   "district": "Nuh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-pakur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://pakur.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Pakur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-palghar.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://palghar.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Palghar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-palnadu.ap.gov.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://palnadu.ap.gov.in/public-utility-category/municipalities/",
+   "state": "AP",
+   "district": "Palnadu",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-palwal.gov.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://palwal.gov.in/public-utility-category/municipalities/",
+   "state": "HR",
+   "district": "Palwal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-panchkula.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://panchkula.nic.in/public-utility-category/municipality/",
+   "state": "HR",
+   "district": "Panchkula",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-panchmahals.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://panchmahals.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Panch Mahals",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-panipat.gov.in-hi-c2bf4abb",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://panipat.gov.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%b0%e0%a4%bf%e0%a4%b7%e0%a4%a6/",
+   "state": "HR",
+   "district": "Panipat",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-panna.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://panna.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Panna",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-parbhani.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://parbhani.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Parbhani",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-paschimbardhaman.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://paschimbardhaman.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Paschim Bardhaman",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-paschimmedinipur.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://paschimmedinipur.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Paschim Medinipur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-patan.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://patan.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Patan",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-pathankot.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://pathankot.nic.in/public-utility-category/municipality/",
+   "state": "PB",
+   "district": "Pathankot",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-patiala.nic.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://patiala.nic.in/public-utility-category/municipalities/",
+   "state": "PB",
+   "district": "Patiala",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-pauri.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://pauri.nic.in/public-utility-category/municipality/",
+   "state": "UK",
+   "district": "Pauri Garhwal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-peddapalli.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://peddapalli.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Peddapalli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-perambalur.nic.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://perambalur.nic.in/public-utility-category/municipalities/",
+   "state": "TN",
+   "district": "Perambalur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-pithoragarh.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://pithoragarh.nic.in/public-utility-category/municipality/",
+   "state": "UK",
+   "district": "Pithoragarh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-poonch.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://poonch.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Poonch",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-porbandar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://porbandar.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Porbandar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-prakasam.ap.gov.in-te-70a5ab16",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://prakasam.ap.gov.in/te/public-utility-category/%e0%b0%aa%e0%b1%81%e0%b0%b0%e0%b0%aa%e0%b0%be%e0%b0%b2%e0%b0%95/",
+   "state": "AP",
+   "district": "Prakasam",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-pratapgarh.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://pratapgarh.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Pratapgarh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-prayagraj.nic.in-hi-45231d6a",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://prayagraj.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "UP",
+   "district": "Prayagraj",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-pudukkottai.nic.in-corporation",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://pudukkottai.nic.in/public-utility-category/corporation/",
+   "state": "TN",
+   "district": "Pudukkottai",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-pudukkottai.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://pudukkottai.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Pudukkottai",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-pulwama.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://pulwama.gov.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Pulwama",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-pune.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://pune.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Pune",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-purbabardhaman.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://purbabardhaman.nic.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Purba Bardhaman",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-purnea.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://purnea.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Purnia",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-purulia.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://purulia.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Purulia",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-raebareli.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://raebareli.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Rae Bareli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-raichur.nic.in-5528977d",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://raichur.nic.in/public-utility-category/%E0%B2%AA%E0%B3%81%E0%B2%B0%E0%B2%B8%E0%B2%AD%E0%B3%86%E0%B2%97%E0%B2%B3%E0%B3%81/",
+   "state": "KA",
+   "district": "Raichur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-raigad.gov.in-ebd5a57b",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://raigad.gov.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MH",
+   "district": "Raigad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-raigad.gov.in-03f78945",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://raigad.gov.in/public-utility-category/%e0%a4%ae%e0%a4%b9%e0%a4%be%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MH",
+   "district": "Raigad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-raigarh.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://raigarh.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Raigarh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-raipur.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://raipur.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Raipur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-raisen.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://raisen.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Raisen",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rajannasircilla.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rajannasircilla.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Rajanna Sircilla",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rajgarh.nic.in-1bca50be",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rajgarh.nic.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MP",
+   "district": "Rajgarh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rajgarh.nic.in-52e25c97",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rajgarh.nic.in/public-utility-category/%E0%A4%A8%E0%A4%97%E0%A4%B0-%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE/",
+   "state": "MP",
+   "district": "Rajgarh",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rajkot.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rajkot.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Rajkot",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rajnandgaon.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rajnandgaon.nic.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Rajnandgaon",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rajouri.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rajouri.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Rajouri",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ramanathapuram.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ramanathapuram.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Ramanathapuram",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rampur.nic.in-hi-45231d6a",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rampur.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "UP",
+   "district": "Rampur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ranchi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ranchi.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Ranchi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ratlam.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ratlam.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Ratlam",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ratnagiri.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ratnagiri.gov.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Ratnagiri",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-reasi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://reasi.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Reasi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rewa.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rewa.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Rewa",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rewari.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rewari.gov.in/public-utility-category/municipality/",
+   "state": "HR",
+   "district": "Rewari",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rohtak.gov.in-hi-83c3efc2",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rohtak.gov.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be%e0%a4%8f%e0%a4%82/",
+   "state": "HR",
+   "district": "Rohtak",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rudraprayag.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rudraprayag.gov.in/public-utility-category/municipality/",
+   "state": "UK",
+   "district": "Rudraprayag",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-rupnagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://rupnagar.nic.in/public-utility-category/municipality/",
+   "state": "PB",
+   "district": "Rupnagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-s24pgs.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://s24pgs.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "South 24 Parganas",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sabarkantha.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sabarkantha.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Sabar Kantha",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sagar.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sagar.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Sagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-saharanpur.nic.in-nagar-nigam",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://saharanpur.nic.in/public-utility-category/nagar-nigam/",
+   "state": "UP",
+   "district": "Saharanpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-saharanpur.nic.in-nagar-palika-parishad",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://saharanpur.nic.in/public-utility-category/nagar-palika-parishad/",
+   "state": "UP",
+   "district": "Saharanpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-saharanpur.nic.in-nagar-panchayat",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://saharanpur.nic.in/public-utility-category/nagar-panchayat/",
+   "state": "UP",
+   "district": "Saharanpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sahibganj.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sahibganj.nic.in/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Sahebganj",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-salem.nic.in-corporation",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://salem.nic.in/public-utility-category/corporation/",
+   "state": "TN",
+   "district": "Salem",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-salem.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://salem.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Salem",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-samastipur.nic.in-hi-45231d6a",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://samastipur.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "BR",
+   "district": "Samastipur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sambhal.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sambhal.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Sambhal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sangli.nic.in-en-municipalty",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sangli.nic.in/en/public-utility-category/municipalty/",
+   "state": "MH",
+   "district": "Sangli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sangrur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sangrur.nic.in/public-utility-category/municipality/",
+   "state": "PB",
+   "district": "Sangrur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sangrur.nic.in-town-panchayats",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sangrur.nic.in/public-utility-category/town-panchayats/",
+   "state": "PB",
+   "district": "Sangrur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-saran.nic.in-ulb",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://saran.nic.in/public-utility-category/ulb/",
+   "state": "BR",
+   "district": "Saran",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sasnagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sasnagar.nic.in/public-utility-category/municipality/",
+   "state": "PB",
+   "district": "S.A.S Nagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sehore.nic.in-1bca50be",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sehore.nic.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MP",
+   "district": "Sehore",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-seoni.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://seoni.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Seoni",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sepahijala.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sepahijala.nic.in/public-utility-category/municipality/",
+   "state": "TR",
+   "district": "Sepahijala",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-seraikela.nic.in-hi-45231d6a",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://seraikela.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "JH",
+   "district": "Saraikela Kharsawan",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-shahjahanpur.nic.in-nagar-nigam-nagar-palika-parishad-nagar-panchayat",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://shahjahanpur.nic.in/public-utility-category/nagar-nigam-nagar-palika-parishad-nagar-panchayat/",
+   "state": "UP",
+   "district": "Shahjahanpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-shajapur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://shajapur.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Shajapur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-shamator.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://shamator.nic.in/public-utility-category/municipality/",
+   "state": "NL",
+   "district": "Shamator",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-shamli.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://shamli.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Shamli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sheikhpura.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sheikhpura.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Sheikhpura",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sheohar.nic.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sheohar.nic.in/public-utility-category/municipalities/",
+   "state": "BR",
+   "district": "Sheohar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sheopur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sheopur.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Sheopur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-shivamogga.nic.in-municipality-2",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://shivamogga.nic.in/public-utility-category/municipality-2/",
+   "state": "KA",
+   "district": "ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ, ಕರ್ನಾಟಕ ಸರ್ಕಾರ | ಕರ್ನಾಟಕದ ಆಹಾರ ಕಣಜ | India",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-shivpuri.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://shivpuri.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Shivpuri",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-shopian.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://shopian.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Shopian",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-shravasti.nic.in-hi-dc498991",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://shravasti.nic.in/hi/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be-%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%82%e0%a4%9a%e0%a4%be%e0%a4%af%e0%a4%a4/",
+   "state": "UP",
+   "district": "Shrawasti",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-siddharthnagar.nic.in-hi-329bb47b",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://siddharthnagar.nic.in/hi/public-utility-category/%E0%A4%A8%E0%A4%97%E0%A4%B0-%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE/",
+   "state": "UP",
+   "district": "Siddharthnagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-siddipet.telangana.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://siddipet.telangana.gov.in/public-utility-category/municipality/",
+   "state": "TG",
+   "district": "Siddipet",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sidhi.nic.in-52e25c97",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sidhi.nic.in/public-utility-category/%E0%A4%A8%E0%A4%97%E0%A4%B0-%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE/",
+   "state": "MP",
+   "district": "Sidhi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-simdega.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://simdega.nic.in/en/public-utility-category/municipality/",
+   "state": "JH",
+   "district": "Simdega",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sindhudurg.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sindhudurg.nic.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Sindhudurg",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-singrauli.nic.in-1bca50be",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://singrauli.nic.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MP",
+   "district": "Singrauli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-singrauli.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://singrauli.nic.in/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Singrauli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sitamarhi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sitamarhi.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Sitamarhi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sitapur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sitapur.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Sitapur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sivaganga.nic.in-municipal-corporation",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sivaganga.nic.in/public-utility-category/municipal-corporation/",
+   "state": "TN",
+   "district": "Sivaganga",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sivaganga.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sivaganga.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Sivaganga",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-siwan.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://siwan.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Siwan",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sknagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sknagar.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Sant Kabir Nagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-solapur.gov.in-ebd5a57b",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://solapur.gov.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MH",
+   "district": "Solapur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-solapur.gov.in-12da8cf1",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://solapur.gov.in/public-utility-category/%E0%A4%A8%E0%A4%97%E0%A4%B0%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%95%E0%A4%BE/",
+   "state": "MH",
+   "district": "Solapur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sonbhadra.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sonbhadra.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Sonbhadra",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sonipat.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sonipat.gov.in/public-utility-category/municipality/",
+   "state": "HR",
+   "district": "Sonipat",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-soreng.nic.in-nagar-panchayat",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://soreng.nic.in/public-utility-category/nagar-panchayat/",
+   "state": "SK",
+   "district": "Soreng",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-southgarohills.gov.in-grt-municipalityrang",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://southgarohills.gov.in/grt/public-utility-category/municipalityrang/",
+   "state": "ML",
+   "district": "South Garo Hills",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-southtripura.nic.in-bn-f3187d81",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://southtripura.nic.in/bn/public-utility-category/%e0%a6%aa%e0%a7%8c%e0%a6%b0%e0%a6%b8%e0%a6%ad%e0%a6%be/",
+   "state": "TR",
+   "district": "South Tripura",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-spsnellore.ap.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://spsnellore.ap.gov.in/public-utility-category/municipality/",
+   "state": "AP",
+   "district": "Sri Potti Sriramulu Nellore",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-srinagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://srinagar.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Srinagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-srisathyasai.ap.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://srisathyasai.ap.gov.in/public-utility-category/municipality/",
+   "state": "AP",
+   "district": "Sri Sathya Sai",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-sultanpur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://sultanpur.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Sultanpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-supaul.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://supaul.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Supaul",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-surajpur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://surajpur.nic.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Surajpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-surat.nic.in-gu-49cc3426",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://surat.nic.in/gu/public-utility-category/%e0%aa%a8%e0%aa%97%e0%aa%b0%e0%aa%aa%e0%aa%be%e0%aa%b2%e0%aa%bf%e0%aa%95%e0%aa%be%e0%aa%93/",
+   "state": "GJ",
+   "district": "Surat",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-surendranagar.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://surendranagar.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Surendranagar",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-surguja.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://surguja.gov.in/en/public-utility-category/municipality/",
+   "state": "CG",
+   "district": "Surguja",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tapi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tapi.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Tapi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tarntaran.nic.in-municipal-council",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tarntaran.nic.in/public-utility-category/municipal-council/",
+   "state": "PB",
+   "district": "Tarn Taran",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tenkasi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tenkasi.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Tenkasi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-thane.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://thane.nic.in/en/public-utility-category/municipality/",
+   "state": "MH",
+   "district": "Thane",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-thanjavur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://thanjavur.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Thanjavur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-theni.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://theni.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Theni",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-thoothukudi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://thoothukudi.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Thoothukkudi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-thoubal.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://thoubal.nic.in/public-utility-category/municipality/",
+   "state": "MN",
+   "district": "Thoubal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tirunelveli.nic.in-municipalities",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tirunelveli.nic.in/public-utility-category/municipalities/",
+   "state": "TN",
+   "district": "Tirunelveli",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tirupathur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tirupathur.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Tirupathur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tirupati.ap.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tirupati.ap.gov.in/public-utility-category/municipality/",
+   "state": "AP",
+   "district": "Tirupati",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tiruppur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tiruppur.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Tiruppur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tiruvarur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tiruvarur.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Thiruvarur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-trivandrum.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://trivandrum.nic.in/en/public-utility-category/municipality/",
+   "state": "KL",
+   "district": "Thiruvananthapuram",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tseminyu.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tseminyu.nic.in/public-utility-category/municipality/",
+   "state": "NL",
+   "district": "Tseminyu",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tuensang.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tuensang.nic.in/public-utility-category/municipality/",
+   "state": "NL",
+   "district": "Tuensang",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-tumkur.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://tumkur.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Tumakuru",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-udhampur.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://udhampur.nic.in/public-utility-category/municipality/",
+   "state": "JK",
+   "district": "Udhampur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-ujjain.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://ujjain.nic.in/en/public-utility-category/municipality/",
+   "state": "MP",
+   "district": "Ujjain",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-umaria.nic.in-en-urban-local-body",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://umaria.nic.in/en/public-utility-category/urban-local-body/",
+   "state": "MP",
+   "district": "Umaria",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-uttarakannada.nic.in-e31fccf9",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://uttarakannada.nic.in/public-utility-category/%e0%b2%aa%e0%b3%81%e0%b2%b0%e0%b2%b8%e0%b2%ad%e0%b3%86%e0%b2%97%e0%b2%b3%e0%b3%81/",
+   "state": "KA",
+   "district": "Uttara Kannada",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-uttardinajpur.gov.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://uttardinajpur.gov.in/public-utility-category/municipality/",
+   "state": "WB",
+   "district": "Uttar Dinajpur",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-uttarkashi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://uttarkashi.nic.in/public-utility-category/municipality/",
+   "state": "UK",
+   "district": "Uttarkashi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-vaishali.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://vaishali.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Vaishali",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-valsad.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://valsad.nic.in/public-utility-category/municipality/",
+   "state": "GJ",
+   "district": "Valsad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-varanasi.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://varanasi.nic.in/public-utility-category/municipality/",
+   "state": "UP",
+   "district": "Varanasi",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-vellore.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://vellore.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Vellore",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-vidisha.nic.in-1bca50be",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://vidisha.nic.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0-%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MP",
+   "district": "Vidisha",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-vijayanagara.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://vijayanagara.nic.in/en/public-utility-category/municipality/",
+   "state": "KA",
+   "district": "Vijayanagara",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-vijayapura.nic.in-e31fccf9",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://vijayapura.nic.in/public-utility-category/%e0%b2%aa%e0%b3%81%e0%b2%b0%e0%b2%b8%e0%b2%ad%e0%b3%86%e0%b2%97%e0%b2%b3%e0%b3%81/",
+   "state": "KA",
+   "district": "Vijayapura",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-viluppuram.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://viluppuram.nic.in/public-utility-category/municipality/",
+   "state": "TN",
+   "district": "Viluppuram",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-wardha.gov.in-ebd5a57b",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://wardha.gov.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MH",
+   "district": "Wardha",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-wayanad.gov.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://wayanad.gov.in/en/public-utility-category/municipality/",
+   "state": "KL",
+   "district": "Wayanad",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-westchamparan.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://westchamparan.nic.in/public-utility-category/municipality/",
+   "state": "BR",
+   "district": "Pashchim Champaran",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-westgarohills.gov.in-grt-municipalityrang",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://westgarohills.gov.in/grt/public-utility-category/municipalityrang/",
+   "state": "ML",
+   "district": "West Garo Hills",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-westjaintiahills.gov.in-kha-ki-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://westjaintiahills.gov.in/kha/public-utility-category/ki-municipality/",
+   "state": "ML",
+   "district": "West Jaintia Hills",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-westtripura.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://westtripura.nic.in/public-utility-category/municipality/",
+   "state": "TR",
+   "district": "West Tripura",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-wokha.nic.in-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://wokha.nic.in/public-utility-category/municipality/",
+   "state": "NL",
+   "district": "Wokha",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-yadgir.nic.in-e31fccf9",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://yadgir.nic.in/public-utility-category/%e0%b2%aa%e0%b3%81%e0%b2%b0%e0%b2%b8%e0%b2%ad%e0%b3%86%e0%b2%97%e0%b2%b3%e0%b3%81/",
+   "state": "KA",
+   "district": "Yadgir",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-yavatmal.gov.in-ab431442",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://yavatmal.gov.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%82%e0%a4%9a%e0%a4%be%e0%a4%af%e0%a4%a4/",
+   "state": "MH",
+   "district": "Yavatmal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-yavatmal.gov.in-ebd5a57b",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://yavatmal.gov.in/public-utility-category/%e0%a4%a8%e0%a4%97%e0%a4%b0%e0%a4%aa%e0%a4%be%e0%a4%b2%e0%a4%bf%e0%a4%95%e0%a4%be/",
+   "state": "MH",
+   "district": "Yavatmal",
+   "india_only": false,
+   "max_pages": 30
+  }
+ },
+ {
+  "key": "ulb2_s3waas-zunheboto.nic.in-en-municipality",
+  "payload": {
+   "reader": "ulb2_s3waas",
+   "url": "https://zunheboto.nic.in/en/public-utility-category/municipality/",
+   "state": "NL",
+   "district": "Zunheboto",
+   "india_only": false,
+   "max_pages": 30
+  }
+ }
+]

@@ -1,0 +1,54 @@
+[
+ {
+  "key": "ulb2_sk-gangtok-officers",
+  "payload": {
+   "reader": "ulb2_sk",
+   "url": "https://gangtokdistrict.nic.in/list-of-officers/",
+   "district": "Gangtok",
+   "state": "SK",
+   "rules": [
+    [
+     "^municipal\\s+commiss\\w*,?\\s*GMC\\b",
+     "Gangtok",
+     "249694",
+     "Municipal Corporation",
+     "head"
+    ],
+    [
+     "^(deputy|joint|assistant|addl\\.?|additional)\\s+commis\\w*,?\\s*GMC\\b",
+     "Gangtok",
+     "249694",
+     "Municipal Corporation",
+     "deputy"
+    ],
+    [
+     "^MEO\\s*,?\\s*Singtam\\b",
+     "Singtam",
+     "249695",
+     "Nagar Panchayat",
+     "head"
+    ]
+   ],
+   "india_only": false
+  }
+ },
+ {
+  "key": "ulb2_sk-namchi-directory",
+  "payload": {
+   "reader": "ulb2_sk",
+   "url": "https://namchi.nic.in/contact-directory-2/",
+   "district": "Namchi",
+   "state": "SK",
+   "rules": [
+    [
+     "^MEO\\s*,?\\s*Namchi\\s+Municipal\\s+Council",
+     "Namchi",
+     "249692",
+     "Municipal Council",
+     "head"
+    ]
+   ],
+   "india_only": false
+  }
+ }
+]

@@ -1,0 +1,1886 @@
+{
+"lgd": {
+"248065": {
+"district": "Sidhi",
+"name": "Sidhi"
+},
+"248066": {
+"district": "Singrauli",
+"name": "Singrauli"
+},
+"248067": {
+"district": "Sidhi",
+"name": "Rampur Naikin"
+},
+"248068": {
+"district": "Sidhi",
+"name": "Churhat"
+},
+"248069": {
+"district": "Betul",
+"name": "Sarni"
+},
+"248070": {
+"district": "Betul",
+"name": "Betul Bazar"
+},
+"248071": {
+"district": "Betul",
+"name": "Multai"
+},
+"248072": {
+"district": "Betul",
+"name": "Betul"
+},
+"248073": {
+"district": "Betul",
+"name": "Amla"
+},
+"248075": {
+"district": "Mandla",
+"name": "Nagar Palika, Nainpur"
+},
+"250672": {
+"district": "Sheopur",
+"name": "Vijaypur"
+},
+"250673": {
+"district": "Sheopur",
+"name": "Sheopur"
+},
+"250674": {
+"district": "Sheopur",
+"name": "Badoda"
+},
+"250675": {
+"district": "Morena",
+"name": "Ambah"
+},
+"250676": {
+"district": "Morena",
+"name": "Porsa"
+},
+"250677": {
+"district": "Morena",
+"name": "Morena"
+},
+"250678": {
+"district": "Morena",
+"name": "Banmor"
+},
+"250679": {
+"district": "Morena",
+"name": "Joura"
+},
+"250680": {
+"district": "Morena",
+"name": "Kailaras"
+},
+"250681": {
+"district": "Morena",
+"name": "Jhundpura"
+},
+"250682": {
+"district": "Morena",
+"name": "Sabalgarh"
+},
+"250683": {
+"district": "Bhind",
+"name": "Phuphkalan"
+},
+"250684": {
+"district": "Bhind",
+"name": "Bhind"
+},
+"250685": {
+"district": "Bhind",
+"name": "Akoda"
+},
+"250686": {
+"district": "Bhind",
+"name": "Gormi"
+},
+"250688": {
+"district": "Bhind",
+"name": "Gohad"
+},
+"250689": {
+"district": "Bhind",
+"name": "Mau"
+},
+"250690": {
+"district": "Bhind",
+"name": "Mihona"
+},
+"250691": {
+"district": "Bhind",
+"name": "Lahar"
+},
+"250692": {
+"district": "Bhind",
+"name": "Alampur"
+},
+"250693": {
+"district": "Bhind",
+"name": "Daboh"
+},
+"250694": {
+"district": "Gwalior",
+"name": "Gwalior"
+},
+"250695": {
+"district": "Gwalior",
+"name": "Bilaua"
+},
+"250697": {
+"district": "Gwalior",
+"name": "Pichhore Gwalior"
+},
+"250698": {
+"district": "Gwalior",
+"name": "Dabra"
+},
+"250699": {
+"district": "Gwalior",
+"name": "Antari"
+},
+"250700": {
+"district": "Gwalior",
+"name": "Bhitarwar"
+},
+"250701": {
+"district": "Datia",
+"name": "Seondha"
+},
+"250702": {
+"district": "Datia",
+"name": "Indergarh"
+},
+"250703": {
+"district": "Datia",
+"name": "Datia"
+},
+"250704": {
+"district": "Datia",
+"name": "Bhander"
+},
+"250705": {
+"district": "Shivpuri",
+"name": "Shivpuri"
+},
+"250706": {
+"district": "Shivpuri",
+"name": "Narwar"
+},
+"250707": {
+"district": "Shivpuri",
+"name": "Karera"
+},
+"250708": {
+"district": "Shivpuri",
+"name": "Kolaras"
+},
+"250709": {
+"district": "Shivpuri",
+"name": "Badarwas"
+},
+"250710": {
+"district": "Shivpuri",
+"name": "Pichhore Shivpuri"
+},
+"250711": {
+"district": "Shivpuri",
+"name": "Khaniyadhana"
+},
+"250712": {
+"district": "Ashoknagar",
+"name": "Isagarh"
+},
+"250713": {
+"district": "Ashoknagar",
+"name": "Chanderi"
+},
+"250714": {
+"district": "Guna",
+"name": "Guna"
+},
+"250715": {
+"district": "Ashoknagar",
+"name": "Ashoknagar"
+},
+"250716": {
+"district": "Guna",
+"name": "Raghogarh-Vijaypur"
+},
+"250717": {
+"district": "Ashoknagar",
+"name": "Mungaoli"
+},
+"250718": {
+"district": "Guna",
+"name": "Kumbhraj"
+},
+"250719": {
+"district": "Guna",
+"name": "Aron"
+},
+"250720": {
+"district": "Guna",
+"name": "Chachaura -Binaganj"
+},
+"250733": {
+"district": "Agar-Malwa",
+"name": "Badagaaon"
+},
+"250734": {
+"district": "Chhatarpur",
+"name": "Barigarh"
+},
+"250735": {
+"district": "Chhatarpur",
+"name": "Lavkush Nagar"
+},
+"250736": {
+"district": "Chhatarpur",
+"name": "Chandla"
+},
+"250737": {
+"district": "Chhatarpur",
+"name": "Harpalpur"
+},
+"250738": {
+"district": "Chhatarpur",
+"name": "Nowgong"
+},
+"250739": {
+"district": "Chhatarpur",
+"name": "Garhi -Malhara"
+},
+"250740": {
+"district": "Chhatarpur",
+"name": "Maharajpur"
+},
+"250741": {
+"district": "Chhatarpur",
+"name": "Chhatarpur"
+},
+"250742": {
+"district": "Chhatarpur",
+"name": "Rajnagar"
+},
+"250743": {
+"district": "Chhatarpur",
+"name": "Khajuraho"
+},
+"250744": {
+"district": "Chhatarpur",
+"name": "Bada -Malhera"
+},
+"250745": {
+"district": "Chhatarpur",
+"name": "Ghuwara"
+},
+"250746": {
+"district": "Chhatarpur",
+"name": "Satai"
+},
+"250747": {
+"district": "Chhatarpur",
+"name": "Bijawar"
+},
+"250748": {
+"district": "Chhatarpur",
+"name": "Buxwaha"
+},
+"250750": {
+"district": "Panna",
+"name": "Panna"
+},
+"250752": {
+"district": "Panna",
+"name": "Kakarhati"
+},
+"250753": {
+"district": "Panna",
+"name": "Amanganj"
+},
+"250754": {
+"district": "Panna",
+"name": "Pawai"
+},
+"250755": {
+"district": "Sagar",
+"name": "Bina"
+},
+"250756": {
+"district": "Chhindwara",
+"name": "Chand"
+},
+"250758": {
+"district": "Sagar",
+"name": "Khurai"
+},
+"250759": {
+"district": "Sagar",
+"name": "Shahgarh"
+},
+"250760": {
+"district": "Sagar",
+"name": "Banda"
+},
+"250761": {
+"district": "Sagar",
+"name": "Rahatgarh"
+},
+"250764": {
+"district": "Sagar",
+"name": "Sagar"
+},
+"250766": {
+"district": "Sagar",
+"name": "Makronia Buzurg"
+},
+"250768": {
+"district": "Sagar",
+"name": "Garhakota"
+},
+"250769": {
+"district": "Sagar",
+"name": "Rehli"
+},
+"250770": {
+"district": "Sagar",
+"name": "Deori"
+},
+"250771": {
+"district": "Damoh",
+"name": "Hatta"
+},
+"250772": {
+"district": "Damoh",
+"name": "Patharia"
+},
+"250773": {
+"district": "Damoh",
+"name": "Hindoria"
+},
+"250774": {
+"district": "Damoh",
+"name": "Damoh"
+},
+"250777": {
+"district": "Satna",
+"name": "Chitrakoot"
+},
+"250778": {
+"district": "Satna",
+"name": "Birsinghpur"
+},
+"250779": {
+"district": "Satna",
+"name": "Kothi"
+},
+"250780": {
+"district": "Satna",
+"name": "Jaitwara"
+},
+"250781": {
+"district": "Satna",
+"name": "Satna"
+},
+"250782": {
+"district": "Satna",
+"name": "Nagod"
+},
+"250783": {
+"district": "Satna",
+"name": "Unchahara"
+},
+"250784": {
+"district": "Satna",
+"name": "Kotar"
+},
+"250785": {
+"district": "Satna",
+"name": "Rampur Baghelan"
+},
+"250786": {
+"district": "Maihar",
+"name": "Amarpatan"
+},
+"250787": {
+"district": "Maihar",
+"name": "Maihar"
+},
+"250788": {
+"district": "Rewa",
+"name": "Chakghat"
+},
+"250789": {
+"district": "Rewa",
+"name": "Teonthar"
+},
+"250790": {
+"district": "Rewa",
+"name": "Sirmaur"
+},
+"250791": {
+"district": "Rewa",
+"name": "Semaria"
+},
+"250792": {
+"district": "Rewa",
+"name": "Baikunthpur"
+},
+"250793": {
+"district": "Rewa",
+"name": "Mangawan"
+},
+"250794": {
+"district": "MAUGANJ",
+"name": "Hanumana"
+},
+"250795": {
+"district": "MAUGANJ",
+"name": "Nai-Garhi"
+},
+"250796": {
+"district": "MAUGANJ",
+"name": "Mauganj"
+},
+"250797": {
+"district": "Rewa",
+"name": "Rewa"
+},
+"250798": {
+"district": "Rewa",
+"name": "Govindgarh"
+},
+"250799": {
+"district": "Rewa",
+"name": "Gurh"
+},
+"250800": {
+"district": "Umaria",
+"name": "Chandia"
+},
+"250801": {
+"district": "Umaria",
+"name": "Umaria"
+},
+"250802": {
+"district": "Umaria",
+"name": "Pali"
+},
+"250803": {
+"district": "Umaria",
+"name": "Nowrozabad - Khodargama"
+},
+"250804": {
+"district": "Shahdol",
+"name": "Khand - Bansagar"
+},
+"250805": {
+"district": "Shahdol",
+"name": "Beohari"
+},
+"250806": {
+"district": "Shahdol",
+"name": "Jaisinghnagar"
+},
+"250807": {
+"district": "Shahdol",
+"name": "Shahdol"
+},
+"250808": {
+"district": "Shahdol",
+"name": "Burhar"
+},
+"250809": {
+"district": "Shahdol",
+"name": "Dhanpuri"
+},
+"250818": {
+"district": "Sidhi",
+"name": "Majhauli"
+},
+"250819": {
+"district": "Neemuch",
+"name": "Singoli"
+},
+"250820": {
+"district": "Neemuch",
+"name": "Ratangarh"
+},
+"250821": {
+"district": "Neemuch",
+"name": "Diken"
+},
+"250822": {
+"district": "Neemuch",
+"name": "Jawad"
+},
+"250823": {
+"district": "Neemuch",
+"name": "Neemuch"
+},
+"250824": {
+"district": "Neemuch",
+"name": "Jiran"
+},
+"250825": {
+"district": "Neemuch",
+"name": "Rampura"
+},
+"250826": {
+"district": "Neemuch",
+"name": "Manasa"
+},
+"250827": {
+"district": "Mandsaur",
+"name": "Bhanpura"
+},
+"250828": {
+"district": "Mandsaur",
+"name": "Malhargarh"
+},
+"250829": {
+"district": "Mandsaur",
+"name": "Narayangarh"
+},
+"250830": {
+"district": "Mandsaur",
+"name": "Piplya Mandi"
+},
+"250831": {
+"district": "Mandsaur",
+"name": "Garoth"
+},
+"250832": {
+"district": "Mandsaur",
+"name": "Shamgarh"
+},
+"250833": {
+"district": "Mandsaur",
+"name": "Mandsaur"
+},
+"250834": {
+"district": "Mandsaur",
+"name": "Nagri"
+},
+"250835": {
+"district": "Mandsaur",
+"name": "Sitamau"
+},
+"250836": {
+"district": "Ratlam",
+"name": "Piploda"
+},
+"250837": {
+"district": "Ratlam",
+"name": "Jaora"
+},
+"250838": {
+"district": "Ratlam",
+"name": "Badawada"
+},
+"250839": {
+"district": "Ratlam",
+"name": "Alot"
+},
+"250840": {
+"district": "Ratlam",
+"name": "Tal"
+},
+"250841": {
+"district": "Ratlam",
+"name": "Sailana"
+},
+"250842": {
+"district": "Ratlam",
+"name": "Namli"
+},
+"250843": {
+"district": "Ratlam",
+"name": "Ratlam"
+},
+"250845": {
+"district": "Ujjain",
+"name": "Khacharod"
+},
+"250846": {
+"district": "Ujjain",
+"name": "Nagda"
+},
+"250847": {
+"district": "Ujjain",
+"name": "Unhel"
+},
+"250849": {
+"district": "Ujjain",
+"name": "Mahidpur"
+},
+"250850": {
+"district": "Ujjain",
+"name": "Tarana"
+},
+"250851": {
+"district": "Ujjain",
+"name": "Ujjain"
+},
+"250852": {
+"district": "Ujjain",
+"name": "Badnagar"
+},
+"250853": {
+"district": "Agar-Malwa",
+"name": "Soyatkalan"
+},
+"250854": {
+"district": "Agar-Malwa",
+"name": "Susner"
+},
+"250855": {
+"district": "Agar-Malwa",
+"name": "Nalkheda"
+},
+"250857": {
+"district": "Agar-Malwa",
+"name": "Badod"
+},
+"250858": {
+"district": "Agar-Malwa",
+"name": "Agar"
+},
+"250859": {
+"district": "Agar-Malwa",
+"name": "Kanad"
+},
+"250860": {
+"district": "Shajapur",
+"name": "Shajapur"
+},
+"250861": {
+"district": "Shajapur",
+"name": "Maksi"
+},
+"250862": {
+"district": "Shajapur",
+"name": "Shujalpur"
+},
+"250863": {
+"district": "Shajapur",
+"name": "Akodia"
+},
+"250864": {
+"district": "Shajapur",
+"name": "Polaykalan"
+},
+"250865": {
+"district": "Dewas",
+"name": "Bhaurasa"
+},
+"250866": {
+"district": "Dewas",
+"name": "Sonkatch"
+},
+"250867": {
+"district": "Dewas",
+"name": "Dewas"
+},
+"250868": {
+"district": "Dewas",
+"name": "Kannod"
+},
+"250869": {
+"district": "Dewas",
+"name": "Loharda"
+},
+"250870": {
+"district": "Dewas",
+"name": "Kantaphod"
+},
+"250871": {
+"district": "Dewas",
+"name": "Satwas"
+},
+"250872": {
+"district": "Dewas",
+"name": "Hatpipalya"
+},
+"250873": {
+"district": "Dewas",
+"name": "Karnawad"
+},
+"250875": {
+"district": "Dewas",
+"name": "Khategaon"
+},
+"250876": {
+"district": "Jhabua",
+"name": "Thandla"
+},
+"250877": {
+"district": "Jhabua",
+"name": "Petlawad"
+},
+"250879": {
+"district": "Jhabua",
+"name": "Jhabua"
+},
+"250880": {
+"district": "Alirajpur",
+"name": "Chandra Shekhar Azad Nagar"
+},
+"250881": {
+"district": "Alirajpur",
+"name": "Jobat"
+},
+"250882": {
+"district": "Alirajpur",
+"name": "Alirajpur"
+},
+"250883": {
+"district": "Jhabua",
+"name": "Ranapur"
+},
+"250884": {
+"district": "Dhar",
+"name": "Badnawar"
+},
+"250885": {
+"district": "Rajgarh",
+"name": "Rajgarh"
+},
+"250886": {
+"district": "Dhar",
+"name": "Sardarpur"
+},
+"250887": {
+"district": "Dhar",
+"name": "Dhar"
+},
+"250888": {
+"district": "Dhar",
+"name": "Pithampur"
+},
+"250889": {
+"district": "Dhar",
+"name": "Mandav"
+},
+"250891": {
+"district": "Dhar",
+"name": "Kukshi"
+},
+"250892": {
+"district": "Dhar",
+"name": "Manawar"
+},
+"250893": {
+"district": "Ratlam",
+"name": "Dhamnod Ratlam"
+},
+"250894": {
+"district": "Dhar",
+"name": "Dharampuri"
+},
+"250895": {
+"district": "Indore",
+"name": "Runji -Gautampura"
+},
+"250896": {
+"district": "Indore",
+"name": "Depalpur"
+},
+"250897": {
+"district": "Indore",
+"name": "Betma"
+},
+"250898": {
+"district": "Indore",
+"name": "Sawer"
+},
+"250900": {
+"district": "Indore",
+"name": "Hatod"
+},
+"250901": {
+"district": "Indore",
+"name": "Indore"
+},
+"250904": {
+"district": "Indore",
+"name": "Rau"
+},
+"250905": {
+"district": "Indore",
+"name": "Mhowgaon"
+},
+"250906": {
+"district": "Indore",
+"name": "Manpur"
+},
+"250907": {
+"district": "Khargone (West Nimar)",
+"name": "Barwaha"
+},
+"250908": {
+"district": "Khargone (West Nimar)",
+"name": "Sanawad"
+},
+"250909": {
+"district": "Khargone (West Nimar)",
+"name": "Maheshwar"
+},
+"250910": {
+"district": "Khargone (West Nimar)",
+"name": "Mandleshwar"
+},
+"250911": {
+"district": "Khargone (West Nimar)",
+"name": "Kasrawad"
+},
+"250912": {
+"district": "Khargone (West Nimar)",
+"name": "Bhikangaon"
+},
+"250913": {
+"district": "Khargone (West Nimar)",
+"name": "Khargone"
+},
+"250914": {
+"district": "Barwani",
+"name": "Barwani"
+},
+"250915": {
+"district": "Barwani",
+"name": "Anjad"
+},
+"250916": {
+"district": "Barwani",
+"name": "Rajpur"
+},
+"250917": {
+"district": "Barwani",
+"name": "Pansemal"
+},
+"250918": {
+"district": "Barwani",
+"name": "Khetia"
+},
+"250919": {
+"district": "Barwani",
+"name": "Sendhwa"
+},
+"250920": {
+"district": "Khandwa (East Nimar)",
+"name": "Harsud"
+},
+"250921": {
+"district": "Khandwa (East Nimar)",
+"name": "Omkareshwar"
+},
+"250922": {
+"district": "Khandwa (East Nimar)",
+"name": "Mundi"
+},
+"250923": {
+"district": "Khandwa (East Nimar)",
+"name": "Khandwa"
+},
+"250924": {
+"district": "Khandwa (East Nimar)",
+"name": "Pandhana"
+},
+"250925": {
+"district": "Burhanpur",
+"name": "Burhanpur"
+},
+"250926": {
+"district": "Burhanpur",
+"name": "Shahpur Burhanpur"
+},
+"250927": {
+"district": "Burhanpur",
+"name": "Nepanagar"
+},
+"250928": {
+"district": "Rajgarh",
+"name": "Machalpur"
+},
+"250929": {
+"district": "Rajgarh",
+"name": "Jirapur"
+},
+"250930": {
+"district": "Rajgarh",
+"name": "Khilchipur"
+},
+"250931": {
+"district": "Dhar",
+"name": "Rajgarh"
+},
+"250932": {
+"district": "Rajgarh",
+"name": "Khujner"
+},
+"250933": {
+"district": "Rajgarh",
+"name": "Suthaliya"
+},
+"250934": {
+"district": "Rajgarh",
+"name": "Biaora"
+},
+"250935": {
+"district": "Rajgarh",
+"name": "Pachore"
+},
+"250936": {
+"district": "Rajgarh",
+"name": "Sarangpur"
+},
+"250937": {
+"district": "Rajgarh",
+"name": "Narsinghgarh"
+},
+"250938": {
+"district": "Rajgarh",
+"name": "Boda"
+},
+"250939": {
+"district": "Rajgarh",
+"name": "Talen"
+},
+"250940": {
+"district": "Vidisha",
+"name": "Lateri"
+},
+"250941": {
+"district": "Vidisha",
+"name": "Sironj"
+},
+"250942": {
+"district": "Vidisha",
+"name": "Kurwai"
+},
+"250944": {
+"district": "Vidisha",
+"name": "Vidisha"
+},
+"250945": {
+"district": "Bhopal",
+"name": "Berasia"
+},
+"250946": {
+"district": "Bhopal",
+"name": "Bhopal"
+},
+"250947": {
+"district": "Sehore",
+"name": "Sehore"
+},
+"250948": {
+"district": "Sehore",
+"name": "Jawar"
+},
+"250949": {
+"district": "Sehore",
+"name": "Ashta"
+},
+"250950": {
+"district": "Sehore",
+"name": "Ichhawar"
+},
+"250951": {
+"district": "Sehore",
+"name": "Nasrullaganj"
+},
+"250952": {
+"district": "Sehore",
+"name": "Budni"
+},
+"250953": {
+"district": "Sehore",
+"name": "Rehti"
+},
+"250954": {
+"district": "Raisen",
+"name": "Sanchi"
+},
+"250955": {
+"district": "Raisen",
+"name": "Raisen"
+},
+"250956": {
+"district": "Raisen",
+"name": "Gairatganj"
+},
+"250957": {
+"district": "Raisen",
+"name": "Begamganj"
+},
+"250958": {
+"district": "Raisen",
+"name": "Sultanpur"
+},
+"250959": {
+"district": "Raisen",
+"name": "Mandideep"
+},
+"250960": {
+"district": "Raisen",
+"name": "Obedullaganj"
+},
+"250961": {
+"district": "Raisen",
+"name": "Badi"
+},
+"250962": {
+"district": "Raisen",
+"name": "Bareli"
+},
+"250963": {
+"district": "Raisen",
+"name": "Udaipura"
+},
+"250964": {
+"district": "Betul",
+"name": "Bhainsdehi"
+},
+"250965": {
+"district": "Sagar",
+"name": "Shahpur Sagar"
+},
+"250966": {
+"district": "Harda",
+"name": "Khirkiya"
+},
+"250967": {
+"district": "Harda",
+"name": "Harda"
+},
+"250968": {
+"district": "Harda",
+"name": "Timarni"
+},
+"250969": {
+"district": "Narmadapuram",
+"name": "Seoni-Malwa"
+},
+"250970": {
+"district": "Narmadapuram",
+"name": "Itarsi"
+},
+"250974": {
+"district": "Narmadapuram",
+"name": "Narmadapuram"
+},
+"250975": {
+"district": "Narmadapuram",
+"name": "Babai"
+},
+"250976": {
+"district": "Narmadapuram",
+"name": "Sohagpur"
+},
+"250977": {
+"district": "Narmadapuram",
+"name": "Pipariya"
+},
+"250978": {
+"district": "Katni",
+"name": "Barhi"
+},
+"250979": {
+"district": "Katni",
+"name": "Murwara - Katni"
+},
+"250980": {
+"district": "Katni",
+"name": "Kymore"
+},
+"250981": {
+"district": "Katni",
+"name": "Vijayraghavgarh"
+},
+"250982": {
+"district": "Jabalpur",
+"name": "Manjholi Jabalpur"
+},
+"250983": {
+"district": "Jabalpur",
+"name": "Sihora"
+},
+"250984": {
+"district": "Balaghat",
+"name": "Katangi"
+},
+"250985": {
+"district": "Jabalpur",
+"name": "Patan"
+},
+"250986": {
+"district": "Dindori",
+"name": "Shahpura Dindori"
+},
+"250987": {
+"district": "Jabalpur",
+"name": "Panagar"
+},
+"250995": {
+"district": "Jabalpur",
+"name": "Jabalpur"
+},
+"250996": {
+"district": "Jabalpur",
+"name": "Bhedaghat"
+},
+"250997": {
+"district": "Jabalpur",
+"name": "Barela"
+},
+"250998": {
+"district": "Narsimhapur",
+"name": "Gotegaon"
+},
+"250999": {
+"district": "Narsimhapur",
+"name": "Gadarwara"
+},
+"251000": {
+"district": "Narsimhapur",
+"name": "Chichli"
+},
+"251001": {
+"district": "Narsimhapur",
+"name": "Narsimhapur"
+},
+"251002": {
+"district": "Narsimhapur",
+"name": "Kareli"
+},
+"251003": {
+"district": "Jabalpur",
+"name": "Shahpura"
+},
+"251007": {
+"district": "Chhindwara",
+"name": "Harrai"
+},
+"251008": {
+"district": "Chhindwara",
+"name": "Amarwara"
+},
+"251009": {
+"district": "Chhindwara",
+"name": "Chaurai"
+},
+"251010": {
+"district": "Chhindwara",
+"name": "Jamai"
+},
+"251018": {
+"district": "Chhindwara",
+"name": "Newton Chikhli Kalan"
+},
+"251022": {
+"district": "Chhindwara",
+"name": "Dongar Parasia"
+},
+"251023": {
+"district": "Chhindwara",
+"name": "Chandameta -Butaria"
+},
+"251025": {
+"district": "Chhindwara",
+"name": "Badkuhi"
+},
+"251026": {
+"district": "Chhindwara",
+"name": "Chhindwara"
+},
+"251027": {
+"district": "Pandhurna",
+"name": "Sausar"
+},
+"251028": {
+"district": "Pandhurna",
+"name": "Mohgaon"
+},
+"251029": {
+"district": "Pandhurna",
+"name": "Lodhikheda"
+},
+"251030": {
+"district": "Pandhurna",
+"name": "Pandhurna"
+},
+"251031": {
+"district": "Seoni",
+"name": "Lakhnadon"
+},
+"251033": {
+"district": "Seoni",
+"name": "Seoni"
+},
+"251034": {
+"district": "Seoni",
+"name": "Barghat"
+},
+"251035": {
+"district": "Jabalpur",
+"name": "Katangi Jabalpur"
+},
+"251037": {
+"district": "Balaghat",
+"name": "Waraseoni"
+},
+"251040": {
+"district": "Balaghat",
+"name": "Balaghat"
+},
+"251041": {
+"district": "Balaghat",
+"name": "Baihar"
+},
+"251042": {
+"district": "Balaghat",
+"name": "Malajkhand"
+},
+"253125": {
+"district": "Raisen",
+"name": "Silwani"
+},
+"253134": {
+"district": "Neemuch",
+"name": "Kukdeshwar"
+},
+"253162": {
+"district": "Balaghat",
+"name": "Lanji"
+},
+"253170": {
+"district": "Mandla",
+"name": "Niwas"
+},
+"253171": {
+"district": "Chhindwara",
+"name": "Bhuwa Bichhia"
+},
+"253193": {
+"district": "Anuppur",
+"name": "Kotma"
+},
+"253194": {
+"district": "Anuppur",
+"name": "Bijuri"
+},
+"253195": {
+"district": "Anuppur",
+"name": "Amarkantak"
+},
+"253196": {
+"district": "Anuppur",
+"name": "Jaithari"
+},
+"253197": {
+"district": "Anuppur",
+"name": "Pasan"
+},
+"253251": {
+"district": "Barwani",
+"name": "Palsud"
+},
+"262903": {
+"district": "Sehore",
+"name": "Shahganj"
+},
+"262908": {
+"district": "Rajgarh",
+"name": "Kurawar"
+},
+"262977": {
+"district": "Ashoknagar",
+"name": "Shadora"
+},
+"262992": {
+"district": "Rajgarh",
+"name": "Chhapiheda"
+},
+"262993": {
+"district": "Vidisha",
+"name": "Samsabad"
+},
+"263010": {
+"district": "Shajapur",
+"name": "Pankhedi Kalapipal"
+},
+"263020": {
+"district": "Narmadapuram",
+"name": "Bankhedi"
+},
+"263072": {
+"district": "Chhindwara",
+"name": "Bichhua"
+},
+"263154": {
+"district": "Neemuch",
+"name": "Nayagoan"
+},
+"263155": {
+"district": "Neemuch",
+"name": "Sarwaniya Maharaj"
+},
+"263205": {
+"district": "Ujjain",
+"name": "Makdon"
+},
+"263211": {
+"district": "Shivpuri",
+"name": "Bairad"
+},
+"263217": {
+"district": "Narsimhapur",
+"name": "Sainkheda"
+},
+"263218": {
+"district": "Betul",
+"name": "Chicholi"
+},
+"263361": {
+"district": "Betul",
+"name": "Athner"
+},
+"265847": {
+"district": "Anuppur",
+"name": "Anuppur Np"
+},
+"273379": {
+"district": "Jhabua",
+"name": "Meghnagar New"
+},
+"274350": {
+"district": "Dewas",
+"name": "Nemawar"
+},
+"277237": {
+"district": "Datia",
+"name": "Badonee"
+},
+"289259": {
+"district": "Mandla",
+"name": "Mandla"
+},
+"289260": {
+"district": "Mandla",
+"name": "Bamhni Banjar"
+},
+"290253": {
+"district": "Tikamgarh",
+"name": "Lidhorakhas"
+},
+"290256": {
+"district": "Tikamgarh",
+"name": "Kari"
+},
+"290257": {
+"district": "Tikamgarh",
+"name": "Jatara"
+},
+"290258": {
+"district": "Tikamgarh",
+"name": "Badagaon"
+},
+"290271": {
+"district": "Dewas",
+"name": "Tonk Khurd"
+},
+"290272": {
+"district": "Dewas",
+"name": "Pipalrawan"
+},
+"290276": {
+"district": "Tikamgarh",
+"name": "Baldevgarh"
+},
+"290285": {
+"district": "Tikamgarh",
+"name": "Tikamgarh"
+},
+"290306": {
+"district": "Tikamgarh",
+"name": "Khargapur"
+},
+"290323": {
+"district": "Niwari",
+"name": "Jeron Khalsa"
+},
+"290343": {
+"district": "Tikamgarh",
+"name": "Palera"
+},
+"290379": {
+"district": "Dhar",
+"name": "Dhamnod- Dhar"
+},
+"290381": {
+"district": "Mandsaur",
+"name": "Suwasra"
+},
+"290382": {
+"district": "Niwari",
+"name": "Niwari"
+},
+"290383": {
+"district": "Sehore",
+"name": "Kothri"
+},
+"290389": {
+"district": "Dewas",
+"name": "Bagali"
+},
+"290390": {
+"district": "Dindori",
+"name": "Dindori"
+},
+"290392": {
+"district": "Bhind",
+"name": "Mehgaon"
+},
+"290394": {
+"district": "Dhar",
+"name": "Dahi"
+},
+"290395": {
+"district": "Pandhurna",
+"name": "Pipla Narayanwar"
+},
+"290429": {
+"district": "Narsimhapur",
+"name": "Tendukheda- Narsimhapur"
+},
+"290462": {
+"district": "Damoh",
+"name": "Tendukheda- Damoh"
+},
+"293808": {
+"district": "Chhindwara",
+"name": "Damua"
+},
+"293809": {
+"district": "Vidisha",
+"name": "Ganjbasoda"
+},
+"293817": {
+"district": "Neemuch",
+"name": "Athana"
+},
+"293818": {
+"district": "Niwari",
+"name": "Taricharkala"
+},
+"293819": {
+"district": "Maihar",
+"name": "New Ramnagar"
+},
+"293820": {
+"district": "Narsimhapur",
+"name": "Salichauka"
+},
+"293821": {
+"district": "Niwari",
+"name": "Prithvipur"
+},
+"293822": {
+"district": "Khargone (West Nimar)",
+"name": "Karahi"
+},
+"293826": {
+"district": "Damoh",
+"name": "Patera"
+},
+"293827": {
+"district": "Niwari",
+"name": "Orchha"
+}
+},
+"rows": {
+"cmoaalot@mpurban.gov.in": "250839",
+"cmoaathner@mpurban.gov.in": "263361",
+"cmoagar@mpurban.gov.in": "250858",
+"cmoakoda@mpurban.gov.in": "250685",
+"cmoakodiya@mpurban.gov.in": "250863",
+"cmoalampur@mpurban.gov.in": "250692",
+"cmoalirajpur@mpurban.gov.in": "250882",
+"cmoamanganj@mpurban.gov.in": "250753",
+"cmoamarkantak@mpurban.gov.in": "253195",
+"cmoamarpatan@mpurban.gov.in": "250786",
+"cmoamarwada@mpurban.gov.in": "251008",
+"cmoambah@mpurban.gov.in": "250675",
+"cmoamla@mpurban.gov.in": "248073",
+"cmoanjad@mpurban.gov.in": "250915",
+"cmoantri@mpurban.gov.in": "250699",
+"cmoanuppur@mpurban.gov.in": "265847",
+"cmoaron@mpurban.gov.in": "250719",
+"cmoashoknagar@mpurban.gov.in": "250715",
+"cmoastha@mpurban.gov.in": "250949",
+"cmoathana@mpurban.gov.in": "293817",
+"cmobabai@mpurban.gov.in": "250975",
+"cmobadagaonshajapur@mpurban.gov.in": "250733",
+"cmobadagaontikamgarh@mpurban.gov.in": "290258",
+"cmobadamalhara@mpurban.gov.in": "250744",
+"cmobadarvas@mpurban.gov.in": "250709",
+"cmobadawada@mpurban.gov.in": "250838",
+"cmobadi@mpurban.gov.in": "250961",
+"cmobadkuhi@mpurban.gov.in": "251025",
+"cmobadnagar@mpurban.gov.in": "250852",
+"cmobadnawar@mpurban.gov.in": "250884",
+"cmobadoni@mpurban.gov.in": "277237",
+"cmobadwah@mpurban.gov.in": "250907",
+"cmobadwani@mpurban.gov.in": "250914",
+"cmobagali@mpurban.gov.in": "290389",
+"cmobaiher@mpurban.gov.in": "251041",
+"cmobaikuntpur@mpurban.gov.in": "250792",
+"cmobairad@mpurban.gov.in": "263211",
+"cmobalaghat@mpurban.gov.in": "251040",
+"cmobaldevgarh@mpurban.gov.in": "290276",
+"cmobamhanibanjar@mpurban.gov.in": "289260",
+"cmobamor@mpurban.gov.in": "250678",
+"cmobanda@mpurban.gov.in": "250760",
+"cmobankhedi@mpurban.gov.in": "263020",
+"cmobarela@mpurban.gov.in": "250997",
+"cmobareli@mpurban.gov.in": "250962",
+"cmobarghat@mpurban.gov.in": "251034",
+"cmobarhi@mpurban.gov.in": "250978",
+"cmobarisia@mpurban.gov.in": "250945",
+"cmobarod@mpurban.gov.in": "250857",
+"cmobarood@mpurban.gov.in": "250674",
+"cmobaxwaha@mpurban.gov.in": "250748",
+"cmobegamganj@mpurban.gov.in": "250957",
+"cmobetma@mpurban.gov.in": "250897",
+"cmobetul@mpurban.gov.in": "248072",
+"cmobetulbazaar@mpurban.gov.in": "248070",
+"cmobhaindehi@mpurban.gov.in": "250964",
+"cmobhander@mpurban.gov.in": "250704",
+"cmobhanpura@mpurban.gov.in": "250827",
+"cmobhedaghat@mpurban.gov.in": "250996",
+"cmobhikangaon@mpurban.gov.in": "250912",
+"cmobhind@mpurban.gov.in": "250684",
+"cmobhorsa@mpurban.gov.in": "250865",
+"cmobhudhar@mpurban.gov.in": "250808",
+"cmobiaora@mpurban.gov.in": "250934",
+"cmobichhiya@mpurban.gov.in": "253171",
+"cmobichhua@mpurban.gov.in": "263072",
+"cmobijabar@mpurban.gov.in": "250747",
+"cmobijuri@mpurban.gov.in": "253194",
+"cmobillowa@mpurban.gov.in": "250695",
+"cmobinaitwa@mpurban.gov.in": "250755",
+"cmobirsingpur@mpurban.gov.in": "250778",
+"cmobitarwar@mpurban.gov.in": "250700",
+"cmoboda@mpurban.gov.in": "250938",
+"cmobudni@mpurban.gov.in": "250952",
+"cmobyohari@mpurban.gov.in": "250805",
+"cmochachodabinaganj@mpurban.gov.in": "250720",
+"cmochakghat@mpurban.gov.in": "250788",
+"cmochand@mpurban.gov.in": "250756",
+"cmochandala@mpurban.gov.in": "250736",
+"cmochanderi@mpurban.gov.in": "250713",
+"cmochandia@mpurban.gov.in": "250800",
+"cmochandmetabutaria@mpurban.gov.in": "251023",
+"cmochatarpur@mpurban.gov.in": "250741",
+"cmochhapiheda@mpurban.gov.in": "262992",
+"cmochhindwara@mpurban.gov.in": "251026",
+"cmochichli@mpurban.gov.in": "251000",
+"cmochincholi@mpurban.gov.in": "263218",
+"cmochitrakoot@mpurban.gov.in": "250777",
+"cmochorai@mpurban.gov.in": "251009",
+"cmochourhat@mpurban.gov.in": "248068",
+"cmocsazadnagar@mpurban.gov.in": "250880",
+"cmodaboha@mpurban.gov.in": "250693",
+"cmodabra@mpurban.gov.in": "250698",
+"cmodahi@mpurban.gov.in": "290394",
+"cmodamoh@mpurban.gov.in": "250774",
+"cmodamua@mpurban.gov.in": "293808",
+"cmodatia@mpurban.gov.in": "250703",
+"cmodepalpur@mpurban.gov.in": "250896",
+"cmodevari@mpurban.gov.in": "250770",
+"cmodhamnod@mpurban.gov.in": "290379",
+"cmodhamnodratlam@mpurban.gov.in": "250893",
+"cmodhanpuri@mpurban.gov.in": "250809",
+"cmodhar@mpurban.gov.in": "250887",
+"cmodharampuri@mpurban.gov.in": "250894",
+"cmodhuwara@mpurban.gov.in": "250745",
+"cmodidori@mpurban.gov.in": "290390",
+"cmodiken@mpurban.gov.in": "250821",
+"cmodongarparasiya@mpurban.gov.in": "251022",
+"cmoesagarh@mpurban.gov.in": "250712",
+"cmogadarwada@mpurban.gov.in": "250999",
+"cmogadimalhara@mpurban.gov.in": "250739",
+"cmogairatganj@mpurban.gov.in": "250956",
+"cmoganjbasoda@mpurban.gov.in": "293809",
+"cmogarhakota@mpurban.gov.in": "250768",
+"cmogarot@mpurban.gov.in": "250831",
+"cmogautampura@mpurban.gov.in": "250895",
+"cmogohad@mpurban.gov.in": "250688",
+"cmogormi@mpurban.gov.in": "250686",
+"cmogotegaon@mpurban.gov.in": "250998",
+"cmogovindgarh@mpurban.gov.in": "250798",
+"cmogudh@mpurban.gov.in": "250799",
+"cmoguna@mpurban.gov.in": "250714",
+"cmohanumana@mpurban.gov.in": "250794",
+"cmoharaai@mpurban.gov.in": "251007",
+"cmoharda@mpurban.gov.in": "250967",
+"cmoharpalpur@mpurban.gov.in": "250737",
+"cmoharsood@mpurban.gov.in": "250920",
+"cmohathod@mpurban.gov.in": "250900",
+"cmohatpipalia@mpurban.gov.in": "250872",
+"cmohatta@mpurban.gov.in": "250771",
+"cmohindoriya@mpurban.gov.in": "250773",
+"cmohoshangabad@mpurban.gov.in": "250974",
+"cmoichawar@mpurban.gov.in": "250950",
+"cmoindargarh@mpurban.gov.in": "250702",
+"cmoitarsi@mpurban.gov.in": "250970",
+"cmojaithari@mpurban.gov.in": "253196",
+"cmojatara@mpurban.gov.in": "290257",
+"cmojatwara@mpurban.gov.in": "250780",
+"cmojavad@mpurban.gov.in": "250822",
+"cmojawar@mpurban.gov.in": "250948",
+"cmojawara@mpurban.gov.in": "250837",
+"cmojaysingnagar@mpurban.gov.in": "250806",
+"cmojeeran@mpurban.gov.in": "250824",
+"cmojeerapur@mpurban.gov.in": "250929",
+"cmojeronkhalsa@mpurban.gov.in": "290323",
+"cmojhabua@mpurban.gov.in": "250879",
+"cmojhundpura@mpurban.gov.in": "250681",
+"cmojobat@mpurban.gov.in": "250881",
+"cmojora@mpurban.gov.in": "250679",
+"cmokailaras@mpurban.gov.in": "250680",
+"cmokakarhatti@mpurban.gov.in": "250752",
+"cmokanad@mpurban.gov.in": "250859",
+"cmokannod@mpurban.gov.in": "250868",
+"cmokantafod@mpurban.gov.in": "250870",
+"cmokareli@mpurban.gov.in": "251002",
+"cmokarera@mpurban.gov.in": "250707",
+"cmokarhi@mpurban.gov.in": "293822",
+"cmokari@mpurban.gov.in": "290256",
+"cmokarnavad@mpurban.gov.in": "250873",
+"cmokasrawad@mpurban.gov.in": "250911",
+"cmokatangibalaghat@mpurban.gov.in": "250984",
+"cmokatangijabalpur@mpurban.gov.in": "251035",
+"cmokemore@mpurban.gov.in": "250980",
+"cmokhachrod@mpurban.gov.in": "250845",
+"cmokhad@mpurban.gov.in": "250804",
+"cmokhajuraho@mpurban.gov.in": "250743",
+"cmokhaniadhana@mpurban.gov.in": "250711",
+"cmokhargapur@mpurban.gov.in": "290306",
+"cmokhargone@mpurban.gov.in": "250913",
+"cmokhategaon@mpurban.gov.in": "250875",
+"cmokhetai@mpurban.gov.in": "250918",
+"cmokhilchipur@mpurban.gov.in": "250930",
+"cmokhirkiya@mpurban.gov.in": "250966",
+"cmokhujner@mpurban.gov.in": "250932",
+"cmokhurai@mpurban.gov.in": "250758",
+"cmokolaras@mpurban.gov.in": "250708",
+"cmokothar@mpurban.gov.in": "250784",
+"cmokothi@mpurban.gov.in": "250779",
+"cmokothri@mpurban.gov.in": "290383",
+"cmokotma@mpurban.gov.in": "253193",
+"cmokukdeshwar@mpurban.gov.in": "253134",
+"cmokukshi@mpurban.gov.in": "250891",
+"cmokumbraj@mpurban.gov.in": "250718",
+"cmokurawar@mpurban.gov.in": "262908",
+"cmokurwai@mpurban.gov.in": "250942",
+"cmolahar@mpurban.gov.in": "250691",
+"cmolakhnadoan@mpurban.gov.in": "251031",
+"cmolanji@mpurban.gov.in": "253162",
+"cmolateri@mpurban.gov.in": "250940",
+"cmolidhorakhas@mpurban.gov.in": "290253",
+"cmolodhikeda@mpurban.gov.in": "251029",
+"cmolodi@mpurban.gov.in": "250735",
+"cmoloharda@mpurban.gov.in": "250869",
+"cmomachalpur@mpurban.gov.in": "250928",
+"cmomaharajpur@mpurban.gov.in": "250740",
+"cmomaheshwar@mpurban.gov.in": "250909",
+"cmomahidpur@mpurban.gov.in": "250849",
+"cmomahuganj@mpurban.gov.in": "250796",
+"cmomahugaon@mpurban.gov.in": "250905",
+"cmomakdon@mpurban.gov.in": "263205",
+"cmomakronia@mpurban.gov.in": "250766",
+"cmomaksi@mpurban.gov.in": "250861",
+"cmomalajkhand@mpurban.gov.in": "251042",
+"cmomalhargaon@mpurban.gov.in": "250828",
+"cmomanasha@mpurban.gov.in": "250826",
+"cmomanawar@mpurban.gov.in": "250892",
+"cmomandaleshwar@mpurban.gov.in": "250910",
+"cmomandav@mpurban.gov.in": "250889",
+"cmomandideep@mpurban.gov.in": "250959",
+"cmomandla@mpurban.gov.in": "289259",
+"cmomandsaur@mpurban.gov.in": "250833",
+"cmomangava@mpurban.gov.in": "250793",
+"cmomanjholi@mpurban.gov.in": "250982",
+"cmomanjholisidhi@mpurban.gov.in": "250818",
+"cmomanpur@mpurban.gov.in": "250906",
+"cmomau@mpurban.gov.in": "250689",
+"cmomeghnagar@mpurban.gov.in": "273379",
+"cmomeher@mpurban.gov.in": "250787",
+"cmomehgaon@mpurban.gov.in": "290392",
+"cmomihona@mpurban.gov.in": "250690",
+"cmomohagaon@mpurban.gov.in": "251028",
+"cmomorena@mpurban.gov.in": "250677",
+"cmomultai@mpurban.gov.in": "248071",
+"cmomundi@mpurban.gov.in": "250922",
+"cmomungawali@mpurban.gov.in": "250717",
+"cmonagari@mpurban.gov.in": "250834",
+"cmonagda@mpurban.gov.in": "250846",
+"cmonagoad@mpurban.gov.in": "250782",
+"cmonahigari@mpurban.gov.in": "250795",
+"cmonalkheda@mpurban.gov.in": "250855",
+"cmonamli@mpurban.gov.in": "250842",
+"cmonanpur@mpurban.gov.in": "248075",
+"cmonarayangarh@mpurban.gov.in": "250829",
+"cmonarsingarh@mpurban.gov.in": "250937",
+"cmonarsinghpur@mpurban.gov.in": "251001",
+"cmonarwar@mpurban.gov.in": "250706",
+"cmonasrullaganj@mpurban.gov.in": "250951",
+"cmonayagaon@mpurban.gov.in": "263154",
+"cmoneemuch@mpurban.gov.in": "250823",
+"cmonemawar@mpurban.gov.in": "274350",
+"cmonepanagar@mpurban.gov.in": "250927",
+"cmonewramnagar@mpurban.gov.in": "293819",
+"cmonewtonchikhli@mpurban.gov.in": "251018",
+"cmoniwari@mpurban.gov.in": "290382",
+"cmoniwas@mpurban.gov.in": "253170",
+"cmonogaon@mpurban.gov.in": "250738",
+"cmonorojabad@mpurban.gov.in": "250803",
+"cmoobaidullaganj@mpurban.gov.in": "250960",
+"cmoomkareswar@mpurban.gov.in": "250921",
+"cmoorcha@mpurban.gov.in": "293827",
+"cmopachore@mpurban.gov.in": "250935",
+"cmopalera@mpurban.gov.in": "290343",
+"cmopali@mpurban.gov.in": "250802",
+"cmopalsood@mpurban.gov.in": "253251",
+"cmopanagar@mpurban.gov.in": "250987",
+"cmopandurna@mpurban.gov.in": "251030",
+"cmopankhedi@mpurban.gov.in": "263010",
+"cmopanna@mpurban.gov.in": "250750",
+"cmopansemal@mpurban.gov.in": "250917",
+"cmopasan@mpurban.gov.in": "253197",
+"cmopatan@mpurban.gov.in": "250985",
+"cmopatera@mpurban.gov.in": "293826",
+"cmopathana@mpurban.gov.in": "250924",
+"cmopathiriya@mpurban.gov.in": "250772",
+"cmopawai@mpurban.gov.in": "250754",
+"cmopetlawad@mpurban.gov.in": "250877",
+"cmophoopkala@mpurban.gov.in": "250683",
+"cmopichhore@mpurban.gov.in": "250697",
+"cmopichor@mpurban.gov.in": "250710",
+"cmopipaliyamandi@mpurban.gov.in": "250830",
+"cmopipalrawa@mpurban.gov.in": "290272",
+"cmopipariya@mpurban.gov.in": "250977",
+"cmopiplanarayawar@mpurban.gov.in": "290395",
+"cmopiplodha@mpurban.gov.in": "250836",
+"cmopithampur@mpurban.gov.in": "250888",
+"cmopolaykala@mpurban.gov.in": "250864",
+"cmoporsa@mpurban.gov.in": "250676",
+"cmoprithvipur@mpurban.gov.in": "293821",
+"cmoraghogarh@mpurban.gov.in": "250716",
+"cmorahatgarh@mpurban.gov.in": "250761",
+"cmoraisen@mpurban.gov.in": "250955",
+"cmorajnagar@mpurban.gov.in": "250742",
+"cmorajpur@mpurban.gov.in": "250916",
+"cmorampura@mpurban.gov.in": "250825",
+"cmorampurbaghelan@mpurban.gov.in": "250785",
+"cmorampurnekin@mpurban.gov.in": "248067",
+"cmoranapur@mpurban.gov.in": "250883",
+"cmoratangarh@mpurban.gov.in": "250820",
+"cmorau@mpurban.gov.in": "250904",
+"cmorehali@mpurban.gov.in": "250769",
+"cmorehati@mpurban.gov.in": "250953",
+"cmosabalgarh@mpurban.gov.in": "250682",
+"cmosaikheda@mpurban.gov.in": "263217",
+"cmosalichouka@mpurban.gov.in": "293820",
+"cmosanavad@mpurban.gov.in": "250908",
+"cmosanchi@mpurban.gov.in": "250954",
+"cmosarangpur@mpurban.gov.in": "250936",
+"cmosardarpur@mpurban.gov.in": "250886",
+"cmosarni@mpurban.gov.in": "248069",
+"cmosarwaniya@mpurban.gov.in": "263155",
+"cmosatai@mpurban.gov.in": "250746",
+"cmosatvas@mpurban.gov.in": "250871",
+"cmosawer@mpurban.gov.in": "250898",
+"cmosehore@mpurban.gov.in": "250947",
+"cmoselana@mpurban.gov.in": "250841",
+"cmosemariya@mpurban.gov.in": "250791",
+"cmosendhwa@mpurban.gov.in": "250919",
+"cmoseoni@mpurban.gov.in": "251033",
+"cmoseonimalwa@mpurban.gov.in": "250969",
+"cmosewda@mpurban.gov.in": "250701",
+"cmoshadora@mpurban.gov.in": "262977",
+"cmoshahdol@mpurban.gov.in": "250807",
+"cmoshahganj@mpurban.gov.in": "262903",
+"cmoshahgarh@mpurban.gov.in": "250759",
+"cmoshahpuradidori@mpurban.gov.in": "250986",
+"cmoshahpurajabalpur@mpurban.gov.in": "251003",
+"cmoshahpurburhanpur@mpurban.gov.in": "250926",
+"cmoshahpursagar@mpurban.gov.in": "250965",
+"cmoshajapur@mpurban.gov.in": "250860",
+"cmoshamshabad@mpurban.gov.in": "262993",
+"cmosheopurkalan@mpurban.gov.in": "250673",
+"cmoshivpuri@mpurban.gov.in": "250705",
+"cmoshujalpur@mpurban.gov.in": "250862",
+"cmoshyamgarh@mpurban.gov.in": "250832",
+"cmosidhi@mpurban.gov.in": "248065",
+"cmosihora@mpurban.gov.in": "250983",
+"cmosilwani@mpurban.gov.in": "253125",
+"cmosingoli@mpurban.gov.in": "250819",
+"cmosirmor@mpurban.gov.in": "250790",
+"cmosironj@mpurban.gov.in": "250941",
+"cmositamahu@mpurban.gov.in": "250835",
+"cmosohagpur@mpurban.gov.in": "250976",
+"cmosonkatch@mpurban.gov.in": "250866",
+"cmosonsar@mpurban.gov.in": "251027",
+"cmosoyatkala@mpurban.gov.in": "250853",
+"cmosultanpur@mpurban.gov.in": "250958",
+"cmosusner@mpurban.gov.in": "250854",
+"cmosuthalia@mpurban.gov.in": "250933",
+"cmosuwasra@mpurban.gov.in": "290381",
+"cmotaal@mpurban.gov.in": "250840",
+"cmotalen@mpurban.gov.in": "250939",
+"cmotarana@mpurban.gov.in": "250850",
+"cmotaricharkala@mpurban.gov.in": "293818",
+"cmothandla@mpurban.gov.in": "250876",
+"cmothyother@mpurban.gov.in": "250789",
+"cmotikamgarh@mpurban.gov.in": "290285",
+"cmotimarni@mpurban.gov.in": "250968",
+"cmotonkhurd@mpurban.gov.in": "290271",
+"cmouchehara@mpurban.gov.in": "250783",
+"cmoudaypura@mpurban.gov.in": "250963",
+"cmoumaria@mpurban.gov.in": "250801",
+"cmounhel@mpurban.gov.in": "250847",
+"cmovidisha@mpurban.gov.in": "250944",
+"cmovijaypur@mpurban.gov.in": "250672",
+"cmovijayraghavgarh@mpurban.gov.in": "250981",
+"cmowaraseoni@mpurban.gov.in": "251037",
+"cmowarigarh@mpurban.gov.in": "250734",
+"commbhopal@mpurban.gov.in": "250946",
+"commburhanpur@mpurban.gov.in": "250925",
+"commdewas@mpurban.gov.in": "250867",
+"commgwalior@mpurban.gov.in": "250694",
+"commindore@mpurban.gov.in": "250901",
+"commjabalpur@mpurban.gov.in": "250995",
+"commkatni@mpurban.gov.in": "250979",
+"commkhandwa@mpurban.gov.in": "250923",
+"commratlam@mpurban.gov.in": "250843",
+"commrewa@mpurban.gov.in": "250797",
+"commsagar@mpurban.gov.in": "250764",
+"commsatna@mpurban.gov.in": "250781",
+"commsingrauli@mpurban.gov.in": "248066",
+"commujjain@mpurban.gov.in": "250851",
+"npjamai@yahoo.com": "251010",
+"दमोह|तेन्दूखेड़ा|cmotendukheda@mpurban.gov.in": "290462",
+"धार|राजगढ़|cmorajgarh@mpurban.gov.in": "250931",
+"नरसिंहपुर|तेन्दूखेड़ा|cmotendukheda@mpurban.gov.in": "290429",
+"राजगढ|राजगढ़|cmorajgarh@mpurban.gov.in": "250885"
+}
+}

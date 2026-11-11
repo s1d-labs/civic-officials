@@ -1,0 +1,56 @@
+[
+ {
+  "key": "ulb2_mn-bishnupur-dlos",
+  "payload": {
+   "reader": "ulb2_mn",
+   "url": "https://bishnupur.nic.in/dlos-and-other-officials/",
+   "district": "Bishnupur",
+   "state": "MN",
+   "rules": [
+    [
+     "^C?EO\\b.*\\bNambol\\b",
+     "Nambol",
+     "276515",
+     "Municipal Council"
+    ],
+    [
+     "^C?EO\\b.*\\bOinam\\b",
+     "Oinam",
+     "276506",
+     "Municipal Council"
+    ],
+    [
+     "^C?EO\\b.*\\bKwakta\\b",
+     "Kwakta",
+     "276525",
+     "Municipal Council"
+    ],
+    [
+     "^C?EO\\b.*\\bBishnupur\\b",
+     "Bishnupur",
+     "276501",
+     "Municipal Council"
+    ],
+    [
+     "^C?EO\\b.*\\bNingthoukhong\\b",
+     "Ningthoukhong",
+     "276530",
+     "Municipal Council"
+    ],
+    [
+     "^C?EO\\b.*\\bMoirang\\b",
+     "Moirang",
+     "276514",
+     "Municipal Council"
+    ],
+    [
+     "^C?EO\\b.*\\bKumbi\\b",
+     "Kumbi",
+     "276505",
+     "Municipal Council"
+    ]
+   ],
+   "india_only": false
+  }
+ }
+]

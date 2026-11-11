@@ -1,0 +1,24 @@
+[
+ {
+  "key": "ulb2_ga-valpoi",
+  "payload": {
+   "reader": "ulb2_ga",
+   "kind": "charge_order",
+   "url": "https://www.goa.gov.in/wp-content/uploads/2026/11/transfer%20order%20of%20Chief%20Officer%20Valpoi%20Municipal%20Council.pdf",
+   "state": "GA",
+   "district": "North Goa",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ulb2_ga-pernem",
+  "payload": {
+   "reader": "ulb2_ga",
+   "kind": "charge_order",
+   "url": "https://www.goa.gov.in/wp-content/uploads/2026/11/transfer%20order%20BDO.pdf",
+   "state": "GA",
+   "district": "North Goa",
+   "india_only": true
+  }
+ }
+]

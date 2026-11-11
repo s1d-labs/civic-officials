@@ -1,0 +1,21 @@
+[
+ {
+  "key": "ulb2_cg-contacts",
+  "payload": {
+   "reader": "ulb2_cg",
+   "kind": "contacts",
+   "url": "https://uad.cg.gov.in/ContactUAD/ContactReport.aspx",
+   "state": "CG",
+   "india_only": true
+  }
+ },
+ {
+  "key": "ulb2_cg-elected",
+  "payload": {
+   "reader": "ulb2_cg",
+   "kind": "elected",
+   "url": "https://cguadestablishment.in/electionresult",
+   "state": "CG"
+  }
+ }
+]
