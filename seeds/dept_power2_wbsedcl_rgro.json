@@ -1,0 +1,22 @@
+[
+ {
+  "key": "power2_wbsedcl_rgro:rgro",
+  "payload": {
+   "reader": "power2_wbsedcl_rgro",
+   "page": "rgro",
+   "url": "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/Grievance_Redressal_for_consumers.html",
+   "state": "WB",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_wbsedcl_rgro:ccc",
+  "payload": {
+   "reader": "power2_wbsedcl_rgro",
+   "page": "ccc",
+   "url": "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/Contact_Customer_Care.html",
+   "state": "WB",
+   "india_only": true
+  }
+ }
+]

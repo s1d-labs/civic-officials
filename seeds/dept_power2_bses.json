@@ -1,0 +1,21 @@
+[
+ {
+  "key": "power2_bses:seed",
+  "payload": {
+   "kind": "seed",
+   "module": "power2_bses",
+   "url": "https://www.bsesdelhi.com/web/brpl/contact-customer-care"
+  }
+ },
+ {
+  "key": "power2_bses:brpl:divisional",
+  "payload": {
+   "reader": "power2_bses",
+   "url": "https://www.bsesdelhi.com/web/brpl/divisional-offices",
+   "state": "DL",
+   "site": "brpl",
+   "page": "divisional",
+   "india_only": false
+  }
+ }
+]

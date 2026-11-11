@@ -1,0 +1,132 @@
+[
+ {
+  "key": "power2_sikkim:officers",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "officers",
+   "url": "https://power.sikkim.gov.in/visitor/listofofficers",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:staff",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "staff",
+   "url": "https://power.sikkim.gov.in/visitor/stafflists",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-2",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/2",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-4",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/4",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-5",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/5",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-6",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/6",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-7",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/7",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-8",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/8",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-9",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/9",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-10",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/10",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-11",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/11",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-12",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/12",
+   "state": "SK",
+   "india_only": false
+  }
+ },
+ {
+  "key": "power2_sikkim:cell-13",
+  "payload": {
+   "reader": "power2_sikkim",
+   "page": "cell",
+   "url": "https://power.sikkim.gov.in/visitor/divisioncell/13",
+   "state": "SK",
+   "india_only": false
+  }
+ }
+]

@@ -1,0 +1,109 @@
+[
+ {
+  "key": "water2_ap_rws:seed",
+  "payload": {
+   "kind": "seed",
+   "module": "water2_ap_rws",
+   "url": "https://krishna.ap.gov.in/?s=rural+water"
+  }
+ },
+ {
+  "key": "water2_ap_rws:spsnellore:p-31534",
+  "payload": {
+   "reader": "water2_ap_rws",
+   "url": "https://spsnellore.ap.gov.in/?p=31534",
+   "state": "AP",
+   "district": "SPSR Nellore",
+   "wing": "rws",
+   "india_only": false
+  }
+ },
+ {
+  "key": "water2_ap_rws:tirupati:rural-water-supply-and-sanitationrwss",
+  "payload": {
+   "reader": "water2_ap_rws",
+   "url": "https://tirupati.ap.gov.in/rural-water-supply-and-sanitationrwss/",
+   "state": "AP",
+   "district": "Tirupati",
+   "wing": "rws",
+   "india_only": false
+  }
+ },
+ {
+  "key": "water2_ap_rws:krishna:rural-water-supply-and-sanitation",
+  "payload": {
+   "reader": "water2_ap_rws",
+   "url": "https://krishna.ap.gov.in/rural-water-supply-and-sanitation/",
+   "state": "AP",
+   "district": "Krishna",
+   "wing": "rws",
+   "india_only": false
+  }
+ },
+ {
+  "key": "water2_ap_rws:konaseema:p-27971",
+  "payload": {
+   "reader": "water2_ap_rws",
+   "url": "https://konaseema.ap.gov.in/?p=27971",
+   "state": "AP",
+   "district": "Konaseema",
+   "wing": "rws",
+   "india_only": false
+  }
+ },
+ {
+  "key": "water2_ap_rws:kakinada:departments-rural-water-supply",
+  "payload": {
+   "reader": "water2_ap_rws",
+   "url": "https://kakinada.ap.gov.in/departments/rural-water-supply/",
+   "state": "AP",
+   "district": "Kakinada",
+   "wing": "rws",
+   "india_only": false
+  }
+ },
+ {
+  "key": "water2_ap_rws:eastgodavari:departments-rural-water-supply",
+  "payload": {
+   "reader": "water2_ap_rws",
+   "url": "https://eastgodavari.ap.gov.in/departments/rural-water-supply/",
+   "state": "AP",
+   "district": "East Godavari",
+   "wing": "rws",
+   "india_only": false
+  }
+ },
+ {
+  "key": "water2_ap_rws:visakhapatnam:p-25114",
+  "payload": {
+   "reader": "water2_ap_rws",
+   "url": "https://visakhapatnam.ap.gov.in/?p=25114",
+   "state": "AP",
+   "district": "Visakhapatnam",
+   "wing": "rws",
+   "india_only": false
+  }
+ },
+ {
+  "key": "water2_ap_rws:kadapa:p-28061",
+  "payload": {
+   "reader": "water2_ap_rws",
+   "url": "https://kadapa.ap.gov.in/?p=28061",
+   "state": "AP",
+   "district": "YSR Kadapa",
+   "wing": "ph",
+   "india_only": false
+  }
+ },
+ {
+  "key": "water2_ap_rws:vizianagaram:public-health-engineering",
+  "payload": {
+   "reader": "water2_ap_rws",
+   "url": "https://vizianagaram.ap.gov.in/public-health-engineering/",
+   "state": "AP",
+   "district": "Vizianagaram",
+   "wing": "ph",
+   "india_only": false
+  }
+ }
+]

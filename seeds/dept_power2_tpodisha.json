@@ -1,0 +1,57 @@
+[
+ {
+  "key": "power2_tpodisha:tpnodl-contacts",
+  "payload": {
+   "reader": "power2_tpodisha",
+   "discom": "TPNODL",
+   "kind": "xlsx",
+   "url": "https://www.tpnodl.com/xl/contact/Worksheet-in-TPNODL-Contact-Us.xlsx",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_tpodisha:tpsodl-rti",
+  "payload": {
+   "reader": "power2_tpodisha",
+   "discom": "TPSODL",
+   "kind": "rti_manual",
+   "url": "https://tpsouthernodisha.com/Editor_UploadedDocuments/Content/RTI_Eng_Manual16.09.2025.pdf",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_tpodisha:tpcodl-pio",
+  "payload": {
+   "reader": "power2_tpodisha",
+   "discom": "TPCODL",
+   "kind": "pio_pdf",
+   "url": "https://www.tpcentralodisha.com/Editor_UploadedDocuments/RTI/PIO_Appellate_Authority.pdf",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_tpodisha:tpcodl-divisional-managers",
+  "payload": {
+   "reader": "power2_tpodisha",
+   "discom": "TPCODL",
+   "kind": "docx",
+   "url": "https://www.tpcentralodisha.com/ContactUs/contact-us/Divisional%20Manager%20Contact%20Details.docx",
+   "state": "OD",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_tpodisha:tpcodl-circle-heads",
+  "payload": {
+   "reader": "power2_tpodisha",
+   "discom": "TPCODL",
+   "kind": "docx",
+   "url": "https://www.tpcentralodisha.com/ContactUs/contact-us/Circle%20Head%20Contact%20Details.docx",
+   "state": "OD",
+   "india_only": true
+  }
+ }
+]

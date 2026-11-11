@@ -1,0 +1,35 @@
+[
+ {
+  "key": "power2_pspcl_offices:pio",
+  "payload": {
+   "reader": "power2_pspcl_offices",
+   "page": "pio",
+   "url": "https://www.pspcl.in/pdfs/twenty-twentytwo/06/Recent_Updated_PIO_List10092025.pdf",
+   "state": "PB",
+   "india_only": false,
+   "expected": 640
+  }
+ },
+ {
+  "key": "power2_pspcl_offices:hierarchy",
+  "payload": {
+   "reader": "power2_pspcl_offices",
+   "page": "hierarchy",
+   "url": "https://pspcl.in/admin/Hierarchies20261201302.pdf",
+   "state": "PB",
+   "india_only": false,
+   "expected": 650
+  }
+ },
+ {
+  "key": "power2_pspcl_offices:ncc",
+  "payload": {
+   "reader": "power2_pspcl_offices",
+   "page": "ncc",
+   "url": "https://www.pspcl.in/Otherlinks/nodal-complaint-centres.aspx",
+   "state": "PB",
+   "india_only": false,
+   "expected": 110
+  }
+ }
+]

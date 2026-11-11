@@ -1,0 +1,80 @@
+[
+ {
+  "key": "water2_pwssb:head-office",
+  "payload": {
+   "reader": "water2_pwssb",
+   "page": "head-office",
+   "url": "https://pwssb.punjab.gov.in/officers-of-the-board-head-office/",
+   "table_id": "463",
+   "circle": null,
+   "state": "PB",
+   "india_only": true,
+   "expected": 6
+  }
+ },
+ {
+  "key": "water2_pwssb:amritsar",
+  "payload": {
+   "reader": "water2_pwssb",
+   "page": "amritsar",
+   "url": "https://pwssb.punjab.gov.in/amritsar-circle/",
+   "table_id": "466",
+   "circle": "Amritsar",
+   "state": "PB",
+   "india_only": true,
+   "expected": 6
+  }
+ },
+ {
+  "key": "water2_pwssb:bathinda",
+  "payload": {
+   "reader": "water2_pwssb",
+   "page": "bathinda",
+   "url": "https://pwssb.punjab.gov.in/bhatinda-circle/",
+   "table_id": "469",
+   "circle": "Bathinda",
+   "state": "PB",
+   "india_only": true,
+   "expected": 6
+  }
+ },
+ {
+  "key": "water2_pwssb:jalandhar",
+  "payload": {
+   "reader": "water2_pwssb",
+   "page": "jalandhar",
+   "url": "https://pwssb.punjab.gov.in/jalandhar-circle/",
+   "table_id": "472",
+   "circle": "Jalandhar",
+   "state": "PB",
+   "india_only": true,
+   "expected": 6
+  }
+ },
+ {
+  "key": "water2_pwssb:ludhiana",
+  "payload": {
+   "reader": "water2_pwssb",
+   "page": "ludhiana",
+   "url": "https://pwssb.punjab.gov.in/ludhiana-circle/",
+   "table_id": "474",
+   "circle": "Ludhiana",
+   "state": "PB",
+   "india_only": true,
+   "expected": 6
+  }
+ },
+ {
+  "key": "water2_pwssb:patiala",
+  "payload": {
+   "reader": "water2_pwssb",
+   "page": "patiala",
+   "url": "https://pwssb.punjab.gov.in/patiala-circle/",
+   "table_id": "478",
+   "circle": "Patiala",
+   "state": "PB",
+   "india_only": true,
+   "expected": 6
+  }
+ }
+]

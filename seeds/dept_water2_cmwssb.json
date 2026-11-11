@@ -1,0 +1,6 @@
+[
+  {"key": "water2_cmwssb:whoswho", "payload": {"reader": "water2_cmwssb", "page": "whoswho", "url": "https://cmwssb.tn.gov.in/whos-who",
+   "url_ta": "https://cmwssb.tn.gov.in/ta/whos-who", "state": "TN", "india_only": true}},
+  {"key": "water2_cmwssb:depots", "payload": {"reader": "water2_cmwssb", "page": "depots",
+   "url": "https://cmwssb.tn.gov.in/sites/default/files/quick_links/Areaandepotofficeaddress.pdf", "state": "TN", "india_only": true}}
+]

@@ -21,12 +21,13 @@ import re
 import signal
 import sys
 import time
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 
 import requests
 from bs4 import BeautifulSoup
 
 from certs_trust import trust
+from forms.aspnet import LegacyTLS
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
 stop = False
@@ -165,7 +166,15 @@ def main(run_fn=None, task="councillors"):
     def get(url, method="GET", data=None, headers=None):
         t = time.time()
         try:
-            r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
+            try:
+                r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
+            except requests.exceptions.SSLError as e:
+                # servers that still need TLS legacy renegotiation (Punjab water, MP PHED): same request, certificate checks stay on
+                if "renegotiation" not in str(e).lower():
+                    raise
+                hub.metric("tls_legacy_retry")
+                s.mount(f"https://{urlsplit(url).hostname}/", LegacyTLS())
+                r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
         except requests.RequestException:
             hub.metric("http_error")
             hub.error()

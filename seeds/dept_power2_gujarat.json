@@ -1,0 +1,52 @@
+[
+ {
+  "key": "power2_gujarat:mgvcl",
+  "payload": {
+   "reader": "power2_gujarat",
+   "page": "mgvcl",
+   "url": "https://www.mgvcl.com/key-officials.php",
+   "state": "GJ",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_gujarat:dgvcl",
+  "payload": {
+   "reader": "power2_gujarat",
+   "page": "dgvcl",
+   "url": "https://www.dgvcl.com/key-officials.php",
+   "state": "GJ",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_gujarat:pgvcl",
+  "payload": {
+   "reader": "power2_gujarat",
+   "page": "pgvcl",
+   "url": "https://www.pgvcl.com/key-officials.php",
+   "state": "GJ",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_gujarat:ugvcl",
+  "payload": {
+   "reader": "power2_gujarat",
+   "page": "ugvcl",
+   "url": "https://www.ugvcl.com/senioroff",
+   "state": "GJ",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_gujarat:ugvcl-key",
+  "payload": {
+   "reader": "power2_gujarat",
+   "page": "ugvcl-key",
+   "url": "https://www.ugvcl.com/keyofficials",
+   "state": "GJ",
+   "india_only": true
+  }
+ }
+]

@@ -1,0 +1,32 @@
+[
+ {
+  "key": "water2_tg_mb:seed",
+  "payload": {
+   "kind": "seed",
+   "module": "water2_tg_mb",
+   "url": "https://kothagudem.telangana.gov.in/?s=bhagiratha"
+  }
+ },
+ {
+  "key": "water2_tg_mb:kothagudem:missionbhagiratha-intradivision",
+  "payload": {
+   "reader": "water2_tg_mb",
+   "url": "https://kothagudem.telangana.gov.in/missionbhagiratha-intradivision/",
+   "state": "TG",
+   "district": "Bhadradri Kothagudem",
+   "wing": "rws",
+   "india_only": false
+  }
+ },
+ {
+  "key": "water2_tg_mb:kothagudem:mission-bhagiratha-grid",
+  "payload": {
+   "reader": "water2_tg_mb",
+   "url": "https://kothagudem.telangana.gov.in/mission-bhagiratha-grid/",
+   "state": "TG",
+   "district": "Bhadradri Kothagudem",
+   "wing": "rws",
+   "india_only": false
+  }
+ }
+]

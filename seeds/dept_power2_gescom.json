@@ -1,0 +1,42 @@
+[
+ {
+  "key": "power2_gescom:divisions",
+  "payload": {
+   "reader": "power2_gescom",
+   "page": "divisions",
+   "url": "https://gescom.karnataka.gov.in/198/o&m-division/en",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_gescom:zones",
+  "payload": {
+   "reader": "power2_gescom",
+   "page": "zones",
+   "url": "https://gescom.karnataka.gov.in/163/o-and-m-zones/en",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_gescom:circles",
+  "payload": {
+   "reader": "power2_gescom",
+   "page": "circles",
+   "url": "https://gescom.karnataka.gov.in/200/o-and-m-circles/en",
+   "state": "KA",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_gescom:emails",
+  "payload": {
+   "reader": "power2_gescom",
+   "page": "emails",
+   "url": "https://gescom.karnataka.gov.in/uploads/Mail%20ids_1763634117.pdf",
+   "state": "KA",
+   "india_only": true
+  }
+ }
+]

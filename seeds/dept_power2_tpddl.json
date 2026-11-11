@@ -1,0 +1,22 @@
+[
+ {
+  "key": "power2_tpddl:charter",
+  "payload": {
+   "reader": "power2_tpddl",
+   "part": "charter",
+   "url": "https://www.tatapower-ddl.com/Editor_UploadedDocuments/Content/Customer_Charter_2025.pdf",
+   "state": "DL",
+   "india_only": true
+  }
+ },
+ {
+  "key": "power2_tpddl:ccc",
+  "payload": {
+   "reader": "power2_tpddl",
+   "part": "ccc",
+   "url": "https://www.tatapower-ddl.com/UploadedDocuments/Updated%20Customer%20Care%20Centres%20List.pdf",
+   "state": "DL",
+   "india_only": true
+  }
+ }
+]
