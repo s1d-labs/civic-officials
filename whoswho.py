@@ -20,7 +20,7 @@ from urllib.parse import urlsplit
 import requests
 
 from certs_trust import trust
-from forms.aspnet import LegacyTLS
+from forms.aspnet import LegacyTLS, insecure_retry
 
 from officials import (PEOPLE_PATH, ajax_rows, candidate_links, common_links, normalise, page_title, pager_blocks, pubutility,
                        row_id, tables, text_people)
@@ -70,11 +70,19 @@ class Site:
                 r = self.s.request(method, url, data=data, timeout=(15, 45), allow_redirects=True)
             except requests.exceptions.SSLError as e:
                 # servers that still need TLS legacy renegotiation (Punjab government sites): same request, certificate checks stay on
-                if "renegotiation" not in str(e).lower():
-                    raise
-                self.metric("tls_legacy_retry")
-                self.s.mount(f"https://{urlsplit(url).hostname}/", LegacyTLS())
-                r = self.s.request(method, url, data=data, timeout=(15, 45), allow_redirects=True)
+                r = None
+                if "renegotiation" in str(e).lower():
+                    self.metric("tls_legacy_retry")
+                    self.s.mount(f"https://{urlsplit(url).hostname}/", LegacyTLS())
+                    try:
+                        r = self.s.request(method, url, data=data, timeout=(15, 45), allow_redirects=True)
+                    except requests.exceptions.SSLError:
+                        r = None
+                if r is None:
+                    # certificate expired / incomplete chain / old ciphers: once more without checks (owner, 2026-11-11)
+                    self.metric("tls_unverified_retry")
+                    self.tls_unverified = True
+                    r = insecure_retry(self.s, url, method, data=data, timeout=(15, 45), allow_redirects=True)
             except requests.exceptions.ConnectionError as e:
                 # port 443 refused (Karnataka *.mrc.gov.in town sites serve plain http only): ask the same page over http
                 if not url.startswith("https://") or isinstance(e, requests.exceptions.ConnectTimeout) or "refused" not in str(e).lower() \
@@ -234,6 +242,9 @@ def main():
                 ok, why = site.run()
             except Exception as e:      # one odd site must not stop the worker
                 ok, why = False, f"{type(e).__name__}: {e}"[:200]
+            if getattr(site, "tls_unverified", False):     # some page came without a certificate check: say so on every record
+                for _, data in site.records:
+                    data["tls_unverified"] = True
             for i in range(0, len(site.files), 100):
                 hub.upload_many(site.files[i:i + 100])
             for rid, data in site.records:

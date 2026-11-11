@@ -27,7 +27,7 @@ import requests
 from bs4 import BeautifulSoup
 
 from certs_trust import trust
-from forms.aspnet import LegacyTLS
+from forms.aspnet import LegacyTLS, insecure_retry
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
 stop = False
@@ -170,11 +170,19 @@ def main(run_fn=None, task="councillors"):
                 r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
             except requests.exceptions.SSLError as e:
                 # servers that still need TLS legacy renegotiation (Punjab water, MP PHED): same request, certificate checks stay on
-                if "renegotiation" not in str(e).lower():
-                    raise
-                hub.metric("tls_legacy_retry")
-                s.mount(f"https://{urlsplit(url).hostname}/", LegacyTLS())
-                r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
+                r = None
+                if "renegotiation" in str(e).lower():
+                    hub.metric("tls_legacy_retry")
+                    s.mount(f"https://{urlsplit(url).hostname}/", LegacyTLS())
+                    try:
+                        r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
+                    except requests.exceptions.SSLError:
+                        r = None
+                if r is None:
+                    # certificate expired / incomplete chain / old ciphers: once more without checks (owner, 2026-11-11);
+                    # the records of this item get tls_unverified
+                    hub.metric("tls_unverified_retry")
+                    r = insecure_retry(s, url, method, data=data, headers=headers, timeout=(20, 90))
         except requests.RequestException:
             hub.metric("http_error")
             hub.error()
@@ -210,10 +218,15 @@ def main(run_fn=None, task="councillors"):
                 hub.failure(task, item["key"], "gave up after 3 attempts", url=url)
                 hub.complete([item["key"]], "done", fetched=0)
                 continue
+            before = set(getattr(s, "unverified_hosts", ()))
             try:
                 recs, files, why = run_fn(item, get)
             except Exception as e:
                 recs, files, why = [], [], f"{type(e).__name__}: {e}"[:200]
+            if set(getattr(s, "unverified_hosts", ())) - before or getattr(s, "unverified_hosts", None) and \
+                    (urlsplit(url).hostname or "") in s.unverified_hosts:
+                for _, data in recs:     # fetched without a certificate check: say so on every record of the item
+                    data["tls_unverified"] = True
             for attempt in range(5):
                 try:
                     if files:

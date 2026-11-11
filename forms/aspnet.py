@@ -20,6 +20,38 @@ class LegacyTLS(HTTPAdapter):
         return super().init_poolmanager(*a, **kw)
 
 
+class AnyTLS(HTTPAdapter):
+    """Last resort for a server whose certificate fails the check (expired, missing intermediate, self-signed, old ciphers):
+    no certificate or host name check, legacy renegotiation and old ciphers allowed. The owner allowed this on 2026-11-11.
+    Use it only with verify=False on the request, and mark what it fetched (tls_unverified)."""
+
+    def init_poolmanager(self, *a, **kw):
+        ctx = ssl.create_default_context()
+        ctx.check_hostname = False
+        ctx.verify_mode = ssl.CERT_NONE
+        ctx.options |= getattr(ssl, "OP_LEGACY_SERVER_CONNECT", 0x4)
+        try:
+            ctx.set_ciphers("DEFAULT:@SECLEVEL=0")
+            ctx.minimum_version = ssl.TLSVersion.TLSv1
+        except (ssl.SSLError, ValueError):
+            pass
+        kw["ssl_context"] = ctx
+        return super().init_poolmanager(*a, **kw)
+
+
+def insecure_retry(s, url, method="GET", **kw):
+    """The same request once more without certificate checks (AnyTLS for this host). Records the host in s.unverified_hosts."""
+    import urllib3
+    from urllib.parse import urlsplit
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+    host = urlsplit(url).hostname
+    s.mount(f"https://{host}/", AnyTLS())
+    if not hasattr(s, "unverified_hosts"):
+        s.unverified_hosts = set()
+    s.unverified_hosts.add(host)
+    return s.request(method, url, verify=False, **kw)
+
+
 def session(legacy_host=None):
     s = requests.Session()
     s.headers["User-Agent"] = UA
