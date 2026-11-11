@@ -234,7 +234,7 @@ def test_tgspdcl():
     assert ae["name"] == "SAMBASIVA RAO BATTULA" and ae["phone"] == "8712468959" and ae["last_updated"] == "2026-11-04"
     assert ae["parents"]["subdivision"] == "ADE/OP/AMEERPET" and ae["parents"]["division"] == "DE/OP/ERRAGADDA"
     hidden = next(x for x in d.values() if x["post"] == "AE/OP/S. K. NAGAR 12")
-    assert "phone" not in hidden                                                           # isShow 0
+    assert hidden.get("phone") and hidden.get("shown_on_page") is False                   # isShow 0: kept, flagged (no masking)
     assert not any(x["post"].startswith("PO/") for x in d.values())
 
 

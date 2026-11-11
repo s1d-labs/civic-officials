@@ -4,8 +4,8 @@ names and "updateDate"); one queue item.
 
 JSON: circles[] (zones, circles, corporate cells) -> sections[] (circle office, divisions, EROs ...) -> entries[] {unit, postId,
 postName, empName, contact, isShow}. Kept: the operation posts CE/<zone>, SE/OP/<circle>, DE/OP/<division>, ADE/OP/<sub-division>,
-AE/OP/<section> (about 800). The page shows a contact only when isShow != 0 and the number starts with 87124 (the official CUG
-series); other numbers are personal, so this reader keeps the same rule and leaves the phone out otherwise.
+AE/OP/<section> (about 800). The page displays a contact only when isShow != 0; the API returns all of them, and this reader keeps all
+(public data is not masked), with "shown_on_page" telling which ones the page displays.
 Record id dept:power_tgspdcl:<postId>.
 """
 import json
@@ -20,8 +20,14 @@ LEVEL = {"SE": "circle", "DE": "division", "ADE": "subdivision", "AE": "section"
 
 
 def shown(e):
+    """Every contact the public API returns (owner 2026-11-11: public data is never masked); the page itself displays only
+    those with isShow != 0, which records keep as "shown_on_page"."""
     c = clean(e.get("contact"))
-    return c if c and e.get("isShow") not in (0, "0", None) and c.replace(" ", "").startswith("87124") else None
+    return c or None
+
+
+def on_page(e):
+    return e.get("isShow") not in (0, "0", None)
 
 
 def parse(js, source=URL):
@@ -49,7 +55,7 @@ def parse(js, source=URL):
                 par = {"circle": circle if lvl in ("division", "subdivision", "section") else None,
                        "division": division if lvl in ("subdivision", "section") else None,
                        "subdivision": sub if lvl == "section" else None}
-                out.add(clean(e.get("postId")) or post, lvl, area, post=post, name=e.get("empName"), phone_=shown(e),
+                out.add(clean(e.get("postId")) or post, lvl, area, post=post, name=e.get("empName"), phone_=shown(e), shown_on_page=on_page(e),
                         office_id=e.get("postId"), parents=par, unit=clean(e.get("unit")))
     return out.recs
 

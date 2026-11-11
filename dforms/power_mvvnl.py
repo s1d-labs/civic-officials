@@ -3,7 +3,7 @@
   Bareilly 1 and 2, Devipatan, store and workshop circles). Header rows name the zone and the circle ("ELECTRICITY DISTRIBUTION
   CIRCLE - X"); rows = S.No, title, name, designation, district, area, phone, email. Chief Engineer = zone, Superintending
   Engineer = circle, Executive Engineer = division: about 140 rows. The Head Quarter, store and workshop tables are left out. The page also holds about
-  360 sub-division rows (Assistant Engineer, EDSD) inside HTML comments: the site does not show them, so they are not read.
+  360 sub-division rows (Assistant Engineer, EDSD) inside HTML comments: public page source, so they are read too.
 - "lesa": the Lucknow (LESA) telephone directory PDF (50 pages, Dec 2025): zone officer tables (CE, SE, EE with office
   address and mobile), the AE of each sub-division under its EE division, and the JE (33 kV / 11 kV and LT) offices with the
   33/11 kV sub-stations they look after. No names. About 50 zone officers, 60 AE and 150 JE rows.
@@ -39,7 +39,8 @@ def level(post):
 
 def parse_directory(html, url=DIR_URL):
     out = Out(MOD, "UP", url, discom="MVVNL")
-    soup = BeautifulSoup(re.sub(r"(?s)<!--.*?-->", "", html), "lxml")   # rows in comments are not shown on the site
+    # rows inside HTML comments (about 360 sub-divisions) are part of the public page source: read them too (owner 2026-11-11)
+    soup = BeautifulSoup(re.sub(r"(?s)<!--(.*?)-->", r"\1", html), "lxml")
     for t in soup.find_all("table"):
         trs = t.find_all("tr")
         if not trs or len(trs) < 3:
