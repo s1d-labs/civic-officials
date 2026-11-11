@@ -1,0 +1,31 @@
+<html><body><div class="panel-heading">Locate Your Dealer On Google Map</div><form method="post" accept-charset="utf-8" onsubmit="return validateForm()" autocomplete="off" action="/secc-cardholders/locate-your-dealer"><div style="display:none;"><input type="hidden" name="_method" value="POST"/><input type="hidden" name="_csrfToken" autocomplete="off" value="e75aea15ba504566d555944befc5067e280b3eb5a290bd4dee66184fc01e0555c2c870af324718308f31c10dfe4b76df7deca0ca98e387664c94f7ff85efb4c6"/></div>										<div class="row">
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="District">District</label>
+													<select name="rgi_district_code" id="rgi_district_code" class="form-control" rel="/transactions/get-blocks-by-district" required="required"><option value="">--Select District--</option><option value="346">Garhwa</option><option value="347">Chatra</option><option value="348">Kodarma</option><option value="349">Giridih</option><option value="350">Deoghar</option><option value="351">Godda</option><option value="352">Sahibganj</option><option value="353">Pakur</option><option value="354">Dhanbad</option><option value="355">Bokaro</option><option value="356">Lohardaga</option><option value="357">East Singhbhum</option><option value="358">Palamu</option><option value="359">Latehar</option><option value="360">Hazaribagh</option><option value="361">Ramgarh</option><option value="362">Dumka</option><option value="363">Jamtara</option><option value="364">Ranchi</option><option value="365">Khunti</option><option value="366">Gumla</option><option value="367">Simdega</option><option value="368">West Singhbhum</option><option value="369">Saraikela-Kharsawan</option></select>													<div id="district_msg" class="errmsg"></div>
+												</div>
+											</div>
+
+
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="Block">Block</label>
+													<select name="rgi_block_code" id="rgi_block_code" class="form-control" rel="/transactions/get-dealers-by-block-nw" required="required"><option value="">--Select Block--</option></select>													<div id="block_msg" class="errmsg"></div>
+												</div>
+											</div>
+
+
+										</div>
+
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group">
+													<label class="label" for="Dealers">Dealers</label>
+													<select name="dealer_id" id="dealer_id" class="form-control" required="required"><option value="">--Select Dealer--</option></select>													<div id="dealer_msg" class="errmsg"></div>
+												</div>
+											</div>
+										</div>
+
+
+										<div class="col-md-offset-5 col-md-4"> <button class="btn btn-danger col-md-7" type="submit">Submit</button></form></body></html>

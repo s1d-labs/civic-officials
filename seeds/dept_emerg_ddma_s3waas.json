@@ -1,0 +1,6470 @@
+[
+ {
+  "key": "emerg_ddma_s3waas-agra.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://agra.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Agra",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-amroha.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://amroha.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Amroha",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-anjaw.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://anjaw.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Anjaw",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 7
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-araria.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://araria.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Araria",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ariyalur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ariyalur.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Ariyalur",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-arvalli.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://arvalli.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Arvalli",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 7
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-banaskantha.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://banaskantha.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Banas Kantha",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-barabanki.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://barabanki.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Bara Banki",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-begusarai.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://begusarai.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Begusarai",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bhagalpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bhagalpur.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Bhagalpur",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bharuch.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bharuch.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Bharuch",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bhavnagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bhavnagar.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Bhavnagar",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bijnor.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bijnor.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Bijnor",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 7
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bokaro.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bokaro.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Bokaro",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 6
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-botad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://botad.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Botad",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 6
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-budgam.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://budgam.nic.in/disaster-management/",
+   "state": "JK",
+   "district": "Budgam",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-buldhana.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://buldhana.nic.in/disaster-management/",
+   "state": "MH",
+   "district": "Buldhana",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 4
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chamoli.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chamoli.gov.in/disaster-management/",
+   "state": "UK",
+   "district": "Chamoli",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-champhai.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://champhai.nic.in/disaster-management/",
+   "state": "MZ",
+   "district": "Champhai",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-changlang.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://changlang.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Changlang",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 19
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chatra.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chatra.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Chatra",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chumoukedima.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chumoukedima.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Chumoukedima",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-coimbatore.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://coimbatore.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Coimbatore",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dangs.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dangs.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Dangs",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-darbhanga.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://darbhanga.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Darbhanga",
+   "india_only": false,
+   "saved": "2026-11-11",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-darjeeling.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://darjeeling.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Darjeeling",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ddinajpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ddinajpur.nic.in/disaster-management/",
+   "state": "WB",
+   "district": "Dakshin Dinajpur",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dehradun.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dehradun.nic.in/disaster-management/",
+   "state": "UK",
+   "district": "Dehradun",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-devbhumidwarka.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://devbhumidwarka.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Devbhumi Dwarka",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dhalai.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dhalai.nic.in/disaster-management/",
+   "state": "TR",
+   "district": "Dhalai",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dhamtari.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dhamtari.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Dhamtari",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 16
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dhanbad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dhanbad.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Dhanbad",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 6
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dharmapuri.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dharmapuri.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Dharmapuri",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 6
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-diu.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://diu.gov.in/disaster-management/",
+   "state": "DH",
+   "district": "Diu",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dmnewdelhi.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dmnewdelhi.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "New Delhi",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dmnorthwest.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dmnorthwest.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "North West",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dmwest.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dmwest.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "West",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dnh.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dnh.gov.in/disaster-management/",
+   "state": "DH",
+   "district": "Dadra And Nagar Haveli",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-eastchamparan.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://eastchamparan.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Purbi Champaran",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-eastkhasihills.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://eastkhasihills.gov.in/disaster-management/",
+   "state": "ML",
+   "district": "East Khasi Hills",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-eastsiang.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://eastsiang.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "East Siang",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 50
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-etah.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://etah.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Etah",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-etawah.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://etawah.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Etawah",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-fatehgarhsahib.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://fatehgarhsahib.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Fatehgarh Sahib",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 6
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gadchiroli.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gadchiroli.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Gadchiroli",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gandhinagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gandhinagar.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Gandhinagar",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-garhwa.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://garhwa.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Garhwa",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 7
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gaurela-pendra-marwahi.cg.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gaurela-pendra-marwahi.cg.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Gaurela-Pendra-Marwahi",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gbnagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gbnagar.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Gautam Buddha Nagar",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ghazipur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ghazipur.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Ghazipur",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gomati.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gomati.nic.in/disaster-management/",
+   "state": "TR",
+   "district": "Gomati",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 4
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gonda.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gonda.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Gonda",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gopalganj.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gopalganj.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Gopalganj",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gorakhpur.nic.in-%e0%a4%9c%e0%a4%bf%e0%a4%b2%e0%a4%be-%e0",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gorakhpur.nic.in/hi/%e0%a4%9c%e0%a4%bf%e0%a4%b2%e0%a4%be-%e0%a4%86%e0%a4%aa%e0%a4%a6%e0%a4%be-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%ac%e0%a4%82%e0%a4%a7%e0%a4%a8-%e0%a4%aa%e0%a5%8d%e0%a4%b0%e0%a4%be%e0%a4%a7%e0%a4%bf/",
+   "state": "UP",
+   "district": "Gorakhpur",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 4
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gumla.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gumla.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Gumla",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-guntur.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://guntur.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Guntur",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gyalshing.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gyalshing.nic.in/disaster-management/",
+   "state": "SK",
+   "district": "Gyalshing",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hapur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hapur.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Hapur",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-haridwar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://haridwar.nic.in/disaster-management/",
+   "state": "UK",
+   "district": "Haridwar",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hazaribag.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hazaribag.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Hazaribagh",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 14
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hpkullu.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hpkullu.nic.in/disaster-management/",
+   "state": "HP",
+   "district": "Kullu",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 40
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hpmandi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hpmandi.nic.in/disaster-management/",
+   "state": "HP",
+   "district": "Mandi",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 14
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hpshimla.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hpshimla.nic.in/disaster-management/",
+   "state": "HP",
+   "district": "Shimla",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 26
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hyderabad.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hyderabad.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Hyderabad",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jalaun.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jalaun.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Jalaun",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jamshedpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jamshedpur.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "East Singhbum",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jamtara.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jamtara.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Jamtara",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jangaon.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jangaon.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Jangoan",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jhansi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jhansi.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Jhansi",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 4
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-junagadh.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://junagadh.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Junagadh",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 12
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kachchh.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kachchh.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Kachchh",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kaimur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kaimur.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Kaimur (Bhabua)",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 4
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kakching.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kakching.nic.in/disaster-management/",
+   "state": "MN",
+   "district": "Kakching",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kamareddy.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kamareddy.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Kamareddy",
+   "india_only": false,
+   "saved": "2026-11-11",
+   "rows_saved": 6
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kanpurdehat.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kanpurdehat.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Kanpur Dehat",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 14
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-karaikal.gov.in-contact-disaster-management",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://karaikal.gov.in/contact-disaster-management/",
+   "state": "PY",
+   "district": "Karaikal",
+   "india_only": false,
+   "saved": "2026-11-07",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-karaikal.gov.in-disastermanagement",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://karaikal.gov.in/disastermanagement/",
+   "state": "PY",
+   "district": "Karaikal",
+   "india_only": false,
+   "saved": "2026-11-07",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kargil.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kargil.nic.in/disaster-management/",
+   "state": "LA",
+   "district": "Kargil",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 11
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-karimnagar.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://karimnagar.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Karimnagar",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-karur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://karur.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Karur",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-katihar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://katihar.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Katihar",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-khammam.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://khammam.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Khammam",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kheda.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kheda.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Kheda",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 24
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kheri.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kheri.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Kheri",
+   "india_only": false,
+   "saved": "2026-11-07",
+   "rows_saved": 7
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-khowai.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://khowai.nic.in/disaster-management/",
+   "state": "TR",
+   "district": "Khowai",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kiphire.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kiphire.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Kiphire",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-koderma.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://koderma.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Koderma",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kohima.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kohima.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Kohima",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kolasib.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kolasib.nic.in/disaster-management/",
+   "state": "MZ",
+   "district": "Kolasib",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-krishnagiri.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://krishnagiri.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Krishnagiri",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kurungkumey.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kurungkumey.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Kurung Kumey",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-lakhisarai.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://lakhisarai.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Lakhisarai",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-lakshadweep.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://lakshadweep.gov.in/disaster-management/",
+   "state": "LD",
+   "district": "Lakshadweep District",
+   "india_only": false,
+   "saved": "2026-11-11",
+   "rows_saved": 16
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-latehar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://latehar.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Latehar",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 13
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-lawngtlai.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://lawngtlai.nic.in/disaster-management/",
+   "state": "MZ",
+   "district": "Lawngtlai",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-lunglei.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://lunglei.nic.in/disaster-management/",
+   "state": "MZ",
+   "district": "Lunglei",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 9
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-madhubani.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://madhubani.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Madhubani",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mahesana.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mahesana.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Mahesana",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 12
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-malappuram.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://malappuram.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Malappuram",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 26
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mangan.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mangan.nic.in/disaster-management/",
+   "state": "SK",
+   "district": "Mangan",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 39
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mansa.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mansa.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Mansa",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mayiladuthurai.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mayiladuthurai.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Mayiladuthurai",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 4
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-medchal-malkajgiri.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://medchal-malkajgiri.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Medchal Malkajgiri",
+   "india_only": false,
+   "saved": "2026-11-11",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mokokchung.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mokokchung.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Mokokchung",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mulugu.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mulugu.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Mulugu",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mumbaisuburban.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mumbaisuburban.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Mumbai Suburban",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 36
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nainital.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nainital.nic.in/disaster-management/",
+   "state": "UK",
+   "district": "Nainital",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 11
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nalgonda.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nalgonda.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Nalgonda",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-namsai.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://namsai.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Namsai",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-narmada.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://narmada.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Narmada",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 5
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-navsari.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://navsari.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Navsari",
+   "india_only": false,
+   "saved": "2026-11-07",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nawada.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nawada.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Nawada",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-northmiddle.andaman.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://northmiddle.andaman.nic.in/disaster-management/",
+   "state": "AN",
+   "district": "North And Middle Andaman",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-northtripura.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://northtripura.nic.in/disaster-management/",
+   "state": "TR",
+   "district": "North Tripura",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 8
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-palnadu.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://palnadu.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Palnadu",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-patan.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://patan.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Patan",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 11
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-patiala.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://patiala.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Patiala",
+   "india_only": false,
+   "saved": "2026-11-07",
+   "rows_saved": 23
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-peddapalli.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://peddapalli.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Peddapalli",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-phek.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://phek.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Phek",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 11
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-porbandar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://porbandar.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Porbandar",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-prakasam.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://prakasam.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Prakasam",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-pudukkottai.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://pudukkottai.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Pudukkottai",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rajannasircilla.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rajannasircilla.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Rajanna Sircilla",
+   "india_only": false,
+   "saved": "2026-11-11",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rajkot.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rajkot.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Rajkot",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ramanathapuram.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ramanathapuram.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Ramanathapuram",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ranchi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ranchi.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Ranchi",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rangareddy.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rangareddy.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Ranga Reddy",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ranipet.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ranipet.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Ranipet",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-reasi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://reasi.nic.in/disaster-management/",
+   "state": "JK",
+   "district": "Reasi",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 7
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rohtak.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rohtak.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Rohtak",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-s24pgs.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://s24pgs.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "South 24 Parganas",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-saharanpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://saharanpur.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Saharanpur",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-saharsa.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://saharsa.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Saharsa",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-salem.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://salem.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Salem",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sangli.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sangli.nic.in/disaster-management/",
+   "state": "MH",
+   "district": "Sangli",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 9
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-saran.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://saran.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Saran",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sepahijala.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sepahijala.nic.in/disaster-management/",
+   "state": "TR",
+   "district": "Sepahijala",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 36
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-serchhip.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://serchhip.nic.in/disaster-management/",
+   "state": "MZ",
+   "district": "Serchhip",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 9
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sheikhpura.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sheikhpura.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Sheikhpura",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 15
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sheohar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sheohar.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Sheohar",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-shiyomi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://shiyomi.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Shi Yomi",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-siddipet.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://siddipet.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Siddipet",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 4
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-siwan.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://siwan.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Siwan",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-soreng.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://soreng.nic.in/disaster-management/",
+   "state": "SK",
+   "district": "Soreng",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-southandaman.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://southandaman.nic.in/disaster-management/",
+   "state": "AN",
+   "district": "South Andamans",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 21
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-southgarohills.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://southgarohills.gov.in/disaster-management/",
+   "state": "ML",
+   "district": "South Garo Hills",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-southgoa.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://southgoa.nic.in/disaster-management/",
+   "state": "GA",
+   "district": "South Goa",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 7
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-southwestgarohills.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://southwestgarohills.gov.in/disaster-management/",
+   "state": "ML",
+   "district": "South West Garo Hills",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-southwestkhasihills.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://southwestkhasihills.gov.in/disaster-management/",
+   "state": "ML",
+   "district": "South West Khasi Hills",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 15
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-srinagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://srinagar.nic.in/disaster-management/",
+   "state": "JK",
+   "district": "Srinagar",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 9
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-supaul.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://supaul.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Supaul",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-surendranagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://surendranagar.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Surendranagar",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 10
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tapi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tapi.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Tapi",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 17
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tarntaran.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tarntaran.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Tarn Taran",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tawang.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tawang.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Tawang",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-theni.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://theni.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Theni",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-thoothukudi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://thoothukudi.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Thoothukkudi",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 6
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-thoubal.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://thoubal.nic.in/disaster-management/",
+   "state": "MN",
+   "district": "Thoubal",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 9
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tiruchirappalli.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tiruchirappalli.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Tiruchirappalli",
+   "india_only": false,
+   "saved": "2026-11-10",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tirupathur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tirupathur.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Tirupathur",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tiruppur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tiruppur.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Tiruppur",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tiruvannamalai.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tiruvannamalai.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Tiruvannamalai",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tiruvarur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tiruvarur.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Thiruvarur",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tuensang.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tuensang.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Tuensang",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-udhampur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://udhampur.nic.in/disaster-management/",
+   "state": "JK",
+   "district": "Udhampur",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-unakoti.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://unakoti.nic.in/disaster-management/",
+   "state": "TR",
+   "district": "Unakoti",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-uttarkashi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://uttarkashi.nic.in/disaster-management/",
+   "state": "UK",
+   "district": "Uttarkashi",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 4
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-vaishali.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://vaishali.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Vaishali",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-valsad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://valsad.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Valsad",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-vellore.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://vellore.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Vellore",
+   "india_only": false,
+   "saved": "2026-11-09",
+   "rows_saved": 2
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-vijayanagara.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://vijayanagara.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Vijayanagara",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-vijayapura.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://vijayapura.nic.in/en/disaster-management/",
+   "state": "KA",
+   "district": "Vijayapura",
+   "india_only": false,
+   "saved": "2026-11-06",
+   "rows_saved": 8
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-westsiang.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://westsiang.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "West Siang",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 3
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-wokha.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://wokha.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Wokha",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 56
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-usdma.uk.gov.in-eocs-contact",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://usdma.uk.gov.in/eocs-contact/",
+   "state": "UK",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 13,
+   "level": "state",
+   "area": "Uttarakhand",
+   "area_is_district": true
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-usdma.uk.gov.in-district-level-authorities",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://usdma.uk.gov.in/district-level-authorities/",
+   "state": "UK",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 26,
+   "level": "state",
+   "area": "Uttarakhand",
+   "area_is_district": true
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-usdma.uk.gov.in-contact-us",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://usdma.uk.gov.in/contact-us/",
+   "state": "UK",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 1,
+   "level": "state",
+   "area": "Uttarakhand"
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-usdma.uk.gov.in-whos-who",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://usdma.uk.gov.in/whos-who/",
+   "state": "UK",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 5,
+   "level": "state",
+   "area": "Uttarakhand"
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ddma.delhi.gov.in-contact-us",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ddma.delhi.gov.in/ddma/contact-us",
+   "state": "DL",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 2,
+   "level": "state",
+   "area": "Delhi"
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rahat.up.nic.in-who.aspx",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rahat.up.nic.in/who.aspx",
+   "state": "UP",
+   "india_only": false,
+   "saved": "2026-11-05",
+   "rows_saved": 9,
+   "level": "state",
+   "area": "Uttar Pradesh"
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-adilabad.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://adilabad.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Adilabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ahilyanagar.maharashtra.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ahilyanagar.maharashtra.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Ahilyanagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-aizawl.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://aizawl.nic.in/disaster-management/",
+   "state": "MZ",
+   "district": "Aizawl",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-alappuzha.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://alappuzha.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Alappuzha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-alipurduar.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://alipurduar.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Alipurduar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-allurisitharamaraju.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://allurisitharamaraju.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Alluri Sitharama Raju",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ambala.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ambala.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Ambala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ambedkarnagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ambedkarnagar.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Ambedkar Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-amethi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://amethi.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Amethi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ananthapuramu.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ananthapuramu.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Ananthapuramu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-annamayya.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://annamayya.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Annamayya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-arwal.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://arwal.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Arwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ashoknagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ashoknagar.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Ashoknagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-asifabad.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://asifabad.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Kumuram Bheem Asifabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-auraiya.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://auraiya.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Auraiya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-aurangabad.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://aurangabad.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Chhatrapati Sambhajinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bagalkot.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bagalkot.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Bagalkote",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bageshwar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bageshwar.nic.in/disaster-management/",
+   "state": "UK",
+   "district": "Bageshwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-balaghat.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://balaghat.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Balaghat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ballari.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ballari.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Ballari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bangalorerural.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bangalorerural.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Bengaluru Rural",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-banka.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://banka.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Banka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-banswara.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://banswara.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Banswara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bapatla.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bapatla.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Bapatla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-baran.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://baran.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Baran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bargarh.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bargarh.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Baragada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-barmer.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://barmer.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Barmer",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-barnala.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://barnala.gov.in/disaster-management/",
+   "state": "PB",
+   "district": "Barnala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-barwani.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://barwani.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Barwani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bastar.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bastar.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Bastar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-basti.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://basti.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Basti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bathinda.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bathinda.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Bathinda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-beawar.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://beawar.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Beawar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-beed.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://beed.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Beed",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-belagavi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://belagavi.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Belagavi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bemetara.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bemetara.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Bemetara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bengalurusouth.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bengalurusouth.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Bengaluru South",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bengaluruurban.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bengaluruurban.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Bengaluru Urban",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-betul.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://betul.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Betul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bhadohi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bhadohi.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Bhadohi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bhadrak.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bhadrak.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Bhadrak",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bharatpur.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bharatpur.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Bharatpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bhilwara.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bhilwara.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Bhilwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bhind.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bhind.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Bhind",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bhiwani.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bhiwani.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Bhiwani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bhojpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bhojpur.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Bhojpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bhoopalapally.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bhoopalapally.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Jayashankar Bhupalapally",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bhopal.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bhopal.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Bhopal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bidar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bidar.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Bidar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bijapur.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bijapur.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Bijapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bikaner.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bikaner.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Bikaner",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bilaspur.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bilaspur.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Bilaspur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-birbhum.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://birbhum.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Birbhum",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-biswanath.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://biswanath.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Biswanath",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bongaigaon.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bongaigaon.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Bongaigaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-boudh.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://boudh.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Boudh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-budaun.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://budaun.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Budaun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bulandshahar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bulandshahar.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Bulandshahr",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-bundi.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://bundi.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Bundi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-burhanpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://burhanpur.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Burhanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-buxar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://buxar.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Buxar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-cachar.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://cachar.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Cachar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chamrajnagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chamrajnagar.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Chamarajanagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chanda.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chanda.nic.in/disaster-management/",
+   "state": "MH",
+   "district": "Chandrapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chandigarhdistrict.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chandigarhdistrict.nic.in/disaster-management/",
+   "state": "CH",
+   "district": "Chandigarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-charaideo.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://charaideo.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Charaideo",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-charkhidadri.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://charkhidadri.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Charkhi Dadri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chhatarpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chhatarpur.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Chhatarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chhindwara.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chhindwara.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Chhindwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chikkaballapur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chikkaballapur.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Chikkaballapura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chikkamagaluru.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chikkamagaluru.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Chikkamagaluru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chirang.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chirang.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Chirang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chitradurga.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chitradurga.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Chitradurga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-chittorgarh.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://chittorgarh.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Chittorgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-churu.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://churu.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Churu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-coochbehar.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://coochbehar.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Cooch Behar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-cuttack.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://cuttack.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Kataka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dahod.gujarat.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dahod.gujarat.gov.in/disaster-management/",
+   "state": "GJ",
+   "district": "Dahod",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-daman.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://daman.nic.in/disaster-management/",
+   "state": "DH",
+   "district": "Daman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-damoh.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://damoh.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Damoh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dantewada.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dantewada.nic.in/disaster-management/",
+   "state": "CG",
+   "district": "Dakshin Bastar Dantewada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-darrang.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://darrang.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Darrang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-datia.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://datia.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Datia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dausa.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dausa.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Dausa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-davanagere.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://davanagere.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Davanagere",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dccentral.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dccentral.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "Central",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dcwestrev.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dcwestrev.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "West",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-deeg.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://deeg.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Deeg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-deogarh.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://deogarh.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Debagada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-deoghar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://deoghar.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Deoghar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dewas.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dewas.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Dewas",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dhar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dhar.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Dhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dharwad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dharwad.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Dharwad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dhemaji.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dhemaji.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Dhemaji",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dhenkanal.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dhenkanal.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Dhenkanal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dholpur.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dholpur.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Dholpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dhubri.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dhubri.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Dhubri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dhule.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dhule.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Dhule",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dibrugarh.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dibrugarh.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Dibrugarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dimahasao.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dimahasao.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Dima Hasao",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dimapur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dimapur.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Dimapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dindigul.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dindigul.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Dindigul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dindori.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dindori.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Dindori",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dk.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dk.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Dakshina Kannada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dmcentral.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dmcentral.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "Central",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dmcentralnorth.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dmcentralnorth.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "Central North",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dmnortheast.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dmnortheast.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "North East",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dmolddelhi.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dmolddelhi.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "Old Delhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dmouternorth.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dmouternorth.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "Outer North",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dmsouth.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dmsouth.delhi.gov.in/disaster-management/",
+   "state": "DL",
+   "district": "South",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dumka.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dumka.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Dumka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-dungarpur.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://dungarpur.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Dungarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-durg.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://durg.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Durg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-eastgodavari.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://eastgodavari.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "East Godavari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-eluru.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://eluru.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Eluru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ernakulam.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ernakulam.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Ernakulam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-farrukhabad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://farrukhabad.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Farrukhabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-fatehabad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://fatehabad.nic.in/disaster-management/",
+   "state": "HR",
+   "district": "Fatehabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-firozabad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://firozabad.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Firozabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gadag.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gadag.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Gadag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gadwal.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gadwal.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Jogulamba Gadwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gajapati.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gajapati.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Gajapati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ganjam.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ganjam.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Ganjam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gariaband.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gariaband.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Gariyaband",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ghaziabad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ghaziabad.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Ghaziabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-girsomnath.gujarat.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://girsomnath.gujarat.gov.in/disaster-management/",
+   "state": "GJ",
+   "district": "Gir Somnath",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-goalpara.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://goalpara.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Goalpara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-golaghat.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://golaghat.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Golaghat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gondia.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gondia.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Gondia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-guna.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://guna.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Guna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gurdaspur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gurdaspur.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Gurdaspur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gurugram.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gurugram.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Gurugram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-gwalior.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://gwalior.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Gwalior",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hailakandi.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hailakandi.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Hailakandi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hansi.haryana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hansi.haryana.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Hansi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hanumakonda.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hanumakonda.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Hanumakonda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hanumangarh.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hanumangarh.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Hanumangarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-harda.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://harda.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Harda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hardoi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hardoi.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Hardoi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hassan.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hassan.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Hassan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hathras.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hathras.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Hathras",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-haveri.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://haveri.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Haveri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hingoli.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hingoli.nic.in/disaster-management/",
+   "state": "MH",
+   "district": "Hingoli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hojai.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hojai.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Hojai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hooghly.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hooghly.nic.in/disaster-management/",
+   "state": "WB",
+   "district": "Hooghly",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hpkangra.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hpkangra.nic.in/disaster-management/",
+   "state": "HP",
+   "district": "Kangra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-hplahaulspiti.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://hplahaulspiti.nic.in/disaster-management/",
+   "state": "HP",
+   "district": "Lahaul And Spiti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-idukki.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://idukki.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Idukki",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-imphalwest.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://imphalwest.nic.in/disaster-management/",
+   "state": "MN",
+   "district": "Imphal West",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-indore.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://indore.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Indore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jabalpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jabalpur.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Jabalpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jagatsinghpur.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jagatsinghpur.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Jagatsinghapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jagtial.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jagtial.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Jagitial",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jaipur.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jaipur.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Jaipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jaisalmer.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jaisalmer.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Jaisalmer",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jajpur.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jajpur.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Jajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jalgaon.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jalgaon.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Jalgaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jalna.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jalna.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Jalna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jalore.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jalore.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Jalore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jalpaiguri.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jalpaiguri.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Jalpaiguri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jamui.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jamui.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Jamui",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-janjgir-champa.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://janjgir-champa.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Janjgir-Champa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jashpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jashpur.nic.in/disaster-management/",
+   "state": "CG",
+   "district": "Jashpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jehanabad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jehanabad.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Jehanabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jhabua.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jhabua.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Jhabua",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jhajjar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jhajjar.nic.in/disaster-management/",
+   "state": "HR",
+   "district": "Jhajjar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jhalawar.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jhalawar.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Jhalawar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jharsuguda.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jharsuguda.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Jharsuguda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jhunjhunu.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jhunjhunu.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Jhunjhunu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jind.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jind.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Jind",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jodhpur.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jodhpur.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Jodhpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-jorhat.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://jorhat.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Jorhat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kadapa.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kadapa.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Y.S.R. Kadapa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kaithal.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kaithal.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Kaithal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kalaburagi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kalaburagi.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Kalaburagi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kalahandi.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kalahandi.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Kalahandi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kalimpong.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kalimpong.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Kalimpong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kamjong.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kamjong.nic.in/disaster-management/",
+   "state": "MN",
+   "district": "Kamjong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kamle.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kamle.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Kamle",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kamrup.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kamrup.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Kamrup",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kamrupmetro.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kamrupmetro.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Kamrup Metro",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kandhamal.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kandhamal.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Kandhamala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kanker.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kanker.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Uttar Bastar Kanker",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kannauj.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kannauj.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Kannauj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kanniyakumari.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kanniyakumari.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Kanniyakumari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kannur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kannur.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Kannur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kanpurnagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kanpurnagar.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Kanpur Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kapurthala.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kapurthala.gov.in/disaster-management/",
+   "state": "PB",
+   "district": "Kapurthala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-karaikal.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://karaikal.gov.in/disaster-management/",
+   "state": "PY",
+   "district": "Karaikal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-karauli.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://karauli.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Karauli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-karbianglong.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://karbianglong.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Karbi Anglong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-karimganj.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://karimganj.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Sribhumi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-karnal.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://karnal.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Karnal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kasargod.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kasargod.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Kasaragod",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-katni.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://katni.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Katni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kaushambi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kaushambi.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Kaushambi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kawardha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kawardha.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Kabeerdham",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kendrapara.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kendrapara.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Kendrapada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kendujhar.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kendujhar.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Kendujhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-khagaria.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://khagaria.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Khagaria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-khairthaltijara.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://khairthaltijara.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Khairthal-Tijara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-khandwa.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://khandwa.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Khandwa (East Nimar)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-khargone.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://khargone.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Khargone (West Nimar)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-khordha.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://khordha.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Khordha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-khunti.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://khunti.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Khunti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kodagu.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kodagu.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Kodagu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kokrajhar.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kokrajhar.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Kokrajhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kolar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kolar.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Kolar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kolhapur.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kolhapur.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Kolhapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kollam.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kollam.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Kollam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kondagaon.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kondagaon.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Kondagaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-koppal.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://koppal.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Koppal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-koraput.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://koraput.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Koraput",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-korba.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://korba.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Korba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-korea.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://korea.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Korea",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kota.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kota.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Kota",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kothagudem.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kothagudem.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Bhadradri Kothagudem",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kotputlibehror.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kotputlibehror.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Kotputli-Behror",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kottayam.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kottayam.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Kottayam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kozhikode.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kozhikode.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Kozhikode",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-krishna.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://krishna.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Krishna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kupwara.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kupwara.nic.in/disaster-management/",
+   "state": "JK",
+   "district": "Kupwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kurukshetra.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kurukshetra.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Kurukshetra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-kushavati.goa.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://kushavati.goa.gov.in/disaster-management/",
+   "state": "GA",
+   "district": "Kushavati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-lakhimpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://lakhimpur.nic.in/disaster-management/",
+   "state": "AS",
+   "district": "Lakhimpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-lalitpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://lalitpur.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Lalitpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-latur.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://latur.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Latur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-leh.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://leh.nic.in/disaster-management/",
+   "state": "LA",
+   "district": "Leh Ladakh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-lohardaga.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://lohardaga.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Lohardaga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-longding.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://longding.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Longding",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-longleng.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://longleng.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Longleng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-lowersubansiri.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://lowersubansiri.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Lower Subansiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ludhiana.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ludhiana.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Ludhiana",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mahabubabad.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mahabubabad.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Mahabubabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mahabubnagar.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mahabubnagar.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Mahabubnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mahasamund.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mahasamund.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Mahasamund",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mahendragarh.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mahendragarh.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Mahendragarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mahisagar.gujarat.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mahisagar.gujarat.gov.in/disaster-management/",
+   "state": "GJ",
+   "district": "Mahisagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-majuli.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://majuli.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Majuli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-malda.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://malda.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Malda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-malerkotla.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://malerkotla.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Malerkotla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-malkangiri.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://malkangiri.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Malkangiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mancherial.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mancherial.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Mancherial",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mandla.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mandla.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Mandla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mandsaur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mandsaur.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Mandsaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mandya.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mandya.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Mandya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-manendragarh-chirmiri-bharatpur.cg.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://manendragarh-chirmiri-bharatpur.cg.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Manendragarh-Chirmiri-Bharatpur(M C B)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mathura.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mathura.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Mathura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mau.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mau.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Mau",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mauganj.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mauganj.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "MAUGANJ",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mayurbhanj.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mayurbhanj.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Mayurbhanj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-moga.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://moga.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Moga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mohla-manpur-ambagarhchowki.cg.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mohla-manpur-ambagarhchowki.cg.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Mohla-Manpur-Ambagarh Chouki",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-morbi.gujarat.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://morbi.gujarat.gov.in/disaster-management/",
+   "state": "GJ",
+   "district": "Morbi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-morena.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://morena.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Morena",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-morigaon.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://morigaon.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Marigaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-muktsar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://muktsar.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Sri Muktsar Sahib",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mumbaicity.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mumbaicity.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Mumbai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mungeli.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mungeli.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Mungeli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-munger.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://munger.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Munger",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-murshidabad.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://murshidabad.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Murshidabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-muzaffarnagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://muzaffarnagar.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Muzaffarnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-muzaffarpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://muzaffarpur.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Muzaffarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-mysore.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://mysore.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Mysuru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nabarangpur.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nabarangpur.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Nabarangpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nadia.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nadia.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Nadia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nagaon.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nagaon.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Nagaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nagapattinam.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nagapattinam.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Nagapattinam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nagarkurnool.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nagarkurnool.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Nagarkurnool",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nagaur.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nagaur.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Nagaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nagpur.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nagpur.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Nagpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nalanda.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nalanda.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Nalanda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nalbari.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nalbari.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Nalbari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-namchi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://namchi.nic.in/disaster-management/",
+   "state": "SK",
+   "district": "Namchi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nanded.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nanded.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Nanded",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-narayanpet.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://narayanpet.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Narayanpet",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-narayanpur.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://narayanpur.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Narayanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-narmadapuram.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://narmadapuram.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Narmadapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-narsinghpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://narsinghpur.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Narsimhapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nashik.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nashik.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Nashik",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nayagarh.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nayagarh.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Nayagada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-neemuch.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://neemuch.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Neemuch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nilgiris.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nilgiris.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "The Nilgiris",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nirmal.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nirmal.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Nirmal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-niuland.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://niuland.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Niuland",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-niwari.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://niwari.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Niwari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-noklak.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://noklak.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Noklak",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-noney.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://noney.nic.in/disaster-management/",
+   "state": "MN",
+   "district": "Noney",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ntr.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ntr.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Ntr",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nuapada.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nuapada.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Nuapada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-nuh.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://nuh.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Nuh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-osmanabad.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://osmanabad.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Dharashiv",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-pakur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://pakur.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Pakur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-palakkad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://palakkad.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Palakkad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-palamu.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://palamu.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Palamu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-palghar.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://palghar.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Palghar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-pali.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://pali.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Pali",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-palwal.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://palwal.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Palwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-panchkula.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://panchkula.nic.in/disaster-management/",
+   "state": "HR",
+   "district": "Panchkula",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-panipat.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://panipat.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Panipat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-panna.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://panna.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Panna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-papumpare.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://papumpare.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Papum Pare",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-parbhani.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://parbhani.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Parbhani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-parvathipurammanyam.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://parvathipurammanyam.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Parvathipuram Manyam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-paschimbardhaman.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://paschimbardhaman.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Paschim Bardhaman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-pathanamthitta.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://pathanamthitta.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Pathanamthitta",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-pathankot.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://pathankot.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Pathankot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-patna.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://patna.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Patna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-phalodi.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://phalodi.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Phalodi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-pilibhit.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://pilibhit.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Pilibhit",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-polavaram.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://polavaram.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Polavaram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-pratapgarh.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://pratapgarh.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Pratapgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-pratapgarh.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://pratapgarh.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Pratapgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-pune.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://pune.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Pune",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-purbamedinipur.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://purbamedinipur.gov.in/disaster-management/",
+   "state": "WB",
+   "district": "Purba Medinipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-puri.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://puri.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Puri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-purnea.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://purnea.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Purnia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-raichur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://raichur.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Raichur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-raigad.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://raigad.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Raigad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-raigarh.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://raigarh.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Raigarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-raipur.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://raipur.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Raipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-raisen.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://raisen.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Raisen",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rajgarh.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rajgarh.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Rajgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rajnandgaon.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rajnandgaon.nic.in/disaster-management/",
+   "state": "CG",
+   "district": "Rajnandgaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rajsamand.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rajsamand.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Rajsamand",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ramanagara.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ramanagara.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Bengaluru South",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ramban.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ramban.gov.in/disaster-management/",
+   "state": "JK",
+   "district": "Ramban",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ramgarh.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ramgarh.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Ramgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rampur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rampur.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Rampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ratlam.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ratlam.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Ratlam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ratnagiri.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ratnagiri.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Ratnagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rayagada.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rayagada.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Rayagada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rewa.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rewa.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Rewa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rewari.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rewari.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Rewari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ribhoi.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ribhoi.gov.in/disaster-management/",
+   "state": "ML",
+   "district": "Ri Bhoi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-rudraprayag.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://rudraprayag.gov.in/disaster-management/",
+   "state": "UK",
+   "district": "Rudraprayag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sabarkantha.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sabarkantha.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Sabar Kantha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sagar.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Sagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sahibganj.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sahibganj.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Sahebganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-saitual.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://saitual.nic.in/disaster-management/",
+   "state": "MZ",
+   "district": "Saitual",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sakti.cg.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sakti.cg.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Sakti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-salumber.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://salumber.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Salumbar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-samastipur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://samastipur.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Samastipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-samba.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://samba.gov.in/disaster-management/",
+   "state": "JK",
+   "district": "Samba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sambalpur.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sambalpur.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Sambalpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sambhal.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sambhal.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Sambhal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sangareddy.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sangareddy.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Sangareddy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sangrur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sangrur.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "Sangrur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sasnagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sasnagar.nic.in/disaster-management/",
+   "state": "PB",
+   "district": "S.A.S Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-satara.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://satara.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Satara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-satna.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://satna.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Satna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sawaimadhopur.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sawaimadhopur.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Sawai Madhopur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sehore.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sehore.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Sehore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-senapati.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://senapati.nic.in/disaster-management/",
+   "state": "MN",
+   "district": "Senapati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-seoni.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://seoni.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Seoni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-seraikela.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://seraikela.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Saraikela Kharsawan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-shahdol.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://shahdol.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Shahdol",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-shajapur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://shajapur.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Shajapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-shamator.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://shamator.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Shamator",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sheopur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sheopur.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Sheopur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-shimoga.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://shimoga.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Shivamogga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-shivamogga.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://shivamogga.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ, ಕರ್ನಾಟಕ ಸರ್ಕಾರ | ಕರ್ನಾಟಕದ ಆಹಾರ ಕಣಜ | India",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-shivpuri.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://shivpuri.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Shivpuri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-shopian.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://shopian.nic.in/disaster-management/",
+   "state": "JK",
+   "district": "Shopian",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-siaha.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://siaha.nic.in/disaster-management/",
+   "state": "MZ",
+   "district": "Siaha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-siddharthnagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://siddharthnagar.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Siddharthnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sidhi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sidhi.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Sidhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sikar.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sikar.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Sikar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-simdega.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://simdega.nic.in/disaster-management/",
+   "state": "JH",
+   "district": "Simdega",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sindhudurg.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sindhudurg.nic.in/disaster-management/",
+   "state": "MH",
+   "district": "Sindhudurg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-singrauli.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://singrauli.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Singrauli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sirohi.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sirohi.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Sirohi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sirsa.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sirsa.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Sirsa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sitamarhi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sitamarhi.nic.in/disaster-management/",
+   "state": "BR",
+   "district": "Sitamarhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sitapur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sitapur.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Sitapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sivaganga.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sivaganga.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Sivaganga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sivasagar.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sivasagar.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Sivasagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-solapur.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://solapur.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Solapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sonipat.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sonipat.gov.in/disaster-management/",
+   "state": "HR",
+   "district": "Sonipat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sonitpur.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sonitpur.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Sonitpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-southsalmaramankachar.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://southsalmaramankachar.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "South Salmara Mancachar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sriganganagar.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sriganganagar.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Ganganagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-srikakulam.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://srikakulam.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Srikakulam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-subarnapur.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://subarnapur.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Subarnapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sukma.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sukma.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Sukma",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-sundargarh.odisha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://sundargarh.odisha.gov.in/disaster-management/",
+   "state": "OD",
+   "district": "Sundaragada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-surajpur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://surajpur.nic.in/disaster-management/",
+   "state": "CG",
+   "district": "Surajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-surat.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://surat.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Surat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-surguja.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://surguja.gov.in/disaster-management/",
+   "state": "CG",
+   "district": "Surguja",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-suryapet.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://suryapet.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Suryapet",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tehri.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tehri.nic.in/disaster-management/",
+   "state": "UK",
+   "district": "Tehri Garhwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tenkasi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tenkasi.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Tenkasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-thane.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://thane.nic.in/disaster-management/",
+   "state": "MH",
+   "district": "Thane",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-thanjavur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://thanjavur.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Thanjavur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-thrissur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://thrissur.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Thrissur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tikamgarh.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tikamgarh.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Tikamgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tinsukia.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tinsukia.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Tinsukia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tirunelveli.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tirunelveli.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Tirunelveli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tonk.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tonk.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Tonk",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-trivandrum.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://trivandrum.nic.in/disaster-management/",
+   "state": "KL",
+   "district": "Thiruvananthapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tseminyu.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tseminyu.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Tseminyu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-tumkur.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://tumkur.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Tumakuru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-udaipur.rajasthan.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://udaipur.rajasthan.gov.in/disaster-management/",
+   "state": "RJ",
+   "district": "Udaipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-udalguri.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://udalguri.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "Udalguri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-udupi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://udupi.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Udupi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-ujjain.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://ujjain.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Ujjain",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-umaria.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://umaria.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Umaria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-uppersiang.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://uppersiang.nic.in/disaster-management/",
+   "state": "AR",
+   "district": "Upper Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-uttarakannada.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://uttarakannada.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Uttara Kannada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-varanasi.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://varanasi.nic.in/disaster-management/",
+   "state": "UP",
+   "district": "Varanasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-vavtharad.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://vavtharad.nic.in/disaster-management/",
+   "state": "GJ",
+   "district": "Vav-Tharad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-vidisha.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://vidisha.nic.in/disaster-management/",
+   "state": "MP",
+   "district": "Vidisha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-vikarabad.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://vikarabad.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Vikarabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-viluppuram.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://viluppuram.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Viluppuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-virudhunagar.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://virudhunagar.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Virudhunagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-vizianagaram.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://vizianagaram.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "Vizianagaram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-wanaparthy.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://wanaparthy.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Wanaparthy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-warangal.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://warangal.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Warangal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-wardha.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://wardha.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Wardha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-washim.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://washim.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Washim",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-wayanad.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://wayanad.gov.in/disaster-management/",
+   "state": "KL",
+   "district": "Wayanad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-westgodavari.ap.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://westgodavari.ap.gov.in/disaster-management/",
+   "state": "AP",
+   "district": "West Godavari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-westkarbianglong.assam.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://westkarbianglong.assam.gov.in/disaster-management/",
+   "state": "AS",
+   "district": "West Karbi Anglong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-westkhasihills.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://westkhasihills.gov.in/disaster-management/",
+   "state": "ML",
+   "district": "West Khasi Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-www.nagapattinam.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://www.nagapattinam.nic.in/disaster-management/",
+   "state": "TN",
+   "district": "Nagapattinam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-www.satara.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://www.satara.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Satara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-yadadri.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://yadadri.telangana.gov.in/disaster-management/",
+   "state": "TS",
+   "district": "Yadadri Bhuvanagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-yadgir.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://yadgir.nic.in/disaster-management/",
+   "state": "KA",
+   "district": "Yadgir",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-yavatmal.gov.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://yavatmal.gov.in/disaster-management/",
+   "state": "MH",
+   "district": "Yavatmal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_ddma_s3waas-zunheboto.nic.in",
+  "payload": {
+   "reader": "emerg_ddma_s3waas",
+   "url": "https://zunheboto.nic.in/disaster-management/",
+   "state": "NL",
+   "district": "Zunheboto",
+   "india_only": false
+  }
+ }
+]

@@ -1,4 +1,4 @@
-"""Offline tests of the north / west / central MLA readers (dforms/leg_br, leg_ga, leg_rj, leg_mp, leg_dl) on small saved samples
+"""Offline tests of the north / west / central MLA readers (dforms/leg_br, leg_ga, leg_rj, leg_mp, leg_dl, leg_up) on small saved samples
 in tests/data/leg/. The lead merges this file into tests/test_leg.py."""
 from esw_common import *  # noqa: F401,F403
 
@@ -19,7 +19,7 @@ def _fetch(module, sample, payload=None):
 
 
 def test_seeds_match_items():
-    for st in ("br", "ga", "rj", "mp", "dl"):
+    for st in ("br", "ga", "rj", "mp", "dl", "up"):
         m = mod("leg_" + st)
         assert _seed("leg_" + st) == m.items(), st
         assert all(i["key"].startswith("leg_") and i["payload"]["state"] == st.upper() for i in m.items())
@@ -118,3 +118,15 @@ def test_leg_dl_items_follow_home_link():
     dl = mod("leg_dl")
     get = lambda url, **k: Answer(b'<a href="/sites/default/files/2027-01/list_of_member.pdf">List of Members</a>', url)  # noqa: E731
     assert dl.items(get)[0]["payload"]["url"] == "https://delhiassembly.delhi.gov.in/sites/default/files/2027-01/list_of_member.pdf"
+
+
+def test_leg_up():
+    recs = _fetch("leg_up", "up_members.html")
+    m = recs["dept:leg_up:UP-AC-217"]
+    assert m["name"] == "Shri Satish Mahana" and m["party"] == "Bharatiya Janta Party" and m["district"] == "Kanpur Nagar"
+    assert m["phone"] == "9839314314, 8765954916" and m["address"] == "3 , Harjendra Nagar District-Kanpur"
+    assert m["member_page"].endswith("memberId=25774") and m["area"] == "217 - Maharajpur"
+    assert recs["dept:leg_up:UP-AC-75"]["constituency"] == "Kol"            # the page gives AC "0": the name decides
+    assert recs["dept:leg_up:UP-AC-313"]["member_id"] == "25226, 25432"      # one person listed twice
+    khair = [d for d in recs.values() if d.get("seat_no") == 71]
+    assert len(khair) == 2 and not any(d.get("office_id") for d in khair) and all("by-election" in d["seat_note"] for d in khair)

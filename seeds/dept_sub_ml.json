@@ -1,0 +1,22 @@
+[
+ {
+  "key": "sub_ml-dc",
+  "payload": {
+   "reader": "sub_ml",
+   "url": "https://meghalaya.gov.in/key-contacts/deputy-commissioner",
+   "state": "ML",
+   "page": "dc",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_ml-sp",
+  "payload": {
+   "reader": "sub_ml",
+   "url": "https://meghalaya.gov.in/key-contacts/superintendent-of-police",
+   "state": "ML",
+   "page": "sp",
+   "india_only": true
+  }
+ }
+]

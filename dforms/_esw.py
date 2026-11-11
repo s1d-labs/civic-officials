@@ -20,10 +20,12 @@ _AC = None
 
 
 def clean(s):
-    """One line, single spaces, no zero-width characters."""
+    """One line, single spaces, no zero-width characters. ZWNJ / ZWJ (U+200C, U+200D) and the BOM are deleted, not spaced:
+    they sit inside Hindi words ("स्‍टेण्‍ड")."""
     if s is None:
         return ""
-    return " ".join(re.sub("[​-‍﻿\xa0]", " ", str(s)).split())
+    s = re.sub("[\u200c\u200d\ufeff]", "", str(s))
+    return " ".join(re.sub("[\u200b\xa0]", " ", s).split())
 
 
 def deob(s):

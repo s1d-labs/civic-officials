@@ -1,0 +1,22 @@
+[
+ {
+  "key": "sub_as_asdma-emergency",
+  "payload": {
+   "reader": "sub_as_asdma",
+   "url": "https://onlineasdma.assam.gov.in/emergency.html",
+   "state": "AS",
+   "page": "emergency",
+   "india_only": true
+  }
+ },
+ {
+  "key": "sub_as_asdma-field",
+  "payload": {
+   "reader": "sub_as_asdma",
+   "url": "https://onlineasdma.assam.gov.in/pdf/Field_Officers.xlsx",
+   "state": "AS",
+   "page": "field",
+   "india_only": true
+  }
+ }
+]

@@ -5040,5 +5040,313 @@
    "read_start": "1",
    "review": "1"
   }
+ },
+ {
+  "key": "gangtokdistrict.nic.in",
+  "payload": {
+   "url": "https://gangtokdistrict.nic.in",
+   "name": "Gangtok",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "225",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gangtokdistrict.nic.in/whos-who",
+  "payload": {
+   "url": "https://gangtokdistrict.nic.in/whos-who/",
+   "name": "Gangtok",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "225",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "gangtokdistrict.nic.in/list-of-officers",
+  "payload": {
+   "url": "https://gangtokdistrict.nic.in/list-of-officers/",
+   "name": "Gangtok",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "225",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "pakyongdistrict.nic.in",
+  "payload": {
+   "url": "https://pakyongdistrict.nic.in",
+   "name": "Pakyong",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "741",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pakyongdistrict.nic.in/about-district/whos-who",
+  "payload": {
+   "url": "https://pakyongdistrict.nic.in/about-district/whos-who/",
+   "name": "Pakyong",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "741",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "pakyongdistrict.nic.in/std-pin-codes",
+  "payload": {
+   "url": "https://pakyongdistrict.nic.in/std-pin-codes/",
+   "name": "Pakyong",
+   "kind": "District administration",
+   "state": "SK",
+   "jurisdiction": "Sikkim",
+   "district_code": "741",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dchnahthial.mizoram.gov.in",
+  "payload": {
+   "url": "https://dchnahthial.mizoram.gov.in",
+   "name": "Hnahthial",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "726",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dchnahthial.mizoram.gov.in/page/list-of-officers",
+  "payload": {
+   "url": "https://dchnahthial.mizoram.gov.in/page/list-of-officers",
+   "name": "Hnahthial",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "726",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dchnahthial.mizoram.gov.in/page/list-of-heads-of-offices",
+  "payload": {
+   "url": "https://dchnahthial.mizoram.gov.in/page/list-of-heads-of-offices",
+   "name": "Hnahthial",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "726",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dchnahthial.mizoram.gov.in/page/helpline-numbers",
+  "payload": {
+   "url": "https://dchnahthial.mizoram.gov.in/page/helpline-numbers",
+   "name": "Hnahthial",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "726",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dckhawzawl.mizoram.gov.in",
+  "payload": {
+   "url": "https://dckhawzawl.mizoram.gov.in",
+   "name": "Khawzawl",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "728",
+   "route": "india"
+  }
+ },
+ {
+  "key": "dckhawzawl.mizoram.gov.in/page/officers-and-staff",
+  "payload": {
+   "url": "https://dckhawzawl.mizoram.gov.in/page/officers-and-staff",
+   "name": "Khawzawl",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "728",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dckhawzawl.mizoram.gov.in/page/helpline",
+  "payload": {
+   "url": "https://dckhawzawl.mizoram.gov.in/page/helpline",
+   "name": "Khawzawl",
+   "kind": "District administration",
+   "state": "MZ",
+   "jurisdiction": "Mizoram",
+   "district_code": "728",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "westgarohills.gov.in/directory",
+  "payload": {
+   "url": "https://westgarohills.gov.in/directory/",
+   "name": "West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "278",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "westgarohills.gov.in/about-district/whos-who",
+  "payload": {
+   "url": "https://westgarohills.gov.in/about-district/whos-who/",
+   "name": "West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "278",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "westgarohills.gov.in/blocks",
+  "payload": {
+   "url": "https://westgarohills.gov.in/blocks/",
+   "name": "West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "278",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "southwestgarohills.gov.in/directory",
+  "payload": {
+   "url": "https://southwestgarohills.gov.in/directory/",
+   "name": "South West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "663",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "southwestgarohills.gov.in/about-district/whos-who",
+  "payload": {
+   "url": "https://southwestgarohills.gov.in/about-district/whos-who/",
+   "name": "South West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "663",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "southwestgarohills.gov.in/subdivision-blocks",
+  "payload": {
+   "url": "https://southwestgarohills.gov.in/subdivision-blocks/",
+   "name": "South West Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "663",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastgarohills.gov.in/directory",
+  "payload": {
+   "url": "https://eastgarohills.gov.in/directory/",
+   "name": "East Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "273",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastgarohills.gov.in/whos-who",
+  "payload": {
+   "url": "https://eastgarohills.gov.in/whos-who/",
+   "name": "East Garo Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "273",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastjaintiahills.gov.in/about-district/whos-who",
+  "payload": {
+   "url": "https://eastjaintiahills.gov.in/about-district/whos-who/",
+   "name": "East Jaintia Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "657",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastjaintiahills.gov.in/directory",
+  "payload": {
+   "url": "https://eastjaintiahills.gov.in/directory/",
+   "name": "East Jaintia Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "657",
+   "route": "india",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "eastjaintiahills.gov.in/block-administration",
+  "payload": {
+   "url": "https://eastjaintiahills.gov.in/block-administration/",
+   "name": "East Jaintia Hills",
+   "kind": "District administration",
+   "state": "ML",
+   "jurisdiction": "Meghalaya",
+   "district_code": "657",
+   "route": "india",
+   "read_start": "1"
+  }
  }
 ]
