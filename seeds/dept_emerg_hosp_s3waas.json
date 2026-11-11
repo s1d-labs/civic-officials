@@ -1,0 +1,4712 @@
+[
+ {
+  "key": "emerg_hosp_s3waas-amethi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://amethi.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Amethi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-amroha.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://amroha.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Amroha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-arvalli.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://arvalli.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Arvalli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ashoknagar.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ashoknagar.nic.in/en/public-utility-category/hospital/",
+   "state": "MP",
+   "district": "Ashoknagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-auraiya.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://auraiya.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Auraiya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ayodhya.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ayodhya.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Ayodhya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-azamgarh.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://azamgarh.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Azamgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bagpat.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bagpat.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Baghpat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bahraich.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bahraich.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Bahraich",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-balaghat.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://balaghat.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Balaghat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ballia.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ballia.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Ballia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-balrampur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://balrampur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Balrampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-banaskantha.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://banaskantha.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Banas Kantha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-banda.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://banda.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Banda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bangalorerural.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bangalorerural.nic.in/en/public-utility-category/hospital/",
+   "state": "KA",
+   "district": "Bengaluru Rural",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-banka.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://banka.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Banka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-barabanki.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://barabanki.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Bara Banki",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bareilly.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bareilly.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Bareilly",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-barwani.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://barwani.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Barwani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-basti.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://basti.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Basti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-beed.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://beed.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Beed",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-begusarai.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://begusarai.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Begusarai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bemetara.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bemetara.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Bemetara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bengaluruurban.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bengaluruurban.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Bengaluru Urban",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bengaluruurban.nic.in-ambulance",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bengaluruurban.nic.in/en/public-utility-category/ambulance/",
+   "state": "KA",
+   "district": "Bengaluru Urban",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-betul.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://betul.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Betul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bhadohi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bhadohi.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Bhadohi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bhagalpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bhagalpur.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Bhagalpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bharuch.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bharuch.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Bharuch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bhavnagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bhavnagar.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Bhavnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bhind.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bhind.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Bhind",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bhojpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bhojpur.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Bhojpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bhopal.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bhopal.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Bhopal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bidar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bidar.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Bidar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bijapur.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bijapur.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Bijapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bilaspur.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bilaspur.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Bilaspur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-botad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://botad.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Botad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-budaun.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://budaun.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Budaun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-budgam.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://budgam.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Budgam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-bulandshahar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://bulandshahar.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Bulandshahr",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-buldhana.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://buldhana.nic.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Buldhana",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-burhanpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://burhanpur.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Burhanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-buxar.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://buxar.nic.in/public-utility-category/hospital/",
+   "state": "BR",
+   "district": "Buxar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-chaibasa.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://chaibasa.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "West Singhbhum",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-champawat.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://champawat.nic.in/public-utility-category/hospitals/",
+   "state": "UK",
+   "district": "Champawat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-chanda.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://chanda.nic.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Chandrapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-chandauli.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://chandauli.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Chandauli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-chhatarpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://chhatarpur.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Chhatarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-chhindwara.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://chhindwara.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Chhindwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-chhotaudepur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://chhotaudepur.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Chhotaudepur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-chikkaballapur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://chikkaballapur.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Chikkaballapura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-chitradurga.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://chitradurga.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Chitradurga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-chitrakoot.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://chitrakoot.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Chitrakoot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-chittoor.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://chittoor.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Chittoor",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-coimbatore.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://coimbatore.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Coimbatore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-coochbehar.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://coochbehar.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Cooch Behar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-cuddalore.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://cuddalore.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Cuddalore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-damoh.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://damoh.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Damoh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dangs.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dangs.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Dangs",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dantewada.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dantewada.nic.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Dakshin Bastar Dantewada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-darjeeling.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://darjeeling.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Darjeeling",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-datia.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://datia.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Datia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-davanagere.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://davanagere.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Davanagere",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ddinajpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ddinajpur.nic.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Dakshin Dinajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dehradun.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dehradun.nic.in/public-utility-category/hospitals/",
+   "state": "UK",
+   "district": "Dehradun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-deoria.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://deoria.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Deoria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-devbhumidwarka.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://devbhumidwarka.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Devbhumi Dwarka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dewas.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dewas.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Dewas",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dhamtari.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dhamtari.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Dhamtari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dhar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dhar.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Dhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dharwad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dharwad.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Dharwad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dibangvalley.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dibangvalley.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Dibang Valley",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dindigul.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dindigul.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Dindigul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dindori.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dindori.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Dindori",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dmnorth.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dmnorth.delhi.gov.in/public-utility-category/hospitals/",
+   "state": "DL",
+   "district": "North",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dmnortheast.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dmnortheast.delhi.gov.in/public-utility-category/hospitals/",
+   "state": "DL",
+   "district": "North East",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dmnorthwest.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dmnorthwest.delhi.gov.in/public-utility-category/hospitals/",
+   "state": "DL",
+   "district": "North West",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dmsouth.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dmsouth.delhi.gov.in/public-utility-category/hospitals/",
+   "state": "DL",
+   "district": "South",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dmsoutheast.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dmsoutheast.delhi.gov.in/public-utility-category/hospitals/",
+   "state": "DL",
+   "district": "South East",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dmsouthwest.delhi.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dmsouthwest.delhi.gov.in/public-utility-category/hospitals/",
+   "state": "DL",
+   "district": "South West",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-doda.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://doda.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Doda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-dumka.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://dumka.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Dumka",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-durg.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://durg.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Durg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-eastchamparan.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://eastchamparan.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Purbi Champaran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-eastkameng.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://eastkameng.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "East Kameng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-eastsiang.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://eastsiang.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "East Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-erode.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://erode.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Erode",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-etah.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://etah.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Etah",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-etawah.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://etawah.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Etawah",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-faridabad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://faridabad.nic.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Faridabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-faridkot.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://faridkot.nic.in/public-utility-category/hospital/",
+   "state": "PB",
+   "district": "Faridkot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-farrukhabad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://farrukhabad.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Farrukhabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-fatehabad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://fatehabad.nic.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Fatehabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-fatehgarhsahib.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://fatehgarhsahib.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Fatehgarh Sahib",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-fatehpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://fatehpur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Fatehpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ferozepur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ferozepur.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Ferozepur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-firozabad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://firozabad.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Firozabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gadag.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gadag.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Gadag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gadchiroli.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gadchiroli.gov.in/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Gadchiroli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gadwal.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gadwal.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Jogulamba Gadwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ganderbal.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ganderbal.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Ganderbal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gandhinagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gandhinagar.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Gandhinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-garhwa.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://garhwa.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Garhwa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gariaband.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gariaband.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Gariyaband",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gaurela-pendra-marwahi.cg.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gaurela-pendra-marwahi.cg.gov.in/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Gaurela-Pendra-Marwahi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gaya.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gaya.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Gaya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gbnagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gbnagar.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Gautam Buddha Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ghaziabad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ghaziabad.nic.in/en/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Ghaziabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-godda.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://godda.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Godda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gonda.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gonda.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Gonda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gondia.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gondia.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Gondia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gopalganj.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gopalganj.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Gopalganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gorakhpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gorakhpur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Gorakhpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-guna.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://guna.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Guna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-guntur.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://guntur.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Guntur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gurdaspur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gurdaspur.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Gurdaspur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gurugram.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gurugram.gov.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Gurugram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-gwalior.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://gwalior.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Gwalior",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hamirpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hamirpur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Hamirpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hapur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hapur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Hapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-harda.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://harda.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Harda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hardoi.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hardoi.nic.in/public-utility-category/hospital/",
+   "state": "UP",
+   "district": "Hardoi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-haridwar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://haridwar.nic.in/public-utility-category/hospitals/",
+   "state": "UK",
+   "district": "Haridwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hassan.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hassan.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Hassan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hathras.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hathras.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Hathras",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-haveri.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://haveri.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Haveri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hazaribag.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hazaribag.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Hazaribagh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hingoli.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hingoli.nic.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Hingoli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hisar.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hisar.gov.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Hisar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hooghly.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hooghly.nic.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Hooghly",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hoshiarpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hoshiarpur.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Hoshiarpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-howrah.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://howrah.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Howrah",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hpkangra.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hpkangra.nic.in/public-utility-category/hospitals/",
+   "state": "HP",
+   "district": "Kangra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hpkinnaur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hpkinnaur.nic.in/public-utility-category/hospitals/",
+   "state": "HP",
+   "district": "Kinnaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hpkullu.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hpkullu.nic.in/public-utility-category/hospitals/",
+   "state": "HP",
+   "district": "Kullu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hplahaulspiti.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hplahaulspiti.nic.in/public-utility-category/hospitals/",
+   "state": "HP",
+   "district": "Lahaul And Spiti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hpmandi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hpmandi.nic.in/public-utility-category/hospitals/",
+   "state": "HP",
+   "district": "Mandi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hpsirmaur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hpsirmaur.nic.in/public-utility-category/hospitals/",
+   "state": "HP",
+   "district": "Sirmaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hpsolan.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hpsolan.nic.in/public-utility-category/hospitals/",
+   "state": "HP",
+   "district": "Solan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hpuna.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hpuna.nic.in/public-utility-category/hospitals/",
+   "state": "HP",
+   "district": "Una",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-hyderabad.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://hyderabad.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Hyderabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-imphaleast.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://imphaleast.nic.in/public-utility-category/hospitals/",
+   "state": "MN",
+   "district": "Imphal East",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-imphalwest.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://imphalwest.nic.in/public-utility-category/hospitals/",
+   "state": "MN",
+   "district": "Imphal West",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-indore.nic.in-government-hospitals",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://indore.nic.in/en/public-utility-category/government-hospitals/",
+   "state": "MP",
+   "district": "Indore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-indore.nic.in-private-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://indore.nic.in/en/public-utility-category/private-hospital/",
+   "state": "MP",
+   "district": "Indore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jabalpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jabalpur.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Jabalpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jagtial.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jagtial.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Jagitial",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jalandhar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jalandhar.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Jalandhar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jalaun.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jalaun.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Jalaun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jalaun.nic.in-hospital-list",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jalaun.nic.in/public-utility-category/hospital-list/",
+   "state": "UP",
+   "district": "Jalaun",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jalgaon.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jalgaon.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Jalgaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jalna.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jalna.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Jalna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jalpaiguri.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jalpaiguri.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Jalpaiguri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jammu.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jammu.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Jammu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jamnagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jamnagar.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Jamnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jamshedpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jamshedpur.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "East Singhbum",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jamtara.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jamtara.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Jamtara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jamui.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jamui.nic.in/public-utility-category/hospital/",
+   "state": "BR",
+   "district": "Jamui",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jangaon.telangana.gov.in-govt-hospitals",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jangaon.telangana.gov.in/public-utility-category/govt-hospitals/",
+   "state": "TG",
+   "district": "Jangoan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-janjgir-champa.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://janjgir-champa.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Janjgir-Champa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jashpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jashpur.nic.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Jashpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jaunpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jaunpur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Jaunpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jehanabad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jehanabad.nic.in/en/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Jehanabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jhabua.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jhabua.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Jhabua",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jhajjar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jhajjar.nic.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Jhajjar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jhansi.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jhansi.nic.in/public-utility-category/hospital/",
+   "state": "UP",
+   "district": "Jhansi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jhargram.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jhargram.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Jhargram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-jind.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://jind.gov.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Jind",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-junagadh.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://junagadh.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Junagadh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kachchh.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kachchh.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Kachchh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kaimur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kaimur.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Kaimur (Bhabua)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kakching.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kakching.nic.in/public-utility-category/hospitals/",
+   "state": "MN",
+   "district": "Kakching",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kalaburagi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kalaburagi.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Kalaburagi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kalimpong.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kalimpong.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Kalimpong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kallakurichi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kallakurichi.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Kallakurichi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kamareddy.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kamareddy.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Kamareddy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kamjong.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kamjong.nic.in/public-utility-category/hospitals/",
+   "state": "MN",
+   "district": "Kamjong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kancheepuram.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kancheepuram.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Kancheepuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kangpokpi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kangpokpi.nic.in/public-utility-category/hospitals/",
+   "state": "MN",
+   "district": "Kangpokpi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kanker.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kanker.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Uttar Bastar Kanker",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kannauj.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kannauj.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Kannauj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kanniyakumari.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kanniyakumari.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Kanniyakumari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kannur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kannur.nic.in/en/public-utility-category/hospitals/",
+   "state": "KL",
+   "district": "Kannur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kanpurnagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kanpurnagar.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Kanpur Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-karimnagar.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://karimnagar.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Karimnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-karnal.gov.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://karnal.gov.in/public-utility-category/hospital/",
+   "state": "HR",
+   "district": "Karnal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-karur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://karur.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Karur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kasargod.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kasargod.nic.in/en/public-utility-category/hospitals/",
+   "state": "KL",
+   "district": "Kasaragod",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kasganj.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kasganj.nic.in/public-utility-category/hospital/",
+   "state": "UP",
+   "district": "Kasganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kathua.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kathua.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Kathua",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-katni.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://katni.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Katni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kaushambi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kaushambi.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Kaushambi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kawardha.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kawardha.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Kabeerdham",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-khagaria.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://khagaria.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Khagaria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-khammam.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://khammam.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Khammam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-khandwa.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://khandwa.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Khandwa (East Nimar)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-khargone.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://khargone.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Khargone (West Nimar)",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kheda.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kheda.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Kheda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kheri.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kheri.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Kheri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-khunti.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://khunti.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Khunti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kishanganj.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kishanganj.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Kishanganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kishtwar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kishtwar.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Kishtwar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kodagu.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kodagu.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Kodagu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-koderma.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://koderma.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Koderma",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kohima.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kohima.nic.in/public-utility-category/hospitals/",
+   "state": "NL",
+   "district": "Kohima",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kolhapur.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kolhapur.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Kolhapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kollam.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kollam.nic.in/en/public-utility-category/hospitals/",
+   "state": "KL",
+   "district": "Kollam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-konaseema.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://konaseema.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Dr. B.R. Ambedkar Konaseema",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kondagaon.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kondagaon.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Kondagaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-koppal.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://koppal.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Koppal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-korba.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://korba.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Korba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-korea.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://korea.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Korea",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kottayam.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kottayam.nic.in/en/public-utility-category/hospitals/",
+   "state": "KL",
+   "district": "Kottayam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kozhikode.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kozhikode.nic.in/public-utility-category/hospitals/",
+   "state": "KL",
+   "district": "Kozhikode",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kradaadi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kradaadi.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Kra Daadi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-krishnagiri.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://krishnagiri.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Krishnagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kupwara.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kupwara.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Kupwara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kurnool.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kurnool.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Kurnool",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-kushinagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://kushinagar.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Kushinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-lakhisarai.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://lakhisarai.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Lakhisarai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-lalitpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://lalitpur.nic.in/en/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Lalitpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-latehar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://latehar.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Latehar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-latur.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://latur.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Latur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-lawngtlai.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://lawngtlai.nic.in/public-utility-category/hospital/",
+   "state": "MZ",
+   "district": "Lawngtlai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-lohardaga.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://lohardaga.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Lohardaga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-lohit.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://lohit.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Lohit",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-longding.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://longding.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Longding",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-longleng.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://longleng.nic.in/public-utility-category/hospitals/",
+   "state": "NL",
+   "district": "Longleng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-lowersubansiri.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://lowersubansiri.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Lower Subansiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-lucknow.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://lucknow.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Lucknow",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-lunglei.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://lunglei.nic.in/public-utility-category/hospitals/",
+   "state": "MZ",
+   "district": "Lunglei",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-madurai.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://madurai.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Madurai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-maharajganj.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://maharajganj.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Mahrajganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mahasamund.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mahasamund.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Mahasamund",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mahendragarh.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mahendragarh.gov.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Mahendragarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mahesana.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mahesana.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Mahesana",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mahoba.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mahoba.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Mahoba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mainpuri.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mainpuri.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Mainpuri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-malappuram.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://malappuram.nic.in/en/public-utility-category/hospitals/",
+   "state": "KL",
+   "district": "Malappuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-malda.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://malda.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Malda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-malerkotla.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://malerkotla.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Malerkotla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mamit.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mamit.nic.in/public-utility-category/hospitals/",
+   "state": "MZ",
+   "district": "Mamit",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mancherial.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mancherial.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Mancherial",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mandsaur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mandsaur.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Mandsaur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mandya.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mandya.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Mandya",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mansa.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mansa.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Mansa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mathura.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mathura.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Mathura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mau.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mau.nic.in/en/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Mau",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mauganj.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mauganj.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "MAUGANJ",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mayiladuthurai.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mayiladuthurai.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Mayiladuthurai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-medak.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://medak.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Medak",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-meerut.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://meerut.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Meerut",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mirzapur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mirzapur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Mirzapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-moga.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://moga.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Moga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mohla-manpur-ambagarhchowki.cg.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mohla-manpur-ambagarhchowki.cg.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Mohla-Manpur-Ambagarh Chouki",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mokokchung.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mokokchung.nic.in/public-utility-category/hospitals/",
+   "state": "NL",
+   "district": "Mokokchung",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mon.nic.in-hospital-en",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mon.nic.in/public-utility-category/hospital-en/",
+   "state": "NL",
+   "district": "Mon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-moradabad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://moradabad.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Moradabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-morena.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://morena.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Morena",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mulugu.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mulugu.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Mulugu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mumbaicity.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mumbaicity.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Mumbai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mumbaisuburban.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mumbaisuburban.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Mumbai Suburban",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mungeli.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mungeli.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Mungeli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-murshidabad.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://murshidabad.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Murshidabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-muzaffarnagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://muzaffarnagar.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Muzaffarnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-mysore.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://mysore.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Mysuru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nadia.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nadia.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Nadia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nainital.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nainital.nic.in/public-utility-category/hospitals/",
+   "state": "UK",
+   "district": "Nainital",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nalgonda.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nalgonda.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Nalgonda",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-namakkal.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://namakkal.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Namakkal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-namsai.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://namsai.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Namsai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nanded.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nanded.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Nanded",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nandyal.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nandyal.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Nandyal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-narayanpur.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://narayanpur.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Narayanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-narmada.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://narmada.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Narmada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-narmadapuram.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://narmadapuram.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Narmadapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-narsinghpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://narsinghpur.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Narsimhapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nashik.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nashik.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Nashik",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-navsari.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://navsari.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Navsari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nawada.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nawada.nic.in/public-utility-category/hospital/",
+   "state": "BR",
+   "district": "Nawada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nawanshahr.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nawanshahr.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Shahid Bhagat Singh Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-neemuch.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://neemuch.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Neemuch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nilgiris.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nilgiris.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "The Nilgiris",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nirmal.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nirmal.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Nirmal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-niwari.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://niwari.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Niwari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nizamabad.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nizamabad.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Nizamabad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-northgarohills.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://northgarohills.gov.in/public-utility-category/hospitals/",
+   "state": "ML",
+   "district": "North Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-northgarohills.gov.in-hospital-rang",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://northgarohills.gov.in/grt/public-utility-category/hospital-rang/",
+   "state": "ML",
+   "district": "North Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-northtripura.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://northtripura.nic.in/public-utility-category/hospitals/",
+   "state": "TR",
+   "district": "North Tripura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ntr.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ntr.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Ntr",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-nuh.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://nuh.gov.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Nuh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pakur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pakur.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Pakur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-palakkad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://palakkad.nic.in/en/public-utility-category/hospitals/",
+   "state": "KL",
+   "district": "Palakkad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-palakkad.nic.in-ambulance-services-en",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://palakkad.nic.in/en/public-utility-category/ambulance-services-en/",
+   "state": "KL",
+   "district": "Palakkad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-palamu.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://palamu.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Palamu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-palnadu.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://palnadu.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Palnadu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-panchkula.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://panchkula.nic.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Panchkula",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-panipat.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://panipat.gov.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Panipat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-panna.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://panna.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Panna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-parbhani.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://parbhani.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Parbhani",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-paschimbardhaman.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://paschimbardhaman.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Paschim Bardhaman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-paschimmedinipur.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://paschimmedinipur.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Paschim Medinipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-patan.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://patan.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Patan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pathanamthitta.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pathanamthitta.nic.in/en/public-utility-category/hospitals/",
+   "state": "KL",
+   "district": "Pathanamthitta",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pathankot.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pathankot.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Pathankot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pauri.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pauri.nic.in/public-utility-category/hospitals/",
+   "state": "UK",
+   "district": "Pauri Garhwal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-peddapalli.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://peddapalli.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Peddapalli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-perambalur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://perambalur.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Perambalur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-peren-district.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://peren-district.nic.in/public-utility-category/hospitals/",
+   "state": "NL",
+   "district": "Peren",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-phek.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://phek.nic.in/public-utility-category/hospitals/",
+   "state": "NL",
+   "district": "Phek",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pherzawl.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pherzawl.nic.in/public-utility-category/hospitals/",
+   "state": "MN",
+   "district": "Pherzawl",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pilibhit.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pilibhit.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Pilibhit",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pithoragarh.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pithoragarh.nic.in/public-utility-category/hospitals/",
+   "state": "UK",
+   "district": "Pithoragarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-poonch.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://poonch.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Poonch",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-porbandar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://porbandar.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Porbandar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-prakasam.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://prakasam.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Prakasam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pratapgarh.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pratapgarh.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Pratapgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pudukkottai.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pudukkottai.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Pudukkottai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pulwama.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pulwama.gov.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Pulwama",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-pune.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://pune.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Pune",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-purbabardhaman.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://purbabardhaman.nic.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Purba Bardhaman",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-purnea.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://purnea.nic.in/public-utility-category/hospital/",
+   "state": "BR",
+   "district": "Purnia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-purulia.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://purulia.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Purulia",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-raebareli.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://raebareli.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Rae Bareli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-raichur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://raichur.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Raichur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-raigad.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://raigad.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Raigad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-raigarh.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://raigarh.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Raigarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-raipur.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://raipur.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Raipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-raisen.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://raisen.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Raisen",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rajannasircilla.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rajannasircilla.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Rajanna Sircilla",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rajgarh.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rajgarh.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Rajgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rajkot.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rajkot.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Rajkot",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rajnandgaon.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rajnandgaon.nic.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Rajnandgaon",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rajouri.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rajouri.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Rajouri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ramanathapuram.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ramanathapuram.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Ramanathapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ramgarh.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ramgarh.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Ramgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rampur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rampur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Rampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ranchi.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ranchi.nic.in/public-utility-category/hospital/",
+   "state": "JH",
+   "district": "Ranchi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rangareddy.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rangareddy.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Ranga Reddy",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ratlam.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ratlam.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Ratlam",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ratnagiri.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ratnagiri.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Ratnagiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-reasi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://reasi.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Reasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rewa.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rewa.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Rewa",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rewari.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rewari.gov.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Rewari",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ribhoi.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ribhoi.gov.in/public-utility-category/hospitals/",
+   "state": "ML",
+   "district": "Ri Bhoi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-roing.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://roing.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Lower Dibang Valley",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rudraprayag.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rudraprayag.gov.in/public-utility-category/hospitals/",
+   "state": "UK",
+   "district": "Rudraprayag",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-rupnagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://rupnagar.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Rupnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-s24pgs.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://s24pgs.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "South 24 Parganas",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sabarkantha.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sabarkantha.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Sabar Kantha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sagar.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Sagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-saharanpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://saharanpur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Saharanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sahibganj.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sahibganj.nic.in/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Sahebganj",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-salem.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://salem.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Salem",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-samastipur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://samastipur.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Samastipur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-samba.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://samba.gov.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Samba",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sambhal.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sambhal.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Sambhal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sangli.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sangli.nic.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Sangli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sangrur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sangrur.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Sangrur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-saran.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://saran.nic.in/public-utility-category/hospital/",
+   "state": "BR",
+   "district": "Saran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sasnagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sasnagar.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "S.A.S Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-satna.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://satna.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Satna",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sehore.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sehore.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Sehore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-senapati.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://senapati.nic.in/public-utility-category/hospitals/",
+   "state": "MN",
+   "district": "Senapati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-seoni.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://seoni.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Seoni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sepahijala.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sepahijala.nic.in/public-utility-category/hospitals/",
+   "state": "TR",
+   "district": "Sepahijala",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-serchhip.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://serchhip.nic.in/public-utility-category/hospitals/",
+   "state": "MZ",
+   "district": "Serchhip",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-shahdol.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://shahdol.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Shahdol",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-shajapur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://shajapur.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Shajapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-shamator.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://shamator.nic.in/public-utility-category/hospitals/",
+   "state": "NL",
+   "district": "Shamator",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-shamli.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://shamli.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Shamli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sheikhpura.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sheikhpura.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Sheikhpura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sheohar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sheohar.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Sheohar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sheopur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sheopur.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Sheopur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-shivamogga.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://shivamogga.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "ಶಿವಮೊಗ್ಗ ಜಿಲ್ಲೆ, ಕರ್ನಾಟಕ ಸರ್ಕಾರ | ಕರ್ನಾಟಕದ ಆಹಾರ ಕಣಜ | India",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-shivpuri.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://shivpuri.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Shivpuri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-shiyomi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://shiyomi.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Shi Yomi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-shopian.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://shopian.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Shopian",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-shravasti.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://shravasti.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Shrawasti",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-siaha.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://siaha.nic.in/public-utility-category/hospitals/",
+   "state": "MZ",
+   "district": "Siaha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-siang.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://siang.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-siddharthnagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://siddharthnagar.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Siddharthnagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-siddipet.telangana.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://siddipet.telangana.gov.in/public-utility-category/hospitals/",
+   "state": "TG",
+   "district": "Siddipet",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sidhi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sidhi.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Sidhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-simdega.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://simdega.nic.in/en/public-utility-category/hospitals/",
+   "state": "JH",
+   "district": "Simdega",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sindhudurg.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sindhudurg.nic.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Sindhudurg",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-singrauli.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://singrauli.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Singrauli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sitamarhi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sitamarhi.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Sitamarhi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sitapur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sitapur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Sitapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sivaganga.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sivaganga.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Sivaganga",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-siwan.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://siwan.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Siwan",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sknagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sknagar.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Sant Kabir Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-solapur.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://solapur.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Solapur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sonbhadra.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sonbhadra.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Sonbhadra",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sonipat.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sonipat.gov.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Sonipat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-soreng.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://soreng.nic.in/public-utility-category/hospitals/",
+   "state": "SK",
+   "district": "Soreng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-southgarohills.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://southgarohills.gov.in/public-utility-category/hospitals/",
+   "state": "ML",
+   "district": "South Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-southgarohills.gov.in-hospital-rang",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://southgarohills.gov.in/grt/public-utility-category/hospital-rang/",
+   "state": "ML",
+   "district": "South Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-southtripura.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://southtripura.nic.in/public-utility-category/hospitals/",
+   "state": "TR",
+   "district": "South Tripura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-southwestgarohills.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://southwestgarohills.gov.in/public-utility-category/hospitals/",
+   "state": "ML",
+   "district": "South West Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-southwestgarohills.gov.in-hospital-rang",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://southwestgarohills.gov.in/grt/public-utility-category/hospital-rang/",
+   "state": "ML",
+   "district": "South West Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-southwestkhasihills.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://southwestkhasihills.gov.in/public-utility-category/hospitals/",
+   "state": "ML",
+   "district": "South West Khasi Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-southwestkhasihills.gov.in-ka-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://southwestkhasihills.gov.in/kha/public-utility-category/ka-hospital/",
+   "state": "ML",
+   "district": "South West Khasi Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-spsnellore.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://spsnellore.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Sri Potti Sriramulu Nellore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-srinagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://srinagar.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Srinagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-srisathyasai.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://srisathyasai.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Sri Sathya Sai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sukma.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sukma.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Sukma",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-sultanpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://sultanpur.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Sultanpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-supaul.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://supaul.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Supaul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-surajpur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://surajpur.nic.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Surajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-surat.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://surat.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Surat",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-surendranagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://surendranagar.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Surendranagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-surguja.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://surguja.gov.in/en/public-utility-category/hospitals/",
+   "state": "CG",
+   "district": "Surguja",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tamenglong.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tamenglong.nic.in/public-utility-category/hospitals/",
+   "state": "MN",
+   "district": "Tamenglong",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tarntaran.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tarntaran.nic.in/public-utility-category/hospitals/",
+   "state": "PB",
+   "district": "Tarn Taran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tawang.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tawang.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Tawang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tenkasi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tenkasi.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Tenkasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-thane.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://thane.nic.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Thane",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-thanjavur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://thanjavur.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Thanjavur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-theni.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://theni.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Theni",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-thoubal.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://thoubal.nic.in/public-utility-category/hospitals/",
+   "state": "MN",
+   "district": "Thoubal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-thrissur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://thrissur.nic.in/en/public-utility-category/hospitals/",
+   "state": "KL",
+   "district": "Thrissur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tikamgarh.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tikamgarh.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Tikamgarh",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tirap.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tirap.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Tirap",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tiruchirappalli.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tiruchirappalli.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Tiruchirappalli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tirunelveli.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tirunelveli.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Tirunelveli",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tirupathur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tirupathur.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Tirupathur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tirupati.ap.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tirupati.ap.gov.in/public-utility-category/hospitals/",
+   "state": "AP",
+   "district": "Tirupati",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tiruppur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tiruppur.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Tiruppur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tiruvannamalai.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tiruvannamalai.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Tiruvannamalai",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tiruvarur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tiruvarur.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Thiruvarur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-trivandrum.nic.in-govt-hospitals",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://trivandrum.nic.in/en/public-utility-category/govt-hospitals/",
+   "state": "KL",
+   "district": "Thiruvananthapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-trivandrum.nic.in-private-hospitals",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://trivandrum.nic.in/en/public-utility-category/private-hospitals/",
+   "state": "KL",
+   "district": "Thiruvananthapuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tseminyu.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tseminyu.nic.in/public-utility-category/hospitals/",
+   "state": "NL",
+   "district": "Tseminyu",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tuensang.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tuensang.nic.in/public-utility-category/hospitals/",
+   "state": "NL",
+   "district": "Tuensang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-tumkur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://tumkur.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Tumakuru",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-udhampur.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://udhampur.nic.in/public-utility-category/hospitals/",
+   "state": "JK",
+   "district": "Udhampur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-udupi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://udupi.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Udupi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ujjain.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ujjain.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Ujjain",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-ukhrul.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://ukhrul.nic.in/public-utility-category/hospitals/",
+   "state": "MN",
+   "district": "Ukhrul",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-umaria.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://umaria.nic.in/en/public-utility-category/hospitals/",
+   "state": "MP",
+   "district": "Umaria",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-unnao.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://unnao.nic.in/public-utility-category/hospital/",
+   "state": "UP",
+   "district": "Unnao",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-uppersiang.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://uppersiang.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Upper Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-uppersubansiri.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://uppersubansiri.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "Upper Subansiri",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-usnagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://usnagar.nic.in/public-utility-category/hospitals/",
+   "state": "UK",
+   "district": "Udham Singh Nagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-uttarakannada.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://uttarakannada.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Uttara Kannada",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-uttardinajpur.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://uttardinajpur.gov.in/public-utility-category/hospitals/",
+   "state": "WB",
+   "district": "Uttar Dinajpur",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-uttarkashi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://uttarkashi.nic.in/public-utility-category/hospitals/",
+   "state": "UK",
+   "district": "Uttarkashi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-vadodara.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://vadodara.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Vadodara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-vaishali.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://vaishali.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Vaishali",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-valsad.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://valsad.nic.in/public-utility-category/hospitals/",
+   "state": "GJ",
+   "district": "Valsad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-varanasi.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://varanasi.nic.in/public-utility-category/hospitals/",
+   "state": "UP",
+   "district": "Varanasi",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-vellore.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://vellore.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Vellore",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-vijayanagara.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://vijayanagara.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Vijayanagara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-vijayapura.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://vijayapura.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Vijayapura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-viluppuram.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://viluppuram.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Viluppuram",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-virudhunagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://virudhunagar.nic.in/public-utility-category/hospitals/",
+   "state": "TN",
+   "district": "Virudhunagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-wayanad.gov.in-govt-hospitals",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://wayanad.gov.in/en/public-utility-category/govt-hospitals/",
+   "state": "KL",
+   "district": "Wayanad",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-westchamparan.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://westchamparan.nic.in/public-utility-category/hospitals/",
+   "state": "BR",
+   "district": "Pashchim Champaran",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-westgarohills.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://westgarohills.gov.in/public-utility-category/hospitals/",
+   "state": "ML",
+   "district": "West Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-westgarohills.gov.in-hospital-rang",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://westgarohills.gov.in/grt/public-utility-category/hospital-rang/",
+   "state": "ML",
+   "district": "West Garo Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-westkameng.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://westkameng.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "West Kameng",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-westkhasihills.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://westkhasihills.gov.in/public-utility-category/hospitals/",
+   "state": "ML",
+   "district": "West Khasi Hills",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-westsiang.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://westsiang.nic.in/public-utility-category/hospitals/",
+   "state": "AR",
+   "district": "West Siang",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-westtripura.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://westtripura.nic.in/public-utility-category/hospitals/",
+   "state": "TR",
+   "district": "West Tripura",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-wokha.nic.in-hospital",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://wokha.nic.in/public-utility-category/hospital/",
+   "state": "NL",
+   "district": "Wokha",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-www.satara.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://www.satara.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Satara",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-yadgir.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://yadgir.nic.in/en/public-utility-category/hospitals/",
+   "state": "KA",
+   "district": "Yadgir",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-yamunanagar.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://yamunanagar.nic.in/public-utility-category/hospitals/",
+   "state": "HR",
+   "district": "Yamunanagar",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-yavatmal.gov.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://yavatmal.gov.in/en/public-utility-category/hospitals/",
+   "state": "MH",
+   "district": "Yavatmal",
+   "india_only": false
+  }
+ },
+ {
+  "key": "emerg_hosp_s3waas-zunheboto.nic.in",
+  "payload": {
+   "reader": "emerg_hosp_s3waas",
+   "url": "https://zunheboto.nic.in/en/public-utility-category/hospitals/",
+   "state": "NL",
+   "district": "Zunheboto",
+   "india_only": false
+  }
+ }
+]

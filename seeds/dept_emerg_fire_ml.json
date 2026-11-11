@@ -1,0 +1,12 @@
+[
+ {
+  "key": "emerg_fire_ml",
+  "payload": {
+   "reader": "emerg_fire_ml",
+   "url": "https://megfireservice.gov.in/keycontacts.html",
+   "stations_url": "https://megfireservice.gov.in/fire_stations.html",
+   "state": "ML",
+   "india_only": false
+  }
+ }
+]

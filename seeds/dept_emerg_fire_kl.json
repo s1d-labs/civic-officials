@@ -1,0 +1,9 @@
+[
+ {"key": "emerg_fire_kl-district", "payload": {"reader": "emerg_fire_kl", "kind": "table", "table": "district", "url": "https://fire.kerala.gov.in/district-fire-offices/", "state": "KL", "india_only": false}},
+ {"key": "emerg_fire_kl-regional", "payload": {"reader": "emerg_fire_kl", "kind": "table", "table": "regional", "url": "https://fire.kerala.gov.in/%e0%b4%b1%e0%b5%80%e0%b4%9c%e0%b4%bf%e0%b4%af%e0%b4%a3%e0%b5%bd-%e0%b4%ab%e0%b4%af%e0%b5%bc-%e0%b4%93%e0%b4%ab%e0%b5%80%e0%b4%b8%e0%b5%8d%e0%b4%b8%e0%b5%8d/", "state": "KL", "india_only": false}},
+ {"key": "emerg_fire_kl-hq", "payload": {"reader": "emerg_fire_kl", "kind": "team", "url": "https://fire.kerala.gov.in/%e0%b4%b9%e0%b5%86%e0%b4%a1%e0%b5%8d-%e0%b4%95%e0%b5%8d%e0%b4%b5%e0%b4%be%e0%b5%bc%e0%b4%9f%e0%b5%8d%e0%b4%9f%e0%b5%87%e0%b4%b4%e0%b5%8d%e0%b4%b8%e0%b5%8d/", "state": "KL", "india_only": false}},
+ {"key": "emerg_fire_kl-posts-1", "payload": {"reader": "emerg_fire_kl", "kind": "posts", "page": 1, "url": "https://fire.kerala.gov.in/wp-json/wp/v2/posts?per_page=100&page=1&_fields=id,link,title,content,modified", "state": "KL", "india_only": false}},
+ {"key": "emerg_fire_kl-posts-2", "payload": {"reader": "emerg_fire_kl", "kind": "posts", "page": 2, "url": "https://fire.kerala.gov.in/wp-json/wp/v2/posts?per_page=100&page=2&_fields=id,link,title,content,modified", "state": "KL", "india_only": false}},
+ {"key": "emerg_fire_kl-posts-3", "payload": {"reader": "emerg_fire_kl", "kind": "posts", "page": 3, "url": "https://fire.kerala.gov.in/wp-json/wp/v2/posts?per_page=100&page=3&_fields=id,link,title,content,modified", "state": "KL", "india_only": false}},
+ {"key": "emerg_fire_kl-posts-4", "payload": {"reader": "emerg_fire_kl", "kind": "posts", "page": 4, "url": "https://fire.kerala.gov.in/wp-json/wp/v2/posts?per_page=100&page=4&_fields=id,link,title,content,modified", "state": "KL", "india_only": false}}
+]
