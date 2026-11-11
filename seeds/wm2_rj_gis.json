@@ -1,0 +1,22 @@
+[
+ {
+  "key": "wm2_rj_gis-ward-bndy-ulb",
+  "payload": {
+   "reader": "wm2_rj_gis",
+   "url": "https://gisprod.rajasthan.gov.in/dynamicquery/rest/services/GISSurvey/Ward_Bndy_ULB/MapServer/0",
+   "token_api": "https://rajdharaa.rajasthan.gov.in/RajdharaaCommonWebAPI/api/GenerateGISToken",
+   "viewer": "https://rajdharaa.rajasthan.gov.in/citizenUDH/",
+   "service": "dynamicquery",
+   "where": "1=1",
+   "oid": "OBJECTID",
+   "page": 1000,
+   "state": "8",
+   "india_only": true,
+   "source": "rj_gis",
+   "chunk": "ward_bndy_ulb",
+   "ward_kind": "election",
+   "vintage": "",
+   "expect": 177
+  }
+ }
+]
