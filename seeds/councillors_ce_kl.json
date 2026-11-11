@@ -1,0 +1,86 @@
+[
+ {
+  "key": "ce-kl-corp-14",
+  "payload": {
+   "kind": "kl-body",
+   "state": "KL",
+   "url": "https://sec.kerala.gov.in/public/wyrlb/14/C",
+   "lb_id": "C14",
+   "election": "Kerala 2025",
+   "lgd_code": "252260",
+   "lgd_name": "Thiruvananthapuram",
+   "body_type": "Municipal Corporation",
+   "expected": 101
+  }
+ },
+ {
+  "key": "ce-kl-corp-13",
+  "payload": {
+   "kind": "kl-body",
+   "state": "KL",
+   "url": "https://sec.kerala.gov.in/public/wyrlb/13/C",
+   "lb_id": "C13",
+   "election": "Kerala 2025",
+   "lgd_code": "252255",
+   "lgd_name": "Kollam",
+   "body_type": "Municipal Corporation",
+   "expected": 56
+  }
+ },
+ {
+  "key": "ce-kl-corp-8",
+  "payload": {
+   "kind": "kl-body",
+   "state": "KL",
+   "url": "https://sec.kerala.gov.in/public/wyrlb/8/C",
+   "lb_id": "C8",
+   "election": "Kerala 2025",
+   "lgd_code": "252220",
+   "lgd_name": "Kochi",
+   "body_type": "Municipal Corporation",
+   "expected": 76
+  }
+ },
+ {
+  "key": "ce-kl-corp-7",
+  "payload": {
+   "kind": "kl-body",
+   "state": "KL",
+   "url": "https://sec.kerala.gov.in/public/wyrlb/7/C",
+   "lb_id": "C7",
+   "election": "Kerala 2025",
+   "lgd_code": "252194",
+   "lgd_name": "Thrissur",
+   "body_type": "Municipal Corporation",
+   "expected": 56
+  }
+ },
+ {
+  "key": "ce-kl-corp-4",
+  "payload": {
+   "kind": "kl-body",
+   "state": "KL",
+   "url": "https://sec.kerala.gov.in/public/wyrlb/4/C",
+   "lb_id": "C4",
+   "election": "Kerala 2025",
+   "lgd_code": "252160",
+   "lgd_name": "Kozhikode",
+   "body_type": "Municipal Corporation",
+   "expected": 76
+  }
+ },
+ {
+  "key": "ce-kl-corp-2",
+  "payload": {
+   "kind": "kl-body",
+   "state": "KL",
+   "url": "https://sec.kerala.gov.in/public/wyrlb/2/C",
+   "lb_id": "C2",
+   "election": "Kerala 2025",
+   "lgd_code": "252125",
+   "lgd_name": "Kannur",
+   "body_type": "Municipal Corporation",
+   "expected": 56
+  }
+ }
+]
