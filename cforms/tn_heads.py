@@ -84,6 +84,10 @@ def pairs(html):
 
 
 def phones(s):
+    d = re.sub(r"\D", "", s or "")
+    d = d[2:] if len(d) == 12 and d.startswith("91") else d
+    if len(d) >= 20 and len(d) % 10 == 0 and all(d[i] in "6789" for i in range(0, len(d), 10)):
+        return [d[i:i + 10] for i in range(0, len(d), 10)]          # "7305712227 9363042912": two mobiles
     out = []
     for m in re.findall(r"(?:\+?91[\s-]*)?(?:0?\d[\d\s-]{8,13}\d)", s or ""):
         d = re.sub(r"\D", "", m)
@@ -100,6 +104,7 @@ def party_short(s):
 
 def name_clean(s):
     s = re.sub(r"^(thiru|tmt|selvi|thirumathi|mr|mrs|ms|dr|adv|திரு|திருமதி|செல்வி)\b\.?\s*", "", s or "", flags=re.I)
+    s = re.sub(r"[\s,(-]*\b(vice[\s-]*)?(chair\s*(man|person|woman)?|mayor|deputy\s+mayor)\b[\s.)]*$", "", s, flags=re.I)
     return s.strip(" .")
 
 
@@ -141,6 +146,7 @@ def parse(answers, p):
                  "phone": ph[0] if ph else None, "phones": ph or None, "phone_as_listed": got.get("phone"),
                  "email": got.get("email"), "own_ward": got.get("ward_no"),
                  "election": ELECTION, "indirect": True, "page_modified": pg.get("modified"),
+                 "in_charge": bool(re.search(r"in\s*-?\s*charge|i/c", title, re.I)) or None,
                  "old_page": bool(mod and mod < OLD_BEFORE) or None,
                  "url": pg.get("link"), "list_url": url, "src_url": url,
                  "src_pos": {"index": pi, "id": pg.get("id"), "page": pg.get("link"), "rows": rows}}

@@ -154,3 +154,12 @@ def test_ap_heads_chairpersons_2026():
     assert recs["councillor:AP:head:annamayya:punganur"]["name"] == "P. NAYAUM TEJ"
     assert recs["councillor:AP:head:annamayya:madanapalle"]["name"] == "GUNDLAPALLI SRIRAMA KUMAR@ SRIRAM KUMAR"
     assert [c["name"] for c in recs["councillor:AP:head:nandyal:dhone"]["candidates"]][1] == "CHAITANYA BOAY ALIAS VALLE CHAITANYA"
+
+
+def test_tn_heads_tiruppur_mayor_in_charge_two_mobiles():
+    a = [(tn_heads.search_url("tiruppur", "mayor"), (DATA / "tn_heads/tiruppur_mayor.json").read_text())]
+    recs = dict(tn_heads.parse(a, {"site": "tiruppur"}))
+    m = recs["councillor:TN:head:tiruppur:mayor"]
+    assert m["in_charge"] and m["position_local"] == "Honourable Mayor Incharge" and m["name"] == ".R. Balasubramaniam".lstrip(".")
+    assert m["phones"] == ["7305712227", "9363042912"] and m["phone"] == "7305712227"
+    assert recs["councillor:TN:head:tiruppur:deputy-mayor"]["name"] == m["name"]
