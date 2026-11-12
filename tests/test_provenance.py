@@ -140,3 +140,14 @@ def test_pool_loop_end_to_end(tmp_path, monkeypatch):
     assert trails and trails[0]["records"] == 0      # the failed item keeps its trail (what we read), and stays failed
     ups = json.dumps(hub.state["uploads"], default=str)
     assert sha in ups
+
+
+def test_form_data_kept_small_hashed_large():
+    t = provenance.Trail("depts", "p")
+    t.begin({"key": "k", "payload": {}}, "r")
+    t.note(resp(b"{}", ctype="application/json"), "https://a.gov.in/api", "POST", {"DepartmentCode": 37, "CategoryCode": 0})
+    t.note(resp(b"{1}", ctype="application/json"), "https://a.gov.in/api", "POST", {"__VIEWSTATE": "x" * 9000})
+    recs, _ = t.finish([], [])
+    s1, s2 = recs[-1][1]["sources"]
+    assert json.loads(s1["form_data"]) == {"CategoryCode": 0, "DepartmentCode": 37}
+    assert "form_data" not in s2 and s2["form_bytes"] > 9000 and len(s2["form_sha256"]) == 64

@@ -17,6 +17,7 @@ and keeps any position the reader gives in "src_pos" ({"page", "line", "row", "c
 """
 import gzip
 import hashlib
+import json
 import os
 import socket
 import subprocess
@@ -24,7 +25,8 @@ import threading
 import time
 
 MAX_COPY = 200 * 1024 * 1024        # one body larger than this is noted (sha256, size) but not copied
-MAX_HELD = 400 * 1024 * 1024        # bodies held for one item before its end; beyond this they are noted, not copied
+MAX_HELD = 400 * 1024 * 1024
+MAX_FORM = 8 * 1024             # form data kept in full up to this size (ASP.NET view state is often larger: then its hash)        # bodies held for one item before its end; beyond this they are noted, not copied
 EXT = (("pdf", ".pdf"), ("html", ".html"), ("json", ".json"), ("xml", ".xml"), ("csv", ".csv"), ("zip", ".zip"),
        ("spreadsheet", ".xlsx"), ("excel", ".xls"), ("image/png", ".png"), ("image/jp", ".jpg"), ("text/plain", ".txt"))
 _commit = None
@@ -98,6 +100,13 @@ class Trail:
         e = {"url": url, "final_url": getattr(r, "url", "") or url, "method": method.upper(), "form": data is not None,
              "status": getattr(r, "status_code", None), "content_type": ctype, "bytes": len(body), "sha256": sha,
              "fetched_at": now()}
+        if data is not None:                 # what was sent, so the request can be repeated: in full when small, else its hash
+            raw = data if isinstance(data, (bytes, str)) else json.dumps(data, sort_keys=True, ensure_ascii=False, default=str)
+            raw_b = raw.encode("utf-8", "replace") if isinstance(raw, str) else raw
+            if len(raw_b) <= MAX_FORM:
+                e["form_data"] = raw if isinstance(raw, str) else raw_b.decode("utf-8", "replace")
+            else:
+                e["form_sha256"], e["form_bytes"] = hashlib.sha256(raw_b).hexdigest(), len(raw_b)
         arch = getattr(r, "from_archive", "")
         if arch:
             e["copy"] = {"archive": url, "captured": arch}
