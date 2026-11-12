@@ -20,7 +20,7 @@ from bs4 import BeautifulSoup
 import provenance
 from cforms.cp_common import Cells
 
-METHOD = "html table (town site council page, en and kn)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (town site council page, en and kn; head's message page text when no member is listed)"     # source trail (provenance.py)
 
 KN_DIGITS = str.maketrans("೦೧೨೩೪೫೬೭೮೯", "0123456789")
 
@@ -189,6 +189,48 @@ def _get(get, url):
         raise
 
 
+MSG_LINK = re.compile(r"administrat|mayor|president|ಆಡಳಿತಾಧಿಕಾರಿ|ಮಹಾಪೌರ|ಅಧ್ಯಕ್ಷ", re.I)
+
+
+def message_links(html, base):
+    """Links of the home page to the head's message page ("Mayor's Message" -> /en/administrator-message on Shivamogga): the
+    template keeps one such page per body; when the council's term is over it names the Administrator."""
+    soup = BeautifulSoup(html, "lxml")
+    out = []
+    for a in soup.find_all("a", href=True):
+        h, t = a["href"], _txt(a)
+        if "message" in h.lower() and (MSG_LINK.search(h) or MSG_LINK.search(t)) and "commis" not in h.lower():
+            u = h if h.startswith("http") else base + "/" + h.lstrip("/")
+            if u not in out:
+                out.append(u)
+    return out[:2]
+
+
+def admin_message(html):
+    """The Administrator named on a head's message page ('Shri Hon'ble Administrator, Shivamogga City Corporation'): the
+    sentence that holds the word, else None. A Mayor / President message gives None (the council may still be in office)."""
+    soup = BeautifulSoup(html, "lxml")
+    area = soup.find("article") or soup.select_one(".region-content") or soup.body or soup
+    text = _txt(area)
+    m = re.search(r"administrator|ಆಡಳಿತಾಧಿಕಾರಿ", text, re.I)
+    if not m:
+        return None
+    s = text.rfind(".", 0, max(0, m.start() - 60))
+    return text[s + 1: m.end() + 120].strip()
+
+
+def _message_status(p, base, get, home_lang="en"):
+    """(url, response, text) of a head's message page that names the Administrator, else None."""
+    home = _get(get, f"{base}/{home_lang}")
+    if home is None:
+        return None
+    for u in message_links(home.text, base):
+        r = _get(get, u)
+        if r is not None and (t := admin_message(r.text)):
+            return u, r, t
+    return None
+
+
 def fetch(p, get):
     base, path, sl = _base(p), p.get("path", "council-members"), p["slug"]
     files, recs, admins, why, blank = [], [], [], "", 0
@@ -238,6 +280,18 @@ def fetch(p, get):
                "lgd_code": p.get("lgd_code"), "status": "administrator", "administrator": who[:300],
                "note": "no council members listed (administrator only)", "url": url, **provenance.at(r), "src_pos": a.get("_pos")}
         return [(f"body_status:KA:{sl}", {k: v for k, v in rec.items() if v not in (None, "")})], files, ""
+    if seen:
+        # no member and no Administrator on the council page: the head's message page (linked from the home page) may name
+        # the Administrator (Shivamogga: "Hon'ble Administrator, Shivamogga City Corporation" under "Mayor's Message")
+        msg = _message_status(p, base, get)
+        if msg:
+            url, r, t = msg
+            files.append((f"councillors/KA/{sl}-message.html.gz", gzip.compress(r.content), "application/gzip"))
+            rec = {"type": "body_status", "state": "KA", "body": p.get("body"), "body_type": p.get("body_type"), "district": p.get("district"),
+                   "lgd_code": p.get("lgd_code"), "status": "administrator", "administrator": t[:300],
+                   "note": "no council members listed; the head's message page names the Administrator", "url": url, **provenance.at(r, url),
+                   "src_pos": {"part": "message page text"}, "method": "html text (town site head's message page)"}
+            return [(f"body_status:KA:{sl}", {k: v for k, v in rec.items() if v not in (None, "")})], files, ""
     if seen:        # the town's own site answered but lists no member: say so on the town page, with the page as source
         url, r = seen
         note = ("the town's website shows its ward table with empty names" if blank else "the town's website lists no council members")
