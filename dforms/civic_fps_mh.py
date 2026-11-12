@@ -6,6 +6,8 @@ from the page's district list, saved 2026-11-11). Record ids: dept:civic_fps_mh:
 """
 from dforms import _civic_fps
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fps_mh"
 STATE = "MH"
 BASE = "https://epos.mahafood.gov.in"

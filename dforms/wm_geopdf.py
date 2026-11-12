@@ -19,6 +19,8 @@ import io
 import json
 import re
 
+METHOD = "file saved to the bucket (GeoPDF, read later)"     # source trail (provenance.py): how this reader reads its sources
+
 ACCEPT = (b"%PDF-", b"\x89PNG", b"\xff\xd8\xff", b"II*\x00", b"MM\x00*")
 EXT = {b"%PDF-": "pdf", b"\x89PNG": "png", b"\xff\xd8\xff": "jpg", b"II*\x00": "tif", b"MM\x00*": "tif"}
 

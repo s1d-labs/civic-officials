@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf) + Devanagari font map"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_up"
 URL = "https://igrsup.gov.in/prernadoc/Adhiniyam/ContactUs/Contacts/officers_Name_No.pdf"
 

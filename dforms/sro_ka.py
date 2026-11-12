@@ -8,6 +8,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_ka"
 URL = "https://igr.karnataka.gov.in/14/sub-registrars/en"
 

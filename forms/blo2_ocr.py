@@ -41,6 +41,8 @@ import requests
 from cforms import hr
 from forms.blo2_pdf import store_path
 
+METHOD = "ocr tesseract eng + pdf text + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
+
 # Tesseract languages per state (the payload's "lang" wins). Manipur, Mizoram, Meghalaya, Nagaland: English lists.
 LANGS = {"UP": "hin+eng", "BR": "hin+eng", "MP": "hin+eng", "RJ": "hin+eng", "HR": "hin+eng", "DL": "hin+eng", "UK": "hin+eng",
          "JH": "hin+eng", "CG": "hin+eng", "HP": "hin+eng", "MH": "mar+eng", "GA": "mar+eng", "GJ": "guj+eng", "WB": "ben+eng",

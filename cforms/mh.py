@@ -20,6 +20,8 @@ import tempfile
 
 from cforms import gj
 
+METHOD = "ocr tesseract + pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 SEARCH = "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx"
 DIGITS = str.maketrans("०१२३४५६७८९", "0123456789")
 PARTY = ((r"उद्ध?व|ठाकरे", "SS(UBT)"), (r"शरद", "NCP(SP)"), (r"राष्ट्रवादी|राष्ट्रवादि", "NCP"),

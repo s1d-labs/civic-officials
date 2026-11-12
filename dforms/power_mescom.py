@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, email, phone, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://mescom.karnataka.gov.in/"
 PAGES = {"zones": "17/zonal-and-circle-offices/en", "divisions": "14/divisional-offices/en", "sections": "15/subdivision-and-sections/en"}
 

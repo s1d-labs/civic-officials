@@ -20,6 +20,8 @@ import re
 
 from dforms import _util2_south_water as sw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "water2_ap_rws"
 HOSTS = [(f"{h}.ap.gov.in", d) for h, d in (
     ("allurisitharamaraju", "Alluri Sitharama Raju"), ("anakapalli", "Anakapalli"), ("ananthapuramu", "Ananthapuramu"),

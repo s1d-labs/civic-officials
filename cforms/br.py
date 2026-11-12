@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 
 from forms.aspnet import hidden, options
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://sec.bihar.gov.in/ForPublic/"
 P = "ctl00$ContentPlaceHolder1$"
 COUNTING = "मतगणना"                       # "counting in progress": this body is not on this page

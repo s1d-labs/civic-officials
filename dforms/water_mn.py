@@ -10,6 +10,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_mn"
 URL = "https://www.phedmanipur.gov.in/wp-content/uploads/2026/06/SUO-MOTU-DISCLOSURES-PHED-30-06-2026.pdf"
 MOBILE = re.compile(r"^\d{10}$")

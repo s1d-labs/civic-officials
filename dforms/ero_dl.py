@@ -10,6 +10,8 @@ Record ids: dept:ero_dl:DL-AC-<no>:ero and dept:ero_dl:DL-AC-<no>:aero:voter-cen
 """
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_dl"
 BASE = "https://ceodelhinet.nic.in/ceodelhiweb/"
 PAGES = {"ero": ("EROContactn.aspx", "ctl00_ContentPlaceHolder1_EROContacts"),

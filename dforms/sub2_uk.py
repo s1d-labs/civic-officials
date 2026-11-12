@@ -29,6 +29,8 @@ import time
 
 from dforms import _esw
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub2_uk"
 URL = "https://ukrd.uk.gov.in/directory/"
 LGD = ["Almora", "Bageshwar", "Chamoli", "Champawat", "Dehradun", "Haridwar", "Nainital", "Pauri Garhwal", "Pithoragarh", "Rudraprayag",

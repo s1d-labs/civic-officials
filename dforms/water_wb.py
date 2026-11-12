@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_wb"
 FORM = "https://www.wbphed.gov.in/en/contacts"
 SEARCH = "https://www.wbphed.gov.in/en/contacts/searchContacts"

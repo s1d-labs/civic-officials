@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 
 from forms.aspnet import session
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://ceo.mizoram.gov.in/officer-contacts?officer_type=blo&blo_page={}"
 
 # ECI assembly constituency numbers (2008 delimitation); keys are lower-case letters and digits only, "(ST)" removed

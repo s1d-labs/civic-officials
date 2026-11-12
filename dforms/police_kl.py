@@ -10,6 +10,8 @@ import re
 
 from dforms._police import clean, gz, phones, rec, slug, uniq
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_kl"
 URL = "https://keralapolice.gov.in/storage/pages/custom/ckFiles/file/RDBrCgXQ7yDQqKfazhg9MphN8DWUdgGcXFThGhoy.pdf"
 DISTRICTS = {"THIRUVANANTHAPURAM CITY", "THIRUVANANTHAPURAM RURAL", "KOLLAM CITY", "KOLLAM RURAL", "PATHANAMTHITTA", "ALAPPUZHA",

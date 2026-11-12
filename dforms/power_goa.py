@@ -14,6 +14,8 @@ import re
 
 from dforms._power import Out, clean, email, raw, slug
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://www.goaelectricity.gov.in/wp-content/uploads/2026/06/Telephone-Directory-2026-27-1.pdf"
 HEAD = re.compile(r"^\s*(Office of the .*Engineer.*|Head Office.*)$")
 NUM = re.compile(r"^\s*(\d{1,3})(?:\.\s*|\s+|$)(.*)$")

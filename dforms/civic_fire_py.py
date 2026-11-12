@@ -11,6 +11,8 @@ import re
 
 from dforms import _civic, _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fire_py"
 URL = "https://fire.py.gov.in/sites/default/files/directory-officers-and-employees.pdf"
 ROW = re.compile(r"^\s*(\d{1,2})\.\s+\S")

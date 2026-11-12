@@ -13,6 +13,8 @@ import re
 
 from dforms._power import Out, clean, raw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://tgsouthernpower.org/api/contacts/official-contacts"
 OP = re.compile(r"^(SE|DE|ADE|AE)\s*/\s*(?:OP|OPN|O)\s*/\s*(.+)$", re.I)
 ZONE = re.compile(r"^CE\s*/\s*(.*ZONE.*)$", re.I)

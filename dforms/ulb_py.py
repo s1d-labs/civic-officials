@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_py"
 KARAIKAL = "https://karaikal.gov.in/about-district/who-s-who/"
 BODY = re.compile(r"\b([A-Z][A-Za-z]+(?:\s[A-Z][A-Za-z]+)?)\s+Municipality\b")

@@ -38,6 +38,8 @@ from urllib.parse import urlparse
 from dforms import _civic, _esw, _ulb
 from dforms.police_s3waas import cards as _cards, last_updated
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_s3waas"
 MAX_PAGES = 30
 HERE = Path(__file__).resolve().parent

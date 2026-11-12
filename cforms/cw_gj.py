@@ -27,6 +27,8 @@ from bs4 import BeautifulSoup
 
 from cforms import gj, tn
 
+METHOD = "ocr tesseract + pdf text (pypdf) + json api + html page"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://sec.gujarat.gov.in/"
 START = ("index.htm", "election-results.htm", "election-oct-2026", "DisplayNews.htm", "result-muncipality-2026.htm",
          "result-nagarpalika-2026.htm", "sitemap.htm")

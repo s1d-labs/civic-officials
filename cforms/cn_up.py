@@ -24,6 +24,8 @@ from bs4 import BeautifulSoup
 
 from cforms.cn_krutidev import convert
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map + html table"     # source trail (provenance.py): how this reader reads its sources
+
 ELECTION = "Uttar Pradesh urban local bodies general election 2023 (poll 4 and 11 May 2023)"
 SOURCES = {
     "lucknow": {"url": "https://lmc.up.nic.in/pdf/Corporator_2023_2027_sapath_date_26_05_2023_Main_List.pdf", "body_en": "Lucknow",

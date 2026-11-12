@@ -13,6 +13,8 @@ import re
 
 from dforms import _civic, _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fire_ap"
 URL = "https://fireservices.ap.gov.in/Fire/fire_contact_distofficersingle?distId={}"
 DISTRICTS = 28

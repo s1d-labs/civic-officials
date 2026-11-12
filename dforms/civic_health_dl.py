@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_health_dl"
 URL = "https://dgehs.delhi.gov.in/sites/default/files/DGHS/generic_multiple_files/list_of_dgds_seed_puhcs_polyclinic.pdf"
 TYPE = re.compile(r"(?i)^(dgd|seed\s*puhc|spuhc|poly\s*clinic|aam aadmi polyclinic|puhc|uphc)$")

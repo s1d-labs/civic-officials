@@ -30,6 +30,8 @@ import re
 
 from dforms._wm2_arcgis import page_layer, query, store
 
+METHOD = "arcgis feature layer (geojson)"     # source trail (provenance.py): how this reader reads its sources
+
 LAYER = "https://gisprod.rajasthan.gov.in/dynamicquery/rest/services/GISSurvey/Ward_Bndy_ULB/MapServer/0"
 TOKEN_API = "https://rajdharaa.rajasthan.gov.in/RajdharaaCommonWebAPI/api/GenerateGISToken"
 VIEWER = "https://rajdharaa.rajasthan.gov.in/citizenUDH/"

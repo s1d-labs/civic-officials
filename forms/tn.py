@@ -15,6 +15,8 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://www.erolls.tn.gov.in/blo/"
 UA = "s1d-labs-public-records/1.0 (+https://labs.s1d.me)"
 P = "ctl00$ContentPlaceHolder1$"

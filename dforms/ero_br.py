@@ -8,6 +8,8 @@ Record ids: dept:ero_br:BR-AC-<no>:ero (BR-AC-<slug>:ero when the name stays unm
 """
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_br"
 URL = "http://ceoelection.bihar.gov.in/RO-ERO_Contact_Details2025.html"
 ALIAS = {"surajgarha": "suryagarha", "chiraiya": "chiraia"}   # normalised page name -> layer name, where ac_no() misses

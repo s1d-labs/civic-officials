@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, phone, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power_hpsebl"
 URL = "https://www.hpseb.in/irj/go/km/docs/internet/New_Website/Pages/contactlist.html"
 

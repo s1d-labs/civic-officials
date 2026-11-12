@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_ga"
 URL = "https://ceogoa.nic.in/appln/UIL/ERO.aspx"
 AC = re.compile(r"^\s*(\d{1,2})\s*[-–.]\s*(.+?)\s*$")

@@ -16,6 +16,8 @@ import re
 
 from dforms import _esw, _ward, _ward_kd as kd
 
+METHOD = "pdf text (pypdf) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward_meerut"
 BODY, LGD, STATE, DISTRICT = "Meerut Nagar Nigam", "248964", "UP", "Meerut"
 URL = "https://meerutnagarnigam.com/downloads/Wardwise-Sanitary-Inspector-And-Safai-Supervisor-List.pdf"

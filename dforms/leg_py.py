@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_py"
 URL = "https://py.gov.in/mlas"
 ALIAS = {"kamarajnagar": "kamrajnagar", "neravytrpattinam": "neravytrpattin", "orleanpeth": "orleampeth"}

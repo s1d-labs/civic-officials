@@ -20,6 +20,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_ranchi"
 BODY, LGD, STATE, DISTRICT = "Ranchi Municipal Corporation", "250413", "JH", "Ranchi"
 TC_URL = "https://municipalservices.jharkhand.gov.in/CitizenProperty/list_tax_collector"

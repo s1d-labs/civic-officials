@@ -12,6 +12,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, gz, phones, rec, slug, uniq
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_jk"
 PS_IN_CELL = re.compile(r"(P/S\s+[^()]+?)\s*(?:\(([^)]*)\))?(?=\s*P/S\s|$)")
 LABEL = re.compile(r"^\(?\s*(SHO\s+(?:PS|Police Station)|I/C\s+PP|PS|P/S|PP|SDPO|Police Station)\s+(.+?)\s*\)?$", re.I)

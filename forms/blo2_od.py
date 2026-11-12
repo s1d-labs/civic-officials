@@ -10,6 +10,8 @@ The WFS answered from Germany on 2026-11-11. Properties are kept verbatim in "ce
 """
 import requests
 
+METHOD = "geojson layer (WFS GetFeature)"     # source trail (provenance.py): how this reader reads its sources
+
 WFS = "https://mapserver.odisha4kgeo.in/geoserver/bbd_ceo/ows"
 LAYER = "bbd_ceo:booth_location_m"
 N_AC = 147

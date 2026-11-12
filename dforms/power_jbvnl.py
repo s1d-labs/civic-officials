@@ -14,6 +14,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, email, phone, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power_jbvnl"
 URL = "https://jbvnl.co.in/know-your-officers"
 LEVEL = {"section": "section", "sub-division": "subdivision", "subdivision": "subdivision", "division": "division",

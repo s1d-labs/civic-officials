@@ -20,6 +20,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub2_up_prd"
 URL = "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public"
 LGD = ["Agra", "Aligarh", "Ambedkar Nagar", "Amethi", "Amroha", "Auraiya", "Ayodhya", "Azamgarh", "Baghpat", "Bahraich", "Ballia",

@@ -17,6 +17,8 @@ import tempfile
 
 from cforms import hr
 
+METHOD = "ocr tesseract"     # source trail (provenance.py): how this reader reads its sources
+
 COLS = {"UP": ["sr", "district", "body", "reservation", "name", "father", "phone"],
         "UK": ["sr", "district", "body", "designation", "name", "phone"]}
 TYPES = [("नगर निगम", "Municipal Corporation"), ("नगर पालिका परिषद", "Municipal Council"), ("नगर पंचायत", "Nagar Panchayat")]

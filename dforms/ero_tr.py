@@ -13,6 +13,8 @@ import re
 from dforms import _esw
 from forms.aspnet import hidden
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_tr"
 BASE = "https://erms.tripura.gov.in/encoretripura/outviews/"
 PAGES = {"ero": "viewERO.aspx", "aero": "viewEROAERO.aspx"}

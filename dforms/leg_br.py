@@ -10,6 +10,8 @@ import re
 
 from dforms import _leg
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_br"
 URL = "https://vidhansabha.bihar.gov.in/Knowyourmla.html"
 EMAIL_NOTE = "from a hidden (commented-out) column of the page"

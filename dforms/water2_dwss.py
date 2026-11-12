@@ -16,6 +16,8 @@ import re
 from dforms import _esw
 from dforms._water import unique
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water2_dwss"
 URL = "https://dwss.punjab.gov.in/contact-us/"
 ORG = "Department of Water Supply & Sanitation, Punjab"

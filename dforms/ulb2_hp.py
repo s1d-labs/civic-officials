@@ -15,6 +15,8 @@ Not India-only: mcnadaun.in, mchamirpur.com and npamb.in answered from Germany o
 """
 from dforms import _esw, _ulb2_nw
 
+METHOD = "pdf text (pypdf) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_hp"
 STATE = "HP"
 # start url | LGD code | district | body (LGD name) | body type | name on the site when it differs ("A|B" = either)

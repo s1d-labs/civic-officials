@@ -9,6 +9,8 @@ import re
 
 from bs4 import BeautifulSoup
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://tsec.gov.in/"
 TOKEN = "org.apache.struts.taglib.html.TOKEN"
 

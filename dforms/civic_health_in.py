@@ -30,6 +30,8 @@ import urllib.parse
 
 from dforms import _esw
 
+METHOD = "arcgis feature layer (json)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_health_in"
 LAYER = "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0"
 CENTRES = "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Health/MapServer/0"

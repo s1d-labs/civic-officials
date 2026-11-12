@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, email, phone, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://power.arunachal.gov.in/contact.php"
 HEADS = {"zone": re.compile(r"^Chief Engineer", re.I), "circle": re.compile(r"^(Superintending Engineer|SE\b)", re.I),
          "division": re.compile(r"^Executive Engineer", re.I)}

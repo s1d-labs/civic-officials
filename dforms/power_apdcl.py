@@ -10,6 +10,8 @@ import json
 
 from dforms._power import Out, clean, email, phone, raw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://www.apdcl.org/website/api/web/allContact"
 TYPES = {2: ("zone", "zone_name", "General Manager"), 3: ("circle", "circle_name", "Deputy General Manager"),
          4: ("division", "division_name", "Assistant General Manager"), 5: ("subdivision", "sd_name", "Sub-Divisional Engineer")}

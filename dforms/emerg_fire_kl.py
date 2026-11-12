@@ -18,6 +18,8 @@ import re
 
 from dforms import _emerg, _esw
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_fire_kl"
 HOST = "https://fire.kerala.gov.in"
 DISTRICTS = (  # Malayalam spelling (start) -> English

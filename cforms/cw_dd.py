@@ -21,6 +21,8 @@ import tempfile
 
 from bs4 import BeautifulSoup
 
+METHOD = "ocr tesseract eng + pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 LIST = "https://ddd.gov.in/document-category/latest-updates/page/{}/"
 WINDOWS = ((datetime.date(2025, 11, 1), datetime.date(2026, 1, 31), "DNH&DD Municipal Councils 2025"),
            (datetime.date(2023, 2, 1), datetime.date(2023, 6, 30), "Diu Municipal Council 2023"))

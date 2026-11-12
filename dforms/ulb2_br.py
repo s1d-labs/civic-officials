@@ -28,6 +28,8 @@ from pathlib import Path
 
 from dforms import _esw, _ulb
 
+METHOD = "pdf text (pypdf) + json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_br"
 STATE = "BR"
 URL = "https://betastate.bihar.gov.in/file_2/FileUpload/2026/Jan/09-Jan-2026/19/DyPage/062d1115-4ac3-46f7-96d2-59a58fbc7c96.pdf"

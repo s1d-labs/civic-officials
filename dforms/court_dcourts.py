@@ -20,6 +20,8 @@ from urllib.parse import urlparse
 from dforms import _civic, _esw
 from dforms.police_s3waas import last_updated
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "court_dcourts"
 SUB = re.compile(r"sub[- ]?divisional|\bsdjm\b|\bsdm\b|outlying|taluk|taluka|tehsil|tahsil|munsif|munsiff|gram nyayalaya|"
                  r"link court|\bbranch\b|camp court|civil court (?:jr|junior)", re.I)

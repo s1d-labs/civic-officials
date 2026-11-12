@@ -16,6 +16,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_clinic_mumbai"
 URL = ("https://portal.mcgm.gov.in/irj/go/km/docs/documents/MCGM%20Department%20List/Public%20Health%20Department/Docs/"
        "List%20of%20Disp%20English%20version.pdf")

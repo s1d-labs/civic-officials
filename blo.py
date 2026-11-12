@@ -77,7 +77,8 @@ def form_rows(p, rows):
                "ac_name": r.get("ac_name", p.get("ac_name")), "district": r.get("district", p.get("district")), "part_no": part,
                "station": r.get("station") or station, "blo_name": r.get("blo_name") or name, "blo_phone": r.get("blo_phone") or phone,
                **({"designation": r["designation"]} if r.get("designation") else {}),
-               **{k: r[k] for k in ("ocr", "page") if k in r}, "cells": c}
+               **{k: r[k] for k in ("ocr", "page") if k in r}, "cells": c,
+               **{k: r[k] for k in ("src_pos", "src_url", "src_sha256", "src", "method") if r.get(k)}}
         out.append((f"blo:{p['state']}:{rec['ac_no']}:{part or i}", rec))
     return out
 
@@ -88,11 +89,21 @@ def run_form(item, get=None):
     p = item["payload"]
     mod = importlib.import_module("forms." + p["kind"].split("-", 1)[1])
     s = mod.new_session() if hasattr(mod, "new_session") else aspnet.session()
+    if getattr(get, "trail", None) is not None:      # the reader's own session: every answer it gets goes into the source trail
+        s.hooks["response"].append(provenance.hook(get.trail))
     if hasattr(mod, "read"):
         rows, files, why = mod.read(s, p, getattr(get, "hub", None))
         return form_rows(p, rows), files, "" if rows else (why or "no rows")
     rows = mod.fetch(s, p)
     return form_rows(p, rows), [], "" if rows else "no rows"
+
+
+def reader_method(p):
+    """METHOD of the forms/<x>.py reader of a "form-<x>" item (built-in kinds set "method" on each record)."""
+    k = p.get("kind", "")
+    if not k.startswith("form-"):
+        return ""
+    return getattr(sys.modules.get("forms." + k.split("-", 1)[1]), "METHOD", "") or ""
 
 
 def run(item, get):
@@ -114,12 +125,15 @@ def run(item, get):
             pages = []
         for i, text in enumerate(pages, 1):
             recs.append((f"blo:{st}:{key}:p{i}", {"type": "blo_pdf_page", "state": st, "url": p["url"], "page": i, "text": text,
-                                                  "file": files[0][0], **{k: p[k] for k in ("ac_no", "label") if k in p}}))
+                                                  "file": files[0][0], **{k: p[k] for k in ("ac_no", "label") if k in p},
+                                                  "src_pos": {"page": i}, "method": "pdf text (pypdf, one record per page)"}))
         return recs, files, ""
     files = [(f"blo/{st}/{key}.{'json' if kind.endswith('json') else 'html'}.gz", gzip.compress(r.content), "application/gzip")]
     if kind == "ka-ac-json":
         try:
             recs = ka_ac(r.json(), p)
+            for i, (_, d) in enumerate(recs):
+                d["src_pos"], d["method"] = {"key": "parts", "index": i}, "json api"
         except ValueError:
             return [], files, "not JSON"
     else:
@@ -133,12 +147,14 @@ def run(item, get):
                 return [], files, "not JSON"
         n = 0
         for t in tables(text):
-            for cells in t["rows"]:
+            for cells, tp in zip(t["rows"], t["pos"]):
                 f = normalise(cells)
                 rid = f"blo:{st}:{p['booth_id']}:{n}" if p.get("booth_id") else f"blo:{st}:{key}:{n}"
                 recs.append((rid, {"type": "blo", "state": st, "url": p["url"], "category": t["caption"],
                                                      **{k: p[k] for k in ("ac_no", "ac_name", "district", "part_no", "station", "booth_id") if k in p},
-                                                     "blo_name": f.get("name", ""), "blo_phone": f.get("phone", ""), "cells": cells}))
+                                                     "blo_name": f.get("name", ""), "blo_phone": f.get("phone", ""), "cells": cells,
+                                                     "src_pos": ({"field": "selectHtml"} if kind == "json-html" else {}) | tp,
+                                                     "method": "json api + html table" if kind == "json-html" else "html table"}))
                 n += 1
     return recs, files, "" if recs else "no rows"
 
@@ -177,6 +193,7 @@ def main():
         trail.note(r, url, method, data)
         return r
     get.hub = hub      # readers that keep their files in the bucket (forms/blo2_ocr.py) read them back through the hub
+    get.trail = trail  # forms/*.py readers use their own session: run_form hooks it into the trail
 
     try:
         while time.time() < deadline and not stop:
@@ -201,7 +218,7 @@ def main():
             except Exception as e:
                 recs, files, why = [], [], f"{type(e).__name__}: {e}"[:200]
             n_data = len(recs)
-            recs, files = trail.finish(recs, files)
+            recs, files = trail.finish(recs, files, reader_method(item["payload"]))
             for attempt in range(5):
                 try:
                     for i in range(0, len(files), 100):      # source copies can make many files: links in chunks

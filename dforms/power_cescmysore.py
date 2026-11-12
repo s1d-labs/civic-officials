@@ -14,6 +14,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, email, phone, raw, slug
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://cescmysore.karnataka.gov.in/"
 SECTION = re.compile(r"^Section\s*Officer\s*-?\s*(.+?)\s*(?:\b(AE|JE|AEE)\b\.?)?\s*$", re.I)
 STATION = re.compile(r"^(?:Service\s*Station\s*-\s*(.+)|(.+?)\s*Service\s*station)$", re.I)

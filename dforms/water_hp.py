@@ -11,6 +11,8 @@ import re
 
 from dforms import _esw, _water
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_hp"
 URL = "https://services.hp.gov.in/hpcivil/TelephoneDirectory/GetDataViewPV"
 FORM = {"TabId": "2", "OfficerNm": "", "DepartmentId": "B22", "DepartmentNm": "", "Designation": "", "PhoneNo": ""}

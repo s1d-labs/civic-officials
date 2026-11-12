@@ -9,6 +9,8 @@ import re
 
 from dforms import _emerg, _esw
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_fire_ga"
 URL = "https://dfes.goa.gov.in/overview-functioning/contact-us/"
 LEVELS = {"director": "state", "deputy director": "state", "divisional officer": "zone", "asst. div. officer": "zone"}

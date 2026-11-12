@@ -27,6 +27,8 @@ from urllib.parse import urlparse
 from dforms import _emerg, _esw
 from dforms.police_s3waas import last_updated
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_help_s3waas"
 
 DEPTS = [  # (dept, pattern) in order: the first match wins

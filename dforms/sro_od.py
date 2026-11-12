@@ -6,6 +6,8 @@ Record ids: dept:sro_od:OD-SRO-<district>-<location>, OD-DR-<district>.
 """
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_od"
 URL = "https://igrodisha.gov.in/Offices.aspx"
 JUNK_MAIL = {"temp@gmail.com"}

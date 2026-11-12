@@ -12,6 +12,8 @@ from urllib.parse import urljoin
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_tn"
 BASE = "https://tnreginet.gov.in/portal/"
 LIST = BASE + "webHP?requestType=ApplicationRH&actionVal=sroList&screenId=7000056&fromHome=1"

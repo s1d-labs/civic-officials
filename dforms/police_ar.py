@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_ar"
 STATION = re.compile(r"\bO/?C\b|Officer[- ]in[- ]Charge|Police Station|\bP\.?S\.?(?=\W|$)", re.I)
 OTHER = re.compile(r"Fire|\bFS\b|Control Room|\(SB\)|\bSB\b|\bWT\b|\bRI\b|Reserve|\bMTO\b|\bPC\b|Traffic|Duty Officer|-cum-CI", re.I)

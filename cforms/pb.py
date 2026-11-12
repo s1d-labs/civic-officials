@@ -9,6 +9,8 @@ import gzip
 import json
 import re
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://lbpams.punjab.gov.in/prodapi/api/ResultDeclarationEndpoint/GetPublicResultReportDetailed1"
 TYPES = {4: "Municipal Corporation", 5: "Municipal Council", 6: "Nagar Panchayat"}
 

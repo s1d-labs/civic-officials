@@ -31,6 +31,8 @@ from dforms import _esw, _ulb
 from dforms._pdftext import layout_pages
 from dforms.ulb_uk_krutidev import convert
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map + json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_mp"
 STATE = "MP"
 URL = "https://www.mpurban.gov.in/Uploaded%20Document/ULBs%20Telephone%20and%20emails/Directory%20(3).pdf"

@@ -25,6 +25,8 @@ import re
 from dforms import _esw
 from dforms._water import unique
 
+METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://cmwssb.tn.gov.in/"
 URLS = {"whoswho": BASE + "whos-who", "depots": BASE + "sites/default/files/quick_links/Areaandepotofficeaddress.pdf"}
 MOD = "water2_cmwssb"

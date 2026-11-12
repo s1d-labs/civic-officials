@@ -15,6 +15,8 @@ import tempfile
 
 from cforms import gj
 
+METHOD = "ocr tesseract + pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://chhsambhajinagarmc.org/assets/300/2026/05/mediafiles/Corporator_list-2026.pdf"
 SEATS = "अबकडइ"
 PHONE = re.compile(r"[6-9]\d{9}|0\d{2,4}[- ]?\d{6,8}")

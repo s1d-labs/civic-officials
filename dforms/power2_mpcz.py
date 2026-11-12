@@ -15,6 +15,8 @@ import re
 from dforms import _power, _util2
 from dforms._util2_pdfgrid import rows
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_mpcz"
 BASE = "https://portal.mpcz.in/upload_files/pdf/contact_us/"
 FILES = {  # file -> (circle or office name, district for the circle, kind)

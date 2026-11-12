@@ -17,6 +17,8 @@ from urllib.parse import urlparse
 from dforms import _esw
 from dforms.police_s3waas import last_updated
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "central_transport"
 TITLE = re.compile(r"^(?:(?:shri|smt|sri|mr|mrs|ms|dr|km|kumari)(?:\.\s*|\s+))+", re.I)
 

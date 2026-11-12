@@ -18,6 +18,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_pb"
 URL = "https://mseva.lgpunjab.gov.in/egov-mdms-service/v1/_search?tenantId=pb"
 BODY = {"RequestInfo": {}, "MdmsCriteria": {"tenantId": "pb", "moduleDetails": [{"moduleName": "tenant", "masterDetails": [{"name": "tenants"}]}]}}

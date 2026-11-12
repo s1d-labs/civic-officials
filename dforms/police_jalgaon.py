@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import ascii_digits, clean, email, gz, phones, rec
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_jalgaon"
 LIST = "https://jalgaonpolice.gov.in/police-stations"
 URL = LIST + "?id={}"

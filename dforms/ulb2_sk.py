@@ -15,6 +15,8 @@ Not India-only.
 """
 from dforms import _ulb2_ne
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_sk"
 STATE = "SK"
 GMC = ("Gangtok", "249694", "Municipal Corporation")

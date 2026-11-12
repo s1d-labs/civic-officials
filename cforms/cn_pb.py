@@ -15,6 +15,8 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 PARTIES = {"AAP": "Aam Aadmi Party", "INC": "Indian National Congress", "BJP": "Bharatiya Janata Party", "BSP": "Bahujan Samaj Party",
            "SAD": "Shiromani Akali Dal", "IND": "Independent", "INDEPENDENT": "Independent", "CONGRESS": "Indian National Congress"}
 SOURCES = {"amritsar": {"body": "Amritsar", "district": "Amritsar",

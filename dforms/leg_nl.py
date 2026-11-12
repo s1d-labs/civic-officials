@@ -7,6 +7,8 @@ webtest.nagaland.gov.in/nla) is not read. One queue item = the page. Record ids:
 """
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_nl"
 URL = "https://www.nagaland.gov.in/legislatures"
 ALIAS = {"tenning": "tening"}

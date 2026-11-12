@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, gz, rec, slug, uniq
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police2n_od"
 URL = "https://bhubaneswarcuttackpolice.gov.in/organizational-structure/"
 DISTRICT = {"bhubaneswar": "Khordha", "kataka": "Cuttack", "cuttack": "Cuttack"}

@@ -13,6 +13,8 @@ from collections import Counter
 
 from dforms import _leg
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_dl"
 HOME = "https://delhiassembly.delhi.gov.in/"
 URL = "https://delhiassembly.delhi.gov.in/sites/default/files/2026-09/list_of_member.pdf"

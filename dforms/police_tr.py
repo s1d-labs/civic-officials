@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms.police_s3waas import grid
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_tr"
 OC = re.compile(r"(?:^|[\s,(])(?:I/C\s+)?(O/C|O\.C\.?|OC|I/C)\s+(.+)$", re.I)
 OC_FIRST = re.compile(r"(?:^|[\s,(])(O/C|O\.C\.?|OC)\s+(.+)$")

@@ -6,6 +6,8 @@ Records: level "zone". Ids: dept:ward2n_raipur:zone-<n>:revenue-coordinator.
 """
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_raipur"
 BODY, LGD, STATE, DISTRICT = "Raipur Municipal Corporation", "250653", "CG", "Raipur"
 URL = "https://mcraipur.in/site/contactus"

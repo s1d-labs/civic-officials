@@ -7,6 +7,8 @@ host was found. India only (the *.gujarat.gov.in police hosts time out from Germ
 (~100-160 requests). Record id dept:police2s_gj:<unit>:<designation id>."""
 from dforms import police_gj
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police2s_gj"
 
 

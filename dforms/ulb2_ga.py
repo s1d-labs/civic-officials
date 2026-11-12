@@ -10,6 +10,8 @@ www.goa.gov.in answers 403 from Germany (2026-11-11): india_only.
 """
 from dforms import ulb2_mh
 
+METHOD = "pdf text (pypdf) + json api + html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_ga"
 GOA = "https://www.goa.gov.in/wp-content/uploads/2026/11/"
 ORDERS = (("valpoi", "transfer%20order%20of%20Chief%20Officer%20Valpoi%20Municipal%20Council.pdf"),

@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2_east
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_mspdcl"
 URL = "https://mspdcl.in/about/who-is-who"
 ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4}

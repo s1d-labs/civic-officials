@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, gz, phones, rec, slug
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_nl"
 OC = re.compile(r"^(?:Police Station\s*[–-]\s*)?(?:O/?C|I/?C|OC|IC)\s+(.+)$", re.I)
 PS = re.compile(r"\b(P\.?S\.?|Police Station|Out-?\s?Post|Police Post|PP)\b", re.I)

@@ -13,6 +13,8 @@ from dforms import _esw
 from forms.aspnet import hidden
 from forms.jh import AC_NO, _norm
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_jh"
 BASE = "https://ceojh.jharkhand.gov.in/linkinfo/"
 PAGES = {"ero": "EROOfficecontact.aspx", "aero": "AEROOfficecontact.aspx"}

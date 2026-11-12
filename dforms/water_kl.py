@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw, _water
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_kl"
 URL = "https://kwa.kerala.gov.in/en/contact-us/"
 ORG = "Kerala Water Authority"

@@ -28,6 +28,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, email, pdf_pages, phone, raw, slug
 
+METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_pspcl_offices"
 URLS = {"pio": "https://www.pspcl.in/pdfs/twenty-twentytwo/06/Recent_Updated_PIO_List10092025.pdf",
         "hierarchy": "https://pspcl.in/admin/Hierarchies20261201302.pdf",

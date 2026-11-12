@@ -18,6 +18,8 @@ from bs4 import BeautifulSoup
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms.police_s3waas import grid
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police2n_pb"
 
 SUBDIV = re.compile(r"(?:Deputy Superintendent of Police|D\.?S\.?P\.?)\s*,?\s*(?:\(?\s*)?Sub[- ]?Div(?:ision|n)?\.?\s*(?:\)\s*)?,?\s*(.+)$", re.I)

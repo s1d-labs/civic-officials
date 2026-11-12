@@ -16,6 +16,8 @@ import re
 
 from dforms import _esw, _field
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "field_food_dl"
 DRUGS = "https://drugs.delhi.gov.in/drugs/whos-who"
 FOOD = "https://foodsafety.delhi.gov.in/sites/default/files/Foodsafety/circulars-orders/know_your_officials.pdf"

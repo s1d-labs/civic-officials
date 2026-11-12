@@ -21,6 +21,8 @@ import tempfile
 from cforms import hr
 from cforms.tn import stored
 
+METHOD = "ocr tesseract"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://ulbharyana.gov.in/Website/DynamicUploadContent/CONTENTFILES/b7a90171-1b60-4c3d-8617-5137e031b016.pdf"
 ELECTION = "Haryana 2022 (poll 19.06.2022; SEC notification SEC/1ME/2022/6120 of 04.07.2022)"
 COLS = ["sr", "district", "council", "committee", "ward", "name", "father", "office", "category", "party"]

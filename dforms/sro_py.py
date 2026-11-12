@@ -5,6 +5,8 @@ One queue item. Record ids: dept:sro_py:PY-SRO-<slug of region>.
 """
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_py"
 URL = "https://regn.py.gov.in/contact.html"
 

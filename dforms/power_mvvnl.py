@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 from dforms._pdftext import cut, layout_pages
 from dforms._power import Out, cells, clean, email, phone, raw
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power_mvvnl"
 DIR_URL = "https://mvvnl.in/post/en/directory?cd=NQA2AA%3d%3d"
 LESA_URL = "https://mvvnl.in/site/writereaddata/siteContent/202512061655264596Lesa-Direcotary_061225.pdf"

@@ -14,6 +14,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, email, phone, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://www.tnpdcl.org/en/tnpdcl/reach-us/contact-information/"
 HONORIFIC = re.compile(r"^(Thiru|Tmt|Selvi|Dr|Er|Mr|Mrs|Ms|Shri|Smt)\b\.?", re.I)
 QUAL = re.compile(r"^(north|south|east|west|central|rural|urban|town|city|i{1,3}|iv|v|\d)\b", re.I)

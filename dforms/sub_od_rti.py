@@ -20,6 +20,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub_od_rti"
 BASE = "https://rtiodisha.gov.in"
 SECTION = BASE + "/Pages/getDisclouser/department_id:{dept}/office_id:{office}/district_id:{dist}/section_id:{sec}/language:en"

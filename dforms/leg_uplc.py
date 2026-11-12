@@ -6,6 +6,8 @@ English. Record ids: dept:leg_uplc:UP-LC-<name>.
 """
 from dforms import _leg_neva
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_uplc"
 HOST = "uplc.neva.gov.in"
 ALIAS = {}

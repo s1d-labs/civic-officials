@@ -15,6 +15,8 @@ import re
 
 from forms.blo2_in import MOBILE, download, mobiles, part_of, ruled_tables, split_name
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 COLS = {
     "dnh": ["station", "blo_name", "posted_at", "address"],
     "daman": ["station", "blo", "address"],

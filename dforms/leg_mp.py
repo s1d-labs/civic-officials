@@ -16,6 +16,8 @@ import re
 
 from dforms import _leg
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_mp"
 URL = "https://mpvidhansabha.nic.in/sadasyasuchi16vs.pdf"
 PARTY = {"इं.ने.कां.": "INC", "भा.ज.पा.": "BJP", "भा.आ.पा.": "BAP"}

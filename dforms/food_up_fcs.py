@@ -21,6 +21,8 @@ import re
 
 from dforms import _esw, _field, _ward_kd as kd
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "food_up_fcs"
 CONTACTS = "https://fcs.up.gov.in/PDF/contacts/contact_details.pdf"
 EMAILS = "https://fcs.up.gov.in/PDF/contacts/email_id.pdf"

@@ -18,6 +18,8 @@ from io import BytesIO
 
 from dforms._power import Out, clean, email, phone, raw
 
+METHOD = "spreadsheet (xlsx)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_bescom"
 URL = "https://bescom.karnataka.gov.in/uploads/media_to_upload1757575623.xlsx"
 NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"

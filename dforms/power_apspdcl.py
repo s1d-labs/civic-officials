@@ -17,6 +17,8 @@ from bs4 import BeautifulSoup
 from dforms._power import Out, cells, clean, phone, raw
 from dforms._power_ap import classify
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://www.apspdcl.in/phonenumbers.php"
 MOD = "power_apspdcl"
 

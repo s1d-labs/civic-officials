@@ -35,6 +35,8 @@ from urllib.parse import quote, unquote, urljoin
 from dforms import _esw, _ward
 from dforms.ward2n_mumbai import BASE, BODY, DISTRICT, LGD, STATE, UA, WARDS
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + pdf tables (pdfplumber)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_mumbai_water"
 KM = f"{BASE}/irj/go/km/docs/documents"
 WATER = re.compile(r"(?i)water|hydraul|\bw\.?\s?w\b|जल|पाणी")

@@ -17,6 +17,8 @@ import time
 
 import requests
 
+METHOD = "ocr tesseract tam + pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 WIN_TEXT = ("ெவற்ற", "வெற்றி")           # "won" in the text layer (legacy glyph order) and in OCR
 GENDER = re.compile(r"^(பெண்|பெ[ணன]்?|ஆ[ணனஸ]்?|ஆனன்|ஆன்|திருநங்கை)$")   # with common OCR slips (ஆன், ஆஸ், ஆனன்)
 PARTY = {"தி.மு.க": "DMK", "அ.இ.அ.தி.மு.க": "AIADMK", "பா.ஜ.க": "BJP", "இ.தே.கா": "INC", "சுயேட்சை": "Independent",

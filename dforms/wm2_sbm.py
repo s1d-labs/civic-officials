@@ -21,6 +21,8 @@ import re
 
 from dforms._wm2_arcgis import page_layer, store
 
+METHOD = "arcgis feature layer (geojson)"     # source trail (provenance.py): how this reader reads its sources
+
 LAYER = "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3"
 
 

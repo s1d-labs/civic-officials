@@ -32,6 +32,8 @@ from pypdf import PdfReader
 
 from cforms import cn_krutidev
 
+METHOD = "pdf text (pypdf) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
+
 SPLIT = re.compile(r"\s{2,}")
 MOBILE = re.compile(r"(?<!\d)(?:\+?91[\s-]?)?([6-9]\d{9})(?!\d)")
 PART_H = re.compile(r"part|\bps\b|ps\s*no|p\.s|booth|polling|भाग|मतदान|मतदेय|स्थल\s*सं|बूथ", re.I)

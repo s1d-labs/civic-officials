@@ -14,6 +14,8 @@ import re
 from dforms import _esw, _leg
 from dforms.ero_kl import ALIAS as ERO_ALIAS
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_kl"
 URL = "https://niyamasabha.nic.in/index.php/content/member_contacts"
 ALIAS = {"karunagapally": "karunagappally", "kuttiady": "kuttiadi", "kunnathunadu": "kunnathunad", "thrikkaripur": "trikaripur",

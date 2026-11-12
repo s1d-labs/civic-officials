@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import ascii_digits, clean, email, gz, phones, rec, slug, uniq
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_hr"
 URL = "https://haryanapolice.gov.in/static/DistrictTelephone"
 DISTRICTS = ["ambala", "bhiwani", "charkhidadri", "dabwali", "faridabad", "fatehabad", "gurugram", "hansi", "hisar", "jhajjar",

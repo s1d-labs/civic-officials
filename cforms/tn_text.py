@@ -20,6 +20,8 @@ import tempfile
 
 from cforms.cn_mpdf_ta import convert
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Tamil font map"     # source trail (provenance.py): how this reader reads its sources
+
 BODY_TYPE = {"corp": "மாநகராட்சி", "mun": "நகராட்சி", "tp": "பேரூராட்சி"}
 HEAD = re.compile(r"^\s*(மாநகராட்சி|நகராட்சி|பேரூராட்சி)\s*:\s*(.+?)\s{2,}வார்டு\s*எண்\s*:\s*(\S+)\s*(?:\[(.*?)\]?)?\s*$")
 GENDER = re.compile(r"^(பெண்|ஆண்|திருநங்கை|மூன்றாம் பாலினம்|இதர)$")

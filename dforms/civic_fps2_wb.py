@@ -10,6 +10,8 @@ every district. Record ids: dept:civic_fps2_wb:<fps_id>.
 """
 from dforms import _civic_fps
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fps2_wb"
 STATE = "WB"
 BASE = "https://smartpds.wb.gov.in"

@@ -14,6 +14,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import ascii_digits, clean, email, gz, phones, rec, slug, uniq
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_ka"
 BASE = "https://ksp.karnataka.gov.in"
 LOCATOR = BASE + "/pslocator/en"

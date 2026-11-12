@@ -9,6 +9,8 @@ import re
 
 from dforms import _emerg, _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_fire_tr"
 URL = "https://fireservice.tripura.gov.in/contact-us"
 

@@ -14,6 +14,8 @@ import re
 
 from dforms._police import clean, email, gz, phones, rec, slug
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_pb"
 BASE = "https://saanjh.punjabpolice.gov.in"
 SOURCE = BASE + "/"

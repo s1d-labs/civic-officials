@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_kl"
 URL = "https://registration.kerala.gov.in/en/contact/"
 HEAD = ["sl", "office", "district", "address", "post", "phone", "email"]

@@ -6,6 +6,8 @@ No assembly site with a member list was found. One queue item = the page. Record
 """
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_sk"
 URL = "https://www.sikkim.gov.in/mygovernment/whos-who/mlas"
 ALIAS = {"khamdungsingtam": "khamdongsingtam", "daramdimbl": "daramdinbl", "westpandam": "westpendam", "dzongubl": "djongubl",

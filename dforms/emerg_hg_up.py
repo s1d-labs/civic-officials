@@ -16,6 +16,8 @@ import re
 from dforms import _emerg
 from dforms._pdftext import layout_pages
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Hindi font fix"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_hg_up"
 URL = "https://homeguard.up.gov.in/Downloads/ContactDetailsofUPHGOfficials.pdf"
 CODES = {

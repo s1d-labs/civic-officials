@@ -22,6 +22,8 @@ from urllib.parse import urljoin, urlparse
 
 from dforms import _esw
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub2_ap"
 STATE = "AP"
 # host -> LGD district name (lgd.districts, state 28)

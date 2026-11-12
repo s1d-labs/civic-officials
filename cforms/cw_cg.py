@@ -24,6 +24,8 @@ import tempfile
 from cforms import gj
 from cforms.tn import stored
 
+METHOD = "ocr tesseract hin + pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://cgsec.gov.in/Notification2025/election/Councillor%202025.pdf"
 ELECTION = "Chhattisgarh urban body general election 2025 (SEC list of elected councillors, Feb 2025)"
 CONS = re.compile("[अ-औक-हक़-य़]")

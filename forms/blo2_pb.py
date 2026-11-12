@@ -10,6 +10,8 @@ import re
 
 from forms.blo2_in import cells, download, layout_lines, mobiles, part_of
 
+METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 TITLE = re.compile(r"AC\s+(\d+)\s*[—–-]\s*(.+?)\s*:\s*BLO list", re.I)
 SOURCE = re.compile(r"source:\s*(.+)$", re.I)
 

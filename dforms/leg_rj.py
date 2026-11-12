@@ -11,6 +11,8 @@ import re
 
 from dforms import _leg
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_rj"
 URL = "https://assembly.rajasthan.gov.in/Containers/Members/Contacts.aspx"
 # the page's spellings -> the names of dforms/ac_no.json (all 53 checked by hand against the AC list, 2026-11-11)

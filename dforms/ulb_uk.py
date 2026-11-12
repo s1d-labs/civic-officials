@@ -27,6 +27,8 @@ from dforms import _esw, _ulb, ulb_up
 from dforms._water import unique
 from dforms.ulb_uk_krutidev import convert
 
+METHOD = "pdf text (pypdf) + Kruti Dev map + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_uk"
 PAGE = "https://udd.uk.gov.in/document-category/list-of-ulb-eo/"
 EO_PDF = "https://cdnbbsr.s3waas.gov.in/s38208974663db80265e9bfe7b222dcb18/uploads/2026/08/202609211745084968.pdf"

@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_oulgaret"
 BODY, LGD, STATE, DISTRICT = "Oulgaret Municipality", "253093", "PY", "Puducherry"
 URL = "https://oulmun.in/sites/default/files/2026-10/listofemployees.pdf"

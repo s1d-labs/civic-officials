@@ -16,6 +16,8 @@ import re
 
 from bs4 import BeautifulSoup
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://ndmc.gov.in/council_members.aspx"
 BODY = "New Delhi Municipal Council"
 

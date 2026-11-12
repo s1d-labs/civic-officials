@@ -26,6 +26,8 @@ from bs4 import BeautifulSoup
 
 from cforms.cp_common import clean, phones, record, slug, useful, ward_no
 
+METHOD = "html page + pdf text (pypdf) + Gujarati font fix"     # source trail (provenance.py): how this reader reads its sources
+
 TITLE = re.compile(r"^(shri|shree|smt|mr|mrs|ms|dr|shrimati)\.?\s+", re.I)
 GU_TITLE = re.compile(r"^(શ્રીમતી|શ્રી|ર્ડો\.|ડો\.|ડૉ\.)\s*")
 

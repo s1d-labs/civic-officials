@@ -20,6 +20,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, rec, slug, uniq
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police2s_kl"
 MAL = re.compile(r"[ഀ-ൿ]")
 ENT = re.compile(r"&(?:amp)?(?:zwj|zwnj|nbsp|amp);?")

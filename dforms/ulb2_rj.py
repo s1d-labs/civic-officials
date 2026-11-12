@@ -25,6 +25,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_rj"
 STATE = "RJ"
 URL = "https://lsg.rajasthan.gov.in/webapi/api/JankalyanHome/GetAllUserDetailList"

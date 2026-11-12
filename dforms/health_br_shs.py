@@ -19,6 +19,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "health_br_shs"
 BASE = "https://shs.bihar.gov.in/"
 PAGE = BASE + "phone-directory.php"

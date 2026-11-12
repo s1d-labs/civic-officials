@@ -15,6 +15,8 @@ from pathlib import Path
 
 from dforms import _esw
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "central_social_security"
 TITLE = re.compile(r"^(?:(?:shri|smt|sri|sh|mr|mrs|ms|dr|km|kumari)(?:\.\s*|\s+))+", re.I)
 LEVEL = (("district-", "district"), ("sub_zone-", "division"), ("zone", "zone"), ("head-office", "state"))

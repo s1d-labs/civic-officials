@@ -7,6 +7,8 @@ Haryana's server answered only from India and gave a database error on 2026-11-1
 """
 from dforms import _civic_fps
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fps_hr"
 STATE = "HR"
 BASE = "https://epos.haryanafood.gov.in"

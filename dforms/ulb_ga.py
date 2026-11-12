@@ -13,6 +13,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_ga"
 URL = "https://southgoa.nic.in/municipalities/"
 CO = re.compile(r"(?i)\bchief\s*officer\b")

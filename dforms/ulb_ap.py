@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_ap"
 URL = "https://apcmms.ap.gov.in/apiv1/public/web/ulbdetails/ulbprofiles"
 GRADES = {"CORP": "Municipal Corporation", "NP": "Nagar Panchayat"}

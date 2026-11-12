@@ -12,6 +12,8 @@ from datetime import datetime
 
 from dforms import _civic, _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fire_tn"
 PAGE = ("https://www.tnfrs.tn.gov.in/subsubmenu_page_content.php?menu_id=NDM2&submenu_id=ODk5&thirdlvl_id={}&dept_id=443"
         "&lang=MQ==")

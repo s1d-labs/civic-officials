@@ -26,6 +26,8 @@ from bs4 import BeautifulSoup
 
 from cforms.cr_common import clean
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 HOST = "https://mcpatiala.punjab.gov.in"
 ELECTION = "Punjab municipal general election 21.12.2024 (e-Nigam Digital MC-House member list)"
 POSTS = {"councillor": None, "president": "President", "vice president": "Vice President", "senior vice president":

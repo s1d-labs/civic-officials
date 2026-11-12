@@ -18,6 +18,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf) + html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_pollst_hr"
 INDEX = "https://ceoharyana.gov.in/WebCMS/Start/1867"
 REVISE = "https://ceoharyana.gov.in/Website/ReviseListOfPollingBooth/"

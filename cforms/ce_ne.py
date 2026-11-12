@@ -11,6 +11,8 @@ import re
 
 from bs4 import BeautifulSoup
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}
 
 

@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_gujarat"
 PAGES = {
     "mgvcl": ("MGVCL", "https://www.mgvcl.com/key-officials.php", "Vadodara"),

@@ -17,6 +17,8 @@ from urllib.parse import unquote, urlparse
 from dforms import _civic, _esw
 from dforms.police_s3waas import cards, last_updated
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_csc_s3waas"
 PLACE = re.compile(r"(?i)\b(village|vill|vpo|v\.?p\.?o|office|road|near|opp|sector|sec|chowk|panchayat|tehsil|block|market|bazar|"
                    r"ward|colony|nagar|street|complex|building|bhawan|kendra|centre|center|bank|kiosk|shop|plot|house|gali|mandir|"

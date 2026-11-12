@@ -11,6 +11,8 @@ Record ids: dept:leg_rs:<ST>-RS-<slug of name>.
 from dforms import _leg
 from dforms.leg_ls import _split_fax
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_rs"
 URL = "https://sansad.in/api_rs/member/sitting-members?page={}&size=300&locale=en"
 PAGES = range(1, 10)

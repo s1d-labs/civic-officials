@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, uniq
 
+METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_ld"
 URL = "https://lakshadweeppolice.gov.in/police_stations"
 CHARTER = "https://www.lakshadweeppolice.gov.in/downloads/citizen_charter_v2.pdf"

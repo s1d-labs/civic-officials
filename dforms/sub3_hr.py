@@ -20,6 +20,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub3_hr"
 URL = "https://revenueharyana.gov.in/Home/WhoIsWhoDistrict/"
 PUSH = re.compile(r"self\.__next_f\.push\(\[\s*1\s*,\s*(\"(?:[^\"\\]|\\.)*\")\s*\]\)", re.S)

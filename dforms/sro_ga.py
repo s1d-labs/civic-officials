@@ -8,6 +8,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_ga"
 URL = "https://reg.goa.gov.in/contact-us.html"
 TALUKA = {"panaji": "Tiswadi", "mormugao": "Mormugao", "satari": "Sattari"}   # office town -> taluka, where the page names the town

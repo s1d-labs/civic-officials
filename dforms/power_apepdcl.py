@@ -18,6 +18,8 @@ from bs4 import BeautifulSoup
 from dforms._power import Out, cells, clean, email, phone, raw
 from dforms._power_ap import classify
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://www.apeasternpower.com/"
 MOD = "power_apepdcl"
 

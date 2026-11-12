@@ -35,6 +35,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_tnurban"
 STATE = "TN"
 BASE = "https://www.tnurbantree.tn.gov.in"

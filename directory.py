@@ -46,6 +46,9 @@ def objects(doc):
     return []
 
 
+METHOD_PDF = "pdf text (pypdf, one record per page)"
+
+
 def pdf_pages(body):
     from pypdf import PdfReader
     try:
@@ -73,7 +76,8 @@ def run(item, get):
     if fmt == "pdf":
         files.append((f"directories/{p.get('state', 'xx')}/{key}.pdf", r.content, "application/pdf"))
         for i, text in enumerate(pdf_pages(r.content), 1):
-            recs.append((f"dir:{key}:p{i}", {"type": "pdf_page", **meta, "url": p["url"], "page": i, "text": text, "file": files[0][0]}))
+            recs.append((f"dir:{key}:p{i}", {"type": "pdf_page", **meta, "url": p["url"], "page": i, "text": text, "file": files[0][0],
+                                             "src_pos": {"page": i}, "method": METHOD_PDF}))
     else:
         files.append((f"directories/{p.get('state', 'xx')}/{key}.{fmt}.gz", gzip.compress(r.content), "application/gzip"))
         if fmt == "json":
@@ -82,26 +86,28 @@ def run(item, get):
             except ValueError:
                 rows = []
             n = 0
-            for cells in rows:
-                embedded = [t for v in cells.values() if "<table" in v for t in tables(v)]
+            for oi, cells in enumerate(rows):
+                embedded = [(k, t) for k, v in cells.items() if "<table" in v for t in tables(v)]
                 if embedded:     # a CMS answer that carries an HTML table inside a text field (e.g. MCD's showContent)
-                    for t in embedded:
-                        for c in t["rows"]:
+                    for field, t in embedded:
+                        for c, tp in zip(t["rows"], t["pos"]):
                             recs.append((f"dir:{key}:{n}", {"type": "row", **meta, "url": p["url"], "category": t["caption"] or p.get("label", ""),
-                                                            "via": "json-html", **normalise(c), "cells": c}))
+                                                            "via": "json-html", **normalise(c), "cells": c,
+                                                            "src_pos": {"index": oi, "field": field, **tp}, "method": "json api + html table"}))
                             n += 1
                     continue
                 recs.append((f"dir:{key}:{n}", {"type": "row", **meta, "url": p["url"], "category": p.get("label", ""), "via": "json",
-                                                **normalise(cells), "cells": cells}))
+                                                **normalise(cells), "cells": cells, "src_pos": {"index": oi}, "method": "json api"}))
                 n += 1
         else:
             if not r.encoding or r.encoding.lower() == "iso-8859-1":
                 r.encoding = r.apparent_encoding or "utf-8"
             n = 0
             for t in tables(r.text) + pubutility(r.text):
-                for cells in t["rows"]:
+                for cells, tp in zip(t["rows"], t["pos"]):
                     recs.append((f"dir:{key}:{n}", {"type": "row", **meta, "url": p["url"], "category": t["caption"] or p.get("label", ""),
-                                                    "via": "table", **normalise(cells), "cells": cells}))
+                                                    "via": "table", **normalise(cells), "cells": cells, "src_pos": tp,
+                                                    "method": "html table" if "table" in tp else "html cards (S3WaaS public utility)"}))
                     n += 1
     recs.append((f"dir:{key}", {"type": "source", **meta, "url": p["url"], "fmt": fmt, "records": len(recs), "file": files[0][0] if files else ""}))
     return recs, files, ""

@@ -23,6 +23,8 @@ from datetime import datetime
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_kl"
 INDEX = "https://lsgkerala.gov.in/en/website/web"
 PAGES = 80                     # safety stop; the index has about 60 pages

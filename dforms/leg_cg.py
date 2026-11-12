@@ -15,6 +15,8 @@ import re
 
 from dforms import _esw, _leg, _leg_neva
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_cg"
 URL = "https://cgvidhansabha.gov.in/hindi_new/mla_current.htm"
 PARTY = {"भारतीय जनता पार्टी": "BJP", "इंडियन नेशनल कांग्रेस": "INC", "गोंडवाना गणतंत्र पार्टी": "GGP"}

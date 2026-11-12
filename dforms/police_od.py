@@ -10,6 +10,8 @@ from bs4 import BeautifulSoup
 from dforms._police import clean, gz, rec, slug, uniq
 from dforms.police_s3waas import fix_phone, grid, level_of
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_od"
 CONTACT = re.compile(r"Contact\s*No\.?\s*[-:.]?\s*(.*)$", re.I)
 OFFICER = re.compile(r"^(?:Shri\.?\s+|Smt\.?\s+)?(Inspector|Inspr\.?|S\.?I\.?|Sub[- ]Inspector)?\s*\.?\s*([^,]+?)\s*,?\s*(IIC|OIC|SDPO|DSP)\b", re.I)

@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_ga"
 HOME = "https://citizen.goapolice.gov.in/"
 

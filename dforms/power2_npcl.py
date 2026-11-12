@@ -13,6 +13,8 @@ import re
 
 from dforms._power import Out, clean, phone, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power2_npcl"
 URL = "https://www.noidapower.com/contact-us"
 BASE = "https://www.noidapower.com"

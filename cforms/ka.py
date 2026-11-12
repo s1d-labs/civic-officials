@@ -16,6 +16,8 @@ import socket
 import requests
 from bs4 import BeautifulSoup
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 KN_DIGITS = str.maketrans("೦೧೨೩೪೫೬೭೮೯", "0123456789")
 
 # column header -> field; checked in this order, first match wins (English and Kannada headers)

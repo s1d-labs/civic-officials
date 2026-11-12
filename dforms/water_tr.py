@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_tr"
 URL = "https://dws.tripura.gov.in/Contact_Report.aspx"
 KEEP = re.compile(r"engineer|secretary|director|chemist|\bS\.?E\b|\bE\.?E\b|\bA\.?E\b|\bJ\.?E\b", re.I)

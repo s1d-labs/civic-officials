@@ -18,6 +18,8 @@ from urllib.parse import urlparse
 from dforms import _civic, _emerg
 from dforms.police_s3waas import cards, last_updated
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_hosp_s3waas"
 EMERG = re.compile(r"(?i)\b(casualty|emergency|trauma|ambulance)\b[^:\d|]{0,15}:?\s*((?:\+?\d[\d -]{6,}\d[,/ ]*)+)")
 CONTACT = re.compile(r"(?i)(?:contact|phone|ph|mob(?:ile)?|tel|landline)[^:\d]{0,12}:?\s*((?:\+?\d[\d -]{5,}\d[,/ ]*)+)")

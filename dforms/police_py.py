@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, uniq
 
+METHOD = "json api + html page"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_py"
 BASE = "https://police.py.gov.in/"
 RANK = re.compile(r"\b(Inspector|Sub[- ]Inspector|Superintendent|Dy\.? ?S\.?P|Assistant Sub|SI\b|ASI\b|Head Constable)", re.I)

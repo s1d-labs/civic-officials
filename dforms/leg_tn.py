@@ -11,6 +11,8 @@ import re
 
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_tn"
 URL = "https://www.assembly.tn.gov.in/17thassembly/members.php"
 PARTY = re.compile(r"^[A-Z][A-Z.]{1,9}(?:\s?\(M\))?$")

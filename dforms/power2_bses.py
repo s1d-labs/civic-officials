@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, email, phone, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power2_bses"
 BASE = "https://www.bsesdelhi.com"
 SITES = {"brpl": "BSES Rajdhani Power Limited", "bypl": "BSES Yamuna Power Limited"}

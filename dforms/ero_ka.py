@@ -12,6 +12,8 @@ from collections import Counter, OrderedDict
 
 from dforms import _esw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_ka"
 URL = "https://ceo.karnataka.gov.in/blo_data/ac/{}.json"
 ACS = range(1, 225)

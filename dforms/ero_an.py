@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_an"
 URL = "https://www.ceoandaman.nic.in/election/downloads/List%20of%20officers.pdf"
 UPDATED = "2025-11-01"

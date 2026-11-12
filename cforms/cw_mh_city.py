@@ -18,6 +18,8 @@ from bs4 import BeautifulSoup
 
 from cforms import gj
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 DIGITS = str.maketrans("०१२३४५६७८९", "0123456789")
 ELECTION = "Maharashtra Municipal Corporation General Election 2026"
 SITES = {

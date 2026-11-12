@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 
 from forms.aspnet import hidden, options
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 U = "https://uad.cg.gov.in/UrbanLocalBodies/ParshadsearchHome.aspx"
 P = "ctl00$ContentPlaceHolder1$"
 COLS = {"जिले का नाम": "district", "निकाय का नाम": "body", "निकाय का प्रकार": "body_type", "पार्षद का नाम": "name",

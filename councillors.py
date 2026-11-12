@@ -95,13 +95,13 @@ def kl_body(p, get):
     files = [(f"councillors/KL/body-{p['lb_id']}.html.gz", gzip.compress(r.content), "application/gzip")]
     soup = BeautifulSoup(r.text, "lxml")
     rows = []
-    for tr in soup.select("table tr"):
+    for n, tr in enumerate(soup.select("table tr"), 1):
         a = tr.find("a", href=re.compile(r"wyr/view/\d+"))
         tds = [" ".join(td.get_text(" ", strip=True).split()) for td in tr.find_all("td")]
         if a and tds:
-            rows.append((urljoin(p["url"], a["href"]), tds))
+            rows.append((urljoin(p["url"], a["href"]), tds, n))
     recs = []
-    for url, tds in rows:
+    for url, tds, n in rows:
         if stop:
             break
         m = get(url)
@@ -109,7 +109,10 @@ def kl_body(p, get):
             continue
         d = kl_member(m.text)
         d.update({"type": "councillor", "state": "KL", "url": url, "list_url": p["url"], "lb_id": p["lb_id"],
-                  "row_ml": tds, "election": d.get("election") or "General Election -2025"})
+                  "row_ml": tds, "election": d.get("election") or "General Election -2025",
+                  # the fields come from the member's detail page; row_ml from row n of the body's ward list
+                  **provenance.at(m, url), "src_pos": {"selector": "detail page labels", "list_row": n},
+                  "method": "html page (labels on the member's detail page)"})
         key = d.get("ward_code") or f"{p['lb_id']}:{d.get('ward_no') or len(recs)}"
         recs.append((f"councillor:KL:{key}", d))
     return recs, files, "" if recs else ("no members" if not rows else "member pages did not answer")
@@ -127,7 +130,8 @@ def pdf(p, get):
     except Exception as e:
         return [], files, f"pdf: {type(e).__name__}"
     recs = [(f"councillor-pdf:{p['state']}:{key}:p{i}", {"type": "councillor_pdf_page", "state": p["state"], "url": p["url"], "page": i,
-             "text": text, "file": files[0][0], **{k: p[k] for k in ("label", "election", "body") if k in p}})
+             "text": text, "file": files[0][0], **{k: p[k] for k in ("label", "election", "body") if k in p},
+             "src_pos": {"page": i}, "method": "pdf text (pypdf, one record per page)"})
             for i, text in enumerate(pages, 1)]
     return recs, files, "" if recs else "empty pdf"
 

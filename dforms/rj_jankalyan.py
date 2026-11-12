@@ -31,6 +31,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "rj_jankalyan"
 API = "https://districtfrontwebapi.rajasthan.gov.in/PublicPortal/DepartmentWebsite/GetDepartmentContactDetail"
 # host label -> (department code of the portal, LGD district name or None, dept, level)

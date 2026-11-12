@@ -7,6 +7,8 @@ Records: level "ward", post "Ward Officer", wards = [the ward]. Record ids: dept
 """
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_sambalpur"
 BODY, LGD, STATE, DISTRICT = "Sambalpur Municipal Corporation", "253100", "OD", "Sambalpur"
 URL = "https://smcsambalpur.nic.in/ward-officer-list/"

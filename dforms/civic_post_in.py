@@ -15,6 +15,8 @@ from urllib.parse import urlencode
 
 from dforms import _civic, _esw
 
+METHOD = "arcgis feature layer (json)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_post_in"
 LAYER = "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query"
 TOTAL = 165366

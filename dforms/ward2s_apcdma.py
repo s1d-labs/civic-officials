@@ -12,6 +12,8 @@ any public list that we found. No "last updated" date. Record ids: dept:ward2s_a
 """
 from dforms import _esw, _ward
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_apcdma"
 STATE = "AP"
 API = "https://apcmms.ap.gov.in/apiv1/open/department/list/"

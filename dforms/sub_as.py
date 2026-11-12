@@ -18,6 +18,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub_as"
 URL = "https://pds.assam.gov.in/portal/dc-offices.html"
 

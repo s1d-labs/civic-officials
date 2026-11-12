@@ -10,6 +10,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_mn"
 URL = "https://ceomanipur.nic.in/officers_contact"
 NO = re.compile(r"^\s*(\d{1,3})\s*[-–.]\s*(.+?)\s*$")

@@ -12,6 +12,8 @@ import re
 
 from dforms._police import clean, email, gz, rec, slug, uniq
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_tn"
 BASE = "https://www.police.tn.gov.in/digigov/contactUs"
 SOURCE = "https://www.police.tn.gov.in/citizenportal/contactus"

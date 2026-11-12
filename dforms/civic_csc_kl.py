@@ -15,6 +15,8 @@ import re
 
 from dforms import _civic, _esw
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_csc_kl"
 BASE = "https://akshaya.kerala.gov.in"
 PAGES = 80

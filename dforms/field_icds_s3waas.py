@@ -9,5 +9,7 @@ Records: dept women_child, layer field, field_layer icds. Ids dept:field_icds_s3
 """
 from dforms import _field
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "field_icds_s3waas"
 items, fetch = _field.reader(MODULE, "icds")

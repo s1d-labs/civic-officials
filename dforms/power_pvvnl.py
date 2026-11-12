@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, email, phone, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power_pvvnl"
 BASE = "https://pvvnl.org/office_hierarchy/"
 DISTRICTS = ["Amroha", "Baghpat", "Bijnor", "Bulandshahar", "Gautam Buddha Nagar", "Ghaziabad", "Hapur", "Meerut", "Moradabad",

@@ -10,6 +10,8 @@ import re
 
 from dforms._police import ascii_digits, email, gz, phones, rec, uniq
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_pune"
 API = "https://admin.punepolice.gov.in/api/ps"
 SITE = "https://punepolice.gov.in/"

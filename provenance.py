@@ -14,6 +14,13 @@ Every data record of the item gets:
   "method": what the reader did ("html table", "pdf text", "ocr", "json api", ...): the reader's own value, else the module's
            METHOD constant, else a default from the content type;
 and keeps any position the reader gives in "src_pos" ({"page", "line", "row", "cells"} as the reader knows them).
+How a record names its source, most exact first:
+  1. data["src_sha256"] (from at(r)): the exact bytes; needed when one url gave several answers (POST paging, ASP.NET postbacks);
+  2. data["src_url"]: the url the reader passed to get() (or the final url); used only when that url gave one answer in the item;
+  3. the item read one source only;
+  4. the record's own url field ("url", "source", "page", "pdf_url", "file_url") when it is a url the item read and that url gave
+     one answer: src then carries "via": "record url" (the reader did not say it in so many words).
+A reader that reads a copy saved in the bucket earlier sets data["src"] = {"sha256", "url", "file"} itself; it is kept.
 """
 import gzip
 import hashlib
@@ -58,6 +65,49 @@ def ext_of(ctype, url):
     if "." in tail and len(tail.rsplit(".", 1)[1]) <= 5:
         return "." + tail.rsplit(".", 1)[1].lower()
     return ".bin"
+
+
+def at(r, url=None):
+    """What a record says about its source response r: {"src_url": the url asked (else r.url), "src_sha256": hash of the bytes}.
+    The hash is worked out once per response. Use as data.update(provenance.at(r, url)) or {**provenance.at(r, url), ...}."""
+    if r is None:
+        return {}
+    sha = getattr(r, "_src_sha256", None)
+    if sha is None:
+        try:
+            sha = hashlib.sha256(r.content or b"").hexdigest()
+        except Exception:
+            sha = ""
+        try:
+            r._src_sha256 = sha
+        except AttributeError:
+            pass
+    out = {"src_url": url or getattr(r, "url", "") or ""}
+    if sha:
+        out["src_sha256"] = sha
+    return out
+
+
+def file_src(body, url, file):
+    """src for data read from a copy saved in the bucket earlier: {"sha256" of the bytes read, "url" of the original, "file" key}."""
+    return {"sha256": hashlib.sha256(body or b"").hexdigest(), "url": url or "", "file": file}
+
+
+def hook(trail):
+    """A requests response hook that notes every 200 answer of a reader's own session in the trail (forms/*.py readers that
+    keep a session of their own for ASP.NET postbacks): session.hooks["response"].append(provenance.hook(trail))."""
+    def _note(r, *a, **kw):
+        try:
+            if getattr(r, "status_code", None) != 200 or getattr(r, "is_redirect", False):
+                return r
+            req = getattr(r, "request", None)
+            method = getattr(req, "method", "GET") or "GET"
+            body = getattr(req, "body", None) if method.upper() != "GET" else None
+            trail.note(r, getattr(req, "url", "") or r.url, method, body)
+        except Exception:
+            pass
+        return r
+    return _note
 
 
 def default_method(ctype):
@@ -130,18 +180,29 @@ class Trail:
         key = self.item.get("key", "")
         tid = f"trail:{key}:{time.strftime('%Y%m%dT%H%M%SZ', time.gmtime())}"
         single = self.sources[0] if len({s["sha256"] for s in self.sources if s["bytes"]}) == 1 else None
-        by_url = {}
+        by_url, shas_of, by_sha = {}, {}, {}
         for s in self.sources:
-            by_url.setdefault(s["url"], s)
-            by_url.setdefault(s["final_url"], s)
+            by_sha.setdefault(s["sha256"], s)
+            for u in {s["url"], s["final_url"]}:
+                by_url.setdefault(u, s)
+                shas_of.setdefault(u, set()).add(s["sha256"])
+
+        def one(u):          # the source of a url that gave exactly one answer in this item, else None
+            return by_url.get(u) if isinstance(u, str) and u and len(shas_of.get(u, ())) == 1 else None
         ctypes = {s["content_type"].split(";")[0].strip().lower() for s in self.sources if s["bytes"]}
         for _, data in recs:
             if not isinstance(data, dict):
                 continue
             data.setdefault("trail", tid)
-            src = by_url.get(data.get("src_url") or "") or single
+            sha = data.pop("src_sha256", None)
+            src, via = (by_sha.get(sha) if sha else None) or one(data.get("src_url")) or single, ""
+            if src is None and sha:          # bytes the trail did not see (read outside get()): the reader's own hash and url
+                data.setdefault("src", {"sha256": sha, "url": data.get("src_url") or ""})
+            if src is None and "src" not in data and not data.get("src_url"):
+                src = next((one(data.get(k)) for k in ("url", "source", "page", "pdf_url", "file_url") if one(data.get(k))), None)
+                via = "record url" if src else ""
             if src and "src" not in data:
-                data["src"] = {"sha256": src["sha256"], "url": src["final_url"]}
+                data["src"] = {"sha256": src["sha256"], "url": src["final_url"], **({"via": via} if via else {})}
             # the reader's word first; else from this record's source, or from the one content type all sources share
             data.setdefault("method", reader_method or default_method((src or {}).get("content_type", "")
                                                                          or (next(iter(ctypes)) if len(ctypes) == 1 else "")))

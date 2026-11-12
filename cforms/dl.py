@@ -20,6 +20,8 @@ import tempfile
 
 from cforms import hr
 
+METHOD = "ocr tesseract + pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 BODY = "Municipal Corporation of Delhi"
 COLS = ["sr", "ward", "ward_name", "reservation", "name", "party"]
 PARTIES = [("BHARATIYA JANATA PARTY", "Bharatiya Janata Party"), ("AAM AADMI PARTY", "Aam Aadmi Party"),

@@ -10,6 +10,8 @@ from xml.etree import ElementTree as ET
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 
+METHOD = "kml (Google My Maps export)"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_mp"
 KML = "https://www.google.com/maps/d/kml?mid={mid}&forcekml=1"
 NS = "{http://www.opengis.net/kml/2.2}"

@@ -14,6 +14,8 @@ import re
 
 from dforms import _leg
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_mh"
 URL = "https://mls.org.in/PDF2025/15-Assembly-24-11-2024.pdf"
 SEATS = 288

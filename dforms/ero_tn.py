@@ -12,6 +12,8 @@ import re
 from dforms import _esw
 from forms.aspnet import hidden
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_tn"
 BASE = "https://www.erolls.tn.gov.in/acwithcandidate_be2019/"
 DIST = "ctl00$ContentPlaceHolder1$ddl_District"

@@ -16,6 +16,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "pdf text (pypdf) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_jh"
 STATE = "JH"
 URL = "https://udhd.jharkhand.gov.in/ContactUs4.aspx"

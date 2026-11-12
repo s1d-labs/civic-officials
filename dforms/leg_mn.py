@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_mn"
 LIST = "https://assembly.mn.gov.in/members"
 PROFILE = "https://assembly.mn.gov.in/members/profile/{}"

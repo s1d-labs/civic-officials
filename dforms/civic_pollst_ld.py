@@ -6,6 +6,8 @@ Record ids: dept:civic_pollst_ld:LD-1-<part>. Layer "pollst".
 """
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_pollst_ld"
 URL = "https://ceolakshadweep.gov.in/polling-stations"
 

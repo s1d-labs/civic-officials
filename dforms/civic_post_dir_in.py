@@ -15,6 +15,8 @@ import re
 
 from dforms import _civic, _esw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_post_dir_in"
 URL = "https://www.indiapost.gov.in/ministry/directory"
 PUSH = re.compile(r'self\.__next_f\.push\(\[1,"((?:[^"\\]|\\.)*)"\]\)')

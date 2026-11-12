@@ -9,6 +9,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, gz, phones, rec, slug, uniq
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_rj"
 URL = "https://jodhpurpolice.rajasthan.gov.in/city-zones"
 

@@ -20,6 +20,8 @@ import re
 from dforms import _emerg
 from dforms._pdftext import layout_pages
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_ddma_kl"
 URL = "https://sdma.kerala.gov.in/wp-content/uploads/2025/06/DM-Directory-2025_23.pdf"
 DISTRICTS = ["Thiruvananthapuram", "Kollam", "Pathanamthitta", "Alappuzha", "Kottayam", "Idukki", "Ernakulam", "Thrissur",

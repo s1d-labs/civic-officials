@@ -14,6 +14,8 @@ import re
 
 from dforms import _emerg, _pdftext
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_fire_ka"
 URL = "https://ksfes.karnataka.gov.in/uploads/media_to_upload1745835964.pdf"
 

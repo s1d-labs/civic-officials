@@ -10,6 +10,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, phone, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power_kpdcl"
 URL = "https://kpdcl.jk.gov.in/page/SGpLSUxqeFdPSG82c2g0ZzhlRHRVQT09"
 

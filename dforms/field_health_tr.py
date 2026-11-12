@@ -5,5 +5,7 @@ Read by dforms/_field.py (layer "health"). Records: dept health, layer field, fi
 """
 from dforms import _field
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "field_health_tr"
 items, fetch = _field.reader(MODULE, "health", state="TR")

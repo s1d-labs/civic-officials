@@ -17,6 +17,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_dl"
 INDEX = "https://delhijalboard.delhi.gov.in/jalboard/summer-action-plan-2026"
 BASE = "https://delhijalboard.delhi.gov.in/sites/default/files/inline-files/"

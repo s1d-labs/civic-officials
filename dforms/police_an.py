@@ -7,6 +7,8 @@ import re
 
 from dforms._police import clean, phones, rec, slug, uniq
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_an"
 URL = "https://andamannicobar.gov.in/pdf/Police%20Suo%20Motu.pdf"
 ROW = re.compile(r"^\s*\d+\.\s+((?:PS|OP)\s.+?)\s+((?:\+?\d[\d\s,/-]{5,})+)$")

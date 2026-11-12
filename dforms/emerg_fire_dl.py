@@ -21,6 +21,8 @@ import re
 from dforms import _emerg, _pdftext
 from dforms._util2_pdfgrid import page_parts
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_fire_dl"
 BASE = "https://dfs.delhi.gov.in/sites/default/files/"
 URL = BASE + "Dfs/generic_multiple_files/update_contact_us.pdf"

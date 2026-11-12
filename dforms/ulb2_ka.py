@@ -25,6 +25,8 @@ from pathlib import Path
 
 from dforms import _esw, _ulb
 
+METHOD = "json api + html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_ka"
 STATE = "KA"
 SITES = json.loads((Path(__file__).with_name("ulb2_ka_sites.json")).read_text())

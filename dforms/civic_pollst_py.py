@@ -10,6 +10,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_pollst_py"
 BASE = "https://ceopuducherry.py.gov.in/blo_ps.php?c="
 # AC number -> district (Puducherry region 1-23, Karaikal 24-28, Mahe 29, Yanam 30)

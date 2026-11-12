@@ -13,6 +13,8 @@ import re
 
 from pypdf import PdfReader
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 DISTRICT = re.compile(r"Municipal\s+Boards\s+of\s+([A-Za-z() ]+?)\s+District", re.I)
 BOARD = re.compile(r"^\d+\.\s+(.+?Municipal\s+Board)$", re.I)
 CATEGORY = r"(Unreserved|Unserved|Women|SC|ST|OBC)\s*(\(\s*Women\s*\))?"

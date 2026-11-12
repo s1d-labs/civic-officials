@@ -15,6 +15,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_jk"
 STATE = "JK"
 URL = "https://ulbk.jk.gov.in/Key%20Contacts%20Urban%20Local%20Bodies%20of%20Kashmir%20Division.pdf"

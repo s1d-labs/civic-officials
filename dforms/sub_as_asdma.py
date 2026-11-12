@@ -22,6 +22,8 @@ from xml.etree import ElementTree as ET
 from dforms import _esw
 from dforms.sub_as import district
 
+METHOD = "spreadsheet + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub_as_asdma"
 BASE = "https://onlineasdma.assam.gov.in/"
 PAGES = {"emergency": BASE + "emergency.html", "field": BASE + "pdf/Field_Officers.xlsx"}

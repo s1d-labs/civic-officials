@@ -17,6 +17,8 @@ from datetime import datetime
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_py"
 STATE = "PY"
 YANAM = "https://yanam.gov.in/directory/"

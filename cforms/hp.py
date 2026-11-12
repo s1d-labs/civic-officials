@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 
 from forms.aspnet import hidden, options
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://sechimachal.hp.gov.in/dpmis/repList.aspx"
 P = "ctl00$ContentPlaceHolder1$"
 LEVELS = {"002": "Municipal Council / Nagar Panchayat", "003": "Municipal Corporation"}

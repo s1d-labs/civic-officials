@@ -28,6 +28,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub2_gj"
 SOURCES = {
     "tdo": ("https://panchayat.gujarat.gov.in/panchayat/documents/Y-423-TDO-Civil-List-2025.pdf", "2025-01-01"),

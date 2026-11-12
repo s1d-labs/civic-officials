@@ -35,6 +35,8 @@ from pathlib import Path
 from dforms import _esw, _ulb
 from dforms._water import unique
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_up"
 BASE = "https://localbodies.up.nic.in/"
 KINDS = {"nn": BASE + "listnn.htm", "npp": BASE + "pdf/elected-npp.pdf", "np": BASE + "pdf/elected-np.pdf"}

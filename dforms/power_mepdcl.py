@@ -12,6 +12,8 @@ import re
 
 from dforms._power import Out, clean, raw, pdf_pages, slug
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 # pdftotext puts the mobile last; pypdf's layout mode may put it first, glued to the text ("9245048628Director ...")
 ROW = re.compile(r"^\s*(?:\d{1,2}\s+)?(?:(?P<m1>\d{10})\s*(?P<t1>\S.*?)|(?P<t2>.*?)\s+(?P<m2>\d{10}))\s*$")
 DES = re.compile(r"^(Chief Engineer|Superintending Engineer|Executive Engineer|Assistant Executive Engineer)\b[^,]*,\s*(.+)$", re.I)

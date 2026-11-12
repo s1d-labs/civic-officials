@@ -4,6 +4,8 @@ Bengali by default; the reader reads it again in English. No AC number: the Engl
 """
 from dforms import _leg_neva
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_wb"
 HOST = "wbla.neva.gov.in"
 ALIAS = {}

@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, gz, phones, rec, slug, uniq
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_dh"
 URL = "https://police.ddd.gov.in/police-station/"
 SPLIT = re.compile(r"\s*(?:Phone|Telephone(?: No\.?| Number)?|Contact(?: No)?)\s*[:–-]?\s*", re.I)

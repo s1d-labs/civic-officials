@@ -12,6 +12,8 @@ import re
 from dforms._pdftext import cut, layout_pages, settle
 from dforms._power import Out, clean, email, raw
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power_uhbvn"
 BASE = "https://uhbvn.org.in/staticContent/documents/contact_us/"
 CIRCLES = ["Ambala", "Jhajjar", "Kaithal", "Karnal", "Kurukshetra", "Panchkula", "Panipat", "Rohtak", "Sonipat", "Yamunanagar"]

@@ -6,6 +6,8 @@ Record ids: dept:sro_dl:DL-SRO-<slug of office>.
 """
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_dl"
 URL = "https://revenue.delhi.gov.in/revenue/sub-registar-offices"
 

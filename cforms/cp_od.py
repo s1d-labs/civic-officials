@@ -12,6 +12,8 @@ from bs4 import BeautifulSoup
 
 from cforms import cp_common as cp
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 
 def cards(html, p, url):
     recs = []

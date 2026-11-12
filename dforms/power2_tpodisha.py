@@ -26,6 +26,8 @@ from dforms import _power, _util2_east
 from dforms._pdftext import layout_pages
 from dforms._power import pdf_pages
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + spreadsheet + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_tpodisha"
 SITES = {"TPCODL": "https://www.tpcentralodisha.com/", "TPSODL": "https://tpsouthernodisha.com/", "TPNODL": "https://www.tpnodl.com/",
          "TPWODL": "https://www.tpwesternodisha.com/"}

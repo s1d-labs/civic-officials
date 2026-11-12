@@ -16,6 +16,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_dl"
 STATE = "DL"
 URL = "https://ndmc.gov.in/council_members.aspx"

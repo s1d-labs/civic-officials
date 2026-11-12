@@ -22,6 +22,8 @@ from bs4 import BeautifulSoup
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms.police_s3waas import grid
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police2n_ml"
 
 UNIT = re.compile(r"\bDSB\b|D\.S\.B|crime branch|infiltration|DCRB|MPRO|court|\bPSI\b|fire|F\s*&\s*ES|reserve|traffic|PCR|"

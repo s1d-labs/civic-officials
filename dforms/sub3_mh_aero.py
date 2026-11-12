@@ -30,6 +30,8 @@ import tempfile
 
 from dforms import _esw
 
+METHOD = "ocr tesseract eng"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub3_mh_aero"
 URL = "https://ceoelection.maharashtra.gov.in/Downloads/PDF/AERO%20for%20all%20AC%20in%20Maharashtra.pdf"
 PAGES, STEP = 70, 10

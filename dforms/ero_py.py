@@ -12,6 +12,8 @@ from datetime import datetime
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_py"
 URL = "https://ceopuducherry.py.gov.in/contact.php"
 AC = re.compile(r"^\s*(\d{1,2})\s*\.\s*(.+?)\s*$")

@@ -23,6 +23,8 @@ from urllib.parse import quote
 
 from bs4 import BeautifulSoup
 
+METHOD = "pdf text (pypdf) + json api + html table + csv file"     # source trail (provenance.py): how this reader reads its sources
+
 DEVA = str.maketrans("०१२३४५६७८९", "0123456789")
 SEATS = str.maketrans({"अ": "a", "ब": "b", "क": "c", "ड": "d", "इ": "e"})   # Kolhapur seat letters in record ids
 ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}

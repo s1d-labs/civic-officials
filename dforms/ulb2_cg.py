@@ -28,6 +28,8 @@ from pathlib import Path
 
 from dforms import _esw, _ulb
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_cg"
 STATE = "CG"
 CONTACTS = "https://uad.cg.gov.in/ContactUAD/ContactReport.aspx"

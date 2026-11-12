@@ -25,6 +25,8 @@ from urllib.parse import urlparse
 from dforms import _emerg
 from dforms.police_s3waas import last_updated
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_ddma_s3waas"
 
 HEAD_WORDS = re.compile(r"(?i)\b(name|designation|post|contact|phone|mobile|tel|telephone|landline|e-?mail|mail id|officer|"

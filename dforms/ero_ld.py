@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_ld"
 URL = "https://ceolakshadweep.gov.in/ero-aero-blo"
 

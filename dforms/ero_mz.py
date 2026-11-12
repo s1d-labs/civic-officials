@@ -11,6 +11,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_mz"
 URL = "https://ceo.mizoram.gov.in/officer-contacts"
 PAGES = 4

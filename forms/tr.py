@@ -10,6 +10,8 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://erms.tripura.gov.in/encoretripura/outviews/viewBLO.aspx"
 UA = "s1d-labs-public-records/1.0 (+https://labs.s1d.me)"
 GRID_ID = "ContentPlaceHolder2_dgshow"

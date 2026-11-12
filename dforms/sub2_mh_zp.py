@@ -21,6 +21,8 @@ from urllib.parse import urljoin, urlparse
 
 from dforms import _esw
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub2_mh_zp"
 # ZP site -> LGD district (code, name). Hosts checked by DNS on 2026-11-11 (NIC S3WaaS addresses 164.100.50.x / 164.100.52.x).
 ZP = {

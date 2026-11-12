@@ -15,6 +15,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_ar"
 STATE = "AR"
 BASE = "https://imc.arunachal.gov.in"

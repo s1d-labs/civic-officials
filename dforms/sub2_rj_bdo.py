@@ -25,6 +25,8 @@ import re
 
 from dforms import _esw, _ward_kd as kd
 
+METHOD = "pdf text (pypdf) + Kruti Dev map + json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub2_rj_bdo"
 URL = ("https://jankalyanfile.rajasthan.gov.in/WebMyWayFiles/Department/PDF/DEPTContactDetail/2026/Sep/"
        "DEPTContactDetail373745a5-0193-41ea-9ee3-1629f3edf43a.pdf")

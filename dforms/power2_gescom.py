@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, email, pdf_pages, phone, raw
 
+METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_gescom"
 BASE = "https://gescom.karnataka.gov.in/"
 PAGES = {"divisions": ("198/o&m-division/en", "division"), "zones": ("163/o-and-m-zones/en", "zone"),

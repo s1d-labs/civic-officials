@@ -14,6 +14,8 @@ import re
 
 from dforms import _leg
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_ls"
 URL = "https://sansad.in/api_ls/member?loksabha=18&page=1&size=600&locale=en&sitting=1"
 ALIAS = {   # sansad name (normalised) -> the name in the site's PC layer, for seats renamed by a delimitation

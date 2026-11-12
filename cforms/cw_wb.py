@@ -24,6 +24,8 @@ import gzip
 import json
 import re
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://portal.wbme.org/Index.aspx/"
 ELECTION = "West Bengal municipal general elections 2021-22 (State Election Commission)"
 HEADERS = {"Content-Type": "application/json; charset=utf-8", "X-Requested-With": "XMLHttpRequest"}

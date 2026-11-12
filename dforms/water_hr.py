@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_hr"
 URL = "https://phedharyana.gov.in/Telephone_Dir/TelDir.aspx?id=w"
 ORG = "Public Health Engineering Department, Haryana"

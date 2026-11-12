@@ -19,6 +19,8 @@ import re
 
 from cforms.cr_common import table_members
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 POSTS = {"प्रमुख": "President", "ઉપપ્રમુખ": "Vice President", "પ્રમુખ": "President", "उपाध्यक्ष": "Vice Chairperson",
          "अध्यक्ष": "Chairperson", "Mayor": "Mayor", "Deputy Mayor": "Deputy Mayor", "Sr. Deputy Mayor": "Senior Deputy Mayor"}
 

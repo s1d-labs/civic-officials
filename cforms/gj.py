@@ -18,6 +18,8 @@ import shutil
 import subprocess
 import tempfile
 
+METHOD = "ocr tesseract guj + pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 DIGITS = str.maketrans("૦૧૨૩૪૫૬૭૮૯०१२३४५६७८९", "01234567890123456789")
 ORDINAL = (("પહે", 1), ("બીજ", 2), ("ત્રીજ", 3), ("રીજ", 3), ("ચોથ", 4), ("પાંચ", 5), ("પૂંચ", 5))
 PARTY = ((r"કોં?ગ્રેસ|રાષ્ટ્રીય", "INC"), (r"આ[મિ] આદ[મિ]ી|આદમી", "AAP"), (r"અ[પ૫]ક્ષ", "Independent"),

@@ -28,6 +28,8 @@ from bs4 import BeautifulSoup
 from cforms.cr_common import best_body, clean, digits, key, latin, sim
 from forms.aspnet import hidden
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://sec.up.nic.in/site/NewWinnerList2023.aspx"
 P = "ctl00$ContentPlaceHolder1$"
 ELECTION = "UP urban local bodies general election 2023 (SEC Uttar Pradesh)"

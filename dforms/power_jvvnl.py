@@ -17,6 +17,8 @@ import re
 
 from dforms._power import Out, clean, email, phone, raw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://energy.rajasthan.gov.in/webapi/api/JankalyanHome/GetTelephoneDirectory"
 LEVEL = {"ZCE": "zone", "CE": "zone", "SE": "circle", "XEN": "division", "AEN": "subdivision", "JEN": "section"}
 POST = re.compile(r"^(ZCE|CE|SE|XEN|AEN|JEN)\b\.?\s*(?:\(([^)]*)\))?\s*(.*)$")

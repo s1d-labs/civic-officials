@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, clean, email, phone, raw, slug
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://kseb.in/"
 FIELDS = {"Section Office:": "section", "Section Code:": "code", "Phone:": "phone", "Office email:": "email",
           "Sub Division:": "subdivision", "Division:": "division", "Circle:": "circle", "Region:": "region"}

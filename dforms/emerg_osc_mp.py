@@ -17,6 +17,8 @@ import re
 
 from dforms import _emerg
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_osc_mp"
 URL = "https://mpwcdmis.gov.in/Downloads/OSC/M.P.%20OSC_list.Pdf"
 ROLES = (("sn", r"s\.?\s*no"), ("email", r"mail"), ("phone", r"phone"), ("name", r"\bCA\b|concerned|administrator"),

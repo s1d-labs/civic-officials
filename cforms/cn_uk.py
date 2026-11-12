@@ -20,6 +20,8 @@ import subprocess
 import tempfile
 from html import unescape
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://cdnbbsr.s3waas.gov.in/s38208974663db80265e9bfe7b222dcb18/uploads/2026/06/202609031174499502.pdf"
 ELECTION = "Uttarakhand urban local bodies general election 2024-25 (poll 23.01.2025)"
 COLS = ["sr", "district", "body", "ward_no", "ward_name", "name", "gender", "phone", "oath", "board", "remark"]

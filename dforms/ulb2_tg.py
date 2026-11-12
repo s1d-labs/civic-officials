@@ -26,6 +26,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_tg"
 STATE = "TG"
 GHMC = "https://www.ghmc.gov.in/KeyContacts.aspx"

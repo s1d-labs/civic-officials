@@ -23,6 +23,8 @@ import tempfile
 from cforms import gj
 from cforms.tn import stored
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://mahasec.maharashtra.gov.in/Upload/PDF/"
 DOCS = {"members": (BASE + "Member%20Winning%20Candidate%20Data.pdf", 14, 8),
         "presidents": (BASE + "President.pdf", 12, 6)}

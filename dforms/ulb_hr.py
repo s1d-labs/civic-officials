@@ -16,6 +16,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_hr"
 URL = "https://ulbharyana.gov.in/Home/NodalOfficersLitigationPolicy"
 COLS = {"district": r"district", "body": r"municipality", "name": r"name of nodal", "post": r"designation", "email": r"e-?mail"}

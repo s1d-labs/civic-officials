@@ -14,6 +14,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police2s_mh"
 UUID = re.compile(r"/about/(police-station-incharge|senior-officers)/([0-9a-f-]{36})")
 LABEL = re.compile(r"^(?:Currently Posted|कार्यरत पोलीस ठाणे|कार्यरत|Posted at|•)$", re.I)

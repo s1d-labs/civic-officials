@@ -9,6 +9,8 @@ import re
 
 from dforms import _emerg, _pdftext
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_fire_nagpur"
 URL = "https://nmcnagpur.gov.in/assets/300/2025/02/mediafiles/Fire_Station_Officer_details.pdf"
 HEADS = ("Name Of Fire Station", "Location", "Contact No.", "Name of Fire", "Mobile", "Email ID")

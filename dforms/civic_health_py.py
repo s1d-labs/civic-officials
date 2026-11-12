@@ -17,6 +17,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_health_py"
 URL = "https://www.nhmpuducherry.org.in/WebResources/html_pdf/programme/71.pdf"
 CHUNK = re.compile(r"\S+(?: \S+)*")

@@ -8,6 +8,8 @@ mobile IN FULL and both nominee mobiles. The vendor test shop 123456789121 is le
 """
 from dforms import _civic_fps
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fps2_ld"
 STATE = "LD"
 BASE = "https://epos.utl.gov.in"

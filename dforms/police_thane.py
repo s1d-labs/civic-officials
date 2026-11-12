@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, gz, phones, rec, uniq
 
+METHOD = "json api + html page"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_thane"
 BASE = "https://thanepolice.gov.in"
 MAP = BASE + "/en/about/jurisdiction-map"

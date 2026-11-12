@@ -20,6 +20,8 @@ import shutil
 import subprocess
 import tempfile
 
+METHOD = "ocr tesseract + pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map + html table"     # source trail (provenance.py): how this reader reads its sources
+
 BIN = bytes(0 if i < 145 else 255 for i in range(256))
 LINE = bytes(1 if i < 205 else 0 for i in range(256))    # ruled lines are thin and light grey in these scans
 OFFICE_CHAIR = re.compile(r"may|pres|chair", re.I)

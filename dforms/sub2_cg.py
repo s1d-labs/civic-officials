@@ -17,6 +17,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub2_cg"
 URL = "https://revenue.cg.nic.in/RevenueOfficerSearchPage.aspx"
 # post code on the site -> (post, dept, level)

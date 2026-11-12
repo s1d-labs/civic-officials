@@ -15,6 +15,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_od"
 PHEO = "https://www.pheoodisha.gov.in/view-portal-emp-dir/{}"
 WATCO = "https://api.watcoodisha.in/watcocms/getAllActiveWhosewhosub"

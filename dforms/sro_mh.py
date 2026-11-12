@@ -16,6 +16,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_mh"
 BASE = "https://igrmaharashtra.gov.in/pdf/documents/offices/"
 FILES = {"pune": "Pune Div.pdf", "mumbai": "Mumbai Div.pdf", "thane": "Thane Div.pdf", "nashik": "Nishik Div.pdf",

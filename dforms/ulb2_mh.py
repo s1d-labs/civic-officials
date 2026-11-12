@@ -32,6 +32,8 @@ from pathlib import Path
 
 from dforms import _esw, _ulb
 
+METHOD = "pdf text (pypdf) + json api + html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_mh"
 SEC_URL = "https://mahasec.maharashtra.gov.in/Upload/PDF/President.pdf"
 SOURCES = (  # key, kind, state, url, india_only, extra payload

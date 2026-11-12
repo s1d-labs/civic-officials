@@ -17,6 +17,8 @@ from urllib.parse import urlparse
 
 from dforms import _esw
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_anganwadi_kl"
 PATH = "/en/page/anganwady-details"
 COLS = (("centre_no", re.compile(r"(?i)(centre|center|awc|anganwadi)\s*(no|number|code|id)|^no\.?$|^sl")),

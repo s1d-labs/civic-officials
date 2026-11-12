@@ -25,6 +25,8 @@ from datetime import datetime
 
 from dforms import _esw
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "swf_as"
 PAGES = ["whos-who", "contact-us"]
 # district site host -> (LGD district code, LGD name); Sribhumi = the former Karimganj district

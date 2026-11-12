@@ -19,6 +19,8 @@ from bs4 import BeautifulSoup
 from dforms import police_s3waas
 from dforms._police import ascii_digits, clean, email, gz, phones, rec, slug, uniq
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police2s_mh_misc"
 DEV = re.compile(r"[ऀ-ॿ]")
 LABELS = {

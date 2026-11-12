@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 
 from dforms import _power
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_pspcl"
 URL = "https://www.pspcl.in/Otherlinks/Contact-Hods.aspx"
 CITIES = ("Amritsar", "Jalandhar", "Ludhiana", "Bathinda", "Patiala", "Mohali", "Sangrur", "Barnala", "Faridkot", "Ferozepur",

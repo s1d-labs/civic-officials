@@ -16,6 +16,8 @@ from collections import Counter
 
 from dforms import _leg
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_up"
 URL = "https://upvidhansabhaproceedings.gov.in/web/guest/member-s-information"
 BASE = "https://upvidhansabhaproceedings.gov.in"

@@ -19,6 +19,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, clean, phone, raw, pdf_pages, slug
 
+METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://www.mahadiscom.in/en/executive-engineer-of-msedcl/"
 NOT_AREA = re.compile(r"admin|safety|testing|cgrf|civil|enquiry|training|vigilance|store|project|it\b|planning|quality|"
                       r"monitoring|ht\b|billing|account|legal|cell|commercial|construction|infra|solar|mis\b", re.I)

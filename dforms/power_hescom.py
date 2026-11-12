@@ -13,6 +13,8 @@ import re
 
 from dforms._power import Out, clean, pdf_pages, phone, raw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://hescom.karnataka.gov.in/storage/pdf-files/"
 URLS = {"sections": BASE + "Contact%20Details/Section%20Officers%20Mobile%20Number.pdf",
         "officers": BASE + "Announcements/HESCOMOfficersContactInfo.pdf"}

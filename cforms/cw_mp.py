@@ -37,6 +37,8 @@ from bs4 import BeautifulSoup
 from cforms import gj, tn
 from cforms.cg import roman
 
+METHOD = "ocr tesseract + pdf text (pypdf) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 SITE = "https://govtpress.mp.gov.in"
 PAGE = SITE + "/gazette"
 LIST = SITE + "/Gazette/ajaxPaginationData/{}"

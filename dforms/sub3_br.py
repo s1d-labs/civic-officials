@@ -28,6 +28,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub3_br"
 BASE = "https://betastate.bihar.gov.in"
 SOURCES = {   # kind: (page, dept, level, post, expected rows)

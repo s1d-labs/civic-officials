@@ -19,6 +19,8 @@ import re
 from dforms import _esw
 from dforms._water import level_of, unique
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water2_pwssb"
 BASE = "https://pwssb.punjab.gov.in/"
 AJAX = BASE + "wp-admin/admin-ajax.php?action=wp_ajax_ninja_tables_public_action&table_id={}&target_action=get-all-data" \

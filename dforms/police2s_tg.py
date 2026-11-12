@@ -5,6 +5,8 @@ Sircilla (SP office, SDPO). CUG mobiles and station / office emails; no officer 
 Record id dept:police2s_tg:<district>:<station or office>."""
 from dforms import police_s3waas
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police2s_tg"
 
 

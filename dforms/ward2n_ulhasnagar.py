@@ -10,6 +10,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_ulhasnagar"
 BODY, LGD, STATE, DISTRICT = "Ulhasnagar Mahanagarpalika", "251484", "MH", "Thane"
 URL = "https://umc.gov.in/api/api/ward-offices?lang=en"

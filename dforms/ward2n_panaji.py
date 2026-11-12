@@ -13,6 +13,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_panaji"
 BODY, LGD, STATE, DISTRICT = "Corporation of the City of Panaji", "252071", "GA", "North Goa"
 BASE = "https://ccpgoa.com/"

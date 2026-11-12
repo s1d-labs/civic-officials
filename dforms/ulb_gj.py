@@ -20,6 +20,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_gj"
 URL = "https://communi.gujarat.gov.in/Home/listofmunicipalities"
 URL_PRAMUKH = "https://communi.gujarat.gov.in/Home/pramukhlist"

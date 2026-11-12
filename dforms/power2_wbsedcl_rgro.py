@@ -15,6 +15,8 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2_east
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_wbsedcl_rgro"
 BASE = "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/"
 PAGES = {"rgro": "Grievance_Redressal_for_consumers.html", "ccc": "Contact_Customer_Care.html"}

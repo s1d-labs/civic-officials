@@ -14,6 +14,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, clean, phone, raw, slug
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://electricity.py.gov.in"
 INDEX = BASE + "/area-contact-information"
 REGION = {"KARAIKAL": "Karaikal", "THIRUNALLAR": "Karaikal", "NEDUNGADU": "Karaikal", "AMBAGARATHUR": "Karaikal", "T.R.PATTINAM": "Karaikal",

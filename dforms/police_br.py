@@ -7,6 +7,8 @@ import json
 
 from dforms._police import email, gz, phones, rec, slug
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_br"
 BASE = "https://police.bihar.gov.in/PoliceStationHandler.ashx"
 SOURCE = "https://police.bihar.gov.in/"

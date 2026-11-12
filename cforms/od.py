@@ -11,6 +11,8 @@ import re
 
 from pypdf import PdfReader
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 RESERVATIONS = ["Reserved For Woman", "Unreserved", "Scheduled Caste Woman", "Scheduled Caste", "Scheduled Tribe Woman",
                 "Scheduled Tribe", "Backward Class Woman", "Backward Class"]
 PARTIES = ["Biju Janata Dal", "Bharatiya Janata Party", "Indian National Congress", "Independent", "Communist Party of India (Marxist)",

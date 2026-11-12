@@ -18,6 +18,8 @@ from pathlib import Path
 
 from dforms import _civic, _esw
 
+METHOD = "json api + csv file"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "central_banking"
 ISO = {"IN-AN": "AN", "IN-AP": "AP", "IN-AR": "AR", "IN-AS": "AS", "IN-BR": "BR", "IN-CH": "CH", "IN-CT": "CG", "IN-CG": "CG",
        "IN-DN": "DH", "IN-DD": "DH", "IN-DH": "DH", "IN-DL": "DL", "IN-GA": "GA", "IN-GJ": "GJ", "IN-HR": "HR", "IN-HP": "HP",

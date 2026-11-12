@@ -16,6 +16,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub2_mp_ero"
 URL = "https://ceoelection.mp.gov.in/CEO_District.aspx"
 TARGET = "ctl00$ContentPlaceHolder1$lnk_CEO_ERO"

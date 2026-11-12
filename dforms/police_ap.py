@@ -7,6 +7,8 @@ import json
 
 from dforms._police import gz, phones, rec, slug, uniq
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_ap"
 BASE = "https://citizen.appolice.gov.in"
 URL = BASE + "/our-organization/police-stations"

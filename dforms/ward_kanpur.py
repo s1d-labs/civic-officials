@@ -13,6 +13,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward_kanpur"
 BODY, LGD, STATE, DISTRICT = "Kanpur Nagar Nigam", "249286", "UP", "Kanpur Nagar"
 URL = "https://kmc.up.nic.in/key-contacts.html"

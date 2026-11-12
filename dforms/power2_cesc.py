@@ -12,6 +12,8 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2_east
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_cesc"
 URL = "https://www.cesc.co.in/HTcustomerLogin/groCgro"
 

@@ -20,6 +20,8 @@ import re
 
 from dforms._wm2_arcgis import page_layer, store
 
+METHOD = "arcgis feature layer (geojson)"     # source trail (provenance.py): how this reader reads its sources
+
 
 def _txt(v):
     if v is None:

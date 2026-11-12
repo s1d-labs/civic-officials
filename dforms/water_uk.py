@@ -8,6 +8,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_uk"
 BASE = "https://ujs.uk.gov.in/whos-who/"
 PAGES = {1: BASE, 2: BASE + "page/2/", 3: BASE + "page/3/"}

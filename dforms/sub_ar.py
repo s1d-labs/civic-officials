@@ -15,6 +15,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub_ar"
 URL = "https://ceoarunachal.nic.in/componenthelper/getcomponentfile/32"
 ROW = re.compile(r"^\s*(\d{1,2})\.\s+(\d{1,2})\s*-\s*")

@@ -10,6 +10,8 @@ The pages answer from Germany (cdn.s3waas.gov.in). Seed: seeds/blo2_mh.json (lin
 """
 from forms.blo2_in import cells, download, layout_lines, mobiles, part_of
 
+METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+
 RAIGAD_SUP = ["Supervisor Sr.No.", "Supervisor Part Number", "Name of BLO Supervisor", "Designation of BLO Supervisor",
               "Supervisor Office Name", "Supervisor Mobile Number"]
 

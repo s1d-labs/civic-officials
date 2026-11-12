@@ -13,6 +13,8 @@ import re
 
 from dforms import _civic_fps, _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fps2_pb"
 STATE = "PB"
 BASE = "https://epos.punjab.gov.in"

@@ -18,6 +18,8 @@ from bs4 import BeautifulSoup
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 
 def slug(s):
     """Lower-case key that keeps Devanagari letters (the areas are Hindi)."""

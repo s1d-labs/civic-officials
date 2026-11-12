@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub_la"
 URL = "https://ladakh.gov.in/directory/"
 CAPTION = re.compile(r"(?i)^\s*district administration\s+(.+?)\s*$")

@@ -12,6 +12,8 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_wbsedcl"
 URL = "https://www.wbsedcl.in/irj/go/km/docs/internet/new_website/Imp_Phone_Number.html"
 HEADS = (("zone", r"^ZONE"), ("circle", r"^REGION"), ("division", r"^DIVISION"), ("section", r"^(CCC|CUSTOMER|SUPPLY|GROUP)"),

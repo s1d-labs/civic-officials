@@ -8,6 +8,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_ap"
 URL = "https://registration.ap.gov.in/igrs/pdfs/R&S%20Department.pdf"
 LAST_UPDATED = "2025-09-22"

@@ -14,6 +14,8 @@ from io import BytesIO
 
 from dforms import _esw
 
+METHOD = "spreadsheet (xlsx)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sro_gj"
 URL = "https://garvi.gujarat.gov.in/Download/HelpFile/gARVI_SRO_Office_list.xlsx"
 NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"

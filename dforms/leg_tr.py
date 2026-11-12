@@ -7,6 +7,8 @@ One queue item = the page. Record ids: dept:leg_tr:TR-AC-<no>.
 """
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_tr"
 URL = "https://tripura.gov.in/members-legislative-assembly"
 

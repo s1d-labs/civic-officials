@@ -8,6 +8,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_kl"
 URL = "https://www.ceo.kerala.gov.in/telephone-numbers"
 # spellings on the page -> AC layer names, where ac_no() misses

@@ -16,6 +16,8 @@ import re
 
 from cforms.cp_common import column, emails, keyed, phones, record, table_rows, useful, ward_no
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://www.tnurbantree.tn.gov.in/"
 TITLE = re.compile(r"^(thiru|tmt|selvi|thirumathi|mr|mrs|ms|dr|adv)\b\.?\s*", re.I)
 

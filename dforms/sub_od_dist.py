@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub_od_dist"
 URL = "https://odisha.gov.in/en/state-portal-district-officials"
 LGD = {"ANUGOLA": "344", "BALANGIR": "345", "BALESHWAR": "346", "BARAGADA": "347", "BHADRAK": "348", "BOUDH": "349", "KATAKA": "350",

@@ -18,6 +18,8 @@ from bs4 import BeautifulSoup
 
 from cforms.cp_common import clean, column, emails, keyed, phones, record, table_rows, useful, ward_no
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 TITLE = re.compile(r"^(sh|shri|sri|smt|mr|mrs|ms|dr|km|kumari)\.?\s+", re.I)
 RELATION = re.compile(r"\s+([wsd]\s*/\s*[ok]|[wsd]o\s*/|wife of|son of|daughter of)\.?\s*(.*)$", re.I)
 CHAIR = re.compile(r"\b(mayor|president|chair\s*(person|man)?)\b", re.I)

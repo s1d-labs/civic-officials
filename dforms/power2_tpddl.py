@@ -13,6 +13,8 @@ import re
 
 from dforms._power import Out, clean, pdf_pages, phone, raw
 
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power2_tpddl"
 CHARTER = "https://www.tatapower-ddl.com/Editor_UploadedDocuments/Content/Customer_Charter_2025.pdf"
 CCC = "https://www.tatapower-ddl.com/UploadedDocuments/Updated%20Customer%20Care%20Centres%20List.pdf"

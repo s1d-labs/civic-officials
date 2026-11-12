@@ -17,6 +17,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_varanasi"
 BODY, LGD, STATE, DISTRICT = "Varanasi Nagar Nigam", "249531", "UP", "Varanasi"
 URL = "https://nnvns.org.in/nnvns/attachments/article/84/All_100_Ward_Beat_List.pdf"

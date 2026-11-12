@@ -5,6 +5,8 @@ Record ids: dept:ward2n_rohtak:hq:<post slug>:<name slug>.
 """
 from dforms import _esw, ward2n_sonipat
 
+METHOD = "pdf text (pypdf) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_rohtak"
 BODY, LGD, STATE, DISTRICT = "Municipal Corporation Rohtak", "248557", "HR", "Rohtak"
 URL = "https://mcrohtak.in/index.php/officer-directory"

@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup
 
 from forms.aspnet import session
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 TEL = re.compile(r"tel:\+?(?:91)?[\s-]*([0-9][0-9\s-]{6,})")
 LATLON = re.compile(r"[?&](?:q|query|ll)=(-?\d{1,2}\.\d+)\s*,\s*(-?\d{1,3}\.\d+)")
 

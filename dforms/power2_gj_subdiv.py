@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, clean, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_gj_subdiv"
 URLS = {"ugvcl": "https://www.ugvcl.com/contact"}
 DISCOM = {"ugvcl": "UGVCL"}

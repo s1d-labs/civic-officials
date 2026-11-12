@@ -10,6 +10,8 @@ from bs4 import BeautifulSoup
 
 from forms.aspnet import hidden, options
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 U = "https://sec.rajasthan.gov.in/Winner_Runner.aspx?code=CEM"
 P = "ctl00$ContentPlaceHolder1$"
 BASE = {"ElecType": "2", "Election": "1"}

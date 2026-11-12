@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw, _water
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_ka"
 PAGES = {"kuwsdb": "https://kuwsdb.karnataka.gov.in/1/know-your-office/en",
          "bwssb": "https://bwssb.karnataka.gov.in/7/service-station/en"}

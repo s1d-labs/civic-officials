@@ -8,6 +8,8 @@ import re
 
 from cforms.cp_common import clean, column, emails, keyed, phones, record, slug, table_rows, useful, ward_no
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 NAME = (r"name of (the )?ward councillors?|councillor|\bname\b|नाम",)
 PHONE = (r"contact|mobile|phone|मोबाइल|दूरभाष",)
 WARD = (r"^ward|वार्ड",)

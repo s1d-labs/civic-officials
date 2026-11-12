@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 
 from cforms.cp_common import keyed, phones, record, useful, ward_no
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 GONE = re.compile(r"\((?:expired|late|died|deceased|resigned)\)", re.I)
 
 

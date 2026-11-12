@@ -17,6 +17,8 @@ from bs4 import BeautifulSoup
 
 from dforms._power import Out, clean, email, phone, raw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power2_kesco"
 URL = "https://kesco.org.in/about/employee-directory"
 DASH = {"—", "–", "-"}

@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_ap"
 PAGE = "https://www.aplegislature.org/web/legislative-assembly/legislative-assembly/member-s-information"
 PORTLET = "AssemblyMemberInformation_APPortlet_INSTANCE_u0YprwIEdWmS"

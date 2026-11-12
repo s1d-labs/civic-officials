@@ -8,6 +8,8 @@ import re
 
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_ml"
 URL = "https://meghalaya.gov.in/key-contacts/mla?page={}"
 

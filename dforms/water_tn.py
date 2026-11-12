@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw, _water
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_tn"
 BASE = "https://www.twadboard.tn.gov.in/engineer-details/"
 PAGES = {"executive-engineer": 9, "superintending-engineer": 2, "chief-engineer": 1}

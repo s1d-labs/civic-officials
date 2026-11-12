@@ -18,6 +18,8 @@ import re
 from dforms._power import Out, clean, email, phone, raw
 from forms.aspnet import hidden
 
+METHOD = "csv file"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "power_dvvnl"
 URL = "https://www.dvvnl.org/ContactListNew1.aspx"
 LEVEL = {"CE": "zone", "SE": "circle", "EE": "division", "AE": "subdivision", "JE": "section"}

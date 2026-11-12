@@ -16,6 +16,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_gj"
 STATE = "GJ"
 URL = "https://udd.gujarat.gov.in/corporations.php"

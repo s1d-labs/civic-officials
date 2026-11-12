@@ -37,6 +37,8 @@ from urllib.parse import urlencode
 from dforms._wm2_arcgis import store
 from dforms.wm2_arcgis import towns
 
+METHOD = "geojson layer (WFS GetFeature)"     # source trail (provenance.py): how this reader reads its sources
+
 MAX_PAGES = 400
 ONE_SHOT_MAX = 250000
 

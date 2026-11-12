@@ -11,6 +11,8 @@ import re
 
 from dforms import _esw, _water
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_mh"
 URL = "https://mjp.maharashtra.gov.in/whos-who/"
 ORG = "Maharashtra Jeevan Pradhikaran"

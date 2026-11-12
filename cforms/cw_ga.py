@@ -18,6 +18,8 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
+METHOD = "pdf text (pypdf) + html page"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://sec.goa.gov.in/"
 START = ("elections/previous/municipal-council/", "elections/ongoing/")
 ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}

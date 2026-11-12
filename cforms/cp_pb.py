@@ -9,6 +9,8 @@ from urllib.parse import urlsplit
 
 from cforms import cp_common as cp
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 
 def fetch(p, get):
     r = get(p["url"])

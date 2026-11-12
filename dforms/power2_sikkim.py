@@ -19,6 +19,8 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_sikkim"
 BASE = "https://power.sikkim.gov.in/visitor/"
 CELLS = (2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
