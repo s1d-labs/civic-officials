@@ -61,3 +61,12 @@ def test_wb_seed():
     codes = {i["payload"]["wbme_id"]: i["payload"]["lgd_code"] for i in items}
     assert codes[220] == "249958" and codes[162] == codes[177] == "250299" and 179 not in codes
     assert all(codes.values())
+
+
+def test_mp_ocr_seed():
+    """The 122 OCR items the seed item seed-cw_mp-gazette listed on the hub (20 gazette issues, 456 pages, all saved in the bucket)."""
+    items = json.loads((SEEDS / "ocr_councillors_cw_mp.json").read_text())
+    assert len(items) == 122 and len({i["key"] for i in items}) == 122
+    assert all(i["payload"]["kind"] == "form-cw_mp" and i["payload"]["stored"].startswith("civic-officials-councillors/councillors/MP/")
+               for i in items)
+    assert sum(i["payload"]["last"] - i["payload"]["first"] + 1 for i in items) == 456
