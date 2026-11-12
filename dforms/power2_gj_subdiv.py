@@ -14,7 +14,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, clean, raw
+from dforms._power import tr_pos, Out, clean, raw
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -33,6 +33,7 @@ def parse(html, discom="ugvcl", url=URLS["ugvcl"]):
     seen = set()
     for tb in soup.find_all("table"):
         for tr in tb.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             c = [clean(td.get_text(" ", strip=True)) for td in tr.find_all(["td", "th"])]
             if len(c) != 5 or (c[0] or "").lower() == "circle":
                 continue
@@ -49,6 +50,7 @@ def parse(html, discom="ugvcl", url=URLS["ugvcl"]):
             else:
                 lvl, area, par = "circle", ca, None
             out.add(f"{discom}:{ca}:{da or ''}:{sa or ''}:{post}:{name or ''}", lvl, area, post=post, name=name, parents=par)
+    out.src = {}
     return out.recs
 
 

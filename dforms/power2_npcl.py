@@ -11,9 +11,10 @@ About 20 records. Record id dept:power2_npcl:<heading>:<sub-heading>.
 """
 import re
 
+import provenance
 from dforms._power import Out, clean, phone, raw
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "javascript bundle (table literal in the page's React script)"     # source trail (provenance.py): how this reader reads its sources
 
 MOD = "power2_npcl"
 URL = "https://www.noidapower.com/contact-us"
@@ -39,22 +40,27 @@ def rows(js):
         texts = [t for t in cur if t is not None]
         if len(texts) == 4:
             out.append((heading, *texts))
+            rows.pos.append(n_tr)
             span = texts[1:] if cur_span else None
         elif len(texts) == 3:                    # Customer Relation: the sub-heading sits in the outer row
             out.append((heading, sub, *texts))
+            rows.pos.append(n_tr)
         elif len(texts) == 1 and span:
             out.append((heading, texts[0], *span))
+            rows.pos.append(n_tr)
             span = None
         elif len(texts) == 1:
             sub = texts[0]
 
     cur_span = False
+    rows.pos, n_tr = [], 0                         # source trail: for each row given, its "tr" number in the contact table
     for m in TOKEN.finditer(part):
         tag, attrs, rs, text = m.groups()
         text = clean(text) if text is not None else None
         if tag == "tr":
             flush()
             cur, cur_span = [], False
+            n_tr += 1
             continue
         if 'className:"col-sm-2"' in attrs:          # the heading cell of an outer row
             if text:
@@ -72,9 +78,13 @@ def rows(js):
     return out
 
 
-def parse(js, url=URL):
+def parse(js, url=URL, src=None):
+    """src: provenance.at() of the script answer (the item also read the page that names the script)."""
     out = Out(MOD, "UP", url, discom="NPCL")
-    for heading, sub, name, post, mob in rows(js):
+    out.src = dict(src or {})
+    got = rows(js)
+    for (heading, sub, name, post, mob), n in zip(got, rows.pos):
+        out.src["src_pos"] = {"selector": "the contact table literal in the script (\"Contact Over Phone\")", "tr": n}
         zone = re.search(r"Zone-\d+", heading or "")
         if zone and re.search(r"(?i)\bhead\b", sub or ""):
             lvl, area, par = "zone", zone.group(0), None
@@ -98,6 +108,6 @@ def fetch(p, get):
     s = get(BASE + m.group(1))
     if s is None:
         return [], [raw(MOD, "contact-us", r.content, "html")], "no answer for the script"
-    recs = parse(s.text, url)
+    recs = parse(s.text, url, provenance.at(s, BASE + m.group(1)))
     files = [raw(MOD, "contact-us", r.content, "html"), raw(MOD, m.group(1).rsplit("/", 1)[-1], s.content, "js")]
     return recs, files, "" if recs else "no rows"

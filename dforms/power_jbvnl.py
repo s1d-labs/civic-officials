@@ -12,7 +12,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, email, phone, raw
+from dforms._power import tr_pos, Out, cells, clean, email, phone, raw
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -31,12 +31,14 @@ def parse_offices(html, url=URL):
     out = Out(MOD, "JH", url, discom="JBVNL", last_updated=updated(html))
     soup = BeautifulSoup(html, "lxml")
     for t in soup.find_all("table"):
-        rows = [cells(tr) for tr in t.find_all("tr")]
+        trs = t.find_all("tr")
+        rows = [cells(tr) for tr in trs]
         head = next((r for r in rows if r and r[0].lower() == "office type"), None)
         if not head:
             continue
         kind = next((clean(c[0]) for c in rows if len(c) >= 4 and clean(c[0]) and c[0].lower() != "office type"), None)
-        for c in rows:
+        for c, tr in zip(rows, trs):
+            out.src = {"src_pos": tr_pos(tr)}
             if len(c) < 4 or c[0].lower() == "office type":
                 continue
             kind = clean(c[0]) or kind                # Area Board rows leave the type empty after the first one
@@ -48,6 +50,7 @@ def parse_offices(html, url=URL):
             mails = [m for m in (email(x) for x in c[3 if ph is None else 4:]) if m]
             key = f"{level}:{area}:{mails[0].split('@')[0]}" if mails else f"{level}:{area}"
             out.add(key, level, area.title(), post=clean(c[1]), phone_=ph, email_=", ".join(mails) or None)
+    out.src = {}
     return out.recs
 
 
@@ -55,12 +58,14 @@ def parse_hq(html, url):
     out = Out(MOD, "JH", url, discom="JBVNL", last_updated=updated(html))
     soup = BeautifulSoup(html, "lxml")
     for tr in soup.find_all("tr"):
+        out.src = {"src_pos": tr_pos(tr)}
         c = cells(tr)
         if len(c) < 3 or c[0].lower() == "department":
             continue
         dept, post, name = clean(c[0]), clean(c[1]), clean(c[2])
         out.add(f"hq:{dept}:{post}:{name}", "state", "JBVNL Headquarters", post=f"{post} ({dept})" if dept else post, name=name,
                 email_=email(c[3]) if len(c) > 3 else None)
+    out.src = {}
     return out.recs
 
 

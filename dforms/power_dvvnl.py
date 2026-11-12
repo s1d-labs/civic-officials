@@ -15,6 +15,7 @@ import csv
 import io
 import re
 
+import provenance
 from dforms._power import Out, clean, email, phone, raw
 from forms.aspnet import hidden
 
@@ -35,7 +36,8 @@ def level(post, office):
 def parse_csv(text, url=URL):
     out = Out(MOD, "UP", url, discom="DVVNL")
     seen = set()
-    for row in csv.DictReader(io.StringIO(text.lstrip("﻿"))):
+    for rn, row in enumerate(csv.DictReader(io.StringIO(text.lstrip("﻿"))), 2):
+        out.src = {"src_pos": {"csv_record": rn - 1, "line": rn}}    # line = after the header line, when no field holds a newline
         post = clean(row.get("Job Title"))
         a, b = clean(row.get("Business Street")), clean(row.get("Business Street 2"))
         office = " ".join(x for x in (a, b) if x) or None
@@ -51,6 +53,7 @@ def parse_csv(text, url=URL):
         seen.add(key)
         out.add(f"{post}:{office}", lvl, office, post=post, name=name, phone_=ph,
                 email_=email(row.get("E-mail Address")), address=clean(row.get("Business City")))
+    out.src = {}
     return out.recs
 
 
@@ -71,4 +74,6 @@ def fetch(p, get):
     if not text.startswith("Title,") and "First Name" not in text[:500]:
         return [], files, "answer is not the csv"
     recs = parse_csv(text, url)
+    for _, d in recs:                     # the item read the form page and the csv export (POST to the same url)
+        d.update(provenance.at(c, url))
     return recs, files, "" if recs else "no rows"

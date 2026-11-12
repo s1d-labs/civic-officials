@@ -11,7 +11,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, email, phone, raw
+from dforms._power import tr_pos, Out, cells, clean, email, phone, raw
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -43,6 +43,7 @@ def parse(html, source=URL):
     cur = {"zone": None, "circle": None, "division": None}
     office_lvl, office = None, None
     for tr in soup.select("table tr"):
+        out.src = {"src_pos": tr_pos(tr)}
         c = cells(tr)
         if len(c) == 1 and c[0]:
             lvl, area = heading(c[0])
@@ -68,6 +69,7 @@ def parse(html, source=URL):
                    (office_lvl == "division" or (office_lvl == "circle" and k == "zone"))}
             out.add(f"{office_lvl}-{office[0]}", office_lvl, office[0], post=des, name=name, phone_=phone(mob), email_=email(em),
                     parents=par, office=office[1])
+    out.src = {}
     return out.recs
 
 

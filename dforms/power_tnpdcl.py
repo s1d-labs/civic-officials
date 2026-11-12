@@ -12,7 +12,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, email, phone, raw
+from dforms._power import tr_pos, Out, cells, clean, email, phone, raw
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -83,6 +83,7 @@ def parse(html, url=URL):
         if len(h) >= 4 and h[0] == "Head Quarters" and h[3] is not None and "Chief Engineer/Distribution/" in h[3]:
             region = h[3].split("/")[-1]
             for tr in tb.find_all("tr")[1:]:
+                out.src = {"src_pos": tr_pos(tr)}
                 c = cells(tr)
                 if len(c) == 4:
                     name, post, _, addr = split_office(c[1])
@@ -95,6 +96,7 @@ def parse(html, url=URL):
         circle = h[3].split("/", 1)[1]
         div = sub = None
         for tr in tb.find_all("tr")[1:]:
+            out.src = {"src_pos": tr_pos(tr)}
             c = cells(tr)
             if len(c) != 4:
                 continue
@@ -113,6 +115,7 @@ def parse(html, url=URL):
             mail = email(c[3])
             key = f"{lvl}:{mail.split(',')[0].split('@')[0] if mail else circle}:{area}:{post}"
             out.add(key, lvl, area, post=post, name=name, phone_=phone(*c[2].split(" / ")), email_=mail, address=addr, parents=par)
+    out.src = {}
     return out.recs
 
 

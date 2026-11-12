@@ -11,7 +11,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, phone, raw
+from dforms._power import tr_pos, Out, cells, clean, phone, raw
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -49,6 +49,7 @@ def parse(html, url=URL):
         if t.find("table"):
             continue                           # wrapper tables: their rows are read from the inner tables
         for tr in t.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             c = [x for x in cells(tr)]
             if not any(c):
                 continue
@@ -90,6 +91,7 @@ def parse(html, url=URL):
                     continue
                 out.add(f"{division}:{sub}", "subdivision", sub, post="Assistant Engineer (sub-division)", name=name,
                         phone_=phone(land, mob), parents={"zone": zone, "circle": circle, "division": division})
+    out.src = {}
     return out.recs
 
 

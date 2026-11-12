@@ -11,6 +11,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms import _power, _util2_east
+from dforms._power import tr_pos
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -32,6 +33,7 @@ def parse(html, url=URL):
     for tb in soup.find_all("table"):
         block = None
         for tr in tb.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             tds = tr.find_all("td")
             if len(tds) == 1:
                 block = _power.clean(tds[0].get_text(" ", strip=True))
@@ -49,6 +51,7 @@ def parse(html, url=URL):
             out.add(f"{_power.slug(block)}:{name}", "state", "CESC licence area (Kolkata and Howrah)",
                     post=f"{kind}{' (' + matter + ')' if matter else ''}: {post}", name=name, email_=mail, address=addr,
                     district="Kolkata")
+    out.src = {}
     return out.recs
 
 

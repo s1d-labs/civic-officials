@@ -9,6 +9,7 @@ Record ids: dept:ero_mn:MN-AC-<no>:ero, dept:ero_mn:MN-AC-<no>:aero:<slug of des
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -34,7 +35,7 @@ def parse(html, url=URL):
         recs.append(_esw.record(MODULE, k, dept="elections", state="MN", source=url, **f))
 
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        g = pgrid(t)
         if not g:
             continue
         head = [h.lower() for h in g[0]]
@@ -49,7 +50,8 @@ def parse(html, url=URL):
                 key = f"MN-DEO-{_esw.slug(dist)}"
                 add(key, level="district", area=dist, post="District Election Officer",
                     designation="Deputy Commissioner" if desig else None, name=name,
-                    phone=_esw.phones(c.get("telephone number")), email=_esw.emails(c.get("email id")), district=dist, office_id=key)
+                    phone=_esw.phones(c.get("telephone number")), email=_esw.emails(c.get("email id")), district=dist, office_id=key,
+                    src_pos=r.pos)
             continue
         tid = t.get("id") or ""
         role = "ero" if tid.endswith("GridView1") else "aero" if tid.endswith("GridView2") else None
@@ -65,7 +67,7 @@ def parse(html, url=URL):
             desig = c.get("designation", "")
             key = f"{office}:ero" if role == "ero" else f"{office}:aero:{_esw.slug(desig) or _esw.slug(c['name'])}"
             add(key, level="ac", area=f"{no} - {ac}", post=POST[role], designation=desig, name=c["name"],
-                email=_esw.emails(c.get("email")), district=c.get("district"), office_id=office)
+                email=_esw.emails(c.get("email")), district=c.get("district"), office_id=office, src_pos=r.pos)
     return recs
 
 

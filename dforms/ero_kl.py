@@ -7,6 +7,7 @@ Record ids: dept:ero_kl:KL-AC-<no>:ero, dept:ero_kl:KL-AC-<no>:aero:<slug of des
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -45,7 +46,7 @@ def parse(html, url=URL):
         t = div.find("table")
         if not t:
             continue
-        rows = _esw.grid(t)
+        rows = pgrid(t)
         head = [h.lower() for h in rows[0]] if rows else []
         for row in rows[1:]:
             c = dict(zip(head, row))
@@ -56,7 +57,7 @@ def parse(html, url=URL):
             loc = c.get("location", "")
             f = dict(dept="elections", post=POST[role], designation=desig, name=c.get("name"),
                      phone=_esw.phones(std0(c.get("phone number")), c.get("mobile")), email=_esw.emails(c.get("email")),
-                     state="KL", district=district, source=url)
+                     state="KL", district=district, source=url, src_pos=dict(row.pos, div=div["id"]))
             if role == "DEO":
                 key = f"KL-DEO-{_esw.slug(district)}"
                 f.update(level="district", area=district, office_id=key)

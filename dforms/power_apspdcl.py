@@ -14,7 +14,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, phone, raw
+from dforms._power import tr_pos, Out, cells, clean, phone, raw
 from dforms._power_ap import classify
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -38,6 +38,7 @@ def parse(html, url=URL):
         corporate = "CORPORATE" in (title or "").upper()
         circ = None if corporate else circle_name(title)
         for tr in panel.select("tbody tr") or panel.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             c = cells(tr)
             if len(c) < 3 or not clean(c[1]) or c[1].lower() == "designation":
                 continue
@@ -53,6 +54,7 @@ def parse(html, url=URL):
             out.add(f"{circ or 'corporate'}:{desig}", level, area, post=desig, phone_=phone(c[2]),
                     parents={"circle": circ} if circ and level != "circle" or (circ and staff) else None,
                     staff_post=True if staff else None)
+    out.src = {}
     return out.recs
 
 

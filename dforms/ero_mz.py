@@ -11,7 +11,7 @@ import re
 
 from dforms import _esw
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (div.media)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ero_mz"
 URL = "https://ceo.mizoram.gov.in/officer-contacts"
@@ -27,14 +27,15 @@ def items(get=None):
 
 def cards(pane):
     out = []
-    for c in pane.select("div.media.p-3"):
+    for cn, c in enumerate(pane.select("div.media.p-3"), 1):
         name = c.find("h5")
         desig = c.find("h6")
         bodies = [_esw.clean(b.get_text(" ")) for b in c.select("div.media.mt-2 div.media-body")]
         ac = next((b.split(":", 1)[1].strip() for b in bodies if b.lower().startswith("assembly constituency")), "")
         dist = next((b for b in bodies if not b.lower().startswith("assembly constituency")), "")
         out.append({"name": _esw.clean(name.get_text(" ")) if name else "", "designation": _esw.clean(desig.get_text(" ")) if desig else "",
-                    "district": dist, "ac": ac})
+                    "district": dist, "ac": ac,
+                    "pos": {"selector": f"div#{pane.get('id', '')} div.media.p-3", "card": cn}})
     return out
 
 
@@ -71,7 +72,7 @@ def parse(html, page=1, url=URL):
             if c["name"] and c["district"]:
                 key = f"MZ-DEO-{_esw.slug(c['district'])}"
                 add(key, level="district", area=c["district"], post="District Election Officer", designation=c["designation"],
-                    name=c["name"], district=c["district"], office_id=key)
+                    name=c["name"], district=c["district"], office_id=key, src_pos=c["pos"])
     for role in ("ero", "aero"):
         pane = soup.find("div", id=role)
         if pane is None:
@@ -83,7 +84,7 @@ def parse(html, page=1, url=URL):
             office = f"MZ-AC-{no}" if no else f"MZ-AC-{_esw.slug(c['ac'])}"
             key = f"{office}:ero" if role == "ero" else f"{office}:aero:{_esw.slug(c['designation']) or _esw.slug(c['name'])}"
             add(key, level="ac", area=f"{no} - {c['ac']}" if no else c["ac"], post=POST[role], designation=c["designation"],
-                name=c["name"], district=c["district"], office_id=office if no else None)
+                name=c["name"], district=c["district"], office_id=office if no else None, src_pos=c["pos"])
     return recs
 
 

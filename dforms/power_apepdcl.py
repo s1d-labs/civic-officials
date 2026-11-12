@@ -15,7 +15,7 @@ from urllib.parse import quote
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, email, phone, raw
+from dforms._power import tr_pos, Out, cells, clean, email, phone, raw
 from dforms._power_ap import classify
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -75,7 +75,8 @@ def parse(html, circle, title, out, url):
         if title and lvl == "circle" and not area:
             parents["wing"] = clean(title)
         out.add(f"{circle}:{desig}", level, a, post=desig, phone_=phone(c[3], land), email_=email(c[4]),
-                parents=parents if level != "circle" or staff else None, source=url, staff_post=True if staff else None)
+                parents=parents if level != "circle" or staff else None, source=url, staff_post=True if staff else None,
+                src_pos=tr_pos(tr), src_url=url)
         n += 1
     return n
 

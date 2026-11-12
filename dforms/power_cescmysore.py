@@ -12,7 +12,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, email, phone, raw, slug
+from dforms._power import tr_pos, Out, cells, clean, email, phone, raw, slug
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -49,6 +49,7 @@ def parse(html, page_level, url, district=None):
         if "Screen Reader" in t or "Document Type" in t:
             continue
         for tr in tb.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             c = [x for x in cells(tr)]
             if not any(c):
                 continue
@@ -89,6 +90,7 @@ def parse(html, page_level, url, district=None):
             else:
                 out.add(f"{cur}:{office[cur]}:{post}", cur, office[cur], post=post, phone_=ph, email_=mail, address=addr,
                         district=district, parents=par)
+    out.src = {}
     return out.recs
 
 

@@ -11,6 +11,8 @@ import re
 from urllib.parse import urljoin
 
 from dforms import _esw
+from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -47,11 +49,12 @@ def total(html):
     return int(m.group(1).replace(",", "")) if m else None
 
 
-def parse(html, url=LIST):
+def parse(html, url=LIST, src=None):
+    """src: provenance.at() of the list page read (every page has the same base url)."""
     t = _esw.soup(html).find("table", id="sroTable")
     if not t:
         return []
-    rows = _esw.grid(t)
+    rows = pgrid(t)
     head = [h.lower() for h in rows[0]] if rows else []
     col = {k: next((i for i, h in enumerate(head) if k in h), None) for k in ("sr", "zone", "district", "sro", "contact", "address", "email")}
     recs = []
@@ -67,7 +70,7 @@ def parse(html, url=LIST):
         recs.append(_esw.record(MODULE, oid, dept="registration", level="district" if post == "District Registrar" else "subdistrict",
                                 area=area, post=post, office=name, zone=c["zone"], phone=_esw.phones(c["contact"]),
                                 email=_esw.emails(c["email"]), address=c["address"], state="TN", district=c["district"],
-                                office_id=oid, source=url))
+                                office_id=oid, source=url, src_pos=row.pos, **(src or {})))
     return recs
 
 
@@ -87,7 +90,7 @@ def fetch(p, get):
     if r is None:
         return [], [], "sro list did not answer"
     files.append(_esw.keep(MODULE, "sro-list-p1", r.content))
-    for rid, d in parse(r.text, LIST):
+    for rid, d in parse(r.text, LIST, provenance.at(r)):
         recs[rid] = d
     tmpl, last = pages(r.text)
     want = total(r.text)
@@ -97,7 +100,7 @@ def fetch(p, get):
         if rp is None:
             continue
         files.append(_esw.keep(MODULE, f"sro-list-p{n}", rp.content))
-        for rid, d in parse(rp.text, LIST):
+        for rid, d in parse(rp.text, LIST, provenance.at(rp, u)):
             recs[rid] = d
     out = list(recs.items())
     why = "" if out else "no rows"

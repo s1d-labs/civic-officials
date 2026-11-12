@@ -14,7 +14,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, clean, email, phone, raw, slug
+from dforms._power import tr_pos, Out, clean, email, phone, raw, slug
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -46,6 +46,7 @@ def parse(html, circle_asked, url=BASE + "searchsection"):
     for tb in soup.select("table.section-details-table"):
         d = {}
         for tr in tb.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             th, td = tr.find("th"), tr.find("td")
             if th and td and th.get_text(strip=True) in FIELDS:
                 d[FIELDS[th.get_text(strip=True)]] = lines(td)

@@ -13,7 +13,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, email, phone, raw
+from dforms._power import tr_pos, Out, cells, clean, email, phone, raw
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -69,6 +69,7 @@ def parse(html, site, page, url):
         if "area" not in cols:
             continue
         for tr in trs[1:]:
+            out.src = {"src_pos": tr_pos(tr)}
             c = cells(tr)
             g = lambda f: clean(c[cols[f]]) if f in cols and cols[f] < len(c) else None   # noqa: E731
             area = g("area")
@@ -76,6 +77,7 @@ def parse(html, site, page, url):
                 continue
             out.add(f"{site}:{page}:{area}", lvl, area.title() if area.isupper() else area, post=g("post") or default_post,
                     name=g("name"), phone_=phone(g("phone")), email_=email(g("email")), address=g("address"))
+    out.src = {}
     return out.recs
 
 

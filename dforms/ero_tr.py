@@ -12,8 +12,9 @@ import re
 
 from dforms import _esw
 from forms.aspnet import hidden
+import provenance
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html labels (ASP.NET repeater)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ero_tr"
 BASE = "https://erms.tripura.gov.in/encoretripura/outviews/"
@@ -42,7 +43,8 @@ def cards(html):
         out.append({"area": _v(soup, "lblDistrict_Name", i), "name": _v(soup, "lblName", i),
                     "designation": _v(soup, "Label1", i) or _v(soup, "lblCategory", i),
                     "phone": _esw.phones(_v(soup, "lblMobileNo", i), _v(soup, "Label2", i)),
-                    "email": _esw.emails(_v(soup, "lblEmailId", i) + " " + _v(soup, "Label3", i))})
+                    "email": _esw.emails(_v(soup, "lblEmailId", i) + " " + _v(soup, "Label3", i)),
+                    "pos": {"selector": f"[id={P}lblName_{i}] and the labels of index {i}", "card": i}})
         i += 1
     return out
 
@@ -85,7 +87,7 @@ def parse(all_cards, page, url):
             k, i = f"{key}:{i}", i + 1
         seen.add(k)
         recs.append(_esw.record(MODULE, k, dept="elections", designation=c["designation"], name=c["name"], phone=c["phone"],
-                                email=c["email"], state="TR", source=url, **f))
+                                email=c["email"], state="TR", source=url, src_pos=c.get("pos"), **c.get("src", {}), **f))
     return recs
 
 
@@ -105,6 +107,8 @@ def fetch(p, get):
         return [], [], "no answer"
     files = [_esw.keep(MODULE, f"{page}-p1", r.content)]
     html, got = r.text, cards(r.text)
+    for c in got:
+        c["src"] = provenance.at(r, url)
     if page == "aero":
         done = {1}
         for _ in range(MAX_PAGES):
@@ -125,6 +129,9 @@ def fetch(p, get):
             done.add(new)
             html = r.text
             files.append(_esw.keep(MODULE, f"{page}-p{new}", r.content))
-            got += cards(html)
+            new_cards = cards(html)
+            for c in new_cards:                 # the same url answers every page (POST): the exact answer by its hash
+                c["src"], c["pos"] = provenance.at(r, url), dict(c["pos"], list_page=new)
+            got += new_cards
     recs = parse(got, page, url)
     return recs, files, "" if recs else "no rows"

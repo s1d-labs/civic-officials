@@ -56,7 +56,7 @@ def sheet_rows(content):
             if v is None or v.text is None:
                 continue
             d[col] = ss[int(v.text)] if c.get("t") == "s" else v.text
-        out.append({k: v for k, v in d.items() if _esw.clean(v)})
+        out.append({**{k: v for k, v in d.items() if _esw.clean(v)}, "_r": r.get("r")})     # _r: sheet row number (source trail)
     return out
 
 
@@ -85,10 +85,12 @@ def parse(content, url=URL):
         b = _esw.clean(d.get("B"))
         if b and (cur is None or b != cur["name"] or district(dist_cell) != cur["district"]):
             cur = {"name": b, "district": district(dist_cell), "address": _esw.clean(d.get("C")), "address_gu": _esw.clean(d.get("D")),
-                   "villages": []}
+                   "villages": [], "rows": []}
             offices.append(cur)
         if cur is None:
             continue
+        if d.get("_r"):
+            cur["rows"].append(d["_r"])
         if not cur["address"] and d.get("C"):
             cur["address"] = _esw.clean(d["C"])
         if not cur["address_gu"] and d.get("D"):
@@ -111,7 +113,9 @@ def parse(content, url=URL):
         recs.append(_esw.record(MODULE, oid, dept="registration", level="subdistrict", area=place, area_regional=place,
                                 post="Sub Registrar", office_regional=o["name"], address=o["address"], address_regional=o["address_gu"],
                                 state="GJ", district=o["district"], office_id=oid, villages=o["villages"],
-                                village_count=len(o["villages"]), source=url))
+                                village_count=len(o["villages"]), source=url,
+                                src_pos={"sheet": "sheet1", "row": int(o["rows"][0]) if o["rows"] and str(o["rows"][0]).isdigit() else None,
+                                         **({"rows_to": int(o["rows"][-1])} if len(o["rows"]) > 1 and str(o["rows"][-1]).isdigit() else {})}))
     return recs
 
 

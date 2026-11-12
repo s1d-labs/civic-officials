@@ -11,6 +11,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms import _power, _util2
+from dforms._power import tr_pos
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -30,6 +31,7 @@ def parse(html, url=URL):
     for tb in soup.find_all("table"):
         level = None
         for tr in tb.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             c = [x for x in _power.cells(tr) if x]
             if not c:
                 continue
@@ -42,6 +44,7 @@ def parse(html, url=URL):
                     "section": "Station Manager office", "state": "Office"}[level]
             out.add(f"{level}:{c[0]}", level, re.sub(r"\s+Zone$", "", c[0]), post=post,
                     phone_=_util2.tel(c[1]))
+    out.src = {}
     return out.recs
 
 

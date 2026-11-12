@@ -18,6 +18,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms import _power, _util2
+from dforms._power import tr_pos
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -73,6 +74,7 @@ def staff(soup, out):
     for tb in soup.find_all("table"):
         title, head = None, None
         for tr in tb.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             c = [" ".join(td.get_text(" ", strip=True).split()) for td in tr.find_all(["td", "th"])]
             filled = [x for x in c if x]
             if len(filled) == 1 and not head and not re.fullmatch(r"[\d\s]+", filled[0]):
@@ -106,6 +108,7 @@ def parse(html, page, url):
     if page == "staff":
         out = _power.Out(MODULE, "SK", url, discom="Power Department, Sikkim")
         staff(soup, out)
+        out.src = {}
         return out.recs
     out = _power.Out(MODULE, "SK", url, discom="Power Department, Sikkim")
     heads = [h.get_text(" ", strip=True) for h in soup.find_all(["h3", "h4"])]
@@ -113,6 +116,7 @@ def parse(html, page, url):
     for tb in soup.find_all("table"):
         head = None
         for tr in tb.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             tds = tr.find_all(["td", "th"])
             c = [" ".join(td.get_text(" ", strip=True).split()) for td in tds]
             if not head:
@@ -142,6 +146,7 @@ def parse(html, page, url):
                     ph = _power.phone(phones[i]) if i < len(phones) else None
                     out.add(f"cell:{area}:{post}:{nm}", level(post), area, post=post, name=nm, phone_=ph,
                             parents={"division": title} if title and title != area else None, district="Gangtok")
+    out.src = {}
     return out.recs
 
 
