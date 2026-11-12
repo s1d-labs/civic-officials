@@ -35,8 +35,9 @@ POSTS = {"councillor": None, "president": "President", "vice president": "Vice P
 
 
 def post_ward(s):
-    """("Vice President", "7") from "Vice President  ward no-7"; (None, "2") from "Councillor  Ward 02"."""
-    m = re.match(r"\s*(.*?)\s*ward\s*(?:no\.?)?\s*[-:]?\s*0*(\d+)\s*$", s or "", re.I)
+    """("Vice President", "7") from "Vice President  ward no-7"; (None, "2") from "Councillor  Ward 02"; ("President", "5") from
+    "President Ward Number-5" (Alawalpur, 2026-11-12)."""
+    m = re.match(r"\s*(.*?)\s*ward\s*(?:no\.?|number)?\s*[-:]?\s*0*(\d+)\s*$", s or "", re.I)
     if not m:
         return None, None
     post = clean(m.group(1)).lower()

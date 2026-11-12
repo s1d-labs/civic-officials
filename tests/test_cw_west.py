@@ -440,3 +440,35 @@ def test_gj_items_split_and_store():
     assert [i["payload"]["first"] for i in got] == [1, 7] and got[1]["payload"]["last"] == 8
     assert got[0]["payload"]["election"] == "Gujarat 2026" and got[0]["payload"]["body_type"] == "Municipal Corporation"
     assert "stored" not in got[0]["payload"] and got[1]["payload"]["stored"].startswith("civic-officials-councillors-ocr/councillors/GJ/")
+
+
+# Real SEC Goa winners files (fetched from dev-vps-3, Mumbai, 2026-11-12): Ponda 2023 and Sanquelim 2023 (ward | name | address in
+# columns, names and addresses over 2-3 lines; Sanquelim writes "WARD I (ONE)"), and the Sanquelim ward IX bye-election (mixed case).
+def _ga_pdf(name, p):
+    from pypdf import PdfReader
+    pages = [pg.extract_text(extraction_mode="layout") or "" for pg in PdfReader(DATA / name).pages]
+    return cw_ga.parse("\n".join(pages), p, pages)
+
+
+def test_ga_real_files_by_column():
+    recs = dict(_ga_pdf("cw_ga_ponda_2023.pdf", {"url": "u"}))
+    assert len(recs) == 15
+    assert recs["councillor:GA:ponda:2"]["name"] == "DHAVALIKAR VIRENDRA TIMA"
+    assert recs["councillor:GA:ponda:14"]["name"] == "NAIK ANAND PANDURANG" and recs["councillor:GA:ponda:14"]["reservation"] == "General"
+    assert recs["councillor:GA:ponda:15"]["name"] == "SINAI TALAULICAR GEETALI RAJESH"
+    recs = dict(_ga_pdf("cw_ga_sanquelim_2023.pdf", {"url": "u"}))
+    assert sorted(int(k.rsplit(":", 1)[1]) for k in recs) == list(range(1, 13))
+    d = recs["councillor:GA:sanquelim:5"]
+    assert d["name"] == "BLAGGAN PRAVEEN DWARKANATH" and d["unopposed"] and d["reservation"] == "General"
+    assert recs["councillor:GA:sanquelim:12"]["reservation"] == "Women"            # not the number word "(TWELEVE)"
+    assert recs["councillor:GA:sanquelim:11"]["name"] == "JALMI DEEPA NILESH" and d["district"] == "North Goa"
+    assert all(r["src_pos"]["page"] >= 1 and r["src_pos"]["line_text"] for r in recs.values())
+    recs = _ga_pdf("cw_ga_sanquelim_bye_ix.pdf", {"url": "u", "title": "Winning Candidates for Ward No.IX of Sanquelim Municipal Council"})
+    assert [(k, d["name"], d["reservation"]) for k, d in recs] == [("councillor:GA:sanquelim:9", "Ameshkar Rajendra Ramesh", "OBC")]
+
+
+def test_ga_orders_are_not_winners():
+    html = ('<a href="https://sec.goa.gov.in/assets/media/docs/x/no-of-councilors.pdf">Order regarding Number of Councillors to be elected</a>'
+            '<a href="https://sec.goa.gov.in/assets/media/docs/x/DMA-WARD-COUNCILOR.pdf">Order</a>'
+            '<a href="https://sec.goa.gov.in/assets/media/docs/x/winning-candidates-ponda.pdf">Winning Candidates Ponda</a>')
+    assert [u for u, _ in cw_ga.winners_pdfs(html, cw_ga.BASE)] == ["https://sec.goa.gov.in/assets/media/docs/x/winning-candidates-ponda.pdf"]

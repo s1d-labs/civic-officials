@@ -90,7 +90,7 @@ def tr_pos(tr):
     return {"table": len(t.find_all_previous("table")) + 1, "row": next((i for i, x in enumerate(rows, 1) if x is tr), 0)}
 
 
-HEAD_WORDS = re.compile(r"name|ward|mobile|contact|phone|s\.?\s*no|sl\.?|नाम|वार्ड|मोबाइल|પ્રભાગ|નામ|ವಾರ್ಡ್|पद", re.I)
+HEAD_WORDS = re.compile(r"name|ward|mobile|contact|phone|s\.?\s*no|sl\.?|नाम|वार्ड|मोबाइल|પ્રભાગ|નામ|ವಾರ್ಡ್|पद|பெயர்|வார்டு|அலைப்பேசி", re.I)        # ... Tamil: name, ward, mobile
 
 
 def table_rows(html):
