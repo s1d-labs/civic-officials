@@ -31,11 +31,12 @@ def parse(html, p):
     soup = _esw.soup(html)
     seen, recs = set(), []
     for t in soup.find_all("table"):
-        g = [[_esw.clean(c) for c in r] for r in _esw.grid(t)]
+        gp = []
+        g = [[_esw.clean(c) for c in r] for r in _esw.grid(t, pos=gp)]
         if not g:
             continue
         lst = "staff" if any("staff" in c.lower() or "employees" in c.lower() for r in g[:2] for c in r) else "officers"
-        for r in g:
+        for r, rp in zip(g, gp):
             if len(r) < 3 or not r[0].isdigit():
                 continue
             name, post = r[1], POSTS.get(r[2].replace(" ", ""), r[2])
@@ -43,7 +44,7 @@ def parse(html, p):
                 continue
             recs.append(_ward.record(MODULE, f"{lst}:{_esw.slug(post)}:{_esw.slug(name)}", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level="body", area=BODY, post=post, name=name, list=lst,
-                                     source=p["url"]))
+                                     source=p["url"], src_pos=rp))
     return recs
 
 
