@@ -9,7 +9,7 @@ import re
 
 from dforms import _emerg, emerg_ddma_s3waas
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table + html text (label lines)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "emerg_ddma_sk"
 URL = "https://ssdma.nic.in/whoiswho.html"

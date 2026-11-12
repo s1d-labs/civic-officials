@@ -28,14 +28,18 @@ def base(station):
     return re.sub(r"[^a-z]", "", s.lower())
 
 
-def stations(html):
-    """{base name: (district, remarks, name as written)} from fire_stations.html."""
+def stations(html, where=None):
+    """{base name: (district, remarks, name as written)} from fire_stations.html. where (a dict) gets {base name: src_pos}."""
     out = {}
     for t in _esw.soup(html).find_all("table"):
-        for row in _esw.grid(t)[1:]:
+        gp = []
+        g = _esw.grid(t, pos=gp)
+        for row, rp in zip(g[1:], gp[1:]):
             if len(row) >= 4 and row[2]:
                 dist = re.sub(r"(?i)\s*d[si]s?tr?ict\s*$|\s*dsitrict\s*$", "", _emerg.clean(row[1])).title()
                 out.setdefault(base(row[2]), (dist, _emerg.clean(row[3]), _emerg.clean(row[2]).rstrip(".")))
+                if where is not None:
+                    where.setdefault(base(row[2]), rp)
     return out
 
 
@@ -58,16 +62,18 @@ def name_post(cell):
 
 
 def records(html, stations_html, url, stations_url=None):
-    st = stations(stations_html) if stations_html else {}
+    sw = {}
+    st = stations(stations_html, sw) if stations_html else {}
     ts = _esw.soup(html).find_all("table")
     recs, seen, used = [], set(), set()
     for t in ts:
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g:
             continue
         head = " ".join(g[0]).lower()
         if "fire station" in head:                       # station table
-            for row in g[1:]:
+            for row, rp in zip(g[1:], gp[1:]):
                 if len(row) < 4 or not row[2]:
                     continue
                 name, post = name_post(row[1])
@@ -84,9 +90,10 @@ def records(html, stations_html, url, stations_url=None):
                     name=name, phone=", ".join(([office] if office else []) + mobiles), landline=office,
                     mobile=", ".join(mobiles), short_codes=_emerg.short_codes(row[3]) if "Hot" in row[3] else None,
                     district=info[0] if info else None, building=info[1] if info else None, state="ML",
-                    office_id=key, source=url, district_source=stations_url if info else None))
+                    office_id=key, source=url, district_source=stations_url if info else None, src_url=url,
+                    src_pos={**rp, **({"district_from": {"url": stations_url, **sw.get(b, {})}} if info else {})}))
         elif "designation" in head:                      # senior officers
-            for row in g[1:]:
+            for row, rp in zip(g[1:], gp[1:]):
                 if len(row) < 3:
                     continue
                 parts = [x.strip(" ,.") for x in row[1].split("|") if x.strip(" ,.")]
@@ -101,14 +108,16 @@ def records(html, stations_html, url, stations_url=None):
                 recs.append(_emerg.record(
                     MODULE, key, "fire", dept="fire", level="state" if "Tura" not in (place or "") else "zone",
                     area=place or "Meghalaya", post=post, name=name, phone=", ".join(([office] if office else []) + mobiles),
-                    landline=office, mobile=", ".join(mobiles), email=email, state="ML", office_id=key, source=url))
+                    landline=office, mobile=", ".join(mobiles), email=email, state="ML", office_id=key, source=url,
+                    src_url=url, src_pos=rp))
     # stations on the station list without a contact row (newly sanctioned, non functional ...)
     for b, (dist, remarks, name) in st.items():
         if b in used:
             continue
         key = _emerg.unique(f"st-{_emerg.slug(name)}", seen)
         recs.append(_emerg.record(MODULE, key, "fire", dept="fire", level="facility", area=name, post="Station Officer",
-                                  district=dist, building=remarks, state="ML", office_id=key, source=stations_url))
+                                  district=dist, building=remarks, state="ML", office_id=key, source=stations_url,
+                                  src_url=stations_url, src_pos=sw.get(b)))
     return recs
 
 

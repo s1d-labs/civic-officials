@@ -130,3 +130,51 @@ def test_civic_tag_and_tr_pos():
     assert recs[1][1]["src_url"] == "keep" and recs[1][1]["method"] == "html table"
     s = _esw.soup("<table><tr><td>a</td></tr></table><table><tr><th>h</th></tr><tr><td>b</td></tr></table>")
     assert _civic.tr_pos(s.find_all("tr")[2]) == {"table": 2, "row": 2}
+
+
+def row_text(html, pos):
+    """Text of the row that a {"table", "row"} src_pos names (rows counted as _esw.grid counts them: the table's own <tr>)."""
+    from dforms import _esw
+    t = _esw.soup(html).find_all("table")[pos["table"] - 1]
+    trs = [tr for tr in t.find_all("tr") if tr.find_parent("table") is t]
+    return " ".join(trs[pos["row"] - 1].get_text(" ").split())
+
+
+def digits(s):
+    import re
+    return re.sub(r"\D", "", s or "")
+
+
+def check_rows(recs, html, field="phone"):
+    n = 0
+    for _, d in recs:
+        pos = d.get("src_pos") or {}
+        if "table" in pos and d.get(field):
+            first = d[field].split(",")[0]
+            assert digits(first)[-6:] in digits(row_text(html, pos)), (d[field], pos)
+            n += 1
+    assert n
+
+
+def test_emerg_table_rows():
+    from esw_common import fake_get
+    for module, fixture in (("emerg_fire_tr", "emerg_fire_tr.html"), ):
+        m = mod(module)
+        recs, _, _ = m.fetch({"url": m.URL}, fake_get({m.URL: fixture}))
+        check_rows(recs, (DATA / fixture).read_text())
+    m = mod("emerg_fire_ml")
+    routes = {m.URL: "emerg_fire_ml_contacts.html", m.STATIONS_URL: "emerg_fire_ml_stations.html"}
+    recs, _, _ = m.fetch({"url": m.URL}, fake_get(routes))
+    check_rows([r for r in recs if r[1]["src_url"] == m.URL], (DATA / "emerg_fire_ml_contacts.html").read_text())
+    assert all(d["src_url"] == m.STATIONS_URL and d["src_pos"]["table"] for _, d in recs if d["source"] == m.STATIONS_URL)
+    url = "https://chamoli.gov.in/disaster-management/"
+    recs, _, _ = mod("emerg_ddma_s3waas").fetch({"url": url, "district": "Chamoli", "state": "UK"},
+                                                fake_get({url: "emerg_ddma_s3waas_chamoli.html"}))
+    check_rows(recs, (DATA / "emerg_ddma_s3waas_chamoli.html").read_text())
+    m = mod("emerg_fire_ga")
+    recs, _, _ = m.fetch({"url": m.URL}, fake_get({m.URL: "emerg_fire_ga.html"}))
+    assert [d["src_pos"]["card"] for _, d in recs] == sorted(d["src_pos"]["card"] for _, d in recs)
+    url = "https://buldhana.nic.in/en/public-utility-category/hospitals/"
+    m = mod("emerg_hosp_s3waas")
+    recs, _, _ = m.fetch({"url": url, "state": "MH", "district": "Buldhana"}, fake_get({url: "emerg_hosp_s3waas_buldhana_p1.html"}))
+    assert all(d["src_url"] == url and d["src_pos"]["card"] >= 1 for _, d in recs)

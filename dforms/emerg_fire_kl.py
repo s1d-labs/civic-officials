@@ -18,7 +18,7 @@ import re
 
 from dforms import _emerg, _esw
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table / html cards / json api (WordPress posts), by payload kind"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "emerg_fire_kl"
 HOST = "https://fire.kerala.gov.in"
@@ -52,7 +52,9 @@ def table_records(html, p):
     which = p.get("table", "district")
     recs, seen = [], set()
     for t in s.select(".entry-content table") or s.find_all("table"):
-        for row in _esw.grid(t)[1:]:
+        gp = []
+        g = _esw.grid(t, pos=gp)
+        for row, rp in zip(g[1:], gp[1:]):
             if len(row) < 4:
                 continue
             names, place, adr, contact = row[0], row[1], row[2], row[3]
@@ -70,14 +72,15 @@ def table_records(html, p):
                     MODULE, key, "fire", dept="fire", level="district" if is_district else "state",
                     area=dist if is_district else area, area_regional=area, post=office_post, name=name or None, name_regional=name or None,
                     phone=_emerg.phones(re.sub(r"[\w.+-]+@[\w.-]+", " ", contact)), email=mail,
-                    address=adr.replace(" | ", ", "), district=dist, state="KL", office_id=key, source=p["url"]))
+                    address=adr.replace(" | ", ", "), district=dist, state="KL", office_id=key, source=p["url"],
+                    src_pos=rp, method="html table"))
     return recs
 
 
 def team_records(html, p):
     s = _esw.soup(html)
     recs, seen = [], set()
-    for title in s.select("h3.team-title"):
+    for ti, title in enumerate(s.select("h3.team-title"), 1):
         cell = title.find_parent(class_="panel-grid-cell")
         if cell is None:
             continue
@@ -94,7 +97,8 @@ def team_records(html, p):
             post=post, post_regional=post, name=name, name_regional=name, phone=_emerg.phones(phone_part),
             fax=_emerg.clean(fax.group(1)) if fax else None, email=mail,
             address="Fire Force Junction, Pulimoodu P.O, Thiruvananthapuram 695001", district="Thiruvananthapuram",
-            state="KL", office_id=key, source=p["url"]))
+            state="KL", office_id=key, source=p["url"], src_pos={"selector": "h3.team-title", "card": ti},
+            method="html cards (team panel)"))
     return recs
 
 
@@ -114,7 +118,7 @@ def contact_block(html):
 
 def post_records(posts, p):
     recs = []
-    for post in posts:
+    for pi, post in enumerate(posts):
         html = (post.get("content") or {}).get("rendered") or ""
         cb = contact_block(html)
         if not cb:
@@ -128,7 +132,9 @@ def post_records(posts, p):
         recs.append(_emerg.record(
             MODULE, key, "fire", dept="fire", level="facility", area=title or head, area_heading=head,
             post="Station Officer", phone=phone, address=adr, district=district, state="KL", office_id=key,
-            source=url, last_updated=(post.get("modified") or "")[:10] or None))
+            source=url, last_updated=(post.get("modified") or "")[:10] or None, src_url=p["url"],
+            src_pos={"index": pi, "id": post.get("id"), "field": "content.rendered: Contact Information block"},
+            method="json api (WordPress posts) + html block"))
     return recs
 
 
