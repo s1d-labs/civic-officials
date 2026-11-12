@@ -113,3 +113,15 @@ def test_kl_heads_seeds():
     items = json.loads((Path(__file__).parent.parent / "seeds" / "councillors_kl_heads.json").read_text())
     assert len(items) == 93 and len({i["payload"]["lgd_code"] for i in items}) == 93
     assert sum(1 for i in items if i["payload"]["code"].startswith("C")) == 6
+
+
+def test_tg_heads_adilabad():
+    from cforms import tg_heads
+    url = "https://adilabadmunicipality.telangana.gov.in/pages/chairman-details"
+    recs = dict(tg_heads.parse(gz("tg_heads/adilabad_chairman.html.gz"), {"body": "Adilabad", "lgd_code": "248083", "slug": "adilabad"}, url))
+    c, v = recs["councillor:TG:head:adilabad:chair"], recs["councillor:TG:head:adilabad:vice"]
+    assert (c["name"], c["position"], c["phone"]) == ("ANUSHA BANDARI", "Chairperson", "9951590999")
+    assert (v["name"], v["position"], v["phone"]) == ("MOHAMMAD ROHITH", "Vice Chairperson", "8374483733")
+    assert c["src_pos"] == {"table": 1, "row": 2} and c["lgd_code"] == "248083"
+    assert tg_heads.post_of("Mayor") == ("chair", "Mayor") and tg_heads.post_of("Deputy Mayor") == ("vice", "Deputy Mayor")
+    assert len(tg_heads.items()) == 123
