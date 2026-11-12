@@ -9,6 +9,7 @@ One queue item = the whole list. Record ids: dept:leg_tn:TN-AC-<no>.
 """
 import re
 
+from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_se
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -75,7 +76,7 @@ def parse(html, url):
         recs.append(_leg.member(MODULE, "TN", "AC", no, nm, constituency=constituency, party=party, source=url,
                                 email=_esw.clean(tds[4].get_text(" ")), residence_address=address,
                                 phone_residence=_esw.cell_text(tds[3]).replace(" | ", ", "), role=", ".join(roles),
-                                seat_no=photo_no, house="Tamil Nadu Legislative Assembly (17th)"))
+                                seat_no=photo_no, house="Tamil Nadu Legislative Assembly (17th)", src_pos=tr_pos(tr)))
     return recs
 
 

@@ -9,6 +9,7 @@ office. One queue item = the whole page (a plain GET; the grid needs no postback
 """
 import re
 
+from dforms._trail import tr_pos
 from dforms import _leg
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -66,7 +67,7 @@ def parse(html, url=URL):
                                 mobile=_span(tr, "lblmobile"), email=_span(tr, "lblemail"), permanent_address=perm,
                                 phone_constituency=_span(tr, "lblLocTel"), residence_address=local,
                                 phone_residence=_span(tr, "lblPreTel"), district=district, terms=_span(tr, "LblHouseNo"),
-                                note=note or ("" if seat else "constituency name not in the AC list")))
+                                note=note or ("" if seat else "constituency name not in the AC list"), src_pos=tr_pos(tr)))
     return recs
 
 

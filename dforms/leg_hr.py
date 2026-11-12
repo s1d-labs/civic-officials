@@ -4,7 +4,7 @@ are thin: 5 phones, 6 emails and 5 addresses of 90 (the Hindi list of 2026-11-11
 """
 from dforms import _leg_neva
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (NeVA member list, div.search-item)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "leg_hr"
 HOST = "hrla.neva.gov.in"

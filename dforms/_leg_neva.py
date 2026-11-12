@@ -20,6 +20,7 @@ import json
 import re
 from pathlib import Path
 
+import provenance
 from dforms import _esw, _leg, _leg_se
 
 _AC = None
@@ -84,7 +85,7 @@ def near(state, cons):
 def cards(html):
     """[{id, name, party, cons_text, address, phone, fax, email}] in page order."""
     out = []
-    for it in _esw.soup(html).select("div.search-item"):
+    for k, it in enumerate(_esw.soup(html).select("div.search-item"), 1):
         a = it.find("a", href=re.compile(r"/Member/Details/\d+"))
         h3 = it.find("h3")
         if not a or not h3:
@@ -92,7 +93,7 @@ def cards(html):
         d = {"id": re.search(r"/Member/Details/(\d+)", a["href"]).group(1), "href": a["href"],
              "name": _esw.clean(h3.get_text(" ")),
              "party": _esw.clean(it.find("h6").get_text(" ")) if it.find("h6") else "", "cons_text": "",
-             "address": "", "phone": "", "fax": "", "email": ""}
+             "address": "", "phone": "", "fax": "", "email": "", "card": k}
         for tr in it.select("div.card-body table tr"):
             tds = tr.find_all("td")
             if len(tds) == 2 and not d["cons_text"]:
@@ -113,8 +114,9 @@ def cards(html):
     return out
 
 
-def parse(html, url, p, regional_html=None, alias=None):
-    """Records of one house from the English list (html); regional_html = the same list in the house's own language."""
+def parse(html, url, p, regional_html=None, alias=None, src=None):
+    """Records of one house from the English list (html); regional_html = the same list in the house's own language.
+    src: provenance.at() of the English answer (the list url is asked twice: in the house's language, then in English)."""
     st, kind, host = p["state"], p.get("kind", "AC"), p["host"]
     regional = {c["id"]: c for c in cards(regional_html)} if regional_html else {}
     rows = []
@@ -146,7 +148,8 @@ def parse(html, url, p, regional_html=None, alias=None):
                                 phone=c["phone"], email=c["email"], address=c["address"], note=note,
                                 fax=_esw.phones(c["fax"]), district=district, seat_no=no_text,
                                 member_page=f"https://{host}{c['href']}", member_id=c["id"], house=p.get("house_name", ""),
-                                seat_match=match, **extra))
+                                seat_match=match, src_pos={"selector": "div.search-item", "card": c["card"],
+                                                           "member_id": c["id"]}, **(src or {}), **extra))
     count = {}
     for rid, _ in recs:
         count[rid] = count.get(rid, 0) + 1
@@ -172,7 +175,7 @@ def fetch(module, p, get, alias=None):
     if not cards(first):
         return [], files, "no members in the list"
     if english(first):
-        return parse(first, p["url"], p, alias=alias), files, ""
+        return parse(first, p["url"], p, alias=alias, src=provenance.at(r, p["url"])), files, ""
     get(f"https://{host}/Home/ChangeInEngCulture?lang={LANG_EN}&langCulCode=en-US", headers={"X-Requested-With": "XMLHttpRequest"})
     r2 = get(p["url"], headers={"X-Requested-With": "XMLHttpRequest"})
     if r2 is None:
@@ -181,5 +184,5 @@ def fetch(module, p, get, alias=None):
     en = r2.content.decode("utf-8", "replace")
     if not english(en) or not cards(en):
         return [], files, "the English member list did not come"
-    recs = parse(en, p["url"], p, regional_html=first, alias=alias)
+    recs = parse(en, p["url"], p, regional_html=first, alias=alias, src=provenance.at(r2, p["url"]))
     return recs, files, "" if recs else "no members"

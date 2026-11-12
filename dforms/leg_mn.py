@@ -12,7 +12,7 @@ import re
 
 from dforms import _esw, _leg, _leg_se
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html page (member profile: div.bu-item label / value)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "leg_mn"
 LIST = "https://assembly.mn.gov.in/members"
@@ -67,7 +67,7 @@ def parse(html, url):
     return [_leg.member(MODULE, "MN", "AC", seat, nm, constituency=cons, party=f.get("political party", ""), source=url,
                         mobile=f.get("contact", ""), email=f.get("email", ""), residence_address=f.get("present address", ""),
                         permanent_address=f.get("permanent address", ""), note=note,
-                        house="Manipur Legislative Assembly (12th)")]
+                        house="Manipur Legislative Assembly (12th)", src_pos={"selector": "div.bu-item"})]
 
 
 def fetch(p, get):

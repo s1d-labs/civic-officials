@@ -10,9 +10,10 @@ Record ids: dept:leg_od:OD-AC-<no>.
 """
 import re
 
+import provenance
 from dforms import _esw, _leg, _leg_se
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (div.memeber-item, ASP.NET postback pages)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "leg_od"
 URL = "https://assembly.odisha.gov.in/MemberofAssembly.aspx"
@@ -36,9 +37,10 @@ def _seat(constituency, district):
     return n, note
 
 
-def parse(html, url):
+def parse(html, url, src=None, page=None):
+    """src: provenance.at() of the answer (every page is a POST to the same url); page: the postback page number."""
     recs = []
-    for card in _esw.soup(html).select("div.memeber-item"):
+    for k, card in enumerate(_esw.soup(html).select("div.memeber-item"), 1):
         h3 = card.find("h3")
         nm = _leg_se.name(h3.get_text(" ") if h3 else "")
         if not nm:
@@ -67,7 +69,9 @@ def parse(html, url):
         no, note = _seat(constituency, district)
         recs.append(_leg.member(MODULE, "OD", "AC", no, nm, constituency=constituency, party=party, source=url, phone=phone,
                                 email=email, residence_address=address, district=district, note=note,
-                                house="Odisha Legislative Assembly (17th)"))
+                                house="Odisha Legislative Assembly (17th)",
+                                src_pos={"selector": "div.memeber-item", "card": k, **({"page": page} if page else {})},
+                                **(src or {})))
     return recs
 
 
@@ -93,7 +97,7 @@ def fetch(p, get):
     files, recs, seen = [], [], set()
     for page in range(1, MAX_PAGES + 1):
         files.append(_leg.keep(MODULE, f"page-{page}", r.content))
-        new = [x for x in parse(r.text, p["url"]) if x[0] not in seen]
+        new = [x for x in parse(r.text, p["url"], provenance.at(r, p["url"]), page) if x[0] not in seen]
         if not new:
             break
         seen.update(x[0] for x in new)

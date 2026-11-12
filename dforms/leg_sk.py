@@ -4,6 +4,7 @@
 Columns: Name | Position ("Hon'ble MLA") | Constituency. No AC number (the name decides), no party, phone, email or address.
 No assembly site with a member list was found. One queue item = the page. Record ids: dept:leg_sk:SK-AC-<no>.
 """
+from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_se
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -30,7 +31,7 @@ def parse(html, url):
             continue
         no, note = _leg_se.seat("SK", FIXED.get(_esw.norm_ac(cons)), cons, alias=ALIAS)
         recs.append(_leg.member(MODULE, "SK", "AC", no, _leg_se.name(nm), constituency=cons, source=url, note=note,
-                                house="Sikkim Legislative Assembly (11th)"))
+                                house="Sikkim Legislative Assembly (11th)", src_pos=tr_pos(tr)))
     return recs
 
 

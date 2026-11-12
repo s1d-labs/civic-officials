@@ -13,6 +13,7 @@ One queue item = the whole page. Record ids: dept:leg_cg:CG-AC-<no>.
 """
 import re
 
+from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_neva
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -60,7 +61,7 @@ def parse(html, url=URL):
                                 email=", ".join(x for x in (email, email_local) if x), phone=mobile,
                                 phone_residence=phone_local, permanent_address=perm, residence_address=local, seat_no=no,
                                 name_regional=name, party_regional=party, note=note,
-                                house="Chhattisgarh Vidhan Sabha (6th)"))
+                                house="Chhattisgarh Vidhan Sabha (6th)", src_pos=tr_pos(tr)))
     return recs
 
 

@@ -25,7 +25,7 @@ def items(get=None):
 
 def parse(doc, url):
     recs = []
-    for m in (doc or {}).get("records") or []:
+    for i, m in enumerate((doc or {}).get("records") or []):
         if str(m.get("mpFlag")) != "1" and _leg.clean(m.get("status")) != "Sitting":
             continue
         st = _leg.state_code(m.get("state")) or "NM"
@@ -40,7 +40,8 @@ def parse(doc, url):
             house="Rajya Sabha", term=_leg.clean(m.get("term")), term_ends=_leg.clean(m.get("expirationDate")),
             name_regional=_leg.clean(m.get("hname")).strip(", "), member_id=str(m.get("mpsno") or ""),
             title=_leg.clean(m.get("initial")), nominated="yes" if st == "NM" else "", photo=_leg.clean(m.get("imageUrl")),
-            last_updated=_leg.clean(m.get("updatedAt"))[:10] or None))
+            last_updated=_leg.clean(m.get("updatedAt"))[:10] or None,
+            src_pos={"key": "records", "index": i, "mpsno": m.get("mpsno")}))
     return recs
 
 

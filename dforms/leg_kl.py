@@ -38,10 +38,11 @@ def ac(name):
 def parse(html, url):
     recs = []
     for table in _esw.soup(html).find_all("table"):
-        rows = _esw.grid(table)
+        tp = []
+        rows = _esw.grid(table, pos=tp)
         if not rows or "constituency" not in " ".join(rows[0]).lower():
             continue
-        for row in rows[1:]:
+        for row, pos in zip(rows[1:], tp[1:]):
             row = row + [""] * (5 - len(row))
             m = re.match(r"\s*(.+?)\s*\|?\s*\(\s*(.+)\)\s*$", row[1])
             if not m:
@@ -55,7 +56,7 @@ def parse(html, url):
             recs.append(_leg.member(MODULE, "KL", "AC", no, name, constituency=const, source=url, phone=phone,
                                     email=row[4], residence_address=row[2].replace(" | ", ", "),
                                     office_address=office if re.search(r"[A-Za-z]{3,}", office) else "",
-                                    house="Kerala Legislative Assembly", term="16th KLA"))
+                                    house="Kerala Legislative Assembly", term="16th KLA", src_pos=pos))
     return recs
 
 

@@ -8,6 +8,7 @@ No address, no residence, no constituency office. One queue item = the whole pag
 """
 import re
 
+from dforms._trail import tr_pos
 from dforms import _leg
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -37,7 +38,7 @@ def parse(html, url=URL):
         seat, note = _leg.ac_seat("BR", no, cons)
         recs.append(_leg.member(MODULE, "BR", "AC", seat, name, constituency=cons, party=party, source=url, mobile=mobile,
                                 email=email, seat_no=int(no), gender=gender.strip("_ "), note=note,
-                                email_note=EMAIL_NOTE if _leg.emails(email) else ""))
+                                email_note=EMAIL_NOTE if _leg.emails(email) else "", src_pos=tr_pos(tr)))
     return recs
 
 

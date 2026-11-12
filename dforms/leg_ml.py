@@ -6,6 +6,7 @@ No addresses. One queue item = one page. Record ids: dept:leg_ml:ML-AC-<no>.
 """
 import re
 
+from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_se
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -40,7 +41,7 @@ def parse(html, url):
         recs.append(_leg.member(MODULE, "ML", "AC", no, _leg_se.name(nm.get_text(" ")), constituency=cons,
                                 party=_esw.clean(party.get_text(" ")) if party else "", source=url,
                                 phone=ph.group(1) if ph else "", email=_esw.emails(ct), note=note,
-                                house="Meghalaya Legislative Assembly (11th)"))
+                                house="Meghalaya Legislative Assembly (11th)", src_pos=tr_pos(tr)))
     return recs
 
 

@@ -5,7 +5,7 @@ the English name decides.
 """
 from dforms import _leg_neva
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (NeVA member list, div.search-item)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "leg_hp"
 HOST = "hpvs.neva.gov.in"

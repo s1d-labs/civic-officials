@@ -5,6 +5,7 @@ Columns: Sl.No (= the ECI AC number, 1 Dimapur-I ... 60 Pungro-Kiphire) | Electe
 (an X/Twitter link for some). No party, phone, email or address on this page. The assembly site (nagalandassembly.gov.in /
 webtest.nagaland.gov.in/nla) is not read. One queue item = the page. Record ids: dept:leg_nl:NL-AC-<no>.
 """
+from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_se
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -29,7 +30,7 @@ def parse(html, url):
         links = [a["href"] for a in tds[3].find_all("a", href=True)] if len(tds) > 3 else []
         recs.append(_leg.member(MODULE, "NL", "AC", by_name or int(sl), _leg_se.name(nm), constituency=cons, source=url,
                                 website=", ".join(links), seat_no=int(sl), note=note,
-                                house="Nagaland Legislative Assembly (14th)"))
+                                house="Nagaland Legislative Assembly (14th)", src_pos=tr_pos(tr)))
     return recs
 
 

@@ -14,6 +14,7 @@ Each member's own page is /web/guest/member?memberId=<id> ("member_page").
 import re
 from collections import Counter
 
+from dforms._trail import tr_pos
 from dforms import _leg
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -29,8 +30,9 @@ def items(get=None):
     return [{"key": "leg_up-list", "payload": {"reader": MODULE, "url": URL, "state": "UP", "india_only": False}}]
 
 
-def rows(html):
-    """[(memberId, district, name, constituency, AC no or None, party, phone, address)] of the list view, each member once."""
+def rows(html, where=None):
+    """[(memberId, district, name, constituency, AC no or None, party, phone, address)] of the list view, each member once.
+    where: a dict; when given, it gets {memberId: src_pos of its <tr>}."""
     from bs4 import BeautifulSoup
     soup = BeautifulSoup(html, "lxml")
     out, seen = [], set()
@@ -40,6 +42,8 @@ def rows(html):
         if mid in seen or len(tds) < 4:
             continue
         seen.add(mid)
+        if where is not None:
+            where[mid] = tr_pos(tr)
         entry = tr.find_parent("div", class_=re.compile(r"districtEntry"))
         leg = entry.find("legend") if entry else None
         name = _leg.clean(tr.find(class_="full-name").get_text(" ")) if tr.find(class_="full-name") else ""
@@ -57,7 +61,8 @@ def rows(html):
 
 
 def parse(html, url=URL):
-    rs = rows(html.replace("\u200d", "").replace("\u200c", ""))
+    where = {}
+    rs = rows(html.replace("\u200d", "").replace("\u200c", ""), where)
     seats, ids = {}, {}
     for r in rs:                                         # the same person listed twice (two member ids) counts once
         seat, note = _leg.ac_seat("UP", r[4], ALIAS.get(_leg.norm(r[3]), r[3]))
@@ -73,7 +78,7 @@ def parse(html, url=URL):
         rid, d = _leg.member(MODULE, "UP", "AC", None if shared else seat, name, constituency=cons, party=party, source=url,
                              phone=phone, address=addr, district=district, seat_no=seat or no,
                              member_page=f"{BASE}/web/guest/member?memberId={mid}", member_id=", ".join(ids[k]),
-                             note=SHARED.format(n=n[seat]) if shared else note)
+                             note=SHARED.format(n=n[seat]) if shared else note, src_pos=where.get(mid))
         recs.append((rid + "-" + _leg.slug(name) if shared else rid, d))      # two names, one seat: the name keeps them apart
     return recs
 
