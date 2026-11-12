@@ -153,3 +153,43 @@ def test_cp_gj_vadodara_lines():
     assert len(pos) == len(e) and pos[0][1].strip().startswith("1")
     assert cp_gj.page_line([text], pos[1][0], pos[1][1]) == {"page": 1, "line": pos[1][0], "line_text": pos[1][1]}
     assert cp_gj.page_line(["a\nb", "c"], 3, "c")["page"] == 2
+
+
+def test_city_records_name_source_and_place():
+    from cforms import city
+    html = ("<table><tr><td>menu</td></tr></table><table><tr><th>Ward No.</th><th>Name of Corporator</th><th>Contact Number</th></tr>"
+            "<tr><td>1</td><td>A B (Mayor)</td><td>9436123456</td></tr><tr><td>2</td><td>C D</td><td>9436000111</td></tr></table>")
+    p = {"source": "agartala", "url": "https://amc.tripura.gov.in/c", "state": "TR", "slug": "agartala", "body": "Agartala MC"}
+    recs = dict(city.fetch(p, _get({p["url"]: html}))[0])
+    d = recs["councillor:TR:agartala:2"]
+    assert d["src_pos"] == {"table": 2, "row": 3} and d["method"] == "html table"
+    wiki = json.dumps({"parse": {"title": "X", "revid": 7, "text": "<table class='wikitable'><tr><th>Ward</th><th>Councillor</th>"
+                                 "<th>Party</th></tr><tr><td>Ward 4</td><td>E F</td><td>INC</td></tr></table>"}})
+    p = {"source": "wikipedia", "title": "X", "state": "XX", "slug": "x", "body": "X"}
+    api = "https://en.wikipedia.org/w/api.php?action=parse&prop=text%7Crevid&format=json&formatversion=2&redirects=1&page=X"
+
+    class R:
+        def __init__(self, t):
+            self.text, self.content = t, t.encode()
+
+        def json(self):
+            return json.loads(self.text)
+    recs = dict(city.fetch(p, lambda url, *a, **k: R(wiki) if url == api else None)[0])
+    d = recs["councillor:XX:x:4"]
+    assert d["src_url"] == api and d["src_pos"] == {"selector": "table.wikitable", "table": 1, "row": 2}
+
+
+def test_as_od_line_positions():
+    from cforms import as_, od
+    pages = ["Municipal Boards of Cachar District\n1. Lakhipur Municipal Board\n3 Unreserved Abc Def BJP\n"]
+    rows = as_.gazette_rows(["duly elected from the Wards"] + pages, {})
+    assert rows[0][2]["src_pos"] == {"page": 2, "line": 3, "line_text": "3 Unreserved Abc Def BJP"}
+
+    class Page:
+        def extract_text(self, **k):
+            return "x\n12 KHORDHA JATNI WARD 3 Unreserved Ram Das Biju Janata Dal\n"
+
+    class Reader:
+        pages = [Page()]
+    rows = od.list_rows(Reader(), {})
+    assert rows[0][2]["src_pos"]["line"] == 2 and rows[0][2]["name"] == "Ram Das"

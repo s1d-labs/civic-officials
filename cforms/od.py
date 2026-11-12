@@ -11,7 +11,7 @@ import re
 
 from pypdf import PdfReader
 
-METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf: plain lines, or text pieces by position for vote files)"     # source trail (provenance.py): how this reader reads its sources
 
 RESERVATIONS = ["Reserved For Woman", "Unreserved", "Scheduled Caste Woman", "Scheduled Caste", "Scheduled Tribe Woman",
                 "Scheduled Tribe", "Backward Class Woman", "Backward Class"]
@@ -44,14 +44,15 @@ def split_party(rest):
 def list_rows(reader, p):
     recs = []
     for pno, page in enumerate(reader.pages, 1):
-        for line in (page.extract_text() or "").splitlines():
+        for li, line in enumerate((page.extract_text() or "").splitlines(), 1):
             m = ROW.match(" ".join(line.split()))
             if not m:
                 continue
             sl, district, body, ward, reservation, rest = m.groups()
             name, party = split_party(rest)
             recs.append((body, ward, {"district": district.title(), "body": body, "ward_no": ward, "reservation": reservation,
-                                      "name": name, "party": party, "sl_no": int(sl), "page": pno}))
+                                      "name": name, "party": party, "sl_no": int(sl), "page": pno,
+                                      "src_pos": {"page": pno, "line": li, "line_text": line}}))
     return recs
 
 
@@ -80,15 +81,17 @@ def vote_rows(reader, p):
             if any(t.startswith("TOTAL") and 200 < x < 260 for x, t in bits):
                 ward = [t for ly, t in labels if top is not None and y < ly <= top + 3]
                 if block and len(ward) == 1:
-                    votes, name, party = max(block)
+                    votes, name, party, wy, wt = max(block)
+                    # source trail: the winner's text line (its height on the page in PDF points, bottom-left origin)
                     recs.append((p["body"], ward[0], {"district": p.get("district"), "body": p["body"], "ward_no": ward[0],
-                                                      "name": name, "party": party, "votes": votes, "page": pno}))
+                                                      "name": name, "party": party, "votes": votes, "page": pno,
+                                                      "src_pos": {"page": pno, "y_pt": round(wy, 1), "line_text": wt}}))
                 block, top = [], None
                 continue
             text = " ".join(" ".join(t for x, t in bits if not (100 < x < 150 and t.isdigit())).split())
             m = CAND.match(text)
             if m and m.group(2) != "NOTA":
-                block.append((int(m.group(4)), m.group(2).rstrip(","), m.group(3)))
+                block.append((int(m.group(4)), m.group(2).rstrip(","), m.group(3), y, text))
                 top = y if top is None else top
     return recs
 

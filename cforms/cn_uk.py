@@ -20,7 +20,7 @@ import subprocess
 import tempfile
 from html import unescape
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text layer by word positions (pdftotext -bbox)"     # source trail (provenance.py): how this reader reads its sources
 
 URL = "https://cdnbbsr.s3waas.gov.in/s38208974663db80265e9bfe7b222dcb18/uploads/2026/06/202609031174499502.pdf"
 ELECTION = "Uttarakhand urban local bodies general election 2024-25 (poll 23.01.2025)"
@@ -175,7 +175,9 @@ def records(bos, p):
                  "position_local": m["ward_name"] if m["head"] else None, "gender": m["gender"] or None,
                  "phone": phone(m["phone"]), "oath_date": m["oath"] if re.search(r"\d", m["oath"]) else None,
                  "first_board_date": m["board"] if re.search(r"\d", m["board"]) else None, "remark": m["remark"] or None,
-                 "election": p.get("election", ELECTION), "url": p.get("url", URL), "page": m["pos"][0] + 1, "read": "text layer"}
+                 "election": p.get("election", ELECTION), "url": p.get("url", URL), "page": m["pos"][0] + 1, "read": "text layer",
+                 # source trail: the row's text line on the page (vertical centre in PDF points, top-left origin)
+                 "src_pos": {"page": m["pos"][0] + 1, "y_pt": round(m["pos"][1], 1)}}
             recs.append((f"councillor:UK:{key}:{ward}", {k: v for k, v in d.items() if v not in (None, "")}))
     seen, out = {}, []
     for rid, d in recs:

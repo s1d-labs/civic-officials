@@ -41,12 +41,12 @@ def position(desig, ex):
 def members(html, url=URL):
     soup = BeautifulSoup(html, "lxml")
     recs, n = [], 0
-    for table in soup.find_all("table"):
+    for ti, table in enumerate(soup.find_all("table"), 1):
         title = norm(table.find("th").get_text(" ")) if table.find("th") else ""
         if not re.search(r"Members", title):
             continue
         ex = "Ex-Officio" in title or "Ex Officio" in title
-        for tr in table.find_all("tr"):
+        for ri, tr in enumerate(table.find_all("tr"), 1):
             tds = tr.find_all("td", recursive=False)
             for i, info in enumerate(tds):          # one or two members per row: each has its name in <strong>
                 if info.find("strong") is None or "Name & Designation" in info.get_text():
@@ -68,7 +68,8 @@ def members(html, url=URL):
                      "district": "New Delhi", "ward_no": f"member-{n}", "name": name, "designation": desig,
                      "position": position(desig, ex), "address": "; ".join(addr) or None,
                      "phone": norm(phone.group(1)) if phone and re.search(r"\d", phone.group(1)) else None, "email": mail,
-                     "election": "not elected: appointed under the NDMC Act 1994 (ex-officio: MLAs and MP)", "url": url}
+                     "election": "not elected: appointed under the NDMC Act 1994 (ex-officio: MLAs and MP)", "url": url,
+                     "src_pos": {"table": ti, "row": ri, "col": i + 1}}
                 recs.append((f"councillor:DL:new-delhi-municipal-council:member-{n}",
                              {k: v for k, v in d.items() if v not in (None, "")}))
     return recs

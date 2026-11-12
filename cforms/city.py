@@ -23,7 +23,7 @@ from urllib.parse import quote
 
 from bs4 import BeautifulSoup
 
-METHOD = "pdf text (pypdf) + json api + html table + csv file"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "by payload source: csv file, html table / cards / list, json in html, js bundle, pdf text (pypdf layout), MediaWiki json api"     # each record names its own     # source trail (provenance.py): how this reader reads its sources
 
 DEVA = str.maketrans("०१२३४५६७८९", "0123456789")
 SEATS = str.maketrans({"अ": "a", "ब": "b", "क": "c", "ड": "d", "इ": "e"})   # Kolhapur seat letters in record ids
@@ -80,7 +80,7 @@ def opencity(p, get):
         return [], files, "CSV did not answer"
     files.append(gz(p, "results.csv", c.content))
     rows, ward_name = [], {}
-    for x in csv.DictReader(io.StringIO(c.content.decode("utf-8-sig"))):
+    for n, x in enumerate(csv.DictReader(io.StringIO(c.content.decode("utf-8-sig"))), 1):
         x = {clean(k): clean(v) for k, v in x.items() if k}
         w = x.get("Ward No.")
         if not w or not x.get("Elected Candidate Name"):
@@ -89,7 +89,8 @@ def opencity(p, get):
             ward_name[w] = x["Ward Name"]
         rows.append({"ward_no": w, "ward_name": x.get("Ward Name") or ward_name.get(w), "seat": x.get("Seat"),
                      "reservation": x.get("Reservation"), "name": x["Elected Candidate Name"], "party": x.get("Party"),
-                     "votes": x.get("Valid Votes Received"), "file_url": res[0]["url"]})
+                     "votes": x.get("Valid Votes Received"), "file_url": res[0]["url"],
+                     "src_url": res[0]["url"], "src_pos": {"csv_row": n}, "method": "csv file (OpenCity dataset)"})
     return rows, files, ""
 
 
@@ -99,17 +100,18 @@ def kolhapur(p, get):
         return [], [], "no answer"
     files = [gz(p, "list.html", r.content)]
     rows = []
-    for h in BeautifulSoup(r.text, "lxml").select("h4.card-title"):
+    for k, h in enumerate(BeautifulSoup(r.text, "lxml").select("h4.card-title"), 1):
         m = re.search(r"(\d+)", clean(h.get_text()).translate(DEVA))
         card = h.find_parent(class_="card")
         if not m or card is None:
             continue
-        for pc in card.select("div.profile-card"):
+        for j, pc in enumerate(card.select("div.profile-card"), 1):
             name = clean(pc.select_one(".name").get_text() if pc.select_one(".name") else "")
             name = re.sub(r"^मा\.\s*", "", name)
             seat = clean(pc.select_one(".designation").get_text() if pc.select_one(".designation") else "")
             if name:
-                rows.append({"ward_no": m.group(1), "seat": seat or None, "name": name})
+                rows.append({"ward_no": m.group(1), "seat": seat or None, "name": name, "method": "html cards",
+                             "src_pos": {"selector": "h4.card-title / div.profile-card", "card": k, "profile": j}})
     return rows, files, ""
 
 
@@ -123,7 +125,7 @@ def indore(p, get):
         return [], files, "no __NEXT_DATA__"
     attrs = json.loads(m.group(1))["props"]["pageProps"]["data"]["data"]["attributes"]
     rows = []
-    for x in attrs.get("details") or []:
+    for i, x in enumerate(attrs.get("details") or []):
         o = x.get("otherContent") or {}
         no = re.search(r"(\d+)", o.get("wardNumber") or "")
         wname = clean(re.sub(r"^Ward Name\s*:?-?\s*", "", clean(o.get("wardName")), flags=re.I))
@@ -131,7 +133,9 @@ def indore(p, get):
         position = des if re.search(r"councillor|chairman|mayor", des, re.I) else None
         address = web if position else (des or web)          # the address sits in "designation", or in "website" when that holds a post
         rows.append({"ward_no": no.group(1) if no else None, "ward_name": wname or None, "name": clean(o.get("title")),
-                     "phone": phones(o.get("phoneNumber")), "position": position, "address": address or None})
+                     "phone": phones(o.get("phoneNumber")), "position": position, "address": address or None,
+                     "method": "json in html (__NEXT_DATA__)",
+                     "src_pos": {"field": "props.pageProps.data.data.attributes.details", "index": i, "id": x.get("id")}})
     return rows, files, "" if rows else "no details"
 
 
@@ -145,7 +149,7 @@ def bbsr(p, get):
     rows = []
     for pane in soup.select("div.tab-pane"):
         zone = zones.get(pane.get("id"))
-        for li in pane.select("ul.wardbrief > li"):
+        for n, li in enumerate(pane.select("ul.wardbrief > li"), 1):
             no, who = li.select_one("span.wardno"), li.select_one("div.block3")
             if not no or not who:
                 continue
@@ -156,7 +160,8 @@ def bbsr(p, get):
                 area_t = clean(area_t[: -len(who_t)])
             m = re.match(r"^(.*?)\s*((?:\d[\d\s]{8,}\d)?)$", who_t)
             rows.append({"ward_no": clean(no.get_text()), "ward_area": area_t or None, "zone": zone,
-                         "name": clean(m.group(1)) if m else who_t, "phone": phones(m.group(2)) if m else None})
+                         "name": clean(m.group(1)) if m else who_t, "phone": phones(m.group(2)) if m else None,
+                         "method": "html list", "src_pos": {"selector": f"div.tab-pane#{pane.get('id')} ul.wardbrief > li", "item": n}})
     return rows, files, ""
 
 
@@ -166,19 +171,19 @@ def agartala(p, get):
         return [], [], "no answer"
     files = [gz(p, "councilor-list.html", r.content)]
     rows = []
-    for t in BeautifulSoup(r.text, "lxml").find_all("table"):
+    for ti, t in enumerate(BeautifulSoup(r.text, "lxml").find_all("table"), 1):
         trs = t.find_all("tr")
         head = [clean(c.get_text()) for c in trs[0].find_all(["th", "td"])] if trs else []
         if not any("Ward" in h for h in head):
             continue
-        for tr in trs[1:]:
+        for ri, tr in enumerate(trs[1:], 2):
             c = dict(zip(head, (clean(td.get_text(" ")) for td in tr.find_all(["td", "th"]))))
             name = c.get("Name of Corporator") or ""
             m = re.match(r"^(.*?)\s*\(([^)]*)\)\s*$", name)
             if not c.get("Ward No.") or not name:
                 continue
             rows.append({"ward_no": c["Ward No."], "name": m.group(1) if m else name, "position": m.group(2).title() if m else None,
-                         "phone": phones(c.get("Contact Number"))})
+                         "phone": phones(c.get("Contact Number")), "method": "html table", "src_pos": {"table": ti, "row": ri}})
     return rows, files, ""
 
 
@@ -196,7 +201,8 @@ def gangtok(p, get):
     rows = []
     for m in re.finditer(r'\{name:"([^"]+)",designation:"([^"]*)",ward:"([^"]*)",contact:"([^"]*)"', b.text):
         rows.append({"ward_name": clean(m.group(3)), "name": clean(m.group(1)), "position": clean(m.group(2)) or None,
-                     "phone": phones(m.group(4))})
+                     "phone": phones(m.group(4)), "src_url": p["url"].rstrip("/") + js.group(1),
+                     "method": "js bundle (object literals)", "src_pos": {"char": m.start(), "text": m.group(0)}})
     return rows, files, ""
 
 
@@ -218,7 +224,8 @@ def itanagar(p, get):
         if not m or (name, m.group(1)) in seen:     # the page repeats one card (ward 20)
             continue
         seen.add((name, m.group(1)))
-        rows.append({"ward_no": m.group(1), "name": name, "position": role})
+        rows.append({"ward_no": m.group(1), "name": name, "position": role, "method": "html page text (cards)",
+                     "src_pos": {"selector": "page text tokens", "token": i}})
     return rows, files, ""
 
 
@@ -230,16 +237,20 @@ def panaji(p, get):
         from pypdf import PdfReader
         text = "\n".join(pg.extract_text(extraction_mode="layout") or "" for pg in PdfReader(io.BytesIO(r.content)).pages)
         marks = list(re.finditer(r"Ward No\.\s*([IVXLC]+)\b", text))
+        lines = text.split("\n")
         for k, m in enumerate(marks):
             block = text[m.end(): marks[k + 1].start() if k + 1 < len(marks) else len(text)]
             cat = re.search(r"\(([^)]+)\)", block)
             block = re.sub(r"\([^)]*\)|Corporation of|the City of|Panaji", " ", block)
-            sec[str(roman(m.group(1)))] = {"name": clean(block), "reservation": cat.group(1) if cat else None}
+            ln = text.count("\n", 0, m.start()) + 1
+            sec[str(roman(m.group(1)))] = {"name": clean(block), "reservation": cat.group(1) if cat else None,
+                                           "pos": {"line": ln, "line_text": lines[ln - 1]}}
     r = get(p["url"])
     if r is not None:
         files.append(gz(p, "elected-members.html", r.content))
         t = next((t for t in BeautifulSoup(r.content, "lxml").find_all("table") if "WARD NO" in t.get_text()), None)
-        for tr in t.find_all("tr") if t else []:
+        tno = len(t.find_all_previous("table")) + 1 if t else None
+        for ri, tr in enumerate(t.find_all("tr") if t else [], 1):
             tds = tr.find_all("td")
             if len(tds) < 2 or not clean(tds[0].get_text()).isdigit():
                 continue
@@ -247,7 +258,7 @@ def panaji(p, get):
             if not lines or any("NOMINATED" in x.upper() for x in lines):
                 continue
             addr = re.sub(r"^COUNCILLOR,?\s*WARD\s*NO\.?\s*\d+,?\s*", "", " ".join(lines[1:]), flags=re.I)
-            ccp[clean(tds[0].get_text())] = {"name": lines[0], "address": clean(addr) or None}
+            ccp[clean(tds[0].get_text())] = {"name": lines[0], "address": clean(addr) or None, "pos": {"table": tno, "row": ri}}
     if not sec and not ccp:
         return [], files, "neither the SEC PDF nor ccpgoa.com answered"
     rows = []
@@ -255,7 +266,12 @@ def panaji(p, get):
         s, c = sec.get(w, {}), ccp.get(w, {})
         rows.append({"ward_no": w, "name": s.get("name") or c.get("name"), "reservation": s.get("reservation"),
                      "name_ccp": c.get("name") if s else None, "address": c.get("address"),
-                     "url": p["pdf_url"] if s else p["url"], "site_url": p["url"] if c and s else None})
+                     "url": p["pdf_url"] if s else p["url"], "site_url": p["url"] if c and s else None,
+                     # source trail: the name comes from the SEC PDF when it has the ward (line of the ward heading in the
+                     # pages' text joined by line ends), else from the ccpgoa.com table; the address from the table
+                     "src_url": p["pdf_url"] if s else p["url"],
+                     "src_pos": {k: v for k, v in (("pdf", s.get("pos")), ("site", c.get("pos"))) if v},
+                     "method": "pdf text (pypdf layout)" + (" + html table" if c else "") if s else "html table"})
     return rows, files, ""
 
 
@@ -300,7 +316,7 @@ def wikipedia(p, get):
     if not d.get("text"):
         return [], files, "no such article"
     page_url = f"https://en.wikipedia.org/w/index.php?title={quote(d.get('title', p['title']).replace(' ', '_'))}&oldid={d.get('revid')}"
-    for t in BeautifulSoup(d["text"], "lxml").select("table.wikitable"):
+    for ti, t in enumerate(BeautifulSoup(d["text"], "lxml").select("table.wikitable"), 1):
         g = grid(t)
         heads = [row for row in g if row and all(h for _, h in row)]
         if not heads:
@@ -327,7 +343,7 @@ def wikipedia(p, get):
             vals = [row[i][0] for i in cs if i < len(row) and row[i][0]]
             return vals[-1] if vals else None
         rows = []
-        for row in g:
+        for ri, row in enumerate(g, 1):
             if not row or all(h for _, h in row) or wcol >= len(row):
                 continue
             m = re.search(r"(\d+)", row[wcol][0])
@@ -337,7 +353,8 @@ def wikipedia(p, get):
             rows.append({"ward_no": m.group(1), "name": name, "party": val(row, party_c), "votes": val(row, votes_c),
                          "runner_up": val(row, ru_name), "runner_up_party": val(row, ru_party), "runner_up_votes": val(row, ru_votes),
                          "margin": val(row, margin_c), "borough": val(row, borough_c), "url": page_url,
-                         "wikipedia_revision": d.get("revid")})
+                         "wikipedia_revision": d.get("revid"), "src_url": api, "method": "json api (MediaWiki parse) + html table",
+                         "src_pos": {"selector": "table.wikitable", "table": ti, "row": ri}})
         if rows:
             return rows, files, ""
     return [], files, "no ward result table"
