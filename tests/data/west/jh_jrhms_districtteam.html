@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+          content="National Health Mission (NHM) — Ensuring universal access to equitable, affordable and quality health care services across Jharkhand." />
+    <meta name="keywords" content="NHM, National Health Mission, Government of Jharkhand" />
+    <title>NHM, Government Of Jharkhand</title>
+    <link rel="icon" href="/common/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.bootstrap5.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="/client/css/style.css" rel="stylesheet" />
+    <link href="/client/css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="loader">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="/common/jh_logo.jpeg" alt="Jharkhand Logo" style="height: 5rem; margin-right: 0.8rem;">
+            <div>
+                <p style="font-size: 1rem; color: #000000b5; font-weight: 500; margin: 0;">राष्ट्रीय स्वास्थ्य मिशन</p>
+                <p style="font-size: 1.5rem; line-height: 1; font-weight: 700; margin: 0;">Jharkhand Rural Health Mission Society</p>
+                <p style="font-size: 1rem; color: #000000b5; line-height: 2; font-weight: 500; margin: 0;">स्वास्थ्य, चिकित्सा शिक्षा और परिवार कल्याण विभाग, झारखंड सरकार</p>
+            </div>
+            <img src="/common/nhm_main.jpeg" alt="NHM Logo" style="height: 4.8rem; margin-left: 1rem;">
+        </div>
+    </div>
+
+    <div class="topbar" role="banner">
+        <div class="container topbar-inner">
+            <div class="topbar-left">
+                <a href="#mainMenu">Skip Navigation </a>
+                <span class="topbar-divider">|</span>
+                <a href="/Home/SiteMap">Sitemap</a>
+                <span class="topbar-divider">|</span>
+                <div class="translate-wrapper">
+                    <div id="google_translate_element"></div>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <div class="access-controls" aria-label="Text Size Controls">
+                    <button class="access-btn" data-access="decrease" title="Decrease font size"
+                            aria-label="Decrease font size">
+                        A-
+                    </button>
+                    <button class="access-btn" data-access="reset" title="Reset font size" aria-label="Reset font size">A</button>
+                    <button class="access-btn" data-access="increase" title="Increase font size"
+                            aria-label="Increase font size">
+                        A+
+                    </button>
+                    <a class="social-icon" style="margin-left: 20px;" href="https://www.youtube.com/channel/UCPwrRj1JfEB81FduqHDC9sQ" target="_blank" title="NHM Youtube Channel">
+                        <img src="/common/youtube.png" />
+                    </a>
+                    <span class="topbar-divider">|</span>
+                    <a class="social-icon" href="https://www.facebook.com/NHMJharkhandOfficial" target="_blank" title="NHM Facebook">
+                        <img src="/common/facebook.png" />
+                    </a>
+                    <span class="topbar-divider">|</span>
+                    <a class="social-icon" href="https://mobile.twitter.com/HLTH_JHARKHAND" target="_blank" title="NHM Twitter">
+                        <img src="/common/twitter.png" />
+                    </a>
+                    <span class="topbar-divider">|</span>
+                    <a class="social-icon" href="https://www.instagram.com/nhm_jharkhand/" target="_blank" title="NHM Instagram">
+                        <img src="/common/instagram.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="site-header" role="banner">
+        <div class="container site-header-inner">
+            <a href="/" class="header-logo" aria-label="National Health Mission — Home">
+                <img src="/common/nhm_main.jpeg" alt="NHM Logo">
+                <div class="header-title">
+                    <span class="site-title-hi">राष्ट्रीय स्वास्थ्य मिशन</span>
+                    <span class="site-title-en">National Health Mission</span>
+                    <span class="site-subtitle">स्वास्थ्य, चिकित्सा शिक्षा और परिवार कल्याण विभाग, झारखंड सरकार</span>
+                </div>
+            </a>
+
+            <div class="header-right" aria-label="Government Logos">
+                <a href="/" aria-label="National Health Mission — Home">
+                    <img src="/common/jh_logo.jpeg" alt="NHM Logo">
+                </a>
+                <span class="site-title-hi">झारखंड सरकार</span>
+            </div>
+
+        </div>
+    </header>
+
+    <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+        <div class="container nav-inner">
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mainMenu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="mainMenu" role="menubar">
+
+                <li class="nav-item" role="none">
+                    <a class="nav-link " role="menuitem" href="/">Home</a>
+                </li>
+
+                <li class="nav-item" role="none">
+                    <a class="nav-link " role="menuitem" href="/Home/AboutUs">About Us</a>
+                </li>
+
+                <li class="nav-item" role="none">
+                    <a href="#" class="nav-link" role="menuitem">Health Facilities <span class="arrow">▾</span></a>
+                    <ul class="dropdown" role="menu">
+                        <li class="dropdown-item" role="none">
+                            <a href="/uploads/client/medical_college.xlsx" download class="dropdown-link"
+                               role="menuitem">Medical College</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a href="/uploads/client/district_hospital.xlsx" download class="dropdown-link" role="menuitem">District Hospital (DH)</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a href="/uploads/client/sub_district_hospital.xlsx" download class="dropdown-link" role="menuitem">Sub District Hospital (SDH)</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a href="/uploads/client/community_health_center.xlsx" download class="dropdown-link" role="menuitem">Community Health Centre (CHC)</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a href="/uploads/client/primary_health_center.xlsx" download class="dropdown-link" role="menuitem">Primary Health Centre (PHC)</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item" role="none">
+                    <a href="#" class="nav-link " role="menuitem">
+                        NHM Programmes <span class="arrow">▾</span>
+                    </a>
+                    <ul class="dropdown" role="menu">
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/MaternalHealth">Maternal Health</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/ChildHealth">Child Health</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/FamilyPlanning">Family Planning</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/RoutineImmunization">Routine Immunization</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/PcPndt">PC & PNDT</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Idsp">IDSP</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Rksk">RKSK</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Rbsk">RBSK</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Nursing">Nursing</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/QualityAssurance">Quality Assurance</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a href="#" class="dropdown-link"
+                               role="menuitem">Infrastructure</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a href="#" class="dropdown-link"
+                               role="menuitem">NGO</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a href="#" class="dropdown-link"
+                               role="menuitem">NCD</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a href="#" class="dropdown-link" role="menuitem">Other National Programmes <span class="arrow">›</span></a>
+                            <ul class="subdropdown" role="menu">
+                                <li><a class="dropdown-link" role="menuitem" href="/Home/Npcb">NPCB</a></li>
+                                <li><a href="#" class="dropdown-link" role="menuitem">NTEP</a></li>
+                                <li><a href="#" class="dropdown-link" role="menuitem">NLEP</a></li>
+                                <li><a href="#" class="dropdown-link" role="menuitem">NVBDCP</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item" role="none">
+                    <a href="#" class="nav-link " role="menuitem">Resources <span class="arrow">▾</span></a>
+                    <ul class="dropdown" role="menu">
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Notice">Notice</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Career">Career</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/GuideLine">Guidelines</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Letter">Letters</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Manual">Manuals</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Report">Reports</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Dre">DRE</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Rop">ROP</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item" role="none">
+                    <a class="nav-link " role="menuitem" href="/Home/Tender">Tender</a>
+                </li>
+
+                <li class="nav-item" role="none">
+                    <a href="#" class="nav-link active" role="menuitem">Our Team <span class="arrow">▾</span></a>
+                    <ul class="dropdown" role="menu">
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/DistrictTeam">District Team</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/StateTeam">Cell Incharge & State Team</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item" role="none">
+                    <a href="#" class="nav-link " role="menuitem">Media <span class="arrow">▾</span></a>
+                    <ul class="dropdown" role="menu">
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Press">Press Release</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Gallery">Photo Gallery</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/Youtube">Youtube Upload</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item" role="none">
+                    <a href="#" class="nav-link " role="menuitem">IEC Warehouse <span class="arrow">▾</span></a>
+                    <ul class="dropdown" role="menu">
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/IceGuideline">IEC Guideline</a>
+                        </li>
+                        <li class="dropdown-item" role="none">
+                            <a class="dropdown-link" role="menuitem" href="/Home/IcePrototype">IEC Prototype</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item" role="none">
+                    <a class="nav-link " role="menuitem" href="/Home/Contact">Contact Us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <div class="page-banner">
+    <div class="container">
+        <h1 class="page-banner-title">NHM Programmes</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            <span class="sep">›</span>
+            <span>Our Team</span>
+            <span class="sep">›</span>
+            <span>District Team</span>
+        </nav>
+    </div>
+</div>
+
+<div class="page-content">
+    <div class="container">
+        <section class="content-card fade-in" id="hss" style="margin-bottom:18px;">
+            <h2>District Team</h2>
+            <p>
+                This section provides information about the District Team under NHM, including key officials, their roles, and responsibilities in implementation at the district level.
+            </p>
+            <table id="nhmTable" class="data-table">
+                <thead>
+                    <tr>
+                        <th>District Name</th>
+                        <th>Designation</th>
+                        <th>District Team Name</th>
+                        <th>District Team Mobile</th>
+                        <th>District Team Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <td>Bokaro (BOK)</td>
+                            <td>District Program Manager</td>
+                            <td>Heena Gourav Barnwal</td>
+                            <td>9693236382</td>
+                            <td>dpmbokaro1980[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Bokaro (BOK)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Abhay Bhusan Prasad</td>
+                            <td>9934587787</td>
+                            <td>cs[dot]bokaro[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Chatra (CTR)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Jagdish Prasad</td>
+                            <td>7277805913</td>
+                            <td>cs-chatra[at]jharkhandmail[dot]gov[dot]in</td>
+                        </tr>
+                        <tr>
+                            <td>Chatra (CTR)</td>
+                            <td>District Program Manager</td>
+                            <td>Anil Barla</td>
+                            <td>6206170884</td>
+                            <td>dpmuchatra[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Deoghar (DGH)</td>
+                            <td>District Program Manager</td>
+                            <td>Niraj Kumar Bhagat</td>
+                            <td>7903074534</td>
+                            <td>csdeoghar1[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Deoghar (DGH)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Yugal Kishore Choudhary</td>
+                            <td>9241327323</td>
+                            <td>deoghar[dot]cs1[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Dhanbad (DHN)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Alok Vishwakarma</td>
+                            <td>9431711098</td>
+                            <td>cs[dot]dhanbad[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Dhanbad (DHN)</td>
+                            <td>District Program Manager</td>
+                            <td>Pratima Kumari</td>
+                            <td>9113422528</td>
+                            <td>nirajranchinrhm[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Dumka (DMK)</td>
+                            <td>District Program Manager</td>
+                            <td>Rakesh Anand</td>
+                            <td>9835573033</td>
+                            <td>pmudumka1[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Dumka (DMK)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Kamleshwar Prasad</td>
+                            <td>9296581027</td>
+                            <td>civilsurgeon[dot]dumka[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>East Singhbhum (JMS)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Jujhar Majhi</td>
+                            <td>7004051398</td>
+                            <td>cs[dot]psinghbhum[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>East Singhbhum (JMS)</td>
+                            <td>District Program Manager</td>
+                            <td>Vijay Kumar</td>
+                            <td>9431186627</td>
+                            <td>vinaydpm2[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Garhwa (GRW)</td>
+                            <td>District Program Manager</td>
+                            <td>Gaurav Kumar</td>
+                            <td>7654881289</td>
+                            <td>dpmsamresh[at]rediffmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Garhwa (GRW)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. John F. Kennedy</td>
+                            <td>8294999290</td>
+                            <td>cs[dot]garhwa[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Giridih (GRD)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Shaikh Mohammad Zafrulla</td>
+                            <td>7979967803</td>
+                            <td>cs[dot]giridih[dot]2022[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Giridih (GRD)</td>
+                            <td>District Program Manager</td>
+                            <td>Niraj Kumar Singh</td>
+                            <td>8002466611</td>
+                            <td>cs[dot]giridih2022[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Godda (GDA)</td>
+                            <td>District Program Manager</td>
+                            <td>Ravi Ranjan Kumar Singh</td>
+                            <td>9931308854</td>
+                            <td>dpmnhm10[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Godda (GDA)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Subhash Chandra Sharma</td>
+                            <td>8507445551</td>
+                            <td>cs[dot]godda[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Gumla (GML)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Sambhu Nath Choudhry</td>
+                            <td>9939977844</td>
+                            <td>cs[dot]gumla[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Gumla (GML)</td>
+                            <td>District Program Manager</td>
+                            <td>Jaya R. Xaxa</td>
+                            <td>8292358697</td>
+                            <td>jayarkhakha[at]rediffmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Hazaribagh (HZB)</td>
+                            <td>District Program Manager</td>
+                            <td>Samresh Kumar Singh</td>
+                            <td>9431103012</td>
+                            <td>ravishankar6306[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Hazaribagh (HZB)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Ashok Kumar</td>
+                            <td>9934725715</td>
+                            <td>cs[dot]hazaribagh5[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Jamtara (JMT)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Anand Mohan Soren</td>
+                            <td>7004438951</td>
+                            <td>cs[dot]jamtara1[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Jamtara (JMT)</td>
+                            <td>District Program Manager</td>
+                            <td>Pradeep Kumar</td>
+                            <td>9905868690</td>
+                            <td>drpkumar1981[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Khunti (KNT)</td>
+                            <td>District Program Manager</td>
+                            <td>Kanan Bala Tirkey</td>
+                            <td>8789433260</td>
+                            <td>cietcg[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Khunti (KNT)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Nageshwar Manjhi</td>
+                            <td>9608439362</td>
+                            <td>cs[dot]khunti[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Koderma (KDM)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Anil Kumar</td>
+                            <td>9934337941</td>
+                            <td>cs[dot]koderma4[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Koderma (KDM)</td>
+                            <td>District Program Manager</td>
+                            <td>Mahesh Kumar</td>
+                            <td>8709947026</td>
+                            <td>cs[dot]koderma4[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Latehar (LTR)</td>
+                            <td>District Program Manager</td>
+                            <td>Nirmal Kumar Das</td>
+                            <td>9934321396</td>
+                            <td>drhslatehar3[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Latehar (LTR)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Rajmohan Khalkho</td>
+                            <td>7979906880</td>
+                            <td>cslatehar[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Lohardaga (LHG)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Raju Kacchap</td>
+                            <td>6202226037</td>
+                            <td>cs[dot]lohardaga2[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Lohardaga (LHG)</td>
+                            <td>District Program Manager</td>
+                            <td>Nazish F. Akhtar</td>
+                            <td>7004130769</td>
+                            <td>nazishranchi[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Pakur (PKR)</td>
+                            <td>District Program Manager</td>
+                            <td>Niraj Kumar Singh</td>
+                            <td>800246611</td>
+                            <td>singh[dot]neerajkumar[at]ymail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Pakur (PKR)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Surendra Kumar Mishra</td>
+                            <td>8210491588</td>
+                            <td>cs[dot]pakur[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Palamu (PLM)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Anil Kumar Srivastava</td>
+                            <td>8210173338</td>
+                            <td>civilsurgeonpalamu[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Palamu (PLM)</td>
+                            <td>District Program Manager</td>
+                            <td>Devendra Srivastava</td>
+                            <td>9142363737</td>
+                            <td>dpmpalamu1[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Ramgarh (RMG)</td>
+                            <td>District Program Manager</td>
+                            <td>Pradeep Kumar Sinha</td>
+                            <td>9199083995</td>
+                            <td>dpmnrhm[at]yahoo[dot]co[dot]in</td>
+                        </tr>
+                        <tr>
+                            <td>Ramgarh (RMG)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr MahaLaxmi Prasad</td>
+                            <td>6204545564</td>
+                            <td>csramgarh[at]yahoo[dot]co[dot]in</td>
+                        </tr>
+                        <tr>
+                            <td>Ranchi (RNC)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Prabhat Kumar</td>
+                            <td>7544052143</td>
+                            <td>csofficeranchi[at]yahoo[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Ranchi (RNC)</td>
+                            <td>District Program Manager</td>
+                            <td>Praveen Kumar Singh</td>
+                            <td>9470357559</td>
+                            <td>singhpraveen42[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Sahibganj (SBJ)</td>
+                            <td>District Program Manager</td>
+                            <td>Ravi Shankar</td>
+                            <td>9431173480</td>
+                            <td>nhm[dot]dpmsahibganj[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Sahibganj (SBJ)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Ramdeo Paswan</td>
+                            <td>9661167879</td>
+                            <td>cs[dot]sahebganj1[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Seraikela Kharsawan (SKM)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Saryu Prasad Singh</td>
+                            <td>8102457770</td>
+                            <td>cs[dot]saraikela6[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Seraikela Kharsawan (SKM)</td>
+                            <td>District Program Manager</td>
+                            <td>Vinay Kumar</td>
+                            <td>8709838812</td>
+                            <td>nkdas2021[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Simdega (SMD)</td>
+                            <td>District Program Manager</td>
+                            <td>Laurentus Tirkey</td>
+                            <td>8084048012</td>
+                            <td>laurentustirkey[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>Simdega (SMD)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Sundar Mohan Samad</td>
+                            <td>9296198563</td>
+                            <td>cs[dot]simdega1[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>West Singhbhum (WSM)</td>
+                            <td>Civil Surgeon</td>
+                            <td>Dr. Sushant Kumar Manjhi</td>
+                            <td>6200872316</td>
+                            <td>cs[dot]westsinghbhum[at]gmail[dot]com</td>
+                        </tr>
+                        <tr>
+                            <td>West Singhbhum (WSM)</td>
+                            <td> District Program Manager</td>
+                            <td>Niraj Yadav</td>
+                            <td>7004715475</td>
+                            <td>kumar[dot]vijay75[at]gmail[dot]com</td>
+                        </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+</div>
+    </main>
+
+    <footer class="main-footer" role="contentinfo">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a href="/" class="header-logo" aria-label="National Health Mission — Home">
+                    <img src="/common/nhm_main.jpeg" alt="NHM Logo">
+                    <div class="header-title">
+                        <span class="site-title-hi">राष्ट्रीय स्वास्थ्य मिशन</span>
+                        <span class="site-title-en">National Health Mission</span>
+                        <span class="site-subtitle">स्वास्थ्य, चिकित्सा शिक्षा और परिवार कल्याण विभाग, झारखंड सरकार</span>
+                    </div>
+                </a>
+                <p style="font-size: .9rem; margin-top: 1rem;">National Health Mission (NHM) is committed to providing accessible, affordable, and accountable quality health services to the last person of the last household of the last village.</p>
+                <p style="font-size:.8rem;opacity:.6;margin-top:10px;">Ministry of Health &amp; Family Welfare, Government of Jharkhand</p>
+            </div>
+
+            <div class="footer-col">
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <nav class="footer-links" aria-label="Quick Links">
+                    <a href="https://sahiya.jharkhand.gov.in/pi" target="_blank">Shiya Jharkhand Portal</a>
+                    <a href="http://pcpndt.jharkhand.gov.in/" target="_blank">PCPNDT Jharkhand Portal</a>
+                    <a href="https://www.jharkhand.gov.in/" target="_blank">State Portal</a>
+                    <a href="https://hmis.mohfw.gov.in/" target="_blank">HMIS Portal</a>
+                    <a href="https://rchrpt.mohfw.gov.in/" target="_blank">RCH Portal</a>
+                    <a href="https://mtc.jharkhand.gov.in/" target="_blank">MTC Portal</a>
+                </nav>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <nav class="footer-links" aria-label="Connect">
+                    <a href="#">📞 Helpline: 0651-2261000,<br />2261856, 2261002</a>
+                    <a href="#">✉ mdnhm-jh[at]jharkhandmail[dot]gov[dot]in</a>
+                    <a href="#">Address: State RCH Office, GVI Campus, Tata Road, Namkum, Ranchi, 834010</a>
+                </nav>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <nav class="footer-policy-links" aria-label="Legal Links">
+                    <a href="/Home/HyperlinkPolicy">Hyperlink Policy</a><span>|</span>
+                    <a href="/Home/CopyrightPolicy">Copyright Policy</a><span>|</span>
+                    <a href="/Home/TermsOfUse">Terms Of Use</a><span>|</span>
+                    <a href="/Home/PoliciesDisclaimer">Policies &amp; Disclaimer</a><span>|</span>
+                    <a href="/Home/PrivacyPolicy">Privacy Policy</a><span>|</span>
+                    <span class="date-time" id="liveDateTime"></span>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            &copy; 2026 National Health Mission, Ministry of Health &amp; Family Welfare, Government of Jharkhand.<br />All Rights Reserved. Developed &amp; Maintained By <a href="https://japit.jharkhand.gov.in/" target="_blank">JAP-IT</a>
+        </div>
+    </footer>
+    <button class="scroll-top-btn" aria-label="Scroll to top" title="Back to top">▲</button>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.js"></script>
+    <script src="/client/js/main.js"></script>
+</body>
+</html>

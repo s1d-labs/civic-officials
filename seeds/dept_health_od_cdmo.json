@@ -1,0 +1,12 @@
+[
+ {
+  "key": "health_od_cdmo",
+  "payload": {
+   "reader": "health_od_cdmo",
+   "url": "https://health.odisha.gov.in/en/health/citizen-information/telephone-directory",
+   "state": "OD",
+   "india_only": true,
+   "expected": 33
+  }
+ }
+]
