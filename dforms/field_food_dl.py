@@ -16,7 +16,7 @@ import re
 
 from dforms import _esw, _field
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (drugs who's who) + pdf text (food safety officers, pdftotext -layout else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "field_food_dl"
 DRUGS = "https://drugs.delhi.gov.in/drugs/whos-who"
@@ -46,7 +46,8 @@ def parse_drugs(html, url):
     soup = _esw.soup(html)
     recs, n = [], 0
     for table in soup.find_all("table"):
-        g = _esw.grid(table)
+        gpos = []
+        g = _esw.grid(table, pos=gpos)
         if len(g) < 2:
             continue
         head = [h.lower() for h in g[0]]
@@ -57,7 +58,7 @@ def parse_drugs(html, url):
         di = [i for i, c in enumerate(head) if "drugs inspector" in c or "name of di" in c or "(name of di)" in c]
         if la_i is None or not di:
             continue
-        for row in g[1:]:
+        for row, rp in zip(g[1:], gpos[1:]):
             la, rank, em = la_split(row[la_i]) if la_i < len(row) else ("", "", "")
             area = _esw.clean(row[area_i]) if area_i is not None and area_i < len(row) else ""
             for i in di:
@@ -72,15 +73,17 @@ def parse_drugs(html, url):
                     field_layer="food", area=area or "Delhi (all districts)", post="Drugs Inspector", name=name, state="DL",
                     pincodes=pins or None, function=(_esw.clean(cell_head.split("|")[0]) if "cell" in cell_head.lower() else func) or None,
                     licensing_authority=la, licensing_authority_rank=rank, licensing_authority_email=em,
-                    office_id=f"drugs:{n}", source=url, last_updated=_field.last_updated(html)))
+                    office_id=f"drugs:{n}", source=url, last_updated=_field.last_updated(html),
+                    src_pos={**rp, "col": i + 1}, method="html table"))
     return recs
 
 
-def parse_food(text, url):
+def parse_food(text, url, method="pdf text (layout)"):
     m = re.search(r"last updated on (\d{1,2})\.(\d{1,2})\.(\d{4})", text)
     lu = f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}" if m else None
     recs, grp, n = [], None, 0
-    for ln in text.split("\n"):
+    lines = [(pg, k, ln) for pg, pt in enumerate(text.split("\f"), 1) for k, ln in enumerate(pt.split("\n"), 1)]
+    for pg, k, ln in lines:
         t = _esw.clean(ln)
         if not t or re.search(r"(?i)implementation of|corresponding with|know your field|^\(\*\)|note:", t):
             continue
@@ -98,7 +101,8 @@ def parse_food(text, url):
             recs.append(_esw.record(MODULE, f"food:{n}", dept="health", level=grp[2], layer="field", field_layer="food",
                                     area="Delhi (all districts)", post=grp[1], name=name, state="DL", office_id=f"food:{n}",
                                     source=url, last_updated=lu,
-                                    notes="area per FSO: the work allocation order (scanned PDF) assigns districts"))
+                                    notes="area per FSO: the work allocation order (scanned PDF) assigns districts",
+                                    src_pos={"page": pg, "line": k, "line_text": ln}, method=method))
     return recs
 
 
@@ -108,7 +112,8 @@ def fetch(p, get):
         return [], [], "no answer"
     if p.get("source") == "food" or r.content[:5] == b"%PDF-":
         files = [_esw.keep(MODULE, "know_your_officials", r.content, "pdf")]
-        recs = parse_food(_field.pdf_text(r.content), p["url"])
+        text, engine = _field.pdf_text_engine(r.content)
+        recs = parse_food(text, p["url"], f"pdf text ({engine})")
     else:
         files = [_esw.keep(MODULE, "drugs-whos-who", r.content)]
         recs = parse_drugs(r.text, p["url"])

@@ -161,12 +161,13 @@ def last_updated(html):
 
 
 def html_rows(html):
-    """[(header cells, row cells, caption)] for every data row of every table that has a usable header (the first of its
+    """[(header cells, row cells, caption, src_pos)] for every data row of every table that has a usable header (the first of its
     first 4 rows that header_map accepts). caption = the nearest heading before the table (a block or tehsil name)."""
     soup = _esw.soup(html)
     out = []
     for table in soup.find_all("table"):
-        g = _esw.grid(table)
+        gpos = []                         # source trail: {"table", "row"} of each grid row
+        g = _esw.grid(table, pos=gpos)
         if len(g) < 2:
             continue
         hi = next((i for i, r in enumerate(g[:4]) if header_map(r)[0]), None)
@@ -178,10 +179,10 @@ def html_rows(html):
             h = table.find_previous(["h2", "h3", "h4", "h5", "strong"])
             cap = _esw.clean(h.get_text(" ")) if h else ""
         head = g[hi]
-        for r in g[hi + 1:]:
+        for r, rp in zip(g[hi + 1:], gpos[hi + 1:]):
             if [c.lower() for c in r] == [c.lower() for c in head]:
                 continue
-            out.append((head, r, cap[:120]))
+            out.append((head, r, cap[:120], rp))
     return out
 
 
@@ -246,16 +247,21 @@ def in_layer(layer, d):
 
 def pdf_text(content):
     """Layout text of a PDF: pdftotext -layout when the binary is there (keeps columns best), else pypdf layout mode."""
+    return pdf_text_engine(content)[0]
+
+
+def pdf_text_engine(content):
+    """(layout text, engine): engine "pdftotext -layout" or "pypdf layout" (source trail: the record's method)."""
     import shutil
     import subprocess
     if shutil.which("pdftotext"):
         try:
             r = subprocess.run(["pdftotext", "-layout", "-", "-"], input=content, capture_output=True, timeout=180)
             if r.returncode == 0 and r.stdout.strip():
-                return r.stdout.decode("utf-8", "replace")
+                return r.stdout.decode("utf-8", "replace"), "pdftotext -layout"
         except Exception:
             pass
-    return "\f".join(_esw.pdf_pages(content))
+    return "\f".join(_esw.pdf_pages(content)), "pypdf layout"
 
 
 def _is_head(ch):
@@ -309,6 +315,7 @@ def text_rows(text):
     least half of the columns; the next lines add their chunks to the open row. A chunk goes to the column whose span it
     overlaps most (a column reaches halfway to the centres of its neighbours' headers, so centred headers work)."""
     text = re.sub(r"(?i)\bpage\s+\d+\s+of\s+\d+\b", " ", text)
+    where = [(pg, k) for pg, pt in enumerate(text.split("\f"), 1) for k, ln in enumerate(pt.split("\n"), 1) if ln.strip()]
     lines = [ln for ln in text.replace("\f", "\n").split("\n") if ln.strip()]
     rows, cur, head, xs, cs, title, cap, has_sno, skip = [], None, None, None, None, "", "", True, 0
     for n, ln in enumerate(lines):
@@ -334,7 +341,10 @@ def text_rows(text):
             continue
         if ROW_NO.match(ln) or (not has_sno and len(ch) >= max(3, (len(xs) + 1) // 2)):
             cur = [""] * len(xs)
-            rows.append((head, cur, cap))
+            # source trail: page + line (1-based, blank lines counted; "Page x of y" blanked) where the row starts
+            rows.append((head, cur, cap, {"page": where[n][0], "line": where[n][1], "line_text": ln}))
+        elif cur is not None and ch:
+            rows[-1][3]["line_end"] = where[n][1]
         if cur is None:
             continue
         for x, c in ch:
@@ -349,7 +359,7 @@ def text_rows(text):
             cur[bj] = (cur[bj] + " " + c).strip()
     # a blank parent cell (tehsil, block, circle, district) means "as above" in these lists
     prev = {}
-    for hd, row, _ in rows:
+    for hd, row, *_ in rows:
         for j, h in enumerate(hd):
             if header_kind(h)[0] in ("tehsil", "block", "circle", "district"):
                 if row[j]:
@@ -359,12 +369,13 @@ def text_rows(text):
     return rows
 
 
-def records(module, rows, p, url, lu=None):
-    """One record per row that names a person or gives a phone."""
+def records(module, rows, p, url, lu=None, method=None):
+    """One record per row that names a person or gives a phone. rows: (head, row, caption[, src_pos])."""
     recs, seen = [], set()
     host = urlparse(url).netloc
     tag = p.get("tag") or _esw.slug(urlparse(url).path)[-50:] or "page"
-    for n, (head, row, cap) in enumerate(rows, 1):
+    for n, t in enumerate(rows, 1):
+        head, row, cap = t[:3]
         cols, hpost = header_map(head)
         if not cols:
             continue
@@ -408,7 +419,8 @@ def records(module, rows, p, url, lu=None):
             email=email, address=cell("address"), state=p.get("state"), district=cell("district") or p.get("district"),
             tehsil=cell("tehsil") or p.get("tehsil"), block=cell("block") or p.get("block"), circle=cell("circle"),
             sub_area=sub or None, vacant=True if vac else None, caption=cap or None, office_id=key, source=url, last_updated=lu or p.get("last_updated"),
-            table_row={h: c for h, c in zip(head, row) if h and c} or None))
+            table_row={h: c for h, c in zip(head, row) if h and c} or None,
+            src_url=url, src_pos=t[3] if len(t) > 3 else None, method=method))
     if p.get("layer_key") and not p.get("all_rows"):
         recs = [(r, d) for r, d in recs if in_layer(p["layer_key"], d)]
     return recs
@@ -417,11 +429,12 @@ def records(module, rows, p, url, lu=None):
 def parse(content, url, p, module):
     """Records from one saved answer (HTML or PDF bytes)."""
     if content[:5] == b"%PDF-":
-        return records(module, text_rows(pdf_text(content)), p, url)
+        text, engine = pdf_text_engine(content)
+        return records(module, text_rows(text), p, url, method=f"pdf text ({engine}), columns from the header positions")
     html = content.decode("utf-8", "replace") if isinstance(content, bytes) else content
     if p.get("text_layout"):
-        return records(module, text_rows(html), p, url)
-    return records(module, html_rows(html), p, url, last_updated(html))
+        return records(module, text_rows(html), p, url, method="text layout, columns from the header positions")
+    return records(module, html_rows(html), p, url, last_updated(html), method="html table")
 
 
 def pdf_links(html, url, rx=None):

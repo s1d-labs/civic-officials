@@ -11,7 +11,7 @@ district when the table gives them. Ids dept:field_health_s3waas:<host>:<page>:<
 """
 from dforms import _field
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table, or pdf text (pdftotext -layout, else pypdf layout) with columns from the header positions"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "field_health_s3waas"
 items, fetch = _field.reader(MODULE, "health")

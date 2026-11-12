@@ -140,3 +140,25 @@ def test_food_up_fcs_contact_and_email_lines():
     joined, _ = m.join_emails(list(by.items()), em)
     j = dict(joined)["dept:food_up_fcs:contacts:dso:meerut"]
     assert j["src_pos"]["email"]["line_text"] and j["src_pos"]["line"] == sp["line"] and j["src_url"] == m.CONTACTS
+
+
+def test_field_html_and_text_positions():
+    from esw_common import fake_get, mod
+    from dforms import _esw, _field
+    u = "http://health.tripura.gov.in/who_is_who"
+    recs, _, _ = mod("field_health_tr").fetch({"url": u}, fake_get({u: "field_health_tr.html"}))
+    d = recs[0][1]
+    assert d["src_url"] == u and d["method"] == "html table"
+    soup = _esw.soup((DATA / "field_health_tr.html").read_text(encoding="utf-8"))
+    t = soup.find_all("table")[d["src_pos"]["table"] - 1]
+    tr = [x for x in t.find_all("tr") if x.find_parent("table") is t][d["src_pos"]["row"] - 1]
+    assert "Manik Saha" in tr.get_text(" ")
+    sample = "field_revenue_gurdaspur_layout.txt"
+    text = (DATA / sample).read_text()
+    p = dict(layer_key="revenue", text_layout=True, state="XX")
+    recs = _field.parse(text.encode(), "https://cdn.example/x", p, "field_revenue_s3waas")
+    sp = recs[0][1]["src_pos"]
+    assert text.split("\f")[sp["page"] - 1].split("\n")[sp["line"] - 1] == sp["line_text"]
+    assert recs[0][1]["method"].startswith("text layout")
+    food = mod("field_food_dl").parse_food((DATA / "field_food_dl_officials_layout.txt").read_text(), "u")
+    assert food[0][1]["src_pos"]["line_text"].strip() and food[0][1]["src_pos"]["page"] == 1
