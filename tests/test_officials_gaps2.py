@@ -1,3 +1,4 @@
+import re
 """Offline tests of the readers added for the second gaps round of 2026-11-12 (district health, education, rural development
 officers): pages saved once from archive.s1d.me or fetched once by hand, in tests/data/gaps2/. No test touches the network."""
 import gzip
@@ -86,7 +87,10 @@ def test_rj_jankalyan_parse_barmer():
     assert sp and sp[0]["post"].startswith("SUPERINTENDENT OF POLICE")
     rti = [x for x in by.values() if x.get("category") == "Right to Information"]
     assert rti and all(x["dept"] == "administration" for x in rti)
-    assert all("DateOfBirth" not in json.dumps(x) for x in by.values())
+    assert all("DateOfBirth" not in json.dumps(x) for x in by.values())      # the API field name is not copied as is
+    dobs = [x["date_of_birth"] for x in by.values() if x.get("date_of_birth")]
+    assert all(re.fullmatch(r"\d{4}-\d{2}-\d{2}", d) for d in dobs if d[:1].isdigit())
+    assert all(x["birth_year"] == x["date_of_birth"][:4] for x in by.values() if x.get("date_of_birth", "")[:1].isdigit())
 
 
 def test_rj_jankalyan_fetch():
@@ -132,3 +136,13 @@ def test_br_shs_fetch():
     recs, files, why = m.fetch(p, get)
     assert not why and len(recs) == 62 and len(files) == 2
     assert get.calls[1][2] == {"page": "1", "query": "", "district": "28", "blockid": ""}
+
+
+def test_rj_jankalyan_keeps_full_date_of_birth():
+    m = mod("rj_jankalyan")
+    d = json.loads((G / "rj_jankalyan_barmer.json").read_text())
+    rows = [r for r in d["Data"]["Data"] if r.get("OfficerName") and (r.get("MobileNo") or r.get("Email"))]
+    rows[0]["DateOfBirth"] = "1972-05-24T00:00:00"
+    recs, _ = m.parse(d, _rj_payload("barmer"))
+    got = [x for _, x in recs if x.get("date_of_birth")]
+    assert got and got[0]["date_of_birth"] == "1972-05-24" and got[0]["birth_year"] == "1972"

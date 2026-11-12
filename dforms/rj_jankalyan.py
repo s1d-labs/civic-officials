@@ -15,8 +15,8 @@ ContactCategoryName such as "District Administration (DATA)", "DLO (DATA)", "Pra
 file (IsPDF, AttachmentUrl: "DLO(PDF)" = district level officers, "Other Officers" = SDM / Tehsildar / BDO lists, "CHC",
 "PHC", "ERO- AERO", "BLO (PDF)", "Telephone Directory"). The files are free-form PDFs (Chrome print, scans): this reader
 keeps every one of them in the bucket (fetched once; the file host redirects to /WebMyWayFiles/) and writes a "source_file"
-record per file, so a later step can read them from the bucket on the runners. The API also has DateOfBirth fields; the
-portal shows only "xx-xx-xxYY", so a birth date is never stored (only the year, as the page shows it).
+record per file, so a later step can read them from the bucket on the runners. The API gives DateOfBirth; the portal page
+shows only "xx-xx-xxYY". The full date is kept (date_of_birth, ISO) with birth_year (owner, 2026-11-12: keep the full dates).
 
 Records (depts.py contract): one dept_office per data row: dept from the designation and the category (keywords below;
 default administration for district portals, the payload's dept for department portals), level from the post (SDM ->
@@ -165,7 +165,8 @@ def parse(data, p):
                                 address=_s(r.get("Address")) or _s(r.get("AddressInHindi")) or None,
                                 place_regional=_s(r.get("PlaceInHindi")) or None, qualification=_s(r.get("Qualification")) or None,
                                 posting_office=_s(r.get("PostingOfficeName")) or None, home_town=_s(r.get("HomeTownName")) or None,
-                                birth_year=(dob[:4] if re.match(r"^\d{4}-", dob) else None), url=_s(r.get("URL")) or None,
+                                birth_year=(dob[:4] if re.match(r"^\d{4}-", dob) else None),
+                                date_of_birth=(dob[:10] if re.match(r"^\d{4}-\d{2}-\d{2}", dob) else (dob or None)), url=_s(r.get("URL")) or None,
                                 attachment=att or None, portal=p.get("host"), portal_title=_s(r.get("DepartmentTitle")) or None,
                                 entry_id=str(eid), state="RJ", district=p.get("district"), office_id=f"rj-jankalyan:{code}:{eid}",
                                 source=p["url"], page=p["url"]))
