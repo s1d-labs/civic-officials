@@ -29,7 +29,9 @@ LANG_EN = "7C4F28F6-02FC-4627-993D-E255037531AD"
 SHARED = "the list has {n} members for this seat (a by-election); it does not say who sits now"
 HONORIFIC = re.compile(r"^(?:(?:sh|shree|janab|mr|mrs|ms)\.?\s+)+", re.I)
 HONORIFIC_REGIONAL = re.compile(r"^(?:(?:श्रीमती|श्रीमति|सुश्री|श्री|कुमारी|डॉ०?|डा0|শ্রীমতী|শ্রীমতি|শ্রী|ಶ್ರೀಮತಿ|ಶ್ರೀ)\.?\s*)+")
-CONS = re.compile(r"^(?:(?P<no>\d{1,3})\s*-\s*)?(?P<cons>.*?)(?:\s+-(?=\S)(?P<district>[^()]*?))?\s*(?:\((?P<state>[^()]*)\))?\s*$")
+# district: one inner bracket allowed ("Nuh -Mewat(Nuh) (Haryana)"); a trailing "*" is dropped ("Kinnaur -KINNAUR (ST)*")
+CONS = re.compile(r"^(?:(?P<no>\d{1,3})\s*-\s*)?(?P<cons>.*?)(?:\s+-(?=\S)(?P<district>(?:[^()]|\([^()]*\)(?=\s*\())*?))?"
+                  r"\s*(?:\((?P<state>[^()]*)\))?\s*\**$")
 
 
 def item(module, state, host, house, house_name, kind="AC", india_only=False):

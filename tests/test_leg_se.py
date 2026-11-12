@@ -133,3 +133,9 @@ def test_leg_tr_nl_sk():
     recs, _ = _run("leg_sk", {mod("leg_sk").URL: "sk_list.html"})
     assert recs["dept:leg_sk:SK-AC-32"]["name"] == "SONAM LAMA" and recs["dept:leg_sk:SK-AC-32"]["constituency"] == "Sangha"
     assert recs["dept:leg_sk:SK-AC-6"]["name"] == "MINGMA NORBU SHERPA"
+
+
+def test_leg_od_split_constituency():
+    od = mod("leg_od")
+    assert od.split_cons("Nuapada- (Nuapada , Odisha)") == ("Nuapada", "Nuapada") and od._seat("Nuapada", "Nuapada")[0] == 71
+    assert od.split_cons("Bargarh - ( Bargarh , Odisha )") == ("Bargarh", "Bargarh")

@@ -130,3 +130,17 @@ def test_leg_up():
     assert recs["dept:leg_up:UP-AC-313"]["member_id"] == "25226, 25432"      # one person listed twice
     khair = [d for d in recs.values() if d.get("seat_no") == 71]
     assert len(khair) == 2 and not any(d.get("office_id") for d in khair) and all("by-election" in d["seat_note"] for d in khair)
+
+
+def test_leg_up_mispaired_numbers():
+    """The page pairs some AC numbers with a neighbour's name (Meerut Cantt - 48; ECI: 47 Meerut Cantt, 48 Meerut, 49 Meerut South;
+    Bilaspur - 38, ECI 36): the ECI number of the name wins, the note keeps the page's number."""
+    p = dict(_seed("leg_up")[0]["payload"])
+    recs = dict(mod("leg_up").fetch(p, fake_get({p["url"]: "leg/up_members_mispaired.html"}))[0])
+    by_no = {d["seat_no"]: d for d in recs.values()}
+    assert by_no[47]["constituency"] == "Meerut Cantt" and by_no[47]["name"] == "Shri Amit Agrawal"
+    assert by_no[48]["constituency"] == "Meerut" and by_no[49]["constituency"] == "Meerut South"
+    assert "prints AC 48" in by_no[47]["seat_note"] and by_no[47]["area"] == "47 - Meerut Cantt"
+    assert by_no[36]["constituency"] == "Bilaspur" and by_no[38]["constituency"] == "Milak"
+    assert all(d.get("office_id") for d in recs.values())       # no false "two members, one seat" (Bilaspur and Milak on 38)
+    assert mod("leg_up").seat_of(0, "Kol") == (75, "") and mod("leg_up").seat_of(217, "Maharajpur") == (217, "")

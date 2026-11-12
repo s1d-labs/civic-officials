@@ -8,7 +8,7 @@ METHOD = "html cards (NeVA member list, div.search-item)"     # source trail (pr
 
 MODULE = "leg_wb"
 HOST = "wbla.neva.gov.in"
-ALIAS = {}
+ALIAS = {"nawda": "Naoda"}     # NeVA spelling -> dforms/ac_no.json (74 Nowda; MyNeta Nowda)
 
 
 def items(get=None):

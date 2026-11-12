@@ -176,5 +176,13 @@ def ac_no(state, name, district=None):
     if k in d:
         return d[k]
     if district:
-        return d.get(k + "@" + norm_ac(district))
+        hit = d.get(k + "@" + norm_ac(district))
+        if hit is None:      # "South 24 Parganas" = "southtwentyfourpargan" (the file spells the number and cuts long names)
+            dk = _dist_key(district)
+            hit = next((v for kk, v in d.items() if kk.startswith(k + "@") and _dist_key(kk.split("@", 1)[1]) == dk), None)
+        return hit
     return None
+
+
+def _dist_key(s):
+    return norm_ac(re.sub(r"\b24\b", "twentyfour", s or ""))[:12]
