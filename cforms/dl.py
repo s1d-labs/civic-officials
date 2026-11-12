@@ -5,6 +5,12 @@
   The page is warped (its vertical rules lean by different amounts), so each row between two horizontal rules is cut out
   and read as one text line; the reservation word and the party name split the line into its fields. Wards are listed in
   order, so the ward number is checked against the row order.
+- "summary2022": the SEC's "Result Summary" of the same election (universal-tab/result_summary-ward_wise_1.pdf, 12 pages,
+  printed from secdelhi.in on 10.12.2022, text layer). One row per ward: S.No, (ward no) ward name, reservation, winner, winner
+  party, votes, runner-up, runner-up party, runner-up votes, difference. Each cell is printed as separate text runs at fixed x
+  positions (one run per wrapped line), so the runs are put into columns by x and into rows by the S.No runs. All 250 wards
+  (the scan above gave 127; MyNeta 248: no winner for 162 Tigri and 178 Tughlakabad Extension). Same record ids as the scan,
+  so these records replace its OCR rows. No OCR.
 - "bye2025": Delhi Gazette list of the 12 wards of the bye-election of 30.11.2025. The Hindi half is in a legacy font; the
   English half has a clean text layer, read with pdftotext -layout.
 The 2022 winner of a ward that had a bye-election gets the id suffix "-2022" (payload bye_wards); the bye winner holds the
@@ -33,7 +39,7 @@ def party(s):
         return "Bharatiya Janata Party"
     if re.search(r"AAM|AADM|ADMI|AAP", t):
         return "Aam Aadmi Party"
-    if re.search(r"CONG|NATIONALC", t):
+    if re.search(r"CONG|NATIONALC|^INDIANNATIONAL$", t):
         return "Indian National Congress"
     if re.search(r"FORWARD|BLOC", t):
         return "All India Forward Bloc"
@@ -62,7 +68,7 @@ def title(s):
     return " ".join(w.title() if w.isupper() and len(w) > 1 else w for w in s.split())
 
 
-def record(p, ward, ward_name, res, name, pty, page, read):
+def record(p, ward, ward_name, res, name, pty, page, read, **extra):
     bye = p.get("source") == "bye2025"
     rid = f"councillor:DL:{hr.slug(BODY)}:{ward}"
     status = None
@@ -72,7 +78,7 @@ def record(p, ward, ward_name, res, name, pty, page, read):
     d = {"type": "councillor", "state": "DL", "body": BODY, "body_type": "Municipal Corporation", "district": "Delhi",
          "ward_no": str(ward), "ward_name": title(ward_name), "name": title(name), "name_as_printed": hr.clean(name),
          "party": party(pty), "reservation": reservation(res), "position": "Councillor", "status": status,
-         "election": "MCD bye-election 2025" if bye else "MCD 2022", "url": p["url"], "page": page, "read": read}
+         "election": "MCD bye-election 2025" if bye else "MCD 2022", "url": p["url"], "page": page, "read": read, **extra}
     return rid, {k: v for k, v in d.items() if v not in (None, "")}
 
 
@@ -219,7 +225,66 @@ def text_rows(text, first=1):
     return out
 
 
+# Result Summary columns: left edge (x, points from the left) of each column's text runs
+SUMMARY_COLS = [("sr", 0), ("ward", 70), ("reservation", 165), ("name", 208), ("party", 275), ("votes", 344), ("runner_up", 368),
+                ("runner_up_party", 434), ("runner_up_votes", 495), ("margin", 530)]
+
+
+def runs(pdf):
+    """Text runs of every page: {page: [(x, y from the top, text)]} (pypdf, one run per text operation)."""
+    from pypdf import PdfReader
+    out = {}
+    for i, pg in enumerate(PdfReader(pdf).pages, 1):
+        h, rs = float(pg.mediabox.height), []
+
+        def v(text, cm, tm, fd, fs, rs=rs, h=h):
+            if text.strip():
+                rs.append((tm[4] * cm[0] + tm[5] * cm[2] + cm[4], h - (tm[4] * cm[1] + tm[5] * cm[3] + cm[5]), text.strip()))
+        pg.extract_text(visitor_text=v)
+        out[i] = rs
+    return out
+
+
+def summary_rows(pages, first=1, last=99):
+    """Rows of the Result Summary: [(page, {column: text})]. A row starts at a S.No run (digits at the left edge) that has a
+    "(ward no)" run on the same line; it ends at the next row or at the page foot."""
+    out = []
+    for pg in sorted(pages):
+        if not first <= pg <= last:
+            continue
+        rs = [r for r in pages[pg] if 30 < r[1] < 815]
+        starts = sorted({round(y, 1) for x, y, t in rs if x < 70 and re.fullmatch(r"\d{1,3}", t)
+                         and any(abs(y2 - y) < 2 and 70 <= x2 < 165 and re.match(r"\(\d{1,3}\)", t2) for x2, y2, t2 in rs)})
+        for i, y0 in enumerate(starts):
+            y1 = starts[i + 1] if i + 1 < len(starts) else 815
+            cells = {}
+            for x, y, t in sorted((r for r in rs if y0 - 2 < r[1] < y1 - 2), key=lambda r: (r[1], r[0])):
+                col = [c for c, left in SUMMARY_COLS if x >= left][-1]
+                if col == "votes" and re.match(r"^\d+\D", t):        # votes and the runner-up's name in one run
+                    m = re.match(r"^(\d+)(.*)$", t)
+                    cells["votes"] = m.group(1)
+                    cells["runner_up"] = (cells.get("runner_up", "") + " " + m.group(2)).strip()
+                    continue
+                cells[col] = (cells.get(col, "") + " " + t).strip()
+            out.append((pg, cells))
+    return out
+
+
+def summary_record(p, pg, c):
+    m = re.match(r"\((\d{1,3})\)\s*(.*)$", c.get("ward", ""))
+    if not m or not c.get("name"):
+        return None
+    num = lambda k: c.get(k) if re.fullmatch(r"\d+", c.get(k) or "") else None
+    extra = {"votes": num("votes"), "runner_up": title(c.get("runner_up", "")) or None,
+             "runner_up_party": party(c["runner_up_party"]) if c.get("runner_up_party") else None,
+             "runner_up_votes": num("runner_up_votes"), "margin": num("margin"), "serial": num("sr")}
+    return record(p, int(m.group(1)), m.group(2), c.get("reservation", "").replace("- ", "-"), c["name"], c.get("party", ""), pg,
+                  "text layer", **extra)
+
+
 def fetch(p, get):
+    if p.get("source") == "summary2022":
+        return fetch_summary(p, get)
     scan = p.get("source") == "mcd2022"
     if (scan or not shutil.which("pdftotext")) and not hr.tools():
         return [], [], "tesseract or poppler not available"
@@ -245,4 +310,18 @@ def fetch(p, get):
                                text=True).stdout
             for row in text_rows(t, first):
                 recs.append(record(p, *row, "text layer"))
+    return recs, files, "" if recs else "no councillors read"
+
+
+def fetch_summary(p, get):
+    r = get(p["url"])
+    if r is None:
+        return [], [], "no answer"
+    if not r.content.startswith(b"%PDF"):
+        return [], [], "not a PDF"
+    key = hashlib.sha1(p["url"].encode()).hexdigest()[:12]
+    files = [(f"councillors/DL/{key}.pdf", r.content, "application/pdf")]
+    import io
+    rows = summary_rows(runs(io.BytesIO(r.content)), int(p.get("first", 1)), int(p.get("last", 99)))
+    recs = [x for x in (summary_record(p, pg, c) for pg, c in rows) if x]
     return recs, files, "" if recs else "no councillors read"
