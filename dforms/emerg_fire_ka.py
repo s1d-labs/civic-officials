@@ -6,7 +6,7 @@ last one down. Rows without a station number are units of a station (Vidhan Soud
 The list names no officer and gives no phone: it is the station network with its command chain (CFO zone -> RFO region ->
 DFO district office -> station). No date on the PDF.
 Access: India only (no connection from Germany on 2026-11-11), and the server does not send its intermediate certificate
-(GlobalSign GCC R46 OV TLS CA 2025): certs_trust.py completes the chain from certs/, verification stays on. archive.s1d.me
+(GlobalSign GCC R46 OV TLS CA 2025): certs_trust.py completes the chain (scrape-hub-client's ca_bundle()), verification stays on. archive.s1d.me
 holds only a cut copy (13 KB, no trailer).
 Record ids: dept:emerg_fire_ka:st-<station no.>, unit-<slug>.
 """

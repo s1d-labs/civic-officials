@@ -5,7 +5,7 @@ Columns: Sl. No | Name of member (Constituency) | Permanent Address | Telephone 
 with the member's office in Thiruvananthapuram ("MLA Hostel, Neyyar Block 6C, 0471-2512226 | 9447978800"): that text goes to
 office_address. The page gives no party and no AC number: the constituency name goes to the ECI number (ac_no.json, with the
 spellings of ero_kl.ALIAS and ALIAS here).
-The server omits its Let's Encrypt intermediate (YR2): certs/letsencrypt_gen_y_yr1_yr2_root_yr_by_x1.pem completes the chain to ISRG
+The server omits its Let's Encrypt intermediate (YR2): scrape_hub_client/certs/letsencrypt_yr2.pem (with isrg_root_yr_by_isrg_root_x1.pem) completes the chain to ISRG
 Root X1 (verification stays on). The archive copy (2026-11-05) is cut off at 32 KB, so the reader needs the live page.
 Record ids: dept:leg_kl:KL-AC-<no>.
 """

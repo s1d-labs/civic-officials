@@ -18,8 +18,8 @@ import io
 import json
 import os
 import re
-import signal
 import sys
+import threading
 import time
 from urllib.parse import urljoin, urlsplit
 
@@ -30,12 +30,7 @@ from certs_trust import trust
 from forms.aspnet import LegacyTLS, insecure_retry
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
-stop = False
-
-
-def on_signal(*_):
-    global stop
-    stop = True
+stop = threading.Event()     # main() swaps in scrape_hub_client.stop_flag(), set on SIGINT / SIGTERM
 
 
 def tokens(html):
@@ -100,7 +95,7 @@ def kl_body(p, get):
             rows.append((urljoin(p["url"], a["href"]), tds))
     recs = []
     for url, tds in rows:
-        if stop:
+        if stop.is_set():
             break
         m = get(url)
         if m is None:
@@ -152,13 +147,13 @@ def run(item, get):
 
 def main(run_fn=None, task="councillors"):
     """The pool loop; depts.py reuses it with its own run_fn and failure kind."""
+    global stop
     run_fn = run_fn or run
-    from scrape_hub_client import HubClient
+    from scrape_hub_client import HubClient, count_request, stop_flag
     project = os.environ["SCRAPE_POOL_PROJECT"]
     deadline = time.time() + float(os.environ.get("SCRAPE_MAX_HOURS", "1")) * 3600 - 300
     hub = HubClient(project, job_index=int(os.environ.get("SCRAPE_JOB_INDEX", 0)), total_jobs=int(os.environ.get("SCRAPE_TOTAL_JOBS", 1)))
-    signal.signal(signal.SIGINT, on_signal)
-    signal.signal(signal.SIGTERM, on_signal)
+    stop = stop_flag()
     s = requests.Session()
     s.verify = trust()
     s.headers.update(HEADERS)
@@ -184,16 +179,11 @@ def main(run_fn=None, task="councillors"):
                     hub.metric("tls_unverified_retry")
                     r = insecure_retry(s, url, method, data=data, headers=headers, timeout=(20, 90))
         except requests.RequestException:
-            hub.metric("http_error")
-            hub.error()
+            count_request(hub, None)                             # http_error
             return None
-        hub.metric("n_http")
-        hub.metric("t_http_s", time.time() - t)
+        count_request(hub, r.status_code, time.time() - t)       # n_http, t_http_s, http_<code>, block on 403/429/503
         time.sleep(max(0.5, hub.settings.get("delay_ms", 0) / 1000))
         if r.status_code != 200:
-            hub.metric(f"http_{r.status_code}")
-            if r.status_code in (403, 429, 503):
-                hub.block()
             return None
         if not r.encoding or r.encoding.lower() == "iso-8859-1":
             r.encoding = r.apparent_encoding or "utf-8"
@@ -201,7 +191,7 @@ def main(run_fn=None, task="councillors"):
     get.hub = hub      # readers that keep their source files in the bucket (cforms/tn.py) read them back through the hub
 
     try:
-        while time.time() < deadline and not stop:
+        while time.time() < deadline and not stop.is_set():
             if hub.settings.get("paused"):
                 time.sleep(30)
                 continue
@@ -249,7 +239,7 @@ def main(run_fn=None, task="councillors"):
                     break
                 except requests.RequestException:  # same item again after a pause; records are keyed, so a repeat is harmless
                     time.sleep(30 * (attempt + 1))
-        hub.close("finished" if not stop else "failed", "" if not stop else "stopped by signal")
+        hub.close("finished" if not stop.is_set() else "failed", "" if not stop.is_set() else "stopped by signal")
     except BaseException as e:
         hub.close("failed", f"{type(e).__name__}: {e}"[:200])
         raise

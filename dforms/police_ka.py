@@ -5,7 +5,7 @@
   and coordinates; no names, no mobiles. Placeholders (email@ksp.gov.in, 88888-888888, '---', lat 0) are left out.
   One queue item = one district id; items(get) lists them from /pslocator/en. Record id dept:police_ka:<district id>:<station>.
 - "kind": "bcp": Bengaluru City Police law & order page, bcp.karnataka.gov.in/24/law-&-order-/en (its server sends a wrong
-  intermediate; certs/ has GlobalSign GCC R46). One table per division: SL No | Police Station | Mobile | Phone. A row label
+  intermediate; scrape-hub-client's ca_bundle() has GlobalSign GCC R46). One table per division: SL No | Police Station | Mobile | Phone. A row label
   starts with the rank: DCP (division), ACP (subdivision), PI (station inspector, the SHO). The page carries every table twice.
   Record id dept:police_ka:bcp:<label>. Designation CUG mobiles (94808xxxxx); no names."""
 import re

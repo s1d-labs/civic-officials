@@ -1,6 +1,6 @@
 """NPCL (Noida Power Company Limited, Greater Noida, Gautam Buddha Nagar, UP): the officer contact tables of
 www.noidapower.com/contact-us. India only (the site times out from Germany, 2026-11-11). The server does not send its intermediate
-certificate: certs/globalsign_gcc_r46_ov_tls_ca_2025.pem (already in the repo) completes the chain.
+certificate: scrape_hub_client/certs/globalsign_gcc_r46_ov_tls_ca_2025.pem (scrape-hub-client) completes the chain.
 The page is a React app: /contact-us is an empty shell whose script /static/js/main.<hash>.js holds the tables as JSX
 (td children strings). fetch() GETs the shell, finds the script name, GETs the script (2 requests). Tables after "Contact Over
 Phone": Customer Relation (the sub-heading in the outer row, then Name | Designation | Mobile rows), New Connection - Operations, Operations & Maintenance - Zone-1, Zone-2, Commercial Services; each row
