@@ -160,3 +160,16 @@ def test_leg_mh_needs_pdftotext(monkeypatch):
     p = _seed("leg_mh")[0]["payload"]
     recs, files, why = mod("leg_mh").fetch(p, lambda url, **k: Answer(b"%PDF-1.4 x", url))
     assert recs == [] and files and "pdftotext" in why
+
+
+def test_neva_spellings_and_brackets():
+    """2026-11-12 load: 9 MLA records without a seat (HR 5, WB 2, HP 1, OD 1); each now gets its ECI number."""
+    n, se, esw = mod("_leg_neva"), mod("_leg_se"), mod("_esw")
+    assert n.constituency("Nuh -Mewat(Nuh) (Haryana)") == (None, "Nuh", "Mewat(Nuh)")
+    assert n.constituency("Ferozepur Jhirka -Mewat(Nuh)") == (None, "Ferozepur Jhirka", "Mewat")
+    assert n.constituency("Kinnaur -KINNAUR (ST)*") == (None, "Kinnaur", "KINNAUR")
+    assert n.near("HR", "Ferozepur Jhirka")[0] == 80 and n.near("HR", "Nuh")[0] == 79 and n.near("HP", "Kinnaur")[0] == 68
+    hr, wb = mod("leg_hr").ALIAS, mod("leg_wb").ALIAS
+    assert [se.seat("HR", None, c, d, hr)[0] for c, d in (("Mehem", "Rohtak"), ("Punhana", "Mewat"), ("Kharkhoda", "Sonipat"))] == [60, 81, 30]
+    assert se.seat("WB", None, "Nawda", "Murshidabad", wb)[0] == 74
+    assert esw.ac_no("WB", "Bishnupur", "South 24 Parganas") == 146 and esw.ac_no("WB", "Bishnupur", "Bankura") == 255

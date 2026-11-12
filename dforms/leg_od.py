@@ -53,9 +53,7 @@ def parse(html, url, src=None, page=None):
                 cons_raw = _esw.clean(tds[1].get_text(" "))
             elif len(tds) == 2 and "Birth" in tds[0].get_text():
                 dob = _esw.clean(tds[1].get_text(" "))
-        m = re.match(r"(.*?)\s+-\s+\(\s*([^,()]+?)\s*,\s*[^()]*\)\s*$", cons_raw)
-        constituency, district = (_esw.clean(m.group(1)), _esw.clean(m.group(2)).title()) if m else (cons_raw, "")
-        constituency = re.sub(r"\s*\(\s*", " (", constituency).replace(" )", ")")
+        constituency, district = split_cons(cons_raw)
         address = phone = email = ""
         for li in card.select("ul.icon-info-memeber li"):
             icon = " ".join(li.find("i").get("class", [])) if li.find("i") else ""
@@ -73,6 +71,13 @@ def parse(html, url, src=None, page=None):
                                 src_pos={"selector": "div.memeber-item", "card": k, **({"page": page} if page else {})},
                                 **(src or {})))
     return recs
+
+
+def split_cons(cons_raw):
+    """'Bargarh - ( Bargarh , Odisha )' -> ('Bargarh', 'Bargarh'); 'Nuapada- (Nuapada , Odisha)' (no space before the dash) too."""
+    m = re.match(r"(.*?)\s*-\s*\(\s*([^,()]+?)\s*,\s*[^()]*\)\s*$", cons_raw)
+    constituency, district = (_esw.clean(m.group(1)), _esw.clean(m.group(2)).title()) if m else (cons_raw, "")
+    return re.sub(r"\s*\(\s*", " (", constituency).replace(" )", ")"), district
 
 
 def _form(html, button):
