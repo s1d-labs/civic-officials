@@ -145,6 +145,9 @@ _ocr = [i for f in sorted((HERE / "seeds").glob("ocr_councillors_*.json")) for i
 _ocr_tn = [{"key": i["key"], "payload": {**i["payload"], "stored": "civic-officials-councillors-ocr/councillors/TN/"
                                          + hashlib.sha1(i["payload"]["url"].encode()).hexdigest()[:12] + ".pdf"}}
            for i in _ocr if i["payload"].get("state") == "TN"]
+# Tamil Nadu again, from the text layer of the same saved PDFs (cforms/tn_text.py: mPDF Tamil glyphs mapped, no OCR; one item = one
+# PDF): every ward, where the OCR items found about half. Same project (runners, no proxy, task name known to new checkouts only).
+_ocr_tn += [i for f in sorted((HERE / "seeds").glob("stored_councillors_*.json")) for i in json.loads(f.read_text())]
 _ocr = [i for i in _ocr if i["payload"].get("state") != "TN"]
 if _ocr:
     PROJECTS.append({"name": f"{FAMILY}-councillors-ocr", "title": "Elected ward councillors read by OCR (scanned results files)",
