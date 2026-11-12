@@ -69,7 +69,7 @@ def test_leg_ka_save_only():
         got.append(url)
         return Answer(b"%PDF-1.4 x" if url.endswith(".pdf") else page, url)
     recs, files, why = m.fetch(m.items()[0]["payload"], get)
-    assert recs == [] and why.startswith("saved only (3 files)")
+    assert why == "" and len(recs) == 1 and recs[0][1]["type"] == "saved_files" and len(recs[0][1]["files"]) == 3
     assert got[1:] == ["https://kla.kar.nic.in/assembly/member/16members/address.pdf",
                        "https://kla.kar.nic.in/assembly/member/mlas_contact.htm"]
     assert files[1][0] == "depts/leg_ka/linked-00-address-pdf.pdf.gz"

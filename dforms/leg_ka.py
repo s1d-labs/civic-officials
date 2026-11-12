@@ -5,7 +5,8 @@ no copy of it (it has assembly.htm, lsmembers.htm, rsmembers.htm); kla.kar.nic.i
 copies 2026-11-05..08) but not dev-vps-2 / dev-vps-3, so its format could not be seen from here. The NeVA directory
 kla.neva.gov.in lists only 3 members (2026-11-12). This item fetches the list page and the pages and files it links whose
 address or link text speaks of members, MLAs, addresses or contacts (at most 15), and keeps them in the bucket
-(depts/leg_ka/...). It gives no records ("saved only"): a reader is to be written from the saved copy.
+(depts/leg_ka/...). It gives one note record (type "saved_files", the list of saved files), no offices: a reader is to be
+written from the saved copy.
 """
 import re
 from urllib.parse import urljoin
@@ -45,4 +46,7 @@ def fetch(p, get):
         if x is not None:
             ext = "pdf" if x.content[:5] == b"%PDF-" else "html"
             files.append(_leg.keep(MODULE, f"linked-{i:02d}-" + _esw.slug(u.rsplit("/", 1)[-1])[:60], x.content, ext))
-    return [], files, f"saved only ({len(files)} files): no reader yet"
+    # one note record (not an office) so that the item counts as done and is not fetched again
+    note = ("save:leg_ka", {"type": "saved_files", "module": MODULE, "url": p["url"], "files": [f[0] for f in files],
+                            "note": "saved only: no reader yet"})
+    return [note], files, ""
