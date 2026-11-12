@@ -8,6 +8,7 @@ import html as htmlmod
 import re
 from xml.etree import ElementTree as ET
 
+import provenance
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 
 METHOD = "kml (Google My Maps export)"     # source trail (provenance.py): how this reader reads its sources
@@ -35,7 +36,7 @@ def parse_kml(text, district, url):
     root = ET.fromstring(text.encode("utf-8") if isinstance(text, str) else text)
     doc = root.find(f"{NS}Document")
     title = clean(doc.findtext(f"{NS}name")) if doc is not None else None
-    recs = []
+    recs, n = [], [0]
 
     def walk(node, zone):
         for el in node:
@@ -43,6 +44,7 @@ def parse_kml(text, district, url):
             if tag == "Folder":
                 walk(el, clean(el.findtext(f"{NS}name")) or zone)
             elif tag == "Placemark":
+                n[0] += 1
                 name = clean(el.findtext(f"{NS}name"))
                 if not name:
                     continue
@@ -79,7 +81,8 @@ def parse_kml(text, district, url):
                 recs.append(rec(M, f"{slug(district)}:{slug(name)}", level=level, office_type=otype, area=name,
                                 post="SHO" if otype == "police station" else "Officer in charge" if otype == "police post" else name,
                                 phone=ph, email=email(mail), zone=zone, unit=title, state="MP", district=district,
-                                lat=lat, lon=lon, source=url))
+                                lat=lat, lon=lon, source=url,
+                                src_pos={"placemark": n[0], "folder": zone, "name": name}))
 
     if doc is not None:
         walk(doc, None)
@@ -107,6 +110,8 @@ def fetch(p, get):
         recs = parse_kml(k.content, district, url)
     except ET.ParseError:
         return [], files, "kml not xml"
+    at = provenance.at(k, KML.format(mid=mid))      # every record is read from the KML export, not the home page
     for _, d in recs:
         d["map"] = f"https://www.google.com/maps/d/viewer?mid={mid}"
+        d.update(at)
     return recs, files, "" if recs else "empty map"

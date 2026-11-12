@@ -214,3 +214,14 @@ def test_police_table_rows():
                 assert ph in digits(all_rows_text(html, d["src_pos"])), (m.M, d["area"], d["src_pos"])
                 n += 1
         assert n, m.M
+
+
+def test_police_kml_placemarks():
+    from test_dept_police import FakeGet
+    from dforms import police_mp
+    url = "https://bhopal.mppolice.gov.in/"
+    get = FakeGet({url: "police_mp_bhopal.html", "https://www.google.com/maps/d/kml?mid=": "police_mp_bhopal.kml"})
+    recs, _, _ = police_mp.fetch({"url": url, "state": "MP", "district": "Bhopal"}, get)
+    d = dict(recs)["dept:police_mp:bhopal:tt-nagar-police-station"]
+    assert d["src_url"].startswith("https://www.google.com/maps/d/kml?mid=") and len(d["src_sha256"]) == 64
+    assert d["src_pos"]["folder"] == "Zone - I" and d["src_pos"]["placemark"] >= 1 and d["src_pos"]["name"] == d["area"]

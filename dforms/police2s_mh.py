@@ -12,6 +12,7 @@ from urllib.parse import urlparse
 
 from bs4 import BeautifulSoup
 
+import provenance
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 
 METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
@@ -127,5 +128,7 @@ def fetch(p, get):
                         name=c["name"], name_regional=m.get("name") if m.get("name") != c["name"] else None,
                         phone=c["phones"] or m.get("phones"), email=c["email"] or m.get("email"),
                         subdivision=c["subdivision"] if level == "police_station" else None,
-                        state="MH", district=p.get("district"), office_id=uid, source=f"https://{host}/en/about/{c['section']}/{uid}"))
+                        state="MH", district=p.get("district"), office_id=uid, source=f"https://{host}/en/about/{c['section']}/{uid}",
+                        # English listing page; the Marathi fields (*_regional) from the same card on the /mr/ page
+                        **provenance.at(r, url), src_pos={"card_link_uuid": uid, **({"regional_from": url.replace("/en/", "/mr/", 1)} if m else {})}))
     return uniq(recs), files, ""
