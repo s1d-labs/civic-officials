@@ -28,9 +28,10 @@ import re
 import subprocess
 import tempfile
 
+import provenance
 from dforms import _esw
 
-METHOD = "ocr tesseract eng"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "ocr tesseract eng (pdftoppm 300 dpi, psm 4, text lines)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub3_mh_aero"
 URL = "https://ceoelection.maharashtra.gov.in/Downloads/PDF/AERO%20for%20all%20AC%20in%20Maharashtra.pdf"
@@ -76,7 +77,7 @@ def parse(pages):
     rows, ac, last_ac = [], None, 0
     for page, text in pages:
         cont = False        # a page starts with the gazette's running head (Marathi read as Latin): no continuation before a row
-        for ln in (text or "").splitlines():
+        for n, ln in enumerate((text or "").splitlines(), 1):
             if not ln.strip() or SKIP.search(ln) or re.search(r"[^\x00-\x7f]{3}", ln) and not re.search(r"[A-Za-z]{4}", ln):
                 continue
             m = AC.match(ln)
@@ -84,7 +85,8 @@ def parse(pages):
                 ac = {"ac_no": int(m.group(1)), "ac_name": _esw.clean(m.group(2)).strip(" -|")}
                 last_ac = ac["ac_no"]
                 if m.group(3):
-                    rows.append({**ac, "serial": int(m.group(3)), "cell": _clean_cell(m.group(4) or ""), "page": page})
+                    rows.append({**ac, "serial": int(m.group(3)), "cell": _clean_cell(m.group(4) or ""), "page": page,
+                                 "pos": provenance.line_pos(page, n, ln)})
                     cont = True
                 continue
             if ac is None:
@@ -94,11 +96,14 @@ def parse(pages):
                 serial, cell = (m.group(1), m.group(2)) if m.group(1) else (m.group(3), m.group(4))
                 prev = [r["serial"] for r in rows if r["ac_no"] == ac["ac_no"]]
                 if not prev or int(serial) == prev[-1] + 1 or int(serial) not in prev and int(serial) <= 30:
-                    rows.append({**ac, "serial": int(serial), "cell": _clean_cell(cell), "page": page})
+                    rows.append({**ac, "serial": int(serial), "cell": _clean_cell(cell), "page": page,
+                                 "pos": provenance.line_pos(page, n, ln)})
                     cont = True
                     continue
             if cont and rows and rows[-1]["ac_no"] == ac["ac_no"]:
                 rows[-1]["cell"] = _clean_cell(rows[-1]["cell"] + " " + ln)
+                if rows[-1].get("pos") and rows[-1]["pos"]["page"] == page:
+                    rows[-1]["pos"]["line_end"] = n           # the cell wraps down to this line
     return rows
 
 
@@ -147,13 +152,15 @@ def build(rows, source):
         recs.append(_esw.record(MODULE, rid, dept=dept, level=level, area=place_of(cell, rx, r["ac_name"]), post=post,
                                 designation=cell, state="MH", ac_no=r["ac_no"], ac_name=r["ac_name"], serial=r["serial"],
                                 page=r["page"], ocr=True, office_id=f"MH-AERO-AC-{r['ac_no']}-{r['serial']}",
-                                last_updated="2026-03-18", source=source))
+                                last_updated="2026-03-18", source=source, src_pos=r.get("pos")))
     return recs
 
 
 # ---------------------------------------------------------------- the PDF and the OCR (GitHub runners only)
 
 def stored(p, get):
+    """(bytes, key) of the saved PDF, or None. The hub's signed url is read directly (the copy is in the bucket already);
+    the records name it in src (provenance.file_src)."""
     hub, k = getattr(get, "hub", None), p.get("stored")
     own = os.environ.get("SCRAPE_POOL_PROJECT")
     keys = [k] if k else []
@@ -169,7 +176,7 @@ def stored(p, get):
                 continue
             r = requests.get(url, timeout=(20, 180))
             if r.status_code == 200 and r.content[:5] == b"%PDF-":
-                return r.content
+                return r.content, key
         except Exception:  # noqa: BLE001 - try the next copy, then the site
             continue
     return None
@@ -188,7 +195,8 @@ def fetch(p, get):
     if not tools("eng"):
         return [], [], "tesseract eng not available"
     files = []
-    content = stored(p, get)
+    got = stored(p, get)
+    content, key = got if got else (None, None)
     if content is None:
         r = get(p.get("url") or URL)
         if r is None:
@@ -209,6 +217,10 @@ def fetch(p, get):
     files.append((f"depts/{MODULE}/ocr-p{first:03d}-{last:03d}.txt.gz", gzip.compress(raw.encode("utf-8")), "application/gzip"))
     # a constituency that starts on the page before this item's first page: its rows here are read from the next AC line on
     recs = build(parse(texts), (p.get("url") or URL))
+    for _, d in recs:          # src_pos = page + line of the OCR text (saved too: pages_of() reads it back)
+        d["src_url"] = p.get("url") or URL
+        if key:
+            d["src"] = provenance.file_src(content, d["src_url"], key)
     return recs, files, "" if recs else f"no rows (ocr {sum(len(t) for _, t in texts)} chars)"
 
 

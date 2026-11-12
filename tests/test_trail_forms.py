@@ -98,3 +98,45 @@ def test_sub2_rj_bdo_and_gj_name_the_pdf_page_and_row(monkeypatch):
     recs, _, _ = g.fetch({"kind": "tdo", "url": url}, fake_get({url: "sub2/gj_tdo_civil_list.pdf"}))
     t = dict(recs)["dept:sub2_gj:tdo:bhavnagar:shihor"]
     assert t["src_url"] == url and t["src_pos"]["page"] >= 1 and t["src_pos"]["sn"] == t["civil_list_no"]
+
+
+def test_sub3_mh_aero_ocr_line_positions():
+    from esw_common import mod
+    m = mod("sub3_mh_aero")
+    pages = [(2, (DATA / "sub3" / "mh_aero_p002.ocr.txt").read_text()), (40, (DATA / "sub3" / "mh_aero_p040.ocr.txt").read_text())]
+    d = dict(m.build(m.parse(pages), "u"))
+    t = d["dept:sub3_mh_aero:AC-5:1"]
+    sp = t["src_pos"]
+    text = dict(pages)[sp["page"]]
+    assert text.splitlines()[sp["line"] - 1] == sp["line_text"] and sp["page"] == t["page"]
+    four = d.get("dept:sub3_mh_aero:AC-3:4")
+    assert four is None or four["src_pos"].get("line_end", four["src_pos"]["line"]) >= four["src_pos"]["line"]
+
+
+def test_police_ka_option_and_table_positions():
+    from bs4 import BeautifulSoup
+    from dforms import police_ka
+    html = (DATA / "police_ka_17.html").read_text(encoding="utf-8")
+    d = dict(police_ka.parse_options(html, "17", "Gadag"))
+    b = d["dept:police_ka:17:betageri-ps"]
+    opt = BeautifulSoup(html, "lxml").find_all("option")[b["src_pos"]["index"] - 1]
+    assert "Betageri" in opt.get_text() and b["method"].startswith("html select options")
+    recs = police_ka.parse_bcp((DATA / "police_ka_bcp.html").read_text(encoding="utf-8"))
+    sp = recs[0][1]["src_pos"]
+    assert sp["table"] >= 1 and sp["row"] >= 2 and recs[0][1]["method"] == "html table"
+
+
+def test_food_up_fcs_contact_and_email_lines():
+    from esw_common import mod
+    m = mod("food_up_fcs")
+    folder = DATA / "food"
+    text = (folder / "up_fcs_contacts_layout.txt").read_text()
+    by = dict(m.parse_contacts(text))
+    d = by["dept:food_up_fcs:contacts:dso:meerut"]
+    sp = d["src_pos"]
+    assert text.split("\f")[sp["page"] - 1].split("\n")[sp["line"] - 1] == sp["line_text"] and "7839564767" in sp["line_text"]
+    assert d["src_url"] == m.CONTACTS
+    em = m.parse_emails((folder / "up_fcs_emails_layout.txt").read_text())
+    joined, _ = m.join_emails(list(by.items()), em)
+    j = dict(joined)["dept:food_up_fcs:contacts:dso:meerut"]
+    assert j["src_pos"]["email"]["line_text"] and j["src_pos"]["line"] == sp["line"] and j["src_url"] == m.CONTACTS

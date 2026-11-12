@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 from dforms._police import ascii_digits, clean, email, gz, phones, rec, slug, uniq
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html select options (district stations) + html table (Bengaluru city)"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_ka"
 BASE = "https://ksp.karnataka.gov.in"
@@ -67,7 +67,7 @@ def _val(s):
 def parse_options(html, district_id, district, url=LOCATOR):
     soup = BeautifulSoup(html, "lxml")
     recs = []
-    for o in soup.find_all("option"):
+    for k, o in enumerate(soup.find_all("option"), 1):
         st, v = clean(o.get_text()), o.get("value") or ""
         if not v or SEP not in v or not st:
             continue
@@ -80,7 +80,8 @@ def parse_options(html, district_id, district, url=LOCATOR):
         ok = la is not None and 11 < la < 19 and 74 < lo < 79
         recs.append(rec(M, f"{district_id}:{slug(st)}", area=st, post="Station (landline)", phone=ph(_val(phone)),
                         email=None if mail == "email@ksp.gov.in" else mail, address=_val(addr), circle=_val(circle), state="KA",
-                        district=district, lat=la if ok else None, lon=lo if ok else None, source=url))
+                        district=district, lat=la if ok else None, lon=lo if ok else None, source=url,
+                        src_pos={"selector": "option", "index": k}, method="html select options (value = address|email|phone|circle|lat|lng)"))
     return uniq(recs)
 
 
@@ -90,13 +91,13 @@ RANK = re.compile(r"^(DCP|ACP|PI)\b\.?\s*", re.I)
 def parse_bcp(html, url=BCP):
     soup = BeautifulSoup(html, "lxml")
     recs, seen = [], set()
-    for t in soup.find_all("table"):
+    for tno, t in enumerate(soup.find_all("table"), 1):
         trs = t.find_all("tr")
         head = " ".join(c.get_text(" ", strip=True) for c in trs[0].find_all(["th", "td"])).lower() if trs else ""
         if "police station" not in head or "mobile" not in head:
             continue
         division = None
-        for tr in trs[1:]:
+        for n, tr in enumerate(trs[1:], 2):
             c = [clean(td.get_text(" ", strip=True)) for td in tr.find_all("td")]
             if len(c) < 4 or not c[1]:
                 continue
@@ -112,7 +113,8 @@ def parse_bcp(html, url=BCP):
             level = {"DCP": "division", "ACP": "subdivision"}.get(rank, "police_station")
             post = {"DCP": "Deputy Commissioner of Police", "ACP": "Assistant Commissioner of Police"}.get(rank, "Police Inspector (SHO)")
             recs.append(rec(M, f"bcp:{slug(label)}", level=level, area=area, post=post, rank=rank, phone=ph(mobile, _val(phone)),
-                            state="KA", district="Bengaluru City", division=division if rank != "DCP" else None, source=url))
+                            state="KA", district="Bengaluru City", division=division if rank != "DCP" else None, source=url,
+                            src_pos={"table": tno, "row": n}, method="html table"))
     return uniq(recs)
 
 
