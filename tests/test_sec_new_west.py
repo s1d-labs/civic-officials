@@ -75,3 +75,29 @@ def test_cg_heads_text_layer():
     assert all("lgd_code" in r and "body_read_by_ocr" not in r for r in d.values())
     seeds = json.loads((SEEDS / "ocr_councillors_cw_cg_heads.json").read_text())
     assert seeds[0]["payload"]["kind"] == "form-cw_cg_heads" and seeds[0]["payload"]["expected"] == 173
+
+
+# Punjab heads of the 2026 poll (cforms/cr_pb.py, payload heads_only): only the post cards, ids chair / vice, member pages read.
+def test_pb_heads_only():
+    from cforms import cr_pb
+    home = (DATA / "cr_pb_talwara_home.html").read_text(encoding="utf-8")
+    det = (DATA / "cr_pb_patiala_687.html").read_text(encoding="utf-8")
+    asked = []
+
+    class R:
+        def __init__(self, t):
+            self.text, self.content = t, t.encode()
+
+    def get(url, method="GET", data=None, headers=None):
+        asked.append(url)
+        return R(home if "Home/Index" in url else det)
+    p = {"heads_only": True, "mcid": 1094, "body": "Talwara", "slug": "talwara", "lgd_code": "248301"}
+    recs, files, why = cr_pb.fetch(p, get)
+    d = dict(recs)
+    assert why == "" and set(d) == {"councillor:PB:talwara:chair", "councillor:PB:talwara:vice"} and len(asked) == 3
+    assert d["councillor:PB:talwara:chair"]["position"] == "President" and d["councillor:PB:talwara:vice"]["seat_ward"] == "7"
+    assert d["councillor:PB:talwara:chair"]["src_pos"] == {"selector": ".card-body .row"}
+    items = json.loads((SEEDS / "councillors_cr_pb_heads.json").read_text())
+    assert len(items) == 90 and all(i["payload"]["heads_only"] and i["payload"]["slug"] for i in items)
+    old = {i["payload"]["mcid"] for i in json.loads((SEEDS / "councillors_cr_pb.json").read_text())}
+    assert not old & {i["payload"]["mcid"] for i in items}

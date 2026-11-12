@@ -36,7 +36,7 @@ POSTS = {"councillor": None, "president": "President", "vice president": "Vice P
 
 def post_ward(s):
     """("Vice President", "7") from "Vice President  ward no-7"; (None, "2") from "Councillor  Ward 02"."""
-    m = re.match(r"\s*(.*?)\s*ward\s*(?:no\.?)?\s*[-:]?\s*0*(\d+)\s*$", s or "", re.I)
+    m = re.match(r"\s*(.*?)\s*(?:ward\s*(?:no\.?)?\s*[-:]?\s*)?0*(\d+)\s*$", s or "", re.I)    # "Councillor  1" (2026 bodies) too
     if not m:
         return None, None
     post = clean(m.group(1)).lower()
@@ -83,6 +83,38 @@ def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
 
 
+HEAD_KEYS = {"President": "chair", "Mayor": "chair", "Vice President": "vice", "Deputy Mayor": "vice",
+             "Senior Vice President": "svice", "Senior Deputy Mayor": "svice",
+             "Sr. Vice President": "svice", "Sr. Deputy Mayor": "svice"}
+
+
+def heads(p, get, home, cs, files):
+    """Payload "heads_only" (bodies of the 26.05.2026 poll, whose members cforms/pb.py reads from LBPAMS with party and votes):
+    only the cards with a post (President, Vice President, Senior Vice President, Mayor, Deputy Mayors), elected by the members
+    after the poll. Ids councillor:PB:<slug>:chair / vice / svice, so the ward records of cforms/pb.py are not replaced; the
+    head's own ward goes to "seat_ward". A home page without such a card gives no records and no failure (not elected yet,
+    or not posted)."""
+    recs = []
+    for c in cs:
+        post = c.get("position") or next((h for h in sorted(HEAD_KEYS, key=len, reverse=True)
+                                          if (c.get("card") or "").lower().startswith(h.lower())), None)
+        key = HEAD_KEYS.get(post or "")
+        if not key:
+            continue
+        m = get(c["url"])
+        d = detail(m.text) if m is not None else {}
+        rec = {"type": "councillor", "state": "PB", "body": p["body"], "body_type": p.get("body_type"), "district": p.get("district"),
+               "lgd_code": p.get("lgd_code"), "ward_no": key, "seat_ward": c.get("ward_no"), "name": d.get("name") or c["name"],
+               "position": post, "elected_by": "members of the council (indirect election)",
+               "phone": d.get("phone"), "email": d.get("email"), "address": d.get("address"), "member_code": c["code"],
+               "election": p.get("election") or "Punjab municipal general election 2026 (poll 26.05.2026): head elected by the members",
+               "url": c["url"], "list_url": home, "src_url": c["url"] if d else home,
+               "src_pos": {"selector": ".card-body .row"} if d else {"selector": ".gallery_card2", "card": c.get("card_no")},
+               "card": c.get("card"), "method": "html page (member detail)" if d else "html cards (home page)"}
+        recs.append((f"councillor:PB:{p.get('slug') or slug(p['body'])}:{key}", {k: v for k, v in rec.items() if v not in (None, "")}))
+    return recs, files, ""
+
+
 def fetch(p, get):
     host = p.get("host") or HOST
     home = f"{host}/Home/Index?mcid={p['mcid']}&lng="
@@ -91,6 +123,8 @@ def fetch(p, get):
         return [], [], "no answer"
     files = [(f"councillors/PB/enigam-{p['mcid']}-home.html.gz", gzip.compress(r.content), "application/gzip")]
     cs = cards(r.text, host)
+    if p.get("heads_only"):
+        return heads(p, get, home, cs, files)
     if not cs:
         return [], files, "no member cards"
     todo = {c["code"]: c for c in cs if c["code"]}
