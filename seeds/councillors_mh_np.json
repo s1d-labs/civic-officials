@@ -1,0 +1,1441 @@
+[
+ {
+  "key": "mh-np22-konkan-020",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "02/02/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग एक-अ (कोविपू) असा.क्र. १८ (०२-०२-२०२२) जिल्हाधिकारी, पालघर, आदेश, क्रमांक क्र/न. प्रशासन/क-१/टे-१/न.प. निवडणूक/कावि-४५/२२",
+   "bodies": [
+    {
+     "lgd_code": "276315",
+     "en": [
+      "Talasari"
+     ],
+     "local": "तलासरी",
+     "name": "Talasari Nagar Panchayat",
+     "district": "Palghar"
+    },
+    {
+     "lgd_code": "276317",
+     "en": [
+      "Mokhada"
+     ],
+     "local": "मोखाडा",
+     "name": "Mokhada Nagar Panchayat",
+     "district": "Palghar"
+    }
+   ],
+   "expected": 34
+  }
+ },
+ {
+  "key": "mh-np22-pune-059",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "05/02/2022",
+   "division": "3",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "(1) जिल्हाधिकारी, सांगली जिल्हा यांजकडील कडेगाव, खानापूर व कवठेमहांकाळ नगरपंचायतीच्या सार्वत्रिक निवडणुकीमध्ये नगरपंचायतसदस्य म्हणून निवडून आलेल्या उमेदवारांची नावे राजपत्रात प्रसिद्ध करणेबाबत जाहीर प्रकटन.",
+   "bodies": [
+    {
+     "lgd_code": "276346",
+     "en": [
+      "Kavthemahankal",
+      "Kavathemahankal",
+      "Kavathe Mahankal",
+      "Kavthe Mahankal",
+      "Kavathe-Mahankal"
+     ],
+     "local": "कवठेमहांकाळ",
+     "name": "Kavthemahankal Nagar Panchayat",
+     "district": "Sangli"
+    },
+    {
+     "lgd_code": "276348",
+     "en": [
+      "Khanapur"
+     ],
+     "local": "खानापूर",
+     "name": "Khanapur Nagar Panchayat",
+     "district": "Sangli"
+    },
+    {
+     "lgd_code": "290358",
+     "en": [
+      "Kadegaon"
+     ],
+     "local": "कडेगाव",
+     "name": "Kadegaon Nagar Panchayat",
+     "district": "Sangli"
+    }
+   ],
+   "expected": 51
+  }
+ },
+ {
+  "key": "mh-np22-pune-062",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "28/01/2022",
+   "division": "3",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "(1) जिल्हाधिकारी, सांगली यांजकडील जत नगरपरिषद, पोट-निवडणूक-2021 अन्वये निवडून आलेल्या सदस्यांचे नाव प्रसिद्धीबाबत अधिसूचना. (2) जिल्हाधिकारी, यांजकडीलसोलापूर जिल्ह्यातील (माढा, माळशिरस, म्हाळुंग-त्रिपूर, वैराग, नातेपुते) व सातारा जिल्हातील (लोणंद, कोरेगाव, वडूज, दहिवडी, पाटण, खंडाळा) नगरपंचायत निवडणूक 2021 अन्वये निवडून आलेल्या सदस्यांचे नाव प्रसिद्धीबाबत अधिसूचना.",
+   "bodies": [
+    {
+     "lgd_code": "276302",
+     "en": [
+      "Madha"
+     ],
+     "local": "माढा",
+     "name": "Madha Nagar Panchayat",
+     "district": "Solapur"
+    },
+    {
+     "lgd_code": "276303",
+     "en": [
+      "Malshiras"
+     ],
+     "local": "माळशिरस",
+     "name": "Malshiras Nagar Panchayat",
+     "district": "Solapur"
+    },
+    {
+     "lgd_code": "300384",
+     "en": [
+      "Natepute"
+     ],
+     "local": "नातेपुते",
+     "name": "Natepute Nagar Panchayat",
+     "district": "Solapur"
+    },
+    {
+     "lgd_code": "300385",
+     "en": [
+      "Vairag"
+     ],
+     "local": "वैराग",
+     "name": "Vairag Nagar Panchayat",
+     "district": "Solapur"
+    }
+   ],
+   "expected": 68
+  }
+ },
+ {
+  "key": "mh-np22-pune-063",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "25/01/2022",
+   "division": "3",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "जिल्हाधिकारी, पुणे यांजकडील भोर व दौंड नगरपरिषदेमधून निवडून आलेल्या उपनगराध्यांचे नाव राजपत्रात प्रसिद्धीबाबत अधिसूचनातसेच देहू नगरपंचायतीमध्ये निवडून आलेल्या सदस्यांचे नाव प्रसिद्धीबाबत अधिसूचना.",
+   "bodies": [
+    {
+     "lgd_code": "298888",
+     "en": [
+      "Dehu"
+     ],
+     "local": "देहू",
+     "name": "Dehu Nagar Panchayat",
+     "district": "Pune"
+    }
+   ],
+   "expected": 17
+  }
+ },
+ {
+  "key": "mh-np22-nashik-075",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "27/01/2022",
+   "division": "4",
+   "section": "3",
+   "gazette_type": "0",
+   "match": "जिल्हाधिकारी, नंदुरबार (उपाध्यक्ष- नवापूर नगरपरिषद व नंदुरबार नगरपरिषद तसेच नगरपंचायत सदस्य- नंदुरबार व धडगाव-वडफळ्या-रोषमाळ बु. नगरपंचायत), जिल्हाधिकारी, नाशिक (नगरपंचायत सदस्य- कळवण, देवळा, निफाड, दिंडोरी, पेठ व सुरगाणा नगरपंचायत) तसेच यापूर्वी असाधारण राजपत्रात प्रसिध्द् करण्यात आलेल्या अधिसूचना यासोबत जोडल्या आहेत.",
+   "bodies": [
+    {
+     "lgd_code": "251434",
+     "en": [
+      "Surgana"
+     ],
+     "local": "सुरगाणा",
+     "name": "Surgana Nagar Panchayat",
+     "district": "Nashik"
+    },
+    {
+     "lgd_code": "275728",
+     "en": [
+      "Akole"
+     ],
+     "local": "अकोले",
+     "name": "Akole Nagar Panchayat",
+     "district": "Ahilyanagar"
+    },
+    {
+     "lgd_code": "275729",
+     "en": [
+      "Karjat"
+     ],
+     "local": "कर्जत",
+     "name": "Karjat Nagar Panchayat",
+     "district": "Ahilyanagar"
+    },
+    {
+     "lgd_code": "275730",
+     "en": [
+      "Parner"
+     ],
+     "local": "पारनेर",
+     "name": "Parner Nagar Panchayat",
+     "district": "Ahilyanagar"
+    },
+    {
+     "lgd_code": "276276",
+     "en": [
+      "Dindori"
+     ],
+     "local": "दिंडोरी",
+     "name": "Dindori Nagar Panchayat",
+     "district": "Nashik"
+    },
+    {
+     "lgd_code": "276277",
+     "en": [
+      "Deola"
+     ],
+     "local": "देवळा",
+     "name": "Deola Nagar Panchayat",
+     "district": "Nashik"
+    },
+    {
+     "lgd_code": "276278",
+     "en": [
+      "Kalwan"
+     ],
+     "local": "कळवण",
+     "name": "Kalwan Nagar Panchayat",
+     "district": "Nashik"
+    },
+    {
+     "lgd_code": "276279",
+     "en": [
+      "Niphad"
+     ],
+     "local": "निफाड",
+     "name": "Niphad Nagar Panchayat",
+     "district": "Nashik"
+    },
+    {
+     "lgd_code": "276280",
+     "en": [
+      "Peth"
+     ],
+     "local": "पेठ",
+     "name": "Peth Nagar Panchayat",
+     "district": "Nashik"
+    },
+    {
+     "lgd_code": "276345",
+     "en": [
+      "Dhadgaon",
+      "Dhadgaon-Vadfalya-Roshmal"
+     ],
+     "local": "धडगांव",
+     "name": "Dhadgaon Nagar Panchayat",
+     "district": "Nandurbar"
+    }
+   ],
+   "expected": 170
+  }
+ },
+ {
+  "key": "mh-np22-nashik-080",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "28/01/2022",
+   "division": "4",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "जिल्हाधिकारी, धुळे (नगरपंचायत सदस्य- साक्री नगरपंचायत)",
+   "bodies": [
+    {
+     "lgd_code": "276339",
+     "en": [
+      "Sakri"
+     ],
+     "local": "साक्री",
+     "name": "Sakri Nagar Panchayat",
+     "district": "Dhule"
+    }
+   ],
+   "expected": 17
+  }
+ },
+ {
+  "key": "mh-np22-nagpur-111",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "28/01/2022",
+   "division": "5",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Publication of Elected Member of the Maharashtra Miunicipal Councils, Nagar Panchayats and Industiral Townships Act, 1965, Under Section 19(1) by Collector , Wardha Extra ordinary Ank 5, Sr. Nos. 59-66.",
+   "bodies": [
+    {
+     "lgd_code": "276378",
+     "en": [
+      "Seloo",
+      "Selu"
+     ],
+     "local": "सेळू",
+     "name": "Seloo Nagar Panchayat",
+     "district": "Wardha"
+    },
+    {
+     "lgd_code": "276379",
+     "en": [
+      "Samudrapur"
+     ],
+     "local": "समुद्रपुर",
+     "name": "Samudrapur Nagar Panchayat",
+     "district": "Wardha"
+    },
+    {
+     "lgd_code": "276380",
+     "en": [
+      "Ashti"
+     ],
+     "local": "आष्टी",
+     "name": "Ashti (Wardha) Nagar Panchayat",
+     "district": "Wardha"
+    },
+    {
+     "lgd_code": "276633",
+     "en": [
+      "Karanja",
+      "Karanja Ghadge",
+      "Karanja (Ghadge)"
+     ],
+     "local": "कारंजा",
+     "name": "Karanja Wardha Nagar Panchayat",
+     "district": "Wardha"
+    }
+   ],
+   "expected": 68
+  }
+ },
+ {
+  "key": "mh-np22-nagpur-112",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "27/01/2022",
+   "division": "5",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Nagpur Part 1-A (27-1-2021) Publication of Elected Member of the Maharashtra Municipal Councils, Nagar Panchayat and Industrial Townships Act, 1965 by Collector, Nagpur. Extra Ordinary No. 4, Serial No. 55-58.",
+   "bodies": [
+    {
+     "lgd_code": "263362",
+     "en": [
+      "Hingna"
+     ],
+     "local": "हिंगणा",
+     "name": "Hingna Nagar Panchayat",
+     "district": "Nagpur"
+    },
+    {
+     "lgd_code": "263364",
+     "en": [
+      "Kuhi"
+     ],
+     "local": "कुही",
+     "name": "Kuhi Nagar Panchayat",
+     "district": "Nagpur"
+    }
+   ],
+   "expected": 34
+  }
+ },
+ {
+  "key": "mh-np22-nagpur-114",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "25/01/2022",
+   "division": "5",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Publication of Elected Member of the Maharashtra Municipal Councils, Nagar Panchayats and Industrial Townships Act, 1965, sub Rule 19(1) by Collector, Gadchiroli. Extra Ordinary Ank 3, Sr. Nos. 30-47",
+   "bodies": [
+    {
+     "lgd_code": "276283",
+     "en": [
+      "Bhamragad",
+      "Bhamragarh"
+     ],
+     "local": "भामरागड",
+     "name": "Bhamragad Nagar Panchayat",
+     "district": "Gadchiroli"
+    },
+    {
+     "lgd_code": "276284",
+     "en": [
+      "Dhanora"
+     ],
+     "local": "धनोरा",
+     "name": "Dhanora Nagar Panchayat",
+     "district": "Gadchiroli"
+    },
+    {
+     "lgd_code": "276286",
+     "en": [
+      "Kurkheda"
+     ],
+     "local": "कूरखेडा",
+     "name": "Kurkheda Nagar Panchayat",
+     "district": "Gadchiroli"
+    },
+    {
+     "lgd_code": "276287",
+     "en": [
+      "Mulchera"
+     ],
+     "local": "मूलचेरा",
+     "name": "Mulchera Nagar Panchayat",
+     "district": "Gadchiroli"
+    },
+    {
+     "lgd_code": "276288",
+     "en": [
+      "Sironcha"
+     ],
+     "local": "सिरोंचा",
+     "name": "Sironcha Nagar Panchayat",
+     "district": "Gadchiroli"
+    },
+    {
+     "lgd_code": "276327",
+     "en": [
+      "Aheri"
+     ],
+     "local": "अहेरी",
+     "name": "Aheri Nagar Panchayat",
+     "district": "Gadchiroli"
+    },
+    {
+     "lgd_code": "276329",
+     "en": [
+      "Chamorshi"
+     ],
+     "local": "चामोर्शी",
+     "name": "Chamorshi Nagar Panchayat",
+     "district": "Gadchiroli"
+    },
+    {
+     "lgd_code": "276330",
+     "en": [
+      "Etapalli",
+      "Etapali"
+     ],
+     "local": "एटापल्ली",
+     "name": "Etapalli Nagar Panchayat",
+     "district": "Gadchiroli"
+    },
+    {
+     "lgd_code": "305207",
+     "en": [
+      "Korchi"
+     ],
+     "local": "कोरची",
+     "name": "Korchi Nagar Panchayat",
+     "district": "Gadchiroli"
+    }
+   ],
+   "expected": 153
+  }
+ },
+ {
+  "key": "mh-np22-nagpur-120",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "24/01/2022",
+   "division": "5",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Nagpur Part 1-A (24-1-2021) Publication of Elected Member of Maharashtra Municipal Councils, Nagar Panchayats and Industrial Townships Act, 1965 Under Section 19(1) by Collector, Chandrapur. Extra Ordinary No. 2 (3), Serial No. 18-29",
+   "bodies": [
+    {
+     "lgd_code": "276355",
+     "en": [
+      "Jiwati"
+     ],
+     "local": "जिवती",
+     "name": "Jiwati Nagar Panchayat",
+     "district": "Chandrapur"
+    },
+    {
+     "lgd_code": "276356",
+     "en": [
+      "Saoli",
+      "Sawali"
+     ],
+     "local": "सावली",
+     "name": "Saoli Nagar Panchayat",
+     "district": "Chandrapur"
+    },
+    {
+     "lgd_code": "276357",
+     "en": [
+      "Korpana"
+     ],
+     "local": "कोरपणा",
+     "name": "Korpana Nagar Panchayat",
+     "district": "Chandrapur"
+    },
+    {
+     "lgd_code": "276358",
+     "en": [
+      "Gondpimpri",
+      "Gondpipri"
+     ],
+     "local": "गोंडपिंपरी",
+     "name": "Gondpimpri Nagar Panchayat",
+     "district": "Chandrapur"
+    },
+    {
+     "lgd_code": "276359",
+     "en": [
+      "Pombhurna"
+     ],
+     "local": "पोंभूर्णा",
+     "name": "Pombhurna Nagar Panchayat",
+     "district": "Chandrapur"
+    },
+    {
+     "lgd_code": "276362",
+     "en": [
+      "Sindewahi"
+     ],
+     "local": "सिंदेवाही",
+     "name": "Sindewahi Nagar Panchayat",
+     "district": "Chandrapur"
+    }
+   ],
+   "expected": 102
+  }
+ },
+ {
+  "key": "mh-np22-amravati-160",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "27/01/2022",
+   "division": "6",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Amravati Part 1 A (27-1-2022) Publication of Elected Member of the Maharashtra Municipal Councils, Nagar Panchayats and Industrial Townships Act, 1965, Under Section 19(1) by Collector, Washim. Extra Ordinary No. 3, Sr. Nos. 21-22",
+   "bodies": [
+    {
+     "lgd_code": "276294",
+     "en": [
+      "Manora"
+     ],
+     "local": "मनोरा",
+     "name": "Manora Nagar Panchayat",
+     "district": "Washim"
+    }
+   ],
+   "expected": 17
+  }
+ },
+ {
+  "key": "mh-np22-amravati-161",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "25/01/2022",
+   "division": "6",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Amravati Part 1A (25-1-2022) Publication of Elected Member of the Maharashtra Municipal Councils, Nagar Panchayats and Industrial Townships Act, 1965, Under Section 19(1) by Collector, Buldhana. Extra Ordinary No. 2 (2), Sr. Nos. 17-20",
+   "bodies": [
+    {
+     "lgd_code": "276274",
+     "en": [
+      "Sangrampur"
+     ],
+     "local": "संग्रामपूर",
+     "name": "Sangrampur Nagar Panchayat",
+     "district": "Buldhana"
+    },
+    {
+     "lgd_code": "276275",
+     "en": [
+      "Motala"
+     ],
+     "local": "मेाताला",
+     "name": "Motala Nagar Panchayat",
+     "district": "Buldhana"
+    }
+   ],
+   "expected": 34
+  }
+ },
+ {
+  "key": "mh-np22-amravati-162",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "25/01/2022",
+   "division": "6",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Amravati Part 1A (25-1-2022) Publication of Elected Member of the Maharashtra Municipal Councils, Nagar Panchayats and Industrial Townships Act, 1965, Under Section 19(1) by Collector, Yavatmal. Extra Ordinary No. 2, Sr. Nos. 5-16",
+   "bodies": [
+    {
+     "lgd_code": "266073",
+     "en": [
+      "Kalamb"
+     ],
+     "local": "कळंब नगर पंचायत",
+     "name": "Kalamb Nagar Panchayat",
+     "district": "Yavatmal"
+    },
+    {
+     "lgd_code": "272842",
+     "en": [
+      "Babhulgaon",
+      "Babhulgao"
+     ],
+     "local": "बाभूळगाव नगर पंचायत",
+     "name": "Babhulgaon Nagar Panchayat",
+     "district": "Yavatmal"
+    },
+    {
+     "lgd_code": "272845",
+     "en": [
+      "Zari Zamani",
+      "Zari-Jamani",
+      "Zari Jamani",
+      "Jhari Jamani",
+      "Zari"
+     ],
+     "local": "झरी झामणी",
+     "name": "Zari Zamani Nagar Panchayat",
+     "district": "Yavatmal"
+    },
+    {
+     "lgd_code": "276308",
+     "en": [
+      "Ralegaon"
+     ],
+     "local": "राळेगांव",
+     "name": "Ralegaon Nagar Panchayat",
+     "district": "Yavatmal"
+    },
+    {
+     "lgd_code": "276309",
+     "en": [
+      "Mahagaon"
+     ],
+     "local": "महागांव",
+     "name": "Mahagaon Nagar Panchayat",
+     "district": "Yavatmal"
+    },
+    {
+     "lgd_code": "276310",
+     "en": [
+      "Maregaon"
+     ],
+     "local": "मारेगांव",
+     "name": "Maregaon Nagar Panchayat",
+     "district": "Yavatmal"
+    }
+   ],
+   "expected": 102
+  }
+ },
+ {
+  "key": "mh-np22-amravati-163",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "21/01/2022",
+   "division": "6",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Amravati Part 1A (21-1-2022) Publication of Elected Councillors under section 19(1) of the Maharashtra Municipal Councils, Nagar Panchyats and Industrial Townships Act, 1965 by Collector, Amravati. Extra Ordinary Ank 1, Sr. Nos. 1-4",
+   "bodies": [
+    {
+     "lgd_code": "276289",
+     "en": [
+      "Tiwsa",
+      "Teosa",
+      "Tiosa"
+     ],
+     "local": "तिवसा",
+     "name": "Tiwsa Nagar Panchayat",
+     "district": "Amravati"
+    },
+    {
+     "lgd_code": "276290",
+     "en": [
+      "Bhatkuli"
+     ],
+     "local": "भातकूली",
+     "name": "Bhatkuli Nagar Panchayat",
+     "district": "Amravati"
+    }
+   ],
+   "expected": 34
+  }
+ },
+ {
+  "key": "mh-np22-aurangabad-178",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "01/02/2022",
+   "division": "7",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "PART-1A GAZZATTE GOVT. MAHARASHTRA GAZETTE no 3 DATE 1 Feb 2022 १) शासकीय अधिसुचना निरंक २) संकीर्ण अधिसूचना, नेमणुका, पदोन्नती इत्यादी निरंक ३) असाधारण राजपत्र म्हणून प्रसिद्धी झालेली अधिसूचना १) जिल्हाधिकारी उस्मानाबाद यांजकडून :- वाशी व लोहारा बु. नगरपंचायत सार्वत्रिक निवडणूक-२०२१-२२ मध्ये निवडून आलेल्या सदस्यांचे नावे प्रसिध्द करणे बाबत. ४) भाग – १ – अ- औरंगाबाद विभागीय पुरवणी निरंक",
+   "bodies": [
+    {
+     "lgd_code": "276312",
+     "en": [
+      "Washi",
+      "Vashi"
+     ],
+     "local": "वाशी",
+     "name": "Washi Nagar Panchayat",
+     "district": "Dharashiv"
+    },
+    {
+     "lgd_code": "276313",
+     "en": [
+      "Lohara",
+      "Lohara Bk",
+      "Lohara Bu"
+     ],
+     "local": "लोहरा (बु)",
+     "name": "Lohara (Bk) Nagar Panchayat",
+     "district": "Dharashiv"
+    }
+   ],
+   "expected": 34
+  }
+ },
+ {
+  "key": "mh-np22-aurangabad-180",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "25/01/2022",
+   "division": "7",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "PART-1A GAZZATTE GOVT. MAHARASHTRA GAZETTE no 2 DATE 25 Jan 2022 १) शासकीय अधिसुचना निरंक २)संकीर्णअधिसूचनानेमणुका पदोन्नतीइत्यादी निरंक 3) भाग – १ – अ- औरंगाबाद विभाग (असाधारण राजपत्र) १) जिल्हाधिकारी बीड यांजकडून :- १) केज २) आष्टी ३) पाटोदा ४) वडवणी ५) शिरूर कासार नगरपंचायत सार्वत्रिक निवडणूक-२०२१-२२ निर्वाचित सदस्यांचे नावे प्रसिध्द करणे बाबत. २)जिल्हाधिकारी जालना यांजकडून :- १) जाफ्राबाद२)मंठा३) बदनापूर४)तीर्थपुरी५)घनसागवीनगरपंचायत सार्वत्रिक निवडणूक-२०२१-२२ निर्वाचित सदस्यांचे नावे प्रसिध्द करणेबाबत.",
+   "bodies": [
+    {
+     "lgd_code": "276369",
+     "en": [
+      "Badnapur"
+     ],
+     "local": "बदनापूर",
+     "name": "Badnapur Nagar Panchayat",
+     "district": "Jalna"
+    },
+    {
+     "lgd_code": "276370",
+     "en": [
+      "Ghansawangi",
+      "Ghansawangee",
+      "Ghanswangi"
+     ],
+     "local": "घनसावंगी",
+     "name": "Ghansawangi Nagar Panchayat",
+     "district": "Jalna"
+    },
+    {
+     "lgd_code": "276371",
+     "en": [
+      "Mantha"
+     ],
+     "local": "मंठा",
+     "name": "Mantha Nagar Panchayat",
+     "district": "Jalna"
+    },
+    {
+     "lgd_code": "276372",
+     "en": [
+      "Jafrabad",
+      "Jaffrabad"
+     ],
+     "local": "जाफ़्राबाद",
+     "name": "Jafrabad Nagar Panchayat",
+     "district": "Jalna"
+    }
+   ],
+   "expected": 68
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-021",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "02/02/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग एक-अ (कोविपू) असा. क्र. १९ (०२-०१-२०२२) जिल्हाधिकारी, पालघर यांजकडून, अधिसूचना, क्रमांक क्र./न. प्रशासन/क-१/टे-१/न.प. निवडणूक/कावि-४८/२२",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-022",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "02/02/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग एक-अ (कोविपू) असा. क्र. २० (०२-०१-२०२२) जिल्हाधिकारी, पालघर यांजकडून, अधिसूचना, क्रमांक क्र./न. प्रशासन/क-१/टे-१/न.प. निवडणूक/कावि-५०/२२",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-023",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "02/02/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग एक-अ (कोविपू) असा. क्र. २२ (०२-०१-२०२२) जिल्हाधिकारी, पालघर यांजकडून, अधिसूचना, क्रमांक क्र./न. प्रशासन/क-१/टे-१/न.प. निवडणूक/कावि-५४/२२",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-024",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "02/02/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग एक-अ (कोविपू) असा. क्र. २१ (०२-०१-२०२२) जिल्हाधिकारी, पालघर यांजकडून, अधिसूचना, क्रमांक क्र./न. प्रशासन/क-१/टे-१/न.प. निवडणूक/कावि-५२/२२",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-025",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "02/02/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग एक-अ (कोविपू) असा. क्र. २३ (०२-०१-२०२२) जिल्हाधिकारी, पालघर यांजकडून, अधिसूचना, क्रमांक क्र./न. प्रशासन/क-१/टे-१/न.प. निवडणूक/कावि-५७/२२",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-026",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "31/01/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Part I-A (K.D.S.) Ext. No. 16 (31st Janu. 2022) जिल्हाधिकारी, सिंधुदुर्ग यांजकडुन, क्र. NPA/२८०१/३/२०१३/२०२२/१५०३",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-027",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "31/01/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Part I-A (K.D.S.) Ext. No. 17 (31st Janu. 2022) जिल्हाधिकारी, सिंधुदुर्ग यांजकडुन, क्र. NPA/२८०१/३/२०१३/२०२२/१५०५",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-028",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "31/01/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Part I-A (K.D.S.) Ext. No. 13 (31st Janu. 2022) जिल्हाधिकारी, सिंधुदुर्ग यांजकडुन, क्र. NPA/२८०१/३/२०१३/२०२२/१४९७",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-029",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "31/01/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Part I-A (K.D.S.) Ext. No. 14 (31st Janu. 2022) जिल्हाधिकारी, सिंधुदुर्ग यांजकडुन, क्र. NPA/२८०१/३/२०१३/२०२२/१४९९",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-030",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "31/01/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Part I-A (K.D.S.) Ext. No. 15 (31st Janu. 2022) जिल्हाधिकारी, सिंधुदुर्ग यांजकडुन, क्र. NPA/२८०१/३/२०१३/२०२२/१४९९",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-031",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "27/01/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग-एक-अ-(को.वि.पु), असा. क्र. १२ (२७-०१-२०२२), जिल्हाधिकारी, सिंधुदुर्ग यांजकडून, आदेश, NPA -२८०१/३/२०१३/कुडाळ निवडणुक/२०२२.",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "251612",
+     "en": [
+      "Kudal"
+     ],
+     "local": "कुडाळ",
+     "name": "Kudal Nagar Panchayat",
+     "district": "Sindhudurg"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-032",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "25/01/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग एक-अ (कोविपू) असा. क्र. ११ (२५-०१-२०२२) जिल्हाधिकारी, ठाणे यांजकडून, आदेश, क्रमांक सामान्य/का-३/टे-२/नपा/सा.नि. शहापुर नपं-२०२१/७८",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "276333",
+     "en": [
+      "Shahapur"
+     ],
+     "local": "शहापूर",
+     "name": "Shahapur Nagar Panchayat",
+     "district": "Thane"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-033",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "25/01/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग एक-अ (कोविपू) असा. क्र. १० (२५-०१-२०२२) जिल्हाधिकारी, ठाणे यांजकडून, आदेश, क्रमांक सामान्य/का-३/टे-२/नपा/सा.नि. मुरबाड नपं-२०२१/७७",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "251487",
+     "en": [
+      "Murbad"
+     ],
+     "local": "मुरबाड",
+     "name": "Murbad Nagar Panchayat",
+     "district": "Thane"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-034",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "25/01/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग-एक-अ-(को.वि.पु), असा. क्र. ९ (२5-०१-२०२२), जिल्हाधिकारी, रायगड यांजकडून, आदेश, क्रमांक नापाप्र/कर्या-४/न.पं./पाली/२०२२",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "300027",
+     "en": [
+      "Pali",
+      "Pali (Sudhagad)"
+     ],
+     "local": "पाली",
+     "name": "Pali Nagar Panchayat",
+     "district": "Raigad"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-konkan-035",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "21/01/2022",
+   "division": "2",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "भाग एक-अ (कोविपु), असा. क्र. ८ (२१-०१-२०२२), क्रमांक नपाप्र-१/सार्वत्रिक निवडणूक/दापोली न.पं./२०२२.",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "251599",
+     "en": [
+      "Dapoli"
+     ],
+     "local": "दापोली",
+     "name": "Dapoli Camp Nagar Panchayat",
+     "district": "Ratnagiri"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-pune-060",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "04/02/2022",
+   "division": "3",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "सातारा जिल्ह्यातील लोणंद, कोरेगाव, वडूज, दहिवडी, खंडाळा नगरपंचायत येथील सदस्य (नगरसेवक) व त्यांनी धारण केलेल्या पक्ष/आघाडीबाबतचा नमुना IV राजपत्रात प्रसिद्ध करण्याबाबतची अधिसूचना.",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "276417",
+     "en": [
+      "Dahiwadi"
+     ],
+     "local": "दहिवडी",
+     "name": "Dahiwadi Nagar Panchayat",
+     "district": "Satara"
+    },
+    {
+     "lgd_code": "276383",
+     "en": [
+      "Khandala"
+     ],
+     "local": "खंडाळा",
+     "name": "Khandala Nagar Panchayat",
+     "district": "Satara"
+    },
+    {
+     "lgd_code": "276381",
+     "en": [
+      "Koregaon"
+     ],
+     "local": "कोरेगांव",
+     "name": "Koregaon Nagar Panchayat",
+     "district": "Satara"
+    },
+    {
+     "lgd_code": "276414",
+     "en": [
+      "Lonand"
+     ],
+     "local": "लोणंद",
+     "name": "Lonand Nagar Panchayat",
+     "district": "Satara"
+    },
+    {
+     "lgd_code": "276416",
+     "en": [
+      "Vaduj"
+     ],
+     "local": "वडुज",
+     "name": "Vaduj Nagar Panchayat",
+     "district": "Satara"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-pune-062",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "28/01/2022",
+   "division": "3",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "(1) जिल्हाधिकारी, सांगली यांजकडील जत नगरपरिषद, पोट-निवडणूक-2021 अन्वये निवडून आलेल्या सदस्यांचे नाव प्रसिद्धीबाबत अधिसूचना. (2) जिल्हाधिकारी, यांजकडीलसोलापूर जिल्ह्यातील (माढा, माळशिरस, म्हाळुंग-त्रिपूर, वैराग, नातेपुते) व सातारा जिल्हातील (लोणंद, कोरेगाव, वडूज, दहिवडी, पाटण, खंडाळा) नगरपंचायत निवडणूक 2021 अन्वये निवडून आलेल्या सदस्यांचे नाव प्रसिद्धीबाबत अधिसूचना.",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "251596",
+     "en": [
+      "Patan"
+     ],
+     "local": "पाटण",
+     "name": "Patan Nagar Panchayat",
+     "district": "Satara"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-nashik-081",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "24/01/2022",
+   "division": "4",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "जिल्हाधिकारी, जळगाव यांचे बोदवड नगरपंचायतीमधील सार्वत्रिक निवडणुकीमध्ये निवडून आलेल्या सदस्यांचे नाव प्रसिद्ध करणेबाबतचे आदेश तसेच जिल्हाधिकारी, अहमदनगर यांचे अकोले, पारनेर व कर्जत नगरपंचायतीमधील सार्वत्रिक निवडणुकीमध्ये निवडून आलेल्या सदस्यांचे नाव प्रसिद्ध करणेबाबतचे आदेश.",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "276272",
+     "en": [
+      "Bodwad"
+     ],
+     "local": "बोदवड",
+     "name": "Bodwad Nagar Panchayat",
+     "district": "Jalgaon"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-nagpur-110",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "31/01/2022",
+   "division": "5",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Publication of Elected Member of the Maharashtra Miunicipal Councils, Nagar Panchayats and Industiral Townships Act, 1965, Under Section 19(1) by Collector Gondia Extra ordinary Ank 6, Sr. Nos. 67-69.",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "276366",
+     "en": [
+      "Arjuni Morgaon",
+      "Arjuni-Morgaon",
+      "Arjuni/Morgaon",
+      "Arjuni Morgoan"
+     ],
+     "local": "अर्जुनी",
+     "name": "Arjuni Nagar Panchayat",
+     "district": "Gondia"
+    },
+    {
+     "lgd_code": "276363",
+     "en": [
+      "Deori"
+     ],
+     "local": "देवरी",
+     "name": "Deori Nagar Panchayat",
+     "district": "Gondia"
+    },
+    {
+     "lgd_code": "276368",
+     "en": [
+      "Sadak Arjuni",
+      "Sadak-Arjuni"
+     ],
+     "local": "सडकअर्जुनी",
+     "name": "Sadak-Arjuni Nagar Panchayat",
+     "district": "Gondia"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-nagpur-113",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "25/01/2022",
+   "division": "5",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "Nagpur Part 1-A (25-1-2022) Publication of Elected Member of Maharashtra Municipal Councils, Nagar Panchayats and Industrial Townships Act, 1965 Under Section 19(1) by Collector, Bhandara. Extra Ordinary No. 3 (3), Serial No. 52-54.",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "276324",
+     "en": [
+      "Lakhandur"
+     ],
+     "local": "लाखांदूर",
+     "name": "Lakhandur Nagar Panchayat",
+     "district": "Bhandara"
+    },
+    {
+     "lgd_code": "276323",
+     "en": [
+      "Lakhani"
+     ],
+     "local": "लाखणी",
+     "name": "Lakhani Nagar Panchayat",
+     "district": "Bhandara"
+    },
+    {
+     "lgd_code": "276325",
+     "en": [
+      "Mohadi"
+     ],
+     "local": "मोहाडी",
+     "name": "Mohadi Nagar Panchayat",
+     "district": "Bhandara"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-aurangabad-180",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "25/01/2022",
+   "division": "7",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "PART-1A GAZZATTE GOVT. MAHARASHTRA GAZETTE no 2 DATE 25 Jan 2022 १) शासकीय अधिसुचना निरंक २)संकीर्णअधिसूचनानेमणुका पदोन्नतीइत्यादी निरंक 3) भाग – १ – अ- औरंगाबाद विभाग (असाधारण राजपत्र) १) जिल्हाधिकारी बीड यांजकडून :- १) केज २) आष्टी ३) पाटोदा ४) वडवणी ५) शिरूर कासार नगरपंचायत सार्वत्रिक निवडणूक-२०२१-२२ निर्वाचित सदस्यांचे नावे प्रसिध्द करणे बाबत. २)जिल्हाधिकारी जालना यांजकडून :- १) जाफ्राबाद२)मंठा३) बदनापूर४)तीर्थपुरी५)घनसागवीनगरपंचायत सार्वत्रिक निवडणूक-२०२१-२२ निर्वाचित सदस्यांचे नावे प्रसिध्द करणेबाबत.",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "259696",
+     "en": [
+      "Kaij",
+      "Kej",
+      "Keij"
+     ],
+     "local": "केज",
+     "name": "Kaij Nagar Panchayat",
+     "district": "Beed"
+    },
+    {
+     "lgd_code": "275734",
+     "en": [
+      "Ashti"
+     ],
+     "local": "आष्टी",
+     "name": "Ashti Nagar Panchayat",
+     "district": "Beed"
+    },
+    {
+     "lgd_code": "275732",
+     "en": [
+      "Patoda"
+     ],
+     "local": "पाटोदा",
+     "name": "Patoda Nagar Panchayat",
+     "district": "Beed"
+    },
+    {
+     "lgd_code": "275726",
+     "en": [
+      "Shirur Kasar",
+      "Shirur (Kasar)",
+      "Shirur Kasaar",
+      "Shirur-Kasar"
+     ],
+     "local": "शिरुर कासार",
+     "name": "Shirur Kasar Nagar Panchayat",
+     "district": "Beed"
+    },
+    {
+     "lgd_code": "275731",
+     "en": [
+      "Wadvani",
+      "Wadwani",
+      "Vadvani"
+     ],
+     "local": "वडवणी",
+     "name": "Wadvani Nagar Panchayat",
+     "district": "Beed"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-aurangabad-181",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "24/01/2022",
+   "division": "7",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "PART-1A GAZZATTE GOVT. MAHARASHTRA GAZETTE no 1 DATE 24 Jan 2022 १) शासकीय अधिसुचना निरंक २) संकीर्ण अधिसूचना नेमणुका पदोन्नती इत्यादी निरंक 3) भाग – १ – अ- औरंगाबाद विभाग (असाधारण राजपत्र) १) जिल्हाधिकारी परभणी यांजकडून :- पालम नगरपंचायत सार्वत्रिक निवडणूक-२०२१-२२ मध्ये निवडून आलेल्या सदस्यांचे नावे प्रसिध्द करणे बाबत. २) जिल्हाधिकारी लातूर यांजकडून :- लातूर जिल्ह्यातील १) शिरूर अनंतपाळ २) चाकूर ३) देवणी ४) जळकोट - नगरपंचायत सार्वत्रिक निवडणूक-२०२१-२२ मध्ये निवडून आलेल्या सदस्यांचे नावे प्रसिध्द करणे बाबत.",
+   "save_only": true,
+   "bodies": [
+    {
+     "lgd_code": "276297",
+     "en": [
+      "Palam"
+     ],
+     "local": "पालम",
+     "name": "Palam Nagar Panchayat",
+     "district": "Parbhani"
+    },
+    {
+     "lgd_code": "276375",
+     "en": [
+      "Chakur"
+     ],
+     "local": "चाकूर",
+     "name": "Chakur Nagar Panchayat",
+     "district": "Latur"
+    },
+    {
+     "lgd_code": "276377",
+     "en": [
+      "Deoni",
+      "Devni"
+     ],
+     "local": "देवणी",
+     "name": "Deoni (Bk) Nagar Panchayat",
+     "district": "Latur"
+    },
+    {
+     "lgd_code": "276373",
+     "en": [
+      "Jalkot"
+     ],
+     "local": "जळकोट",
+     "name": "Jalkot Nagar Panchayat",
+     "district": "Latur"
+    },
+    {
+     "lgd_code": "276374",
+     "en": [
+      "Shirur Anantpal",
+      "Shirur-Anantpal",
+      "Shirur Anantapal"
+     ],
+     "local": "शिरुर-अनंतपाल",
+     "name": "Shirur-Anantpal Nagar Panchayat",
+     "district": "Latur"
+    }
+   ]
+  }
+ },
+ {
+  "key": "mh-np22-save-aurangabad-177",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "18/02/2022",
+   "division": "7",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "PART-1A GAZZATTE GOVT. MAHARASHTRA GAZETTE no 4 DATE 18 Feb 2022 ?) ?????? ???????? ??????) ???????",
+   "save_only": true
+  }
+ },
+ {
+  "key": "mh-np22-save-aurangabad-179",
+  "payload": {
+   "kind": "form-mh_np",
+   "state": "MH",
+   "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx",
+   "gazette_date": "28/01/2022",
+   "division": "7",
+   "section": "3",
+   "gazette_type": "1",
+   "match": "PART-1A GAZZATTE GOVT. MAHARASHTRA GAZETTE no 3 DATE 28 Jan 2022",
+   "save_only": true
+  }
+ }
+]

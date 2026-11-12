@@ -158,13 +158,15 @@ def get_pdf(p, get):
         return None, "search did not answer"
     soup, data = form(r.text)
     want = gj.norm(p["match"])
-    target = None
+    target, nth = None, int(p.get("nth", 0) or 0)      # nth: the day lists the same text more than once
     for tr in soup.find_all("tr"):
         a = tr.find("a", href=re.compile("doPostBack"))
         tds = [gj.norm(td.get_text(" ", strip=True)) for td in tr.find_all("td")]
         if a and len(tds) > 6 and (tds[6] == want or tds[6].startswith(want[:80])):
-            target = a["href"].split("'")[1]
-            break
+            if nth == 0:
+                target = a["href"].split("'")[1]
+                break
+            nth -= 1
     if not target:
         return None, "notice not in the search result"
     data.update({"__EVENTTARGET": target, "__EVENTARGUMENT": ""})
