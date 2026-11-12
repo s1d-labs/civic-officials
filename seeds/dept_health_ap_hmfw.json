@@ -1,0 +1,11 @@
+[
+ {
+  "key": "health_ap_hmfw:contacts",
+  "payload": {
+   "reader": "health_ap_hmfw",
+   "url": "https://hmfw.ap.gov.in/contact.aspx",
+   "csms_url": "http://hmfw.ap.gov.in/hsms/CSMSContacts.aspx",
+   "state": "AP"
+  }
+ }
+]
