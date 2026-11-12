@@ -1,0 +1,13 @@
+[
+ {
+  "key": "health_tn_dph:ddhs",
+  "payload": {
+   "reader": "health_tn_dph",
+   "url": "https://tnhealth.tn.gov.in/tngovin/dph/notification/2021-22/distdec2021.pdf",
+   "state": "TN",
+   "india_only": true,
+   "route": "proxy",
+   "expected": 45
+  }
+ }
+]
