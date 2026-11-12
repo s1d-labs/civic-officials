@@ -423,3 +423,19 @@ def test_seed_keys():
     for f in ROOT.glob("seeds/dept_emerg_hg_*.json"):
         for it in json.loads(f.read_text()):
             assert it["key"].startswith("emerg_hg_") and it["payload"]["reader"] in f.stem, (f, it["key"])
+
+
+def test_s3waas_subdivision_rows_and_dates():
+    # Darjeeling (archive copy 2026-11-05): control-room table, one row per sub-division
+    recs, _, why = s3("darjeeling", "https://darjeeling.gov.in/disaster-management/", "Darjeeling", "WB")
+    assert why == "" and len(recs) == 5
+    check_emerg(recs, "emerg_ddma_s3waas", "disaster", "emerg_ddma")
+    ids = by_id(recs)
+    d = ids["dept:emerg_ddma_s3waas:darjeeling.gov.in:page:district-disaster-management-control-room-number"]
+    assert (d["phone"], d["level"], d["src_pos"]) == ("0354-2255749", "district", {"table": 1, "row": 2})
+    k = ids["dept:emerg_ddma_s3waas:darjeeling.gov.in:page:kurseong-subdivision"]
+    assert (k["phone"], k["level"]) == ("03542344448", "subdivision")
+    # Munger (archive copy 2026-11-10): a letter page; "25-03-2026" is the letter date, not a phone
+    recs, _, why = s3("munger", "https://munger.nic.in/disaster-management-section-munger-letter-no-372-a-p-date-25-03-2026/",
+                      "Munger", "BR")
+    assert (recs, why) == ([], "no contacts")
