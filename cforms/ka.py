@@ -11,6 +11,7 @@ in the name column ("Election Not Held", "Stay in High Court"), gives "... (ward
 without ward numbers sl-<serial no>. Seeds: seeds/councillors_ka.json."""
 import gzip
 import re
+import time
 import socket
 
 import requests
@@ -191,12 +192,14 @@ def _get(get, url):
 def fetch(p, get):
     base, path, sl = _base(p), p.get("path", "council-members"), p["slug"]
     files, recs, admins, why, blank = [], [], [], "", 0
+    seen = None            # (url, response) of the last page that answered: the source of a "no members listed" status
     for lang in ("en", "kn"):
         url = f"{base}/{lang}/{path}"
         r = _get(get, url)
         if r is None:
             why = why or f"{lang} page did not answer"
             continue
+        seen = (url, r)
         files.append((f"councillors/KA/{sl}-{lang}.html.gz", gzip.compress(r.content), "application/gzip"))
         rows, adm, term, nb = members(r.text)
         admins += [(a, url, r) for a in adm]
@@ -234,6 +237,13 @@ def fetch(p, get):
         rec = {"type": "body_status", "state": "KA", "body": p.get("body"), "body_type": p.get("body_type"), "district": p.get("district"),
                "lgd_code": p.get("lgd_code"), "status": "administrator", "administrator": who[:300],
                "note": "no council members listed (administrator only)", "url": url, **provenance.at(r), "src_pos": a.get("_pos")}
+        return [(f"body_status:KA:{sl}", {k: v for k, v in rec.items() if v not in (None, "")})], files, ""
+    if seen:        # the town's own site answered but lists no member: say so on the town page, with the page as source
+        url, r = seen
+        note = ("the town's website shows its ward table with empty names" if blank else "the town's website lists no council members")
+        rec = {"type": "body_status", "state": "KA", "body": p.get("body"), "body_type": p.get("body_type"), "district": p.get("district"),
+               "lgd_code": p.get("lgd_code"), "status": "no members listed", "note": note, "url": url, **provenance.at(r),
+               "checked": time.strftime("%Y-%m-%d", time.gmtime())}
         return [(f"body_status:KA:{sl}", {k: v for k, v in rec.items() if v not in (None, "")})], files, ""
     if blank:
         return [], files, "no council members listed (ward table with empty names)"

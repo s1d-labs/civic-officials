@@ -156,6 +156,14 @@ def run(item, get):
     return KINDS[p["kind"]](p, get)
 
 
+def https_refused(url, e):
+    """An https address whose port 443 refuses the connection (not a timeout): worth one try over http."""
+    if not url.startswith("https://") or isinstance(e, requests.exceptions.ConnectTimeout):
+        return False
+    m = str(e).lower()
+    return "refused" in m or "couldn't connect" in m
+
+
 def reader_of(p):
     """The module that reads this item: dforms.<reader> (depts), cforms.<xx> (form-<xx>), else the built-in kind."""
     if p.get("reader"):
@@ -217,6 +225,14 @@ def main(run_fn=None, task="councillors"):
                     # the records of this item get tls_unverified
                     hub.metric("tls_unverified_retry")
                     r = insecure_retry(s, url, method, data=data, headers=headers, timeout=(20, 90))
+            except requests.exceptions.ConnectionError as e:
+                # port 443 refused (Karnataka *.mrc.gov.in town sites serve plain http only): the same page over http,
+                # as whoswho.py does; the trail notes the http address
+                if not https_refused(url, e):
+                    raise
+                hub.metric("https_refused_http_retry")
+                url = "http://" + url[len("https://"):]
+                r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
         except requests.RequestException:
             hub.metric("http_error")
             hub.error()
@@ -313,7 +329,12 @@ def local(payload, run_fn=None):
     s.headers.update(HEADERS)
 
     def get(url, method="GET", data=None, headers=None):
-        r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
+        try:
+            r = s.request(method, url, data=data, headers=headers, timeout=(20, 90))
+        except requests.exceptions.ConnectionError as e:
+            if not https_refused(url, e):
+                raise
+            r = s.request(method, "http://" + url[len("https://"):], data=data, headers=headers, timeout=(20, 90))
         time.sleep(1)
         if r.status_code == 200 and (not r.encoding or r.encoding.lower() == "iso-8859-1"):
             r.encoding = r.apparent_encoding or "utf-8"
