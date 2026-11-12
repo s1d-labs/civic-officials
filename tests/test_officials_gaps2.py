@@ -103,3 +103,32 @@ def test_rj_jankalyan_fetch():
     assert json.loads(post[2])["AdvanceSearchModel"]["DepartmentCode"] == 44
     check_records([r for r in recs if r[1]["type"] == "dept_office" and r[1]["dept"] == "administration"], "rj_jankalyan",
                   "administration")
+
+
+# ---- Bihar: State Health Society phone directory (district and block tabs, Patna answers saved 2026-11-12) ----
+def test_br_shs_parse():
+    m = mod("health_br_shs")
+    d = m.parse((G / "br_shs_district_28.html").read_text(), "district", "28", "Patna")
+    b = m.parse((G / "br_shs_block_28.html").read_text(), "block", "28", "Patna")
+    check_records([r for r in d if r[1]["dept"] == "health"] + b, "health_br_shs", "health")
+    assert len(d) == 16 and len(b) == 46
+    cs = dict(d)["dept:health_br_shs:district:28:civil-surgeon:dr-vibha-kumari-singh"]
+    assert (cs["phone"], cs["email"], cs["level"], cs["district"]) == ("9470003600", "cspatna2015@gmail.com", "district", "Patna")
+    dm = [x for _, x in d if x["post"] == "DISTRICT MAGISTRATE"][0]
+    assert dm["dept"] == "administration"
+    moic = dict(b)["dept:health_br_shs:block:28:athmalgola:moic:dr-b-n-sharma"]
+    assert (moic["level"], moic["area"], moic["phone"]) == ("block", "Athmalgola", "9470003616")
+    assert m.pages((G / "br_shs_district_28.html").read_text()) == 1
+    assert m.pages('<a class="page-link" data-page_number="2">2</a><a class="page-link" data-page_number="3">') == 3
+
+
+def test_br_shs_fetch():
+    m = mod("health_br_shs")
+    its = m.items()
+    assert len(its) == 38 and len({i["payload"]["district"] for i in its}) == 38
+    p = next(i["payload"] for i in its if i["payload"]["district_id"] == "28")
+    get = fake_get({("POST", m.BASE + m.KINDS["district"]): "gaps2/br_shs_district_28.html",
+                    ("POST", m.BASE + m.KINDS["block"]): "gaps2/br_shs_block_28.html"})
+    recs, files, why = m.fetch(p, get)
+    assert not why and len(recs) == 62 and len(files) == 2
+    assert get.calls[1][2] == {"page": "1", "query": "", "district": "28", "blockid": ""}
