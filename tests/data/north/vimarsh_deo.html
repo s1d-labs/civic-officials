@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+   
+     
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>MP-DPI</title>
+    <script type="text/javascript" src="jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/staticlogo.js"></script>
+    <link href="SCHOOL/Remedial/css/bootstrap.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="SCHOOL/Remedial/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="SCHOOL/Remedial/css/animate.css"/>
+	<link href="SCHOOL/Remedial/css/prettyPhoto.css" rel="stylesheet"/>
+	<link href="SCHOOL/Remedial/css/style.css" rel="stylesheet" />	
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <script type="text/javascript">
+        function ValidNumeric() {
+            var charCode = (event.which) ? event.which : event.keyCode;
+            if (charCode >= 48 && charCode <= 57)
+            { return true; }
+            else
+            { return false; }
+        }
+    </script>
+     <script type = "text/javascript" >
+       function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+     </script>
+     <script lang="javascript" type="text/javascript">
+        function DisableCopyPaste (e) 
+        {
+         var message = "Copy - Paste is Disabled.";
+         var kCode = event.keyCode || e.charCode; 
+         if (kCode == 17 || kCode == 2)
+         {
+         alert(message);
+         return false;
+         }
+        }
+        </script>
+    <style type="text/css">
+        p.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	}
+        </style>
+    </head>
+<body>
+    <form method="post" action="./whoiswho.aspx" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTM2NDE2MzkzMA9kFgICAQ9kFgYCAQ9kFgYCAQ8QZBAVFhYtLVNlbGVjdCBEZXNpZ25hdGlvbi0tD0FEIChERU8gT2ZmaWNlKQ5BRCAoSkQgT2ZmaWNlKQRBRFBDA0FQQxBBU08gKERFTyBPRkZJQ0UpA0JFTw5ERCAoSkQgT2ZmaWNlKQNERU8ORElFVCBQcmluY2lwYWwMR3lhbnB1bmogRGFsJUlULUFzc2lzdGFudCBDb29yZGljYXRvciAoREVPIE9mZmljZSklSVQtQXNzaXN0YW50IENvb3JkaW5hdG9yIChERU8gT2ZmaWNlKSRJVC1Bc3Npc3RhbnQgQ29vcmRpbmF0b3IgKEpEIE9mZmljZSkbSVQtQ29vcmRpY2F0b3IgKERFTyBPZmZpY2UpG0lULUNvb3JkaW5hdG9yIChERU8gT2ZmaWNlKRpJVC1Db29yZGluYXRvciAoSkQgT2ZmaWNlKQJKRA9QTyAoREVPIE9GRklDRSkOU3BvcnRzIE9mZmljZXIWVm9jYXRpb25hbCBDb29yZGluYXRvcglQcmluY2lwYWwVFhYtLVNlbGVjdCBEZXNpZ25hdGlvbi0tD0FEIChERU8gT2ZmaWNlKQ5BRCAoSkQgT2ZmaWNlKQRBRFBDA0FQQxBBU08gKERFTyBPRkZJQ0UpA0JFTw5ERCAoSkQgT2ZmaWNlKQNERU8ORElFVCBQcmluY2lwYWwMR3lhbnB1bmogRGFsJUlULUFzc2lzdGFudCBDb29yZGljYXRvciAoREVPIE9mZmljZSklSVQtQXNzaXN0YW50IENvb3JkaW5hdG9yIChERU8gT2ZmaWNlKSRJVC1Bc3Npc3RhbnQgQ29vcmRpbmF0b3IgKEpEIE9mZmljZSkbSVQtQ29vcmRpY2F0b3IgKERFTyBPZmZpY2UpG0lULUNvb3JkaW5hdG9yIChERU8gT2ZmaWNlKRpJVC1Db29yZGluYXRvciAoSkQgT2ZmaWNlKQJKRA9QTyAoREVPIE9GRklDRSkOU3BvcnRzIE9mZmljZXIWVm9jYXRpb25hbCBDb29yZGluYXRvcglQcmluY2lwYWwUKwMWZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZxYBAghkAgMPEA8WAh4HRW5hYmxlZGdkZBYBZmQCBQ8QZGQWAGQCAw8PFgIe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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA33B8E1" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAE1gORcfZcG/HTl0G+z4k5wRGJFKGrixhNRIBkKHiTebmFqBdql4eUolwhIHVikdy2tEl4PfUP8JOgY2AHAoKttj0K6mGhfXth2cUlVwxjykgndCHiqpAKJT+VbLBBigPvVQOGXQTWcKL71TwXNRFVDC8KEU8pFDe/Rxeut2I/qV5WMu61dWVUmKGuyP/FbllaVQPKE/+TtINQ0X3Qqa+ohcer9jM9g3iBRsIFgS70I2eeXcbTp9ysuQA0yoZ4Tdj1zIMSoDOdXdIy2+YGCNvDAYTkXFAOLeO09gWCfajkf4oJB5f/Ry7urxqbnDSRE1XSeQf82vCL/sEG9AlQT1/x8bBHLdTgHfhsoJG30pty7Jps/H0QSFvSTJ57QUyeIWCZl/vlFTe9faXc/PLv2VGl1a1kp6iMWc7g17kskf+AiqaDEtVc1hjE2Tgre4IursNeJP40AIhOF3brkEANmqtr9hP7E6XR0dt9P9s3m2STWmyIds6SIXkNl74rS4qIP9u0nRPHjzN2L6dQ5B5/wdZ4pddoR6MYk/KkqdRjsQug4hB2ihAgCxEKSFmx/4MYrePweer3MitGkoywLiAFLhIFC8KGuPQxXuzxRPdva1FwTOy6KJSjos3c5JUv1lm38LCuyJAiYSIH1yvaLewfPn2cRRGEzjYmPlIXNJoZ4NKO8Giak0SF7Q1NckF/RQVAy8b7Ab0QSfB/IJMuPt0FwdAdekTxeM5Al2Vs3n2uRcPwyVfOUc6cOlxcAYPHuc2qcgjyHsjgI4apnsZqnVxo/n9Tk9BuR66GrLzzznjPXaAGzjkZHuJR3K9Z5j9K8huecAWWFEo0n3SXiQaSC7u2R+ArYqeqp9tKcMoPccEnMheeQWoiNPElcq+A6w+2IM5fHA8q+jueK4mrmhG1Uq3r+r1bnfFNS5clTzhmmUCiw/cijqFDh9pUywc05wcGYmD1j8M9/4rTwr0rY22XXMtzCUVCOFOqntSut7Ga15qURcgm/jjeZRX4UBdE0UVfPqrqK70WViWTxhp8jo5g3OHIu5/j4edG42Ix5wcxeHPtzw6XHJNvffmX9BnKrphze4Z1R8/APV442hfkpYG1/aZg489KTG/6nwaQXcsSWn3aF/3T4S+X2Dj2cnvECaahM1Z4SwAXkLg6VVcHUmzkMtHZrX6tPAnu79fVwpgraIDZcBzCe4m6tw9Wvw2cMGjq9ertv3RPesQ0Cn25MYW50NNyeCVJFnkWIpSWghQhxcA83n7coHkEvloxlHV0xDWU9P4zpyEAxIN6C+dK2U4CfxjfsINz/1axMtxCDy2HcFI8ixyjgp+rcbP1UKvIkOeEtNqwRhMfgQyGKiyvmisejVGG5B0uqcd501IwDJGaBLL8R4zov3negHNzdO/Q0ze/L85i16t+gR2lOkV1IfcTy5cQDn7ACno9gradSgTbba4KNBJBjr+nisNcKozvkX36aAUfvko1clERzqSWWAj7+cDCvDUno3caKbKZZbfk5I8gDJuhdCP9OHM4OLrzaJWUVNmAhhZFGRKY2MpsYmBm2r1Q30a8FvS8QInHqSws39vG067qe4zeYfMs7HGuOisXgQiQSV8OlAMqwEb4yYakNxtNe0nBEJxi8AZ8uajYKCIP1Q64Hs3XHOl9JYN9AX/BX+AYBPGa5igjg9JStlD7fnwqyPEqAg" />
+</div>
+    <header>		
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="navigation">
+				<div class="container">					
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand">
+							<a href="deo_home.aspx"><h1><span>MP-</span>dpi</h1></a>
+						</div>
+					</div>
+					
+					<div class="navbar-collapse collapse">							
+						<div class="menu">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation"><a href="deo_home.aspx" >Home</a></li>
+								  
+                                
+                                <li role="presentation"><a href="index.aspx">Logout</a></li>
+							</ul>
+						</div>
+					</div>						
+				</div>
+			</div>	
+		</nav>		
+	</header>
+	
+	<!--/#main-slider-->
+	
+	<div class="feature">
+		<div class="container" style="padding-top:40px;">
+            
+            <div class="row">
+                <div class="panel-group">
+                      <div class="panel panel-primary">
+                        <div class="panel-heading"><img src="/images/MP-Govt.jpg" width="40" height="40" /><strong style="font-family: Aparajita; font-size: x-large; font-weight: bold">    संभाग, जिला, विकासखंड स्तरीय अधिकारियों एवं प्राचार्य की जानकारी :-</strong></div>
+                        <div class="panel-body">
+                             <div id="Panel2" class="table table-responsive" style="width:100%;">
+	
+
+                                 <table class="table table-bordered table-responsive" width="100%">
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td style="color: #000000; align-items:center">
+                                            <strong>Select Designation</strong></td>
+                                        
+                                         <td style="color: #000000; align-items:center">
+                                           <select name="DropDownList1" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;DropDownList1\&#39;,\&#39;\&#39;)&#39;, 0)" id="DropDownList1" class="form-control" style="width:100%;">
+		<option value="--Select Designation--">--Select Designation--</option>
+		<option value="AD (DEO Office)">AD (DEO Office)</option>
+		<option value="AD (JD Office)">AD (JD Office)</option>
+		<option value="ADPC">ADPC</option>
+		<option value="APC">APC</option>
+		<option value="ASO (DEO OFFICE)">ASO (DEO OFFICE)</option>
+		<option value="BEO">BEO</option>
+		<option value="DD (JD Office)">DD (JD Office)</option>
+		<option selected="selected" value="DEO">DEO</option>
+		<option value="DIET Principal">DIET Principal</option>
+		<option value="Gyanpunj Dal">Gyanpunj Dal</option>
+		<option value="IT-Assistant Coordicator (DEO Office)">IT-Assistant Coordicator (DEO Office)</option>
+		<option value="IT-Assistant Coordinator (DEO Office)">IT-Assistant Coordinator (DEO Office)</option>
+		<option value="IT-Assistant Coordinator (JD Office)">IT-Assistant Coordinator (JD Office)</option>
+		<option value="IT-Coordicator (DEO Office)">IT-Coordicator (DEO Office)</option>
+		<option value="IT-Coordinator (DEO Office)">IT-Coordinator (DEO Office)</option>
+		<option value="IT-Coordinator (JD Office)">IT-Coordinator (JD Office)</option>
+		<option value="JD">JD</option>
+		<option value="PO (DEO OFFICE)">PO (DEO OFFICE)</option>
+		<option value="Sports Officer">Sports Officer</option>
+		<option value="Vocational Coordinator">Vocational Coordinator</option>
+		<option value="Principal">Principal</option>
+
+	</select>
+                                           </td>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                     
+                                        <td style="color: #000000; align-items:center">
+                                            <strong>Select District</strong></td>
+                                        <td style="color: #000000; align-items:center">
+                                            <strong>Select Block</strong></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td style="color: #000000; align-items:center">
+                                            <select name="DropDownList2" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;DropDownList2\&#39;,\&#39;\&#39;)&#39;, 0)" id="DropDownList2" class="form-control">
+		<option selected="selected" value=""></option>
+		<option value="AGAR MALWA">AGAR MALWA</option>
+		<option value="ALIRAJPUR">ALIRAJPUR</option>
+		<option value="ANUPPUR">ANUPPUR</option>
+		<option value="ASHOKNAGAR">ASHOKNAGAR</option>
+		<option value="BALAGHAT">BALAGHAT</option>
+		<option value="BARWANI">BARWANI</option>
+		<option value="BETUL">BETUL</option>
+		<option value="BHIND">BHIND</option>
+		<option value="BHOPAL">BHOPAL</option>
+		<option value="BURHANPUR">BURHANPUR</option>
+		<option value="CHHATARPUR">CHHATARPUR</option>
+		<option value="CHHINDWARA">CHHINDWARA</option>
+		<option value="DAMOH">DAMOH</option>
+		<option value="DATIA">DATIA</option>
+		<option value="DEWAS">DEWAS</option>
+		<option value="DHAR">DHAR</option>
+		<option value="DINDORI">DINDORI</option>
+		<option value="GUNA">GUNA</option>
+		<option value="GWALIOR">GWALIOR</option>
+		<option value="HARDA">HARDA</option>
+		<option value="HOSHANGABAD">HOSHANGABAD</option>
+		<option value="INDORE">INDORE</option>
+		<option value="JABALPUR">JABALPUR</option>
+		<option value="JHABUA">JHABUA</option>
+		<option value="KATNI">KATNI</option>
+		<option value="KHANDWA">KHANDWA</option>
+		<option value="KHARGONE">KHARGONE</option>
+		<option value="MANDLA">MANDLA</option>
+		<option value="MANDSAUR">MANDSAUR</option>
+		<option value="MORENA">MORENA</option>
+		<option value="NARSINGHPUR">NARSINGHPUR</option>
+		<option value="NEEMUCH">NEEMUCH</option>
+		<option value="PANNA">PANNA</option>
+		<option value="RAISEN">RAISEN</option>
+		<option value="RAJGARH">RAJGARH</option>
+		<option value="RATLAM">RATLAM</option>
+		<option value="REWA">REWA</option>
+		<option value="SAGAR">SAGAR</option>
+		<option value="SATNA">SATNA</option>
+		<option value="SEHORE">SEHORE</option>
+		<option value="SEONI">SEONI</option>
+		<option value="SHAHDOL">SHAHDOL</option>
+		<option value="SHAJAPUR">SHAJAPUR</option>
+		<option value="SHEOPUR">SHEOPUR</option>
+		<option value="SHIVPURI">SHIVPURI</option>
+		<option value="SIDHI">SIDHI</option>
+		<option value="SINGRAULI">SINGRAULI</option>
+		<option value="TIKAMGARH">TIKAMGARH</option>
+		<option value="UJJAIN">UJJAIN</option>
+		<option value="UMARIA">UMARIA</option>
+		<option value="VIDISHA">VIDISHA</option>
+
+	</select>
+                                        </td>
+                                        <td style="color: #000000; align-items:center">
+                                            <select name="DropDownList3" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;DropDownList3\&#39;,\&#39;\&#39;)&#39;, 0)" id="DropDownList3" disabled="disabled" class="aspNetDisabled form-control">
+
+	</select>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                            </table>
+                               
+                                 
+</div>
+                            <div id="Panel1" class="table table-responsive table-bordered" style="width:100%;">
+	
+                                <div>
+		<table class="table table-responsive table-bordered" cellspacing="0" cellpadding="4" id="GridView1" style="color:#333333;width:100%;border-collapse:collapse;">
+			<tr style="color:White;background-color:#1C5E55;font-weight:bold;">
+				<th scope="col">Division</th><th scope="col">District</th><th scope="col">Block</th><th scope="col">Designation</th><th scope="col">Name</th><th scope="col">Phone (office)</th><th scope="col">Mobile No.</th><th scope="col">Email ID</th>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>UJJAIN</td><td>AGAR MALWA</td><td>&nbsp;</td><td>DEO</td><td>SOURABH JAIN</td><td>07362-297025</td><td>9993299928</td><td>sourabh.jain96@mp.gov.in</td>
+			</tr><tr style="background-color:White;">
+				<td>INDORE</td><td>ALIRAJPUR</td><td>&nbsp;</td><td>DEO</td><td>ARJUN SINGH SOLANKI</td><td>9826796950</td><td>9826796950</td><td>deoali@mp.gov.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>SHAHDOL</td><td>ANUPPUR</td><td>&nbsp;</td><td>DEO</td><td>TULARAM ARMO</td><td>0</td><td>9754762634</td><td>deoanu-mp@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>GWALIOR</td><td>ASHOKNAGAR</td><td>&nbsp;</td><td>DEO</td><td>MADHU SHARMA</td><td>07543293366</td><td>7974280699</td><td>deoash-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>INDORE</td><td>BARWANI</td><td>&nbsp;</td><td>DEO</td><td>SMT. SHEELA CHOUHAN</td><td>09179122285</td><td>9179122285</td><td>deobar-mp@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>HOSHANGABAD</td><td>BETUL</td><td>&nbsp;</td><td>DEO</td><td>SHRI DR. ANIL KUSHWAHA</td><td>0</td><td>9826289708</td><td>deobet-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>GWALIOR</td><td>BHIND</td><td>&nbsp;</td><td>DEO</td><td>R.D.MITAL</td><td>9977041174</td><td>9977041174</td><td>deobhimp@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>BHOPAL</td><td>BHOPAL</td><td>&nbsp;</td><td>DEO</td><td>N K AHIRWAR</td><td>07552557550</td><td>8770575722</td><td>deobho-mp@mp.nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>INDORE</td><td>BURHANPUR</td><td>&nbsp;</td><td>DEO</td><td>MS. ROHINI PAWAR</td><td>7325253672</td><td>7869917404</td><td>deobur-mp@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>SAGAR</td><td>CHHATARPUR</td><td>&nbsp;</td><td>DEO</td><td>RAJENDRA PRASAD PRAJAPATI</td><td>07682248224</td><td>7415648384</td><td>deocha-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>JABALPUR</td><td>CHHINDWARA</td><td>&nbsp;</td><td>DEO</td><td>JAGDEESH KUMAR IDPACHE (AH3393)</td><td>8223951100</td><td>8223951100</td><td>deochi-mp@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>SAGAR</td><td>DAMOH</td><td>&nbsp;</td><td>DEO</td><td>SATYAM CHOURASIYA </td><td>07812299431</td><td>9893598863</td><td>deodam-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>GWALIOR</td><td>DATIA</td><td>&nbsp;</td><td>DEO</td><td>U N MISHRA</td><td>0</td><td>8839215150</td><td>deodat-mp@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>UJJAIN</td><td>DEWAS</td><td>&nbsp;</td><td>DEO</td><td>HARISINGH BHARTIYA</td><td>07272253053</td><td>9926500317</td><td>deodew@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>INDORE</td><td>DHAR</td><td>&nbsp;</td><td>DEO</td><td>KESHAV VARMA</td><td>07292222309</td><td>9926060273</td><td>dhar.rmsa@gmail.com</td>
+			</tr><tr style="background-color:White;">
+				<td>JABALPUR</td><td>DINDORI</td><td>&nbsp;</td><td>DEO</td><td>SHRI RATTI SINGH SINDRAM</td><td>9424365703</td><td>9424365703</td><td>deodin-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>GWALIOR</td><td>GUNA</td><td>&nbsp;</td><td>DEO</td><td>CHANDRA SHEKHAR SISODIYA</td><td>07542252597</td><td>8770260289</td><td>deogun-mp@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>HOSHANGABAD</td><td>HARDA</td><td>&nbsp;</td><td>DEO</td><td>D.S. RAGHUWANSHI</td><td>7577224780</td><td>8839745976</td><td>deohar-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>HOSHANGABAD</td><td>HOSHANGABAD</td><td>&nbsp;</td><td>DEO</td><td>SHRI SHATRUNJAY PRATEP SINGH BISEN</td><td>9425305694</td><td>9425305694</td><td>deohos@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>INDORE</td><td>INDORE</td><td>&nbsp;</td><td>DEO</td><td>SUSHMA VAISHYA</td><td>9926476196</td><td>9926476196</td><td>deoind-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>JABALPUR</td><td>JABALPUR</td><td>&nbsp;</td><td>DEO</td><td>GAUTAM BARVE</td><td>9977560606</td><td>9977560606</td><td>deojbpmp@gmail.com</td>
+			</tr><tr style="background-color:White;">
+				<td>INDORE</td><td>JHABUA</td><td>&nbsp;</td><td>DEO</td><td>RS BAMNIYA</td><td>07392244249</td><td>7974580902</td><td>deojha-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>INDORE</td><td>KHANDWA</td><td>&nbsp;</td><td>DEO</td><td>P S SOLANLI</td><td>07332243320</td><td>9827646178</td><td>khandwa.rmsa@gmail.com</td>
+			</tr><tr style="background-color:White;">
+				<td>JABALPUR</td><td>MANDLA</td><td>&nbsp;</td><td>DEO</td><td>SMT. MUNNI WARKADE</td><td>9826721738</td><td>9826721738</td><td>deomal-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>UJJAIN</td><td>MANDSAUR</td><td>&nbsp;</td><td>DEO</td><td>PANKAJ KUMAR JAT</td><td>07422299019</td><td>9806021147</td><td>deomas-mp@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>GWALIOR</td><td>MORENA</td><td>&nbsp;</td><td>DEO</td><td>SUDHIR KUMAR SAXENA</td><td>07532</td><td>9589023218</td><td>deomor@mp.nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>JABALPUR</td><td>NARSINGHPUR</td><td>&nbsp;</td><td>DEO</td><td>HARI PRASAD KURMI</td><td>9926625245</td><td>9926625245</td><td>narsinghpur.rmsa@gmail.com</td>
+			</tr><tr style="background-color:White;">
+				<td>UJJAIN</td><td>NEEMUCH</td><td>&nbsp;</td><td>DEO</td><td>S.M. MANGRIA</td><td>07423228371</td><td>9406866663</td><td>deonee-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>SAGAR</td><td>NIWARI</td><td>&nbsp;</td><td>DEO</td><td>UNMESH SHIVASTAVA</td><td>8319346195</td><td>8319346195</td><td>deoniwari01@gmail.c0m</td>
+			</tr><tr style="background-color:White;">
+				<td>BHOPAL</td><td>RAISEN</td><td>&nbsp;</td><td>DEO</td><td>D D RAJAK</td><td>07482222555</td><td>9981817618</td><td>deoraisen123@gmail.com</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>BHOPAL</td><td>RAJGARH</td><td>&nbsp;</td><td>DEO</td><td>KARAN SINGH BHILALA</td><td>9893262582</td><td>9893262582</td><td>deoraj-mp@mp.nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>UJJAIN</td><td>RATLAM</td><td>&nbsp;</td><td>DEO</td><td>ANITA SAGAR</td><td>07412270546</td><td>7999824910</td><td>deorat-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>REWA</td><td>REWA</td><td>&nbsp;</td><td>DEO</td><td>SUDAMALAL GUPTA</td><td>9407361011</td><td>9407361011</td><td>deorewa@gmail.com</td>
+			</tr><tr style="background-color:White;">
+				<td>SAGAR</td><td>SAGAR</td><td>&nbsp;</td><td>DEO</td><td>ARVIND JAIN</td><td>07582223644</td><td>9425452254</td><td>deosag-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>REWA</td><td>SATNA</td><td>&nbsp;</td><td>DEO</td><td>SALONI SHARMA</td><td>07672351256</td><td>9131129809</td><td>deosat-mp@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>BHOPAL</td><td>SEHORE</td><td>&nbsp;</td><td>DEO</td><td>SANJAY SINGH TOMAR</td><td>-</td><td>9425128782</td><td>DEOSEH-MP@NIC.IN</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>JABALPUR</td><td>SEONI</td><td>&nbsp;</td><td>DEO</td><td>MR AVINASH DIXIT</td><td>9713459659</td><td>9713459659</td><td>seonideo.mis@gmail.com</td>
+			</tr><tr style="background-color:White;">
+				<td>SHAHDOL</td><td>SHAHDOL</td><td>&nbsp;</td><td>DEO</td><td>PHOOL SINGH MARPACHI</td><td>07652245032</td><td>9755440277</td><td>deoshd-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>UJJAIN</td><td>SHAJAPUR</td><td>&nbsp;</td><td>DEO</td><td>VIVEK DUBEY</td><td>07364292093</td><td>9424000024</td><td>deoshj@mp.nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>GWALIOR</td><td>SHEOPUR</td><td>&nbsp;</td><td>DEO</td><td>MUNNA LAL GARG</td><td>7697840609</td><td>7697840609</td><td>deoshe-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>GWALIOR</td><td>SHIVPURI</td><td>&nbsp;</td><td>DEO</td><td>VIVEK SHRIVASTAVA</td><td>7999939926</td><td>7999939926</td><td>deoshi-mp@nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>REWA</td><td>SIDHI</td><td>&nbsp;</td><td>DEO</td><td>PAWAN KUMAR SINGH</td><td>9424611330</td><td>9424611330</td><td>deosid-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>REWA</td><td>SINGRAULI</td><td>&nbsp;</td><td>DEO</td><td>KAVITA TRIPATHI </td><td>9090212411</td><td>9090212411</td><td>deosin@mp.gov.in</td>
+			</tr><tr style="background-color:White;">
+				<td>SAGAR</td><td>TIKAMGARH</td><td>&nbsp;</td><td>DEO</td><td>HANUMANT SINGH CHAUHAN</td><td>9425881223</td><td>9425881223</td><td>deotik-mp@nic.in</td>
+			</tr><tr style="background-color:#E3EAEB;">
+				<td>UJJAIN</td><td>UJJAIN</td><td>&nbsp;</td><td>DEO</td><td>ANAND KUMAR SHARMA</td><td>0734-2517126</td><td>9425364017</td><td>deoujj@mp.nic.in</td>
+			</tr><tr style="background-color:White;">
+				<td>SHAHDOL</td><td>UMARIA</td><td>&nbsp;</td><td>DEO</td><td>REEJHAN SINGH MARABI</td><td>07653223344</td><td>9630477851</td><td>deouma-mp@nic.in</td>
+			</tr>
+		</table>
+	</div>
+
+                            
+</div>
+
+                                 
+            </div>
+		</div>
+	</div>
+	
+	<!--/#conatcat-info-->
+	
+	
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<div class="social-icon">
+					
+				
+				
+				
+				<div class="col-md-4 col-md-offset-4" style="text-align: center">
+					<div class="copyright">©2018 by  <a>Team Vimarsh</a> Rights Reserved. 
+                        							        
+				</div>						
+			</div>
+			
+			<div class="pull-right">
+			</div>		
+		</div>
+            </div>
+	</footer>
+</form>
+</body>
+</html>

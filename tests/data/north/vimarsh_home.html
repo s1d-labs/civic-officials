@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+   
+     
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>MP-DPI</title>
+    <script type="text/javascript" src="jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/staticlogo.js"></script>
+    <link href="SCHOOL/Remedial/css/bootstrap.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="SCHOOL/Remedial/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="SCHOOL/Remedial/css/animate.css"/>
+	<link href="SCHOOL/Remedial/css/prettyPhoto.css" rel="stylesheet"/>
+	<link href="SCHOOL/Remedial/css/style.css" rel="stylesheet" />	
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <script type="text/javascript">
+        function ValidNumeric() {
+            var charCode = (event.which) ? event.which : event.keyCode;
+            if (charCode >= 48 && charCode <= 57)
+            { return true; }
+            else
+            { return false; }
+        }
+    </script>
+     <script type = "text/javascript" >
+       function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+     </script>
+     <script lang="javascript" type="text/javascript">
+        function DisableCopyPaste (e) 
+        {
+         var message = "Copy - Paste is Disabled.";
+         var kCode = event.keyCode || e.charCode; 
+         if (kCode == 17 || kCode == 2)
+         {
+         alert(message);
+         return false;
+         }
+        }
+        </script>
+    <style type="text/css">
+        p.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	}
+        </style>
+    </head>
+<body>
+    <form method="post" action="./whoiswho.aspx" id="form1" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTM2NDE2MzkzMA9kFgICAQ9kFgYCAQ9kFgYCAQ8QZBAVFhYtLVNlbGVjdCBEZXNpZ25hdGlvbi0tD0FEIChERU8gT2ZmaWNlKQ5BRCAoSkQgT2ZmaWNlKQRBRFBDA0FQQxBBU08gKERFTyBPRkZJQ0UpA0JFTw5ERCAoSkQgT2ZmaWNlKQNERU8ORElFVCBQcmluY2lwYWwMR3lhbnB1bmogRGFsJUlULUFzc2lzdGFudCBDb29yZGljYXRvciAoREVPIE9mZmljZSklSVQtQXNzaXN0YW50IENvb3JkaW5hdG9yIChERU8gT2ZmaWNlKSRJVC1Bc3Npc3RhbnQgQ29vcmRpbmF0b3IgKEpEIE9mZmljZSkbSVQtQ29vcmRpY2F0b3IgKERFTyBPZmZpY2UpG0lULUNvb3JkaW5hdG9yIChERU8gT2ZmaWNlKRpJVC1Db29yZGluYXRvciAoSkQgT2ZmaWNlKQJKRA9QTyAoREVPIE9GRklDRSkOU3BvcnRzIE9mZmljZXIWVm9jYXRpb25hbCBDb29yZGluYXRvcglQcmluY2lwYWwVFhYtLVNlbGVjdCBEZXNpZ25hdGlvbi0tD0FEIChERU8gT2ZmaWNlKQ5BRCAoSkQgT2ZmaWNlKQRBRFBDA0FQQxBBU08gKERFTyBPRkZJQ0UpA0JFTw5ERCAoSkQgT2ZmaWNlKQNERU8ORElFVCBQcmluY2lwYWwMR3lhbnB1bmogRGFsJUlULUFzc2lzdGFudCBDb29yZGljYXRvciAoREVPIE9mZmljZSklSVQtQXNzaXN0YW50IENvb3JkaW5hdG9yIChERU8gT2ZmaWNlKSRJVC1Bc3Npc3RhbnQgQ29vcmRpbmF0b3IgKEpEIE9mZmljZSkbSVQtQ29vcmRpY2F0b3IgKERFTyBPZmZpY2UpG0lULUNvb3JkaW5hdG9yIChERU8gT2ZmaWNlKRpJVC1Db29yZGluYXRvciAoSkQgT2ZmaWNlKQJKRA9QTyAoREVPIE9GRklDRSkOU3BvcnRzIE9mZmljZXIWVm9jYXRpb25hbCBDb29yZGluYXRvcglQcmluY2lwYWwUKwMWZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZxYBZmQCAw8QZGQWAWZkAgUPEGRkFgBkAgMPZBYCAgEPPCsAEQIBEBYAFgAWAAwUKwAAZAIFD2QWBAIDDxBkZBYBZmQCDQ88KwARAgEQFgAWABYADBQrAABkGAIFCUdyaWRWaWV3Mg9nZAUJR3JpZFZpZXcxD2dkDuflGgFVbTrCIKvz11h27Ez8lxmeigIDqaegH6nyT0Y=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA33B8E1" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAE2T/03txpgSedacti3UTfPpGJFKGrixhNRIBkKHiTebmFqBdql4eUolwhIHVikdy2tEl4PfUP8JOgY2AHAoKttj0K6mGhfXth2cUlVwxjykgndCHiqpAKJT+VbLBBigPvVQOGXQTWcKL71TwXNRFVDC8KEU8pFDe/Rxeut2I/qV5WMu61dWVUmKGuyP/FbllaVQPKE/+TtINQ0X3Qqa+ohcer9jM9g3iBRsIFgS70I2eeXcbTp9ysuQA0yoZ4Tdj1zIMSoDOdXdIy2+YGCNvDAYTkXFAOLeO09gWCfajkf4oJB5f/Ry7urxqbnDSRE1XSeQf82vCL/sEG9AlQT1/x8bBHLdTgHfhsoJG30pty7Jps/H0QSFvSTJ57QUyeIWCZl/vlFTe9faXc/PLv2VGl1a1kp6iMWc7g17kskf+AiqaDEtVc1hjE2Tgre4IursNeJP40AIhOF3brkEANmqtr9hP7E6XR0dt9P9s3m2STWmyIds6SIXkNl74rS4qIP9u0nRPHjzN2L6dQ5B5/wdZ4pddoR6MYk/KkqdRjsQug4hB2ihAgCxEKSFmx/4MYrePweer3MitGkoywLiAFLhIFC8KGuPQxXuzxRPdva1FwTOy6KJSjos3c5JUv1lm38LCuyJAiYSIH1yvaLewfPn2cRRGEzjYmPlIXNJoZ4NKO8Giak0SF7Q1NckF/RQVAy8b7Ab0QSfB/IJMuPt0FwdAdekTxeM5Al2Vs3n2uRcPwyVfOUc6cOlxcAYPHuc2qcgjyHsjgI4apnsZqnVxo/n9Tk9BuR66GrLzzznjPXaAGzjkZHuJR3K9Z5j9K8huecAWWFEo0n3SXiQaSC7u2R+ArYqeqp9tKcMoPccEnMheeQWoiNPElcq+A6w+2IM5fHA8q+jueK4mrmhG1Uq3r+r1bnfFNS5clTzhmmUCiw/cijqFDh9pUywc05wcGYmD1j8M9/4rTwr0rY22XXMtzCUVCOFOqntSut7Ga15qURcgm/jjeZRX4UBdE0UVfPqrqK70WViWTxhp8jo5g3OHIu5/j4edG42Ix5wcxeHPtzw6XHJNvffmX9BnKrphze4Z1R8/APV442hfkpYG1/aZg489KTG/6nwaQXcsSWn3aF/3T4S+X2Dj2cnvECaahM1Z4SwAXkLg6VVcHUmzkMtHZrX6tPAnu79fVwpgraIDZcBzCe4m6tw9Wvw2cMGjq9ertv3RPesQ0Cn25MYW50NNyeCVJFnkWIpSWghQhxcA83n7coHkEvloxlHV0xDWU9P4zpyEAxIN6C+dK2U4CfxjfsINz/1axMtxCDy2HcFI8ixyjgp+rcbP1UKvIkOeEtNqwRhMfgQyGKiyvmisejVGG5B0uqcd501IwDJGaBLL8R4zov3negHNzdO/Q0ze/L85i16t+gR2lOkV1IfcTy5cQDn7ACno9gradSgTbba4KNBJBjr+nisNcKozvkX36aAUfvko1clERzqSWWAj7+cDCvDUno3caKbKZZbfk5I8gDJuhdCP9OHM4OLrzaJWUVNmAhhZFGRKY2MpsYmBm2r1Q30a8FvS8QInHqSws39vG067qe4zeYfMs7HGuOisXgQiQSV8OlAMqwEb4yYakNxtNe0nBEJxi8AZ8uajYKCIP1Q64Hs3WDYYqbp1PPzED0g9Utg1z2cjCafwLY7l7ZwZjkS/tEA" />
+</div>
+    <header>		
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="navigation">
+				<div class="container">					
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse.collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand">
+							<a href="deo_home.aspx"><h1><span>MP-</span>dpi</h1></a>
+						</div>
+					</div>
+					
+					<div class="navbar-collapse collapse">							
+						<div class="menu">
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation"><a href="deo_home.aspx" >Home</a></li>
+								  
+                                
+                                <li role="presentation"><a href="index.aspx">Logout</a></li>
+							</ul>
+						</div>
+					</div>						
+				</div>
+			</div>	
+		</nav>		
+	</header>
+	
+	<!--/#main-slider-->
+	
+	<div class="feature">
+		<div class="container" style="padding-top:40px;">
+            
+            <div class="row">
+                <div class="panel-group">
+                      <div class="panel panel-primary">
+                        <div class="panel-heading"><img src="/images/MP-Govt.jpg" width="40" height="40" /><strong style="font-family: Aparajita; font-size: x-large; font-weight: bold">    संभाग, जिला, विकासखंड स्तरीय अधिकारियों एवं प्राचार्य की जानकारी :-</strong></div>
+                        <div class="panel-body">
+                             <div id="Panel2" class="table table-responsive" style="width:100%;">
+	
+
+                                 <table class="table table-bordered table-responsive" width="100%">
+                                <tbody>
+                                    
+                                    <tr>
+                                        <td style="color: #000000; align-items:center">
+                                            <strong>Select Designation</strong></td>
+                                        
+                                         <td style="color: #000000; align-items:center">
+                                           <select name="DropDownList1" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;DropDownList1\&#39;,\&#39;\&#39;)&#39;, 0)" id="DropDownList1" class="form-control" style="width:100%;">
+		<option selected="selected" value="--Select Designation--">--Select Designation--</option>
+		<option value="AD (DEO Office)">AD (DEO Office)</option>
+		<option value="AD (JD Office)">AD (JD Office)</option>
+		<option value="ADPC">ADPC</option>
+		<option value="APC">APC</option>
+		<option value="ASO (DEO OFFICE)">ASO (DEO OFFICE)</option>
+		<option value="BEO">BEO</option>
+		<option value="DD (JD Office)">DD (JD Office)</option>
+		<option value="DEO">DEO</option>
+		<option value="DIET Principal">DIET Principal</option>
+		<option value="Gyanpunj Dal">Gyanpunj Dal</option>
+		<option value="IT-Assistant Coordicator (DEO Office)">IT-Assistant Coordicator (DEO Office)</option>
+		<option value="IT-Assistant Coordinator (DEO Office)">IT-Assistant Coordinator (DEO Office)</option>
+		<option value="IT-Assistant Coordinator (JD Office)">IT-Assistant Coordinator (JD Office)</option>
+		<option value="IT-Coordicator (DEO Office)">IT-Coordicator (DEO Office)</option>
+		<option value="IT-Coordinator (DEO Office)">IT-Coordinator (DEO Office)</option>
+		<option value="IT-Coordinator (JD Office)">IT-Coordinator (JD Office)</option>
+		<option value="JD">JD</option>
+		<option value="PO (DEO OFFICE)">PO (DEO OFFICE)</option>
+		<option value="Sports Officer">Sports Officer</option>
+		<option value="Vocational Coordinator">Vocational Coordinator</option>
+		<option value="Principal">Principal</option>
+
+	</select>
+                                           </td>
+                                         
+                                    </tr>
+                                    
+                                    <tr>
+                                     
+                                        <td style="color: #000000; align-items:center">
+                                            <strong>Select District</strong></td>
+                                        <td style="color: #000000; align-items:center">
+                                            <strong>Select Block</strong></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td style="color: #000000; align-items:center">
+                                            <select name="DropDownList2" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;DropDownList2\&#39;,\&#39;\&#39;)&#39;, 0)" id="DropDownList2" disabled="disabled" class="aspNetDisabled form-control">
+		<option selected="selected" value=""></option>
+		<option value="AGAR MALWA">AGAR MALWA</option>
+		<option value="ALIRAJPUR">ALIRAJPUR</option>
+		<option value="ANUPPUR">ANUPPUR</option>
+		<option value="ASHOKNAGAR">ASHOKNAGAR</option>
+		<option value="BALAGHAT">BALAGHAT</option>
+		<option value="BARWANI">BARWANI</option>
+		<option value="BETUL">BETUL</option>
+		<option value="BHIND">BHIND</option>
+		<option value="BHOPAL">BHOPAL</option>
+		<option value="BURHANPUR">BURHANPUR</option>
+		<option value="CHHATARPUR">CHHATARPUR</option>
+		<option value="CHHINDWARA">CHHINDWARA</option>
+		<option value="DAMOH">DAMOH</option>
+		<option value="DATIA">DATIA</option>
+		<option value="DEWAS">DEWAS</option>
+		<option value="DHAR">DHAR</option>
+		<option value="DINDORI">DINDORI</option>
+		<option value="GUNA">GUNA</option>
+		<option value="GWALIOR">GWALIOR</option>
+		<option value="HARDA">HARDA</option>
+		<option value="HOSHANGABAD">HOSHANGABAD</option>
+		<option value="INDORE">INDORE</option>
+		<option value="JABALPUR">JABALPUR</option>
+		<option value="JHABUA">JHABUA</option>
+		<option value="KATNI">KATNI</option>
+		<option value="KHANDWA">KHANDWA</option>
+		<option value="KHARGONE">KHARGONE</option>
+		<option value="MANDLA">MANDLA</option>
+		<option value="MANDSAUR">MANDSAUR</option>
+		<option value="MORENA">MORENA</option>
+		<option value="NARSINGHPUR">NARSINGHPUR</option>
+		<option value="NEEMUCH">NEEMUCH</option>
+		<option value="PANNA">PANNA</option>
+		<option value="RAISEN">RAISEN</option>
+		<option value="RAJGARH">RAJGARH</option>
+		<option value="RATLAM">RATLAM</option>
+		<option value="REWA">REWA</option>
+		<option value="SAGAR">SAGAR</option>
+		<option value="SATNA">SATNA</option>
+		<option value="SEHORE">SEHORE</option>
+		<option value="SEONI">SEONI</option>
+		<option value="SHAHDOL">SHAHDOL</option>
+		<option value="SHAJAPUR">SHAJAPUR</option>
+		<option value="SHEOPUR">SHEOPUR</option>
+		<option value="SHIVPURI">SHIVPURI</option>
+		<option value="SIDHI">SIDHI</option>
+		<option value="SINGRAULI">SINGRAULI</option>
+		<option value="TIKAMGARH">TIKAMGARH</option>
+		<option value="UJJAIN">UJJAIN</option>
+		<option value="UMARIA">UMARIA</option>
+		<option value="VIDISHA">VIDISHA</option>
+
+	</select>
+                                        </td>
+                                        <td style="color: #000000; align-items:center">
+                                            <select name="DropDownList3" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;DropDownList3\&#39;,\&#39;\&#39;)&#39;, 0)" id="DropDownList3" disabled="disabled" class="aspNetDisabled form-control">
+
+	</select>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                            </table>
+                               
+                                 
+</div>
+                            
+
+                                 
+            </div>
+		</div>
+	</div>
+	
+	<!--/#conatcat-info-->
+	
+	
+	<footer>
+		<div class="footer">
+			<div class="container">
+				<div class="social-icon">
+					
+				
+				
+				
+				<div class="col-md-4 col-md-offset-4" style="text-align: center">
+					<div class="copyright">©2018 by  <a>Team Vimarsh</a> Rights Reserved. 
+                        							        
+				</div>						
+			</div>
+			
+			<div class="pull-right">
+			</div>		
+		</div>
+            </div>
+	</footer>
+</form>
+</body>
+</html>
