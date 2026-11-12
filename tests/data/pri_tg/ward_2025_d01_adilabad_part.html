@@ -1,0 +1,909 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+ <base href="https://tsec.gov.in:443/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>Welcome</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet">
+<link href="css/prettyPhoto.css" rel="stylesheet">
+<link href="css/price-range.css" rel="stylesheet">
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/responsive.css" rel="stylesheet">
+<link href="fonts/open-sans.css" rel="stylesheet">
+<!--[if lt IE 9]>
+ <script src="js/html5shiv.js"></script>
+ <script src="js/respond.min.js"></script>
+ <![endif]-->
+<!-- <link rel="shortcut icon" href="images/ico/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="144x144"
+ href="images/ico/apple-touch-icon-144-precomposed.png"> -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114"
+ href="images/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72"
+ href="images/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed"
+ href="images/ico/apple-touch-icon-57-precomposed.png">
+<link id="pagestyle" rel="stylesheet" type="text/css"
+ href="css/main.css" />
+<link rel="stylesheet" type="text/css" href="open-sans.css" />
+<script src="https://tsec.gov.in:443/js/general/downloadFile.js"></script>
+<script src="js/dw_event.js" type="text/javascript"></script>
+<script src="js/dw_cookies.js" type="text/javascript"></script>
+<script src="js/dw_sizerdx.js" type="text/javascript"></script>
+<script src="https://tsec.gov.in:443/js/general/downloadFile.js"></script>
+<script type="text/javascript">
+dw_Event.add( window, 'load', dw_fontSizerDX.init );
+</script>
+<script type="text/javascript">
+function swapStyleSheet(sheet){
+ document.getElementById('pagestyle').setAttribute('href', sheet);
+}
+</script>
+<style type="text/css">
+.tg{
+ border: 1px solid #5E7D82;
+ font-family: arial,sans-serif;
+ font-weight: 500;
+ border-collapse: collapse;
+}
+.tg .head{
+ background-color: #0080D1;
+ color: #FFFFFF;
+ font-size: 14px;
+ font-weight: normal;
+}
+.tg tr td {
+ font-size: 13px;
+ color: black;
+ font-family: arial,sans-serif;
+ padding: 8px;
+}
+.tg a{
+ color: #4B6367;
+ font-size: 15px;
+ font-family: arial,sans-serif;
+}
+.tg tr td img {
+ width: 50px;
+ height: 30px;
+}
+ .main-title-outer {
+ width: 100%;
+ margin-bottom: 10px;
+}
+.main-title {
+ border-left: solid 2px rgb(75, 99, 103);
+ position: relative;
+ z-index: 1;
+ background-color: rgb(75, 99, 103);
+ float: left;
+ margin: 0 5px;
+ text-align: center;
+ border-bottom: none;
+ padding: 0 10px 0 5px;
+ font-size: 13px;
+ font-weight: bold;
+ text-transform: uppercase;
+ text-align: left;
+ color: #fff;
+ height: 36px;
+ line-height: 36px;
+}
+.main-title:before {
+ content: "";
+ display: block;
+ position: absolute;
+ left: -8px;
+ border-left: solid 4px rgb(75, 99, 103);
+ width: auto;
+ margin-top: 0;
+ min-height: 100%;
+ z-index: 10;
+}
+.outerclass .mainheading{
+ font-size: 13px;
+}
+.heading{
+ border-left: solid 2px #52A9D8;
+ position: relative;
+ z-index: 1;
+ background-color: #52A9D8;
+ float: left;
+ margin: 0 10px;
+ text-align: center;
+ border-bottom: none;
+ padding: 0 10px 0 5px;
+ font-size: 15px;
+ font-weight: bold;
+ text-transform: uppercase;
+ text-align: left;
+ color: #FFFFFF;
+ height: 30px;
+ line-height: 36px;
+ width: 100%;
+}
+.heading:before {
+ content: "";
+ display: block;
+ position: absolute;
+ left: -8px;
+ border-left: solid 4px #52A9D8;
+ width: auto;
+ margin-top: 0;
+ min-height: 100%;
+ z-index: 10;
+}
+.tg .subheading1 {
+ border-top:thin solid #F60;
+ color:#9849B7;
+ border-bottom:thin solid #F60;
+ padding-bottom:10px;
+ font-family: arial,sans-serif;
+ font-size: 15px;
+ font-weight: bold;
+}
+</style>
+<script type="text/javascript">
+function getData(target){
+ if(target.indexOf("pdf/")>-1){
+ window.open(''+target);
+ }
+ document.forms[0].action = "getInfo.se";
+ document.forms[0].mode.value = target;
+ document.forms[0].submit(); 
+}
+</script>
+</head>
+ </head>
+ <body>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+ <head>
+ <base href="https://tsec.gov.in:443/">
+ <title></title>
+ <meta http-equiv="pragma" content="no-cache">
+ <meta http-equiv="cache-control" content="no-cache">
+ <meta http-equiv="expires" content="0"> 
+ <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+ <meta http-equiv="description" content="This is my page">
+ <!--
+ <link rel="stylesheet" type="text/css" href="styles.css">
+ -->
+ <script type="text/javascript">
+ function getData(target){
+ window.location.href = "";
+ }
+ $(document).ready(
+ function(){
+ $("#search").attr("placeholder","Type to Search..."); 
+ $("#search").css({"color": "black", "font-size": "25px;","border":"1px solid #0090EC"});
+ }
+);
+function getSearchData(){
+ if($("#search").val()=="" || $("#search").val()=="0"){
+ alert("Search box can not be empty");
+ return false;
+ }
+ else{
+ document.forms[0].action = "search.se";
+ document.forms[0].mode.value = "getSearchData";
+ document.forms[0].submit();
+ }
+}
+function alphaNumericOnly(stringval) {
+ var val = stringval.value;
+ var asciiNum="";
+ for (var i=0;i<val.length;i++){
+ var _charCode = val.charCodeAt(i);
+ if( (_charCode>=48 && _charCode<=57)
+ || (_charCode>=65 && _charCode<=90)
+ || (_charCode>=97 && _charCode<=122)
+ ){
+ asciiNum += val[i];
+ }
+ }
+ stringval.value=asciiNum;
+}
+ </script>
+<script>
+ window.onload = function () {
+ document.getElementById("search").setAttribute("autocomplete", "off");
+ };
+</script>
+ </head>
+ <body>
+ <header id="header">
+ <!--header-->
+ <div class="header-middle">
+ <div class="container" style="padding:0px; z-index:1; background-image: url('images/topbar_tsec.jpg'); background-size: 100% auto;height: 100px;">
+ <div class="row bgtop" style="padding:0px;">
+ <div class="col-xs-12 " style="padding:0px; z-index:1">
+ <!-- <div class="logo ">
+ <a href="#"><img src="images/seclogo.png"
+ alt="Andhra Pradesh Logo" width="80" height="80" />
+ <h1>
+ <span>Telangana State Election Commission</span>
+ </h1> </a>
+ </div> -->
+ </div>
+ <div class="col-sm-3 pull-right" id="sizer">
+ <div class="btn-group pull-right" style="margin-top: 8px">
+ <img alt="Te-Poll" src="https://tsec.gov.in:443//images/tepoll_logo.png" width="90px" height="90px">
+ <!-- <a href="#" class="increase btn btn-default"
+ href="javascript:void(0);" onClick="set_font_size('increase')"
+ style="background:#4B6367; border-color:#000; color:#fff">
+ A+ </a> <a href="#" class="reset btn btn-default"
+ href="javascript:void(0);" onclick="set_font_size('')"
+ style="background:#4B6367; color:#fff; border-color:#000;">
+ A&nbsp; </a> <a href="#" class="decrease btn btn-default"
+ href="javascript:void(0);" onClick="set_font_size('decrease')"
+ style="background:#4B6367; color:#fff; border-color:#000;">
+ A- </a> <a href="#" class="dark btn btn-default"
+ onclick="swapStyleSheet('css/main.css')"
+ style="background:#efefef; border-color:#000; color:#000">
+ A&nbsp;</a> <a href="#" class="dark btn btn-default"
+ onclick="swapStyleSheet('css/dark.css')"
+ style="background:#000; border-color:#000; color:#fff">
+ A&nbsp;</a> --><!-- <a href="#" class="dark btn btn-default"
+ style="background:#FC0; border-color:#000; color:#111"> <span
+ class="fa fa-wheelchair"></span>
+ </a> -->
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!--/header-middle-->
+ </header>
+ <!--/header-->
+ <div class="container" style="background:none; padding-left:0px; padding-right:0px">
+ <div class="navbg">
+ <div class="row">
+ <div class="col-sm-12">
+ <div class="navbar-header">
+ <button type="button" class="navbar-toggle" data-toggle="collapse"
+ data-target=".navbar-collapse">
+ <span class="sr-only">Toggle navigation</span> <span
+ class="icon-bar"></span> <span class="icon-bar"></span> <span
+ class="icon-bar"></span>
+ </button>
+ </div>
+ <div class="mainmenu pull-left">
+ <ul class="nav navbar-nav collapse navbar-collapse">
+ <li><a href="javascript:getData('unspecified')">Home</a>
+ </li><li><a href="javascript:getData('AboutUs')">About US</a></li>
+ <li><a href="javascript:getData('rti')">RTI</a></li>
+ <li><a href="javascript:getData('PhotoGallary')">Gallery</a></li>
+ <li><a href="javascript:getData('faqs')">FAQs</a></li><li>
+ <a href="javascript:getData('ContactUs')">Contact Us</a> 
+ <li>
+ <li><a href="https://tsec.gov.in:443/sitemap.do" target="_blank">Sitemap</a></li>
+ <li style="float: right;margin-left: 90px;">
+ <form name="commonform" method="post" action="/search.se">
+ <input type="hidden" name="mode" value="getResultsDetailsnew" id="mode">
+ <input type="hidden" name="property(side_serviceid)" value="" id="side_serviceid">
+ <div style="float: right;display: block;">&nbsp;
+ <button onclick="getSearchData()" class="btn btn-flat btn-default" style="background-color: #4B6367;color: #fff;border:1px solid #3f5154; ">
+ <i class="fa fa-search"> Search</i>
+ </button>
+ </div>
+ <div style="float: right;display: block;"><input type="text" name="property(search)" maxlength="100" value="" onkeyup="alphaNumericOnly(this)" id="search"></div>
+ </form>
+ </li> 
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!--/conatiner-->
+ </div>
+ </body>
+</html>
+ <div class="container" style="background:white;">
+ <div class="row" style="padding-top: 30px">
+ <div class="col-sm-12">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<link href="https://tsec.gov.in:443/css/newstyle.css" rel="stylesheet">
+<script type="text/javascript" src="https://tsec.gov.in:443/js/jquery.min.js"></script>
+<script type="text/javascript">
+function getElectionFor(){
+ var is_rural_urban=$("#election_rural_urban").val();
+ var directorindirect=$("#conducting_type").val();
+ $("#election_for").html("<option value=\"0\">--Loading--</option>");
+ var url="dashboardresults.do?mode=getElectionFor&is_rural_urban="+is_rural_urban+"&conducting_type="+directorindirect;
+ $("#loading").show();
+ $.post(url,function(data,status){
+ $("#election_for").html(data);
+ $("#loading").hide();
+ }
+ );
+ }
+ $(document).ready(
+ function(){
+ $("#loading").hide();
+ $("#loading1").hide();
+ $("#get").hide();
+ }
+ );
+ function getReset(){
+ $("#election_rural_urban").val("0");
+ /* $("#conducting_type").val("0"); */
+ $("#election").html("<option value=\"0\">--Select--</option>");
+ $("#election_for").html("<option value=\"0\">--Select--</option>");
+ }
+ function getReset1(){
+ /* $("#conducting_type").val("0"); */
+ $("#election_for").html("<option value=\"0\">--Select--</option>");
+ $("#election").html("<option value=\"0\">--Select--</option>");
+ }
+ function getElection(){
+ var election_year=$("#election_year").val();
+ var is_rural_urban=$("#election_rural_urban").val();
+ var election_for=$("#election_for").val();
+ if(election_for=="" && election_for=="0"){
+ alert("Please Select Election Post");
+ return false;
+ }
+ else{
+ var obj=election_for.split("#");
+ var election_type_code=obj[1];
+ $("#loading1").show();
+ $("#election").html("<option value=\"0\">--Loading--</option>");
+ var url="dashboardresults.do?mode=getElectionnew&election_rural_urban="+is_rural_urban+"&election_year="+election_year+"&election_type_code="+election_type_code;
+ $.post(url,function(data,status){
+ $("#election").html(data);
+ $("#loading1").hide();
+ }
+ );
+ }
+ }
+ function getElectionDetails(){
+ var mandatoryMsg = "Please Provide : ";
+ var flag = true;
+ var eId = "election_year#election_rural_urban#conducting_type#election_for#election";
+ var eName = "Election Year-Election Category-Election Type-Election Post-Election";
+ var id = [];
+ var name = [];
+ id = eId.split("#");
+ name = eName.split("-");
+ for ( var x = 0; x < id.length; x++) {
+ if ( $("#"+id[x]).val().trim() == "" || $("#"+id[x]).val() == "0" || Number($("#"+id[x]).val() == 0) ) {
+ mandatoryMsg+="\n - "+name[x];
+ flag = false;
+ }
+ }
+ if( flag ){
+ $("#get").show();
+ document.forms['dashboardresults'].mode.value = "getDatanew";
+ document.forms['dashboardresults'].submit();
+ }else{
+ alert(mandatoryMsg);
+ return false;
+ }
+ }
+ function getResultsDetails(districtId, partyCode, electionType)
+ {
+ document.getElementById("sdistrictId").value=districtId;
+ document.getElementById("partyCode").value=partyCode;
+ document.getElementById("electionType").value=electionType;
+ document.forms['dashboardresults'].mode.value = "getResultsDetailsnew";
+ document.forms['dashboardresults'].submit();
+ }
+</script>
+<script type="text/javascript">
+//HTML Table to Excel
+ var tableToExcel = (function() {
+ var uri = 'data:application/vnd.ms-excel;base64,'
+ , template = '<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40"> '+
+ '<head><!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>{worksheet}</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions> '+ 
+ '</x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml>'+
+ '<![endif]--><meta http-equiv="content-type" content="text/plain; charset=UTF-8"/>'+
+ '</head> '+
+ '<body><table border="1" widht="80%" >{table}</table></body></html>'
+ , base64 = function(s) { return window.btoa(unescape(encodeURIComponent(s))) }
+ , format = function(s, c) { return s.replace(/{(\w+)}/g, function(m, p) { return c[p]; }) }
+ return function(table, name) {
+ if (!table.nodeType) table = document.getElementById(table)
+ var data1=table.innerHTML;
+ var ctx = {worksheet: name || 'Worksheet', table: table.innerHTML}
+ //window.location.href = uri + base64(format(template, ctx))
+ var link = document.createElement("a");
+ link.download = name+".xls";
+ link.href = uri + base64(format(template, ctx));
+ link.click();
+ document.body.appendChild(link);
+ link.click();
+ // Cleanup the DOM
+ document.body.removeChild(link);
+ delete link;
+ }
+})()
+ </script>
+<style type="text/css">
+.heading123{
+ border-left: solid 2px #52A9D8;
+ position: relative;
+ z-index: 1;
+ background-color: #3B77B3;;
+/* float: left; */
+ margin: 0 10px;
+ text-align: center;
+ border-bottom: none;
+ padding: 0 10px 0 5px;
+ font-size: 15px;
+ font-weight: bold;
+ text-transform: uppercase;
+ text-align: left;
+ color: #FFFFFF;
+ height: 30px;
+ line-height: 36px;
+ width: 100%;
+}
+.tblSubHead1{
+ text-align: center;
+ background-color:#118685;/* #337599 */; /* #98DBD7 ; *//* #93847F ; */
+ color: #fff;
+ font-size: 16px;
+ padding: 5px;
+ font-family: roboto_condensedregular;
+ padding: 8px;
+ font-weight: bold;
+ text-transform: capitalize;
+ vertical-align: top;
+}
+.tblSubHead2{
+ text-align: center;
+ background-color: #98DBD7;/* #337599 */; /* #98DBD7 ; *//* #93847F ; */
+ color: black;
+ font-size: 14px;
+ padding: 5px;
+ font-family: roboto_condensedregular;
+ padding: 8px;
+ font-weight: bold;
+ text-transform: capitalize;
+ vertical-align: top;
+}
+.highest{
+ color:Red;
+} 
+</style>
+</head>
+<body>
+<form name="commonform" id="dashboardresults" method="post" action="/dashboardresults.se">
+ <input type="hidden" name="mode" value="getResultsDetailsnew" id="mode">
+ <input type="hidden" name="property(sdistrictId)" value="01" id="sdistrictId">
+ <input type="hidden" name="property(partyCode)" value="0" id="partyCode">
+ <input type="hidden" name="property(electionType)" value="GRAMPANCHAYAT" id="electionType">
+ <center>
+ <table width="80%" border="0" id="addelection" class="entryclass" cellpadding="5" cellspacing="1">
+ <tr>
+ <td colspan="4" class="heading123" style="width: 100%;">ELECTION RESULTS - RURAL</td>
+ </tr>
+ <tr class="tdeven">
+ <td width="20%">Election Year<font color="red">*</font></td>
+ <td width="25%">
+ <select name="property(election_year)" onchange="getReset()" id="election_year" style="width:200px"><option value="2027">2027</option>
+<option value="2026">2026</option>
+<option value="2025" selected="selected">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option></select>
+ </td>
+ <td width="20%">Election Category<font color="red">*</font></td>
+ <td width="25%">
+ <select name="property(election_rural_urban)" onchange="getElectionFor()" id="election_rural_urban" style="width:200px"><option value="0">--Select--</option>
+ <option value="R" selected="selected">Rural</option></select>
+ </tr>
+ <tr class="tdodd">
+ <td >Election Type<font color="red">*</font></td>
+ <td >
+ <select name="property(conducting_type)" id="conducting_type" style="width:200px"><option value="D" selected="selected">Direct</option></select>
+ <td >Election Post<font color="red">*</font></td>
+ <td nowrap="nowrap">
+ <div style="display: block;float: left">
+ <select name="property(election_for)" onchange="getElection()" id="election_for" style="width:200px"><option value="0">--Select--</option>
+<option value="MD#1#ZPTC">ZPTC Member</option>
+<option value="GP#3#MPTC">MPTC Member</option>
+<option value="GP#4#GRAMPANCHAYAT">Sarpanch</option>
+<option value="W#6#GRAMPANCHAYAT" selected="selected">Ward Member</option></select>
+ </div>
+ <div id="loading" style="display: block;float: left;margin-left: 10px;display: none;">
+ <img src="images/ajax-loader.gif" style="width:30px;height: 30px"></img>
+ </div>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>Election<font color="red">*</font></td>
+ <td nowrap="nowrap" colspan="3">
+ <div style="display: block;float: left">
+ <select name="property(election)" id="election" style="width:400px"><option value="0">--Select--</option>
+<option value="189" selected="selected">ORDINARY ELECTIONS TO GRAM PANCHAYATHS, 2025</option></select>
+ </div>
+ <div id="loading1" style="display: block;float: left;margin-left: 10px;display: none;">
+ <img src="images/ajax-loader.gif" style="width:30px;height: 30px"></img>
+ </div>
+ </td>
+ </tr>
+ <tr class="tdbutton">
+ <td colspan="4" align="right" ><input type="button" name="action" value="Get Data" onclick="getElectionDetails()" style="width:120px" class="btn btn-flat btn-success"></td>
+ </tr>
+ <tr style="display: none;" id="get" >
+ <td colspan="4" >
+ <div class="alert alert-success" >Loading is in Progress Please Wait.. <img src="https://tsec.gov.in:443/images/ajax-loader.gif"></div>
+ </td>
+ </tr>
+ </table>
+ <br/>
+ <div id="excelButtonDiv" style="text-align: left;margin-left:110px;float: left;">
+ <button class="btn btn-sm btn-warning" type="button" onclick="tableToExcel('GridView1','Election Results ')" >Export Excel</button>
+ </div>
+ <div id="backButton" style="text-align: right;margin-right:110px;float: right;">
+ <button class="btn btn-sm btn-primary" type="button" onclick="history.back('-1')" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+ </div>
+ <br />
+ <table border="1" class="entryclass" cellpadding="5" cellspacing="1" width="80%" >
+ <tr class="tblSubHead1" height="30px" >
+ <th colspan="7" style="text-align: center;">ORDINARY ELECTIONS TO GRAM PANCHAYATHS, 2025 <br/> District : Adilabad - Election Results</th></tr>
+ <tr class="tblSubHead2">
+ <!-- <caption align="Top" class="tableHeading">GP Ward Details</caption> -->
+ <tr class="tblSubHead2" height="30px">
+ <th>Sl No.</th>
+ <th>Ward Name</th>
+ <th>Reserved for</th>
+ <th>Name of the Elected Candidate</th>
+ <th>Result Status</th>
+ </tr>
+ <tr>
+ <td colspan="11" align="left" style=" color: MidnightBlue ;background-color:PowderBlue ;font-size :medium;">Name of the Mandal: <b>Adilabad Rural</b> <br/>
+ Name of the Gram Panchayat: <b>Allikori</b>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>1</td>
+ <td>Ward 1</td>
+ <td>ST</td>
+ <td>Marapa Lingu</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>2</td>
+ <td>Ward 2</td>
+ <td>ST</td>
+ <td>Sidam ambu bai</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>3</td>
+ <td>Ward 3</td>
+ <td>ST</td>
+ <td>Sidamki Gangaram</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>4</td>
+ <td>Ward 4</td>
+ <td>ST</td>
+ <td>Mesram Ramesh</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>5</td>
+ <td>Ward 5</td>
+ <td>ST</td>
+ <td>Marsakola Savitra Bai</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>6</td>
+ <td>Ward 6</td>
+ <td>ST</td>
+ <td>Madavi Jangubai</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="11" align="left" style=" color: MidnightBlue ;background-color:PowderBlue ;font-size :medium;">Name of the Mandal: <b>Adilabad Rural</b> <br/>
+ Name of the Gram Panchayat: <b>Ankapur</b>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>1</td>
+ <td>Ward 1</td>
+ <td>ST</td>
+ <td>Korenga Kala Bai</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>2</td>
+ <td>Ward 2</td>
+ <td>ST</td>
+ <td>Sedmaki Chitru</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>3</td>
+ <td>Ward 3</td>
+ <td>ST</td>
+ <td>Sedmaki Saroja</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>4</td>
+ <td>Ward 4</td>
+ <td>ST</td>
+ <td>Marsakola Manohar</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>5</td>
+ <td>Ward 5</td>
+ <td>ST</td>
+ <td>Sidam Maruthi</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>6</td>
+ <td>Ward 6</td>
+ <td>ST</td>
+ <td>Sidam Laxmibai</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>7</td>
+ <td>Ward 7</td>
+ <td>ST</td>
+ <td>Sidam Ramu</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>8</td>
+ <td>Ward 8</td>
+ <td>ST</td>
+ <td>Sidam Anand Rao</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="11" align="left" style=" color: MidnightBlue ;background-color:PowderBlue ;font-size :medium;">Name of the Mandal: <b>Adilabad Rural</b> <br/>
+ Name of the Gram Panchayat: <b>Ankoli</b>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>1</td>
+ <td>Ward 1</td>
+ <td>ST</td>
+ <td>Chakati Renuka</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>2</td>
+ <td>Ward 2</td>
+ <td>ST</td>
+ <td>Mesram Rajendra Prasad</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>3</td>
+ <td>Ward 3</td>
+ <td>SC</td>
+ <td>Bandari Ashok</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>4</td>
+ <td>Ward 4</td>
+ <td>ST</td>
+ <td>Ada Roja</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>5</td>
+ <td>Ward 5</td>
+ <td>ST</td>
+ <td>Dadanji Kishanji</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>6</td>
+ <td>Ward 6</td>
+ <td>BC</td>
+ <td>Danla Dattu</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>7</td>
+ <td>Ward 7</td>
+ <td>ST</td>
+ <td>Raju Uppari</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>8</td>
+ <td>Ward 8</td>
+ <td>ST</td>
+ <td>Badugu Narsamma</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>9</td>
+ <td>Ward 9</td>
+ <td>ST</td>
+ <td>Marsukola Premala</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Unanimous</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>10</td>
+ <td>Ward 10</td>
+ <td>ST</td>
+ <td>Salam Bheemrao</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr>
+ <td colspan="11" align="left" style=" color: MidnightBlue ;background-color:PowderBlue ;font-size :medium;">Name of the Mandal: <b>Adilabad Rural</b> <br/>
+ Name of the Gram Panchayat: <b>Arli-B</b>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>1</td>
+ <td>Ward 1</td>
+ <td>BC</td>
+ <td>Akula Amani</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>2</td>
+ <td>Ward 2</td>
+ <td>BC</td>
+ <td>Navvula Sandeep</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>3</td>
+ <td>Ward 3</td>
+ <td>BC</td>
+ <td>Bavune Vinod</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>4</td>
+ <td>Ward 4</td>
+ <td>BC</td>
+ <td>Sangu Vittal</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>5</td>
+ <td>Ward 5</td>
+ <td>SC</td>
+ <td>Santhosh Chilkuri</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>6</td>
+ <td>Ward 6</td>
+ <td>BC</td>
+ <td>Vahile Renuka</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdeven">
+ <td>7</td>
+ <td>Ward 7</td>
+ <td>SC</td>
+ <td>Velpula Mounika</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ <tr class="tdodd">
+ <td>8</td>
+ <td>Ward 8</td>
+ <td>ST</td>
+ <td>Tumram Govind Rao</td>
+ <td>
+ <font color="green" style="font-weight: bold;" ><b>
+ <i class="fa fa-check" aria-hidden="true"></i>Elected</b></font>
+ </td>
+ </tr>
+ </table></div></body></html>
