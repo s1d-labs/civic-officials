@@ -1,0 +1,1193 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head id="ctl00_Head1"><title>
+	Sangli, Miraj &amp; Kupwad Municipal Corporation. All Rights Reserved.
+</title><link href="AOS/aos.css" rel="stylesheet" />
+    <script src="AOS/aos.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+    
+
+    <!-- Add FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" /><link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet" /><link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /><link href="https://fonts.googleapis.com/css2?family=Yatra+One&amp;display=swap" rel="stylesheet" /><meta http-equiv="content-language" content="text/html; charset=utf-8" /><link rel="stylesheet" href="boostrap4.3.1/bootstrap.min.css" /><link rel="stylesheet" href="boostrap4.3.1/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <script src="boostrap4.3.1/jquery.min.js"></script>
+    <script src="boostrap4.3.1/popper.min.js"></script>
+    <script src="boostrap4.3.1/bootstrap.min.js"></script>
+    <script src="js/anguler.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css" /><link rel="dns-prefetch" href="//ajax.googleapis.com" /><link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet" />
+    <!-- Main css start -->
+    <link rel="stylesheet" type="text/css" href="css/smkc.css" />
+    <!-- Main css end -->
+    <!--Menu code Start-->
+    <link rel="stylesheet" href="css/menu.css" />
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script src="js/modernizr.min.js" type="text/javascript"></script>
+    <!--Menu code End-->
+
+    <!-- Main js start-->
+    <script src="js/smkc.js" type="text/javascript"></script>
+    <!-- Main js end-->
+
+    <!-- Favicon Script Start-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /><link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Favicon Script End-->
+
+    <!-- Responsive Code Start-->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+    <script type="text/javascript" src="js/onorientationchange.js"></script>
+    <!-- Responsive Code End-->
+
+    
+    <script async src="https://cse.google.com/cse.js?cx=51d3c031d7fe94f79">
+    </script>
+    
+
+    
+    <style>
+        :root {
+            --primary-red: #dc3545;
+            --primary-teal: #00b8a0;
+            --secondary-blue: #00acc4;
+            --dark-blue: #104382;
+            --light-gray: #f8f9fa;
+            --border-gray: #e9ecef;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            --shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin-top: 80px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #f5f7fa;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Hero Carousel Improvements */
+        .hero-section {
+            position: relative;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-top: 18px;
+        }
+
+        .carousel-inner img {
+            object-fit: cover;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 60px;
+            height: 60px;
+            background: rgba(212, 26, 34, 0.8);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .carousel-control-prev:hover,
+        .carousel-control-next:hover {
+            background: rgba(212, 26, 34, 1);
+        }
+
+        .carousel-control-prev {
+            left: 20px;
+        }
+
+        .carousel-control-next {
+            right: 20px;
+        }
+
+        /* Main Content Layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 5px;
+            margin-top: 1rem;
+            /*padding: 0 5px 0 30px;*/
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            padding: 0;
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .sidebar-header {
+            background: linear-gradient(135deg, var(--primary-red), #e74c3c);
+            color: white;
+            padding: 11px;
+            border-radius: 12px 12px 0 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar li {
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .sidebar li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            padding: 5px 9px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 13px;
+        }
+
+            .sidebar a:hover {
+                /*background: linear-gradient(95deg, var(--primary-red), transparent);
+            color: white;
+            padding-left: 1rem;*/
+                background: linear-gradient(100deg, var(--primary-red), #f1e3e3);
+                color: black;
+                padding-left: 1rem;
+            }
+
+        .sidebar i {
+            margin-right: 10px;
+            color: var(--primary-red);
+            transition: color 0.3s ease;
+        }
+
+        .sidebar a:hover i {
+            color: white;
+        }
+
+        /* Content Area - New Design */
+        .content-area {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+        }
+
+        /* Department Header Section */
+        .dept-header {
+            background: linear-gradient(135deg, var(--primary-red), #e74c3c);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+            .dept-header h1 {
+                margin: 0;
+                /*font-size: 2.5rem;
+                font-weight: 700;*/
+                font-size: 25px;
+                text-align: center;
+                font-weight: 500;
+                text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+
+        .dept-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, white, transparent);
+        }
+
+        /* Section Cards */
+        .dept-sections {
+            padding: 1rem;
+        }
+
+        .section-card {
+            background: white;
+            border: 1px solid var(--border-gray);
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .section-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .section-header {
+            /*background: linear-gradient(135deg, var(--primary-red), #e74c3c);
+            color: white;*/
+            color: #d83933;
+            padding: 7px 11px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 3px solid #d94f28;
+        }
+
+        .section-header i {
+            font-size: 1.3rem;
+        }
+
+        .section-content {
+            padding: 0.5rem;
+        }
+
+        /* Introduction Section */
+        .intro-text {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            text-align: justify;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .service-item {
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .service-item:hover {
+            background: var(--primary-red);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .service-item i {
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .service-item:hover i {
+            color: white;
+        }
+        .service-item:hover a {
+            color: white;
+        }
+
+        /* Contact Details */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            border-color: var(--primary-red);
+            transform: translateY(-2px);
+        }
+
+        .contact-avatar {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .contact-name {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .contact-designation {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-info span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        /* Targets Section */
+        .targets-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .target-item {
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 4px solid var(--primary-red);
+            transition: all 0.3s ease;
+        }
+
+        .target-item:hover {
+            background: rgba(220, 53, 69, 0.1);
+            transform: translateX(5px);
+        }
+
+        .target-title {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .target-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Documents Section */
+        .documents-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .document-item {
+            display: flex;
+            align-items: center;
+            background: var(--light-gray);
+            border-radius: 8px;
+            padding: 3px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .document-item:hover {
+            background: var(--primary-red);
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .document-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-red);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .document-item:hover .document-icon {
+            background: white;
+            color: var(--primary-red);
+        }
+
+        .document-info h4 {
+            margin: 0 0 0.25rem 0;
+            font-weight: 500;
+        }
+
+        .document-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .dept-header h1 {
+                font-size: 2rem;
+            }
+
+            .contact-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin-top: 60px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+
+            .dept-header {
+                padding: 4px;
+            }
+
+            .dept-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .dept-sections {
+                padding: 1rem;
+            }
+
+            .section-content {
+                padding: 0.5rem;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Focus States for Accessibility */
+        .sidebar a:focus,
+        .service-item:focus,
+        .document-item:focus {
+            outline: 2px solid var(--primary-red);
+            outline-offset: 2px;
+        }
+    </style>
+
+    <style>
+        .gov_linksimg {
+            width: 75px;
+        }
+        /*sidebar*/
+    </style>
+</head>
+<body id="body">
+
+    <form name="aspnetForm" method="post" action="./SMKCSection_new.aspx?deptcode=57" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTExNTE1NDY0MzgPZBYCZg9kFgICAw9kFggCSA9kFgwCWg8WAh4JaW5uZXJodG1sBTEoYykgTXVuaWNpcGFsIERlcGFydG1lbnQgKFJlZ2lvbmFsKSBPZmZpY2VzIC0gMyAgZAJdDxYCHwAFiQZXYXJkIENvbW1pdHRlZSBOby4gMyBoYXMgYmVlbiBlc3RhYmxpc2hlZCBhcyBwZXIgdGhlIHByb3Zpc2lvbnMgb2YgdGhlIE1haGFyYXNodHJhIE11bmljaXBhbCBDb3Jwb3JhdGlvbiBBY3QsIDE5NDksIGFuZCB3b3JrcyB0byBhc3Npc3QgdGhlIEhvbi4gTXVuaWNpcGFsIENvbW1pc3Npb25lciBpbiBhZG1pbmlzdHJhdGl2ZSBhZmZhaXJzLiBVbmRlciB0aGUgbGVhZGVyc2hpcCBvZiB0aGUgQ29tbWl0dGVlIENoYWlycGVyc29uLCB0aGUgY29tbWl0dGVlIHVuZGVydGFrZXMgY29vcmRpbmF0ZWQgcGxhbm5pbmcgb2YgY2l2aWMgaXNzdWVzLCBsb2NhbCBnb3Zlcm5hbmNlIG1hdHRlcnMsIGFuZCBkZXZlbG9wbWVudCB3b3JrcyBpbiB0aGUgcmVzcGVjdGl2ZSB3YXJkIGFyZWEuVGhlIGNvbW1pdHRlZSBhY3RpdmVseSBtb25pdG9ycyBkZXBhcnRtZW50YWwgdGFza3MsIGlzc3VlcyByZWNvbW1lbmRhdGlvbnMsIGNvbmR1Y3RzIGluc3BlY3Rpb25zLCBhbmQgZW5zdXJlcyBmb2xsb3ctdXAgYWN0aW9ucywgYWltaW5nIHRvIGRlbGl2ZXIgZWZmaWNpZW50IGFuZCByZXNwb25zaXZlIHNlcnZpY2VzIHRvIGNpdGl6ZW5zLldhcmQgQ29tbWl0dGVlIE5vLiAxIGFjdHMgYXMgYSBjcnVjaWFsIGxpbmsgYmV0d2VlbiBsb2NhbCBnb3Zlcm5hbmNlIGFuZCB0aGUgcHVibGljLCBwbGF5aW5nIGEgdml0YWwgcm9sZSBpbiBhY2hpZXZpbmcgdHJhbnNwYXJlbnQsIHBlb3BsZS1jZW50cmljLCBhbmQgcmVzdWx0LW9yaWVudGVkIG11bmljaXBhbCBhZG1pbmlzdHJhdGlvbi4mcXVvdDtkAmAPFgIfAAWjATxkaXYgY2xhc3M9J3NlcnZpY2UtaXRlbSc+PGkgY2xhc3M9J2ZhIGZhLWNvZ3MnPjwvaT48aDU+PGEgaHJlZj0naHR0cHM6Ly9jaXRpemVuc2VydmljZXMuc21rYy5pbi8nIHRhcmdldD0nX2JsYW5rJz5NYXJyaWFnZSBSZWdpc3RyYXRpb24gQ2VydGlmaWNhdGU8L2E+PC9oNT48L2Rpdj5kAmMPFgIfAAXABjxkaXYgY2xhc3M9J2NvbnRhY3QtY2FyZCc+PGRpdiBjbGFzcz0nY29udGFjdC1hdmF0YXInPjxpIGNsYXNzPSdmYSBmYS11c2VyJz48L2k+PC9kaXY+PGRpdiBjbGFzcz0nY29udGFjdC1uYW1lJz4gQW5pcyBOYXplZXIgQWhtZWQgTXVsbGEgPC9kaXY+PGRpdiBjbGFzcz0nY29udGFjdC1kZXNpZ25hdGlvbic+RGVwYXJ0bWVudCBIZWFkPC9kaXY+PGRpdiBjbGFzcz0nY29udGFjdC1pbmZvJz48c3Bhbj48aSBjbGFzcz0nZmEgZmEtZW52ZWxvcGUnPjwvaT4gc21rY29ycG9yYXRpb25AZ21haWwuY29tPC9zcGFuPjxzcGFuPjxpIGNsYXNzPSdmYSBmYS1waG9uZSc+PC9pPiAyMzMyMzczNzIxPC9zcGFuPjxzcGFuPjxpIGNsYXNzPSdmYSBmYS1idWlsZGluZyc+PC9pPiAwMjMzLTIzNzM3MjEgLyAyMiAvMjM8L3NwYW4+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0nY29udGFjdC1jYXJkJz48ZGl2IGNsYXNzPSdjb250YWN0LWF2YXRhcic+PGkgY2xhc3M9J2ZhIGZhLXVzZXInPjwvaT48L2Rpdj48ZGl2IGNsYXNzPSdjb250YWN0LW5hbWUnPlNhbWlyIEFiZGR1bGdhbmkgQmFndmFuPC9kaXY+PGRpdiBjbGFzcz0nY29udGFjdC1kZXNpZ25hdGlvbic+T2ZmaWNlIEhlYWQ8L2Rpdj48ZGl2IGNsYXNzPSdjb250YWN0LWluZm8nPjxzcGFuPjxpIGNsYXNzPSdmYSBmYS1lbnZlbG9wZSc+PC9pPiBzbWtjb3Jwb3JhdGlvbkBnbWFpbC5jb208L3NwYW4+PHNwYW4+PGkgY2xhc3M9J2ZhIGZhLXBob25lJz48L2k+IDIzMzIzNzM3MjE8L3NwYW4+PHNwYW4+PGkgY2xhc3M9J2ZhIGZhLWJ1aWxkaW5nJz48L2k+IDAyMzMtMjM3MzcyMSAvIDIyIC8yMzwvc3Bhbj48L2Rpdj48L2Rpdj5kAmYPFgIfAAVBPGRpdiBjbGFzcz0ndGFyZ2V0LWl0ZW0nPjxkaXYgY2xhc3M9J3RhcmdldC10aXRsZSc+LS48L2Rpdj48L2Rpdj5kAmkPFgIfAAX4ATxhIGNsYXNzPSdkb2N1bWVudC1pdGVtJyBocmVmPSdwZGYvRG93bmxvYWRfZm9ybXMvTWFycmFpZ2VfcmVnLnBkZicgdGFyZ2V0PSdfYmxhbmsnPjxkaXYgY2xhc3M9J2RvY3VtZW50LWljb24nPjxpIGNsYXNzPSdmYSBmYS1maWxlLW8nPjwvaT48L2Rpdj48ZGl2IGNsYXNzPSdkb2N1bWVudC1pbmZvJz48aDQ+Q2VydGlmaWNhdGVzICZhbXA7IERvY3VtZW50cyAtIE1hcnJpYWdlIFJlZ2lzdHJhdGlvbiBGb3JtPC9oND48L2Rpdj48L2E+ZAJ9DxYCHgRUZXh0BQI0MGQCfw8WAh8BBQUxLDQ2NGQCgQEPFgIfAQUIMSwzMywxODVkZFuGIUTYu6fNw9OZdpCFZRr8Uk/XU0rg0bSmUTk4Obje" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="805D3EB9" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAK3wqSxr0QCtK+3uZzh8Mo5Iplaf+72g2HrnMS57CtHwXkXehFqfwY6X7q9XWbjpf94ZJwce1ZnFeLz0F8OtwZK" />
+</div>
+        <div class="fullwidht topredstrip">
+            <div class="fixwidht_inner">
+                <div class="shortlinkstop font12">
+                
+                    <div class="gcse-search"></div>
+                    
+                    <a><i class="fa fa-sitemap" aria-hidden="true"></i></a><a class="font16">|</a> <a id="sizmintwo">A--</a> <a class="font16">|</a>
+                    <a id="sizmin">A-</a> <a class="font16">|</a><a id="sizenorml">A</a> <a class="font16">|</a><a id="sizplus">A+</a> <a class="font16">|</a> <a id="sizplustwo">A++</a>
+                    <a class="font16">|</a> <a class="clr_change1">A</a> <a class="font16">|</a> <a class="clr_change">A</a> <a class="font16">|</a> <a>
+                        <a id="ctl00_LnkChangeLanguage" href="javascript:__doPostBack(&#39;ctl00$LnkChangeLanguage&#39;,&#39;&#39;)">English Version</a></a>
+                </div>
+                </div>
+                
+                <div class="clear">
+                </div>
+            </div>
+        <div class="fullwidht">
+            <div class="fixwidht marfixdiv">
+                        
+              <div id="demoStickyWrapper">
+    <div class="demo-header">
+      <a href="index.aspx">
+        <img src="images/SMKC_NEW_LOGO_PNG.png" alt="SMKC Logo" class="demo-logo">
+      </a>
+      <div class="demo-tagline"><span id="ctl00_Label9">सांगली मिरज आणि कुपवाड शहर महानगरपालिका</span></div>
+      <div class="demo-menu-toggle" onclick="toggleMenu()" id="menuToggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+                  
+    
+                  
+
+                  
+    <nav class="demo-navbar" id="demoNavbar">
+  <ul id="demoNavList">
+
+    <!-- Home -->
+    <li>
+      <a id="ctl00_hlHome" class="demo-active" href="index.aspx">मुखपृष्ठ</a>
+    </li>
+
+    <!-- About SMKC Dropdown -->
+    <li class="demo-dropdown" onclick="toggleDropdown(event)">
+      <a href="javascript:void(0);" class="demo-dropdown-btn">
+        <span id="ctl00_Label8">महानगरपालिके विषयी</span>
+      </a>
+      <div class="demo-dropdown-content">
+        <a id="ctl00_hlAbout" href="aboutsmkcnew.aspx">महानगरपालिके विषयी</a>
+        <a id="ctl00_hlCouncilors" href="councilors_new.aspx">नगरसेवक</a>
+        <a id="ctl00_hlWhosWho" href="SMKC_whoswho_new.aspx">पदाधिकारी </a>
+      </div>
+    </li>
+
+    <!-- Citizen Services Dropdown -->
+    <li class="demo-dropdown" onclick="toggleDropdown(event)">
+      <a href="javascript:void(0);" class="demo-dropdown-btn">
+        <span id="ctl00_Label19">नागरी सुविधा</span>
+      </a>
+      <div class="demo-dropdown-content">
+        <a id="ctl00_hlWSDues" href="WSDues_new.aspx">आपली पाणीपट्टी तपशील</a>
+        <a id="ctl00_hlPropDues" href="https://propertytax.smkc.in" target="_blank">आपली घरपट्टी तपशील</a>
+        <a id="ctl00_hlWaterSupply" href="Water%20Supply/WSNDC_new.aspx">पाणीपुरवठा  ना हरकत प्रमाणपत्र</a>
+          
+        <a id="ctl00_hlPropNDC" href="https://citizenservices.smkc.in" target="_blank">मालमत्ता कर  ना हरकत प्रमाणपत्र</a>
+      </div>
+    </li>
+
+    <!-- Departments -->
+    <li>
+      <a id="ctl00_hlDepartments" href="SMKCSection_new.aspx">विभाग</a>
+    </li>
+
+    <!-- Contact Us -->
+      <li class="demo-dropdown" onclick="toggleDropdown(event)">
+      <a href="javascript:void(0);" class="demo-dropdown-btn">
+        <span id="ctl00_Label52">आमच्याशी संपर्क साधा</span>
+      </a>
+      <div class="demo-dropdown-content">
+        <a id="ctl00_hlContact" href="contact_us_new.aspx">आमच्याशी संपर्क साधा</a>
+        <a id="ctl00_hlSmkcOffice" href="smkc_office_new.aspx">मनपा कार्यालय</a>
+      </div>
+    </li>
+
+    <!-- Online Payment Dropdown -->
+    <li class="demo-dropdown" onclick="toggleDropdown(event)">
+      <a href="javascript:void(0);" class="demo-dropdown-btn">
+        <span id="ctl00_Label27">पे ऑनलाईन</span>
+      </a>
+      <div class="demo-dropdown-content">
+        <a id="ctl00_hlWSPay" href="WSDues_new.aspx">पाणीपट्टी भरणा</a>
+        <a id="ctl00_hlPropertyPay" href="https://propertytax.smkc.in" target="_blank">घरपट्टी भरणा</a>
+      </div>
+    </li>
+
+      
+
+      <li>
+          <a id="ctl00_hlDisabilityReg" href="https://smkc.gov.in:8443/public/disability-registration">दिव्यांग नोंदणी</a><span class="new-badge-menu">NEW</span>
+      </li>
+     
+
+       <!-- Election 2025 -->
+    
+      
+
+      
+      
+      <li>
+          <a id="ctl00_HyperLink1" href="https://smkc.gov.in:8443/public/single-women-registration">एकल महिला नोंदणी</a><span class="new-badge-menu">NEW</span>
+      </li>
+      <li>
+          <a id="ctl00_HyperLink2" href="pdf/Citizen_Charter_0425.pdf">लोकसेवा हक्क अधिनियम</a><span class="new-badge-menu">NEW</span>
+      </li>
+      
+      <li>
+          <a id="ctl00_HyperLink4" href="Civic-Innovation-Challenge-2026/dist/index.html">गुंठेवारी नियमितीकरण</a><span class="new-badge-menu">NEW</span>
+      </li>
+  </ul>
+</nav>
+
+
+  </div>
+            
+
+                <br />
+                
+
+                 
+                
+                 
+
+                
+                <div class="clear">
+                </div>
+
+                <!--Mene div end-->
+                <div class="fixwidht_inner hm_rowmar">
+                    
+
+                </div>
+                <div class="fixwidht_inner">
+                    <div class="left50div1 hm_rowmar">
+                        
+<div class="container">
+        <!-- Hero Carousel Section -->
+        <div class="hero-section">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item-dept active">
+                        <img class="d-block w-100" src="images/departmentimages/smkc_department_banner_new.jpg" alt="Department Image 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="main-content">
+            <!-- Sidebar Navigation -->
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    Departments
+                </div>
+                <ul>
+                    
+                    <li><a href="SMKCSection_new.aspx?deptcode=40">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label1">Municipal Additional Commissioner’s Office - 1</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=41">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label2">Municipal Additional Commissioner’s Office - 2</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=42">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label3">Municipal General Administration Department (Headquarters)</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=43">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label4">General Administration Department Employee Recruitment/Promotion Section</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=44">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label5">Municipal Central Establishment Section</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=45">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label6">General Administration Department Departmental Inquiry Section</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=46">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label7">General Administration Department Reception/Inward-Outward Section</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=47">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label8">Municipal Central Store Section</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=48">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label9">Municipal Central Records Section</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=49">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label10">Municipal Information and Public Relations Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=50">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label11">Municipal Election/Census/Social Development Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=51">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label12">Municipal Women and Child Development/Divyang (Disabled) Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=52">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label13">Municipal Security Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=53">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label14">Municipal Legal Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=54">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label15">Municipal Education, Sports, and Cultural Affairs Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=55">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label16">Municipal Department (Regional) Offices - 1</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=56">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label17">Municipal Department (Regional) Offices - 2</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=57">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label18">Municipal Department (Regional) Offices - 3</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=58">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label19">Municipal Department (Regional) Offices - 4</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=59">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label20">Municipal Tax (Property Tax and Others) Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=60">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label21">Municipal Market and Licensing Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=61">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label22">Municipal Secretariat Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=62">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label23">Municipal Committee Office Management</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=63">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label24">Municipal Accounts and Finance Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=64">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label51"> Accounts and Finance Department - Pension Section</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=65">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label52">Municipal Audit Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=66">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label53">Municipal Solid Waste Management Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=67">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label54">Municipal Health Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=68">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label55">Municipal Hospital Management Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=69">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label56">Municipal Veterinary Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=70">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label57">Municipal Construction Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=71">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label58">Municipal Engineering Projects Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=72">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label59">Municipal Electrical Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=73">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label60">Municipal Vehicle and Mechanical Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=74">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label61">Municipal Property Management Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=75">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label62">Municipal Water Supply Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=76">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label63">Municipal Sewerage Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=77">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label64">Municipal Town Planning Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=78">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label65">Municipal Encroachment and Unauthorized Construction Prevention/Elimination Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=79">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label66">Municipal Information and Technology Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=80">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label67">Municipal Environment Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=81">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label68">Municipal Parks and Tree Plantation/Maintenance Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=82">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label69">Municipal Fire Department</span></a></li>
+                    <li><a href="SMKCSection_new.aspx?deptcode=83">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span id="ctl00_ContentPlaceHolder1_Label70">Municipal Central Disaster Management Cell</span></a></li>
+                
+                </ul>
+            </div>
+
+            <!-- Content Area - New Design -->
+            <div class="content-area">
+                <!-- 1. Department Name Header -->
+                <div class="dept-header">
+                    <h1 id="ctl00_ContentPlaceHolder1_deptName">(c) Municipal Department (Regional) Offices - 3  </h1>
+                </div>
+
+                <div class="dept-sections">
+                    <!-- 2. Introduction Section -->
+                    <div class="section-card">
+                        <div class="section-header">
+                            <i class="fa fa-info-circle"></i>
+                            <span>Introduction </span>
+                        </div>
+                        <div class="section-content">
+                            <div id="ctl00_ContentPlaceHolder1_deptIntroduction" class="intro-text">Ward Committee No. 3 has been established as per the provisions of the Maharashtra Municipal Corporation Act, 1949, and works to assist the Hon. Municipal Commissioner in administrative affairs. Under the leadership of the Committee Chairperson, the committee undertakes coordinated planning of civic issues, local governance matters, and development works in the respective ward area.The committee actively monitors departmental tasks, issues recommendations, conducts inspections, and ensures follow-up actions, aiming to deliver efficient and responsive services to citizens.Ward Committee No. 1 acts as a crucial link between local governance and the public, playing a vital role in achieving transparent, people-centric, and result-oriented municipal administration.&quot;</div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Services Section -->
+                    <div class="section-card">
+                        <div class="section-header">
+                            <i class="fa fa-cogs"></i>
+                            <span>Services </span>
+                        </div>
+                        <div class="section-content">
+                            <div id="ctl00_ContentPlaceHolder1_deptServices" class="services-grid"><div class='service-item'><i class='fa fa-cogs'></i><h5><a href='https://citizenservices.smkc.in/' target='_blank'>Marriage Registration Certificate</a></h5></div></div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Contact Details Section -->
+                    <div class="section-card">
+                        <div class="section-header">
+                            <i class="fa fa-address-book"></i>
+                            <span>Officer Details </span>
+                        </div>
+                        <div class="section-content">
+                            <div id="ctl00_ContentPlaceHolder1_deptContacts" class="contact-grid"><div class='contact-card'><div class='contact-avatar'><i class='fa fa-user'></i></div><div class='contact-name'> Anis Nazeer Ahmed Mulla </div><div class='contact-designation'>Department Head</div><div class='contact-info'><span><i class='fa fa-envelope'></i> smkcorporation@gmail.com</span><span><i class='fa fa-phone'></i> 2332373721</span><span><i class='fa fa-building'></i> 0233-2373721 / 22 /23</span></div></div><div class='contact-card'><div class='contact-avatar'><i class='fa fa-user'></i></div><div class='contact-name'>Samir Abddulgani Bagvan</div><div class='contact-designation'>Office Head</div><div class='contact-info'><span><i class='fa fa-envelope'></i> smkcorporation@gmail.com</span><span><i class='fa fa-phone'></i> 2332373721</span><span><i class='fa fa-building'></i> 0233-2373721 / 22 /23</span></div></div></div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Targets Section -->
+                    <div class="section-card">
+                        <div class="section-header">
+                            <i class="fa fa-bullseye"></i>
+                            <span>Targets </span>
+                        </div>
+                        <div class="section-content">
+                            <div id="ctl00_ContentPlaceHolder1_deptTargets" class="targets-list"><div class='target-item'><div class='target-title'>-.</div></div></div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Documents Section -->
+                    <div class="section-card">
+                        <div class="section-header">
+                            <i class="fa fa-file-text"></i>
+                            <span>Documents </span>
+                        </div>
+                        <div class="section-content">
+                            <div id="ctl00_ContentPlaceHolder1_deptDocuments" cla="" ss="documents-grid"><a class='document-item' href='pdf/Download_forms/Marraige_reg.pdf' target='_blank'><div class='document-icon'><i class='fa fa-file-o'></i></div><div class='document-info'><h4>Certificates &amp; Documents - Marriage Registration Form</h4></div></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    </div>
+                </div>
+
+                
+            <footer class="custom-footer">
+    <div class="custom-footer-container">
+        <div class="custom-footer-column">
+            <h3 class="custom-footer-heading">
+                <span id="ctl00_Label12">सांगली मिरज आणि कुपवाड शहर महानगरपालिका</span>
+            </h3>
+            <p><span id="ctl00_Label1">शहर पोलीस ठाण्यासमोर, राजवाडा चौक,</span><br /> 
+            <span id="ctl00_Label2">सांगली, महाराष्ट्र. पिन कोड: ४१६४१६</span></p>
+            <p><span id="ctl00_Label3">सांगली कार्यालयाशी संपर्क साधा: ०२३३-२३७३७२१ / २२ / २३</span></p>
+            <p><a class="custom-footer-link"><span id="ctl00_Label4">ईमेल: smkcorporation@gmail.com</span></a></p>
+        </div>
+        
+        <div class="custom-footer-column">
+            <h3 class="custom-footer-heading">
+                <span id="ctl00_Label5">त्वरित दुवे</span>
+            </h3>
+            <ul class="custom-footer-links">
+                <li><a href="aboutsangli_new.aspx" class="custom-footer-link"><span id="ctl00_Label6">सांगली शहराचा इतिहास</span></a></li>
+                <li><a href="aboutsmkcnew.aspx" class="custom-footer-link"><span id="ctl00_Label11">एसएमकेसी बद्दल</span></a></li>
+                <li><a href="https://nagarkaryavali.com/ANCL_CRM/FrmComplaintEntry.aspx?@=96662C75620D2130C842D02FE58D4E35488651A90997DA4A1E0E0E400328137D" class="custom-footer-link"><span id="ctl00_Label10" Text1="तक्रारी">तक्रारी</span></a></li>
+                <li><a href="index.aspx" class="custom-footer-link"><span id="ctl00_Label13">नागरिक सेवा</span></a></li>
+                <li><a href="councilors_new.aspx" class="custom-footer-link"><span id="ctl00_Label16">नगरसेवक</span></a></li>
+                <li><a href="SMKC_SiteMap_new.aspx" class="custom-footer-link"><span id="ctl00_Label17">साईटमॅप</span></a></li>
+                <li><a href="help_faq.aspx" class="custom-footer-link">
+                            <span id="ctl00_Label7">FAQ</span></a></li>
+            </ul>
+        </div>
+        
+        <div class="custom-footer-column">
+            <h3 class="custom-footer-heading">
+                <span id="ctl00_Label41">आमच्याशी संपर्क साधा</span>
+            </h3>
+            <ul class="custom-footer-social-links">
+                <li>
+                    <a href="https://twitter.com/SmkcMission?s=09" class="custom-footer-link" target="_blank">
+                        <i class="fab fa-x-twitter"></i> 
+                        <span id="ctl00_Label44">ट्विटर</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100011116629758&mibextid=ZbWKwL" class="custom-footer-link" target="_blank">
+                        <i class="fab fa-facebook"></i> 
+                        <span id="ctl00_Label45">फेसबुक</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/smkc_mission_updates?igsh=dWFiNHFtYWE1M21x" class="custom-footer-link" target="_blank">
+                        <i class="fab fa-instagram"></i> 
+                        <span id="ctl00_Label46">इंस्टाग्राम</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/@smkcnewssangli6016?si=NXXNkeUF4HMMVtpk" class="custom-footer-link" target="_blank">
+                        <i class="fab fa-youtube"></i> 
+                        <span id="ctl00_Label47">यूट्यूब</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- New Feedback QR Code Column -->
+        <div class="custom-footer-column feedback-column">
+            <h3 class="custom-footer-heading">
+                <span id="ctl00_Label50">अभिप्राय</span>
+            </h3>
+            <div class="feedback-qr-container">
+                <img src="https://cdn.abacus.ai/images/b74bfcf5-1f6d-49a9-9688-c73fd8151c9e.png" 
+                     alt="Feedback QR Code" 
+                     class="feedback-qr-code" />
+                <p class="feedback-text">
+                    <span id="ctl00_Label51">आपला अभिप्राय शेअर करण्यासाठी QR कोड वर क्लिक करा किंवा स्कॅन करा</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="custom-footer-bottom">
+        <p><span id="ctl00_Label48">© कॉपीराइट २०२५ सांगली, मिरज आणि कुपवाड शहर महानगरपालिका. सर्व हक्क राखीव.</span>
+            <a href="disclaimer_new.aspx" class="custom-footer-link"><span id="ctl00_Label49">अस्वीकृती</span></a> | 
+            <a href="privacypolicy.aspx" class="custom-footer-link"><span id="ctl00_Label60">गोपनीयता धोरण</span></a> | 
+            <a href="contact_us_new.aspx" class="custom-footer-link"><span id="ctl00_Label68">आमच्याशी संपर्क साधा</span></a>
+        </p>
+         <p>
+                    <span id="ctl00_visitors">Visitor Count: </span>
+                </p>
+                <p>
+                    <span>Today: <strong>40</strong></span>
+                    &nbsp;|&nbsp;
+                    <span>This month: <strong>1,464</strong></span>
+                    &nbsp;|&nbsp;
+                    <span>Till date: <strong>1,33,185</strong></span>
+                    &nbsp;|&nbsp;
+                    <span>Updated on : <strong>30/09/2026</strong></span>
+                </p>
+    </div>  
+</footer>
+            
+
+
+                <!--old Footer Row start-->
+                
+                
+                <!--old Footer row end -->
+            </div>
+        </div>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <!--Menu js Start-->
+    <script type="text/javascript" src="js/menu.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+    </script>
+    <!--Menu js End-->
+</body>
+
+            
+       
+    <script>
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // Find hamburger menu (it might be in header or navbar)
+    const hamburgerMenu = document.querySelector('.demo-menu-toggle');
+    
+    // Add click event to hamburger menu if it exists
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener('click', function(e) {
+            e.preventDefault();
+            toggleMobileMenu();
+        });
+    }
+});
+
+// Toggle mobile menu visibility
+function toggleMobileMenu() {
+    const navList = document.getElementById('demoNavList');
+    if (navList) {
+        navList.classList.toggle('demo-show');
+    }
+}
+
+function toggleDropdown(event) {
+    // Prevent the event from bubbling up
+    event.stopPropagation();
+    
+    // Get the clicked dropdown element
+    const dropdown = event.currentTarget;
+    
+    // Check if we're in mobile view (you can adjust this breakpoint as needed)
+    if (window.innerWidth <= 768) {
+        // Close all other dropdowns first
+        const allDropdowns = document.querySelectorAll('.demo-dropdown');
+        allDropdowns.forEach(function(item) {
+            if (item !== dropdown) {
+                item.classList.remove('open');
+            }
+        });
+        
+        // Toggle the current dropdown
+        dropdown.classList.toggle('open');
+    }
+}
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', function(event) {
+    if (window.innerWidth <= 768) {
+        const allDropdowns = document.querySelectorAll('.demo-dropdown');
+        allDropdowns.forEach(function(dropdown) {
+            dropdown.classList.remove('open');
+        });
+    }
+});
+
+// Handle window resize to ensure proper behavior
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        // Remove open class from all dropdowns when switching to desktop view
+        const allDropdowns = document.querySelectorAll('.demo-dropdown');
+        allDropdowns.forEach(function(dropdown) {
+            dropdown.classList.remove('open');
+        });
+        
+        // Hide mobile menu in desktop view
+        const navList = document.getElementById('demoNavList');
+        if (navList) {
+            navList.classList.remove('demo-show');
+        }
+    }
+});
+</script>
+    
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    function isExternalLink(url) {
+        const currentDomain = window.location.hostname;
+        const tempLink = document.createElement('a');
+        tempLink.href = url;
+
+        return tempLink.hostname !== '' &&
+            tempLink.hostname !== currentDomain &&
+            !url.startsWith('/') &&
+            !url.startsWith('#') &&
+            !url.startsWith('mailto:') &&
+            !url.startsWith('tel:');
+    }
+
+    document.addEventListener('click', function (e) {
+        const link = e.target.closest('a');
+
+        if (link && link.href && isExternalLink(link.href)) {
+            e.preventDefault(); // prevent default immediately
+
+            const confirmed = confirm('smkc.gov.in says\n\nYou are being redirected to an external website.\n\nURL: ' + link.href + '\n\nDo you want to continue?');
+
+            if (confirmed) {
+                window.location.href = link.href; // manually redirect
+            }
+        }
+    });
+});
+</script>
+        <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</html>
