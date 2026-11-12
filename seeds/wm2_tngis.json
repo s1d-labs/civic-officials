@@ -169,5 +169,28 @@
    "ward_kind": "",
    "vintage": ""
   }
+ },
+ {
+  "key": "wm2_tngis-urban-local-bodies",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:urban_local_bodies",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "urban_local_bodies",
+   "page": 500,
+   "sort": "object_id",
+   "fields": {
+    "ward_no": "ward_number",
+    "body_name": "ulb_name",
+    "body_code": "ulb_lgd_code",
+    "district": "district_name"
+   },
+   "ward_kind": "election",
+   "vintage": "",
+   "expect": 3271
+  }
  }
 ]
