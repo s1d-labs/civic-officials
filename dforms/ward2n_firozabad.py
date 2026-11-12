@@ -41,7 +41,7 @@ def parse(html, p):
         recs.append(_ward.record(MODULE, f"ward-{ward}:{_esw.slug(en)}", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                  level="ward", area=f"Ward {ward}", area_regional=wname or None, post=en,
                                  post_regional=re.sub(r"\s*का\s*नाम$", "", post_hi), name=name, name_regional=name or None,
-                                 phone=mob, wards=[ward], wing="sanitation", source=p["url"]))
+                                 phone=mob, wards=[ward], wing="sanitation", source=p["url"], src_pos=_ward.tr_pos(tr)))
     return recs
 
 

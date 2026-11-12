@@ -145,6 +145,23 @@ def grid_pos(table, **kw):
     return list(zip(g, pos))
 
 
+def nth(tag, selector=None):
+    """src_pos of an element: {"selector": "div.prof-card", "index": its place among the page's elements of that tag and first
+    class (1-based, document order)}."""
+    cls = (tag.get("class") or [None])[0]
+    n = len(tag.find_all_previous(tag.name, class_=cls) if cls else tag.find_all_previous(tag.name)) + 1
+    return {"selector": selector or (f"{tag.name}.{cls}" if cls else tag.name), "index": n}
+
+
+def tr_pos(tr):
+    """src_pos {"table", "row"} of one <tr> (the same numbers as _esw.grid(pos=) and officials.tables give)."""
+    t = tr.find_parent("table")
+    if t is None:
+        return nth(tr)
+    own = [x for x in t.find_all("tr") if x.find_parent("table") is t]
+    return {"table": _esw.table_no(t), "row": next((i for i, x in enumerate(own, 1) if x is tr), None)}
+
+
 class Row(dict):
     """A table row dict (header -> cell) that also carries its src_pos as an attribute (not a key: readers walk the items)."""
     pos = None

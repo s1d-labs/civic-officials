@@ -41,7 +41,9 @@ def parse(html, p):
     return [_ward.record(MODULE, f"ps-{x}:assistant-commissioner", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                          level="zone", area=area, area_regional=f"प्रभाग समिती {LETTERS[x]}", zone=area,
                          post="Assistant Commissioner", post_regional=post_mr or None, name=en or mr, name_regional=mr or None,
-                         wing="administration", source=p["url"])]
+                         wing="administration", source=p["url"],
+                         src_pos={"selector": "div.service-content p" if soup.select_one("div.service-content") else "p",
+                                  "lines": [ln for ln in (post_mr, en, mr) if ln]})]
 
 
 def fetch(p, get):

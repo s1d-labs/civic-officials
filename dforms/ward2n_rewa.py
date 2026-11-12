@@ -8,7 +8,7 @@ import re
 
 from dforms import _esw, _ward
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2n_rewa"
 BODY, LGD, STATE, DISTRICT = "Rewa Nagar Nigam", "250797", "MP", "Rewa"
@@ -43,7 +43,7 @@ def parse(html, p):
         recs.append(_ward.record(MODULE, f"zone-{z}:{_esw.slug(post)}", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                  level="zone", area=f"Civil {zone}", zone=zone, post=post, name=name,
                                  phone=info.get("fa-phone", ""), email=info.get("fa-envelope", ""),
-                                 address=info.get("fa-globe"), department=info.get("fa-home"), source=p["url"]))
+                                 address=info.get("fa-globe"), department=info.get("fa-home"), source=p["url"], src_pos=_ward.nth(h)))
     return recs
 
 

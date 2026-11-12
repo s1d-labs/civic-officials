@@ -37,7 +37,8 @@ def parse(html, p):
     phone = re.sub(r"^\+91\s*-\s*", "", phone)
     return [_ward.record(MODULE, f"wo{n}:ward-officer", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level="zone",
                          area=area, zone=area, post="Ward Officer", post_regional=post_mr, name=name, name_regional=name,
-                         phone=phone, email=email, wing="administration", source=p["url"])]
+                         phone=phone, email=email, wing="administration", source=p["url"],
+                         src_pos={"selector": "page text", "match": m.group(0)[:200]})]
 
 
 def fetch(p, get):
