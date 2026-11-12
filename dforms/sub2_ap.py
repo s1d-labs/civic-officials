@@ -22,7 +22,7 @@ from urllib.parse import urljoin, urlparse
 
 from dforms import _esw
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (district portal pages from its menu)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub2_ap"
 STATE = "AP"
@@ -201,12 +201,13 @@ def level_of_post(post):
     return None
 
 
-def rows(html, page_kind):
+def rows(html, page_kind, where=None):
     """[{area, division, name, post, phone, email, level}] from the tables of one page."""
     soup = _esw.soup(html)
     out = []
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        tp = []
+        g = _esw.grid(t, pos=tp)
         col, start = None, 0
         for i, r in enumerate(g[:4]):
             col = header(r)
@@ -218,7 +219,7 @@ def rows(html, page_kind):
         cap = " ".join(_esw.clean(" ".join(r)) for r in g[:start - 1])      # a title row above the header
         tkind = kind_of(cap) or page_kind
         division = ""
-        for r in g[start:]:
+        for r, pos in zip(g[start:], tp[start:]):
             r = r + [""] * (max(len(x) for x in g) - len(r))
             if len(set(x for x in r if x)) <= 1:            # a section row ("ONGOLE", "Kandukur Division")
                 one = next((x for x in r if x), "")
@@ -260,12 +261,15 @@ def rows(html, page_kind):
             div = division
             out.append({"area": area, "division": div, "name": name, "post": post, "phone": phone, "email": email, "level": lv,
                         "address": _esw.clean(cell("address"))})
+            if where is not None:
+                where.append(pos)
     return out
 
 
-def build(module, state, host, district, url, page_kind, rws, upd, seen, posts=None):
+def build(module, state, host, district, url, page_kind, rws, upd, seen, posts=None, where=None):
+    """where: src_pos of each row of rws (rows(..., where))."""
     recs = []
-    for r in rws:
+    for r, pos in zip(rws, where or [None] * len(rws)):
         lv = r["level"]
         dup = (lv, _esw.slug(r["area"]), r["phone"], r["name"].lower())
         if dup in seen:                                   # the same row again (Nellore shows the list in three tabs)
@@ -281,7 +285,8 @@ def build(module, state, host, district, url, page_kind, rws, upd, seen, posts=N
         recs.append(_esw.record(module, key, dept=dept, level=lv, area=r["area"], post=r["post"] or post, name=r["name"],
                                 phone=r["phone"], email=r["email"], address=r.get("address", ""), district=district, state=state,
                                 office_id=base,
-                                division=r["division"] if lv != "subdivision" else "", source=url, last_updated=upd))
+                                division=r["division"] if lv != "subdivision" else "", source=url, last_updated=upd,
+                                src_url=url, src_pos=pos))
     return recs
 
 
@@ -311,7 +316,8 @@ def read(p, get, module=MODULE, state=STATE, hosts=None, kinds=None, posts=None)
         if a is None:
             continue
         files.append(_esw.keep(module, f"{host}-{_esw.slug(urlparse(purl).path) or 'page'}", a.content))
-        recs += build(module, state, host, district, purl, k, rows(a.text, k), last_updated(a.text), seen, posts)
+        where = []
+        recs += build(module, state, host, district, purl, k, rows(a.text, k, where), last_updated(a.text), seen, posts, where)
     return recs, files, "" if recs else "no officer rows"
 
 

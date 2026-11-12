@@ -18,9 +18,10 @@ Record ids: dept:sub2_up_prd:UP-<district slug>:<block slug>:<bdo|ado>[:n].
 """
 import re
 
+import provenance
 from dforms import _esw
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (ASP.NET postback answer, table#gridEntryDist)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub2_up_prd"
 URL = "https://prdfinance.up.gov.in/pr_officer_ado_bdo_gpdata_public"
@@ -88,16 +89,20 @@ def items(get=None):
     return out
 
 
-def rows(html):
-    """[{district, block, post, name, mobile, whatsapp, gender}] of table#gridEntryDist."""
+def rows(html, where=None):
+    """[{district, block, post, name, mobile, whatsapp, gender}] of table#gridEntryDist. where: a list; when given, it gets each
+    row's src_pos."""
     t = _esw.soup(html).find("table", id="gridEntryDist")
     if t is None:
         return []
-    g = _esw.grid(t)
+    tp = []
+    g = _esw.grid(t, pos=tp)
     out = []
-    for r in g[1:]:
+    for r, pos in zip(g[1:], tp[1:]):
         if len(r) < 7 or not re.fullmatch(r"\d+", r[0].strip()):
             continue
+        if where is not None:
+            where.append(pos)
         out.append({"district": r[1], "block": r[2], "post": r[3].strip().upper(), "name": r[4], "mobile": r[5], "whatsapp": r[6],
                     "gender": r[7] if len(r) > 7 else ""})
     return out
@@ -111,9 +116,10 @@ def _person(name, block):
     return n
 
 
-def build(found, dist, seen, source):
+def build(found, dist, seen, source, where=None, src=None):
+    """where: src_pos per row of found; src: provenance.at() of the answer (GET and POST of one url)."""
     recs = []
-    for r in found:
+    for r, pos in zip(found, where or [None] * len(found)):
         post = POSTS.get(r["post"])
         if not post or not r["block"].strip():
             continue
@@ -125,7 +131,8 @@ def build(found, dist, seen, source):
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept="rural_development", level="block", area=area, post=post,
                                 name=_person(r["name"], r["block"]), phone=_esw.phones(r["mobile"], r["whatsapp"]),
-                                whatsapp=_esw.phones(r["whatsapp"]), district=dist, state="UP", source=source))
+                                whatsapp=_esw.phones(r["whatsapp"]), district=dist, state="UP", source=source, src_pos=pos,
+                                **(src or {})))
     return recs
 
 
@@ -147,5 +154,6 @@ def fetch(p, get):
     tag = _esw.slug(want) + (f"-{p['nth']}" if int(p.get("nth", 1)) > 1 else "")
     files = [_esw.keep(MODULE, f"district-{tag}", a.content)]
     dist = p.get("district") or district(want)
-    recs = build(rows(a.text), dist, set(), url)
+    where = []
+    recs = build(rows(a.text, where), dist, set(), url, where, provenance.at(a, url))
     return recs, files, "" if recs else "no rows"

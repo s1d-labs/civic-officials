@@ -41,7 +41,8 @@ def parse(html, url=URL):
         if not m:
             continue
         district = m.group(1).title()
-        rows = _esw.grid(t)
+        tp = []
+        rows = _esw.grid(t, pos=tp)
         if not rows:
             continue
         head = [h.lower() for h in rows[0]]
@@ -50,7 +51,7 @@ def parse(html, url=URL):
             i = next((k for k, h in enumerate(head) if h.startswith(name)), None)
             return row[i] if i is not None and i < len(row) else ""
 
-        for row in rows[1:]:
+        for row, pos in zip(rows[1:], tp[1:]):
             name, desig = col(row, "name"), col(row, "designation")
             if not (name or desig):
                 continue
@@ -62,7 +63,8 @@ def parse(html, url=URL):
             rec = _esw.record(MODULE, key, dept="police" if POLICE.search(desig) else "administration", level="district",
                               area=district, post=desig, designation=desig, name=name,
                               phone=_esw.phones(col(row, "mobile"), col(row, "landline")), email=_esw.emails(col(row, "email")),
-                              address=col(row, "address"), district=district, state="LA", source=url, last_updated=updated)
+                              address=col(row, "address"), district=district, state="LA", source=url, last_updated=updated,
+                              src_pos=pos)
             if rec[1].get("name") or rec[1].get("phone") or rec[1].get("email"):
                 recs.append(rec)
     return recs

@@ -20,7 +20,7 @@ import re
 
 from dforms import _esw
 
-METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "json in the page (Next.js flight data, \"initialData\" lists)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub3_hr"
 URL = "https://revenueharyana.gov.in/Home/WhoIsWhoDistrict/"
@@ -99,9 +99,10 @@ def area_of(designation, rx):
     return rest.title() if rest.isupper() or rest.islower() else rest
 
 
-def build(entries, source):
+def build(entries, source, where=None):
+    """where: src_pos per entry ({"key": "initialData", "list": n, "index": i})."""
     recs, seen = [], set()
-    for e in entries:
+    for e, pos in zip(entries, where or [None] * len(entries)):
         des = _esw.clean(field(e, "designationName", "designation", "Designation"))
         found = post_of(des)
         if not found:
@@ -121,7 +122,7 @@ def build(entries, source):
         seen.add(rid)
         recs.append(_esw.record(MODULE, rid, dept="revenue" if key != "sdm" else "administration", level=level, area=area,
                                 post=post, designation=des, name=name, phone=phone, email=email, district=dist,
-                                district_code=dc, state="HR", office_id=field(e, "officerId", "id"), source=source))
+                                district_code=dc, state="HR", office_id=field(e, "officerId", "id"), source=source, src_pos=pos))
     return recs
 
 
@@ -135,7 +136,8 @@ def fetch(p, get):
     if not lists:
         return [], files, "no initialData in the page"
     entries = [e for lst in lists for e in lst]
+    where = [{"key": "initialData", "list": n, "index": i} for n, lst in enumerate(lists, 1) for i, _ in enumerate(lst)]
     if not entries:
         return [], files, "the page lists no officers (initialData is empty)"
-    recs = build(entries, url)
+    recs = build(entries, url, where)
     return recs, files, "" if recs else f"no tehsildar / naib tehsildar / SDM among {len(entries)} entries"

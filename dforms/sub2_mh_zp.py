@@ -19,9 +19,10 @@ Record ids: dept:sub2_mh_zp:<host>:<slug of area>[:n].
 import re
 from urllib.parse import urljoin, urlparse
 
+import provenance
 from dforms import _esw
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (directory pages) + json api (S3WaaS directory ajax: dir_pages, directory_paginate, directory_tax_filter)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub2_mh_zp"
 # ZP site -> LGD district (code, name). Hosts checked by DNS on 2026-11-11 (NIC S3WaaS addresses 164.100.50.x / 164.100.52.x).
@@ -87,13 +88,15 @@ def area_of(post, address, caption, email, cells=None):
     return ""
 
 
-def rows_of(html, caption_default=""):
-    """[(caption, normalised row)] from every table of one page."""
+def rows_of(html, caption_default="", src=None, pos=None):
+    """[(caption, normalised row)] from every table of one page. src: provenance.at() of the answer; pos: extra src_pos keys
+    (the ajax call). Each row dict carries "_pos" and "_src" for the source trail."""
     from officials import normalise, tables
     out = []
     for t in tables(html):
-        for cells in t["rows"]:
-            out.append((t["caption"] or caption_default, {**normalise(cells), "_cells": cells}))
+        for cells, tp in zip(t["rows"], t.get("pos") or [{}] * len(t["rows"])):
+            out.append((t["caption"] or caption_default, {**normalise(cells), "_cells": cells, "_pos": {**(pos or {}), **tp},
+                                                           "_src": src or {}}))
     return out
 
 
@@ -116,7 +119,10 @@ def ajax_rows(html, get):
             if not got:
                 break
             from officials import normalise
-            out += [(b["name"], {**normalise(c), "_cells": c}) for c in got]
+            src = provenance.at(r, pg["ajaxurl"])
+            out += [(b["name"], {**normalise(c), "_cells": c, "_src": src,
+                                 "_pos": {"action": pg["action"], "category": b["slug"], "paged": p, "item": i}})
+                    for i, c in enumerate(got, 1)]
             if '"last":1' in r.text.replace(" ", "") or '"last":"1"' in r.text.replace(" ", ""):
                 break
             p += 1
@@ -138,14 +144,14 @@ def tabular_rows(html, url, get):
     params = box["data-params"]
     out, files, calls = [], [], 0
 
-    def answer_rows(r, head):
+    def answer_rows(r, head, pos=None):
         try:
             content = (json.loads(r.text).get("data") or {}).get("content") or ""
         except (ValueError, AttributeError):
             return []
         if "<table" not in content:
             content = f"<table>{head}{content}</table>"
-        return rows_of(content)
+        return rows_of(content, src=provenance.at(r, ajax), pos={"field": "data.content", **(pos or {})})
     for sec in soup.select(".taxonomy-section[data-params]"):
         cap = sec.find_previous(["h2", "h3", "h4", "caption"])
         thead = sec.find("thead")
@@ -158,7 +164,8 @@ def tabular_rows(html, url, get):
             if r is None:
                 break
             files.append(_esw.keep(MODULE, f"tabular-{_esw.slug(sec['data-params'])[:20]}-{n}", r.content, "json"))
-            out += [(c or (cap.get_text(" ", strip=True) if cap else ""), row) for c, row in answer_rows(r, head)]
+            out += [(c or (cap.get_text(" ", strip=True) if cap else ""), row)
+                    for c, row in answer_rows(r, head, {"action": "directory_paginate", "pageno": n})]
     if not soup.select(".taxonomy-section[data-params]"):
         opts = [(o["value"], o.get_text(" ", strip=True)) for o in box.select("select option[value]") if o["value"] != "-1"]
         for v, label in opts[:6]:
@@ -168,7 +175,7 @@ def tabular_rows(html, url, get):
             if r is None:
                 continue
             files.append(_esw.keep(MODULE, f"tabular-term-{v}", r.content, "json"))
-            out += [(c or label, row) for c, row in answer_rows(r, "")]
+            out += [(c or label, row) for c, row in answer_rows(r, "", {"action": "directory_tax_filter", "term_id": v})]
     return out, files
 
 
@@ -201,7 +208,8 @@ def build(rows, p, source, host, upd=None):
         recs.append(_esw.record(MODULE, key, dept="rural_development", level="block", area=area, district=p.get("district", ""),
                                 district_code=p.get("district_code", ""), state="MH", name=name,
                                 post="Block Development Officer", designation=cand, phone=phone, email=email,
-                                address=r.get("address", ""), source=source, last_updated=upd))
+                                address=r.get("address", ""), source=source, last_updated=upd, src_pos=r.get("_pos") or None,
+                                **(r.get("_src") or {})))
     return recs
 
 
@@ -222,7 +230,7 @@ def fetch(p, get):
     if r is None:
         return [], [], "no answer"
     files = [_esw.keep(MODULE, f"{host}-directory-p1", r.content)]
-    pages = [(url, r.text)]
+    pages = [(url, r.text, provenance.at(r, url))]
     base, more = next_pages(r.text, url)
     done = {1}
     for n in sorted(more - done)[:8]:
@@ -230,8 +238,8 @@ def fetch(p, get):
         if m is None:
             break
         files.append(_esw.keep(MODULE, f"{host}-directory-p{n}", m.content))
-        pages.append((f"{base}page/{n}/", m.text))
-    rows = [(u, row) for u, h in pages for row in rows_of(h)]
+        pages.append((f"{base}page/{n}/", m.text, provenance.at(m, f"{base}page/{n}/")))
+    rows = [(u, row) for u, h, s in pages for row in rows_of(h, src=s)]
     extra, f2 = ajax_rows(r.text, get)
     extra3, f3 = tabular_rows(r.text, url, get)
     files += f2 + f3
@@ -250,7 +258,7 @@ def fetch(p, get):
         if m is None:
             continue
         files.append(_esw.keep(MODULE, f"{host}-{_esw.slug(urlparse(u).path)[-50:]}", m.content))
-        rows += [(u, row) for row in rows_of(m.text)]
+        rows += [(u, row) for row in rows_of(m.text, src=provenance.at(m, u))]
     upd = last_updated(r.text)
     recs, seen = [], set()
     for src in dict.fromkeys(u for u, _ in rows):

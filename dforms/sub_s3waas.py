@@ -22,7 +22,7 @@ from urllib.parse import urlparse
 from dforms import _civic, _esw
 from dforms.police_s3waas import cards, last_updated
 
-METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (S3WaaS public utility, .public-utlty-catg; /page/N/ pages)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub_s3waas"
 
@@ -67,7 +67,12 @@ def records(pages, p):
     lu = next((last_updated(h) for _, h in pages if last_updated(h)), None)
     recs, seen = [], set()
     for url, html in pages:
-        for c in cards(html):
+        where = []
+        try:
+            cs = cards(html, where)
+        except TypeError:          # police_s3waas.cards without positions
+            cs, where = cards(html), []
+        for ci, c in enumerate(cs):
             title = _esw.clean(c.get("title"))
             place = area(title)
             if not place:
@@ -81,7 +86,8 @@ def records(pages, p):
                 MODULE, key, dept=dept, level=level, area=place, area_regional=place if regional else None,
                 office=title, post=post, phone=_esw.phones(c.get("phone") or "", m.group(1) if m else ""),
                 email=_esw.emails(c.get("email") or ""), address=adr, pincode=re.sub(r"\D", "", c.get("pincode") or "")[:6],
-                district=p.get("district"), state=p.get("state"), office_id=key, source=url, last_updated=lu)
+                district=p.get("district"), state=p.get("state"), office_id=key, source=url, last_updated=lu, src_url=url,
+                src_pos=where[ci] if ci < len(where) else {"selector": ".public-utlty-catg"})
             if rec[1].get("phone") or rec[1].get("email"):
                 recs.append(rec)
     return recs
