@@ -65,3 +65,55 @@ def test_cw_mp_table_row_positions():
     kinds = [kind for kind, _ in dict(blocks)[page]]
     rows = [v for kind, v in dict(blocks)[page] if kind == "rows"][d["src_pos"]["table"] - 1]
     assert m["name"].split()[0] in " ".join(rows[d["src_pos"]["row"] - 1]) and "rows" in kinds
+
+
+def test_cw_dd_line_of_each_member():
+    from cforms import cw_dd
+    text = (DATA / "cw_dd_daman_2016.txt").read_text()
+    recs = cw_dd.records(text, {"url": "u", "election": "x"}, "text layer", [text])
+    lines = text.split("\n")
+    for _, d in recs:
+        sp = d["src_pos"]
+        assert sp["page"] == 1 and lines[sp["line"] - 1] == sp["line_text"] and d["name"].split()[-1] in sp["line_text"]
+        assert d["method"] == "pdf text (pypdf layout)"
+
+
+def test_cw_ga_ward_heading_line():
+    from cforms import cw_ga
+    text = (DATA / "cw_ga_winners_sample.txt").read_text()
+    recs = cw_ga.parse(text, {"url": "u"}, [text])
+    assert recs and all(d["src_pos"]["page"] == 1 and text.split("\n")[d["src_pos"]["line"] - 1] == d["src_pos"]["line_text"]
+                        for _, d in recs)
+
+
+def test_cw_mh_sec_and_csmc_grid_rows():
+    from cforms import cw_mh, cw_mh_csmc
+    d = json.loads(gzip.decompress((DATA / "cw_mh_sec_members_p64.json.gz").read_bytes())) \
+        if (DATA / "cw_mh_sec_members_p64.json.gz").exists() else None
+    if d:
+        ws, hs, vs = [tuple(w) for w in d["words"]], [tuple(h) for h in d["h"]], [tuple(v) for v in d["v"]]
+        recs = cw_mh.parse_page(ws, hs, vs, {"doc": "members"}, d["page"], [])
+        assert recs and all(r["src_pos"]["page"] == d["page"] and r["src_pos"]["row"] >= 1 for _, r in recs)
+    d = json.loads(gzip.decompress((DATA / "cw_mh_csmc_p8.json.gz").read_bytes()))
+    ws, hs, vs = [tuple(w) for w in d["words"]], [tuple(h) for h in d["h"]], [tuple(v) for v in d["v"]]
+    pos = []
+    rows, _ = cw_mh_csmc.parse_page(ws, hs, vs, None, "29", pos)
+    assert len(pos) == len(rows) and pos[0]["row"] < pos[1]["row"] and len(pos[0]["box_pt"]) == 4
+
+
+def test_cw_wb_answer_hash_and_index():
+    from cforms import cw_wb
+    raw = gzip.decompress((DATA / "cw_wb_res220.json.gz").read_bytes())
+    prd = gzip.decompress((DATA / "cw_wb_prd220.json.gz").read_bytes())
+
+    class R:
+        def __init__(self, b):
+            self.content, self.text = b, b.decode("utf-8")
+
+    def get(url, method="GET", data=None, headers=None):
+        return R(prd if url.endswith("PollResultDate") else raw)
+    recs, _, _ = cw_wb.fetch({"wbme_id": 220, "lgd_code": "249958"}, get)
+    d = dict(recs)["councillor:WB:249958:1"]
+    assert d["src_sha256"] == hashlib.sha256(raw).hexdigest() and d["src_url"].endswith("SelectCandidateVotesinFavourPortalList")
+    cands = json.loads(json.loads(raw)["d"])
+    assert cands[d["src_pos"]["index"]]["CandidateName"].strip() == d["name"]

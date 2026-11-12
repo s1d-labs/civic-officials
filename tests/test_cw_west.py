@@ -374,7 +374,7 @@ def test_dd_listing_and_items():
 
 
 def test_dd_other_gazette_keeps_nothing(monkeypatch):
-    monkeypatch.setattr(cw_dd, "text_of", lambda c: ("NOTIFICATION about a tender", "text layer"))
+    monkeypatch.setattr(cw_dd, "text_of", lambda c, pages=None: ("NOTIFICATION about a tender", "text layer"))
     assert cw_dd.fetch({"url": "u"}, lambda u, **k: _Resp(content=b"%PDF-1.4 x")) == ([], [], "no member list")
 
 

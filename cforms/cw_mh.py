@@ -21,9 +21,9 @@ import subprocess
 import tempfile
 
 from cforms import gj
-from cforms.tn import stored
+from cforms.tn import mark_stored, stored
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text layer by drawn cell borders (pdftotext -bbox)"     # source trail (provenance.py): how this reader reads its sources
 
 BASE = "https://mahasec.maharashtra.gov.in/Upload/PDF/"
 DOCS = {"members": (BASE + "Member%20Winning%20Candidate%20Data.pdf", 14, 8),
@@ -105,11 +105,17 @@ def votes(t):
     return int(t) if t.isdigit() else None
 
 
+class Cells(list):
+    """Cell texts of one row; .pos = its src_pos (grid row on the page, row box in PDF points, top-left origin)."""
+    pos = None
+
+
 def rows_of(ws, hs, vs, ncols, name_col):
     """Cell texts of every data row of one page, from its text-layer words and drawn lines."""
     rows, _ = gj.grid_rows(hs, vs, ncols, name_col)
-    for cols, a, b in rows:
-        cells = [cell(ws, cols[c][0] + 0.5, a, cols[c][1] - 0.5, b) for c in range(1, ncols + 1)]
+    for gi, (cols, a, b) in enumerate(rows, 1):
+        cells = Cells(cell(ws, cols[c][0] + 0.5, a, cols[c][1] - 0.5, b) for c in range(1, ncols + 1))
+        cells.pos = {"row": gi, "box_pt": [round(cols[1][0], 1), round(a, 1), round(cols[ncols][1], 1), round(b, 1)]}
         if cells[0].isdigit():
             yield cells
 
@@ -157,6 +163,8 @@ def parse_page(ws, hs, vs, p, page, recs):
                 recs[-1][1].setdefault("runner_up_tied", []).append(title(d["runner_up"]))
             continue
         recs.append(record(d, p, page))
+        if getattr(cells, "pos", None):
+            recs[-1][1]["src_pos"] = {"page": page, **cells.pos}
     return recs
 
 
@@ -199,6 +207,7 @@ def fetch(p, get):
         return [], [], "pdftotext not available"
     url = DOCS[p["doc"]][0]
     content = stored(p, get)
+    from_bucket = content is not None
     if content is None:
         r = get(url)
         if r is None:
@@ -213,4 +222,6 @@ def fetch(p, get):
         with open(path, "wb") as f:
             f.write(content)
         recs = parse(path, p)
+    if from_bucket:
+        mark_stored(recs, p, content, url)
     return recs, files, "" if recs else "no members read"

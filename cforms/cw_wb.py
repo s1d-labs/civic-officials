@@ -21,10 +21,11 @@ Kolkata's 16 boroughs share 250299). Record id councillor:WB:<lgd code or wbme-<
 """
 import datetime
 import gzip
+import hashlib
 import json
 import re
 
-METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "json api (portal.wbme.org page methods, POST)"     # source trail (provenance.py): how this reader reads its sources
 
 BASE = "https://portal.wbme.org/Index.aspx/"
 ELECTION = "West Bengal municipal general elections 2021-22 (State Election Commission)"
@@ -79,7 +80,9 @@ def winners(cands, poll, p):
              "tie": True if len(first) > 1 else None, "single_candidate": True if len(cs) == 1 else None,
              "candidates": cs, "n_candidates": len(cs), "election": f"{ELECTION}: {norm(poll.get('ElectionType'))}, result "
              f"{norm(poll.get('PollResultDate'))}", "result_date": norm(poll.get("PollResultDate")), "poll_id": poll.get("ID"),
-             "url": "https://portal.wbme.org/", "wbme_id": p.get("wbme_id")}
+             "url": "https://portal.wbme.org/", "wbme_id": p.get("wbme_id"),
+             # source trail: the winner's place in the answer's candidate list (0-based) and its SeatID
+             "src_pos": {"index": next(i for i, c in enumerate(cands) if c is w), "SeatID": w.get("SeatID")}}
         out[d["ward_no"]] = {k: v for k, v in d.items() if v not in (None, "")}
     return out
 
@@ -99,7 +102,11 @@ def fetch(p, get):
         if cands is None:
             return [], files, f"no answer (results of poll {poll.get('ID')})"
         files.append((f"councillors/WB/wbme-{mid}-poll{poll.get('ID')}.json.gz", gzip.compress(raw), "application/gzip"))
-        seats.update(winners(cands, poll, p))      # a later poll (bye-election) replaces the seat
+        won = winners(cands, poll, p)
+        sha = hashlib.sha256(raw).hexdigest()      # every poll is a POST to the same url: the answer is named by its bytes
+        for d in won.values():
+            d.update({"src_url": BASE + "SelectCandidateVotesinFavourPortalList", "src_sha256": sha})
+        seats.update(won)      # a later poll (bye-election) replaces the seat
     place = p.get("lgd_code") or f"wbme-{mid}"
     recs = [(f"councillor:WB:{place}:{w}", d) for w, d in sorted(seats.items(), key=lambda x: int(x[0]))]
     return recs, files, "" if recs else "no candidates"

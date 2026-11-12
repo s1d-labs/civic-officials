@@ -156,6 +156,15 @@ def stored(p, get):
     return None
 
 
+def mark_stored(recs, p, content, url=None):
+    """Source trail for an item that read the bucket copy (payload "stored"): each record's src = the copy's sha256, the
+    original url and the bucket key. Call only when stored() gave the content."""
+    src = provenance.file_src(content, url or p.get("url"), p.get("stored"))
+    for _, d in recs:
+        d["src"] = dict(src)
+    return recs
+
+
 def fetch(p, get):
     if not tools():
         return [], [], "tesseract not available"

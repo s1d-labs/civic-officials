@@ -27,7 +27,7 @@ from bs4 import BeautifulSoup
 
 from cforms import gj, tn
 
-METHOD = "ocr tesseract + pdf text (pypdf) + json api + html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = gj.METHOD     # source trail: the items read with cforms/gj.py parse() (seed step: html pages)     # source trail (provenance.py): how this reader reads its sources
 
 BASE = "https://sec.gujarat.gov.in/"
 START = ("index.htm", "election-results.htm", "election-oct-2026", "DisplayNews.htm", "result-muncipality-2026.htm",
@@ -116,6 +116,7 @@ def fetch(p, get):
     if not gj.tools("guj"):
         return [], [], "tesseract not available"
     content = tn.stored(p, get)
+    from_bucket = content is not None
     if content is None:
         r = get(p["url"])
         if r is None:
@@ -132,4 +133,6 @@ def fetch(p, get):
         recs = gj.parse(pdf, p)
     for _, rec in recs:
         rec["election"] = p.get("election") or rec["election"]
+    if from_bucket:
+        tn.mark_stored(recs, p, content)
     return recs, files, "" if recs else "no members read"

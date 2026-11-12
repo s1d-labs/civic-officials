@@ -15,7 +15,7 @@ import tempfile
 
 from cforms import gj
 
-METHOD = "ocr tesseract + pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "ocr tesseract mar (name cells) + pdf text layer by drawn cell borders (pdftotext -bbox)"     # source trail (provenance.py): how this reader reads its sources
 
 URL = "https://chhsambhajinagarmc.org/assets/300/2026/05/mediafiles/Corporator_list-2026.pdf"
 SEATS = "अबकडइ"
@@ -36,13 +36,13 @@ def split_name(t):
     return title, gj.norm(name[m.end():] if m else name), gj.norm(addr)
 
 
-def parse_page(ws, hs, vs, texts=None, last_ward=""):
+def parse_page(ws, hs, vs, texts=None, last_ward="", pos=None):
     """Rows of one page: [(serial, ward, seat, name cell text, phones)]. texts: OCR of the name cells in row order (else the
-    text layer)."""
+    text layer). pos: a list that gets each row's src_pos (grid row on the page, row box in PDF points)."""
     rows, _ = gj.grid_rows(hs, vs, 6, 5)
     out = []
     i = 0
-    for cols, a, b in rows:
+    for gi, (cols, a, b) in enumerate(rows, 1):
         serial = re.sub(r"\D", "", gj.box_text(ws, cols[1][0], a, cols[1][1], b))
         if not serial:
             continue
@@ -54,6 +54,8 @@ def parse_page(ws, hs, vs, texts=None, last_ward=""):
         i += 1
         phones = PHONE.findall(gj.box_text(ws, cols[6][0], a, cols[6][1], b).replace(" ", "  "))
         out.append((serial, ward, seat, cell, phones))
+        if pos is not None:
+            pos.append({"row": gi, "box_pt": [round(cols[1][0], 1), round(a, 1), round(cols[6][1], 1), round(b, 1)]})
     return out, last_ward
 
 
@@ -71,8 +73,9 @@ def parse(pdf, p, use_ocr=True):
                 rows, _ = gj.grid_rows(hs, vs, 6, 5)
                 keep = [(cols, a, b) for cols, a, b in rows if re.sub(r"\D", "", gj.box_text(ws, cols[1][0], a, cols[1][1], b))]
                 texts = gj.ocr_boxes(pdf, pg, [(c[5][0] + 1.2, a + 1.2, c[5][1] - 1.2, b - 1.2) for c, a, b in keep], tmp, "mar")
-            rows, last_ward = parse_page(ws, hs, vs, texts, last_ward)
-            for serial, ward, seat, cell, phones in rows:
+            pos = []
+            rows, last_ward = parse_page(ws, hs, vs, texts, last_ward, pos)
+            for (serial, ward, seat, cell, phones), rp in zip(rows, pos):
                 counts[ward] = counts.get(ward, 0) + 1
                 seat = seat or SEATS[min(counts[ward], 5) - 1]
                 title, name, addr = split_name(cell)
@@ -83,7 +86,9 @@ def parse(pdf, p, use_ocr=True):
                        "district": "Chhatrapati Sambhajinagar", "position": "Member", "ward_no": ward, "seat": seat,
                        "name": name, "title": title, "address": addr, "phone": ", ".join(dict.fromkeys(phones)),
                        "serial": int(serial), "election": "Maharashtra Municipal Corporation General Election 2026",
-                       "url": URL, "page": pg, "read": "ocr" if use_ocr else "text layer"}
+                       "url": URL, "page": pg, "read": "ocr" if use_ocr else "text layer", "src_pos": {"page": pg, **rp}}
+                if not use_ocr:
+                    rec["method"] = "pdf text layer by drawn cell borders (pdftotext -bbox)"
                 recs.append((f"councillor:MH:chh-sambhajinagar-mc:{ward or 'x'}-{seat}", rec))
     return recs
 
