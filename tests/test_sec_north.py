@@ -70,3 +70,12 @@ def test_mp_ocr_seed():
     assert all(i["payload"]["kind"] == "form-cw_mp" and i["payload"]["stored"].startswith("civic-officials-councillors/councillors/MP/")
                for i in items)
     assert sum(i["payload"]["last"] - i["payload"]["first"] + 1 for i in items) == 456
+
+
+def test_listed_seeds_ga_dd():
+    """Items that the seed items seed-cw_ga / seed-cw_dd listed on the hub (2026-11-12) but that were never queued."""
+    ga = json.loads((SEEDS / "councillors_cw_ga_listed.json").read_text())
+    dd = json.loads((SEEDS / "ocr_councillors_cw_dd.json").read_text())
+    assert len(ga) == 7 and {i["payload"]["kind"] for i in ga} == {"form-cw_ga"}
+    assert len(dd) == 79 and {i["payload"]["kind"] for i in dd} == {"form-cw_dd"}
+    assert len({i["key"] for i in ga + dd}) == 86
