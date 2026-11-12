@@ -200,6 +200,18 @@ if _wm:
                      "record_label": "file", "items": [i for i in _wm if i["payload"].get("india_only")],
                      "workers": 4, "threads": 1, "delay_ms": 1000, "geo": "IN", "proxy": "IN"})
 
+# Tamil Nadu public-service and boundary layers on the TNGIS public GeoServer WFS (seeds/tngis_services.json, built by
+# seeds/build_tngis_services.py; dforms/wm2_wfs.py with payload "kind"): police stations and jurisdictions, PDS shops, health
+# facilities, schools, anganwadi, CSC, offices, taluk / block / village / town boundaries. One item = one layer saved ONCE to the
+# bucket (gis/tngis/33/<layer>.geojson.gz). TNGIS answers from abroad (the ward layers ran on GitHub runners): no proxy, no geo.
+# One host for every item: 2 workers.
+_tngis = HERE / "seeds" / "tngis_services.json"
+if _tngis.exists():
+    PROJECTS.append({"name": f"{FAMILY}-tngis", "title": "Tamil Nadu TNGIS service and boundary layers saved once to the bucket",
+                     "task": "wardmaps", "target": f"{FAMILY}-tngis", "env": {}, "probe": None, "unit_label": "layer",
+                     "record_label": "layer", "items": json.loads(_tngis.read_text()), "workers": 2, "threads": 1,
+                     "delay_ms": 2000})
+
 PROBES = []    # many hosts per project: no single health check would mean anything
 
 # District portals that no project read before (seeds/directories_missing.json, 2026-11-11): whoswho items in the sites.csv item

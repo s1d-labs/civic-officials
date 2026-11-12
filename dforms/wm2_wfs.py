@@ -16,14 +16,29 @@ Payload (seeds/wm2_tngis.json):
 Paging: startIndex + count with sortBy on "sort" (default: no sortBy = the server's natural order, stable for one table);
 the run is complete only when the features received = numberMatched of the first page.
 Stored file: wardmaps/<source>/<state>/<chunk>.geojson.gz. Records "wm2_<source>:<state>-<body key>" as in wm2_arcgis.
+
+Other layers (seeds/tngis_services.json, 2026-11-12: police stations and jurisdictions, PDS shops, health facilities, schools,
+anganwadi, CSC / e-Sevai, offices, taluk / block / revenue village / village panchayat / town boundaries): payload "kind"
+(e.g. "police_station", "taluk_boundary") instead of the ward "fields". The layer goes to gis/<source>/<state>/<chunk>.geojson.gz
+and the item writes ONE record "gis_<source>:<state>-<chunk>" = {"type": "gis_layer", "kind", "layer", "file", "features",
+"fields" (every attribute name), "geometry_types", "has_z", "by_district" (when payload "district" names the attribute),
+"expect" (numberMatched at seeding), "one_shot"}. civic-india reads the saved copy (keeps every attribute, UTF-8 Tamil text).
+
+Stable order: a layer without a primary key gives new feature ids on each request, and paging over a non-unique sortBy can
+repeat or skip rows. After paging, the reader checks for repeated ids and repeated features (same properties and geometry);
+on a repeat it asks for the whole layer in ONE request (count = numberMatched, up to ONE_SHOT_MAX) and keeps that answer
+when it has exactly numberMatched features.
 """
+import hashlib
 import json
+from collections import Counter
 from urllib.parse import urlencode
 
 from dforms._wm2_arcgis import store
 from dforms.wm2_arcgis import towns
 
 MAX_PAGES = 400
+ONE_SHOT_MAX = 250000
 
 
 def get_page(get, p, start, count):
@@ -46,8 +61,24 @@ def get_page(get, p, start, count):
     return d, ""
 
 
+def _repeats(feats):
+    """True when a feature id or a whole feature (properties + geometry) comes twice."""
+    ids = [f.get("id") for f in feats if f.get("id") is not None]
+    if len(ids) != len(set(ids)):
+        return True
+    seen = set()
+    for f in feats:
+        h = hashlib.sha1(json.dumps([f.get("properties"), f.get("geometry")], sort_keys=True,
+                                    separators=(",", ":")).encode("utf-8")).digest()
+        if h in seen:
+            return True
+        seen.add(h)
+    return False
+
+
 def page_wfs(get, p):
-    """All features of the layer (and cql), as one FeatureCollection. Returns (fc, why); why is "" on success."""
+    """All features of the layer (and cql), as one FeatureCollection. Returns (fc, why); why is "" on success.
+    fc["one_shot"] is True when the pages repeated features and one whole-layer request replaced them."""
     page = int(p.get("page", 500))
     feats, total = [], None
     for _ in range(MAX_PAGES):
@@ -65,10 +96,46 @@ def page_wfs(get, p):
     fc = {"type": "FeatureCollection", "features": feats}
     if total is not None and len(feats) != total:
         return fc, f"got {len(feats)} of {total} features"
-    ids = [f.get("id") for f in feats if f.get("id") is not None]
-    if len(ids) != len(set(ids)):
-        return fc, "duplicate feature ids across pages (unstable order: set \"sort\")"
+    if len(feats) > page and _repeats(feats):
+        if total is None or total > ONE_SHOT_MAX:
+            return fc, "repeated features across pages (unstable order: set \"sort\")"
+        d, why = get_page(get, p, 0, total)
+        if d is None:
+            return fc, "repeated features across pages; one-request retry failed: " + why
+        got = d.get("features") or []
+        if len(got) != total:
+            return fc, f"repeated features across pages; one-request retry got {len(got)} of {total}"
+        return {"type": "FeatureCollection", "features": got, "one_shot": True}, ""
     return fc, ""
+
+
+def _txt(v):
+    return "" if v is None else str(v).strip()
+
+
+def layer_record(p, fc, path):
+    """The one record of a non-ward layer (payload "kind")."""
+    feats = fc["features"]
+    fields, gtypes, has_z, by_d = {}, Counter(), False, Counter()
+    for f in feats:
+        for k in (f.get("properties") or {}):
+            fields.setdefault(k, None)
+        g = f.get("geometry") or {}
+        gtypes[g.get("type") or "none"] += 1
+        if not has_z:
+            c = g.get("coordinates")
+            while isinstance(c, list) and c and isinstance(c[0], list):
+                c = c[0]
+            has_z = isinstance(c, list) and len(c) > 2
+        if p.get("district"):
+            by_d[_txt((f.get("properties") or {}).get(p["district"])) or "?"] += 1
+    rec = {"type": "gis_layer", "kind": p["kind"], "source": p["source"], "state": str(p.get("state", "XX")),
+           "layer": p["layer"], "url": p["url"], "where": p.get("cql", ""), "file": path, "features": len(feats),
+           "fields": list(fields), "geometry_types": dict(gtypes), "has_z": has_z, "one_shot": bool(fc.get("one_shot")),
+           "expect": p.get("expect"), "sort": p.get("sort", ""), "vintage": p.get("vintage", "")}
+    if p.get("district"):
+        rec["by_district"] = dict(sorted(by_d.items()))
+    return rec
 
 
 def fetch(p, get):
@@ -78,7 +145,11 @@ def fetch(p, get):
     if not fc["features"]:
         return [], [], "no features in " + p["layer"]
     source, state = p["source"], str(p.get("state", "XX"))
-    path, blob, ctype = store(fc, f"wardmaps/{source}/{state}/{p.get('chunk') or p['layer'].split(':')[-1]}")
+    chunk = p.get("chunk") or p["layer"].split(":")[-1]
+    if p.get("kind"):
+        path, blob, ctype = store({"type": "FeatureCollection", "features": fc["features"]}, f"gis/{source}/{state}/{chunk}")
+        return [(f"gis_{source}:{state}-{chunk}", layer_record(p, fc, path))], [(path, blob, ctype)], ""
+    path, blob, ctype = store({"type": "FeatureCollection", "features": fc["features"]}, f"wardmaps/{source}/{state}/{chunk}")
     fields = p.get("fields") or {}
     recs = []
     for key, t in sorted(towns(fc, fields).items()):
