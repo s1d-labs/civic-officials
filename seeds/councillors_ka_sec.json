@@ -1,0 +1,934 @@
+[
+ {
+  "key": "ka-sec-2021-04",
+  "payload": {
+   "kind": "form-ka_sec",
+   "state": "KA",
+   "round": "2021-04",
+   "election": "ULB general election, April 2021",
+   "poll_date": "2021-04-27",
+   "result_date": null,
+   "url": "https://karsec.karnataka.gov.in/FileDoc/PressRelease/All/67/press%20note.pdf",
+   "doc": "SEC press note No. RaChuA 41 IyuBi 2021 of 26-04-2021 (scan)",
+   "sha256": "056ee727c68a261ca2d3f21fa2bd806f13187b42f668ff17c05a848ce446b33e",
+   "pages": 2,
+   "rows": [
+    {
+     "page": 1,
+     "row": 1,
+     "body": "Ballari",
+     "body_kn": "ಬಳ್ಳಾರಿ ಮಹಾನಗರ ಪಾಲಿಕೆ",
+     "body_type": "City Corporation",
+     "district": "Ballari",
+     "lgd_code": "251927",
+     "wards": 39
+    },
+    {
+     "page": 1,
+     "row": 2,
+     "body": "Vijayapura",
+     "body_kn": "ವಿಜಯಪುರ ಪುರಸಭೆ",
+     "body_type": "Town Municipal Council",
+     "district": "Bengaluru Rural",
+     "lgd_code": "251842",
+     "wards": 23
+    },
+    {
+     "page": 1,
+     "row": 3,
+     "body": "Ramanagara",
+     "body_kn": "ರಾಮನಗರ ನಗರಸಭೆ",
+     "body_type": "City Municipal Council",
+     "district": "Bengaluru South",
+     "lgd_code": "253186",
+     "wards": 31
+    },
+    {
+     "page": 1,
+     "row": 4,
+     "body": "Channapatna",
+     "body_kn": "ಚನ್ನಪಟ್ಟಣ ನಗರಸಭೆ",
+     "body_type": "City Municipal Council",
+     "district": "Bengaluru South",
+     "lgd_code": "253185",
+     "wards": 31
+    },
+    {
+     "page": 1,
+     "row": 5,
+     "body": "Gudibanda",
+     "body_kn": "ಗುಡಿಬಂಡೆ ಪಟ್ಟಣ ಪಂಚಾಯತಿ",
+     "body_type": "Town Panchayat",
+     "district": "Chikkaballapura",
+     "lgd_code": "251980",
+     "wards": 11
+    },
+    {
+     "page": 1,
+     "row": 6,
+     "body": "Bhadravati",
+     "body_kn": "ಭದ್ರಾವತಿ ನಗರಸಭೆ",
+     "body_type": "City Municipal Council",
+     "district": "Shivamogga",
+     "lgd_code": "251952",
+     "wards": 35
+    },
+    {
+     "page": 1,
+     "row": 7,
+     "body": "Tirthahalli",
+     "body_kn": "ತೀರ್ಥಹಳ್ಳಿ ಪಟ್ಟಣ ಪಂಚಾಯತಿ",
+     "body_type": "Town Panchayat",
+     "district": "Shivamogga",
+     "lgd_code": "251950",
+     "wards": 15
+    },
+    {
+     "page": 1,
+     "row": 8,
+     "body": "Belur",
+     "body_kn": "ಬೇಲೂರು ಪುರಸಭೆ",
+     "body_type": "Town Municipal Council",
+     "district": "Hassan",
+     "lgd_code": "252009",
+     "wards": 23
+    },
+    {
+     "page": 1,
+     "row": 9,
+     "body": "Madikeri",
+     "body_kn": "ಮಡಿಕೇರಿ ನಗರಸಭೆ",
+     "body_type": "City Municipal Council",
+     "district": "Kodagu",
+     "lgd_code": "252037",
+     "wards": 23
+    },
+    {
+     "page": 1,
+     "row": 10,
+     "body": "Bidar",
+     "body_kn": "ಬೀದರ್ ನಗರಸಭೆ",
+     "body_type": "City Corporation",
+     "district": "Bidar",
+     "lgd_code": "251867",
+     "wards": 35
+    }
+   ]
+  }
+ },
+ {
+  "key": "ka-sec-2021-09",
+  "payload": {
+   "kind": "form-ka_sec",
+   "state": "KA",
+   "round": "2021-09",
+   "election": "ULB general election, September 2021",
+   "poll_date": null,
+   "result_date": "2021-09-06",
+   "url": "https://karsec.karnataka.gov.in/FileDoc/PressRelease/All/70/20210906153501993.pdf",
+   "doc": "SEC press note of 06-09-2021, Form 14 (scan)",
+   "sha256": "ac2c360d06f80cffb8374ea70ddeab5ce723ae767e848a6c236e3bf068055c7d",
+   "pages": 3,
+   "rows": [
+    {
+     "page": 2,
+     "row": 1,
+     "body": "Belagavi",
+     "body_kn": "ಬೆಳಗಾವಿ ಮಹಾನಗರ ಪಾಲಿಕೆ",
+     "body_type": "City Corporation",
+     "district": "Belagavi",
+     "lgd_code": "251824",
+     "wards": 58
+    },
+    {
+     "page": 2,
+     "row": 2,
+     "body": "Hubballi-Dharwad",
+     "body_kn": "ಹುಬ್ಬಳ್ಳಿ-ಧಾರವಾಡ ಮಹಾನಗರ ಪಾಲಿಕೆ",
+     "body_type": "City Corporation",
+     "district": "Dharwad",
+     "lgd_code": "251893",
+     "wards": 82
+    },
+    {
+     "page": 2,
+     "row": 3,
+     "body": "Kalaburagi City Corporation",
+     "body_kn": "ಕಲಬುರಗಿ ಮಹಾನಗರ ಪಾಲಿಕೆ",
+     "body_type": "City Corporation",
+     "district": "Kalaburagi",
+     "lgd_code": "248127",
+     "wards": 55
+    },
+    {
+     "page": 3,
+     "row": 1,
+     "body": "Dod Ballapur",
+     "body_kn": "ದೊಡ್ಡಬಳ್ಳಾಪುರ",
+     "body_type": "City Municipal Council",
+     "district": "Bengaluru Rural",
+     "lgd_code": "251992",
+     "wards": 31
+    },
+    {
+     "page": 3,
+     "row": 2,
+     "body": "Tarikere",
+     "body_kn": "ತರೀಕೆರೆ",
+     "body_type": "Town Municipal Council",
+     "district": "Chikkamagaluru",
+     "lgd_code": "251962",
+     "wards": 23
+    }
+   ]
+  }
+ },
+ {
+  "key": "ka-sec-2021-12",
+  "payload": {
+   "kind": "form-ka_sec",
+   "state": "KA",
+   "round": "2021-12",
+   "election": "ULB general election, December 2021 (58 bodies)",
+   "poll_date": "2021-12-27",
+   "result_date": "2021-12-30",
+   "url": "https://karsec.karnataka.gov.in/FileDoc/PressRelease/All/71/Rural%20%26%20Urban%20Local%20Bodies%20Elections%20-%20Press%20Note.",
+   "doc": "SEC press note No. RaChuA 139 IyuBi 2021 of 27-12-2021, Form 10 (scan)",
+   "sha256": "5977870fff47dcf128c4f62cb9c118dc2e1ae4c38584d9af7d32d975722278cf",
+   "pages": 6,
+   "rows": [
+    {
+     "page": 5,
+     "row": 1,
+     "body": "Hebbugodi",
+     "body_kn": "ಹೆಬ್ಬಗೋಡಿ",
+     "body_type": "City Municipal Council",
+     "district": "Bengaluru Urban",
+     "lgd_code": "276463",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 2,
+     "body": "Jigani",
+     "body_kn": "ಜಿಗಣಿ",
+     "body_type": "Town Municipal Council",
+     "district": "Bengaluru Urban",
+     "lgd_code": "276464",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 3,
+     "body": "Chandapura",
+     "body_kn": "ಚಂದಾಪುರ",
+     "body_type": "Town Municipal Council",
+     "district": "Bengaluru Urban",
+     "lgd_code": "276533",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 4,
+     "body": "Bidadi",
+     "body_kn": "ಬಿಡದಿ",
+     "body_type": "Town Municipal Council",
+     "district": "Bengaluru South",
+     "lgd_code": "276526",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 5,
+     "body": "Nayakanahatti",
+     "body_kn": "ನಾಯಕನ ಹಟ್ಟಿ",
+     "body_type": "Town Panchayat",
+     "district": "Chitradurga",
+     "lgd_code": "276542",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 6,
+     "body": "Malebennuru",
+     "body_kn": "ಮಲೆಬೆನ್ನೂರು",
+     "body_type": "Town Municipal Council",
+     "district": "Davanagere",
+     "lgd_code": "276556",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 7,
+     "body": "Sira",
+     "body_kn": "ಶಿರಾ",
+     "body_type": "City Municipal Council",
+     "district": "Tumakuru",
+     "lgd_code": "251969",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 8,
+     "body": "Vitla",
+     "body_kn": "ವಿಟ್ಲ",
+     "body_type": "Town Panchayat",
+     "district": "Dakshina Kannada",
+     "lgd_code": "276554",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 9,
+     "body": "Kotekar",
+     "body_kn": "ಕೋಟೆಕಾರು",
+     "body_type": "Town Panchayat",
+     "district": "Dakshina Kannada",
+     "lgd_code": "276555",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 10,
+     "body": "Chikkamagaluru",
+     "body_kn": "ಚಿಕ್ಕಮಗಳೂರು",
+     "body_type": "City Municipal Council",
+     "district": "Chikkamagaluru",
+     "lgd_code": "251965",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 11,
+     "body": "Kapu",
+     "body_kn": "ಕಾಪು",
+     "body_type": "Town Municipal Council",
+     "district": "Udupi",
+     "lgd_code": "301055",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 12,
+     "body": "Athni",
+     "body_kn": "ಅಥಣಿ",
+     "body_type": "Town Municipal Council",
+     "district": "Belagavi",
+     "lgd_code": "251812",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 13,
+     "body": "Harogeri",
+     "body_kn": "ಹಾರೋಗೇರಿ",
+     "body_type": "Town Municipal Council",
+     "district": "Belagavi",
+     "lgd_code": "276569",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 14,
+     "body": "Mugalakoda",
+     "body_kn": "ಮುಗಳಖೋಡ",
+     "body_type": "Town Municipal Council",
+     "district": "Belagavi",
+     "lgd_code": "276563",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 15,
+     "body": "Munavalli",
+     "body_kn": "ಮುನವಳ್ಳಿ",
+     "body_type": "Town Municipal Council",
+     "district": "Belagavi",
+     "lgd_code": "276564",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 16,
+     "body": "Ugar Khurda",
+     "body_kn": "ಉಗಾರಖುರ್ದ",
+     "body_type": "Town Municipal Council",
+     "district": "Belagavi",
+     "lgd_code": "276565",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 17,
+     "body": "Mkhubballi",
+     "body_kn": "ಎಂ.ಕೆ. ಹುಬ್ಬಳ್ಳಿ",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "299417",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 18,
+     "body": "Kankanavadi",
+     "body_kn": "ಕಂಕನವಾಡಿ",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "276567",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 19,
+     "body": "Naganur",
+     "body_kn": "ನಾಗನೂರ",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "301061",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 20,
+     "body": "Examba",
+     "body_kn": "ಯಕ್ಸಾಂಬ",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "276575",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 21,
+     "body": "Chennammana Kittur",
+     "body_kn": "ಚೆನ್ನಮ್ಮನ ಕಿತ್ತೂರು",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "276578",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 22,
+     "body": "Arabhavi",
+     "body_kn": "ಅರಭಾವಿ",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "276577",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 23,
+     "body": "Ainapur",
+     "body_kn": "ಐನಾಪುರ",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "276618",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 24,
+     "body": "Shedbala",
+     "body_kn": "ಶೇಡಬಾಳ",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "276579",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 25,
+     "body": "Chinchali",
+     "body_kn": "ಚಿಂಚಿಲಿ",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "276477",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 26,
+     "body": "Boragaon",
+     "body_kn": "ಬೋರಗಾಂವ",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "276583",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 27,
+     "body": "Kallolli",
+     "body_kn": "ಕಲ್ಲೋಳಿ",
+     "body_type": "Town Panchayat",
+     "district": "Belagavi",
+     "lgd_code": "276576",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 28,
+     "body": "Nalatavada",
+     "body_kn": "ನಲತವಾಡ",
+     "body_type": "Town Panchayat",
+     "district": "Vijayapura",
+     "lgd_code": "276544",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 29,
+     "body": "Nidagundi",
+     "body_kn": "ನಿಡಗುಂದಿ",
+     "body_type": "Town Panchayat",
+     "district": "Vijayapura",
+     "lgd_code": "276557",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 30,
+     "body": "Devarahipparagi",
+     "body_kn": "ದೇವರಹಿಪ್ಪರಗಿ",
+     "body_type": "Town Panchayat",
+     "district": "Vijayapura",
+     "lgd_code": "276558",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 31,
+     "body": "Alamela",
+     "body_kn": "ಅಲಮೇಲ",
+     "body_type": "Town Panchayat",
+     "district": "Vijayapura",
+     "lgd_code": "276540",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 32,
+     "body": "Managuli",
+     "body_kn": "ಮನಗೂಳಿ",
+     "body_type": "Town Panchayat",
+     "district": "Vijayapura",
+     "lgd_code": "276541",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 33,
+     "body": "Kolhara",
+     "body_kn": "ಕೋಲ್ಹಾರ",
+     "body_type": "Town Panchayat",
+     "district": "Vijayapura",
+     "lgd_code": "276543",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 34,
+     "body": "Kamatagi",
+     "body_kn": "ಕಮತಗಿ",
+     "body_type": "Town Panchayat",
+     "district": "Bagalkote",
+     "lgd_code": "301079",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 35,
+     "body": "Belagali",
+     "body_kn": "ಬೆಳಗಲಿ",
+     "body_type": "Town Panchayat",
+     "district": "Bagalkote",
+     "lgd_code": "276529",
+     "wards": null
+    },
+    {
+     "page": 5,
+     "row": 36,
+     "body": "Aminagad",
+     "body_kn": "ಅಮೀನಗಡ",
+     "body_type": "Town Panchayat",
+     "district": "Bagalkote",
+     "lgd_code": "276597",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 1,
+     "body": "Annigeri",
+     "body_kn": "ಅಣ್ಣಿಗೇರಿ",
+     "body_type": "Town Municipal Council",
+     "district": "Dharwad",
+     "lgd_code": "251896",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 2,
+     "body": "Gadag-Betigeri",
+     "body_kn": "ಗದಗ-ಬೆಟಗೇರಿ",
+     "body_type": "City Municipal Council",
+     "district": "Gadag",
+     "lgd_code": "251888",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 3,
+     "body": "Bankapura",
+     "body_kn": "ಬಂಕಾಪೂರ",
+     "body_type": "Town Municipal Council",
+     "district": "Haveri",
+     "lgd_code": "251913",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 4,
+     "body": "Guttal",
+     "body_kn": "ಗುತ್ತಲ",
+     "body_type": "Town Panchayat",
+     "district": "Haveri",
+     "lgd_code": "276521",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 5,
+     "body": "Jali",
+     "body_kn": "ಜಾಲಿ",
+     "body_type": "Town Panchayat",
+     "district": "Uttara Kannada",
+     "lgd_code": null,
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 6,
+     "body": "Karatagi",
+     "body_kn": "ಕಾರಟಗಿ",
+     "body_type": "Town Municipal Council",
+     "district": "Koppal",
+     "lgd_code": "276496",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 7,
+     "body": "Tavaragera",
+     "body_kn": "ತಾವರಗೇರ",
+     "body_type": "Town Panchayat",
+     "district": "Koppal",
+     "lgd_code": "276601",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 8,
+     "body": "Kukanooru",
+     "body_kn": "ಕುಕನೂರ",
+     "body_type": "Town Panchayat",
+     "district": "Koppal",
+     "lgd_code": "276497",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 9,
+     "body": "Bhagyanagara",
+     "body_kn": "ಭಾಗ್ಯನಗರ",
+     "body_type": "Town Panchayat",
+     "district": "Koppal",
+     "lgd_code": "276604",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 10,
+     "body": "Kanakgiri",
+     "body_kn": "ಕನಕಗಿರಿ",
+     "body_type": "Town Panchayat",
+     "district": "Koppal",
+     "lgd_code": "276599",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 11,
+     "body": "Kurekuppa",
+     "body_kn": "ಕುರೆಕುಪ್ಪ",
+     "body_type": "Town Municipal Council",
+     "district": "Ballari",
+     "lgd_code": "276538",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 12,
+     "body": "Kurugodu",
+     "body_kn": "ಕುರುಗೋಡು",
+     "body_type": "Town Municipal Council",
+     "district": "Ballari",
+     "lgd_code": "276532",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 13,
+     "body": "Hosapete",
+     "body_kn": "ಹೊಸಪೇಟೆ",
+     "body_type": "City Municipal Council",
+     "district": "Vijayanagara",
+     "lgd_code": "251922",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 14,
+     "body": "Hagaribommanahalli",
+     "body_kn": "ಹಗರಿಬೊಮ್ಮನಹಳ್ಳಿ",
+     "body_type": "Town Municipal Council",
+     "district": "Vijayanagara",
+     "lgd_code": "276535",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 15,
+     "body": "Mariyammanahalli",
+     "body_kn": "ಮರಿಯಮ್ಮನಹಳ್ಳಿ",
+     "body_type": "Town Panchayat",
+     "district": "Vijayanagara",
+     "lgd_code": "276474",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 16,
+     "body": "Maski",
+     "body_kn": "ಮಸ್ಕಿ",
+     "body_type": "Town Municipal Council",
+     "district": "Raichur",
+     "lgd_code": "276519",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 17,
+     "body": "Kavital",
+     "body_kn": "ಕವಿತಾಳ",
+     "body_type": "Town Panchayat",
+     "district": "Raichur",
+     "lgd_code": "276522",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 18,
+     "body": "Turvihal",
+     "body_kn": "ತುರ್ವಿಹಾಳ",
+     "body_type": "Town Panchayat",
+     "district": "Raichur",
+     "lgd_code": "276524",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 19,
+     "body": "Balaganur",
+     "body_kn": "ಬಳಗಾನೂರು",
+     "body_type": "Town Panchayat",
+     "district": "Raichur",
+     "lgd_code": "276523",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 20,
+     "body": "Siravara",
+     "body_kn": "ಸಿರಿವಾರ",
+     "body_type": "Town Panchayat",
+     "district": "Raichur",
+     "lgd_code": "276605",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 21,
+     "body": "Kembhavi",
+     "body_kn": "ಕೆಂಭಾವಿ",
+     "body_type": "Town Municipal Council",
+     "district": "Yadgir",
+     "lgd_code": "276516",
+     "wards": null
+    },
+    {
+     "page": 6,
+     "row": 22,
+     "body": "Kakkera",
+     "body_kn": "ಕಕ್ಕೇರಾ",
+     "body_type": "Town Municipal Council",
+     "district": "Yadgir",
+     "lgd_code": "276560",
+     "wards": null
+    }
+   ]
+  }
+ },
+ {
+  "key": "ka-sec-2022-10",
+  "payload": {
+   "kind": "form-ka_sec",
+   "state": "KA",
+   "round": "2022-10",
+   "election": "Vijayapura City Corporation general election, October 2022",
+   "poll_date": null,
+   "result_date": "2022-10-31",
+   "url": "https://karsec.karnataka.gov.in/FileDoc/PressRelease/All/74/ulb%26gp%20results%20oct%202022.pdf",
+   "doc": "SEC press note No. RaChuA 41 IGP 2022 of 31-10-2022 (scan)",
+   "sha256": "5ebcd016c744ed565b0e8e8d7d93213f7da3677589ebf08d7796dc79348b5b4e",
+   "pages": 5,
+   "rows": [
+    {
+     "page": 2,
+     "row": 1,
+     "body": "Vijayapura",
+     "body_kn": "ವಿಜಯಪುರ ಮಹಾನಗರ ಪಾಲಿಕೆ",
+     "body_type": "City Corporation",
+     "district": "Vijayapura",
+     "lgd_code": "251993",
+     "wards": 35
+    }
+   ]
+  }
+ },
+ {
+  "key": "ka-sec-2025-08",
+  "payload": {
+   "kind": "form-ka_sec",
+   "state": "KA",
+   "round": "2025-08",
+   "election": "ULB general election of new town panchayats, August 2025",
+   "poll_date": "2025-08-17",
+   "result_date": "2025-08-20",
+   "url": "https://karsec.karnataka.gov.in/Document/Files/%E0%B2%AA%E0%B2%A4%E0%B3%8D%E0%B2%B0%E0%B2%BF%E0%B2%95%E0%B2%BE%20%E0%B2%AA%E0%B3%8D%E0%B2%B0%E0%B2%95%E0%B2%9F%E0%B2%A3%E0%B3%86%20-%E0%B2%A6%E0%B2%BF%E0%B2%A8%E0%B2%BE%E0%B2%82%E0%B2%95%2020-8-2025%20%E0%B2%B0%20%E0%B2%AB%E0%B2%B2%E0%B2%BF%E0%B2%A4%E0%B2%BE%E0%B2%82%E0%B2%B6",
+   "doc": "SEC press note No. SECK/ULB/GELN/1/2025-ULB of 20-08-2025, annex 1 (scan)",
+   "sha256": "91cb96020752a970e5e694313efe1804e5ba08a06928cfc8f3dc85ebd6eb2375",
+   "pages": 2,
+   "rows": [
+    {
+     "page": 2,
+     "row": 1,
+     "body": "Vemgal-Kurugol",
+     "body_kn": "ವೇಮಗಲ್ ಕುರುಗಲ್",
+     "body_type": "Town Panchayat",
+     "district": "Kolar",
+     "lgd_code": "301054",
+     "wards": 17
+    },
+    {
+     "page": 2,
+     "row": 2,
+     "body": "Ajjampura",
+     "body_kn": "ಅಜ್ಜಂಪುರ",
+     "body_type": "Town Panchayat",
+     "district": "Chikkamagaluru",
+     "lgd_code": "296977",
+     "wards": 11
+    },
+    {
+     "page": 2,
+     "row": 3,
+     "body": "Kadaba",
+     "body_kn": "ಕಡಬ",
+     "body_type": "Town Panchayat",
+     "district": "Dakshina Kannada",
+     "lgd_code": "296954",
+     "wards": 13
+    },
+    {
+     "page": 2,
+     "row": 4,
+     "body": "Rattihalli",
+     "body_kn": "ರಟ್ಟಿಹಳ್ಳಿ",
+     "body_type": "Town Panchayat",
+     "district": "Haveri",
+     "lgd_code": "296955",
+     "wards": 15
+    },
+    {
+     "page": 2,
+     "row": 5,
+     "body": "Kalagi",
+     "body_kn": "ಕಾಳಗಿ",
+     "body_type": "Town Panchayat",
+     "district": "Kalaburagi",
+     "lgd_code": "296978",
+     "wards": 11
+    }
+   ]
+  }
+ },
+ {
+  "key": "ka-sec-2025-12",
+  "payload": {
+   "kind": "form-ka_sec",
+   "state": "KA",
+   "round": "2025-12",
+   "election": "ULB general election of new town panchayats, December 2025",
+   "poll_date": null,
+   "result_date": "2025-12-24",
+   "url": "https://karsec.karnataka.gov.in/Document/Files/ULB%20Result%20Press%20Note",
+   "doc": "SEC press note No. SECK/ULB/GELN/2/2025-ULB of 24-12-2025, annex 1 (scan)",
+   "sha256": "44d93abbbc011aece5da071bda92642902e49f644092048038855d61580d8158",
+   "pages": 2,
+   "rows": [
+    {
+     "page": 2,
+     "row": 1,
+     "body": "Bashettihalli",
+     "body_kn": "ಬಾಶೆಟ್ಟಿಹಳ್ಳಿ",
+     "body_type": "Town Panchayat",
+     "district": "Bengaluru Rural",
+     "lgd_code": "299169",
+     "wards": 19
+    },
+    {
+     "page": 2,
+     "row": 2,
+     "body": "Bajape",
+     "body_kn": "ಬಜಪೆ",
+     "body_type": "Town Panchayat",
+     "district": "Dakshina Kannada",
+     "lgd_code": "299320",
+     "wards": 19
+    },
+    {
+     "page": 2,
+     "row": 3,
+     "body": "Kinnigoli",
+     "body_kn": "ಕಿನ್ನಿಗೋಳಿ",
+     "body_type": "Town Panchayat",
+     "district": "Dakshina Kannada",
+     "lgd_code": "299321",
+     "wards": 18
+    },
+    {
+     "page": 2,
+     "row": 4,
+     "body": "Manki",
+     "body_kn": "ಮಂಕಿ",
+     "body_type": "Town Panchayat",
+     "district": "Uttara Kannada",
+     "lgd_code": "299328",
+     "wards": 20
+    }
+   ]
+  }
+ }
+]

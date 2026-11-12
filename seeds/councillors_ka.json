@@ -4616,5 +4616,20 @@
    "lgd_code": "251903",
    "slug": "yellapur-town-panchayat"
   }
+ },
+ {
+  "key": "ka-aminagad-town-panchayat",
+  "payload": {
+   "kind": "form-ka",
+   "state": "KA",
+   "url": "http://www.aminagadtown.mrc.gov.in/en/council-members",
+   "host": "www.aminagadtown.mrc.gov.in",
+   "path": "council-members",
+   "body": "Aminagad Town Panchayat",
+   "body_type": "Town Panchayat",
+   "district": "Bagalkote",
+   "lgd_code": "276597",
+   "slug": "aminagad-town-panchayat"
+  }
  }
 ]

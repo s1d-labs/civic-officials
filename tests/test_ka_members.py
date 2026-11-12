@@ -51,3 +51,29 @@ def test_https_refused_goes_to_http():
     assert councillors.https_refused("https://a.mrc.gov.in/", rq.exceptions.ConnectionError("Connection refused"))
     assert not councillors.https_refused("https://a.mrc.gov.in/", rq.exceptions.ConnectTimeout("timed out"))
     assert not councillors.https_refused("http://a.mrc.gov.in/", rq.exceptions.ConnectionError("Connection refused"))
+
+
+def test_message_page_names_administrator(monkeypatch):
+    """Shivamogga (saved 2026-11-13): the council page lists no member; the home page's "Mayor's Message" link
+    (/en/administrator-message) names the Administrator -> body_status administrator with the message page as source."""
+    from esw_common import Answer
+    monkeypatch.setattr(ka, "_base", lambda p: "http://www.shivamoggacity.mrc.gov.in")
+    pages = {"http://www.shivamoggacity.mrc.gov.in/en": (DATA / "ka" / "shivamogga_home.html").read_bytes(),
+             "http://www.shivamoggacity.mrc.gov.in/en/administrator-message": (DATA / "ka" / "shivamogga_admin_message.html").read_bytes()}
+    empty = b"<html><article><p>Council Members</p></article></html>"
+    p = {"host": "www.shivamoggacity.mrc.gov.in", "url": "http://www.shivamoggacity.mrc.gov.in/en/council-members",
+         "slug": "shivamogga-city-corporation", "body": "Shivamogga City Corporation", "lgd_code": "251951"}
+    seen = []
+
+    def get(url, **kw):
+        seen.append(url)
+        return Answer(pages.get(url, empty), url)
+    assert ka.message_links(pages["http://www.shivamoggacity.mrc.gov.in/en"].decode(), "http://www.shivamoggacity.mrc.gov.in") == \
+        ["http://www.shivamoggacity.mrc.gov.in/en/administrator-message"]
+    recs, files, why = ka.fetch(p, get)
+    assert why == "" and len(recs) == 1 and seen[-1].endswith("/en/administrator-message")
+    rid, d = recs[0]
+    assert rid == "body_status:KA:shivamogga-city-corporation" and d["status"] == "administrator"
+    assert "Administrator , Shivamogga City Corporation" in d["administrator"] and d["url"].endswith("/administrator-message")
+    assert d["src_url"].endswith("/administrator-message") and len(files) == 3
+    assert ka.admin_message("<article>Message of the President, Smt. X</article>") is None
