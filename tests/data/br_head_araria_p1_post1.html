@@ -1,0 +1,572 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta charset="utf-8" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><title>
+	:: State Election Commission ::
+</title><meta content="State,Election,Commission,Bihar" />
+
+    <!-- Favicons -->
+    <link href="img/favicon.ico" rel="icon" /><link href="img/favicon.ico" rel="apple-touch-icon" />
+   
+    <script src="cdn/jquery-3.3.1.slim.min.js"></script>
+    <link href="cdn/bootstrap.min.css" rel="stylesheet" />
+    <script src="cdn/jquery-3.3.1.slim.min.js"></script>
+    <script src="cdn/popper.min.js"></script>
+    <script src="cdn/bootstrap.min.js"></script>
+    <link href="cdn/all.css" rel="stylesheet" /><link href="cdn/jquery.dataTables.min.css" rel="stylesheet" />
+    <style>
+       
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+            .topnav a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+                /*margin-left:119px;*/
+            }
+
+                .topnav a:hover {
+                    background-color: #ddd;
+                    color: black;
+                }
+
+                .topnav a.active {
+                    background-color: #4CAF50;
+                    color: white;
+                }
+
+            .topnav .icon {
+                display: none;
+            }
+
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:first-child) {
+                display: none;
+            }
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {
+                position: relative;
+            }
+
+                .topnav.responsive .icon {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+
+                .topnav.responsive a {
+                    float: none;
+                    display: block;
+                    text-align: left;
+                }
+        }
+    </style>
+    
+    <link href="cdn/sweetalert.min.css" rel="stylesheet" />
+    <script src="cdn/sweetalert.min.js"></script>
+    <script>
+        function ShowMessage(message, messagetype, url) {
+            var toTitleCase = function (str) {
+                str = str.toLowerCase().split(' ');
+                for (var i = 0; i < str.length; i++) {
+                    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+                }
+                return str.join(' ');
+            };
+            if (url == "") {
+                url = "javascript:;";
+            }
+            switch (messagetype) {
+                case 'success':
+                    swal({
+                        title: toTitleCase(messagetype) + " !",
+                        text: message,
+                        icon: messagetype,
+                        button: "OK",
+                    }).then(function () {
+                        window.parent.location.href = url;
+                    });
+
+                    break;
+                case 'Error':
+                    swal({
+                        title: toTitleCase(messagetype) + " !",
+                        text: message,
+                        icon: messagetype,
+                        button: "OK",
+                    }).then(function () {
+                        window.location = url;
+                    });
+                    break;
+                case 'Warning':
+                    swal({
+                        title: toTitleCase(messagetype) + " !",
+                        text: message,
+                        icon: messagetype,
+                        button: "OK",
+                    }).then(function () {
+                        window.location = url;
+                    });
+                    break;
+                default:
+                    swal({
+                        title: toTitleCase(messagetype) + " !",
+                        text: message,
+                        icon: messagetype,
+                        button: "OK",
+                    }).then(function () {
+                        window.location = url;
+                    });
+            }
+
+        };
+    </script>
+    
+    
+    
+    <link href="cdn/sweetalert.min.css" rel="stylesheet" />
+    <script src="cdn/sweetalert.min.js"></script>
+    <link href="cdn/select2.min.css" rel="stylesheet" />
+    <script src="cdn/select2.min.js"></script>
+    <script>
+        function ShowMessage(message, messagetype, url) {
+            var toTitleCase = function (str) {
+                str = str.toLowerCase().split(' ');
+                for (var i = 0; i < str.length; i++) {
+                    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+                }
+                return str.join(' ');
+            };
+            if (url == "") {
+                url = "javascript:;";
+            }
+            switch (messagetype) {
+                case 'success':
+                    swal({
+                        title: toTitleCase(messagetype) + " !",
+                        text: message,
+                        icon: messagetype,
+                        button: "OK",
+                    }).then(function () {
+                        //window.parent.location.href = url;
+                        window.open(url, '_blank');
+                    });
+
+                    break;
+                case 'Error':
+                    swal({
+                        title: toTitleCase(messagetype) + " !",
+                        text: message,
+                        icon: messagetype,
+                        button: "OK",
+                    }).then(function () {
+                        window.location = url;
+                    });
+                    break;
+                case 'Warning':
+                    swal({
+                        title: toTitleCase(messagetype) + " !",
+                        text: message,
+                        icon: messagetype,
+                        button: "OK",
+                    }).then(function () {
+                        window.location = url;
+                    });
+                    break;
+                default:
+                    swal({
+                        title: toTitleCase(messagetype) + " !",
+                        text: message,
+                        icon: messagetype,
+                        button: "OK",
+                    }).then(function () {
+                        window.location = url;
+                    });
+            }
+
+        };
+
+    </script>
+    <style>
+        .underline {
+            text-decoration-line: underline;
+            text-decoration-style: dotted;
+        }
+
+        .label {
+            font-size: 10pt;
+            font-weight: bold;
+            font-family: Arial;
+        }
+
+        .contents {
+            border: 1px dotted black;
+            padding: 5px;
+            width: 300px;
+        }
+
+        .swal-text {
+            font-size: 25px;
+        }
+
+        .name {
+            color: #741830;
+        }
+
+        .left {
+            float: left;
+            width: 50px;
+            height: 50px;
+        }
+
+        .right {
+            margin-left: 60px;
+            line-height: 50px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .noborder, .noborder td {
+            border: none;
+        }
+
+        tr, th, td {
+            text-align: center;
+        }
+
+        .btn-info {
+            color: #fff;
+            background-color: #4682B4;
+            border-color: #4682B4;
+        }
+
+        .form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2d2727;
+    background-color: #d29d9d6b;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 1.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+        .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.6rem;
+    font-family: inherit;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #741830;
+}
+        .text-primary{
+            color: #741830;
+            font-weight: 600;
+        }
+
+        label{
+            color: #741830;
+            font-weight: 600;
+            /*font-size:large;*/
+        }
+
+    </style>
+<link href="Images/SEC.png" type="image/x-icon" rel="icon" /></head>
+<body>
+    <form name="aspnetForm" method="post" action="./ResultP1.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="FHoG3i/E5uI2/LYLwOB+ZyTRuXgcHC66h3HYPBMqyoUhYD752vtbZISD01hf4Fz9dHUNsMs7TA3KIOEZEMmCi2PULVNg1U9Y14Kwmp9+7+KCe7DcIX/KzxKiA8sLhDMzskO6ZlC30KWW3V7Iqhgo1dNFmbQrQmOZxW6g4MR8JM5IkZpkFUKpH4kCSuEfRUXftbIsyP3TxJMYj32O9WuOTMF3gZjbdzI+g8BtBz8FBV6b4fiA+crBiCkUmEdEdEjOeLN6UppIGWlSs/KCnB2C21sBsC3//etgjXtsBKnV55K6H6QP8RbjHnEA/3Uv0TLFNsvFha4X/8hZA+u83BlVKED3+26aAGeDgHNTAgHxzSi2IqOUdjAP67/dF/cUs4VPxq6Va2aoyHIT3kvGDU+SX1TI0jKEx1lVQtULDbZAGv8USmpe2n49ooDC3Dy+Lb2ff9GtBdcoaLjidZ/ryLdAy56y8YajKnX3DQgvlpLK3xq60WKc4Z1t7xt7Zwvv9RHYlQUALqVDzOUzzsM8gZ/AUhniw7mwBxd7NhZ4qxb69WjtkzeL5biJlEObEUAGCG4dIzDnZo3F0guCKZ921nD/KKbugT4Y2YxrDItIhzorMHIVqIpFZKG8lvdE6eSx9jXEdJEsC+tQaFz+cnzPUvJR20OsRmD+GXjB7mf52+77vF2WloqM5TMbBoKVzFgZCXy2C8AJpNvj1ZcWmt1QDfOv8k82hxoQo2OPxpC7O4OFo+xK+fVUR6OgUQrpFwznwG6axXlwlTzsO7kqK5+97u8NV1Jh4evjvscTX2Pu7EPgz5XuQ8aSeJ3SZx7D3AaKTlPIo484TzF61sZAa7YN4fhJ5Aa/CP3qYcbvbGh79HqjgpIxfU+cfOupUPtbxBjfv41o2ybmn5YCdpSLxNSQUjyePHddcsbxTZSX/TYZ+N4Pc7sySj0xw/EkQszO3eRfvSEIYWP1x5xwUEjBWk28vc6yNd9EPooGa34CYdCgLw8amfghJHS+rO0mg5Ucdc+38apbUqGrbOTKgMh5oiqogRfOG4vTRQwevwiup0hvcV8HxiKPchtp4qceyJTW8X1t5A/GcLWY8S5Fik63mjJeVmZn8hLg5hFkERKI+dli9ktiTih/BOotIQRPaZhgeK8FX7P9qdliqkE7+FiADA929QfAbX+oXtRAgWBl4IrZfHhcMFiVqWeI+sGv1jsiwmvLxpYtN6c/GkNHJrcWM4s3gMJlC/eKAhqIY97qfG9mup3lUrVguGS5n3IhgAlDdY+/6SUJ+dgNYxHfoltdSWutsuBIVyp7qRUp7nxcxhZKfbUR2DTQV9UMLgIBCqKyGa/7s8qmfVR+xo8HXzJzBBEYuwSKHPjs6e1KQFLL5WFWOxSZxE/t/hQ33lZpxfGx4xrOB3Flf7GS+EHzKmfNjxYN/0SF7z9VKY+UUK+2RCp43pFf1fWe/oBT/n9Q9WP5vFVDGTaZq7VvOx0E1SjVQD1eIDgupTIuz0xtM+yEYyNFv4D4U+5ZoRVqMaiXDWi9SSXGpCO42OBfQz0SVPQEyQnoajPxJLdNa9U8kPUcJk3R9fWAE6UWX1MAqzN1ZLKiDbuOybmFTwm34pdcQhn9ogPv+RIYD4odjcxLVz9fXa1ySA7RNmYiPSUfkL5znEDYSkERGvIkaZZDEE2Z2MftIyUTECDiAqsibLyKaThhyxapY/Yt++gNLyt1xJ7FAnjJLq9kRVAKorhGvuOAcHaPDzedNLQjvqziJQE6tCZJbwy+G18nF/poPslIqbwczeVtfrizWP5XVzkA4bYo008s6IhHwLpWDtpgaiHIvWPRhjJN37VF6mg39IVIE27tpH2TEgiw7W68ugBrOZDUfsOg22hiYx2DO6J2yA7joxlm7GVpjbwUblAwfrYFBE4l/bo/bstdKmRjs1u7fURLQAh3d9Z7ifjEor2ZU0lhTBxPRRJbyZDio8SEzVTNkSCvY8NiiRrBOyegtk2zotjdCckn8v8NFlTpT2+E8/dEBM05hegrwZMxK4fd7i6GXqegnbc1AoDh6atxIzjJoNTCKqfy/kQH5LAiNzSe28+NWDNc0xs/qXveXDT81Pm7/vhglVAAEI9titETklC4+2E1hhHFCW/V0UgRQGV/IJbCuztdaj0U01YzwLqfPSK5CRkPyIqqWLwUEJImS89+PzFa5q1C/wPCMuijcncFSHwDegx0BK7RaPi4z42Ee/WArsiP6JdcZZevV9BPuVzfLPCvl+vX2yAD98hO47WOETt9N0RV446yUDpur1inKe3FqXgFLRDJlAMfp4JRFQVUG8Jy41lJYk7THsy35sGUehMV+lgeMEP4w6LYdQ6dnujUpa77AEUGfLpXu0jEnOt2/Vogt2IdzXn+IueoMz4g6ONoee1SuTHSbiz+c3UgnW+49FxDiFijBY3ZRlMUkywh8hrtIPYEObvTn75sdSUDnggIe7CUFlBZYKbzBAnplQnnPeF9FTRHLR4Mj8cTyGY4hZIYCODlo4HuSFexjQFRLHgJi/hinT73clfuSnqibIM+17cQsRW08ADbJa4ZLiNcLLhNOjEdoWNTxOAxOJkCV4HhCov6IALGfA9GCQqPBdc9QT1qPiQZ+c0dgt3rR9s1zdX0pBRmsROhBmGj5d0yPUc0kAEfVTl1vWUcyJXDa11v4duBHmK+D5rf/6Tz2Js8ol0HyG1LLzaXJH+iYJmaGoLZRgp9hOZbKvfdNWHJ0H8z9HEeazV+a5mJOdudkcXKIXdh/qSd3BkluPGg8TepHzalkXqW7bki+pkAQeku+d8/Xy6TaWRugt4EJXAaXnKmsJj/ZkG42hui2D6yiVm5Qx1fMHcwY0iqOG+DBjvVUGY2ugNffiuZ4r2Up8ZJY8Y/hKE6grY7lrcla+P24c4gNcGa/RBBzAgmwr0Ce+pO4aGdwE5FroK9JNQVQV9u/GG13Ty8KtCI0HH1RQ6QY/WcAC1kSFE+9NPZAp4f296xinC/B92+CEPkcdb5pP3PsX5LHsD1MN8R4gdPfezdrK8k6uCM41ZZ8LRthijBAphzktF/0ayijnDhneB1eNEQQzFR+4ngMUQEzppgRVW65aKYHLR0NL4hQh0iN9SZ5gawnniSY9HcH4eumZFqdYAP41zwFYsAPZxic1AUAQFdULPlj3UX5bi+kKgafeEhBl9dcLiyWgY33gxSPGTJL1Z+FVMT2k/S/2BK3AZOPj/5gwZD5UZ8mOe/7dI2A7jrVhKvE5z7F/VU94ZbsBG6qWuiF7OI5Sw43Ek/9iDNnEwZJ2eM/ebGQH1dgSq8YiytUmGsRp0uGVt29OxjnT0tAhWG3bs4aBsEM2eD1AiiZ0rAMj/9RsveY75R6nE7EORGNu4ePVKnsvsWyo9plykBQHdwIpsd1UxyGhch7ByA7lB68uW2nxUc5dcryykysVMxufsZ2nP2DziXw+MlFdt5yiceHMsfliBazQoUcrDFYhsDC4m+LuOzBz2Ao/OLozvXNC1bDS/8fRRwfd3Rud1n87ro5WtpDBysJoJMYhXTO64oi9u5rIgDIyWz87kN1tNqiaXQ+n8ZncuruZgibd8RI7pF8bhyWDrPMtwjAJG4bwgNgGGS2OYonxR56qdbGg6lEDx8rqwt3iOStvvbPytke5G2wpy5Y09p4rV+mXxFa1QRSLWmRkPKRhEP+3d8e75nWJOGMiHhTDYlTl4pwgj9kY+vFM788g0NxHN+zY1Zj9lAcGNVtb4f9Tx8O+JdZCmu/N2oPZ+jbrs/eKupmGy7Zhh4M2bW5RTtK7E2psyPX5jfxzXdUjGtJ09SCxk3R7x5/dfcc61peBQXt+69elfWDOeav06UwxiJhy57t80s64TTIK0MFRxfI6DxxGNU8gy4qnTp8/pp8sSNiVGpDU+WSSgwn7kLHW5DivJ8t9J4WFL45/0FCF/6iXIRcAQhl2UHUxSxBep5cI9gz9LZH8lGtHgFTyMYuW+zqeU+pvwttY2EidPqmhEajNyP0YufQQnFCaJXYVqGqKdUvMG8Bd4tQ2XoYDRsd8lyyviBdGDzgh1vRT/sgOHQRYGFjuh15g+R4gPvqpp/iayIOAnyRlRI3PUuYyUIhV0fiOHt0coEZgAPMcxshlXM01LP/oqas5N2WbT51SmE7DHDKUa1QsPAtf/iFQ73noC2xrQFvA8Puz87MC8HCuc1e5rla1O1GohEp5N2LW2AEW/umgLjEPRs0HS1bdy7Du0c319GzCoUqRwpZ3w+6rV/aTwwNwwM2haWVfY+hxqMXtq9/Bdi6jLCFxZTgqLXjDcxyj7qAnYQSwe5G03XBxH6RDsLCtaklFHZ0jDkZAcSr5H46/d2urCK9boQPGE+A4IMz7eIUHjexF3DbDy8GasH7NCkghpqXC8ICv9b/ETp+6o6sT2VVkIf4un7dht97xavqMtkT+46Ijo1KPaAKzIoELSCN7w7RSxgZWiSzuu0XFEsLTBZF1c5RWSBubxYXab3y9xLuPjPzy0Qe70zG5ljK3acbhEWkG7xGUFHdjCmiO1bjxk5ok9WrereJsLUmLQlY5B/mBZ2rOlOj6TZxy+p+YNiEmex86ny+i6NRyUieEronG6FdXgACoOMfRpfyWLKnam14Nu+da8nnagMO2juKzJmSAKBv7ZVRpvKg47vOARRALULS0ypiUI0bFeX+rX8AkVoWrasDR0MET+Fyy9ckudgaGjP0Yk8fOboz/bGlUfcjX71hfhwLbyDDmqwMnw/jSLYaeQpKtGifALI8pelIfPlWyeVE2dD+tufF7Jya/dLDh5Tsmo9mQvZpRtYltps/8LyZ1gMj5HO+DejZchIkxv9aX8pe3VPkXm9E0ZAlJyknL8eCwBSwvUJUtZInRxP+U6cJSInBsT1mqFXeVACEOhMGEv+84DLWG70HBN17QZCHoTqnj/QwPi+mm+vdXrSb+6GPlkOjhRca2dx25UUBTHD/UdO1Kh3rggB0KjsFxYxDbRqx1s8pjMCkBVSl2tqEuXeTGg+EMPq75AsOYFwJrYy55+B0rGHs5fOT+OuTCj/IljjLaKy4nUFvzGSJ/cu+1OgxIYQ25nKicI+tQwNIlz36VEM1DsNIcx6zorlg1wydCHgrojr44yVE51NNx3XHZxTy9Hjl3RZCRNNwyQMZic5hWBHsoHDGU1/ZO9q6OcqFXONboePzn2EEMKWwIiF8CpFGHagbC5FgUKD2fLDwYc8GBTsBFWJVhocUMjAYzKTXP93L2ov/Tyw82lNPTisgMY6PT6pr3mktL/A21rXmVEHedrY4MOqgZZzZ4HO8XrCz8Yo0XzyT9sFfTzue2ux251nKmtprf3UPIPARl6WcLwLNpYrj1bSUD3QXCxM1WcXcxj6IVLPIt9p0zmDojZEzjRoOcnRwZxuaFyWkha3pB3XYZuemZgRAxi6bv0DfQeOBIN4tqgnDgZMtucFzpLz4hkU2M2aGWatO9J5LZQAu3L8EGQAfNXiTANjmuNR0UpV4FFBT8PgmddSi5Ei4QC6Lt2C1IYD1aKrhTt1667h6K/GF+mq8VCWKdxAvL1DfWmRHfOd3QEXV+V9TwwmkdGybBJ+LTN2rf+7BaA8HRyaJHbkMocP+oK9XTSPwfDLu02EG1bdiqjpklQ/VdLpUJLVjO0hynlpUoipyWiZyXOtHx2MmLM2wIZWCry4I5MZEM9hc7DOxI7rBI9twPT8i3r4vempcHeLpbaGWH7rf1QN2OOlK1wBxCyZiPYZBWO+5lx42HxprSvi/pwMcYWRORimNSxjRX5S6RVPGFAoIjye/Ji7o6ARk2aCumxld8KuHbhcKzh4wndLsHWKl+D2lg4NiE1I+RnURiFOAs97/nflHWVIFM3mAicSToiFHcDniI5/4robedV4NaFW2YeqPRNFjvRXbvwiBqN63GnxiFB17YZkdA5hQliATLLsGzgNXBZ+N0H408d84TzdjgZB5VU+rrLToZTXXtDWLvszUmYFFYR0CcO1FY6qvPhhKJ4eZWAGwatDTpX8ybi32ppa1L4PjAySMM38EJ5Q2LhWIblUJ4obkw7wZv3fMbZYNBnZsmEafO0OKdTchk/G2c4fCuWRBuxg3OtlrS06xbaOzPePD0NJqe8/7qKG87MAJOC600611Fr1xhbZ0D6RBXCGeyOSm5EPYWNC7goNVxdOWHMISc61GZnYoHnXDEwrOY84JGxRamVXjsbZEL1tlBy+3dCHYEbl0/dajOrthoNnnkFlp55N3C8i8bQl8IxCS7eiEw+m2cirgSYQqJ07dsaTpv8RSSrTSeDitoim+emEod/+/BsqpaI6ZzLn1h671gQ2EFrVQKrkQre/vsUqr9I2qhUDZ21ZYtZE3m8DlAe7RulSilHe5Stbmx+e9+hPFNaSJOXeB35tzTh3pP3DMQP/ybBPMlzkWBiezjvvZlxBM3HBb8F4XrklvdYboVTnFucxDYMUzOCvUeyAFge+Tvp8YMSqBlx1eSc5vt3UZdVCL1ZAIgWO6s4LM52mqU5dvQtzHaE/1dVt9yzEBuC9vma+a0nb5Cnr3V1rJyTKcW2WKsalNUD9jj8akpM+oEDbJRofreVPkGKH/y0Jq5iBMl6xB2VpkSqFkgsQZ72FruHwW2pOxhG5uXHsyxoDcuvZGEqZYqfwa4z+UjbkIwgux9ceNTkYa5W/t83dQHW4MrEiPNIApmg/vTviEn9RxY7dznUlpi3ojgs9t13qCTAKKTdU0FiAEG7zVe90q2xx+jl1eBo7bcQ5+I5NdcIJ5uugFCB+l8I510qOay3M3yE0pxVe8tVKpAdZ3oiB5wDpGw0IB1tjlmyr2CaHbuNn2MiFATavSmT/zYSKyZ1LUJEqyClFY+4ETm50bxYABd4QHzeMaKxJZc+YbVt15cEe8NyHrEZ2vPrlIMJMbyurFxzOSa93QlpMgCZ2auRCyGU4I5mrO3lkqAlW/fLK6ZnI5jGFlVOjbqwISbJtdk1itiBaL0JjFut+n400/98vylHu7SYrgmFyKh52JZ7uSs+c9biVZ2/A/JBkfOi0xuN/q0/C8oN7pF5hHQA4pR8iG8UhUf3kaq8SQF20cKwxlxWhHhCtfG4H7ZVxMHyU7tI9as5CtQLB5yW8rAI8gPpTWOmI4cIE9um3TgslQ/MJhVn9rjvk8oY8c7f5pM2WJz9Qoa3PQNCD7L+7IWl5Qfykt9ZNbmA2GmFXhWUEhg7u66jS25GyUODvefzJZBM9zsjVqIIhtwRMr4auZJc8zVkJtmENiWTRMHm1mZwjcD+ZPpsY9PZ3j5WFQVAzP3AzXCqQhgxzlcCRPQp7xoNqgHgF88rfp/fWwCbwwMsrBn+UP1XY3/rnJWHLOcq/edq8GzlSQs2+KrVOw4YqYgx1Ogg+wwMnf3w0QTbjAQBUVGAAMXHdLIShRjhbjlVYgmq/S5KkO6Olmw+wiM+QTt/FgfykiDkV+2VIqv82u75h9qqJy2MkLijLyF0zZjETvbwXNNkr0H6fPs09Ryfv/+Yo6rYf/lg7GUjD1/UcFomXW6xTS7Nj8ZdfFzB4uII60X6AtIqQxtZzkwroJzUTQ6L5KObCBW2mYSQTstDMmppBhWIKLqxUBeRcfbDiAypmvqyyysnAH1NDQql1xJkOJvQU3Mn5GJSwiR6K4Oo6Mlw7hIV6rZ2X8c3/df7OxcVwQWFlR0rfo7jJY4aBxQnpjJHQL+TOrQbT/JIuuNn8k67/ZPh66Ln7kyK0iQaOcdWiN4Okh3rXkc2ywRHChwd+gZpVzZd1IJar5Yo8CGx5PXYA4K73Otf8q1elb0uAxjRnGSV/ExtlCr14xeLWCIr2b0jGOoYqfLPegTXvwVa7Tj+oZHEnoC/oGnpCdJ/W7lC+8ZqBoo3C3XfRPqOn/gDN107pAaVCcTUDCv7mFP9sQwpqPztut8Z4qf2hdObCPj4GHKcSKgd7BPPo7gBZyHqBJKw4gZD5RvbhWCHYyDGK19MclqKVkk1tNYZbaT6w+RDPx5RtuRWsF9Sqi8SIu89e2Fz1vE6sgZIsSZyOQ0H0bXKl6/40RvPtOBup3yuQRIA58K4p/CbT+GRGTd1Ar7K6V5ALL2Vdi5W+EeVdMBmuuXpx6Oy0TdGebJZmaWTQdqz1t8AGNid2YdDvJaL0nSi8YzuyPx8NSExfo3a9dKQxu4HdBbw9kQFxhr+2TCg3Az7IAD0JqA6xT/FTKXMR39G7W06yLcwIaXEeBfEG7wAzw3u/NO2Ybb+QDLhkDPTkszhv+WCFbouJ9cRYpbC5lSzXcQ9Nr2iwzEeVG1knJKzojLF+NTtZpculKVaVodlJt8hhdXVJbGPF3o7xedbwQ+rYKSj9F0xDg+WpueJy968aXJGy2h/j8iQl+cAG4oWBfO7DgxaZ1SkeA7QwwPaIOrY+3RXYNocT1Wlq7wQdCj4NoNTpomSh86aABd8=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/ForPublic/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMBvRFybDE_Yds4H09bF57usn79P_UD5QkBwYFqdMPaxq82uC4o8hQvrykt0zQ7rlQ2&amp;t=639191031332169432" type="text/javascript"></script>
+
+
+<script src="/ForPublic/ScriptResource.axd?d=D9drwtSJ4hBA6O8UhT6CQiUUMZeWdx-U213PtPawlP4wZDwtuvXt87fqcyJuNx58KfLxc9Ai2CDJ4lvcp7FDxErFgMfgIILf7HDzpuwPd1YZ08JEPevIQMenuvtQfLPfkTy00qX4bMIXm03Rwynl9tW-of7jq3ex_-DJiswFla81&amp;t=ffffffffbec1863d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/ForPublic/ScriptResource.axd?d=JnUc-DEDOM5KzzVKtsL1tbgCxxN4BuKlI3CEZDlu3qeYvkFbIxpPEIeoQubCBaiwLlyuohu2glixFV-qXhjvTAi_ywhkFloYF0hEgi3qikAX5p8vPqQ8miMtkTMLqFYc4P1-iaSJq1zN10ODi0Vk86dgmP0qaZkJh3W_iPgK7olVcywr_j9eVab_yk7rPCgi0&amp;t=ffffffffbec1863d" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="FE3CC900" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="yLNOdAunQXC/JjTTlA2Fx7PcS2nLjnl5H2woOivFIc82EdqwQ2LgqfXa+Qp2u4wbIH6a8ir1AQ0np2fdT7XdECol2s3D9yV9ipiCMzAhLrI1NIqVG3zaozEmxmvZtIVSHXVVenuGAPB27uZ6FQrk5e5QDMhIbsaZstITNRCC8hfTwNhq2rruBMZj5UAZjefsIRWzUiw41fmhnO44pvDcSAbuKeK+iDDP/ZGATJyCq/grYgUJNiATDkBXa8sN3vpmdEKEsiJwzhMgo+sYAz4fvqEYsxmf+TjnwzWZ9EyD86WwhhixJP+4adcfG2q4QWO/tB9lZNth97YIp5DxuRAzAAXz3KQwQQw18Ak3GRjCLtY97v7jpNI2xKL3EyP/GDCQ1F5PQQadR7UUauQlMpDTb4gwBVn6r4JWJF/qtAeT2mzVd19Nfp5meE/+HHGBlYBKlY5Bo+Cw/T5voJ7jsfbve4iIBmtTvDFgy9DznksgvKm4Kb9CBgkhwT93rFCL9tmjK2+TwBv8hVPMZgAlc62aQBU8tXRtya3NUWIlFfJX98I4KgQMjHRSZYevcKWANkS9HaSWLFsrl/s6haMsOXo/dqwMnCLaKUX0wUOFKTBP5xD+zfDaJYCo+48RqR3HbU3WzguHozLjn21ER7ro06z+o2L5wLvxLgtfXOL3ZLs628luVAU5ynpOaPBCL8BvXdAINV0J5iHsKfNJD0D2rVwA/qi+uQyHmp5rKahTzghXs1a571DCpopYlP21JEaTqVOFyoLRoNsyf2K1Cpq07diVTTB1HLB3vuoSdcbe4GdhYFKCuV8XFUC5SPEHv+QAhLwH/SnuA3a0OUisRyPaNRff6t4H+VXgAOvyJTJEfJmYPO3kA46F1+WMSghkBAZecKaSf0LKnfPonZf6vtwNgUeh7YT7yolfG8CCgVvqx/LLURM4e1WyZzOQigbGuwQm/0+DhzBakXCHtihauGcBnjCPdegJt1eVa5ZUlSjGzY2zpA33pq8qK0ioUyBb3LlmFHYIp6q2xLuZcfI4JESpoALtzNpbALQfePeHGSO4zd0pERi7vYDjVYM92GDttNRpwZ/GDByzB6KkS4ZRwdvulSYtxXYCjw27Rj0Yvd4i/ASMdnHCvccol8095glkKH+9+hpFvvYXHj6MlvLhIIietKq8WhNrw5Isodv3qg+NMsBkEkV64qoc8BdPv7o9EsaFAPvHbAM8CLBSfSOGlp5VsvS02YVEsjZNs30FRJEqlBY1KRm3M2Bi5flr5X66IqnYBxCMGFINzu+iqP3KNItyzK5cpMvUnLlQzct+GzuqZywt2t7OX7xrCPyYfV4Wxm/HY3zCrlrNkhEfdOjNEqcU1Ljpdw==" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$sm1', 'aspnetForm', ['tctl00$ContentPlaceHolder1$ctl00',''], [], ['ctl00$ContentPlaceHolder1$btnFilter',''], 90, 'ctl00');
+//]]>
+</script>
+
+        <div>
+            <div style="background-color: #002E5B;padding-left:15px;padding-right:15px;">
+                <div class="row">
+                    <div class="col-md-6">
+                       <a href="http://sec.bihar.gov.in/"><img src="img/sec-light-img.png" alt="SEC" style="max-width: 280px; margin-top: 10px;" /></a>
+                    </div>
+                    <div class="col-md-6">
+                        <br />
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding-bottom:80px;">
+        
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="home"><i class="fas fa-home"></i>&nbsp;Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Result For Phase 1</li>
+        </ol>
+    </nav>
+    <div class="container-fluid">
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfDist" id="ctl00_ContentPlaceHolder1_hfDist" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfBlock" id="ctl00_ContentPlaceHolder1_hfBlock" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfUser" id="ctl00_ContentPlaceHolder1_hfUser" />
+        <input type="hidden" name="ctl00$ContentPlaceHolder1$hfRole" id="ctl00_ContentPlaceHolder1_hfRole" />
+        <div class="card border-primary mb-3">
+            <div class="card-body">
+                <div class="panel-body  text-primary">
+                     <h1 style="line-height: 40px; text-align: center;">नगरपालिका आम निर्वाचन - 2022 </h1>
+                    <div id="ctl00_ContentPlaceHolder1_ctl00">
+	
+                            <div id="ctl00_ContentPlaceHolder1_TopView" class="row">
+                                <div class="col-md-2 nopadding">
+                                    <div class="form-group">
+                                        <label>पद का नाम <span style="color: red">&nbsp;*</span></label>
+                                        <select name="ctl00$ContentPlaceHolder1$ddl_Post" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddl_Post\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_ddl_Post" class="form-control" style="width:100%;">
+		<option value="0">--select--</option>
+		<option selected="selected" value="1">मुख्य पार्षद</option>
+		<option value="2">उप मुख्य पार्षद</option>
+		<option value="3">वार्ड पार्षद</option>
+
+	</select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 nopadding">
+                                    <div class="form-group">
+                                        <label>जिला <span style="color: red">&nbsp;*</span></label>
+                                        <select name="ctl00$ContentPlaceHolder1$ddlDistrict" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlDistrict\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_ddlDistrict" class="form-control" style="width:100%;">
+		<option value="">चुने</option>
+		<option selected="selected" value="7">ARARIA (अररिया)</option>
+		<option value="33">ARWAL (अरवल)</option>
+		<option value="35">AURANGABAD (औरंगाबाद)</option>
+		<option value="23">BANKA (बांका)</option>
+		<option value="20">BEGUSARAI (बेगूसराय)</option>
+		<option value="22">BHAGALPUR (भागलपुर)</option>
+		<option value="29">BHOJPUR (भोजपुर)</option>
+		<option value="30">BUXAR (बक्सर)</option>
+		<option value="13">DARBHANGA (दरभंगा)</option>
+		<option value="36">GAYA (गया)</option>
+		<option value="15">GOPALGANJ (गोपालगंज)</option>
+		<option value="34">JAHANABAD (जहानाबाद)</option>
+		<option value="38">JAMUI (जमुई)</option>
+		<option value="31">KAIMUR (BHABUA) (कैमूर (भभुआ))</option>
+		<option value="10">KATIHAR (कटिहार)</option>
+		<option value="21">KHAGARIA (खगड़िया)</option>
+		<option value="8">KISHANGANJ (किशनगंज)</option>
+		<option value="25">LAKHISARAI (लखीसराय)</option>
+		<option value="11">MADHEPURA (मधेपुरा)</option>
+		<option value="5">MADHUBANI (मधुबनी)</option>
+		<option value="24">MUNGER (मुंगेर)</option>
+		<option value="14">MUZAFFARPUR (मुजफ्फरपुर)</option>
+		<option value="27">NALANDA (नालन्दा)</option>
+		<option value="37">NAWADA (नवादा)</option>
+		<option value="1">PASCHIM CHAMPARAN (पश्चिम चम्पारण)</option>
+		<option value="28">PATNA (पटना)</option>
+		<option value="9">PURNIA (पूर्णियां)</option>
+		<option value="2">PURVI CHAMPARAN (पूर्वी चम्पारण)</option>
+		<option value="32">ROHTAS (रोहतास)</option>
+		<option value="12">SAHARSA (सहरसा)</option>
+		<option value="19">SAMASTIPUR (समस्तीपुर)</option>
+		<option value="17">SARAN (सारण)</option>
+		<option value="26">SHEIKHPURA (शेखपुरा)</option>
+		<option value="3">SHEOHAR (शिवहर)</option>
+		<option value="4">SITAMARHI (सीतामढ़ी)</option>
+		<option value="16">SIWAN (सिवान)</option>
+		<option value="6">SUPAUL (सुपौल)</option>
+		<option value="18">VAISHALI (वैशाली)</option>
+
+	</select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 nopadding">
+                                    <div class="form-group">
+                                        <label>नगर निकाय का प्रकार <span style="color: red">&nbsp;*</span></label>
+                                        <select name="ctl00$ContentPlaceHolder1$ddlNPType" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlNPType\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_ddlNPType" class="form-control" style="width:100%;">
+		<option value="0">--select--</option>
+		<option value="1">नगर निगम</option>
+		<option selected="selected" value="2">नगर परिषद</option>
+		<option value="3">नगर पंचायत</option>
+
+	</select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 nopadding">
+                                    <div id="ctl00_ContentPlaceHolder1_DivPanchayat" class="form-group">
+                                        <label id="ctl00_ContentPlaceHolder1_lbl_Panchayat_DllHeading1">नगर निकाय का नाम<span style="color: red">&nbsp;*</span></label>
+                                        <select name="ctl00$ContentPlaceHolder1$ddlPanchayat" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlPanchayat\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_ddlPanchayat" class="form-control" style="width:100%;">
+		<option value="0">Select</option>
+		<option selected="selected" value="290">नगर परिषद, अररिया </option>
+		<option value="70">नगर परिषद, जोगबनी </option>
+		<option value="346">नगर परिषद, फॉरबिसगंज </option>
+
+	</select>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 nopadding">
+                                    
+                                </div>
+                                <div class="col-md-2 nopadding">
+                                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnFilter" value="Show" id="ctl00_ContentPlaceHolder1_btnFilter" class="btn btn-info" style="margin-top: 32px; width: 100%;" />
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-md-2 nopadding">
+                                
+                            </div>
+                            <div style="text-align: center">
+                                <h1><span id="ctl00_ContentPlaceHolder1_lblMsg"></span></h1>
+                                <h3>RESULT</h3>
+                                <h5 style="float: right; margin-top: -4rem;">
+                                    <h5></h5>
+                                    <div style="overflow-x: scroll;">
+                                        <div>
+		<table cellspacing="0" cellpadding="3" rules="all" border="1" id="ctl00_ContentPlaceHolder1_RPDetails" style="background-color:White;border-color:#CCCCCC;border-width:1px;border-style:None;width:100%;border-collapse:collapse;">
+			<tr style="color:White;background-color:#006699;font-weight:bold;">
+				<th scope="col">जिला</th><th scope="col">अनुमंडल</th><th scope="col">नगर निकाय</th><th scope="col">पद</th><th scope="col">प्रत्याशी का नाम</th><th scope="col">कुल प्राप्त मत</th>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>अब्दुल वहाब अंसारी</td><td>951</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>अमित भगत</td><td>976</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>आलोक कुमार भगत</td><td>4093</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>इमतयाज आलम अंसारी</td><td>7441</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>इल्तुतमिस सुलतान</td><td>557</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>परवेज आलम</td><td>4424</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>प्रमोद कुमार बच्चन</td><td>312</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>बशीर आलम</td><td>2579</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>मुकेश चन्द्र यादव</td><td>1968</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>राजेन्द्र  बेगवानी</td><td>155</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>रीतेश कुमार राय</td><td>2055</td>
+			</tr><tr style="color:#000066;background-color: LightGreen; color: Black">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>विजय कुमार मिश्र (विजेता)</td><td>11197</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>शिव नारायण यादव</td><td>614</td>
+			</tr><tr style="color:#000066;">
+				<td>अररिया</td><td>अररिया</td><td>नगर परिषद, अररिया </td><td>मुख्य पार्षद</td><td>साकिब रेजा</td><td>819</td>
+			</tr>
+		</table>
+	</div>
+                                    </div>
+                                </h5>
+                            </div>
+                        
+</div>
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+
+            </div>
+        <style>
+                .navbar-inverse{
+                    background-image: linear-gradient(to right, #283e55, #076271) !important;
+                }
+                #sidebar-wrapper, .list-group-item {
+                    background-image: linear-gradient(to right, #2e2d36, #312f40, #1f1f36) !important;
+                }
+                .page-footer{
+                    background-color: #e6e4e4;
+                    position:fixed;
+                    bottom:0;
+                    left:0;
+                    width: 100%;
+                    padding-top: 15px;
+                    padding-bottom: 5px;
+                }
+                #menuLogout {
+                    cursor: pointer;
+                    color: #F96A70;
+                    font-weight: bold;
+                }
+            </style>
+
+            <footer class="page-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <p>Powered by : <a
+                                href="http://ser.org.in/" target="_blank" class="color-white" >Software Education Research Pvt Ltd.</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        
+        
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </form>
+</body>
+</html>
