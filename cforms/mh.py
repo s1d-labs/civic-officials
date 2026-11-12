@@ -10,6 +10,10 @@ drawn cell borders (cforms/gj.py), every cell is read by Tesseract (mar), and ea
 cells hold (seat letters, reservation words, party names, vote counts). Ward and vote numbers come from the text layer when
 it has them (digits survive), else from OCR.
 One queue item = one notice and up to 6 pages. The site answers only from India.
+The other corporations published in their division's "Part -1 A" extraordinary supplement of 19 Jan 2026 (payload division
+3 Pune, 4 Nashik, 7 Aurangabad; section "3"), several corporations in one notice: payload "first"/"last" give the pages of
+one corporation and "lgd_code" its LGD body; "store" keeps the file in the bucket when the item does not start at page 1.
+Notices of Nagpur and Amravati divisions have no ruled table: cforms/mh_gztext.py reads them from the text layer.
 """
 import collections
 import hashlib
@@ -256,6 +260,8 @@ def parse(pdf, p, use_ocr=True):
                "read": "ocr+text layer" if use_ocr else "text layer"}
         if seat_by_order:
             rec["seat_from"] = "row order"
+        if p.get("lgd_code"):
+            rec["lgd_code"] = p["lgd_code"]
         if p.get("corrigendum"):
             rec["corrigendum"] = True
         if alias:
@@ -273,7 +279,7 @@ def fetch(p, get):
     if content is None:
         return [], [], why
     key = hashlib.sha1((p["gazette_date"] + p["match"]).encode()).hexdigest()[:12]
-    files = [(f"councillors/MH/{key}.pdf", content, "application/pdf")] if int(p.get("first", 1)) == 1 else []
+    files = [(f"councillors/MH/{key}.pdf", content, "application/pdf")] if int(p.get("first", 1)) == 1 or p.get("store") else []
     with tempfile.TemporaryDirectory() as tmp:
         pdf = os.path.join(tmp, "r.pdf")
         with open(pdf, "wb") as f:
