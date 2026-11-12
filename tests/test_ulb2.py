@@ -737,3 +737,17 @@ def test_ulb2_up_yeida():
     d = dict(recs)["dept:ulb2_up:UP-gautam-buddha-nagar-yeida-chief-executive-officer"]
     assert d["name"] == "Shri Rakesh Kumar Singh (IAS)" and d["role"] == "head" and d["lgd_code"] == "274822"
     assert d["office_phone"] == "0120-2395152, 0120-2395157" and d["body_type"] == "Notified Area Council"
+
+
+def test_ulb2_hp_nerwa_misspelt_header():
+    """Nerwa's employee table heads its post column "Desiganation" (2026-11-12): the rows are read."""
+    p = payload_NW("ulb2_hp", "Nerwa")
+    get = fake_get({"https://npnerwa.com/": "ulb2_hp_nerwa_start.html",
+                    "https://www.npnerwa.com/Web/employee": "ulb2_hp_nerwa_employee.html"})
+    recs, files, why = mod("ulb2_hp").fetch(p, get)
+    assert why == ""
+    check_records(recs, "ulb2_hp", "town_body")
+    by = {d["post"]: d for _, d in recs}
+    assert len(recs) == 3 and by["Secretary"]["name"] == "Mr. Ram Karan" and by["JE"]["phone"] == "9805162675"
+    assert by["Secretary"]["phone"] == "9418681728" and by["Secretary"]["lgd_code"] == "297014"
+    assert by["Secretary"]["src_url"] == "https://www.npnerwa.com/Web/employee" and by["Secretary"]["src_pos"]

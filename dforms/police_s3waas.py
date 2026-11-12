@@ -211,10 +211,17 @@ def table_rows(html):
 
 def cards(html, where=None):
     """S3WaaS public-utility cards: {title, address, phone, email, pincode, website, type}. where (a list) gets each card's
-    src_pos {"selector": ".public-utlty-catg", "card": n} (1-based among the page's cards)."""
+    src_pos {"selector": ".public-utlty-catg", "card": n} (1-based among the page's cards). The "district-theme-5" template
+    (Kolasib, 2026-11) writes the cards as "ul.pub-ut-container > li.box" (h2.heading3, ul.pubutility-list): read the same way,
+    selector ".pub-ut-container > li"."""
     soup = BeautifulSoup(html, "lxml")
     out = []
-    for n, c in enumerate(soup.select(".public-utlty-catg"), 1):
+    sel = ".public-utlty-catg"
+    found = soup.select(sel)
+    if not found:
+        sel = ".pub-ut-container > li"
+        found = soup.select(sel)
+    for n, c in enumerate(found, 1):
         h = c.select_one(".heading4, h2, h3")
         d = {"title": clean(h.get_text(" ", strip=True)) if h else None}
         for li in c.select("li"):
@@ -231,7 +238,7 @@ def cards(html, where=None):
         if d.get("title"):
             out.append(d)
             if where is not None:
-                where.append({"selector": ".public-utlty-catg", "card": n})
+                where.append({"selector": sel, "card": n})
     return out
 
 

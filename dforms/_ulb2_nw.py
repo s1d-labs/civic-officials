@@ -20,7 +20,7 @@ from dforms import _esw, _ulb
 
 MAX_PAGES = 8
 NAME = re.compile(r"(?i)^\W*(name|employee\s*name|officer'?s?\s*name|name\s*of\s*(the\s*)?(officer|official|employee|member|councill?or)s?|member\s*name)\b|^\W*नाम")
-POST = re.compile(r"(?i)designation|\bpost\b|पद")
+POST = re.compile(r"(?i)desig|\bpost\b|पद")          # "Desiganation" (Nerwa, Jubbal)
 PHONE = re.compile(r"(?i)phone|mobile|contact|tel\b|landline|मोबाइल|फोन")
 EMAIL = re.compile(r"(?i)e-?\s?mail")
 WARD = re.compile(r"(?i)\bward\b|वार्ड")

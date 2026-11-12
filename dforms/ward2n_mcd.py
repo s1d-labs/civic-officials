@@ -9,6 +9,12 @@ S. No. | Name | Designation | Phone | Mobile | Email Address. One queue item per
 copied into ZONES). Two requests per item: the sub menu list, then the Key Contacts page. The page does not say which of the 250
 wards each zone holds (no "wards" key). Posts are kept as written ("Dy. Comm.", "Ex. Engg. (M-I)", "CSI"); post_full gives the
 long form of the common short forms. Record ids: dept:ward2n_mcd:<zone slug>:<department slug>:<post slug>:<name slug>.
+Second layout (Rohini, Shahdara South, Karol Bagh, City-SP, West; live sample of Rohini 2026-11-12): two boxes on top (the zone
+office: "Contact No.", "E-Mail ID"; the Deputy Commissioner: <h3> name, post, "(O) - phone"), then one table "LIST OF HEAD OF
+DEPARTMENT IN <ZONE>" whose header row names the columns (Administrative & Accounts | Engineering | Health | Others) and whose
+cells are cards "<strong>Name</strong><br>Post<br>(O) - phone (M) - mobile". parse_cells() reads it when parse() finds no
+Name / Designation table; section = the column heading (none for cells right of the last heading); src_pos {table, row, col}.
+Repeated cells (same post and name) are read once; "--" cells are empty.
 """
 import json
 import re
@@ -70,7 +76,8 @@ def parse(html, p, source=None):
     zone = p["zone"]
     seen, recs = set(), []
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g:
             continue
         head = [c.lower() for c in g[0]]
@@ -79,7 +86,7 @@ def parse(html, p, source=None):
         sec = t.find_previous(class_="section-title")
         dept = _esw.clean(sec.get_text()) if sec else ""
         rows = [dict(zip(head, r)) for r in g[1:]]
-        for r in rows:
+        for r, rpos in zip(rows, gp[1:]):
             name = _esw.clean(_ward.col(r, "name"))
             post = _esw.clean(_ward.col(r, "designation"))
             phone = " , ".join(x for x in (_ward.col(r, "phone"), _ward.col(r, "mobile")) if re.search(r"\d{5}", x or ""))
@@ -94,7 +101,69 @@ def parse(html, p, source=None):
                                      zone=zone, post=full if full in ("Deputy Commissioner", "Assistant Commissioner") else post,
                                      post_as_written=post if full in ("Deputy Commissioner", "Assistant Commissioner") else None,
                                      post_full=full or None, name=name, phone=phone, email=email, wing=wing,
-                                     section=dept or None, source=source or p["url"]))
+                                     section=dept or None, source=source or p["url"], src_url=source or p["url"],
+                                     src_pos=rpos))
+    return recs
+
+
+def parse_cells(html, p, source=None):
+    """The card-cell layout (see the module text): [(record id, data)]."""
+    soup = _esw.soup(html)
+    zone, src = p["zone"], source or p["url"]
+    seen, done, recs = set(), set(), []
+
+    def add(name, post, phone, email, section, pos):
+        name, post = _esw.clean(name).strip(" -"), _esw.clean(post).strip(" -")
+        if not post or (post.lower(), name.lower()) in done or not (name or re.search(r"\d{5}", phone or "") or email):
+            return
+        done.add((post.lower(), name.lower()))
+        full, wing = long_post(post)
+        dw = next((w for k, w in DEPT_WING if k in (section or "").lower()), None)
+        wing = wing if wing and wing != "other" else (dw or _ward.wing_of(post))
+        key = f"{_esw.slug(zone)}:{_esw.slug(section or '') or 'dept'}:{_esw.slug(post)}:{_esw.slug(name) or 'n'}"
+        recs.append(_ward.record(MODULE, key, seen, body=BODY, lgd=LGD, state=STATE, district=None, level="zone", area=zone,
+                                 zone=zone, post=full if full in ("Deputy Commissioner", "Assistant Commissioner") else post,
+                                 post_as_written=post if full in ("Deputy Commissioner", "Assistant Commissioner") else None,
+                                 post_full=full or None, name=name, phone=phone, email=email, wing=wing, section=section or None,
+                                 source=src, src_url=src, src_pos=pos))
+
+    def lines(el):
+        return [x for x in (_esw.clean(s) for s in el.get_text("\n").split("\n")) if x and x not in ("--", "-")]
+
+    for n, box in enumerate(soup.select(".innarbox"), 1):
+        h = box.find(["h3", "h4", "strong"])
+        ls = lines(box)
+        if not h or not ls:
+            continue
+        rest = ls[1:]
+        text = " ".join(rest)
+        email = _esw.emails(re.sub(r"\[at\]", "@", re.sub(r"\[dot\]", ".", text)))
+        phone = _esw.phones(" ".join(re.findall(r"[\d][\d -]{6,}\d", text)))
+        if rest and not re.match(r"(?i)contact|e-?mail", rest[0]):
+            add(ls[0], rest[0], phone, email, None, {"selector": ".innarbox", "box": n})
+        else:
+            add("", "Zone Office", phone, email, None, {"selector": ".innarbox", "box": n})
+    for tno, table in enumerate(soup.find_all("table"), 1):
+        if not table.find("strong"):
+            continue
+        heads = []
+        for tr in table.find_all("tr"):
+            ths = tr.find_all("th", recursive=False)
+            if ths and not tr.find("td"):
+                heads = [_esw.clean(th.get_text(" ")) for th in ths]
+        for rno, tr in enumerate(table.find_all("tr"), 1):
+            for cno, td in enumerate(tr.find_all("td", recursive=False)):
+                st = td.find("strong")
+                ls = lines(td)
+                if not st or not ls:
+                    continue
+                name = _esw.clean(st.get_text(" "))
+                rest = ls[1:] if ls[0] == name else ls
+                post = next((x for x in rest if not re.match(r"^\(?[OM]\)|^[\d(]", x)), "")
+                text = " ".join(x for x in rest if x != post)
+                phone = _esw.phones(" ".join(re.findall(r"\d[\d -]{6,}\d", text)))
+                add(name, post, phone, "", heads[cno] if cno < len(heads) and len(heads) > 1 else None,
+                    {"table": tno, "row": rno, "col": cno + 1})
     return recs
 
 
@@ -119,6 +188,6 @@ def fetch(p, get):
     except ValueError:
         return [], files, "Key Contacts is not JSON"
     html = d.get("menuName") or d.get("menuContentHtml") or ""
-    recs = parse(html, p, source=url)
+    recs = parse(html, p, source=url) or parse_cells(html, p, source=url)
     why = "" if recs else ("Key Contacts is a PDF: " + d["pdfPath"] if d.get("pdfPath") else "no officer table in Key Contacts")
     return recs, files, why

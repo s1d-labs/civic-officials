@@ -1,0 +1,17 @@
+{
+ "module": "ward2n_sangli",
+ "payload": {
+  "reader": "ward2n_sangli",
+  "url": "https://www.smkc.gov.in/SMKCSection_new.aspx?deptcode=57",
+  "state": "MH",
+  "office": 3
+ },
+ "routes": {
+  "https://www.smkc.gov.in/SMKCSection_new.aspx?deptcode=57": "sangli_wc3.html"
+ },
+ "min_records": 2,
+ "expect": [
+  {"post": "Ward Officer", "name": "Anis Nazeer Ahmed Mulla", "level": "zone"},
+  {"post": "Office Head", "name": "Samir Abddulgani Bagvan"}
+ ]
+}
