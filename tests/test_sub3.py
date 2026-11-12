@@ -117,12 +117,29 @@ def _mh_pages():
 
 def test_sub3_mh_seeds():
     m = mod("sub3_mh_aero")
-    seeds = _seeds("mh", 7)
+    seeds = _seeds("mh", 17)                       # 7 ten-page items + 10 three-page retries of pages 10-30
     assert seeds == m.items()
     for s in seeds:
         p = s["payload"]
         assert p["open"] is True and not p.get("india_only") and p["stored"] == "civic-officials-depts-open/depts/sub3_mh_aero/aero.pdf"
-    assert [(s["payload"]["first"], s["payload"]["last"]) for s in seeds][-1] == (61, 70)
+    assert [(s["payload"]["first"], s["payload"]["last"]) for s in seeds][6] == (61, 70)
+    assert [(s["payload"]["first"], s["payload"]["last"]) for s in seeds][7:9] == [(10, 12), (12, 14)]
+
+
+def test_sub3_mh_ocr_page_timeout_falls_back(monkeypatch, tmp_path):
+    """A page that runs past the limit is read again at 200 dpi / psm 6, single-threaded; a second timeout gives ""."""
+    import subprocess
+    m = mod("sub3_mh_aero")
+    calls = []
+
+    def run(cmd, **kw):
+        calls.append((cmd[0], cmd[cmd.index("--psm") + 1] if "--psm" in cmd else cmd[2], kw.get("env", {}).get("OMP_THREAD_LIMIT")))
+        if cmd[0] == "tesseract" and cmd[cmd.index("--psm") + 1] == "4":
+            raise subprocess.TimeoutExpired(cmd, kw.get("timeout"))
+        return subprocess.CompletedProcess(cmd, 0, "47 - Nashik", "")
+    monkeypatch.setattr(m.subprocess, "run", run)
+    assert m.ocr_page("a.pdf", 12, str(tmp_path)) == "47 - Nashik"
+    assert calls == [("pdftoppm", "300", None), ("tesseract", "4", "1"), ("pdftoppm", "200", None), ("tesseract", "6", "1")]
 
 
 def test_sub3_mh_parse_ocr():
