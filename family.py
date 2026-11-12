@@ -204,12 +204,22 @@ if _wm:
 # seeds/build_tngis_services.py; dforms/wm2_wfs.py with payload "kind"): police stations and jurisdictions, PDS shops, health
 # facilities, schools, anganwadi, CSC, offices, taluk / block / village / town boundaries. One item = one layer saved ONCE to the
 # bucket (gis/tngis/33/<layer>.geojson.gz). TNGIS answers from abroad (the ward layers ran on GitHub runners): no proxy, no geo.
-# One host for every item: 2 workers.
-_tngis = HERE / "seeds" / "tngis_services.json"
-if _tngis.exists():
+# One host for every item: 2 workers. seeds/tngis_all.json (2026-11-13, seeds/build_tngis_all.py): every other non-mirror layer
+# of the owner's TNGIS download that the WFS still answers, same project and reader.
+_tngis = [i for f in ("tngis_services.json", "tngis_all.json") if (HERE / "seeds" / f).exists()
+          for i in json.loads((HERE / "seeds" / f).read_text())]
+if _tngis:
     PROJECTS.append({"name": f"{FAMILY}-tngis", "title": "Tamil Nadu TNGIS service and boundary layers saved once to the bucket",
                      "task": "wardmaps", "target": f"{FAMILY}-tngis", "env": {}, "probe": None, "unit_label": "layer",
-                     "record_label": "layer", "items": json.loads(_tngis.read_text()), "workers": 2, "threads": 1,
+                     "record_label": "layer", "items": _tngis, "workers": 2, "threads": 1,
+                     "delay_ms": 2000})
+# seeds/tngis_all_big.json: the 67 large TNGIS layers (about 20 M features; 0.2-2.8 GB of GeoJSON each by estimate), same
+# reader and host, own project so they are queued only on purpose; 1 worker (one answer of a few MB at a time).
+_tngis_big = HERE / "seeds" / "tngis_all_big.json"
+if _tngis_big.exists():
+    PROJECTS.append({"name": f"{FAMILY}-tngis-big", "title": "Tamil Nadu TNGIS large layers (parcels, land use, buildings) saved once",
+                     "task": "wardmaps", "target": f"{FAMILY}-tngis-big", "env": {}, "probe": None, "unit_label": "layer",
+                     "record_label": "layer", "items": json.loads(_tngis_big.read_text()), "workers": 1, "threads": 1,
                      "delay_ms": 2000})
 
 PROBES = []    # many hosts per project: no single health check would mean anything

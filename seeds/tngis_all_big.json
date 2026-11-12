@@ -1,0 +1,1214 @@
+[
+ {
+  "key": "tngis-all_roads_tamilnadu_gis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:all_roads_tamilnadu_gis",
+   "kind": "all_roads_tamilnadu_gis",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "all_roads_tamilnadu_gis",
+   "page": 2100,
+   "expect": 212849,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-all_tanks",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:all_tanks",
+   "kind": "all_tanks",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "all_tanks",
+   "page": 1300,
+   "expect": 70395,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-all_water_bodies",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:all_water_bodies",
+   "kind": "all_water_bodies",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "all_water_bodies",
+   "page": 1200,
+   "expect": 119797,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "dist_name"
+  }
+ },
+ {
+  "key": "tngis-base_price_with_surcharge_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:base_price_with_surcharge_glv_revision_adyar",
+   "kind": "base_price_with_surcharge_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "base_price_with_surcharge_glv_revision_adyar",
+   "page": 3200,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-beach_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:beach_glv_revision_adyar",
+   "kind": "beach_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "beach_glv_revision_adyar",
+   "page": 3100,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-building",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "chennai_viewer:building",
+   "kind": "building",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "building",
+   "page": 2000,
+   "expect": 924340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-building_commercial",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "chennai_viewer:building_commercial",
+   "kind": "building_commercial",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "building_commercial",
+   "page": 1400,
+   "expect": 77004,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-bus_route_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:bus_route_glv_revision_adyar",
+   "kind": "bus_route_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "bus_route_glv_revision_adyar",
+   "page": 3100,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cadastral_with_transaction_count",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "cadastral_analysis:cadastral_with_transaction_count",
+   "kind": "cadastral_with_transaction_count",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cadastral_with_transaction_count",
+   "page": 4000,
+   "expect": 348341,
+   "vintage": "live 2026-11",
+   "sort": "lgd_village_code,survey_no,sub_div_no,kide"
+  }
+ },
+ {
+  "key": "tngis-cenima_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cenima_glv_revision_adyar",
+   "kind": "cenima_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cenima_glv_revision_adyar",
+   "page": 3100,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cmda_land_type_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cmda_land_type_glv_revision_adyar",
+   "kind": "cmda_land_type_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cmda_land_type_glv_revision_adyar",
+   "page": 3200,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cmda_second_master_plan",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cmda_second_master_plan",
+   "kind": "cmda_second_master_plan",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cmda_second_master_plan",
+   "page": 4000,
+   "expect": 239525,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cmwssb_new_sewer_main",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cmwssb_new_sewer_main",
+   "kind": "cmwssb_new_sewer_main",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cmwssb_new_sewer_main",
+   "page": 4000,
+   "expect": 179797,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-collage_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:collage_glv_revision_adyar",
+   "kind": "collage_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "collage_glv_revision_adyar",
+   "page": 2900,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-college_distance_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:college_distance_glv_revision_ariyalur",
+   "kind": "college_distance_glv_revision_ariyalur",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "college_distance_glv_revision_ariyalur",
+   "page": 3000,
+   "expect": 447539,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-crop_classification_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crop_classification_glv_revision_ariyalur",
+   "kind": "crop_classification_glv_revision_ariyalur",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crop_classification_glv_revision_ariyalur",
+   "page": 3100,
+   "expect": 447539,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-crz_cadastral",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crz_cadastral",
+   "kind": "crz_cadastral",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crz_cadastral",
+   "page": 2800,
+   "expect": 192509,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-drainage",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:drainage",
+   "kind": "drainage",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "drainage",
+   "page": 4000,
+   "expect": 315349,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-dry_wet_anomolies_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:dry_wet_anomolies_glv_revision_ariyalur",
+   "kind": "dry_wet_anomolies_glv_revision_ariyalur",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dry_wet_anomolies_glv_revision_ariyalur",
+   "page": 2500,
+   "expect": 447539,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-dtcp_land_master",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:dtcp_land_master",
+   "kind": "dtcp_land_master",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dtcp_land_master",
+   "page": 3400,
+   "expect": 274235,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-existing_glv_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:existing_glv_glv_revision_adyar",
+   "kind": "existing_glv_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "existing_glv_glv_revision_adyar",
+   "page": 3200,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-existing_master_plan_all_dept",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:existing_master_plan_all_dept",
+   "kind": "existing_master_plan_all_dept",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "existing_master_plan_all_dept",
+   "page": 3000,
+   "expect": 653015,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-forest_verification_status",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:forest_verification_status",
+   "kind": "forest_verification_status",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "forest_verification_status",
+   "page": 2600,
+   "expect": 138783,
+   "vintage": "live 2026-11",
+   "sort": "village_lgdcode,survey_number,sub_division,kide"
+  }
+ },
+ {
+  "key": "tngis-fuel_distance_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:fuel_distance_glv_revision_ariyalur",
+   "kind": "fuel_distance_glv_revision_ariyalur",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "fuel_distance_glv_revision_ariyalur",
+   "page": 3000,
+   "expect": 447539,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_with_igr_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_with_igr_adyar",
+   "kind": "gcc_with_igr_adyar",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_with_igr_adyar",
+   "page": 1600,
+   "expect": 68722,
+   "vintage": "live 2026-11",
+   "sort": "gid",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-glv_before_normalization_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:glv_before_normalization_glv_revision_adyar",
+   "kind": "glv_before_normalization_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "glv_before_normalization_glv_revision_adyar",
+   "page": 3200,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gst_lt_lg",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "chennai_viewer:gst_lt_lg",
+   "kind": "gst_lt_lg",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gst_lt_lg",
+   "page": 4000,
+   "expect": 380709,
+   "vintage": "live 2026-11",
+   "sort": "GSTIN,Latititude,Longitude"
+  }
+ },
+ {
+  "key": "tngis-health_distance_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:health_distance_glv_revision_ariyalur",
+   "kind": "health_distance_glv_revision_ariyalur",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "health_distance_glv_revision_ariyalur",
+   "page": 3000,
+   "expect": 447539,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-igr_land_type_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:igr_land_type_glv_revision_adyar",
+   "kind": "igr_land_type_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "igr_land_type_glv_revision_adyar",
+   "page": 3200,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-igr_land_type_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:igr_land_type_glv_revision_ariyalur",
+   "kind": "igr_land_type_glv_revision_ariyalur",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "igr_land_type_glv_revision_ariyalur",
+   "page": 3100,
+   "expect": 422568,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-industry_cad_matched",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:industry_cad_matched",
+   "kind": "industry_cad_matched",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "industry_cad_matched",
+   "page": 2000,
+   "expect": 120038,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "dname"
+  }
+ },
+ {
+  "key": "tngis-landuse_2005_and_2006",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:landuse_2005_and_2006",
+   "kind": "landuse_2005_and_2006",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "landuse_2005_and_2006",
+   "page": 1300,
+   "expect": 141441,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-landuse_2011_and_2012",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:landuse_2011_and_2012",
+   "kind": "landuse_2011_and_2012",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "landuse_2011_and_2012",
+   "page": 1400,
+   "expect": 118509,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-landuse_2015_and_2016",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:landuse_2015_and _2016",
+   "kind": "landuse_2015_and_2016",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "landuse_2015_and_2016",
+   "page": 1500,
+   "expect": 152769,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-landuse_sisdp",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:landuse _ sisdp",
+   "kind": "landuse_sisdp",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "landuse_sisdp",
+   "page": 1700,
+   "expect": 542201,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-lulc_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:lulc_glv_revision_ariyalur",
+   "kind": "lulc_glv_revision_ariyalur",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "lulc_glv_revision_ariyalur",
+   "page": 3100,
+   "expect": 422568,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-metro_station_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:metro_station_glv_revision_adyar",
+   "kind": "metro_station_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "metro_station_glv_revision_adyar",
+   "page": 3000,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-park_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:park_glv_revision_adyar",
+   "kind": "park_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "park_glv_revision_adyar",
+   "page": 3200,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-petrol_bunk_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:petrol_bunk_glv_revision_adyar",
+   "kind": "petrol_bunk_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "petrol_bunk_glv_revision_adyar",
+   "page": 3100,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-population",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "cadastral_analysis:population",
+   "kind": "population",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "population",
+   "page": 300,
+   "expect": 18486,
+   "vintage": "live 2026-11",
+   "sort": "lgdvcode,vill_name",
+   "district": "dist_name"
+  }
+ },
+ {
+  "key": "tngis-proposed_master_plan_all_dept",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:proposed_master_plan_all_dept",
+   "kind": "proposed_master_plan_all_dept",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "proposed_master_plan_all_dept",
+   "page": 2700,
+   "expect": 651838,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-railway_distance_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:railway_distance_glv_revision_ariyalur",
+   "kind": "railway_distance_glv_revision_ariyalur",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "railway_distance_glv_revision_ariyalur",
+   "page": 3000,
+   "expect": 447539,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-railway_station_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:railway_station_glv_revision_adyar",
+   "kind": "railway_station_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "railway_station_glv_revision_adyar",
+   "page": 3100,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-revenue_village_bifurcation",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:revenue_village_bifurcation",
+   "kind": "revenue_village_bifurcation",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "revenue_village_bifurcation",
+   "page": 400,
+   "expect": 17580,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-revised_base_price_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:revised_base_price_glv_revision_adyar",
+   "kind": "revised_base_price_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "revised_base_price_glv_revision_adyar",
+   "page": 3200,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-road_adjoining_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:road_adjoining_glv_revision_ariyalur",
+   "kind": "road_adjoining_glv_revision_ariyalur",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_adjoining_glv_revision_ariyalur",
+   "page": 3000,
+   "expect": 447539,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-road_distance_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:road_distance_glv_revision_ariyalur",
+   "kind": "road_distance_glv_revision_ariyalur",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_distance_glv_revision_ariyalur",
+   "page": 3000,
+   "expect": 447539,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-road_type_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:road_type_glv_revision_ariyalur",
+   "kind": "road_type_glv_revision_ariyalur",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_type_glv_revision_ariyalur",
+   "page": 3100,
+   "expect": 447539,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-road_width_type_for_land_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:road_width_type_for_land_glv_revision_adyar",
+   "kind": "road_width_type_for_land_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_width_type_for_land_glv_revision_adyar",
+   "page": 3200,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-road_width_type_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:road_width_type_glv_revision_adyar",
+   "kind": "road_width_type_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_width_type_glv_revision_adyar",
+   "page": 3200,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-roads",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:roads",
+   "kind": "roads",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "roads",
+   "page": 1800,
+   "expect": 157634,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-roads_network_analysis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:roads_network_analysis",
+   "kind": "roads_network_analysis",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "roads_network_analysis",
+   "page": 1700,
+   "expect": 163938,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-roads_network_analysis_noded",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:roads_network_analysis_noded",
+   "kind": "roads_network_analysis_noded",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "roads_network_analysis_noded",
+   "page": 4000,
+   "expect": 686608,
+   "vintage": "live 2026-11",
+   "sort": "old_id,sub_id"
+  }
+ },
+ {
+  "key": "tngis-rural_roads_gis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:rural_roads_gis",
+   "kind": "rural_roads_gis",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "rural_roads_gis",
+   "page": 3000,
+   "expect": 131872,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-school_distance_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:school_distance_glv_revision_ariyalur",
+   "kind": "school_distance_glv_revision_ariyalur",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "school_distance_glv_revision_ariyalur",
+   "page": 2700,
+   "expect": 447539,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-school_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:school_glv_revision_adyar",
+   "kind": "school_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "school_glv_revision_adyar",
+   "page": 2800,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-settlement_area",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:settlement_area",
+   "kind": "settlement_area",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "settlement_area",
+   "page": 1800,
+   "expect": 174866,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-street_furniture_municipalities",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:street_furniture_municipalities",
+   "kind": "street_furniture_municipalities",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "street_furniture_municipalities",
+   "page": 4000,
+   "expect": 507629,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tamil_nilam_land_type_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tamil_nilam_land_type_glv_revision_adyar",
+   "kind": "tamil_nilam_land_type_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tamil_nilam_land_type_glv_revision_adyar",
+   "page": 3200,
+   "expect": 262340,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tn_contours",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tn_contours",
+   "kind": "tn_contours",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tn_contours",
+   "page": 1900,
+   "expect": 180735,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-trichy_all_government_lands",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:trichy_all_government_lands",
+   "kind": "trichy_all_government_lands",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "trichy_all_government_lands",
+   "page": 2500,
+   "expect": 322405,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-trichy_govt_land_dissolved_combined",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:trichy_govt_land_dissolved_combined",
+   "kind": "trichy_govt_land_dissolved_combined",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "trichy_govt_land_dissolved_combined",
+   "page": 2900,
+   "expect": 252861,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-ulb_roads",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:ulb_roads",
+   "kind": "ulb_roads",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ulb_roads",
+   "page": 2300,
+   "expect": 172486,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-ulb_under_ground_drainage",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:ulb_under_ground_drainage",
+   "kind": "ulb_under_ground_drainage",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ulb_under_ground_drainage",
+   "page": 3700,
+   "expect": 222715,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-village_roads",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:village_roads",
+   "kind": "village_roads",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "village_roads",
+   "page": 4000,
+   "expect": 308677,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-villupuram_all_govt_land",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:villupuram_all_govt_land",
+   "kind": "villupuram_all_govt_land",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "villupuram_all_govt_land",
+   "page": 2600,
+   "expect": 276530,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-villupuram_dry_land_parcel",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:villupuram_dry_land_parcel",
+   "kind": "villupuram_dry_land_parcel",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "villupuram_dry_land_parcel",
+   "page": 3700,
+   "expect": 886351,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ }
+]

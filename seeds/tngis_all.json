@@ -1,0 +1,6778 @@
+[
+ {
+  "key": "tngis-20_above_accidents_cluster",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:20_above_accidents_cluster",
+   "kind": "20_above_accidents_cluster",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "20_above_accidents_cluster",
+   "page": 800,
+   "expect": 166,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-aadhar_enrollment_center_mis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:aadhar_enrollment_center_mis",
+   "kind": "aadhar_enrollment_center_mis",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "aadhar_enrollment_center_mis",
+   "page": 1000,
+   "expect": 977,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-aavin_bmc_facilities",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "aavin:aavin_bmc_facilities",
+   "kind": "aavin_bmc_facilities",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "aavin_bmc_facilities",
+   "page": 4000,
+   "expect": 864,
+   "vintage": "live 2026-11",
+   "sort": "region,type,latitude,longitude"
+  }
+ },
+ {
+  "key": "tngis-aavin_cc_facilities",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "aavin:aavin_cc_facilities",
+   "kind": "aavin_cc_facilities",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "aavin_cc_facilities",
+   "page": 4000,
+   "expect": 12,
+   "vintage": "live 2026-11",
+   "sort": "region,type,latitude,longitude"
+  }
+ },
+ {
+  "key": "tngis-aavin_dairy_facilities",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "aavin:aavin_dairy_facilities",
+   "kind": "aavin_dairy_facilities",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "aavin_dairy_facilities",
+   "page": 4000,
+   "expect": 902,
+   "vintage": "live 2026-11",
+   "sort": "region,type,latitude,longitude"
+  }
+ },
+ {
+  "key": "tngis-aavin_districts",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "aavin:aavin_districts",
+   "kind": "aavin_districts",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "aavin_districts",
+   "page": 100,
+   "expect": 38,
+   "vintage": "live 2026-11",
+   "sort": "lgd_code"
+  }
+ },
+ {
+  "key": "tngis-accidents_cluster",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:accidents_cluster",
+   "kind": "accidents_cluster",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "accidents_cluster",
+   "page": 1000,
+   "expect": 1715,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-accidents_cluster_center",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:accidents_cluster_center",
+   "kind": "accidents_cluster_center",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "accidents_cluster_center",
+   "page": 4000,
+   "expect": 1715,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-accidents_hotspot_scrb",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:accidents_hotspot_scrb",
+   "kind": "accidents_hotspot_scrb",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "accidents_hotspot_scrb",
+   "page": 4000,
+   "expect": 192,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-accidents_location_ii_o_i_ix",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:accidents_location_ii_o_i_ix",
+   "kind": "accidents_location_ii_o_i_ix",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "accidents_location_ii_o_i_ix",
+   "page": 4000,
+   "expect": 64245,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-administrative_boundary_district",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "admin_master:administrative_boundary_district",
+   "kind": "administrative_boundary_district",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "administrative_boundary_district",
+   "page": 100,
+   "expect": 38,
+   "vintage": "live 2026-11",
+   "sort": "district_lgd_code"
+  }
+ },
+ {
+  "key": "tngis-aerial_ofc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:aerial_ofc",
+   "kind": "aerial_ofc",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "aerial_ofc",
+   "page": 700,
+   "expect": 11558,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-aggregation_pop",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:aggregation_pop",
+   "kind": "aggregation_pop",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "aggregation_pop",
+   "page": 4000,
+   "expect": 47,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-agro_industries_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_agro_industries",
+   "kind": "agro_industries_basemap",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "agro_industries_basemap",
+   "page": 4000,
+   "expect": 142,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-airport_building_height_less_10m",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:airport_building_height_less_10m",
+   "kind": "airport_building_height_less_10m",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "airport_building_height_less_10m",
+   "page": 4000,
+   "expect": 170,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-airport_location",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:airport_location",
+   "kind": "airport_location",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "airport_location",
+   "page": 3200,
+   "expect": 8,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-all_tower_elcot_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_all_tower_elcot",
+   "kind": "all_tower_elcot_basemap",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "all_tower_elcot_basemap",
+   "page": 4000,
+   "expect": 35277,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-ambulance_base_location",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:ambulance_base_location",
+   "kind": "ambulance_base_location",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ambulance_base_location",
+   "page": 4000,
+   "expect": 1322,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-ambulance_to_accidents_cluster_line",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:ambulance_to_accidents_cluster_line",
+   "kind": "ambulance_to_accidents_cluster_line",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ambulance_to_accidents_cluster_line",
+   "page": 4000,
+   "expect": 1715,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-animal_population",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:animal_population",
+   "kind": "animal_population",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "animal_population",
+   "page": 700,
+   "expect": 15225,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-asi_sites",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:asi_sites",
+   "kind": "asi_sites",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "asi_sites",
+   "page": 3700,
+   "expect": 1327,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-asset_mapping_new",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:asset_mapping_new",
+   "kind": "asset_mapping_new",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "asset_mapping_new",
+   "page": 2600,
+   "expect": 16951,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-banks_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_banks",
+   "kind": "banks_basemap",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "banks_basemap",
+   "page": 4000,
+   "expect": 1998,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-basin",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:basin",
+   "kind": "basin",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "basin",
+   "page": 100,
+   "expect": 4,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-block_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:block_boundary",
+   "kind": "block_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "block_boundary",
+   "page": 100,
+   "expect": 387,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-bridges",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:bridges",
+   "kind": "bridges",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "bridges",
+   "page": 4000,
+   "expect": 879,
+   "vintage": "live 2026-11",
+   "sort": "bridge_id"
+  }
+ },
+ {
+  "key": "tngis-bsnl_towers",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:bsnl_towers",
+   "kind": "bsnl_towers",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "bsnl_towers",
+   "page": 4000,
+   "expect": 4677,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-bsnl_usof_tower",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:bsnl_usof_tower",
+   "kind": "bsnl_usof_tower",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "bsnl_usof_tower",
+   "page": 4000,
+   "expect": 203,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-burial_ground",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:burial_ground",
+   "kind": "burial_ground",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "burial_ground",
+   "page": 4000,
+   "expect": 9995,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-bus_shelter_all_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_bus_shelter_all",
+   "kind": "bus_shelter_all_basemap",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "bus_shelter_all_basemap",
+   "page": 4000,
+   "expect": 1921,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-bus_stops_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_bus_stops",
+   "kind": "bus_stops_basemap",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "bus_stops_basemap",
+   "page": 4000,
+   "expect": 938,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-camera",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:camera",
+   "kind": "camera",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "camera",
+   "page": 4000,
+   "expect": 233,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-catchment",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:catchment",
+   "kind": "catchment",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "catchment",
+   "page": 100,
+   "expect": 9,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-catheterization_lab",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:catheterization_lab",
+   "kind": "catheterization_lab",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "catheterization_lab",
+   "page": 3400,
+   "expect": 12,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-cd_works",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:cd_works",
+   "kind": "cd_works",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cd_works",
+   "page": 4000,
+   "expect": 16794,
+   "vintage": "live 2026-11",
+   "sort": "cd_work_id"
+  }
+ },
+ {
+  "key": "tngis-chc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:chc",
+   "kind": "chc",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "chc",
+   "page": 4000,
+   "expect": 400,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-chennai_metro_rail_limited_route",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:chennai metro rail limited route",
+   "kind": "chennai_metro_rail_limited_route",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "chennai_metro_rail_limited_route",
+   "page": 100,
+   "expect": 465,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-chennai_metro_rail_limited_station",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:chennai metro rail limited station",
+   "kind": "chennai_metro_rail_limited_station",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "chennai_metro_rail_limited_station",
+   "page": 1200,
+   "expect": 120,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-chennai_viewer_gcc_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "chennai_viewer:gcc_boundary",
+   "kind": "chennai_viewer_gcc_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "chennai_viewer_gcc_boundary",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-chennai_viewer_village_panchayat",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "chennai_viewer:chennai_viewer_village_panchayat",
+   "kind": "chennai_viewer_village_panchayat",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "chennai_viewer_village_panchayat",
+   "page": 1100,
+   "expect": 12525,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cma_manhole_line",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:cma_manhole_line",
+   "kind": "cma_manhole_line",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cma_manhole_line",
+   "page": 4000,
+   "expect": 143608,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cma_water_sump_location",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cma_water_sump_location",
+   "kind": "cma_water_sump_location",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cma_water_sump_location",
+   "page": 4000,
+   "expect": 16,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cmrl_metro_lines_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_cmrl_metro_lines",
+   "kind": "cmrl_metro_lines_basemap",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cmrl_metro_lines_basemap",
+   "page": 300,
+   "expect": 134,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cmrl_metro_stations_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_cmrl_metro_stations",
+   "kind": "cmrl_metro_stations_basemap",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cmrl_metro_stations_basemap",
+   "page": 4000,
+   "expect": 172,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cmwssb_decanting_location",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cmwssb_decanting_location",
+   "kind": "cmwssb_decanting_location",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cmwssb_decanting_location",
+   "page": 3100,
+   "expect": 22,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cmwssb_metrowater_pipeline",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cmwssb_metrowater_pipeline",
+   "kind": "cmwssb_metrowater_pipeline",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cmwssb_metrowater_pipeline",
+   "page": 2900,
+   "expect": 76,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cmwssb_new_machinehole",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cmwssb_new_machinehole",
+   "kind": "cmwssb_new_machinehole",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cmwssb_new_machinehole",
+   "page": 3300,
+   "expect": 129303,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-cmwssb_sewage_pipeline",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cmwssb_sewage_pipeline",
+   "kind": "cmwssb_sewage_pipeline",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cmwssb_sewage_pipeline",
+   "page": 4000,
+   "expect": 288,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-coimbatore_defence_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:coimbatore_defence_boundary",
+   "kind": "coimbatore_defence_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "coimbatore_defence_boundary",
+   "page": 800,
+   "expect": 4,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-coimbatore_forest_boundary_pmgatisakthi",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:coimbatore_forest_boundary_pmgatisakthi",
+   "kind": "coimbatore_forest_boundary_pmgatisakthi",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "coimbatore_forest_boundary_pmgatisakthi",
+   "page": 600,
+   "expect": 3,
+   "vintage": "live 2026-11",
+   "sort": "fid"
+  }
+ },
+ {
+  "key": "tngis-cold_storages",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cold_storages",
+   "kind": "cold_storages",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cold_storages",
+   "page": 4000,
+   "expect": 183,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-collection_centres_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_collection_centres",
+   "kind": "collection_centres_basemap",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "collection_centres_basemap",
+   "page": 4000,
+   "expect": 537,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-commercial_tax_circle_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:commercial_tax_circle_boundary",
+   "kind": "commercial_tax_circle_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "commercial_tax_circle_boundary",
+   "page": 100,
+   "expect": 338,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-commercial_tax_division_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:commercial_tax_division_boundary",
+   "kind": "commercial_tax_division_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "commercial_tax_division_boundary",
+   "page": 100,
+   "expect": 18,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-commercial_tax_intelligence_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:commercial_tax_intelligence_boundary",
+   "kind": "commercial_tax_intelligence_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "commercial_tax_intelligence_boundary",
+   "page": 100,
+   "expect": 15,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-commercial_tax_zone_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:commercial_tax_zone_boundary",
+   "kind": "commercial_tax_zone_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "commercial_tax_zone_boundary",
+   "page": 100,
+   "expect": 55,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-community_farm_schools",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:community_farm_schools",
+   "kind": "community_farm_schools",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "community_farm_schools",
+   "page": 4000,
+   "expect": 679,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-community_skill_school",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:community_skill_school",
+   "kind": "community_skill_school",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "community_skill_school",
+   "page": 4000,
+   "expect": 1738,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-comprehensive_emergency_obstetric_and_new_b_68e673",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:comprehensive_emergency_obstetric_and_new_born_care",
+   "kind": "comprehensive_emergency_obstetric_and_new_b_68e673",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "comprehensive_emergency_obstetric_and_new_b_68e673",
+   "page": 4000,
+   "expect": 105,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-computed_tomography_scan",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:computed_tomography_scan",
+   "kind": "computed_tomography_scan",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "computed_tomography_scan",
+   "page": 4000,
+   "expect": 16,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-crz1a",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crz1a",
+   "kind": "crz1a",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crz1a",
+   "page": 400,
+   "expect": 4171,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-crz2",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crz2",
+   "kind": "crz2",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crz2",
+   "page": 500,
+   "expect": 251,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-crz4a_gis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crz4a_gis",
+   "kind": "crz4a_gis",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crz4a_gis",
+   "page": 100,
+   "expect": 9,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-crz_3a",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crz_3a",
+   "kind": "crz_3a",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crz_3a",
+   "page": 300,
+   "expect": 760,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-crz_3b",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crz_3b",
+   "kind": "crz_3b",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crz_3b",
+   "page": 700,
+   "expect": 199,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-crz_4b_07_07_2022",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crz_4b_07_07_2022",
+   "kind": "crz_4b_07_07_2022",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crz_4b_07_07_2022",
+   "page": 300,
+   "expect": 217,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-crz_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crz_boundary",
+   "kind": "crz_boundary",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crz_boundary",
+   "page": 200,
+   "expect": 279,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-crz_ib",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crz_ib",
+   "kind": "crz_ib",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crz_ib",
+   "page": 400,
+   "expect": 1039,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-crza1_mangrove_buffer",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:crza1_mangrove_buffer",
+   "kind": "crza1_mangrove_buffer",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "crza1_mangrove_buffer",
+   "page": 400,
+   "expect": 407,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cumta_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cumta_boundary",
+   "kind": "cumta_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cumta_boundary",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-cvca_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:cvca_boundary",
+   "kind": "cvca_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "cvca_boundary",
+   "page": 100,
+   "expect": 11,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-data_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_data",
+   "kind": "data_basemap",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "data_basemap",
+   "page": 4000,
+   "expect": 110928,
+   "vintage": "live 2026-11",
+   "sort": "ogc_fid"
+  }
+ },
+ {
+  "key": "tngis-deo_jurisdiction",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:deo_jurisdiction",
+   "kind": "deo_jurisdiction",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "deo_jurisdiction",
+   "page": 100,
+   "expect": 32,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-dgps_survey_point",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "cadastral_analysis:dgps_survey_point",
+   "kind": "dgps_survey_point",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dgps_survey_point",
+   "page": 4000,
+   "expect": 27313,
+   "vintage": "live 2026-11",
+   "sort": "survey_point_id,filename"
+  }
+ },
+ {
+  "key": "tngis-dgps_water_body",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "cadastral_analysis:dgps_water_body",
+   "kind": "dgps_water_body",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dgps_water_body",
+   "page": 2000,
+   "expect": 33613,
+   "vintage": "live 2026-11",
+   "sort": "village_code,survey_number,sub_division,water_body_name"
+  }
+ },
+ {
+  "key": "tngis-dh",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:dh",
+   "kind": "dh",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dh",
+   "page": 4000,
+   "expect": 20,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-diet",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:diet",
+   "kind": "diet",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "diet",
+   "page": 4000,
+   "expect": 32,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-dig_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "igr:dig_boundary",
+   "kind": "dig_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dig_boundary",
+   "page": 100,
+   "expect": 11,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-district_block_area",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:district_block_area",
+   "kind": "district_block_area",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "district_block_area",
+   "page": 1000,
+   "expect": 388,
+   "vintage": "live 2026-11",
+   "sort": "NEW_B_ID"
+  }
+ },
+ {
+  "key": "tngis-district_headquarters_to_aggregation_pop",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:district_headquarters_to_aggregation_pop",
+   "kind": "district_headquarters_to_aggregation_pop",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "district_headquarters_to_aggregation_pop",
+   "page": 4000,
+   "expect": 47,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-district_new",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:district_new",
+   "kind": "district_new",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "district_new",
+   "page": 100,
+   "expect": 38,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-district_ring",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:district_ring",
+   "kind": "district_ring",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "district_ring",
+   "page": 4000,
+   "expect": 42,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-district_ring_distance",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:district_ring_distance",
+   "kind": "district_ring_distance",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "district_ring_distance",
+   "page": 2600,
+   "expect": 42,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-districts",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:districts",
+   "kind": "districts",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "districts",
+   "page": 100,
+   "expect": 38,
+   "vintage": "live 2026-11",
+   "sort": "lgd_code"
+  }
+ },
+ {
+  "key": "tngis-dms",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:dms",
+   "kind": "dms",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dms",
+   "page": 3600,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-dpc_new",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:dpc_new",
+   "kind": "dpc_new",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dpc_new",
+   "page": 4000,
+   "expect": 3601,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-dpr_230kv_link_tanfinet",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:dpr_230kv_link_tanfinet",
+   "kind": "dpr_230kv_link_tanfinet",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dpr_230kv_link_tanfinet",
+   "page": 4000,
+   "expect": 42,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-dpr_link_tanfinet",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:dpr_link_tanfinet",
+   "kind": "dpr_link_tanfinet",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dpr_link_tanfinet",
+   "page": 4000,
+   "expect": 540,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-dro_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "igr:dro_boundary",
+   "kind": "dro_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dro_boundary",
+   "page": 100,
+   "expect": 56,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-dtcp_masterplan",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:dtcp_masterplan",
+   "kind": "dtcp_masterplan",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dtcp_masterplan",
+   "page": 1000,
+   "expect": 724,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-dust_bin_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_dust_bin",
+   "kind": "dust_bin_basemap",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "dust_bin_basemap",
+   "page": 4000,
+   "expect": 3824,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-earthquake_zone",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:earthquake_zone",
+   "kind": "earthquake_zone",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "earthquake_zone",
+   "page": 200,
+   "expect": 4,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-eco_sensitive_zone",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:eco_sensitive_zone",
+   "kind": "eco_sensitive_zone",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "eco_sensitive_zone",
+   "page": 100,
+   "expect": 69,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-engineering_college",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:engineering_college",
+   "kind": "engineering_college",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "engineering_college",
+   "page": 4000,
+   "expect": 601,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "d_name"
+  }
+ },
+ {
+  "key": "tngis-existing_line_h_facility_to_warehouse",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:existing_line_h_facility_to_warehouse",
+   "kind": "existing_line_h_facility_to_warehouse",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "existing_line_h_facility_to_warehouse",
+   "page": 4000,
+   "expect": 56440,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-facilities",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:facilities",
+   "kind": "facilities",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "facilities",
+   "page": 4000,
+   "expect": 28342,
+   "vintage": "live 2026-11",
+   "sort": "si_no"
+  }
+ },
+ {
+  "key": "tngis-facilities_buffer_100m",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:facilities_buffer_100m",
+   "kind": "facilities_buffer_100m",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "facilities_buffer_100m",
+   "page": 1800,
+   "expect": 49284,
+   "vintage": "live 2026-11",
+   "sort": "fid"
+  }
+ },
+ {
+  "key": "tngis-facilities_buffer_500m",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:facilities_buffer_500m",
+   "kind": "facilities_buffer_500m",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "facilities_buffer_500m",
+   "page": 1400,
+   "expect": 21664,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-flood_innundation_area",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:flood_innundation_area",
+   "kind": "flood_innundation_area",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "flood_innundation_area",
+   "page": 4000,
+   "expect": 16222,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-forest_beat",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:forest_beat",
+   "kind": "forest_beat",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "forest_beat",
+   "page": 500,
+   "expect": 1308,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-forest_circle",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:forest_circle",
+   "kind": "forest_circle",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "forest_circle",
+   "page": 100,
+   "expect": 13,
+   "vintage": "live 2026-11",
+   "sort": "circle_id"
+  }
+ },
+ {
+  "key": "tngis-forest_district",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:forest_district",
+   "kind": "forest_district",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "forest_district",
+   "page": 100,
+   "expect": 32,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-forest_division",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:forest_division",
+   "kind": "forest_division",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "forest_division",
+   "page": 100,
+   "expect": 52,
+   "vintage": "live 2026-11",
+   "sort": "gid"
+  }
+ },
+ {
+  "key": "tngis-forest_forest_beat",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:forest_beat",
+   "kind": "forest_forest_beat",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "forest_forest_beat",
+   "page": 200,
+   "expect": 1635,
+   "vintage": "live 2026-11",
+   "sort": "gid"
+  }
+ },
+ {
+  "key": "tngis-forest_forest_range",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:forest_range",
+   "kind": "forest_forest_range",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "forest_forest_range",
+   "page": 100,
+   "expect": 247,
+   "vintage": "live 2026-11",
+   "sort": "range_id"
+  }
+ },
+ {
+  "key": "tngis-forest_range",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:forest_range",
+   "kind": "forest_range",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "forest_range",
+   "page": 100,
+   "expect": 217,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-forest_section",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:forest_section",
+   "kind": "forest_section",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "forest_section",
+   "page": 100,
+   "expect": 607,
+   "vintage": "live 2026-11",
+   "sort": "gid"
+  }
+ },
+ {
+  "key": "tngis-free_wifi",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:free_wifi",
+   "kind": "free_wifi",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "free_wifi",
+   "page": 4000,
+   "expect": 74,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_amma_unavagam",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_amma_unavagam",
+   "kind": "gcc_amma_unavagam",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_amma_unavagam",
+   "page": 4000,
+   "expect": 366,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_boundary",
+   "kind": "gcc_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_boundary",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_bus_shelters",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_bus_shelters",
+   "kind": "gcc_bus_shelters",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_bus_shelters",
+   "page": 4000,
+   "expect": 803,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_carraigeway",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_carraigeway",
+   "kind": "gcc_carraigeway",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_carraigeway",
+   "page": 1300,
+   "expect": 36931,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_community_hall",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:gcc_community_hall",
+   "kind": "gcc_community_hall",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_community_hall",
+   "page": 1800,
+   "expect": 54,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_office_buildings",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:gcc_office_buildings",
+   "kind": "gcc_office_buildings",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_office_buildings",
+   "page": 2600,
+   "expect": 187,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_other_govt_buildings",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:gcc_other_govt_buildings",
+   "kind": "gcc_other_govt_buildings",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_other_govt_buildings",
+   "page": 1700,
+   "expect": 2096,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_others",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:gcc_others",
+   "kind": "gcc_others",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_others",
+   "page": 2300,
+   "expect": 1734,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_overall_manhole",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:gcc_overall_manhole",
+   "kind": "gcc_overall_manhole",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_overall_manhole",
+   "page": 4000,
+   "expect": 210423,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_parking_area",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_parking_area",
+   "kind": "gcc_parking_area",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_parking_area",
+   "page": 1800,
+   "expect": 124,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_parks",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_parks",
+   "kind": "gcc_parks",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_parks",
+   "page": 4000,
+   "expect": 802,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_road_of_width",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_road_of_width",
+   "kind": "gcc_road_of_width",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_road_of_width",
+   "page": 1500,
+   "expect": 36899,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_shopping_complex",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:gcc_shopping_complex",
+   "kind": "gcc_shopping_complex",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_shopping_complex",
+   "page": 2000,
+   "expect": 115,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_street_lights",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_street_lights",
+   "kind": "gcc_street_lights",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_street_lights",
+   "page": 4000,
+   "expect": 238249,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_streets",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_streets",
+   "kind": "gcc_streets",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_streets",
+   "page": 3700,
+   "expect": 94325,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_toilets",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_toilets",
+   "kind": "gcc_toilets",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_toilets",
+   "page": 4000,
+   "expect": 613,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_trees",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_trees",
+   "kind": "gcc_trees",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_trees",
+   "page": 4000,
+   "expect": 248882,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_w200_z15_drainage",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:gcc_w200_z15_drainage",
+   "kind": "gcc_w200_z15_drainage",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_w200_z15_drainage",
+   "page": 1700,
+   "expect": 11531,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gcc_with_igr",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "cadastral_analysis:gcc_with_igr",
+   "kind": "gcc_with_igr",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_with_igr",
+   "page": 1700,
+   "expect": 68722,
+   "vintage": "live 2026-11",
+   "sort": "gid",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-gcc_zone_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gcc_zone_boundary",
+   "kind": "gcc_zone_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gcc_zone_boundary",
+   "page": 100,
+   "expect": 15,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-generic_viewer_districts",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:districts",
+   "kind": "generic_viewer_districts",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "generic_viewer_districts",
+   "page": 100,
+   "expect": 38,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-generic_viewer_forest_circle",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:forest_circle",
+   "kind": "generic_viewer_forest_circle",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "generic_viewer_forest_circle",
+   "page": 100,
+   "expect": 18,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-geology",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:geology",
+   "kind": "geology",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "geology",
+   "page": 400,
+   "expect": 1443,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-geomorphology",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:geomorphology",
+   "kind": "geomorphology",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "geomorphology",
+   "page": 100,
+   "expect": 67,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-godowns",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:godowns",
+   "kind": "godowns",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "godowns",
+   "page": 4000,
+   "expect": 250,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gps_lit_up",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:gps_lit_up",
+   "kind": "gps_lit_up",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gps_lit_up",
+   "page": 4000,
+   "expect": 1479,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-gram_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_gram",
+   "kind": "gram_basemap",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "gram_basemap",
+   "page": 4000,
+   "expect": 692,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-habitation",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:habitation",
+   "kind": "habitation",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "habitation",
+   "page": 4000,
+   "expect": 148732,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-habitations",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:habitations",
+   "kind": "habitations",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "habitations",
+   "page": 4000,
+   "expect": 79395,
+   "vintage": "live 2026-11",
+   "sort": "reference"
+  }
+ },
+ {
+  "key": "tngis-haca_boundary_final",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:haca_boundary_final",
+   "kind": "haca_boundary_final",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "haca_boundary_final",
+   "page": 400,
+   "expect": 1020,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "dist_name"
+  }
+ },
+ {
+  "key": "tngis-health_districts",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:health_districts",
+   "kind": "health_districts",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "health_districts",
+   "page": 100,
+   "expect": 42,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "dist_name"
+  }
+ },
+ {
+  "key": "tngis-health_facilities",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:health_facilities",
+   "kind": "health_facilities",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "health_facilities",
+   "page": 3000,
+   "expect": 11289,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-high_tide_line",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:high_tide_line",
+   "kind": "high_tide_line",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "high_tide_line",
+   "page": 300,
+   "expect": 1064,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-highway_villupuram_clusters",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:highway_villupuram_clusters",
+   "kind": "highway_villupuram_clusters",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "highway_villupuram_clusters",
+   "page": 100,
+   "expect": 33,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-highways_circle",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:highways_circle",
+   "kind": "highways_circle",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "highways_circle",
+   "page": 100,
+   "expect": 9,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-highways_division_gis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:highways_division_gis",
+   "kind": "highways_division_gis",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "highways_division_gis",
+   "page": 100,
+   "expect": 45,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-hill_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:hill_boundary",
+   "kind": "hill_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "hill_boundary",
+   "page": 500,
+   "expect": 1879,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-hoardings_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_hoardings",
+   "kind": "hoardings_basemap",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "hoardings_basemap",
+   "page": 1600,
+   "expect": 12,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-horizontal_tnswan",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:horizontal_tnswan",
+   "kind": "horizontal_tnswan",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "horizontal_tnswan",
+   "page": 4000,
+   "expect": 559,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-hostels",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:hostels",
+   "kind": "hostels",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "hostels",
+   "page": 4000,
+   "expect": 2807,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-hsc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:hsc",
+   "kind": "hsc",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "hsc",
+   "page": 4000,
+   "expect": 8708,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-ht_feeder_line",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:ht_feeder_line",
+   "kind": "ht_feeder_line",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ht_feeder_line",
+   "page": 200,
+   "expect": 10884,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-igr_sro_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "igr:sro_boundary",
+   "kind": "igr_sro_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "igr_sro_boundary",
+   "page": 100,
+   "expect": 580,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-indira_gandhi_awas_yojana_free_houses",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:indira_gandhi_awas_yojana_-_free_houses",
+   "kind": "indira_gandhi_awas_yojana_free_houses",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "indira_gandhi_awas_yojana_free_houses",
+   "page": 4000,
+   "expect": 13799,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "dname"
+  }
+ },
+ {
+  "key": "tngis-integrated_farming_cluster",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:integrated_farming_cluster",
+   "kind": "integrated_farming_cluster",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "integrated_farming_cluster",
+   "page": 4000,
+   "expect": 265,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-iot_devices",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:iot_devices",
+   "kind": "iot_devices",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "iot_devices",
+   "page": 4000,
+   "expect": 176,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-kallakurichi_district_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:kallakurichi_district_boundary",
+   "kind": "kallakurichi_district_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "kallakurichi_district_boundary",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-kallakurichi_gl_packet",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:kallakurichi_gl_packet",
+   "kind": "kallakurichi_gl_packet",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "kallakurichi_gl_packet",
+   "page": 3000,
+   "expect": 11685,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-kallakurichi_vacant_govt_lands",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:kallakurichi_vacant_govt_lands",
+   "kind": "kallakurichi_vacant_govt_lands",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "kallakurichi_vacant_govt_lands",
+   "page": 2700,
+   "expect": 21103,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-kallakurichi_wb_rf_roads_all",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:kallakurichi_wb_rf_roads_all",
+   "kind": "kallakurichi_wb_rf_roads_all",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "kallakurichi_wb_rf_roads_all",
+   "page": 2000,
+   "expect": 38215,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-kancheepuram_existing_master_plan",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:kancheepuram_existing_master_plan",
+   "kind": "kancheepuram_existing_master_plan",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "kancheepuram_existing_master_plan",
+   "page": 4000,
+   "expect": 34165,
+   "vintage": "live 2026-11",
+   "sort": "survey_number,sub_division,kide,area"
+  }
+ },
+ {
+  "key": "tngis-land_anomalies_sankarankovil",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:land_anomalies_sankarankovil",
+   "kind": "land_anomalies_sankarankovil",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "land_anomalies_sankarankovil",
+   "page": 4000,
+   "expect": 55030,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-land_anomalies_tiruvallur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:land_anomalies_tiruvallur",
+   "kind": "land_anomalies_tiruvallur",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "land_anomalies_tiruvallur",
+   "page": 4000,
+   "expect": 50613,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-line_to_1st_recommended_warehouse",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:line_to_1st_recommended_warehouse",
+   "kind": "line_to_1st_recommended_warehouse",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "line_to_1st_recommended_warehouse",
+   "page": 4000,
+   "expect": 11288,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-low_tide_line",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:low_tide_line",
+   "kind": "low_tide_line",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "low_tide_line",
+   "page": 1500,
+   "expect": 1216,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-lpa_boundary_compined_dept",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:lpa_boundary_compined_dept",
+   "kind": "lpa_boundary_compined_dept",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "lpa_boundary_compined_dept",
+   "page": 100,
+   "expect": 121,
+   "vintage": "live 2026-11",
+   "sort": "ogc_fid"
+  }
+ },
+ {
+  "key": "tngis-lpa_online_layout",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:lpa_online_layout",
+   "kind": "lpa_online_layout",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "lpa_online_layout",
+   "page": 4000,
+   "expect": 451,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-magnetic_resonance_imaging_scan",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:magnetic_resonance_imaging_scan",
+   "kind": "magnetic_resonance_imaging_scan",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "magnetic_resonance_imaging_scan",
+   "page": 2100,
+   "expect": 13,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-major_district_roads",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:major_district_roads",
+   "kind": "major_district_roads",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "major_district_roads",
+   "page": 200,
+   "expect": 772,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-mandi_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_mandi",
+   "kind": "mandi_basemap",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "mandi_basemap",
+   "page": 4000,
+   "expect": 406,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-manhole_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_manhole",
+   "kind": "manhole_basemap",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "manhole_basemap",
+   "page": 4000,
+   "expect": 17710,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-mayiladuthurai_dpc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:mayiladuthurai_dpc",
+   "kind": "mayiladuthurai_dpc",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "mayiladuthurai_dpc",
+   "page": 4000,
+   "expect": 184,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-mch",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:mch",
+   "kind": "mch",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "mch",
+   "page": 4000,
+   "expect": 35,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-merged_areg_forest_inter_1",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:merged_areg_forest_inter_1",
+   "kind": "merged_areg_forest_inter_1",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "merged_areg_forest_inter_1",
+   "page": 2800,
+   "expect": 28872,
+   "vintage": "live 2026-11",
+   "sort": "id",
+   "district": "dname"
+  }
+ },
+ {
+  "key": "tngis-metro_water_stations",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:metro_water_stations",
+   "kind": "metro_water_stations",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "metro_water_stations",
+   "page": 3400,
+   "expect": 24,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-microwatersheds",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:microwatersheds",
+   "kind": "microwatersheds",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "microwatersheds",
+   "page": 1400,
+   "expect": 18023,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-mines",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:mines",
+   "kind": "mines",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "mines",
+   "page": 4000,
+   "expect": 1515,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-mines_lease",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:mines_lease",
+   "kind": "mines_lease",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "mines_lease",
+   "page": 1300,
+   "expect": 122,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-monuments_tamilnadu_gis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:monuments_tamilnadu_gis",
+   "kind": "monuments_tamilnadu_gis",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "monuments_tamilnadu_gis",
+   "page": 4000,
+   "expect": 439,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-multipurpose_evacuation_shelter",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:multipurpose_evacuation_shelter",
+   "kind": "multipurpose_evacuation_shelter",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "multipurpose_evacuation_shelter",
+   "page": 4000,
+   "expect": 121,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-museums",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:museums",
+   "kind": "museums",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "museums",
+   "page": 4000,
+   "expect": 38,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-national_highways",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:national_highways",
+   "kind": "national_highways",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "national_highways",
+   "page": 2400,
+   "expect": 330,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-national_knowledge_network",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:national_knowledge_network",
+   "kind": "national_knowledge_network",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "national_knowledge_network",
+   "page": 4000,
+   "expect": 97,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-national_mission_on_education_through_infor_890769",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:national_mission_on_education_through_information_and_communication_technology",
+   "kind": "national_mission_on_education_through_infor_890769",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "national_mission_on_education_through_infor_890769",
+   "page": 4000,
+   "expect": 43,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-natural_framing_cluster",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:natural_framing_cluster",
+   "kind": "natural_framing_cluster",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "natural_framing_cluster",
+   "page": 4000,
+   "expect": 136,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-new_facilities",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:new_facilities",
+   "kind": "new_facilities",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "new_facilities",
+   "page": 2900,
+   "expect": 28,
+   "vintage": "live 2026-11",
+   "sort": "village_code,category_id,facility_name,latitude"
+  }
+ },
+ {
+  "key": "tngis-new_roads",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:new_roads",
+   "kind": "new_roads",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "new_roads",
+   "page": 1800,
+   "expect": 5,
+   "vintage": "live 2026-11",
+   "sort": "road_id"
+  }
+ },
+ {
+  "key": "tngis-none",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:None",
+   "kind": "none",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "none",
+   "page": 4000,
+   "expect": 2227,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-oceans_landstack",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:oceans_landstack",
+   "kind": "oceans_landstack",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "oceans_landstack",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-ofc_connectivity_horizontal_tnswan",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:ofc_connectivity_horizontal_tnswan",
+   "kind": "ofc_connectivity_horizontal_tnswan",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ofc_connectivity_horizontal_tnswan",
+   "page": 2500,
+   "expect": 503,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-ofc_connectivity_tnswan",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:ofc_connectivity_tnswan",
+   "kind": "ofc_connectivity_tnswan",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ofc_connectivity_tnswan",
+   "page": 3800,
+   "expect": 682,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-optical_line_terminal",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:optical_line_terminal",
+   "kind": "optical_line_terminal",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "optical_line_terminal",
+   "page": 4000,
+   "expect": 5000,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-other_district_roads",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:other_district_roads",
+   "kind": "other_district_roads",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "other_district_roads",
+   "page": 1800,
+   "expect": 8965,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-other_govt_land",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:other_govt_land",
+   "kind": "other_govt_land",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "other_govt_land",
+   "page": 2200,
+   "expect": 9905,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-package_c_cables",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:package_c_cables",
+   "kind": "package_c_cables",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "package_c_cables",
+   "page": 4000,
+   "expect": 205807,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-pallikaranai_lake_ramsar_noc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:pallikaranai_lake_ramsar_noc",
+   "kind": "pallikaranai_lake_ramsar_noc",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "pallikaranai_lake_ramsar_noc",
+   "page": 500,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-pallikaranai_lake_ramsar_noc_1km",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:pallikaranai_lake_ramsar_noc_1km",
+   "kind": "pallikaranai_lake_ramsar_noc_1km",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "pallikaranai_lake_ramsar_noc_1km",
+   "page": 500,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-panchayat_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:panchayat_boundary",
+   "kind": "panchayat_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "panchayat_boundary",
+   "page": 1100,
+   "expect": 12525,
+   "vintage": "live 2026-11",
+   "sort": "village_lgd_code"
+  }
+ },
+ {
+  "key": "tngis-parks_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_parks",
+   "kind": "parks_basemap",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "parks_basemap",
+   "page": 4000,
+   "expect": 866,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-petrol_bunks",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:petrol_bunks",
+   "kind": "petrol_bunks",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "petrol_bunks",
+   "page": 4000,
+   "expect": 4694,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-phc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:phc",
+   "kind": "phc",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "phc",
+   "page": 4000,
+   "expect": 1895,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-pilgrim_centre",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:pilgrim_centre",
+   "kind": "pilgrim_centre",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "pilgrim_centre",
+   "page": 4000,
+   "expect": 23099,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-playground_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_playground",
+   "kind": "playground_basemap",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "playground_basemap",
+   "page": 1500,
+   "expect": 167,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-pm_mitra_sipcot_industrial_park_at_virudhun_f4e8cd",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:PM_MITRA_SIPCOT_Industrial_Park_at_Virudhunagar_boundary",
+   "kind": "pm_mitra_sipcot_industrial_park_at_virudhun_f4e8cd",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "pm_mitra_sipcot_industrial_park_at_virudhun_f4e8cd",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-pm_mitra_sipcot_industrial_park_at_virudhunagar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:PM_MITRA_SIPCOT_Industrial_Park_at_Virudhunagar",
+   "kind": "pm_mitra_sipcot_industrial_park_at_virudhunagar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "pm_mitra_sipcot_industrial_park_at_virudhunagar",
+   "page": 1700,
+   "expect": 314,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-poly_technical_college",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:poly_technical_college",
+   "kind": "poly_technical_college",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "poly_technical_college",
+   "page": 4000,
+   "expect": 460,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-primary_agricultural_co_operative_credit_society",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:primary_agricultural_co-operative_credit_society",
+   "kind": "primary_agricultural_co_operative_credit_society",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "primary_agricultural_co_operative_credit_society",
+   "page": 1000,
+   "expect": 4606,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district_name"
+  }
+ },
+ {
+  "key": "tngis-protected_area_sanctuaries",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:protected_area_sanctuaries",
+   "kind": "protected_area_sanctuaries",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "protected_area_sanctuaries",
+   "page": 500,
+   "expect": 599,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-quarry",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:quarry",
+   "kind": "quarry",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "quarry",
+   "page": 4000,
+   "expect": 1050,
+   "vintage": "live 2026-11",
+   "sort": "quarry_id"
+  }
+ },
+ {
+  "key": "tngis-raingauge",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:raingauge",
+   "kind": "raingauge",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "raingauge",
+   "page": 4000,
+   "expect": 496,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-region",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:region",
+   "kind": "region",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "region",
+   "page": 100,
+   "expect": 2,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-region_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:region_boundary",
+   "kind": "region_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "region_boundary",
+   "page": 100,
+   "expect": 3,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-regulated_market",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:regulated_market",
+   "kind": "regulated_market",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "regulated_market",
+   "page": 4000,
+   "expect": 255,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-regulations_zone",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:regulations_zone",
+   "kind": "regulations_zone",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "regulations_zone",
+   "page": 3000,
+   "expect": 3656,
+   "vintage": "live 2026-11",
+   "sort": "type_of_regulation,remarks"
+  }
+ },
+ {
+  "key": "tngis-reserve_forest",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:reserve_forest",
+   "kind": "reserve_forest",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "reserve_forest",
+   "page": 800,
+   "expect": 2117,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-reserve_forest_adjoining_villages",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:reserve_forest_adjoining_villages",
+   "kind": "reserve_forest_adjoining_villages",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "reserve_forest_adjoining_villages",
+   "page": 400,
+   "expect": 3326,
+   "vintage": "live 2026-11",
+   "sort": "gid"
+  }
+ },
+ {
+  "key": "tngis-reserve_forest_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_reserve_forest",
+   "kind": "reserve_forest_basemap",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "reserve_forest_basemap",
+   "page": 400,
+   "expect": 3743,
+   "vintage": "live 2026-11",
+   "sort": "gid"
+  }
+ },
+ {
+  "key": "tngis-reserve_forest_no_village_map",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:reserve_forest_no_village_map",
+   "kind": "reserve_forest_no_village_map",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "reserve_forest_no_village_map",
+   "page": 400,
+   "expect": 1767,
+   "vintage": "live 2026-11",
+   "sort": "gid"
+  }
+ },
+ {
+  "key": "tngis-reserve_forest_villages",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:reserve_forest_villages",
+   "kind": "reserve_forest_villages",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "reserve_forest_villages",
+   "page": 400,
+   "expect": 2827,
+   "vintage": "live 2026-11",
+   "sort": "gid"
+  }
+ },
+ {
+  "key": "tngis-reserve_land",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "forest:reserve_land",
+   "kind": "reserve_land",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "reserve_land",
+   "page": 800,
+   "expect": 229,
+   "vintage": "live 2026-11",
+   "sort": "reserve_land"
+  }
+ },
+ {
+  "key": "tngis-reservoir",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:reservoir",
+   "kind": "reservoir",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "reservoir",
+   "page": 500,
+   "expect": 90,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-revenue_village",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "data_sharing_dtcp:revenue_village",
+   "kind": "revenue_village",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "revenue_village",
+   "page": 500,
+   "expect": 18470,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "dist_name"
+  }
+ },
+ {
+  "key": "tngis-river",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:river",
+   "kind": "river",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "river",
+   "page": 2300,
+   "expect": 15710,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-road_block_glv_revision_adyar",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:road_block_glv_revision_adyar",
+   "kind": "road_block_glv_revision_adyar",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_block_glv_revision_adyar",
+   "page": 600,
+   "expect": 1766,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-road_network_analysis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:road_network_analysis",
+   "kind": "road_network_analysis",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_network_analysis",
+   "page": 1600,
+   "expect": 24173,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-road_network_analysis_noded",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:road_network_analysis_noded",
+   "kind": "road_network_analysis_noded",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_network_analysis_noded",
+   "page": 3900,
+   "expect": 61710,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-road_network_analysis_noded_vertices_pgr",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:road_network_analysis_noded_vertices_pgr",
+   "kind": "road_network_analysis_noded_vertices_pgr",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_network_analysis_noded_vertices_pgr",
+   "page": 4000,
+   "expect": 35310,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-road_network_analysis_vertices_pgr",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:road_network_analysis_vertices_pgr",
+   "kind": "road_network_analysis_vertices_pgr",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_network_analysis_vertices_pgr",
+   "page": 4000,
+   "expect": 34303,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-road_parcels_glv_revision_ariyalur",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:road_parcels_glv_revision_ariyalur",
+   "kind": "road_parcels_glv_revision_ariyalur",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_parcels_glv_revision_ariyalur",
+   "page": 2600,
+   "expect": 29751,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-road_proposal",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:road_proposal",
+   "kind": "road_proposal",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_proposal",
+   "page": 2400,
+   "expect": 32,
+   "vintage": "live 2026-11",
+   "sort": "road_id,created_date"
+  }
+ },
+ {
+  "key": "tngis-road_proposal_logs",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:road_proposal_logs",
+   "kind": "road_proposal_logs",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "road_proposal_logs",
+   "page": 2200,
+   "expect": 13,
+   "vintage": "live 2026-11",
+   "sort": "road_proposal_id,updated_date"
+  }
+ },
+ {
+  "key": "tngis-roads_network_analysis_noded_vertices_pgr",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:roads_network_analysis_noded_vertices_pgr",
+   "kind": "roads_network_analysis_noded_vertices_pgr",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "roads_network_analysis_noded_vertices_pgr",
+   "page": 4000,
+   "expect": 98053,
+   "vintage": "live 2026-11",
+   "sort": "cnt,chk,ein,eout"
+  }
+ },
+ {
+  "key": "tngis-roads_network_analysis_vertices_pgr",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:roads_network_analysis_vertices_pgr",
+   "kind": "roads_network_analysis_vertices_pgr",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "roads_network_analysis_vertices_pgr",
+   "page": 4000,
+   "expect": 91377,
+   "vintage": "live 2026-11",
+   "sort": "cnt,chk,ein,eout"
+  }
+ },
+ {
+  "key": "tngis-rural_cadastral",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:rural_cadastral",
+   "kind": "rural_cadastral",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "rural_cadastral",
+   "page": 3800,
+   "expect": 97,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-rural_village",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:rural_village",
+   "kind": "rural_village",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "rural_village",
+   "page": 1100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sadp_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sadp_boundary",
+   "kind": "sadp_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sadp_boundary",
+   "page": 100,
+   "expect": 70,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sadp_scst_habitation",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sadp_scst_habitation",
+   "kind": "sadp_scst_habitation",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sadp_scst_habitation",
+   "page": 4000,
+   "expect": 1017,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-scrb_iit_fifty_hotspot",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:scrb_iit_fifty_hotspot",
+   "kind": "scrb_iit_fifty_hotspot",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "scrb_iit_fifty_hotspot",
+   "page": 4000,
+   "expect": 2265,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-scrb_iit_hotspot_point_new",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:scrb_iit_hotspot_point_new",
+   "kind": "scrb_iit_hotspot_point_new",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "scrb_iit_hotspot_point_new",
+   "page": 4000,
+   "expect": 4530,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-sdh",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sdh",
+   "kind": "sdh",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sdh",
+   "page": 4000,
+   "expect": 277,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-seed_production_cluster",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:seed_production_cluster",
+   "kind": "seed_production_cluster",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "seed_production_cluster",
+   "page": 4000,
+   "expect": 93,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sensitive_places_institution_religious_bus_stand",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sensitive_places_institution_religious_bus_stand",
+   "kind": "sensitive_places_institution_religious_bus_stand",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sensitive_places_institution_religious_bus_stand",
+   "page": 4000,
+   "expect": 64531,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sensitive_places_within_500_buffer_from_tasmac",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sensitive_places_within_500_buffer_from_tasmac",
+   "kind": "sensitive_places_within_500_buffer_from_tasmac",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sensitive_places_within_500_buffer_from_tasmac",
+   "page": 4000,
+   "expect": 9029,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sericulture",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sericulture",
+   "kind": "sericulture",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sericulture",
+   "page": 4000,
+   "expect": 84,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sewerage_pumping_station",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sewerage_pumping_station",
+   "kind": "sewerage_pumping_station",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sewerage_pumping_station",
+   "page": 3200,
+   "expect": 124,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sick_new_born_care_units",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sick_new_born_care_units",
+   "kind": "sick_new_born_care_units",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sick_new_born_care_units",
+   "page": 4000,
+   "expect": 64,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sidco_plot_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:sidco_plot_boundary",
+   "kind": "sidco_plot_boundary",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sidco_plot_boundary",
+   "page": 4000,
+   "expect": 174,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-sipcot_estate",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sipcot_estate",
+   "kind": "sipcot_estate",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_estate",
+   "page": 1000,
+   "expect": 5385,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sipcot_estate_outer_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sipcot_estate_outer_boundary",
+   "kind": "sipcot_estate_outer_boundary",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_estate_outer_boundary",
+   "page": 400,
+   "expect": 20,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_airport_connectivity",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_airport_connectivity",
+   "kind": "sipcot_pm_gatishakthi_airport_connectivity",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_airport_connectivity",
+   "page": 100,
+   "expect": 40,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_airport_point",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_airport_point",
+   "kind": "sipcot_pm_gatishakthi_airport_point",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_airport_point",
+   "page": 4000,
+   "expect": 7,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_icd_connectivity",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_icd_connectivity",
+   "kind": "sipcot_pm_gatishakthi_icd_connectivity",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_icd_connectivity",
+   "page": 100,
+   "expect": 60,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_icd_point",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_icd_point",
+   "kind": "sipcot_pm_gatishakthi_icd_point",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_icd_point",
+   "page": 4000,
+   "expect": 10,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_mmlp_connectivity",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_mmlp_connectivity",
+   "kind": "sipcot_pm_gatishakthi_mmlp_connectivity",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_mmlp_connectivity",
+   "page": 100,
+   "expect": 7,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_mmlp_point",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_mmlp_point",
+   "kind": "sipcot_pm_gatishakthi_mmlp_point",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_mmlp_point",
+   "page": 4000,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_nh_connectivity",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_nh_connectivity",
+   "kind": "sipcot_pm_gatishakthi_nh_connectivity",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_nh_connectivity",
+   "page": 1000,
+   "expect": 7,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_park_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_park_boundary",
+   "kind": "sipcot_pm_gatishakthi_park_boundary",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_park_boundary",
+   "page": 100,
+   "expect": 7,
+   "vintage": "live 2026-11",
+   "sort": "gid",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_port_connectivity",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_port_connectivity",
+   "kind": "sipcot_pm_gatishakthi_port_connectivity",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_port_connectivity",
+   "page": 100,
+   "expect": 21,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_port_point",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_port_point",
+   "kind": "sipcot_pm_gatishakthi_port_point",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_port_point",
+   "page": 4000,
+   "expect": 3,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_railway_connectivity",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_railway_connectivity",
+   "kind": "sipcot_pm_gatishakthi_railway_connectivity",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_railway_connectivity",
+   "page": 100,
+   "expect": 26,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_railway_point",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_railway_point",
+   "kind": "sipcot_pm_gatishakthi_railway_point",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_railway_point",
+   "page": 4000,
+   "expect": 23,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-sipcot_pm_gatishakthi_sh_connectivity",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:sipcot_pm_gatishakthi_sh_connectivity",
+   "kind": "sipcot_pm_gatishakthi_sh_connectivity",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sipcot_pm_gatishakthi_sh_connectivity",
+   "page": 300,
+   "expect": 7,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-slum_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:slum_boundary",
+   "kind": "slum_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "slum_boundary",
+   "page": 3300,
+   "expect": 2507,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-soil",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:soil",
+   "kind": "soil",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "soil",
+   "page": 900,
+   "expect": 1761,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-south_states",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:south_states",
+   "kind": "south_states",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "south_states",
+   "page": 100,
+   "expect": 18,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-sp_tnoutpolygon",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "PWDworks:sp_tnoutpolygon",
+   "kind": "sp_tnoutpolygon",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sp_tnoutpolygon",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "gid"
+  }
+ },
+ {
+  "key": "tngis-sro_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sro_boundary",
+   "kind": "sro_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sro_boundary",
+   "page": 100,
+   "expect": 565,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-srowise_revnue_village_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "igr:srowise_revnue_village_boundary",
+   "kind": "srowise_revnue_village_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "srowise_revnue_village_boundary",
+   "page": 500,
+   "expect": 18183,
+   "vintage": "live 2026-11",
+   "sort": "gid"
+  }
+ },
+ {
+  "key": "tngis-stadiums",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:stadiums",
+   "kind": "stadiums",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "stadiums",
+   "page": 4000,
+   "expect": 64,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-state_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:state_boundary",
+   "kind": "state_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "state_boundary",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-state_highways",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:state_highways",
+   "kind": "state_highways",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "state_highways",
+   "page": 300,
+   "expect": 974,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-state_ring",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:state_ring",
+   "kind": "state_ring",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "state_ring",
+   "page": 4000,
+   "expect": 8,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sub_basin",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:sub_basin",
+   "kind": "sub_basin",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sub_basin",
+   "page": 200,
+   "expect": 148,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-subcatchment",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:subcatchment",
+   "kind": "subcatchment",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "subcatchment",
+   "page": 100,
+   "expect": 28,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-sugar_mills_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_sugar_mills",
+   "kind": "sugar_mills_basemap",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "sugar_mills_basemap",
+   "page": 3600,
+   "expect": 43,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-super_core_distance",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:super_core_distance",
+   "kind": "super_core_distance",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "super_core_distance",
+   "page": 4000,
+   "expect": 6,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-survey_ae_ofc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:survey_ae_ofc",
+   "kind": "survey_ae_ofc",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "survey_ae_ofc",
+   "page": 1300,
+   "expect": 11610,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-survey_ug_ofc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:survey_ug_ofc",
+   "kind": "survey_ug_ofc",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "survey_ug_ofc",
+   "page": 800,
+   "expect": 2186,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tasmac_100m_buffer",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tasmac_100m_buffer",
+   "kind": "tasmac_100m_buffer",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tasmac_100m_buffer",
+   "page": 1900,
+   "expect": 4342,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tasmac_500m_buffer",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tasmac_500m_buffer",
+   "kind": "tasmac_500m_buffer",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tasmac_500m_buffer",
+   "page": 1700,
+   "expect": 3135,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tasmac_fl2fl3_gt_gis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tasmac_fl2fl3_gt_gis",
+   "kind": "tasmac_fl2fl3_gt_gis",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tasmac_fl2fl3_gt_gis",
+   "page": 1000,
+   "expect": 38,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district_name"
+  }
+ },
+ {
+  "key": "tngis-tasmac_location_for_analysis_for_closing",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tasmac_location_for_analysis_for_closing",
+   "kind": "tasmac_location_for_analysis_for_closing",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tasmac_location_for_analysis_for_closing",
+   "page": 2800,
+   "expect": 4740,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tasmac_location_gis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tasmac_location_gis",
+   "kind": "tasmac_location_gis",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tasmac_location_gis",
+   "page": 2700,
+   "expect": 5146,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-tasmac_location_gt_gis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tasmac_location_gt_gis",
+   "kind": "tasmac_location_gt_gis",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tasmac_location_gt_gis",
+   "page": 4000,
+   "expect": 4956,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-tasmac_office_gt_gis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tasmac_office_gt_gis",
+   "kind": "tasmac_office_gt_gis",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tasmac_office_gt_gis",
+   "page": 4000,
+   "expect": 97,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tasmac_region_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tasmac_region_boundary",
+   "kind": "tasmac_region_boundary",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tasmac_region_boundary",
+   "page": 100,
+   "expect": 38,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-temple_land_dgps_point",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:temple_land_dgps_point",
+   "kind": "temple_land_dgps_point",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "temple_land_dgps_point",
+   "page": 4000,
+   "expect": 5486,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-temple_lands",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:temple_lands",
+   "kind": "temple_lands",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "temple_lands",
+   "page": 3000,
+   "expect": 597,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tidco_additional_projects",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:tidco_additional_projects",
+   "kind": "tidco_additional_projects",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tidco_additional_projects",
+   "page": 4000,
+   "expect": 52,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tiruppur_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tiruppur_boundary",
+   "kind": "tiruppur_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tiruppur_boundary",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "ogc_fid"
+  }
+ },
+ {
+  "key": "tngis-tiruppur_district_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tiruppur_district_boundary",
+   "kind": "tiruppur_district_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tiruppur_district_boundary",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tn_ex_serviceman",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tn_ex_serviceman",
+   "kind": "tn_ex_serviceman",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tn_ex_serviceman",
+   "page": 4000,
+   "expect": 44,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-tn_railway",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tn_railway",
+   "kind": "tn_railway",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tn_railway",
+   "page": 1000,
+   "expect": 55,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tn_reservoirs_point_nrsc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tn_reservoirs_point_nrsc",
+   "kind": "tn_reservoirs_point_nrsc",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tn_reservoirs_point_nrsc",
+   "page": 4000,
+   "expect": 7,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tn_substation",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tn_substation",
+   "kind": "tn_substation",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tn_substation",
+   "page": 4000,
+   "expect": 1872,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tn_waterbodies_nrsc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tn_waterbodies_nrsc",
+   "kind": "tn_waterbodies_nrsc",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tn_waterbodies_nrsc",
+   "page": 4000,
+   "expect": 77386,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_aads",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_aads",
+   "kind": "tncsc_aads",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_aads",
+   "page": 4000,
+   "expect": 59,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_ads",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_ads",
+   "kind": "tncsc_ads",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_ads",
+   "page": 3600,
+   "expect": 18,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_cap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_cap",
+   "kind": "tncsc_cap",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_cap",
+   "page": 4000,
+   "expect": 95,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_crs",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_crs",
+   "kind": "tncsc_crs",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_crs",
+   "page": 4000,
+   "expect": 1549,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_godown_buffer",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_godown_buffer",
+   "kind": "tncsc_godown_buffer",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_godown_buffer",
+   "page": 4000,
+   "expect": 226,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_hulling_agents",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_hulling_agents",
+   "kind": "tncsc_hulling_agents",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_hulling_agents",
+   "page": 3600,
+   "expect": 618,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_kerosene_bunk",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_kerosene_bunk",
+   "kind": "tncsc_kerosene_bunk",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_kerosene_bunk",
+   "page": 4000,
+   "expect": 10,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_mrm",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_mrm",
+   "kind": "tncsc_mrm",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_mrm",
+   "page": 2700,
+   "expect": 21,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_operational_godown",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_operational_godown",
+   "kind": "tncsc_operational_godown",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_operational_godown",
+   "page": 4000,
+   "expect": 264,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_petrol_and_gas_agency",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_petrol_and_gas_agency",
+   "kind": "tncsc_petrol_and_gas_agency",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_petrol_and_gas_agency",
+   "page": 4000,
+   "expect": 8,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_railhead",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_railhead",
+   "kind": "tncsc_railhead",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_railhead",
+   "page": 4000,
+   "expect": 39,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_semi_covered_godown",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_semi_covered_godown",
+   "kind": "tncsc_semi_covered_godown",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_semi_covered_godown",
+   "page": 3000,
+   "expect": 28,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tncsc_weighbridge",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tncsc_weighbridge",
+   "kind": "tncsc_weighbridge",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tncsc_weighbridge",
+   "page": 4000,
+   "expect": 301,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-tneb_buildings",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tneb_buildings",
+   "kind": "tneb_buildings",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tneb_buildings",
+   "page": 3400,
+   "expect": 10,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tneb_circle",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tneb_circle",
+   "kind": "tneb_circle",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tneb_circle",
+   "page": 100,
+   "expect": 44,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tneb_division",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tneb_division",
+   "kind": "tneb_division",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tneb_division",
+   "page": 300,
+   "expect": 176,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tneb_region",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tneb_region",
+   "kind": "tneb_region",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tneb_region",
+   "page": 100,
+   "expect": 9,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tneb_section_gis",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tneb_section_gis",
+   "kind": "tneb_section_gis",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tneb_section_gis",
+   "page": 800,
+   "expect": 2817,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tneb_subdivision",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tneb_subdivision",
+   "kind": "tneb_subdivision",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tneb_subdivision",
+   "page": 1000,
+   "expect": 706,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tnmsc_medical_warehouse_locations",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tnmsc_medical_warehouse_locations",
+   "kind": "tnmsc_medical_warehouse_locations",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tnmsc_medical_warehouse_locations",
+   "page": 4000,
+   "expect": 37,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-tnrd_blocks",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:tnrd_blocks",
+   "kind": "tnrd_blocks",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tnrd_blocks",
+   "page": 100,
+   "expect": 389,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-tnrd_bridge",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tnrd_bridge",
+   "kind": "tnrd_bridge",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tnrd_bridge",
+   "page": 4000,
+   "expect": 879,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tnrd_facilites",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tnrd_facilites",
+   "kind": "tnrd_facilites",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tnrd_facilites",
+   "page": 4000,
+   "expect": 28342,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tnrd_new_habitations",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:tnrd_new_habitations",
+   "kind": "tnrd_new_habitations",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tnrd_new_habitations",
+   "page": 2700,
+   "expect": 26,
+   "vintage": "live 2026-11",
+   "sort": "reference"
+  }
+ },
+ {
+  "key": "tngis-tnrd_railways",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:tnrd_railways",
+   "kind": "tnrd_railways",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tnrd_railways",
+   "page": 1000,
+   "expect": 55,
+   "vintage": "live 2026-11",
+   "sort": "railway_id"
+  }
+ },
+ {
+  "key": "tngis-tnrd_roads_split",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:tnrd_roads_split",
+   "kind": "tnrd_roads_split",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tnrd_roads_split",
+   "page": 2400,
+   "expect": 24173,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-tnrd_tourist_point",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:tnrd_tourist_point",
+   "kind": "tnrd_tourist_point",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tnrd_tourist_point",
+   "page": 4000,
+   "expect": 306,
+   "vintage": "live 2026-11",
+   "sort": "tourist_point_id"
+  }
+ },
+ {
+  "key": "tngis-tnrd_urban_local_bodies",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tnrd:urban_local_bodies",
+   "kind": "tnrd_urban_local_bodies",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tnrd_urban_local_bodies",
+   "page": 800,
+   "expect": 649,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-tnswan_pop_address",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tnswan_pop_address",
+   "kind": "tnswan_pop_address",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tnswan_pop_address",
+   "page": 1000,
+   "expect": 705,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district_name"
+  }
+ },
+ {
+  "key": "tngis-toll_plaza_data",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:toll_plaza_data",
+   "kind": "toll_plaza_data",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "toll_plaza_data",
+   "page": 4000,
+   "expect": 98,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-tourisms",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:tourisms",
+   "kind": "tourisms",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "tourisms",
+   "page": 4000,
+   "expect": 270,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-traffic_square_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_traffic_square",
+   "kind": "traffic_square_basemap",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "traffic_square_basemap",
+   "page": 4000,
+   "expect": 444,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-transformer_basemap",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "tngis_basemap:basemap_transformer",
+   "kind": "transformer_basemap",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "transformer_basemap",
+   "page": 4000,
+   "expect": 5504,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-treasuries",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:treasuries",
+   "kind": "treasuries",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "treasuries",
+   "page": 4000,
+   "expect": 301,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-trichy_cadastral_data_join_thuraiyur_porombokku",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:trichy_cadastral_data_join_thuraiyur_porombokku",
+   "kind": "trichy_cadastral_data_join_thuraiyur_porombokku",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "trichy_cadastral_data_join_thuraiyur_porombokku",
+   "page": 1500,
+   "expect": 1553,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-trichy_cluster_more_than_500_acres",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:trichy_cluster_more_than_500_acres",
+   "kind": "trichy_cluster_more_than_500_acres",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "trichy_cluster_more_than_500_acres",
+   "page": 300,
+   "expect": 16,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-trichy_district_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:trichy_district_boundary",
+   "kind": "trichy_district_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "trichy_district_boundary",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-trichy_govt_land_cluster_landparcel",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:trichy_govt_land_cluster_landparcel",
+   "kind": "trichy_govt_land_cluster_landparcel",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "trichy_govt_land_cluster_landparcel",
+   "page": 2500,
+   "expect": 3961,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-trichy_morethen_fifty_acre",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:trichy_morethen_fifty_acre",
+   "kind": "trichy_morethen_fifty_acre",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "trichy_morethen_fifty_acre",
+   "page": 800,
+   "expect": 126,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-trichy_morethen_five_acre_cluster",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:trichy_morethen_five_acre_cluster",
+   "kind": "trichy_morethen_five_acre_cluster",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "trichy_morethen_five_acre_cluster",
+   "page": 1700,
+   "expect": 1338,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-trichy_other_govt_land_to_host",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:trichy_other_govt_land_to_host",
+   "kind": "trichy_other_govt_land_to_host",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "trichy_other_govt_land_to_host",
+   "page": 2800,
+   "expect": 10721,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-trichy_three_to_five_acre_cluster",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:trichy_three_to_five_acre_cluster",
+   "kind": "trichy_three_to_five_acre_cluster",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "trichy_three_to_five_acre_cluster",
+   "page": 2000,
+   "expect": 789,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-ug_ofc",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:ug_ofc",
+   "kind": "ug_ofc",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ug_ofc",
+   "page": 500,
+   "expect": 2187,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-ulb_utility",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:ulb_utility",
+   "kind": "ulb_utility",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ulb_utility",
+   "page": 4000,
+   "expect": 162551,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-ulb_water_flow_direction",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:ulb_water_flow_direction",
+   "kind": "ulb_water_flow_direction",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ulb_water_flow_direction",
+   "page": 4000,
+   "expect": 39468,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-ulb_water_pipeline",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:ulb_water_pipeline",
+   "kind": "ulb_water_pipeline",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "ulb_water_pipeline",
+   "page": 4000,
+   "expect": 150918,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-urban_block_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:urban_block_boundary",
+   "kind": "urban_block_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "urban_block_boundary",
+   "page": 1300,
+   "expect": 27586,
+   "vintage": "live 2026-11",
+   "sort": "gid",
+   "district": "dname"
+  }
+ },
+ {
+  "key": "tngis-urban_cadastral",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:urban_cadastral",
+   "kind": "urban_cadastral",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "urban_cadastral",
+   "page": 3800,
+   "expect": 44365,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-urban_localbody_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:urban_localbody_boundary",
+   "kind": "urban_localbody_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "urban_localbody_boundary",
+   "page": 300,
+   "expect": 43,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-urban_village",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:urban_village",
+   "kind": "urban_village",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "urban_village",
+   "page": 1200,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ },
+ {
+  "key": "tngis-uzhavar_santhai",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:uzhavar_santhai",
+   "kind": "uzhavar_santhai",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "uzhavar_santhai",
+   "page": 4000,
+   "expect": 178,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-velankanni_flow_direction",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:velankanni_flow_direction",
+   "kind": "velankanni_flow_direction",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "velankanni_flow_direction",
+   "page": 4000,
+   "expect": 454,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-velankanni_machine_hole",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:velankanni_machine_hole",
+   "kind": "velankanni_machine_hole",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "velankanni_machine_hole",
+   "page": 4000,
+   "expect": 702,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-velankanni_over_head_tank",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:velankanni_over_head_tank",
+   "kind": "velankanni_over_head_tank",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "velankanni_over_head_tank",
+   "page": 4000,
+   "expect": 2,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-velankanni_roads",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:velankanni_roads",
+   "kind": "velankanni_roads",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "velankanni_roads",
+   "page": 4000,
+   "expect": 465,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-velankanni_storm_water_drain",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:velankanni_storm_water_drain",
+   "kind": "velankanni_storm_water_drain",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "velankanni_storm_water_drain",
+   "page": 4000,
+   "expect": 51,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-velankanni_under_ground_drainage",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:velankanni_under_ground_drainage",
+   "kind": "velankanni_under_ground_drainage",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "velankanni_under_ground_drainage",
+   "page": 4000,
+   "expect": 657,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-velankanni_water_supply_network",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:velankanni_water_supply_network",
+   "kind": "velankanni_water_supply_network",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "velankanni_water_supply_network",
+   "page": 4000,
+   "expect": 457,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-velankanni_water_supply_node",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:velankanni_water_supply_node",
+   "kind": "velankanni_water_supply_node",
+   "category": "infrastructure",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "velankanni_water_supply_node",
+   "page": 4000,
+   "expect": 386,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-vertinary_clinical_center",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vertinary_clinical_center",
+   "kind": "vertinary_clinical_center",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vertinary_clinical_center",
+   "page": 3000,
+   "expect": 14,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-vertinary_dispensary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vertinary_dispensary",
+   "kind": "vertinary_dispensary",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vertinary_dispensary",
+   "page": 4000,
+   "expect": 2723,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-vertinary_poly_clinic",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vertinary_poly_clinic",
+   "kind": "vertinary_poly_clinic",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vertinary_poly_clinic",
+   "page": 3200,
+   "expect": 16,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-vertinary_sub_center",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vertinary_sub_center",
+   "kind": "vertinary_sub_center",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vertinary_sub_center",
+   "page": 4000,
+   "expect": 833,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-villupuram_cluster_one_k_acre",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:villupuram_cluster_one_k_acre",
+   "kind": "villupuram_cluster_one_k_acre",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "villupuram_cluster_one_k_acre",
+   "page": 100,
+   "expect": 73,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-villupuram_ten_km_buffer_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:villupuram_ten_km_buffer_boundary",
+   "kind": "villupuram_ten_km_buffer_boundary",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "villupuram_ten_km_buffer_boundary",
+   "page": 100,
+   "expect": 1,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-virudunagar_pm_mitra_connectivity_line",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:virudunagar_pm_mitra_connectivity_line",
+   "kind": "virudunagar_pm_mitra_connectivity_line",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "virudunagar_pm_mitra_connectivity_line",
+   "page": 500,
+   "expect": 13,
+   "vintage": "live 2026-11",
+   "sort": "objectid_1"
+  }
+ },
+ {
+  "key": "tngis-virudunagar_pm_mitra_connectivity_point",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "Pm_Gati_Sakthi:virudunagar_pm_mitra_connectivity_point",
+   "kind": "virudunagar_pm_mitra_connectivity_point",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "virudunagar_pm_mitra_connectivity_point",
+   "page": 4000,
+   "expect": 11,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-vpm_govt_land_morethen_50_acre",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vpm_govt_land_morethen_50_acre",
+   "kind": "vpm_govt_land_morethen_50_acre",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vpm_govt_land_morethen_50_acre",
+   "page": 500,
+   "expect": 171,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-vpm_govt_land_morethen_five_acre",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vpm_govt_land_morethen_five_acre",
+   "kind": "vpm_govt_land_morethen_five_acre",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vpm_govt_land_morethen_five_acre",
+   "page": 800,
+   "expect": 1712,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-vpm_tnm_govt_land_between_3_to_5_acre",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vpm_tnm_govt_land_between_3_to_5_acre",
+   "kind": "vpm_tnm_govt_land_between_3_to_5_acre",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vpm_tnm_govt_land_between_3_to_5_acre",
+   "page": 900,
+   "expect": 17,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-vpm_tnm_govt_land_morethen_five_acre",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vpm_tnm_govt_land_morethen_five_acre",
+   "kind": "vpm_tnm_govt_land_morethen_five_acre",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vpm_tnm_govt_land_morethen_five_acre",
+   "page": 800,
+   "expect": 32,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-vpm_tvm_10km_buffer",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vpm_tvm_10km_buffer",
+   "kind": "vpm_tvm_10km_buffer",
+   "category": "other",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vpm_tvm_10km_buffer",
+   "page": 500,
+   "expect": 2,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-vpm_tvm_town_boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vpm_tvm_town_boundary",
+   "kind": "vpm_tvm_town_boundary",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vpm_tvm_town_boundary",
+   "page": 200,
+   "expect": 2,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-vulnerable_locations",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:vulnerable_locations",
+   "kind": "vulnerable_locations",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "vulnerable_locations",
+   "page": 4000,
+   "expect": 3980,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-waqf_tn",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:waqf_tn",
+   "kind": "waqf_tn",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "waqf_tn",
+   "page": 4000,
+   "expect": 2816,
+   "vintage": "live 2026-11",
+   "sort": "object_id",
+   "district": "district"
+  }
+ },
+ {
+  "key": "tngis-warehouse_location",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:warehouse_location",
+   "kind": "warehouse_location",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "warehouse_location",
+   "page": 4000,
+   "expect": 84,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-water_distribution_stations",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "land_stack:water_distribution_stations",
+   "kind": "water_distribution_stations",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "water_distribution_stations",
+   "page": 1100,
+   "expect": 121,
+   "vintage": "live 2026-11",
+   "sort": "objectid"
+  }
+ },
+ {
+  "key": "tngis-waterbodies",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "waterbodies:waterbodies",
+   "kind": "waterbodies",
+   "category": "land_env",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "waterbodies",
+   "page": 2000,
+   "expect": 8535,
+   "vintage": "live 2026-11",
+   "sort": "vc,kide,area",
+   "district": "dname"
+  }
+ },
+ {
+  "key": "tngis-women_livelihood_service_centre",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:women_livelihood_service_centre",
+   "kind": "women_livelihood_service_centre",
+   "category": "service_point",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "women_livelihood_service_centre",
+   "page": 4000,
+   "expect": 30,
+   "vintage": "live 2026-11",
+   "sort": "object_id"
+  }
+ },
+ {
+  "key": "tngis-world_administrative_boundaries",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://tngis.tn.gov.in/tngismaps/wfs",
+   "layer": "generic_viewer:world_administrative_boundaries",
+   "kind": "world_administrative_boundaries",
+   "category": "admin_boundary",
+   "state": "33",
+   "india_only": false,
+   "source": "tngis",
+   "chunk": "world_administrative_boundaries",
+   "page": 300,
+   "expect": 256,
+   "vintage": "live 2026-11",
+   "sort": "id"
+  }
+ }
+]

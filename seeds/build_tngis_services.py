@@ -35,7 +35,7 @@ LAYERS = [
     ("csc", "generic_viewer:csc_updated", 44101, "district", 5000),
     ("aadhaar_centre", "generic_viewer:aadhar_enrollment_center", 977, "district", 2000),
     ("govt_office", "generic_viewer:government_offices_location", 2317, "distname1", 5000),
-    ("govt_office_tanfinet", "generic_viewer:government_office_tanfinet_pop", 164814, "district", 5000),
+    ("govt_office_tanfinet", "generic_viewer:government_office_tanfinet_pop", 164814, "district", 2000),   # 5000: answer cut at 120,000
     ("district_hq", "generic_viewer:district_headquarters", 38, "district", 2000),
     ("rdo_office", "generic_viewer:revenue_divisional_office", 14, "district_name", 2000),
     ("taluk_office", "generic_viewer:taluk_office", 288, "district_name", 2000),
