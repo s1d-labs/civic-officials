@@ -40,7 +40,8 @@ def parse_contact(html, url=CONTACT):
         if t is None or not re.search(r"(?i)officials|officers", title):
             continue
         dmho = "District Medical" in title
-        for tr in t.find_all("tr"):
+        tno = _esw.table_no(t)
+        for n, tr in enumerate(t.find_all("tr"), 1):
             c = _cells(tr)
             if len(c) < 4 or not c[0] or c[0].lower().startswith("name of"):
                 continue
@@ -49,12 +50,14 @@ def parse_contact(html, url=CONTACT):
                 district = c[1]
                 recs.append(_esw.record(MODULE, f"dmho:{_esw.slug(district)}", dept="health", level="district", area=district,
                                         district=district, post="District Medical & Health Officer", category=title, name=name,
-                                        phone=_esw.phones(c[3]), email=_esw.emails(c[2]), state="AP", source=url, page=url))
+                                        phone=_esw.phones(c[3]), email=_esw.emails(c[2]), state="AP", source=url, page=url,
+                                        src_url=url, src_pos={"table": tno, "row": n}))
             else:
                 post = re.sub(r"\s*\|\s*", " ", c[1]).strip(" ,")
                 recs.append(_esw.record(MODULE, f"state:{_esw.slug(post)}:{_esw.slug(name)}", dept="health", level="state",
                                         area="Andhra Pradesh", post=post, category=title, name=name, phone=_esw.phones(c[3]),
-                                        email=_esw.emails(c[2]), state="AP", source=url, page=url))
+                                        email=_esw.emails(c[2]), state="AP", source=url, page=url,
+                                        src_url=url, src_pos={"table": tno, "row": n}))
     return recs
 
 
@@ -63,6 +66,8 @@ def parse_csms(html, url=CSMS):
     recs, district = [], ""
     for tr in s.find_all("tr", class_=["RowDistrictStyle", "RowDataStyle"]):
         c = _cells(tr)
+        t = tr.find_parent("table")
+        rp = {"table": _esw.table_no(t), "row": t.find_all("tr").index(tr) + 1} if t is not None else {}
         if "RowDistrictStyle" in tr.get("class", []):
             district = c[0].title() if c else ""
             continue
@@ -77,7 +82,7 @@ def parse_csms(html, url=CSMS):
                                 area=hosp, place=place, facility_type=HOSP.get(kind, kind), district=district,
                                 post="Medical Superintendent" + (" (in charge)" if ic else ""), name=name,
                                 phone=_esw.phones(mob), email=_esw.emails(mail), serial=sno.rstrip("."), state="AP",
-                                source=url, page=url))
+                                source=url, page=url, src_url=url, src_pos=rp))
     return recs
 
 

@@ -15,7 +15,7 @@ from pathlib import Path
 
 from dforms import _esw
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html tabs: office card + officer table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "central_social_security"
 TITLE = re.compile(r"^(?:(?:shri|smt|sri|sh|mr|mrs|ms|dr|km|kumari)(?:\.\s*|\s+))+", re.I)
@@ -70,9 +70,11 @@ def records(html, url, p):
         lvl = level_of(tid)
         recs.append(_esw.record(MODULE, f"epfo:{tid}", dept="social_security", level=lvl, area=office, post="Office",
                                 email=c.get("email"), address=c.get("address"), std_code=c.get("std"), state=p.get("state"),
-                                office_id=tid, source=url, agency="EPFO", kind="office"))
+                                office_id=tid, source=url, agency="EPFO", kind="office",
+                                src_pos={"selector": f"div.tab-content#{tid} .office-card-accordion"}))
         for t in tables:
-            for tr in t.select("tbody tr") or t.find_all("tr")[1:]:
+            all_trs = t.find_all("tr")
+            for tr in t.select("tbody tr") or all_trs[1:]:
                 tds = tr.find_all("td")
                 if len(tds) < 2:
                     continue
@@ -99,7 +101,9 @@ def records(html, url, p):
                 recs.append(_esw.record(
                     MODULE, key, dept="social_security", level=lvl, area=office, post=post, name=name, charge=charge,
                     phone=ph, email=em, address=c.get("address"), state=p.get("state"), office_id=tid, source=url,
-                    agency="EPFO", kind="officer"))
+                    agency="EPFO", kind="officer",
+                    src_pos={"table": _esw.table_no(t), "row": all_trs.index(tr) + 1 if tr in all_trs else None,
+                             "selector": f"div.tab-content#{tid}"}))
     return recs
 
 

@@ -162,3 +162,41 @@ def test_field_html_and_text_positions():
     assert recs[0][1]["method"].startswith("text layout")
     food = mod("field_food_dl").parse_food((DATA / "field_food_dl_officials_layout.txt").read_text(), "u")
     assert food[0][1]["src_pos"]["line_text"].strip() and food[0][1]["src_pos"]["page"] == 1
+
+
+def _tr_of(html, pos):
+    from dforms import _esw
+    soup = _esw.soup(html)
+    t = soup.find_all("table")[pos["table"] - 1]
+    return [x for x in t.find_all("tr") if x.find_parent("table") is t][pos["row"] - 1] if "row" in pos else t
+
+
+def test_court_central_health_positions():
+    from esw_common import fake_get, mod
+    m = mod("court_dcourts")
+    base = "https://patna.dcourts.gov.in/"
+    get = fake_get({base + "list-of-judges/": "court_dcourts_patna_judges.html",
+                    base + "contact-us/": "court_dcourts_kabirdham_contact.html"})
+    recs, _, _ = m.fetch({"url": base, "state": "BR", "district": "Patna"}, get)
+    judge = next(d for _, d in recs if d["kind"] == "judge")
+    office = next(d for _, d in recs if d["kind"] == "office")
+    assert judge["src_url"] == base + "list-of-judges/" and office["src_url"] == base + "contact-us/"
+    html = (DATA / "court_dcourts_patna_judges.html").read_text()
+    assert "ANAMIKA" in _tr_of(html, judge["src_pos"]).get_text(" ") and judge["method"] == "html table"
+    assert office["src_pos"].get("line_text") or office["src_pos"].get("row")
+    gst = mod("central_gst")
+    g = gst.officers((DATA / "central_gst_mumbai_thane.html").read_text(), "https://x/y", {"state": "MH", "zone": "z"})
+    assert g[0][1]["name"].split()[-1] in _tr_of((DATA / "central_gst_mumbai_thane.html").read_text(), g[0][1]["src_pos"]).get_text(" ")
+    bank = mod("central_banking")
+    text = (DATA / "central_banking_ifsc.csv").read_text(encoding="utf-8-sig")
+    st = bank.state_of(next(__import__("csv").DictReader(__import__("io").StringIO(text))))
+    b = bank.records(text, {"state": st}, "u")
+    assert b[0][1]["src_pos"]["row"] == 1 and b[0][1]["ifsc"] in text.splitlines()[b[0][1]["src_pos"]["line"] - 1]
+    br = mod("health_br_shs")
+    page = DATA / "gaps2" / "br_shs_district_28.html"
+    get = fake_get({lambda u, mm, dd: "district" in u and dd["page"] == "1": "gaps2/br_shs_district_28.html",
+                    lambda u, mm, dd: "block" in u and dd["page"] == "1": "gaps2/br_shs_block_28.html"})
+    recs, _, _ = br.fetch({"district_id": "28", "district": "Patna"}, get)
+    d = recs[0][1]
+    assert d["src_url"].endswith("get_contact_district_data") and d["src_sha256"] == hashlib.sha256(page.read_bytes()).hexdigest()
+    assert d["src_pos"]["ajax_page"] == 1 and d["src_pos"]["row"] >= 1
