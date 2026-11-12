@@ -123,7 +123,8 @@ def page_table(reader, page):
 
 
 def ruled_tables(content):
-    """Every page of a ruled PDF -> [(page_no, rows)]."""
+    """Every page of a ruled PDF -> [(page_no, rows)]. A row's place (source trail): 1-based index in its page's rows, i.e. the
+    band between two horizontal rules, top to bottom."""
     rd = PdfReader(io.BytesIO(content))
     return [(i, page_table(rd, pg)) for i, pg in enumerate(rd.pages, 1)]
 
@@ -131,14 +132,21 @@ def ruled_tables(content):
 # ---- tables without rules -----------------------------------------------------------------------------------------------
 
 def layout_lines(content):
-    """[(page_no, line)] in pypdf layout mode."""
+    """[(page_no, line, line_no)] in pypdf layout mode; blank lines left out; line_no = 1-based line in the page's layout text
+    (blank lines counted), for the source trail. Readers unpack `page, ln, *n = t` (saved fixtures may hold (page, line))."""
     rd = PdfReader(io.BytesIO(content))
     out = []
     for i, pg in enumerate(rd.pages, 1):
-        for ln in pg.extract_text(extraction_mode="layout").splitlines():
+        for k, ln in enumerate(pg.extract_text(extraction_mode="layout").splitlines(), 1):
             if ln.strip():
-                out.append((i, ln))
+                out.append((i, ln, k))
     return out
+
+
+def line_pos(t):
+    """src_pos of one layout_lines entry: {"page", "line", "line_text"} (no "line" when the entry has no number)."""
+    page, ln, *n = t
+    return {"page": page, **({"line": n[0]} if n else {}), "line_text": ln}
 
 
 def cells(line):

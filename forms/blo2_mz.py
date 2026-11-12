@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 
 from forms.aspnet import session
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards"     # source trail (provenance.py): how this reader reads its sources
 
 URL = "https://ceo.mizoram.gov.in/officer-contacts?officer_type=blo&blo_page={}"
 
@@ -49,7 +49,7 @@ def parse(html, url=""):
     soup = BeautifulSoup(html, "lxml")
     pane = soup.select_one("#blo") or soup
     rows = []
-    for card in pane.select("div.media.p-3"):
+    for k, card in enumerate(pane.select("div.media.p-3"), 1):
         name = card.find("h5")
         desig = card.find("h6")
         cells = {"Name": name.get_text(" ", strip=True) if name else "", "Designation": desig.get_text(" ", strip=True) if desig else ""}
@@ -66,7 +66,7 @@ def parse(html, url=""):
         ac = cells.get("Assembly Constituency", "")
         rows.append({"ac_no": ACS.get(ac_key(ac)), "ac_name": ac, "district": cells.get("District"), "part_no": cells["Part"],
                      "station": cells["Part"], "blo_name": cells["Name"], "blo_phone": "", "designation": cells["Designation"],
-                     "cells": cells})
+                     "cells": cells, "src_pos": {"selector": "#blo div.media.p-3", "card": k}})
     return rows
 
 

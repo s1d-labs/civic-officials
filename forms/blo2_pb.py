@@ -8,9 +8,9 @@ Text PDF without rules; read with pypdf layout mode. Answers from Germany. Seed:
 """
 import re
 
-from forms.blo2_in import cells, download, layout_lines, mobiles, part_of
+from forms.blo2_in import cells, download, layout_lines, line_pos, mobiles, part_of
 
-METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout, columns split at 2+ spaces)"     # source trail (provenance.py): how this reader reads its sources
 
 TITLE = re.compile(r"AC\s+(\d+)\s*[—–-]\s*(.+?)\s*:\s*BLO list", re.I)
 SOURCE = re.compile(r"source:\s*(.+)$", re.I)
@@ -18,7 +18,8 @@ SOURCE = re.compile(r"source:\s*(.+)$", re.I)
 
 def parse_ludhiana(lines, p):
     out, ac_no, ac_name, source = [], p.get("ac_no"), p.get("ac_name"), ""
-    for page, ln in lines:
+    for t in lines:
+        page, ln = t[0], t[1]
         m = TITLE.search(ln)
         if m:
             ac_no, ac_name = int(m.group(1)), m.group(2).strip()
@@ -35,7 +36,7 @@ def parse_ludhiana(lines, p):
         if source:
             raw["source_note"] = source
         out.append({"ac_no": ac_no, "ac_name": ac_name, "district": p.get("district", "Ludhiana"), "part_no": c[0],
-                    "blo_name": name, "blo_phone": mobiles(c[-1])[0], "cells": raw})
+                    "blo_name": name, "blo_phone": mobiles(c[-1])[0], "cells": raw, "src_pos": line_pos(t)})
     return out
 
 

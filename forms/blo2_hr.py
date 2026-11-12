@@ -28,13 +28,13 @@ def _text(td):
 def parse(html, district=None):
     soup = BeautifulSoup(html, "lxml")
     rows, seen = [], set()
-    for t in soup.find_all("table"):
+    for tno, t in enumerate(soup.find_all("table"), 1):
         cap = _text(t.caption) if t.caption else ""
         m = re.match(r"0*(\d+)\s*-\s*(.+)", cap)
         ac_no, ac_name = (int(m.group(1)), m.group(2).strip()) if m else (None, cap or None)
         trs = t.find_all("tr")
         head = None
-        for tr in trs:
+        for trno, tr in enumerate(trs, 1):
             tds = tr.find_all(["td", "th"])
             vals = [_text(td) for td in tds]
             if any(re.search(r"blo\s*name", v, re.I) for v in vals):
@@ -57,7 +57,8 @@ def parse(html, district=None):
             stn_k = next((k for k in cells if re.search(r"station name|booth name", k, re.I)), None)
             rows.append({"ac_no": ac_no, "ac_name": ac_name, "district": district, "part_no": part,
                          "station": cells.get(stn_k, ""), "blo_name": cells.get(name_k, ""), "blo_phone": cells.get("mobile", ""),
-                         **({"designation": cells["Designation"]} if cells.get("Designation") else {}), "cells": cells})
+                         **({"designation": cells["Designation"]} if cells.get("Designation") else {}), "cells": cells,
+                         "src_pos": {"table": tno, "row": trno}})
     return rows
 
 

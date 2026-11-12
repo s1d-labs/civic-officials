@@ -8,9 +8,9 @@ Text PDFs without rules on cdn.s3waas.gov.in; read with pypdf layout mode (forms
   Sr. No | Assembly | Part No. | Part Name | Name | Officer Type | AC No | Mobile No.
 The pages answer from Germany (cdn.s3waas.gov.in). Seed: seeds/blo2_mh.json (links from the archived notice pages).
 """
-from forms.blo2_in import cells, download, layout_lines, mobiles, part_of
+from forms.blo2_in import cells, download, layout_lines, line_pos, mobiles, part_of
 
-METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout, columns split at 2+ spaces)"     # source trail (provenance.py): how this reader reads its sources
 
 RAIGAD_SUP = ["Supervisor Sr.No.", "Supervisor Part Number", "Name of BLO Supervisor", "Designation of BLO Supervisor",
               "Supervisor Office Name", "Supervisor Mobile Number"]
@@ -27,7 +27,8 @@ def _mid(mid):
 
 def parse_raigad(lines, p):
     out = []
-    for page, ln in lines:
+    for t in lines:
+        page, ln = t[0], t[1]
         c = cells(ln)
         if len(c) < 5 or not (part_of(c[0]) and part_of(c[1])):
             continue
@@ -46,13 +47,14 @@ def parse_raigad(lines, p):
         elif right:
             raw["after_mobile"] = " | ".join(right)
         out.append({"ac_no": p.get("ac_no"), "ac_name": p.get("ac_name"), "district": p.get("district"), "part_no": c[1],
-                    "blo_name": c[2], "blo_phone": mobiles(c[i])[0], "designation": desig, "cells": raw})
+                    "blo_name": c[2], "blo_phone": mobiles(c[i])[0], "designation": desig, "cells": raw, "src_pos": line_pos(t)})
     return out
 
 
 def parse_satara(lines, p):
     out = []
-    for page, ln in lines:
+    for t in lines:
+        page, ln = t[0], t[1]
         c = cells(ln)
         if len(c) < 6 or not part_of(c[0]) or not mobiles(c[-1]):
             continue
@@ -66,7 +68,7 @@ def parse_satara(lines, p):
         ac = c[-2] if part_of(c[-2]) else p.get("ac_no")
         out.append({"ac_no": int(ac) if ac and str(ac).isdigit() else ac, "ac_name": c[1], "district": p.get("district"),
                     "part_no": c[2], "station": raw.get("Part Name", ""), "blo_name": raw.get("Name", ""),
-                    "blo_phone": mobiles(c[-1])[0], "designation": c[-3], "cells": raw})
+                    "blo_phone": mobiles(c[-1])[0], "designation": c[-3], "cells": raw, "src_pos": line_pos(t)})
     return out
 
 

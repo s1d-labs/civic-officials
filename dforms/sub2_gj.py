@@ -26,9 +26,10 @@ instead of the site (cforms/tn.py stored() pattern). Record ids: dept:sub2_gj:<k
 import io
 import re
 
+import provenance
 from dforms import _esw
 
-METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text pieces by position (pypdf, ruled columns)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub2_gj"
 SOURCES = {
@@ -81,7 +82,8 @@ def items(get=None):
 
 
 def stored(p, get):
-    """The PDF from the bucket when the item names its saved copy (payload "stored": "<project>/<path>.pdf")."""
+    """(bytes, key) of the PDF from the bucket when the item names its saved copy (payload "stored": "<project>/<path>.pdf").
+    The hub's signed url is read directly: the copy is in the bucket already; records name it in src (provenance.file_src)."""
     hub, k = getattr(get, "hub", None), p.get("stored")
     if not hub or not k:
         return None
@@ -90,7 +92,7 @@ def stored(p, get):
         url = hub.read_urls(k.split("/", 1)[0], [k])[k]
         r = requests.get(url, timeout=(20, 180))
         if r.status_code == 200 and r.content[:5] == b"%PDF-":
-            return r.content
+            return r.content, k
     except Exception:  # noqa: BLE001 - fall back to the site
         pass
     return None
@@ -151,6 +153,7 @@ def page_rows(texts, vlines, kind):
         if not sn:
             continue
         row["sn"] = sn.group(1)
+        row["_pos"] = {"row": i + 1, "sn": sn.group(1), "y": round(y0, 1)}   # row: 1-based on the page, top to bottom; y: PDF points
         if sn.group(2) and "district" in roles:
             row["district"] = join_lines([sn.group(2)] + cells.get("district", []))
         rows.append(row)
@@ -163,9 +166,11 @@ def rows(content, kind):
     from dforms._util2_pdfgrid import page_parts
     reader = PdfReader(io.BytesIO(content))
     out = []
-    for page in reader.pages:
+    for n, page in enumerate(reader.pages, 1):
         texts, _, vlines = page_parts(reader, page)
-        out += page_rows(texts, vlines, kind)
+        for r in page_rows(texts, vlines, kind):
+            r["_pos"] = {"page": n, **r.get("_pos", {})}
+            out.append(r)
     return out
 
 
@@ -265,7 +270,7 @@ def build(kind, rs, source, upd):
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept=dept, level=level, area=area, district=district, district_code=code, state="GJ", name=name, post=post,
                                 designation=DATE.sub(" ", r.get("post", "")), office=unit if unit != area else "", phone=phone, email=email, source=source, last_updated=upd,
-                                civil_list_no=r.get("sn", "")))
+                                civil_list_no=r.get("sn", ""), src_pos=r.get("_pos")))
     return recs
 
 
@@ -273,7 +278,8 @@ def fetch(p, get):
     kind = p.get("kind", "tdo")
     url, upd = SOURCES[kind]
     url = p.get("url") or url
-    content = stored(p, get)
+    got = stored(p, get)
+    content, key = got if got else (None, None)
     files = []
     if content is None:
         r = get(url)
@@ -284,4 +290,7 @@ def fetch(p, get):
             return [], [], "not a pdf"
         files = [(f"depts/{MODULE}/{kind}.pdf", content, "application/pdf")]
     recs = build(kind, rows(content, kind), url, upd)
+    src = {"src": provenance.file_src(content, url, key)} if key else {"src_url": url}
+    for _, d in recs:
+        d.update(src)
     return recs, files, "" if recs else "no rows"

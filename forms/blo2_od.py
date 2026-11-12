@@ -31,7 +31,7 @@ def items(s=None):
 
 def rows_from_geojson(doc, p):
     rows = []
-    for f in doc.get("features") or []:
+    for k, f in enumerate(doc.get("features") or []):
         pr = dict(f.get("properties") or {})
         g = f.get("geometry") or {}
         lon, lat = (g.get("coordinates") or [None, None])[:2] if g.get("type") == "Point" else (None, None)
@@ -41,7 +41,8 @@ def rows_from_geojson(doc, p):
         rows.append({"ac_no": pr.get("ac_no", p.get("ac_no")), "ac_name": _name(pr.get("asmby_no")),
                      "district": _name(pr.get("district_cd")), "part_no": part,
                      "station": pr.get("psbuilding_name_and_address") or pr.get("part_name") or "",
-                     "blo_name": "", "blo_phone": "", "cells": cells})
+                     "blo_name": "", "blo_phone": "", "cells": cells,
+                     "src_pos": {"feature": k, **({"feature_id": f["id"]} if f.get("id") is not None else {})}})
     rows.sort(key=lambda r: (r["part_no"] is None, r["part_no"] or 0))
     return rows
 

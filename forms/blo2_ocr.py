@@ -40,8 +40,9 @@ import requests
 
 from cforms import hr
 from forms.blo2_pdf import store_path
+import provenance
 
-METHOD = "ocr tesseract eng + pdf text + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "ocr tesseract (ruled grid reader of cforms/hr.py; language per state)"     # source trail (provenance.py): how this reader reads its sources
 
 # Tesseract languages per state (the payload's "lang" wins). Manipur, Mizoram, Meghalaya, Nagaland: English lists.
 LANGS = {"UP": "hin+eng", "BR": "hin+eng", "MP": "hin+eng", "RJ": "hin+eng", "HR": "hin+eng", "DL": "hin+eng", "UK": "hin+eng",
@@ -442,7 +443,11 @@ def parse(pages, p):
             cells = {names[i]: r[i] for i in range(n)}
             if phi is not None and ddig.get(phi, [""] * len(data))[k]:
                 cells["_mobile_digits"] = ddig[phi][k]
-            items.append({"votes": votes, "phone": phone, "name": name if whole else "", "name_read": name, "cells": cells,
+            conf = (pg.get("conf") or [])
+            pos = {"page": pg.get("page"), "row": first + k + 1}      # row: 1-based among the rows the grid reader found on the page
+            if first + k < len(conf):
+                pos["conf"] = conf[first + k]
+            items.append({"votes": votes, "phone": phone, "name": name if whole else "", "name_read": name, "cells": cells, "pos": pos,
                           "station": hr.clean(r[cols["station"]]) if "station" in cols else "",
                           "designation": post or (hr.clean(r[cols["designation"]]) if "designation" in cols else ""),
                           "page": pg.get("page")})
@@ -454,7 +459,9 @@ def parse(pages, p):
         seen.add(part)
         row = {"ac_no": p.get("ac_no"), "ac_name": p.get("ac_name"), "district": p.get("district"), "part_no": part,
                "station": it["station"], "blo_name": it["name"], "blo_phone": it["phone"], "cells": it["cells"],
-               "ocr": True, "page": it["page"]}
+               "ocr": True, "page": it["page"], "src_pos": it["pos"]}
+        if p.get("_lang"):
+            row["method"] = f"ocr tesseract {p['_lang']} (ruled grid reader of cforms/hr.py)"
         if it["designation"]:
             row["designation"] = it["designation"]
         if inf:
@@ -471,7 +478,9 @@ def parse(pages, p):
 # ---------------------------------------------------------------- the bucket copy
 
 def stored(p, hub):
-    """The PDF from the bucket (payload "stored": "<project>/<path>", or a list); None when no copy is there."""
+    """The PDF from the bucket (payload "stored": "<project>/<path>", or a list): (bytes, key); None when no copy is there.
+    The hub's signed bucket url is read directly (not through the trail: the copy is already in the bucket; the rows name it
+    in src {"sha256", "url", "file"})."""
     keys = p.get("stored") or []
     keys = [keys] if isinstance(keys, str) else list(keys)
     own = os.environ.get("SCRAPE_POOL_PROJECT")
@@ -486,7 +495,7 @@ def stored(p, hub):
                 continue
             r = requests.get(url, timeout=(20, 180))
             if r.status_code == 200 and r.content[:5] == b"%PDF-":
-                return r.content
+                return r.content, k
         except Exception:  # noqa: BLE001 - try the next copy, then the site
             continue
     return None
@@ -498,7 +507,8 @@ def read(s, p, hub=None):
     if not tools(lang):
         return [], [], f"tesseract {lang} not available"
     files = []
-    content = stored(p, hub)
+    got = stored(p, hub)
+    content, key = got if got else (None, None)
     if content is None:
         r = s.get(p["url"], timeout=(20, 180))
         r.raise_for_status()
@@ -510,7 +520,11 @@ def read(s, p, hub=None):
     raw = {"url": p["url"], "lang": lang, "sha256": hashlib.sha256(content).hexdigest(), "pages": pages}
     files.append((store_path(p)[:-4] + ".ocr.json.gz", gzip.compress(json.dumps(raw, ensure_ascii=False).encode()),
                    "application/gzip"))
-    rows = parse(pages, p)
+    rows = parse(pages, {**p, "_lang": lang})
+    if key:          # read from the bucket copy: the rows name that copy and its bytes
+        src = provenance.file_src(content, p["url"], key)
+        for row in rows:
+            row["src"] = dict(src)
     if rows:
         return rows, files, ""
     found = sum(len(pg.get("rows") or []) for pg in pages)

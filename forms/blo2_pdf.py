@@ -32,7 +32,7 @@ from pypdf import PdfReader
 
 from cforms import cn_krutidev
 
-METHOD = "pdf text (pypdf) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout; Kruti Dev map on pages set in Kruti Dev)"     # source trail (provenance.py): how this reader reads its sources
 
 SPLIT = re.compile(r"\s{2,}")
 MOBILE = re.compile(r"(?<!\d)(?:\+?91[\s-]?)?([6-9]\d{9})(?!\d)")
@@ -287,8 +287,9 @@ def rows_from_pages(pages, p, head=None):
     """pages: layout text per page. Returns blo.py form rows. head: columns to start with (from _guess_head)."""
     guessed = head is not None
     lab, rows, starts = (_labels(head) if head else {}), [], None
-    for page in pages:
+    for page_no, page in enumerate(pages, 1):
         items, pending, prev = [], [], []     # pass 1: data lines with the wrapped cell parts above them
+        pos_of = {}                           # source trail: item index -> src_pos of its data line
         kd = kd_page(page)
         for n_line, line in enumerate(page.splitlines()):
             if not line.strip():
@@ -312,8 +313,10 @@ def rows_from_pages(pages, p, head=None):
                 if last and not has_part and MOBILE.search(line) and not MOBILE.search(" ".join(t for _, _, t in last[0])):
                     # "7 | station | क0" then "स01 | name | post | office | mobile": one row typed on two lines
                     items[-1] = (last[0] + flds, last[1], False, last[3], n_line)
+                    pos_of[len(items) - 1]["line_end"] = n_line + 1
                 else:
                     items.append((_split(flds, len(head)), pending, len(flds) == len(head), [], n_line))
+                    pos_of[len(items) - 1] = {"page": page_no, "line": n_line + 1, "line_text": line}
                 pending = []
             elif TITLE.search(" ".join(texts)):
                 pending = []                # "बी0एल0ओ0 सूची - 388 वाराणसी उत्तरी": a title, not part of a cell
@@ -325,7 +328,7 @@ def rows_from_pages(pages, p, head=None):
             continue
         good = [f for f, _, _, _, _ in items if len(f) == len(head)]   # median start per column: outliers do not move it
         starts = _starts(good, head) if good else (starts or _starts([], head))
-        for flds, above, exact, below, _ in items:      # pass 2: fields -> columns
+        for k, (flds, above, exact, below, _) in enumerate(items):      # pass 2: fields -> columns
             cells = {}
             for h, f in _map(head, flds, starts, exact, lab):
                 cells[h] = (cells[h] + " " + f[2]) if h in cells else f[2]
@@ -336,6 +339,8 @@ def rows_from_pages(pages, p, head=None):
                 h = _map(head, [pf], starts, lab=lab)[0][0]
                 cells[h] = (cells[h] + " " + pf[2]) if cells.get(h) else pf[2]
             rows.append(_row(cells, lab, p))
+            rows[-1]["src_pos"] = pos_of[k]       # page: 1-based; line: 1-based in the page's layout text (blank lines counted)
+            rows[-1]["method"] = "pdf text (pypdf layout) + Kruti Dev map" if kd else "pdf text (pypdf layout)"
             if guessed:
                 rows[-1]["cells"]["_columns"] = GUESSED
     if not rows and not guessed:
