@@ -1,0 +1,589 @@
+[
+ {
+  "key": "swf_as:bajali.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://bajali.assam.gov.in/",
+   "host": "bajali.assam.gov.in",
+   "state": "AS",
+   "district": "Bajali",
+   "district_code": "739",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:baksa.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://baksa.assam.gov.in/",
+   "host": "baksa.assam.gov.in",
+   "state": "AS",
+   "district": "Baksa",
+   "district_code": "616",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:barpeta.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://barpeta.assam.gov.in/",
+   "host": "barpeta.assam.gov.in",
+   "state": "AS",
+   "district": "Barpeta",
+   "district_code": "280",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:biswanath.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://biswanath.assam.gov.in/",
+   "host": "biswanath.assam.gov.in",
+   "state": "AS",
+   "district": "Biswanath",
+   "district_code": "705",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:bongaigaon.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://bongaigaon.assam.gov.in/",
+   "host": "bongaigaon.assam.gov.in",
+   "state": "AS",
+   "district": "Bongaigaon",
+   "district_code": "281",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:cachar.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://cachar.assam.gov.in/",
+   "host": "cachar.assam.gov.in",
+   "state": "AS",
+   "district": "Cachar",
+   "district_code": "282",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:charaideo.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://charaideo.assam.gov.in/",
+   "host": "charaideo.assam.gov.in",
+   "state": "AS",
+   "district": "Charaideo",
+   "district_code": "708",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:chirang.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://chirang.assam.gov.in/",
+   "host": "chirang.assam.gov.in",
+   "state": "AS",
+   "district": "Chirang",
+   "district_code": "612",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:darrang.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://darrang.assam.gov.in/",
+   "host": "darrang.assam.gov.in",
+   "state": "AS",
+   "district": "Darrang",
+   "district_code": "283",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:dhemaji.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://dhemaji.assam.gov.in/",
+   "host": "dhemaji.assam.gov.in",
+   "state": "AS",
+   "district": "Dhemaji",
+   "district_code": "284",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:dhubri.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://dhubri.assam.gov.in/",
+   "host": "dhubri.assam.gov.in",
+   "state": "AS",
+   "district": "Dhubri",
+   "district_code": "285",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:dibrugarh.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://dibrugarh.assam.gov.in/",
+   "host": "dibrugarh.assam.gov.in",
+   "state": "AS",
+   "district": "Dibrugarh",
+   "district_code": "286",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:dimahasao.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://dimahasao.assam.gov.in/",
+   "host": "dimahasao.assam.gov.in",
+   "state": "AS",
+   "district": "Dima Hasao",
+   "district_code": "299",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:goalpara.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://goalpara.assam.gov.in/",
+   "host": "goalpara.assam.gov.in",
+   "state": "AS",
+   "district": "Goalpara",
+   "district_code": "287",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:golaghat.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://golaghat.assam.gov.in/",
+   "host": "golaghat.assam.gov.in",
+   "state": "AS",
+   "district": "Golaghat",
+   "district_code": "288",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:hailakandi.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://hailakandi.assam.gov.in/",
+   "host": "hailakandi.assam.gov.in",
+   "state": "AS",
+   "district": "Hailakandi",
+   "district_code": "289",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:hojai.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://hojai.assam.gov.in/",
+   "host": "hojai.assam.gov.in",
+   "state": "AS",
+   "district": "Hojai",
+   "district_code": "709",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:jorhat.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://jorhat.assam.gov.in/",
+   "host": "jorhat.assam.gov.in",
+   "state": "AS",
+   "district": "Jorhat",
+   "district_code": "290",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:kamrup.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://kamrup.assam.gov.in/",
+   "host": "kamrup.assam.gov.in",
+   "state": "AS",
+   "district": "Kamrup",
+   "district_code": "291",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:kamrupmetro.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://kamrupmetro.assam.gov.in/",
+   "host": "kamrupmetro.assam.gov.in",
+   "state": "AS",
+   "district": "Kamrup Metro",
+   "district_code": "618",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:karbianglong.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://karbianglong.assam.gov.in/",
+   "host": "karbianglong.assam.gov.in",
+   "state": "AS",
+   "district": "Karbi Anglong",
+   "district_code": "292",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:kokrajhar.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://kokrajhar.assam.gov.in/",
+   "host": "kokrajhar.assam.gov.in",
+   "state": "AS",
+   "district": "Kokrajhar",
+   "district_code": "294",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:lakhimpur.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://lakhimpur.assam.gov.in/",
+   "host": "lakhimpur.assam.gov.in",
+   "state": "AS",
+   "district": "Lakhimpur",
+   "district_code": "295",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:majuli.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://majuli.assam.gov.in/",
+   "host": "majuli.assam.gov.in",
+   "state": "AS",
+   "district": "Majuli",
+   "district_code": "706",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:morigaon.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://morigaon.assam.gov.in/",
+   "host": "morigaon.assam.gov.in",
+   "state": "AS",
+   "district": "Marigaon",
+   "district_code": "296",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:nagaon.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://nagaon.assam.gov.in/",
+   "host": "nagaon.assam.gov.in",
+   "state": "AS",
+   "district": "Nagaon",
+   "district_code": "297",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:nalbari.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://nalbari.assam.gov.in/",
+   "host": "nalbari.assam.gov.in",
+   "state": "AS",
+   "district": "Nalbari",
+   "district_code": "298",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:sivasagar.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://sivasagar.assam.gov.in/",
+   "host": "sivasagar.assam.gov.in",
+   "state": "AS",
+   "district": "Sivasagar",
+   "district_code": "300",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:sonitpur.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://sonitpur.assam.gov.in/",
+   "host": "sonitpur.assam.gov.in",
+   "state": "AS",
+   "district": "Sonitpur",
+   "district_code": "301",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:southsalmaramankachar.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://southsalmaramankachar.assam.gov.in/",
+   "host": "southsalmaramankachar.assam.gov.in",
+   "state": "AS",
+   "district": "South Salmara Mancachar",
+   "district_code": "707",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:sribhumi.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://sribhumi.assam.gov.in/",
+   "host": "sribhumi.assam.gov.in",
+   "state": "AS",
+   "district": "Sribhumi",
+   "district_code": "293",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:tamulpur.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://tamulpur.assam.gov.in/",
+   "host": "tamulpur.assam.gov.in",
+   "state": "AS",
+   "district": "Tamulpur",
+   "district_code": "756",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:tinsukia.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://tinsukia.assam.gov.in/",
+   "host": "tinsukia.assam.gov.in",
+   "state": "AS",
+   "district": "Tinsukia",
+   "district_code": "302",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:udalguri.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://udalguri.assam.gov.in/",
+   "host": "udalguri.assam.gov.in",
+   "state": "AS",
+   "district": "Udalguri",
+   "district_code": "617",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:westkarbianglong.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://westkarbianglong.assam.gov.in/",
+   "host": "westkarbianglong.assam.gov.in",
+   "state": "AS",
+   "district": "West Karbi Anglong",
+   "district_code": "710",
+   "dept": "administration",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:dhs.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://dhs.assam.gov.in/",
+   "host": "dhs.assam.gov.in",
+   "state": "AS",
+   "dept": "health",
+   "level": "state",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:elementary.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://elementary.assam.gov.in/",
+   "host": "elementary.assam.gov.in",
+   "state": "AS",
+   "dept": "education",
+   "level": "state",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:fcsca.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://fcsca.assam.gov.in/",
+   "host": "fcsca.assam.gov.in",
+   "state": "AS",
+   "dept": "food_supplies",
+   "level": "state",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:landrevenue.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://landrevenue.assam.gov.in/",
+   "host": "landrevenue.assam.gov.in",
+   "state": "AS",
+   "dept": "revenue",
+   "level": "state",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:madhyamik.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://madhyamik.assam.gov.in/",
+   "host": "madhyamik.assam.gov.in",
+   "state": "AS",
+   "dept": "education",
+   "level": "state",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:phe.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://phe.assam.gov.in/",
+   "host": "phe.assam.gov.in",
+   "state": "AS",
+   "dept": "water",
+   "level": "state",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:pnrd.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://pnrd.assam.gov.in/",
+   "host": "pnrd.assam.gov.in",
+   "state": "AS",
+   "dept": "rural_development",
+   "level": "state",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:police.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://police.assam.gov.in/",
+   "host": "police.assam.gov.in",
+   "state": "AS",
+   "dept": "police",
+   "level": "state",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:pwdroads.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://pwdroads.assam.gov.in/",
+   "host": "pwdroads.assam.gov.in",
+   "state": "AS",
+   "dept": "public_works",
+   "level": "state",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:sec.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://sec.assam.gov.in/",
+   "host": "sec.assam.gov.in",
+   "state": "AS",
+   "dept": "elections",
+   "level": "state",
+   "india_only": true
+  }
+ },
+ {
+  "key": "swf_as:transport.assam.gov.in",
+  "payload": {
+   "reader": "swf_as",
+   "url": "https://transport.assam.gov.in/",
+   "host": "transport.assam.gov.in",
+   "state": "AS",
+   "dept": "transport",
+   "level": "state",
+   "india_only": true
+  }
+ }
+]

@@ -52,3 +52,40 @@ def test_up_food_fetch_and_seed():
     assert [s["payload"]["source"] for s in seeds] == ["contacts", "emails"] and all(s["payload"]["india_only"] for s in seeds)
     recs, files, why = m.fetch(seeds[0]["payload"], fake_get({}))
     assert why == "no answer" and not recs
+
+
+# ---- Assam: Standardized Website Framework 2.0 sites ----
+KAMRUP = {"https://kamrup.assam.gov.in/whos-who": "swf_as/kamrup_whos-who.html",
+          "https://kamrup.assam.gov.in/contact-us": "swf_as/kamrup_contact-us.html"}
+
+
+def test_swf_as_district_site():
+    m = mod("swf_as")
+    p = next(i["payload"] for i in json.loads((ROOT / "seeds" / "dept_swf_as.json").read_text())
+             if i["payload"]["host"] == "kamrup.assam.gov.in")
+    assert p["district_code"] == "291" and p["india_only"]
+    recs, files, why = m.fetch(p, fake_get(KAMRUP))
+    assert why == "" and len(files) == 2 and files[0][0] == "depts/swf_as/kamrup.assam.gov.in/whos-who.html.gz"
+    check_records(recs, "swf_as", "administration")
+    by = {r: d for r, d in recs}
+    assert len(recs) == 21           # 20 Who's Who cards + the District Commissioner (contact page only), merged by name and post
+    dc = by["dept:swf_as:kamrup.assam.gov.in:deba-kumar-mishra-acs:district-commissioner"]
+    assert (dc["phone"], dc["email"], dc["level"], dc["district_code"]) == ("0361-2684404", "dc-kamrup@nic.in", "district", "291")
+    adc = by["dept:swf_as:kamrup.assam.gov.in:pranjit-kr-deb-acs:additional-district-commissioner"]
+    assert (adc["email"], adc["category"], adc["last_updated"]) == ("pranjitkumar27@gmail.com", "Additional District Commissioner",
+                                                                    "2026-10-30")
+    co = by["dept:swf_as:kamrup.assam.gov.in:nabajit-pathak-acs:co-district-commissioner"]
+    assert (co["level"], co["area"]) == ("subdivision", "Rangia")
+    assert by["dept:swf_as:kamrup.assam.gov.in:niranjan-chandra-baro:nazir"]["phone"] == "9954005806"
+
+
+def test_swf_as_placeholders_and_seeds():
+    m = mod("swf_as")
+    assert m.cards((DATA / "swf_as" / "dhs_whos-who.html").read_text()) == []     # "Shri HOD Name", "Mr Test"
+    recs, files, why = m.fetch({"url": "https://dhs.assam.gov.in/", "host": "dhs.assam.gov.in", "dept": "health"},
+                               fake_get({"https://dhs.assam.gov.in/whos-who": "swf_as/dhs_whos-who.html"}))
+    assert recs == [] and why == "no officer cards" and len(files) == 1
+    seeds = json.loads((ROOT / "seeds" / "dept_swf_as.json").read_text())
+    hosts = [s["payload"]["host"] for s in seeds]
+    assert len(hosts) == len(set(hosts)) and sum(h.split(".")[0] in m.DISTRICTS for h in hosts) == 35
+    assert all(s["payload"]["india_only"] and s["payload"]["reader"] == "swf_as" for s in seeds)
