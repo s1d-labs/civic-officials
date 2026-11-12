@@ -32,10 +32,11 @@ def _rec(seen, key, **f):
 def parse_section(html, p):
     seen, recs, insp = set(), [], {}
     for t in _esw.soup(html).find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g or not ("supervisor" in " ".join(g[0]).lower() and "inspector" in " ".join(g[0]).lower()):
             continue
-        for vals in g[1:]:
+        for vals, vp in zip(g[1:], gp[1:]):
             ward = re.sub(r"\D", "", vals[0])
             if not ward or len(vals) < 6:
                 continue
@@ -44,14 +45,16 @@ def parse_section(html, p):
             if sup or sup_mob:
                 recs.append(_rec(seen, f"ward-{ward}:sanitation-supervisor", level="ward", area=f"Ward {ward}",
                                  ward_name=wname or None, post="Sanitation Supervisor", name=sup,
-                                 phone=sup_mob, wards=[ward], source=p["url"]))
+                                 phone=sup_mob, wards=[ward], source=p["url"], src_pos=vp))
             if ins or ins_mob:
                 k = re.sub(r"\D", "", ins_mob) or _esw.slug(ins)
-                i = insp.setdefault(k, {"name": ins, "phone": ins_mob, "wards": []})
+                i = insp.setdefault(k, {"name": ins, "phone": ins_mob, "wards": [], "at": []})
                 i["wards"].append(ward)
+                i["at"].append(vp)
     for k, i in insp.items():
         recs.append(_rec(seen, f"si:{k}", level="ward", area="Wards " + ", ".join(i["wards"]), post="Sanitation Inspector",
-                         name=i["name"], phone=i["phone"], wards=i["wards"], source=p["url"]))
+                         name=i["name"], phone=i["phone"], wards=i["wards"], source=p["url"],
+                         src_pos={"rows": i["at"], "note": "one inspector summed over these table rows"}))
     return recs
 
 
@@ -67,7 +70,8 @@ def parse_list(html, p):
                 continue
             k = re.sub(r"\D", "", mob) or _esw.slug(name)
             recs.append(_rec(seen, f"si-list:{k}", level="ward", area="Wards " + ", ".join(wards),
-                             post=_esw.clean(post) or "Sanitation Inspector", name=name, phone=mob, wards=wards, source=p["url"]))
+                             post=_esw.clean(post) or "Sanitation Inspector", name=name, phone=mob, wards=wards, source=p["url"],
+                             src_pos=r.pos))
     return recs
 
 

@@ -35,7 +35,7 @@ def parse_officials(html, p, seen):
             zone = f"{m.group(1).title()} Zone"
             recs.append(_ward.record(MODULE, f"officials:{_esw.slug(zone)}:{_esw.slug(post or 'officer')}", seen, body=BODY, lgd=LGD,
                                      state=STATE, district=DISTRICT, level="zone", area=zone, zone=zone,
-                                     post=post or "Zone Officer", name=name, wing="administration", source=p["url"]))
+                                     post=post or "Zone Officer", name=name, wing="administration", source=p["url"], src_pos=r.pos))
     return recs
 
 
@@ -49,7 +49,7 @@ def parse_centres(html, p, seen):
             area = re.sub(r"(?i)\s*[–-]?\s*(city\s*)?civic\s*cent(er|re)\s*$", "", name).strip() or name
             recs.append(_ward.record(MODULE, f"civic-centres:{_esw.slug(area)}", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level="zone", area=f"{area} Civic Centre", post="Civic Centre",
-                                     address=addr, wing="administration", source=p["url"]))
+                                     address=addr, wing="administration", source=p["url"], src_pos=r.pos))
     return recs
 
 

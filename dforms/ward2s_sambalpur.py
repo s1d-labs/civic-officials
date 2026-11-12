@@ -29,7 +29,7 @@ def parse(html, p):
             w = ward[0]
             recs.append(_ward.record(MODULE, f"w{w}:ward-officer:{_esw.slug(name) or 'post'}", seen, body=BODY, lgd=LGD,
                                      state=STATE, district=DISTRICT, level="ward", area=f"Ward {w}", post="Ward Officer",
-                                     name=name, phone=phone, wards=[w], source=p["url"]))
+                                     name=name, phone=phone, wards=[w], source=p["url"], src_pos=r.pos))
     return recs
 
 

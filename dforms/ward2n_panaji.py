@@ -48,19 +48,19 @@ def parse_disposal(html, p, seen):
                 if re.search(r"(?i)section$", nm):
                     recs.append(_ward.record(MODULE, f"disposal:{_esw.slug(service)[:60]}:{_esw.slug(nm)}", seen, body=BODY, lgd=LGD,
                                              state=STATE, district=DISTRICT, level="body", area=service, post=f"{post} ({nm})",
-                                             phone=phone, address=ADDRESS, source=p["url"]))
+                                             phone=phone, address=ADDRESS, source=p["url"], src_pos=r.pos))
                     continue
                 recs.append(_ward.record(MODULE, f"disposal:{_esw.slug(service)[:60]}:{_esw.slug(nm)}", seen, body=BODY, lgd=LGD,
                                          state=STATE, district=DISTRICT, level="ward" if wards else "body", area=service,
                                          post=post, name=nm, phone=phone, address=ADDRESS, wards=wards,
                                          wing="engineering" if re.search(r"(?i)development\s*works", service) else None,
-                                         source=p["url"]))
+                                         source=p["url"], src_pos=r.pos))
     return recs
 
 
 def parse_sanitation(html, p, seen):
     recs = []
-    for ul in _esw.soup(html).find_all("ul", class_="elementor-icon-list-items"):
+    for ui, ul in enumerate(_esw.soup(html).find_all("ul", class_="elementor-icon-list-items"), 1):
         items_ = [_esw.clean(li.get_text(" ")) for li in ul.find_all("li")]
         if not items_ or not re.match(r"(?i)contact\s+sanitary\s+inspector", items_[0]):
             continue
@@ -68,7 +68,8 @@ def parse_sanitation(html, p, seen):
         phone = " ".join(x for x in items_[1:] if re.search(r"\d{6}", x))
         recs.append(_ward.record(MODULE, f"sanitation:sanitary-inspector:{_esw.slug(name)}", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level="body", area="Sanitation related works", post="Sanitary Inspector",
-                                 name=name, phone=phone, address=ADDRESS, source=p["url"]))
+                                 name=name, phone=phone, address=ADDRESS, source=p["url"],
+                                 src_pos={"selector": "ul.elementor-icon-list-items", "index": ui}))
     return recs
 
 

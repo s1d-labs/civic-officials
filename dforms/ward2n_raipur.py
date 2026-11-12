@@ -27,7 +27,7 @@ def parse(html, p):
             recs.append(_ward.record(MODULE, f"zone-{int(z)}:revenue-coordinator", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level="zone", area=f"Zone {int(z)}", zone=f"Zone {int(z)}",
                                      post="Revenue Coordinator (Property Tax)", name=_ward.col(r, "coordinator"),
-                                     phone=_ward.col(r, "mobile"), wing="revenue", source=p["url"]))
+                                     phone=_ward.col(r, "mobile"), wing="revenue", source=p["url"], src_pos=r.pos))
     return recs
 
 

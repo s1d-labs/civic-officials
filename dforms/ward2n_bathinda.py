@@ -56,7 +56,7 @@ def parse(html, p):
                                      seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level="zone" if zs else "body",
                                      area=area, zone=area if zs else None, zones=zs or None, post=post, name=name,
                                      phone=_ward.col(r, "mobile"), work=_ward.col(r, "work") or None, section=branch, wing=wing,
-                                     source=p["url"]))
+                                     source=p["url"], src_pos=r.pos))
     return recs
 
 

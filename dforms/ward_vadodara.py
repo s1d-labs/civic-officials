@@ -39,7 +39,7 @@ def parse_wing(html, p):
                                      state=STATE, district=DISTRICT, level="ward", area=f"Ward {w}", post=post, name=name,
                                      phone=phone, wards=[w], wing="administration" if _ward.role_of(post) == "head" else
                                      p.get("kind") if p.get("kind") in ("engineering", "revenue") else None,
-                                     source=p["url"]))
+                                     source=p["url"], src_pos=r.pos))
     return recs
 
 
@@ -57,7 +57,7 @@ def parse_offices(html, p):
             recs.append(_ward.record(MODULE, f"w{int(w[0]):02d}:ward-office", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                      level="ward", area=f"Ward {w[0]}", post="Ward Office", address=en, address_regional=gu or None,
                                      zone=zone, zone_regional=zone_gu.strip() or None, wards=w, wing="administration",
-                                     source=p["url"]))
+                                     source=p["url"], src_pos=r.pos))
     return recs
 
 

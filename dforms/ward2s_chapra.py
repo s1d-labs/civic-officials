@@ -35,7 +35,7 @@ def parse(html, p):
             bare = HONORIFIC.sub("", name)
             recs.append(_ward.record(MODULE, f"{page}:{_esw.slug(post)}:{_esw.slug(bare) or 'post'}", seen, body=BODY, lgd=LGD,
                                      state=STATE, district=DISTRICT, level="body", area=BODY, post=post, name=bare, phone=phone,
-                                     source=p["url"]))
+                                     source=p["url"], src_pos=r.pos))
     return recs
 
 

@@ -48,7 +48,7 @@ def parse(html, p):
                                      phone=re.sub(r"^-+$", "", _ward.col(r, "Mobile")), email=_ward.col(r, "Email"),
                                      address=address, office_phone=_esw.clean(office_phone) or None,
                                      wing="administration" if re.search(r"(?i)commissioner|superintendent", post) else None,
-                                     source=p["url"]))
+                                     source=p["url"], src_pos=r.pos))
     return recs
 
 
