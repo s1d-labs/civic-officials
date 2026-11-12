@@ -57,10 +57,12 @@ CONS = "ಕ-ಹ"
 
 
 def _reorder(s):
+    # a dead consonant ("ï") with an ottu after it: the virama goes after the ottu ("¸ïÖ" = ಸ್ಟ್, not ಸ್್ಟ)
+    s = re.sub(f"{VIRAMA}{VIRAMA}([{CONS}])", VIRAMA + r"\1" + VIRAMA, s)
     # ottus typed after the vowel sign: C + sign + (virama C)+ -> C + (virama C)+ + sign
     s = re.sub(f"([{SIGNS}]+)((?:{VIRAMA}[{CONS}])+)", r"\2\1", s)
     # reph after its syllable: (C (virama C)* signs*) REPH -> ರ್ + that
-    s = re.sub(f"([{CONS}](?:{VIRAMA}[{CONS}])*[{SIGNS}]*){REPH}", "ರ" + VIRAMA + r"\1", s)
+    s = re.sub(f"([{CONS}](?:{VIRAMA}[{CONS}])*[{SIGNS}]*{VIRAMA}?){REPH}", "ರ" + VIRAMA + r"\1", s)
     s = s.replace(REPH, "ರ" + VIRAMA)
     # vowel length and two-part signs: NFC composes ಿ+ೕ ೀ, ೆ+ೕ ೇ, ೆ+ೂ ೊ, ೊ+ೕ ೋ, ೆ+ೖ ೈ
     return unicodedata.normalize("NFC", s)
@@ -81,8 +83,11 @@ NUDI_MARK = re.compile(r"[ÀÁÂÄÉ£¥¸ªº¼]")
 
 
 def is_nudi(text):
-    """True when at least a fifth of the letters are the Latin-1 glyph codes Nudi uses for Kannada (À, Á, Ä, É, £, ¸ ...)."""
-    letters = [c for c in text or "" if c.isalpha()]
-    if len(letters) < 4:
+    """True when the text has Nudi's vowel-sign codes (À, Á, Ä, É, ï ...) and at least a quarter of its letters are Latin-1
+    codes (U+00A0-U+00FF: À, £, ¸, ª ...). Plain English has none; Unicode Kannada has none."""
+    t = text or ""
+    letters = [c for c in t if c.isalpha() or "\xa0" < c <= "\xff"]
+    high = [c for c in letters if "\xa0" < c <= "\xff"]
+    if len(letters) < 3 or not NUDI_MARK.search(t) and not re.search("[ÃÆËïð]", t):
         return False
-    return sum(1 for c in letters if NUDI_MARK.match(c)) / len(letters) >= 0.2
+    return len(high) / len(letters) >= 0.25
