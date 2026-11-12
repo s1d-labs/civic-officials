@@ -54,14 +54,15 @@ def parse(html, p):
     soup = _esw.soup(html)
     seen, recs, src = set(), [], p.get("url") or URL
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g or not any("नाम" in c for c in g[0]):
             continue
         head = g[0]
         ix = {k: next((i for i, c in enumerate(head) if w in c), None)
               for k, w in (("name", "नाम"), ("work", "आवंटित"), ("post", "पद"), ("phone", "मोबा"))}
         ix["name"] = next(i for i, c in enumerate(head) if c.strip() == "नाम")
-        for r in g[1:]:
+        for r, rp in zip(g[1:], gp[1:]):
             cell = lambda k: _esw.clean(r[ix[k]]) if ix.get(k) is not None and ix[k] < len(r) else ""  # noqa: E731
             name, work, post, phone = cell("name"), cell("work"), cell("post"), cell("phone")
             if not name or name == head[ix["name"]]:
@@ -74,11 +75,11 @@ def parse(html, p):
                           name_regional=name if hindi else None, post_regional=post if re.search("[ऀ-ॿ]", post) else None,
                           duties=work or None)
             recs.append(_ward.record(MODULE, f"body:{_esw.slug(en)}:{_esw.slug(bare) or phone or 'n'}", seen, level="body",
-                                     area=BODY, post=en, **common))
+                                     area=BODY, post=en, **common, src_pos=rp))
             for z in ZONE.findall(work):
                 zone = f"Zone {int(z):02d}"
                 recs.append(_ward.record(MODULE, f"zone-{int(z):02d}:zonal-officer:{_esw.slug(bare) or phone or 'n'}", seen,
-                                         level="zone", area=zone, zone=zone, post="Zonal Officer", wing="administration", **common))
+                                         level="zone", area=zone, zone=zone, post="Zonal Officer", wing="administration", **common, src_pos=rp))
     return recs
 
 

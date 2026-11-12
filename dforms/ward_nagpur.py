@@ -37,7 +37,8 @@ def parse_zone(html, p):
     seen, recs = set(), []
     zone, zno, address = None, p.get("zone_no"), None
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         m = re.search(r"([A-Za-z .()]+?)\s*Zone\s*No\.?\s*0?(\d+)", g[0][0] if g and g[0] else "")
         if m and not zone:
             zno = int(m.group(2))
@@ -49,12 +50,12 @@ def parse_zone(html, p):
             phone = next((x for x in head if re.search(r"(?i)contact", x)), "")
             name = next((x for x in head if re.match(r"(?i)(shri|smt|mrs?|ms|dr)\.?\s", x)), head[0] if head else "")
             post = next((x for x in head if x not in (name, phone)), "Assistant Commissioner")
-            recs.append((name, post, phone, "Zone office"))
+            recs.append((name, post, phone, "Zone office", {"table": _esw.table_no(t), "kind": "zone head box (lines of one cell)"}))
             continue
         if not any(len(r) >= 4 and _esw.clean(r[0]).isdigit() for r in g):
             continue
         section = "Zone office"
-        for r in g:
+        for r, rp in zip(g, gp):
             cells = [_esw.clean(c) for c in r]
             if len(set(cells)) == 1 and cells[0] and not cells[0].isdigit():
                 section = cells[0]
@@ -63,17 +64,18 @@ def parse_zone(html, p):
                 continue
             name, post, phone = cells[1], cells[2], cells[3]
             if name or phone:
-                recs.append((name, post, phone, section))
+                recs.append((name, post, phone, section, rp))
     zone = zone or f"Zone {zno:02d}" if zno else (zone or "Zone")
     out = []
-    for name, post, phone, section in recs:
+    for name, post, phone, section, pos in recs:
         post = post.replace("Engg.", "Engineer")
         wing = next((w for k, w in WINGS.items() if k in section.lower()), None)
         if section == "Zone office" or wing is None or _ward.wing_of(post) in ("health", "water", "planning"):
             wing = _ward.wing_of(post)
         out.append(_ward.record(MODULE, f"z{zno:02d}:{_esw.slug(section)}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}", seen,
                                 body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level="zone", area=zone, zone=zone, post=post,
-                                name=name, phone=phone, address=address, wing=wing, section=section, source=p["url"]))
+                                name=name, phone=phone, address=address, wing=wing, section=section, source=p["url"],
+                                src_pos=pos))
     return out
 
 
@@ -81,10 +83,11 @@ def parse_zonal(html, p):
     soup = _esw.soup(html)
     seen, out = set(), []
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g or "zone" not in " ".join(g[0]).lower():
             continue
-        for r in g[1:]:
+        for r, rp in zip(g[1:], gp[1:]):
             if len(r) < 4:
                 continue
             name, zno, zname, phone = (_esw.clean(c) for c in r[:4])
@@ -95,7 +98,7 @@ def parse_zonal(html, p):
             out.append(_ward.record(MODULE, f"z{int(m.group(0)):02d}:zonal-officer:{_esw.slug(name)}", seen, body=BODY, lgd=LGD,
                                     state=STATE, district=DISTRICT, level="zone", area=zone, zone=zone,
                                     post="Zonal Officer / Chief Sanitary Officer", name=name, phone=phone, wing="sanitation",
-                                    source=p["url"]))
+                                    source=p["url"], src_pos=rp))
     return out
 
 

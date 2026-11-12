@@ -37,7 +37,8 @@ def zone_wards(html):
     soup = _esw.soup(html)
     out = {}
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g or "ward" not in g[0][0].lower():
             continue
         head = []
@@ -50,7 +51,7 @@ def zone_wards(html):
         z = zones_in(head)
         if not z:
             continue
-        for r in g[1:]:
+        for r, rp in zip(g[1:], gp[1:]):
             w = _ward.wards_of(r[0])
             if w:
                 out.setdefault(z[0], [])
@@ -62,9 +63,10 @@ def parse(html, zw, p):
     soup = _esw.soup(html)
     seen, recs, n = set(), [], {}
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         dept = ""
-        for r in g:
+        for r, rp in zip(g, gp):
             cells = [_esw.clean(c) for c in r]
             if len(set(cells)) == 1:
                 dept = cells[0]
@@ -86,7 +88,7 @@ def parse(html, zw, p):
                 recs.append(_ward.record(MODULE, f"{key}:{n[key]}", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                          level="zone", area=zone, zone=zone, post=en, post_regional=post, name=name,
                                          name_regional=name, phone=" ".join(x for x in (phone, tel) if x), wards=zw.get(z) or None,
-                                         wing=wing, section=dept, source=p["url"]))
+                                         wing=wing, section=dept, source=p["url"], src_pos=rp))
     return recs
 
 
@@ -104,5 +106,5 @@ def fetch(p, get):
     if z is not None:
         files.append(_esw.keep(MODULE, "zones-and-wards", z.content))
         zw = zone_wards(z.text)
-    recs = parse(r.text, zw, p)
+    recs = _ward.tag(parse(r.text, zw, p), r, p["url"])      # the staff list; wards come from the zone page (in the trail too)
     return recs, files, "" if recs else "no zone officers"

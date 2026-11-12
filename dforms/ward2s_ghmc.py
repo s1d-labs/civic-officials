@@ -50,13 +50,14 @@ def parse(html, p):
         section = _esw.clean(h.get_text(" ")) if h else ""
         if not section or SKIP.search(section):
             continue
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g:
             continue
         head = [_esw.clean(c).lower() for c in g[0]]
         if not any(c.startswith("name") for c in head) or not any("designation" in c for c in head) or not any(c in ("zone", "circle") for c in head):
             continue
-        for r in g[1:]:
+        for r, rp in zip(g[1:], gp[1:]):
             row = dict(zip(head, [_esw.clean(c) for c in r]))
             name, post = _ward.col(row, "name"), _ward.col(row, "designation")
             zone, circle = row.get("zone", ""), row.get("circle", "")
@@ -81,7 +82,7 @@ def parse(html, p):
             recs.append(_ward.record(MODULE, key, seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level=level, area=area,
                                      zone=f"{zone} Zone" if zone else None, post=post, name=name, phone=f"{contact} {mail}",
                                      email=f"{mail} {contact}", source=p["url"], wing=_wing(section, post), section=section.title(),
-                                     circles=circles if circles and len(circles) > 1 else None))
+                                     circles=circles if circles and len(circles) > 1 else None, src_pos=rp))
     return recs
 
 

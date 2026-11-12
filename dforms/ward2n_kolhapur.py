@@ -58,11 +58,12 @@ def parse(html, p):
     for t in soup.find_all("table"):
         h = t.find_previous(["h1", "h2", "h3", "h4", "h5", "strong", "b", "caption"])
         section = _esw.clean(h.get_text(" ")) if h else ""
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g or "पदनाम" not in " ".join(g[0]):
             continue
         head = [_esw.clean(c) for c in g[0]]
-        for row in g[1:]:
+        for row, rp in zip(g[1:], gp[1:]):
             r = dict(zip(head, [_esw.clean(c) for c in row]))
             post = _ward.hi_norm(_ward.col(r, "पदनाम"))
             for level, area, zone, wards in areas(post):
@@ -81,7 +82,7 @@ def parse(html, p):
                                          district=DISTRICT, level=level, area=area, zone=zone, wards=wards, post=en,
                                          post_regional=post, name=name, name_regional=name,
                                          phone=_ward.hi_norm(_ward.col(r, "संपर्क")), email=_ward.col(r, "ई - मेल", "मेल"),
-                                         wing=wing, section=section or None, source=p["url"]))
+                                         wing=wing, section=section or None, source=p["url"], src_pos=rp))
     return recs
 
 

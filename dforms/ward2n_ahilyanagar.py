@@ -26,11 +26,12 @@ def parse(html, p):
     n = p["office"]
     seen, recs = set(), []
     for t in soup.find_all("table"):
-        kv = {}
-        for r in _esw.grid(t):
+        kv, kp = {}, {}
+        for r, rp in _ward.grid_pos(t):
             r = [c for c in r if _esw.clean(c) not in (":", "")]
             if len(r) >= 2:
                 kv[_esw.clean(r[0])] = _esw.clean(r[1])
+                kp[_esw.clean(r[0])] = rp["row"]
         name = kv.get("विभाग प्रमुखाचे नाव")
         if name is None:
             continue
@@ -42,7 +43,9 @@ def parse(html, p):
         recs.append(_ward.record(MODULE, f"ps{n}:ward-officer", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                  level="zone", area=area, zone=area, post=post, post_regional=post_mr, name=name,
                                  name_regional=name or None, phone=_ward.col(kv, "मोबाईल"), email=_ward.col(kv, "मेल"),
-                                 vacant=None if name else True, wing="administration", source=p["url"]))
+                                 vacant=None if name else True, wing="administration", source=p["url"],
+                                 src_pos={"table": _esw.table_no(t), "row": kp.get("विभाग प्रमुखाचे नाव"), "kind": "label | value table",
+                                          "rows": kp}))
         break
     return recs
 

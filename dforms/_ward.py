@@ -138,6 +138,13 @@ def joined_at(pages):
     return out
 
 
+def grid_pos(table, **kw):
+    """[(row, src_pos)] of _esw.grid(table): each row with its {"table", "row"} (source trail)."""
+    pos = []
+    g = _esw.grid(table, pos=pos, **kw)
+    return list(zip(g, pos))
+
+
 class Row(dict):
     """A table row dict (header -> cell) that also carries its src_pos as an attribute (not a key: readers walk the items)."""
     pos = None

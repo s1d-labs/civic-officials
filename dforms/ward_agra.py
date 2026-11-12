@@ -23,18 +23,20 @@ def parse(html, p):
     soup = _esw.soup(html)
     seen, recs = set(), []
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if len(g) < 3:
             continue
         zones = [_esw.clean(c) for c in g[0]]
-        rows = {}
+        rows, rows_at = {}, {}
         label = None
-        for r in g[1:]:
+        for r, rp in zip(g[1:], gp[1:]):
             if len(set(r)) == 1:
                 label = _esw.clean(r[0]).lower()
                 continue
             if label:
                 rows[label] = r
+                rows_at[label] = rp["row"]
         addr, wards = rows.get("office address"), rows.get("corporate wards")
         if not wards:
             continue
@@ -47,7 +49,9 @@ def parse(html, p):
             address = _esw.clean(addr[i]) if addr and i < len(addr) else ""
             recs.append(_ward.record(MODULE, f"{_esw.slug(z)}:zone-office", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                      level="zone", area=f"{z} Zone", zone=f"{z} Zone", post="Zone Office", address=address,
-                                     wards=ws, wing="administration", source=p["url"]))
+                                     wards=ws, wing="administration", source=p["url"],
+                                     src_pos={"table": _esw.table_no(t), "col": i + 1, "kind": "one column per zone",
+                                              "rows": {k: v for k, v in rows_at.items() if k in ("office address", "corporate wards")}}))
     return recs
 
 

@@ -44,9 +44,11 @@ def parse(html, p):
             nm = re.sub(r"(?i)^(mr|mrs|ms|shree|shri)\.?\s+", "", nm.strip())
             recs.append(_ward.record(MODULE, f"{_esw.slug(zone)}:deputy-commissioner", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level="zone", area=zone, zone=zone, post=post.strip() or "Deputy Commissioner",
-                                     name=nm, wing="administration", source=p["url"]))
-        g = _esw.grid(t)
-        for r in g[1:]:
+                                     name=nm, wing="administration", source=p["url"],
+                                     src_pos={"table": _esw.table_no(t), "heading_above": head}))
+        gp = []
+        g = _esw.grid(t, pos=gp)
+        for r, rp in zip(g[1:], gp[1:]):
             if len(r) < 3 or not r[1]:
                 continue
             branch, raw = _esw.clean(r[1]), _esw.clean(r[2])
@@ -54,7 +56,7 @@ def parse(html, p):
             recs.append(_ward.record(MODULE, f"{_esw.slug(zone)}:{_esw.slug(branch)[:60]}", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level="zone", area=f"{zone} - {branch}", zone=zone,
                                      post=f"Zonal Officer, {branch}", name=nm, wing=_wing(branch),
-                                     vacant=True if re.fullmatch(r"-*", raw) else None, source=p["url"]))
+                                     vacant=True if re.fullmatch(r"-*", raw) else None, source=p["url"], src_pos=rp))
     return recs
 
 
