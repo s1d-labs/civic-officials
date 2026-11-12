@@ -125,3 +125,32 @@ def test_tg_heads_adilabad():
     assert c["src_pos"] == {"table": 1, "row": 2} and c["lgd_code"] == "248083"
     assert tg_heads.post_of("Mayor") == ("chair", "Mayor") and tg_heads.post_of("Deputy Mayor") == ("vice", "Deputy Mayor")
     assert len(tg_heads.items()) == 123
+
+
+def test_ap_heads_mayors_2026():
+    from cforms import ap_heads
+    bodies = ap_heads.parse_text(gz("ap_heads/mayors_2026.txt.gz"), "Mayor")
+    assert len(bodies) == 13 and all(b["elected"] and b["votes_check"] for b in bodies)
+    recs = dict(ap_heads.records(bodies, {"post": "Mayor", "url": ap_heads.FILES["Mayor"]}))
+    t = recs["councillor:AP:head:tirupati:tirupati"]
+    assert t["name"] == "MANNEM SREENIVASSA PRASAD (JB SREENIVAS)" and t["party"] == "TDP" and t["votes"] == 94937
+    assert t["position"] == "Mayor" and t["ward_no"] == "chair" and t["direct"] and len(t["candidates"]) == 11
+    assert t["src_pos"]["page"] == 1 and "94937" in t["src_pos"]["line_text"]
+    k = recs["councillor:AP:head:y-s-r-kadapa:kadapa"]
+    assert k["name"] == "MATLI SHUVARNA" and k["poll_date"] == "01.11.2026 & 02.11.2026"
+    assert recs["councillor:AP:head:kurnool:kurnool"]["name"] == "BOLLEDDULA VIJAYA PRATHYUSHA"
+
+
+def test_ap_heads_chairpersons_2026():
+    from cforms import ap_heads
+    bodies = ap_heads.parse_text(gz("ap_heads/chairpersons_2026.txt.gz"), "Chairperson")
+    assert len(bodies) == 86 and all(b["elected"] for b in bodies)
+    assert sum(1 for b in bodies if b["unopposed"]) == 17
+    assert not [b["body"] for b in bodies if b["votes_check"] is False]
+    recs = dict(ap_heads.records(bodies, {"post": "Chairperson", "url": ap_heads.FILES["Chairperson"]}))
+    assert recs["councillor:AP:head:ananthapuramu:tadipatri"]["name"] == "YERRAGUDI RESHMA PARVEEN"
+    assert recs["councillor:AP:head:prakasam:chimakurthy"]["district"] == "Prakasam"          # not Chirala's wrapped row
+    assert recs["councillor:AP:head:dr-b-r-ambedkar-konaseema:amalapuram"]["name"] == "NALLA SRIDHAR"
+    assert recs["councillor:AP:head:annamayya:punganur"]["name"] == "P. NAYAUM TEJ"
+    assert recs["councillor:AP:head:annamayya:madanapalle"]["name"] == "GUNDLAPALLI SRIRAMA KUMAR@ SRIRAM KUMAR"
+    assert [c["name"] for c in recs["councillor:AP:head:nandyal:dhone"]["candidates"]][1] == "CHAITANYA BOAY ALIAS VALLE CHAITANYA"
