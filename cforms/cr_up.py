@@ -3,13 +3,15 @@ winner list "नगरीय निकाय सामान्य निर्�
 
 The page is ASP.NET WebForms with two auto-postback lists: DropDownList1 = post (7 नगर निगम महापौर, 8 नगर निगम पार्षद,
 9 नगर पालिका परिषद अध्यक्ष, 10 नगर पालिका परिषद सदस्य, 11 नगर पंचायत अध्यक्ष, 12 नगर पंचायत सदस्य) and ddlDistrict (75
-districts, ids in cforms/cr_up_lgd.json; 0 = all). fetch() GETs the page, posts both lists at once (else the post list, then
-the district list) and reads table ctl00_ContentPlaceHolder1_winnerdetail. Its 16 columns: जनपद | निकाय का नाम | वार्ड का नाम ("7-जगदीशपुरा पूर्वी")
+districts, ids in cforms/cr_up_lgd.json; 0 = all). fetch() GETs the page, posts the post list, then the district list
+(one postback with both set shows the post for the whole state), checks the chosen values, and reads table ctl00_ContentPlaceHolder1_winnerdetail. Its 16 columns: जनपद | निकाय का नाम | वार्ड का नाम ("7-जगदीशपुरा पूर्वी")
 | पद का आरक्षण | उम्मीदवार | पिता/पति | प्रत्याशी का जाति/वर्ग | शैक्षिक योग्यता | पार्टी का नाम | लिंग | आयु | मोबाइल नं० |
 प्राप्त वैध मत | प्राप्त मत % | मतदान % | परिणाम (सविरोध = won a contest, निर्विरोध = unopposed).
-The form and the table are known from the Wayback Machine copy of 13 May 2023 (tests/data/cr_up_sec_winners.html, cut to
-4 rows). On 2026-11-11 the site did not answer on ports 80 and 443 from vpsin2 (connection timed out; also from Germany and
-the US earlier the same day), so no live postback was tested. The hub retries failed items; the items wait for the site.
+The form and the table were first known from the Wayback Machine copy of 13 May 2023 (tests/data/cr_up_sec_winners.html).
+On 2026-11-11 the site did not answer from vpsin2, Germany or the US. On 2026-11-12 it answered from dev-vps-3 (OVH Mumbai) in
+0.5 s, while the hub's Indian proxies got HTTP 504 / errors on every item. Tested live 2026-11-12: Lucknow corporators (post 8,
+district 47) = 110 rows on 2 pages; the table shows 100 rows per page with Next / Last links (GridView postbacks
+__EVENTTARGET winnerdetail, __EVENTARGUMENT Page$Next); fixtures tests/data/cr_up_sec_*.html.gz (view state cut).
 Queue items (items()): posts 8, 10 and 12 for each of the 75 districts (225 items, about 13,000 members of 760 bodies),
 plus posts 7, 9 and 11 for the whole state (3 items: mayors and chairpersons).
 The body name is Hindi; it is tied to LGD here (cforms/cr_up_lgd.json: LGD bodies of civic.ulb, 2026-11-11) with the
@@ -115,28 +117,67 @@ def records(rows, post, url=URL):
     return recs
 
 
-def _post(get, html, target, post, district):
+def _post(get, html, target, post, district, arg=""):
     d = hidden(html)
-    d.update({"__EVENTTARGET": P + target, "__EVENTARGUMENT": "", "__LASTFOCUS": "", P + "DropDownList1": post,
+    d.update({"__EVENTTARGET": P + target, "__EVENTARGUMENT": arg, "__LASTFOCUS": "", P + "DropDownList1": post,
               P + "ddlDistrict": district})
     r = get(URL, method="POST", data=d)
     return r.text if r is not None else None
+
+
+def selected(html):
+    """(post, district) the answer shows as chosen."""
+    soup = BeautifulSoup(html, "lxml")
+    out = []
+    for name in ("DropDownList1", "ddlDistrict"):
+        sel = soup.find("select", attrs={"name": P + name})
+        o = sel.find("option", selected=True) if sel else None
+        out.append(o.get("value") if o else None)
+    return tuple(out)
+
+
+def has_next(html):
+    return "Page$Next" in html
+
+
+MAX_PAGES = 80      # post 12 for the whole state is ~5,400 rows = 54 pages of 100
 
 
 def fetch(p, get):
     r = get(URL)
     if r is None:
         return [], [], "no answer"
-    # one postback with both lists set (both are in the first page with all options); when that gives no rows, the two
-    # steps a person takes (post, then district) on the answer's own view state
-    h = _post(get, r.text, "ddlDistrict" if p["district_id"] != "0" else "DropDownList1", p["post"], p["district_id"])
-    if h is not None and not winners(h) and p["district_id"] != "0":
-        h = _post(get, r.text, "DropDownList1", p["post"], "0")
-        h = h and _post(get, h, "ddlDistrict", p["post"], p["district_id"])
+    # the steps a person takes: choose the post (the server then resets the district list to "all"), then the district.
+    # One postback with both set gives the post for the WHOLE state (seen 2026-11-12), so it is not used.
+    post, did = p["post"], p["district_id"]
+    h = _post(get, r.text, "DropDownList1", post, "0")
+    if h and did != "0":
+        h = _post(get, h, "ddlDistrict", post, did)
     if not h:
         return [], [], "postback did not answer"
-    files = [(f"councillors/UP/sec2023-post{p['post']}-d{p['district_id']}.html.gz", gzip.compress(h.encode()), "application/gzip")]
-    recs = records(winners(h), p["post"])
+    if selected(h) != (post, did):
+        return [], [], f"page shows post/district {selected(h)}, not {(post, did)}"
+    # the winner table shows 100 rows per page, with Next / Last links (GridView paging postbacks)
+    pages, rows = [h], winners(h)
+    seen = {json.dumps(rows[:1], sort_keys=True)}
+    while has_next(h) and len(pages) < MAX_PAGES:
+        h = _post(get, h, "winnerdetail", post, did, "Page$Next")
+        if not h:
+            return [], [], f"page {len(pages) + 1} did not answer"
+        w = winners(h)
+        first = json.dumps(w[:1], sort_keys=True)
+        if not w or first in seen:
+            break
+        seen.add(first)
+        pages.append(h)
+        rows += w
+    files = [(f"councillors/UP/sec2023-post{post}-d{did}-p{i}.html.gz", gzip.compress(x.encode()), "application/gzip")
+             for i, x in enumerate(pages, 1)]
+    if has_next(h) and len(pages) >= MAX_PAGES:
+        return [], files, f"more than {MAX_PAGES} pages"
+    recs = records(rows, post)
+    for _, d in recs:
+        d["pages"] = len(pages)
     return recs, files, "" if recs else "no winner rows"
 
 
