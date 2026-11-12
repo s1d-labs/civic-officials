@@ -28,7 +28,7 @@ from pathlib import Path
 
 from dforms import _esw, _ulb
 
-METHOD = "pdf text (pypdf) + json api"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf plain mode)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb2_br"
 STATE = "BR"
@@ -68,8 +68,8 @@ def rows(pages):
     """[{"sec", "no", "body", "names", "phones"}] in the order of the list."""
     sec = cur = None
     out = []
-    for pg in pages:
-        for line in pg.split("\n"):
+    for pno, pg in enumerate(pages, 1):
+        for lno, line in enumerate(pg.split("\n"), 1):
             s = line.strip()
             if not s or re.match(r"(?i)^(sl\.|govt\. of|urban development)", s):
                 continue
@@ -81,7 +81,8 @@ def rows(pages):
                 continue
             m = ROW.match(s)
             if m and sec:
-                cur = {"sec": sec, "no": m.group(1), "body": _esw.clean(m.group(2)), "names": [], "phones": []}
+                cur = {"sec": sec, "no": m.group(1), "body": _esw.clean(m.group(2)), "names": [], "phones": [],
+                       "pos": {"page": pno, "line": lno, "line_text": line}}     # the row's first line (source trail)
                 out.append(cur)
                 rest = m.group(3)
             elif cur is None:
@@ -134,7 +135,7 @@ def parse(pages, url=URL):
                 person, p = _esw.clean(person[:m.start()]), f"{post} ({m.group(1)})"
             extra = {"row_phones": ", ".join(phones)} if phones and not any(given) else {}
             rec = _ulb.record(MODULE, STATE, name, p, seen, name=person, phone=ph, district=district, body_type=btype, source=url,
-                              lgd_code=lgd, list_section=r["sec"], list_name=r["body"], **extra)
+                              lgd_code=lgd, list_section=r["sec"], list_name=r["body"], src_pos=r.get("pos"), **extra)
             if circle or (m and i):              # a circle officer, or the "(Urban Administration)" officer next to the EO
                 rec[1]["role"] = "staff"
             recs.append(rec)

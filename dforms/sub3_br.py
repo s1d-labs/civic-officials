@@ -27,8 +27,10 @@ import io
 import re
 
 from dforms import _esw
+import provenance
 
-METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table"     # co / dclr; the bdo list is read from its PDF: "pdf ruled table (pypdf text pieces + rules)"
+METHOD_PDF = "pdf ruled table (pypdf text pieces + rules)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub3_br"
 BASE = "https://betastate.bihar.gov.in"
@@ -236,7 +238,7 @@ def pdf_rows(content):
     for g in groups:
         for r in g[3]:
             r["district"] = g[2]
-            r.pop("y", None)
+            r["y_pt"] = round(r.pop("y", 0) or 0, 1)        # source trail: the mobile's baseline on its page
             out.append(r)
     return out
 
@@ -246,7 +248,8 @@ def pdf_rows(content):
 def html_rows(html):
     """[{district, area, post, mobile}] of the first table whose header has a district and a mobile column."""
     for t in _esw.soup(html).find_all("table"):
-        g = _esw.grid(t)
+        tp = []
+        g = _esw.grid(t, pos=tp)
         if not g:
             continue
         roles = [_role(c) for c in g[0]]
@@ -254,12 +257,12 @@ def html_rows(html):
             continue
         ix = {r: roles.index(r) for r in set(roles) if r}
         out = []
-        for r in g[1:]:
+        for r, rp in zip(g[1:], tp[1:]):
             if len(r) < len(roles):
                 continue
             post_area = r[ix["area"]] if "area" in ix else ""
             out.append({"district": r[ix["district"]], "area": post_area, "post": r[ix["post"]] if "post" in ix else "",
-                        "mobile": r[ix["mobile"]]})
+                        "mobile": r[ix["mobile"]], "pos": rp})
         return out
     return []
 
@@ -283,7 +286,8 @@ def file_link(html):
     return None
 
 
-def build(kind, rows, source):
+def build(kind, rows, source, src=None):
+    """src: provenance.at(answer) the rows came from (the bdo item reads the page and then the PDF)."""
     _, dept, level, post, _ = SOURCES[kind]
     recs, seen = [], set()
     for r in rows:
@@ -299,7 +303,10 @@ def build(kind, rows, source):
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept=dept, level=level, area=area, post=post, phone=phone, district=dist,
                                 district_code=dc, state="BR", source=source,
-                                **({"page": r["page"]} if r.get("page") else {})))
+                                **({"page": r["page"]} if r.get("page") else {}),
+                                src_pos=r.get("pos") or ({"page": r["page"], "y": r.get("y_pt"), "line_text": r["mobile"]}
+                                                         if r.get("page") else None),
+                                method=METHOD_PDF if r.get("page") else METHOD, **(src or {})))
     return recs
 
 
@@ -311,7 +318,7 @@ def fetch(p, get):
         return [], [], "no answer"
     files = [_esw.keep(MODULE, kind, r.content)]
     rows = [] if kind == "bdo" else html_rows(r.text)
-    source = url
+    source, src = url, provenance.at(r, url)
     if not rows:
         link = file_link(r.text)
         if not link:
@@ -324,5 +331,6 @@ def fetch(p, get):
             return [], files, "the list file is not a PDF"
         files.append((f"depts/{MODULE}/{kind}.pdf", f.content, "application/pdf"))
         rows = pdf_rows(f.content)
-    recs = build(kind, rows, source)
+        src = provenance.at(f, source)
+    recs = build(kind, rows, source, src)
     return recs, files, "" if recs else "no rows"

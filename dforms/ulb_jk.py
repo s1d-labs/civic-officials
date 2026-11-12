@@ -14,6 +14,7 @@ The elected councils' terms ended in 2023 and no new election has been held (202
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -35,10 +36,12 @@ def split_type(office):
     return (m.group(2), m.group(1)) if m else (office, None)
 
 
-def rows(text):
-    """[(sno, office, officer, email, designation, phone)] from the layout text of the PDF."""
+def rows(text, where=None):
+    """[(sno, office, officer, email, designation, phone)] from the layout text of the PDF. where: a list; when given, it gets
+    (line number in the text, 1-based; raw line) for each row."""
     out = []
-    for line in text.splitlines():
+    for lno, line in enumerate(text.splitlines(), 1):
+        raw = line
         line = re.sub(r"\s*\(\s*", " (", line)
         line = re.sub(r"\s+@", "@", line)
         m = ROW.match(line)
@@ -53,6 +56,8 @@ def rows(text):
         other = [c for c in rest[1:] if c != email]
         officer, post = (other[0], " ".join(other[1:])) if other else ("", "")
         out.append((int(m.group(1)), rest[0], officer, email, post, phone))
+        if where is not None:
+            where.append((lno, raw))
     return out
 
 
@@ -72,13 +77,17 @@ def parse(content, url=URL):
     pages = _esw.pdf_pages(content) if isinstance(content, bytes) else [content]
     last = made(content) if isinstance(content, bytes) else None
     recs, seen = [], set()
-    for sno, office, officer, email, post, phone in rows("\n".join(pages)):
+    found = []
+    for pno, page in enumerate(pages, 1):
+        where = []
+        found += [(r, provenance.line_pos(pno, *w)) for r, w in zip(rows(page, where), where)]
+    for (sno, office, officer, email, post, phone), pos in found:
         body, btype = split_type(office)
         m = re.match(r"^(.*?)\s*\(([^)]*)\)\s*$", officer)
         name, charge = (m.group(1), m.group(2)) if m else (officer, None)
         recs.append(_ulb.record(MODULE, STATE, body, post or "Executive Officer", seen, name=name, phone=phone, email=email,
                                 body_type=btype, source=url, charge=_esw.clean(charge) or None, list_name=_esw.clean(office),
-                                last_updated=last))
+                                last_updated=last, src_pos=pos))
     return recs
 
 

@@ -12,8 +12,9 @@ import re
 from collections import Counter
 
 from dforms import _leg
+import provenance
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "leg_dl"
 HOME = "https://delhiassembly.delhi.gov.in/"
@@ -37,13 +38,16 @@ def _segs(line):
     return [(m.start(), m.group()) for m in SEG.finditer(line)]
 
 
-def _blocks(lines):
+def _blocks(lines, where=None):
+    """where: a list; when given, it gets (line number, 1-based; raw line) of each block's first line."""
     out, cur = [], None
-    for ln in lines:
+    for lno, ln in enumerate(lines, 1):
         m = ROW.match(ln)
         if m and 1 <= int(m.group(1)) <= 70:
             cur = [int(m.group(1)), [ln]]
             out.append(cur)
+            if where is not None:
+                where.append((lno, ln))
         elif cur is not None and ln.strip() and not re.search(r"Delhi Legislative Assembly|Constituency|Hon'ble", ln):
             cur[1].append(ln)
     return out
@@ -145,11 +149,13 @@ def _member(no, lines, addr_x, url, prev_mail="", tail=""):
 
 
 def parse(pages, url=URL):
-    rows = []
-    for page in pages:
-        blocks = _blocks(page.splitlines())
+    rows, at = [], []
+    for pno, page in enumerate(pages, 1):
+        where = []
+        blocks = _blocks(page.splitlines(), where)
         addr_x = _addr_x(blocks)
         rows += [[no, lines, addr_x] for no, lines in blocks]
+        at += [provenance.line_pos(pno, *w) for w in where]
     # an email that ends in "." continues in the next row: as a lone "com" on its first line, or glued into its email ("@gcom")
     tails = [""] * len(rows)
     for n in range(len(rows) - 1):
@@ -165,6 +171,7 @@ def parse(pages, url=URL):
     for n, row in enumerate(rows):
         (rid, d), _ = _member(*row, url, prev_mail=prev, tail=tails[n])
         prev = d.get("email") or d.get("email_raw", "")
+        d["src_pos"] = at[n]
         recs.setdefault(rid, (rid, d))
     return list(recs.values())
 

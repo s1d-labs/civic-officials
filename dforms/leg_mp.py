@@ -15,8 +15,9 @@ designation. No constituency office. One queue item = the whole PDF.
 import re
 
 from dforms import _leg
+import provenance
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pdftotext -layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "leg_mp"
 URL = "https://mpvidhansabha.nic.in/sadasyasuchi16vs.pdf"
@@ -51,7 +52,7 @@ def split(line):
     return line.strip(), ""
 
 
-def _block(head, lines, district, url):
+def _block(head, lines, district, url, pos=None):
     left, right = [], []
     for ln in lines:
         lt, rt = split(ln)
@@ -82,29 +83,29 @@ def _block(head, lines, district, url):
                        source=url, mobile=", ".join(f["mobile"]), phone_residence=", ".join(f["phone_residence"]),
                        email=" ".join(f["email"]), residence_address=" ".join(f["addr"]), permanent_address=" ".join(perm),
                        phone_constituency=", ".join(pphone), designation=f["designation"], party_regional=party,
-                       district=district, seat_no=no, note=note)
+                       district=district, seat_no=no, note=note, src_pos=pos)
 
 
 def parse(pages, url=URL):
-    recs, district, head, lines = [], "", None, []
-    for page in pages:
-        for ln in page.splitlines():
+    recs, district, head, lines, pos = [], "", None, [], None
+    for pno, page in enumerate(pages, 1):
+        for lno, ln in enumerate(page.splitlines(), 1):
             lt, rt = split(ln)
             d = DIST.match(fix(rt)) if not lt and rt else None
             h = HEAD.match(fix(lt)) if lt and not rt else None
             if d or h:
                 if head:
-                    recs.append(_block(head, lines, district, url))
+                    recs.append(_block(head, lines, district, url, pos))
                 head, lines = None, []
                 if d:
                     district = d.group(1)
                 else:
-                    head = h
+                    head, pos = h, provenance.line_pos(pno, lno, ln)     # the member's header line
                 continue
             if head:
                 lines.append(ln)
     if head:
-        recs.append(_block(head, lines, district, url))
+        recs.append(_block(head, lines, district, url, pos))
     return recs
 
 

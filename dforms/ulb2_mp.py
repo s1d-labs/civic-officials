@@ -28,10 +28,11 @@ import re
 from pathlib import Path
 
 from dforms import _esw, _ulb
+import provenance
 from dforms._pdftext import layout_pages
 from dforms.ulb_uk_krutidev import convert
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map + json api"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb2_mp"
 STATE = "MP"
@@ -48,11 +49,13 @@ def items(get=None):
     return [{"key": f"{MODULE}-directory", "payload": {"reader": MODULE, "url": URL, "state": STATE, "india_only": True}}]
 
 
-def rows(text):
-    """[{kind, name, district, division, phones, emails}] from the layout text (form feeds between pages)."""
+def rows(text, where=None):
+    """[{kind, name, district, division, phones, emails}] from the layout text (form feeds between pages). where: a list; when
+    given, it gets provenance.line_pos(page, line, raw line) of each row's first line."""
     div = dist = None
-    out, seen = [], set()
-    for line in text.replace("\f", "\n").splitlines():
+    out, seen, at = [], set(), []
+    lines = [(pno, lno, ln) for pno, pg in enumerate(text.split("\f"), 1) for lno, ln in enumerate(pg.split("\n"), 1)]
+    for pno, lno, line in lines:
         s = line.strip()
         if not s:
             continue
@@ -72,12 +75,16 @@ def rows(text):
             k = (name, tuple(row["phones"][:1]), tuple(row["emails"][:1]))
             if k in seen:                       # the second print of page 7
                 out.append(None)
+                at.append(None)
                 continue
             seen.add(k)
             out.append(row)
+            at.append(provenance.line_pos(pno, lno, line))
         elif out and out[-1] and (PH.search(s) or EM.search(s)):
             out[-1]["phones"] += PH.findall(s)
             out[-1]["emails"] += EM.findall(s)
+    if where is not None:
+        where.extend(a for a in at if a)
     return [r for r in out if r]
 
 
@@ -94,14 +101,15 @@ def lgd_of(r):
 
 def parse(text, url=URL):
     recs, seen = [], set()
-    for r in rows(text):
+    where = []
+    for r, pos in zip(rows(text, where), where):
         code = lgd_of(r)
         latin = LGD["lgd"].get(code, {}).get("name") if code else None
         post = "Commissioner" if r["kind"] == "u-fu-" else "Chief Municipal Officer"
         recs.append(_ulb.record(MODULE, STATE, name_of(r["name"]), post, seen, phone=" ".join(r["phones"]),
                                 email=" ".join(r["emails"]), district=r["district"], body_type=TYPES[r["kind"]], source=url,
                                 latin=latin, lgd_code=code, area_latin=latin, division=r["division"], post_from="directory",
-                                page=PAGE))
+                                page=PAGE, src_pos=pos))
     return recs
 
 

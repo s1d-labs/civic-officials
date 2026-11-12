@@ -34,8 +34,11 @@ from pathlib import Path
 
 from dforms import _esw, _ulb
 from dforms._water import unique
+import provenance
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout) + Nirmala UI glyph map"     # chairpersons (npp, np); the nagar nigam list (nn) is an html table
+METHOD_NN = "html table"
+METHOD_PDF = "pdf text (pypdf layout) + Nirmala UI glyph map"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb_up"
 BASE = "https://localbodies.up.nic.in/"
@@ -159,13 +162,15 @@ def person(s):
 def parse_nn(html, url=KINDS["nn"]):
     recs, seen = [], set()
     for t in _esw.soup(html).find_all("table"):
-        for row in _esw.grid(t):
+        pos = []
+        for row, tp in zip(_esw.grid(t, pos=pos), pos):
             if len(row) < 5 or not re.fullmatch(r"\d+", row[0].strip()):
                 continue
             district = nfc(_esw.clean(row[1]))
             m = re.match(r"\s*(.*?)\s*(?:\|\s*)?((?:https?://|www\.)\S+)?\s*$", row[2])
             body, site = nfc(_esw.clean(m.group(1)).strip(" |")), (m.group(2) or "")
-            common = dict(district=district or None, body_type=BODY_TYPE["nn"], source=url, website=site or None, election="2023")
+            common = dict(district=district or None, body_type=BODY_TYPE["nn"], source=url, website=site or None, election="2023",
+                          src_pos=tp, method=METHOD_NN)
             parts = [p.strip() for p in row[3].split("|")]
             mob = _esw.phones(parts[1]) if len(parts) > 1 else ""
             addr = ", ".join(p for p in parts[2:] if p) or None
@@ -200,16 +205,20 @@ def gap_bound(pairs):
     return statistics.median(mids) if mids else None
 
 
-def page_rows(page):
-    """Records of one page: lists of 7 cells (serial, district, body, reservation, member, relative, mobile) of raw text."""
+def page_rows(page, where=None):
+    """Records of one page: lists of 7 cells (serial, district, body, reservation, member, relative, mobile) of raw text.
+    where: a list; when given, it gets for each record (line number in the page text, 1-based; raw first line) of its first line."""
     # the footer "Page 7" can share a line, even a cell ("पिछड़ा Page 7वर्ग"): out, keeping the columns
     lines = [re.sub(r"Page \d+", lambda m: "" if m.end() < len(ln) and ln[m.end()] != " " else " " * len(m.group(0)), ln)
              for ln in page.split("\n")]
+    nos = [i for i, ln in enumerate(lines, 1) if ln.strip()]
+    raw = page.split("\n")
     lines = [ln for ln in lines if ln.strip()]
     hi = next((i for i, ln in enumerate(lines) if "मोबाइल" in fix(ln)), None)
     if hi is None:
         return []
     body = lines[hi + 1:]
+    body_nos = nos[hi + 1:]
     res_lo, res_hi, mob_lo, ser_hi, db, cf = 10 ** 6, 0, 10 ** 6, 0, [], []
     for ln in body:
         ch = chunks(ln)
@@ -235,7 +244,7 @@ def page_rows(page):
     if b_db is None or b_cf is None:
         return []
     recs, cur = [], None
-    for ln in body:
+    for ln, lno in zip(body, body_nos):
         cells = [[] for _ in range(7)]
         left, right = [], []
         for a, b, c in chunks(ln):
@@ -269,6 +278,8 @@ def page_rows(page):
         if cur is None or cells[6] or (cells[0] and cur[0]):
             cur = [[] for _ in range(7)]
             recs.append(cur)
+            if where is not None:
+                where.append((lno, raw[lno - 1]))
         for i in range(7):
             cur[i] += cells[i]
     return recs
@@ -277,8 +288,9 @@ def page_rows(page):
 def parse_pdf(content, kind, url=None):
     url = url or KINDS[kind]
     recs, seen = [], set()
-    for page in _esw.pdf_pages(content):
-        for r in page_rows(page):
+    for pno, page in enumerate(_esw.pdf_pages(content), 1):
+        where = []
+        for r, (lno, ltext) in zip(page_rows(page, where), where):
             serial, district, body, res, name, rel, mob = (_esw.clean(fix(" ".join(c))) for c in r)
             if not re.fullmatch(r"\d+", serial) or not body:
                 continue
@@ -287,7 +299,8 @@ def parse_pdf(content, kind, url=None):
                 continue
             recs.append(rec(body, "अध्यक्ष", seen, name=name, phone=mob, district=district or None,
                                     body_type=BODY_TYPE[kind], source=url, serial=int(serial), reservation=res or None,
-                                    relative=person(rel) or None, election="2023"))
+                                    relative=person(rel) or None, election="2023",
+                                    src_pos=provenance.line_pos(pno, lno, ltext), method=METHOD_PDF))
     return recs
 
 
