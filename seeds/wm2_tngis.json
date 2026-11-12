@@ -31,14 +31,15 @@
    "india_only": false,
    "source": "tngis",
    "chunk": "ulb_ward_boundaries",
-   "page": 500,
+   "page": 200,
    "fields": {
     "ward_no": "ward",
     "body_name": "ulbname"
    },
    "ward_kind": "",
    "vintage": "",
-   "expect": 2066
+   "expect": 2066,
+   "sort": "id"
   }
  },
  {
