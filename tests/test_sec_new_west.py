@@ -57,3 +57,21 @@ def test_rj_chair_fetch_postbacks():
     assert recs[0][1]["src_sha256"]
     seeds = json.loads((SEEDS / "councillors_rj_heads.json").read_text())
     assert [s["payload"]["post"] for s in seeds] == ["chair", "vice"]
+
+
+# Chhattisgarh 2025 heads (cforms/cw_cg_heads.py): page 1 of the SEC's "Mayor-president 2025.pdf" (10 mayors, 22 chairpersons),
+# read without OCR (names come from Tesseract on the runners).
+def test_cg_heads_text_layer():
+    from cforms import cw_cg_heads
+    recs = cw_cg_heads.parse(str(DATA / "cw_cg_heads_p1.pdf"), {}, use_ocr=False)
+    assert len(recs) == 32
+    d = dict(recs)
+    assert sum(r["position"] == "Mayor" for r in d.values()) == 10
+    b = d["councillor:CG:2025:bilaspur:chair"]
+    assert b["lgd_code"] == "250616" and b["party"] == "BJP" and b["position_local"] == "महापौर" and b["src_pos"]["serial"] == "1"
+    assert b["ward_no"] == "chair" and b["src_pos"]["page"] == 1
+    t = d["councillor:CG:2025:takhatpur:chair"]
+    assert t["position"] == "Chairperson" and t["party"] == "INC" and t["lgd_code"] == "250615"
+    assert all("lgd_code" in r and "body_read_by_ocr" not in r for r in d.values())
+    seeds = json.loads((SEEDS / "ocr_councillors_cw_cg_heads.json").read_text())
+    assert seeds[0]["payload"]["kind"] == "form-cw_cg_heads" and seeds[0]["payload"]["expected"] == 173
