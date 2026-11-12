@@ -77,3 +77,39 @@ def test_tn_kadambur_all_wards():
     assert sum(1 for _, d in recs if d["unopposed"]) == 3
     assert all(d["election"].startswith("Tamil Nadu 2022 (Kadambur") for _, d in recs)
     assert recs[2][1]["name"] == "கனகமணி.மா" and recs[2][1]["party"] == "DMK"
+
+
+def test_kl_heads_members_page_adoor():
+    from cforms import kl_heads
+    p = {"kind": "form-kl_heads", "url": "https://adoormunicipality.lsgkerala.gov.in/en", "body": "Adoor", "code": "M030100",
+         "body_type": "Municipality", "district": "Pathanamthitta", "name_list": "Adoor Municipality", "lgd_code": "252262"}
+    url = p["url"] + "/members"
+    recs = kl_heads.from_members(gz("kl_heads/adoor_members.html.gz"), p, url)
+    assert set(recs) == {"councillor:KL:head:M030100:chair", "councillor:KL:head:M030100:vice"}
+    c = recs["councillor:KL:head:M030100:chair"]
+    assert c["name"] == "Reena Samuel" and c["own_ward"] == "13" and c["own_ward_name"] == "Nethaji" and c["ward_no"] == "chair"
+    assert c["src_pos"] == {"selector": "div.member-card", "index": 12} and c["url"].endswith("/en/member/6cd6cace-31ad-490c-a02d-689a4402856b")
+    v = recs["councillor:KL:head:M030100:vice"]
+    assert v["name"] == "Sasikumar D" and v["own_ward"] == "12" and v["position"] == "Vice Chairperson"
+    # standing committee chairmen are not heads
+    assert kl_heads.post_of("Works Standing Committee Chairman") is None
+    assert kl_heads.post_of("Vice Chairperson & Chairman Standing Committee for Finance")[0] == "vice"
+
+
+def test_kl_heads_home_page_fallback():
+    from cforms import kl_heads
+    pala = (DATA / "ulb_kl_pala.html").read_text()
+    recs = kl_heads.from_home(pala, {"code": "M050800", "body": "Pala"}, "https://palamunicipality.lsgkerala.gov.in/en")
+    assert recs["councillor:KL:head:M050800:chair"]["name"] == "MAYA RAHUL"
+    assert recs["councillor:KL:head:M050800:chair"]["phone"] == "9526968579"
+    kochi = (DATA / "ulb_kl_kochi.html").read_text()
+    recs = kl_heads.from_home(kochi, {"code": "C070100", "body": "Kochi"}, "https://kochicorporation.lsgkerala.gov.in/en")
+    assert recs["councillor:KL:head:C070100:mayor"]["name"] == "Adv. Minimol V. K."
+    assert recs["councillor:KL:head:C070100:deputy-mayor"]["position"] == "Deputy Mayor"
+
+
+def test_kl_heads_seeds():
+    import json
+    items = json.loads((Path(__file__).parent.parent / "seeds" / "councillors_kl_heads.json").read_text())
+    assert len(items) == 93 and len({i["payload"]["lgd_code"] for i in items}) == 93
+    assert sum(1 for i in items if i["payload"]["code"].startswith("C")) == 6
