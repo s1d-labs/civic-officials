@@ -18,9 +18,10 @@ import shutil
 import subprocess
 import tempfile
 
+import provenance
 from cforms.cn_mpdf_ta import convert
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Tamil font map"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pdftotext -layout) + Tamil font map (mPDF glyphs)"     # source trail (provenance.py): how this reader reads its sources
 
 BODY_TYPE = {"corp": "மாநகராட்சி", "mun": "நகராட்சி", "tp": "பேரூராட்சி"}
 HEAD = re.compile(r"^\s*(மாநகராட்சி|நகராட்சி|பேரூராட்சி)\s*:\s*(.+?)\s{2,}வார்டு\s*எண்\s*:\s*(\S+)\s*(?:\[(.*?)\]?)?\s*$")
@@ -146,7 +147,7 @@ def parse_text(raw, p=None):
                 continue
             r = row_of(ch)
             if r:
-                r["line"], r["page"] = (page_no, i), page_no
+                r["line"], r["page"], r["raw"] = (page_no, i), page_no, rl
                 r["cells"] = {"name": [], "father": [], "party": [], "result": []}
                 for x, t in r.pop("mid"):
                     col = cur.col_of(x)
@@ -203,8 +204,11 @@ def ward_of(b, p):
     won = [c for c in cands if "வெற்றி" in c["result"] or "போட்டியின்றி" in c["result"]]
     if not won and len(cands) == 1:
         won = cands
+    # source trail: the winner's row line (page 1-based, line 1-based in that page's pdftotext -layout text, raw line)
+    row = {id(c): r for c, r in zip(cands, rows)}
+    pos = [provenance.line_pos(row[id(c)]["line"][0], row[id(c)]["line"][1] + 1, row[id(c)]["raw"], serial=c["serial"]) for c in won]
     return {"body_type": b.body_type, "body": b.body, "ward_no": b.ward, "reservation": b.reservation, "page": b.page,
-            **b.totals, "candidates": cands, "winners": won}
+            **b.totals, "candidates": cands, "winners": won, "winner_pos": pos}
 
 
 def records(wards, p):
@@ -219,6 +223,10 @@ def records(wards, p):
                    **{x: w[x] for x in ("electors", "polled", "valid", "invalid", "poll_pct") if x in w},
                    "candidates": w["candidates"], "election": "Tamil Nadu 2022", "url": p.get("url"), "page": w["page"],
                    "read": "text layer (mPDF Tamil glyphs mapped)"}
+            if k < len(w.get("winner_pos") or []):
+                rec["src_pos"] = w["winner_pos"][k]
+            if p.get("_src"):
+                rec["src"] = dict(p["_src"])
             slug = re.sub(r"\s+", "-", w["body"])[:60]
             rid = f"councillor:TN:tx:{p.get('type')}-{p.get('district_code')}:{slug}:{w['ward_no']}"
             n = seen.get(rid, 0)
@@ -240,6 +248,7 @@ def fetch(p, get):
         return [], [], "pdftotext not available"
     content = stored(p, get)
     files = []
+    src = provenance.file_src(content, p.get("url"), p.get("stored")) if content is not None else None
     if content is None:
         r = get(p["url"])
         if r is None or r.content[:5] != b"%PDF-":
@@ -254,7 +263,7 @@ def fetch(p, get):
             f.write(content)
         raw = subprocess.run(["pdftotext", "-layout", pdf, "-"], capture_output=True, text=True).stdout
     wards = parse_text(raw, p)
-    recs = records(wards, p)
+    recs = records(wards, dict(p, _src=src) if src else p)
     nowin = [f"{w['body']}:{w['ward_no']}" for w in wards if not w["winners"]]
     if recs:
         return recs, files, ""

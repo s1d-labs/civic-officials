@@ -18,7 +18,7 @@ import shutil
 import subprocess
 import tempfile
 
-METHOD = "ocr tesseract guj + pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "ocr tesseract guj (name and address cells) + pdf text layer by drawn cell borders (pdftotext -bbox)"     # source trail (provenance.py): how this reader reads its sources
 
 DIGITS = str.maketrans("૦૧૨૩૪૫૬૭૮૯०१२३४५६७८९", "01234567890123456789")
 ORDINAL = (("પહે", 1), ("બીજ", 2), ("ત્રીજ", 3), ("રીજ", 3), ("ચોથ", 4), ("પાંચ", 5), ("પૂંચ", 5))
@@ -490,7 +490,11 @@ def parse(pdf, p, use_ocr=True):
                    "body_type": p.get("body_type", ""), "district": p.get("district", ""), "ward_no": ward, "seat": seat,
                    "reservation": resv, "serial": serial, "name": name,
                    "party": party_of(party_t) or norm(party_t), "votes": None, "address": addr,
-                   "election": "Gujarat 2026", "url": p["url"], "page": pg, "read": "ocr+text layer" if use_ocr else "text layer"}
+                   "election": "Gujarat 2026", "url": p["url"], "page": pg, "read": "ocr+text layer" if use_ocr else "text layer",
+                   # source trail: the table row (1-based among the page's data rows) and its box in PDF points (top-left origin)
+                   "src_pos": {"page": pg, "row": k + 1, "box_pt": [round(cols[1][0], 1), round(a, 1), round(cols[6][1], 1), round(b, 1)]}}
+            if not use_ocr:
+                rec["method"] = "pdf text layer by drawn cell borders (pdftotext -bbox)"
             if seat_by_order:
                 rec["seat_from"] = "row order"
             if alias:

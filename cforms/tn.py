@@ -17,7 +17,9 @@ import time
 
 import requests
 
-METHOD = "ocr tesseract tam + pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+import provenance
+
+METHOD = "ocr tesseract tam (300 dpi) + pdf text (pdftotext -layout), paired by vote count"     # source trail (provenance.py): how this reader reads its sources
 
 WIN_TEXT = ("ெவற்ற", "வெற்றி")           # "won" in the text layer (legacy glyph order) and in OCR
 GENDER = re.compile(r"^(பெண்|பெ[ணன]்?|ஆ[ணனஸ]்?|ஆனன்|ஆன்|திருநங்கை)$")   # with common OCR slips (ஆன், ஆஸ், ஆனன்)
@@ -123,18 +125,24 @@ def page_records(p, page, layer, text):
         w = cand[0]
         used.add(w[0])
         head = next((h for h in reversed(heads) if h[0] < w[0]), None)
+        ocr_lines = [norm(x) for x in text.splitlines()]
         body = head[1] if head else ""
         rec = {"type": "councillor", "state": "TN", "body_local": body, "body": body, "body_type": BODY_TYPE.get(p.get("type"), ""),
                "district": p.get("district"), "ward_no": ward, "reservation": head[3] if head else "",
                "name": w[1], "father_or_husband": w[2], "party_local": w[3], "party": PARTY.get(w[3].rstrip("."), w[3]),
-               "votes": votes, "election": "Tamil Nadu 2022", "url": p["url"], "page": page, "read": "ocr+text layer"}
+               "votes": votes, "election": "Tamil Nadu 2022", "url": p["url"], "page": page, "read": "ocr+text layer",
+               # source trail: OCR line of the winner (1-based in the page's Tesseract text) and the ward's place in the text layer
+               "src_pos": {"page": page, "ocr_line": w[0] + 1, "line_text": ocr_lines[w[0]] if w[0] < len(ocr_lines) else "",
+                           "layer_ward": k + 1}}
         recs.append(rec)
     return recs
 
 
 def stored(p, get):
     """The PDF from the bucket when the item names its saved copy (payload "stored": "<project>/councillors/TN/<key>.pdf"):
-    then no request goes to tnsec.tn.gov.in, so the item needs neither an Indian proxy nor an India server."""
+    then no request goes to tnsec.tn.gov.in, so the item needs neither an Indian proxy nor an India server.
+    The bucket copy is read through the hub's short-lived read link (not through get(): the trail must not keep a signed url);
+    the readers put provenance.file_src(content, url, key) in each record's "src" instead."""
     hub, k = getattr(get, "hub", None), p.get("stored")
     if not hub or not k:
         return None
@@ -153,6 +161,7 @@ def fetch(p, get):
         return [], [], "tesseract not available"
     key = hashlib.sha1(p["url"].encode()).hexdigest()[:12]
     content = stored(p, get)
+    src = provenance.file_src(content, p["url"], p["stored"]) if content is not None else None
     if content is None:
         r = get(p["url"])
         if r is None:
@@ -170,6 +179,8 @@ def fetch(p, get):
         for pg in pages:
             layer, text = texts[pg]
             for rec in page_records(p, pg, layer, text):
+                if src:
+                    rec["src"] = dict(src)
                 slug = re.sub(r"\s+", "-", rec["body"])[:40] or f"{p.get('type')}-{p.get('district_code')}-p{pg}"
                 recs.append((f"councillor:TN:{p.get('type')}-{p.get('district_code')}:{slug}:{rec['ward_no']}", rec))
     if recs:

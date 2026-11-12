@@ -34,10 +34,11 @@ import tempfile
 
 from bs4 import BeautifulSoup
 
+import provenance
 from cforms import gj, tn
 from cforms.cg import roman
 
-METHOD = "ocr tesseract + pdf text (pypdf) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "ocr tesseract hin (one image per ruled cell, scan without text layer)"     # source trail (provenance.py): how this reader reads its sources
 
 SITE = "https://govtpress.mp.gov.in"
 PAGE = SITE + "/gazette"
@@ -364,12 +365,17 @@ def junk(name):
             or letters < 0.7 * len(name.replace(" ", "")))
 
 
-def members(table, rl):
-    """Members from the read rows of one page and the column roles."""
+class Row(list):
+    """The cell texts of one table row; .box = the row's band in PDF points (x0, y0, x1, y1, top-left origin)."""
+    box = None
+
+
+def members(table, rl, tno=None):
+    """Members from the read rows of one page and the column roles. tno: the table's place on the page (source trail)."""
     out = []
     if "name" not in rl:
         return out
-    for r in table:
+    for ri, r in enumerate(table, 1):
         cell = lambda k: r[rl[k]] if k in rl and rl[k] < len(r) else ""   # noqa: E731
         post = norm(cell("post"))
         # the party: every cell right of the name (a stray line can split the party column)
@@ -386,7 +392,8 @@ def members(table, rl):
         out.append({"position": "Mayor" if mayor else "Councillor", "ward_no": ward, "ward_read": num(cell("ward")),
                     "post_read": bool(POST.search(post)), "body_cell": norm(cell("body")),
                     "ward_words": word_num(cell("ward_words")), "name": name,
-                    "party": party_of(party_local), "party_local": party_local})
+                    "party": party_of(party_local), "party_local": party_local,
+                    "_pos": {k: v for k, v in (("table", tno), ("row", ri), ("box_pt", getattr(r, "box", None))) if v is not None}})
     return out
 
 
@@ -449,9 +456,10 @@ def page_cells(pdf, page, tmp):
         if seg[0][0] - top > 15:
             plan.append(("pre", len(boxes), 1))
             boxes.append((0, top * k, w * k, (seg[0][0] - 1) * k))
-        shape = []
+        shape, bands = [], []
         last = len(vs) - 2
         for a, b in seg:
+            bands.append((round(vs[0] * k, 1), round(a * k, 1), round(vs[-1] * k, 1), round(b * k, 1)))
             n = 0
             for j, (x0, x1) in enumerate(zip(vs, vs[1:])):
                 if x1 - x0 < 22:                 # a doubled border, not a column (the narrowest column, serial, is ~30 px)
@@ -461,7 +469,7 @@ def page_cells(pdf, page, tmp):
                 boxes.append(((x0 + 3) * k, (a + 2) * k, (x1 - 3) * k, (b - 2) * k))
                 n += 1
             shape.append(n)
-        plan.append(("rows", len(boxes) - sum(shape), shape))
+        plan.append(("rows", len(boxes) - sum(shape), (shape, bands)))
         top = seg[-1][1] + 1
     texts = gj.ocr_boxes(pdf, page, boxes, tmp, "hin", dpi=300, psm=6)
     out = []
@@ -470,8 +478,10 @@ def page_cells(pdf, page, tmp):
             out.append(("pre", texts[i]))
         else:
             rows = []
-            for n in shape:
-                rows.append(texts[i:i + n])
+            for n, band in zip(*shape):
+                row = Row(texts[i:i + n])
+                row.box = list(band)
+                rows.append(row)
                 i += n
             out.append(("rows", rows))
     return out
@@ -483,13 +493,15 @@ def read_pages(blocks, body=None):
     out, since = [], 0                                  # since: rows read since the last preamble
     for page, bl in blocks:
         rl = roles([r for kind, v in bl if kind == "rows" for r in v])
+        tno = 0
         for kind, v in bl:
             if kind == "pre":
                 b = body_from(v)
                 if b:
                     body, since = b, 0
                 continue
-            ms = members(v, rl)
+            tno += 1
+            ms = members(v, rl, tno)
             # a table that starts again at ward 1 with no preamble read before it: a new notice whose preamble the scan lost.
             # Its body cell ("नगर परिषद् X जिला Y", over the first rows) names it; else its rows are left out.
             if ms and since and "1" in (ms[0].get("ward_read"), ms[0].get("ward_words")):
@@ -550,6 +562,7 @@ def fetch(p, get):
     if not tools():
         return [], [], "tesseract not available"
     content = tn.stored(p, get)
+    src = provenance.file_src(content, p["url"], p["stored"]) if content is not None else None
     files = []
     if content is None:
         r = get(p["url"])
@@ -576,6 +589,9 @@ def fetch(p, get):
                     body = pres[-1]
                     break
         recs = [record(p, b, m, page) for b, m, page in read_pages(blocks, body)]
+    if src:
+        for _, d in recs:
+            d["src"] = dict(src)
     return recs, files, "" if recs else "no members read"
 
 
@@ -636,6 +652,8 @@ def record(p, body, m, page):
          "district_local": body["district_local"], "lgd_code": lgd[0] if lgd else None,
          "election": f"MP urban body general election {body['year']}", "election_month": month_year,
          "gazette_no": p.get("gazette_no"), "gazette_date": p.get("gazette_date"), "page": page, "url": p["url"],
-         "source": "Madhya Pradesh Gazette Extraordinary (State Election Commission notice, section 45)"}
+         "source": "Madhya Pradesh Gazette Extraordinary (State Election Commission notice, section 45)",
+         # source trail: the table on the page (1-based, top to bottom), the row in it (1-based) and the row band in PDF points
+         "src_pos": {"page": page, **(m.get("_pos") or {})}}
     ward = m["ward_no"] or ("mayor" if m["position"] == "Mayor" else f"p{page}-{hashlib.sha1(m['name'].encode()).hexdigest()[:6]}")
     return f"councillor:MP:{slug}:{ward}", d

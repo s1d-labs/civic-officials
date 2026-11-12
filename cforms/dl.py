@@ -20,7 +20,7 @@ import tempfile
 
 from cforms import hr
 
-METHOD = "ocr tesseract + pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "ocr tesseract eng (one strip per ruled row) or pdf text (pdftotext -layout), by payload source"     # source trail (provenance.py): how this reader reads its sources
 
 BODY = "Municipal Corporation of Delhi"
 COLS = ["sr", "ward", "ward_name", "reservation", "name", "party"]
@@ -64,7 +64,7 @@ def title(s):
     return " ".join(w.title() if w.isupper() and len(w) > 1 else w for w in s.split())
 
 
-def record(p, ward, ward_name, res, name, pty, page, read):
+def record(p, ward, ward_name, res, name, pty, page, read, pos=None):
     bye = p.get("source") == "bye2025"
     rid = f"councillor:DL:{hr.slug(BODY)}:{ward}"
     status = None
@@ -74,7 +74,9 @@ def record(p, ward, ward_name, res, name, pty, page, read):
     d = {"type": "councillor", "state": "DL", "body": BODY, "body_type": "Municipal Corporation", "district": "Delhi",
          "ward_no": str(ward), "ward_name": title(ward_name), "name": title(name), "name_as_printed": hr.clean(name),
          "party": party(pty), "reservation": reservation(res), "position": "Councillor", "status": status,
-         "election": "MCD bye-election 2025" if bye else "MCD 2022", "url": p["url"], "page": page, "read": read}
+         "election": "MCD bye-election 2025" if bye else "MCD 2022", "url": p["url"], "page": page, "read": read,
+         "src_pos": {"page": page, **pos} if pos else None,
+         "method": {"ocr": "ocr tesseract eng (one strip per ruled row)", "text layer": "pdf text (pdftotext -layout)"}.get(read)}
     return rid, {k: v for k, v in d.items() if v not in (None, "")}
 
 
@@ -158,7 +160,7 @@ def parse_row(text):
 
 def scan_page(p, pdf, page, tmp, state):
     out = []
-    for text in strips(hr.render(pdf, page, tmp), tmp, page, p.get("lang", "eng")):
+    for k, text in enumerate(strips(hr.render(pdf, page, tmp), tmp, page, p.get("lang", "eng")), 1):
         got = parse_row(text)
         if not got:
             continue
@@ -172,7 +174,8 @@ def scan_page(p, pdf, page, tmp, state):
             # rows run 1..250 in order and Sr. No = Ward No: take the reading that fits the order, else the order itself
             ward = next((int(v) for v in (wd, sr) if v and int(v) == nxt), nxt)
         state["last"] = ward
-        out.append(record(p, ward, wname, res, name, pty, page, "ocr"))
+        # source trail: k = the row's place among the page's ruled rows (top to bottom), its OCR text as read
+        out.append(record(p, ward, wname, res, name, pty, page, "ocr", {"row": k, "line_text": text}))
     return out
 
 
@@ -186,10 +189,14 @@ def split_party(c):
             return
 
 
-def text_rows(text, first=1):
-    """English list of the 2025 gazette (pdftotext -layout) -> [(ward, ward name, reservation, name, party, page)]."""
-    rows, starts, cur, page = [], None, None, first
+def text_rows(text, first=1, pos=None):
+    """English list of the 2025 gazette (pdftotext -layout) -> [(ward, ward name, reservation, name, party, page)].
+    pos: a list; when given, it gets each row's src_pos {"line": 1-based in its page's text, "line_text"}."""
+    rows, starts, cur, page, li = [], None, None, first, 0
     for ln in text.split("\n"):              # not splitlines(): it would drop the form feeds that mark new pages
+        if "\f" in ln:
+            li = 0
+        li += 1
         page += ln.count("\f")
         ln = ln.replace("\f", "")
         if re.match(r"\s*Sr\.?\s+Ward", ln):
@@ -209,6 +216,7 @@ def text_rows(text, first=1):
         if re.fullmatch(r"\d+\.?", c["sr"]) and re.fullmatch(r"\d+", c["ward"]):
             cur = c
             c["page"] = page
+            c["_pos"] = {"line": li, "line_text": ln}
             split_party(c)
             rows.append(c)
         elif cur is not None and not c["sr"] and not c["ward"]:
@@ -218,6 +226,8 @@ def text_rows(text, first=1):
     out = []
     for c in rows:
         out.append((int(c["ward"]), c["ward_name"], c["reservation"], c["name"], c["party"], c["page"]))
+        if pos is not None:
+            pos.append(c["_pos"])
     return out
 
 
@@ -245,6 +255,7 @@ def fetch(p, get):
         else:
             t = subprocess.run(["pdftotext", "-layout", "-f", str(first), "-l", str(last), pdf, "-"], capture_output=True,
                                text=True).stdout
-            for row in text_rows(t, first):
-                recs.append(record(p, *row, "text layer"))
+            pos = []
+            for row, rp in zip(text_rows(t, first, pos), pos):
+                recs.append(record(p, *row, "text layer", rp))
     return recs, files, "" if recs else "no councillors read"
