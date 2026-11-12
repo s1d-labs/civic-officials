@@ -48,7 +48,8 @@ EX_OFFICIO = re.compile(r"\bM\.?\s?P\b|\bM\.?\s?L\.?\s?[AC]\b|member of parliame
 PLACEHOLDER = re.compile(r"vacant|ಖಾಲಿ|\bterm\b|election|not held|ಚುನಾವಣೆ|ಅವಧಿ|\bstay\b|\bcourt\b|conduct|upgraded|\bclosed\b|council members|ನ್ಯಾಯಾಲಯ|ಇರುವುದಿಲ್ಲ|ಮೇಲ್ದ", re.I)
 HONORIFIC = re.compile(r"^(?:(?:shri|sri|smt|mrs?|ms|dr|kum|ಶ್ರೀಮತಿ|ಶ್ರೀ|ಕುಮಾರಿ|ಡಾ)(?=[\s.,]|$)\.?\s*)+", re.I)
 ALL_WARDS = re.compile(r"^\s*all\b|ಎಲ್ಲಾ", re.I)
-NOMINATED = re.compile(r"nominated|nominee|ನಾಮನಿರ್ದೇಶಿತ|ನಾಮ ನಿರ್ದೇಶಿತ", re.I)
+# "ನಾಮಿನಿ ಸದಸ್ಯರು" (nominee member, Channarayapatna), "Name Direction Member" (a machine translation of ನಾಮನಿರ್ದೇಶನ, Hosapete)
+NOMINATED = re.compile(r"nominated|nominee|ನಾಮನಿರ್ದೇಶ|ನಾಮ ನಿರ್ದೇಶ|ನಾಮಿನಿ|name\s*direction", re.I)
 HONBLE = re.compile(r"\bHon'?ble\b|\bHonourable\b|ಮಾನ್ಯ|ಪೂಜ್ಯ", re.I)
 TERM = re.compile(r"(?:term|ಅವಧಿ)\D{0,20}((?:19|20)\d\d\s*(?:-|–|to|ರಿಂದ)\s*(?:19|20)\d\d)", re.I)
 
@@ -140,9 +141,12 @@ def members(html):
                 d["address"] = d["phone_raw"] = d.pop("addr_phone")
                 d.setdefault("phone", d["phone_raw"])
                 del d["phone_raw"]
-            for src in ("address", "position"):   # "Ward Mo.11, Chandapura Village", "Councillor Ward No.1": the ward written elsewhere
-                if "ward_no" not in d and re.search(r"ward|ವಾರ್ಡ", d.get(src) or "", re.I):
-                    d["ward_no"] = d[src]
+            # "Councillor Ward No.13", "Ward Mo.11, Chandapura Village": the ward written elsewhere. The post first: an address can
+            # name the ward the member lives in (Chandapura: post "Ward No.13", address "Ward No.10, #134 ...")
+            for src in ("position", "address"):
+                v = d.get(src) or ""
+                if "ward_no" not in d and re.search(r"ward|ವಾರ್ಡ", v, re.I) and (src == "address" or re.search(r"[\d೦-೯]", v)):
+                    d["ward_no"] = v
             if "ward_noname" in d:          # "12 - Gandhi Nagar", "Ward No 12 Gandhi Nagar"
                 v = d.pop("ward_noname")
                 d["ward_no"] = v
