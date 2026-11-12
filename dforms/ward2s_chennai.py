@@ -17,6 +17,7 @@ Record ids: dept:ward2s_chennai:z<zone>:<post slug>:<name slug>.
 """
 import re
 
+import provenance
 from dforms import _esw, _ward
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout) + spreadsheet"     # source trail (provenance.py): how this reader reads its sources
@@ -63,19 +64,22 @@ def name_post(text):
     return t, ""
 
 
-def rows(pages):
-    """[(zone, ward, centre, capacity, official text, official phone, sro text, sro phone)] from the page texts."""
-    out = []
-    for page in pages:
-        lines = [ln for ln in page.split("\n") if not HEADER.search(ln)]
-        blocks, cur = [], []
-        for ln in lines + [""]:
+def rows(pages, at=None):
+    """[(zone, ward, centre, capacity, official text, official phone, sro text, sro phone)] from the page texts. at: a list; when
+    given, it gets each row's src_pos (page, its main line: 1-based in page.split("\\n"))."""
+    out, where = [], []
+    for pn, page in enumerate(pages, 1):
+        numbered = [(i, ln) for i, ln in enumerate(page.split("\n"), 1) if not HEADER.search(ln)]
+        blocks, cur, nos, cno = [], [], [], []
+        for i, ln in numbered + [(0, "")]:
             if ln.strip():
                 cur.append(ln)
+                cno.append(i)
             elif cur:
                 blocks.append(cur)
-                cur = []
-        for b in blocks:
+                nos.append(cno)
+                cur, cno = [], []
+        for b, bno in zip(blocks, nos):
             mains = [i for i, ln in enumerate(b) if ROW.match(ln)]
             for k, i in enumerate(mains):
                 # lines between two rows with no blank line between them: the upper half wraps the upper row, the lower half the
@@ -83,6 +87,9 @@ def rows(pages):
                 lo = (mains[k - 1] + 1 + (i - mains[k - 1]) // 2) if k else 0  # a line half-way goes to the upper row
                 hi = (i + 1 + (mains[k + 1] - i) // 2) if k + 1 < len(mains) else len(b)
                 out.append(_row(b[i], b[lo:i], b[i + 1:hi]))
+                where.append(provenance.line_pos(pn, bno[i], b[i]))
+    if at is not None:
+        at += [w for r, w in zip(out, where) if r]
     return [r for r in out if r]
 
 
@@ -155,19 +162,23 @@ def people_of(off, phones):
 
 
 def parse(pages, p):
-    people, sros = {}, {}
-    for zone, ward, centre, cap, off, phones, sro, sph in rows(pages):
+    people, sros, at = {}, {}, []
+    for (zone, ward, centre, cap, off, phones, sro, sph), pos in zip(rows(pages, at), at):
+        ref = {"page": pos["page"], "line": pos["line"]}
         for name, post, ph in people_of(off, phones):
             if not (name or ph):
                 continue
             k = (zone, name.upper().replace(" ", ""), post, ph)
-            d = people.setdefault(k, {"name": name, "post": post or "Official in charge", "phone": ph, "wards": [], "centres": []})
+            d = people.setdefault(k, {"name": name, "post": post or "Official in charge", "phone": ph, "wards": [], "centres": [],
+                                      "at": []})
             d["wards"].append(ward)
+            d["at"].append(ref)
             d["centres"].append(centre)
         if sro or sph:
             k = (zone, sro.upper().replace(" ", ""), sph)
-            d = sros.setdefault(k, {"name": sro, "phone": sph, "wards": []})
+            d = sros.setdefault(k, {"name": sro, "phone": sph, "wards": [], "at": []})
             d["wards"].append(ward)
+            d["at"].append(ref)
     seen, recs = set(), []
     for (zone, *_), d in list(people.items()) + list(sros.items()):
         zn = f"Zone {zone} ({ZONES[zone]})" if zone in ZONES else f"Zone {zone}"
@@ -178,7 +189,8 @@ def parse(pages, p):
         recs.append(_ward.record(MODULE, f"z{zone}:{_esw.slug(post)}:{_esw.slug(d['name']) or 'post'}", seen, body=BODY, lgd=LGD,
                                  state=STATE, district=DISTRICT, level="ward", area="Ward " + ", ".join(wards), zone=zn,
                                  post=post, name=d["name"], phone=d["phone"], wards=wards,
-                                 wing=None if is_sro else _ward.wing_of(post), source=p["url"], **extra))
+                                 wing=None if is_sro else _ward.wing_of(post), source=p["url"], **extra,
+                                 src_pos={"rows": d["at"], "note": "one person summed over these relief-centre rows"}))
     return recs
 
 

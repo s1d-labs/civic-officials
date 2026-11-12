@@ -14,6 +14,7 @@ them). Names are Hindi: name and name_regional carry the same text. Record ids: 
 import collections
 import re
 
+import provenance
 from dforms import _esw, _ward, _ward_kd as kd
 
 METHOD = "pdf text (pypdf) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
@@ -32,8 +33,9 @@ def _runs(line):
     return [(m.start(), m.group(0)) for m in re.finditer(r"\S+(?: \S+)*", line)]
 
 
-def ward_rows(page):
-    """[(ward, [text of column 1..4])] of one ward-table page, or [] when the page is not one."""
+def ward_rows(page, at=None):
+    """[(ward, [text of column 1..4])] of one ward-table page, or [] when the page is not one. at: a list; when given, it gets
+    each row's first line (1-based in page.splitlines())."""
     lines = page.splitlines()
     starts = [ln for ln in lines if re.match(r"\s*\d{1,3}\s{2,}\S", ln)]
     c = collections.Counter(x for ln in lines for x, _ in _runs(ln))
@@ -46,11 +48,13 @@ def ward_rows(page):
     if len(peaks) != 5 or len(starts) < 3:
         return []
     out, cur = [], None
-    for ln in lines:
+    for lno, ln in enumerate(lines, 1):
         m = re.match(r"\s*(\d{1,3})\s{2,}\S", ln)
         if m and abs(m.start(1) - peaks[0]) <= 3:
             cur = (m.group(1), [[] for _ in range(4)])
             out.append(cur)
+            if at is not None:
+                at.append(lno)
             ln = ln[:m.start(1)] + " " * len(m.group(1)) + ln[m.end(1):]
         if cur is None:
             continue
@@ -74,18 +78,20 @@ def person(text):
 
 
 def allotment(page):
-    """Page 7: [(name, post, phone, wards, note)] of the heads and the inspectors' ward allotments."""
+    """Page 7: [(name, post, phone, wards, note, line no)] of the heads and the inspectors' ward allotments (line no 1-based in
+    the page text)."""
     u = kd.convert(page)
     out = []
-    for ln in u.splitlines():
+    for lno, ln in enumerate(u.splitlines(), 1):
         ln = _esw.clean(ln)
         m = re.match(r"(?:\d+\s*-\s*)?(श्री[^\]]+|डा\S*\s*[^\]]+)\]\s*([^-\d]+?)\s*-+\s*(\d{10})\s*-?\s*(.*)$", ln)
         if m:
-            out.append((m.group(1).strip(), m.group(2).strip(), m.group(3), [], m.group(4).strip(" -")))
+            out.append((m.group(1).strip(), m.group(2).strip(), m.group(3), [], m.group(4).strip(" -"), lno))
             continue
         m = re.match(r"\d+\s+(श्री.+?)\s+(\d{10})\s+(.+)$", ln)
         if m:
-            out.append((m.group(1).strip(), "सफाई एवं खाद्य निरीक्षक", m.group(2), _ward.wards_of(m.group(3).replace("]", ",")), ""))
+            out.append((m.group(1).strip(), "सफाई एवं खाद्य निरीक्षक", m.group(2), _ward.wards_of(m.group(3).replace("]", ",")), "",
+                        lno))
     return out
 
 
@@ -98,8 +104,9 @@ POSTS = {"सफाई एवं खाद्य निरीक्षक": "San
 def parse(pages, p):
     people = {}  # (post, phone or name) -> {...}
     localities = {}
-    for pg in pages:
-        for ward, cols in ward_rows(pg):
+    for pn, pg in enumerate(pages, 1):
+        at = []
+        for (ward, cols), lno in zip(ward_rows(pg, at), at):
             w = str(int(ward))
             localities[w] = _esw.clean(kd.convert(cols[3]))
             for ci, default in ((1, "सफाई एवं खाद्य निरीक्षक"), (2, "सफाई नायक")):
@@ -107,18 +114,22 @@ def parse(pages, p):
                 if not (name or phone):
                     continue
                 post = post or default
-                g = people.setdefault((post, phone or name), {"name": name, "post": post, "phone": phone, "wards": []})
+                g = people.setdefault((post, phone or name), {"name": name, "post": post, "phone": phone, "wards": [], "at": []})
                 if w not in g["wards"]:
                     g["wards"].append(w)
+                g["at"].append({"page": pn, "line": lno, "col": ci + 1})
     heads = []
-    for pg in pages:
-        for name, post, phone, wards, note in allotment(pg):
+    for pn, pg in enumerate(pages, 1):
+        raw = pg.splitlines()
+        for name, post, phone, wards, note, lno in allotment(pg):
+            pos = provenance.line_pos(pn, lno, raw[lno - 1] if lno <= len(raw) else "")
             if wards:
                 g = people.setdefault(("सफाई एवं खाद्य निरीक्षक", phone), {"name": name, "post": "सफाई एवं खाद्य निरीक्षक",
-                                                                           "phone": phone, "wards": []})
+                                                                           "phone": phone, "wards": [], "at": []})
                 g["wards"] += [x for x in wards if x not in g["wards"]]
+                g["at"].append({"page": pn, "line": lno})
             else:
-                heads.append((name, post, phone, note))
+                heads.append((name, post, phone, note, pos))
     seen, recs = set(), []
     for g in people.values():
         g["wards"].sort(key=lambda x: int(re.match(r"\d+", x).group(0)))
@@ -128,12 +139,14 @@ def parse(pages, p):
                                  state=STATE, district=DISTRICT, level="ward", area=area,
                                  area_regional=localities.get(g["wards"][0]) if len(g["wards"]) == 1 else None, post=en,
                                  post_regional=g["post"], name=g["name"], name_regional=g["name"], phone=g["phone"],
-                                 wards=g["wards"], wing="sanitation", source=p["url"]))
-    for name, post, phone, note in heads:
+                                 wards=g["wards"], wing="sanitation", source=p["url"],
+                                 src_pos={"rows": g["at"], "note": "one person summed over these ward rows (col: table column)"}))
+    for name, post, phone, note, pos in heads:
         en = POSTS.get(post, post)
         recs.append(_ward.record(MODULE, f"{_esw.slug(en)}:{phone}", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                  level="body", area=BODY, post=en, post_regional=post, name=name, name_regional=name, phone=phone,
-                                 wing="health" if "स्वास्थ्य" in post else "sanitation", note=note or None, source=p["url"]))
+                                 wing="health" if "स्वास्थ्य" in post else "sanitation", note=note or None, source=p["url"],
+                                 src_pos=pos))
     return recs
 
 

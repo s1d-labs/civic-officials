@@ -12,7 +12,7 @@ import re
 
 from dforms import _esw, _ward
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "js bundle (locale objects read by regex)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2n_faridabad"
 BODY, LGD, STATE, DISTRICT = "Municipal Corporation Faridabad", "248585", "HR", "Faridabad"
@@ -32,10 +32,13 @@ def bundle_url(html, base=URL):
     return base.rstrip("/") + m.group(1) if m else None
 
 
-def pairs(rx, js):
-    """{key: (English groups, Hindi groups or None)}: the bundle holds an English and a Hindi locale object with the same keys."""
+def pairs(rx, js, at=None):
+    """{key: (English groups, Hindi groups or None)}: the bundle holds an English and a Hindi locale object with the same keys.
+    at: a dict; when given, at[key] = the character offsets of the object(s) in the bundle (source trail)."""
     out = {}
     for m in rx.finditer(js):
+        if at is not None:
+            at.setdefault(m.group(1), []).append(m.start())
         g = m.groups()
         en, hi = out.get(g[0], (None, None))
         if DEV.search("".join(g[1:])):
@@ -50,21 +53,24 @@ def parse(js, p, source=None):
     seen, recs = set(), []
     kw = dict(body=BODY, lgd=LGD, state=STATE, district=DISTRICT, source=source or p["url"],
               page="https://mcfaridabad.in/ (Administrative Hierarchy)")
-    for key, (en, hi) in pairs(ZONE, js).items():
+    at = {}
+    for key, (en, hi) in pairs(ZONE, js, at).items():
         if not en:
             continue
         zone, officer, mobile = en
         recs.append(_ward.record(MODULE, f"{_esw.slug(zone)}:zonal-officer", seen, level="zone", area=zone, zone=zone,
                                  area_regional=hi[0] if hi else None, post="Zonal Officer", name=officer.strip(" -"),
-                                 name_regional=hi[1] if hi else None, phone=mobile, wing="administration", **kw))
-    for key, (en, hi) in pairs(JC, js).items():
+                                 name_regional=hi[1] if hi else None, phone=mobile, wing="administration", **kw,
+                                 src_pos={"object": key, "offsets": at.get(key)}))
+    for key, (en, hi) in pairs(JC, js, at).items():
         if not en or not en[0].strip(" -"):
             continue
         name, post = en
         area = JC_AREA.get(key)
         recs.append(_ward.record(MODULE, f"{_esw.slug(key)}:{_esw.slug(post)}", seen, level="zone" if area else "body",
                                  area=area or BODY, zone=area, post=post, post_regional=hi[1] if hi else None, name=name,
-                                 name_regional=hi[0] if hi else None, wing="administration", **kw))
+                                 name_regional=hi[0] if hi else None, wing="administration", **kw,
+                                 src_pos={"object": key, "offsets": at.get(key)}))
     return recs
 
 
@@ -78,5 +84,5 @@ def fetch(p, get):
     j = get(js_url)
     if j is None:
         return [], [], "no answer (script bundle)"
-    recs = parse(j.text, p, source=js_url)
+    recs = _ward.tag(parse(j.text, p, source=js_url), j, js_url)
     return recs, [_esw.keep(MODULE, "bundle", j.content, "js")], "" if recs else "no zone objects in the bundle"

@@ -13,6 +13,7 @@ Record ids: dept:ward_amritsar:<file>:<post slug>:<mobile>.
 """
 import re
 
+import provenance
 from dforms import _esw, _ward
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
@@ -113,7 +114,8 @@ def parse(pages, p):
     kind = p.get("kind") or "civil"
     wing = FILES.get(kind, ("", "engineering"))[1]
     seen, recs = set(), []
-    for pg in pages:
+    for pn, pg in enumerate(pages, 1):
+        lines = pg.splitlines()
         for r in rows(pg):
             wards = [] if re.search(r"(?i)whole|---|new appointment", r["ward"]) else _ward.wards_of(re.sub(r"\([^)]*\)", "", r["ward"]))
             post = r["post"] or "Engineer"
@@ -122,7 +124,8 @@ def parse(pages, p):
             recs.append(_ward.record(MODULE, f"{kind}:{_esw.slug(post)}:{mob}", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level="ward" if wards else "zone", area=area, post=post, name=r["name"],
                                      phone=r["mobile"], wards=wards, zone=r["office"] or None, wing=wing,
-                                     ward_text=r["ward"] or None, source=p["url"]))
+                                     ward_text=r["ward"] or None, source=p["url"],
+                                     src_pos=provenance.line_pos(pn, r["line"] + 1, lines[r["line"]])))
     return recs
 
 

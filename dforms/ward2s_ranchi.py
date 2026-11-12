@@ -18,9 +18,10 @@ Record ids: dept:ward2s_ranchi:tc:<employee code> and dept:ward2s_ranchi:body:<p
 import collections
 import re
 
+import provenance
 from dforms import _esw, _ward
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout) + html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (div.box) + pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2s_ranchi"
 BODY, LGD, STATE, DISTRICT = "Ranchi Municipal Corporation", "250413", "JH", "Ranchi"
@@ -52,7 +53,7 @@ def plain_wards(codes):
 def parse_tax(html, p):
     soup = _esw.soup(html)
     seen, recs = set(), []
-    for box in soup.select("div.box"):
+    for bi, box in enumerate(soup.select("div.box"), 1):
         name = _esw.clean((box.select_one("p.name") or box).get_text(" ")) if box.select_one("p.name") else ""
         phone = _esw.clean(box.select_one("p.testimonial").get_text(" ")) if box.select_one("p.testimonial") else ""
         emp = _esw.clean(box.select_one("p.emp_code").get_text(" ")) if box.select_one("p.emp_code") else ""
@@ -64,7 +65,8 @@ def parse_tax(html, p):
         recs.append(_ward.record(MODULE, f"tc:{_esw.slug(emp) or _esw.slug(name)}", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level="ward", area="Wards " + ", ".join(wards), post="Tax Collector",
                                  name=name, phone=phone, wards=wards, ward_codes=codes, employee_code=emp or None,
-                                 source=p.get("url") or TC_URL, wing="revenue"))
+                                 source=p.get("url") or TC_URL, wing="revenue", src_pos={"selector": "div.box", "card": bi},
+                                 method="html cards (div.box)"))
     return recs
 
 
@@ -72,12 +74,13 @@ def _runs(line):
     return [(m.start(), m.group(0)) for m in re.finditer(r"\S+(?: \S+)*", line)]
 
 
-def contact_rows(pages):
+def contact_rows(pages, at=None):
     """[(serial, name, designation, [mobiles], [landlines])] from the telephone list pages (pypdf layout text). Per page: the name
     column starts where the honorifics (SHRI, SMT, DR.) start, the designation column where most other text runs start; lines
-    above the first name line (title, helpline numbers, column heading) are skipped."""
+    above the first name line (title, helpline numbers, column heading) are skipped.
+    at: a list; when given, it gets each row's src_pos (page, the serial number's line, "from" = the row's first line)."""
     rows = []
-    for page in pages:
+    for pn, page in enumerate(pages, 1):
         lines = page.splitlines()
         runs = [(x, t) for ln in lines for x, t in _runs(ln)]
         xs = [x for x, t in runs if HONORIFIC.match(t)]
@@ -88,7 +91,8 @@ def contact_rows(pages):
         post_x = min((x for x, n in other.items() if n >= 3), default=name_x + 25)
         first = next(i for i, ln in enumerate(lines) if any(HONORIFIC.match(t) for _, t in _runs(ln)))
         cur = {"name": [], "post": [], "mob": [], "tel": []}
-        for ln in lines[first:]:
+        start = first + 1
+        for lno, ln in enumerate(lines[first:], first + 1):
             m = re.match(r"\s*(\d{1,3})(?=\s{2,}|\s*$)", ln)
             serial = m.group(1) if m else None
             for x, t in _runs(ln[m.end():] if m else ln):
@@ -106,7 +110,10 @@ def contact_rows(pages):
             if serial:
                 if cur["name"]:
                     rows.append((serial, " ".join(cur["name"]), " ".join(cur["post"]), cur["mob"], cur["tel"]))
+                    if at is not None:
+                        at.append(provenance.line_pos(pn, lno, ln, **({"from": start} if start < lno else {})))
                 cur = {"name": [], "post": [], "mob": [], "tel": []}
+                start = lno + 1
     return rows
 
 
@@ -117,15 +124,15 @@ def post_en(p):
 
 
 def parse_contacts(pages, p):
-    seen, recs = set(), []
-    for serial, name, post, mob, tel in contact_rows(pages):
+    seen, recs, at = set(), [], []
+    for (serial, name, post, mob, tel), pos in zip(contact_rows(pages, at), at):
         if not post:
             continue
         en = post_en(post)
         recs.append(_ward.record(MODULE, f"body:{_esw.slug(en)}:{_esw.slug(name)}", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level="body", area=BODY, post=en, name=name,
                                  phone=", ".join(mob + [f"0651-{t}" for t in tel]), source=p.get("url") or PDF_URL,
-                                 post_as_written=post, serial=serial))
+                                 post_as_written=post, serial=serial, src_pos=pos, method="pdf text (pypdf layout)"))
     return recs
 
 
