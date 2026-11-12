@@ -200,3 +200,30 @@ def test_court_central_health_positions():
     d = recs[0][1]
     assert d["src_url"].endswith("get_contact_district_data") and d["src_sha256"] == hashlib.sha256(page.read_bytes()).hexdigest()
     assert d["src_pos"]["ajax_page"] == 1 and d["src_pos"]["row"] >= 1
+
+
+def test_rj_jankalyan_json_index():
+    from esw_common import mod
+    m = mod("rj_jankalyan")
+    p = next(i["payload"] for i in m.items() if i["key"] == "rj_jankalyan:kota")
+    data = json.loads((DATA / "gaps2" / "rj_jankalyan_kota.json").read_text())
+    recs, _ = m.parse(data, p)
+    d = recs[0][1]
+    assert d["src_url"] == m.API and d["src_pos"]["key"] == "Data.Data"
+    entry = data["Data"]["Data"][d["src_pos"]["index"]]
+    assert str(entry.get("Id") or entry.get("Code")) == d["src_pos"]["id"] == d["entry_id"]
+
+
+def test_swf_as_card_positions():
+    from esw_common import ROOT as R, fake_get, mod
+    m = mod("swf_as")
+    p = next(i["payload"] for i in json.loads((R / "seeds" / "dept_swf_as.json").read_text())
+             if i["payload"]["host"] == "kamrup.assam.gov.in")
+    pages = {"https://kamrup.assam.gov.in/whos-who": "swf_as/kamrup_whos-who.html",
+             "https://kamrup.assam.gov.in/contact-us": "swf_as/kamrup_contact-us.html"}
+    recs, _, _ = m.fetch(p, fake_get(pages))
+    by = dict(recs)
+    adc = by["dept:swf_as:kamrup.assam.gov.in:pranjit-kr-deb-acs:additional-district-commissioner"]
+    assert adc["src_url"] == adc["page"] and adc["src_pos"]["card"] >= 1
+    dc = by["dept:swf_as:kamrup.assam.gov.in:deba-kumar-mishra-acs:district-commissioner"]
+    assert dc["src_url"].endswith("contact-us") and dc["src_pos"]["card"] >= 1

@@ -25,7 +25,7 @@ from datetime import datetime
 
 from dforms import _esw
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (SWF Who's Who / Contact Us)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "swf_as"
 PAGES = ["whos-who", "contact-us"]
@@ -99,12 +99,13 @@ def cards(html):
         t.decompose()
     area = soup.find(id="swf_content_area") or soup
     out = []
-    for card in area.find_all("div", class_=re.compile(r"^(card_info|rim-contact-card|hod-contact-card)$")):
+    for n, card in enumerate(area.find_all("div", class_=re.compile(r"^(card_info|rim-contact-card|hod-contact-card)$")), 1):
         head = card.find_previous("div", class_="whoswho-subtitle")
         cat = _t(head.find("h6")) if head is not None else ""
         f = _fields(card)
         if not f["name"] or PLACEHOLDER.match(f["name"]):
             continue
+        f["_pos"] = {"selector": "#swf_content_area div.card_info|rim-contact-card|hod-contact-card", "card": n}   # source trail
         out.append((cat, f))
     return out
 
@@ -146,6 +147,7 @@ def build(pages, p):
                 order.append(k)
                 continue
             m = merged[k]
+            m["_pos"] = {**m.get("_pos", {}), "also": m.get("_pos", {}).get("also", []) + [{"url": url, **f.get("_pos", {})}]}
             for x in ("phone", "email", "address", "fax"):
                 if f[x] and f[x] not in m[x]:
                     m[x] = ", ".join(v for v in (m[x], f[x]) if v)
@@ -159,7 +161,8 @@ def build(pages, p):
                                 category=f["category"] or None, name=f["name"], phone=f["phone"], email=f["email"],
                                 fax=f["fax"] or None, address=f["address"], state="AS", district=district or None,
                                 district_code=code or None, site=host, page=f["page"], source=f["page"],
-                                last_updated=f["last_updated"], office_id=f"{host}:{k[0]}"))
+                                last_updated=f["last_updated"], office_id=f"{host}:{k[0]}",
+                                src_url=f["page"], src_pos=f.get("_pos")))   # "also": the same person on a later page (merged)
     return recs
 
 
