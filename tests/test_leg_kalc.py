@@ -56,3 +56,20 @@ def test_leg_kalc_fetch_follows_latest_link(monkeypatch):
     recs, files, why = m.fetch(p, get)
     assert why == "" and len(recs) == 70 and calls[1].endswith("mcontact18082026.pdf")
     assert [f[0] for f in files] == ["depts/leg_kalc/memberslist.html.gz", "depts/leg_kalc/mcontact18082026.pdf.gz"]
+
+
+def test_leg_ka_save_only():
+    m = mod("leg_ka")
+    assert json.loads((ROOT / "seeds" / "dept_leg_ka.json").read_text()) == m.items()
+    page = (b'<a href="16members/address.pdf">MLA address list</a> <a href="../assembly.htm">Home</a>'
+            b' <a href="http://example.org/members.htm">x</a> <a href="mlas_contact.htm">c</a>')
+    got = []
+
+    def get(url, method="GET", data=None, headers=None):
+        got.append(url)
+        return Answer(b"%PDF-1.4 x" if url.endswith(".pdf") else page, url)
+    recs, files, why = m.fetch(m.items()[0]["payload"], get)
+    assert recs == [] and why.startswith("saved only (3 files)")
+    assert got[1:] == ["https://kla.kar.nic.in/assembly/member/16members/address.pdf",
+                       "https://kla.kar.nic.in/assembly/member/mlas_contact.htm"]
+    assert files[1][0] == "depts/leg_ka/linked-00-address-pdf.pdf.gz"
