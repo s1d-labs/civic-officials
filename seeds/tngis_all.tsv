@@ -1,0 +1,442 @@
+layer	chunk	category	expect	sort	page	district	geom	zip_mb	est_json_mb	log_count	mirrors
+generic_viewer:20_above_accidents_cluster	20_above_accidents_cluster	other	166	object_id	800		Polygon	0.7	1.0	166	
+generic_viewer:aadhar_enrollment_center_mis	aadhar_enrollment_center_mis	other	977	object_id	1000			0.0	1.0	977	
+aavin:aavin_bmc_facilities	aavin_bmc_facilities	service_point	864	region,type,latitude,longitude	4000		Point	0.0	0.2	864	
+aavin:aavin_cc_facilities	aavin_cc_facilities	service_point	12	region,type,latitude,longitude	4000		Point	0.0	0.0	12	
+aavin:aavin_dairy_facilities	aavin_dairy_facilities	service_point	902	region,type,latitude,longitude	4000		Point+Point	0.0	0.2	902	
+aavin:aavin_districts	aavin_districts	service_point	38	lgd_code	100		Polygon	2.4	3.2	38	aavin:aavin_production_20_21
+generic_viewer:accidents_cluster	accidents_cluster	other	1715	object_id	1000		Polygon	5.4	7.8	1715	
+generic_viewer:accidents_cluster_center	accidents_cluster_center	other	1715	object_id	4000		Point	0.1	0.3	1715	
+generic_viewer:accidents_hotspot_scrb	accidents_hotspot_scrb	other	192	object_id	4000	district	Point	0.0	0.1	192	
+generic_viewer:accidents_location_ii_o_i_ix	accidents_location_ii_o_i_ix	other	64245	object_id	4000		Point	2.8	27.7	64245	
+admin_master:administrative_boundary_district	administrative_boundary_district	admin_boundary	38	district_lgd_code	100		Polygon	3.9	5.4	38	
+generic_viewer:aerial_ofc	aerial_ofc	infrastructure	11558	object_id	700		LineZ	12.6	74.5	11558	
+generic_viewer:aggregation_pop	aggregation_pop	other	47	object_id	4000		Point	0.0	0.0	47	
+tngis_basemap:basemap_agro_industries	agro_industries_basemap	infrastructure	142	object_id	4000		Point	0.0	0.1	142	
+generic_viewer:airport_building_height_less_10m	airport_building_height_less_10m	infrastructure	170	object_id	4000		Polygon	0.0	0.1	170	
+generic_viewer:airport_location	airport_location	infrastructure	8	object_id	3200		Point	0.0	0.0	8	
+generic_viewer:all_roads_tamilnadu_gis	all_roads_tamilnadu_gis	infrastructure	212849	object_id	2100		LineZ	55.1	489.5	212849	
+generic_viewer:all_tanks	all_tanks	land_env	70395	object_id	1300	district	PolygonZ	44.8	259.7	70395	tambaram_corporation:tambaram_corp_tanks
+tngis_basemap:basemap_all_tower_elcot	all_tower_elcot_basemap	infrastructure	35277	object_id	4000	district	Point	2.9	29.0	35277	
+generic_viewer:all_water_bodies	all_water_bodies	land_env	119797	object_id	1200	dist_name	Polygon	61.3	484.9	119797	tngis_basemap:basemap_all_water_bodies
+generic_viewer:ambulance_base_location	ambulance_base_location	service_point	1322	object_id	4000		Point	0.1	0.7	1322	
+generic_viewer:ambulance_to_accidents_cluster_line	ambulance_to_accidents_cluster_line	other	1715	object_id	4000		Line	0.1	0.4	1715	
+generic_viewer:animal_population	animal_population	other	15225	object_id	700		Polygon	52.9	96.3	15225	
+generic_viewer:asi_sites	asi_sites	other	1327	object_id	3700		Polygon	0.3	1.7	1327	tngis_basemap:basemap_asi_sites_final
+Pm_Gati_Sakthi:asset_mapping_new	asset_mapping_new	other	16951	object_id	2600		Polygon+Point+Point	3.2	32.0	16951	
+tngis_basemap:basemap_banks	banks_basemap	service_point	1998	object_id	4000		Point	0.2	1.6	1998	
+generic_viewer:base_price_with_surcharge_glv_revision_adyar	base_price_with_surcharge_glv_revision_adyar	land_env	262340	object_id	3200		Polygon	40.6	405.8	262340	
+generic_viewer:basin	basin	land_env	4	object_id	100		Polygon	0.6	0.7	4	tnsdma_data_sharing:tnsdma_basin
+generic_viewer:beach_glv_revision_adyar	beach_glv_revision_adyar	land_env	262340	object_id	3100		Polygon	41.6	415.5	262340	
+generic_viewer:block_boundary	block_boundary	admin_boundary	387	object_id	100		PolygonZ	12.6	33.6	387	tngis_basemap:basemap_block_new_gis,tnsdma_data_sharing:tnsdma_blocks
+tnrd:bridges	bridges	infrastructure	879	bridge_id	4000		Point	0.1	0.9	879	
+generic_viewer:bsnl_towers	bsnl_towers	infrastructure	4677	object_id	4000		Point	0.4	3.6	4677	
+generic_viewer:bsnl_usof_tower	bsnl_usof_tower	infrastructure	203	object_id	4000	district	Point	0.0	0.2	203	
+chennai_viewer:building	building	infrastructure	924340	object_id	2000			0.0	2773.0	924340	chennai_viewer:building_gcc_property_usage_source,chennai_viewer:building_new_construction,chennai_viewer:building_property_type,chennai_viewer:building_property_usage,chennai_viewer:building_property_usage_anamoly,generic_viewer:gcc_buildings,chennai_viewer:updated_distinct_combined_property_usage_toverified
+chennai_viewer:building_commercial	building_commercial	infrastructure	77004	object_id	1400		Polygon	26.8	268.0	77004	
+generic_viewer:burial_ground	burial_ground	service_point	9995	object_id	4000		Point	0.2	2.3	9995	tngis_basemap:basemap_burial_ground_locations_gis,tnsdma_data_sharing:tnsdma_burial_ground
+generic_viewer:bus_route_glv_revision_adyar	bus_route_glv_revision_adyar	land_env	262340	object_id	3100		Polygon	41.5	415.2	262340	
+tngis_basemap:basemap_bus_shelter_all	bus_shelter_all_basemap	service_point	1921	object_id	4000		Point	0.2	1.7	1921	Pm_Gati_Sakthi:bisag_tnega_bus_shelter_all
+tngis_basemap:basemap_bus_stops	bus_stops_basemap	service_point	938	object_id	4000		Point	0.1	0.9	938	
+cadastral_analysis:cadastral_with_transaction_count	cadastral_with_transaction_count	other	348341	lgd_village_code,survey_no,sub_div_no,kide	4000		Polygon+Line	38.1	381.3	348341	
+generic_viewer:camera	camera	other	233	object_id	4000		Point	0.0	0.1	233	tngis_basemap:basemap_camera_gis
+generic_viewer:catchment	catchment	land_env	9	object_id	100		Polygon	0.7	1.0	9	tnsdma_data_sharing:tnsdma_catchment
+generic_viewer:catheterization_lab	catheterization_lab	service_point	12	object_id	3400	district	MultiPoint	0.0	0.0	12	
+tnrd:cd_works	cd_works	other	16794	cd_work_id	4000		Point	0.8	7.7	16794	
+generic_viewer:cenima_glv_revision_adyar	cenima_glv_revision_adyar	land_env	262340	object_id	3100		Polygon	41.2	412.0	262340	
+generic_viewer:chc	chc	service_point	400	object_id	4000		Point	0.0	0.2	400	
+generic_viewer:chennai metro rail limited route	chennai_metro_rail_limited_route	infrastructure	465	object_id	100		PolygonZ	3.7	12.4	465	
+generic_viewer:chennai metro rail limited station	chennai_metro_rail_limited_station	infrastructure	120	object_id	1200		PolygonZ	0.1	0.5	120	tngis_basemap:basemap_cmrl_station_gis
+chennai_viewer:gcc_boundary	chennai_viewer_gcc_boundary	admin_boundary	1	object_id	100		Polygon	0.0	0.0	1	
+chennai_viewer:chennai_viewer_village_panchayat	chennai_viewer_village_panchayat	admin_boundary	12525	object_id	1100		Polygon	28.1	54.1	12525	
+Pm_Gati_Sakthi:cma_manhole_line	cma_manhole_line	infrastructure	143608	object_id	4000		Line+Point	17.6	175.7	143608	cma:manhole_line
+generic_viewer:cma_water_sump_location	cma_water_sump_location	admin_boundary	16	object_id	4000		Point	0.0	0.0	16	
+generic_viewer:cmda_land_type_glv_revision_adyar	cmda_land_type_glv_revision_adyar	land_env	262340	object_id	3200		Polygon	39.9	398.7	262340	
+generic_viewer:cmda_second_master_plan	cmda_second_master_plan	land_env	239525	object_id	4000		PolygonZ	26.9	268.9	239525	
+tngis_basemap:basemap_cmrl_metro_lines	cmrl_metro_lines_basemap	infrastructure	134	object_id	300		Line	1.1	1.8	134	
+tngis_basemap:basemap_cmrl_metro_stations	cmrl_metro_stations_basemap	infrastructure	172	object_id	4000		Point	0.0	0.1	172	
+generic_viewer:cmwssb_decanting_location	cmwssb_decanting_location	other	22	object_id	3100		Point	0.0	0.0	22	
+generic_viewer:cmwssb_metrowater_pipeline	cmwssb_metrowater_pipeline	infrastructure	76	object_id	2900		Line	0.1	0.1	76	
+generic_viewer:cmwssb_new_machinehole	cmwssb_new_machinehole	other	129303	objectid	3300		Point	19.3	193.0	129303	
+generic_viewer:cmwssb_new_sewer_main	cmwssb_new_sewer_main	infrastructure	179797	objectid	4000		Line	21.5	215.4	179797	
+generic_viewer:cmwssb_sewage_pipeline	cmwssb_sewage_pipeline	infrastructure	288	object_id	4000		Line	0.1	0.3	288	
+generic_viewer:coimbatore_defence_boundary	coimbatore_defence_boundary	admin_boundary	4	object_id	800	district	Polygon	0.0	0.0	4	
+Pm_Gati_Sakthi:coimbatore_forest_boundary_pmgatisakthi	coimbatore_forest_boundary_pmgatisakthi	land_env	3	fid	600		Polygon	0.0	0.0	3	
+generic_viewer:cold_storages	cold_storages	other	183	object_id	4000	district	Point	0.0	0.1	183	tngis_basemap:basemap_cold_storages
+generic_viewer:collage_glv_revision_adyar	collage_glv_revision_adyar	land_env	262340	object_id	2900		Polygon	44.1	441.0	262340	
+tngis_basemap:basemap_collection_centres	collection_centres_basemap	service_point	537	object_id	4000		Point	0.0	0.4	537	
+generic_viewer:college_distance_glv_revision_ariyalur	college_distance_glv_revision_ariyalur	other	447539	object_id	3000		Polygon	74.6	745.9	447539	
+generic_viewer:commercial_tax_circle_boundary	commercial_tax_circle_boundary	admin_boundary	338	object_id	100		Polygon	11.2	15.6	338	
+generic_viewer:commercial_tax_division_boundary	commercial_tax_division_boundary	admin_boundary	18	object_id	100		Polygon	2.9	3.8	18	
+generic_viewer:commercial_tax_intelligence_boundary	commercial_tax_intelligence_boundary	admin_boundary	15	object_id	100		Polygon	2.7	3.7	15	
+generic_viewer:commercial_tax_zone_boundary	commercial_tax_zone_boundary	admin_boundary	55	object_id	100		Polygon	5.3	7.2	55	
+generic_viewer:community_farm_schools	community_farm_schools	service_point	679	object_id	4000		Point	0.0	0.3	679	generic_viewer:sp_community_skill_school_290622_gis
+generic_viewer:community_skill_school	community_skill_school	service_point	1738	object_id	4000		Point	0.1	0.8	1738	generic_viewer:sp_community_farm_schools_290622_gis
+generic_viewer:comprehensive_emergency_obstetric_and_new_born_care	comprehensive_emergency_obstetric_and_new_b_68e673	service_point	105	object_id	4000		Point	0.0	0.1	105	
+generic_viewer:computed_tomography_scan	computed_tomography_scan	service_point	16	object_id	4000	district	Point	0.0	0.0	16	
+generic_viewer:crop_classification_glv_revision_ariyalur	crop_classification_glv_revision_ariyalur	land_env	447539	object_id	3100		Polygon	72.0	719.9	447539	
+generic_viewer:crz1a	crz1a	land_env	4171	object_id	400		PolygonZ	16.4	51.7	4171	tngis_basemap:basemap_crz1a
+generic_viewer:crz2	crz2	land_env	251	object_id	500		Polygon	1.5	2.4	251	tngis_basemap:basemap_crz2
+generic_viewer:crz4a_gis	crz4a_gis	land_env	9	object_id	100		Polygon	0.4	0.6	9	tngis_basemap:basemap_crz4a_gis,generic_viewer:crz_iv_a
+generic_viewer:crz_3a	crz_3a	land_env	760	object_id	300		Polygon	7.4	10.5	760	tngis_basemap:basemap_crz_3a
+generic_viewer:crz_3b	crz_3b	land_env	199	object_id	700		Polygon	0.9	1.3	199	tngis_basemap:basemap_crz_3b
+generic_viewer:crz_4b_07_07_2022	crz_4b_07_07_2022	land_env	217	object_id	300		Polygon	2.2	3.2	217	tngis_basemap:basemap_crz_4b_07_07_2022
+generic_viewer:crz_boundary	crz_boundary	land_env	279	object_id	200		Line	3.9	5.4	279	tngis_basemap:basemap_crz_boundary_gis
+generic_viewer:crz_cadastral	crz_cadastral	land_env	192509	object_id	2800		Polygon	33.8	337.9	192509	
+generic_viewer:crz_ib	crz_ib	land_env	1039	object_id	400		Polygon	8.1	11.3	1039	tngis_basemap:basemap_crz1b_gis
+generic_viewer:crza1_mangrove_buffer	crza1_mangrove_buffer	other	407	object_id	400		Polygon	3.5	5.0	407	tngis_basemap:basemap_crza1_mangrove_buffer
+generic_viewer:cumta_boundary	cumta_boundary	admin_boundary	1	object_id	100		Polygon	0.1	0.1	1	
+generic_viewer:cvca_boundary	cvca_boundary	admin_boundary	11	object_id	100		PolygonZ	0.3	0.7	11	
+tngis_basemap:basemap_data	data_basemap	other	110928	ogc_fid	4000		Point	12.8	128.3	110928	
+generic_viewer:deo_jurisdiction	deo_jurisdiction	admin_boundary	32	object_id	100		Polygon	1.1	3.1	32	
+cadastral_analysis:dgps_survey_point	dgps_survey_point	land_env	27313	survey_point_id,filename	4000		Point	1.8	18.0	27313	
+cadastral_analysis:dgps_water_body	dgps_water_body	land_env	33613	village_code,survey_number,sub_division,water_body_name	2000		Polygon	9.2	81.4	33527	wrd_data_sharing:wrd_data_sharing_dgps_water_body_old
+generic_viewer:dh	dh	service_point	20	object_id	4000		Point	0.0	0.0	20	dtcp_data_sharing:dh_gis
+generic_viewer:diet	diet	service_point	32	object_id	4000	district	Point	0.0	0.0	32	tngis_basemap:basemap_sp_ssa_diet_gis
+igr:dig_boundary	dig_boundary	admin_boundary	11	object_id	100		Polygon	2.3	3.2	11	
+tnrd:district_block_area	district_block_area	admin_boundary	388	NEW_B_ID	1000			0.0	0.4	388	
+generic_viewer:district_headquarters_to_aggregation_pop	district_headquarters_to_aggregation_pop	other	47	object_id	4000		Line	0.0	0.0	47	
+generic_viewer:district_new	district_new	admin_boundary	38	object_id	100		PolygonZ	4.2	11.1	38	data_sharing_dtcp:district_gis
+generic_viewer:district_ring	district_ring	admin_boundary	42	object_id	4000		Point	0.0	0.0	42	
+generic_viewer:district_ring_distance	district_ring_distance	other	42	object_id	2600		Line	0.0	0.1	42	
+tnrd:districts	districts	admin_boundary	38	lgd_code	100		Polygon	2.4	3.2	38	
+generic_viewer:dms	dms	service_point	1	object_id	3600		Polygon	0.0	0.0	1	
+generic_viewer:dpc_new	dpc_new	other	3601	object_id	4000		Point	0.2	2.2	3601	
+generic_viewer:dpr_230kv_link_tanfinet	dpr_230kv_link_tanfinet	other	42	object_id	4000		Line	0.0	0.0	42	
+generic_viewer:dpr_link_tanfinet	dpr_link_tanfinet	other	540	object_id	4000		Line	0.0	0.3	540	
+generic_viewer:drainage	drainage	land_env	315349	object_id	4000		Line	77.6	362.3	315349	tngis_basemap:basemap_drainage,tnsdma_data_sharing:tnsdma_drainage
+igr:dro_boundary	dro_boundary	admin_boundary	56	object_id	100		Polygon	6.5	8.8	56	
+generic_viewer:dry_wet_anomolies_glv_revision_ariyalur	dry_wet_anomolies_glv_revision_ariyalur	land_env	447539	object_id	2500		Polygon	89.1	891.2	447539	generic_viewer:guideline_difference_glv_revision_ariyalur
+generic_viewer:dtcp_land_master	dtcp_land_master	land_env	274235	object_id	3400		Polygon	211.6	392.8	274235	dtcp_data_sharing:dtcp_land_master_gis
+Pm_Gati_Sakthi:dtcp_masterplan	dtcp_masterplan	land_env	724	object_id	1000			0.0	0.7	724	
+tngis_basemap:basemap_dust_bin	dust_bin_basemap	other	3824	object_id	4000		Point	0.2	2.1	3824	
+generic_viewer:earthquake_zone	earthquake_zone	land_env	4	object_id	200		Polygon	0.1	0.1	4	
+generic_viewer:eco_sensitive_zone	eco_sensitive_zone	land_env	69	object_id	100		PolygonZ	0.7	1.8	69	
+generic_viewer:engineering_college	engineering_college	service_point	601	object_id	4000	d_name	Point	0.0	0.3	601	tngis_basemap:basemap_sp_engg_colg_gis
+generic_viewer:existing_glv_glv_revision_adyar	existing_glv_glv_revision_adyar	land_env	262340	object_id	3200		Polygon	39.9	399.1	262340	
+generic_viewer:existing_line_h_facility_to_warehouse	existing_line_h_facility_to_warehouse	service_point	56440	object_id	4000		Line	2.4	24.1	56440	
+generic_viewer:existing_master_plan_all_dept	existing_master_plan_all_dept	land_env	653015	id	3000		Polygon+Line	108.3	1083.2	653015	
+tnrd:facilities	facilities	service_point	28342	si_no	4000		Point	3.4	33.6	28342	tnrd:tnrd_facilities
+generic_viewer:facilities_buffer_100m	facilities_buffer_100m	other	49284	fid	1800		Polygon	78.9	134.9	49284	
+generic_viewer:facilities_buffer_500m	facilities_buffer_500m	other	21664	object_id	1400		Polygon	49.5	76.6	21664	
+generic_viewer:flood_innundation_area	flood_innundation_area	land_env	16222	object_id	4000		Polygon	0.7	5.1	16222	
+generic_viewer:forest_beat	forest_beat	land_env	1308	object_id	500		Polygon	9.1	12.4	1308	tnsdma_data_sharing:tnsdma_forest_beat
+forest:forest_circle	forest_circle	land_env	13	circle_id	100		Polygon	2.2	2.9	13	
+generic_viewer:forest_district	forest_district	land_env	32	object_id	100		Polygon	2.8	3.6	32	tnsdma_data_sharing:tnsdma_forest_district
+forest:forest_division	forest_division	land_env	52	gid	100		Polygon	5.2	7.0	52	
+forest:forest_beat	forest_forest_beat	land_env	1635	gid	200		Polygon	18.9	27.5	1639	
+forest:forest_range	forest_forest_range	land_env	247	range_id	100		Polygon	9.4	12.9	247	
+generic_viewer:forest_range	forest_range	land_env	217	object_id	100		PolygonZ	5.0	13.3	217	
+forest:forest_section	forest_section	land_env	607	gid	100		Polygon	13.5	18.9	600	
+forest:forest_verification_status	forest_verification_status	land_env	138783	village_lgdcode,survey_number,sub_division,kide	2600		Polygon+Point	26.3	263.2	138779	
+generic_viewer:free_wifi	free_wifi	other	74	object_id	4000		Point	0.0	0.1	74	
+generic_viewer:fuel_distance_glv_revision_ariyalur	fuel_distance_glv_revision_ariyalur	other	447539	object_id	3000		Polygon	73.6	736.4	447539	
+generic_viewer:gcc_amma_unavagam	gcc_amma_unavagam	service_point	366	object_id	4000		Point	0.0	0.3	366	
+generic_viewer:gcc_boundary	gcc_boundary	admin_boundary	1	object_id	100		Polygon	0.0	0.0	1	
+generic_viewer:gcc_bus_shelters	gcc_bus_shelters	service_point	803	object_id	4000		Point	0.0	0.5	803	
+generic_viewer:gcc_carraigeway	gcc_carraigeway	admin_boundary	36931	object_id	1300		Polygon	37.2	137.9	36931	
+Pm_Gati_Sakthi:gcc_community_hall	gcc_community_hall	admin_boundary	54	object_id	1800		Polygon	0.0	0.1	54	
+Pm_Gati_Sakthi:gcc_office_buildings	gcc_office_buildings	infrastructure	187	object_id	2600		Polygon	0.0	0.4	187	
+Pm_Gati_Sakthi:gcc_other_govt_buildings	gcc_other_govt_buildings	infrastructure	2096	object_id	1700		Polygon	1.4	6.0	2096	
+Pm_Gati_Sakthi:gcc_others	gcc_others	admin_boundary	1734	object_id	2300		Polygon	0.4	3.7	1734	
+Pm_Gati_Sakthi:gcc_overall_manhole	gcc_overall_manhole	infrastructure	210423	object_id	4000		Point	9.0	89.7	210423	
+generic_viewer:gcc_parking_area	gcc_parking_area	land_env	124	object_id	1800		Polygon	0.0	0.3	124	tngis_basemap:basemap_gcc_parking_area
+generic_viewer:gcc_parks	gcc_parks	land_env	802	object_id	4000		Point	0.1	0.5	802	tngis_basemap:basemap_gcc_parks
+generic_viewer:gcc_road_of_width	gcc_road_of_width	infrastructure	36899	object_id	1500		Polygon	32.4	120.7	36899	
+Pm_Gati_Sakthi:gcc_shopping_complex	gcc_shopping_complex	service_point	115	object_id	2000		Polygon	0.0	0.3	115	
+generic_viewer:gcc_street_lights	gcc_street_lights	land_env	238249	object_id	4000		Point	10.2	102.4	238249	tngis_basemap:basemap_gcc_street_lights,Pm_Gati_Sakthi:bisag_gcc_street_lights
+generic_viewer:gcc_streets	gcc_streets	land_env	94325	object_id	3700		Line	12.5	125.1	94325	tngis_basemap:basemap_gcc_streets
+generic_viewer:gcc_toilets	gcc_toilets	service_point	613	object_id	4000		Point	0.0	0.4	613	tngis_basemap:basemap_gcc_toilets
+generic_viewer:gcc_trees	gcc_trees	land_env	248882	object_id	4000		Point	9.7	96.7	248882	tngis_basemap:basemap_gcc_trees
+Pm_Gati_Sakthi:gcc_w200_z15_drainage	gcc_w200_z15_drainage	land_env	11531	object_id	1700		Line	3.2	32.4	11531	
+cadastral_analysis:gcc_with_igr	gcc_with_igr	admin_boundary	68722	gid	1700	district	Line	19.8	197.9	68722	
+generic_viewer:gcc_with_igr_adyar	gcc_with_igr_adyar	admin_boundary	68722	gid	1600	district	Line	20.6	205.7	68722	
+generic_viewer:gcc_zone_boundary	gcc_zone_boundary	admin_boundary	15	object_id	100		PolygonZ	0.3	0.7	15	
+generic_viewer:districts	generic_viewer_districts	admin_boundary	38	object_id	100		Polygon	4.6	6.1	38	tambaram_corporation:tambaram_corp_districts,tngis_basemap:basemap_districts,Police_Jurisdiction:Data_Sharing_Districts,generic_viewer:districts_new
+generic_viewer:forest_circle	generic_viewer_forest_circle	land_env	18	object_id	100		PolygonZ	1.9	4.9	18	
+generic_viewer:geology	geology	land_env	1443	object_id	400		Polygon	10.1	15.1	1443	tnsdma_data_sharing:tnsdma_geology
+generic_viewer:geomorphology	geomorphology	other	67	object_id	100		Polygon	47.9	62.5	67	tnsdma_data_sharing:tnsdma_geomorphology
+generic_viewer:glv_before_normalization_glv_revision_adyar	glv_before_normalization_glv_revision_adyar	land_env	262340	object_id	3200		Polygon	39.9	398.5	262340	
+generic_viewer:godowns	godowns	service_point	250	object_id	4000		Point	0.0	0.2	250	tngis_basemap:basemap_godowns_gis
+generic_viewer:gps_lit_up	gps_lit_up	other	1479	object_id	4000		Point	0.1	0.7	1479	
+tngis_basemap:basemap_gram	gram_basemap	other	692	object_id	4000		Point	0.1	0.6	692	
+chennai_viewer:gst_lt_lg	gst_lt_lg	other	380709	GSTIN,Latititude,Longitude	4000		Point	35.5	355.3	380709	
+generic_viewer:habitation	habitation	admin_boundary	148732	object_id	4000		Point	7.6	76.0	148732	
+tnrd:habitations	habitations	admin_boundary	79395	reference	4000		Point	7.3	73.5	79395	tnrd:tnrd_habitations
+generic_viewer:haca_boundary_final	haca_boundary_final	admin_boundary	1020	object_id	400	dist_name	Polygon	4.6	11.1	1020	
+generic_viewer:health_distance_glv_revision_ariyalur	health_distance_glv_revision_ariyalur	other	447539	object_id	3000		Polygon	74.3	743.4	447539	
+generic_viewer:health_districts	health_districts	service_point	42	object_id	100	dist_name	Polygon	2.8	3.6	42	
+generic_viewer:health_facilities	health_facilities	service_point	11289	object_id	3000		Point	1.9	18.5	11289	
+generic_viewer:high_tide_line	high_tide_line	land_env	1064	object_id	300		LineZ	5.4	15.0	1064	tngis_basemap:basemap_high_tide_line
+generic_viewer:highway_villupuram_clusters	highway_villupuram_clusters	other	33	object_id	100		Polygon	13.1	18.4	33	
+generic_viewer:highways_circle	highways_circle	infrastructure	9	object_id	100		Polygon	1.0	1.5	9	
+generic_viewer:highways_division_gis	highways_division_gis	infrastructure	45	object_id	100		Polygon	2.3	3.5	45	
+generic_viewer:hill_boundary	hill_boundary	admin_boundary	1879	object_id	500		PolygonZ	6.1	16.4	1879	tnsdma_data_sharing:tnsdma_hill_boundary
+tngis_basemap:basemap_hoardings	hoardings_basemap	other	12	object_id	1600		Point+Point	0.0	0.0	12	
+generic_viewer:horizontal_tnswan	horizontal_tnswan	infrastructure	559	object_id	4000		Point	0.0	0.2	559	
+generic_viewer:hostels	hostels	service_point	2807	object_id	4000	district	Point	0.2	1.7	2807	tngis_basemap:basemap_sp_hostels_gis
+generic_viewer:hsc	hsc	service_point	8708	object_id	4000		Point	0.4	4.1	8708	dtcp_data_sharing:hsc_gis
+generic_viewer:ht_feeder_line	ht_feeder_line	infrastructure	10884	object_id	200		Line	72.3	199.0	10884	
+generic_viewer:igr_land_type_glv_revision_adyar	igr_land_type_glv_revision_adyar	land_env	262340	object_id	3200		Polygon	40.0	399.8	262340	
+generic_viewer:igr_land_type_glv_revision_ariyalur	igr_land_type_glv_revision_ariyalur	land_env	422568	object_id	3100		Polygon	67.3	672.9	422568	
+igr:sro_boundary	igr_sro_boundary	admin_boundary	580	object_id	100		Polygon	19.2	26.4	580	
+generic_viewer:indira_gandhi_awas_yojana_-_free_houses	indira_gandhi_awas_yojana_free_houses	other	13799	object_id	4000	dname	Point	0.5	5.4	13799	
+generic_viewer:industry_cad_matched	industry_cad_matched	infrastructure	120038	object_id	2000	dname	Polygon	29.9	298.6	120038	
+generic_viewer:integrated_farming_cluster	integrated_farming_cluster	other	265	object_id	4000		Point	0.0	0.1	265	
+generic_viewer:iot_devices	iot_devices	other	176	object_id	4000		Point	0.0	0.1	176	
+generic_viewer:kallakurichi_district_boundary	kallakurichi_district_boundary	admin_boundary	1	object_id	100		Polygon	0.1	0.1	1	
+generic_viewer:kallakurichi_gl_packet	kallakurichi_gl_packet	other	11685	object_id	3000		Polygon	6.3	19.4	11685	
+generic_viewer:kallakurichi_vacant_govt_lands	kallakurichi_vacant_govt_lands	land_env	21103	object_id	2700	district	Polygon+Line	3.8	38.0	21103	
+generic_viewer:kallakurichi_wb_rf_roads_all	kallakurichi_wb_rf_roads_all	infrastructure	38215	object_id	2000	district	Polygon+Line	9.3	93.0	38215	
+land_stack:kancheepuram_existing_master_plan	kancheepuram_existing_master_plan	land_env	34165	survey_number,sub_division,kide,area	4000		Polygon	3.7	36.8	34165	land_stack:kancheepuram_proposed_master_plan
+generic_viewer:land_anomalies_sankarankovil	land_anomalies_sankarankovil	other	55030	object_id	4000		Polygon	5.5	54.8	55030	
+generic_viewer:land_anomalies_tiruvallur	land_anomalies_tiruvallur	other	50613	object_id	4000		Polygon	5.5	54.8	50613	
+generic_viewer:landuse_2005_and_2006	landuse_2005_and_2006	land_env	141441	object_id	1300		Polygon	299.1	519.2	141441	
+generic_viewer:landuse_2011_and_2012	landuse_2011_and_2012	land_env	118509	object_id	1400		Polygon	232.7	412.0	118509	
+generic_viewer:landuse_2015_and _2016	landuse_2015_and_2016	land_env	152769	object_id	1500		Polygon	227.8	486.0	152769	
+generic_viewer:landuse _ sisdp	landuse_sisdp	land_env	542201	object_id	1700		Polygon	598.0	1586.0	542201	
+generic_viewer:line_to_1st_recommended_warehouse	line_to_1st_recommended_warehouse	land_env	11288	object_id	4000		Line	0.5	4.6	11288	generic_viewer:line_to_2nd_recommended_warehouse,generic_viewer:line_to_3rd_recommended_warehouse
+generic_viewer:low_tide_line	low_tide_line	land_env	1216	object_id	1500		Line	2.6	3.9	1216	tngis_basemap:basemap_low_tide_line
+generic_viewer:lpa_boundary_compined_dept	lpa_boundary_compined_dept	admin_boundary	121	ogc_fid	100		Polygon	2.9	4.3	121	generic_viewer:lpa_boundary_modified
+land_stack:lpa_online_layout	lpa_online_layout	land_env	451	object_id	4000		Polygon	0.0	0.3	451	
+generic_viewer:lulc_glv_revision_ariyalur	lulc_glv_revision_ariyalur	land_env	422568	object_id	3100		Polygon	67.2	672.0	422568	
+generic_viewer:magnetic_resonance_imaging_scan	magnetic_resonance_imaging_scan	service_point	13	object_id	2100		MultiPoint+Point	0.0	0.0	13	
+generic_viewer:major_district_roads	major_district_roads	infrastructure	772	object_id	200		LineZ	8.3	15.9	772	dtcp_data_sharing:sp_hd_mdr_gis,tngis_basemap:basemap_sp_hd_mdr_gis
+tngis_basemap:basemap_mandi	mandi_basemap	service_point	406	object_id	4000		Point	0.0	0.4	406	
+tngis_basemap:basemap_manhole	manhole_basemap	infrastructure	17710	object_id	4000		Point+Point	1.0	9.8	17710	
+generic_viewer:mayiladuthurai_dpc	mayiladuthurai_dpc	other	184	object_id	4000		MultiPoint	0.0	0.1	184	
+generic_viewer:mch	mch	service_point	35	object_id	4000		Point	0.0	0.0	35	dtcp_data_sharing:mch_gis
+forest:merged_areg_forest_inter_1	merged_areg_forest_inter_1	land_env	28872	id	2800	dname	Polygon+Point	5.1	51.3	28872	
+generic_viewer:metro_station_glv_revision_adyar	metro_station_glv_revision_adyar	land_env	262340	object_id	3000		Polygon	42.4	423.8	262340	
+generic_viewer:metro_water_stations	metro_water_stations	infrastructure	24	object_id	3400		Polygon	0.0	0.0	24	tngis_basemap:basemap_metro_water_stations
+generic_viewer:microwatersheds	microwatersheds	land_env	18023	object_id	1400		Polygon	15.2	60.8	18023	tambaram_corporation:tambaram_corp_microwatershed,tnsdma_data_sharing:tnsdma_micro_watershed
+generic_viewer:mines	mines	land_env	1515	object_id	4000	district	Polygon	0.4	1.3	1515	
+generic_viewer:mines_lease	mines_lease	land_env	122	object_id	1300	district	Polygon	0.0	0.4	122	
+generic_viewer:monuments_tamilnadu_gis	monuments_tamilnadu_gis	other	439	object_id	4000		Polygon	0.1	0.5	439	tngis_basemap:basemap_monuments_tamilnadu_gis
+generic_viewer:multipurpose_evacuation_shelter	multipurpose_evacuation_shelter	service_point	121	object_id	4000		Point	0.0	0.1	121	
+generic_viewer:museums	museums	service_point	38	object_id	4000		Point	0.0	0.0	38	tngis_basemap:basemap_museum_locations_gis
+generic_viewer:national_highways	national_highways	infrastructure	330	object_id	2400		Line	0.4	0.7	330	dtcp_data_sharing:sp_nh_gis,tngis_basemap:basemap_sp_nh_gis
+generic_viewer:national_knowledge_network	national_knowledge_network	other	97	object_id	4000		Point	0.0	0.1	97	tngis_basemap:basemap_national_knowledge_networking_gis
+generic_viewer:national_mission_on_education_through_information_and_communication_technology	national_mission_on_education_through_infor_890769	other	43	object_id	4000		Point	0.0	0.0	43	tngis_basemap:basemap_sp_nmict_gis
+generic_viewer:natural_framing_cluster	natural_framing_cluster	other	136	object_id	4000		Point	0.0	0.1	136	
+tnrd:new_facilities	new_facilities	service_point	28	village_code,category_id,facility_name,latitude	2900		Point	0.0	0.0	28	tnrd:tnrd_new_facilities
+tnrd:new_roads	new_roads	infrastructure	5	road_id	1800		Line	0.0	0.0	5	
+generic_viewer:None	none	other	2227	object_id	4000		Point	0.1	0.8	2227	
+land_stack:oceans_landstack	oceans_landstack	land_env	1	object_id	100		Polygon	1.4	2.6	1	
+generic_viewer:ofc_connectivity_horizontal_tnswan	ofc_connectivity_horizontal_tnswan	infrastructure	503	object_id	2500		Line	0.2	1.0	503	
+generic_viewer:ofc_connectivity_tnswan	ofc_connectivity_tnswan	infrastructure	682	object_id	3800		Line	0.1	0.9	682	
+generic_viewer:optical_line_terminal	optical_line_terminal	other	5000	object_id	4000	district	Point	0.5	4.6	5000	
+generic_viewer:other_district_roads	other_district_roads	infrastructure	8965	object_id	1800		Line	8.2	24.2	8965	dtcp_data_sharing:other_district_roads_gis,tngis_basemap:basemap_other_district_roads_gis
+generic_viewer:other_govt_land	other_govt_land	land_env	9905	object_id	2200		Polygon	2.2	21.9	9905	
+generic_viewer:package_c_cables	package_c_cables	infrastructure	205807	object_id	4000		Line	7.4	74.2	205807	
+generic_viewer:pallikaranai_lake_ramsar_noc	pallikaranai_lake_ramsar_noc	land_env	1	object_id	500		Polygon	0.0	0.0	1	
+generic_viewer:pallikaranai_lake_ramsar_noc_1km	pallikaranai_lake_ramsar_noc_1km	land_env	1	object_id	500		Polygon	0.0	0.0	1	
+tnrd:panchayat_boundary	panchayat_boundary	admin_boundary	12525	village_lgd_code	1100		Polygon	28.0	52.8	12525	
+generic_viewer:park_glv_revision_adyar	park_glv_revision_adyar	land_env	262340	object_id	3200		Polygon	40.8	408.1	262340	
+tngis_basemap:basemap_parks	parks_basemap	land_env	866	object_id	4000		Point+Polygon	0.1	0.8	866	
+generic_viewer:petrol_bunk_glv_revision_adyar	petrol_bunk_glv_revision_adyar	land_env	262340	object_id	3100		Polygon	41.8	417.9	262340	
+generic_viewer:petrol_bunks	petrol_bunks	infrastructure	4694	object_id	4000		Point	0.4	3.7	4694	dtcp_data_sharing:petrol_bunks_gis,tngis_basemap:basemap_petrol_bunks_gis
+generic_viewer:phc	phc	service_point	1895	object_id	4000		Point	0.1	1.0	1895	dtcp_data_sharing:phc_gis
+generic_viewer:pilgrim_centre	pilgrim_centre	service_point	23099	object_id	4000		Point	0.5	5.0	23099	tngis_basemap:basemap_sp_bu_pilgrim_centre_gis
+tngis_basemap:basemap_playground	playground_basemap	other	167	object_id	1500		Polygon	0.1	0.5	167	
+Pm_Gati_Sakthi:PM_MITRA_SIPCOT_Industrial_Park_at_Virudhunagar_boundary	pm_mitra_sipcot_industrial_park_at_virudhun_f4e8cd	land_env	1	object_id	100		Polygon	0.0	0.1	1	
+Pm_Gati_Sakthi:PM_MITRA_SIPCOT_Industrial_Park_at_Virudhunagar	pm_mitra_sipcot_industrial_park_at_virudhunagar	land_env	314	object_id	1700		Polygon	0.1	0.9	314	
+generic_viewer:poly_technical_college	poly_technical_college	service_point	460	object_id	4000	district	PointZ	0.0	0.4	460	tngis_basemap:basemap_sp_polytech_colg_gis
+cadastral_analysis:population	population	other	18486	lgdvcode,vill_name	300	dist_name	PolygonZ	67.7	285.7	18486	
+generic_viewer:primary_agricultural_co-operative_credit_society	primary_agricultural_co_operative_credit_society	land_env	4606	object_id	1000	district_name		0.0	4.6	4606	tngis_basemap:basemap_sp_paccs_gis
+generic_viewer:proposed_master_plan_all_dept	proposed_master_plan_all_dept	land_env	651838	id	2700		Polygon+Point+Line	117.3	1172.7	651838	
+generic_viewer:protected_area_sanctuaries	protected_area_sanctuaries	admin_boundary	599	object_id	500		PolygonZ	1.5	5.4	599	
+tnrd:quarry	quarry	land_env	1050	quarry_id	4000		Point	0.0	0.5	1050	tnrd:tnrd_quarry
+generic_viewer:railway_distance_glv_revision_ariyalur	railway_distance_glv_revision_ariyalur	other	447539	object_id	3000		Polygon	73.7	737.2	447539	
+generic_viewer:railway_station_glv_revision_adyar	railway_station_glv_revision_adyar	land_env	262340	object_id	3100		Polygon	41.3	413.4	262340	
+generic_viewer:raingauge	raingauge	land_env	496	object_id	4000		Point	0.0	0.2	496	
+generic_viewer:region	region	admin_boundary	2	object_id	100		Polygon	0.5	0.6	2	tnsdma_data_sharing:tnsdma_region
+generic_viewer:region_boundary	region_boundary	admin_boundary	3	object_id	100		PolygonZ	0.1	0.3	3	
+generic_viewer:regulated_market	regulated_market	service_point	255	object_id	4000	district	Point	0.0	0.2	255	tngis_basemap:basemap_regulated_market_gis
+land_stack:regulations_zone	regulations_zone	admin_boundary	3656	type_of_regulation,remarks	3000		Polygon	2.2	6.1	3656	
+generic_viewer:reserve_forest	reserve_forest	land_env	2117	object_id	800		PolygonZ	4.3	11.8	2117	tnsdma_data_sharing:tnsdma_reserve_forest
+forest:reserve_forest_adjoining_villages	reserve_forest_adjoining_villages	land_env	3326	gid	400		Polygon	17.5	37.4	3326	
+tngis_basemap:basemap_reserve_forest	reserve_forest_basemap	land_env	3743	gid	400		Polygon+Polygon+PolygonZ	16.7	43.5	3743	forest:reserve_forest
+forest:reserve_forest_no_village_map	reserve_forest_no_village_map	land_env	1767	gid	400		Polygon	9.7	19.6	1767	
+forest:reserve_forest_villages	reserve_forest_villages	land_env	2827	gid	400		Polygon	15.5	31.7	2827	
+forest:reserve_land	reserve_land	land_env	229	reserve_land	800		Polygon	1.0	1.4	229	
+generic_viewer:reservoir	reservoir	infrastructure	90	object_id	500		Polygon	0.5	0.8	90	tambaram_corporation:tambaram_corp_reservoir
+data_sharing_dtcp:revenue_village	revenue_village	admin_boundary	18470	object_id	500	dist_name	Polygon	65.0	175.0	18470	tambaram_corporation:tambaram_corp_revenue_village
+generic_viewer:revenue_village_bifurcation	revenue_village_bifurcation	admin_boundary	17580	object_id	400		PolygonZ	61.2	212.8	17580	
+generic_viewer:revised_base_price_glv_revision_adyar	revised_base_price_glv_revision_adyar	land_env	262340	object_id	3200		Polygon	40.2	401.9	262340	
+generic_viewer:river	river	land_env	15710	object_id	2300		Line	12.2	33.5	15710	tnsdma_data_sharing:tnsdma_river
+generic_viewer:road_adjoining_glv_revision_ariyalur	road_adjoining_glv_revision_ariyalur	land_env	447539	object_id	3000		Polygon	72.7	726.9	447539	
+generic_viewer:road_block_glv_revision_adyar	road_block_glv_revision_adyar	land_env	1766	id	600		Polygon	9.2	14.5	1766	
+generic_viewer:road_distance_glv_revision_ariyalur	road_distance_glv_revision_ariyalur	other	447539	object_id	3000		Polygon	73.2	732.2	447539	
+tnrd:road_network_analysis	road_network_analysis	other	24173	objectid	1600		Line	10.9	73.8	24173	
+tnrd:road_network_analysis_noded	road_network_analysis_noded	other	61710	id	3900		Line	12.6	78.1	61710	
+tnrd:road_network_analysis_noded_vertices_pgr	road_network_analysis_noded_vertices_pgr	other	35310	id	4000		Point	0.8	3.2	35310	
+tnrd:road_network_analysis_vertices_pgr	road_network_analysis_vertices_pgr	other	34303	id	4000		Point	0.8	3.2	34303	
+generic_viewer:road_parcels_glv_revision_ariyalur	road_parcels_glv_revision_ariyalur	land_env	29751	object_id	2600		Polygon	5.7	57.0	29751	
+tnrd:road_proposal	road_proposal	infrastructure	32	road_id,created_date	2400		Line+Point	0.0	0.1	32	
+tnrd:road_proposal_logs	road_proposal_logs	infrastructure	13	road_proposal_id,updated_date	2200		Line	0.0	0.0	13	
+generic_viewer:road_type_glv_revision_ariyalur	road_type_glv_revision_ariyalur	land_env	447539	object_id	3100		Polygon	71.6	715.6	447539	
+generic_viewer:road_width_type_for_land_glv_revision_adyar	road_width_type_for_land_glv_revision_adyar	land_env	262340	object_id	3200		Polygon	39.9	398.7	262340	
+generic_viewer:road_width_type_glv_revision_adyar	road_width_type_glv_revision_adyar	land_env	262340	object_id	3200		Polygon	40.1	400.9	262340	
+tnrd:roads	roads	infrastructure	157634	objectid	1800		Line	63.0	432.4	157634	tnrd:rural_roads
+tnrd:roads_network_analysis	roads_network_analysis	other	163938	objectid	1700		Line	64.3	461.5	163938	
+tnrd:roads_network_analysis_noded	roads_network_analysis_noded	other	686608	old_id,sub_id	4000		Line	89.0	801.4	686608	
+tnrd:roads_network_analysis_noded_vertices_pgr	roads_network_analysis_noded_vertices_pgr	other	98053	cnt,chk,ein,eout	4000		Point	2.0	7.2	98053	
+tnrd:roads_network_analysis_vertices_pgr	roads_network_analysis_vertices_pgr	other	91377	cnt,chk,ein,eout	4000		Point	1.9	6.7	91377	
+land_stack:rural_cadastral	rural_cadastral	land_env	97	id	3800		Polygon	0.0	0.1	97	
+generic_viewer:rural_roads_gis	rural_roads_gis	infrastructure	131872	object_id	3000		Line	42.8	217.8	131872	dtcp_data_sharing:rural_roads_gis,tngis_basemap:basemap_rural_roads_gis,generic_viewer:tnrd_rural_roads
+land_stack:rural_village	rural_village	admin_boundary	1	object_id	1100		Polygon	0.0	0.0	1	
+generic_viewer:sadp_boundary	sadp_boundary	admin_boundary	70	object_id	100		Polygon	1.9	2.5	70	
+generic_viewer:sadp_scst_habitation	sadp_scst_habitation	admin_boundary	1017	object_id	4000	district	Point	0.1	0.5	1017	
+generic_viewer:school_distance_glv_revision_ariyalur	school_distance_glv_revision_ariyalur	other	447539	object_id	2700		Polygon	81.7	817.1	447539	
+generic_viewer:school_glv_revision_adyar	school_glv_revision_adyar	land_env	262340	object_id	2800		Polygon	45.5	454.6	262340	
+generic_viewer:scrb_iit_fifty_hotspot	scrb_iit_fifty_hotspot	other	2265	object_id	4000		Polygon	1.5	2.6	2265	
+generic_viewer:scrb_iit_hotspot_point_new	scrb_iit_hotspot_point_new	other	4530	object_id	4000	district	Point	0.5	4.5	4530	
+generic_viewer:sdh	sdh	service_point	277	object_id	4000		Point	0.0	0.1	277	
+generic_viewer:seed_production_cluster	seed_production_cluster	other	93	object_id	4000		Point	0.0	0.1	93	
+generic_viewer:sensitive_places_institution_religious_bus_stand	sensitive_places_institution_religious_bus_stand	other	64531	object_id	4000		Point	3.3	32.8	64531	
+generic_viewer:sensitive_places_within_500_buffer_from_tasmac	sensitive_places_within_500_buffer_from_tasmac	other	9029	object_id	4000		Point	0.5	4.6	9029	
+generic_viewer:sericulture	sericulture	other	84	object_id	4000		Point	0.0	0.0	84	
+generic_viewer:settlement_area	settlement_area	admin_boundary	174866	object_id	1800		Polygon	65.0	473.8	174866	tngis_basemap:basemap_settlement_area_gis
+generic_viewer:sewerage_pumping_station	sewerage_pumping_station	infrastructure	124	object_id	3200		Polygon	0.0	0.2	124	
+generic_viewer:sick_new_born_care_units	sick_new_born_care_units	service_point	64	object_id	4000		Point	0.0	0.0	64	
+land_stack:sidco_plot_boundary	sidco_plot_boundary	land_env	174	id	4000		Polygon	0.0	0.1	174	
+generic_viewer:sipcot_estate	sipcot_estate	infrastructure	5385	object_id	1000			0.0	5.4	5385	tnsdma_data_sharing:tnsdma_sipcot_estate
+generic_viewer:sipcot_estate_outer_boundary	sipcot_estate_outer_boundary	infrastructure	20	object_id	400	district	Polygon	0.1	0.2	20	tnsdma_data_sharing:tnsdma_sipcot_outer_boundary
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_airport_connectivity	sipcot_pm_gatishakthi_airport_connectivity	infrastructure	40	objectid	100		LineZ	3.4	8.8	40	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_airport_point	sipcot_pm_gatishakthi_airport_point	infrastructure	7	objectid	4000		PointZ	0.0	0.0	7	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_icd_connectivity	sipcot_pm_gatishakthi_icd_connectivity	infrastructure	60	objectid	100		LineZ	5.7	14.9	60	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_icd_point	sipcot_pm_gatishakthi_icd_point	infrastructure	10	objectid	4000		PointZ	0.0	0.0	10	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_mmlp_connectivity	sipcot_pm_gatishakthi_mmlp_connectivity	infrastructure	7	objectid	100		LineZ	0.9	2.4	7	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_mmlp_point	sipcot_pm_gatishakthi_mmlp_point	infrastructure	1	objectid	4000		PointZ	0.0	0.0	1	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_nh_connectivity	sipcot_pm_gatishakthi_nh_connectivity	infrastructure	7	objectid	1000		LineZ	0.0	0.0	7	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_park_boundary	sipcot_pm_gatishakthi_park_boundary	land_env	7	gid	100	district	PolygonZ	0.1	0.2	7	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_port_connectivity	sipcot_pm_gatishakthi_port_connectivity	infrastructure	21	objectid	100		LineZ	2.5	6.5	21	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_port_point	sipcot_pm_gatishakthi_port_point	infrastructure	3	objectid	4000		PointZ	0.0	0.0	3	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_railway_connectivity	sipcot_pm_gatishakthi_railway_connectivity	infrastructure	26	objectid	100		LineZ	0.4	1.2	26	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_railway_point	sipcot_pm_gatishakthi_railway_point	infrastructure	23	objectid	4000		PointZ	0.0	0.0	23	
+Pm_Gati_Sakthi:sipcot_pm_gatishakthi_sh_connectivity	sipcot_pm_gatishakthi_sh_connectivity	infrastructure	7	objectid	300		LineZ	0.0	0.1	7	
+generic_viewer:slum_boundary	slum_boundary	admin_boundary	2507	object_id	3300		Polygon	1.2	3.8	2507	tnsdma_data_sharing:tnsdma_slum_boundary
+generic_viewer:soil	soil	land_env	1761	object_id	900		Polygon	6.4	9.8	1761	tnsdma_data_sharing:tnsdma_soil
+land_stack:south_states	south_states	admin_boundary	18	id	100		Polygon	8.4	11.0	18	
+PWDworks:sp_tnoutpolygon	sp_tnoutpolygon	other	1	gid	100		Polygon	0.5	0.6	1	c100_v4:sp_tnwrap
+generic_viewer:sro_boundary	sro_boundary	admin_boundary	565	object_id	100		Polygon	21.7	30.9	565	
+igr:srowise_revnue_village_boundary	srowise_revnue_village_boundary	admin_boundary	18183	gid	500		Polygon	77.0	167.5	18183	
+generic_viewer:stadiums	stadiums	service_point	64	object_id	4000		PointZ	0.0	0.0	64	tngis_basemap:basemap_tn_stadium_locations_gis
+generic_viewer:state_boundary	state_boundary	admin_boundary	1	object_id	100		PolygonZ	0.6	1.6	1	Police_Jurisdiction:Data_Sharing_State,tngis_basemap:basemap_state_boundary_new_gis,data_sharing_dtcp:state_boundary_new_gis,tnsdma_data_sharing:tnsdma_state-boundary
+generic_viewer:state_highways	state_highways	infrastructure	974	object_id	300		Line	9.1	13.6	974	dtcp_data_sharing:sp_hd_sh_gis,tngis_basemap:basemap_sp_hd_sh_gis
+generic_viewer:state_ring	state_ring	admin_boundary	8	object_id	4000		Line	0.0	0.0	8	
+Pm_Gati_Sakthi:street_furniture_municipalities	street_furniture_municipalities	land_env	507629	object_id	4000		Point	29.8	298.2	507629	
+generic_viewer:sub_basin	sub_basin	land_env	148	object_id	200		Polygon	2.2	2.9	148	tambaram_corporation:tambaram_corp_subbasin,tnsdma_data_sharing:tnsdma_sub_basin
+generic_viewer:subcatchment	subcatchment	land_env	28	object_id	100		Polygon	1.0	1.4	28	tnsdma_data_sharing:tnsdma_sub_catchment
+tngis_basemap:basemap_sugar_mills	sugar_mills_basemap	other	43	object_id	3600		Point	0.0	0.1	43	
+generic_viewer:super_core_distance	super_core_distance	other	6	object_id	4000		Line	0.0	0.0	6	
+generic_viewer:survey_ae_ofc	survey_ae_ofc	land_env	11610	object_id	1300		LineZ	12.1	44.4	11610	
+generic_viewer:survey_ug_ofc	survey_ug_ofc	land_env	2186	object_id	800		LineZ	4.0	13.1	2186	
+generic_viewer:tamil_nilam_land_type_glv_revision_adyar	tamil_nilam_land_type_glv_revision_adyar	land_env	262340	object_id	3200		Polygon	39.9	398.7	262340	
+generic_viewer:tasmac_100m_buffer	tasmac_100m_buffer	other	4342	object_id	1900		Polygon	6.5	11.4	4342	
+generic_viewer:tasmac_500m_buffer	tasmac_500m_buffer	other	3135	object_id	1700		Polygon	5.6	9.0	3135	
+generic_viewer:tasmac_fl2fl3_gt_gis	tasmac_fl2fl3_gt_gis	service_point	38	object_id	1000	district_name		0.0	0.0	38	
+generic_viewer:tasmac_location_for_analysis_for_closing	tasmac_location_for_analysis_for_closing	other	4740	object_id	2800		Point	0.8	8.4	4740	
+generic_viewer:tasmac_location_gis	tasmac_location_gis	service_point	5146	object_id	2700	district	Point	0.9	9.3	5146	tngis_basemap:basemap_tasmac_location_gis
+generic_viewer:tasmac_location_gt_gis	tasmac_location_gt_gis	service_point	4956	object_id	4000	district	Point	0.3	3.0	4956	
+generic_viewer:tasmac_office_gt_gis	tasmac_office_gt_gis	service_point	97	object_id	4000		Point	0.0	0.1	97	
+generic_viewer:tasmac_region_boundary	tasmac_region_boundary	service_point	38	object_id	100		Polygon	3.9	5.3	38	
+generic_viewer:temple_land_dgps_point	temple_land_dgps_point	land_env	5486	object_id	4000		Point	0.4	3.8	5486	
+generic_viewer:temple_lands	temple_lands	land_env	597	object_id	3000		Polygon	0.1	1.0	597	
+Pm_Gati_Sakthi:tidco_additional_projects	tidco_additional_projects	service_point	52	object_id	4000		Point	0.0	0.0	52	
+generic_viewer:tiruppur_boundary	tiruppur_boundary	admin_boundary	1	ogc_fid	100		Polygon	0.2	0.3	1	
+generic_viewer:tiruppur_district_boundary	tiruppur_district_boundary	admin_boundary	1	object_id	100		Polygon	0.2	0.3	1	
+generic_viewer:tn_contours	tn_contours	land_env	180735	object_id	1900		Line	290.3	452.6	180735	tambaram_corporation:tambaram_corp_contours,tngis_basemap:basemap_contours
+generic_viewer:tn_ex_serviceman	tn_ex_serviceman	service_point	44	object_id	4000	district	Point	0.0	0.1	44	
+generic_viewer:tn_railway	tn_railway	infrastructure	55	object_id	1000		Line	0.2	0.3	55	tngis_basemap:basemap_tn_railway,tnsdma_data_sharing:tnsdma_tn_railway
+generic_viewer:tn_reservoirs_point_nrsc	tn_reservoirs_point_nrsc	infrastructure	7	object_id	4000		Point	0.0	0.0	7	
+generic_viewer:tn_substation	tn_substation	infrastructure	1872	object_id	4000		Point	0.2	1.6	1872	
+generic_viewer:tn_waterbodies_nrsc	tn_waterbodies_nrsc	land_env	77386	object_id	4000		Polygon	21.3	63.0	77386	
+generic_viewer:tncsc_aads	tncsc_aads	service_point	59	object_id	4000		Point	0.0	0.1	59	
+generic_viewer:tncsc_ads	tncsc_ads	service_point	18	object_id	3600		Point	0.0	0.0	18	
+generic_viewer:tncsc_cap	tncsc_cap	service_point	95	object_id	4000		Point	0.0	0.1	95	
+generic_viewer:tncsc_crs	tncsc_crs	service_point	1549	object_id	4000		Point	0.1	1.3	1549	
+generic_viewer:tncsc_godown_buffer	tncsc_godown_buffer	other	226	object_id	4000		Point	0.0	0.3	226	
+generic_viewer:tncsc_hulling_agents	tncsc_hulling_agents	service_point	618	object_id	3600		Point	0.1	0.8	618	
+generic_viewer:tncsc_kerosene_bunk	tncsc_kerosene_bunk	service_point	10	object_id	4000		Point	0.0	0.0	10	
+generic_viewer:tncsc_mrm	tncsc_mrm	service_point	21	object_id	2700		Point	0.0	0.0	21	
+generic_viewer:tncsc_operational_godown	tncsc_operational_godown	service_point	264	object_id	4000		Point	0.0	0.3	264	
+generic_viewer:tncsc_petrol_and_gas_agency	tncsc_petrol_and_gas_agency	infrastructure	8	object_id	4000		Point	0.0	0.0	8	
+generic_viewer:tncsc_railhead	tncsc_railhead	infrastructure	39	object_id	4000		Point	0.0	0.0	39	
+generic_viewer:tncsc_semi_covered_godown	tncsc_semi_covered_godown	service_point	28	object_id	3000		Point	0.0	0.0	28	
+generic_viewer:tncsc_weighbridge	tncsc_weighbridge	infrastructure	301	object_id	4000	district	Point	0.0	0.2	301	
+generic_viewer:tneb_buildings	tneb_buildings	infrastructure	10	object_id	3400		PolygonZ	0.0	0.0	10	
+generic_viewer:tneb_circle	tneb_circle	infrastructure	44	object_id	100		Polygon	0.8	1.1	44	
+generic_viewer:tneb_division	tneb_division	infrastructure	176	object_id	300		Polygon	1.6	2.4	176	
+generic_viewer:tneb_region	tneb_region	infrastructure	9	object_id	100		Polygon	0.4	0.5	9	
+generic_viewer:tneb_section_gis	tneb_section_gis	infrastructure	2817	object_id	800		Polygon	6.0	17.1	2817	
+generic_viewer:tneb_subdivision	tneb_subdivision	infrastructure	706	object_id	1000			0.0	0.7	706	
+generic_viewer:tnmsc_medical_warehouse_locations	tnmsc_medical_warehouse_locations	service_point	37	object_id	4000	district	Point	0.0	0.0	37	
+tnrd:tnrd_blocks	tnrd_blocks	admin_boundary	389	id	100		Polygon	7.3	9.9	389	
+generic_viewer:tnrd_bridge	tnrd_bridge	infrastructure	879	object_id	4000		Point	0.1	0.9	879	
+generic_viewer:tnrd_facilites	tnrd_facilites	service_point	28342	object_id	4000		Point	2.0	20.2	28342	tngis_basemap:basemap_tnrd_facilites
+tnrd:tnrd_new_habitations	tnrd_new_habitations	admin_boundary	26	reference	2700		Point	0.0	0.0	26	
+tnrd:tnrd_railways	tnrd_railways	infrastructure	55	railway_id	1000		Line	0.2	0.3	55	
+tnrd:tnrd_roads_split	tnrd_roads_split	infrastructure	24173	objectid	2400		Line	10.4	48.6	24173	
+tnrd:tnrd_tourist_point	tnrd_tourist_point	other	306	tourist_point_id	4000		Point	0.0	0.2	306	
+tnrd:urban_local_bodies	tnrd_urban_local_bodies	other	649	id	800		Polygon	2.6	4.0	649	
+generic_viewer:tnswan_pop_address	tnswan_pop_address	infrastructure	705	object_id	1000	district_name		0.0	0.7	705	
+generic_viewer:toll_plaza_data	toll_plaza_data	other	98	object_id	4000		Point	0.0	0.1	98	
+generic_viewer:tourisms	tourisms	other	270	object_id	4000		PointZ	0.0	0.1	270	tngis_basemap:basemap_tourism_gis
+tngis_basemap:basemap_traffic_square	traffic_square_basemap	other	444	object_id	4000		Point	0.0	0.3	444	
+tngis_basemap:basemap_transformer	transformer_basemap	infrastructure	5504	object_id	4000		Point	0.3	3.4	5504	
+generic_viewer:treasuries	treasuries	service_point	301	object_id	4000	district	Point	0.0	0.3	301	
+generic_viewer:trichy_all_government_lands	trichy_all_government_lands	land_env	322405	object_id	2500		Polygon	62.2	622.1	322405	
+generic_viewer:trichy_cadastral_data_join_thuraiyur_porombokku	trichy_cadastral_data_join_thuraiyur_porombokku	land_env	1553	object_id	1500	district	Polygon	0.5	4.9	1553	
+generic_viewer:trichy_cluster_more_than_500_acres	trichy_cluster_more_than_500_acres	other	16	object_id	300		Polygon	0.2	0.2	16	
+generic_viewer:trichy_district_boundary	trichy_district_boundary	admin_boundary	1	object_id	100		Polygon	0.2	0.2	1	
+generic_viewer:trichy_govt_land_cluster_landparcel	trichy_govt_land_cluster_landparcel	other	3961	object_id	2500		Polygon	0.8	7.9	3961	
+generic_viewer:trichy_govt_land_dissolved_combined	trichy_govt_land_dissolved_combined	land_env	252861	object_id	2900		Polygon	57.6	430.7	252861	
+generic_viewer:trichy_morethen_fifty_acre	trichy_morethen_fifty_acre	other	126	object_id	800		Polygon	0.4	0.8	126	
+generic_viewer:trichy_morethen_five_acre_cluster	trichy_morethen_five_acre_cluster	other	1338	object_id	1700		Polygon	1.1	3.8	1338	
+generic_viewer:trichy_other_govt_land_to_host	trichy_other_govt_land_to_host	land_env	10721	object_id	2800		Polygon	1.9	18.7	10721	
+generic_viewer:trichy_three_to_five_acre_cluster	trichy_three_to_five_acre_cluster	other	789	object_id	2000		Polygon	0.4	1.9	789	
+generic_viewer:ug_ofc	ug_ofc	infrastructure	2187	object_id	500	district	LineZ	4.1	18.8	2187	
+Pm_Gati_Sakthi:ulb_roads	ulb_roads	infrastructure	172486	object_id	2300	district	Line+Point	36.0	359.8	172486	cma:road_details
+Pm_Gati_Sakthi:ulb_under_ground_drainage	ulb_under_ground_drainage	land_env	222715	object_id	3700		Line+Point	29.5	295.2	222715	cma:ugddata
+Pm_Gati_Sakthi:ulb_utility	ulb_utility	infrastructure	162551	object_id	4000	district	Point	12.2	121.7	162551	
+Pm_Gati_Sakthi:ulb_water_flow_direction	ulb_water_flow_direction	infrastructure	39468	object_id	4000		Line	3.7	37.4	39468	cma:water_flow_direction
+Pm_Gati_Sakthi:ulb_water_pipeline	ulb_water_pipeline	infrastructure	150918	object_id	4000		Line	17.3	173.3	150918	cma:water_pipeline
+generic_viewer:urban_block_boundary	urban_block_boundary	admin_boundary	27586	gid	1300	dname	Polygon	20.7	101.9	27586	
+land_stack:urban_cadastral	urban_cadastral	land_env	44365	id	3800		Polygon	5.8	57.9	44365	
+Pm_Gati_Sakthi:urban_localbody_boundary	urban_localbody_boundary	admin_boundary	43	id	300		Polygon	0.4	0.7	43	
+land_stack:urban_village	urban_village	admin_boundary	1	id	1200		Polygon	0.0	0.0	1	
+generic_viewer:uzhavar_santhai	uzhavar_santhai	service_point	178	object_id	4000	district	Point	0.0	0.1	178	tngis_basemap:basemap_uzhavar_santhai
+generic_viewer:velankanni_flow_direction	velankanni_flow_direction	other	454	object_id	4000		Line	0.0	0.3	454	Pm_Gati_Sakthi:bisag_velankanni_tp_flow_direction
+generic_viewer:velankanni_machine_hole	velankanni_machine_hole	other	702	object_id	4000		Point	0.0	0.2	702	Pm_Gati_Sakthi:bisag_velankanni_tp_machine_hole
+generic_viewer:velankanni_over_head_tank	velankanni_over_head_tank	land_env	2	object_id	4000		Point	0.0	0.0	2	Pm_Gati_Sakthi:bisag_velankanni_tp_over_head_tank
+generic_viewer:velankanni_roads	velankanni_roads	infrastructure	465	object_id	4000		Line	0.0	0.4	465	Pm_Gati_Sakthi:bisag_velankanni_tp_roads
+generic_viewer:velankanni_storm_water_drain	velankanni_storm_water_drain	land_env	51	object_id	4000		Line	0.0	0.0	51	Pm_Gati_Sakthi:bisag_velankanni_tp_storm_water_drain
+generic_viewer:velankanni_under_ground_drainage	velankanni_under_ground_drainage	land_env	657	object_id	4000		Line	0.0	0.4	657	Pm_Gati_Sakthi:bisag_velankanni_tp_under_ground_drainage
+generic_viewer:velankanni_water_supply_network	velankanni_water_supply_network	infrastructure	457	object_id	4000		Line	0.0	0.2	457	Pm_Gati_Sakthi:bisag_velankanni_tp_water_supply_network
+generic_viewer:velankanni_water_supply_node	velankanni_water_supply_node	infrastructure	386	object_id	4000		Point	0.0	0.1	386	Pm_Gati_Sakthi:bisag_velankanni_tp_water_supply_node
+generic_viewer:vertinary_clinical_center	vertinary_clinical_center	service_point	14	object_id	3000		Point	0.0	0.0	14	tngis_basemap:basemap_vertinary_clinical_center_gis
+generic_viewer:vertinary_dispensary	vertinary_dispensary	service_point	2723	object_id	4000		Point	0.2	1.8	2723	tngis_basemap:basemap_vertinary_dispensary_gis
+generic_viewer:vertinary_poly_clinic	vertinary_poly_clinic	service_point	16	object_id	3200		Point	0.0	0.0	16	tngis_basemap:basemap_vertinary_poly_clinic_gis
+generic_viewer:vertinary_sub_center	vertinary_sub_center	service_point	833	object_id	4000		Point	0.1	0.6	833	tngis_basemap:basemap_vertinary_sub_center_gis
+generic_viewer:village_roads	village_roads	infrastructure	308677	object_id	4000		Line	44.7	321.6	308677	
+generic_viewer:villupuram_all_govt_land	villupuram_all_govt_land	land_env	276530	object_id	2600		Polygon	52.8	527.5	276530	
+generic_viewer:villupuram_cluster_one_k_acre	villupuram_cluster_one_k_acre	other	73	object_id	100		Polygon	99.6	140.1	73	
+generic_viewer:villupuram_dry_land_parcel	villupuram_dry_land_parcel	land_env	886351	object_id	3700		Polygon	117.7	1176.8	886351	
+generic_viewer:villupuram_ten_km_buffer_boundary	villupuram_ten_km_buffer_boundary	other	1	object_id	100		Polygon	0.1	0.2	1	
+Pm_Gati_Sakthi:virudunagar_pm_mitra_connectivity_line	virudunagar_pm_mitra_connectivity_line	other	13	objectid_1	500		LineZ	0.0	0.1	13	
+Pm_Gati_Sakthi:virudunagar_pm_mitra_connectivity_point	virudunagar_pm_mitra_connectivity_point	other	11	objectid	4000		PointZ	0.0	0.0	11	
+generic_viewer:vpm_govt_land_morethen_50_acre	vpm_govt_land_morethen_50_acre	land_env	171	object_id	500		Polygon	0.5	1.5	171	
+generic_viewer:vpm_govt_land_morethen_five_acre	vpm_govt_land_morethen_five_acre	land_env	1712	object_id	800		Polygon	2.1	10.7	1712	
+generic_viewer:vpm_tnm_govt_land_between_3_to_5_acre	vpm_tnm_govt_land_between_3_to_5_acre	land_env	17	object_id	900		Polygon	0.0	0.1	17	
+generic_viewer:vpm_tnm_govt_land_morethen_five_acre	vpm_tnm_govt_land_morethen_five_acre	land_env	32	object_id	800		Polygon	0.0	0.2	32	
+generic_viewer:vpm_tvm_10km_buffer	vpm_tvm_10km_buffer	other	2	object_id	500		Polygon	0.0	0.0	2	
+generic_viewer:vpm_tvm_town_boundary	vpm_tvm_town_boundary	admin_boundary	2	object_id	200		Polygon	0.0	0.0	2	
+generic_viewer:vulnerable_locations	vulnerable_locations	land_env	3980	object_id	4000	district	Point	0.2	2.2	3980	tngis_basemap:basemap_tndrr_vul_loc_2019_gis
+generic_viewer:waqf_tn	waqf_tn	service_point	2816	object_id	4000	district	Point	0.2	2.5	2816	tngis_basemap:basemap_waqf_tn
+generic_viewer:warehouse_location	warehouse_location	service_point	84	object_id	4000		Point	0.0	0.1	84	tngis_basemap:basemap_warehouse_name_location_gis,Pm_Gati_Sakthi:bisag_state_warehouse_location
+land_stack:water_distribution_stations	water_distribution_stations	service_point	121	objectid	1100		Polygon	0.1	0.5	121	
+waterbodies:waterbodies	waterbodies	land_env	8535	vc,kide,area	2000	dname	Polygon	2.1	20.6	8535	
+generic_viewer:women_livelihood_service_centre	women_livelihood_service_centre	service_point	30	object_id	4000		Point	0.0	0.0	30	
+generic_viewer:world_administrative_boundaries	world_administrative_boundaries	admin_boundary	256	id	300		Polygon	2.0	4.0	256	
