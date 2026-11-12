@@ -4,17 +4,7 @@
   "payload": {
    "reader": "food_up_fcs",
    "url": "https://fcs.up.gov.in/PDF/contacts/contact_details.pdf",
-   "source": "contacts",
-   "state": "UP",
-   "india_only": true
-  }
- },
- {
-  "key": "food_up_fcs:emails",
-  "payload": {
-   "reader": "food_up_fcs",
-   "url": "https://fcs.up.gov.in/PDF/contacts/email_id.pdf",
-   "source": "emails",
+   "emails_url": "https://fcs.up.gov.in/PDF/contacts/email_id.pdf",
    "state": "UP",
    "india_only": true
   }

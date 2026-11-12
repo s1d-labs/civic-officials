@@ -46,12 +46,19 @@ def test_up_food_emails():
     assert by["dept:food_up_fcs:emails:rfc:allahabad"]["email"] == "rfcallahabad58@gmail.com"
 
 
-def test_up_food_fetch_and_seed():
+def test_up_food_emails_join_and_seed():
     m = mod("food_up_fcs")
+    recs, rest = m.join_emails(m.parse_contacts((FOOD / "up_fcs_contacts_layout.txt").read_text()),
+                               m.parse_emails((FOOD / "up_fcs_emails_layout.txt").read_text()))
+    by = dict(recs)
+    assert by["dept:food_up_fcs:contacts:dso:ayodhya"]["email"] == "dsofaizabad11@gmail.com"
+    assert by["dept:food_up_fcs:contacts:rfc:मेरठ"]["email"] == "rfcmeerut@gmail.com"
+    assert sum(1 for d in by.values() if d["section"] in ("dso", "dfmo") and d.get("email")) == 150
+    assert len(rest) <= 4                # e-mails without a contact row stay records of their own
     seeds = json.loads((ROOT / "seeds" / "dept_food_up_fcs.json").read_text())
-    assert [s["payload"]["source"] for s in seeds] == ["contacts", "emails"] and all(s["payload"]["india_only"] for s in seeds)
-    recs, files, why = m.fetch(seeds[0]["payload"], fake_get({}))
-    assert why == "no answer" and not recs
+    assert len(seeds) == 1 and seeds[0]["payload"]["emails_url"].endswith("email_id.pdf") and seeds[0]["payload"]["india_only"]
+    out, files, why = m.fetch(seeds[0]["payload"], fake_get({}))
+    assert why == "no answer" and not out
 
 
 # ---- Assam: Standardized Website Framework 2.0 sites ----

@@ -13,8 +13,8 @@ contact files, linked on fcs.up.gov.in (home page, "Contact Us"):
 Records (depts.py contract, dept food_supplies): level state / division / district; area = the division or district (English
 LGD name for districts, Hindi as the file gives it in area_regional), district + district_code (LGD) on district rows, post in
 English and post_regional in Hindi, name in Hindi (the file gives no English names), phone = office phone and CUG mobile.
-The e-mail file gives records of its own (post, area, email); the loader joins them to the contact rows by post and district.
-One queue item per file (payload "source": "contacts" or "emails"). Ids: dept:food_up_fcs:<source>:<section>:<area or n>.
+The e-mail of each office goes on its contact row (districts by LGD code, divisions by name); an e-mail without a contact row
+stays a record of its own. One queue item = both files (2 GETs). Ids: dept:food_up_fcs:<contacts|emails>:<section>:<area or n>.
 Both files are kept in the bucket. pdftotext / pypdf layout text, a few pages: light work.
 """
 import re
@@ -312,21 +312,56 @@ def parse_emails(text, url=EMAILS):
     return out
 
 
+# the 18 divisions (Hindi as the contact file spells them, any spelling with the same letters) -> English name of the e-mail file
+DIVISIONS = {"मेरठ": "Meerut", "सहारनपुर": "Saharanpur", "मुरादाबाद": "Moradabad", "बरेली": "Bareilly", "लखनऊ": "Lucknow",
+             "आगरा": "Agra", "अलीगढ": "Aligarh", "कानपुर": "Kanpur", "फैजाबाद": "Faizabad", "देवीपाटन": "Devipatan",
+             "गोरखपुर": "Gorakhpur", "बस्ती": "Basti", "आजमगढ": "Azamgarh", "वाराणसी": "Varanasi", "विन्ध्याचल": "Mirzapur",
+             "मिर्जापुर": "Mirzapur", "इलाहाबाद": "Allahabad", "झांसी": "Jhansi", "चित्रकूट": "Chitrakoot"}
+DIV_SKEL = {key(k): v for k, v in DIVISIONS.items()}
+
+
+def join_emails(recs, emails):
+    """The e-mail of each office (e-mail file) on its row of the contact file: district rows by LGD code, division rows by the
+    division name. Returns (contact records with emails, e-mail records that matched no contact row)."""
+    by, used = {}, set()
+    for rid, d in emails:
+        sec = d["section"]
+        k = (sec, d.get("district_code") or re.sub(r"[^a-z]", "", re.sub(r"\(.*?\)", "", d["area"]).lower()))
+        by.setdefault(k, (rid, d))
+    out = []
+    for rid, d in recs:
+        sec = d.get("section")
+        if d.get("district_code"):
+            k = (sec, d["district_code"])
+        else:
+            k = (sec, re.sub(r"[^a-z]", "", DIV_SKEL.get(key(d.get("area_regional") or ""), "").lower()))
+        hit = by.get(k)
+        if hit:
+            d = dict(d, email=hit[1]["email"], email_source=hit[1]["source"])
+            used.add(hit[0])
+        out.append((rid, d))
+    return out, [e for e in emails if e[0] not in used]
+
+
 def items(get=None):
-    return [{"key": f"{MODULE}:contacts", "payload": {"reader": MODULE, "url": CONTACTS, "source": "contacts", "state": "UP",
-                                                      "india_only": True}},
-            {"key": f"{MODULE}:emails", "payload": {"reader": MODULE, "url": EMAILS, "source": "emails", "state": "UP",
-                                                    "india_only": True}}]
+    return [{"key": f"{MODULE}:contacts", "payload": {"reader": MODULE, "url": CONTACTS, "emails_url": EMAILS, "state": "UP",
+                                                      "india_only": True}}]
 
 
 def fetch(p, get):
+    """One item = the contact file + the e-mail file (2 GETs); the e-mails go on the contact rows, unmatched e-mails stay records
+    of their own. Without the e-mail file the contact rows still go in."""
     r = get(p["url"])
     if r is None:
         return [], [], "no answer"
     if r.content[:5] != b"%PDF-":
         return [], [], "not a pdf"
-    src = p.get("source") or ("emails" if "email" in p["url"] else "contacts")
-    files = [(f"depts/{MODULE}/{src}.pdf", r.content, "application/pdf")]
-    text = _field.pdf_text(r.content)
-    recs = parse_emails(text, p["url"]) if src == "emails" else parse_contacts(text, p["url"])
+    files = [(f"depts/{MODULE}/contacts.pdf", r.content, "application/pdf")]
+    recs = parse_contacts(_field.pdf_text(r.content), p["url"])
+    if p.get("emails_url"):
+        e = get(p["emails_url"])
+        if e is not None and e.content[:5] == b"%PDF-":
+            files.append((f"depts/{MODULE}/emails.pdf", e.content, "application/pdf"))
+            recs, rest = join_emails(recs, parse_emails(_field.pdf_text(e.content), p["emails_url"]))
+            recs += rest
     return recs, files, "" if recs else "no rows"
