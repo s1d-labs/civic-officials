@@ -1,0 +1,112 @@
+[
+ {
+  "key": "edu_mp_vimarsh:jd",
+  "payload": {
+   "reader": "edu_mp_vimarsh",
+   "url": "https://vimarsh.mp.gov.in/whoiswho.aspx",
+   "designation": "JD",
+   "state": "MP",
+   "india_only": true,
+   "expected": 0
+  }
+ },
+ {
+  "key": "edu_mp_vimarsh:dd-jd-office",
+  "payload": {
+   "reader": "edu_mp_vimarsh",
+   "url": "https://vimarsh.mp.gov.in/whoiswho.aspx",
+   "designation": "DD (JD Office)",
+   "state": "MP",
+   "india_only": true,
+   "expected": 0
+  }
+ },
+ {
+  "key": "edu_mp_vimarsh:deo",
+  "payload": {
+   "reader": "edu_mp_vimarsh",
+   "url": "https://vimarsh.mp.gov.in/whoiswho.aspx",
+   "designation": "DEO",
+   "state": "MP",
+   "india_only": true,
+   "expected": 46
+  }
+ },
+ {
+  "key": "edu_mp_vimarsh:ad-deo-office",
+  "payload": {
+   "reader": "edu_mp_vimarsh",
+   "url": "https://vimarsh.mp.gov.in/whoiswho.aspx",
+   "designation": "AD (DEO Office)",
+   "state": "MP",
+   "india_only": true,
+   "expected": 0
+  }
+ },
+ {
+  "key": "edu_mp_vimarsh:po-deo-office",
+  "payload": {
+   "reader": "edu_mp_vimarsh",
+   "url": "https://vimarsh.mp.gov.in/whoiswho.aspx",
+   "designation": "PO (DEO OFFICE)",
+   "state": "MP",
+   "india_only": true,
+   "expected": 0
+  }
+ },
+ {
+  "key": "edu_mp_vimarsh:diet-principal",
+  "payload": {
+   "reader": "edu_mp_vimarsh",
+   "url": "https://vimarsh.mp.gov.in/whoiswho.aspx",
+   "designation": "DIET Principal",
+   "state": "MP",
+   "india_only": true,
+   "expected": 0
+  }
+ },
+ {
+  "key": "edu_mp_vimarsh:apc",
+  "payload": {
+   "reader": "edu_mp_vimarsh",
+   "url": "https://vimarsh.mp.gov.in/whoiswho.aspx",
+   "designation": "APC",
+   "state": "MP",
+   "india_only": true,
+   "expected": 0
+  }
+ },
+ {
+  "key": "edu_mp_vimarsh:adpc",
+  "payload": {
+   "reader": "edu_mp_vimarsh",
+   "url": "https://vimarsh.mp.gov.in/whoiswho.aspx",
+   "designation": "ADPC",
+   "state": "MP",
+   "india_only": true,
+   "expected": 0
+  }
+ },
+ {
+  "key": "edu_mp_vimarsh:sports-officer",
+  "payload": {
+   "reader": "edu_mp_vimarsh",
+   "url": "https://vimarsh.mp.gov.in/whoiswho.aspx",
+   "designation": "Sports Officer",
+   "state": "MP",
+   "india_only": true,
+   "expected": 0
+  }
+ },
+ {
+  "key": "edu_mp_vimarsh:beo",
+  "payload": {
+   "reader": "edu_mp_vimarsh",
+   "url": "https://vimarsh.mp.gov.in/whoiswho.aspx",
+   "designation": "BEO",
+   "state": "MP",
+   "india_only": true,
+   "expected": 235
+  }
+ }
+]

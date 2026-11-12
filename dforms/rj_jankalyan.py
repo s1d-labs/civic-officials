@@ -35,6 +35,29 @@ METHOD = "json api (GetDepartmentContactDetail)"     # source trail (provenance.
 
 MODULE = "rj_jankalyan"
 API = "https://districtfrontwebapi.rajasthan.gov.in/PublicPortal/DepartmentWebsite/GetDepartmentContactDetail"
+# Each portal family has its own API base in its own bundle (environment "ApiBaseUrl"): the police portals (<district>police,
+# grp*, policedepartment) use https://policedepartment.rajasthan.gov.in/webapi/ (main-es2015.98a15c4e4bec4cdbb5a4.js, build
+# 2026-07-21); the Panchayati Raj portals (rajpanchayat, rdprd, zp*) use https://lsg.rajasthan.gov.in/webapi/ (it gives one or two
+# rows more than districtfrontwebapi for the same code). The department codes are the same on every base (measured 2026-11-13).
+API_POLICE = "https://policedepartment.rajasthan.gov.in/webapi/PublicPortal/DepartmentWebsite/GetDepartmentContactDetail"
+API_LSG = "https://lsg.rajasthan.gov.in/webapi/PublicPortal/DepartmentWebsite/GetDepartmentContactDetail"
+# The police portals keep almost nothing in their contact directory (Ajmer 4 rows, Alwar 2; Jaipur, Banswara, the state portal
+# 967 and 28 more: "Data": [] on both bases, the same 1,034-byte answer). Their "Contact Us" menu entries (Directory, Nodal
+# Officers, RPS List, Distt-Circle-P.Station, beat constables) are "Redirect only" rows of department 112 that point to old
+# www.police.rajasthan.gov.in/*.aspx pages, which answer 404 since the site moved to an Angular app (/portal/, obfuscated bundle).
+# So an empty answer of a police portal is the portal's real state: the item ends done with a note record, not failed.
+
+
+def api_for(p):
+    """The contact API of the item's portal (payload "api" first, else by its host label)."""
+    if p.get("api"):
+        return p["api"]
+    label = (p.get("host") or "").split(".")[0]
+    if label in POLICE_SITES or label == "policedepartment" or p.get("dept") == "police":
+        return API_POLICE
+    if label in ("rajpanchayat", "rdprd") or label.startswith("zp") or label.endswith("zp"):
+        return API_LSG
+    return API
 # host label -> (department code of the portal, LGD district name or None, dept, level)
 DISTRICT_SITES = {
     "ajmer": ("22", "Ajmer"), "alwar": ("23", "Alwar"), "balotra": ("1274", "Balotra"), "banswara": ("24", "Banswara"),
@@ -67,6 +90,8 @@ POLICE_SITES = {
     "rajsamandpolice": ("440", "Rajsamand"), "sawaimadhopurpolice": ("441", "Sawai Madhopur"), "sikarpolice": ("442", "Sikar"),
     "sirohipolice": ("443", "Sirohi"), "sriganganagarpolice": ("444", "Ganganagar"), "tonkpolice": ("445", "Tonk"),
     "udaipurpolice": ("446", "Udaipur"),
+    # Government Railway Police (codes from the police portals' bundle, 2026-11-13)
+    "grpajmerpolice": ("448", "Ajmer"), "grpjodhpurpolice": ("449", "Jodhpur"),
 }
 DEPT_SITES = {  # state department portals: (code, dept, district or None)
     "nhm": ("236", "health", None), "phed": ("110", "water", None), "rajpanchayat": ("107", "rural_development", None),
@@ -171,7 +196,7 @@ def parse(data, p):
                                 date_of_birth=(dob[:10] if re.match(r"^\d{4}-\d{2}-\d{2}", dob) else (dob or None)), url=_s(r.get("URL")) or None,
                                 attachment=att or None, portal=p.get("host"), portal_title=_s(r.get("DepartmentTitle")) or None,
                                 entry_id=str(eid), state="RJ", district=p.get("district"), office_id=f"rj-jankalyan:{code}:{eid}",
-                                source=p["url"], page=p["url"], src_url=API,
+                                source=p["url"], page=p["url"], src_url=api_for(p),
                                 src_pos={"key": "Data.Data", "index": i, "id": str(eid)}))
     return recs, files
 
@@ -192,7 +217,8 @@ def items(get=None):
 
 
 def fetch(p, get):
-    r = get(API, method="POST", data=json.dumps(body(p["code"])),
+    api = api_for(p)
+    r = get(api, method="POST", data=json.dumps(body(p["code"])),
             headers={"Content-Type": "application/json", "Accept": "application/json"})
     if r is None:
         return [], [], "API did not answer"
@@ -222,5 +248,10 @@ def fetch(p, get):
                       "fetched": ok, "portal": p.get("host"), "state": "RJ", "district": p.get("district"), "dept": p.get("dept"),
                       "source": p["url"], **({"src_url": url, "method": "file saved to the bucket (pdf)"} if ok else {})}))
     if not any(d.get("type") == "dept_office" for _, d in recs) and not pdfs:
+        if api == API_POLICE:
+            return [(f"dept:{MODULE}:{p['code']}:note", {"type": "note", "note": "the portal's contact directory is empty",
+                                                         "portal": p.get("host"), "state": "RJ", "district": p.get("district"),
+                                                         "dept": "police", "source": p["url"], "src_url": api,
+                                                         "method": METHOD, "src_pos": {"key": "Data.Data", "index": None}})], files, ""
         return recs, files, "no entries"
     return recs, files, ""

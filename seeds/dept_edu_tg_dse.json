@@ -1,0 +1,12 @@
+[
+ {
+  "key": "edu_tg_dse:contact",
+  "payload": {
+   "reader": "edu_tg_dse",
+   "url": "https://schooledu.telangana.gov.in/ISMS/contactus.do",
+   "state": "TG",
+   "route": "abroad",
+   "expected": 64
+  }
+ }
+]

@@ -56,7 +56,7 @@ def _rj_payload(label):
 def test_rj_jankalyan_items():
     m = mod("rj_jankalyan")
     its = m.items()
-    assert len(its) == len({i["key"] for i in its}) == 94
+    assert len(its) == len({i["key"] for i in its}) == 96
     p = _rj_payload("jaipur")
     assert (p["code"], p["district"], p["dept"], p["india_only"]) == ("37", "Jaipur", "administration", True)
     assert _rj_payload("nhm")["level"] == "state" and _rj_payload("jaipurruralpolice")["dept"] == "police"
@@ -107,6 +107,22 @@ def test_rj_jankalyan_fetch():
     assert json.loads(post[2])["AdvanceSearchModel"]["DepartmentCode"] == 44
     check_records([r for r in recs if r[1]["type"] == "dept_office" and r[1]["dept"] == "administration"], "rj_jankalyan",
                   "administration")
+
+
+def test_rj_jankalyan_police_api():
+    """Police portals ask their own API base (policedepartment.rajasthan.gov.in/webapi); an empty directory ends done with a note."""
+    m = mod("rj_jankalyan")
+    p = _rj_payload("jaipurpolice")
+    assert m.api_for(p) == m.API_POLICE and m.api_for(_rj_payload("rdprd")) == m.API_LSG and m.api_for(_rj_payload("kota")) == m.API
+    assert _rj_payload("grpajmerpolice")["code"] == "448"
+    get = fake_get({("POST", m.API_POLICE): "gaps2/rj_jankalyan_jaipurpolice_empty.json"})
+    recs, files, why = m.fetch(p, get)
+    assert not why and [d["type"] for _, d in recs] == ["note"] and recs[0][0] == "dept:rj_jankalyan:410:note"
+    assert json.loads(get.calls[0][2])["AdvanceSearchModel"]["DepartmentCode"] == 410
+    a = _rj_payload("ajmerpolice")
+    recs, _ = m.parse(json.loads((G / "rj_jankalyan_ajmerpolice.json").read_text()), a)
+    assert len(recs) == 4 and all(d["dept"] == "police" and d["src_url"] == m.API_POLICE for _, d in recs)
+    assert dict(recs)["dept:rj_jankalyan:411:12612"]["post"] == "SUPERINTENDENT OF POLICE"
 
 
 # ---- Bihar: State Health Society phone directory (district and block tabs, Patna answers saved 2026-11-12) ----
