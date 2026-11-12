@@ -252,3 +252,28 @@ def test_wm_geopdf_names_the_answer():
 
     recs, files, why = wm_geopdf.fetch({"url": "https://raw.example/x.pdf", "state": "MH", "body": "b"}, lambda u, **k: R())
     assert why == "" and recs[0][1]["src_sha256"] == hashlib.sha256(pdf).hexdigest() and recs[0][1]["src_url"] == R.url
+
+
+def test_aspnet_postback_readers_name_the_answer():
+    """forms/tn.py parse positions, forms/jh.py grid rows, keep_trail: the per-AC session keeps the caller's trail hook."""
+    import requests
+    from bs4 import BeautifulSoup
+    from forms import aspnet, jh, tn
+    html = ("<div id='ContentPlaceHolder1_namedetails'><table><tr><th>Part Name</th><th>BLO Name</th></tr>"
+            "<tr><td>1-School</td><td>A</td></tr><tr><td>2-Hall</td><td>B</td></tr></table></div>")
+    pos = []
+    rows, _ = tn.parse(BeautifulSoup(html, "lxml"), pos)
+    assert rows[1]["BLO Name"] == "B" and pos[1] == {"table": 1, "row": 3}
+
+    class R:
+        content = (b"<table id='GridView1'><tr><th>a</th><th>b</th><th>c</th><th>d</th><th>e</th></tr>"
+                   b"<tr><td>X</td><td>1</td><td>N</td><td>D</td><td>9999999999</td></tr></table>")
+        url = jh.URL
+    cells = jh._grid_rows(BeautifulSoup(R.content, "lxml"), R(), 2)
+    assert cells[0].src["src_pos"] == {"selector": "#GridView1", "row": 2, "grid_page": 2}
+    assert cells[0].src["src_sha256"] == hashlib.sha256(R.content).hexdigest() and cells[0].src["src_url"] == jh.URL
+    caller = requests.Session()
+    hook = lambda r, *a, **k: r  # noqa: E731
+    caller.hooks["response"].append(hook)
+    assert hook in aspnet.keep_trail(requests.Session(), caller).hooks["response"]
+    assert hook in jh._session(caller).hooks["response"]
