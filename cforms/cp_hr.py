@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 
 from cforms.cp_common import clean, column, emails, keyed, phones, record, table_rows, useful, ward_no
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (else page text blocks)"     # source trail (provenance.py): how this reader reads its sources
 
 TITLE = re.compile(r"^(sh|shri|sri|smt|mr|mrs|ms|dr|km|kumari)\.?\s+", re.I)
 RELATION = re.compile(r"\s+([wsd]\s*/\s*[ok]|[wsd]o\s*/|wife of|son of|daughter of)\.?\s*(.*)$", re.I)
@@ -88,18 +88,20 @@ def table_layout(html, p):
         recs.append(record("HR", p["body"], ward, name, p["url"], phone=phones10(cell(pi)), email=emails(cell(ei)) if ei is not None else None,
                            address=cell(ai), position=post if post and post.lower() != "member" else ("Mayor/President" if chair else None),
                            ward_label=label, lgd_code=p.get("lgd_code"), record_for=rid_for(p, ward, chair),
-                           extra={"relation": rel} if rel else None))
+                           extra={"relation": rel} if rel else None, pos=cells.pos))
     return recs
 
 
 def blocks_layout(html, p):
     t = " ".join(BeautifulSoup(html, "lxml").get_text(" ").split())
     recs = []
-    for m in re.finditer(r"\bName\s+(.+?)\s+Ward\s+(\d+)\s+Mobile\s+([\d\s,/-]+?)(?=\s+Name\b|\s+[A-Za-z]|$)", t):
+    for k, m in enumerate(re.finditer(r"\bName\s+(.+?)\s+Ward\s+(\d+)\s+Mobile\s+([\d\s,/-]+?)(?=\s+Name\b|\s+[A-Za-z]|$)", t), 1):
         name, _, rel = split_name(m.group(1))
         ward = ward_no(m.group(2))
         recs.append(record("HR", p["body"], ward, name, p["url"], phone=phones10(m.group(3)), ward_label=m.group(2),
-                           lgd_code=p.get("lgd_code"), record_for=rid_for(p, ward, False), extra={"relation": rel} if rel else None))
+                           lgd_code=p.get("lgd_code"), record_for=rid_for(p, ward, False), extra={"relation": rel} if rel else None,
+                           # source trail: the k-th "Name ... Ward ... Mobile ..." block of the page text, its text as matched
+                           pos={"selector": "page text", "block": k, "text": m.group(0)}))
     return recs
 
 

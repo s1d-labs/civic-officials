@@ -28,7 +28,8 @@ def members(html, p):
             continue
         recs.append(record("BR", p["body"], ward, name, p["url"], phone=phones(cells[pi]), email=emails(" ".join(cells)),
                            ward_label=cells[wi], lgd_code=p.get("lgd_code"),
-                           record_for=f"councillor:BR:{p['sec_slug']}:{ward}" if ward and p.get("sec_slug") else None))
+                           record_for=f"councillor:BR:{p['sec_slug']}:{ward}" if ward and p.get("sec_slug") else None,
+                           pos=cells.pos))
     return recs
 
 

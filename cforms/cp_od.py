@@ -12,12 +12,12 @@ from bs4 import BeautifulSoup
 
 from cforms import cp_common as cp
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (.author-text), else html table"     # source trail (provenance.py): how this reader reads its sources
 
 
 def cards(html, p, url):
     recs = []
-    for card in BeautifulSoup(html, "lxml").select(".author-text"):
+    for k, card in enumerate(BeautifulSoup(html, "lxml").select(".author-text"), 1):
         name = card.select_one(".author-name")
         if not name:
             continue
@@ -34,7 +34,8 @@ def cards(html, p, url):
         recs.append(cp.record("OD", p["body"], ward, nm, url, phone=cp.phones(conts.get("contact no.") or conts.get("contact no")),
                               position=post.get_text(" ", strip=True) if post else None, ward_label=loc or None,
                               lgd_code=p.get("lgd_code"), record_for=f"councillor:OD:{p['slug']}:{ward}" if ward else None,
-                              extra={"ward_name": m.group(2)} if m and m.group(2) else None))
+                              extra={"ward_name": m.group(2)} if m and m.group(2) else None,
+                              pos={"selector": ".author-text", "card": k}))
     return recs
 
 

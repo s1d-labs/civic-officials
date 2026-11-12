@@ -117,3 +117,39 @@ def test_cw_wb_answer_hash_and_index():
     assert d["src_sha256"] == hashlib.sha256(raw).hexdigest() and d["src_url"].endswith("SelectCandidateVotesinFavourPortalList")
     cands = json.loads(json.loads(raw)["d"])
     assert cands[d["src_pos"]["index"]]["CandidateName"].strip() == d["name"]
+
+
+def _get(pages):
+    class Resp:
+        def __init__(self, text):
+            self.text, self.content, self.url = text, text.encode(), ""
+
+    def get(url, method="GET", data=None, headers=None):
+        return Resp(pages[url]) if url in pages else None
+    return get
+
+
+def test_cp_table_rows_positions():
+    from bs4 import BeautifulSoup
+    from cforms import cp_common as cp, cp_od, cp_tg
+    html = (DATA / "cp" / "cp_tg_dubbaka.html").read_text(encoding="utf-8")
+    p = {"url": "https://dubbakamunicipality.telangana.gov.in/pages/council-page", "body": "Dubbaka", "slug": "dubbaka"}
+    recs = dict(cp_tg.fetch(p, _get({p["url"]: html}))[0])
+    d = recs["cp:TG:dubbaka:1"]
+    tables = BeautifulSoup(html, "lxml").find_all("table")
+    tr = tables[d["src_pos"]["table"] - 1].find_all("tr")[d["src_pos"]["row"] - 1]
+    assert "Mallaipally" in tr.get_text(" ") and d["src_url"] == p["url"] and cp_tg.METHOD == "html table"
+    assert cp.tr_pos(tr) == d["src_pos"]
+    seed = json.loads((Path(__file__).parent.parent / "seeds" / "councillors_cp_od.json").read_text())[0]["payload"]
+    recs, _, _ = cp_od.fetch(seed, _get({seed["url"]: (DATA / "cp" / "cp_od_jharsuguda.html").read_text(encoding="utf-8")}))
+    assert all(d["src_pos"]["selector"] == ".author-text" or "table" in d["src_pos"] for _, d in recs)
+
+
+def test_cp_gj_vadodara_lines():
+    from cforms import cp_gj
+    text = (DATA / "cp" / "cp_gj_vmc_p1_layout.txt").read_text(encoding="utf-8")
+    pos = []
+    e = cp_gj.vmc_entries(text, pos)
+    assert len(pos) == len(e) and pos[0][1].strip().startswith("1")
+    assert cp_gj.page_line([text], pos[1][0], pos[1][1]) == {"page": 1, "line": pos[1][0], "line_text": pos[1][1]}
+    assert cp_gj.page_line(["a\nb", "c"], 3, "c")["page"] == 2

@@ -40,7 +40,7 @@ def parse(html, url):
                      "ward_name": None if nominated else at(wn), "name": name, "position": post,
                      "address": None if re.fullmatch(r"(?i)(ward no\.? ?\d+|mc shimla|(deputy )?mayor mc shimla)", addr) else addr,
                      "email": cp.emails(at(ei)), "phone": cp.phones(at(pi)), "nominated": nominated or None,
-                     "election": "MC Shimla 2023 (as listed on the corporation's site)", "url": url})
+                     "election": "MC Shimla 2023 (as listed on the corporation's site)", "url": url, "src_pos": cells.pos})
     per = {}
     for d in rows:
         if d["ward_no"]:

@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 
 from cforms import cp_common as cp
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 
 def parse(html, p, url):
@@ -35,7 +35,8 @@ def parse(html, p, url):
         ward = cp.ward_no(label)
         phone = cp.phones(cells[pi]) if pi < len(cells) else None
         recs.append(cp.record("TG", p["body"], ward, name, url, phone=phone, ward_label=label, lgd_code=p.get("lgd_code"),
-                              record_for=f"councillor:TG:{p['slug']}:{ward}" if ward and p.get("slug") else None))
+                              record_for=f"councillor:TG:{p['slug']}:{ward}" if ward and p.get("slug") else None,
+                              pos=cells.pos, extra={"src_url": url}))
     return recs
 
 
