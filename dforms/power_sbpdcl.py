@@ -16,7 +16,7 @@ from dforms._power import raw
 from dforms._power_bihar import DES, parse
 from dforms.power_nbpdcl import dedupe
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout) + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (office tree)"     # source trail (provenance.py): how this reader reads its sources
 
 TITLE = re.compile(r"(?i)\b(CHAIRMAN|SECRETARY|DIRECTOR|PRIVATE|GENERAL MANAGER|ENGINEER|MANAGER|OFFICER|ASSISTANT|CONTROL)\b"
                    r"|CUM-?\s*MD\b|\bMD\s*-|\bTO\s+C?MD\b|^(OSD|HC|DIR|PS|OS|CMD)\b|-")

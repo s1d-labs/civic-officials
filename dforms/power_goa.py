@@ -83,13 +83,14 @@ def entries(pages, pos=None):
             # the numbers of the block before it: "Sub Div-II, Cuncolim" starts at 12)
             cur = [head, int(m.group(1)), [], [], []]
             out.append(cur)
-            at.append([])
+            at.append([li])                              # the numbered line (its number may stand alone)
             s = m.group(2).strip()
             if not s:
                 continue
         if cur is None:
             continue
-        at[-1].append(li)
+        if at[-1][-1] != li:
+            at[-1].append(li)
         rest, ext = [], False
         for tok in re.split(r"\s+", s):
             t = tok.strip(",;")

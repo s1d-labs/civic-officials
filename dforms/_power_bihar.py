@@ -9,7 +9,7 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, clean, phone
+from dforms._power import tr_pos, Out, clean, phone
 
 DES = re.compile(r"^\s*(E\.?\s?E\.?\s?E|EEE|AEE|JEE|ESE|SBO|PSS|EE|AE|JE|AA|RO|AO|A\.O|AITM|ITM|ASSISTANT|MANAGER|"
                  r"REVENUE|DGM|GM|CE|CHIEF|SR\.?|SENIOR|DEPUTY|UNDER|FUSE|CGRF|SECTION|LAND|LAW|DLA|PROJECT|DIRECTOR|"
@@ -125,5 +125,5 @@ def parse(html, module, state, discom, url, desig_first):
         if h.startswith("fuse"):
             parents = {"division": division} if division else {}
             division = None
-        out.add(key, level, area, post=d, name=name, phone_=nums, parents=parents, block=head)
+        out.add(key, level, area, post=d, name=name, phone_=nums, parents=parents, block=head, src_pos=tr_pos(el))
     return out.recs

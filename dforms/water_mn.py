@@ -8,9 +8,10 @@ Record ids: dept:water_mn:<slug of the office without "i/c">[:n].
 """
 import re
 
+import provenance
 from dforms import _esw
 
-METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "water_mn"
 URL = "https://www.phedmanipur.gov.in/wp-content/uploads/2026/06/SUO-MOTU-DISCLOSURES-PHED-30-06-2026.pdf"
@@ -29,32 +30,34 @@ def _runs(line):
 def directory(pages):
     """(as-on date, [{"no", "name", "office", "phone", "email"}]) from the pages of the directory section."""
     lines, date, on = [], None, False
-    for text in pages:
-        for ln in text.splitlines():
+    where = []
+    for pn, text in enumerate(pages, 1):
+        for li, ln in enumerate(text.splitlines(), 1):
             if re.search(r"Directory of officers", ln, re.I):
                 on = True
                 m = re.search(r"as on\s*(\d{1,2})/(\d{1,2})/(\d{4})", ln)
                 date = f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}" if m else None
                 continue
             if on and re.search(r"Section\s*4\s*\(", ln):
-                return date, _rows(lines)
+                return date, _rows(lines, where)
             if on:
                 lines.append(ln)
-    return date, _rows(lines)
+                where.append((pn, li, ln))
+    return date, _rows(lines, where)
 
 
-def _rows(lines):
+def _rows(lines, where=None):
     # columns from the mobile numbers: name < office < phone < email
     xs = sorted(x for ln in lines for x, t in _runs(ln) if MOBILE.match(t))
     if not xs:
         return []
     px = xs[len(xs) // 2]
     parsed = []
-    for ln in lines:
+    for li, ln in enumerate(lines):
         runs = _runs(ln)
         if not runs or re.match(r"^\s*(S\.|No\b|Officers\b)", ln) or re.fullmatch(r"\s*\d{1,3}\s*", ln):
             continue
-        row = {"no": None, "name": [], "office": [], "phone": [], "email": []}
+        row = {"no": None, "name": [], "office": [], "phone": [], "email": [], "li": li}
         for x, t in runs:
             if x < 4 and re.fullmatch(r"\d{1,2}", t):
                 row["no"] = int(t)
@@ -95,7 +98,12 @@ def _rows(lines):
     out = []
     for a in anchors:
         parts = [parsed[j] for j in sorted(owner) if owner[j] == a]
-        out.append({"no": parsed[a]["no"], "name": " ".join(t for p in parts for t in p["name"]),
+        pos = None
+        if where:                         # source trail: the lines of the row on the page of its numbered line
+            at = [where[p["li"]] for p in parts if where[p["li"]][0] == where[parsed[a]["li"]][0]]
+            pos = provenance.line_pos(at[0][0], at[0][1], "\n".join(w[2] for w in at),
+                                      lines=[w[1] for w in at] if len(at) > 1 else None)
+        out.append({"no": parsed[a]["no"], **({"pos": pos} if pos else {}), "name": " ".join(t for p in parts for t in p["name"]),
                     "office": " ".join(t for p in parts for t in p["office"]),
                     "phone": " ".join(t for p in parts for t in p["phone"]),
                     "email": "".join(t.replace(" ", "") for p in parts for t in p["email"])})
@@ -126,7 +134,8 @@ def parse(pages, url=URL):
         seen.add(k)
         recs.append(_esw.record(MODULE, k, dept="water", level=_level(core), area=area, post=office, name=_esw.clean(r["name"]),
                                 phone=_esw.phones(r["phone"]), email=_esw.emails(r["email"]), state="MN",
-                                office_id=f"MN-PHED-{k.replace(':', '-')}", org=ORG, source=url, last_updated=date))
+                                office_id=f"MN-PHED-{k.replace(':', '-')}", org=ORG, source=url, last_updated=date,
+                                src_pos=r.get("pos")))
     return recs
 
 
