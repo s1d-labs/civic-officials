@@ -13,6 +13,16 @@ for the year (2025 or 2026) and returns OCR items of 6 pages (kind form-cw_gj). 
 others read the saved copy (payload "stored", as in cforms/tn.py).
 fetch() is gj.parse() (grid from drawn borders, Tesseract guj for names and body titles) with the election label of the item.
 Record id councillor:GJ:<file slug>-<body hash>:<ward>-<seat>.
+
+February 2025 (found 2026-11-12): the results are in the Gujarat Government Gazette itself, egazette.gujarat.gov.in
+(GazettesSearch.aspx: an ASP.NET search by date, no captcha; files ViewPdf2.aspx?docid=...&cdbid=..., a plain GET). Searched
+18-24 Feb 2025, Government Central Press, Extraordinary: 30 "Part IV-C Extra" notices, Extra No. 89-118 (No. 89, 18 pp: Junagadh
+Municipal Corporation 60 seats, then the Junagadh district nagarpalikas). Same six-column table as 2026: gj.parse reads them
+unchanged (text-layer check of No. 89: 236 rows, every key unique). Two seed files, made from that search:
+- seeds/ocr_councillors_gj25_save.json: payload "save_only": one request through an Indian proxy, the PDF goes to the bucket, no
+  OCR and no records (the proxy is not held during OCR).
+- seeds/stored_councillors_gj25.json: the OCR items (whole notice, pages 1-200, clamped to the file), payload "stored" = the
+  saved copy, for GitHub runners without a proxy (project -ocr-b). Queue them after the save items are done.
 """
 import hashlib
 import io
@@ -110,7 +120,20 @@ def items(get):
     return out
 
 
+def save_only(p, get):
+    """Fetch the PDF once and keep it in the bucket (the key the OCR items read as "stored"); no OCR, no records."""
+    r = get(p["url"])
+    if r is None:
+        return [], [], "no answer"
+    if not r.content.startswith(b"%PDF"):
+        return [], [], "not a pdf"
+    key = hashlib.sha1(p["url"].encode()).hexdigest()[:12]
+    return [], [(f"councillors/GJ/{key}.pdf", r.content, "application/pdf")], ""
+
+
 def fetch(p, get):
+    if p.get("save_only"):
+        return save_only(p, get)
     if not gj.tools("guj"):
         return [], [], "tesseract not available"
     content = tn.stored(p, get)
