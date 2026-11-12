@@ -221,14 +221,23 @@ def records(wards, p):
                    "party": c["party"], "votes": c["votes"], "vote_pct": c["vote_pct"], "result": c["result"],
                    "unopposed": "போட்டியின்றி" in c["result"], "position": "Ward Member",
                    **{x: w[x] for x in ("electors", "polled", "valid", "invalid", "poll_pct") if x in w},
-                   "candidates": w["candidates"], "election": "Tamil Nadu 2022", "url": p.get("url"), "page": w["page"],
-                   "read": "text layer (mPDF Tamil glyphs mapped)"}
+                   "candidates": w["candidates"], "election": p.get("election") or "Tamil Nadu 2022", "url": p.get("url"),
+                   "page": w["page"], "read": "text layer (mPDF Tamil glyphs mapped)"}
+            if p.get("bye_election"):
+                # a casual (bye-) election: the winner holds the seat now; the general-election winner of the same ward
+                # (record id without the suffix, "replaces") is stale
+                rec["bye_election"] = True
+                rec["replaces"] = None      # set below, from the record id
             if k < len(w.get("winner_pos") or []):
                 rec["src_pos"] = w["winner_pos"][k]
             if p.get("_src"):
                 rec["src"] = dict(p["_src"])
             slug = re.sub(r"\s+", "-", w["body"])[:60]
-            rid = f"councillor:TN:tx:{p.get('type')}-{p.get('district_code')}:{slug}:{w['ward_no']}"
+            base = f"councillor:TN:tx:{p.get('type')}-{p.get('district_code')}:{slug}:{w['ward_no']}"
+            if p.get("bye_election"):
+                rec["replaces"] = base       # the text-layer record (cforms/tn_text) of the 2022 winner, and its OCR record (cforms/tn)
+                rec["replaces_also"] = f"councillor:TN:{p.get('type')}-{p.get('district_code')}:{slug[:40]}:{w['ward_no']}"
+            rid = base + (p.get("id_suffix") or "")
             n = seen.get(rid, 0)
             seen[rid] = n + 1
             recs.append((rid if n == 0 else f"{rid}:{n + 1}", rec))

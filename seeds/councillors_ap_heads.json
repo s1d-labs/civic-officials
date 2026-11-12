@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ap-heads-2026-mayor",
+  "payload": {
+   "kind": "form-ap_heads",
+   "state": "AP",
+   "url": "https://sec.ap.gov.in/Uploads/Doc26/Rsls/Mayors%20-%20Results%202026.pdf",
+   "post": "Mayor"
+  }
+ },
+ {
+  "key": "ap-heads-2026-chairperson",
+  "payload": {
+   "kind": "form-ap_heads",
+   "state": "AP",
+   "url": "https://sec.ap.gov.in/Uploads/Doc26/Rsls/Chairpersons%20-%20Results,%202026.pdf",
+   "post": "Chairperson"
+  }
+ }
+]
