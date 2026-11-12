@@ -101,3 +101,51 @@ def test_pb_heads_only():
     assert len(items) == 90 and all(i["payload"]["heads_only"] and i["payload"]["slug"] for i in items)
     old = {i["payload"]["mcid"] for i in json.loads((SEEDS / "councillors_cr_pb.json").read_text())}
     assert not old & {i["payload"]["mcid"] for i in items}
+
+
+# Chhattisgarh June 2026 general and bye-elections (cforms/cw_cg26.py): files without a text layer; the grid is checked here with
+# a stand-in for Tesseract (cells answer with their column number, or the ward numbers of the page), the OCR runs on runners.
+def _cg26_seed(post):
+    return next(i["payload"] for i in json.loads((SEEDS / "ocr_councillors_cw_cg26.json").read_text()) if i["payload"]["post"] == post)
+
+
+def test_cg26_heads_grid():
+    from cforms import cw_cg26
+    seen = []
+
+    def ocr(pdf, pg, boxes):
+        seen.append(len(boxes))
+        return ["राम कुमार" if i % 5 == 3 else "भारतीय जनता पाट" if i % 5 == 4 else "" for i in range(len(boxes))]
+    recs = cw_cg26.parse(str(DATA / "cw_cg26_heads.pdf"), _cg26_seed("chair"), ocr=ocr)
+    d = dict(recs)
+    assert seen == [25] and len(recs) == 5
+    assert list(d) == ["councillor:CG:2026:bamhanidih:chair", "councillor:CG:2026:shivnandanpur:chair",
+                       "councillor:CG:2026:palari-balod:chair", "councillor:CG:2026:ghumka:chair",
+                       "councillor:CG:2026:sahaspur-lohara:chair"]
+    s = d["councillor:CG:2026:sahaspur-lohara:chair"]
+    assert s["bye_election"] is True and s["replaces"] == "councillor:CG:2025:sahaspur-lohara:chair" and s["lgd_code"] == "273468"
+    g = d["councillor:CG:2026:ghumka:chair"]
+    assert g["party"] == "BJP" and g["name"] == "राम कुमार" and "bye_election" not in g or g["bye_election"] is False
+    assert g["src_pos"]["part"] == "general" and g["src_pos"]["page"] == 1
+
+
+def test_cg26_bye_members_grid():
+    from cforms import cw_cg26
+    wards = ["16", "29", "15", "8", "14", "6", "7", "1", "12", "13", "9"]
+    boxes_seen = []
+
+    def ocr(pdf, pg, boxes):
+        boxes_seen.extend(boxes)
+        return [wards[i // 7] if i % 7 == 3 else "" for i in range(len(boxes))]
+    p = {**_cg26_seed("member"), "first_part": "bye"}
+    recs = cw_cg26.parse(str(DATA / "cw_cg26_members_p3.pdf"), p, ocr=ocr)
+    ids = [r for r, _ in recs]
+    assert len(recs) == 11 and ids[0] == "councillor:CG:2026:jagdalpur:16" and ids[4] == "councillor:CG:2026:jashpur-nagar:14"
+    assert ids[-1] == "councillor:CG:2026:pakhajur:9"
+    d = dict(recs)
+    assert d["councillor:CG:2026:farasgaon:12"]["replaces"] == "councillor:CG:2025:farasgaon:12"
+    assert all(x["bye_election"] and x["election"] == cw_cg26.BYE for x in d.values())
+    # Jashpur Nagar: district and body cells merged over its two rows, cut once from the top of the merge
+    assert boxes_seen[3 * 7 + 1] == boxes_seen[4 * 7 + 1] and boxes_seen[3 * 7 + 5] != boxes_seen[4 * 7 + 5]
+    # Kanker: the district merged over two bodies, the body cells not
+    assert boxes_seen[9 * 7 + 1] == boxes_seen[10 * 7 + 1] and boxes_seen[9 * 7 + 2] != boxes_seen[10 * 7 + 2]

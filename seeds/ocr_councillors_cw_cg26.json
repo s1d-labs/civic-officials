@@ -1,0 +1,178 @@
+[
+ {
+  "key": "cw-cg-2026-06-chair",
+  "payload": {
+   "kind": "form-cw_cg26",
+   "state": "CG",
+   "post": "chair",
+   "url": "https://cgsec.gov.in/Notification2026/election/%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%9A%E0%A4%BF%E0%A4%A4%20%E0%A4%85%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%95%E0%A5%8D%E0%A4%B7%20%E0%A4%95%E0%A5%80%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80.pdf",
+   "expected": 5,
+   "bodies": {
+    "general": [
+     [
+      1,
+      1,
+      "Bamhanidih",
+      "301919",
+      "Janjgir-Champa",
+      "bamhanidih"
+     ],
+     [
+      2,
+      2,
+      "Shivnandanpur",
+      "301867",
+      "Surajpur",
+      "shivnandanpur"
+     ],
+     [
+      3,
+      3,
+      "Palari",
+      "305304",
+      "Balod",
+      "palari-balod"
+     ],
+     [
+      4,
+      4,
+      "Ghumka",
+      "301920",
+      "Rajnandgaon",
+      "ghumka"
+     ]
+    ],
+    "bye": [
+     [
+      1,
+      1,
+      "Sahaspur-Lohara",
+      "273468",
+      "Kabeerdham",
+      "sahaspur-lohara"
+     ]
+    ]
+   }
+  }
+ },
+ {
+  "key": "cw-cg-2026-06-members",
+  "payload": {
+   "kind": "form-cw_cg26",
+   "state": "CG",
+   "post": "member",
+   "url": "https://cgsec.gov.in/Notification2026/election/%E0%A4%A8%E0%A4%BF%E0%A4%B0%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%9A%E0%A4%BF%E0%A4%A4%20%E0%A4%AA%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%B7%E0%A4%A6%E0%A5%8B%E0%A4%82%20%E0%A4%95%E0%A5%80%20%E0%A4%9C%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%80.pdf",
+   "expected": 71,
+   "bodies": {
+    "general": [
+     [
+      1,
+      15,
+      "Bamhanidih",
+      "301919",
+      "Janjgir-Champa",
+      "bamhanidih"
+     ],
+     [
+      16,
+      30,
+      "Shivnandanpur",
+      "301867",
+      "Surajpur",
+      "shivnandanpur"
+     ],
+     [
+      31,
+      45,
+      "Palari",
+      "305304",
+      "Balod",
+      "palari-balod"
+     ],
+     [
+      46,
+      60,
+      "Ghumka",
+      "301920",
+      "Rajnandgaon",
+      "ghumka"
+     ]
+    ],
+    "bye": [
+     [
+      1,
+      1,
+      "Jagdalpur",
+      "250665",
+      "Bastar",
+      "jagdalpur"
+     ],
+     [
+      2,
+      2,
+      "Bilaspur",
+      "250616",
+      "Bilaspur",
+      "bilaspur"
+     ],
+     [
+      3,
+      3,
+      "Dipka",
+      "250599",
+      "Korba",
+      "dipka"
+     ],
+     [
+      4,
+      5,
+      "Jashpur Nagar",
+      "250590",
+      "Jashpur",
+      "jashpur-nagar"
+     ],
+     [
+      6,
+      6,
+      "Kirodimal Nagar",
+      "253280",
+      "Raigarh",
+      "kirodimal-nagar"
+     ],
+     [
+      7,
+      7,
+      "Sargaon",
+      "253176",
+      "Mungeli",
+      "sargaon"
+     ],
+     [
+      8,
+      9,
+      "Farasgaon",
+      "265121",
+      "Kondagaon",
+      "farasgaon"
+     ],
+     [
+      10,
+      10,
+      "Charama",
+      "253144",
+      "Uttar Bastar Kanker",
+      "charama"
+     ],
+     [
+      11,
+      11,
+      "Pakhanjur",
+      "253146",
+      "Uttar Bastar Kanker",
+      "pakhajur"
+     ]
+    ]
+   }
+  }
+ }
+]
