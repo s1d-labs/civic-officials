@@ -1,0 +1,26 @@
+[
+ {
+  "key": "wm2_uk_eregistration-ward-boundaries",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://gis.eregistrationukgov.in/server/rest/services/UKSTAMPS/SRO_Circle_Rate_Main_Basemap/MapServer/16",
+   "where": "1=1",
+   "oid": "OBJECTID_1",
+   "page": 1000,
+   "state": "5",
+   "india_only": false,
+   "source": "uk_eregistration",
+   "chunk": "ward_boundaries",
+   "fields": {
+    "ward_no": "wardcode",
+    "ward_name": "wardname",
+    "body_name": "ulbname",
+    "body_code": "ulbcode",
+    "district": "districtna"
+   },
+   "ward_kind": "election",
+   "vintage": "2022-01",
+   "note": "Uttarakhand Stamps and Registration GIS (public citizen portal, Web AppBuilder item 3cccaa6a8cb54d3990d471d30a252a88), layer 16 Ward_Boundaries: 721 features, a copy of the SBM-Urban ward layer of Jan 2022 (same fields: ulbcode = SBM code, status OPEN/APPROVED). New over SBM live: Lohaghat 7 wards (SBM live has 2). Many features have no ulbname/ulbcode (Dehradun, Haldwani, Kotdwar, Haridwar): place them by geometry."
+  }
+ }
+]

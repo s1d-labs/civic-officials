@@ -1,0 +1,56 @@
+[
+ {
+  "key": "wm2_wbamrut-wb-ward-boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://nagargispariseva.wb.gov.in/geoserver/WBAMRUT/wfs",
+   "state": "19",
+   "india_only": false,
+   "source": "wbamrut_wfs",
+   "vintage": "",
+   "layer": "WBAMRUT:wb_ward_boundary",
+   "chunk": "wb_ward_boundary",
+   "page": 100,
+   "sort": "MUN_ID",
+   "fields": {
+    "ward_no": "Ward_No",
+    "body_name": "Name",
+    "body_code": "ULB_Code",
+    "district": "Dist_Code"
+   },
+   "ward_kind": ""
+  }
+ },
+ {
+  "key": "wm2_wbamrut-revenue-ward-boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://nagargispariseva.wb.gov.in/geoserver/WBAMRUT/wfs",
+   "state": "19",
+   "india_only": false,
+   "source": "wbamrut_wfs",
+   "vintage": "",
+   "layer": "WBAMRUT:Revenue_Ward_Boundary",
+   "chunk": "revenue_ward_boundary",
+   "page": 100,
+   "fields": {},
+   "ward_kind": "revenue"
+  }
+ },
+ {
+  "key": "wm2_wbamrut-wb-municipal-boundary",
+  "payload": {
+   "reader": "wm2_wfs",
+   "url": "https://nagargispariseva.wb.gov.in/geoserver/WBAMRUT/wfs",
+   "state": "19",
+   "india_only": false,
+   "source": "wbamrut_wfs",
+   "vintage": "",
+   "layer": "WBAMRUT:wb_municipal_boundary",
+   "chunk": "wb_municipal_boundary",
+   "page": 100,
+   "kind": "town_boundary",
+   "district": "Dist_Code"
+  }
+ }
+]
