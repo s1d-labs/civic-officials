@@ -1,0 +1,45 @@
+[
+ {
+  "key": "wm2_kgis-ward-dynamic",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://kgis.ksrsac.in/kgismaps2/rest/services/Boundaries/Ward_Dynamic/MapServer/0",
+   "where": "1=1",
+   "oid": "OBJECTID",
+   "page": 1000,
+   "state": "29",
+   "india_only": false,
+   "source": "kgis",
+   "chunk": "ward_dynamic",
+   "fields": {
+    "ward_no": "KGISWardNo",
+    "ward_name": "KGISWardName",
+    "body_code": "KGISTownCode"
+   },
+   "ward_kind": "election",
+   "vintage": "",
+   "expect": 7250
+  }
+ },
+ {
+  "key": "wm2_kgis-town",
+  "payload": {
+   "reader": "wm2_arcgis",
+   "url": "https://kgis.ksrsac.in/kgismaps2/rest/services/Boundaries/Admin_Dynamic/MapServer/4",
+   "where": "1=1",
+   "oid": "OBJECTID",
+   "page": 1000,
+   "state": "29",
+   "india_only": false,
+   "source": "kgis_towns",
+   "chunk": "town",
+   "fields": {
+    "body_name": "KGISTownName",
+    "body_code": "LGD_TownCode"
+   },
+   "ward_kind": "",
+   "vintage": "",
+   "expect": 315
+  }
+ }
+]

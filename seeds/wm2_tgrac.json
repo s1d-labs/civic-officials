@@ -1,0 +1,24 @@
+[
+ {
+  "key": "wm2_tgrac-his-wards-municipality",
+  "payload": {
+   "reader": "wm2_arcgis_json",
+   "url": "https://www.tgrac.telangana.gov.in/arcgis/rest/services/GovtHospitals_Folder/Health_Facilities_Mapping/MapServer/51",
+   "where": "1=1",
+   "oid": "FID",
+   "page": 200,
+   "state": "36",
+   "india_only": false,
+   "source": "tgrac_his",
+   "chunk": "wards_municipality",
+   "fields": {
+    "ward_no": "Ward_No",
+    "ward_name": "Name",
+    "body_name": "ULB_Name"
+   },
+   "ward_kind": "election",
+   "vintage": "",
+   "expect": 3461
+  }
+ }
+]

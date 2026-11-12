@@ -1,0 +1,68 @@
+[
+ {
+  "key": "wm2_harsac-mcf-ward-boundary",
+  "payload": {
+   "reader": "wm2_arcgis_town",
+   "url": "https://hsacggm.in/server/rest/services/OneMap_Faridabad/MCF/MapServer/0",
+   "where": "1=1",
+   "oid": "objectid_1",
+   "page": 1000,
+   "state": "6",
+   "india_only": false,
+   "source": "harsac",
+   "chunk": "mcf_ward_boundary",
+   "body_name": "Faridabad",
+   "body": "248585",
+   "district": "Faridabad",
+   "fields": {
+    "ward_no": "ward_no"
+   },
+   "ward_kind": "election",
+   "vintage": ""
+  }
+ },
+ {
+  "key": "wm2_harsac-mcg-ward-boundary-2023",
+  "payload": {
+   "reader": "wm2_arcgis_town",
+   "url": "https://hsacggm.in/server/rest/services/OneMap_Gurugram/MCG_Layers/MapServer/2",
+   "where": "1=1",
+   "oid": "OBJECTID",
+   "page": 1000,
+   "state": "6",
+   "india_only": false,
+   "source": "harsac",
+   "chunk": "mcg_ward_boundary_2023",
+   "body_name": "Gurugram",
+   "body": "248576",
+   "district": "Gurugram",
+   "fields": {
+    "ward_no": "ward_no"
+   },
+   "ward_kind": "election",
+   "vintage": "2023"
+  }
+ },
+ {
+  "key": "wm2_harsac-mcm-ward-boundary-2023",
+  "payload": {
+   "reader": "wm2_arcgis_town",
+   "url": "https://hsacggm.in/server/rest/services/OneMap_Gurugram/MCM_Layers/MapServer/2",
+   "where": "1=1",
+   "oid": "OBJECTID",
+   "page": 1000,
+   "state": "6",
+   "india_only": false,
+   "source": "harsac",
+   "chunk": "mcm_ward_boundary_2023",
+   "body_name": "Manesar",
+   "body": "297117",
+   "district": "Gurugram",
+   "fields": {
+    "ward_no": "ward_no"
+   },
+   "ward_kind": "election",
+   "vintage": "2023"
+  }
+ }
+]
