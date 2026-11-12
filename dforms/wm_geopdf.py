@@ -19,6 +19,8 @@ import io
 import json
 import re
 
+import provenance
+
 METHOD = "file saved to the bucket (GeoPDF, read later)"     # source trail (provenance.py): how this reader reads its sources
 
 ACCEPT = (b"%PDF-", b"\x89PNG", b"\xff\xd8\xff", b"II*\x00", b"MM\x00*")
@@ -99,6 +101,7 @@ def fetch(p, get):
     body = re.sub(r"[^A-Za-z0-9._-]+", "-", str(p.get("body") or "unknown"))
     path = f"wardmaps/{p.get('state', 'XX')}/{body}/{sha[:16]}.{ext}"
     rec = {"type": "wm_file", "url": p["url"], "file": path, "bytes": len(content), "sha256": sha, "pages": pages(content),
+           **provenance.at(r),          # the answer the file came from (the LFS link when the first url gave a pointer)
            "geo": geo_flag(content), **{k: p[k] for k in ("body", "body_name", "state", "ward", "all", "stage", "source", "path")
                                           if k in p}}
     return [(f"wm_file:{sha[:16]}", rec)], [(path, content, "application/pdf" if ext == "pdf" else f"image/{ext}")], ""

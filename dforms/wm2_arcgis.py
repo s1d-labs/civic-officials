@@ -39,12 +39,17 @@ def towns(fc, fields):
     """{body key: {"body_name", "body_code", "district", "wards": set, "features": n}} from a FeatureCollection."""
     fb, fc_, fd, fw = (fields.get(k) for k in ("body_name", "body_code", "district", "ward_no"))
     out = {}
-    for f in fc.get("features") or []:
+    for i, f in enumerate(fc.get("features") or []):
         pr = f.get("properties") or {}
         name, code, dist = _txt(pr.get(fb)) if fb else "", _txt(pr.get(fc_)) if fc_ else "", _txt(pr.get(fd)) if fd else ""
         key = "-".join(x for x in (code, _slug(name), _slug(dist) if not code else "") if x) or "all"
-        t = out.setdefault(key, {"body_name": name, "body_code": code, "district": dist, "wards": set(), "features": 0})
+        t = out.setdefault(key, {"body_name": name, "body_code": code, "district": dist, "wards": set(), "features": 0,
+                                 "index": [], "ids": []})
         t["features"] += 1
+        t["index"].append(i)                         # source trail: the feature's place in the stored FeatureCollection
+        fid = f.get("id", pr.get("objectid", pr.get("OBJECTID")))
+        if fid is not None:
+            t["ids"].append(fid)
         if fw:
             w = _txt(pr.get(fw))
             if w:
@@ -68,5 +73,6 @@ def fetch(p, get):
             "type": "wm_layer_town", "source": source, "state": state, "body_name": t["body_name"], "body_code": t["body_code"],
             "district": t["district"], "wards": len(t["wards"]) if fields.get("ward_no") else t["features"],
             "features": t["features"], "file": path, "url": p["url"], "where": where,
-            "ward_kind": p.get("ward_kind", ""), "vintage": p.get("vintage", "")}))
+            "ward_kind": p.get("ward_kind", ""), "vintage": p.get("vintage", ""),
+            "src_pos": {"layer_file": path, "feature_index": t["index"], **({"feature_id": t["ids"]} if t["ids"] else {})}}))
     return recs, [(path, blob, ctype)], ""

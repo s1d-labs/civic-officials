@@ -109,9 +109,11 @@ def _ward(v):
 
 def towns(fc, path, p):
     by = collections.defaultdict(list)
-    for f in fc.get("features") or []:
+    at = collections.defaultdict(list)            # source trail: feature places in the stored FeatureCollection
+    for i, f in enumerate(fc.get("features") or []):
         pr = f.get("properties") or {}
         by[_txt(pr.get("CITY_NAME"))].append(pr)
+        at[_txt(pr.get("CITY_NAME"))].append((i, f.get("id", pr.get("OBJECTID", pr.get("objectid")))))
     recs = []
     for name, rows in sorted(by.items()):
         dist = collections.Counter(_txt(r.get("DISTRICT_NAME")) for r in rows if _txt(r.get("DISTRICT_NAME")))
@@ -125,7 +127,9 @@ def towns(fc, path, p):
             "area_names": dict(area) if set(area) != {name} else {}, "wards": len(wards), "features": len(rows),
             "created_first": int(min(made)) if made else None, "created_last": int(max(made)) if made else None,
             "last_edit": int(max(edit)) if edit else None, "file": path, "url": p["url"], "where": p.get("where") or "1=1",
-            "ward_kind": p.get("ward_kind", ""), "vintage": p.get("vintage", "")}))
+            "ward_kind": p.get("ward_kind", ""), "vintage": p.get("vintage", ""),
+            "src_pos": {"layer_file": path, "feature_index": [i for i, _ in at[name]],
+                        "feature_id": [x for _, x in at[name] if x is not None]}}))
     return recs
 
 

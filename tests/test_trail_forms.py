@@ -227,3 +227,28 @@ def test_swf_as_card_positions():
     assert adc["src_url"] == adc["page"] and adc["src_pos"]["card"] >= 1
     dc = by["dept:swf_as:kamrup.assam.gov.in:deba-kumar-mishra-acs:district-commissioner"]
     assert dc["src_url"].endswith("contact-us") and dc["src_pos"]["card"] >= 1
+
+
+def test_wm2_town_records_name_their_features():
+    import gzip as gz
+    from dforms import wm2_arcgis, wm2_sbm
+    fc = json.loads((DATA / "wm2" / "sbm_3wards.geojson").read_text())
+    recs = dict(wm2_sbm.towns(fc, "wardmaps/x.geojson.gz", "u", "33"))
+    t = recs["wm2_sbm:803442"]
+    assert t["src_pos"]["layer_file"] == "wardmaps/x.geojson.gz" and len(t["src_pos"]["feature_index"]) == 2
+    assert all(fc["features"][i]["properties"]["ulbcode"].strip() == "803442" for i in t["src_pos"]["feature_index"])
+    assert set(t["src_pos"]["feature_id"]) <= {f["id"] for f in fc["features"]}
+    tw = wm2_arcgis.towns(fc, {"body_code": "ulbcode"})
+    assert sorted(i for v in tw.values() for i in v["index"]) == [0, 1, 2]
+    assert gz  # noqa
+
+
+def test_wm_geopdf_names_the_answer():
+    from dforms import wm_geopdf
+    pdf = b"%PDF-1.4 map"
+
+    class R:
+        content, url, status_code = pdf, "https://raw.example/x.pdf", 200
+
+    recs, files, why = wm_geopdf.fetch({"url": "https://raw.example/x.pdf", "state": "MH", "body": "b"}, lambda u, **k: R())
+    assert why == "" and recs[0][1]["src_sha256"] == hashlib.sha256(pdf).hexdigest() and recs[0][1]["src_url"] == R.url
