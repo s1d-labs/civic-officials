@@ -26,6 +26,7 @@ from urllib.parse import urljoin, urlsplit
 import requests
 from bs4 import BeautifulSoup
 
+import archive_first
 from certs_trust import trust
 from forms.aspnet import LegacyTLS, insecure_retry
 
@@ -162,8 +163,17 @@ def main(run_fn=None, task="councillors"):
     s = requests.Session()
     s.verify = trust()
     s.headers.update(HEADERS)
+    af = archive_first.from_env()        # ARCHIVE_FIRST=1 + read key in the project env: saved copy before the live site
+    live_only = [af is None]
 
     def get(url, method="GET", data=None, headers=None):
+        if not live_only[0] and archive_first.plain_get(method, data, headers):
+            r = af.lookup(url)
+            hub.metric("archive_hit" if r is not None else "archive_miss")
+            if r is not None:
+                if not r.encoding or r.encoding.lower() == "iso-8859-1":
+                    r.encoding = r.apparent_encoding or "utf-8"
+                return r
         t = time.time()
         try:
             try:
@@ -219,8 +229,19 @@ def main(run_fn=None, task="councillors"):
                 hub.complete([item["key"]], "done", fetched=0)
                 continue
             before = set(getattr(s, "unverified_hosts", ()))
+            if af:
+                af.reset()
             try:
                 recs, files, why = run_fn(item, get)
+                if why and not recs and af and af.used:
+                    # failed on saved copies (a postback needs a live session, or the copy is a different page): once more live
+                    hub.metric("archive_retry_live")
+                    live_only[0] = True
+                    try:
+                        recs, files, why = run_fn(item, get)
+                    finally:
+                        live_only[0] = False
+                    af.reset()
             except ModuleNotFoundError as e:
                 if not str(getattr(e, "name", "") or "").startswith(("dforms.", "cforms.", "forms.")):
                     raise
@@ -235,6 +256,9 @@ def main(run_fn=None, task="councillors"):
                     (urlsplit(url).hostname or "") in s.unverified_hosts:
                 for _, data in recs:     # fetched without a certificate check: say so on every record of the item
                     data["tls_unverified"] = True
+            if af and af.used:
+                for _, data in recs:     # read (partly) from archive.s1d.me copies: the newest capture time used
+                    data["archived_at"] = max(af.used)
             for attempt in range(5):
                 try:
                     if files:
