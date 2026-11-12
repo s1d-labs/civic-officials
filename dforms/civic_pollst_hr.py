@@ -16,9 +16,10 @@ Record ids: dept:civic_pollst_hr:HR-<ac>-<part>. Layer "pollst". The PDF is kept
 """
 import re
 
+from provenance import line_pos
 from dforms import _esw
 
-METHOD = "pdf text (pypdf) + html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout), cells apart by 2+ spaces"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_pollst_hr"
 INDEX = "https://ceoharyana.gov.in/WebCMS/Start/1867"
@@ -95,10 +96,10 @@ def split_first(cs):
 
 def parse(pages, url, district=""):
     recs, seen, ac, ac_name = [], set(), None, ""
-    for text in pages:
+    for pn, text in enumerate(pages, 1):
         lines = text.splitlines()
         rows, cur = [], None
-        for ln in lines:
+        for ln_no, ln in enumerate(lines, 1):
             m = AC_RX.search(ln)
             if m:
                 ac, ac_name = int(m.group(1)), _esw.clean(m.group(2))
@@ -106,7 +107,7 @@ def parse(pages, url, district=""):
             if not ln.strip():
                 continue
             if ROW.match(ln) and len(cells(ln)) >= 3:
-                cur = {"ac": ac, "ac_name": ac_name, "first": split_first(cells(ln)), "more": []}
+                cur = {"ac": ac, "ac_name": ac_name, "first": split_first(cells(ln)), "more": [], "pos": line_pos(pn, ln_no, ln)}
                 rows.append(cur)
             elif cur is not None:
                 cur["more"].append(cells(ln))
@@ -134,7 +135,7 @@ def parse(pages, url, district=""):
                                     district=district, office_id=key, source=url, layer="pollst", ac_no=r["ac"],
                                     ac_name=r["ac_name"], part_no=part, station=building, locality=locality,
                                     polling_area=polling[:1000], town=town.group(1) if town else None,
-                                    ward_no=ward.group(1) if ward else None))
+                                    ward_no=ward.group(1) if ward else None, src_pos=r["pos"]))
     return recs
 
 

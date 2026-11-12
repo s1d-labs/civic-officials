@@ -9,9 +9,10 @@ Record ids: dept:civic_fire_py:<slug of station or post>.
 """
 import re
 
+from provenance import line_pos
 from dforms import _civic, _esw
 
-METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout), columns from the header"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_fire_py"
 URL = "https://fire.py.gov.in/sites/default/files/directory-officers-and-employees.pdf"
@@ -29,8 +30,8 @@ def columns(header):
     return [header.find(w) for w in ("Name", "Designation", "Office Tel")]
 
 
-def rows(text):
-    """[(no, name, designation, phones)] from page 1's layout text."""
+def rows(text, where=None):
+    """[(no, name, designation, phones)] from page 1's layout text. where (a list) gets each row's src_pos."""
     lines = text.split("\n")
     head = next((i for i, x in enumerate(lines) if "Designation" in x and "Name" in x), None)
     if head is None:
@@ -60,12 +61,14 @@ def rows(text):
         no = ROW.match(body[n]).group(1)
         name, post, tel = (_esw.clean(c) for c in cells[n])
         out.append((no, re.sub(r"^\d{1,2}\.\s*", "", name), post, tel))
+        if where is not None:
+            where.append(line_pos(1, head + 2 + n, body[n]))
     return out
 
 
 def parse(text, url=URL):
-    recs, seen = [], set()
-    for no, name, post, tel in rows(text):
+    recs, seen, where = [], set(), []
+    for k, (no, name, post, tel) in enumerate(rows(text, where)):
         post = re.sub(r"\s*-\s*", "-", post).replace("Officer-Additional", "Officer - Additional")
         m = STATION.search(post)
         station = _esw.clean(m.group(1)) if m else ""
@@ -80,7 +83,7 @@ def parse(text, url=URL):
             office=f"{station} Fire Station" if station else "Fire Service Department, Puducherry", post=rank,
             name=re.sub(r"(?i)^thiru\.?\s*", "", name), name_title=name,
             phone=_esw.phones(tel), district=DISTRICTS.get(station.lower(), "Puducherry") if station else None, state="PY",
-            office_id=f"PY-FIRE-{key}", row_no=int(no), source=url))
+            office_id=f"PY-FIRE-{key}", row_no=int(no), source=url, src_pos=where[k]))
     return recs
 
 

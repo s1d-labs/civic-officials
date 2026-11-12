@@ -15,9 +15,10 @@ dept:civic_health_py:PY-<district>-<S.N>.
 """
 import re
 
+from provenance import line_pos
 from dforms import _esw
 
-METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout), columns from the rows"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_health_py"
 URL = "https://www.nhmpuducherry.org.in/WebResources/html_pdf/programme/71.pdf"
@@ -85,11 +86,11 @@ def parse(pages, url=URL):
     """Rows; a line that is not a row (no S.N) continues the row above, cell by cell in the page's columns ("TB Health Visitor
     PHC" with the name and the rest of the place on the next line)."""
     rows, district, cols = [], "Puducherry", None
-    for page in pages:
+    for pn, page in enumerate(pages, 1):
         lines = page.splitlines()
         cols = columns(lines) or cols
         last = None
-        for line in lines:
+        for ln_no, line in enumerate(lines, 1):
             m = PART.search(line)
             if m and not ROW.match(line):
                 district = _esw.clean(m.group(2)).title()
@@ -110,7 +111,7 @@ def parse(pages, url=URL):
             cells = ([(cs[0][0] + len(sno) + 1, first)] if first else []) + cs[1:]
             name, post, place = split3(cells, cols)
             last = {"sno": sno, "district": district, "joined": d.group(1) if d else "", "name": [name] if name else [],
-                    "post": [post] if post else [], "place": [place] if place else []}
+                    "post": [post] if post else [], "place": [place] if place else [], "pos": line_pos(pn, ln_no, line)}
             rows.append(last)
     recs, seen = [], set()
     for r in rows:
@@ -123,7 +124,7 @@ def parse(pages, url=URL):
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept="health", level="facility", layer="health", area=place or post, post=post,
                                 name=name, joined=r["joined"], facility_type=ftype(place, post), state="PY",
-                                district=r["district"], office_id=key, source=url))
+                                district=r["district"], office_id=key, source=url, src_pos=r["pos"]))
     return recs
 
 

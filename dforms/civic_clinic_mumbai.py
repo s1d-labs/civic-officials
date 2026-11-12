@@ -15,8 +15,9 @@ Records: dept health, level facility, layer clinic, area = clinic name, facility
 import re
 
 from dforms import _esw
+from provenance import line_pos
 
-METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout), columns by character position"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_clinic_mumbai"
 URL = ("https://portal.mcgm.gov.in/irj/go/km/docs/documents/MCGM%20Department%20List/Public%20Health%20Department/Docs/"
@@ -79,10 +80,10 @@ def put(row, line, address_only=False):
 def rows(pages):
     """Rows as dicts (in order). Lines between two start lines go to the nearer start line (ties: the one above)."""
     out, section = [], ""
-    for page in pages:
-        lines = [ln for ln in page.splitlines() if ln.strip()]
+    for pn, page in enumerate(pages, 1):
+        lines = [(k, ln) for k, ln in enumerate(page.splitlines(), 1) if ln.strip()]
         starts, body = [], []
-        for ln in lines:
+        for k, ln in lines:
             m = SECTION.match(ln)
             if m and not START.match(ln):
                 body.append(("section", m.group(1) or m.group(2)))
@@ -90,14 +91,14 @@ def rows(pages):
             if HEADER.match(ln) or TITLE.match(ln):
                 continue
             s = START.match(ln)
-            body.append(("start", ln, s.group(1), s.group(2)) if s else ("line", ln))
+            body.append(("start", ln, s.group(1), s.group(2), k) if s else ("line", ln))
         idx = [i for i, b in enumerate(body) if b[0] == "start"]
         sec_at = {}
         for i, b in enumerate(body):
             if b[0] == "section":
                 section = b[1]
             sec_at[i] = section
-        page_rows = {i: blank(body[i][2], body[i][3], sec_at[i]) for i in idx}
+        page_rows = {i: {**blank(body[i][2], body[i][3], sec_at[i]), "pos": line_pos(pn, body[i][4], body[i][1])} for i in idx}
         for i, b in enumerate(body):
             if b[0] == "start":
                 put(page_rows[i], b[1])
@@ -145,7 +146,7 @@ def parse(pages, url=URL):
                                 pin=re.sub(r"\s", "", pin.group()) if pin else "", ward=r["ward"],
                                 ward_printed=bool(r["ward"]), zone=r["zone"], location=r["location"], timing=timing,
                                 state="MH", district="Mumbai", body="Municipal Corporation of Greater Mumbai", office_id=key,
-                                source=url))
+                                source=url, src_pos=r.get("pos")))
     return recs
 
 

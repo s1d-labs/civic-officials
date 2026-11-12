@@ -17,7 +17,7 @@ import re
 
 from dforms import _emerg
 
-METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf ruled table (pypdf text positions inside the drawn rules)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "emerg_osc_mp"
 URL = "https://mpwcdmis.gov.in/Downloads/OSC/M.P.%20OSC_list.Pdf"
@@ -45,10 +45,11 @@ def parts(content):
     return [page_parts(reader, page) for page in reader.pages]
 
 
-def bands(pages):
-    """Each table row as {role: text} (header row and title left out); pages = parts(content)."""
+def bands(pages, where=None):
+    """Each table row as {role: text} (header row and title left out); pages = parts(content). where (a list) gets each row's
+    src_pos {"page", "row": n-th ruled row from the page top, "top", "bottom" in PDF points}."""
     rows, roles = [], None
-    for texts, hl, vl in pages:
+    for pn, (texts, hl, vl) in enumerate(pages, 1):
         if not vl or not hl:
             continue
         cols = _uniq([x for x, _, _ in vl])
@@ -61,6 +62,7 @@ def bands(pages):
             if b is not None and c is not None:
                 cells.setdefault(b, {}).setdefault(c, []).append((-y, x, t))
         for b in sorted(cells, reverse=True):      # top of the page first
+            band = len(ys) - 1 - b
             row = {c: _emerg.clean(" ".join(t for _, _, t in sorted(v))) for c, v in cells[b].items()}
             head = " ".join(row.values())
             if re.search(r"(?i)mail\s*id", head) and re.search(r"(?i)district", head):
@@ -79,12 +81,14 @@ def bands(pages):
                 if r and row.get(c):
                     out[r] = (out[r] + " " + row[c]) if r in out else row[c]
             rows.append(out)
+            if where is not None:
+                where.append({"page": pn, "row": band, "top": round(ys[b + 1], 1), "bottom": round(ys[b], 1)})
     return rows
 
 
 def records(content, url, pages=None):
-    recs, seen = [], set()
-    for r in bands(pages if pages is not None else parts(content)):
+    recs, seen, where = [], set(), []
+    for n, r in enumerate(bands(pages if pages is not None else parts(content), where)):
         dist = _emerg.clean(r.get("district"))
         if not dist:
             continue
@@ -96,7 +100,7 @@ def records(content, url, pages=None):
             MODULE, key, "osc", dept="women_child", level="facility", area=f"One Stop Centre {dist}",
             post="Centre Administrator", name=r.get("name"), phone=ph, std_code=f"0{m.group(1)}" if m else None,
             email=_emerg.emails(r.get("email") or ""), address=r.get("address"), district=dist, state="MP",
-            office_id=key, source=url))
+            office_id=key, source=url, src_pos=where[n]))
     return recs
 
 

@@ -20,8 +20,9 @@ import re
 
 from dforms import _emerg, _pdftext
 from dforms._util2_pdfgrid import page_parts
+from provenance import line_pos
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf ruled table (pypdf text positions inside the drawn cell rules) + pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "emerg_fire_dl"
 BASE = "https://dfs.delhi.gov.in/sites/default/files/"
@@ -117,10 +118,11 @@ def officers(text):
     return area, out, emails
 
 
-def stations_of(pages):
-    """[(station, {col: cell text})] from the contact PDF's page parts."""
+def stations_of(pages, where=None):
+    """[(station, {col: cell text})] from the contact PDF's page parts. where (a list) gets each station's src_pos:
+    {"page": 1-based, "cell": {"col": 1, "top", "bottom"} in PDF points}."""
     out = []
-    for texts, hl, vl in pages:
+    for pn, (texts, hl, vl) in enumerate(pages, 1):
         cs = cells(texts, hl, vl)
         for (k, hi, lo), txt in sorted(cs.items(), key=lambda kv: -kv[0][1]):
             if k != 1:
@@ -132,22 +134,27 @@ def stations_of(pages):
                     row[COLS[k2]] = t2
             name = _emerg.clean(txt.replace("\n", " ")).lstrip("*").strip()
             out.append((name, row))
+            if where is not None:
+                where.append({"page": pn, "cell": {"col": k, "top": round(hi, 1), "bottom": round(lo, 1)}})
     return out
 
 
 def phone_list(content):
     """{normalised station name: (name as written, phone)} from the station phone PDF."""
     pages, _ = _pdftext.layout_pages(content)
-    return phone_lines("\n".join(pages))
+    at = [(pn, k) for pn, pg in enumerate(pages, 1) for k, _ in enumerate(pg.split("\n"), 1)]
+    return phone_lines("\n".join(pages), at)
 
 
-def phone_lines(text):
-    """phone_list() on the layout text of the PDF."""
+def phone_lines(text, at=None):
+    """phone_list() on the layout text of the PDF. Each value is (name, phone, src_pos of the phone's line); at = (page, line)
+    of each line of text, when known."""
     out, pending = {}, None
-    for line in text.splitlines():
+    for i, line in enumerate(text.splitlines()):
+        pos = line_pos(*at[i], line) if at and i < len(at) else {"line": i + 1, "line_text": line}
         m = re.match(r"^\s*(?:\d{1,3}\s+)?([A-Za-z][A-Za-z0-9 .()/&-]*?[A-Za-z0-9.)])\s{2,}(\d[\d /]*\d(?:\s*EXT\.?-?\s*\d+)?)\s*$", line)
         if m and not re.search(r"(?i)tel\.?\s*no|fire\s+stations", m.group(1)):
-            out.setdefault(norm(m.group(1)), (_emerg.clean(m.group(1)), _emerg.clean(m.group(2))))
+            out.setdefault(norm(m.group(1)), (_emerg.clean(m.group(1)), _emerg.clean(m.group(2)), pos))
             pending = None
             continue
         m = re.match(r"^\s*(?:\d{1,3}\s+)?([A-Za-z][A-Za-z .()/&-]+?)\s*$", line)
@@ -156,7 +163,7 @@ def phone_lines(text):
             continue
         m = re.match(r"^\s*(?:\d{1,3})?\s{2,}(\d{6,}[\d /]*)\s*$", line)
         if m and pending:
-            out.setdefault(norm(pending), (_emerg.clean(pending), _emerg.clean(m.group(1))))
+            out.setdefault(norm(pending), (_emerg.clean(pending), _emerg.clean(m.group(1)), pos))
             pending = None
     return out
 
@@ -175,7 +182,7 @@ def records(pages, phones, url, phones_url=None):
 
     def add(key, **f):
         recs.append(_emerg.record(MODULE, _emerg.unique(key, seen), "fire", dept="fire", state="DL", district=None,
-                                  source=url, **f))
+                                  source=url, src_url=url, **f))
 
     def levels(row):
         sd = officers(row.get("subdivision", ""))
@@ -183,13 +190,17 @@ def records(pages, phones, url, phones_url=None):
         zn = officers(row.get("dcfo", "") or row.get("cfo", ""))
         return sd, dv, zn
 
-    for station, row in stations_of(pages):
+    where = []
+    for si, (station, row) in enumerate(stations_of(pages, where)):
         sd, dv, zn = levels(row)
+        pos = where[si]
         if station and station != "---":
             ph = match_phone(station, phones) if phones else None
             add(f"st-{_emerg.slug(station)}", level="facility", area=station, post="Station Officer",
                 phone=ph[1] if ph else None, phone_source=phones_url if ph else None,
-                subdivision=sd[0] or None, division=dv[0] or None, zone=zn[0] or None)
+                subdivision=sd[0] or None, division=dv[0] or None, zone=zn[0] or None,
+                src_pos={**pos, **({"phone_file": phones_url, "phone_line": ph[2]} if ph and len(ph) > 2 else {})},
+                method="pdf ruled table (pypdf text positions)" + (" + pdf text (layout) of the phone list" if ph else ""))
         for col, (area, offs, emails) in (("subdivision", sd), ("division", dv), ("dcfo", officers(row.get("dcfo", ""))),
                                           ("cfo", officers(row.get("cfo", "")))):
             if not row.get(col) or (col, row[col]) in done:
@@ -201,7 +212,7 @@ def records(pages, phones, url, phones_url=None):
                 key = f"{pre}-{_emerg.slug(area or 'x')}-{_emerg.slug(post) if pre == 'zone' else ''}-{_emerg.slug(name or 'vacant')}"
                 add(re.sub(r"-+", "-", key), level=level, area=area, post=post, name=None if name == "Vacant" else name,
                     vacant=True if name == "Vacant" else None, additional_charge=True if addl else None,
-                    email=_emerg.emails(email))
+                    email=_emerg.emails(email), src_pos={**pos, "col": col}, method="pdf ruled table (pypdf text positions)")
     return recs
 
 
