@@ -1,0 +1,24 @@
+[
+ {
+  "key": "sub4_tr_sdm",
+  "payload": {
+   "reader": "sub4_tr",
+   "kind": "sdm",
+   "url": "https://tripura.gov.in/sites/default/files/2026-11/Sub_Divisional_Magistrates_05_11_2026.pdf",
+   "page": "https://tripura.gov.in/contact-directory",
+   "state": "TR",
+   "india_only": false
+  }
+ },
+ {
+  "key": "sub4_tr_bdo",
+  "payload": {
+   "reader": "sub4_tr",
+   "kind": "bdo",
+   "url": "https://tripura.gov.in/sites/default/files/2026-10/Block_Development_Officers_27_10_2026.pdf",
+   "page": "https://tripura.gov.in/contact-directory",
+   "state": "TR",
+   "india_only": false
+  }
+ }
+]
