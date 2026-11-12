@@ -8,6 +8,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 
+METHOD = "html cards"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_nagpur"
 URL = "https://nagpurpolice.gov.in/police-stations.php"
 
@@ -26,7 +28,7 @@ def std(nums, code="0712"):
 def parse(html, url=URL):
     soup = BeautifulSoup(html, "lxml")
     recs = []
-    for card in soup.select("div.station-card"):
+    for ci, card in enumerate(soup.select("div.station-card"), 1):
         h = card.select_one(".station-name")
         station = clean(h.get_text(" ", strip=True)) if h else None
         if not station:
@@ -49,7 +51,7 @@ def parse(html, url=URL):
         recs.append(rec(M, key(station), area=station, post=clean(ot.get_text(" ", strip=True)) if ot else "Officer in charge",
                         name=clean(on.get_text(" ", strip=True)) if on else None, phone=f.get("landline"),
                         landline=f.get("landline"), email=f.get("email"), address=f.get("place"), map_link=mp["href"] if mp else None,
-                        state="MH", district="Nagpur", source=url))
+                        state="MH", district="Nagpur", source=url, src_pos={"selector": "div.station-card", "card": ci}))
     return uniq(recs)
 
 

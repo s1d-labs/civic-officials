@@ -7,7 +7,10 @@ import re
 
 from bs4 import BeautifulSoup
 
+from dforms import _civic
 from dforms._police import clean, gz, phones, rec, slug
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_nl"
 OC = re.compile(r"^(?:Police Station\s*[–-]\s*)?(?:O/?C|I/?C|OC|IC)\s+(.+)$", re.I)
@@ -23,7 +26,7 @@ def base(name):
     return b or name
 
 
-def rows(html):
+def rows(html, where=None):
     """(label, number cell, officer cell or None, table is a station list) for every row of every table."""
     soup = BeautifulSoup(html, "lxml")
     out = []
@@ -40,6 +43,8 @@ def rows(html):
                 continue
             officer = c[officer_col] if officer_col is not None and officer_col < len(c) else None
             out.append((c[1], c[-1], officer, station_list))
+            if where is not None:
+                where.append(_civic.tr_pos(tr))
     return out
 
 
@@ -53,7 +58,8 @@ def records(module, html, p):
     upd = last_updated(html)
     by = {}
     order = []
-    for label, num, officer, station_list in rows(html):
+    where, pos_of = [], {}
+    for ri, (label, num, officer, station_list) in enumerate(rows(html, where)):
         ph = phones(num)
         if not ph or re.fullmatch(r"x+", num or "", re.I):
             continue
@@ -63,6 +69,7 @@ def records(module, html, p):
             key = f"{slug(district)}:{slug(label)}"
             by[key] = dict(level=level, area=district if level == "district" else label, post=label, phone=ph)
             order.append(key)
+            pos_of[key] = [where[ri]]
             continue
         if not (station_list or m or PS.search(label)) or SKIP.search(label):
             continue
@@ -75,6 +82,7 @@ def records(module, html, p):
             d = by[key] = dict(level="police_station", area=f"{b} PS" if post_kind == "police station" else b, office_type=post_kind,
                                post="Officer in charge")
             order.append(key)
+        pos_of.setdefault(key, []).append(where[ri])
         if m:
             d["oc_phone"] = ph
         else:
@@ -85,7 +93,9 @@ def records(module, html, p):
     for key in order:
         d = by[key]
         ph = phones(d.pop("oc_phone", None), d.pop("station_phone", None), d.pop("phone", None))
-        recs.append(rec(module, key, **d, phone=ph, state=state, district=district, source=url, last_updated=upd))
+        ps = pos_of.get(key) or []
+        recs.append(rec(module, key, **d, phone=ph, state=state, district=district, source=url, last_updated=upd,
+                        src_pos=ps[0] if len(ps) == 1 else {"rows": ps}))
     return recs
 
 

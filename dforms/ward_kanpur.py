@@ -11,7 +11,10 @@ Record ids: dept:ward_kanpur:z<N>:<wing>:<post slug>:<n>.
 """
 import re
 
+import provenance
 from dforms import _esw, _ward
+
+METHOD = "html table (wards: zone PDF, pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward_kanpur"
 BODY, LGD, STATE, DISTRICT = "Kanpur Nagar Nigam", "249286", "UP", "Kanpur Nagar"
@@ -81,12 +84,13 @@ def parse(html, zw, p):
     soup = _esw.soup(html)
     seen, recs, n = set(), [], {}
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g or "नाम" not in g[0][0]:
             continue
         dept = next((x.strip() for x in t.find_all_previous(string=True, limit=8) if x.strip()), "")
         wing = next((w for k, w in DEPTS.items() if k in dept), None)
-        for r in g[1:]:
+        for r, rp in zip(g[1:], gp[1:]):
             if len(r) < 3:
                 continue
             name, post, phone = (_esw.clean(c) for c in r[:3])
@@ -103,7 +107,8 @@ def parse(html, zw, p):
                                          level="zone", area=zone, zone=zone, post=en, post_regional=post, name=name,
                                          name_regional=name, phone="" if phone == "-" else phone, email=email,
                                          wards=zw.get(z) or None, wing=wing if wing and wing != "administration" else None,
-                                         section=dept, source=p["url"]))
+                                         section=dept, source=p["url"], src_url=p["url"],
+                                         src_pos=dict(rp, wards_from=p.get("zone_pdf") or ZONEPDF) if zw.get(z) else rp))
     return recs
 
 

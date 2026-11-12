@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward_vasaivirar"
 BODY, LGD, STATE, DISTRICT = "Vasai-Virar City Municipal Corporation", "251463", "MH", "Palghar"
 URL = "https://vvcmc.in/contacts/"
@@ -40,15 +42,17 @@ def people(html):
     for t in soup.find_all("table"):
         rank = next((x.strip() for x in t.find_all_previous(string=True, limit=5) if x.strip()), "")
         cur = None
-        for r in _esw.grid(t)[1:]:
+        for r, rp in _ward.grid_pos(t)[1:]:
             if len(r) < 4:
                 continue
             key = next((v for k, v in KEYS.items() if r[2].lower().startswith(k)), None)
             if key == "name":
-                cur = {"rank": rank}
+                cur = {"rank": rank, "_pos": dict(rp)}
                 out.append(cur)
             if cur is not None and key:
                 cur[key] = _esw.clean(r[3])
+                if rp["row"] != cur["_pos"]["row"]:
+                    cur["_pos"]["to"] = rp["row"]       # one person = the label rows from "name" down
     return out
 
 
@@ -72,7 +76,8 @@ def parse(html, p):
         recs.append(_ward.record(MODULE, f"{_esw.slug(area)}:{_esw.slug(x.get('email', '')) or len(recs)}", seen, body=BODY, lgd=LGD,
                                  state=STATE, district=DISTRICT, level="zone", area=area, zone=area, post=en, post_regional=post,
                                  name=name, name_regional=name, phone=x.get("phone", ""), email=x.get("email", ""),
-                                 samitis=s or None, jurisdiction=x.get("area") or None, wing="administration", source=p["url"]))
+                                 samitis=s or None, jurisdiction=x.get("area") or None, wing="administration", source=p["url"],
+                                 src_pos=x.get("_pos")))
     return recs
 
 

@@ -6,6 +6,8 @@ from the page's district list, saved 2026-11-11). Record ids: dept:civic_fps_kl:
 """
 from dforms import _civic_fps
 
+METHOD = "json api (SMART-PDS device list + supply office search)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fps_kl"
 STATE = "KL"
 BASE = "https://epos.kerala.gov.in"

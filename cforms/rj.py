@@ -8,17 +8,23 @@ import re
 
 from bs4 import BeautifulSoup
 
+import provenance
 from forms.aspnet import hidden, options
+
+METHOD = "html table (ASP.NET result page after dropdown postbacks)"     # source trail (provenance.py): how this reader reads its sources
 
 U = "https://sec.rajasthan.gov.in/Winner_Runner.aspx?code=CEM"
 P = "ctl00$ContentPlaceHolder1$"
 BASE = {"ElecType": "2", "Election": "1"}
 
 
-def _post(get, html, target, fields):
+def _post(get, html, target, fields, resp=False):
+    """The page after the postback: its text, or (text, response) with resp=True (source trail)."""
     d = hidden(html)
     d.update({"__EVENTTARGET": P + target, "__EVENTARGUMENT": "", **{P + k: v for k, v in fields.items()}})
     r = get(U, method="POST", data=d)
+    if resp:
+        return (r.text, r) if r is not None else (None, None)
     return r.text if r is not None else None
 
 
@@ -64,7 +70,7 @@ def fetch(p, get):
     f["DistrictDropDownList"] = p["district_value"]
     h = h and _post(get, h, "DistrictDropDownList", f)
     f["PanchayatSamitiDropDownList"] = p["ulb_value"]
-    h = h and _post(get, h, "PanchayatSamitiDropDownList", f)
+    h, last = _post(get, h, "PanchayatSamitiDropDownList", f, resp=True) if h else (None, None)
     if not h:
         return [], [], "postback did not answer"
     sl = p.get("slug") or slug(p["body"])
@@ -72,12 +78,13 @@ def fetch(p, get):
     election = " ".join(x for x in ("Rajasthan ULB", _selected(h, "$Election"), _selected(h, "$Period")) if x)
     soup = BeautifulSoup(h, "lxml")
     recs, seen = [], {}
-    for t in soup.find_all("table"):
+    src = provenance.at(last, U)       # every step is a POST to the same url: the answer is named by its bytes
+    for ti, t in enumerate(soup.find_all("table"), 1):
         trs = t.find_all("tr")
         head = [" ".join(c.get_text(" ", strip=True).split()) for c in trs[0].find_all(["th", "td"])] if trs else []
         if "Result" not in head or "Ward No." not in head:
             continue
-        for tr in trs[1:]:
+        for ri, tr in enumerate(trs[1:], 2):
             c = dict(zip(head, (" ".join(td.get_text(" ", strip=True).split()) for td in tr.find_all(["td", "th"]))))
             if c.get("Result", "").lower() != "winner":
                 continue
@@ -89,6 +96,6 @@ def fetch(p, get):
             d = {"type": "councillor", "state": "RJ", "body": c.get("ULB Name") or p["body"], "district": c.get("District Name") or p["district"],
                  "ward_no": ward, "name": c.get("Name"), "party": c.get("Party Name"), "reservation": c.get("Ward Reservation"),
                  "votes": c.get("Votes Secured"), "gender": c.get("Gender"), "age": c.get("Age"), "category": c.get("Candidate Category"),
-                 "election": election, "url": U, "ulb_value": p["ulb_value"]}
+                 "election": election, "url": U, "ulb_value": p["ulb_value"], **src, "src_pos": {"table": ti, "row": ri}}
             recs.append((rid, {k: v for k, v in d.items() if v not in (None, "")}))
     return recs, files, "" if recs else "no winners in the table"

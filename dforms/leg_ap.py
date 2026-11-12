@@ -12,7 +12,11 @@ The MLA "Who is Who" PDF (legislation.aplegislature.org, Portlets/LatestNews/178
 """
 import re
 
+import provenance
+from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_se
+
+METHOD = "html cards (district view) + html table (address view)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "leg_ap"
 PAGE = "https://www.aplegislature.org/web/legislative-assembly/legislative-assembly/member-s-information"
@@ -31,11 +35,14 @@ def items(get=None):
                                                   "term": TERM, "india_only": True}}]
 
 
-def parse_district(html):
-    """{normalised constituency: (ECI no, constituency, name, party, district)} from the district view."""
+def parse_district(html, where=None):
+    """{normalised constituency: (ECI no, constituency, name, party, district)} from the district view. where: a dict; when
+    given, it gets {normalised constituency: {"selector": "li", "li": n}} (n = the member's <li> among the page's <li>)."""
     out, district = {}, ""
     s = _esw.soup(html)
+    nli = 0
     for el in s.find_all(["h4", "li"]):
+        nli += el.name == "li"
         if el.name == "h4":
             district = _esw.clean(el.get_text(" ")).title()
             continue
@@ -49,6 +56,8 @@ def parse_district(html):
         party_el = el.select_one("div.cbp-vm-details div.cbp-vm-icon") or el.select_one("div.cbp-vm-icon")
         out[_esw.norm_ac(cons)] = (int(no) if no else None, cons, _leg_se.name(nm.get_text(" ")),
                                    _esw.clean(party_el.get_text(" ")) if party_el else "", district)
+        if where is not None:
+            where[_esw.norm_ac(cons)] = {"selector": "li", "li": nli}
     return out
 
 
@@ -56,7 +65,7 @@ def _addr(td):
     return re.sub(r"(,\s*)+", ", ", _esw.cell_text(td).replace(" | ", ", ")).strip(" ,")
 
 
-def parse_address(html):
+def parse_address(html, where=None):
     """{normalised constituency: (name, constituency, email, communication address, permanent address)} from the address view."""
     out = {}
     for tr in _esw.soup(html).find_all("tr"):
@@ -68,10 +77,15 @@ def parse_address(html):
         cons = next((re.sub(r"^\(\s*|\s*\)$", "", x) for x in parts[1:] if x.startswith("(")), "")
         email = _esw.emails(" ".join(parts[1:]))
         out[_esw.norm_ac(cons)] = (nm, _esw.clean(cons), email, _addr(tds[2]), _addr(tds[3]))
+        if where is not None:
+            where[_esw.norm_ac(cons)] = tr_pos(tr)
     return out
 
 
-def merge(dist, addr, url):
+def merge(dist, addr, url, pos=None):
+    """pos: {"dist", "addr": {constituency key: src_pos}, "dist_src", "addr_src": provenance.at() of each view}. A member in
+    the district view gets its src (and src_pos) from there, with the address view's row in src_pos "address_row"."""
+    pos = pos or {}
     recs = []
     for k in list(dist) + [k for k in addr if k not in dist]:
         no, cons, nm, party, district = dist.get(k, (None, "", "", "", ""))
@@ -82,7 +96,12 @@ def merge(dist, addr, url):
         seat, note = _leg_se.seat("AP", no, cons, district)
         comm = a[3] if a else ""
         perm = a[4] if a else ""
-        recs.append(_leg.member(MODULE, "AP", "AC", seat, nm, constituency=cons, party=party, source=url,
+        sp = dict(pos.get("dist", {}).get(k) or {})
+        if k in pos.get("addr", {}):
+            sp["address_row"] = {**pos["addr"][k], "url": (pos.get("addr_src") or {}).get("src_url", "")}
+        src = pos.get("dist_src") if k in dist else pos.get("addr_src")
+        recs.append(_leg.member(MODULE, "AP", "AC", seat, nm, constituency=cons, party=party, source=url, src_pos=sp or None,
+                                **(src or {}),
                                 email=a[2] if a else "", address=comm or perm, communication_address=comm,
                                 permanent_address=perm if perm != comm else "", district=district, seat_no=no, note=note,
                                 house="Andhra Pradesh Legislative Assembly (16th)"))
@@ -94,11 +113,13 @@ def fetch(p, get):
     if r is None:
         return [], [], "no answer"
     files = [_leg.keep(MODULE, "district", r.content)]
-    dist = parse_district(r.text)
+    pos = {"dist": {}, "addr": {}, "dist_src": provenance.at(r, p["url"])}
+    dist = parse_district(r.text, pos["dist"])
     addr = {}
     ra = get(p["address_url"]) if p.get("address_url") else None
     if ra is not None:
         files.append(_leg.keep(MODULE, "address", ra.content))
-        addr = parse_address(ra.text)
-    recs = merge(dist, addr, p["url"])
+        addr = parse_address(ra.text, pos["addr"])
+        pos["addr_src"] = provenance.at(ra, p["address_url"])
+    recs = merge(dist, addr, p["url"], pos)
     return recs, files, "" if recs else "no members in the page"

@@ -10,6 +10,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward_patna"
 BODY, LGD, STATE, DISTRICT = "Patna Municipal Corporation", "249650", "BR", "Patna"
 URL = "https://www.pmc.bihar.gov.in/CircleOfficials.aspx"
@@ -49,7 +51,8 @@ def parse(html, p):
         for post, phone in posts:
             recs.append(_ward.record(MODULE, f"{_esw.slug(name)}:{_esw.slug(post)}", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level="zone", area=name, zone=name, post=_esw.clean(post),
-                                     phone=phone.strip(), email=email, address=address, source=p["url"]))
+                                     phone=phone.strip(), email=email, address=address, source=p["url"],
+                                     src_pos={"selector": "page text", "block": m.group(0), "match": f"{post} {phone}".strip()[:200]}))
     return recs
 
 

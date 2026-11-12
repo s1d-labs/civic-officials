@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward_ludhiana"
 BODY, LGD, STATE, DISTRICT = "Municipal Corporation Ludhiana", "248338", "PB", "Ludhiana"
 URL = "https://mcludhiana.gov.in/StaffList.aspx"
@@ -38,15 +40,18 @@ def parse(html, p):
     soup = _esw.soup(html)
     seen, recs = set(), []
 
+    cur = {}     # the src_pos of the row being read (source trail)
+
     def add(zones, sub, branch, post, name, phone):
         wing = next((w for k, w in BRANCH_WING if k in branch.lower()), None) or _ward.wing_of(post)
         zone = f"Zone {zones}"
         recs.append(_ward.record(MODULE, f"{_esw.slug(zones)}:{_esw.slug(branch) or 'senior'}:{_esw.slug(post)}:{_esw.slug(name) or 'n'}",
                                  seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level="zone", area=zone, zone=zone,
                                  subzone=sub or None, post=post, name=name, phone=re.sub(r"^0$", "", phone), wing=wing,
-                                 section=branch or None, source=p["url"]))
+                                 section=branch or None, source=p["url"], src_pos=cur.get("pos")))
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g:
             continue
         head = [c.lower() for c in g[0]]
@@ -54,12 +59,14 @@ def parse(html, p):
         if "zone" in head and "designation" in head:
             zi, ni, di = head.index("zone"), next(i for i, h in enumerate(head) if "name" in h), head.index("designation")
             ci = next((i for i, h in enumerate(head) if "contact" in h), None)
-            for r in g[1:]:
+            for r, rp in zip(g[1:], gp[1:]):
+                cur["pos"] = rp
                 zones, sub = zones_of(r[zi])
                 if zones and (r[ni] or (ci is not None and r[ci])):
                     add(zones, sub, cap, _esw.clean(r[di]).strip(" ,"), _esw.clean(r[ni]), _esw.clean(r[ci]) if ci is not None else "")
         elif head[:2] == ["designation", "name"]:
-            for r in g[1:]:
+            for r, rp in zip(g[1:], gp[1:]):
+                cur["pos"] = rp
                 m = re.search(r"\bZone\s+([A-D](?:\s*(?:,|&|and)\s*[A-D])*)\b", r[0], re.I)
                 if m:
                     zones, sub = zones_of(m.group(1))

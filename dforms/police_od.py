@@ -7,8 +7,11 @@ import re
 
 from bs4 import BeautifulSoup
 
+from dforms import _esw
 from dforms._police import clean, gz, rec, slug, uniq
 from dforms.police_s3waas import fix_phone, grid, level_of
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_od"
 CONTACT = re.compile(r"Contact\s*No\.?\s*[-:.]?\s*(.*)$", re.I)
@@ -35,7 +38,8 @@ def parse(html, district, url):
         rows = grid(t)
         if not rows or not any("sphere" in (c or "").lower() for c in rows[0]):
             continue
-        for r in rows[1:]:
+        tno = _esw.table_no(t)
+        for rn, r in enumerate(rows[1:], 2):
             if len(r) < 3 or not r[1]:
                 continue
             sphere = clean(r[1])
@@ -45,7 +49,7 @@ def parse(html, district, url):
                 level, otype = "police_station", "police station"
             recs.append(rec(M, f"{slug(district)}:{slug(sphere)}", level=level, office_type=otype, area=sphere,
                             post=post or "PIO", name=name, rank=rank, phone=phone, state="OD", district=district,
-                            deputy=clean(r[3]) if len(r) > 3 and r[3] else None, source=url))
+                            deputy=clean(r[3]) if len(r) > 3 and r[3] else None, source=url, src_pos={"table": tno, "row": rn}))
     return uniq(recs)
 
 

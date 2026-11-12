@@ -13,6 +13,8 @@ item gives the office email and phone only).
 from dforms import _ulb2_nw
 from dforms.ulb2_hp import site_items
 
+METHOD = "html table (start page and its officer / contact pages)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_hr"
 STATE = "HR"
 SITES = """https://mcambala.in/|248491|Ambala|Ambala|Municipal Corporation|

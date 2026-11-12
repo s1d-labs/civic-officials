@@ -14,6 +14,8 @@ import re
 
 from dforms import _leg
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_ls"
 URL = "https://sansad.in/api_ls/member?loksabha=18&page=1&size=600&locale=en&sitting=1"
 ALIAS = {   # sansad name (normalised) -> the name in the site's PC layer, for seats renamed by a delimitation
@@ -61,7 +63,7 @@ def seat(state, const):
 
 def parse(doc, url):
     recs = []
-    for m in (doc or {}).get("membersDtoList") or []:
+    for i, m in enumerate((doc or {}).get("membersDtoList") or []):
         if _leg.clean(m.get("status")) not in ("", "Sitting"):
             continue
         state_name, const = _leg.clean(m.get("stateName")), _leg.clean(m.get("constName"))
@@ -80,7 +82,8 @@ def parse(doc, url):
             residence_address=_addr(m.get("permanentFaddr"), m.get("permanentLaddr")),
             delhi_address=_addr(m.get("presentFaddr"), m.get("presentLaddr")), house="Lok Sabha", term="18th Lok Sabha",
             member_id=str(m.get("mpsno") or ""), photo=_leg.clean(m.get("imageUrl")), note=note,
-            last_updated=_leg.clean(m.get("updatedAt"))[:10] or None))
+            last_updated=_leg.clean(m.get("updatedAt"))[:10] or None,
+            src_pos={"key": "membersDtoList", "index": i, "mpsno": m.get("mpsno")}))
     return recs
 
 

@@ -10,6 +10,11 @@ from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
+import provenance
+from forms.aspnet import keep_trail
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://erms.tripura.gov.in/encoretripura/outviews/viewBLO.aspx"
 UA = "s1d-labs-public-records/1.0 (+https://labs.s1d.me)"
 GRID_ID = "ContentPlaceHolder2_dgshow"
@@ -71,7 +76,7 @@ def _rows(soup, base, ac_no, ac_name):
     if g is None:
         return [], None
     head, rows, pager = None, [], None
-    for tr in g.find_all("tr", recursive=False):
+    for n, tr in enumerate(g.find_all("tr", recursive=False), 1):
         cells = tr.find_all(["td", "th"], recursive=False)
         if tr.find("a", href=re.compile(r"__doPostBack")) is not None and len(cells) <= 2:
             pager = tr
@@ -95,13 +100,14 @@ def _rows(soup, base, ac_no, ac_name):
             "address": raw.get("Residential Address", ""),
             "last_updated": raw.get("Last Updated On", ""),
             "cells": raw,
+            "src_pos": {"selector": "#" + GRID_ID, "row": n},
         })
     return rows, pager
 
 
 def fetch(session, payload):
     ac_no, ac_name = int(payload["ac_no"]), payload.get("ac_name", "")
-    s = _session(requests.Session())  # one session per AC: the result URL token rides on its cookie
+    s = keep_trail(_session(requests.Session()), session)  # one session per AC: the result URL token rides on its cookie
     soup = _get(s)
     data = _form(soup)
     btn = payload.get("button") or f"ctl00$ContentPlaceHolder2$Button{ac_no}"
@@ -118,6 +124,10 @@ def fetch(session, payload):
     all_rows, cur = [], 1
     for _ in range(MAX_PAGES):
         rows, pager = _rows(soup, base, ac_no, ac_name)
+        src = provenance.at(r)          # the answer the rows came from (postbacks share one url: its hash names it)
+        for row in rows:
+            row.update(src)
+            row["src_pos"]["grid_page"] = cur
         all_rows.extend(rows)
         if pager is None:
             break

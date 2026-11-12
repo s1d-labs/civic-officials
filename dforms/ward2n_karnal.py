@@ -7,6 +7,8 @@ dforms/ward2n_sonipat.parse. Record ids: dept:ward2n_karnal:hq:<post slug>:<name
 """
 from dforms import _esw, ward2n_sonipat
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_karnal"
 BODY, LGD, STATE, DISTRICT = "Municipal Corporation Karnal", "248517", "HR", "Karnal"
 URL = "https://mckarnal.co.in/index.php/office-directory"

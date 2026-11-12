@@ -32,8 +32,11 @@ import io
 import re
 from urllib.parse import quote, unquote, urljoin
 
+import provenance
 from dforms import _esw, _ward
 from dforms.ward2n_mumbai import BASE, BODY, DISTRICT, LGD, STATE, UA, WARDS
+
+METHOD = "pdf ruled table (pypdf: drawn rules + text positions), else pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2n_mumbai_water"
 KM = f"{BASE}/irj/go/km/docs/documents"
@@ -202,7 +205,9 @@ def table_rows(content):
             continue
         sr_i = r.index("sr")
         nums = sorted([(bd, txt) for ci, bd, txt, yc in cells if ci == sr_i and re.fullmatch(r"\d{1,3}\.?", txt)], key=lambda b: -b[0][0])
-        page_rows = [{"sr": txt.strip("."), "band": bd, "post": "", "name": "", "phone": "", "email": "", "subs": {}} for bd, txt in nums]
+        page_rows = [{"sr": txt.strip("."), "band": bd, "post": "", "name": "", "phone": "", "email": "", "subs": {},
+                      "src_pos": {"page": pno + 1, "sr": txt.strip("."), "y_band": [round(b, 1) for b in bd if abs(b) < 1e8]},
+                      "method": "pdf ruled table (pypdf: drawn rules + text positions)"} for bd, txt in nums]
         top = page_rows[0]["band"][0] if page_rows else -1e9
         for ci, bd, txt, yc in cells:
             role = r[ci] if ci < len(r) else None
@@ -230,12 +235,12 @@ def table_rows(content):
 def text_rows(content):
     """Fallback for a PDF without drawn rules: numbered lines of the layout text with their phones and emails."""
     out = []
-    for page in _ward.layout_pages(content):
-        for line in page.splitlines():
-            m = re.match(r"^\s{0,6}(\d{1,3})\.?\s{2,}(\S.*?)\s{2,}(.*)$", line)
-            if m and (re.search(r"[6-9]\d{9}", line) or "@" in line):
-                out.append({"sr": m.group(1), "post": m.group(2), "name": "", "phone": _esw.phones(line), "email": _esw.emails(line),
-                            "beats": []})
+    for pn, lno, line in _ward.pdf_lines(_ward.layout_pages(content)):
+        m = re.match(r"^\s{0,6}(\d{1,3})\.?\s{2,}(\S.*?)\s{2,}(.*)$", line)
+        if m and (re.search(r"[6-9]\d{9}", line) or "@" in line):
+            out.append({"sr": m.group(1), "post": m.group(2), "name": "", "phone": _esw.phones(line), "email": _esw.emails(line),
+                        "beats": [], "src_pos": provenance.line_pos(pn, lno, line),
+                        "method": "pdf text (pdftotext -layout, else pypdf layout)"})
     return out
 
 
@@ -276,7 +281,8 @@ def parse(content, url, code, seen=None, created=None):
                                  part_wards=parts or None, beats=[b for b in beats if b["beat"] or b["area"]] or None,
                                  beat_area="; ".join(b["area"] for b in beats if b["area"] and not re.search(r"(?i)maintenance", b["area"]))
                                  or None, maintenance=maint, wing="water", role="head" if post.startswith("Assistant Engineer") else
-                                 "staff", sr=row["sr"], source=url, file_created=created))
+                                 "staff", sr=row["sr"], source=url, file_created=created, src_pos=row.get("src_pos"),
+                                 method=row.get("method"), src_url=url))
     return recs
 
 
@@ -312,7 +318,7 @@ def fetch(p, get):
             tried.append(u)
             continue
         files.append(_esw.keep(MODULE, f"{slug(code)}-{i}", a.content, "pdf"))
-        recs += parse(a.content, u, code, seen, created_of(a.content))
+        recs += _ward.tag(parse(a.content, u, code, seen, created_of(a.content)), a, u)
         if recs and not found:
             break
     why = "" if recs else (f"no rows in {len(pdfs) - len(tried)} PDF(s)" if len(tried) < len(pdfs[:4]) else

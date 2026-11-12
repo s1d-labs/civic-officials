@@ -14,6 +14,9 @@ Record ids: dept:sub_ar:AR-AC-<no>:ro.
 import re
 
 from dforms import _esw
+import provenance
+
+METHOD = "pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub_ar"
 URL = "https://ceoarunachal.nic.in/componenthelper/getcomponentfile/32"
@@ -30,11 +33,12 @@ def _chunks(line):
     return [(m.start(), m.group(0)) for m in re.finditer(r"\S(?:.*?\S)?(?=\s{2,}|\s*$)", line)]
 
 
-def rows(pages):
-    """[[ac, designation, name, email]] from the layout text; wrapped cells joined to the cell above them."""
+def rows(pages, where=None):
+    """[[ac, designation, name, email]] from the layout text; wrapped cells joined to the cell above them. where: a list; when
+    given, it gets provenance.line_pos of each row's first line."""
     out, starts = [], []
-    for text in pages:
-        for line in text.splitlines():
+    for pno, text in enumerate(pages, 1):
+        for lno, line in enumerate(text.splitlines(), 1):
             if not line.strip():
                 continue
             ch = _chunks(line)
@@ -42,6 +46,8 @@ def rows(pages):
                 ch = ch[1:]                                   # the serial number
                 starts = [s for s, _ in ch]
                 out.append([c for _, c in ch] + [""] * (4 - len(ch)))
+                if where is not None:
+                    where.append(provenance.line_pos(pno, lno, line))
             elif out and starts and len(line) - len(line.lstrip()) > 8:
                 for s, c in ch:
                     k = min(range(len(starts)), key=lambda i: abs(starts[i] - s))
@@ -60,7 +66,8 @@ def parse(content, url=URL):
 def parse_pages(pages, url=URL):
     """Records from the PDF's page texts (layout mode)."""
     recs, seen = [], set()
-    for ac, desig, name, mail in rows(pages):
+    where = []
+    for (ac, desig, name, mail), pos in zip(rows(pages, where), where):
         m = re.match(r"^(\d{1,2})\s*-\s*(.+)$", ac)
         if not m:
             continue
@@ -75,7 +82,7 @@ def parse_pages(pages, url=URL):
         rec = _esw.record(MODULE, key, dept="elections", level="ac", area=f"{no} - {acname}", post="Returning Officer",
                           designation=desig, name=_esw.clean(name), email=_esw.emails(mail.replace("/", " ")),
                           subdivision=sub.group(2).strip() if sub else "", district=dc.group(1).strip() if dc else "",
-                          state="AR", office_id=f"AR-AC-{no}", source=url)
+                          state="AR", office_id=f"AR-AC-{no}", source=url, src_pos=pos)
         if rec[1].get("name") or rec[1].get("email"):
             recs.append(rec)
     return recs

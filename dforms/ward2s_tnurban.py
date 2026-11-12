@@ -35,6 +35,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_tnurban"
 STATE = "TN"
 BASE = "https://www.tnurbantree.tn.gov.in"
@@ -133,11 +135,12 @@ def parse(html, p):
     body, lgd, district = BODIES[city]
     seen, recs, byk = set(), [], {}
     for t in _esw.soup(html).find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g or len(g[0]) < 2:
             continue
         cols, section, zone = None, "", None
-        for r in g:
+        for r, rp in zip(g, gp):
             h = _heading(r)
             if h and re.fullmatch(r"[\d\s-]+", h):
                 continue
@@ -195,7 +198,7 @@ def parse(html, p):
                 recs.append(_ward.record(MODULE, key, seen, body=body, lgd=lgd, state=STATE, district=district, level=level,
                                          area=area, zone=z, post=post, name=nm, phone=ph, section=section or None,
                                          notes=note, wards=wards if z else None, services=[service] if service else None,
-                                         source=p["url"]))
+                                         source=p["url"], src_pos=rp))
                 byk[k] = recs[-1][1]
     return recs
 

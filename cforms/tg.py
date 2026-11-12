@@ -9,6 +9,10 @@ import re
 
 from bs4 import BeautifulSoup
 
+import provenance
+
+METHOD = "html table (ASP.NET-style report grids after a POST)"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://tsec.gov.in/"
 TOKEN = "org.apache.struts.taglib.html.TOKEN"
 
@@ -31,7 +35,7 @@ def report_a(html):
     """Ward rows from the all-candidates report: one dict per ward with its winner (if any) and the ward totals."""
     grid = BeautifulSoup(html, "lxml").find("table", id="GridView1")
     wards, w = [], None
-    for tr in grid.find_all("tr") if grid else []:
+    for ri, tr in enumerate(grid.find_all("tr") if grid else [], 1):
         c = cells(tr)
         if len(c) == 1 and c[0].startswith("WARD Name"):
             f = dict((k.strip(), v.strip()) for k, v in (x.split(":", 1) for x in c[0].split(",") if ":" in x))
@@ -43,7 +47,7 @@ def report_a(html):
                  "nota_votes": num(f.get("NOTA Votes")), "cands": []}
             wards.append(w)
         elif len(c) == 5 and w is not None and c[0].isdigit():
-            w["cands"].append({"name": c[1], "party": c[2], "votes": num(c[3]), "status": c[4]})
+            w["cands"].append({"name": c[1], "party": c[2], "votes": num(c[3]), "status": c[4], "_row": ri})
     return wards
 
 
@@ -51,11 +55,12 @@ def report_e(html):
     grid = BeautifulSoup(html, "lxml").find("table", id="GridView1")
     rows = [cells(tr) for tr in (grid.find_all("tr") if grid else [])]
     out = []
-    for c in rows:
+    for ri, c in enumerate(rows, 1):
         if len(c) == 6 and c[0].isdigit():
             no = re.fullmatch(r"(?:Ward\s*-?\s*)?(\d+)", c[1], re.I)
             out.append({"ward_no": no.group(1) if no else c[0], "ward_name": None if no else c[1], "reservation": c[2], "name": c[3],
-                        "party": c[4], "result_status": c[5]})
+                        "party": c[4], "result_status": c[5], "src_pos": {"table_id": "GridView1", "row": ri},
+                        "method": "html table (elected-only report E)"})
     return out
 
 
@@ -86,11 +91,14 @@ def fetch(p, get):
              "electors": w["electors"], "valid_votes": w["valid_votes"], "rejected_votes": w["rejected_votes"], "nota_votes": w["nota_votes"]}
         if c["votes"] is not None and others:
             d["margin"] = c["votes"] - others[0]
+        # source trail: the winner's row in report A (a POST to the same url as report E: named by its bytes)
+        d.update({**provenance.at(r, url), "src_pos": {"table_id": "GridView1", "row": c["_row"]},
+                  "method": "html table (all-candidates report A)"})
         recs.append((f"councillor:TG:{slug}:{w['ward_no']}", d))
     if not recs:                                   # no winners in A: ask for the elected-only report with the new token
         tok = token(r.text)
         r = tok and get(url, method="POST", data={TOKEN: tok, **form, "property(typeOfReport)": "E"})
         if r:
             files.append((f"councillors/TG/{p['district_id']}-{p['ulb_id']}-{slug}-E.html.gz", gzip.compress(r.content), "application/gzip"))
-            recs = [(f"councillor:TG:{slug}:{e['ward_no']}", {**base, **e}) for e in report_e(r.text)]
+            recs = [(f"councillor:TG:{slug}:{e['ward_no']}", {**base, **e, **provenance.at(r, url)}) for e in report_e(r.text)]
     return recs, files, "" if recs else "no members"

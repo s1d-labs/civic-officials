@@ -15,6 +15,8 @@ import re
 from dforms._power import raw, slug
 from dforms._power_bihar import parse
 
+METHOD = "html table (office tree)"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://nbpdcl.co.in/frmHelplineNumbers.aspx"
 MOD = "power_nbpdcl"
 

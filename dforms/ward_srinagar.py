@@ -8,6 +8,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward_srinagar"
 BODY, LGD, STATE, DISTRICT = "Srinagar Municipal Corporation", "248156", "JK", "Srinagar"
 URL = "https://smcsrinagar.jk.gov.in/Home/KnowWardOfficer"
@@ -27,7 +29,8 @@ def parse(html, p):
             if not w or not (name or phone):
                 continue
             k = re.sub(r"\D", "", phone) or name.lower()
-            g = groups.setdefault(k, {"name": name, "phone": phone, "wards": [], "areas": [], "rank": []})
+            g = groups.setdefault(k, {"name": name, "phone": phone, "wards": [], "areas": [], "rank": [], "at": []})
+            g["at"].append(r.pos)
             g["wards"] += [x for x in w if x not in g["wards"]]
             g["areas"].append(_ward.col(r, "area"))
             m = re.search(r"\((SBI|JBI)\)", _ward.col(r, "ward officer"))
@@ -39,7 +42,8 @@ def parse(html, p):
         recs.append(_ward.record(MODULE, f"ward-officer:{_esw.slug(g['name']) or 'n'}", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level="ward", area=area, post="Ward Officer", name=g["name"], phone=g["phone"],
                                  wards=g["wards"], wing="administration", ward_kind="SMC administrative ward (35), not electoral",
-                                 cadre=" ".join(sorted(set(g["rank"]))) or None, source=p["url"]))
+                                 cadre=" ".join(sorted(set(g["rank"]))) or None, source=p["url"],
+                                 src_pos={"rows": g["at"], "note": "one officer summed over these table rows"}))
     return recs
 
 

@@ -15,6 +15,8 @@ from urllib.parse import urlencode
 
 from dforms import _civic, _esw
 
+METHOD = "arcgis feature layer (json query)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_post_in"
 LAYER = "https://livingatlas.esri.in/server1/rest/services/India/All_India_Pincode_Directory/MapServer/0/query"
 TOTAL = 165366
@@ -39,7 +41,7 @@ def items(get=None):
 
 def parse(doc, url=LAYER):
     recs, seen = [], set()
-    for f in doc.get("features") or []:
+    for fi, f in enumerate(doc.get("features") or []):
         a = f.get("attributes") or {}
         office = _esw.clean(a.get("officename"))
         pin = str(a.get("pincode") or "").strip()
@@ -54,7 +56,8 @@ def parse(doc, url=LAYER):
             circle=_esw.clean(a.get("circlename")), district=_esw.clean(a.get("district")),
             state=_civic.state_code(a.get("statename")) or "IN", state_name=_esw.clean(a.get("statename")),
             lat=_civic.lat(a.get("lat")), lon=_civic.lon(a.get("long")), notes=_esw.clean(a.get("comments")),
-            office_id=key, objectid=a.get("objectid"), source=url, source_org="Department of Posts, All India Pincode Directory"))
+            office_id=key, objectid=a.get("objectid"), source=url, source_org="Department of Posts, All India Pincode Directory",
+            src_pos={"key": "features", "index": fi, "objectid": a.get("objectid")}))
     return recs
 
 

@@ -26,6 +26,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html cards (h3.font-semibold + p lines; office from the page footer)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_as"
 STATE = "AS"
 INDEX = "https://assamurban.in/ulb"
@@ -134,13 +136,16 @@ def blank(s):
     return "" if re.fullmatch(r"[.\-–\s*]*", s) else s
 
 
-def cards(html):
-    """[(name, [p lines])] of the person cards in the page body (the footer's h3 headings are left out)."""
+def cards(html, where=None):
+    """[(name, [p lines])] of the person cards in the page body (the footer's h3 headings are left out). where: a list; when
+    given, it gets {"selector": "h3.font-semibold", "card": n} per card (n counts the page's h3.font-semibold)."""
     soup = _esw.soup(html)
     out = []
-    for h in soup.find_all("h3", class_="font-semibold"):
+    for n, h in enumerate(soup.find_all("h3", class_="font-semibold"), 1):
         if h.find_parent("footer"):
             continue
+        if where is not None:
+            where.append({"selector": "h3.font-semibold", "card": n})
         lines = [blank(p.get_text(" ")) for p in h.find_next_siblings("p")]
         out.append((blank(h.get_text(" ")), [x for x in lines if x]))
     return out
@@ -183,7 +188,8 @@ def parse(staff_html, members_html=None, body="", district=None, url="", members
     head = None
     list_name, (body, btype) = body, split_type(body)
     common = {"district": district, "body_type": btype, "list_name": list_name}
-    for name, lines in cards(staff_html):
+    where = []
+    for (name, lines), pos in zip(cards(staff_html, where), where):
         cat, phone, ward, detail = split(lines)
         name, more = split_name(name)
         post, section = (detail, None) if STAFF.match(cat) and detail else (cat or detail, detail if cat else None)
@@ -195,24 +201,27 @@ def parse(staff_html, members_html=None, body="", district=None, url="", members
         if not post or not (name or phone):
             continue
         recs.append(_ulb.record(MODULE, STATE, body, post, seen, name=name, phone=phone, source=url, **common,
-                                section=section, ward=ward or None, **more))
+                                section=section, ward=ward or None, src_url=url, src_pos=pos, **more))
         if head is None and recs[-1][1]["role"] == "head":
             head = len(recs) - 1
-    for name, lines in cards(members_html or ""):
+    where = []
+    for (name, lines), pos in zip(cards(members_html or "", where), where):
         cat, phone, ward, detail = split(lines)
         name, more = split_name(name)
         more.pop("designation", None)
         if not KEEP_MEMBER.search(cat) or not (name or phone):
             continue
         recs.append(_ulb.record(MODULE, STATE, body, cat, seen, name=name, phone=phone, source=members_url, **common,
-                                ward=ward or None, **more))
+                                ward=ward or None, src_url=members_url, src_pos=pos, **more))
     addr, ophone, oemail = footer(staff_html)
     if head is not None:
         rid, d = recs[head]
         d.update({k: v for k, v in (("address", addr), ("office_phone", ophone), ("office_email", oemail)) if v})
+        if addr or ophone or oemail:
+            d["src_pos"] = {**d.get("src_pos", {}), "office_from": "footer"}
     elif ophone or oemail:
         recs.append(_ulb.record(MODULE, STATE, body, "Office", seen, phone=ophone, email=oemail, source=url, **common,
-                                address=addr or None))
+                                address=addr or None, src_url=url, src_pos={"selector": "footer"}))
     return recs
 
 

@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2
 
+METHOD = "html cards (div.item-experts / div.team-item)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_gujarat"
 PAGES = {
     "mgvcl": ("MGVCL", "https://www.mgvcl.com/key-officials.php", "Vadodara"),
@@ -33,7 +35,7 @@ def items(get=None):
 
 def cards(soup):
     """(name, post, phone, email) for each officer card of either layout."""
-    for box in soup.select("div.item-experts, div.team-item"):
+    for bn, box in enumerate(soup.select("div.item-experts, div.team-item"), 1):
         h = box.find(["h4", "h6", "h5"])
         name = h.get_text(" ", strip=True) if h else None
         post = phone = mail = None
@@ -50,6 +52,7 @@ def cards(soup):
         if not post:   # MGVCL cards without an icon on the post line: the last <p> before the phone
             ps = [" ".join(p.get_text(" ", strip=True).split()) for p in box.find_all("p")]
             post = next((p for p in ps if re.search(r"engineer|manager|director|officer|controller|secretary", p, re.I)), None)
+        cards.pos = {"selector": "div.item-experts, div.team-item", "card": bn}     # source trail: the card just given
         yield name, post, phone, mail
 
 
@@ -67,7 +70,7 @@ def parse(html, page, url):
         else:
             area, level = f"{discom} Corporate Office", "state"
         out.add(f"{discom}:{post}:{name}", level, area, post=_power.clean(post), name=name, phone_=_util2.tel(phone or ""),
-                email_=_power.email(mail), district=district if level == "state" else None)
+                email_=_power.email(mail), district=district if level == "state" else None, src_pos=dict(cards.pos))
     return out.recs
 
 

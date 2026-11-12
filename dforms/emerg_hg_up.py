@@ -15,6 +15,9 @@ import re
 
 from dforms import _emerg
 from dforms._pdftext import layout_pages
+from provenance import line_pos
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout): mobile + e-mail line; post and area from the e-mail name"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "emerg_hg_up"
 URL = "https://homeguard.up.gov.in/Downloads/ContactDetailsofUPHGOfficials.pdf"
@@ -59,8 +62,9 @@ def unit(local):
     return None
 
 
-def records(pages, url=URL):
+def records(pages, url=URL, engine=None):
     lines = [ln for pg in pages for ln in pg.split("\n")]
+    at = [(pn, k) for pn, pg in enumerate(pages, 1) for k, _ in enumerate(pg.split("\n"), 1)]
     recs, seen = [], set()
     for i, ln in enumerate(lines):
         m = LINE.search(ln)
@@ -85,7 +89,8 @@ def records(pages, url=URL):
         recs.append(_emerg.record(
             MODULE, key, "hg", dept="police", level=level, area=area or "Uttar Pradesh", post=post, phone=mobile,
             email=mail.lower() if "@" in mail else "", district=district if level != "state" else None, state="UP",
-            office_id=key, source=url))
+            office_id=key, source=url, src_pos=line_pos(*at[i], ln),
+            **({"method": f"pdf text ({engine}): mobile + e-mail line; post and area from the e-mail name"} if engine else {})))
     return recs
 
 
@@ -100,6 +105,6 @@ def fetch(p, get):
         return [], [], "no answer"
     if r.content[:5] != b"%PDF-":
         return [], [], "not a PDF"
-    pages, _ = layout_pages(r.content)
-    recs = records(pages, url)
+    pages, engine = layout_pages(r.content)
+    recs = records(pages, url, _emerg.ENGINE.get(engine))
     return recs, [_emerg.keep(MODULE, "contact-details-uphg", r.content, ext="pdf")], "" if recs else "no rows"

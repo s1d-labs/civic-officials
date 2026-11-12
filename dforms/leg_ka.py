@@ -13,6 +13,8 @@ from urllib.parse import urljoin
 
 from dforms import _esw, _leg
 
+METHOD = 'save only (html page + linked member files, no parse)'     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_ka"
 URL = "https://kla.kar.nic.in/assembly/member/members.htm"
 WANT = re.compile(r"member|mla|address|contact|phone|directory|ಸದಸ್ಯ|ವಿಳಾಸ|ದೂರವಾಣಿ", re.I)

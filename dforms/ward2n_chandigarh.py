@@ -11,7 +11,10 @@ Record ids: dept:ward2n_chandigarh:<ward-a-b | duty slug | csi>:<post slug>:<nam
 """
 import re
 
+import provenance
 from dforms import _esw, _ward
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2n_chandigarh"
 BODY, LGD, STATE, DISTRICT = "Municipal Corporation Chandigarh", "276386", "CH", "Chandigarh"
@@ -47,7 +50,8 @@ def cut(line, xs):
 
 
 def page_rows(page):
-    """[(si name, mobile, area, [wards])] and [(csi text)] of one page."""
+    """[(si name, mobile, area, [wards], line no)] and [(line no, csi text)] of one page (line no: 0-based in page.splitlines(),
+    the line of the row's mobile number)."""
     lines = [ln for ln in page.splitlines()]
     anchors = []
     for i, ln in enumerate(lines):
@@ -89,12 +93,12 @@ def page_rows(page):
     out = []
     for i in aidx:
         r = rows[i]
-        out.append((_esw.clean(" ".join(r["name"])), r["mob"], _esw.clean(" ".join(r["area"])), r["wards"]))
+        out.append((_esw.clean(" ".join(r["name"])), r["mob"], _esw.clean(" ".join(r["area"])), r["wards"], i))
     return out, csi
 
 
 def csi_people(entries):
-    """[(name, post, [phones], duty text)] of the chief sanitary inspectors and veterinary officers in the C.S.I. column lines
+    """[(name, post, [phones], duty text, line no of the post marker)] of the chief sanitary inspectors and veterinary officers in the C.S.I. column lines
     [(line no, text)]: the post marker ("CSI", "Veterinary Officer") ends the name; a short line just above without digits is the
     first part of the name ("Sh. CHANDER" / "MOHAN CSI,"); the phone is on that line or the next two; the lines below up to the
     next name are the duty ("Dumping Ground/Sanitary Landfill ...")."""
@@ -120,15 +124,16 @@ def csi_people(entries):
         duty = _esw.clean(CSI_PH.sub(" ", rest)).strip(" ,.-")
         duty = re.sub(r"^(Officer|-)[,\s-]*", "", duty)
         post = "CSI" if m.group(1) == "CSI" else "Veterinary Officer"
-        out.append((_esw.clean(name).strip(" ,"), post, ph, duty))
+        out.append((_esw.clean(name).strip(" ,"), post, ph, duty, i))
     return out
 
 
 def parse(pages, p):
     seen, recs, done = set(), [], set()
-    for pg in pages:
+    for pn, pg in enumerate(pages, 1):
         rows, csi = page_rows(pg)
-        for name, mobs, area, wards in rows:
+        lines = pg.splitlines()
+        for name, mobs, area, wards, li in rows:
             m = re.search(r"[,\s]*\b(SI|MPW)\b\.?\s*$", name)
             post = {"SI": "Sanitary Inspector", "MPW": "Multi Purpose Worker"}.get(m.group(1)) if m else "Sanitary Inspector"
             nm = name[:m.start()] if m else name
@@ -142,8 +147,9 @@ def parse(pages, p):
             recs.append(_ward.record(MODULE, f"{key}:{_esw.slug(post)}:{_esw.slug(nm) or 'n'}", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level=level, area=ar, post=post, post_as_written=m.group(1) if m else None,
                                      name=nm, phone=", ".join(dict.fromkeys(mobs)), wards=ws or None, sectors=area or None,
-                                     wing="sanitation", source=p["url"]))
-        for name, post, ph, duty in csi_people(csi):
+                                     wing="sanitation", source=p["url"],
+                                     src_pos=provenance.line_pos(pn, li + 1, lines[li], note="the line of the mobile number")))
+        for name, post, ph, duty, li in csi_people(csi):
             if (name, tuple(ph)) in done:
                 continue
             done.add((name, tuple(ph)))
@@ -151,7 +157,7 @@ def parse(pages, p):
             recs.append(_ward.record(MODULE, f"csi:{_esw.slug(full)}:{_esw.slug(name)}", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level="body", area=BODY, post=full, post_as_written=post, name=name,
                                      phone=", ".join(ph), duty=duty or None, wing="sanitation" if post == "CSI" else "health",
-                                     source=p["url"]))
+                                     source=p["url"], src_pos=provenance.line_pos(pn, li + 1, lines[li])))
     return recs
 
 

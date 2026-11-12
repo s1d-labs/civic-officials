@@ -9,6 +9,9 @@ The pages show no date. One queue item = one page.
 Record ids: dept:ero_dl:DL-AC-<no>:ero and dept:ero_dl:DL-AC-<no>:aero:voter-centre.
 """
 from dforms import _esw
+from dforms._water import pgrid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ero_dl"
 BASE = "https://ceodelhinet.nic.in/ceodelhiweb/"
@@ -33,7 +36,7 @@ def parse(html, page, url):
     t = soup.find("table", id=PAGES[page][1]) or max(soup.find_all("table"), key=lambda x: len(x.find_all("tr")), default=None)
     if t is None:
         return []
-    rows = _esw.grid(t)
+    rows = pgrid(t)
     head = [h.lower() for h in rows[0]] if rows else []
     recs = []
     for row in rows[1:]:
@@ -46,11 +49,11 @@ def parse(html, page, url):
                  email=_esw.emails(_col(c, "email")), state="DL", district=_col(c, "distt"), office_id=ac, source=url)
         if page == "ero":
             recs.append(_esw.record(MODULE, f"{ac}:ero", post="Electoral Registration Officer", designation=_col(c, "designation"),
-                                    name=_col(c, "ero name"), address=_col(c, "address"), **f))
+                                    name=_col(c, "ero name"), address=_col(c, "address"), src_pos=row.pos, **f))
         else:
             recs.append(_esw.record(MODULE, f"{ac}:aero:voter-centre", post="Assistant Electoral Registration Officer",
                                     designation="AERO, Voter Registration and EPIC Centre", name=_col(c, "aero name"),
-                                    address=_col(c, "location"), **f))
+                                    address=_col(c, "location"), src_pos=row.pos, **f))
     return recs
 
 

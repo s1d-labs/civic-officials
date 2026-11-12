@@ -14,6 +14,8 @@ from bs4 import BeautifulSoup
 
 from dforms._police import ascii_digits, clean, gz, phones, rec, slug, uniq
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police2s_mp"
 DEV = re.compile(r"[ऀ-ॿ]")
 HONOR = re.compile(r"^(?:श्री|श्रीमती|श्रीमति|सुश्री|कु\.|डॉ|निरी|उनि|सउनि|प्र\.?\s?आर|आर\.|उ\.?पु\.?अ|Shri|Smt|Mrs|Ms|Mr|Dr|Kum|Insp|SI\b|ASI\b)", re.I)

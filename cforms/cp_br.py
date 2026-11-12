@@ -8,6 +8,8 @@ import re
 
 from cforms.cp_common import clean, column, emails, keyed, phones, record, slug, table_rows, useful, ward_no
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 NAME = (r"name of (the )?ward councillors?|councillor|\bname\b|नाम",)
 PHONE = (r"contact|mobile|phone|मोबाइल|दूरभाष",)
 WARD = (r"^ward|वार्ड",)
@@ -26,7 +28,8 @@ def members(html, p):
             continue
         recs.append(record("BR", p["body"], ward, name, p["url"], phone=phones(cells[pi]), email=emails(" ".join(cells)),
                            ward_label=cells[wi], lgd_code=p.get("lgd_code"),
-                           record_for=f"councillor:BR:{p['sec_slug']}:{ward}" if ward and p.get("sec_slug") else None))
+                           record_for=f"councillor:BR:{p['sec_slug']}:{ward}" if ward and p.get("sec_slug") else None,
+                           pos=cells.pos))
     return recs
 
 

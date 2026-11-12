@@ -6,7 +6,11 @@ Record ids: dept:sro_ap:AP-SRO-<SRO code>, AP-DR-<slug>, AP-DIG-<slug>.
 """
 import re
 
+import provenance
 from dforms import _esw
+from dforms._pdftext import page_lines
+
+METHOD = "pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sro_ap"
 URL = "https://registration.ap.gov.in/igrs/pdfs/R&S%20Department.pdf"
@@ -30,7 +34,7 @@ def _phone(s):
 
 def parse(pages, url=URL):
     recs, seen, district = [], set(), None
-    for line in "\n".join(pages).splitlines():
+    for pn, ln, line in page_lines(pages):
         m = DIST.match(line)
         if m:
             district = " ".join(w if w in ("SPS", "YSR", "NTR") else w.title() for w in m.group(1).split())
@@ -61,7 +65,7 @@ def parse(pages, url=URL):
             continue
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept="registration", phone=_phone(mob), email=_mail(mail), state="AP", source=url,
-                                last_updated=LAST_UPDATED, **f))
+                                last_updated=LAST_UPDATED, src_pos=provenance.line_pos(pn, ln, line), **f))
     return recs
 
 

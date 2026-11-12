@@ -11,7 +11,9 @@ seeds/dept_civic_fps2_rj.json). Only reached from India so far (india_only). Rec
 """
 import re
 
-from dforms import _civic_fps, _esw
+from dforms import _civic, _civic_fps, _esw
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_fps2_rj"
 STATE = "RJ"
@@ -61,7 +63,7 @@ def parse(html, district="", district_regional="", dist_code="", src=PAGE):
             name_regional=name_hi if name_hi != name else "", phone=_civic_fps.unmasked(phone), address=addr, shop_name=shop,
             state=STATE, district=district, district_regional=district_regional, dist_code=dist_code, village=place,
             panchayat=panchayat, block=block or town, municipality=town, subdistrict=tehsil, area_type="urban" if urban else "rural",
-            fps_id=fid, office_id=fid, source=src))
+            fps_id=fid, office_id=fid, source=src, src_pos=_civic.tr_pos(tr)))
     return recs
 
 
@@ -84,5 +86,5 @@ def fetch(p, get):
         if r is None:
             continue
         files.append(_esw.keep(MODULE, f"district-{code}", r.content))
-        recs += parse(r.text, p.get("district", "") if p.get("dist_code") else "", dname, code, url)
+        recs += _civic.tag(parse(r.text, p.get("district", "") if p.get("dist_code") else "", dname, code, url), r, url)
     return recs, files, "" if recs else "no rows"

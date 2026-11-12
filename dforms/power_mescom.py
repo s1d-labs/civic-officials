@@ -11,7 +11,9 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, email, phone, raw
+from dforms._power import tr_pos, Out, cells, email, phone, raw
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 BASE = "https://mescom.karnataka.gov.in/"
 PAGES = {"zones": "17/zonal-and-circle-offices/en", "divisions": "14/divisional-offices/en", "sections": "15/subdivision-and-sections/en"}
@@ -44,6 +46,7 @@ def parse(html, page, url):
     for tb in tables(soup):
         title, head, last = None, None, None
         for tr in tb.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             c = cells(tr)
             if len(c) == 1:
                 if re.fullmatch(r"[\d\s/-]{6,}", c[0]) and last is not None:
@@ -91,6 +94,7 @@ def parse(html, page, url):
                                phone_=phone(*split_phone(d.get("contact no"))), email_=email(d.get("e-mail")), address=d.get("address"))
     for _, d in out.recs:
         d.pop("_office", None)
+    out.src = {}
     return out.recs
 
 

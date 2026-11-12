@@ -4,7 +4,10 @@ import time
 
 from bs4 import BeautifulSoup
 
+import provenance
 from forms.aspnet import hidden, options, session
+
+METHOD = "html table (ASP.NET postbacks)"     # source trail (provenance.py): how this reader reads its sources
 
 U = "https://ceoelection.mp.gov.in/BLO_Details.aspx"
 HOST = "ceoelection.mp.gov.in"
@@ -19,7 +22,9 @@ def _post(s, html, target, fields):
     d = hidden(html)
     d.update({"__EVENTTARGET": P + target, "__EVENTARGUMENT": "", **{P + k: v for k, v in fields.items()}})
     time.sleep(1)
-    return s.post(U, data=d, timeout=60).text
+    r = s.post(U, data=d, timeout=60)
+    s.last_answer = r
+    return r.text
 
 
 def items(s):
@@ -39,18 +44,20 @@ def fetch(s, p):
     h = _post(s, h, "ddlDist", {"ddlDist": p["district_value"]})
     h = _post(s, h, "ddlAC", {"ddlDist": p["district_value"], "ddlAC": p["ac_value"]})
     soup = BeautifulSoup(h, "lxml")
+    src = provenance.at(getattr(s, "last_answer", None), U)     # the AC postback answer (postbacks share one url)
     rows = []
-    for t in soup.find_all("table"):
+    for tno, t in enumerate(soup.find_all("table"), 1):
         trs = t.find_all("tr")
         if len(trs) < 2:
             continue
         head = [" ".join(c.get_text(" ", strip=True).split()) for c in trs[0].find_all(["th", "td"])]
         if not any("blo" in x.lower() or "मतदान" in x or "booth" in x.lower() for x in head):
             continue
-        for tr in trs[1:]:
+        for n, tr in enumerate(trs[1:], 2):
             cells = [" ".join(c.get_text(" ", strip=True).split()) for c in tr.find_all(["td", "th"])]
             if not any(cells):
                 continue
             c = {head[i] if i < len(head) else f"col{i}": v for i, v in enumerate(cells)}
-            rows.append({"ac_no": p.get("ac_no"), "ac_name": p.get("ac_name"), "district": p.get("district"), "cells": c})
+            rows.append({"ac_no": p.get("ac_no"), "ac_name": p.get("ac_name"), "district": p.get("district"), "cells": c,
+                         "src_pos": {"table": tno, "row": n}, **src})
     return rows

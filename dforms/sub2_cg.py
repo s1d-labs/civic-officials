@@ -15,7 +15,10 @@ area_regional = the place as the site writes it. Record ids: dept:sub2_cg:CG-<si
 import difflib
 import re
 
+import provenance
 from dforms import _esw
+
+METHOD = "html table (ASP.NET postback answers, table#GridView1)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub2_cg"
 URL = "https://revenue.cg.nic.in/RevenueOfficerSearchPage.aspx"
@@ -172,23 +175,27 @@ def designations(html):
     return [o.get("value") for o in sel.find_all("option") if o.get("value")] if sel else []
 
 
-def rows(html):
-    """[(post cell, name, mobile)] of the result table GridView1."""
+def rows(html, where=None):
+    """[(post cell, name, mobile)] of the result table GridView1. where: a list; when given, it gets each row's src_pos."""
     t = _esw.soup(html).find("table", id="GridView1")
     if t is None:
         return []
-    out = []
-    for r in _esw.grid(t)[1:]:
+    out, tp = [], []
+    for r, pos in zip(_esw.grid(t, pos=tp)[1:], tp[1:]):
         if len(r) >= 4:
             out.append((r[1], r[2], r[3]))
+            if where is not None:
+                where.append({**pos, "selector": "table#GridView1"})
     return out
 
 
-def build(code, found, p, seen):
+def build(code, found, p, seen, where=None, src=None):
+    """where: src_pos per row of found; src: provenance.at() of the postback answer (one url, many POST answers)."""
+    where = where or [None] * len(found)
     post, dept, level = POSTS[code]
     sid, dc, district = str(p["district_id"]), p.get("district_code", ""), p.get("district", "")
     recs = []
-    for cell, name, mobile in found:
+    for (cell, name, mobile), pos in zip(found, where):
         name = _esw.clean(name)
         if not name or VACANT.match(name):
             continue
@@ -206,7 +213,8 @@ def build(code, found, p, seen):
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept=dept, level=level, area=area, area_regional=hi, post=this, name=name,
                                 phone=_esw.phones(mobile), district=district, district_code=dc, state="CG", office=_esw.clean(cell),
-                                office_id=f"CG-REV-{sid}-{code}-{_esw.slug(area) or 'x'}", source=URL, lgd_match=bool(en)))
+                                office_id=f"CG-REV-{sid}-{code}-{_esw.slug(area) or 'x'}", source=URL, lgd_match=bool(en),
+                                src_pos=pos and {**pos, "ddlDesignation": code}, **(src or {})))
     return recs
 
 
@@ -236,5 +244,6 @@ def fetch(p, get):
         if a is None:
             continue
         files.append(_esw.keep(MODULE, f"district-{sid}-post-{code}", a.content))
-        recs += build(code, rows(a.text), p, seen)
+        where = []
+        recs += build(code, rows(a.text, where), p, seen, where, provenance.at(a, url))
     return recs, files, "" if recs else "no rows"

@@ -14,6 +14,9 @@ import json
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
+
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "water_od"
 PHEO = "https://www.pheoodisha.gov.in/view-portal-emp-dir/{}"
@@ -69,7 +72,7 @@ def parse_pheo(html, p):
     office = p.get("office") or PORTALS.get(portal, "")
     recs, seen = [], set()
     for t in soup.find_all("table"):
-        rows = _esw.grid(t)
+        rows = pgrid(t)
         if not rows or "designation" not in [h.lower() for h in rows[0]]:
             continue
         head = [h.lower() for h in rows[0]]
@@ -87,7 +90,7 @@ def parse_pheo(html, p):
             recs.append(_esw.record(MODULE, k, dept="water", level=_level(desig, place), area=place, post=desig, name=name,
                                     phone=_esw.phones(c.get("phone number")), state="OD",
                                     office_id=f"OD-PHEO-{_esw.slug(place)}", org="Public Health Engineering Organisation, Odisha",
-                                    office=office, source=p["url"]))
+                                    office=office, source=p["url"], src_pos=row.pos, method="html table"))
     # the footer block: "Contact Us Office of the Executive Engineer, P.H. Division, Berhampur Phone: ... Fax : ... E-Mail: ..."
     h2 = next((h for h in soup.find_all("h2") if _esw.clean(h.get_text()) == "Contact Us"), None)
     box = h2.find_parent(["div", "section"]) if h2 else None
@@ -99,7 +102,8 @@ def parse_pheo(html, p):
                                 area=_place(office), post="Office", address=m.group(1), phone=_esw.phones(m.group(2)),
                                 fax=_esw.phones(m.group(3)), email=_esw.emails(m.group(4)), state="OD",
                                 office_id=f"OD-PHEO-portal-{portal}", org="Public Health Engineering Organisation, Odisha",
-                                office=office, source=p["url"]))
+                                office=office, source=p["url"], src_pos={"selector": "h2 'Contact Us' block"},
+                                method="html page"))
     return recs
 
 
@@ -116,10 +120,10 @@ def _wlevel(desig, place, group):
 
 def parse_watco(js, url=WATCO):
     recs, seen = [], set()
-    for g in js.get("data") or []:
+    for gi, g in enumerate(js.get("data") or []):
         group = _esw.clean(g.get("name"))
         gmail = _esw.emails(g.get("title"))
-        for x in g.get("whosWhoSubContents") or []:
+        for xi, x in enumerate(g.get("whosWhoSubContents") or []):
             desig, place = _esw.clean(x.get("designation")), _esw.clean(x.get("placeOfPosting"))
             name = re.sub(r"\(\s*contractual\s*\)", "", _esw.clean(x.get("nameOfTheStaff")), flags=re.I).strip()
             if not name and not x.get("contactNo"):
@@ -133,7 +137,8 @@ def parse_watco(js, url=WATCO):
             recs.append(_esw.record(MODULE, k, dept="water", level=_wlevel(desig, place, group), area=place or group, post=desig,
                                     name=name, phone=_esw.phones(x.get("contactNo")), email=gmail if gm else None, state="OD",
                                     office_id=f"OD-WATCO-{_esw.slug(place or group)}", org="WATCO (Water Corporation of Odisha)",
-                                    group=group, source=url))
+                                    group=group, source=url, method="json api",
+                                    src_pos={"path": f"data[{gi}].whosWhoSubContents[{xi}]", **({"id": x["id"]} if x.get("id") else {})}))
     return recs
 
 
@@ -145,7 +150,7 @@ def _nopin(s):
 
 def parse_watco_main(js, url=WATCO_MAIN):
     recs = []
-    for x in js.get("data") or []:
+    for xi, x in enumerate(js.get("data") or []):
         lines = [_esw.clean(htmlmod.unescape(s)) for s in re.split(r"<br\s*/?>|</p>", x.get("name") or "")]
         lines = [re.sub(r"<[^>]+>", "", s).strip() for s in lines if re.sub(r"<[^>]+>", "", s).strip()]
         if not lines:
@@ -159,7 +164,8 @@ def parse_watco_main(js, url=WATCO_MAIN):
         recs.append(_esw.record(MODULE, f"watco-main:{_esw.slug(post or name)}", dept="water", level="state", area="Odisha",
                                 post=post, name=name, phone=_esw.phones(_nopin(addr)),
                                 email=_esw.emails(addr), address=re.split(r"\s+(?:Contact|Mobile) No", addr)[0], state="OD",
-                                office_id="OD-WATCO-head-office", org="WATCO (Water Corporation of Odisha)", source=url))
+                                office_id="OD-WATCO-head-office", org="WATCO (Water Corporation of Odisha)", source=url,
+                                method="json api", src_pos={"path": f"data[{xi}]", **({"id": x["id"]} if x.get("id") else {})}))
     return recs
 
 

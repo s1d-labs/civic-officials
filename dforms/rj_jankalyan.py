@@ -31,6 +31,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "json api (GetDepartmentContactDetail)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "rj_jankalyan"
 API = "https://districtfrontwebapi.rajasthan.gov.in/PublicPortal/DepartmentWebsite/GetDepartmentContactDetail"
 # host label -> (department code of the portal, LGD district name or None, dept, level)
@@ -141,7 +143,7 @@ def parse(data, p):
     code = str(p["code"])
     recs, files = [], []
     default_dept = p.get("dept") or "administration"
-    for r in rows:
+    for i, r in enumerate(rows):
         eid = r.get("Id") or r.get("Code")
         cat = _s(r.get("ContactCategoryName"))
         att = _s(r.get("AttachmentUrl"))
@@ -169,7 +171,8 @@ def parse(data, p):
                                 date_of_birth=(dob[:10] if re.match(r"^\d{4}-\d{2}-\d{2}", dob) else (dob or None)), url=_s(r.get("URL")) or None,
                                 attachment=att or None, portal=p.get("host"), portal_title=_s(r.get("DepartmentTitle")) or None,
                                 entry_id=str(eid), state="RJ", district=p.get("district"), office_id=f"rj-jankalyan:{code}:{eid}",
-                                source=p["url"], page=p["url"]))
+                                source=p["url"], page=p["url"], src_url=API,
+                                src_pos={"key": "Data.Data", "index": i, "id": str(eid)}))
     return recs, files
 
 
@@ -217,7 +220,7 @@ def fetch(p, get):
         recs.append((f"dept:{MODULE}:{p['code']}:file:{eid}",
                      {"type": "source_file", "category": cat, "url": url, "stored": path, "bytes": len(f.content) if ok else None,
                       "fetched": ok, "portal": p.get("host"), "state": "RJ", "district": p.get("district"), "dept": p.get("dept"),
-                      "source": p["url"]}))
+                      "source": p["url"], **({"src_url": url, "method": "file saved to the bucket (pdf)"} if ok else {})}))
     if not any(d.get("type") == "dept_office" for _, d in recs) and not pdfs:
         return recs, files, "no entries"
     return recs, files, ""

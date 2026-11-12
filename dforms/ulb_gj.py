@@ -20,6 +20,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_gj"
 URL = "https://communi.gujarat.gov.in/Home/listofmunicipalities"
 URL_PRAMUKH = "https://communi.gujarat.gov.in/Home/pramukhlist"
@@ -55,10 +57,11 @@ def updated(html):
 def table(html, first):
     """Rows of the first table whose heading row has a cell matching first (regex), as dicts by lower-case heading."""
     for t in _esw.soup(html).find_all("table"):
-        rows = _esw.grid(t)
+        tp = []
+        rows = _esw.grid(t, pos=tp)
         if rows and any(re.search(first, h, re.I) for h in rows[0]):
             head = [h.lower() for h in rows[0]]
-            return [dict(zip(head, r)) for r in rows[1:] if len(r) >= len(head) - 1]
+            return [{**dict(zip(head, r)), "_pos": p} for r, p in zip(rows[1:], tp[1:]) if len(r) >= len(head) - 1]
     return []
 
 
@@ -115,7 +118,8 @@ def parse(co_html, pramukh_html=None, url=URL, url_pramukh=URL_PRAMUKH):
             continue
         recs.append(_ulb.record(MODULE, "GJ", body, "Chief Officer", seen, name=name, district=district_of(body), body_type=BODY_TYPE,
                                 source=url, last_updated=up_co, zone=blank(col(r, r"zone")) or None, body_class=blank(col(r, r"class")) or None,
-                                cadre=blank(col(r, r"cadre")) or None, status=blank(col(r, r"status")) or None))
+                                cadre=blank(col(r, r"cadre")) or None, status=blank(col(r, r"status")) or None,
+                                src_url=url, src_pos=r.get("_pos")))
     up_pr = updated(pramukh_html) if pramukh_html else None
     for r in pr:
         body = r.get("_body")
@@ -123,7 +127,8 @@ def parse(co_html, pramukh_html=None, url=URL, url_pramukh=URL_PRAMUKH):
         if not body or not (name or phone):
             continue
         recs.append(_ulb.record(MODULE, "GJ", body, "Pramukh (President)", seen, name=name, phone=phone,
-                                district=DISTRICTS.get(blank(col(r, r"district")).lower(), blank(col(r, r"district"))) or None, body_type=BODY_TYPE, source=url_pramukh, last_updated=up_pr))
+                                district=DISTRICTS.get(blank(col(r, r"district")).lower(), blank(col(r, r"district"))) or None, body_type=BODY_TYPE, source=url_pramukh, last_updated=up_pr,
+                                src_url=url_pramukh, src_pos=r.get("_pos")))
     return recs
 
 

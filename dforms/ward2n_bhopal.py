@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_bhopal"
 BODY, LGD, STATE, DISTRICT = "Bhopal Municipal Corporation", "250946", "MP", "Bhopal"
 URL = ("https://www.bmconline.gov.in/sap/opu/odata/sap/ZHP_ADMIN_SRV/ZHP_TELEPHONE_LISTSet"
@@ -40,7 +42,7 @@ def post_of(hi):
 def parse(data, p):
     rows = (data.get("d") or {}).get("results") or []
     seen, recs = set(), []
-    for x in rows:
+    for xi, x in enumerate(rows):
         m = re.search(r"(?i)zone\s*0*(\d+)", x.get("ZoneWardNo") or "")
         if not m:
             continue
@@ -51,7 +53,8 @@ def parse(data, p):
                                  level="zone", area=f"Zone {z}", zone=f"Zone {z}", post=en,
                                  post_regional=_esw.clean(x.get("Designation")), name=name_en or name_hi,
                                  name_regional=name_hi or None, phone=" ".join(filter(None, [x.get("Mobile"), x.get("Contact")])),
-                                 wing=wing, source=p["url"]))
+                                 wing=wing, source=p["url"],
+                                 src_pos={"path": "d.results", "index": xi, **({"id": x.get("Id")} if x.get("Id") is not None else {})}))
     return recs
 
 

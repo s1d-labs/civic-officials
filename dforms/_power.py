@@ -92,6 +92,13 @@ class Out:
     def __init__(self, module, state, source, discom=None, last_updated=None):
         self.module, self.state, self.source, self.discom, self.last_updated = module, state, source, discom, last_updated
         self.recs, self.seen = [], {}
+        self.src = {}       # source trail: provenance.at(r, url) of the answer being read now (multi-source items); goes on each record
+
+    def at(self, r, url=None):
+        """The answer the next records are read from (an item that reads several pages / files)."""
+        import provenance
+        self.src = provenance.at(r, url)
+        return self
 
     def add(self, key, level, area, post=None, name=None, phone_=None, email_=None, address=None, district=None, office_id=None,
             parents=None, source=None, last_updated=None, state=None, **extra):
@@ -109,6 +116,8 @@ class Out:
              "office_id": clean(office_id), "source": source or self.source, "last_updated": last_updated or self.last_updated,
              "discom": self.discom, "parents": par or None, **extra}
         d = {a: b for a, b in d.items() if b not in (None, "", [], {})}
+        for a, b in self.src.items():
+            d.setdefault(a, b)
         self.recs.append((f"dept:{self.module}:{k}", d))
         return d
 
@@ -137,3 +146,13 @@ def pdf_pages(content, layout=True):
 
 def cells(tr):
     return [" ".join(td.get_text(" ", strip=True).split()) for td in tr.find_all(["td", "th"])]
+
+
+def tr_pos(tr):
+    """Source trail position of a <tr>: {"table": the table's place among the page's <table> elements (1-based, document order,
+    as officials.tables and _esw.table_no count), "row": the <tr>'s number among that table's own rows (1-based)}."""
+    t = tr.find_parent("table")
+    if t is None:
+        return {"row": len(tr.find_all_previous("tr")) + 1}
+    rows = [x for x in t.find_all("tr") if x.find_parent("table") is t]
+    return {"table": len(t.find_all_previous("table")) + 1, "row": next((i for i, x in enumerate(rows, 1) if x is tr), None)}

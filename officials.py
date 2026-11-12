@@ -86,14 +86,17 @@ def normalise(cells):
 
 
 def tables(html):
-    """Every table with a header row: [{"caption", "headers", "rows": [{header: cell}]}]."""
+    """Every table with a header row: [{"caption", "headers", "rows": [{header: cell}], "pos": [{"table": n, "row": m}, ...]}].
+    "pos" (source trail) runs parallel to "rows": "table" = the table's place among the page's <table> elements (1-based, document
+    order, nested tables counted); "row" = the row's <tr> number inside that table (1-based, header row counted)."""
     soup = BeautifulSoup(html, "lxml")
     out = []
-    for t in soup.find_all("table"):
+    for ti, t in enumerate(soup.find_all("table"), 1):
         cap = t.find("caption")
         trs = t.find_all("tr")
         if not trs:
             continue
+        first = 1
         head = [" ".join(c.get_text(" ", strip=True).split()) for c in trs[0].find_all(["th", "td"])]
         title = ""
         # a title row above the header row (one cell, often with colspan: "District Administration" | Sl no. | Name | ...):
@@ -101,16 +104,18 @@ def tables(html):
         if len(trs) > 2 and sum(1 for h in head if h) == 1:
             nxt = [" ".join(c.get_text(" ", strip=True).split()) for c in trs[1].find_all(["th", "td"])]
             if sum(1 for h in nxt if h) >= 2 and any(rx.search(h) for h in nxt for rx in FIELD.values()):
-                title, head, trs = next(h for h in head if h), nxt, trs[1:]
+                title, head, trs, first = next(h for h in head if h), nxt, trs[1:], 2
         if not any(head) or len(head) < 2:
             continue
-        rows = []
-        for tr in trs[1:]:
+        rows, nos = [], []
+        for n, tr in enumerate(trs[1:], first + 1):
             cells = [" ".join(c.get_text(" ", strip=True).split()) for c in tr.find_all(["td", "th"])]
             if any(cells):
                 rows.append({(head[i] if i < len(head) and head[i] else f"col{i}"): v for i, v in enumerate(cells)})
+                nos.append({"table": ti, "row": n})
         if rows:
-            out.append({"caption": " ".join(cap.get_text(" ", strip=True).split()) if cap else title, "headers": head, "rows": rows})
+            out.append({"caption": " ".join(cap.get_text(" ", strip=True).split()) if cap else title, "headers": head, "rows": rows,
+                        "pos": nos})
     return out
 
 
@@ -176,8 +181,8 @@ def pubutility(html):
     """S3WaaS "public utility" cards (e.g. /public-utility-category/municipality/ on district sites): one card per office, with
     the office's name as heading and lines "Phone : ...", "Email : ...", "Website : ..." and an address. Returns [{"caption", "rows"}]."""
     soup = BeautifulSoup(html, "lxml")
-    rows = []
-    for ul in soup.select("ul.pubutility-list"):
+    rows, pos = [], []
+    for k, ul in enumerate(soup.select("ul.pubutility-list"), 1):
         box = ul.find_parent(["div", "li", "article"])
         head = box.find(["h2", "h3", "h4", "h5", "strong"]) if box else None
         cells = {"Office": " ".join(head.get_text(" ", strip=True).split()) if head else ""}
@@ -188,10 +193,12 @@ def pubutility(html):
                 cells[m.group(1).title()] = deobfuscate(m.group(2)) if m.group(1).lower().startswith("e") else m.group(2)
             elif t:
                 cells.setdefault("Address", t)
-        if any(v for k, v in cells.items() if k != "Office"):
+        if any(v for h, v in cells.items() if h != "Office"):
             rows.append(cells)
+            pos.append({"selector": "ul.pubutility-list", "card": k})
     title = soup.find("h1")
-    return [{"caption": " ".join(title.get_text(" ", strip=True).split()) if title else "public utility", "rows": rows}] if rows else []
+    return [{"caption": " ".join(title.get_text(" ", strip=True).split()) if title else "public utility", "rows": rows,
+             "pos": pos}] if rows else []
 
 
 PHONE = re.compile(r"^(?:\+?91[\s-]*)?(?:0\d{2,4}[\s-]?\d{6,8}|[6-9]\d{9})(?:\s*[,/]\s*(?:\+?91[\s-]*)?\d{10})*$")
@@ -209,11 +216,12 @@ def text_people(html):
         t.decompose()
     lines = [" ".join(x.split()) for x in soup.get_text("\n").split("\n")]
     lines = [x for x in lines if x]
-    rows = []
+    rows, pos = [], []
     for i, ln in enumerate(lines):
         if i >= 2 and PHONE.match(ln) and ROLE.search(lines[i - 1]) and not ROLE.search(lines[i - 2]) and len(lines[i - 2]) <= 60:
             cell = {"Name": lines[i - 2], "Designation": lines[i - 1], "Phone": ln}
             if i + 1 < len(lines) and re.match(r"^(ward\s*no\.?\s*)?\d{1,3}$", lines[i + 1], re.I):
                 cell["Ward"] = re.sub(r"\D", "", lines[i + 1])
             rows.append(cell)
-    return [{"caption": "people", "rows": rows}] if len(rows) >= 2 else []
+            pos.append({"text_line": i - 1, "line_text": lines[i - 2]})     # 1-based among the page's non-empty text lines
+    return [{"caption": "people", "rows": rows, "pos": pos}] if len(rows) >= 2 else []

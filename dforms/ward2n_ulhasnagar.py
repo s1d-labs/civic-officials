@@ -10,6 +10,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_ulhasnagar"
 BODY, LGD, STATE, DISTRICT = "Ulhasnagar Mahanagarpalika", "251484", "MH", "Thane"
 URL = "https://umc.gov.in/api/api/ward-offices?lang=en"
@@ -21,7 +23,7 @@ def items(get=None):
 
 def parse(data, p):
     seen, recs = set(), []
-    for o in data if isinstance(data, list) else []:
+    for oi, o in enumerate(data if isinstance(data, list) else []):
         office = _esw.clean(o.get("ward_name"))
         m = re.search(r"\d+", office)
         if not m:
@@ -35,7 +37,7 @@ def parse(data, p):
                                  post="Ward Officer", name=name, phone=", ".join(str(x) for x in phones),
                                  email=o.get("email") or "", address=o.get("address"),
                                  map_url=o.get("map_url") or None, vacant=None if name else True, wing="administration",
-                                 source=p["url"]))
+                                 source=p["url"], src_pos={"index": oi, **({"id": o.get("id")} if o.get("id") is not None else {})}))
     return recs
 
 

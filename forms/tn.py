@@ -15,6 +15,10 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
+import provenance
+
+METHOD = "html table (ASP.NET postbacks)"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://www.erolls.tn.gov.in/blo/"
 UA = "s1d-labs-public-records/1.0 (+https://labs.s1d.me)"
 P = "ctl00$ContentPlaceHolder1$"
@@ -72,6 +76,7 @@ def _post(session, soup, target, values, submit=False):
         data[SUBMIT] = "Submit"
     r = session.post(URL, data=data, headers={"Referer": URL}, timeout=TIMEOUT)
     time.sleep(DELAY)
+    session.last_answer = r
     return _check(r)
 
 
@@ -105,8 +110,9 @@ def _split_no(text):
     return (m.group(1), m.group(2).strip()) if m else ("", text.strip())
 
 
-def parse(soup):
-    """Rows of the result table. Returns (rows as header->text dicts, total from the label or None)."""
+def parse(soup, pos=None):
+    """Rows of the result table. Returns (rows as header->text dicts, total from the label or None).
+    pos: a list; when given, it gets each row's src_pos {"table", "row"} (source trail)."""
     total = None
     lab = soup.select_one("#ContentPlaceHolder1_lb_Page")
     if lab:
@@ -119,13 +125,16 @@ def parse(soup):
         return [], total
     heads = [th.get_text(" ", strip=True) for th in tab.find_all("th")]
     rows = []
-    for tr in tab.find_all("tr"):
+    tno = len(tab.find_all_previous("table")) + 1
+    for n, tr in enumerate(tab.find_all("tr"), 1):
         tds = tr.find_all("td")
         if not tds:
             continue
         vals = [" ".join(td.get_text(" ", strip=True).split()) for td in tds]
         keys = heads if len(heads) == len(vals) else ["col%d" % i for i in range(len(vals))]
         rows.append(dict(zip(keys, vals)))
+        if pos is not None:
+            pos.append({"table": tno, "row": n})
     return rows, total
 
 
@@ -140,11 +149,13 @@ def fetch(session, payload):
     if "Select All" not in parts:
         raise RuntimeError("no 'Select All' part option for AC %s" % aval)
     soup = _post(session, soup, None, {DIST: dval, AC: aval, PART: "Select All"}, submit=True)
-    raw, total = parse(soup)
+    pos = []
+    raw, total = parse(soup, pos)
+    src = provenance.at(getattr(session, "last_answer", None), URL)    # the submit answer (postbacks share one url)
     if total is not None and total != len(raw):
         raise RuntimeError("AC %s: label says %d records, table has %d" % (aval, total, len(raw)))
     out = []
-    for c in raw:
+    for c, sp in zip(raw, pos):
         part_no, station = _split_no(c.get("Part Name", ""))
         out.append({
             "ac_no": payload["ac_no"],
@@ -156,6 +167,8 @@ def fetch(session, payload):
             "blo_phone": c.get("Mobile No", ""),
             "address": c.get("Office Address", ""),
             "cells": c,
+            "src_pos": sp,
+            **src,
         })
     return out
 

@@ -18,6 +18,8 @@ import re
 
 from dforms import _esw, _leg
 
+METHOD = 'html table (member list) + html member pages'     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_tg"
 HOST = "https://legislature.telangana.gov.in/"
 LISTS = {"AC": "assemblymemprofile?selectedtab=m", "LC": "councilmemprofile?selectedtab=m"}

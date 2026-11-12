@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html cards"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_bhavnagar"
 BODY, LGD, STATE, DISTRICT = "Bhavnagar Mahanagar Palika", "251165", "GJ", "Bhavnagar"
 BASE = "https://bmcgujarat.com/en/contact-us/"
@@ -82,13 +84,14 @@ def parse_swm(html, p, seen):
             recs.append(_ward.record(MODULE, f"swm:ward-{ward}", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level="ward",
                                      area=f"Ward {ward} {wname}".strip(), zone=zname, wards=[ward], post="Sanitary Inspector",
                                      name=nm, phone=phone, email=email, address=addr, lat=lat or None, lon=lon or None,
-                                     wing="sanitation", in_charge=True if ic else None, source=p["url"]))
+                                     wing="sanitation", in_charge=True if ic else None, source=p["url"], src_pos=_ward.nth(card)))
         m = re.match(r"(.*?)\s*\b(CSI|C\.S\.I\.?)\s*$", head)
         if m:
             nm, _, ic = _name(m.group(1))
             recs.append(_ward.record(MODULE, f"swm:{_esw.slug(zone)}:csi", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                      level="zone", area=zname, zone=zname, wards=wards, post="Chief Sanitary Inspector", name=nm,
-                                     wing="sanitation", vacant=None if nm else True, source=p["url"]))
+                                     wing="sanitation", vacant=None if nm else True, source=p["url"],
+                                     src_pos=dict(_ward.nth(h4), text=_esw.clean(h4.get_text(" ")))))
     return recs
 
 
@@ -104,7 +107,7 @@ def parse_drainage(html, p, seen):
         recs.append(_ward.record(MODULE, f"drainage:ward-{ward}", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level="ward",
                                  area=f"Ward {ward} {wname}".strip(), wards=[ward], post=post, name=nm, phone=phone, email=email,
                                  address=addr, lat=lat or None, lon=lon or None, wing="sewerage", in_charge=True if ic else None,
-                                 source=p["url"]))
+                                 source=p["url"], src_pos=_ward.nth(card)))
     return recs
 
 
@@ -133,7 +136,7 @@ def parse_officials(html, p, seen):
         recs.append(_ward.record(MODULE, f"officials:{_esw.slug(zone)}:{_esw.slug(post)}", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level="zone", area=f"House Tax {zone}", zone=zone, post=post, name=nm,
                                  phone=_esw.phones(f.get("land line number", ""), f.get("mobile number", "")),
-                                 email=f.get("email", ""), wing="revenue", source=p["url"]))
+                                 email=f.get("email", ""), wing="revenue", source=p["url"], src_pos=_ward.nth(box)))
     return recs
 
 

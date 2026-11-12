@@ -148,7 +148,8 @@ def test_fire_dl():
     p1 = json.loads((DATA / "emerg_fire_dl_p1.json").read_text())
     pages = [([tuple(t) for t in p1["texts"]], [tuple(h) for h in p1["h"]], [tuple(v) for v in p1["v"]])]
     phones = m.phone_lines((DATA / "emerg_fire_dl_phones.txt").read_text())
-    assert phones["connaughtplace"] == ("CONNAUGHT PLACE", "23414444")
+    assert phones["connaughtplace"][:2] == ("CONNAUGHT PLACE", "23414444")
+    assert phones["connaughtplace"][2] == {"line": 2, "line_text": "            CONNAUGHT PLACE            23414444"}
     recs = m.records(pages, phones, m.URL, m.PHONES_URL)
     check_fire(recs, "emerg_fire_dl", "DL")
     d = by_id(recs)

@@ -15,7 +15,10 @@ constituency.
 """
 import re
 
+import provenance
 from dforms import _esw
+
+METHOD = "pdf text (pypdf layout, table columns by header position)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "water_dl"
 INDEX = "https://delhijalboard.delhi.gov.in/jalboard/summer-action-plan-2026"
@@ -102,9 +105,10 @@ def _people(lines):
     return [p for p in out if p["name"] or p["phones"]]
 
 
-def table(pages):
-    """The officer table of one file: (AC heading, [(section heading or "", role, person)])."""
-    for text in pages:
+def table(pages, info=None):
+    """The officer table of one file: (AC heading, [(section heading or "", role, person)]). info: a dict; it gets "page" (1-based)
+    of the table, for the source trail."""
+    for pn, text in enumerate(pages, 1):
         lines = text.splitlines()
         hi = next((i for i, ln in enumerate(lines) if re.search(r"Name of\s+CE", ln) and re.search(r"Name of\s+JE", ln)), None)
         if hi is None:
@@ -127,6 +131,8 @@ def table(pages):
             for x, t in runs:
                 col = sum(1 for b in bounds if x >= b)
                 sections[sec][col].append(t)
+        if info is not None:
+            info["page"] = pn
         out = []
         for s, cols in sections.items():
             for role, cell in zip(ROLES, cols):
@@ -149,7 +155,8 @@ def _join(cell):
 
 def parse(pages, p):
     no = int(p.get("ac") or re.search(r"ac_(\d+)_", p["url"]).group(1))
-    heading, rows = table(pages)
+    info = {}
+    heading, rows = table(pages, info)
     m = re.search(r"No\.?\s*\d+\s*[–—-]\s*(.+)$", heading)
     ac_name = _esw.clean(m.group(1)).title() if m else ""
     ac = f"DL-AC-{no}"
@@ -168,7 +175,10 @@ def parse(pages, p):
         recs.append(_esw.record(MODULE, k, dept="water", level=LEVEL[role], area=area, post=post or POSTNAME[role],
                                 name=name, phone=_esw.phones(*person["phones"]), state="DL", ac=ac,
                                 office_id=f"DL-DJB-{_esw.slug(post)}" if post else f"DL-DJB-{k.replace(':', '-')}", org=ORG,
-                                section=sec, plan="Summer Action Plan 2026", source=p["url"]))
+                                section=sec, plan="Summer Action Plan 2026", source=p["url"],
+                                # source trail: the page of the table and the column (role) the officer's cell is in
+                                src_pos={"page": info.get("page"), "column": role, **({"section": sec} if sec else {})},
+                                **p.get("_src", {})))
     return recs
 
 
@@ -211,7 +221,7 @@ def _one(url, p, get):
     pages = _esw.pdf_pages(r.content)
     if not pages:
         return [], file, "not a readable pdf"
-    return parse(pages, dict(p, url=url, ac=int(no))), file, ""
+    return parse(pages, dict(p, url=url, ac=int(no), _src=provenance.at(r, url))), file, ""
 
 
 def fetch(p, get):

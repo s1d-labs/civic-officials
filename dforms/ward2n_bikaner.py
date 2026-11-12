@@ -15,7 +15,10 @@ Record ids: dept:ward2n_bikaner:<circle>:si, :ward-<n>:jamadar, :contact:<row>.
 """
 import re
 
+import provenance
 from dforms import _esw, _ward, ward2n_kota as kl
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2n_bikaner"
 BODY, LGD, STATE, DISTRICT = "Nagar Nigam Bikaner", "248667", "RJ", "Bikaner"
@@ -44,26 +47,26 @@ def clean_name(t):
 
 
 def sanitation_rows(pages):
-    """[(circle "EAST 1", ward, si text, [si phones], jamadar text, [jamadar phones])] of the ward list."""
+    """[(circle "EAST 1", ward, si text, [si phones], jamadar text, [jamadar phones], src_pos)] of the ward list."""
     out = []
-    for pg in pages:
-        for ln in pg.splitlines():
-            m = ROW.match(ln)
-            if not m:
-                continue
-            rest = m.group(4)
-            ph = [(x.start(), x.group(1)) for x in PHONE.finditer(rest)]
-            if not ph:
-                continue
-            si_name = rest[:ph[0][0]]
-            si_ph = [ph[0][1]]
-            k = 1
-            if len(ph) > 1 and re.fullmatch(r"\s*/\s*", rest[ph[0][0] + 10:ph[1][0]]):
-                si_ph.append(ph[1][1])
-                k = 2
-            start = ph[k - 1][0] + 10
-            jam_name = rest[start:ph[k][0]] if len(ph) > k else rest[start:]
-            out.append((f"{m.group(1)} {m.group(2)}", m.group(3), si_name, si_ph, jam_name, [p for _, p in ph[k:]]))
+    for pn, lno, ln in _ward.pdf_lines(pages):
+        m = ROW.match(ln)
+        if not m:
+            continue
+        rest = m.group(4)
+        ph = [(x.start(), x.group(1)) for x in PHONE.finditer(rest)]
+        if not ph:
+            continue
+        si_name = rest[:ph[0][0]]
+        si_ph = [ph[0][1]]
+        k = 1
+        if len(ph) > 1 and re.fullmatch(r"\s*/\s*", rest[ph[0][0] + 10:ph[1][0]]):
+            si_ph.append(ph[1][1])
+            k = 2
+        start = ph[k - 1][0] + 10
+        jam_name = rest[start:ph[k][0]] if len(ph) > k else rest[start:]
+        out.append((f"{m.group(1)} {m.group(2)}", m.group(3), si_name, si_ph, jam_name, [p for _, p in ph[k:]],
+                    provenance.line_pos(pn, lno, ln)))
     return out
 
 
@@ -90,9 +93,9 @@ def parse(pages, p, contacts=()):
             if d.get("name"):
                 by_phone.setdefault(x, d["name"])
     seen, recs, circles = set(), [], {}
-    for circle, ward, si, si_ph, jam, jam_ph in sanitation_rows(pages):
+    for circle, ward, si, si_ph, jam, jam_ph, pos in sanitation_rows(pages):
         w = str(int(ward))
-        c = circles.setdefault(circle, {"wards": [], "si": si, "ph": si_ph})
+        c = circles.setdefault(circle, {"wards": [], "si": si, "ph": si_ph, "pos": pos})
         if w not in c["wards"]:
             c["wards"].append(w)
         name, raw = clean_name(jam)
@@ -100,7 +103,7 @@ def parse(pages, p, contacts=()):
                                  area=f"Ward {w}", zone=circle.title(), post="Sanitation Jamadar", post_regional="जमादार",
                                  name=name, name_regional=name or None, name_text_layer=raw if raw != name else None,
                                  name_note=NOTE, phone=", ".join(jam_ph), wards=[w], wing="sanitation",
-                                 vacant=None if (raw or jam_ph) else True, source=p["url"]))
+                                 vacant=None if (raw or jam_ph) else True, source=p["url"], src_pos=pos))
     for circle, c in circles.items():
         name, raw = clean_name(c["si"])
         found = next((by_phone[x] for x in c["ph"] if x in by_phone), None)
@@ -110,7 +113,7 @@ def parse(pages, p, contacts=()):
                                  name_regional=found or name or None, name_text_layer=raw if raw != (found or name) else None,
                                  name_from="ContactList.pdf (same mobile number)" if found else None,
                                  name_note=None if found else NOTE, phone=", ".join(c["ph"]), wards=c["wards"], wing="sanitation",
-                                 source=p["url"]))
+                                 source=p["url"], src_pos=c["pos"]))     # the circle's first line (its in-charge's name and mobile)
     return recs
 
 
@@ -123,6 +126,6 @@ def fetch(p, get):
     rc = get(p["contact_url"]) if p.get("contact_url") else None
     if rc is not None and rc.content[:5] == b"%PDF-":
         files.append(_esw.keep(MODULE, "contact-list", rc.content, "pdf"))
-        contacts = parse_contacts(_ward.layout_pages(rc.content), p)
-    recs = parse(_ward.layout_pages(r.content), p, contacts) + contacts
+        contacts = _ward.tag(parse_contacts(_ward.layout_pages(rc.content), p), rc, p["contact_url"])
+    recs = _ward.tag(parse(_ward.layout_pages(r.content), p, contacts), r, p["url"]) + contacts
     return recs, files, "" if recs else "no rows (pdftotext missing?)"

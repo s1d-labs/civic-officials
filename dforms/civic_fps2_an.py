@@ -7,6 +7,8 @@ The site masks the dealer mobile (XXXXXX1344) and gives no nominees in Nicobar (
 """
 from dforms import _civic_fps
 
+METHOD = "json api (SMART-PDS device list + supply office search)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fps2_an"
 STATE = "AN"
 BASE = "https://epos.andamannicobar.gov.in"

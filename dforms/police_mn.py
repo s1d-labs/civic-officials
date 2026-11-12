@@ -10,7 +10,10 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms import police_nl
+from dforms import _civic
 from dforms._police import clean, gz, phones, rec, slug
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_mn"
 
@@ -33,6 +36,7 @@ def control_rooms(html, url):
                             area="Manipur" if state_level else district, post="Police control room", office_type="control room",
                             phone=ph, fax=phones(c[3]) if len(c) > 3 else None, state="MN",
                             district=None if state_level else district, source=url))
+            recs[-1][1]["src_pos"] = _civic.tr_pos(tr)
     return recs
 
 

@@ -12,6 +12,10 @@ import re
 from dforms import _esw
 from forms.aspnet import hidden
 from forms.jh import AC_NO, _norm
+from dforms._water import Row, pgrid
+import provenance
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ero_jh"
 BASE = "https://ceojh.jharkhand.gov.in/linkinfo/"
@@ -36,9 +40,11 @@ def rows(html):
     if t is None:
         return []
     out = []
-    for r in _esw.grid(t)[1:]:
+    for r in pgrid(t)[1:]:
         if len(r) >= 5 and r[1] and r[2] and not re.fullmatch(r"[\d\s.]+", r[0]):
-            out.append(r[:5])
+            x = Row(r[:5])
+            x.pos = r.pos
+            out.append(x)
     return out
 
 
@@ -49,7 +55,8 @@ def pages(html):
 
 def parse(all_rows, page, url):
     recs, seen, miss = [], set(), set()
-    for dist, ac, name, desig, mob in all_rows:
+    for row in all_rows:
+        dist, ac, name, desig, mob = row
         no = ac_number(ac, dist)
         if not no:
             miss.add(ac)
@@ -61,7 +68,8 @@ def parse(all_rows, page, url):
         seen.add(k)
         recs.append(_esw.record(MODULE, k, dept="elections", level="ac", area=f"{no} - {ac}" if no else ac, post=POST[page],
                                 designation=desig if desig.upper() not in ("ERO", "AERO") else None, name=name,
-                                phone=_esw.phones(mob), state="JH", district=dist, office_id=office if no else None, source=url))
+                                phone=_esw.phones(mob), state="JH", district=dist, office_id=office if no else None, source=url,
+                                src_pos=getattr(row, "pos", None), **getattr(row, "src", {})))
     return recs, sorted(miss)
 
 
@@ -72,6 +80,8 @@ def fetch(p, get):
         return [], [], "no answer"
     files = [_esw.keep(MODULE, f"{page}-p1", r.content)]
     html, got, done = r.text, rows(r.text), {1}
+    for x in got:
+        x.src = provenance.at(r, url)
     while len(done) < MAX_PAGES:
         todo = [n for n in pages(html) if n not in done]
         if not todo:
@@ -85,6 +95,10 @@ def fetch(p, get):
             continue
         html = r.text
         files.append(_esw.keep(MODULE, f"{page}-p{n}", r.content))
-        got += rows(html)
+        new = rows(html)
+        for x in new:                     # the same url answers every page (POST): the exact answer by its hash
+            x.src = provenance.at(r, url)
+            x.pos = dict(x.pos, list_page=n)
+        got += new
     recs, _ = parse(got, page, url)
     return recs, files, "" if recs else "no rows"

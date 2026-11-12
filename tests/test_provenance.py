@@ -151,3 +151,73 @@ def test_form_data_kept_small_hashed_large():
     s1, s2 = recs[-1][1]["sources"]
     assert json.loads(s1["form_data"]) == {"CategoryCode": 0, "DepartmentCode": 37}
     assert "form_data" not in s2 and s2["form_bytes"] > 9000 and len(s2["form_sha256"]) == 64
+
+
+def test_src_sha256_wins_and_ambiguous_url_gives_no_src():
+    """One url, two answers (POST paging): src_url alone is not enough; at(r) names the exact bytes."""
+    t = provenance.Trail("depts", "p")
+    t.begin({"key": "k", "payload": {}}, "r")
+    r1, r2 = resp(b"[1]", "https://a.gov.in/api", "application/json"), resp(b"[2]", "https://a.gov.in/api", "application/json")
+    t.note(r1, "https://a.gov.in/api", "POST", {"page": 1})
+    t.note(r2, "https://a.gov.in/api", "POST", {"page": 2})
+    recs, _ = t.finish([("a", {**provenance.at(r2, "https://a.gov.in/api"), "src_pos": {"index": 0}}),
+                        ("b", {"src_url": "https://a.gov.in/api"}), ("c", {"url": "https://a.gov.in/api"})], [])
+    a, b, c = (recs[i][1] for i in range(3))
+    assert a["src"]["sha256"] == hashlib.sha256(b"[2]").hexdigest() and "src_sha256" not in a and a["src_url"] == "https://a.gov.in/api"
+    assert "src" not in b and "src" not in c
+
+
+def test_record_url_fallback_is_marked():
+    t = provenance.Trail("depts", "p")
+    t.begin({"key": "k", "payload": {}}, "r")
+    t.note(resp(b"list", "https://a.gov.in/list"), "https://a.gov.in/list")
+    t.note(resp(b"one", "https://a.gov.in/one"), "https://a.gov.in/one")
+    recs, _ = t.finish([("a", {"url": "https://a.gov.in/one"}), ("b", {"source": "https://elsewhere.in/"})], [])
+    assert recs[0][1]["src"] == {"sha256": hashlib.sha256(b"one").hexdigest(), "url": "https://a.gov.in/one", "via": "record url"}
+    assert "src" not in recs[1][1]
+
+
+def test_bytes_read_outside_get_keep_the_readers_hash():
+    t = provenance.Trail("depts", "p")
+    t.begin({"key": "k", "payload": {}}, "r")
+    recs, _ = t.finish([("a", {"src_url": "https://a.gov.in/x.pdf", "src_sha256": "ab" * 32}),
+                        ("b", {"src": provenance.file_src(b"%PDF", "https://a.gov.in/y.pdf", "councillors/TN/y.pdf")})], [])
+    assert recs[0][1]["src"] == {"sha256": "ab" * 32, "url": "https://a.gov.in/x.pdf"}
+    assert recs[1][1]["src"] == {"sha256": hashlib.sha256(b"%PDF").hexdigest(), "url": "https://a.gov.in/y.pdf",
+                                 "file": "councillors/TN/y.pdf"}
+
+
+def test_session_hook_notes_own_session_answers():
+    site = ThreadingHTTPServer(("127.0.0.1", 0), Page)
+    threading.Thread(target=site.serve_forever, daemon=True).start()
+    try:
+        url = f"http://127.0.0.1:{site.server_address[1]}/officers"
+        t = provenance.Trail("blo2", "p")
+        t.begin({"key": "k", "payload": {}}, "forms.x")
+        s = requests.Session()
+        s.hooks["response"].append(provenance.hook(t))
+        s.get(url)
+        recs, files = t.finish([("a", {})], [])
+    finally:
+        site.shutdown()
+    assert recs[0][1]["src"]["url"] == url and len(files) == 1
+
+
+def test_tables_positions_and_directory_blo_records():
+    import blo
+    import directory
+    import officials
+    html = ("<table><tr><td>x</td></tr></table><table><tr><th>Name</th><th>Phone</th></tr><tr><td>A</td><td>1</td></tr>"
+            "<tr><td></td><td></td></tr><tr><td>B</td><td>2</td></tr></table>")
+    t = officials.tables(html)
+    assert len(t) == 1 and t[0]["pos"] == [{"table": 2, "row": 2}, {"table": 2, "row": 4}]
+
+    def get(*a):
+        return resp(html.encode(), "https://a.gov.in/d")
+    recs, _, _ = directory.run({"payload": {"url": "https://a.gov.in/d", "fmt": "html"}}, get)
+    rows = [d for _, d in recs if d["type"] == "row"]
+    assert rows[1]["src_pos"] == {"table": 2, "row": 4} and rows[1]["method"] == "html table"
+    recs, _, _ = blo.run({"payload": {"url": "https://a.gov.in/d", "state": "PY"}}, get)
+    assert recs[0][1]["src_pos"] == {"table": 2, "row": 2} and recs[0][1]["method"] == "html table"
+    from forms import blo2_pdf
+    assert blo.reader_method({"kind": "form-blo2_pdf"}) == blo2_pdf.METHOD

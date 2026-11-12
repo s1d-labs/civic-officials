@@ -9,6 +9,8 @@ import re
 
 from dforms import _emerg, _esw
 
+METHOD = "html cards"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_fire_ga"
 URL = "https://dfes.goa.gov.in/overview-functioning/contact-us/"
 LEVELS = {"director": "state", "deputy director": "state", "divisional officer": "zone", "asst. div. officer": "zone"}
@@ -54,6 +56,7 @@ def card_parts(card):
 def records(html, url):
     s = _esw.soup(html)
     recs, seen, zone = [], set(), None
+    ncard = 0
     for el in s.find_all(["h3", "div"]):
         if el.name == "h3" and not el.find_parent(class_=is_card):
             t = _emerg.clean(el.get_text(" "))
@@ -62,6 +65,7 @@ def records(html, url):
             continue
         if el.name != "div" or not is_card(el.get("class")):
             continue
+        ncard += 1
         badge, name, note, mobiles, land, email = card_parts(el)
         if not badge:
             continue
@@ -81,7 +85,7 @@ def records(html, url):
             MODULE, key, "fire", dept="fire", level=level, area=area, post=post, name=name,
             phone=", ".join(mobiles + land), mobile=", ".join(mobiles), landline=", ".join(land), email=email,
             additional_charge=True if addl else None, zone=zone if station else None, district=None, state="GA",
-            office_id=key, source=url))
+            office_id=key, source=url, src_pos={"selector": "div card (class *-card / station-*)", "card": ncard}))
     return recs
 
 

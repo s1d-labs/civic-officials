@@ -13,6 +13,8 @@ from urllib.parse import urlparse
 from dforms import _civic, _esw
 from dforms.police_s3waas import cards, last_updated
 
+METHOD = "html cards (S3WaaS public utility, paged /page/N/)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fire_s3waas"
 
 
@@ -25,7 +27,8 @@ def records(pages, p):
     lu = next((last_updated(h) for _, h in pages if last_updated(h)), None)
     recs, seen = [], set()
     for url, html in pages:
-        for c in cards(html):
+        cw = []
+        for ci, c in enumerate(cards(html, cw)):
             station = _esw.clean(c.get("title"))
             if not station:
                 continue
@@ -37,7 +40,7 @@ def records(pages, p):
                 phone=_esw.phones(c.get("phone") or "", m.group(1) if m else ""), email=_esw.emails(c.get("email") or ""),
                 address=adr,
                 pincode=re.sub(r"\D", "", c.get("pincode") or "")[:6], district=p.get("district"), state=p.get("state"),
-                office_id=key, source=url, last_updated=lu))
+                office_id=key, source=url, last_updated=lu, src_url=url, src_pos=cw[ci]))
     return recs
 
 

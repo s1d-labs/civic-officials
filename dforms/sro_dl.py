@@ -5,6 +5,9 @@ email on the page. The page shows no date. One queue item.
 Record ids: dept:sro_dl:DL-SRO-<slug of office>.
 """
 from dforms import _esw
+from dforms._water import pgrid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sro_dl"
 URL = "https://revenue.delhi.gov.in/revenue/sub-registar-offices"
@@ -20,7 +23,7 @@ def parse(html, url=URL):
     if table is None:
         return []
     recs, seen = [], set()
-    for row in _esw.grid(table):
+    for row in pgrid(table):
         if len(row) < 3 or row[0].strip().upper() == "DISTRICT" or not row[1].strip():
             continue
         district, office, address = row[:3]
@@ -30,7 +33,7 @@ def parse(html, url=URL):
             key, i = f"{base}-{i}", i + 1
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept="registration", level="subdistrict", area=office, post="Sub Registrar",
-                                address=address, state="DL", district=district, office_id=key, source=url))
+                                address=address, state="DL", district=district, office_id=key, source=url, src_pos=row.pos))
     return recs
 
 

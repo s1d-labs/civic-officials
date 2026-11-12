@@ -6,6 +6,8 @@ One queue item per district (seeds/dept_civic_fps_dl.json, district codes from t
 """
 from dforms import _civic_fps
 
+METHOD = "json api (SMART-PDS device list + supply office search)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fps_dl"
 STATE = "DL"
 BASE = "https://epos.delhi.gov.in"

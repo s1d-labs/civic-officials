@@ -16,6 +16,8 @@ from bs4 import BeautifulSoup
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms.police_s3waas import grid
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police2n_wb"
 
 HEADPOST = re.compile(r"^(I/?C|O/?C|IC|OC)\s+", re.I)

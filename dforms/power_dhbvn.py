@@ -15,8 +15,10 @@ Record id dept:power_dhbvn:<circle>:<office>.
 """
 import re
 
-from dforms._pdftext import cut, layout_pages, settle
+from dforms._pdftext import Lines, cut, layout_pages, settle
 from dforms._power import Out, clean, email, raw
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MOD = "power_dhbvn"
 BASE = "https://dhbvn.org.in/staticContent/contactus/"
@@ -192,8 +194,9 @@ def parse_text(pages, circle, url):
     out = Out(MOD, "HR", url, discom="DHBVN")
     label = circle.replace("-", " ").title()
     division = last = None
-    for text in pages:
+    for pn, text in enumerate(pages, 1):
         lines = [ln.rstrip() for ln in text.splitlines()]
+        at = Lines(pn, text)
         cols, hi = header(lines)
         if cols:
             cols = last = [0] + settle(cols[1:], [ln for ln in lines[hi + 1:] if NAME.search(ln)] or lines)
@@ -238,7 +241,7 @@ def parse_text(pages, circle, url):
                    "division": division if lvl in ("subdivision", "section") else None}
             area = f"Operation Circle {label}" if lvl == "circle" else area_of(office)
             out.add(f"{circle}:{office}", lvl, area, post=post, name=nm, phone_=", ".join(tels) or None,
-                    email_=mails_of(fr), parents=par, office=office)
+                    email_=mails_of(fr), parents=par, office=office, src_pos=at.pos(rl))
     return out.recs
 
 

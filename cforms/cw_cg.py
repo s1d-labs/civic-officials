@@ -22,7 +22,9 @@ import subprocess
 import tempfile
 
 from cforms import gj
-from cforms.tn import stored
+from cforms.tn import mark_stored, stored
+
+METHOD = "ocr tesseract hin (name and ward name cells, 400 dpi) + pdf text layer by drawn cell borders (pdftotext -bbox)"     # source trail (provenance.py): how this reader reads its sources
 
 URL = "https://cgsec.gov.in/Notification2025/election/Councillor%202025.pdf"
 ELECTION = "Chhattisgarh urban body general election 2025 (SEC list of elected councillors, Feb 2025)"
@@ -231,7 +233,7 @@ def page_records(pdf, p, pg, use_ocr=True):
                     boxes.append((x0, r["y0"], x1, r["y1"]))
         texts = ocr_cells(pdf, pg, boxes, tmp) if use_ocr else [""] * len(boxes)
         i = 0
-        for r in rows:
+        for ri, r in enumerate(rows, 1):
             ward_name, name = fix_name(texts[i]), fix_name(texts[i + 1])
             i += 2
             bt, bk = body_key(r["body_raw"])
@@ -254,6 +256,9 @@ def page_records(pdf, p, pg, use_ocr=True):
                  "ward_name": ward_name, "name": name, "party": party_of(r["party_raw"]) or None,
                  "party_text": r["party_raw"], "election": ELECTION, "url": p.get("url", URL), "page": pg,
                  "serial": r["serial"],
+                 # source trail: data row on the page (1-based, top to bottom) and its box in PDF points (top-left origin)
+                 "src_pos": {"page": pg, "row": ri, "box_pt": [round(r["cols"][1][0], 1), round(r["y0"], 1),
+                                                               round(r["cols"][7][1], 1), round(r["y1"], 1)]},
                  "name_check": "ok" if subseq(key(r["name_raw"]), key(name)) else "differs from text layer"}
             if b.get("body_en"):
                 d["body_en"] = b["body_en"]
@@ -271,6 +276,7 @@ def fetch(p, get):
         return [], [], "tesseract not available"
     url = p.get("url", URL)
     content = stored(p, get)
+    from_bucket = content is not None
     if content is None:
         r = get(url)
         if r is None:
@@ -286,4 +292,6 @@ def fetch(p, get):
         with open(pdf, "wb") as f:
             f.write(content)
         recs = parse(pdf, p)
+    if from_bucket:
+        mark_stored(recs, p, content, url)
     return recs, files, "" if recs else "no members read"

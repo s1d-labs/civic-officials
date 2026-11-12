@@ -18,6 +18,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html cards (label / value divs under <h5> headings)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub_as"
 URL = "https://pds.assam.gov.in/portal/dc-offices.html"
 
@@ -67,8 +69,9 @@ def _subdivision(address):
     return m.group(1).strip() if m else ""
 
 
-def cards(html):
-    """[(district as the page writes it, {label: value})] for every officer card, in page order."""
+def cards(html, where=None):
+    """[(district as the page writes it, {label: value})] for every officer card, in page order. where: a list; when given, it
+    gets the src_pos of each card: {"selector": "h5", "h5": n} = the card's block follows the n-th <h5> after the list title."""
     i = html.find("Statewise All District List")
     parts = re.split(r"<h5>(.*?)</h5>", html[i:] if i >= 0 else html, flags=re.S)
     out, dist = [], ""
@@ -82,17 +85,20 @@ def cards(html):
             f[_esw.clean(label)] = re.sub(r"(\s*\|\s*)+", " | ", _esw.clean(val)).strip(" |")
         if f.get("Name of the Officer") or f.get("Designation"):
             out.append((dist, f))
+            if where is not None:
+                where.append({"selector": "h5", "h5": (k + 1) // 2})
     return out
 
 
 def parse(html, url=URL):
-    rows = cards(html)
+    where = []
+    rows = cards(html, where)
     count = {}
     for dist, f in rows:
         k = (dist, _esw.slug(f.get("Designation", "")))
         count[k] = count.get(k, 0) + 1
     recs, seen = [], set()
-    for dist, f in rows:
+    for (dist, f), pos in zip(rows, where):
         desig = _esw.clean(f.get("Designation", "")).strip(" ,")
         name = _esw.clean(f.get("Name of the Officer", ""))
         d = district(dist)
@@ -115,7 +121,8 @@ def parse(html, url=URL):
         rec = _esw.record(MODULE, key, dept="administration" if admin else "food_supplies", level=level, area=area, post=desig,
                           designation=desig, name=name, phone=_esw.phones(_phone(f.get("Contact Number (M)")),
                                                                          _phone(f.get("Phone Number (O)"))),
-                          email=_esw.emails(f.get("Email Id", "")), address=addr, district=d, state="AS", source=url)
+                          email=_esw.emails(f.get("Email Id", "")), address=addr, district=d, state="AS", source=url,
+                          src_pos=pos)
         if rec[1].get("name") or rec[1].get("phone") or rec[1].get("email"):
             recs.append(rec)
     return recs

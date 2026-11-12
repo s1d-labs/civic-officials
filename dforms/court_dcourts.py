@@ -20,6 +20,8 @@ from urllib.parse import urlparse
 from dforms import _civic, _esw
 from dforms.police_s3waas import last_updated
 
+METHOD = "html table (judges, contact tables) + html text blocks (contact page)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "court_dcourts"
 SUB = re.compile(r"sub[- ]?divisional|\bsdjm\b|\bsdm\b|outlying|taluk|taluka|tehsil|tahsil|munsif|munsiff|gram nyayalaya|"
                  r"link court|\bbranch\b|camp court|civil court (?:jr|junior)", re.I)
@@ -94,7 +96,8 @@ def judges(html, url, p):
     lu = last_updated(html)
     soup = _esw.soup(html)
     recs, seen = [], set()
-    for t in soup.select("table"):
+    for tno, t in enumerate(soup.select("table"), 1):
+        all_trs = t.find_all("tr")
         cap = t.find("caption")
         est = _esw.clean(cap.get_text(" ")) if cap else ""
         est = "" if GENERIC_CAP.match(est) else est
@@ -132,7 +135,8 @@ def judges(html, url, p):
                 post=f.get("designation"), name=name, vacant=vac or None,
                 establishment=est, room=f.get("room"), location=f.get("location"), profile=prof,
                 phone=_esw.phones(f.get("phone") or ""), email=_esw.emails(f.get("email") or ""),
-                state=p.get("state"), district=p.get("district"), office_id=key, source=url, last_updated=lu, kind="judge"))
+                state=p.get("state"), district=p.get("district"), office_id=key, source=url, last_updated=lu, kind="judge",
+                src_pos={"table": tno, "row": all_trs.index(tr) + 1 if tr in all_trs else None}, method="html table"))
     return recs
 
 
@@ -162,7 +166,8 @@ def lines_of(node):
 def contact_tables(node, url, p, lu, host, seen):
     recs = []
     for t in node.find_all("table"):
-        g = _esw.grid(t)
+        gpos = []
+        g = _esw.grid(t, pos=gpos)
         if len(g) < 2:
             continue
         hi = next((i for i, r in enumerate(g[:3]) if {"email", "phone"} & set(col_kinds(r))
@@ -170,7 +175,7 @@ def contact_tables(node, url, p, lu, host, seen):
         if hi is None:
             continue
         kinds = col_kinds(g[hi])
-        for row in g[hi + 1:]:
+        for row, rp in zip(g[hi + 1:], gpos[hi + 1:]):
             f = {k: v for k, v in zip(kinds, row) if k}
             ph, em = _esw.phones(f.get("phone", "")), _esw.emails(" ".join(row))
             if not (ph or em):
@@ -184,7 +189,8 @@ def contact_tables(node, url, p, lu, host, seen):
                 MODULE, key, dept="courts", level="subdivision" if town else level_of(office, f.get("address")), area=office,
                 post=office, name=name, town=town,
                 phone=ph, email=em, address=f.get("address"), state=p.get("state"), district=p.get("district"), office_id=key,
-                source=url, last_updated=lu, kind="office"))
+                source=url, last_updated=lu, kind="office", src_pos={**rp, "selector": "#row-content table"},
+                method="html table"))
         t.decompose()
     return recs
 
@@ -208,7 +214,8 @@ def contacts(html, url, p):
     seen = set()
     recs = contact_tables(node, url, p, lu, host, seen)
     blocks, cur = [], []
-    for ln in lines_of(node):
+    lines = lines_of(node)
+    for ln in lines:
         has = any(CONTACT.search(x) for x in cur)
         if cur and has and HEAD.search(ln) and not CONTACT.search(ln) and len(ln) < 160:
             blocks.append(cur)
@@ -216,7 +223,9 @@ def contacts(html, url, p):
         cur.append(ln)
     if cur:
         blocks.append(cur)
-    for b in blocks:
+    at = 1
+    for bno, b in enumerate(blocks, 1):
+        first, at, first_text = at, at + len(b), b[0]   # source trail: 1-based line of the block's first line in the page text lines
         text = " | ".join(b)
         ll = [float(m.group(2)) for m in LATLON.finditer(text)]
         b = [LATLON.sub(" ", x) for x in b]
@@ -241,7 +250,9 @@ def contacts(html, url, p):
             lat=next((x for x in ll if 6 < x < 37.6), None), lon=next((x for x in ll if 68 < x < 97.5), None),
             post=post or office, name=name, phone=ph, email=em,
             address=adr[:400], text=text[:1000], state=p.get("state"), district=p.get("district"), office_id=key, source=url,
-            last_updated=lu, kind="office"))
+            last_updated=lu, kind="office",
+            src_pos={"selector": "#row-content text lines (tables taken out)", "block": bno, "line": first, "line_text": first_text},
+            method="html text block"))
     return recs
 
 
@@ -257,6 +268,8 @@ def fetch(p, get):
             continue
         files.append(_esw.keep(MODULE, f"{host}-{path.strip('/')}", r.content))
         got = parse(r.text, u, p)
+        for _, d in got:
+            d["src_url"] = u
         if not got:
             why.append(f"no rows {path}")
         recs += got

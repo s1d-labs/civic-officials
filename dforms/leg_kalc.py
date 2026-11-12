@@ -20,6 +20,8 @@ import subprocess
 from cforms import cn_nudi
 from dforms import _esw, _leg, _pdfcells
 
+METHOD = 'pdf text (pdftotext -raw) + Nudi map'     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_kalc"
 LIST = "https://kla.kar.nic.in/council/members/memberslist.htm"
 BASE = "https://kla.kar.nic.in/council/members/"

@@ -11,6 +11,10 @@ import re
 
 from dforms import _esw
 from forms.aspnet import hidden
+from dforms._water import pgrid
+import provenance
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ero_tn"
 BASE = "https://www.erolls.tn.gov.in/acwithcandidate_be2019/"
@@ -42,7 +46,7 @@ def items(get=None):
 def _table(html):
     """(header, rows) of the first table that has an 'Sl.No' header."""
     for t in _esw.soup(html).find_all("table"):
-        g = _esw.grid(t)
+        g = pgrid(t)
         if g and g[0] and g[0][0].lower().startswith("sl"):
             return [h.lower() for h in g[0]], g[1:]
     return [], []
@@ -55,7 +59,9 @@ def _col(head, row, *words):
     return ""
 
 
-def parse(html, page, district=None, url=None):
+def parse(html, page, district=None, url=None, src=None):
+    """src: provenance.at() of the answer read (the postback: the same url as the first GET)."""
+    src = src or {}
     head, rows = _table(html)
     recs, seen = [], set()
     if page == "deo":
@@ -70,7 +76,8 @@ def parse(html, page, district=None, url=None):
             recs.append(_esw.record(MODULE, key, dept="elections", level="district", area=dist, post="District Election Officer",
                                     designation=_col(head, r, "designation"), name=_col(head, r, "name of the deo"),
                                     phone=_esw.phones(_col(head, r, "contact")), email=_esw.emails(_col(head, r, "email")),
-                                    state="TN", district=dist, office_id=key, source=url or BASE + "DEO.aspx", last_updated=upd))
+                                    state="TN", district=dist, office_id=key, source=url or BASE + "DEO.aspx", last_updated=upd,
+                                    src_pos=getattr(r, "pos", None)))
         return recs
     for r in rows:
         m = NO.match(_col(head, r, "assembly"))
@@ -87,7 +94,8 @@ def parse(html, page, district=None, url=None):
         seen.add(k)
         recs.append(_esw.record(MODULE, k, dept="elections", level="ac", area=f"{no} - {ac}", post=POST[page], designation=desig,
                                 name=_col(head, r, f"name of the {page}"), phone=_esw.phones(_col(head, r, "mobile")), address=addr,
-                                state="TN", district=district, office_id=office, source=url or BASE + page.upper() + ".aspx"))
+                                state="TN", district=district, office_id=office, source=url or BASE + page.upper() + ".aspx",
+                                src_pos=getattr(r, "pos", None), **src))
     return recs
 
 
@@ -105,5 +113,5 @@ def fetch(p, get):
     if r2 is None:
         return [], [], "postback did not answer"
     files = [_esw.keep(MODULE, f"{page}-d{p['district_value']}", r2.content)]
-    recs = parse(r2.text, page, p.get("district"), url)
+    recs = parse(r2.text, page, p.get("district"), url, provenance.at(r2, url))
     return recs, files, "" if recs else "no rows"

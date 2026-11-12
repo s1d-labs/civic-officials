@@ -16,6 +16,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_gj"
 STATE = "GJ"
 URL = "https://udd.gujarat.gov.in/corporations.php"
@@ -32,7 +34,7 @@ def items(get=None):
     return [{"key": "ulb2_gj-corporations", "payload": {"reader": MODULE, "url": URL, "state": STATE, "india_only": False}}]
 
 
-def rows(html):
+def rows(html, where=None):
     """[(city, officer, designation, email, website)] from the corporations table."""
     soup = _esw.soup(html)
     t = soup.find("table", class_="Listtable") or soup.find("table")
@@ -42,17 +44,20 @@ def rows(html):
     cells = t.find_all("td")
     for i in range(0, len(cells) - 5, 6):
         c = cells[i:i + 6]
+        pos = {"table": _esw.table_no(t), "td": i + 1}     # source trail: the row's first <td> among the table's <td>
         if not re.fullmatch(r"\d+", _esw.clean(c[0].get_text(" "))):
             continue
         a = c[5].find("a", href=True)
         out.append((_esw.clean(c[1].get_text(" ")), _esw.clean(c[2].get_text(" ")), _esw.clean(c[3].get_text(" ")),
                     _esw.clean(c[4].get_text(" ")), a["href"].strip() if a else ""))
+        if where is not None:
+            where.append(pos)
     return out
 
 
 def parse(html, url=URL):
-    recs, seen = [], set()
-    for city, name, post, email, site in rows(html):
+    recs, seen, where = [], set(), []
+    for (city, name, post, email, site), pos in zip(rows(html, where), where):
         if not city or not (name or email):
             continue
         code, district = CODES.get(re.sub(r"[^a-z]", "", city.lower()), (None, None))
@@ -60,7 +65,7 @@ def parse(html, url=URL):
         if site:
             extra["website"] = site
         recs.append(_ulb.record(MODULE, STATE, city, post or "Municipal Commissioner", seen, name=name, email=email, district=district,
-                                body_type="Municipal Corporation", source=url, **extra))
+                                body_type="Municipal Corporation", source=url, src_pos=pos, **extra))
     return recs
 
 

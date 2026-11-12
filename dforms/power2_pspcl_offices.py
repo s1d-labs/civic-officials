@@ -26,7 +26,10 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, email, pdf_pages, phone, raw, slug
+import provenance
+from dforms._power import Out, cells, tr_pos, clean, email, pdf_pages, phone, raw, slug
+
+METHOD = "pdf text (pypdf layout) + html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "power2_pspcl_offices"
 URLS = {"pio": "https://www.pspcl.in/pdfs/twenty-twentytwo/06/Recent_Updated_PIO_List10092025.pdf",
@@ -75,8 +78,8 @@ def is_phone(t):
 def pio_rows(pages):
     """One dict per numbered row: sno, post, role, address, phones, email."""
     rows, cur = [], None
-    for page in pages:
-        for line in page.splitlines():
+    for pn, page in enumerate(pages, 1):
+        for ln, line in enumerate(page.splitlines(), 1):
             cs = chunks(line)
             if not cs:
                 continue
@@ -98,7 +101,7 @@ def pio_rows(pages):
                 if extra and not re.match(r"(?i)autho", extra):
                     rest = [(cs[ri][0] + len(role) + 1, extra)] + rest
                 cur = {"sno": sno, "post": post_parts, "role": role, "address": [], "phones": [], "email": "",
-                       "rc": cs[ri][0], "pc": None}
+                       "rc": cs[ri][0], "pc": None, "at": [(pn, ln, line)]}
                 rows.append(cur)
                 for pos, t in rest:
                     _cell(cur, pos, t, first=True)
@@ -108,6 +111,7 @@ def pio_rows(pages):
             if re.match(r"(?i)^note\b", cs[0][1]):
                 cur = None
                 continue
+            cur["at"].append((pn, ln, line))
             for pos, t in cs:
                 if pos < cur["rc"] - 1:
                     if re.fullmatch(r"\d{1,3}\.?", t) and not cur["sno"]:
@@ -187,8 +191,12 @@ def parse_pio(pages, url=URLS["pio"], last_updated=None):
                "division": division if lvl == "subdivision" else None}
         em = email(r["email"])
         key = "pio:" + (em.split("@")[0] if em else slug(post))
+        at = [x for x in r.get("at", []) if x[0] == r["at"][0][0]] if r.get("at") else []
         out.add(key, lvl, area, post=post, phone_=phone(*r["phones"]), email_=em, address=addr, parents=par,
-                pio_role=r["role"], list_no=r["sno"])
+                pio_role=r["role"], list_no=r["sno"],
+                src_pos=provenance.line_pos(at[0][0], at[0][1], "\n".join(x[2] for x in at),
+                                            lines=[x[1] for x in at] if len(at) > 1 else None) if at else None,
+                method="pdf text (pypdf layout)")
     return out.recs
 
 
@@ -200,8 +208,9 @@ HROW = re.compile(r"^\s*\d+\s+([1-6])\s+([A-Za-z]+)\s+(\d{2})\s+(\S.*?)\s+(\d{3}
 def parse_hierarchy(pages, url=URLS["hierarchy"], last_updated=None):
     out = Out(MODULE, "PB", url, discom="PSPCL", last_updated=last_updated)
     seen = set()
-    for line in "\n".join(pages).splitlines():
+    for pn, ln, line in ((pn, ln, x) for pn, pg in enumerate(pages, 1) for ln, x in enumerate(pg.splitlines(), 1)):
         m = HROW.match(line)
+        out.src = {"src_pos": provenance.line_pos(pn, ln, line), "method": "pdf text (pypdf layout)"}
         if not m:
             continue
         zc, zn, cc, cn, dc, dn, sc, sn, rest = m.groups()
@@ -222,6 +231,7 @@ def parse_hierarchy(pages, url=URLS["hierarchy"], last_updated=None):
         lvl = "section" if re.match(r"(?i)sub\s*office", sn) else "subdivision"
         out.add(f"h:{sc}", lvl, sn, post="AEE / AE (sub-division)" if lvl == "subdivision" else "Sub office",
                 office_id=sc, parents={"zone": zn, "circle": cn, "division": dn}, pincode=pin.group(1) if pin else None)
+    out.src = {}
     return out.recs
 
 
@@ -235,6 +245,7 @@ def parse_ncc(html, url=URLS["ncc"]):
     for tb in soup.find_all("table"):
         for tr in tb.find_all("tr"):
             c = cells(tr)
+            out.src = {"src_pos": tr_pos(tr), "method": "html table"}
             if len(c) == 1 and c[0]:
                 parts = [clean(x) for x in c[0].split("/")]
                 circle, zone = parts[0], (parts[1] if len(parts) > 1 else None)
@@ -247,6 +258,7 @@ def parse_ncc(html, url=URLS["ncc"]):
             out.add(f"ncc:{circle}:{div}", "division", div, post="Addl. SE / Sr. Xen", phone_=phone(*re.split(r"\s+(?=\d)", c[3])),
                     parents={"zone": zone, "circle": circle},
                     complaint_phone=phone(*re.split(r"\s+(?=\d)", c[2])))
+    out.src = {}
     return out.recs
 
 

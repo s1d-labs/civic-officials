@@ -12,6 +12,8 @@ any public list that we found. No "last updated" date. Record ids: dept:ward2s_a
 """
 from dforms import _esw, _ward
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_apcdma"
 STATE = "AP"
 API = "https://apcmms.ap.gov.in/apiv1/open/department/list/"
@@ -46,18 +48,19 @@ def parse(data, p):
     _id, body, lgd, district = BODIES[p["city"]]
     page = f"https://{p['city']}.cdma.ap.gov.in/ulbprofile/{p['city']}/contact"
     seen, recs = set(), []
-    for dp in (data or {}).get("data") or []:
+    for di, dp in enumerate((data or {}).get("data") or []):
         dept = _esw.clean(dp.get("dprt_nm"))
-        for role in dp.get("RleArray") or []:
+        for ri, role in enumerate(dp.get("RleArray") or []):
             post = _esw.clean(role.get("rle_nm"))
-            for e in role.get("emplArray") or []:
+            for ei, e in enumerate(role.get("emplArray") or []):
                 name, phone = _esw.clean(e.get("emple_name")), str(e.get("mble_ph") or "")
                 if not post or not (name or phone):
                     continue
                 recs.append(_ward.record(MODULE, f"{p['city']}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}", seen, body=body,
                                          lgd=lgd, state=STATE, district=district, level="body", area=body, post=post, name=name,
                                          phone=phone, source=page, api=p["url"], department=dept,
-                                         employee_id=_esw.clean(e.get("cfms_emple_id")) or None))
+                                         employee_id=_esw.clean(e.get("cfms_emple_id")) or None,
+                                         src_url=p["url"], src_pos={"path": f"data[{di}].RleArray[{ri}].emplArray[{ei}]"}))
     return recs
 
 

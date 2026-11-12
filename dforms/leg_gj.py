@@ -4,6 +4,8 @@ dforms/_leg_neva.py). The list comes in Gujarati first; the reader reads it agai
 """
 from dforms import _leg_neva
 
+METHOD = 'html cards (NeVA member list, div.search-item)'     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_gj"
 HOST = "gujarat.neva.gov.in"
 ALIAS = {"mahemdabad": "mehmedabad", "shahera": "shehra", "jamnagarrural": "jamnagar"}   # NeVA spelling -> layer name

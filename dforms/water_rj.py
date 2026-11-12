@@ -11,6 +11,9 @@ Record ids: dept:water_rj:RJ-PHED-<slug of designation>-<slug of place> (a count
 import re
 
 from dforms import _esw, _water
+from dforms._water import pgrid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "water_rj"
 URL = "https://phedwater.rajasthan.gov.in/content/raj/water/public-health-engineering-department/en/directory0.html"
@@ -59,7 +62,7 @@ def parse(html, url=URL):
     soup = _esw.soup(html)
     recs, seen = [], set()
     for t in soup.find_all("table"):
-        rows = _esw.grid(t)
+        rows = pgrid(t)
         if not rows:
             continue
         col = columns(rows[0])
@@ -92,7 +95,8 @@ def parse(html, url=URL):
             key = _water.unique(f"RJ-PHED-{_esw.slug(post)}-{_esw.slug(place)}", seen)
             recs.append(_esw.record(MODULE, key, dept="water", level=level, area=area, post=post, name=name, phone=phone, email=email,
                                     state="RJ", district=blank(c.get("district")).title() or None,
-                                    office_id=f"RJ-PHED-{_esw.slug(post)}-{_esw.slug(place)}", org=ORG, place=place, source=url))
+                                    office_id=f"RJ-PHED-{_esw.slug(post)}-{_esw.slug(place)}", org=ORG, place=place, source=url,
+                                    src_pos=row.pos))
     return recs
 
 

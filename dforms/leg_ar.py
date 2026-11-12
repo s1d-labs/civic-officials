@@ -5,6 +5,8 @@ an address. List in English; no AC number: the name decides (ALIAS: the site's s
 """
 from dforms import _leg_neva
 
+METHOD = "html cards (NeVA member list, div.search-item)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_ar"
 HOST = "arla.neva.gov.in"
 # the site's spellings (normalised) -> the names of dforms/ac_no.json

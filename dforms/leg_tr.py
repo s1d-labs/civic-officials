@@ -7,6 +7,8 @@ One queue item = the page. Record ids: dept:leg_tr:TR-AC-<no>.
 """
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_tr"
 URL = "https://tripura.gov.in/members-legislative-assembly"
 
@@ -18,13 +20,14 @@ def items(get=None):
 def parse(html, url):
     recs = []
     for table in _esw.soup(html).find_all("table"):
-        for row in _esw.grid(table):
+        tp = []
+        for row, pos in zip(_esw.grid(table, pos=tp), tp):
             if len(row) < 4 or not row[2].strip().isdigit():
                 continue
             nm, cons, no, party = (_esw.clean(x.replace(" | ", " ")) for x in row[:4])
             seat, note = _leg_se.seat("TR", no, cons)
             recs.append(_leg.member(MODULE, "TR", "AC", seat, _leg_se.name(nm), constituency=cons, party=party, source=url,
-                                    note=note, house="Tripura Legislative Assembly (13th)"))
+                                    note=note, house="Tripura Legislative Assembly (13th)", src_pos=pos))
     return recs
 
 

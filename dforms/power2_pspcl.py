@@ -14,6 +14,9 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms import _power
+from dforms._power import tr_pos
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "power2_pspcl"
 URL = "https://www.pspcl.in/Otherlinks/Contact-Hods.aspx"
@@ -54,6 +57,7 @@ def parse(html, url=URL):
     for tb in soup.find_all("table"):
         org, office = None, None
         for tr in tb.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             c = [x for x in _power.cells(tr)]
             if not any(c):
                 continue
@@ -78,6 +82,7 @@ def parse(html, url=URL):
             par = {"zone": org} if org and org != office and lvl in ("circle", "division") else None
             out.add(f"{office}:{post}", lvl, office, post=post, phone_=_power.phone(*nums), email_=mails,
                     district=district(office) or district(org or ""), parents=par)
+    out.src = {}
     return out.recs
 
 

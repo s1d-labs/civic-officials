@@ -9,7 +9,9 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, email, phone, raw
+from dforms._power import tr_pos, Out, cells, clean, email, phone, raw
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MOD = "power_pvvnl"
 BASE = "https://pvvnl.org/office_hierarchy/"
@@ -37,10 +39,12 @@ def parse(html, district, url):
     soup = BeautifulSoup(html, "lxml")
     t = soup.find("table")
     if not t:
+        out.src = {}
         return out.recs
     zone = circle = None
     circles = []
     for tr in t.find_all("tr"):
+        out.src = {"src_pos": tr_pos(tr)}
         c = cells(tr)
         if len(c) < 7 or not c[0].strip().isdigit():
             continue
@@ -63,6 +67,7 @@ def parse(html, district, url):
                 office = post
         out.add(f"{district}:{post}:{area}", lvl, office, post=post, name=name, phone_=phone(tel), email_=email(mail),
                 district=district, parents=par)
+    out.src = {}
     return out.recs
 
 

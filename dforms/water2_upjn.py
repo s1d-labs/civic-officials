@@ -17,6 +17,9 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms import _esw
+from dforms._power import tr_pos
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 
 def slug(s):
@@ -69,13 +72,15 @@ def civil(table, R):
         idx = next((i for i, c in enumerate(cells) if c.isdigit()), None)
         if idx is None:
             continue
-        for c in cells[:idx]:
+        tp = tr_pos(tr)
+        for ci, c in enumerate(cells[:idx], 1):
             if MOB.search(c):
                 if pending:
                     lvl = pending.pop(0)
                     name, ph = person(c)
                     area = zone if lvl == "zone" else circle
-                    R.add(f"civil:{lvl}:{area}", lvl, area, name, ph, {"zone": zone} if lvl == "circle" else None, cadre="civil")
+                    R.add(f"civil:{lvl}:{area}", lvl, area, name, ph, {"zone": zone} if lvl == "circle" else None, cadre="civil",
+                          src_pos=dict(tp, col=ci))
             elif c.endswith("क्षेत्र"):
                 zone, pending = c, ["zone"]
             elif c.endswith("मण्डल"):
@@ -86,7 +91,7 @@ def civil(table, R):
             name, ph = person(cells[idx + 2])
             dist = area.split(",")[-1].strip() if "," in area else area
             R.add(f"civil:division:{area}", "division", area, name, ph, {"zone": zone, "circle": circle}, cadre="civil",
-                  district=dist)
+                  district=dist, src_pos=dict(tp, col=idx + 3))
 
 
 def _office(c):
@@ -103,18 +108,20 @@ def em(table, R):
     zone = circle = division = None
     for tr in table.find_all("tr"):
         cells = [_esw.clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all(["td", "th"])]
+        tp = tr_pos(tr)
         for i, c in enumerate(cells):
             if c.endswith("क्षेत्र") and not MOB.search(c):
                 zone = c
             elif "मण्डल" in c and MOB.search(c):
                 off, name, ph = _office(c)
                 circle = off
-                R.add(f"em:circle:{off}", "circle", off, name, ph, None, cadre="electrical-mechanical", zones=[zone] if zone else None)
+                R.add(f"em:circle:{off}", "circle", off, name, ph, None, cadre="electrical-mechanical", zones=[zone] if zone else None,
+                      src_pos=dict(tp, col=i + 1))
             elif c.startswith("खण्ड") and MOB.search(c):
                 off, name, ph = _office(c)
                 division = (f"em:division:{off}", off, name, ph)
                 R.add(division[0], "division", off, name, ph, {"circle": circle, "zone": zone}, cadre="electrical-mechanical",
-                      districts=[])
+                      districts=[], src_pos=dict(tp, col=i + 1))
             elif c.isdigit() and i + 1 < len(cells) and division:
                 d = R.seen.get(slug(division[0]))
                 if d is not None:

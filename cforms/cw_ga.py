@@ -18,6 +18,8 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
+METHOD = "pdf text (pypdf layout)"     # seed step (items): html pages     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://sec.goa.gov.in/"
 START = ("elections/previous/municipal-council/", "elections/ongoing/")
 ROMAN = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100}
@@ -101,8 +103,8 @@ def items(get):
     return out
 
 
-def parse(text, p):
-    """[(record id, record)] from the text of one winners PDF."""
+def parse(text, p, pages=None):
+    """[(record id, record)] from the text of one winners PDF. pages: the page texts (joined by "\n" = text), for src_pos."""
     m = COUNCIL.search(text) or COUNCIL.search(p.get("title") or "")
     council = clean(m.group(1)).title() if m else (p.get("body") or "")
     year = (m.group(2) if m and m.group(2) else None) or p.get("year")
@@ -127,8 +129,20 @@ def parse(text, p):
                       "body_type": "Municipality", "district": DISTRICT.get(slug.split("-")[0], ""), "ward_no": ward,
                       "ward_roman": w.group(1), "name": name, "reservation": clean(cat.group(1)) if cat else None,
                       "unopposed": unopposed or None, "election": f"Goa municipal councils {year}" if year else None,
-                      "url": p["url"], "page_url": p.get("page")}))
+                      "url": p["url"], "page_url": p.get("page"), "src_pos": ward_pos(text, w.start(), pages)}))
     return recs
+
+
+def ward_pos(text, at, pages=None):
+    """src_pos of the ward heading at char `at`: page (when the page texts are known), 1-based line in that page, the line."""
+    n = text.count("\n", 0, at) + 1
+    line = text.split("\n")[n - 1]
+    for pg, t in enumerate(pages or [], 1):
+        k = t.count("\n") + 1
+        if n <= k:
+            return {"page": pg, "line": n, "line_text": line}
+        n -= k
+    return {"line": n, "line_text": line}
 
 
 def fetch(p, get):
@@ -139,10 +153,11 @@ def fetch(p, get):
         return [], [], "not a pdf"
     from pypdf import PdfReader
     try:
-        text = "\n".join(pg.extract_text(extraction_mode="layout") or "" for pg in PdfReader(io.BytesIO(r.content)).pages)
+        pages = [pg.extract_text(extraction_mode="layout") or "" for pg in PdfReader(io.BytesIO(r.content)).pages]
+        text = "\n".join(pages)
     except Exception as e:  # noqa: BLE001
         return [], [], f"pdf: {type(e).__name__}"
     key = hashlib.sha1(p["url"].encode()).hexdigest()[:12]
     files = [(f"councillors/GA/{key}.pdf", r.content, "application/pdf")]
-    recs = parse(text, p)
+    recs = parse(text, p, pages)
     return recs, files, "" if recs else ("no text layer" if len(text.strip()) < 50 else "no wards read")

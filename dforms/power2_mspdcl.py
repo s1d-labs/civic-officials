@@ -15,6 +15,9 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms import _power, _util2_east
+from dforms._power import tr_pos
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "power2_mspdcl"
 URL = "https://mspdcl.in/about/who-is-who"
@@ -31,6 +34,7 @@ def parse(html, url=URL):
     for tb in soup.find_all("table"):
         block, head = None, None
         for tr in tb.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             c = _power.cells(tr)
             if len(c) == 1:
                 block, head = _power.clean(c[0]), None
@@ -54,6 +58,7 @@ def parse(html, url=URL):
             else:
                 out.add(f"{block}:{post}", "state", block if block != "Other Offices" else (unit or block), post=post,
                         name=_util2_east.person(g.get("name")), email_=_power.email(g.get("email")))
+    out.src = {}
     return out.recs
 
 

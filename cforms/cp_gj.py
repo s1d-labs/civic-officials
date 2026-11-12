@@ -24,7 +24,10 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
+import provenance
 from cforms.cp_common import clean, phones, record, slug, useful, ward_no
+
+METHOD = "html page (cards, script arguments, detail forms) or pdf text (pypdf layout), by payload layout"     # source trail (provenance.py): how this reader reads its sources
 
 TITLE = re.compile(r"^(shri|shree|smt|mr|mrs|ms|dr|shrimati)\.?\s+", re.I)
 GU_TITLE = re.compile(r"^(શ્રીમતી|શ્રી|ર્ડો\.|ડો\.|ડૉ\.)\s*")
@@ -89,14 +92,17 @@ def rmc_cards(html):
     return out
 
 
-def vmc_entries(text):
-    """(serial, ward, name, phones, address lines) per entry of the Vadodara PDF text (pypdf layout mode)."""
+def vmc_entries(text, pos=None):
+    """(serial, ward, name, phones, address lines) per entry of the Vadodara PDF text (pypdf layout mode).
+    pos: a list that gets each entry's first line: 1-based line number in `text` (split at line ends) and the line."""
     out, cur = [], None
-    for line in text.splitlines():
+    for li, line in enumerate(text.splitlines(), 1):
         m = re.match(r"^\s*(\d{1,3})\s+(\d{1,2})\s+(\S.*)$", line)
         if m:
             cur = [m.group(1), m.group(2), m.group(3), []]
             out.append(cur)
+            if pos is not None:
+                pos.append((li, line))
         elif cur is not None and line.strip():
             cur[3].append(line.strip())
     res = []
@@ -108,6 +114,16 @@ def vmc_entries(text):
         addr = " ".join(re.sub(r"(?<!\d)[6-9]\d{9}(?!\d)", "", x).strip() for x in rest).strip() or None
         res.append((serial, ward, name, ph, addr))
     return res
+
+
+def page_line(pages, n, line):
+    """Line n of the pages' texts joined by "\n" -> provenance.line_pos(page, line in that page, line text)."""
+    for pg, t in enumerate(pages, 1):
+        k = t.count("\n") + 1
+        if n <= k:
+            return provenance.line_pos(pg, n, line)
+        n -= k
+    return {"line": n, "line_text": line}
 
 
 def numbered(state, body, recs):
@@ -133,16 +149,17 @@ def fetch(p, get):
             if not cards:
                 break
             files.append((f"councillors/GJ/cp-{slug(body)}-p{page}.html.gz", gzip.compress(r.content), "application/gzip"))
-            for name, label, addr, ph in cards:
+            for k, (name, label, addr, ph) in enumerate(cards, 1):
                 seen.add(name)
                 recs.append(record("GJ", body, ward_no(label), name_of(name), url, phone=phones(ph), address=addr,
-                                   ward_label=label, lgd_code=lgd))
+                                   ward_label=label, lgd_code=lgd, extra={**provenance.at(r, url), "method": "html (openModel script arguments)"},
+                                   pos={"selector": "openModel(...) call", "card": k}))
     elif layout == "smc":
         r = get(p["url"])
         if r is None:
             return [], [], "no answer"
         files.append((f"councillors/GJ/cp-{slug(body)}-list.html.gz", gzip.compress(r.content), "application/gzip"))
-        for name, label, action, fields in smc_list(r.text):
+        for k, (name, label, action, fields) in enumerate(smc_list(r.text), 1):
             a = get(urljoin(p["url"], action or "/Corporation/Navigate"), method="POST", data=fields)
             nav = a is not None and smc_form(a.text)
             b = nav and get(urljoin(p["url"], nav[0]), method="POST", data=nav[1])
@@ -150,16 +167,21 @@ def fetch(p, get):
             if not d:
                 continue
             files.append((f"councillors/GJ/cp-{slug(body)}-{slug(name)}.html.gz", gzip.compress(b.content), "application/gzip"))
+            # source trail: the detail page (a POST answer; every member POSTs to the same url, so it is named by its bytes)
             recs.append(record("GJ", body, ward_no(label), name_of(d["name"]) or name_of(name), p["url"], phone=d["phone"],
-                               address=d["address"], ward_label=label, lgd_code=lgd, extra={"ward_name": d["ward_label"]}))
+                               address=d["address"], ward_label=label, lgd_code=lgd,
+                               extra={"ward_name": d["ward_label"], **provenance.at(b, urljoin(p["url"], nav[0])),
+                                      "method": "html page (member detail form)"},
+                               pos={"selector": "detail page text", "list_item": k}))
     elif layout == "rmc":
         r = get(p["url"])
         if r is None:
             return [], [], "no answer"
         files.append((f"councillors/GJ/cp-{slug(body)}.html.gz", gzip.compress(r.content), "application/gzip"))
-        for serial, ward, name, addr, ph in rmc_cards(r.text):
+        for k, (serial, ward, name, addr, ph) in enumerate(rmc_cards(r.text), 1):
             recs.append(record("GJ", body, str(int(ward)), name_of(name, gu=True), p["url"], phone=ph, address=addr,
-                               lgd_code=lgd, extra={"serial": serial}))
+                               lgd_code=lgd, extra={"serial": serial, "method": "html page text"},
+                               pos={"selector": "page text (ક્રમ/વોર્ડ blocks)", "card": k}))
     elif layout == "vmcpdf":
         r = get(p["url"])
         if r is None:
@@ -168,12 +190,15 @@ def fetch(p, get):
         import io
         from pypdf import PdfReader
         try:
-            text = "\n".join(pg.extract_text(extraction_mode="layout") or "" for pg in PdfReader(io.BytesIO(r.content)).pages)
+            pages = [pg.extract_text(extraction_mode="layout") or "" for pg in PdfReader(io.BytesIO(r.content)).pages]
+            text = "\n".join(pages)
         except Exception as e:
             return [], files, f"pdf: {type(e).__name__}"
-        for serial, ward, name, ph, addr in vmc_entries(text):
+        pos = []
+        for (serial, ward, name, ph, addr), (li, line) in zip(vmc_entries(text, pos), pos):
             recs.append(record("GJ", body, str(int(ward)), name, p["url"], phone=ph, lgd_code=lgd,
-                               extra={"serial": serial, "address_pdf": addr, "name_quality": "pdf font: letters missing"}))
+                               extra={"serial": serial, "address_pdf": addr, "name_quality": "pdf font: letters missing",
+                                      "method": "pdf text (pypdf layout)"}, pos=page_line(pages, li, line)))
     else:
         return [], [], f"unknown layout {layout}"
     recs = useful(recs)

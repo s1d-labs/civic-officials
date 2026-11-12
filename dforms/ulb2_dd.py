@@ -8,6 +8,8 @@ dnh.gov.in's public-utility municipality card is left to the S3WaaS reader (ulb2
 """
 from dforms import ulb2_mh
 
+METHOD = "html page text (pattern match)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_dd"
 
 

@@ -3,6 +3,8 @@ One queue item = one district page (its /page/N/ pages included); parsing in pol
 Record id dept:police_tg:<district>:<station>."""
 from dforms import police_s3waas
 
+METHOD = "html table + html cards (S3WaaS public utility), paged /page/N/"     # source trail (provenance.py): how this reader reads its sources
+
 M = "police_tg"
 
 

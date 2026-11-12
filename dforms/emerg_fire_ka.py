@@ -13,6 +13,9 @@ Record ids: dept:emerg_fire_ka:st-<station no.>, unit-<slug>.
 import re
 
 from dforms import _emerg, _pdftext
+from provenance import line_pos
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "emerg_fire_ka"
 URL = "https://ksfes.karnataka.gov.in/uploads/media_to_upload1745835964.pdf"
@@ -22,10 +25,11 @@ def items(get=None):
     return _emerg.seed(MODULE)
 
 
-def rows(text):
-    """[(cfo, rfo, dfo, station no. or None, station or unit)] from the layout text of the PDF."""
+def rows(text, where=None, at=None):
+    """[(cfo, rfo, dfo, station no. or None, station or unit)] from the layout text of the PDF. where (a list) gets each row's
+    src_pos; at = (page, line in page) of each text line when known."""
     out, cfo, rfo, dfo = [], None, None, None
-    for line in text.splitlines():
+    for li, line in enumerate(text.splitlines()):
         m = re.match(r"^\s*(\d{1,3})\s+(.*\S)\s*$", line) or re.match(r"^\s{4,}((?:CFO|RFO|DFO|COMMAND|HEAD)\b.*\S)\s*$", line)
         if not m:
             continue
@@ -49,6 +53,8 @@ def rows(text):
             i += 1
         if name:
             out.append((cfo, rfo, dfo, no, _emerg.clean(name).rstrip(".")))
+            if where is not None:
+                where.append(line_pos(*at[li], line) if at and li < len(at) else {"line": li + 1, "line_text": line})
     return out
 
 
@@ -62,9 +68,9 @@ def tidy(post):
     return _emerg.clean(m.group(2)).title()
 
 
-def records(text, url):
-    recs, seen = [], set()
-    for cfo, rfo, dfo, no, name in rows(text):
+def records(text, url, at=None, engine=None):
+    recs, seen, where = [], set(), []
+    for n, (cfo, rfo, dfo, no, name) in enumerate(rows(text, where, at)):
         unit = no is None
         if unit and not re.search(r"(?i)\(units?\)|academy|workshop", name):
             continue
@@ -72,7 +78,8 @@ def records(text, url):
         recs.append(_emerg.record(
             MODULE, key, "fire", dept="fire", level="facility", area=re.sub(r"(?i)\s*\(units?\)", "", name),
             post="Station Officer", station_no=no, unit=True if unit else None,
-            zone=tidy(cfo), region=tidy(rfo), district_office=tidy(dfo), state="KA", office_id=key, source=url))
+            zone=tidy(cfo), region=tidy(rfo), district_office=tidy(dfo), state="KA", office_id=key, source=url,
+            src_pos=where[n], **({"method": f"pdf text ({engine})"} if engine else {})))
     return recs
 
 
@@ -82,6 +89,7 @@ def fetch(p, get):
     if r is None:
         return [], [], "no answer"
     files = [_emerg.keep(MODULE, "station-list", r.content, "pdf")]
-    pages, _ = _pdftext.layout_pages(r.content)
-    recs = records("\n".join(pages), url)
+    pages, engine = _pdftext.layout_pages(r.content)
+    at = [(pn, k) for pn, pg in enumerate(pages, 1) for k, _ in enumerate(pg.split("\n"), 1)]
+    recs = records("\n".join(pages), url, at, _emerg.ENGINE.get(engine))
     return recs, files, "" if recs else "no rows"

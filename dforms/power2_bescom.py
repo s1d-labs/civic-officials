@@ -18,6 +18,8 @@ from io import BytesIO
 
 from dforms._power import Out, clean, email, phone, raw
 
+METHOD = "spreadsheet (xlsx)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_bescom"
 URL = "https://bescom.karnataka.gov.in/uploads/media_to_upload1757575623.xlsx"
 NS = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
@@ -49,7 +51,7 @@ def sheets(content):
                 v = c.find(NS + "v")
                 if v is not None and v.text is not None:
                     d[col] = ss[int(v.text)] if c.get("t") == "s" else v.text
-            rows.append({k: v for k, v in d.items() if v and v.strip()})
+            rows.append({**{k: v for k, v in d.items() if v and v.strip()}, "_r": r.get("r")})   # _r: sheet row (source trail)
         out.append((sh.get("name"), rows))
     return out
 
@@ -186,7 +188,8 @@ def parse(content, url=URL):
                 ppl = people(r.get(col, "")) or [(None, None, [], [])]
                 p0 = ppl[0]
                 out.add(f"{lvl}:{':'.join(path)}", lvl, name, post=post, name=p0[1], phone_=phone(*p0[2]),
-                        email_=email(" ".join(p0[3])), parents=parents, district=district)
+                        email_=email(" ".join(p0[3])), parents=parents, district=district,
+                        src_pos={"sheet": sname, "row": int(r["_r"]) if str(r.get("_r") or "").isdigit() else None, "col": col})
             par = {"zone": zone, "circle": circle, "division": div, "subdivision": sub}
             ss = phone(r.get(ss_col)) if ss_col and ss_col != area_col else None
             areas = clean(r.get(area_col)) if area_col not in "BCDEFGHIJK" else None
@@ -196,7 +199,8 @@ def parse(content, url=URL):
                                                                                                           "Assistant Engineer / Junior Engineer")
                 out.add(f"section:{':'.join(path)}:{unit}:{post}:{nm or ''}", "section", unit, post=post, name=nm,
                         phone_=phone(*nums), email_=email(" ".join(mails)), parents=par, district=district,
-                        areas=areas, service_station_phone=ss)
+                        areas=areas, service_station_phone=ss,
+                        src_pos={"sheet": sname, "row": int(r["_r"]) if str(r.get("_r") or "").isdigit() else None, "col": "K"})
     return out.recs
 
 

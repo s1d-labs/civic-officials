@@ -20,6 +20,8 @@ import re
 
 from dforms import _esw, ulb_as
 
+METHOD = "html cards (h3.font-semibold + p lines; office from the page footer)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_as"
 STATE = "AS"
 # subdomain | name as the platform's list writes it (ulb_as.BODIES) | district as the platform writes it | LGD local body code

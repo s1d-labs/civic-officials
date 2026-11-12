@@ -8,6 +8,9 @@ Record ids: dept:sro_kl:KL-SRO-<district>-<office>, KL-DR-<district>-<gl|audit>,
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sro_kl"
 URL = "https://registration.kerala.gov.in/en/contact/"
@@ -22,7 +25,7 @@ def parse(html, url=URL):
     soup = _esw.soup(html)
     recs, seen = [], set()
     for t in soup.find_all("table"):
-        for row in _esw.grid(t):
+        for row in pgrid(t):
             if len(row) != 7 or not re.fullmatch(r"\d+", row[0].strip()):
                 continue
             c = dict(zip(HEAD, row))
@@ -42,7 +45,7 @@ def parse(html, url=URL):
             seen.add(key)
             recs.append(_esw.record(MODULE, key, dept="registration", level=level, area=area, post=post, office=office,
                                     phone=_esw.phones(c["phone"]), email=_esw.emails(c["email"]), address=c["address"], state="KL",
-                                    district=district, office_id=key, source=url))
+                                    district=district, office_id=key, source=url, src_pos=row.pos))
     return recs
 
 

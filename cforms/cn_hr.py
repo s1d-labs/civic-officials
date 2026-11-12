@@ -18,8 +18,11 @@ import os
 import re
 import tempfile
 
+import provenance
 from cforms import hr
 from cforms.tn import stored
+
+METHOD = "ocr tesseract eng (ruled grid, one image per column)"     # source trail (provenance.py): how this reader reads its sources
 
 URL = "https://ulbharyana.gov.in/Website/DynamicUploadContent/CONTENTFILES/b7a90171-1b60-4c3d-8617-5137e031b016.pdf"
 ELECTION = "Haryana 2022 (poll 19.06.2022; SEC notification SEC/1ME/2022/6120 of 04.07.2022)"
@@ -77,7 +80,7 @@ def page_rows(trows, state):
             state["last"] = int(ward)
         out.append({"district": state.get("district", ""), "body": state.get("body", ""), "body_type": state.get("body_type"),
                     "ward": ward, "name": (c["name"] or "").replace("]", "j"), "father": c["father"], "office": office if is_chair else "Member",
-                    "category": c["category"], "party": c["party"]})
+                    "category": c["category"], "party": c["party"], "_pos": hr.row_pos(r)})
     return out
 
 
@@ -112,6 +115,7 @@ def fetch(p, get):
         return [], [], "tesseract not available"
     url = p.get("url", URL)
     content = stored(p, get)
+    src = provenance.file_src(content, url, p["stored"]) if content is not None else None
     if content is None:
         r = get(url)
         if r is None:
@@ -127,6 +131,9 @@ def fetch(p, get):
         with open(pdf, "wb") as f:
             f.write(content)
         recs = parse(pdf, {**p, "election": p.get("election", ELECTION), "url": url})
+    for _, d in recs:
+        if src:
+            d["src"] = dict(src)
     return recs, files, "" if recs else "no members read"
 
 

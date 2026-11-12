@@ -25,7 +25,10 @@ from pathlib import Path
 
 from dforms import _esw, _ulb, ulb_up
 from dforms._water import unique
+import provenance
 from dforms.ulb_uk_krutidev import convert
+
+METHOD = "pdf ruled table (pypdf text runs + rules) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb_uk"
 PAGE = "https://udd.uk.gov.in/document-category/list-of-ulb-eo/"
@@ -122,7 +125,7 @@ def table_rows(content, ncols):
     from pypdf import PdfReader
     reader = PdfReader(io.BytesIO(content))
     rows = []
-    for page in reader.pages:
+    for pno, page in enumerate(reader.pages, 1):
         runs, hor, ver = page_parts(page, reader)
         if len(ver) < ncols + 1:
             continue
@@ -152,7 +155,7 @@ def table_rows(content, ncols):
             top, bottom = body_ys[k], body_ys[k + 1]
             dk = band_of((top + bottom) / 2, dist_ys)
             d = " ".join(t for _, t in sorted(dist_text.get(dk, []), key=lambda r: -r[0]))
-            rows.append({"cells": page_rows[k], "district": d})
+            rows.append({"cells": page_rows[k], "district": d, "page": pno, "band": k + 1})
     # a row cut by a page break: the part on the next page has no serial and no body; it joins the row before
     out = []
     for r in rows:
@@ -220,7 +223,9 @@ def parse_email(content):
     return out
 
 
-def parse_eo(content, url=EO_PDF, emails=None, last_updated=None):
+def parse_eo(content, url=EO_PDF, emails=None, last_updated=None, email_url=None, src=None):
+    """src: provenance.at(answer) of the EO list (the item reads three answers); src_pos = page, ruled row band on the page
+    (1-based from the top), y of the officer's line and its raw (Kruti Dev) text; email_from = the email list the email came from."""
     recs, seen, district = [], set(), None
     for r in table_rows(content, 5):
         serial = "".join(t for _, t in r["cells"][0]).strip()
@@ -243,8 +248,13 @@ def parse_eo(content, url=EO_PDF, emails=None, last_updated=None):
             if not post or name in ("", "रिक्त"):
                 continue
             phone = ", ".join(m for my, m in mobs if abs(my - y) < 4)
+            pos = {"page": r.get("page"), "row": r.get("band"), "line_text": t}
+            if y > -5000:                                # a line from a continuation row on the next page has no y here
+                pos["y"] = round(y, 1)
+            if mail and email_url:
+                pos["email_from"] = email_url
             recs.append(rec(body, post, seen, district=district, name=name, phone=phone, email=mail, body_type=btype, source=url,
-                            serial=int(serial), last_updated=last_updated))
+                            serial=int(serial), last_updated=last_updated, src_pos=pos, **(src or {})))
     return recs
 
 
@@ -267,5 +277,5 @@ def fetch(p, get):
     if r is None or r.content[:5] != b"%PDF-":
         return [], files, "no EO list"
     files.insert(0, _esw.keep(MODULE, "ulb-eo-contact-list", r.content, "pdf"))
-    recs = parse_eo(r.content, eo, emails, date)
+    recs = parse_eo(r.content, eo, emails, date, email if emails else None, provenance.at(r, eo))
     return recs, files, "" if recs else "no rows"

@@ -10,6 +10,9 @@ Area = the place in the post, else the region. Record ids: dept:water_mh:MH-MJP-
 import re
 
 from dforms import _esw, _water
+from dforms._water import pgrid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "water_mh"
 URL = "https://mjp.maharashtra.gov.in/whos-who/"
@@ -30,7 +33,7 @@ def parse(html, url=URL):
     soup = _esw.soup(html)
     recs, seen = [], set()
     for t in soup.find_all("table"):
-        rows = _esw.grid(t)
+        rows = pgrid(t)
         if not rows or [h.lower() for h in rows[0][:2]] != ["name", "designation"]:
             continue
         sec = section(t)
@@ -51,7 +54,7 @@ def parse(html, url=URL):
             recs.append(_esw.record(MODULE, key, dept="water", level=level, area=area, post=title, name=name,
                                     phone=_esw.phones(c.get("phone")), email=_esw.emails(c.get("email")), state="MH",
                                     office_id=f"MH-MJP-{_esw.slug(region or 'hq')}-{_esw.slug(post)}", org=ORG,
-                                    region=region, section=sec if not region else None, source=url))
+                                    region=region, section=sec if not region else None, source=url, src_pos=row.pos))
     return recs
 
 

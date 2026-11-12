@@ -17,5 +17,7 @@ Ids dept:field_revenue_s3waas:<host>:<page or tag>:<serial or row>.
 """
 from dforms import _field
 
+METHOD = "html table, or pdf text (pdftotext -layout, else pypdf layout) with columns from the header positions"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "field_revenue_s3waas"
 items, fetch = _field.reader(MODULE, "revenue")

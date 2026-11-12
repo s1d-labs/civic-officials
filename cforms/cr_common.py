@@ -15,6 +15,8 @@ from difflib import SequenceMatcher
 
 from bs4 import BeautifulSoup
 
+from cforms.cp_common import Cells
+
 CONS = {"क": "k", "ख": "kh", "ग": "g", "घ": "gh", "ङ": "n", "च": "ch", "छ": "chh", "ज": "j", "झ": "jh", "ञ": "n", "ट": "t",
         "ठ": "th", "ड": "d", "ढ": "dh", "ण": "n", "त": "t", "थ": "th", "द": "d", "ध": "dh", "न": "n", "प": "p", "फ": "ph",
         "ब": "b", "भ": "bh", "म": "m", "य": "y", "र": "r", "ल": "l", "व": "v", "श": "sh", "ष": "sh", "स": "s", "ह": "h", "ळ": "l"}
@@ -136,7 +138,7 @@ def member_tables(html):
     """[(roles, [cells, ...]), ...] for the innermost tables that have a name column."""
     soup = BeautifulSoup(html, "lxml")
     found = []
-    for t in soup.find_all("table"):
+    for ti, t in enumerate(soup.find_all("table"), 1):
         if t.find("table"):                      # a layout table: its inner tables are read
             continue
         trs = t.find_all("tr")
@@ -144,7 +146,11 @@ def member_tables(html):
             head = [clean(c.get_text(" ", strip=True)) for c in tr.find_all(["th", "td"])]
             rs = roles(head)
             if "name" in rs and ("ward_no" in rs or "ward_name" in rs):
-                rows = [[clean(c.get_text(" ", strip=True)) for c in r.find_all(["td", "th"])] for r in trs[hi + 1:]]
+                rows = []
+                for ri, r in enumerate(trs[hi + 1:], hi + 2):     # rows carry .pos = {"table", "row"} for the source trail
+                    row = Cells(clean(c.get_text(" ", strip=True)) for c in r.find_all(["td", "th"]))
+                    row.pos = {"table": ti, "row": ri}
+                    rows.append(row)
                 found.append((rs, [r for r in rows if any(r)]))
                 break
     return found
@@ -162,8 +168,9 @@ POST_TAIL = re.compile(r"\s+(Chairman|Chairperson|Vice[- ]Chairman|Vice[- ]Chair
                        r"President|Vice[- ]President|Chairman[- ]in[- ]Council|MIC)\s*$", re.I)
 
 
-def table_members(html):
-    """Dicts {ward_no, ward_name, name, party, phone, address, email, position, reservation, father} of every member row."""
+def table_members(html, pos=None):
+    """Dicts {ward_no, ward_name, name, party, phone, address, email, position, reservation, father} of every member row.
+    pos: a list that gets each member's src_pos {"table", "row"} (source trail)."""
     out = []
     for rs, rows in member_tables(html):
         for cells in rows:
@@ -192,4 +199,6 @@ def table_members(html):
                 d["phone"] = ", ".join(re.findall(r"(?<!\d)(?:\+?91[-\s]?)?([6-9]\d{4}[-\s]?\d{5}|0\d{2,4}[-\s]?\d{6,8})(?!\d)",
                                                   digits(d["phone"]))) or digits(d["phone"])
             out.append(d)
+            if pos is not None:
+                pos.append(getattr(cells, "pos", None))
     return out

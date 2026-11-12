@@ -11,6 +11,8 @@ import re
 
 from dforms import _leg
 
+METHOD = "html page (member detail: .mla-info-bx and .personal-detail table)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_ga"
 BASE = "https://www.goavidhansabha.gov.in/"
 LIST = BASE + "mlas.php"
@@ -73,7 +75,8 @@ def parse(html, url):
                         phone_residence=f.get("residence", ""), mobile=f.get("personal", ""), fax=f.get("fax", ""),
                         office_address=f.get("office", ""), permanent_address=f.get("permanent", ""),
                         residence_address=f.get("present", ""), designation=_leg.clean(desig.get_text(" ")) if desig else "",
-                        seat_no=int(no) if no else None, note=note, email_images=", ".join(email_images))]
+                        seat_no=int(no) if no else None, note=note, email_images=", ".join(email_images),
+                        src_pos={"selector": ".mla-info-bx, .personal-detail tr"})]
 
 
 def fetch(p, get):

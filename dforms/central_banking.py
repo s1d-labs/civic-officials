@@ -18,6 +18,8 @@ from pathlib import Path
 
 from dforms import _civic, _esw
 
+METHOD = "csv file (RBI IFSC list)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "central_banking"
 ISO = {"IN-AN": "AN", "IN-AP": "AP", "IN-AR": "AR", "IN-AS": "AS", "IN-BR": "BR", "IN-CH": "CH", "IN-CT": "CG", "IN-CG": "CG",
        "IN-DN": "DH", "IN-DD": "DH", "IN-DH": "DH", "IN-DL": "DL", "IN-GA": "GA", "IN-GJ": "GJ", "IN-HR": "HR", "IN-HP": "HP",
@@ -44,7 +46,8 @@ def phone(v):
 
 def records(text, p, url):
     out = []
-    for row in csv.DictReader(io.StringIO(text)):
+    dr = csv.DictReader(io.StringIO(text))
+    for n, row in enumerate(dr, 1):
         if state_of(row) != p["state"]:
             continue
         ifsc = _esw.clean(row.get("IFSC")).upper()
@@ -55,7 +58,8 @@ def records(text, p, url):
             bank=row.get("BANK") or None, bank_code=ifsc[:4], ifsc=ifsc, micr=row.get("MICR") or None,
             swift=row.get("SWIFT") or None, centre=row.get("CENTRE"), city=row.get("CITY"), district=row.get("DISTRICT"),
             address=row.get("ADDRESS"), phone=phone(row.get("CONTACT")), state=p["state"], office_id=ifsc,
-            source=url, last_updated=p.get("last_updated")))
+            source=url, last_updated=p.get("last_updated"),
+            src_pos={"row": n, "line": dr.line_num}))     # row: data row (header not counted); line: file line where it ends
     return out
 
 

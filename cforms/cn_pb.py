@@ -15,6 +15,10 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
+from cforms.cp_common import tr_pos
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 PARTIES = {"AAP": "Aam Aadmi Party", "INC": "Indian National Congress", "BJP": "Bharatiya Janata Party", "BSP": "Bahujan Samaj Party",
            "SAD": "Shiromani Akali Dal", "IND": "Independent", "INDEPENDENT": "Independent", "CONGRESS": "Indian National Congress"}
 SOURCES = {"amritsar": {"body": "Amritsar", "district": "Amritsar",
@@ -72,7 +76,7 @@ def amritsar_page(html, url):
         pty = re.search(r"Party\s*:?\s*(.*)$", text)
         d = {**base("amritsar"), "ward_no": m.group(1), "name": name, "position": post.group(1).title() if post else "Member",
              "address": norm(addr.group(1)) if addr else None, "phone": phones(mob.group(1)) if mob else None,
-             "party": party(pty.group(1)) if pty else None, "url": url}
+             "party": party(pty.group(1)) if pty else None, "url": url, "src_url": url, "src_pos": tr_pos(tr)}
         recs.append((f"councillor:PB:amritsar:{m.group(1)}", {k: v for k, v in d.items() if v not in (None, "")}))
     return recs
 
@@ -104,7 +108,8 @@ def jalandhar_ward(html, url, ward):
     d = {**base("jalandhar"), "ward_no": str(int(ward)), "name": f.get("name"), "father_or_husband": f.get("father/husband name"),
          "address": f.get("address"), "phone": phones(f.get("mobile")), "email": f.get("email") or None,
          "party": party(f.get("party")), "reservation": f.get("category"), "position": "Member",
-         "ward_name": ", ".join(areas)[:300] or None, "areas": areas or None, "url": url}
+         "ward_name": ", ".join(areas)[:300] or None, "areas": areas or None, "url": url, "src_url": url,
+         "src_pos": {"selector": "article p (Name ... Party lines); areas: article ul li"}, "method": "html page (ward page)"}
     return f"councillor:PB:jalandhar:{d['ward_no']}", {k: v for k, v in d.items() if v not in (None, "", [])}
 
 

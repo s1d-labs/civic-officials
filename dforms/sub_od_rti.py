@@ -18,7 +18,10 @@ Record ids: dept:sub_od_rti:OD-<RTI code>:<slug of post>[:n].
 import base64
 import re
 
+import provenance
 from dforms import _esw
+
+METHOD = "html table (RTI disclosure section answers, POST)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub_od_rti"
 BASE = "https://rtiodisha.gov.in"
@@ -117,7 +120,8 @@ def staff(html):
     soup = _esw.soup(html)
     rows = []
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        tp = []
+        g = _esw.grid(t, pos=tp)
         if not g:
             continue
         head = [h.lower() for h in g[0]]
@@ -135,13 +139,13 @@ def staff(html):
             continue
         prev = t.find_previous(string=re.compile(r"Public Information Officer|Appellate Authority", re.I))
         role = _esw.clean(prev) if prev else ""
-        for r in g[1:]:
+        for r, pos in zip(g[1:], tp[1:]):
             r = r + [""] * (len(head) - len(r))
             name = _esw.clean(r[col["name"]])
             if not name or name.lower() == "name":
                 continue
             rows.append({"name": name, "post": _esw.clean(r[col["post"]]), "phone": _esw.phones(r[col["phone"]]) if "phone" in col else "",
-                         "email": _esw.emails(r[col["email"]]) if "email" in col else "", "role": role})
+                         "email": _esw.emails(r[col["email"]]) if "email" in col else "", "role": role, "pos": pos})
     m = UPDATED.search(soup.get_text(" "))
     upd = f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}" if m else ""
     return rows, upd
@@ -151,7 +155,8 @@ def is_officer(post):
     return bool(OFFICER.search(post or "")) and not CLERICAL.search(post or "")
 
 
-def build(o, rows, upd, district, seen):
+def build(o, rows, upd, district, seen, src=None):
+    """src: {"src_url", "src_sha256"} of the section answer the rows came from (each office's answer is a POST)."""
     recs = []
     area = district if o["level"] == "district" else area_of(o["name"], o["strip"], district)
     done = set()
@@ -169,7 +174,8 @@ def build(o, rows, upd, district, seen):
         seen.add(key)
         rec = _esw.record(MODULE, key, dept=o["dept"], level=o["level"], area=area, post=r["post"], name=r["name"], phone=r["phone"],
                           email=r["email"], address=o["address"], district=district, state="OD", office_id=f"OD-RTI-{o['code']}",
-                          office=o["name"], rti_role=r["role"], source=o["url"], last_updated=upd)
+                          office=o["name"], rti_role=r["role"], source=o["url"], last_updated=upd, src_pos=r.get("pos"),
+                          **(src or {}))
         if rec[1].get("name") and (rec[1].get("phone") or rec[1].get("email") or rec[1].get("post")):
             recs.append(rec)
     return recs
@@ -193,7 +199,8 @@ def fetch(p, get):
             rows, upd = staff(a.text)
             if sec == 7:
                 rows = [dict(x, role=x["role"] or "PIO") for x in rows]
-            got = build(o, rows, upd, district, seen)
+            got = build(o, rows, upd, district, seen,
+                        provenance.at(a, SECTION.format(dept=o["dept_id"], office=o["office_id"], dist=o["dist_id"], sec=sec)))
             if got:
                 break
         if not got:

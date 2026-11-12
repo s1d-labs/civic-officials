@@ -7,6 +7,9 @@ layer writes otherwise. One queue item.
 Record ids: dept:ero_br:BR-AC-<no>:ero (BR-AC-<slug>:ero when the name stays unmatched).
 """
 from dforms import _esw
+from dforms._water import pgrid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ero_br"
 URL = "http://ceoelection.bihar.gov.in/RO-ERO_Contact_Details2025.html"
@@ -29,7 +32,7 @@ def parse(html, url=URL):
     t = soup.find("table", id="eroTable") or max(soup.find_all("table"), key=lambda x: len(x.find_all("tr")), default=None)
     if t is None:
         return []
-    rows = _esw.grid(t)
+    rows = pgrid(t)
     head = [h.lower() for h in rows[0]] if rows else []
     recs, seen = [], set()
     for row in rows[1:]:
@@ -46,7 +49,7 @@ def parse(html, url=URL):
         recs.append(_esw.record(MODULE, key, dept="elections", level="ac", area=f"{no} - {name}" if no else name,
                                 post="Electoral Registration Officer", designation="RO/ERO", name=c.get("ro/ero name"),
                                 address=c.get("office address"), phone=_esw.phones(c.get("mobile no.")), state="BR",
-                                district=district, office_id=ac if no else None, source=url))
+                                district=district, office_id=ac if no else None, source=url, src_pos=row.pos))
     return recs
 
 

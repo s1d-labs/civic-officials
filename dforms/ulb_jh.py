@@ -20,6 +20,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html cards (div.widget-user; office from #Label7)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_jh"
 STATE = "JH"
 BASE = "https://udhd.jharkhand.gov.in/"
@@ -114,7 +116,7 @@ def parse(html, body="", district=None, url=""):
     area, btype = split_type(body)
     common = {"district": district, "body_type": btype, "list_name": body}
     recs, seen = [], set()
-    for w in soup.find_all("div", class_="widget-user"):
+    for k, w in enumerate(soup.find_all("div", class_="widget-user"), 1):
         n, d = w.find(class_="widget-user-username"), w.find(class_="widget-user-desc")
         name, post = _esw.clean(n.get_text(" ") if n else ""), _esw.clean(d.get_text(" ") if d else "")
         if not post or SKIP.match(post):
@@ -123,14 +125,17 @@ def parse(html, body="", district=None, url=""):
         phone, email = _esw.phones(re.sub(r"\+91\s*$", "", lines)), _esw.emails(lines)
         if not (name or phone or email):
             continue
-        recs.append(_ulb.record(MODULE, STATE, area, post, seen, name=name, phone=phone, email=email, source=url, **common))
+        recs.append(_ulb.record(MODULE, STATE, area, post, seen, name=name, phone=phone, email=email, source=url,
+                                src_pos={"selector": "div.widget-user", "card": k}, **common))
     addr, ophone, oemail, last = footer(soup)
     office = {k: v for k, v in (("address", addr), ("office_phone", ophone), ("office_email", oemail), ("last_updated", last)) if v}
     if recs:                    # the first card is the officer in charge (an Additional / Deputy Commissioner reads as "deputy")
         recs[0][1].update(office)
+        if addr or ophone or oemail:
+            recs[0][1]["src_pos"] = {**recs[0][1]["src_pos"], "office_from": "#Label7"}
     elif ophone or oemail:
         recs.append(_ulb.record(MODULE, STATE, area, "Office", seen, phone=ophone, email=oemail, source=url, address=addr or None,
-                                last_updated=last, **common))
+                                last_updated=last, src_pos={"selector": "#Label7"}, **common))
     return recs
 
 

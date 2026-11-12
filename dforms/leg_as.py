@@ -10,7 +10,11 @@ Record ids: dept:leg_as:AS-AC-<no>.
 """
 import re
 
+import provenance
+from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_se
+
+METHOD = "html cards (list page) + html table (member detail page)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "leg_as"
 BASE = "https://assambidhansabha.org/members"
@@ -23,10 +27,11 @@ def items(get=None):
                                                     "details": True, "india_only": False}} for n in range(1, PAGES + 1)]
 
 
-def parse_list(html):
-    """[(detail url, name, party, ECI no, constituency, email, phone)] from one list page."""
+def parse_list(html, where=None):
+    """[(detail url, name, party, ECI no, constituency, email, phone)] from one list page. where: a list; when given, it gets
+    {"selector": "p.text-light", "card": n} per row."""
     out = []
-    for p in _esw.soup(html).select("p.text-light"):
+    for n, p in enumerate(_esw.soup(html).select("p.text-light"), 1):
         box = p.find_parent("div")
         a = box.find("a", href=re.compile(r"members\?id=\d+")) if box else None
         strong = p.find("strong")
@@ -38,6 +43,8 @@ def parse_list(html):
         email = _esw.emails(" ".join(spans[2:]))
         phone = _esw.phones(" ".join(s for s in spans[2:] if "@" not in s))
         out.append((a["href"] if a else "", _leg_se.name(strong.get_text(" ")), spans[0], no, cons, email, phone))
+        if where is not None:
+            where.append({"selector": "p.text-light", "card": n})
     return out
 
 
@@ -51,7 +58,8 @@ def parse_detail(html):
     return out
 
 
-def record(row, detail, url):
+def record(row, detail, url, src_pos=None, src=None):
+    """src: provenance.at() of the list page; src_pos: the card, with "detail_page" = the member page the addresses came from."""
     durl, nm, party, no, cons, email, phone = row
     present = detail.get("Present Address & Contact No", "")
     perm = detail.get("Permanent Address & Contact No", "")
@@ -63,7 +71,7 @@ def record(row, detail, url):
                        phone=", ".join(x for x in (phone, extra_phone) if x),
                        email=", ".join(x for x in (email, _esw.emails(detail.get("E-mail ID (If Any)", ""))) if x),
                        residence_address=present, permanent_address=perm, seat_no=no, note=note,
-                       house="Assam Legislative Assembly (16th)")
+                       house="Assam Legislative Assembly (16th)", src_pos=src_pos, **(src or {}))
 
 
 def fetch(p, get):
@@ -71,13 +79,15 @@ def fetch(p, get):
     if r is None:
         return [], [], "no answer"
     files = [_leg.keep(MODULE, f"page-{p.get('page', 'x')}", r.content)]
-    recs = []
-    for row in parse_list(r.text):
+    recs, where = [], []
+    src = provenance.at(r, p["url"])
+    for row, pos in zip(parse_list(r.text, where), where):
         detail = {}
         if p.get("details") and row[0]:
             rd = get(row[0])
             if rd is not None:
                 files.append(_leg.keep(MODULE, "member-" + row[0].rsplit("=", 1)[-1], rd.content))
                 detail = parse_detail(rd.text)
-        recs.append(record(row, detail, p["url"]))
+                pos = {**pos, "detail_page": {"url": row[0], "sha256": provenance.at(rd, row[0]).get("src_sha256", "")}}
+        recs.append(record(row, detail, p["url"], pos, src))
     return recs, files, "" if recs else "no members in the page"

@@ -17,6 +17,9 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 from cforms import gj
+from cforms.cp_common import tr_pos
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 DIGITS = str.maketrans("०१२३४५६७८९", "0123456789")
 ELECTION = "Maharashtra Municipal Corporation General Election 2026"
@@ -61,8 +64,9 @@ def rec(site, **kw):
     return d
 
 
-def pcmc_list(html):
-    """[(ward, seat, name, phone, detail url)] from the corporator table."""
+def pcmc_list(html, pos=None):
+    """[(ward, seat, name, phone, detail url)] from the corporator table. pos: a list that gets each entry's src_pos
+    ({"table", "row", "col"}: the cell of the seat)."""
     soup = BeautifulSoup(html, "lxml")
     out = []
     for tr in soup.find_all("tr"):
@@ -70,13 +74,15 @@ def pcmc_list(html):
         if len(tds) < 2 or not norm(tds[0].get_text()).translate(DIGITS).isdigit():
             continue
         ward = str(int(norm(tds[0].get_text()).translate(DIGITS)))
-        for seat, td in zip("अबकड", tds[1:5]):
+        for col, (seat, td) in enumerate(zip("अबकड", tds[1:5]), 2):
             a = td.find("a")
             name = norm(a.get_text(" ")) if a else ""
             if not name:
                 continue
             phone = PHONE.search(norm(td.get_text(" ")).translate(DIGITS))
             out.append((ward, seat, name, phone.group(0) if phone else "", urljoin(SITES["pcmc"]["url"], a.get("href", ""))))
+            if pos is not None:
+                pos.append({**tr_pos(tr), "col": col})
     return out
 
 
@@ -101,14 +107,18 @@ def pcmc(p, get):
         return [], [], "no answer"
     files = [("councillors/MH/pcmc-corporators.html.gz", gzip.compress(r.content), "application/gzip")]
     recs = []
-    for ward, seat, name, phone, url in pcmc_list(r.text):
+    pos = []
+    for (ward, seat, name, phone, url), sp in zip(pcmc_list(r.text, pos), pos):
         name, post = name_post(name)
-        d = rec("pcmc", name=name, ward_no=ward, seat=seat, phone=phone, url=url)
+        # source trail: name, ward, seat and phone from the list page cell; address, party and email from the detail page
+        d = rec("pcmc", name=name, ward_no=ward, seat=seat, phone=phone, url=url, src_url=SITES["pcmc"]["url"], src_pos=sp)
         if post:
             d["post"] = post
         if p.get("details", True) and "corporator-details" in url:
             m = get(url)
             if m is not None:
+                d["src_pos"] = {**sp, "detail_page": url, "detail_fields": "address, party, email (labels on the page)"}
+                d["method"] = "html table (list) + html page (member detail)"
                 det = pcmc_detail(m.text)
                 d["address"] = det.get("address", "")
                 d["party_local"] = det.get("party", "")
@@ -120,8 +130,9 @@ def pcmc(p, get):
     return recs, files, "" if recs else "no members in the table"
 
 
-def amravati_list(html):
-    """[(serial, name, ward, phones, party)]: party heading rows set the party of the rows below them."""
+def amravati_list(html, pos=None):
+    """[(serial, name, ward, phones, party)]: party heading rows set the party of the rows below them. pos: a list that gets
+    each row's src_pos {"table", "row"}."""
     soup = BeautifulSoup(html, "lxml")
     out, party = [], ""
     for tr in soup.find_all("tr"):
@@ -136,6 +147,8 @@ def amravati_list(html):
         phones = PHONE.findall(tds[3].translate(DIGITS))
         out.append((tds[0].translate(DIGITS), tds[1], str(int(tds[2].translate(DIGITS))) if tds[2].translate(DIGITS).isdigit()
                     else tds[2].translate(DIGITS), phones, party))
+        if pos is not None:
+            pos.append(tr_pos(tr))
     return out
 
 
@@ -145,11 +158,12 @@ def amravati(p, get):
         return [], [], "no answer"
     files = [("councillors/MH/amravati-elected-members.html.gz", gzip.compress(r.content), "application/gzip")]
     recs, seen = [], {}
-    for serial, name, ward, phones, party in amravati_list(r.text):
+    pos = []
+    for (serial, name, ward, phones, party), sp in zip(amravati_list(r.text, pos), pos):
         name, post = name_post(name)
         seen[ward] = seen.get(ward, 0) + 1
         d = rec("amravati", name=name, ward_no=ward, phone=", ".join(phones), party=party_of(party), party_local=party,
-                url=SITES["amravati"]["url"])
+                url=SITES["amravati"]["url"], src_pos=sp)
         if post:
             d["post"] = post
         recs.append((f"councillor:MH:{SITES['amravati']['slug']}:{ward}-{seen[ward]}", d))

@@ -13,6 +13,8 @@ import re
 
 from pypdf import PdfReader
 
+METHOD = "pdf text (pypdf, plain mode)"     # source trail (provenance.py): how this reader reads its sources
+
 DISTRICT = re.compile(r"Municipal\s+Boards\s+of\s+([A-Za-z() ]+?)\s+District", re.I)
 BOARD = re.compile(r"^\d+\.\s+(.+?Municipal\s+Board)$", re.I)
 CATEGORY = r"(Unreserved|Unserved|Women|SC|ST|OBC)\s*(\(\s*Women\s*\))?"
@@ -43,7 +45,7 @@ def gazette_rows(pages, p):
     for pno in range(start, len(pages)):
         if "Political party wise Result of MB" in pages[pno]:
             break
-        for raw in pages[pno].splitlines():
+        for li, raw in enumerate(pages[pno].splitlines(), 1):
             line = " ".join(raw.split())
             tail = (tail + " " + line)[-300:]
             m = DISTRICT.search(tail)
@@ -59,7 +61,8 @@ def gazette_rows(pages, p):
                 ward = m.group(1) + (m.group(2) or "").upper()
                 recs.append((board, ward, {"district": district, "body": board, "ward_no": ward,
                                            "reservation": category(m.group(3), m.group(4)), "name": m.group(5),
-                                           "party": re.sub(r"\s+", "", m.group(6)), "page": pno + 1}))
+                                           "party": re.sub(r"\s+", "", m.group(6)), "page": pno + 1,
+                                           "src_pos": {"page": pno + 1, "line": li, "line_text": raw}}))
     return recs
 
 
@@ -74,13 +77,14 @@ def gmc_rows(pages, p):
            for i, m in enumerate(marks)}
     recs, first = [], next(i for i, t in enumerate(pages) if "List of Winning Candidates" in t)
     for pno in range(first, len(pages)):
-        for raw in pages[pno].splitlines():
+        for li, raw in enumerate(pages[pno].splitlines(), 1):
             m = GMC_ROW.match(" ".join(raw.split()))
             if not m:
                 continue
             ward, name, party = m.groups()
             party = {"BJO": "BJP"}.get(party, party)    # one typo in the list (ward 38); the count and the tally say BJP
-            d = {"district": p.get("district"), "body": p["body"], "ward_no": ward, "name": name, "party": party, "page": pno + 1}
+            d = {"district": p.get("district"), "body": p["body"], "ward_no": ward, "name": name, "party": party, "page": pno + 1,
+                 "src_pos": {"page": pno + 1, "line": li, "line_text": raw}}
             if ward in seg:
                 res, part = seg[ward]
                 d["reservation"] = re.sub(r"\s*\(\s*", " (", res).replace(" )", ")")

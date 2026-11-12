@@ -15,6 +15,8 @@ import re
 
 from dforms import _civic, _esw
 
+METHOD = "json in the page (Next.js flight data)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_post_dir_in"
 URL = "https://www.indiapost.gov.in/ministry/directory"
 PUSH = re.compile(r'self\.__next_f\.push\(\[1,"((?:[^"\\]|\\.)*)"\]\)')
@@ -52,7 +54,7 @@ def contacts(html):
 
 def parse(html, url=URL):
     recs, seen = [], set()
-    for c in contacts(html):
+    for ci, c in enumerate(contacts(html), 1):
         circle = next((_esw.clean(k) for k in c.get("Keyname") or [] if _esw.clean(k).lower().endswith("circle")), "")
         if not circle:
             continue
@@ -68,7 +70,8 @@ def parse(html, url=URL):
             MODULE, key, "post", dept="postal", level="region" if re.search(r"(?i)\bregion\b", post) else "circle",
             area=post, post=post, name="" if vacant else name, phone=phone, email=email, address=c.get("Address"),
             circle=circle, state=state_of(post, circle), vacant=True if vacant else None, office_id=c.get("id"),
-            source=url, source_org="Department of Posts directory"))
+            source=url, source_org="Department of Posts directory",
+            src_pos={"selector": "self.__next_f.push flight data, contact objects", "object": ci, "id": c.get("id")}))
     return recs
 
 

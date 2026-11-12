@@ -8,8 +8,11 @@ import re
 
 from bs4 import BeautifulSoup
 
+from dforms import _esw
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms.police_s3waas import grid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_tr"
 OC = re.compile(r"(?:^|[\s,(])(?:I/C\s+)?(O/C|O\.C\.?|OC|I/C)\s+(.+)$", re.I)
@@ -69,7 +72,8 @@ def parse(html, district, url):
     soup = BeautifulSoup(html, "lxml")
     recs, std = [], None
     for t in soup.find_all("table"):
-        for row in grid(t):
+        tno = _esw.table_no(t)
+        for rn, row in enumerate(grid(t), 1):
             cells = [clean(c) or "" for c in row]
             joined = " ".join(cells)
             m = re.search(r"STD\s*CODE\s*[-:]?\s*(0\d{3,4})", joined, re.I)
@@ -103,7 +107,7 @@ def parse(html, district, url):
             recs.append(rec(M, f"{slug(district)}:{slug(station)}", area=station, office_type=otype,
                             post="O/C" if hit.group(1).upper().startswith("O") else "I/C", name=name, rank=rank,
                             phone=tel(rest, std), email=ms[0] if ms else None, parent_station=under.group(1) if under else None,
-                            state="TR", district=district, source=url))
+                            state="TR", district=district, source=url, src_pos={"table": tno, "row": rn}))
     return uniq(recs)
 
 

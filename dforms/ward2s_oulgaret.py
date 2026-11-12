@@ -12,7 +12,10 @@ from the saved copy. Record ids: dept:ward2s_oulgaret:<post slug>:<name slug>.
 """
 import re
 
+import provenance
 from dforms import _esw, _ward
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2s_oulgaret"
 BODY, LGD, STATE, DISTRICT = "Oulgaret Municipality", "253093", "PY", "Puducherry"
@@ -28,18 +31,17 @@ def items(get=None):
 
 def parse(pages, p):
     seen, recs = set(), []
-    for page in pages:
-        for line in page.splitlines():
-            m = ROW.match(line)
-            if not m:
-                continue
-            name, post, pay = (_esw.clean(x) for x in m.groups())
-            if not FIELD.search(post) or re.search(r"(?i)designation", post):
-                continue
-            post = re.sub(r"\s*Gr\.?\s*-?\s*", " Gr.", post).replace("Gardner", "Gardener")
-            recs.append(_ward.record(MODULE, f"{_esw.slug(post)}:{_esw.slug(name)}", seen, body=BODY, lgd=LGD, state=STATE,
-                                     district=DISTRICT, level="body", area=BODY, post=post, name=name, pay_level=pay,
-                                     source=p["url"]))
+    for pn, lno, line in _ward.pdf_lines(pages):
+        m = ROW.match(line)
+        if not m:
+            continue
+        name, post, pay = (_esw.clean(x) for x in m.groups())
+        if not FIELD.search(post) or re.search(r"(?i)designation", post):
+            continue
+        post = re.sub(r"\s*Gr\.?\s*-?\s*", " Gr.", post).replace("Gardner", "Gardener")
+        recs.append(_ward.record(MODULE, f"{_esw.slug(post)}:{_esw.slug(name)}", seen, body=BODY, lgd=LGD, state=STATE,
+                                 district=DISTRICT, level="body", area=BODY, post=post, name=name, pay_level=pay,
+                                 source=p["url"], src_pos=provenance.line_pos(pn, lno, line)))
     return recs
 
 

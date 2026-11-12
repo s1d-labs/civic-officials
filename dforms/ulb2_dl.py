@@ -14,7 +14,10 @@ Delhi Cantonment Board (X-DL-CANT) is not read: archive.s1d.me has no copy of a 
 """
 import re
 
+from dforms._trail import tr_pos
 from dforms import _esw, _ulb
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb2_dl"
 STATE = "DL"
@@ -52,7 +55,7 @@ def parse(html, url=URL):
         address = "; ".join(x for x in rest[1:] if not re.match(r"(?i)residence", x)) or None
         rid, d = _ulb.record(MODULE, STATE, P["body"], re.sub(r"(?i),\s*ndmc\s*$", "", post), seen, name=name, phone=phone,
                              email=email, district=P["district"], body_type=P["body_type"], source=url, lgd_code=P["lgd_code"],
-                             address=address)
+                             address=address, src_pos=tr_pos(tr))
         if re.match(r"(?i)chairperson", post):
             d["role"], d["role_note"] = "head", "NDMC Act 1994: the Chairperson is the executive head; NDMC has no Commissioner"
         else:

@@ -9,6 +9,8 @@ this box (timeout) and refused the connection from the India server vpsin. tnpds
 """
 from dforms import _civic_fps
 
+METHOD = "json api (SMART-PDS device list + supply office search)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fps2_tn"
 STATE = "TN"
 BASE = "https://smartpds.tn.gov.in"

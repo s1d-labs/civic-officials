@@ -11,6 +11,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html page: embedded JSON (__NEXT_DATA__ zonalOfficersCard)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_indore"
 BODY, LGD, STATE, DISTRICT = "Indore Municipal Corporation", "250901", "MP", "Indore"
 URL = "https://imcindore.mp.gov.in/contact"
@@ -58,7 +60,7 @@ def cards(html):
 def parse(html, p):
     seen, recs = set(), []
     cs, updated = cards(html)
-    for c in cs:
+    for ci, c in enumerate(cs):
         mc = c.get("MunicipalContent") or {}
         num = re.search(r"\d+", mc.get("title") or "")
         f = fields(mc.get("description"))
@@ -68,7 +70,9 @@ def parse(html, p):
         zname = f"Zone {nn}: {f['zone']}"
         wards = _ward.wards_of(f.get("wards", ""))
         common = dict(body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level="zone", area=zname, zone=zname, wards=wards,
-                      source=p["url"], last_updated=updated, office_id=f"zone-{nn}")
+                      source=p["url"], last_updated=updated, office_id=f"zone-{nn}",
+                      src_pos={"selector": "script#__NEXT_DATA__", "path": "props.pageProps.data.data.attributes.zonalOfficersCard",
+                               "index": ci, **({"id": c["id"]} if isinstance(c, dict) and c.get("id") is not None else {})})
         if f.get("office"):
             recs.append(_ward.record(MODULE, f"zone-{nn}:zone-office", seen, post="Zonal Office", phone=f["office"],
                                      wing="administration", **common))

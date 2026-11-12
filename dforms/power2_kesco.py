@@ -15,7 +15,9 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, clean, email, phone, raw
+from dforms._power import tr_pos, Out, clean, email, phone, raw
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MOD = "power2_kesco"
 URL = "https://kesco.org.in/about/employee-directory"
@@ -52,6 +54,7 @@ def parse(html, url=URL):
         division = subdivision = None
         circle = "Technical" if dept and dept.lower().startswith("tech.") else None
         for tr in t.find_all("tr"):
+            out.src = {"src_pos": tr_pos(tr)}
             tds = tr.find_all("td")
             if len(tds) < 6:
                 continue
@@ -72,6 +75,7 @@ def parse(html, url=URL):
                 par.update(division=division, subdivision=subdivision)
             out.add(f"{dept}:{post}:{office or name}", lvl, area, post=post, name=name, phone_=phone(mob), email_=email(mail),
                     district="Kanpur Nagar", parents=par, wing=dept)
+    out.src = {}
     return out.recs
 
 

@@ -13,7 +13,10 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
+from dforms import _civic
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+
+METHOD = "html table / cards / text, by payload form"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_ar"
 STATION = re.compile(r"\bO/?C\b|Officer[- ]in[- ]Charge|Police Station|\bP\.?S\.?(?=\W|$)", re.I)
@@ -67,13 +70,13 @@ def tables(soup, p):
                 continue                                         # staff of a station, not its officer in charge
             name, rank = _rank(name)
             recs.append(_rec(p, _area(post, place, p["district"]), post="Officer in charge", name=name or None, rank=rank,
-                             phone=phones(*(c[i] for i in ph))))
+                             phone=phones(*(c[i] for i in ph)), src_pos=_civic.tr_pos(tr), method="html table"))
     return recs
 
 
 def cards(soup, p):
     recs = []
-    for li in soup.select("li.public-utlty-catg, .public-utlty-catg"):
+    for ci, li in enumerate(soup.select("li.public-utlty-catg, .public-utlty-catg"), 1):
         h = li.find(["h2", "h3"])
         if not h:
             continue
@@ -83,14 +86,16 @@ def cards(soup, p):
         m = re.search(r"Phone\s*:\s*([^|]+)", text)
         e = re.search(r"Email\s*:\s*([^|]+)", text)
         recs.append(_rec(p, clean(h.get_text(" ", strip=True)), post="Station", phone=phones(m.group(1)) if m else None,
-                         email=email(e.group(1)) if e else None, address=addr))
+                         email=email(e.group(1)) if e else None, address=addr,
+                         src_pos={"selector": ".public-utlty-catg", "card": ci}, method="html cards (S3WaaS public utility)"))
     return recs
 
 
 def listing(soup, p):
     recs = []
     text = clean(soup.get_text(" ", strip=True))
-    for chunk in re.split(r"\s(?=\d{1,2}\.\s)|\s(?=[A-Z]{4,} JURISDICTION:)", text):
+    for ki, chunk in enumerate(re.split(r"\s(?=\d{1,2}\.\s)|\s(?=[A-Z]{4,} JURISDICTION:)", text), 1):
+        pos = {"selector": "page text, numbered items", "item": ki, "text": chunk[:200]}
         m = re.match(r"\d{1,2}\.\s+(.+?)\s+Mobile(?: no)?\s*:\s*([\d\s/​]+)(?:.*?Email(?: Id)?\s*:\s*(\S+@\S+))?", chunk, re.I)
         if not m:
             continue
@@ -99,10 +104,10 @@ def listing(soup, p):
             continue
         if re.match(r"SDPO\b", post):
             recs.append(_rec(p, re.sub(r"^SDPO\s*", "", post), level="subdivision", post="SDPO", phone=phones(m.group(2)),
-                             email=email(m.group(3))))
+                             email=email(m.group(3)), src_pos=pos, method="html text (numbered list)"))
         elif OC.match(post):
             recs.append(_rec(p, _area(post, None, p["district"]), post="Officer in charge", phone=phones(m.group(2)),
-                             email=email(m.group(3))))
+                             email=email(m.group(3)), src_pos=pos, method="html text (numbered list)"))
     return recs
 
 
@@ -120,7 +125,9 @@ def blocks(soup, p):
                 addr = lines[j + 1]
             if lines[j] in ("Contact:", "Phone:") and j + 1 < len(lines):
                 num = lines[j + 1]
-        recs.append(_rec(p, ln, post="Station", phone=phones((num or "").rstrip(".")), address=addr))
+        recs.append(_rec(p, ln, post="Station", phone=phones((num or "").rstrip(".")), address=addr,
+                         src_pos={"selector": "page text lines", "text_line": i + 1, "line_text": ln},
+                         method="html text (label lines)"))
     return recs
 
 
@@ -146,7 +153,7 @@ def fetch(p, get):
         main = soup.select_one("#SkipContent") or soup.select_one("main") or soup
         for x in main(["script", "style", "nav", "header", "footer"]):
             x.decompose()
-        recs += form(main, p)
+        recs += _civic.tag(form(main, p), r, url)
         nxt = soup.select_one("a.next.page-numbers, .pagination a.next") if p.get("form") == "cards" else None
         url = urljoin(url, nxt["href"]) if nxt and nxt.get("href") else None
     if n == 0:

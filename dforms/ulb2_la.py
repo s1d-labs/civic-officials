@@ -11,6 +11,8 @@ import re
 
 from dforms import _esw, _ulb2_nw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_la"
 STATE = "LA"
 PAGES = [("https://leh.nic.in/directory/", "248177", "Leh Ladakh", "Leh"),

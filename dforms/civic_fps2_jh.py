@@ -18,7 +18,10 @@ Record ids: dept:civic_fps2_jh:<dealer id>.
 import json
 import re
 
+import provenance
 from dforms import _civic_fps, _esw
+
+METHOD = "json api (dealer list) + html page (label cells, map coordinates)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_fps2_jh"
 STATE = "JH"
@@ -161,6 +164,15 @@ def fetch(p, get):
                         data={"_method": "POST", "_csrfToken": tok, "rgi_district_code": code, "rgi_block_code": bcode, "dealer_id": did})
                 html = a.text if a is not None else ""
                 kept["pages"][did] = html
-            recs.append(parse(html, did, label, bcode, bname, code, district))
+            rec = parse(html, did, label, bcode, bname, code, district)
+            pos = {"block_code": bcode, "dealer_id": did}       # the dealer in the block's dealer list
+            if html:              # name, phone, address, coordinates from the dealer's map page (POST answer)
+                rec[1].update(provenance.at(a, PAGE))
+                rec[1]["method"] = "json api (dealer list) + html page (label cells, map coordinates)"
+            else:
+                rec[1].update(provenance.at(r, f"{BASE}/secc-cardholders/get-dealers-by-block"))
+                rec[1]["method"] = "json api (dealer list)"
+            rec[1]["src_pos"] = pos
+            recs.append(rec)
         files.append(_esw.keep(MODULE, f"{code}-{bcode}", json.dumps(kept, ensure_ascii=False), "json"))
     return recs, files, "" if recs else "no rows"

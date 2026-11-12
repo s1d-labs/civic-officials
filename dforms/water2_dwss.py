@@ -15,6 +15,9 @@ import re
 
 from dforms import _esw
 from dforms._water import unique
+from dforms._power import tr_pos
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "water2_dwss"
 URL = "https://dwss.punjab.gov.in/contact-us/"
@@ -86,7 +89,8 @@ def parse(html, url=URL):
             nums = re.sub(r"(?i)\(\s*fax\s*\)", " ", re.sub(r"[\w.]+(\[at\]|@)[\w.\[\]-]+", " ", contact))
             recs.append(_esw.record(MODULE, key, dept="water", level=lvl, area=area, post=post, name=nm,
                                     phone=_esw.phones(nums) or None, email=_esw.emails(contact) or None, address=addr, state="PB",
-                                    district=_esw.clean(circ.group(1)) if circ else None, source=url, org=ORG, **extra))
+                                    district=_esw.clean(circ.group(1)) if circ else None, source=url, org=ORG, **extra,
+                                    src_pos=tr_pos(tr)))
     return recs
 
 

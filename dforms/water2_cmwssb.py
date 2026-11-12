@@ -22,8 +22,11 @@ dept:water2_cmwssb:depot-<no>. Extra keys: org "CMWSSB", parents {"zone": "Area 
 """
 import re
 
+import provenance
 from dforms import _esw
 from dforms._water import unique
+
+METHOD = "html table + pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 BASE = "https://cmwssb.tn.gov.in/"
 URLS = {"whoswho": BASE + "whos-who", "depots": BASE + "sites/default/files/quick_links/Areaandepotofficeaddress.pdf"}
@@ -58,21 +61,26 @@ def ww_area(post, level):
     return "Head Office, Chennai"
 
 
-def ww_tables(html):
+def ww_tables(html, pos=None):
+    """pos: a list; when given, it gets for each returned table the src_pos of each of its rows ({"table", "row"})."""
     s = _esw.soup(html)
     out = []
-    for tb in s.find_all("table"):
-        rows = [[_esw.clean(td.get_text(" ")) for td in tr.find_all(["td", "th"])] for tr in tb.find_all("tr")]
-        rows = [r for r in rows if any(r)]
-        if rows and len(rows[0]) >= 5:
-            out.append(rows)
+    for tn, tb in enumerate(s.find_all("table"), 1):
+        rows = [([_esw.clean(td.get_text(" ")) for td in tr.find_all(["td", "th"])], {"table": tn, "row": k})
+                for k, tr in enumerate(tb.find_all("tr"), 1)]
+        rows = [(r, at) for r, at in rows if any(r)]
+        if rows and len(rows[0][0]) >= 5:
+            out.append([r for r, _ in rows])
+            if pos is not None:
+                pos.append([at for _, at in rows])
     return out
 
 
 def parse_whoswho(html, url, html_ta=None):
     upd = re.search(r"Last reviewed and updated on\s*(\d{2})-(\d{2})-(\d{4})", _esw.soup(html).get_text(" "))
     last = f"{upd.group(3)}-{upd.group(2)}-{upd.group(1)}" if upd else None
-    tables = ww_tables(html)
+    tpos = []
+    tables = ww_tables(html, tpos)
     ta = ww_tables(html_ta) if html_ta else []
     recs, seen = [], set()
     for ti, rows in enumerate(tables):
@@ -96,7 +104,8 @@ def parse_whoswho(html, url, html_ta=None):
                 extra["post_regional"] = rta[ri][1]
             recs.append(_esw.record(MOD, key, dept="water", level=level, area=ww_area(post, level), post=post.strip(" ,"), name=name,
                                     phone=_esw.phones(ph, mob if mob.strip(" -") else ""), email=_esw.emails(mail), state="TN",
-                                    district="Chennai", source=url, last_updated=last, org="CMWSSB", **extra))
+                                    district="Chennai", source=url, last_updated=last, org="CMWSSB", **extra,
+                                    src_url=url, src_pos=tpos[ti][ri], method="html table"))
     return recs
 
 
@@ -245,6 +254,12 @@ def parse_depots(content, url):
 def parse_pages(pages, url):
     """Records from the text of each PDF page (pypdf layout mode)."""
     recs, seen = [], set()
+    # source trail: tables_of numbers the lines across pages; line no -> (page, line in page, text)
+    where = dict(enumerate(((pn, ln, x) for pn, pg in enumerate(pages, 1) for ln, x in enumerate(pg.splitlines(), 1)), 1))
+
+    def lp(no):
+        w = where.get(no)
+        return provenance.line_pos(*w) if w else None
     for area, kind, cols, lines in tables_of(pages):
         if not area:
             continue
@@ -272,7 +287,8 @@ def parse_pages(pages, url):
                 recs.append(_esw.record(MOD, key, dept="water", level="subdivision", area=f"{zone}, {post}", post=post,
                                         name=re.sub(r"\s*\(?i/c\)?\s*$", "", name), phone=_esw.phones(joined(mob[no])),
                                         address=joined(adr[no]), state="TN", district="Chennai", source=url,
-                                        last_updated="2022-03-18", org="CMWSSB", parents={"zone": zone}))
+                                        last_updated="2022-03-18", org="CMWSSB", parents={"zone": zone}, src_pos=lp(no),
+                                        method="pdf text (pypdf layout)"))
             continue
         # a depot table: every row has the depot mobile 81449300NN (also a vacant depot), so the mobile line is the anchor
         anchors = [no for no, _ in mobiles] or [it[0][0] for it in name_items(names)]
@@ -300,7 +316,8 @@ def parse_pages(pages, url):
                                     name=re.sub(r"\s*\(?\s*i\s*/\s*c\s*\)?\s*", " ", name).strip() if name else None,
                                     phone=_esw.phones(mob.get(no, ""), joined(land[no])), address=joined(adr[no]), state="TN",
                                     district="Chennai", source=url, last_updated="2022-03-18", org="CMWSSB",
-                                    parents={"zone": zone}, depot_no=n, in_charge=ic or None))
+                                    parents={"zone": zone}, depot_no=n, in_charge=ic or None, src_pos=lp(no),
+                                    method="pdf text (pypdf layout)"))
     return recs
 
 

@@ -12,6 +12,8 @@ from collections import Counter, OrderedDict
 
 from dforms import _esw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ero_ka"
 URL = "https://ceo.karnataka.gov.in/blo_data/ac/{}.json"
 ACS = range(1, 225)
@@ -35,16 +37,17 @@ def _phone(s):
 def parse(doc, url):
     no, name, district = doc.get("no"), _esw.clean(doc.get("name")), _esw.clean(doc.get("district")).title()
     officers = OrderedDict()          # (role, name key) -> {"name", "phones": Counter, "parts": []}
-    for row in doc.get("parts") or []:
+    for ri, row in enumerate(doc.get("parts") or []):
         row = list(row) + [""] * (10 - len(row))
         for role, ni, pi in (("aero", 6, 7), ("ero", 8, 9)):
             n = _esw.clean(row[ni])
             if not n:
                 continue
-            o = officers.setdefault((role, _esw.slug(n)), {"name": n, "phones": Counter(), "parts": []})
+            o = officers.setdefault((role, _esw.slug(n)), {"name": n, "phones": Counter(), "parts": [], "at": []})
             if _phone(row[pi]):
                 o["phones"][_phone(row[pi])] += 1
             o["parts"].append(str(row[0]))
+            o["at"].append(ri)
     recs, eros = [], [k for k in officers if k[0] == "ero"]
     for (role, nk), o in officers.items():
         if role == "ero":
@@ -57,7 +60,10 @@ def parse(doc, url):
         recs.append(_esw.record(MODULE, key, dept="elections", level="ac", area=f"{no} - {name}", post=post, name=o["name"],
                                 phone=", ".join(p for p, _ in o["phones"].most_common()), state="KA", district=district,
                                 office_id=f"KA-AC-{no}", source=url, last_updated=_date(doc.get("version")),
-                                parts=f"{len(parts)} parts" + (f" ({parts[0]}-{parts[-1]})" if parts else "")))
+                                parts=f"{len(parts)} parts" + (f" ({parts[0]}-{parts[-1]})" if parts else ""),
+                                # source trail: the officer is named on these rows of the AC file's "parts" array (0-based)
+                                src_pos={"key": "parts", "index": o["at"][0], **({"indexes": o["at"]} if len(o["at"]) > 1 else {}),
+                                         "col": 6 if role == "aero" else 8}))
     return recs
 
 

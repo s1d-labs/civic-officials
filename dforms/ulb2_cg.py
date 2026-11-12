@@ -26,7 +26,10 @@ import re
 import unicodedata
 from pathlib import Path
 
+from dforms._trail import tr_pos
 from dforms import _esw, _ulb
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb2_cg"
 STATE = "CG"
@@ -77,10 +80,11 @@ def parse_contacts(html, url=CONTACTS):
         code, latin, _ = tie(LGD["contacts"].get(norm(dist) + "|" + norm(body)))
         common = {"district": dist, "body_type": btype, "division": div, "lgd_code": code, "area_latin": latin}
         recs.append(_ulb.record(MODULE, STATE, body, head_post(post), seen, name=name, phone=mobile, email=email, source=url,
-                                latin=latin, post_regional=post, office_phone=_esw.phones(office) or None, **common))
+                                latin=latin, post_regional=post, office_phone=_esw.phones(office) or None,
+                                src_pos=tr_pos(tr), **common))
         if eng:
             recs.append(_ulb.record(MODULE, STATE, body, "Engineer", seen, name=eng, phone=engmob, source=url, latin=latin,
-                                    post_regional="इंजीनियर", **common))
+                                    post_regional="इंजीनियर", src_pos={**tr_pos(tr), "cells": "engineer columns"}, **common))
     return recs
 
 
@@ -101,7 +105,7 @@ def parse_elected(html, url=ELECTED):
             code, latin, dist = tie(code)
             recs.append(_ulb.record(MODULE, STATE, body, post, seen, name=c[2], district=dist, source=url, latin=latin,
                                     post_regional=preg, party=c[3] or None, wards=c[4] if len(c) > 4 and c[4] else None,
-                                    lgd_code=code, area_latin=latin))
+                                    lgd_code=code, area_latin=latin, src_pos=tr_pos(tr)))
     return recs
 
 

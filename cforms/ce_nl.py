@@ -26,6 +26,8 @@ import tempfile
 from cforms import hr
 from cforms.tn import stored
 
+METHOD = 'ocr tesseract eng (gazette scan)'     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://govtpress.nagaland.gov.in/wp-content/uploads/2017/09/mastercopy-31-Aug.pdf"
 ELECTION = ("Nagaland ULB general election 2024 (poll 26.06.2024, results 29.06.2024; SEC notification "
             "SEC/ELE-RESULT/2024/279 of 01.07.2024, Nagaland Gazette Extraordinary No. 179)")

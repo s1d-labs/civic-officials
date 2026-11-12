@@ -13,7 +13,10 @@ import re
 
 from bs4 import BeautifulSoup
 
+import provenance
 from forms.aspnet import hidden, options
+
+METHOD = "html table (ASP.NET grid after dropdown postbacks)"     # source trail (provenance.py): how this reader reads its sources
 
 URL = "https://sechimachal.hp.gov.in/dpmis/repList.aspx"
 P = "ctl00$ContentPlaceHolder1$"
@@ -66,10 +69,11 @@ def walk(get, lvl, dis=None, lang="en-GB"):
 def rows(html):
     soup = BeautifulSoup(html, "lxml")
     out = []
-    for tr in soup.select("#ContentPlaceHolder1_gvNominationList tr"):
+    for ri, tr in enumerate(soup.select("#ContentPlaceHolder1_gvNominationList tr"), 1):
         tds = [" ".join(td.get_text(" ", strip=True).split()) for td in tr.find_all("td")]
         if len(tds) == len(COLS):
             out.append(dict(zip(COLS, tds)))
+            out[-1]["_pos"] = {"table_id": "ContentPlaceHolder1_gvNominationList", "row": ri}
     return out
 
 
@@ -85,7 +89,8 @@ def record(p, x):
          "body_type": LEVELS.get(p["level"]), "district": p["district"], "district_hi": p.get("district_hi"),
          "ward_no": ward_no, "ward_name": m.group(2).strip() if m else None, "ward": x["ward"], "name": x["name"],
          "gender": x["gender"], "age": x["age"], "address": x["address"], "phone": x["phone"], "term": x["term"],
-         "term_start": started.group(1) if started else x["term_start"], "election": f"Himachal Pradesh {x['term'][:4]}", "url": URL}
+         "term_start": started.group(1) if started else x["term_start"], "election": f"Himachal Pradesh {x['term'][:4]}", "url": URL,
+         "src_pos": x.get("_pos")}
     return f"councillor:HP:{slug(p['body'])}:{ward_no}", {k: v for k, v in d.items() if v not in (None, "")}
 
 
@@ -111,7 +116,8 @@ def fetch(p, get):
     if not got:
         return [], files, "no members listed" if "Could Not Find" in r.text else "no member table"
     latest = max(x["term"] for x in got)
-    return [record(p, x) for x in got if x["term"] == latest], files, ""
+    src = provenance.at(r, URL)          # the list is a POST to the same url as the dropdown postbacks: named by its bytes
+    return [(rid, {**d, **src}) for rid, d in (record(p, x) for x in got if x["term"] == latest)], files, ""
 
 
 def bodies(get, lang):

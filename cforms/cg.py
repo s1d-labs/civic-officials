@@ -11,7 +11,10 @@ import re
 
 from bs4 import BeautifulSoup
 
+import provenance
 from forms.aspnet import hidden, options
+
+METHOD = "html table (ASP.NET grid, paged by POST)"     # source trail (provenance.py): how this reader reads its sources
 
 U = "https://uad.cg.gov.in/UrbanLocalBodies/ParshadsearchHome.aspx"
 P = "ctl00$ContentPlaceHolder1$"
@@ -77,27 +80,32 @@ def clean(s):
     return " ".join(ZW.sub("", s or "").split())
 
 
-def _rows(html):
+def _rows(html, src=None):
+    """Rows of the result grid; each carries "_pos" (its <tr> number) and "_src" (provenance.at of the page) for the trail."""
     g = BeautifulSoup(html, "lxml").find("table", id="ContentPlaceHolder1_Gview")
     trs = g.find_all("tr") if g else []
     if not trs:
         return []
     head = [clean(c.get_text(" ", strip=True)) for c in trs[0].find_all(["th", "td"])]
     out = []
-    for tr in trs[1:]:
+    for ri, tr in enumerate(trs[1:], 2):
         c = [clean(td.get_text(" ", strip=True)) for td in tr.find_all("td")]
         if len(c) == len(head) and c[0].isdigit():
             out.append({COLS.get(h, h): v for h, v in zip(head, c)})
+            out[-1]["_pos"], out[-1]["_src"] = {"table_id": "ContentPlaceHolder1_Gview", "row": ri}, src or {}
     return out
 
 
-def _search(get, value):
+def _search(get, value, resp=False):
+    """The search answer's text (or (text, response) with resp=True)."""
     r = get(U)
     if r is None:
-        return None
+        return (None, None) if resp else None
     d = hidden(r.text)
     d.update({P + "ddlNikay": value, P + "btnNikay": "SEARCH"})
     r = get(U, method="POST", data=d)
+    if resp:
+        return (r.text, r) if r is not None else (None, None)
     return r.text if r is not None else None
 
 
@@ -134,13 +142,13 @@ def _term(date):
 def fetch(p, get):
     v = p["body_value"]
     sl = p.get("slug") or slug(p["body"]) or f"body-{v}"
-    h = _search(get, v)
+    h, resp = _search(get, v, resp=True)
     if not h:
         return [], [], "no answer"
     files, rows, page = [], [], 1
     while True:
         files.append((f"councillors/CG/uad-{v}-{sl}-p{page}.html.gz", gzip.compress(h.encode()), "application/gzip"))
-        rows += _rows(h)
+        rows += _rows(h, {**provenance.at(resp, U), "paged": page})
         page += 1
         if f"Page${page}" not in h or page > 30:
             break
@@ -149,7 +157,7 @@ def fetch(p, get):
         r = get(U, method="POST", data=d)
         if r is None:
             return [], files, f"page {page} did not answer"
-        h = r.text
+        h, resp = r.text, r
     if not rows:
         return [], files, "no councillors listed"
     bodies = {r["body"] for r in rows}
@@ -161,7 +169,10 @@ def fetch(p, get):
         term, year = _term(r.get("first_meeting"))
         d = {"type": "councillor", "state": "CG", **{k: val for k, val in r.items() if k in COLS.values()},
              "election": f"Chhattisgarh ULB {term} election (UAD parshad list, first meeting {r.get('first_meeting')})" if term
-             else "Chhattisgarh ULB (UAD parshad list)", "stale": bool(year and year < 2025), "url": U, "body_value": v}
+             else "Chhattisgarh ULB (UAD parshad list)", "stale": bool(year and year < 2025), "url": U, "body_value": v,
+             # source trail: every page of the grid is a POST to the same url: the answer is named by its bytes
+             **{k: val for k, val in r["_src"].items() if k != "paged"},
+             "src_pos": {**r["_pos"], "grid_page": r["_src"].get("paged")}}
         for k in ("phone", "office_phone", "email"):
             if d.get(k) in ("", "0", "-", None):
                 d.pop(k, None)

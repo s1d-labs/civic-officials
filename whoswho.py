@@ -122,11 +122,18 @@ class Site:
                                                          "title": page_title(html), "rows": n_rows, "file": path,
                                                          "fetched_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}))
 
-    def add_rows(self, page, caption, rows, via):
-        for cells in rows:
-            self.records.append((row_id(self.site, page, caption, cells),
-                                 {"type": "row", "site": self.site, **self.meta, "page": page, "category": caption, "via": via,
-                                  **normalise(cells), "cells": cells}))
+    def add_rows(self, page, caption, rows, via, pos=None, src=None, method=None):
+        """pos: one src_pos per row (officials.tables "pos"); src: provenance.at(response) of the answer the rows came from."""
+        for i, cells in enumerate(rows):
+            d = {"type": "row", "site": self.site, **self.meta, "page": page, "category": caption, "via": via,
+                 **normalise(cells), "cells": cells}
+            if src:
+                d.update(src)
+            if pos and i < len(pos):
+                d["src_pos"] = pos[i]
+            if method:
+                d["method"] = method
+            self.records.append((row_id(self.site, page, caption, cells), d))
         self.n_rows += len(rows)
         return len(rows)
 
@@ -148,7 +155,9 @@ class Site:
                     rows = ajax_rows(r.text)
                     if not rows:
                         break
-                    n += self.add_rows(page_url, b["name"], rows, f"{pg['action']}:{b['slug']}:{p + 1}")
+                    n += self.add_rows(page_url, b["name"], rows, f"{pg['action']}:{b['slug']}:{p + 1}",
+                                       [{"category": b["slug"], "paged": p, "item": i} for i in range(1, len(rows) + 1)],
+                                       provenance.at(r, pg["ajaxurl"]), f"json api ({pg['action']})")
                     try:
                         if str(json.loads(r.text).get("last")) == "1":
                             break
@@ -176,7 +185,7 @@ class Site:
         n0 = 0
         if self.read_start:
             for t in tables(home.text):
-                n0 += self.add_rows(base, t["caption"], t["rows"], "table")
+                n0 += self.add_rows(base, t["caption"], t["rows"], "table", t.get("pos"), provenance.at(home), "html table")
             n0 += self.ajax(base, home.text)
         self.keep_page(self.url, base, home.text, n0)    # a home page's tables are mostly tenders and notices: read only when told
         seen, fetched = {base.rstrip("/")}, 0
@@ -195,13 +204,14 @@ class Site:
                     continue
                 seen.add(final.rstrip("/"))
             n = 0
+            src = provenance.at(r)
             for t in tables(r.text):
-                n += self.add_rows(final, t["caption"], t["rows"], "table")
+                n += self.add_rows(final, t["caption"], t["rows"], "table", t.get("pos"), src, "html table")
             for t in pubutility(r.text):
-                n += self.add_rows(final, t["caption"], t["rows"], "card")
+                n += self.add_rows(final, t["caption"], t["rows"], "card", t.get("pos"), src, "html cards (S3WaaS public utility)")
             if not n and PEOPLE_PATH.search(urlsplit(final).path):       # people as cards (no table): members / staff pages
                 for t in text_people(r.text):
-                    n += self.add_rows(final, t["caption"], t["rows"], "text")
+                    n += self.add_rows(final, t["caption"], t["rows"], "text", t.get("pos"), src, "html text (name, role, phone lines)")
             n += self.ajax(final, r.text)
             self.keep_page(u, final, r.text, n)
             if n:      # a page with officials: its own links to more such pages (directory categories) are worth a look

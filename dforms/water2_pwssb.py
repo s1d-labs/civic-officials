@@ -18,6 +18,9 @@ import re
 
 from dforms import _esw
 from dforms._water import level_of, unique
+import provenance
+
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "water2_pwssb"
 BASE = "https://pwssb.punjab.gov.in/"
@@ -54,9 +57,10 @@ def level(post, circle):
     return lvl
 
 
-def parse(rows, page, url, circle=None):
+def parse(rows, page, url, circle=None, src=None):
+    """src: provenance.at() of the table-data answer the rows came from."""
     recs, seen = [], set()
-    for x in rows if isinstance(rows, list) else []:
+    for xi, x in enumerate(rows if isinstance(rows, list) else []):
         if not isinstance(x, dict):
             continue
         text = x.get("name") or x.get("name_and_designation") or ""
@@ -72,7 +76,8 @@ def parse(rows, page, url, circle=None):
         recs.append(_esw.record(MODULE, key, dept="water", level=lvl, area=area, post=post or None,
                                 name=re.sub(r"^(Er|Sh|Smt|Mr|Ms)\.?\s+", "", name), phone=_esw.phones(x.get("office"),
                                 x.get("mobile") or x.get("mobile_no")), email=_esw.emails(x.get("email")) or None,
-                                state="PB", district=circle, source=url, org=ORG, parents=par))
+                                state="PB", district=circle, source=url, org=ORG, parents=par,
+                                src_pos={"index": xi, **({"id": x["id"]} if x.get("id") else {})}, **(src or {})))
     return recs
 
 
@@ -97,5 +102,5 @@ def fetch(p, get):
         rows = json.loads(a.content)
     except ValueError:
         return [], files, "not json"
-    recs = parse(rows, page, url, p.get("circle", circle))
+    recs = parse(rows, page, url, p.get("circle", circle), provenance.at(a, AJAX.format(tid)))
     return recs, files, "" if recs else "no rows"

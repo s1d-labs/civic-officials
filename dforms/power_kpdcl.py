@@ -8,7 +8,9 @@ Record id dept:power_kpdcl:<division>:<sub-division>:<designation>.
 """
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, phone, raw
+from dforms._power import tr_pos, Out, cells, clean, phone, raw
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MOD = "power_kpdcl"
 URL = "https://kpdcl.jk.gov.in/page/SGpLSUxqeFdPSG82c2g0ZzhlRHRVQT09"
@@ -39,6 +41,7 @@ def parse(html, url=URL):
             continue
         ix = {h: i for i, h in enumerate(head)}
         for tr in trs[1:]:
+            out.src = {"src_pos": tr_pos(tr)}
             c = cells(tr)
             if len(c) != len(head):
                 continue
@@ -52,6 +55,7 @@ def parse(html, url=URL):
             out.add(f"{g('division')}:{g('sub-division')}:{g('rank/designation')}", lvl, area, post=g("rank/designation"),
                     name=g("name"), phone_=phone(g("phone")), district=g("district"), parents=par,
                     office_type=g("office"), office=g("sub-division"))
+    out.src = {}
     return out.recs
 
 

@@ -15,6 +15,11 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
+import provenance
+from forms.aspnet import keep_trail
+
+METHOD = "html table (ASP.NET postbacks)"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://ceojh.jharkhand.gov.in/linkinfo/BLOcontacts.aspx"
 UA = "s1d-labs-public-records/1.0 (+https://labs.s1d.me)"
 SLEEP = 1.0
@@ -52,6 +57,7 @@ def _session(session=None):
     if session is not None:  # keep caller's proxies / CA bundle, never its cookies
         s.proxies.update(getattr(session, "proxies", {}) or {})
         s.verify = getattr(session, "verify", True)
+        keep_trail(s, session)  # the caller's trail hooks (source trail), not its cookies
     return s
 
 
@@ -74,20 +80,28 @@ def _selected(soup):
     return None
 
 
-def _grid_rows(soup):
+def _grid_rows(soup, resp=None, page=1):
+    """Cells of each data row; with resp, each row list carries .src (source trail: provenance.at + src_pos)."""
     g = soup.find("table", id="GridView1")
     out = []
     if not g:
         return out
-    for tr in g.find_all("tr", recursive=False):
+    src = provenance.at(resp, URL) if resp is not None else {}
+    for n, tr in enumerate(g.find_all("tr", recursive=False), 1):
         tds = tr.find_all("td", recursive=False)
         if len(tds) != 5:
             continue
         cells = [td.get_text(" ", strip=True) for td in tds]
         if not any(cells):  # blank spacer row before the pager
             continue
-        out.append(cells)
+        out.append(_Cells(cells))
+        out[-1].src = {**src, "src_pos": {"selector": "#GridView1", "row": n, "grid_page": page}}
     return out
+
+
+class _Cells(list):
+    """A row's cells (a list) with its source trail in .src."""
+    src = {}
 
 
 def _pages(soup):
@@ -137,10 +151,11 @@ def fetch(session, payload):
         time.sleep(SLEEP)
         data = _hidden(soup)
         data.update({"__EVENTTARGET": "", "__EVENTARGUMENT": "", "DropDownList1": ac})
-    soup = _soup(s.post(URL, data=data, timeout=TIMEOUT))
+    resp = s.post(URL, data=data, timeout=TIMEOUT)
+    soup = _soup(resp)
     if _selected(soup) != ac:
         raise RuntimeError("JH: filter to %r did not apply" % ac)
-    rows = _grid_rows(soup)
+    rows = _grid_rows(soup, resp)
     seen, todo = {1}, [p for p in _pages(soup) if p != 1]
     while todo:  # only if an AC has more than 600 parts
         p = todo.pop(0)
@@ -150,10 +165,11 @@ def fetch(session, payload):
         time.sleep(SLEEP)
         data = _hidden(soup)
         data.update({"__EVENTTARGET": "GridView1", "__EVENTARGUMENT": "Page$%d" % p, "DropDownList1": ac})
-        soup = _soup(s.post(URL, data=data, timeout=TIMEOUT))
-        rows += _grid_rows(soup)
+        resp = s.post(URL, data=data, timeout=TIMEOUT)
+        soup = _soup(resp)
+        rows += _grid_rows(soup, resp, p)
         todo += [q for q in _pages(soup) if q not in seen and q not in todo]
-    out = [_row(c) for c in rows]
+    out = [{**_row(c), **getattr(c, "src", {})} for c in rows]
     bad = [r for r in out if _norm(r["ac_name"]) != _norm(ac)]
     if bad:
         raise RuntimeError("JH: %d rows of another AC in %r (pager kept no filter)" % (len(bad), ac))

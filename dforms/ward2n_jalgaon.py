@@ -10,6 +10,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_jalgaon"
 BODY, LGD, STATE, DISTRICT = "Jalgaon Shahar Mahanagarpalika", "276571", "MH", "Jalgaon"
 URL = "https://jcmc.gov.in/OfficersWardOfficer{n}_M.html"
@@ -26,10 +28,11 @@ def parse(html, p):
     area = f"Prabhag Samiti {n}"
     seen, recs = set(), []
     for t in soup.find_all("table"):
-        kv = {}
-        for r in _esw.grid(t):
+        kv, kp = {}, {}
+        for r, rp in _ward.grid_pos(t):
             if len(r) >= 2:
                 kv[_esw.clean(r[0]).rstrip(":- ").strip()] = _esw.clean(r[1])
+                kp[_esw.clean(r[0]).rstrip(":- ").strip()] = rp["row"]
         name = kv.get("नाव")
         if not name:
             continue
@@ -43,7 +46,8 @@ def parse(html, p):
                                  level="zone", area=area, zone=area, post=post, post_regional=post_mr, name=name,
                                  name_regional=name, phone=_ward.hi_norm(kv.get("फोन नंबर - एक्स्टेंशन", "")),
                                  email=kv.get("ईमेल", ""), address=_ward.hi_norm(kv.get("कार्यालयीन पत्ता", "")),
-                                 joined=joined, wing="administration", source=p["url"]))
+                                 joined=joined, wing="administration", source=p["url"],
+                                 src_pos={"table": _esw.table_no(t), "row": kp.get("नाव"), "kind": "label | value table", "rows": kp}))
         break
     return recs
 

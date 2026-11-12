@@ -13,6 +13,9 @@ goes back to the queue (as dforms/leg_mp.py). One queue item = the PDF. Record i
 import re
 
 from dforms import _leg
+import provenance
+
+METHOD = "pdf text (pdftotext -layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "leg_mh"
 URL = "https://mls.org.in/PDF2025/15-Assembly-24-11-2024.pdf"
@@ -28,14 +31,15 @@ def items(get=None):
     return [{"key": f"{MODULE}-gazette", "payload": {"reader": MODULE, "url": URL, "state": "MH", "india_only": True}}]     # pdftotext: the India servers have it, the GitHub runners do not
 
 
-def rows(pages):
+def rows(pages, where=None):
     """[(AC no, constituency, name, party)] from the English schedule. Two pdftotext quirks: a long name runs into the party
     with one space ("... Wooike Bharatiya Janata Party": the known party names split it), and a row's first line can carry
-    only the last word of the row above ("113 Nandgaon   Nanasaheb": that word is the end of 112's name)."""
+    only the last word of the row above ("113 Nandgaon   Nanasaheb": that word is the end of 112's name).
+    where: a dict; when given, it gets {AC no: provenance.line_pos of the row's first line}."""
     out, cur, cols = {}, None, None
     split_party = re.compile(r"^(.*\S)\s+((?:" + "|".join(re.escape(p) for p in PARTY_START) + r").*)$")
-    for page in pages:
-        for line in page.splitlines():
+    for pno, page in enumerate(pages, 1):
+        for lno, line in enumerate(page.splitlines(), 1):
             if not line.strip() or DEVANAGARI.search(line):
                 cur = None
                 continue
@@ -44,17 +48,20 @@ def rows(pages):
             if m and re.search("[A-Za-z]", m.group(2)) and 1 <= int(m.group(1)) <= SEATS and int(m.group(1)) not in out:
                 no, cons, name, party = int(m.group(1)), m.group(2), m.group(3), m.group(4)
                 cols = (m.start(2), m.start(3), m.start(4))
-                cur = out[no] = {"cons": [cons], "name": [name], "party": [party], "cols": cols}
+                cur = out[no] = {"cons": [cons], "name": [name], "party": [party], "cols": cols,
+                                 "pos": provenance.line_pos(pno, lno, line)}
                 continue
             if s and cols and re.search("[A-Za-z]", s.group(2)) and 1 <= int(s.group(1)) <= SEATS and int(s.group(1)) not in out:
                 k = split_party.match(s.group(3))
                 no = int(s.group(1))
                 if k:                                            # name and party with one space between them
-                    cur = out[no] = {"cons": [s.group(2)], "name": [k.group(1)], "party": [k.group(2)], "cols": cols}
+                    cur = out[no] = {"cons": [s.group(2)], "name": [k.group(1)], "party": [k.group(2)], "cols": cols,
+                                     "pos": provenance.line_pos(pno, lno, line)}
                 else:                                            # the word belongs to the row above; this row's name follows
                     if no - 1 in out:
                         out[no - 1]["name"].append(s.group(3))
-                    cur = out[no] = {"cons": [s.group(2)], "name": [], "party": [], "cols": cols}
+                    cur = out[no] = {"cons": [s.group(2)], "name": [], "party": [], "cols": cols,
+                                     "pos": provenance.line_pos(pno, lno, line)}
                 continue
             if cur is None or re.match(r"^\s*\d", line):
                 cur = None
@@ -64,18 +71,21 @@ def rows(pages):
                 part = line[max(a - 2, 0):(b - 2) if b else None].strip()
                 if part:
                     cur[key].append(part)
+    if where is not None:
+        where.update({no: d["pos"] for no, d in out.items()})
     return [(no, " ".join(d["cons"]), " ".join(d["name"]), re.sub(r"\s*[–-]\s*$", "", " ".join(d["party"])).replace(" – ", " - "))
             for no, d in sorted(out.items())]
 
 
 def parse(pages, url=URL):
-    recs = []
-    for no, cons, name, party in rows(pages):
+    recs, where = [], {}
+    for no, cons, name, party in rows(pages, where):
         seat, note = _leg.ac_seat("MH", no, cons)
         recs.append(_leg.member(MODULE, "MH", "AC", seat, re.sub(r"\s+", " ", name), constituency=re.sub(r"\s+", " ", cons),
                                 party=re.sub(r"\s+", " ", party), source=url, seat_no=no, note=note,
                                 house="Maharashtra Legislative Assembly (15th)",
-                                source_note="ECI notification No. 308/MH-LA/2024 of 24 November 2024 (names and parties only)"))
+                                source_note="ECI notification No. 308/MH-LA/2024 of 24 November 2024 (names and parties only)",
+                                src_pos=where.get(no)))
     return recs
 
 

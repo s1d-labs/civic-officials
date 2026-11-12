@@ -17,6 +17,8 @@ import tempfile
 
 from cforms import hr
 
+METHOD = "ocr tesseract hin (ruled grid, one image per column)"     # source trail (provenance.py): how this reader reads its sources
+
 COLS = {"UP": ["sr", "district", "body", "reservation", "name", "father", "phone"],
         "UK": ["sr", "district", "body", "designation", "name", "phone"]}
 TYPES = [("नगर निगम", "Municipal Corporation"), ("नगर पालिका परिषद", "Municipal Council"), ("नगर पंचायत", "Nagar Panchayat")]
@@ -98,7 +100,8 @@ def fetch(p, get):
                      "father_or_husband": norm(c.get("father")) or None, "phone": phone(c.get("phone")),
                      "reservation": reservation(c["reservation"]) if c.get("reservation") else None,
                      "reservation_local": norm(c.get("reservation")) or None, "designation_local": desig or None,
-                     "position": position, "election": p.get("election"), "url": p["url"], "page": pg, "read": "ocr"}
+                     "position": position, "election": p.get("election"), "url": p["url"], "page": pg, "read": "ocr",
+                     "src_pos": {"page": pg, **hr.row_pos(row)}}
                 place = re.sub(r"[\s,]+", "-", f"{district} {body}")[:60]
                 rid = f"councillor:{st}:{place}:chair"
                 n = seen[rid] = seen.get(rid, 0) + 1

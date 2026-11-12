@@ -13,6 +13,8 @@ import shutil
 import subprocess
 import tempfile
 
+METHOD = 'pdf text (pdftotext -layout)'     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://pbmc.gov.in/files?id=1023&websection=RTI"
 BODY, LGD = "Sri Vijaya Puram (Port Blair) Municipal Council", "253098"
 ELECTION = "Sri Vijaya Puram Municipal Council (as listed in its RTI 4(1)(b) disclosure of 28.02.2025)"

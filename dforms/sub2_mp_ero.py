@@ -14,7 +14,10 @@ Mauganj, Maihar and Pandhurna). Record ids: dept:sub2_mp_ero:MP-AC-<AC no>.
 """
 import re
 
+import provenance
 from dforms import _esw
+
+METHOD = "html table (ASP.NET postback answer, table#*Grid_ERO)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub2_mp_ero"
 URL = "https://ceoelection.mp.gov.in/CEO_District.aspx"
@@ -48,15 +51,17 @@ def hidden(html):
     return {i["name"]: i.get("value", "") for i in _esw.soup(html).find_all("input", type="hidden") if i.get("name")}
 
 
-def rows(html):
-    """[(ac no, district, ac name, name, mobile)] of the ERO table."""
+def rows(html, where=None):
+    """[(ac no, district, ac name, name, mobile)] of the ERO table. where: a list; when given, it gets each row's src_pos."""
     t = _esw.soup(html).find("table", id=re.compile("Grid_ERO$"))
     if t is None:
         return []
-    out = []
-    for r in _esw.grid(t)[1:]:
+    out, tp = [], []
+    for r, pos in zip(_esw.grid(t, pos=tp)[1:], tp[1:]):
         if len(r) >= 5 and r[0].strip().isdigit():
             out.append((int(r[0]), r[1], r[2], r[3], r[4]))
+            if where is not None:
+                where.append(pos)
     return out
 
 
@@ -76,8 +81,9 @@ def fetch(p, get):
     if a is None:
         return [], files, "no answer to the ERO postback"
     files.append(_esw.keep(MODULE, "ero", a.content))
-    recs = []
-    for no, dist, ac, name, mobile in rows(a.text):
+    recs, where = [], []
+    src = provenance.at(a, url)          # the url is asked twice (GET, then the POST that gives the list)
+    for (no, dist, ac, name, mobile), pos in zip(rows(a.text, where), where):
         name = _esw.clean(name)
         if not name:
             continue
@@ -85,5 +91,5 @@ def fetch(p, get):
         recs.append(_esw.record(MODULE, f"MP-AC-{no}", dept="administration", level="subdivision", area=area_of(ac),
                                 post="Electoral Registration Officer", name=name, phone=_esw.phones(mobile), district=district,
                                 district_code=dc, state="MP", office_id=f"MP-ERO-AC-{no}", ac_no=no, ac_name=_esw.clean(ac),
-                                source=url))
+                                source=url, src_pos=pos, **src))
     return recs, files, "" if recs else "no rows"

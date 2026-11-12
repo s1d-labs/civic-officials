@@ -24,6 +24,8 @@ from urllib.parse import quote
 from dforms import _esw
 from dforms import _pdfcells
 
+METHOD = 'pdf table cells (pdftotext -raw -bbox, else pypdf)'     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub3_wb"
 BASE = "https://ceowestbengal.wb.gov.in/Downloads/"
 DISTRICTS = ["ALIPURDUAR", "BANKURA", "BIRBHUM", "COOCHBEHAR", "DAKSHIN DINAJPUR", "DARJEELING", "HOOGHLY", "HOWRAH", "JALPAIGURI",

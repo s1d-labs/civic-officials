@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "sub_od_dist"
 URL = "https://odisha.gov.in/en/state-portal-district-officials"
 LGD = {"ANUGOLA": "344", "BALANGIR": "345", "BALESHWAR": "346", "BARAGADA": "347", "BHADRAK": "348", "BOUDH": "349", "KATAKA": "350",
@@ -33,24 +35,27 @@ def district_name(cap):
     return NAMES.get(cap) or cap.title()
 
 
-def rows(html):
+def rows(html, where=None):
     soup = _esw.soup(html)
     out = []
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        tp = []
+        g = _esw.grid(t, pos=tp)
         if not g or "district" not in " ".join(g[0]).lower():
             continue
         head = [h.lower() for h in g[0]]
         idx = {k: next((i for i, h in enumerate(head) if k in h), None) for k in ("district", "name", "designation", "mail", "address", "phone")}
-        for r in g[1:]:
+        for r, pos in zip(g[1:], tp[1:]):
             r = r + [""] * (len(head) - len(r))
             out.append({k: (r[i] if i is not None else "") for k, i in idx.items()})
+            if where is not None:
+                where.append(pos)
     return out
 
 
 def parse(html, url, seen):
-    recs = []
-    for r in rows(html):
+    recs, where = [], []
+    for r, pos in zip(rows(html, where), where):
         cap = _esw.clean(r["district"]).upper()
         if cap not in LGD:
             continue
@@ -64,7 +69,8 @@ def parse(html, url, seen):
         seen.add(key)
         rec = _esw.record(MODULE, key, dept="police" if police else "administration", level="district", area=district, post=post,
                           name=_esw.clean(r["name"]), phone=_esw.phones(r["phone"], r["address"]), email=mail, address=r["address"],
-                          district=district, district_code=code, state="OD", office_id=f"OD-D-{code}", source=url)
+                          district=district, district_code=code, state="OD", office_id=f"OD-D-{code}", source=url,
+                          src_pos=pos)
         if rec[1].get("name"):
             recs.append(rec)
     return recs

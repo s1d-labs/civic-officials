@@ -10,6 +10,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_kohima"
 BODY, LGD, STATE, DISTRICT = "Kohima Municipal Council", "249722", "NL", "Kohima"
 URL = "https://kmc.nagaland.gov.in/index.php/employee-details/"
@@ -26,14 +28,14 @@ def parse(html, p):
     for t in soup.find_all("table"):
         h = t.find_previous(["h1", "h2", "h3", "h4", "h5", "h6", "strong", "p"])
         branch = _esw.clean(h.get_text(" ")) if h else ""
-        for r in _esw.grid(t)[1:]:
+        for r, rp in _ward.grid_pos(t)[1:]:
             r = [_esw.clean(c) for c in r] + ["", "", ""]
             name, post = re.sub(r"^(Shri|Smti|Smt|Kum|Sri|Dr)\.?\s*", "", r[1]).strip(), r[2]
             if not post or not name or not (FIELD.search(post) or "engineer" in branch.lower()):
                 continue
             recs.append(_ward.record(MODULE, f"{_esw.slug(branch)}:{_esw.slug(post)}:{_esw.slug(name)}", seen, body=BODY, lgd=LGD,
                                      state=STATE, district=DISTRICT, level="body", area=BODY, post=post, name=name,
-                                     branch=branch or None, source=p["url"]))
+                                     branch=branch or None, source=p["url"], src_pos=rp))
     return recs
 
 

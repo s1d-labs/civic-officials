@@ -12,7 +12,10 @@ Records: level "zone". Record ids: dept:ward2s_kolkata:<borough slug>:<post slug
 """
 import re
 
+import provenance
 from dforms import _esw, _ward
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2s_kolkata"
 BODY, LGD, STATE, DISTRICT = "Kolkata Municipal Corporation", "250299", "WB", "Kolkata"
@@ -30,11 +33,20 @@ def items(get=None):
 def parse(pages, p):
     seen, recs = set(), []
     text = "\n".join(pages[:2])
-    for block in re.split(r"\n\s*\n", text):
+    at = _ward.joined_at(pages[:2])
+    spans, last = [], 0                 # the blocks of re.split(r"\n\s*\n", text), with where each starts
+    for m in re.finditer(r"\n\s*\n", text):
+        spans.append((last, m.start()))
+        last = m.end()
+    spans.append((last, len(text)))
+    for b0, b1 in spans:
+        block = text[b0:b1]
         lines = [ln for ln in block.split("\n") if ln.strip()]
         row = next((ROW.match(ln) for ln in lines if ROW.match(ln)), None)
         if not row:
             continue
+        gi = text.count("\n", 0, b0) + next(i for i, ln in enumerate(block.split("\n")) if ROW.match(ln))
+        pos = provenance.line_pos(at[gi][0], at[gi][1], row.group(0), lines_in_block=len(lines)) if gi < len(at) else None
         name = row.group(2).strip()
         rest = re.sub(r"S\.W\.M\.-I", " ", row.group(3))
         words = " ".join(re.sub(r"S\.W\.M\.-I|\d|/", " ", ln) for ln in lines if not ROW.match(ln))
@@ -49,7 +61,7 @@ def parse(pages, p):
         post = f"{post} (Solid Waste Management)"
         recs.append(_ward.record(MODULE, f"{_esw.slug(zone)}:{_esw.slug(post)}:{_esw.slug(name)}", seen, body=BODY, lgd=LGD,
                                  state=STATE, district=DISTRICT, level="zone", area=zone, zone=zone, post=post, name=name,
-                                 phone=", ".join(phones), wing="sanitation", source=p["url"]))
+                                 phone=", ".join(phones), wing="sanitation", source=p["url"], src_pos=pos))
     return recs
 
 

@@ -14,6 +14,8 @@ import re
 
 from dforms._power import Out, clean, email, raw, slug
 
+METHOD = "pdf text (pypdf, plain)"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://www.goaelectricity.gov.in/wp-content/uploads/2026/06/Telephone-Directory-2026-27-1.pdf"
 HEAD = re.compile(r"^\s*(Office of the .*Engineer.*|Head Office.*)$")
 NUM = re.compile(r"^\s*(\d{1,3})(?:\.\s*|\s+|$)(.*)$")
@@ -48,16 +50,19 @@ def block_of(h):
     return "other", tail
 
 
-def entries(pages):
-    """[(heading, number, text lines, phones, email parts)] from the PDF's plain text, one string per page."""
-    lines = []
-    for t in pages:
-        ls = [x for x in t.splitlines() if x.strip()]
-        if ls and re.fullmatch(r"\s*\d{1,2}\s*", ls[0]):          # page number
+def entries(pages, pos=None):
+    """[(heading, number, text lines, phones, email parts)] from the PDF's plain text, one string per page.
+    pos: a list; when given, it gets for each entry its source trail position ({"page", "line", "line_text", "lines"})."""
+    lines, where = [], []
+    for pn, t in enumerate(pages, 1):
+        ls = [(i, x) for i, x in enumerate(t.splitlines(), 1) if x.strip()]
+        if ls and re.fullmatch(r"\s*\d{1,2}\s*", ls[0][1]):          # page number
             ls = ls[1:]
-        lines += ls
+        lines += [x for _, x in ls]
+        where += [(pn, i) for i, _ in ls]
     out, head, cur, open_head = [], None, None, False
-    for line in lines:
+    at = []
+    for li, line in enumerate(lines):
         s = line.strip()
         h = HEAD.match(s)
         m = NUM.match(s)
@@ -78,11 +83,14 @@ def entries(pages):
             # the numbers of the block before it: "Sub Div-II, Cuncolim" starts at 12)
             cur = [head, int(m.group(1)), [], [], []]
             out.append(cur)
+            at.append([li])                              # the numbered line (its number may stand alone)
             s = m.group(2).strip()
             if not s:
                 continue
         if cur is None:
             continue
+        if at[-1][-1] != li:
+            at[-1].append(li)
         rest, ext = [], False
         for tok in re.split(r"\s+", s):
             t = tok.strip(",;")
@@ -107,6 +115,13 @@ def entries(pages):
                 rest.append(tok)
         if rest:
             cur[2].append(" ".join(rest))
+    if pos is not None:
+        for lis in at:
+            pg = where[lis[0]][0] if lis else None
+            nos = [where[i][1] for i in lis if where[i][0] == pg]
+            pos.append({"page": pg, "line": nos[0], "line_text": "\n".join(lines[i] for i in lis if where[i][0] == pg),
+                        **({"lines": nos} if len(nos) > 1 else {}),
+                        **({"to_page": where[lis[-1]][0]} if lis and where[lis[-1]][0] != pg else {})} if lis else {})
     return out
 
 
@@ -157,7 +172,8 @@ def parse_pages(pages, source=URL):
     out = Out("power_goa", "GA", source, discom="Electricity Department, Goa")
     circle = division = None
     keys, last, key = set(), None, None
-    for head, n, lines, phones, mails in entries(pages):
+    pos = []
+    for (head, n, lines, phones, mails), sp in zip(entries(pages, pos), pos):
         lvl, area = block_of(head)
         if head != last:                         # a new block; two blocks may have one heading ("Sub Div-I," with no place,
             last, key = head, slug(head)         # in Div-XIII and in Div-XV): the second one's key names its division
@@ -191,7 +207,7 @@ def parse_pages(pages, source=URL):
         if len(rid) > 80:                         # Out.add cuts a key at 80 characters: keep the entry number on the end
             rid = f"{key[:79 - len(str(n))].rstrip('-')}-{n}"
         out.add(rid, elvl, earea, post=des, name=name, phone_=", ".join(dict.fromkeys(phones)) or None,
-                email_=mail, parents=par, office=head, entry=n)
+                email_=mail, parents=par, office=head, entry=n, src_pos=sp)
     return out.recs
 
 

@@ -18,6 +18,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_kochi"
 BODY, LGD, STATE, DISTRICT = "Kochi Municipal Corporation", "252220", "KL", "Ernakulam"
 URL = "https://kochicorporation.lsgkerala.gov.in/en/phone-numbers/404"
@@ -70,10 +72,12 @@ def parse(html, p):
     seen, recs = set(), []
     upd = last_updated(html)
 
+    cur = {}     # the src_pos of the row being read (source trail)
+
     def add(level, area, post, name="", phone="", zone=None, **extra):
         recs.append(_ward.record(MODULE, f"{_esw.slug(area)}:{_esw.slug(post)}:{_esw.slug(name) or 'office'}", seen, body=BODY,
                                  lgd=LGD, state=STATE, district=DISTRICT, level=level, area=area, post=post, name=name,
-                                 phone=phone, zone=zone, source=p["url"], last_updated=upd, **extra))
+                                 phone=phone, zone=zone, source=p["url"], last_updated=upd, **extra, src_pos=cur.get("pos")))
 
     def staff(name, post, office, phone, **extra):
         z = zone_of(office)
@@ -83,18 +87,21 @@ def parse(html, p):
             add("body", BODY, post, name, phone, office=_esw.clean(office).title() or None, **extra)
 
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g:
             continue
         heads = [[c.lower() for c in r] for r in g[:2]]
         top = " ".join(heads[0])
         if heads[0][:2] == ["office name", "contact no"] and heading(t) == "zonal offices":
-            for r in g[1:]:
+            for r, rp in zip(g[1:], gp[1:]):
+                cur["pos"] = rp
                 z = zone_of(r[0])
                 if z and len(r) > 1:
                     add("zone", f"{z} Zonal Office", "Zonal Office", phone=r[1], zone=z)
         elif "health inspectors" in top:
-            for r in g[2:]:
+            for r, rp in zip(g[2:], gp[2:]):
+                cur["pos"] = rp
                 if len(r) < 5 or not _esw.clean(r[1]):
                     continue
                 circle = _esw.clean(r[2]).title()
@@ -102,16 +109,19 @@ def parse(html, p):
                 area = f"{circle} ({place})" if place else circle
                 add("circle", area, "Health Inspector", r[1], r[4], circle=circle, place=place or None)
         elif "revenue inspectors" in top:
-            for r in g[2:]:
+            for r, rp in zip(g[2:], gp[2:]):
+                cur["pos"] = rp
                 if len(r) >= 4 and _esw.clean(r[1]):
                     staff(r[1], "Revenue Inspector", r[2], r[3])
         elif "superintendents" in top:
-            for r in g[2:]:
+            for r, rp in zip(g[2:], gp[2:]):
+                cur["pos"] = rp
                 if len(r) >= 5 and _esw.clean(r[1]):
                     sec = _esw.clean(r[2]).title()
                     staff(r[1], f"Superintendent ({sec})" if sec else "Superintendent", r[3], r[4], section=sec or None)
         elif heads[0][:2] == ["name", "designation"] and heading(t) != "other officers":
-            for r in g[1:]:
+            for r, rp in zip(g[1:], gp[1:]):
+                cur["pos"] = rp
                 if len(r) >= 3 and _esw.clean(r[0]) and _esw.clean(r[1]):
                     post = post_of(r[1])
                     staff(r[0], post, "WEST ZONE" if "west" in post.lower() else "", r[2])

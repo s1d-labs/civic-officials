@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_panvel"
 BODY, LGD, STATE, DISTRICT = "Panvel Mahanagarpalika", "251492", "MH", "Raigad"
 URL = "https://panvelcorporation.maharashtra.gov.in/Zone_Office"
@@ -24,6 +26,7 @@ def parse(html, p):
     last = m.group(1) if m else None
     seen, recs = set(), []
     for sec in soup.find_all("section", id=re.compile(r"^zone-\d+")):
+        sp = {"selector": f"section#{sec.get('id')}"}
         kv = {}
         for pp in sec.find_all("p"):
             s = pp.find("strong")
@@ -37,8 +40,9 @@ def parse(html, p):
         letter = lm.group(1)
         wards = []
         for t in sec.find_all("table"):
-            for r in _esw.grid(t)[1:]:
+            for r, rp in _ward.grid_pos(t)[1:]:
                 wards += [w for w in _ward.wards_of(r[0]) if w not in wards]
+                sp.setdefault("ward_rows", []).append(rp)
         link = sec.find("a", href=re.compile(r"maps\.app\.goo\.gl|google\.[a-z.]+/maps|goo\.gl/maps"))
         area = f"Ward {letter}"
         name = kv.get("Ward Officer", "")
@@ -47,7 +51,7 @@ def parse(html, p):
                                  post="Ward Officer", name=name, phone=_esw.phones(kv.get("Contact", ""), kv.get("Landline", "")),
                                  email=kv.get("Email", ""), address=kv.get("Address"), wards=wards,
                                  map_url=link["href"] if link else None, vacant=None if name else True, wing="administration",
-                                 last_updated=last, source=p["url"]))
+                                 last_updated=last, source=p["url"], src_pos=sp))
     return recs
 
 

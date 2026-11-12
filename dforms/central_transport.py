@@ -17,6 +17,8 @@ from urllib.parse import urlparse
 from dforms import _esw
 from dforms.police_s3waas import last_updated
 
+METHOD = "html table (+ office card on Uttarakhand pages)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "central_transport"
 TITLE = re.compile(r"^(?:(?:shri|smt|sri|mr|mrs|ms|dr|km|kumari)(?:\.\s*|\s+))+", re.I)
 
@@ -49,10 +51,12 @@ def uk(html, url, p):
     recs = [_esw.record(MODULE, f"{p['state']}:{slug}", dept="transport", level=lvl, area=office, post="Office",
                         phone=_esw.phones(card.get("telephone", "")), email=_esw.emails(card.get("email", "")),
                         address=card.get("address"), registration_code=code.group(1) if code else None,
-                        state=p["state"], district=p.get("district"), office_id=slug, source=url, last_updated=lu)]
+                        state=p["state"], district=p.get("district"), office_id=slug, source=url, last_updated=lu,
+                        src_pos={"selector": "#row-content .meta-info"}, method="html page (office card)")]
     seen = set()
     for t in node.find_all("table"):
-        g = _esw.grid(t)
+        gpos = []
+        g = _esw.grid(t, pos=gpos)
         if not g:
             continue
         head = [x.lower() for x in g[0]]
@@ -62,7 +66,7 @@ def uk(html, url, p):
         pi = next((i for i, x in enumerate(head) if re.search(r"phone|mobile|contact", x)), None)
         if ni is None:
             continue
-        for row in g[1:]:
+        for row, rp in zip(g[1:], gpos[1:]):
             name = TITLE.sub("", row[ni]).strip() if ni < len(row) else ""
             if not name:
                 continue
@@ -75,7 +79,7 @@ def uk(html, url, p):
                 email=_esw.emails(row[ei]) if ei is not None and ei < len(row) else None,
                 phone=_esw.phones(row[pi]) if pi is not None and pi < len(row) else None,
                 address=card.get("address"), state=p["state"], district=p.get("district"), office_id=slug, source=url,
-                last_updated=lu, kind="officer"))
+                last_updated=lu, kind="officer", src_pos=rp, method="html table"))
     return recs
 
 
@@ -83,7 +87,8 @@ def mh(html, url, p):
     soup = _esw.soup(html)
     recs, seen = [], set()
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gpos = []
+        g = _esw.grid(t, pos=gpos)
         if not g or not any("code" in x.lower() for x in g[0]):
             continue
         head = [x.lower() for x in g[0]]
@@ -91,7 +96,7 @@ def mh(html, url, p):
                (("name", r"name"), ("code", r"code"), ("address", r"address"), ("map", r"map"), ("phone", r"^office$|phone|tele"),
                 ("email", r"mail"))}
         last_code = None
-        for row in g[1:]:
+        for row, rp in zip(g[1:], gpos[1:]):
             val = {k: (row[i] if i is not None and i < len(row) else "") for k, i in col.items()}
             code = re.sub(r"\s+", "", val["code"]).upper() or last_code
             if not (val["name"] or code):
@@ -109,7 +114,7 @@ def mh(html, url, p):
                 MODULE, k, dept="transport", level=lvl, area=code, area_regional=name, post="RTO",
                 phone=_esw.phones(val["phone"]), email=_esw.emails(split(val["email"])), address=val["address"],
                 map=val["map"] or None, registration_code=code, state=p["state"], office_id=code, source=url,
-                last_updated=last_updated(html)))
+                last_updated=last_updated(html), src_pos=rp, method="html table"))
     return recs
 
 

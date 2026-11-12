@@ -7,6 +7,9 @@ Record ids: dept:sro_ga:GA-SRO-<taluka>, GA-SR-state.
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sro_ga"
 URL = "https://reg.goa.gov.in/contact-us.html"
@@ -25,7 +28,7 @@ def parse(html, url=URL):
     soup = _esw.soup(html)
     recs = []
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        g = pgrid(t)
         if not g:
             continue
         head = [h.lower() for h in g[0]]
@@ -42,13 +45,13 @@ def parse(html, url=URL):
                 key = f"GA-SRO-{_esw.slug(taluka)}"
                 recs.append(_esw.record(MODULE, key, dept="registration", level="subdistrict", area=taluka, post="Civil Registrar-cum-Sub Registrar",
                                         office=row[0].strip(" ."), town=town, phone=_esw.phones(row[1]), state="GA", office_id=key,
-                                        source=url))
+                                        source=url, src_pos=row.pos))
         elif head[:2] == ["designation", "email"]:
             for row in g[1:]:
                 if len(row) >= 4 and "state registrar" in row[0].lower():
                     recs.append(_esw.record(MODULE, "GA-SR-state", dept="registration", level="state", area="Goa", post=row[0],
                                             email=_mail(row[1]), address=row[2], phone=_esw.phones(row[3]), state="GA",
-                                            office_id="GA-SR-state", source=url))
+                                            office_id="GA-SR-state", source=url, src_pos=row.pos))
     return recs
 
 

@@ -6,6 +6,8 @@ Record ids: dept:civic_pollst_ld:LD-1-<part>. Layer "pollst".
 """
 from dforms import _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_pollst_ld"
 URL = "https://ceolakshadweep.gov.in/polling-stations"
 
@@ -17,12 +19,13 @@ def items(get=None):
 def parse(html, url=URL):
     recs, seen = [], set()
     for table in _esw.soup(html).find_all("table"):
-        rows = _esw.grid(table)
+        gp = []
+        rows = _esw.grid(table, pos=gp)
         if not rows or not any("part" in c.lower() for c in rows[0]):
             continue
         head = [c.lower() for c in rows[0]]
         col = {k: next((i for i, h in enumerate(head) if k in h), None) for k in ("part no", "part name", "locality", "area")}
-        for r in rows[1:]:
+        for gi, r in enumerate(rows[1:], 1):
             get = lambda k: r[col[k]] if col[k] is not None and col[k] < len(r) else ""  # noqa: E731
             part, station = get("part no"), get("part name")
             if not part.isdigit() or not station or part in seen:
@@ -32,7 +35,7 @@ def parse(html, url=URL):
             recs.append(_esw.record(MODULE, key, dept="elections", level="polling_station", area=station, state="LD",
                                     district="Lakshadweep", office_id=key, source=url, layer="pollst", ac_no=1,
                                     ac_name="Lakshadweep", part_no=part, station=station, locality=get("locality"),
-                                    polling_area=get("area")))
+                                    polling_area=get("area"), src_pos=gp[gi]))
     return recs
 
 

@@ -20,6 +20,8 @@ import shutil
 import subprocess
 import tempfile
 
+METHOD = "pdf text (pdftotext -layout) or ocr tesseract (ruled grid, one image per column), by payload mode"     # source trail (provenance.py): how this reader reads its sources
+
 BIN = bytes(0 if i < 145 else 255 for i in range(256))
 LINE = bytes(1 if i < 205 else 0 for i in range(256))    # ruled lines are thin and light grey in these scans
 OFFICE_CHAIR = re.compile(r"may|pres|chair", re.I)
@@ -248,7 +250,8 @@ def table_pgm(pgm, lang, psm="6", binarize=True, meta=None, **grid_kw):
         ws = [x for col in ex.map(strip, range(ncol)) for x in col]
     if meta is not None:
         meta.update(vl=vl, hl=hl, strips=[(f"{clean_pgm[:-4]}-c{i}.pgm", vl[i] + 5 - pad, y0 - pad) for i in range(ncol)])
-    rows = [{"cells": [[] for _ in range(ncol)], "new": crosses[a], "y": a} for a in hl[:-1]]
+    # "row": the row's place in the ruled grid (1-based, from the top rule), for the source trail
+    rows = [{"cells": [[] for _ in range(ncol)], "new": crosses[a], "y": a, "row": i} for i, a in enumerate(hl[:-1], 1)]
     for cx, cy, t, conf in ws:
         if conf < 20 or not (vl[0] < cx < vl[-1] and hl[0] < cy < hl[-1]):
             continue
@@ -334,11 +337,15 @@ def record(p, st, x, page, read):
     else:
         position = "Member"
     ward = "chair" if chair else x["ward"]
+    pos = x.get("_pos")
     d = {"type": "councillor", "state": "HR", "body": full, "body_type": btype, "district": clean(x.get("district")),
          "ward_no": ward, "name": clean(x["name"]).lstrip("* ").strip(), "father_or_husband": clean(x.get("father")),
          "party": fix_party(x.get("party", "")), "reservation": fix_category(x.get("category", "")), "position": position,
          "unopposed": True if "*" in (x["name"] or "") else None, "election": p.get("election"), "url": p["url"],
-         "page": page, "read": read}
+         "page": page, "read": read,
+         # source trail: where on the page (text: line; scan: grid row, its top y in pixels at 300 dpi, lowest word confidence)
+         "src_pos": {"page": page, **pos} if pos else None,
+         "method": {"ocr": "ocr tesseract (ruled grid, one image per column)", "text layer": "pdf text (pdftotext -layout)"}.get(read)}
     rid = f"councillor:HR:{slug(full)}:{ward}"
     if f"{slug(full)}:{ward}" in p.get("replaced", []):     # seat filled again in a later bye-election (which holds the id)
         rid += f"-{(p.get('election') or '')[8:12]}"
@@ -379,7 +386,7 @@ def split_cols(line, starts):
 def text_rows(text):
     """English half of a 2025 gazette page -> rows (dicts with COLS keys)."""
     rows, starts, cur = [], None, None
-    for ln in text.splitlines():
+    for li, ln in enumerate(text.splitlines(), 1):
         if re.search(r"ftyk|Ukxj|Ø-", ln):          # Kruti Dev (Hindi) header: Hindi half
             starts, cur = None, None
             continue
@@ -402,6 +409,7 @@ def text_rows(text):
                     continue
                 w, c["name"] = m.group(1), m.group(2)
             c["ward"] = w if w.isdigit() else ""
+            c["_pos"] = {"line": li, "line_text": ln}       # the row's first line in this page's text
             cur = c
             rows.append(c)
         elif cur is not None:
@@ -422,6 +430,12 @@ def body_fill(rows, state):
 
 
 # ---- 2026: scans
+
+def row_pos(r):
+    """src_pos of one grid row (table_pgm): grid row, top y (pixels), lowest word confidence over its cells."""
+    conf = [c for c in r.get("conf") or [] if c is not None]
+    return {k: v for k, v in (("row", r.get("row")), ("y", r.get("y")), ("conf", min(conf) if conf else None)) if v is not None}
+
 
 def scan_rows(trows, cols, state, sequential=True):
     """Grid rows -> member rows; district and body cells span several rows (no line crosses them)."""
@@ -459,7 +473,7 @@ def scan_rows(trows, cols, state, sequential=True):
             state["body"], btype = (b1, "Municipal Council") if b1 else (b2, "Municipal Committee")
         x = {"district": state["district"], "body": state["body"], "ward": w, "body_type": btype, "name": c.get("name", ""),
              "father": c.get("father", ""), "office": "Mayor" if is_chair and not is_member else office,
-             "category": c.get("category", ""), "party": c.get("party", "")}
+             "category": c.get("category", ""), "party": c.get("party", ""), "_pos": row_pos(r)}
         out.append(x)
     return out
 

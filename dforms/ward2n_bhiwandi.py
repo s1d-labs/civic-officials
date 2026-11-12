@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_bhiwandi"
 BODY, LGD, STATE, DISTRICT = "Bhiwandi-Nizampur Shahar Mahanagarpalika", "251477", "MH", "Thane"
 URL = "https://www.bncmc.gov.in/department.php?department_id={id}"
@@ -46,7 +48,7 @@ def parse(html, p):
                                      phone=re.sub(r"^-+$", "", _ward.col(r, "Mobile")), email=_ward.col(r, "Email"),
                                      address=address, office_phone=_esw.clean(office_phone) or None,
                                      wing="administration" if re.search(r"(?i)commissioner|superintendent", post) else None,
-                                     source=p["url"]))
+                                     source=p["url"], src_pos=r.pos))
     return recs
 
 

@@ -15,6 +15,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_mcd"
 BODY, LGD, STATE = "Municipal Corporation of Delhi", "X-DL-MCD", "DL"
 BASE = "https://mcdonline.nic.in/portal"

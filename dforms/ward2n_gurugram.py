@@ -13,6 +13,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "js bundle (office objects read by regex)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_gurugram"
 BODY, LGD, STATE, DISTRICT = "Municipal Corporation of Gurugram", "248576", "HR", "Gurugram"
 URL = "https://www.mcg.gov.in/"
@@ -31,7 +33,8 @@ def bundle_url(html, base=URL):
 
 def parse(js, p, source=None):
     seen, recs = set(), []
-    for office, name, typ, address, phone, email in OFFICE.findall(js):
+    for k, mo in enumerate(OFFICE.finditer(js), 1):
+        office, name, typ, address, phone, email = mo.groups()
         office = _esw.clean(office)
         post = re.sub(r"\s*Office$", "", office)
         z = re.search(r"\(\s*Zone\s*-\s*([IVX]+)\s*,\s*Wards?\s*-\s*([\d,\s]+)\)", address, re.I)
@@ -45,7 +48,8 @@ def parse(js, p, source=None):
             wing = "horticulture"
         kw = dict(body=BODY, lgd=LGD, state=STATE, district=DISTRICT, post=post, name=_esw.clean(name).strip(" ,"),
                   phone=phone.strip() if re.search(r"\d{5}", phone) else "", email=email, address=addr, wing=wing,
-                  section=typ or None, source=source or p["url"], page="https://www.mcg.gov.in/contact/office-contacts")
+                  section=typ or None, source=source or p["url"], page="https://www.mcg.gov.in/contact/office-contacts",
+                  src_pos={"object": k, "offset": mo.start()})
         if z:
             zone = f"Zone-{z.group(1).upper()}"
             recs.append(_ward.record(MODULE, _esw.slug(office), seen, level="zone", area=zone, zone=zone,
@@ -65,5 +69,5 @@ def fetch(p, get):
     j = get(js_url)
     if j is None:
         return [], [], "no answer (script bundle)"
-    recs = parse(j.text, p, source=js_url)
+    recs = _ward.tag(parse(j.text, p, source=js_url), j, js_url)
     return recs, [_esw.keep(MODULE, "bundle", j.content, "js")], "" if recs else "no office objects in the bundle"

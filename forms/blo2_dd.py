@@ -15,6 +15,8 @@ import re
 
 from forms.blo2_in import MOBILE, download, mobiles, part_of, ruled_tables, split_name
 
+METHOD = "pdf ruled table (pypdf text inside the drawn rules)"     # source trail (provenance.py): how this reader reads its sources
+
 COLS = {
     "dnh": ["station", "blo_name", "posted_at", "address"],
     "daman": ["station", "blo", "address"],
@@ -28,7 +30,7 @@ def rows_from_tables(tables, p):
     cols = list(COLS[layout])
     out, by_part = [], {}
     for page, rows in tables:
-        for row in rows:
+        for row_no, row in enumerate(rows, 1):
             joined = " ".join(row)
             if layout == "diu" and "RESIDENT ADDRESS" in joined.upper():
                 cols = ["blo", "resident_address"]
@@ -78,7 +80,8 @@ def rows_from_tables(tables, p):
                 continue
             rec = {"ac_no": p.get("ac_no"), "ac_name": p.get("ac_name"), "district": p.get("district"), "part_no": part,
                    "station": c.get("station") or c.get("building") or "", "blo_name": name, "blo_phone": phones[0],
-                   "designation": desig or c.get("posted_at", ""), "cells": c}
+                   "designation": desig or c.get("posted_at", ""), "cells": c,
+                   "src_pos": {"page": page, "row": row_no, "cells": list(row)}}   # row: band between rules, 1-based
             if len(phones) > 1:
                 c["phones"] = phones
             by_part[part] = rec

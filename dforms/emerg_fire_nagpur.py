@@ -8,6 +8,9 @@ Record ids: dept:emerg_fire_nagpur:<slug of the station>. No date in the PDF; th
 import re
 
 from dforms import _emerg, _pdftext
+from provenance import line_pos
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "emerg_fire_nagpur"
 URL = "https://nmcnagpur.gov.in/assets/300/2025/02/mediafiles/Fire_Station_Officer_details.pdf"
@@ -42,20 +45,23 @@ def blocks(text):
     if not xs:
         return []
     out = []
-    for ln in lines[k:]:
+    for li, ln in enumerate(lines[k:], k):
         if not ln.strip() or re.search(r"Chief Fire Officer|Fire & Emergency Service\s*$|NMC Nagpur\s*$", ln) and len(ln.strip()) < 40:
             continue
         cells = _pdftext.cut(ln, xs)
         new = re.fullmatch(r"\d{1,3}", cells[0]) or re.match(r"(?i)^(shri|smt)\b", cells[4])
         if new or not out:
-            out.append([cells[0] if re.fullmatch(r"\d{1,3}", cells[0]) else (out[-1][0] if out else ""), []])
+            out.append([cells[0] if re.fullmatch(r"\d{1,3}", cells[0]) else (out[-1][0] if out else ""), [], li])
         out[-1][1].append(cells)
     return out
 
 
-def records(text, url):
+def records(text, url, at=None, engine=None):
     recs, seen = [], set()
-    for sn, rows in blocks(text):
+    lines = text.splitlines()
+    for sn, rows, li in blocks(text):
+        pos = line_pos(*at[li], lines[li]) if at and li < len(at) else {"line": li + 1, "line_text": lines[li]}
+        pos["lines"] = len(rows)
         col = [" ".join(r[i] for r in rows if i < len(r) and r[i]).strip() for i in range(8)]
         allt = " ".join(" ".join(r) for r in rows)
         station = _emerg.clean(col[1])
@@ -76,7 +82,7 @@ def records(text, url):
             MODULE, key, "fire", dept="fire", level="facility", area=station, post=post, name=name,
             phone=", ".join(x for x in (land, ", ".join(mobiles)) if x), landline=land, mobile=", ".join(mobiles), email=email,
             email_as_written=_emerg.clean(col[7]) if typo else None, address=address, district="Nagpur", body="Nagpur Municipal Corporation", state="MH",
-            office_id=key, source=url))
+            office_id=key, source=url, src_pos=pos, **({"method": f"pdf text ({engine}), columns cut at the header"} if engine else {})))
     return recs
 
 
@@ -85,6 +91,7 @@ def fetch(p, get):
     r = get(url)
     if r is None:
         return [], [], "no answer"
-    pages, _ = _pdftext.layout_pages(r.content)
-    recs = records("\n".join(pages), url)
+    pages, engine = _pdftext.layout_pages(r.content)
+    at = [(pn, k) for pn, pg in enumerate(pages, 1) for k, _ in enumerate(pg.split("\n"), 1)]
+    recs = records("\n".join(pages), url, at, _emerg.ENGINE.get(engine))
     return recs, [_emerg.keep(MODULE, "fire-station-officers", r.content, "pdf")], "" if recs else "no rows"

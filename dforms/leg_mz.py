@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html page (member profile: div.profile-page table)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_mz"
 LIST = "https://mizoramassembly.in/members"
 DETAIL = "https://mizoramassembly.in/members/details/{}"
@@ -55,7 +57,7 @@ def parse(html, url):
     present, perm = f.get("present address", ""), f.get("permanent address", "")
     return [_leg.member(MODULE, "MZ", "AC", seat, nm, constituency=cons, party=party, source=url, residence_address=present,
                         permanent_address=perm if perm and perm != present else "", elected_on=f.get("date of election", ""),
-                        note=note, house="Mizoram Legislative Assembly (9th)")]
+                        note=note, house="Mizoram Legislative Assembly (9th)", src_pos={"selector": "div.profile-page tr"})]
 
 
 def fetch(p, get):

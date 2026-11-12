@@ -12,6 +12,8 @@ from pathlib import Path
 
 from dforms import _civic, _esw
 
+# source trail: the engine dforms/_pdftext.layout_pages() used -> the record's "method"
+ENGINE = {"pdftotext": "pdftotext -layout", "pypdf": "pypdf layout"}
 SEEDS = Path(__file__).resolve().parent.parent / "seeds"
 
 state_code = _civic.state_code

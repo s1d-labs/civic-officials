@@ -9,6 +9,8 @@ import re
 
 from dforms import _emerg, _esw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_fire_tr"
 URL = "https://fireservice.tripura.gov.in/contact-us"
 
@@ -30,7 +32,8 @@ def records(html, url):
     s = _esw.soup(html)
     recs, seen, division = [], set(), None
     for t in s.find_all("table"):
-        for row in _esw.grid(t):
+        gp = []
+        for row, rp in zip(_esw.grid(t, pos=gp), gp):
             if len(row) < 2 or re.match(r"(?i)name\s*&\s*designation|postal address", row[0]):
                 continue
             left, right = row[0], row[1]
@@ -46,7 +49,7 @@ def records(html, url):
                 recs.append(_emerg.record(
                     MODULE, key, "fire", dept="fire", level="facility", area=area, post="Station Officer",
                     phone=", ".join(x for x in (land, mob) if x), landline=land, mobile=mob, has_101="/101" in right.replace(" ", ""),
-                    division=division, state="TR", office_id=key, source=url))
+                    division=division, state="TR", office_id=key, source=url, src_pos=rp))
                 continue
             parts = [_emerg.clean(x) for x in left.split("|") if _emerg.clean(x)]
             land, mob = split_phones(right)
@@ -66,7 +69,7 @@ def records(html, url):
                 MODULE, key, "fire", dept="fire", level="division" if is_div else "state",
                 area=f"{division} Fire Division" if is_div else "Tripura Fire & Emergency Services", post=post, name=name,
                 phone=", ".join(x for x in (land, mob) if x), landline=land, mobile=mob, email=email, address=adr,
-                division=division if is_div else None, state="TR", office_id=key, source=url))
+                division=division if is_div else None, state="TR", office_id=key, source=url, src_pos=rp))
     return recs
 
 

@@ -26,6 +26,8 @@ from bs4 import BeautifulSoup
 
 from cforms.cr_common import clean
 
+METHOD = "html page (member detail pages, home page cards)"     # source trail (provenance.py): how this reader reads its sources
+
 HOST = "https://mcpatiala.punjab.gov.in"
 ELECTION = "Punjab municipal general election 21.12.2024 (e-Nigam Digital MC-House member list)"
 POSTS = {"councillor": None, "president": "President", "vice president": "Vice President", "senior vice president":
@@ -48,14 +50,14 @@ def code_of(href):
 
 def cards(html, base=HOST):
     out = []
-    for c in BeautifulSoup(html, "lxml").select(".gallery_card2"):
+    for k, c in enumerate(BeautifulSoup(html, "lxml").select(".gallery_card2"), 1):
         a = c.find("a", href=re.compile("CouncillorsDetail"))
         h6, p = c.find("h6"), c.find("p")
         if not a or not h6:
             continue
         post, ward = post_ward(p.get_text(" ", strip=True) if p else "")
         out.append({"code": code_of(a["href"]), "url": urljoin(base, a["href"]), "name": clean(h6.get_text(" ", strip=True)),
-                    "position": post, "ward_no": ward, "card": clean(p.get_text(" ", strip=True)) if p else None})
+                    "position": post, "ward_no": ward, "card": clean(p.get_text(" ", strip=True)) if p else None, "card_no": k})
     return out
 
 
@@ -110,7 +112,11 @@ def fetch(p, get):
         rec = {"type": "councillor", "state": "PB", "body": p["body"], "body_type": p.get("body_type"), "district": p.get("district"),
                "lgd_code": p.get("lgd_code"), "ward_no": ward, "name": name, "position": d.get("position") or c.get("position"),
                "phone": d.get("phone"), "email": d.get("email"), "address": d.get("address"), "member_code": code,
-               "on_home_page": not c.get("from_range"), "election": ELECTION, "url": c["url"], "list_url": home}
+               "on_home_page": not c.get("from_range"), "election": ELECTION, "url": c["url"], "list_url": home,
+               # source trail: the member's detail page when it answered (fields from its .card-body rows), else the home page card
+               "src_url": c["url"] if d else home,
+               "src_pos": {"selector": ".card-body .row"} if d else {"selector": ".gallery_card2", "card": c.get("card_no")},
+               "method": "html page (member detail)" if d else "html cards (home page)"}
         rid = f"councillor:PB:{p.get('slug') or slug(p['body'])}:{ward}"
         if rid in recs and recs[rid].get("on_home_page") and c.get("from_range"):
             continue    # a home page card wins over another code of the same ward; between two range codes the higher wins

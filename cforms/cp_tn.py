@@ -16,6 +16,8 @@ import re
 
 from cforms.cp_common import column, emails, keyed, phones, record, table_rows, useful, ward_no
 
+METHOD = "html table (in a WordPress search answer: json api)"     # source trail (provenance.py): how this reader reads its sources
+
 BASE = "https://www.tnurbantree.tn.gov.in/"
 TITLE = re.compile(r"^(thiru|tmt|selvi|thirumathi|mr|mrs|ms|dr|adv)\b\.?\s*", re.I)
 
@@ -31,7 +33,8 @@ def name_of(s):
     return " ".join(s.split()) or None
 
 
-def parse(html, p, url):
+def parse(html, p, url, at_pos=None):
+    """at_pos: what to put before each row's table position in src_pos (the search hit's place in the json answer)."""
     recs = []
     for head, cells in table_rows(html):
         if not head:
@@ -52,17 +55,19 @@ def parse(html, p, url):
         recs.append(record("TN", p["body"], w, name, url, phone=tel, email=emails(at(ei)) or emails(at(pi)), address=at(ai),
                            ward_label=at(wi), lgd_code=p.get("lgd_code"),
                            record_for=f"{p['record_prefix']}:{w}" if w and p.get("record_prefix") else None,
-                           extra={"name_en": p.get("name_en")}))
+                           extra={"name_en": p.get("name_en")}, pos={**(at_pos or {}), **(cells.pos or {})}))
     return useful(recs)
 
 
 def best_page(pages, p):
     """(url, records) of the search hit with the most councillor rows; ([], pdf links) when only PDFs are linked."""
     best, pdfs = (None, []), []
-    for pg in pages if isinstance(pages, list) else []:
+    for i, pg in enumerate(pages if isinstance(pages, list) else []):
         html = (pg.get("content") or {}).get("rendered") or ""
         link = pg.get("link") or ""
-        recs = parse(html, p, link)
+        recs = parse(html, p, link, {"index": i, "id": pg.get("id"), "field": "content.rendered"})
+        for d in recs:
+            d["method"] = "json api + html table"
         if len(recs) > len(best[1]):
             best = (link, recs)
         title = ((pg.get("title") or {}).get("rendered") or "").lower()

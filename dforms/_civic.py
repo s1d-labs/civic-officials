@@ -84,3 +84,38 @@ def s3waas_pages(p, get, module, max_pages=30):
         pages.append((u, m.text))
         more = (more | next_pages(m.text, u)[1]) - done
     return pages, files
+
+
+# ---------------------------------------------------------------- source trail (provenance.py)
+_ROWS = {}
+
+
+def tr_pos(tr):
+    """src_pos of one <tr>: {"table": the table's place among the page's tables (as officials.tables / _esw.table_no),
+    "row": the row's <tr> number inside that table (1-based, header counted, as officials.tables counts)}."""
+    table = tr.find_parent("table")
+    if table is None:
+        return {}
+    key = id(table)
+    if key not in _ROWS or _ROWS[key][0] is not table:
+        if len(_ROWS) > 64:
+            _ROWS.clear()
+        _ROWS[key] = (table, _esw.table_no(table), {id(t): n for n, t in enumerate(table.find_all("tr"), 1)})
+    _, tno, rows = _ROWS[key]
+    return {"table": tno, "row": rows.get(id(tr))}
+
+
+def tag(recs, r, url=None, **extra):
+    """Name the answer r (provenance.at: url asked + sha256 of the bytes) on every record of recs that names none yet, plus extra
+    keys (method ...) where the record has none. Returns recs."""
+    at = None
+    for _, d in recs:
+        if isinstance(d, dict) and "src_url" not in d and r is not None:
+            if at is None:
+                import provenance
+                at = provenance.at(r, url)
+            d.update(at)
+        for k, v in extra.items():
+            if v is not None and isinstance(d, dict):
+                d.setdefault(k, v)
+    return recs

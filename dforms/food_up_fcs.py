@@ -21,6 +21,8 @@ import re
 
 from dforms import _esw, _field, _ward_kd as kd
 
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "food_up_fcs"
 CONTACTS = "https://fcs.up.gov.in/PDF/contacts/contact_details.pdf"
 EMAILS = "https://fcs.up.gov.in/PDF/contacts/email_id.pdf"
@@ -136,10 +138,17 @@ def section_of(line_hi):
     return None
 
 
+def lines_of(text):
+    """(page, line, raw line) of a layout text with pages split by form feeds (source trail: 1-based page and line)."""
+    for pg, ptext in enumerate(text.split("\f"), 1):
+        for n, raw in enumerate(ptext.split("\n"), 1):
+            yield pg, n, raw
+
+
 def parse_contacts(text, url=CONTACTS):
     """Records of the contact file, from its layout text."""
     rows, sec, division, pre, last = [], None, "", [], None
-    for raw in text.replace("\f", "\n").split("\n"):
+    for pg, n_line, raw in lines_of(text):
         if not raw.strip():
             continue
         m = re.match(r"^\s*(\d{1,3})\s+(.*)$", raw)
@@ -173,7 +182,8 @@ def parse_contacts(text, url=CONTACTS):
                 cs += [c[: mm.start()].strip(), mm.group(1)]
             else:
                 cs.append(c)
-        r = {"sec": sec, "sn": m.group(1), "phones": phones_of(body), "district": "", "division": "", "name": "", "post": ""}
+        r = {"sec": sec, "sn": m.group(1), "phones": phones_of(body), "district": "", "division": "", "name": "", "post": "",
+             "_pos": {"page": pg, "line": n_line, "line_text": raw}}
         name_i = next((i for i, c in enumerate(cs) if HONORIFIC.match(c)), None)
         lead = cs[:name_i] if name_i is not None else cs[: sec[3]] if sec[3] else []
         rest = cs[name_i:] if name_i is not None else cs[len(lead):]
@@ -254,7 +264,7 @@ def build(rows, url):
             division_regional=r["division"] if sec[2] == "district" else None, state="UP",
             post=post_en(sec, post_hi) or post_hi, post_regional=post_hi, name=name, phone=", ".join(r["phones"]),
             vacant=True if not name and sec[0] not in ("ministers", "heads") else None, section=sec[0],
-            office_id=k, list_no=r["sn"], source=url))
+            office_id=k, list_no=r["sn"], source=url, src_url=url, src_pos=r.get("_pos")))
     return recs
 
 
@@ -271,7 +281,7 @@ def parse_emails(text, url=EMAILS):
     """Records of the e-mail file: one per office ("1  dsofaizabad11@gmail.com   DSO Faizabad"); a bracket line under a row
     ("(NOIDA)", "(Kasganj)") belongs to the row above."""
     recs, sec, last, n = [], None, None, 0
-    for raw in text.replace("\f", "\n").split("\n"):
+    for pg, n_line, raw in lines_of(text):
         t = _esw.clean(raw)
         if not t:
             continue
@@ -290,7 +300,7 @@ def parse_emails(text, url=EMAILS):
         if not re.match(r"^\s*\d", raw) and last is not None:          # a second address of the row above
             last["email"] = last["email"] + ", " + em
             continue
-        last = {"sec": sec, "email": em, "label": label}
+        last = {"sec": sec, "email": em, "label": label, "_pos": {"page": pg, "line": n_line, "line_text": raw}}
         recs.append(last)
     out, seen = [], set()
     for r in recs:
@@ -308,7 +318,7 @@ def parse_emails(text, url=EMAILS):
         en = next((e for c, e in set(UP.values()) if c == code), "") if code else ""
         out.append(_esw.record(MODULE, f"emails:{k}", dept="food_supplies", level=sec[2], area=en or area, district=en or None,
                                district_code=code or None, state="UP", post=sec[1], email=r["email"], label=r["label"],
-                               section=sec[0], office_id=k, source=url))
+                               section=sec[0], office_id=k, source=url, src_url=url, src_pos=r.get("_pos")))
     return out
 
 
@@ -338,6 +348,8 @@ def join_emails(recs, emails):
         hit = by.get(k)
         if hit:
             d = dict(d, email=hit[1]["email"], email_source=hit[1]["source"])
+            if hit[1].get("src_pos"):         # where the e-mail was read (the e-mail file), next to the contact row's own place
+                d["src_pos"] = {**d.get("src_pos", {}), "email": hit[1]["src_pos"]}
             used.add(hit[0])
         out.append((rid, d))
     return out, [e for e in emails if e[0] not in used]

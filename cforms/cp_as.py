@@ -13,6 +13,8 @@ from bs4 import BeautifulSoup
 
 from cforms.cp_common import keyed, phones, record, useful, ward_no
 
+METHOD = "html cards (h3 + p)"     # source trail (provenance.py): how this reader reads its sources
+
 GONE = re.compile(r"\((?:expired|late|died|deceased|resigned)\)", re.I)
 
 
@@ -29,7 +31,7 @@ def cards(html):
 
 def parse(html, p):
     recs = []
-    for name, ps in cards(html):
+    for k, (name, ps) in enumerate(cards(html), 1):
         if GONE.search(name):
             continue
         post = next((t for t in ps if re.search(r"chair|commissioner|councillor|member", t, re.I)), None)
@@ -39,7 +41,8 @@ def parse(html, p):
             wtxt = next((t for t in ps if re.fullmatch(r"\d{1,3}", t)), None)
         w = ward_no(wtxt) if wtxt else None
         recs.append(record("AS", p["body"], w, name, p["url"], phone=tel, position=post, ward_label=wtxt, lgd_code=p.get("lgd_code"),
-                           record_for=f"councillor:AS:{p['record_slug']}:{w}" if w and p.get("record_slug") else None))
+                           record_for=f"councillor:AS:{p['record_slug']}:{w}" if w and p.get("record_slug") else None,
+                           pos={"selector": "h3 with p after it", "card": k}))
     return useful(recs)
 
 

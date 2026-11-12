@@ -24,6 +24,8 @@ import tempfile
 
 from cforms import gj
 
+METHOD = "ocr tesseract mar (word cells) + pdf text layer by drawn cell borders (pdftotext -bbox, numbers and seat codes)"     # source trail (provenance.py): how this reader reads its sources
+
 SEARCH = "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx"
 DIGITS = str.maketrans("०१२३४५६७८९", "0123456789")
 PARTY = ((r"उद्ध?व|ठाकरे", "SS(UBT)"), (r"शरद", "NCP(SP)"), (r"राष्ट्रवादी|राष्ट्रवादि", "NCP"),
@@ -257,7 +259,12 @@ def parse(pdf, p, use_ocr=True):
                "party_local": party_local, "votes": int(votes) if votes else None,
                "address": row.get(role.get("address"), "") if "address" in role else "",
                "election": "Maharashtra 2026", "url": p["url"], "gazette": p.get("match", ""), "page": pg,
-               "read": "ocr+text layer" if use_ocr else "text layer"}
+               "read": "ocr+text layer" if use_ocr else "text layer",
+               # source trail: the table row (1-based among the page's ruled rows) and its box in PDF points (top-left origin)
+               "src_pos": {"page": pg, "row": k + 1, "box_pt": [round(min(c[0] for c in cols.values()), 1), round(a, 1),
+                                                                round(max(c[1] for c in cols.values()), 1), round(b, 1)]}}
+        if not use_ocr:
+            rec["method"] = "pdf text layer by drawn cell borders (pdftotext -bbox)"
         if seat_by_order:
             rec["seat_from"] = "row order"
         if p.get("lgd_code"):
@@ -285,4 +292,8 @@ def fetch(p, get):
         with open(pdf, "wb") as f:
             f.write(content)
         recs = parse(pdf, p)
+    # the PDF is the answer of the third request to the same search url (POST "View"): name it by its bytes
+    sha = hashlib.sha256(content).hexdigest()
+    for _, d in recs:
+        d.update({"src_url": SEARCH, "src_sha256": sha})
     return recs, files, "" if recs else "no members read"

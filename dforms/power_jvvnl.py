@@ -17,6 +17,8 @@ import re
 
 from dforms._power import Out, clean, email, phone, raw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://energy.rajasthan.gov.in/webapi/api/JankalyanHome/GetTelephoneDirectory"
 LEVEL = {"ZCE": "zone", "CE": "zone", "SE": "circle", "XEN": "division", "AEN": "subdivision", "JEN": "section"}
 POST = re.compile(r"^(ZCE|CE|SE|XEN|AEN|JEN)\b\.?\s*(?:\(([^)]*)\))?\s*(.*)$")
@@ -35,7 +37,8 @@ def parse(rows, source=URL):
     discom, md = "JVVNL", 0
     prev_office, zone, circle, division, sub, sub_town = None, None, None, None, None, None
     seen, under, block_repeat = set(), {}, False                       # blocks seen; AEN/XEN post -> its parents (for the GSS blocks)
-    for x in rows:
+    for xi, x in enumerate(rows):
+        out.src = {"src_pos": {"index": xi}}
         name, des, office = _c(x.get("Name")), _c(x.get("Designation")), _c(x.get("Office Name"))
         ph = phone(x.get("Mobile No."), x.get("Landline No."))
         em = email(x.get("Email"))
@@ -91,6 +94,7 @@ def parse(rows, source=URL):
             division, sub, sub_town = des, None, None
         elif kind == "AEN":
             sub, sub_town = des, town or tag
+    out.src = {}
     return out.recs
 
 

@@ -13,7 +13,10 @@ import re
 
 from bs4 import BeautifulSoup
 
+import provenance
 from forms.aspnet import hidden, options
+
+METHOD = "html table (ASP.NET result page, one POST per ward)"     # source trail (provenance.py): how this reader reads its sources
 
 BASE = "https://sec.bihar.gov.in/ForPublic/"
 P = "ctl00$ContentPlaceHolder1$"
@@ -22,12 +25,15 @@ ZW = re.compile("[\u200b-\u200d\ufeff]")
 WIN = re.compile(r"\s*\((विजेता|निर्विरोध)[^)]*\)\s*")
 
 
-def _post(get, url, html, target, fields):
+def _post(get, url, html, target, fields, resp=False):
+    """The page after the postback: its text, or (text, response) with resp=True (source trail)."""
     d = hidden(html)
     d.update({"__EVENTTARGET": P + target if target else "", "__EVENTARGUMENT": "", **{P + k: v for k, v in fields.items()}})
     if not target:
         d[P + "btnFilter"] = "Show"
     r = get(url, method="POST", data=d)
+    if resp:
+        return (r.text, r) if r is not None else (None, None)
     return r.text if r is not None else None
 
 
@@ -103,7 +109,7 @@ def fetch(p, get):
         f = {"ddl_Post": "3", "ddlDistrict": p["district_value"], "ddlNPType": p["type"], "ddlPanchayat": p["body_value"]}
         saved, counting = [], 0
         for w in wards:
-            r = _post(get, url, h, "", {**f, "ddlWard": w})
+            r, resp = _post(get, url, h, "", {**f, "ddlWard": w}, resp=True)
             if r is None:
                 saved.append(f"<!-- ward {w}: no answer -->")
                 continue
@@ -125,7 +131,11 @@ def fetch(p, get):
                  "ward_no": c.get("वार्ड") or w, "name": " ".join(ZW.sub("", WIN.sub(" ", c.get("प्रत्याशी का नाम", ""))).split()), "votes": votes,
                  "candidates": len(rows), "margin": votes - others[0] if votes is not None and others else None,
                  "winner_by": how if how != "marked" else None, "election": label, "url": url, "result_page": page,
-                 "body_value": p["body_value"]}
+                 "body_value": p["body_value"],
+                 # source trail: every ward is a POST to the same url, so the answer is named by its bytes; the winner's row
+                 **provenance.at(resp, url),
+                 "src_pos": {"table_id": "ctl00_ContentPlaceHolder1_RPDetails",
+                             "row": next(i for i, x in enumerate(rows) if x is c) + 2, "ward_posted": w}}
             won[w] = {k: v for k, v in d.items() if v not in (None, "")}
         doc = f"<html><head><meta charset=\"utf-8\"><title>{htmlmod.escape(label)}</title></head><body>{''.join(saved)}</body></html>"
         files.append((f"councillors/BR/{page}-{p['body_value']}-{sl}.html.gz", gzip.compress(doc.encode()), "application/gzip"))

@@ -8,6 +8,9 @@ Record ids: dept:ero_ld:LD-PC-1:ero, dept:ero_ld:LD-AERO-<island>.
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ero_ld"
 URL = "https://ceolakshadweep.gov.in/ero-aero-blo"
@@ -32,7 +35,7 @@ def items(get=None):
 def parse(html, url=URL):
     recs, seen = [], set()
     for t in _esw.soup(html).find_all("table"):
-        g = _esw.grid(t)
+        g = pgrid(t)
         head = [h.lower() for h in g[0]] if g else []
         if not any("defining area" in h for h in head):
             continue
@@ -55,7 +58,7 @@ def parse(html, url=URL):
             seen.add(k)
             recs.append(_esw.record(MODULE, k, dept="elections", designation=desig if not desig.lower().startswith(("electoral",
                                     "assistant electoral", "aero")) else None, name=name, phone=phone, state="LD",
-                                    district="Lakshadweep", source=url, **f))
+                                    district="Lakshadweep", source=url, src_pos=r.pos, **f))
     return recs
 
 

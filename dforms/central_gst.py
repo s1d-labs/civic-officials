@@ -16,6 +16,8 @@ from urllib.parse import urlparse
 from dforms import _esw
 from dforms.police_s3waas import last_updated
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "central_gst"
 TITLE = re.compile(r"^(?:(?:shri|smt|sri|sh|mr|mrs|ms|dr|km|kumari)(?:\.\s*|\s+))+", re.I)
 COLS = (("name", r"name"), ("designation", r"designation|post"), ("charge", r"charge|division|section|work"),
@@ -50,13 +52,14 @@ def officers(html, url, p):
     lu = last_updated(html)
     recs, seen = [], set()
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gpos = []
+        g = _esw.grid(t, pos=gpos)
         if len(g) < 2:
             continue
         ks = kinds(g[0])
         if "name" not in ks or "designation" not in ks:
             continue
-        for row in g[1:]:
+        for row, rp in zip(g[1:], gpos[1:]):
             f = {k: v for k, v in zip(ks, row) if k}
             name = TITLE.sub("", f.get("name", "")).strip(" ,")
             if not name or name.lower() in ("vacant", "-"):
@@ -72,7 +75,7 @@ def officers(html, url, p):
                 charge=f.get("charge") or None, phone=phone(f.get("phone", ""), p.get("std")),
                 email=_esw.emails(f.get("email", "")), address=f.get("address"), zone=p.get("zone"),
                 state=p["state"], district=p.get("district"), office_id=_esw.slug(area), source=url, last_updated=lu,
-                agency="CBIC"))
+                agency="CBIC", src_pos=rp))
     return recs
 
 

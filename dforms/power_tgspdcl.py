@@ -13,6 +13,8 @@ import re
 
 from dforms._power import Out, clean, raw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://tgsouthernpower.org/api/contacts/official-contacts"
 OP = re.compile(r"^(SE|DE|ADE|AE)\s*/\s*(?:OP|OPN|O)\s*/\s*(.+)$", re.I)
 ZONE = re.compile(r"^CE\s*/\s*(.*ZONE.*)$", re.I)
@@ -33,13 +35,15 @@ def on_page(e):
 def parse(js, source=URL):
     upd = (js.get("updateDate") or "")[:10] or None
     out = Out("power_tgspdcl", "TG", source, discom="TGSPDCL", last_updated=upd)
-    for c in js.get("circles") or []:
+    for ci, c in enumerate(js.get("circles") or []):
         circle = clean(c.get("name"))
-        for s in c.get("sections") or []:
+        for si, s in enumerate(c.get("sections") or []):
             sec = clean(s.get("name")) or ""
             division = sec if re.search(r"DIVISION|^DE ", sec, re.I) else None
             sub = None
-            for e in s.get("entries") or []:
+            for ei, e in enumerate(s.get("entries") or []):
+                out.src = {"src_pos": {"path": f"circles[{ci}].sections[{si}].entries[{ei}]",
+                                       **({"id": e["postId"]} if e.get("postId") else {})}}
                 post = clean(e.get("postName")) or ""
                 m, z = OP.match(post), ZONE.match(post)
                 if z:
@@ -57,6 +61,7 @@ def parse(js, source=URL):
                        "subdivision": sub if lvl == "section" else None}
                 out.add(clean(e.get("postId")) or post, lvl, area, post=post, name=e.get("empName"), phone_=shown(e), shown_on_page=on_page(e),
                         office_id=e.get("postId"), parents=par, unit=clean(e.get("unit")))
+    out.src = {}
     return out.recs
 
 

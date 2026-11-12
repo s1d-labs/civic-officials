@@ -16,6 +16,11 @@ import socket
 import requests
 from bs4 import BeautifulSoup
 
+import provenance
+from cforms.cp_common import Cells
+
+METHOD = "html table (town site council page, en and kn)"     # source trail (provenance.py): how this reader reads its sources
+
 KN_DIGITS = str.maketrans("೦೧೨೩೪೫೬೭೮೯", "0123456789")
 
 # column header -> field; checked in this order, first match wins (English and Kannada headers)
@@ -92,7 +97,12 @@ def tables(html):
         if hi is None:
             continue
         head = [_txt(c) for c in trs[hi].find_all(["th", "td"])]
-        rows = [[_txt(c) for c in tr.find_all(["td", "th"])] for tr in trs[hi + 1:]]
+        tno = len(t.find_all_previous("table")) + 1
+        rows = []
+        for ri, tr in enumerate(trs[hi + 1:], hi + 2):     # source trail: table place on the page, <tr> number in it
+            row = Cells(_txt(c) for c in tr.find_all(["td", "th"]))
+            row.pos = {"table": tno, "row": ri}
+            rows.append(row)
         prev = t.find_previous(["h1", "h2", "h3", "h4", "h5", "p", "strong"])
         heading = " ".join([_txt(prev) if prev else ""] + [_txt(tr) for tr in trs[:hi]])     # title rows inside the table count too
         out.append((heading, head, [r for r in rows if any(r)]))
@@ -108,7 +118,7 @@ def members(html):
         for cells in body:
             if len(cells) < 2:
                 continue
-            d = {}
+            d = {"_pos": getattr(cells, "pos", None)}
             for c, v in zip(cols, cells):
                 if c and v and v not in ("-", "--", "NA", "N/A") and c not in d:
                     d[c] = v
@@ -209,7 +219,8 @@ def fetch(p, get):
             rec = {"type": "councillor", "state": "KA", "body": p.get("body"), "body_type": p.get("body_type"), "district": p.get("district"),
                    "lgd_code": p.get("lgd_code"), "ward_no": ward, "ward_name": d.get("ward_name"), "name": d.get("name"),
                    "position": d.get("position"), "party": d.get("party"), "reservation": d.get("reservation"), "phone": _phone(d.get("phone")),
-                   "address": d.get("address"), "nominated": d["nominated"] or None, "election": term or "as listed on the body's website (term not stated)", "lang": lang, "url": url}
+                   "address": d.get("address"), "nominated": d["nominated"] or None, "election": term or "as listed on the body's website (term not stated)", "lang": lang, "url": url,
+                   **provenance.at(r), "src_pos": d.get("_pos")}
             recs.append((f"councillor:KA:{sl}:{key}", {k: v for k, v in rec.items() if v not in (None, "")}))
         return recs, files, ""
     if admins:

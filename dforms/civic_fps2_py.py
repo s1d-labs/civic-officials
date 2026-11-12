@@ -7,6 +7,8 @@ The site masks the dealer mobile; nominee 1 mobiles are in full (Mahe: 8 of 8 sh
 """
 from dforms import _civic_fps
 
+METHOD = "json api (SMART-PDS device list + supply office search)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "civic_fps2_py"
 STATE = "PY"
 BASE = "https://smartpds.py.gov.in"

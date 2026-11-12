@@ -7,6 +7,9 @@ Record ids: dept:sro_jk:JK-SRO-<slug of office place>.
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sro_jk"
 URL = "https://igr.jk.gov.in/ConUsSubRegistrar.html"
@@ -20,7 +23,7 @@ def parse(html, url=URL):
     soup = _esw.soup(html)
     recs, seen = [], set()
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        g = pgrid(t)
         division = next((r[0].title() for r in g[:2] if "DIVISION" in r[0].upper()), None)
         for row in g:
             if len(row) < 7 or not row[0].strip().isdigit():
@@ -35,7 +38,7 @@ def parse(html, url=URL):
             address = ", ".join(x for x in (loc, pin) if x)
             recs.append(_esw.record(MODULE, key, dept="registration", level="subdistrict", area=place, post="Sub Registrar",
                                     office=office, name=name, phone=_esw.phones(phone), email=_esw.emails(mail), address=address,
-                                    division=division, state="JK", office_id=key, source=url))
+                                    division=division, state="JK", office_id=key, source=url, src_pos=row.pos))
     return recs
 
 

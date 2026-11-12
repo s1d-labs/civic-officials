@@ -22,7 +22,11 @@ import tempfile
 
 from bs4 import BeautifulSoup
 
+import provenance
 from cforms.cn_krutidev import convert
+from cforms.cp_common import tr_pos
+
+METHOD = "pdf text (pdftotext -layout) + Kruti Dev map (Lucknow), html table (Kanpur, Gorakhpur)"     # source trail (provenance.py): how this reader reads its sources
 
 ELECTION = "Uttar Pradesh urban local bodies general election 2023 (poll 4 and 11 May 2023)"
 SOURCES = {
@@ -77,9 +81,12 @@ def lucknow(text, url):
     recs = []
     m = re.search(r"(Jherh|Jh)\s+(.+?)\]\s*ek0\s*egkikSj.*?la0\s*&?\s*([\d]{10})", text)
     if m:
+        before = text[:m.start()]
+        pg, ln = before.count("\f") + 1, before.split("\f")[-1].count("\n") + 1
         recs.append(rec("lucknow", "chair", {"ward_no": "chair", "name": kd(m.group(2)), "position": "Mayor", "phone": m.group(3),
-                                             "url": url}))
-    for page in text.split("\f"):
+                                             "url": url, "src_pos": provenance.line_pos(pg, ln, text.split("\f")[pg - 1].split("\n")[ln - 1]),
+                                             "method": "pdf text (pdftotext -layout) + Kruti Dev map"}))
+    for pg, page in enumerate(text.split("\f"), 1):
         lines = page.splitlines()
         rows, name_x = [], []
         for ln in lines:
@@ -92,7 +99,7 @@ def lucknow(text, url):
                     name_x.append(w.end())
         nx = sorted(name_x)[len(name_x) // 2] if name_x else None
         cur = None
-        for ln in lines:
+        for li, ln in enumerate(lines, 1):
             mm = re.match(r"\s*(\d{1,3})\s{2,}(.*)$", ln)
             f = KD_FATHER.search(ln)
             p = KD_PARTY.search(ln)
@@ -107,7 +114,7 @@ def lucknow(text, url):
                 cur = {"ward": str(int(mm.group(1))), "ward_name": ln[ward_end:cut], "name": ln[cut:f.start()],
                        "father": ln[f.start():p.start()], "party": p.group(1),
                        "address": ln[p.end():ph.start() if ph else len(ln)], "phone": ph.group(1) if ph else "",
-                       "x": (cut, f.start(), p.end())}
+                       "x": (cut, f.start(), p.end()), "pos": provenance.line_pos(pg, li, ln)}
                 recs.append(cur)
             elif cur is not None and ln.strip() and not re.search(r"okMZ\s+okMZ dk uke|la0\s+loZ", ln):
                 for c in re.finditer(r"\S+(?:\s\S+)*", ln):
@@ -126,7 +133,7 @@ def lucknow(text, url):
         out.append(rec("lucknow", r["ward"], {"ward_no": r["ward"], "ward_name": kd(r["ward_name"]), "name": kd(r["name"]),
                                               "father_or_husband": kd(r["father"]), "party": party(kd(r["party"])),
                                               "address": kd(r["address"]), "phone": phones(r["phone"]), "position": "Member",
-                                              "url": url}))
+                                              "url": url, "src_pos": r["pos"], "method": "pdf text (pdftotext -layout) + Kruti Dev map"}))
     return out
 
 
@@ -142,10 +149,11 @@ def kanpur(html, url):
         if len(c) >= 3 and re.search(r"महापौर", c[0]) and re.search(r"\d{10}", " ".join(c)):
             recs.append(rec("kanpur", "chair", {"ward_no": "chair", "name": norm(re.sub(r",?\s*महापौर$", "", c[0])), "position": "Mayor",
                                                 "address": c[1], "phone": phones(c[2]), "email": c[3] if len(c) > 3 else None,
-                                                "url": url}))
+                                                "url": url, "src_pos": tr_pos(tr), "method": "html table"}))
         elif len(c) >= 3 and re.fullmatch(r"\d{1,3}", c[0]) and c[1]:
             recs.append(rec("kanpur", str(int(c[0])), {"ward_no": str(int(c[0])), "name": c[1], "address": c[2] if c[2] != "कानपुर" else None,
-                                                       "phone": phones(c[3]) if len(c) > 3 else None, "position": "Member", "url": url}))
+                                                       "phone": phones(c[3]) if len(c) > 3 else None, "position": "Member", "url": url,
+                                                       "src_pos": tr_pos(tr), "method": "html table"}))
     return recs
 
 
@@ -156,7 +164,8 @@ def gorakhpur(html, url):
         c = cells(tr)
         if len(c) >= 5 and re.fullmatch(r"\d{1,3}", c[1]) and c[3]:
             recs.append(rec("gorakhpur", str(int(c[1])), {"ward_no": str(int(c[1])), "ward_name": c[2], "name": c[3],
-                                                          "phone": phones(c[4]), "position": "Member", "url": url}))
+                                                          "phone": phones(c[4]), "position": "Member", "url": url,
+                                                          "src_pos": tr_pos(tr), "method": "html table"}))
     return recs
 
 

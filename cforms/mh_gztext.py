@@ -20,6 +20,8 @@ import tempfile
 
 from cforms import gj, mh
 
+METHOD = 'pdf text layer (gazette, Unicode Marathi)'     # source trail (provenance.py): how this reader reads its sources
+
 DIGITS = mh.DIGITS
 MARK = re.compile(r"([ँ-ःा-ौॢॣ])\1+")
 REPH = re.compile(r"र्([क-ह])\1")

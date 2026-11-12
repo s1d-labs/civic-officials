@@ -19,6 +19,8 @@ import tempfile
 
 from cforms import gj, hr, mh
 
+METHOD = 'ocr tesseract mar (rotated gazette scan, ruled grid)'     # source trail (provenance.py): how this reader reads its sources
+
 SEAT = re.compile(r"(?:^|[\s\-(])([अबकडइ])\s*\)?\s*$")
 
 

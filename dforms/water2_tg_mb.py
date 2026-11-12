@@ -14,6 +14,8 @@ last_updated = the page footer "Last Updated: DD.MM.YYYY". Record ids: dept:wate
 """
 from dforms import _util2_south_water as sw
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MOD = "water2_tg_mb"
 HOSTS = [(f"{h}.telangana.gov.in", d) for h, d in (
     ("adilabad", "Adilabad"), ("asifabad", "Kumuram Bheem Asifabad"), ("bhoopalapally", "Jayashankar Bhupalpally"),

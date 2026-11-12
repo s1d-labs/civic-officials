@@ -9,5 +9,7 @@ Records: dept education, layer field, field_layer education. Ids dept:field_educ
 """
 from dforms import _field
 
+METHOD = "html table, or pdf text (pdftotext -layout, else pypdf layout) with columns from the header positions"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "field_education_s3waas"
 items, fetch = _field.reader(MODULE, "education")

@@ -31,6 +31,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_mumbai"
 BODY, LGD, STATE, DISTRICT = "Brihanmumbai Municipal Corporation", "251488", "MH", "Mumbai"
 BASE = "https://portal.mcgm.gov.in"

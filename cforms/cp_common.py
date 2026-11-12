@@ -75,6 +75,21 @@ def ward_no(s):
     return str(int(m.group(1))) if m else None
 
 
+class Cells(list):
+    """The cell texts of one row; .pos = its src_pos for the source trail ({"table": n, "row": m}: the table's place among
+    the page's <table> elements and the <tr> number inside it, both 1-based, document order)."""
+    pos = None
+
+
+def tr_pos(tr):
+    """src_pos of a <tr>: {"table": place of its table among the page's tables, "row": its number in that table}, 1-based."""
+    t = tr.find_parent("table")
+    if t is None:
+        return {"row": len(tr.find_all_previous("tr")) + 1}
+    rows = [x for x in t.find_all("tr") if x.find_parent("table") is t] or t.find_all("tr")
+    return {"table": len(t.find_all_previous("table")) + 1, "row": next((i for i, x in enumerate(rows, 1) if x is tr), 0)}
+
+
 HEAD_WORDS = re.compile(r"name|ward|mobile|contact|phone|s\.?\s*no|sl\.?|नाम|वार्ड|मोबाइल|પ્રભાગ|નામ|ವಾರ್ಡ್|पद", re.I)
 
 
@@ -83,10 +98,11 @@ def table_rows(html):
     the first row with <th> cells, or the first row of header words with no plain number in it."""
     soup = BeautifulSoup(html, "lxml")
     out = []
-    for t in soup.find_all("table"):
+    for ti, t in enumerate(soup.find_all("table"), 1):
         head = None
-        for tr in t.find_all("tr"):
-            cells = [" ".join(c.get_text(" ", strip=True).split()) for c in tr.find_all(["td", "th"])]
+        for ri, tr in enumerate(t.find_all("tr"), 1):
+            cells = Cells(" ".join(c.get_text(" ", strip=True).split()) for c in tr.find_all(["td", "th"]))
+            cells.pos = {"table": ti, "row": ri}
             if not any(cells):
                 continue
             if head is None and len(cells) > 1 and not any(c.isdigit() for c in cells) and (
@@ -109,10 +125,11 @@ def column(head, *patterns):
 
 
 def record(state, body, ward, name, url, *, prefix=None, phone=None, email=None, address=None, position=None, ward_label=None,
-           lgd_code=None, record_for=None, extra=None):
+           lgd_code=None, record_for=None, extra=None, pos=None):
     d = {"type": "councillor_contact", "state": state, "body": body, "lgd_code": lgd_code, "ward_no": ward,
          "ward_label": clean(ward_label), "name": clean(name), "phone": phone, "email": email, "address": clean(address),
-         "position": clean(position), "record_for": record_for, "url": url, "source": urlsplit(url).hostname}
+         "position": clean(position), "record_for": record_for, "url": url, "source": urlsplit(url).hostname,
+         "src_pos": pos}
     d.update(extra or {})
     return {k: v for k, v in d.items() if v not in (None, "")}
 
@@ -170,5 +187,6 @@ def table_members(html, state, body, url, *, lgd_code=None, record_prefix=None, 
         if addr and pi is not None and ai == pi:
             addr = None
         recs.append(record(state, body, ward, name, url, phone=phone, email=email, address=addr, position=post, ward_label=label,
-                           lgd_code=lgd_code, record_for=f"{record_prefix}:{ward}" if record_prefix and ward else None))
+                           lgd_code=lgd_code, record_for=f"{record_prefix}:{ward}" if record_prefix and ward else None,
+                           pos=getattr(cells, "pos", None)))
     return recs

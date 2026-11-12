@@ -33,7 +33,8 @@ EMPTY = re.compile(r"(?i)^\W*(-+|nil|n\.?a\.?|vacant|no\s+.*(found|available).*)
 
 def table_rows(table):
     """[{post, name, phone, email, ward}] of one table, [] when it has no name + designation header."""
-    rows = _esw.grid(table)
+    tp = []
+    rows = _esw.grid(table, pos=tp)
     for i, row in enumerate(rows[:4]):
         cols, tels = {}, []
         for j, c in enumerate(row):
@@ -50,7 +51,7 @@ def table_rows(table):
     else:
         return []
     out = []
-    for row in rows[i + 1:]:
+    for row, pos in zip(rows[i + 1:], tp[i + 1:]):
         if len(row) <= max(list(cols.values()) + tels) or row == rows[i]:
             continue
         v = {k: _esw.clean(row[j].replace(" | ", " ")) for k, j in cols.items()}
@@ -67,7 +68,7 @@ def table_rows(table):
         if not (name or phone or email):
             continue
         ward = v.get("ward") if re.search(r"\w", v.get("ward") or "") else None
-        out.append({"post": post or "Ward Member", "name": name, "phone": phone, "email": email, "ward": ward})
+        out.append({"post": post or "Ward Member", "name": name, "phone": phone, "email": email, "ward": ward, "pos": pos})
     return out
 
 
@@ -115,7 +116,7 @@ def office(html):
     return email.split(", ")[0] if email else "", phone.split(", ")[0] if phone else ""
 
 
-def records(module, state, p, people, seen, office_email="", office_phone="", source=""):
+def records(module, state, p, people, seen, office_email="", office_phone="", source="", office_pos=None):
     """_ulb.record() for each person (repeats of the same post + name dropped), else one "Office" record."""
     common = {"district": p.get("district"), "body_type": p.get("body_type"), "lgd_code": p.get("lgd_code")}
     out, done = [], set()
@@ -126,13 +127,15 @@ def records(module, state, p, people, seen, office_email="", office_phone="", so
         done.add(k)
         extra = {"ward": x["ward"]} if x.get("ward") else {}
         out.append(_ulb.record(module, state, p["body"], x["post"], seen, name=x["name"], phone=x["phone"], email=x["email"],
-                               source=x.get("source") or source, **common, **extra))
+                               source=x.get("source") or source, src_url=x.get("source") or source, src_pos=x.get("pos"),
+                               **common, **extra))
     if not out and (office_email or office_phone):
         # a post mailbox names the post (Haryana: eo-palwal@ulbharyana.gov.in, secy-<town>@...), as ulb_pb does
         post = ("Executive Officer" if re.match(r"(?i)eo[-._]", office_email) else
                 "Secretary" if re.match(r"(?i)secy?[-._]", office_email) else "Office")
         extra = {"post_from": "email"} if post != "Office" else {}
         out.append(_ulb.record(module, state, p["body"], post, seen, phone=office_phone, email=office_email, source=source,
+                               src_pos=office_pos, **{"src_url": office_pos.get("page_url")} if office_pos else {},
                                **common, **extra))
     return out
 
@@ -144,7 +147,7 @@ def crawl(p, get, module, state):
     files = [_esw.keep(module, _esw.slug(p["body"]) + "-start", r.content)]
     if not is_body_page(r.text, p.get("match") or p["body"]):
         return [], files, "not the body's site"
-    people, mail, tel = [], "", ""
+    people, mail, tel, opos = [], "", "", {}
     pages = [(p["url"], r.text)]
     for u in links(r.text, p["url"]):
         a = get(u)
@@ -157,6 +160,11 @@ def crawl(p, get, module, state):
             people += [dict(x, source=u) for x in table_rows(t)]
         if not (mail and tel):
             m, t = office(html)
+            if (m and not mail) or (t and not tel):        # where the office mailbox / phone came from (mailto:, tel: or text)
+                opos.setdefault("selector", "mailto:/tel: links or Email / Contact No text")
+                opos.setdefault("page_url", u)
+                if t and not tel and u != opos["page_url"]:
+                    opos["phone_page_url"] = u
             mail, tel = mail or m, tel or t
-    recs = records(module, state, p, people, set(), mail, tel, p["url"])
+    recs = records(module, state, p, people, set(), mail, tel, p["url"], opos or None)
     return recs, files, "" if recs else "no rows"

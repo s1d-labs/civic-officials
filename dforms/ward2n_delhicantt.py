@@ -10,6 +10,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html cards"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_delhicantt"
 BODY, LGD, STATE, DISTRICT = "Delhi Cantonment Board", "X-DL-CANT", "DL", "New Delhi"
 URL = "https://delhi.cantt.gov.in/boardstaff/"
@@ -40,7 +42,7 @@ def parse(html, p):
         wing = next((w for k, w in BRANCH_WING if k in branch.lower()), None) or _ward.wing_of(post)
         recs.append(_ward.record(MODULE, f"{_esw.slug(branch) or 'branch'}:{_esw.slug(post)}:{_esw.slug(name)}", seen, body=body, lgd=lgd,
                                  state=p.get("state", STATE), district=p.get("district", DISTRICT), level="body", area=body, post=post,
-                                 name=name, section=branch or None, wing=wing, last_updated=m.group(1) if m else None, source=p["url"]))
+                                 name=name, section=branch or None, wing=wing, last_updated=m.group(1) if m else None, source=p["url"], src_pos=_ward.nth(card)))
     return recs
 
 

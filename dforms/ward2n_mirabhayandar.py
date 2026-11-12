@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_mirabhayandar"
 BODY, LGD, STATE, DISTRICT = "Mira-Bhayandar Mahanagarpalika", "251470", "MH", "Thane"
 URL = "https://mbmc.gov.in/ward-committee-no-{n}-"
@@ -77,15 +79,17 @@ def parse(html, p):
             name = _ward.col(r, "विभाग प्रमुख")
             recs.append(_ward.record(MODULE, f"ps{n}:ward-officer", seen, post="Ward Officer", post_regional="प्रभाग अधिकारी",
                                      name=name, name_regional=name or None, phone=_ward.col(r, "दूरध्वनी"),
-                                     email=_ward.col(r, "ई-मेल"), address=_ward.col(r, "पत्ता"), wing="administration", **common))
+                                     email=_ward.col(r, "ई-मेल"), address=_ward.col(r, "पत्ता"), wing="administration", **common,
+                                     src_pos=r.pos))
             done.add(("ward officer", _esw.clean(name)))
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not any(len(r) >= 3 and re.fullmatch(r"\d{1,3}\.?", _esw.clean(r[0])) for r in g):
             continue
         before = _ward.hi_norm(" ".join(reversed(t.find_all_previous(string=True, limit=150))))
         section = ([_esw.clean(x) for x in SECTION.findall(before) if "JOB CHART" not in x] or [""])[-1]
-        for r in g:
+        for r, rp in zip(g, gp):
             if len(r) < 3 or not re.fullmatch(r"\d{1,3}\.?", _esw.clean(r[0])) or t.find("table"):
                 continue
             pr = _ward.hi_norm(r[1])
@@ -103,7 +107,7 @@ def parse(html, p):
                 k[key] = k.get(key, 0) + 1
                 recs.append(_ward.record(MODULE, f"{key}:{k[key]}", seen, post=en, post_regional=post_mr, name=name,
                                          name_regional=name, phone=phone, wing=wing, section=section or None,
-                                         sub_area=sub or None, notes=note or None, **common))
+                                         sub_area=sub or None, notes=note or None, **common, src_pos=rp))
     return recs
 
 

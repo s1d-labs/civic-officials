@@ -17,7 +17,9 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, phone, raw, pdf_pages, slug
+from dforms._power import Out, cells, tr_pos, clean, phone, raw, pdf_pages, slug
+
+METHOD = "html table + pdf text (pypdf layout, one record per page)"     # source trail (provenance.py): how this reader reads its sources
 
 URL = "https://www.mahadiscom.in/en/executive-engineer-of-msedcl/"
 NOT_AREA = re.compile(r"admin|safety|testing|cgrf|civil|enquiry|training|vigilance|store|project|it\b|planning|quality|"
@@ -31,6 +33,7 @@ def parse_ee(html, source=URL):
     mode, zone, seen = None, None, set()
     for tr in soup.find_all("tr"):
         c = cells(tr)
+        tpos = tr_pos(tr)
         if len(c) < 4:
             continue
         if c[0] == "Executive Engineer Name":
@@ -48,7 +51,7 @@ def parse_ee(html, source=URL):
         seen.add(key)
         name = re.sub(r"\s*\(I/C\)\s*$", " (I/C)", name)
         out.add(f"division-{where}-{div}", "division", div, post="Executive Engineer", name=name, phone_=phone(mob),
-                parents={"zone": zone, "circle": where})
+                parents={"zone": zone, "circle": where}, src_pos=tpos, method="html table")
     return out.recs
 
 
@@ -61,7 +64,8 @@ def pdf_records(content, p):
         out.append((f"dept:power_msedcl:pdf-{slug(zone)}-p{i}",
                     {"type": "dept_pdf_page", "dept": "electricity", "discom": "MSEDCL", "state": "MH", "zone": zone, "page": i,
                      "text": text, "source": p["url"], "file": f"depts/power/power_msedcl/{slug(zone)}.pdf",
-                     "levels": ["zone", "circle", "division", "subdivision"]}))
+                     "levels": ["zone", "circle", "division", "subdivision"], "src_pos": {"page": i},
+                     "method": "pdf text (pypdf layout, one record per page)"}))
     return out
 
 

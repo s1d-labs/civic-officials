@@ -8,6 +8,11 @@ import time
 import requests
 from bs4 import BeautifulSoup
 
+import provenance
+from forms.aspnet import keep_trail
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://ceodelhinet.nic.in/ceodelhiweb/BloUpdateDetails.aspx"
 UA = "s1d-labs-public-records/1.0 (+https://labs.s1d.me)"
 DDL = "ctl00$ContentPlaceHolder1$ddlACNO"
@@ -30,6 +35,7 @@ def _hidden(soup):
 def _get(s):
     r = s.get(URL, timeout=90)
     r.raise_for_status()
+    s.last_answer = r
     return BeautifulSoup(r.text, "lxml")
 
 
@@ -41,6 +47,7 @@ def _post(s, soup, target, arg, ac_no):
     time.sleep(PAUSE)
     r = s.post(URL, data=data, timeout=90)
     r.raise_for_status()
+    s.last_answer = r
     return BeautifulSoup(r.text, "lxml")
 
 
@@ -64,7 +71,7 @@ def _rows(soup, ac_no, ac_name):
         return [], None
     trs = g.find_all("tr", recursive=False) or g.select("tr")
     head, rows, pager = None, [], None
-    for tr in trs:
+    for n, tr in enumerate(trs, 1):
         cells = tr.find_all(["td", "th"], recursive=False)
         if tr.find("table") is not None or (len(cells) == 1 and tr.find("a", href=re.compile("Page\\$"))):
             pager = tr
@@ -86,6 +93,7 @@ def _rows(soup, ac_no, ac_name):
             "blo_phone": raw.get("Mobile", ""),
             "designation": raw.get("Designation", ""),
             "cells": raw,
+            "src_pos": {"selector": "#" + GRID_ID, "row": n},
         })
     return rows, pager
 
@@ -102,7 +110,7 @@ def _current_page(pager):
 
 def fetch(session, payload):
     ac_no, ac_name = int(payload["ac_no"]), payload.get("ac_name", "")
-    s = _session(requests.Session())  # one session per AC
+    s = keep_trail(_session(requests.Session()), session)  # one session per AC (the trail hooks of the caller kept)
     soup = _post(s, _get(s), DDL, "", ac_no)
     all_rows, seen_pages = [], set()
     for _ in range(MAX_PAGES):
@@ -111,6 +119,10 @@ def fetch(session, payload):
         if cur in seen_pages:
             break
         seen_pages.add(cur)
+        src = provenance.at(getattr(s, "last_answer", None), URL)   # postbacks share one url: the answer's hash names it
+        for r in rows:
+            r.update(src)
+            r["src_pos"]["grid_page"] = cur
         all_rows.extend(rows)
         nxt = f"Page${cur + 1}"
         if pager is None or not pager.find("a", href=lambda h: h and f"'{nxt}'" in h.replace("&#39;", "'")):

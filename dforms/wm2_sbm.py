@@ -21,6 +21,8 @@ import re
 
 from dforms._wm2_arcgis import page_layer, store
 
+METHOD = "arcgis feature layer (geojson)"     # source trail (provenance.py): how this reader reads its sources
+
 LAYER = "https://prodgis.sbmurban.org/server/rest/services/SBMGISProduction/GISProductionData/MapServer/3"
 
 
@@ -41,9 +43,11 @@ def where(p):
 
 def towns(fc, path, url, state):
     by = collections.defaultdict(list)
-    for f in fc["features"]:
+    at = collections.defaultdict(list)            # source trail: feature places in the stored FeatureCollection
+    for i, f in enumerate(fc["features"]):
         pr = f.get("properties") or {}
         by[(pr.get("ulbcode") or "").strip()].append(pr)
+        at[(pr.get("ulbcode") or "").strip()].append((i, f.get("id", pr.get("objectid"))))
     recs = []
     for code, rows in sorted(by.items()):
         st = collections.Counter((r.get("status") or "").strip() or "none" for r in rows)
@@ -55,7 +59,9 @@ def towns(fc, path, url, state):
             "type": "wm_layer_town", "source": "sbm", "body_code": code, "body_name": name.most_common(1)[0][0] if name else "",
             "state": sc.most_common(1)[0][0] if sc else state, "district": dist.most_common(1)[0][0] if dist else "",
             "wards": len(rows) - st.get("REJECTED", 0), "rejected": st.get("REJECTED", 0), "status": dict(st),
-            "last_edit": int(max(edits)) if edits else None, "file": path, "url": url}))
+            "last_edit": int(max(edits)) if edits else None, "file": path, "url": url,
+            "src_pos": {"layer_file": path, "feature_index": [i for i, _ in at[code]],
+                        "feature_id": [x for _, x in at[code] if x is not None]}}))
     return recs
 
 

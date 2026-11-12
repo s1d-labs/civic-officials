@@ -37,6 +37,8 @@ from urllib.parse import urlencode
 from dforms._wm2_arcgis import store
 from dforms.wm2_arcgis import towns
 
+METHOD = "geojson layer (WFS GetFeature)"     # source trail (provenance.py): how this reader reads its sources
+
 MAX_PAGES = 400
 ONE_SHOT_MAX = 250000
 
@@ -132,7 +134,8 @@ def layer_record(p, fc, path):
     rec = {"type": "gis_layer", "kind": p["kind"], "source": p["source"], "state": str(p.get("state", "XX")),
            "layer": p["layer"], "url": p["url"], "where": p.get("cql", ""), "file": path, "features": len(feats),
            "fields": list(fields), "geometry_types": dict(gtypes), "has_z": has_z, "one_shot": bool(fc.get("one_shot")),
-           "expect": p.get("expect"), "sort": p.get("sort", ""), "vintage": p.get("vintage", "")}
+           "expect": p.get("expect"), "sort": p.get("sort", ""), "vintage": p.get("vintage", ""),
+           "src_pos": {"layer_file": path}}      # the whole layer, every feature (the pages are in the trail)
     if p.get("district"):
         rec["by_district"] = dict(sorted(by_d.items()))
     return rec
@@ -157,5 +160,6 @@ def fetch(p, get):
             "type": "wm_layer_town", "source": source, "state": state, "body_name": t["body_name"], "body_code": t["body_code"],
             "district": t["district"], "wards": len(t["wards"]) if fields.get("ward_no") else t["features"],
             "features": t["features"], "file": path, "url": p["url"], "layer": p["layer"], "where": p.get("cql", ""),
-            "ward_kind": p.get("ward_kind", ""), "vintage": p.get("vintage", "")}))
+            "ward_kind": p.get("ward_kind", ""), "vintage": p.get("vintage", ""),
+            "src_pos": {"layer_file": path, "feature_index": t["index"], **({"feature_id": t["ids"]} if t["ids"] else {})}}))
     return recs, [(path, blob, ctype)], ""

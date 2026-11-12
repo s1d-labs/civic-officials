@@ -23,7 +23,10 @@ site. Record ids: dept:sub2_rj_bdo:<slug of district>:<slug of panchayat samiti>
 import io
 import re
 
+import provenance
 from dforms import _esw, _ward_kd as kd
+
+METHOD = "pdf text pieces by position (pypdf, ruled columns) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub2_rj_bdo"
 URL = ("https://jankalyanfile.rajasthan.gov.in/WebMyWayFiles/Department/PDF/DEPTContactDetail/2026/Sep/"
@@ -86,7 +89,8 @@ def items(get=None):
 
 
 def stored(p, get):
-    """The PDF from the bucket when the item names its saved copy (payload "stored": "<project>/<path>.pdf")."""
+    """(bytes, key) of the PDF from the bucket when the item names its saved copy (payload "stored": "<project>/<path>.pdf").
+    The hub's signed url is read directly: the copy is in the bucket already; records name it in src (provenance.file_src)."""
     hub, k = getattr(get, "hub", None), p.get("stored")
     if not hub or not k:
         return None
@@ -95,7 +99,7 @@ def stored(p, get):
         url = hub.read_urls(k.split("/", 1)[0], [k])[k]
         r = requests.get(url, timeout=(20, 180))
         if r.status_code == 200 and r.content[:5] == b"%PDF-":
-            return r.content
+            return r.content, k
     except Exception:  # noqa: BLE001 - fall back to the site
         pass
     return None
@@ -125,6 +129,7 @@ def page_rows(texts):
                 continue
             cells.setdefault(ROLES[k], []).append(t)
         cells["sn"] = sn
+        cells["_pos"] = {"row": i + 1, "sn": sn, "y": round(y0, 1)}   # row: 1-based on the page, top to bottom; y: PDF points
         rows.append(cells)
     return rows
 
@@ -135,9 +140,11 @@ def rows(content):
     from dforms._util2_pdfgrid import page_parts
     reader = PdfReader(io.BytesIO(content))
     out = []
-    for page in reader.pages:
+    for n, page in enumerate(reader.pages, 1):
         texts, _, _ = page_parts(reader, page)
-        out += page_rows(texts)
+        for r in page_rows(texts):
+            r["_pos"] = {"page": n, **r.get("_pos", {})}
+            out.append(r)
     return out
 
 
@@ -203,13 +210,14 @@ def build(rs, source=URL):
                                 post="Vikas Adhikari (Block Development Officer)", phone=phone, email=email, source=source,
                                 last_updated=LIST_DATE, vacant=True if vacant else None, cadre=hindi(r.get("cadre")),
                                 home_district=text(r.get("home")), office=ps_src if ps_src != ps else None,
-                                list_no=r.get("sn")))
+                                list_no=r.get("sn"), src_pos=r.get("_pos")))
     return recs
 
 
 def fetch(p, get):
     url = p.get("url") or URL
-    content = stored(p, get)
+    got = stored(p, get)
+    content, key = got if got else (None, None)
     if content is None and p.get("discover"):
         url = current_url(get) or url
     files = []
@@ -222,4 +230,7 @@ def fetch(p, get):
             return [], [], "not a pdf"
         files = [(f"depts/{MODULE}/vikas-adhikari-list.pdf", content, "application/pdf")]
     recs = build(rows(content), url)
+    src = {"src": provenance.file_src(content, url, key)} if key else {"src_url": url}
+    for _, d in recs:
+        d.update(src)
     return recs, files, "" if recs else "no rows"

@@ -19,6 +19,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_madurai"
 BODY, LGD, STATE, DISTRICT = "Madurai City Municipal Corporation", "252889", "TN", "Madurai"
 URL = "https://www.tnurbantree.tn.gov.in/madurai/office-staffs/"
@@ -60,13 +62,17 @@ def split_post(name, default):
     return n, default + extra
 
 
-def tables(html):
-    """The page's tables with more than one column, as grids."""
+def tables(html, at=None):
+    """The page's tables with more than one column, as grids. at: a list; when given, it gets for each grid the src_pos of its
+    rows (source trail)."""
     out = []
     for t in _esw.soup(html).find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if g and len(g[0]) > 1:
             out.append(g)
+            if at is not None:
+                at.append(gp)
     return out
 
 
@@ -79,16 +85,20 @@ def parse(html, p):
     seen, recs = set(), []
     src = p["url"]
 
+    cur = {}
+
     def add(key_area, post, name, phone, level, area, wards, zone=None, address=None, wing=None):
         recs.append(_ward.record(MODULE, f"{_esw.slug(key_area)}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}", seen, body=BODY,
                                  lgd=LGD, state=STATE, district=DISTRICT, level=level, area=area, zone=zone, post=post, name=name,
-                                 phone=phone, wards=wards, address=address, wing=wing, source=src))
+                                 phone=phone, wards=wards, address=address, wing=wing, source=src, src_pos=cur.get("pos")))
 
-    for g in tables(html):
+    at = []
+    for g, gp in zip(tables(html, at), at):
         head = [c.lower() for c in g[0]]
         if "zone" in head and "mobile" in head:  # table 1: zone / central engineers
             post0 = ""
-            for r in g[1:]:
+            for r, rp in zip(g[1:], gp[1:]):
+                cur["pos"] = rp
                 h = _heading(r)
                 if h:
                     post0 = re.sub(r"\s*[–-]\s*", " - ", h)
@@ -111,7 +121,8 @@ def parse(html, p):
         elif "ward nos" in head:  # tables 2 and 3: ward engineers, fitters, sanitary staff
             sanitary = any(re.search(r"(?i)\bS\.?\s?[IO]\b", r[1]) for r in g[1:] if len(r) > 1)
             zone, fitter, central = None, False, False
-            for r in g[1:]:
+            for r, rp in zip(g[1:], gp[1:]):
+                cur["pos"] = rp
                 h = _heading(r)
                 if h:
                     zone, fitter, central = _zone_no(h), bool(re.search(r"(?i)fitter", h)), bool(re.search(r"(?i)central", h))

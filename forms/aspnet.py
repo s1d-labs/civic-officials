@@ -61,6 +61,15 @@ def session(legacy_host=None):
     return s
 
 
+def keep_trail(new, old):
+    """A reader that starts its own session (one per AC, no caller cookies) keeps the caller session's response hooks, so the
+    source trail (provenance.hook, set by blo.run_form) still notes every answer. Returns new."""
+    for h in (getattr(old, "hooks", None) or {}).get("response", []):
+        if h not in new.hooks["response"]:
+            new.hooks["response"].append(h)
+    return new
+
+
 def hidden(html):
     soup = BeautifulSoup(html, "lxml")
     return {i.get("name"): i.get("value", "") for i in soup.select("input[type=hidden]") if i.get("name")}

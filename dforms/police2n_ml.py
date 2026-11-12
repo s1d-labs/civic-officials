@@ -19,8 +19,11 @@ import re
 
 from bs4 import BeautifulSoup
 
+from dforms import _civic
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms.police_s3waas import grid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police2n_ml"
 
@@ -125,9 +128,11 @@ def shillong(html, url, district="East Khasi Hills", state="ML"):
                 recs.append(rec(M, f"{d}:sdpo-{slug(area)}", level="subdivision", office_type="subdivision", area=area,
                                 post="SDPO", phone=phones(mob) or office(off, area), email=mail, epabx=epbx or None,
                                 state=state, district=district, source=url, last_updated=lu))
+                recs[-1][1]["src_pos"] = _civic.tr_pos(tr)
             elif re.match(r"^SP\s+EKH$", label, re.I):
                 recs.append(rec(M, f"{d}:sp", level="district", office_type="office", area=district, post="SP", phone=office(off, ""),
                                 email=mail, state=state, district=district, source=url, last_updated=lu))
+                recs[-1][1]["src_pos"] = _civic.tr_pos(tr)
             elif sm and not re.search(r"traffic|PCR", label, re.I):
                 mails[mob.strip()] = (label, mail, epbx)
     for t in soup.find_all("table"):
@@ -166,6 +171,7 @@ def stations(html, url, state="ML"):
                 area = re.sub(r"\s*\bPS$", "", label).strip()
                 recs.append(rec(M, f"{slug(district or 'state')}:{slug(area)}", office_type="police station", area=area,
                                 post="OC", state=state, district=district, source=url))
+                recs[-1][1]["src_pos"] = _civic.tr_pos(tr)
     return uniq(recs)
 
 

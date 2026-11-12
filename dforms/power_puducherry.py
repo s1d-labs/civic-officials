@@ -12,7 +12,9 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, clean, phone, raw, slug
+from dforms._power import tr_pos, Out, clean, phone, raw, slug
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 BASE = "https://electricity.py.gov.in"
 INDEX = BASE + "/area-contact-information"
@@ -69,8 +71,9 @@ def parse(html, p, url):
     sec = p["section"]
     region = next((v for k, v in REGION.items() if sec.upper().startswith(k)), "Puducherry")
     out = Out("power_puducherry", "PY", url, discom="Electricity Department, Puducherry", last_updated=upd)
-    rows = [tr.find_all("td") for tb in soup.find_all("table")[:2] for tr in tb.find_all("tr")]
-    rows = [r for r in rows if r and re.search(r"phone|mobile", r[0].get_text(" "), re.I)]      # not the heading rows
+    trs = [tr for tb in soup.find_all("table")[:2] for tr in tb.find_all("tr")]
+    trs = [tr for tr in trs if tr.find_all("td") and re.search(r"phone|mobile", tr.find_all("td")[0].get_text(" "), re.I)]
+    rows = [tr.find_all("td") for tr in trs]                                                   # not the heading rows
     if len(rows) < 2:
         return []
     ee, aee = cell(rows[0][0]), cell(rows[0][1]) if len(rows[0]) > 1 else None
@@ -81,13 +84,15 @@ def parse(html, p, url):
     sec_area = re.sub(r"\s*SECTION$", "", sec, flags=re.I).title()
     if ee["post"]:
         out.add(f"division:{div or ee['post']}", "division", div_area, post=ee["post"], phone_=ee["phone"], address=ee["address"],
-                district=region)
+                district=region, src_pos=dict(tr_pos(trs[0]), col=1))
     if aee and aee["post"]:
         out.add(f"subdivision:{sub_area or aee['post']}", "subdivision", sub_area, post=aee["post"], phone_=aee["phone"],
-                address=aee["address"], district=region, parents={"division": div_area})
+                address=aee["address"], district=region, parents={"division": div_area}, src_pos=dict(tr_pos(trs[0]), col=2))
     if je["post"]:
         out.add(f"section:{sec_area}", "section", sec_area, post=je["post"], phone_=je["phone"], address=je["address"],
-                district=region, parents={"division": div_area, "subdivision": sub_area}, areas=p.get("areas"))
+                district=region, parents={"division": div_area, "subdivision": sub_area}, areas=p.get("areas"),
+                src_pos=dict(tr_pos(trs[1]), col=1))
+    out.src = {}
     return out.recs
 
 

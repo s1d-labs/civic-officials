@@ -25,6 +25,8 @@ from urllib.parse import urlparse
 from dforms import _emerg
 from dforms.police_s3waas import last_updated
 
+METHOD = "html table + html text (label lines)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_ddma_s3waas"
 
 HEAD_WORDS = re.compile(r"(?i)\b(name|designation|post|contact|phone|mobile|tel|telephone|landline|e-?mail|mail id|officer|"
@@ -112,10 +114,11 @@ def section_of(table):
     return ""
 
 
-def table_rows(table):
-    """[{kind: text}] for each data row of one table (kinds from col_kind / guess)."""
+def table_rows(table, where=None):
+    """[{kind: text}] for each data row of one table (kinds from col_kind / guess). where (a list) gets each row's src_pos."""
     from dforms import _esw
-    g = _esw.grid(table)
+    gp = []
+    g = _esw.grid(table, pos=gp)
     if not g:
         return []
     hi = next((i for i, r in enumerate(g[:3]) if is_header(r)), None)
@@ -124,12 +127,12 @@ def table_rows(table):
         if any(DOC_HEAD.search(h) for h in heads) and not any(col_kind(h) in ("phone", "email") for h in heads):
             return []
         kinds = [col_kind(h) for h in heads]
-        body = g[hi + 1:]
+        body, bpos = g[hi + 1:], gp[hi + 1:]
         heads_l = [_emerg.clean(h) for h in heads]
     else:
-        kinds, body, heads_l = None, g, None
+        kinds, body, heads_l, bpos = None, g, None, gp
     out = []
-    for r in body:
+    for r, rp in zip(body, bpos):
         if heads_l and [_emerg.clean(c) for c in r] == heads_l:
             continue
         ks = kinds or [guess(c) for c in r]
@@ -149,6 +152,8 @@ def table_rows(table):
             if c not in d.get(k, []):
                 d.setdefault(k, []).append(c)
         out.append(d)
+        if where is not None:
+            where.append(rp)
     return out
 
 
@@ -262,7 +267,7 @@ def records(html, p):
     lu = last_updated(html)
     recs, seen = [], set()
 
-    def add(section, area, post_, name, phone, fax, email, address, helpline, covers, org, labels):
+    def add(section, area, post_, name, phone, fax, email, address, helpline, covers, org, labels, pos=None, method=None):
         phone = ", ".join(x for x in (phone or "").split(", ") if x and not YEARS.match(x))
         name = name if re.search(r"[^\W\d_]", name or "") else ""
         if not (phone or email or helpline):
@@ -279,13 +284,14 @@ def records(html, p):
             MODULE, key, "ddma", dept="fire" if FIRE.search(f"{area} {post_}") else "disaster", level=lvl,
             area=area or district or p.get("area"), post=post_, name=name, phone=phone, fax=fax, email=email, address=address,
             helpline=helpline, covers=covers, org=org, section=section, district=dist, state=state, office_id=key, source=url,
-            last_updated=lu))
+            last_updated=lu, src_pos=pos, method=method))
 
     for t in post.find_all("table"):
         if t.find_parent("table"):
             continue
         sec = section_of(t)
-        for d in table_rows(t):
+        tw = []
+        for di, d in enumerate(table_rows(t, tw)):
             name, post_ = people(d)
             area = " ".join(d.get("area", []))
             extra = " ".join(d.get("extra", []))
@@ -298,10 +304,10 @@ def records(html, p):
                 post_ = sec or ("" if name else "Control Room")
             add(sec, area, post_, name, phone, fax, email, " ".join(d.get("address", [])), helpline, " ".join(d.get("covers", [])),
                 " ".join(d.get("org", [])),
-                " ".join(d.get("area_labels", [])) + " " + sec)
-    for b in text_blocks(post):
+                " ".join(d.get("area_labels", [])) + " " + sec, tw[di], "html table")
+    for bi, b in enumerate(text_blocks(post), 1):
         add(b.get("label", ""), "", b.get("post", ""), b.get("name", ""), b.get("phone", ""), "", b.get("email", ""), "",
-            b.get("helpline", ""), "", "", "")
+            b.get("helpline", ""), "", "", "", {"selector": "page text outside tables", "block": bi}, "html text (label lines)")
     return recs
 
 

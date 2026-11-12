@@ -10,6 +10,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_panipat"
 BODY, LGD, STATE, DISTRICT = "Municipal Corporation Panipat", "248521", "HR", "Panipat"
 URL = "https://nagarnigampanipat.in/sanitation-structure/"
@@ -20,7 +22,7 @@ def items(get=None):
 
 
 def parse(html, p):
-    seen, recs, insp = set(), [], {}
+    seen, recs, insp, insp_at = set(), [], {}, {}
     for head, rows in _ward.header_tables(html, "ward", "inspector"):
         for r in rows:
             beat = _ward.col(r, "ward no", "ward")
@@ -31,6 +33,7 @@ def parse(html, p):
             ins = _ward.col(r, "inspector")
             if ins:
                 insp.setdefault(ins, [])
+                insp_at.setdefault(ins, []).append(r.pos)
                 if ward not in insp[ins]:
                     insp[ins].append(ward)
             sup, mob = _ward.col(r, "supervisor", "daroga"), _ward.col(r, "mob")
@@ -38,7 +41,7 @@ def parse(html, p):
                 recs.append(_ward.record(MODULE, f"ward-{ward}:cleaning-supervisor:{_esw.slug(sup)}", seen, body=BODY, lgd=LGD,
                                          state=STATE, district=DISTRICT, level="ward", area=f"Ward {ward}", post="Cleaning Supervisor (Daroga)",
                                          name=sup, phone=mob, wards=[ward], beat=beat.strip() if m.group(2) else None,
-                                         wing="sanitation", source=p["url"]))
+                                         wing="sanitation", source=p["url"], src_pos=r.pos))
     for text, wards in insp.items():
         t = _esw.clean(text.replace("|", " "))
         mm = re.search(r"(?i)((?:assistant\s+)?sanitary\s+ins[pe]+ctor)", t)
@@ -47,7 +50,8 @@ def parse(html, p):
         recs.append(_ward.record(MODULE, f"ward-{'-'.join(wards)}:{_esw.slug(post)}:{_esw.slug(name)}", seen, body=BODY, lgd=LGD,
                                  state=STATE, district=DISTRICT, level="ward", area="Ward " + ", ".join(wards), post=post,
                                  post_as_written=mm.group(1) if mm else None, name=name,
-                                 phone=" ".join(re.findall(r"[6-9]\d{9}", t)), wards=wards, wing="sanitation", source=p["url"]))
+                                 phone=" ".join(re.findall(r"[6-9]\d{9}", t)), wards=wards, wing="sanitation", source=p["url"],
+                                 src_pos={"rows": insp_at.get(text), "note": "one inspector summed over these table rows"}))
     return recs
 
 

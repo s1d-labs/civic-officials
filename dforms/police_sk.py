@@ -7,7 +7,10 @@ import re
 
 from bs4 import BeautifulSoup
 
+from dforms import _civic
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_sk"
 URL = "https://police.sikkim.gov.in/visitor/telephonepolice"
@@ -33,6 +36,7 @@ def parse(html, url=URL):
         recs.append(rec(M, f"{slug(district)}:{slug(post)}", level=level, area=place if level != "district" else district,
                         post=kind, phone=phones(num), email=email(c[3] if len(c) > 3 else None), state="SK",
                         district=district, source=url))
+        recs[-1][1]["src_pos"] = _civic.tr_pos(tr)
     return uniq(recs)
 
 

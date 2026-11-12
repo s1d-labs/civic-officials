@@ -10,6 +10,8 @@ import json
 
 from dforms._power import Out, clean, email, phone, raw
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://www.apdcl.org/website/api/web/allContact"
 TYPES = {2: ("zone", "zone_name", "General Manager"), 3: ("circle", "circle_name", "Deputy General Manager"),
          4: ("division", "division_name", "Assistant General Manager"), 5: ("subdivision", "sd_name", "Sub-Divisional Engineer")}
@@ -17,7 +19,8 @@ TYPES = {2: ("zone", "zone_name", "General Manager"), 3: ("circle", "circle_name
 
 def parse(js, source=URL):
     out = Out("power_apdcl", "AS", source, discom="APDCL")
-    for x in js.get("allContact") or []:
+    for xi, x in enumerate(js.get("allContact") or []):
+        out.src = {"src_pos": {"path": f"allContact[{xi}]", **({"id": x["id"]} if x.get("id") is not None else {})}}
         t = TYPES.get(x.get("type"))
         if not t:
             continue
@@ -28,6 +31,7 @@ def parse(js, source=URL):
         out.add(str(x.get("id")), lvl, x.get(field), post=clean(x.get("designation")) or post, name=x.get("contact_person"),
                 phone_=phone(x.get("mobile"), x.get("phone")), email_=email(x.get("email")), district=x.get("district"),
                 office_id=str(x.get("id")), parents=par, last_updated=(x.get("updated_time") or "")[:10] or None)
+    out.src = {}
     return out.recs
 
 

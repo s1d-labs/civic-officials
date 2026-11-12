@@ -8,6 +8,9 @@ Record ids: dept:ero_ga:GA-AC-<no>:ero.
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ero_ga"
 URL = "https://ceogoa.nic.in/appln/UIL/ERO.aspx"
@@ -26,9 +29,9 @@ def parse(html, url=URL):
         district = None
         for h in t.find_all_previous(string=DISTRICT, limit=1):
             district = DISTRICT.match(h).group(1).title()
-        rows = _esw.grid(t)
+        rows = pgrid(t)
         for row in rows[1:]:
-            row = row + [""] * (7 - len(row))
+            rp, row = row.pos, row + [""] * (7 - len(row))
             m = AC.match(row[0])
             if not m:
                 continue
@@ -36,7 +39,7 @@ def parse(html, url=URL):
             recs[f"{ac}:ero"] = _esw.record(MODULE, f"{ac}:ero", dept="elections", level="ac", area=f"{no} - {m.group(2)}",
                                             post="Electoral Registration Officer", designation=row[2], name=row[1],
                                             phone=_esw.phones(row[3], row[4]), email=_esw.emails(row[5]), address=row[6],
-                                            state="GA", district=district, office_id=ac, source=url)
+                                            state="GA", district=district, office_id=ac, source=url, src_pos=rp)
     return list(recs.values())
 
 

@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw
 
+METHOD = "html cards (span ids)"  # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "water_tr"
 URL = "https://dws.tripura.gov.in/Contact_Report.aspx"
 KEEP = re.compile(r"engineer|secretary|director|chemist|\bS\.?E\b|\bE\.?E\b|\bA\.?E\b|\bJ\.?E\b", re.I)
@@ -81,7 +83,8 @@ def parse(html, url=URL):
                                 phone=_esw.phones(c.get("mobile"), c.get("phone")), fax=_esw.phones(c.get("fax")),
                                 email=_esw.emails(c.get("email")), address=c.get("address"), state="TR",
                                 office_id=f"TR-DWS-{_esw.slug(place)}", org="Drinking Water and Sanitation Department, Tripura",
-                                group=group, source=url))
+                                group=group, source=url,
+                                src_pos={"selector": f"span[id] of group {g}, card {i}", "table_id": g, "card": i}))
     return recs
 
 

@@ -11,7 +11,10 @@ same text, post is English, post_regional as written. Records: level "zone". Ids
 """
 import re
 
+import provenance
 from dforms import _esw, _ward, _ward_kd as kd
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2n_bhilai"
 BODY, LGD, STATE, DISTRICT = "Nagar Palik Nigam Bhilai", "250639", "CG", "Durg"
@@ -43,23 +46,22 @@ def hi(raw):
 
 
 def lines_of(pages):
-    """[(serial, left text, right raw text)] of every line (page heads and page numbers left out). Columns by start position."""
+    """[(serial, left text, right raw text, src_pos)] of every line (page heads and page numbers left out). Columns by start position."""
     out = []
-    for pg in pages:
-        for ln in pg.splitlines():
-            if re.search(r"Page \d+ of|vf/kdkjh@deZpkjh|^\s*Ø\s|¼1½", ln):
-                continue
-            serial, left, right = None, [], []
-            for m in re.finditer(r"\S+(?: \S+)*", ln):
-                s, t = m.start(), m.group(0)
-                if s < 4 and re.fullmatch(r"\d{1,2}", t) and serial is None and not right:
-                    serial = t
-                elif s < 22 and not right:
-                    left.append(t)
-                else:
-                    right.append(t)
-            if serial or left or right:
-                out.append((serial, " ".join(left), " ".join(right)))
+    for pn, lno, ln in _ward.pdf_lines(pages):
+        if re.search(r"Page \d+ of|vf/kdkjh@deZpkjh|^\s*Ø\s|¼1½", ln):
+            continue
+        serial, left, right = None, [], []
+        for m in re.finditer(r"\S+(?: \S+)*", ln):
+            s, t = m.start(), m.group(0)
+            if s < 4 and re.fullmatch(r"\d{1,2}", t) and serial is None and not right:
+                serial = t
+            elif s < 22 and not right:
+                left.append(t)
+            else:
+                right.append(t)
+        if serial or left or right:
+            out.append((serial, " ".join(left), " ".join(right), provenance.line_pos(pn, lno, ln)))
     return out
 
 
@@ -72,10 +74,10 @@ def post_en(text):
 
 
 def rows(lines):
-    """[(serial, name, own post, [duty texts])]."""
-    serials = [i for i, (s, _, _) in enumerate(lines) if s]
+    """[(serial, name, own post, [duty texts], src_pos)]; src_pos = the serial number's line, "to" = the last line of the row."""
+    serials = [i for i, (s, *_) in enumerate(lines) if s]
     starts = []
-    for i, (_, _, r) in enumerate(lines):
+    for i, (_, _, r, *_) in enumerate(lines):
         m = ITEM.match(r)
         if not (m and m.group(1) == "1"):
             continue
@@ -110,13 +112,16 @@ def rows(lines):
             cur += " " + ITEM.sub("", r)
         if cur:
             duties.append(cur)
-        out.append((lines[i][0], name, own, [hi(d) for d in duties]))
+        pos = dict(lines[i][3]) if len(lines[i]) > 3 else None
+        if pos and end - 1 > i:
+            pos["to"] = {"page": lines[end - 1][3]["page"], "line": lines[end - 1][3]["line"]}
+        out.append((lines[i][0], name, own, [hi(d) for d in duties], pos))
     return out
 
 
 def parse(pages, p):
     seen, recs, n = set(), [], {}
-    for serial, name, own, duties in rows(lines_of(pages)):
+    for serial, name, own, duties, pos in rows(lines_of(pages)):
         done = set()
         for d in duties:
             t = d.replace("ष", "श")
@@ -143,7 +148,7 @@ def parse(pages, p):
                 recs.append(_ward.record(MODULE, f"{key}:{n[key]}", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                          level="zone", area=ZONES[z], zone=ZONES[z], post=en, post_regional=post_hi or None,
                                          name=name, name_regional=name or None, own_post=own or None, duty=_esw.clean(d),
-                                         serial=serial, source=p["url"]))
+                                         serial=serial, source=p["url"], src_pos=pos))
     return recs
 
 

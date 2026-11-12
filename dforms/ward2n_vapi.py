@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_vapi"
 BODY, LGD, STATE, DISTRICT = "Vapi Municipal Corporation", "251264", "GJ", "Valsad"
 URL = "https://vapicity.in/contactdetailsofsubsanitaryinspectors"
@@ -22,10 +24,11 @@ def items(get=None):
 def parse(html, p):
     seen, recs = set(), []
     for t in _esw.soup(html).find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if not g or not any("વોર્ડ" in c for c in g[0]):
             continue
-        for r in g[1:]:
+        for r, rp in zip(g[1:], gp[1:]):
             if len(r) < 4:
                 continue
             sr, who, phone, ward = (_esw.clean(c).translate(GU) for c in r[:4])
@@ -39,7 +42,7 @@ def parse(html, p):
             recs.append(_ward.record(MODULE, f"ward-{wards[0]}:ssi", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                      level="ward", area=f"Ward {wards[0]}", wards=wards, post="Sub Sanitary Inspector",
                                      post_regional=_esw.clean(post_regional) or None, name=name, name_regional=name or None,
-                                     phone=phone, wing="sanitation", source=p["url"]))
+                                     phone=phone, wing="sanitation", source=p["url"], src_pos=rp))
     return recs
 
 

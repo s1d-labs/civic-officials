@@ -9,6 +9,8 @@ import re
 
 from dforms import _esw, _leg, _leg_se
 
+METHOD = "html page (one block per <h2> member heading)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_py"
 URL = "https://py.gov.in/mlas"
 ALIAS = {"kamarajnagar": "kamrajnagar", "neravytrpattinam": "neravytrpattin", "orleanpeth": "orleampeth"}
@@ -20,7 +22,7 @@ def items(get=None):
 
 def parse(html, url):
     recs = []
-    for h2 in _esw.soup(html).find_all("h2"):
+    for k, h2 in enumerate(_esw.soup(html).find_all("h2"), 1):
         m = re.match(r"Member of Legislative Assembly,\s*(.+?),\s*(?:Puducherry|Pondicherry)\s*$", _esw.clean(h2.get_text(" ")), re.I)
         if not m:
             continue
@@ -39,7 +41,7 @@ def parse(html, url):
         recs.append(_leg.member(MODULE, "PY", "AC", no, _leg_se.name(h3.get_text(" ")), constituency=cons, source=url,
                                 mobile=fields.get("mobile", "") + (", " + fields["phone"] if fields.get("phone") else ""),
                                 email=fields.get("email", ""), residence_address=fields.get("address", ""), note=note,
-                                house="Puducherry Legislative Assembly (16th)"))
+                                house="Puducherry Legislative Assembly (16th)", src_pos={"selector": "h2", "h2": k}))
     return recs
 
 

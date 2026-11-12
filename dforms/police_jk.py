@@ -10,7 +10,10 @@ import re
 
 from bs4 import BeautifulSoup
 
+from dforms import _civic
 from dforms._police import clean, gz, phones, rec, slug, uniq
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_jk"
 PS_IN_CELL = re.compile(r"(P/S\s+[^()]+?)\s*(?:\(([^)]*)\))?(?=\s*P/S\s|$)")
@@ -43,11 +46,11 @@ def subdiv_table(t, p):
             continue
         m = re.match(r"SDPO\s+(.+?)\s*(?:\(([^)]*)\))?$", c[0])
         if m:
-            recs.append(_rec(p, "SDPO", m.group(1), phone=phones(m.group(2)), subdivision=m.group(1)))
+            recs.append(_rec(p, "SDPO", m.group(1), phone=phones(m.group(2)), subdivision=m.group(1), src_pos=_civic.tr_pos(tr)))
         if c[0]:                    # an empty first cell continues the subdivision of the row above
             sub = m.group(1) if m else (re.sub(r"\s*\(.*$", "", c[0]) or None)
         for n, num in PS_IN_CELL.findall(c[1]):
-            recs.append(_rec(p, "PS", n, phone=phones(num), subdivision=sub))
+            recs.append(_rec(p, "PS", n, phone=phones(num), subdivision=sub, src_pos=_civic.tr_pos(tr)))
     return recs
 
 
@@ -67,7 +70,7 @@ def label_table(t, p):
                 if r:
                     rank, name = r.group(1), r.group(2)
             num = " ".join(re.sub(r"\((?:O|R|F)\)", " ", x) for x in c[i + 1:])
-            recs.append(_rec(p, kind, m.group(2), name=name, rank=rank, phone=phones(num)))
+            recs.append(_rec(p, kind, m.group(2), name=name, rank=rank, phone=phones(num), src_pos=_civic.tr_pos(tr)))
             break
     return recs
 
@@ -82,7 +85,7 @@ def parse(html, p):
         recs += subdiv_table(t, p) if "police station" in head and "sub" in head and "division" in head else label_table(t, p)
     seen, out = set(), []
     for rid, d in recs:           # the same SDPO repeats on each of its stations' rows
-        k = (rid, tuple(sorted(d.items())))
+        k = (rid, tuple(sorted((a, b) for a, b in d.items() if a != "src_pos")))      # same row data, another table row
         if k not in seen:
             seen.add(k)
             out.append((rid, d))

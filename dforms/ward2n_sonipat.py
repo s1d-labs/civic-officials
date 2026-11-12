@@ -8,7 +8,10 @@ Record ids: dept:<module>:<wards | hq>:<post slug>:<name slug>.
 """
 import re
 
+import provenance
 from dforms import _esw, _ward
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2n_sonipat"
 BODY, LGD, STATE, DISTRICT = "Municipal Corporation Sonipat", "248529", "HR", "Sonipat"
@@ -51,7 +54,8 @@ def parse(html, p, module=MODULE, body=BODY, lgd=LGD, district=DISTRICT):
             recs.append(_ward.record(module, f"{key}:{_esw.slug(post)}:{_esw.slug(name)}", seen, body=body, lgd=lgd, state=p["state"],
                                      district=district, level="ward" if ws else "body", area=("Ward " + ", ".join(ws)) if ws else body,
                                      post=post, name=name, phone=phone if len(re.sub(r"\D", "", phone)) >= 6 else "", email=email, wards=ws or None,
-                                     ward_text=_ward.col(r, "ward") if ws else None, section=branch or None, wing=wing if low else None, source=p["url"]))
+                                     ward_text=_ward.col(r, "ward") if ws else None, section=branch or None, wing=wing if low else None, source=p["url"],
+                                     src_pos=r.pos))
     return recs
 
 

@@ -11,6 +11,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_dhule"
 BODY, LGD, STATE, DISTRICT = "Dhule Mahanagarpalika", "251282", "MH", "Dhule"
 URL = "https://dhulecorporation.org/dmc/ward-committee-office-1"
@@ -31,9 +33,10 @@ def parse(html, p):
     last = m.group(1) if m else None
     offices, officers = {}, {}
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         head = None
-        for r in g:
+        for r, rp in zip(g, gp):
             low = " ".join(r)
             if "क्षेत्रीय कार्यालय" in low and ("प्रभाग अधिकारी" in low or "लोकसंख्या" in low):
                 head = "officer" if "प्रभाग अधिकारी" in low else "office"
@@ -45,9 +48,9 @@ def parse(html, p):
                 n = num(r[1])
                 addr = re.split(r"पत्ता\s*[-–:]\s*", r[1], maxsplit=1)
                 offices[n] = {"address": _esw.clean(addr[1]) if len(addr) > 1 else "", "wards": _ward.wards_of(r[2]),
-                              "population": re.sub(r"\D", "", r[3]) or None}
+                              "population": re.sub(r"\D", "", r[3]) or None, "pos": rp}
             else:
-                officers[num(r[0])] = {"name": r[1], "wards": _ward.wards_of(r[2]), "phone": r[3]}
+                officers[num(r[0])] = {"name": r[1], "wards": _ward.wards_of(r[2]), "phone": r[3], "pos": rp}
     seen, recs = set(), []
     for n in sorted(set(offices) | set(officers), key=lambda x: x or 0):
         if not n:
@@ -60,7 +63,8 @@ def parse(html, p):
                                  address=o.get("address"), wards=f.get("wards") or o.get("wards"),
                                  population=int(o["population"]) if o.get("population") else None,
                                  vacant=None if f.get("name") else True, wing="administration", last_updated=last,
-                                 source=p["url"]))
+                                 source=p["url"], src_pos={k: v for k, v in (("officer_row", f.get("pos")), ("office_row", o.get("pos")))
+                                                           if v} or None))
     return recs
 
 

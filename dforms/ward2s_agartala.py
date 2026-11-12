@@ -12,6 +12,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2s_agartala"
 BODY, LGD, STATE, DISTRICT = "Agartala Municipal Corporation", "249785", "TR", "West Tripura"
 BASE = "https://agartalacity.tripura.gov.in"
@@ -36,15 +38,16 @@ def parse(html, p):
             w = ward[0]
             recs.append(_ward.record(MODULE, f"w{w}:ward-secretary:{_esw.slug(name) or 'post'}", seen, body=BODY, lgd=LGD,
                                      state=STATE, district=DISTRICT, level="ward", area=f"Ward {w}", post="Ward Secretary",
-                                     name=name, phone=phone, wards=[w], wing="administration", source=p["url"]))
-    for li in soup.find_all("li"):
+                                     name=name, phone=phone, wards=[w], wing="administration", source=p["url"], src_pos=r.pos))
+    for li_no, li in enumerate(soup.find_all("li"), 1):
         m = ZONE.match(_esw.clean(li.get_text(" ")))
         if not m:
             continue
         zone = f"{m.group(1).title()} Zone"
         recs.append(_ward.record(MODULE, f"{_esw.slug(zone)}:zone-office", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                  level="zone", area=zone, zone=zone, post="Zone Office", phone=m.group(3),
-                                 address=m.group(2).strip(" ,."), wing="administration", source=p["url"]))
+                                 address=m.group(2).strip(" ,."), wing="administration", source=p["url"],
+                                 src_pos={"selector": "li", "index": li_no, "text": m.group(0)}))
     return recs
 
 

@@ -15,6 +15,8 @@ import re
 from dforms import _power, _util2
 from dforms._util2_pdfgrid import rows
 
+METHOD = "pdf table grid (pypdf text positions and ruling lines, _util2_pdfgrid)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "power2_mpcz"
 BASE = "https://portal.mpcz.in/upload_files/pdf/contact_us/"
 FILES = {  # file -> (circle or office name, district for the circle, kind)
@@ -56,7 +58,9 @@ def records(content, file, url):
     except Exception:
         head = ""
     out = _power.Out(MODULE, "MP", url, discom="MPMKVVCL", last_updated=_util2.updated(head[:1500]))
+    seen_pg = {}
     for r in rows(content):
+        k = seen_pg[r.get("page")] = seen_pg.get(r.get("page"), 0) + 1      # source trail: person row k of the page, top down
         post, name = _power.clean(r.get("post")), _util2.person(r.get("name"))
         if not (post or name):
             continue
@@ -77,7 +81,7 @@ def records(content, file, url):
         out.add(f"{file}:{area}:{post}:{name}", level, area, post=post, name=name,
                 phone_=_power.phone(*(re.split(r"\s+-\s+|\s+(?=[6-9]\d{9}\b)", r.get("phone") or ""))),
                 email_=_power.email(" ".join([r.get("email") or ""] + mails)), district=district, parents=parents,
-                office=_power.clean(office), list=circle)
+                office=_power.clean(office), list=circle, src_pos={"page": r.get("page"), "row": k})
     return out.recs
 
 

@@ -8,7 +8,10 @@ import html as htmlmod
 import json
 import re
 
+from dforms import _civic
 from dforms._police import ascii_digits, email, gz, phones, rec, uniq
+
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_pune"
 API = "https://admin.punepolice.gov.in/api/ps"
@@ -73,6 +76,11 @@ def fetch(p, get):
                 d = js[0] if isinstance(js, list) and js and isinstance(js[0], dict) else {}
             except (ValueError, json.JSONDecodeError):
                 d = {}
-        recs += station(base, d)
+        rs = station(base, d)
+        # the station's fields come from its detail answer (?ps=<id>) when it answered, else from its row in the list
+        _civic.tag(rs, x if d else r, f"{API}?ps={base['id']}" if d else url,
+                   src_pos={"id": base.get("id")} if d else {"key": "ps", "index": rows.index(base), "id": base.get("id")},
+                   method="json api (station detail)" if d else "json api (station list)")
+        recs += rs
     why = "" if recs else "no stations"
     return uniq(recs), files, why

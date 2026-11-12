@@ -8,7 +8,10 @@ Sabarimala stations are kept with that heading as the unit; the coastal and wome
 import io
 import re
 
+from provenance import line_pos
 from dforms._police import clean, gz, phones, rec, slug, uniq
+
+METHOD = "pdf text (pypdf, text pieces put in lines by position)"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_kl"
 URL = "https://keralapolice.gov.in/storage/pages/custom/ckFiles/file/RDBrCgXQ7yDQqKfazhg9MphN8DWUdgGcXFThGhoy.pdf"
@@ -47,18 +50,22 @@ def lines_of(page):
     return [clean("  ".join(t.strip() for _, t in sorted(v))) for _, v in sorted(rows.items(), key=lambda kv: -kv[0])]
 
 
-def text_lines(content):
+def text_lines(content, where=None):
+    """All pages' lines; where (a list) gets (page, line in page) for each line, 1-based (source trail)."""
     from pypdf import PdfReader
     out = []
-    for page in PdfReader(io.BytesIO(content)).pages:
-        out.extend(lines_of(page))
+    for pn, page in enumerate(PdfReader(io.BytesIO(content)).pages, 1):
+        ls = lines_of(page)
+        out.extend(ls)
+        if where is not None:
+            where.extend((pn, k) for k in range(1, len(ls) + 1))
     return out
 
 
-def parse(lines, url=URL):
+def parse(lines, url=URL, where=None):
     recs, head, last = [], None, None
     started = False
-    for ln in lines:
+    for li, ln in enumerate(lines):
         if not ln:
             continue
         if HEAD.match(ln) and not PS.search(ln):
@@ -89,7 +96,8 @@ def parse(lines, url=URL):
         landline = f"{m.group('std')}-{m.group('off')}" if m.group("std") else None
         r = rec(M, f"{slug(head)}:{slug(station)}", area=station, post="SHO", phone=phones(m.group("mob"), landline),
                 vpn=m.group("vpn"), state="KL", district=district.title() if district else None,
-                unit=None if district else head.title(), source=url, last_updated="2025-03-31")
+                unit=None if district else head.title(), source=url, last_updated="2025-03-31",
+                src_pos=line_pos(*where[li], ln) if where and li < len(where) else {"line": li + 1, "line_text": ln})
         recs.append(r)
         last = r
     return uniq(recs)
@@ -104,9 +112,10 @@ def fetch(p, get):
     if r.content[:5] != b"%PDF-":
         return [], files, "not a pdf"
     try:
-        lines = text_lines(r.content)
+        where = []
+        lines = text_lines(r.content, where)
     except Exception as e:
         return [], files, f"pdf: {type(e).__name__}"
     files.append(gz(M, "connectivity-2025.txt", "\n".join(lines)))
-    recs = parse(lines, url)
+    recs = parse(lines, url, where)
     return recs, files, "" if recs else "no rows"

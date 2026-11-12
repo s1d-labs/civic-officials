@@ -15,6 +15,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html cards (div.card-body)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_ar"
 STATE = "AR"
 BASE = "https://imc.arunachal.gov.in"
@@ -29,11 +31,12 @@ def items(get=None):
             for kind, page in (("officers", "Officers.html"), ("members", "committeemember.html"))]
 
 
-def cards(html):
-    """[(name, {icon: text})] of the cards: icon = local_offer / device_hub / contact_phone."""
+def cards(html, where=None):
+    """[(name, {icon: text})] of the cards: icon = local_offer / device_hub / contact_phone. where: a list; when given, it gets
+    {"selector": "div.card-body", "card": n} per card."""
     soup = _esw.soup(html)
     out = []
-    for body in soup.find_all("div", class_="card-body"):
+    for n, body in enumerate(soup.find_all("div", class_="card-body"), 1):
         h = body.find("h5")
         if not h:
             continue
@@ -46,6 +49,8 @@ def cards(html):
                 i.extract()
                 f[icon] = _esw.clean(sp.get_text(" "))
         out.append((name, f))
+        if where is not None:
+            where.append({"selector": "div.card-body", "card": n})
     return out
 
 
@@ -57,14 +62,15 @@ def updated(html):
 def parse(html, kind="officers", body=BODY, district=DISTRICT, url=""):
     recs, seen = [], set()
     last = updated(html)
-    for name, f in cards(html):
+    where = []
+    for (name, f), pos in zip(cards(html, where), where):
         post = f.get("local_offer", "")
         if not post or (kind == "members" and not KEEP_MEMBER.search(post)):
             continue
         contact = f.get("contact_phone", "")
         ward = re.sub(r"(?i)^ward\s*no\.?\s*", "", f.get("device_hub", "")) if kind == "members" else None
         recs.append(_ulb.record(MODULE, STATE, body, post, seen, name=name, phone=_esw.phones(contact), email=_esw.emails(contact),
-                                district=district, source=url, last_updated=last, ward=ward or None))
+                                district=district, source=url, last_updated=last, ward=ward or None, src_pos=pos))
     return recs
 
 

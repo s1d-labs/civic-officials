@@ -10,7 +10,10 @@ ac_name, district, attached hospital, opened, building, phone. Record ids: dept:
 """
 import re
 
+from provenance import line_pos
 from dforms import _esw
+
+METHOD = "pdf text (pypdf layout), columns from the header"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_health_dl"
 URL = "https://dgehs.delhi.gov.in/sites/default/files/DGHS/generic_multiple_files/list_of_dgds_seed_puhcs_polyclinic.pdf"
@@ -87,13 +90,13 @@ def finish(row, url):
                        facility_type=ftype, address=addr, phone=phone, state="DL", district=row["district"],
                        ac=int(row["ac"]) if row["ac"] else None, ac_name=row["ac_name"],
                        hospital=_esw.clean(" ".join(row["hospital"])), opened=_esw.clean(" ".join(row["opened"])),
-                       building=_esw.clean(" ".join(row["building"])), office_id=key, source=url)
+                       building=_esw.clean(" ".join(row["building"])), office_id=key, source=url, src_pos=row.get("pos"))
 
 
 def parse(pages, url=URL):
     out, row, xs = {}, None, None
-    for page in pages:
-        for line in page.splitlines():
+    for pn, page in enumerate(pages, 1):
+        for ln_no, line in enumerate(page.splitlines(), 1):
             h = columns(line)
             if h:
                 xs = h
@@ -106,6 +109,7 @@ def parse(pages, url=URL):
                     rid, d = finish(row, url)
                     out.setdefault(rid, (rid, d))
                 row = r
+                row["pos"] = line_pos(pn, ln_no, line)
                 continue
             if row:
                 for x, t in chunks(line):

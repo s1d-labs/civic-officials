@@ -21,6 +21,8 @@ import tempfile
 
 from bs4 import BeautifulSoup
 
+METHOD = "pdf text (pypdf layout), else ocr tesseract eng (scanned gazettes)"     # source trail (provenance.py): how this reader reads its sources
+
 LIST = "https://ddd.gov.in/document-category/latest-updates/page/{}/"
 WINDOWS = ((datetime.date(2025, 11, 1), datetime.date(2026, 1, 31), "DNH&DD Municipal Councils 2025"),
            (datetime.date(2023, 2, 1), datetime.date(2023, 6, 30), "Diu Municipal Council 2023"))
@@ -102,15 +104,17 @@ def split_name_party(rest):
     return parts[0], " ".join(parts[1:])
 
 
-def members(text):
-    """[(council, ward, name, party text)] from a gazette's text; each heading starts one council's table."""
+def members(text, pos=None):
+    """[(council, ward, name, party text)] from a gazette's text; each heading starts one council's table.
+    pos: a list; when given, it gets for each member the 1-based line of its row in `text` (split at "\n") and the line."""
     heads = list(HEAD.finditer(text))
     out = []
     for k, h in enumerate(heads):
         council = " ".join(h.group(1).split())
         block = text[h.end(): heads[k + 1].start() if k + 1 < len(heads) else len(text)]
         seen = set()
-        for line in block.splitlines():
+        line0 = text.count("\n", 0, h.end()) + 1
+        for li, line in enumerate(block.split("\n")):
             m = ROW.search(line)
             if not m:
                 continue
@@ -121,36 +125,58 @@ def members(text):
             seen.add(ward)
             name = re.sub(r"^(Shri|Smt|Sh|Ms|Mr|Mrs|Kum|Km|Kumari|Dr),", r"\1.", name)     # OCR reads "Smt." as "Smt,"
             out.append((council, ward, " ".join(name.split()), party))
+            if pos is not None:
+                pos.append((line0 + li, line))
     return out
 
 
-def text_of(content):
+def text_of(content, pages=None):
+    """(text of all pages joined by "\n", "text layer" or "ocr"); pages: a list that gets each page's text (source trail)."""
     from pypdf import PdfReader
     try:
-        t = "\n".join(pg.extract_text(extraction_mode="layout") or "" for pg in PdfReader(io.BytesIO(content)).pages)
+        pt = [pg.extract_text(extraction_mode="layout") or "" for pg in PdfReader(io.BytesIO(content)).pages]
     except Exception:  # noqa: BLE001 - a broken file reads as nothing
-        t = ""
+        pt = []
+    t = "\n".join(pt)
     if len(t.strip()) > 200 or not (shutil.which("tesseract") and shutil.which("pdftoppm")):
+        if pages is not None:
+            pages[:] = pt
         return t, "text layer"
     with tempfile.TemporaryDirectory() as tmp:          # a scanned gazette (the 2016 ones are): OCR in English
         open(f"{tmp}/g.pdf", "wb").write(content)
         subprocess.run(["pdftoppm", "-r", "300", "-gray", "-png", f"{tmp}/g.pdf", f"{tmp}/p"], capture_output=True, timeout=600)
-        pages = sorted(__import__("glob").glob(f"{tmp}/p*.png"))
-        t = "\n".join(subprocess.run(["tesseract", p, "-", "--psm", "6", "-l", "eng"], capture_output=True, text=True,
-                                     timeout=300).stdout for p in pages)
+        pt = [subprocess.run(["tesseract", png, "-", "--psm", "6", "-l", "eng"], capture_output=True, text=True,
+                             timeout=300).stdout for png in sorted(__import__("glob").glob(f"{tmp}/p*.png"))]
+        t = "\n".join(pt)
+    if pages is not None:
+        pages[:] = pt
     return t, "ocr"
 
 
-def records(text, p, read="text layer"):
+def where(n, pages):
+    """Global line n (1-based, pages joined by "\n") -> (page, line in that page), both 1-based; (None, n) without pages."""
+    for pg, t in enumerate(pages or [], 1):
+        k = t.count("\n") + 1
+        if n <= k:
+            return pg, n
+        n -= k
+    return None, n
+
+
+def records(text, p, read="text layer", pages=None):
     recs = []
-    for council, ward, name, party in members(text):
+    pos = []
+    for (council, ward, name, party), (ln, lt) in zip(members(text, pos), pos):
+        pg, pl = where(ln, pages)
         slug, district, body = SLUG.get(council.lower().split()[0], (re.sub(r"[^a-z0-9]+", "-", council.lower()), "",
                                                                     council + " Municipal Council"))
         recs.append((f"councillor:DD:{slug}:{ward}",
                      {"type": "councillor", "state": "DD", "body": body, "body_en": body, "body_type": "Municipal Council",
                       "district": district, "ward_no": ward, "name": name, "party": party_of(party), "party_full": party,
                       "election": p.get("election"), "gazette": p.get("title"), "gazette_date": p.get("date"),
-                      "url": p["url"], "read": read}))
+                      "url": p["url"], "read": read,
+                      "src_pos": {k: v for k, v in (("page", pg), ("line", pl), ("line_text", lt)) if v is not None},
+                      "method": "ocr tesseract eng (300 dpi, psm 6)" if read == "ocr" else "pdf text (pypdf layout)"}))
     return recs
 
 
@@ -160,8 +186,9 @@ def fetch(p, get):
         return [], [], "no answer"
     if not r.content.startswith(b"%PDF"):
         return [], [], "not a pdf"
-    text, read = text_of(r.content)
-    recs = records(text, p, read)
+    pages = []
+    text, read = text_of(r.content, pages)
+    recs = records(text, p, read, pages)
     if not recs:
         return [], [], "no member list"           # most gazettes in the window are other notices: nothing kept
     key = hashlib.sha1(p["url"].encode()).hexdigest()[:12]

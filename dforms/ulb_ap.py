@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_ap"
 URL = "https://apcmms.ap.gov.in/apiv1/public/web/ulbdetails/ulbprofiles"
 GRADES = {"CORP": "Municipal Corporation", "NP": "Nagar Panchayat"}
@@ -32,7 +34,7 @@ def parse(text, url=URL):
     data = json.loads(text) if isinstance(text, (str, bytes)) else text
     rows = data.get("data") if isinstance(data, dict) else data
     recs, seen = [], set()
-    for o in rows or []:
+    for i, o in enumerate(rows or []):
         listed = _esw.clean(o.get("ulb_nm"))
         if not listed:
             continue
@@ -45,7 +47,8 @@ def parse(text, url=URL):
         recs.append(_ulb.record(MODULE, "AP", body, "Commissioner", seen, name=name, phone=phone, district=_esw.clean(o.get("dstrt_nm")),
                                 body_type=body_type(o.get("ulb_grde_nm")), source=url, name_list=listed if listed.title() != body else None,
                                 grade=_esw.clean(o.get("ulb_grde_nm")) or None, ulb_id=o.get("ulb_id"),
-                                election_wards=o.get("election_wards"), web_subdomain=site or None))
+                                election_wards=o.get("election_wards"), web_subdomain=site or None,
+                                src_pos={"key": "data", "index": i, "ulb_id": o.get("ulb_id")}))
     return recs
 
 

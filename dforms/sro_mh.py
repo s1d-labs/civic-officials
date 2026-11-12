@@ -14,7 +14,11 @@ Record ids: dept:sro_mh:MH-SRO-<slug of district>-<slug of office>.
 """
 import re
 
+import provenance
 from dforms import _esw
+from dforms._pdftext import block_pos
+
+METHOD = "pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sro_mh"
 BASE = "https://igrmaharashtra.gov.in/pdf/documents/offices/"
@@ -283,7 +287,8 @@ def parse_pages(pages, url, division=None):
             if m and rows and re.search(r"[A-Za-z]$", rows[-1]["office"]):
                 rows[-1]["office"] += m.group(1)          # the end of the previous row's broken name: "Mahabal" + "eshwar"
                 office = m.group(2)
-            rows.append({"office": office, "dist": dist, "dig": dig, "addr": addr, "f": f, "sr": int(sr)})
+            rows.append({"office": office, "dist": dist, "dig": dig, "addr": addr, "f": f, "sr": int(sr),
+                         "pos": block_pos(n + 1, lines, [head + 1 + j for j in range(lo, hi) if body[j].strip()])})
     for row in rows:
         office, dist, f, addr = row["office"], row["dist"], row["f"], row["addr"]
         post = "DIG of Registration" if re.match(r"DIG\b", office) else \
@@ -308,7 +313,7 @@ def parse_pages(pages, url, division=None):
                                 dig=row["dig"], phone=std0(_esw.phones(f.get("landline", ""))), email=_esw.emails(f.get("email", "")),
                                 address=addr if pin in addr else f"{addr} {pin}", pincode=pin, state="MH", district=dist,
                                 office_id=key, source=url, lat=lat, lon=lon, sr_no=row["sr"], division=division,
-                                office_time=f.get("time")))
+                                office_time=f.get("time"), src_pos=row.get("pos")))
     return recs
 
 

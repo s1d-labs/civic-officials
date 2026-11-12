@@ -4,6 +4,8 @@ dforms/_leg_neva.py). The list comes in Punjabi first; the reader reads it again
 """
 from dforms import _leg_neva
 
+METHOD = 'html cards (NeVA member list, div.search-item)'     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "leg_pb"
 HOST = "pvs.neva.gov.in"
 ALIAS = {}

@@ -19,6 +19,8 @@ import re
 
 from cforms.cr_common import table_members
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 POSTS = {"प्रमुख": "President", "ઉપપ્રમુખ": "Vice President", "પ્રમુખ": "President", "उपाध्यक्ष": "Vice Chairperson",
          "अध्यक्ष": "Chairperson", "Mayor": "Mayor", "Deputy Mayor": "Deputy Mayor", "Sr. Deputy Mayor": "Senior Deputy Mayor"}
 
@@ -35,7 +37,8 @@ def post(s):
 
 def records(html, p):
     out, seen = [], set()
-    for i, m in enumerate(table_members(html), 1):
+    pos = []
+    for i, (m, sp) in enumerate(zip(table_members(html, pos), pos), 1):
         w = m.get("ward_no") or f"s{i}"
         if w in seen:                            # a second seat of the same ward (two tables, or a multi-member ward)
             w = f"{w}-{i}"
@@ -46,7 +49,7 @@ def records(html, p):
              "email": m.get("email"), "address": m.get("address"), "father": m.get("father"),
              "reservation": m.get("reservation"), "post": m.get("position"),
              "position": post(m.get("position")),
-             "election": p.get("election"), "note": p.get("note"), "url": p["url"]}
+             "election": p.get("election"), "note": p.get("note"), "url": p["url"], "src_pos": sp}
         out.append((f"councillor:{p['state']}:{p['slug']}:{w}", {k: v for k, v in d.items() if v not in (None, "")}))
     return out
 

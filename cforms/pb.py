@@ -9,6 +9,8 @@ import gzip
 import json
 import re
 
+METHOD = "json api (lbpams POST search)"     # source trail (provenance.py): how this reader reads its sources
+
 URL = "https://lbpams.punjab.gov.in/prodapi/api/ResultDeclarationEndpoint/GetPublicResultReportDetailed1"
 TYPES = {4: "Municipal Corporation", 5: "Municipal Council", 6: "Nagar Panchayat"}
 
@@ -45,4 +47,7 @@ def fetch(p, get):
     if js.get("totalCount") and js["totalCount"] > len(js.get("data") or []):
         return [], files, f"only {len(js['data'])} of {js['totalCount']} rows"
     recs = [record(x, TYPES.get(t)) for x in rows]
+    idx = {id(x): i for i, x in enumerate(js.get("data") or [])}
+    for x, (_, d) in zip(rows, recs):      # source trail: the row's place in the answer's "data" list
+        d["src_pos"] = {"key": "data", "index": idx[id(x)], **({"id": x["Id"]} if x.get("Id") is not None else {})}
     return recs, files, "" if recs else "no winners"

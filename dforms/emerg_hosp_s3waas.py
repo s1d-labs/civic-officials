@@ -18,6 +18,8 @@ from urllib.parse import urlparse
 from dforms import _civic, _emerg
 from dforms.police_s3waas import cards, last_updated
 
+METHOD = "html cards (S3WaaS public utility, paged /page/N/)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_hosp_s3waas"
 EMERG = re.compile(r"(?i)\b(casualty|emergency|trauma|ambulance)\b[^:\d|]{0,15}:?\s*((?:\+?\d[\d -]{6,}\d[,/ ]*)+)")
 CONTACT = re.compile(r"(?i)(?:contact|phone|ph|mob(?:ile)?|tel|landline)[^:\d]{0,12}:?\s*((?:\+?\d[\d -]{5,}\d[,/ ]*)+)")
@@ -49,7 +51,8 @@ def records(pages, p):
     lu = next((last_updated(h) for _, h in pages if last_updated(h)), None)
     recs, seen = [], set()
     for url, html in pages:
-        for c in cards(html):
+        cw = []
+        for ci, c in enumerate(cards(html, cw)):
             name = _emerg.clean(c.get("title"))
             if not name:
                 continue
@@ -67,7 +70,8 @@ def records(pages, p):
                 pincode=re.sub(r"\D", "", c.get("pincode") or c.get("pin code") or "")[:6] or None,
                 facility_type=kind, website=_emerg.clean(c.get("website")),
                 ambulances_govt=count(r"government ambulance", adr), ambulances_108=count(r"(?:mems\s*)?108 ambulance", adr),
-                district=p.get("district"), state=p.get("state"), office_id=key, source=url, last_updated=lu))
+                district=p.get("district"), state=p.get("state"), office_id=key, source=url, last_updated=lu,
+                src_url=url, src_pos=cw[ci]))
     return recs
 
 

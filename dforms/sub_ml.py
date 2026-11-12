@@ -13,7 +13,10 @@ date is site-wide). Record ids: dept:sub_ml:ML-<district slug>:dc, dept:sub_ml:M
 """
 import re
 
+from dforms._trail import tr_pos
 from dforms import _esw
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub_ml"
 BASE = "https://meghalaya.gov.in/key-contacts/"
@@ -74,7 +77,7 @@ def parse(html, url, page):
         post = "Deputy Commissioner" if page == "dc" else "Superintendent of Police"
         rec = _esw.record(MODULE, key, dept="administration" if page == "dc" else "police", level="district", area=d, post=post,
                           designation=desig, name=name, phone=c["phone"], fax=c["fax"], email=c["email"], address=c["address"],
-                          district=d, state="ML", source=url)
+                          district=d, state="ML", source=url, src_pos=tr_pos(tr))
         if rec[1].get("name") or rec[1].get("phone") or rec[1].get("email"):
             recs.append(rec)
     return recs

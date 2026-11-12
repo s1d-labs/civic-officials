@@ -15,6 +15,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "html page (p.ceo-desig-block)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_up"
 STATE = "UP"
 YEIDA = "https://yamunaexpresswayauthority.com/"
@@ -31,7 +33,7 @@ def parse(html, body, district=None, url=YEIDA, lgd_code=None, body_type=None):
     recs, seen = [], set()
     tel = soup.find("a", href=re.compile(r"^tel:"))
     office = _esw.phones(tel.get_text(" ")) if tel else ""
-    for p in soup.select("p.ceo-desig-block"):
+    for k, p in enumerate(soup.select("p.ceo-desig-block"), 1):
         s = p.find("strong")
         name = _esw.clean(s.get_text(" ") if s else "")
         if s:
@@ -40,7 +42,8 @@ def parse(html, body, district=None, url=YEIDA, lgd_code=None, body_type=None):
         if not name or not post:
             continue
         extra = {k: v for k, v in (("lgd_code", lgd_code), ("office_phone", office)) if v}
-        recs.append(_ulb.record(MODULE, STATE, body, post, seen, name=name, district=district, body_type=body_type, source=url, **extra))
+        recs.append(_ulb.record(MODULE, STATE, body, post, seen, name=name, district=district, body_type=body_type, source=url,
+                                src_pos={"selector": "p.ceo-desig-block", "block": k}, **extra))
         break                   # the block stands twice (once in an HTML comment); the first is the live one
     return recs
 

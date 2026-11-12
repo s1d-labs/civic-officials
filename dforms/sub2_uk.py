@@ -27,7 +27,10 @@ import json
 import re
 import time
 
+import provenance
 from dforms import _esw
+
+METHOD = "html table (S3WaaS tabular directory) + json api (directory_paginate pages)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub2_uk"
 URL = "https://ukrd.uk.gov.in/directory/"
@@ -53,8 +56,12 @@ def ajax_url(html):
     return m.group(1).replace("\\/", "/") if m else ""
 
 
-def _rows(table):
-    return [r for r in _esw.grid(table) if not (r and r[0].strip().lower() == "name")]
+def _rows(table, where=None):
+    tp = []
+    out = [(r, p) for r, p in zip(_esw.grid(table, pos=tp), tp) if not (r and r[0].strip().lower() == "name")]
+    if where is not None:
+        where.extend(p for _, p in out)
+    return [r for r, _ in out]
 
 
 def tabular_sections(html):
@@ -71,12 +78,13 @@ def tabular_sections(html):
         cap = t.find("caption")
         tp = sec.get("data-params", "")
         pages = [int(a["data-page-id"]) for a in sec.select("[data-page-id]") if str(a.get("data-page-id", "")).isdigit()]
+        pos = []
         out.append({"caption": _esw.clean(cap.get_text(" ")) if cap else "", "term_params": tp, "term_id": _b64json(tp).get("term_id"),
-                    "rows": _rows(t), "pages": max(pages or [1])})
+                    "rows": _rows(t, pos), "pages": max(pages or [1]), "pos": pos})
     return params, out
 
 
-def answer_rows(text):
+def answer_rows(text, where=None):
     """Rows of one "directory_paginate" answer ([] when the answer is not a success)."""
     try:
         obj = json.loads(text)
@@ -85,14 +93,15 @@ def answer_rows(text):
     if not obj.get("success") or not isinstance(obj.get("data"), dict):
         return []
     content = obj["data"].get("content") or ""
-    return _rows(_esw.soup(f"<table>{content}</table>").find("table"))
+    return _rows(_esw.soup(f"<table>{content}</table>").find("table"), where)
 
 
 def stale(text):
     return "invalid nonce" in (text or "").lower()
 
 
-def paginate(get, ajax, params, section, files, module=MODULE, tag=""):
+def paginate(get, ajax, params, section, files, module=MODULE, tag="", where=None):
+    """where: a list; when given, it gets (src_pos, provenance.at(answer)) for each row returned."""
     """The further pages of one section: (rows, stale nonce?). Each answer is kept in files."""
     rows = []
     for n in range(2, section["pages"] + 1):
@@ -103,10 +112,15 @@ def paginate(get, ajax, params, section, files, module=MODULE, tag=""):
         files.append(_esw.keep(module, f"{tag}term-{section['term_id']}-p{n}", r.content, "json"))
         if stale(r.text):
             return rows, True
-        got = answer_rows(r.text)
+        pos = []
+        got = answer_rows(r.text, pos)
         if not got:
             break
         rows += got
+        if where is not None:
+            src = provenance.at(r, ajax)
+            where += [({"action": "directory_paginate", "term_id": section["term_id"], "pageno": n, "field": "data.content", **q}, src)
+                      for q in pos]
     return rows, False
 
 
@@ -136,9 +150,10 @@ def _person(name):
     return "" if not re.search(r"[A-Za-z]{2}", n) or re.fullmatch(r"(?i)(vacant|n/?a|-+)", n) else n
 
 
-def build(rows, dist, source, seen):
+def build(rows, dist, source, seen, where=None):
+    """where: (src_pos, src) per row of rows."""
     recs = []
-    for r in rows:
+    for r, (pos, src) in zip(rows, where or [(None, {})] * len(rows)):
         if len(r) < 3 or not BDO.search(r[1]):
             continue
         name, post, address = _person(r[0]), _esw.clean(r[1]).strip(" ,."), r[-1]
@@ -154,7 +169,8 @@ def build(rows, dist, source, seen):
             key, i = f"{base}:{i}", i + 1
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept="rural_development", level="block", area=area, area_local=local, post=post,
-                                name=name, phone=phone, email=email, address=address, district=dist, state="UK", source=source))
+                                name=name, phone=phone, email=email, address=address, district=dist, state="UK", source=source,
+                                src_pos=pos, **(src or {})))
     return recs
 
 
@@ -166,22 +182,28 @@ def fetch(p, get):
     files = [_esw.keep(MODULE, "directory", r.content)]
     params, sections = tabular_sections(r.text)
     ajax = ajax_url(r.text) or url.split("/directory")[0] + "/wp-admin/admin-ajax.php"
-    extra, fresh = {}, None
+    extra, fresh, extra_at = {}, None, {}
     for s in sections:
         if s["pages"] < 2:
             continue
-        more, old = paginate(get, ajax, params, s, files)
+        at = []
+        more, old = paginate(get, ajax, params, s, files, where=at)
         if old and fresh is None:        # the cached page's nonce is stale: ask the page once without the cache
             f = get(f"{url}?nc={int(time.time())}")
             fresh = tabular_sections(f.text)[0] if f is not None else ""
             if f is not None:
                 files.append(_esw.keep(MODULE, "directory-fresh", f.content))
         if old and fresh:
-            more, _ = paginate(get, ajax, fresh, s, files, tag="fresh-")
+            at = []
+            more, _ = paginate(get, ajax, fresh, s, files, tag="fresh-", where=at)
         extra[s["term_id"]] = more
+        extra_at[s["term_id"]] = at[:len(more)]
     recs, seen = [], set()
     for s in sections:
         if not s["caption"].lower().startswith("district"):
             continue
-        recs += build(s["rows"] + extra.get(s["term_id"], []), district(s["caption"]), url, seen)
+        page = provenance.at(r, url)
+        where = [(q, page) for q in s.get("pos", [])] + extra_at.get(s["term_id"], [])
+        rows = s["rows"] + extra.get(s["term_id"], [])
+        recs += build(rows, district(s["caption"]), url, seen, where + [(None, {})] * (len(rows) - len(where)))
     return recs, files, "" if recs else "no rows"

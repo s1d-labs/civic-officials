@@ -28,6 +28,8 @@ import re
 
 from dforms import _esw, _ulb
 
+METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb_rj"
 URL = "https://lsg.rajasthan.gov.in/webapi/PublicPortal/DepartmentWebsite/GetDepartmentContactDetail"
 SOURCE = "https://lsg.rajasthan.gov.in/"
@@ -102,8 +104,10 @@ def body_of(x):
 
 def parse(data, url=URL):
     rows = data["Data"]["Data"] if isinstance(data.get("Data"), dict) else data.get("Data") or []
+    path = "Data.Data" if isinstance(data.get("Data"), dict) else "Data"
     best = {}
-    for x in rows:
+    for i, x in enumerate(rows):
+        x = {**x, "_index": i}
         if x.get("IsPDF") and not (val(x, "OfficerName") or val(x, "MobileNo")):
             continue
         b = body_of(x)
@@ -125,7 +129,8 @@ def parse(data, url=URL):
     for x, body, district, btype, kind, post, name, name_hi, phone, email in sorted(best.values(), key=lambda v: int(v[0].get("Id") or 0)):
         recs.append(_ulb.record(MODULE, "RJ", body, post, seen, name=name, phone=phone, email=email, district=district, body_type=btype,
                                 source=SOURCE, name_regional=name_hi or None, post_regional=val(x, "DesignationNameHindi") or None,
-                                list_site=_esw.clean(x.get("DepartmentTitle")), list_kind=kind, contact_id=x.get("Id")))
+                                list_site=_esw.clean(x.get("DepartmentTitle")), list_kind=kind, contact_id=x.get("Id"),
+                                src_pos={"key": path, "index": x["_index"], "Id": x.get("Id")}))
     return recs
 
 

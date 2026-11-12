@@ -13,7 +13,10 @@ Record ids: dept:ward2s_bhagalpur:<zone or ward-N or body>:<post slug>:<name slu
 """
 import re
 
+import provenance
 from dforms import _esw, _ward, _ward_kd as kd
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2s_bhagalpur"
 BODY, LGD, STATE, DISTRICT = "Bhagalpur Nagar Nigam", "249630", "BR", "Bhagalpur"
@@ -55,19 +58,25 @@ def _people(lines):
 def parse(pages, p):
     text = "\n".join(pages)
     lines = text.splitlines()
+    at = _ward.joined_at(pages)
+
+    def pos(i, **more):
+        return provenance.line_pos(at[i][0], at[i][1], lines[i], **more) if i < len(at) else None
     first = next((i for i, ln in enumerate(lines) if re.match(r"\s*1\s{2,}\S", ln) and MOBILE.search(ln)), len(lines))
     seen, recs, src = set(), [], p.get("url") or URL
     # head: blocks between blank lines, each with its label
-    blocks, cur = [], []
-    for ln in lines[:first]:
+    blocks, cur, starts = [], [], []
+    for i, ln in enumerate(lines[:first]):
         if ln.strip():
+            if not cur:
+                starts.append(i)
             cur.append(ln)
         elif cur:
             blocks.append(cur)
             cur = []
     if cur:
         blocks.append(cur)
-    for b in blocks:
+    for b, b0 in zip(blocks, starts):
         m = next((LABEL.search(ln) for ln in b if LABEL.search(ln)), None)
         if not m:
             continue
@@ -83,17 +92,19 @@ def parse(pages, p):
         for name, agency, phone in _people(b):
             recs.append(_ward.record(MODULE, f"{zone_key}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}", seen, body=BODY, lgd=LGD,
                                      state=STATE, district=DISTRICT, level=level, area=area, zone=zone, post=post, name=name,
-                                     phone=phone, wards=wards, source=src, agency=agency or None, wing="sanitation"))
+                                     phone=phone, wards=wards, source=src, agency=agency or None, wing="sanitation",
+                                     src_pos=pos(b0, lines_in_block=len(b))))
     # ward table: Kruti Dev names
-    rows = [m.groups() for ln in lines[first:] for m in WARD_ROW.finditer(ln)]
+    found = [(m.groups(), i) for i, ln in enumerate(lines[first:], first) for m in WARD_ROW.finditer(ln)]
+    rows = [g for g, _ in found]
     is_kd = kd.is_krutidev(" ".join(r[1] for r in rows))
-    for ward, raw, phone in rows:
+    for (ward, raw, phone), li in found:
         name = kd.convert(raw) if is_kd or not re.search("[ऀ-ॿ]", raw) else raw
         name = _esw.clean(name)
         w = str(int(ward))
         recs.append(_ward.record(MODULE, f"ward-{w}:{_esw.slug(WARD_POST)}:{phone}", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level="ward", area=f"Ward {w}", post=WARD_POST, name=name, name_regional=name,
-                                 phone=phone, wards=[w], source=src, wing="sanitation"))
+                                 phone=phone, wards=[w], source=src, wing="sanitation", src_pos=pos(li)))
     return recs
 
 

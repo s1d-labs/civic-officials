@@ -10,7 +10,10 @@ The e-mail list (Official-Email-IDs.pdf, 2025-07) is not read: its link was not 
 """
 import re
 
+import provenance
 from dforms._power import Out, clean, raw, pdf_pages, slug
+
+METHOD = "pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 # pdftotext puts the mobile last; pypdf's layout mode may put it first, glued to the text ("9245048628Director ...")
 ROW = re.compile(r"^\s*(?:\d{1,2}\s+)?(?:(?P<m1>\d{10})\s*(?P<t1>\S.*?)|(?P<t2>.*?)\s+(?P<m2>\d{10}))\s*$")
@@ -35,7 +38,8 @@ def area_of(office):
 def parse_pages(pages, zone, source):
     out = Out("power_mepdcl", "ML", source, discom="MePDCL")
     circle, pend = None, ""
-    for line in "\n".join(pages).splitlines():
+    plines = []                                   # (page, line) of the lines in pend: source trail
+    for pn, ln, line in ((pn, ln, x) for pn, t in enumerate(pages, 1) for ln, x in enumerate(t.splitlines(), 1)):
         s = " ".join(line.split())
         if not s or re.match(r"(?i)^(Sl\.?\s*No|Key Helpline|Meghalaya Power)", s):
             continue
@@ -46,12 +50,14 @@ def parse_pages(pages, zone, source):
             s = re.sub(r"^\d{1,2}\s+", "", s)
             if DES.match(s) or pend:
                 pend = f"{pend} {s}".strip()
+                plines.append((pn, ln, line))
             elif re.search(r"(?i)\b(Circle|Zone)\b", s) and not DES.match(s):
                 circle = s if re.search(r"(?i)circle", s) else circle
             continue
         mob, body = (m.group("m1"), m.group("t1")) if m.group("m1") else (m.group("m2"), m.group("t2"))
         text = f"{pend} {body}".strip()
-        pend = ""
+        here = [x for x in plines if x[0] == pn] + [(pn, ln, line)]
+        pend, plines = "", []
         d = DES.match(text)
         if not d:
             continue
@@ -66,7 +72,8 @@ def parse_pages(pages, zone, source):
             area = area_of(office)
         out.add(f"{zone}-{post}-{office}", lvl, area, post=post, phone_=mob,
                 parents={"zone": f"{zone} Zone" if lvl != "zone" else None, "circle": circle if lvl in ("division", "subdivision") else None},
-                office=office)
+                office=office, src_pos=provenance.line_pos(pn, here[0][1], "\n".join(x[2] for x in here),
+                                                           lines=[x[1] for x in here] if len(here) > 1 else None))
     return out.recs
 
 

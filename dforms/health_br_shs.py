@@ -17,7 +17,10 @@ Ids: dept:health_br_shs:<district|block>:<site district id>[:<block>]:<post>:<na
 """
 import re
 
+import provenance
 from dforms import _esw
+
+METHOD = "html table (ajax POST pages)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "health_br_shs"
 BASE = "https://shs.bihar.gov.in/"
@@ -44,7 +47,7 @@ def parse(html, kind, did, district):
     s = _esw.soup(html)
     recs = []
     head = None
-    for tr in s.find_all("tr"):
+    for n, tr in enumerate(s.find_all("tr"), 1):
         cells = [_esw.cell_text(c) for c in tr.find_all(["td", "th"])]
         if tr.find("th") or (cells and cells[0].lower().startswith("sl")):
             head = [c.lower() for c in cells]
@@ -65,7 +68,7 @@ def parse(html, kind, did, district):
         recs.append(_esw.record(MODULE, key, dept=dept, level="block" if kind == "block" else "district",
                                 area=block or district, block=block or None, post=post, name=name, phone=phone, fax=fax or None,
                                 email=email, district=district, district_site=row.get("district") or None, state="BR",
-                                source=PAGE, page=PAGE, serial=cells[0]))
+                                source=PAGE, page=PAGE, serial=cells[0], src_pos={"row": n}))
     return recs
 
 
@@ -92,6 +95,10 @@ def fetch(p, get):
                 break
             files.append(_esw.keep(MODULE, f"{did}/{kind}-{page}", r.content))
             got = parse(r.text, kind, did, district)
+            src = provenance.at(r, BASE + path)        # one url, one answer per page: the hash names the answer
+            for _, d in got:
+                d.update(src)
+                d["src_pos"] = {"ajax_page": page, **d.get("src_pos", {})}   # row: <tr> number in the answer's html
             recs += got
             last = pages(r.text)
             page += 1

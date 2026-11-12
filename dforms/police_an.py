@@ -5,16 +5,19 @@ No officer names. The next block (fire stations) ends the read. Record id dept:p
 import io
 import re
 
+from provenance import line_pos
 from dforms._police import clean, phones, rec, slug, uniq
+
+METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_an"
 URL = "https://andamannicobar.gov.in/pdf/Police%20Suo%20Motu.pdf"
 ROW = re.compile(r"^\s*\d+\.\s+((?:PS|OP)\s.+?)\s+((?:\+?\d[\d\s,/-]{5,})+)$")
 
 
-def parse(texts, url=URL):
+def parse(texts, url=URL, first_page=1):
     recs, mode = [], None
-    for t in texts:
+    for pg, t in enumerate(texts, first_page):
         lines = (t or "").splitlines()
         i = 0
         while i < len(lines):
@@ -37,7 +40,7 @@ def parse(texts, url=URL):
                 i += 1
             area = m.group(1)
             recs.append(rec(M, slug(area), area=area, office_type=mode, post="Station (landline)", phone=phones(num),
-                            state="AN", source=url))
+                            state="AN", source=url, src_pos=line_pos(pg, i, lines[i - 1])))
     return uniq(recs)
 
 
@@ -50,15 +53,16 @@ def fetch(p, get):
     if r.content[:5] != b"%PDF-":
         return [], files, "not a pdf"
     from pypdf import PdfReader
-    texts = []
+    texts, first = [], 1
     try:
-        for page in PdfReader(io.BytesIO(r.content)).pages:
+        for n, page in enumerate(PdfReader(io.BytesIO(r.content)).pages, 1):
             t = page.extract_text() or ""
             if texts or "Police Stations with Landline Phone Numbers" in t:
+                first = first if texts else n
                 texts.append(t)
             if texts and "Fire Stations with Landline" in t:
                 break
     except Exception as e:
         return [], files, f"pdf: {type(e).__name__}"
-    recs = parse(texts, url)
+    recs = parse(texts, url, first)
     return recs, files, "" if recs else "no rows"

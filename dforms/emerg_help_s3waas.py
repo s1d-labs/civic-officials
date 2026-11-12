@@ -27,6 +27,8 @@ from urllib.parse import urlparse
 from dforms import _emerg, _esw
 from dforms.police_s3waas import last_updated
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "emerg_help_s3waas"
 
 DEPTS = [  # (dept, pattern) in order: the first match wins
@@ -115,7 +117,8 @@ def records(url, html, p):
     recs, seen = [], set()
     for table in content.find_all("table"):
         head = heading_before(table, content)
-        for cells in _esw.grid(table):
+        gp = []
+        for cells, rp in zip(_esw.grid(table, pos=gp), gp):
             labels, numtext = split_row(cells)
             if not labels:
                 continue
@@ -150,7 +153,8 @@ def records(url, html, p):
                 post=post.group(0) if post else None, name=person.group(0) if person else None,
                 phone=nums, std_code=std.group(1) if std else None, short_codes=_emerg.short_codes(numtext) or None,
                 email=_emerg.emails(" ".join(cells)) or None,
-                district=p.get("district"), state=p.get("state"), office_id=key, source=url, last_updated=lu))
+                district=p.get("district"), state=p.get("state"), office_id=key, source=url, last_updated=lu,
+                src_pos={**rp, "cells": cells}))
     return recs
 
 

@@ -11,7 +11,11 @@ Record ids dept:power2_tpddl:<district>:csm and dept:power2_tpddl:<district>:off
 """
 import re
 
+import provenance
+from dforms._pdftext import block_pos
 from dforms._power import Out, clean, pdf_pages, phone, raw
+
+METHOD = "pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MOD = "power2_tpddl"
 CHARTER = "https://www.tatapower-ddl.com/Editor_UploadedDocuments/Content/Customer_Charter_2025.pdf"
@@ -23,7 +27,7 @@ def _runs(line):
     return [(m.start(), m.group(0)) for m in RUN.finditer(line)]
 
 
-def parse_charter(text, url=CHARTER):
+def parse_charter(text, url=CHARTER, page=None):
     out = Out(MOD, "DL", url, discom="Tata Power-DDL")
     lines = text.splitlines()
     a = next((i for i, l in enumerate(lines) if "Manager" in l and "District" not in l), None)
@@ -45,13 +49,14 @@ def parse_charter(text, url=CHARTER):
                 items.append((i, "mid", t))
     if not anchors:
         return out.recs
-    by = {k: {"mid": [], "right": []} for k in range(len(anchors))}
+    by = {k: {"mid": [], "right": [], "at": set(range(anchors[k][0], anchors[k][2] + 1))} for k in range(len(anchors))}
     for i, kind, t in items:
         pool = range(len(anchors))
         if kind == "mid" and re.match(r"(?i)(district office|tata power)", t):   # an address starts: it belongs to the next label
             pool = [j for j in pool if anchors[j][0] >= i] or list(pool)
         k = min(pool, key=lambda j: (abs(anchors[j][0] - i), anchors[j][0]))
         by[k][kind].append(t)
+        by[k]["at"].add(i)
     for k, (_, district, _) in enumerate(anchors):
         names, cur = [], []
         for t in by[k]["right"]:
@@ -62,21 +67,25 @@ def parse_charter(text, url=CHARTER):
         if cur:
             names.append(" ".join(cur))
         out.add(f"{district}:csm", "district", f"{clean(district)} District", post="Customer Service Manager",
-                name=", ".join(names) or None, address=" ".join(by[k]["mid"]), district=None, document="Customer Charter 2025")
+                name=", ".join(names) or None, address=" ".join(by[k]["mid"]), district=None, document="Customer Charter 2025",
+                src_pos=block_pos(page, lines, by[k]["at"]))
     return out.recs
 
 
 def parse_ccc(text, url=CCC):
+    """text: the PDF's text, or its pages as a list (then each record gets its page and line)."""
     out = Out(MOD, "DL", url, discom="Tata Power-DDL")
     district = None
-    for line in text.splitlines():
+    pages = text if isinstance(text, list) else [text]
+    for pn, ln, line in ((pn, ln, x) for pn, t in enumerate(pages, 1) for ln, x in enumerate(t.splitlines(), 1)):
         runs = _runs(line)
         if runs and runs[0][0] < 15 and not re.match(r"(?i)district|customer|please", runs[0][1]):
             district = runs[0][1]
         m = re.search(r"Contact\s*No\.?\s*([\d\s-]{8,})", line)
         if m and district:
             out.add(f"{district}:office", "district", f"{clean(district)} District", post="District Customer Care Centre",
-                    phone_=phone(m.group(1).strip()), document="Customer Care Centres list (April 2021)")
+                    phone_=phone(m.group(1).strip()), document="Customer Care Centres list (April 2021)",
+                    src_pos=provenance.line_pos(pn, ln, line) if isinstance(text, list) else None)
     return out.recs
 
 
@@ -90,8 +99,8 @@ def fetch(p, get):
         return [], [], "not a PDF"
     pages = pdf_pages(r.content)
     if part == "charter":
-        page = next((t for t in pages if "Annexure-A" in t and "CUSTOMER CARE" in t.upper()), "")
-        recs = parse_charter(page, url)
+        pno = next((i for i, t in enumerate(pages, 1) if "Annexure-A" in t and "CUSTOMER CARE" in t.upper()), None)
+        recs = parse_charter(pages[pno - 1] if pno else "", url, pno)
     else:
-        recs = parse_ccc("\n".join(pages), url)
+        recs = parse_ccc(pages, url)
     return recs, [raw(MOD, part, r.content, "pdf")], "" if recs else "no rows"

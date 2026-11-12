@@ -12,6 +12,8 @@ Not India-only (S3WaaS sites answer from Germany).
 """
 from dforms import _ulb2_ne
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_mn"
 STATE = "MN"
 MC = "Municipal Council"

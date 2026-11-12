@@ -11,7 +11,9 @@ source value when it differs. Record ids: dept:civic_fps2_pb:<fps_id>.
 """
 import re
 
-from dforms import _civic_fps, _esw
+from dforms import _civic, _civic_fps, _esw
+
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_fps2_pb"
 STATE = "PB"
@@ -84,7 +86,7 @@ def parse(html, dist_code, office_code="", office="", district=""):
             name=name, name_source=src_name if src_name != name else "", phone=_civic_fps.unmasked(mob), state=STATE,
             district=district, subdistrict=office, block=office, afso_code=office_code, fps_id=fid, office_id=fid,
             terminal_id="" if _civic_fps.MASKED.search(term) else _civic_fps.name_of(term), total_cards=int(cards) if cards.isdigit() else None, dist_code=dist_code,
-            source=f"{BASE}/dfso_fps_details"))
+            source=f"{BASE}/dfso_fps_details", src_pos=_civic.tr_pos(tr)))
     return recs
 
 
@@ -102,7 +104,7 @@ def fetch(p, get):
         if a is None:
             continue
         files.append(_esw.keep(MODULE, f"fps-{code}-{oc}", a.content))
-        for rid, d in parse(a.text, code, oc, oname, district):
+        for rid, d in _civic.tag(parse(a.text, code, oc, oname, district), a, f"{BASE}/fps_aso_details.action"):
             if rid not in seen:                               # a shop shows once, under its first office
                 seen.add(rid)
                 recs.append((rid, d))

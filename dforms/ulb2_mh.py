@@ -32,6 +32,9 @@ from pathlib import Path
 
 from dforms import _esw, _ulb
 
+METHOD = "pdf text (pypdf plain mode)"     # sec_president, charge_order; office_list / office_page records say "html page text"
+METHOD_HTML = "html page text (pattern match)"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ulb2_mh"
 SEC_URL = "https://mahasec.maharashtra.gov.in/Upload/PDF/President.pdf"
 SOURCES = (  # key, kind, state, url, india_only, extra payload
@@ -74,18 +77,29 @@ def plain_text(content):
     return " ".join(_esw.clean(p.extract_text() or "") for p in r.pages), made
 
 
-def sec_rows(text, first=1):
+def page_starts(content):
+    """Offsets in plain_text's joined text where each page starts (source trail: an offset -> its page)."""
+    from pypdf import PdfReader
+    out, n = [], 0
+    for p in PdfReader(io.BytesIO(content)).pages:
+        out.append(n)
+        n += len(_esw.clean(p.extract_text() or "")) + 1
+    return out
+
+
+def sec_rows(text, first=1, where=None):
     """[{sr, division, district, body, reservation, name, gender, votes}] from the plain text of President.pdf (rows from Sr. No.
-    `first` on; a test sample may start in the middle)."""
+    `first` on; a test sample may start in the middle). where: a list; when given, it gets (character offset, row text) per row."""
     out, pos, n = [], 0, first
     starts = []
     while True:
         m = re.compile(rf"(?:^|\s){n}\s+{DIVISIONS}\s").search(text, pos)
         if not m:
             break
-        starts.append((n, m.start(), m.end(), m.group(1)))
+        starts.append((n, m.start() + (m.group(0)[0].isspace()), m.end(), m.group(1)))
         pos, n = m.end(), n + 1
     for i, (sr, _s, e, div) in enumerate(starts):
+        raw = text[_s:starts[i + 1][1] if i + 1 < len(starts) else len(text)]
         chunk = text[e:starts[i + 1][1] if i + 1 < len(starts) else len(text)].split()
         dist = None
         for d in sorted(DISTRICTS, key=len, reverse=True):
@@ -108,22 +122,29 @@ def sec_rows(text, first=1):
         votes = "unopposed" if votes.startswith("UNOPP") else votes
         out.append({"sr": sr, "division": " ".join(div.split()), "district": dist, "body": body, "reservation": res,
                     "name": " ".join(rest[:gi]), "gender": "F" if rest[gi].startswith("F") else "M", "votes": votes})
+        if where is not None:
+            where.append((_s, raw.strip()))
     return out
 
 
 def parse_sec(content, url=SEC_URL):
-    return parse_sec_text(*plain_text(content), url=url)
+    return parse_sec_text(*plain_text(content), url=url, starts=page_starts(content))
 
 
-def parse_sec_text(text, made=None, url=SEC_URL):
+def parse_sec_text(text, made=None, url=SEC_URL, starts=None):
     """Records from the plain text of President.pdf; made = the PDF's creation date (yyyy-mm-dd), written as last_updated."""
     recs, seen = [], set()
-    for r in sec_rows(text):
+    import bisect
+    where = []
+    for r, (off, row_text) in zip(sec_rows(text, where=where), where):
         lgd = LGD.get(lgd_key(r["district"], r["body"]))
+        pg = bisect.bisect_right(starts, off) if starts else None
+        pos = {"page": pg, "offset": off - starts[pg - 1] if pg else off, "line_text": row_text}
+        pos = {k: v for k, v in pos.items() if v is not None}     # offset = character offset of the row in its page's plain text
         recs.append(_ulb.record(MODULE, "MH", r["body"], "President", seen, name=r["name"], district=r["district"].title(),
                                 source=url, lgd_code=lgd, reservation=r["reservation"], gender=r["gender"], votes=r["votes"],
                                 election="Municipal council and nagar panchayat general election 2025-26 (direct election of the president)",
-                                sec_sr=r["sr"], last_updated=made))
+                                sec_sr=r["sr"], last_updated=made, src_pos=pos))
     return recs
 
 
@@ -140,12 +161,13 @@ def parse_office_list(html, district, body_type, url, state="MH", module=MODULE)
     main = soup.find(id="wpb-content-root") or soup.find("main") or soup      # the S3WaaS page body (WPBakery root)
     text = _esw.clean(main.get_text(" "))
     recs, seen = [], set()
-    for m in ENTRY.finditer(text):
+    for k, m in enumerate(ENTRY.finditer(text), 1):
         body = re.sub(r"^(Municipal\s+Council|Nagar\s+Panchayat)\s+", "", m.group(1).strip())
         email = _esw.emails(m.group(4))
         extra = {"mailbox": "chief officer"} if re.match(r"(?i)co[._]?[a-z]", email or "") else {}
         recs.append(_ulb.record(module, state, body, "Office", seen, phone=m.group(3), email=email, district=district,
-                                body_type=_esw.clean(m.group(2)), source=url, lgd_code=OFFICE_LGD.get(body.lower()), **extra))
+                                body_type=_esw.clean(m.group(2)), source=url, lgd_code=OFFICE_LGD.get(body.lower()),
+                                src_pos={"selector": "page text", "match": k, "line_text": m.group(0)}, method=METHOD_HTML, **extra))
     return recs
 
 
@@ -158,11 +180,12 @@ def parse_order(text, district, url, state="GA", module="ulb2_ga"):
     d = re.search(r"Dated\s*:?\s*(\d{1,2})\s*[/.\- ]\s*(\d{1,2})\s*[/.\- ]\s*(\d{4})", t)
     date = f"{d.group(3)}-{int(d.group(2)):02d}-{int(d.group(1)):02d}" if d else None
     recs, seen = [], set()
-    for m in CHARGE.finditer(t):
+    for k, m in enumerate(CHARGE.finditer(t), 1):
         title = m.group(1) + "." if m.group(1) in ("Smt", "Dr", "Ms") else m.group(1)
         recs.append(_ulb.record(module, state, m.group(4), "Chief Officer", seen, name=f"{title} {m.group(2)}", district=district,
                                 body_type="Municipal Council", source=url, own_post=_esw.clean(m.group(3)), charge="additional charge",
-                                last_updated=date))
+                                last_updated=date, src_pos={"selector": "pdf plain text", "match": k, "line_text": m.group(0)},
+                                method=METHOD))
     return recs
 
 
@@ -175,6 +198,7 @@ def parse_office_page(html, district, url, state="DD", module="ulb2_dd"):
     body = re.sub(r"\s+Municipal\s+Council$", "", m.group(1).strip())
     return [_ulb.record(module, state, body, "Office", set(), phone=m.group(2), email=m.group(4), district=district,
                         body_type="Municipal Council", source=url, address=m.group(3),
+                        src_pos={"selector": "page text", "match": 1, "line_text": m.group(0)}, method=METHOD_HTML,
                         last_updated=f"{up.group(3)}-{int(up.group(2)):02d}-{int(up.group(1)):02d}" if up else None)]
 
 

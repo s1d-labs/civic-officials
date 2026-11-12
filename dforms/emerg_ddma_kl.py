@@ -19,6 +19,9 @@ import re
 
 from dforms import _emerg
 from dforms._pdftext import layout_pages
+from provenance import line_pos
+
+METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "emerg_ddma_kl"
 URL = "https://sdma.kerala.gov.in/wp-content/uploads/2025/06/DM-Directory-2025_23.pdf"
@@ -64,9 +67,11 @@ def split(line):
     return line[:m.start()].strip(" -:;,"), line[m.start():].strip(), m.start()
 
 
-def rows(pages):
-    """[(part, level, district, section, no, post, phone text)] from the directory's pages."""
+def rows(pages, where=None):
+    """[(part, level, district, section, no, post, phone text)] from the directory's pages. where (a list) gets the src_pos of
+    each row's first line: {"page", "line", "line_text"} (1-based page, 1-based line in that page's text)."""
     out, part, level, district, section, cur = [], None, "state", None, "", None
+    at = [(pn, k) for pn, pg in enumerate(pages, 1) if "PAGE NO" not in pg for k, _ in enumerate(pg.split("\n"), 1)]
     lines = [ln for pg in pages if "PAGE NO" not in pg for ln in pg.split("\n")]
 
     def nxt_row(i):
@@ -102,6 +107,8 @@ def rows(pages):
             post, ph, _ = split(m.group(2))
             cur = [part, level, district, section, int(m.group(1)), post, ph]
             out.append(cur)
+            if where is not None:
+                where.append(line_pos(*at[i], ln))
             continue
         if part == "district" and not re.search(r"\d{3,}", s) and (SECTIONS.match(s) or nxt_row(i)) and len(s) < 60:
             section, cur = s, None
@@ -128,9 +135,9 @@ def dept_of(section, post, part):
     return "other"
 
 
-def records(pages, url=URL):
-    recs, seen = [], set()
-    for part, level, district, section, no, post, ph in rows(pages):
+def records(pages, url=URL, engine=None):
+    recs, seen, where = [], set(), []
+    for n, (part, level, district, section, no, post, ph) in enumerate(rows(pages, where)):
         phone = _emerg.phones(ph)
         helpline = _emerg.short_codes(ph)
         if not (phone or helpline) or not post:
@@ -156,7 +163,7 @@ def records(pages, url=URL):
         recs.append(_emerg.record(
             MODULE, key, "ddma", dept=dept_of(section, post, part), level=lvl, area=area or "Kerala", post=post, phone=phone,
             helpline=helpline, section=section, part=part, district=district, state="KL", office_id=key, source=url,
-            last_updated="2025-05-25"))
+            last_updated="2025-05-25", src_pos=where[n], **({"method": f"pdf text ({engine})"} if engine else {})))
     return recs
 
 
@@ -172,6 +179,6 @@ def fetch(p, get):
     if r.content[:5] != b"%PDF-":
         return [], [], "not a PDF"
     files = [_emerg.keep(MODULE, "dm-directory-2025", r.content, ext="pdf")]
-    pages, _ = layout_pages(r.content)
-    recs = records(pages, url)
+    pages, engine = layout_pages(r.content)
+    recs = records(pages, url, _emerg.ENGINE.get(engine))
     return recs, files, "" if recs else "no rows"

@@ -14,6 +14,8 @@ import re
 
 from dforms import _esw, _ward
 
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+
 MODULE = "ward2n_pimprichinchwad"
 BODY, LGD, STATE, DISTRICT = "Pimpri Chinchwad Municipal Corporation", "251528", "MH", "Pune"
 BASE = "https://www.pcmcindia.gov.in"
@@ -50,7 +52,8 @@ def zones(html):
     soup = _esw.soup(html)
     out, cur = {}, None
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        gp = []
+        g = _esw.grid(t, pos=gp)
         if t.get("id", "").endswith("-zone") and g:
             cells = [c for c in g[0] if c]
             parts = [p.strip() for p in cells[0].split("|")]
@@ -60,10 +63,12 @@ def zones(html):
             contact = re.sub(r"(?i)mail\s*:?-\s*", "mail: ", " | ".join(cells[1:]))
             phone = ", ".join(dict.fromkeys(_esw.phones(re.sub(r"(?i)mo\.?[\d/\s]+", " ", contact)).split(", ") + mobiles(contact)))
             cur = out[x] = {"name": parts[0], "address": ", ".join(p.strip(" ,") for p in parts[1:] if p.strip(" ,")),
-                            "phone": phone.strip(", "), "email": _esw.emails(contact), "wards": []}
+                            "phone": phone.strip(", "), "email": _esw.emails(contact), "wards": [],
+                            "pos": {"table": _esw.table_no(t), "selector": f"table#{t.get('id')}", "row": gp[0]["row"]}}
             continue
         if cur is not None and g and "प्रभाग" in g[0][0]:
-            for r in g[1:]:
+            cur["pos"]["ward_table"] = _esw.table_no(t)
+            for r, rp in zip(g[1:], gp[1:]):
                 n = _esw.clean(r[0]).translate(DIGITS)
                 if re.fullmatch(r"\d{1,3}", n) and n not in cur["wards"]:
                     cur["wards"].append(str(int(n)))
@@ -100,7 +105,7 @@ def parse(zone_html, hod_pages, p):
         recs.append(_ward.record(MODULE, f"{x.lower()}:zone-office", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level="zone",
                                  area=f"{x} Zonal Office", area_regional=d["name"], zone=f"{x} Zone", post="Zonal Office",
                                  address=d["address"], phone=d["phone"], email=d["email"], wards=d["wards"], wing="administration",
-                                 source=URL))
+                                 source=URL, src_url=p.get("url") or URL, src_pos=d.get("pos")))
     for url, html in hod_pages:
         x, h = hod(html)
         if not x or not (h["name"] or h["email"] or h["mobile"]):
@@ -110,7 +115,7 @@ def parse(zone_html, hod_pages, p):
                                  area=f"{x} Zonal Office", area_regional=z.get(x, {}).get("name") or REGIONAL[x],
                                  zone=f"{x} Zone", post=post_en(h["post"]), post_regional=h["post"], name=name, name_regional=name,
                                  email=h["email"], phone=h["mobile"], address=h["address"], wards=z.get(x, {}).get("wards"),
-                                 source=url))
+                                 source=url, src_url=url, src_pos={"selector": "div.commissionerSection table tr"}))
     return recs
 
 
