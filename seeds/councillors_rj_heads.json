@@ -1,0 +1,4 @@
+[
+ {"key": "rj-heads-61-chair", "payload": {"kind": "form-rj_chair", "state": "RJ", "url": "https://sec.rajasthan.gov.in/ChairpersonNomination.aspx?code=CEM", "post": "chair", "period": "61", "period_label": "SEP 2026", "expected": 309}},
+ {"key": "rj-heads-61-vice", "payload": {"kind": "form-rj_chair", "state": "RJ", "url": "https://sec.rajasthan.gov.in/DyChairpersonNomination.aspx?code=CEM", "post": "vice", "period": "61", "period_label": "SEP 2026", "expected": 309}}
+]
