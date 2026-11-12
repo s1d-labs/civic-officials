@@ -336,3 +336,31 @@ def test_table_members_ward_column():
             "<tr><td>1</td><td>7</td><td>A B</td><td>9876543210</td></tr></table>")
     d = cp.table_members(html, "HR", "X", "https://x/", record_prefix="councillor:HR:x")[0]
     assert d["ward_no"] == "7" and d["record_for"] == "councillor:HR:x:7"
+
+
+def test_tn_list_pdf_karaikudi():
+    # Karaikudi publishes only a PDF (www.tnurbantree.tn.gov.in/karaikudi/wp-content/uploads/sites/33/2025/07/
+    # All-councilors-photos-English.pdf, fetched 2026-11-12 from Mumbai): 36 rows, the address over the lines above and below,
+    # ward 14 without a member. Fixture: ../cp_tn_karaikudi_list.pdf
+    content = (DATA.parent / "cp_tn_karaikudi_list.pdf").read_bytes()
+    p = {"body": "காரைக்குடி", "lgd_code": "252863", "record_prefix": "councillor:TN:mun-svg:காரைக்குடி", "name_en": "Karaikudi"}
+    recs = {d["ward_no"]: d for d in cp_tn.pdf_list(content, p, "https://x/list.pdf")}
+    assert len(recs) == 35 and "14" not in recs and all(d.get("phone") for d in recs.values())
+    assert recs["1"]["name"] == "Karthikeyan M." and recs["1"]["phone"] == "9003669463"
+    assert recs["1"]["address"].startswith("No.29, V.O.C. Road") and recs["1"]["address"].endswith("Karaikudi.")
+    assert recs["13"]["phone"] == "9894344572" and recs["13"]["address"].startswith("Kizhamel")
+    assert recs["16"]["phone"] == "9865790532" and "9865790532" not in recs["16"]["address"]
+    assert recs["36"]["address"] == "No.145, Pudusanthai East, Karaikudi"
+    assert recs["20"]["record_for"] == "councillor:TN:mun-svg:காரைக்குடி:20" and recs["20"]["src_pos"]["page"] == 2
+    assert recs["20"]["src_pos"]["line_text"].split()[:3] == ["20", "Ward", "20"]
+
+
+def test_tn_tamil_table_bhavani():
+    # Bhavani's councillor page has Tamil column heads only (wp-json search answer, first 2 hits, fetched 2026-11-12 from Mumbai)
+    pages = json.loads((DATA / "tn_bhavani_search.json").read_text())
+    (link, recs), _ = cp_tn.best_page(pages, {"body": "பவானி", "record_prefix": "councillor:TN:mun-erd:பவானி"})
+    assert link.endswith("/bhavani/municipal-councillors/") and len(recs) == 27
+    d = {r["ward_no"]: r for r in recs}
+    assert d["1"]["name"] == "க ச வடிவேல்" and d["1"]["phone"] == "9994140124" and d["1"]["address"] == "24, சொக்கராயன் நகர், பவானி"
+    assert "phone" not in d["2"] and d["2"]["address"].startswith("880,")
+    assert d["27"]["record_for"] == "councillor:TN:mun-erd:பவானி:27" and d["27"]["src_pos"]["row"] == 28
