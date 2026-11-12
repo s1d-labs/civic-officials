@@ -60,7 +60,8 @@ def parse_zones(html, p):
             wards = [_esw.clean(s.get_text()) for s in pane.find_all("span", class_="wardno")]
         recs.append(_ward.record(MODULE, f"{_esw.slug(zone)}:deputy-commissioner:{_esw.slug(dc) or 'post'}", seen, body=BODY, lgd=LGD,
                                  state=STATE, district=DISTRICT, level="zone", area=zone, zone=zone, post="Deputy Commissioner",
-                                 name=dc, wards=wards, wing="administration", source=p["url"]))
+                                 name=dc, wards=wards, wing="administration", source=p["url"],
+                                 src_pos={"selector": f"div#{tab} ul.wardsummary"}))
     return recs
 
 
@@ -86,7 +87,7 @@ def parse_officers(html, p):
             level, area, wards = "division", f"Division {div.group(1)}", None
         recs.append(_ward.record(MODULE, f"{_esw.slug(area)}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}", seen, body=BODY, lgd=LGD,
                                  state=STATE, district=DISTRICT, level=level, area=area, zone=zone, post=post, name=name, phone=phone,
-                                 email=email, wards=wards, source=p["url"]))
+                                 email=email, wards=wards, source=p["url"], src_pos=_ward.nth(li)))
     return recs
 
 

@@ -44,13 +44,14 @@ def parse(html, p):
         zone = m.group(1)
         recs.append(_ward.record(MODULE, f"{_esw.slug(zone)}:zonal-office", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level="zone", area=f"{zone} Zonal Office", zone=zone, post="Zonal Office",
-                                 phone=m.group(2), source=p["url"], last_updated=upd))
+                                 phone=m.group(2), source=p["url"], last_updated=upd,
+                                 src_pos={"selector": ".field--name-body text", "match": m.group(0)[:300]}))
     e = ELEC.search(text)
     if e:
         recs.append(_ward.record(MODULE, "electricity-department", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                                  level="body", area=BODY, post="Electricity Department", wing="electrical",
                                  phone=re.sub(r"(\d)\s*-\s*(\d)", r"\1-\2", re.sub(r"(?i).*?\bPh\s*:", "", e.group(1))), email=e.group(1), source=p["url"],
-                                 last_updated=upd))
+                                 last_updated=upd, src_pos={"selector": ".field--name-body text", "match": e.group(0)[:300]}))
     return recs
 
 

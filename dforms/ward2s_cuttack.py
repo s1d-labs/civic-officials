@@ -43,13 +43,14 @@ def split(value):
 def parse(html, p):
     soup = _esw.soup(html)
     box = soup.select_one("div.ward-details") or soup
-    lines = {}
-    for para in box.find_all("p"):
+    lines, at = {}, {}
+    for pi, para in enumerate(box.find_all("p"), 1):
         st = para.find("strong")
         if not st:
             continue
         label = _esw.clean(st.get_text(" ")).rstrip(":").lower()
         lines[label] = _esw.clean(para.get_text(" ").replace(st.get_text(" "), "", 1)).lstrip(": ")
+        at[label] = pi
     m = re.search(r"\d+", next((v for k, v in lines.items() if "name of the ward" == k), "") or "")
     ward = str(int(m.group())) if m else str(p.get("ward") or "")
     if not ward:
@@ -57,12 +58,15 @@ def parse(html, p):
     seen, recs = set(), []
     for word, post in POSTS:
         value = next((v for k, v in lines.items() if word in k), "")
+        lab = next((k for k in lines if word in k), "")
         name, phone = split(value)
         if not (name or phone):
             continue
         recs.append(_ward.record(MODULE, f"w{ward}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}", seen, body=BODY, lgd=LGD,
                                  state=STATE, district=DISTRICT, level="ward", area=f"Ward {ward}", post=post, name=name,
-                                 phone=phone, wards=[ward], source=p["url"]))
+                                 phone=phone, wards=[ward], source=p["url"],
+                                 src_pos={"selector": ("div.ward-details " if box is not soup else "") + "p", "index": at.get(lab),
+                                          "label": lab}))
     return recs
 
 

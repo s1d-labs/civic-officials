@@ -70,7 +70,7 @@ def parse_admin(html, p):
                                          area=", ".join(divs) + (" Division" if len(divs) == 1 else " Divisions"),
                                          zone=", ".join(divs), post=f"{post} ({section})" if section and section.lower() not in post.lower() else post,
                                          phone=phone, email=email, divisions=divs, department=", ".join(dept_names),
-                                         wing=_ward.wing_of(f"{section} {post}"), last_updated=upd, source=p["url"]))
+                                         wing=_ward.wing_of(f"{section} {post}"), last_updated=upd, source=p["url"], src_pos=_ward.tr_pos(tr)))
             elif len(tds) == 2 and all(td.find("h2") for td in tds):
                 for td in tds:
                     name = _esw.clean(td.find("h2").get_text())
@@ -83,7 +83,7 @@ def parse_admin(html, p):
                                              state=STATE, district=DISTRICT, level="zone",
                                              area=f"{divs[0] if divs else name} Division", zone=divs[0] if divs else name,
                                              post="Divisional Office", address=addr, phone=re.sub(r"(?i)phone\s*:?", "", ph),
-                                             email=body, wing="administration", last_updated=upd, source=p["url"]))
+                                             email=body, wing="administration", last_updated=upd, source=p["url"], src_pos=_ward.tr_pos(tr)))
     return recs
 
 
@@ -105,7 +105,9 @@ def parse_officer(html, p):
     return [_ward.record(MODULE, f"{_esw.slug(div)}:divisional-officer", set(), body=BODY, lgd=LGD, state=STATE, district=DISTRICT,
                          level="zone", area=f"{div} Division", area_regional=f["office"] or None, zone=div, post=post,
                          post_regional=f["post"] or None, name=f["name"], name_regional=f["name"] or None, phone=f["phone"],
-                         email=f["email"], wing="administration", last_updated=last_updated(soup), source=p["url"])]
+                         email=f["email"], wing="administration", last_updated=last_updated(soup), source=p["url"],
+                         src_pos={"selector": "page text", "kind": "label value pairs",
+                                  "labels": ["विभागाचे नाव", "विभाग प्रमुख / खाते प्रमुख", "पद", "संपर्क नंबर / मोबाइल नंबर", "ई-मेल आयडी"]})]
 
 
 def parse(html, p):

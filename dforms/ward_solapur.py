@@ -35,7 +35,7 @@ def parse(html, p):
         area = f"Divisional Office No. {m.group(1)}"
         recs.append(_ward.record(MODULE, f"div{m.group(1)}:{_esw.slug(name) or 'post'}", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level="zone", area=area, zone=area, post=post, name=name, phone=phone,
-                                 email=email, wing="administration", charge=charge.group(1) if charge else None, source=p["url"]))
+                                 email=email, wing="administration", charge=charge.group(1) if charge else None, source=p["url"], src_pos=_ward.nth(card)))
     return recs
 
 
