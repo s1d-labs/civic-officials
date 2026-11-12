@@ -39,7 +39,8 @@ def rows(html):
     """[(row dict name/post/phone/email)] of every table with a name and a designation column."""
     out = []
     for t in _esw.soup(html).find_all("table"):
-        g = _esw.grid(t, lambda td: _esw.clean(td.get_text(" ")))
+        tp = []
+        g = _esw.grid(t, lambda td: _esw.clean(td.get_text(" ")), pos=tp)
         if not g:
             continue
         cols = roles(g[0])
@@ -48,13 +49,14 @@ def rows(html):
         # the mobile column too, when the table has an office phone column and a mobile column
         mob = next((i for i, h in enumerate(g[0]) if re.search(r"(?i)mobile", h) and i != cols.get("phone")), None)
         width = len(g[0])
-        for r in g[1:]:
+        for r, pos in zip(g[1:], tp[1:]):
             off = width - len(r)                     # a short row: the first (spanned) columns are missing
 
             def at(i):
                 return r[i - off] if i is not None and 0 <= i - off < len(r) else ""
             cell = {k: at(i) for k, i in cols.items()}
             cell["phone"] = ", ".join(x for x in (cell.get("phone", ""), at(mob)) if _esw.clean(x))
+            cell["_pos"] = pos          # source trail: {"table", "row"}
             out.append(cell)
     return out
 
@@ -73,7 +75,7 @@ def parse(module, state, html, rules, district=None, url=""):
             done.add(k)
             recs.append(_ulb.record(module, state, body, post, seen, name=row.get("name", ""), phone=row.get("phone", ""),
                                     email=row.get("email", ""), district=district, body_type=btype, source=url,
-                                    lgd_code=lgd or None, last_updated=lu))
+                                    lgd_code=lgd or None, last_updated=lu, src_pos=row.get("_pos")))
             if role and role[0] and recs[-1][1]["role"] != role[0]:
                 recs[-1][1].update(role=role[0], role_from="rule")
     return recs

@@ -56,6 +56,8 @@ def val(x, k):
 
 def parse(data, url=URL):
     rows = data["Data"]["Data"] if isinstance(data.get("Data"), dict) else data.get("Data") or []
+    path = "Data.Data" if isinstance(data.get("Data"), dict) else "Data"
+    rows = [{**x, "_index": i} for i, x in enumerate(rows)]       # source trail: the place in the answer's list
     rows = sorted(rows, key=lambda x: (str(x.get("ModifiedDate") or ""), int(x.get("UserId") or 0)), reverse=True)
     recs, seen = [], set()
     for x in rows:
@@ -79,7 +81,8 @@ def parse(data, url=URL):
                                 body_type=_esw.clean(m.group(1)).title(), source=SOURCE, list_name=office,
                                 post_regional=val(x, "DesignationNameHindi") or None, nodal_type=val(x, "UserType") or None,
                                 user_id=x.get("UserId"), row_created=val(x, "UserCreateDate")[:10] or None,
-                                row_modified=val(x, "ModifiedDate")[:10] or None, api=url, **extra))
+                                row_modified=val(x, "ModifiedDate")[:10] or None, api=url,
+                                src_pos={"key": path, "index": x["_index"], "UserId": x.get("UserId")}, **extra))
     return recs
 
 

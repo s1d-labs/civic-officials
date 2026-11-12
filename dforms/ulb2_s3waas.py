@@ -38,7 +38,7 @@ from urllib.parse import urlparse
 from dforms import _civic, _esw, _ulb
 from dforms.police_s3waas import cards as _cards, last_updated
 
-METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (S3WaaS public utility, .public-utlty-catg)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb2_s3waas"
 MAX_PAGES = 30
@@ -258,7 +258,7 @@ def lgd_table():
     return _LGD
 
 
-def record_of(c, p, url, host, seen, lu=None):
+def record_of(c, p, url, host, seen, lu=None, pos=None):
     """One dept_office record for one card (None when the card names no body)."""
     d = card_fields(c)
     title, addr = _esw.clean(d["title"]), _esw.clean(d["address"])
@@ -303,7 +303,8 @@ def record_of(c, p, url, host, seen, lu=None):
     rid, data = _ulb.record(MODULE, p["state"], body, post, seen, name=name, phone=phone, email=email, district=p.get("district"),
                             body_type=m.group(1) if m else None, source=url, latin=lat or None, area_latin=lat, lgd_code=lgd,
                             address=addr or None, pincode=re.sub(r"\D", "", d.get("pincode") or "")[:6] or None,
-                            website=d.get("website") or None, post_from=how, last_updated=lu, site=host, notes=note)
+                            website=d.get("website") or None, post_from=how, last_updated=lu, site=host, notes=note,
+                            src_url=url, src_pos=pos)
     data["role"] = role(post)
     return rid, data
 
@@ -313,8 +314,13 @@ def records(pages, p):
     lu = next((last_updated(h) for _, h in pages if last_updated(h)), None)
     recs, seen = [], set()
     for url, html in pages:
-        for c in _cards(html):
-            r = record_of(c, p, url, host, seen, lu)
+        where = []
+        try:
+            cs = _cards(html, where)
+        except TypeError:          # police_s3waas.cards without positions
+            cs, where = _cards(html), []
+        for i, c in enumerate(cs):
+            r = record_of(c, p, url, host, seen, lu, where[i] if i < len(where) else {"selector": ".public-utlty-catg"})
             if r:
                 recs.append(r)
     return recs

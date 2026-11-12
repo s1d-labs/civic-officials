@@ -25,7 +25,7 @@ from pathlib import Path
 
 from dforms import _esw, _ulb
 
-METHOD = "json api + html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (flip cards div#block-*, .frontside)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb2_ka"
 STATE = "KA"
@@ -118,7 +118,8 @@ def parse(html, body, site, url="", district=None, lgd_code=None):
             continue
         extra = {"lgd_code": lgd_code} if lgd_code else {}
         recs.append(_ulb.record(MODULE, STATE, area, post, seen, name=name, district=district, body_type=btype, source=url,
-                                list_name=body, card=bid.replace("block-", ""), **extra))
+                                list_name=body, card=bid.replace("block-", ""), src_pos={"selector": f"div#{bid} .frontside"},
+                                **extra))
     return recs, why
 
 

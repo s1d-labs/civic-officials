@@ -26,7 +26,7 @@ import re
 
 from dforms import _esw, _ulb
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table"     # source trail (provenance.py); tgnew pages: "html cards (div.bg-card)" on each record
 
 MODULE = "ulb2_tg"
 STATE = "TG"
@@ -107,14 +107,17 @@ def header_map(cells):
 
 
 def tables(soup):
-    """Every (heading map, data rows) of the page's tables that have a Name and a Designation column."""
+    """Every (heading map, data rows, row positions) of the page's tables that have a Name and a Designation column; positions =
+    src_pos {"table", "row"} of each data row (row = its <tr> number among the table's find_all("tr"), 1-based)."""
     for tb in soup.find_all("table"):
-        rows = [[_esw.clean(c.get_text(" ")) for c in tr.find_all(["td", "th"])] for tr in tb.find_all("tr")]
-        rows = [r for r in rows if any(r)]
-        for i, r in enumerate(rows):
+        tno = _esw.table_no(tb)
+        rows = [([_esw.clean(c.get_text(" ")) for c in tr.find_all(["td", "th"])], {"table": tno, "row": n})
+                for n, tr in enumerate(tb.find_all("tr"), 1)]
+        rows = [(r, q) for r, q in rows if any(r)]
+        for i, (r, _) in enumerate(rows):
             h = header_map(r)
             if "name" in h and "post" in h:
-                yield h, rows[i + 1:]
+                yield h, [x for x, _ in rows[i + 1:]], [q for _, q in rows[i + 1:]]
                 break
 
 
@@ -135,13 +138,13 @@ def common(p):
 def parse_cdma(html, p, seen=None):
     soup, seen = _esw.soup(html), seen if seen is not None else set()
     recs = []
-    for h, rows in tables(soup):
-        for r in rows:
+    for h, rows, where in tables(soup):
+        for r, pos in zip(rows, where):
             g = {f: (r[i] if i < len(r) else "") for f, i in h.items()}
             if not g.get("post") or not (g.get("name") or g.get("phone") or g.get("email")):
                 continue
             recs.append(_ulb.record(MODULE, STATE, p["body"], g["post"], seen, name=g.get("name", ""), phone=g.get("phone", ""),
-                                    email=g.get("email", ""), page=p.get("page"), **common(p)))
+                                    email=g.get("email", ""), page=p.get("page"), src_pos=pos, **common(p)))
     o = kv(soup)
     office = {k: v for k, v in (("office_phone", _esw.phones(next((v for k, v in o.items() if "contact number" in k), ""))),
                                 ("office_email", _esw.emails(next((v for k, v in o.items() if "email" in k), ""))),
@@ -151,7 +154,8 @@ def parse_cdma(html, p, seen=None):
             recs[0][1].update(office)
         else:
             recs.append(_ulb.record(MODULE, STATE, p["body"], "Office", seen, phone=office.get("office_phone", ""),
-                                    email=office.get("office_email", ""), address=office.get("address"), page=p.get("page"), **common(p)))
+                                    email=office.get("office_email", ""), address=office.get("address"), page=p.get("page"),
+                                    src_pos={"selector": "tr with 'Email ids:' / 'Contact Number:' / 'Address:'"}, **common(p)))
     return recs
 
 
@@ -166,7 +170,7 @@ def cards(html, p, page, seen):
     soup = _esw.soup(html)
     main = soup.find("main") or soup
     recs = []
-    for c in main.find_all("div", class_="bg-card"):
+    for k, c in enumerate(main.find_all("div", class_="bg-card"), 1):
         h = c.find(["h2", "h3"])
         post = _esw.clean(h.get_text(" ")) if h else ""
         if not post:
@@ -177,7 +181,8 @@ def cards(html, p, page, seen):
         email = _esw.emails(" ".join(a["href"][7:] for a in c.find_all("a", href=re.compile("^mailto:"))))
         if name or phone or email:
             recs.append(_ulb.record(MODULE, STATE, p["body"], post.title(), seen, name=name, phone=phone, email=email, page=page,
-                                    **dict(common(p), source=p["page_url"])))
+                                    src_url=p["page_url"], src_pos={"selector": "main div.bg-card", "card": k},
+                                    method="html cards (div.bg-card)", **dict(common(p), source=p["page_url"])))
     return recs
 
 
@@ -213,9 +218,12 @@ def fetch_tgnew(p, get):
             office = {k: v for k, v in (("address", addr), ("office_phone", ph), ("office_email", em)) if v}
             if recs:
                 recs[0][1].update(office)
+                if office:
+                    recs[0][1]["src_pos"] = {**recs[0][1]["src_pos"], "office_from": base + page}
             elif ph or em:
                 recs.append(_ulb.record(MODULE, STATE, p["body"], "Office", seen, phone=ph, email=em, address=addr or None,
-                                        page=page, **dict(common(p), source=base + page)))
+                                        page=page, src_url=base + page, src_pos={"selector": "contact page"},
+                                        method="html page (contact)", **dict(common(p), source=base + page)))
         else:
             recs += cards(a.text, dict(p, page_url=base + page), page, seen)
     return recs, files, "" if recs else "no rows"
@@ -225,17 +233,17 @@ def parse_ghmc(html, p):
     """Deputy Commissioners of the GHMC circles that were urban bodies until December 2025."""
     soup, seen, recs = _esw.soup(html), set(), []
     want = {c["circle"].lower(): c for c in p.get("circles", [])}
-    for h, rows in tables(soup):
+    for h, rows, where in tables(soup):
         if "circle" not in h:
             continue
-        for r in rows:
+        for r, pos in zip(rows, where):
             g = {f: (r[i] if i < len(r) else "") for f, i in h.items()}
             c = want.get(g.get("circle", "").lower())
             if not c or not re.match(r"(?i)deputy\s+commissioner", g.get("post", "")):
                 continue
             recs.append(_ulb.record(MODULE, STATE, c["body"], g["post"].title(), seen, name=g.get("name", ""), phone=g.get("phone", ""),
                                     email=g.get("email", ""), district=c["district"], lgd_code=c["lgd_code"], source=p["url"],
-                                    merged_into="GHMC", ghmc_circle=g["circle"],
+                                    merged_into="GHMC", ghmc_circle=g["circle"], src_pos=pos,
                                     notes="the body was merged into GHMC (G.O.Ms.No.264, 03.12.2025); this is the officer of its GHMC circle"))
         break                                   # the first table with a Circle column is the Deputy Commissioners' table
     return recs

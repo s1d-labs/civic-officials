@@ -14,9 +14,10 @@ BODIES below (option value | name as the form writes it | LGD district | LGD cod
 import html as _html
 import re
 
+import provenance
 from dforms import _esw, _ulb
 
-METHOD = "pdf text (pypdf) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html page (ASP.NET form answer: ContentPlaceHolderBody_* labels)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb2_jh"
 STATE = "JH"
@@ -105,7 +106,8 @@ def labels(page):
     return out
 
 
-def parse(page, body, district=None, lgd=None, url=URL):
+def parse(page, body, district=None, lgd=None, url=URL, src=None):
+    """src: provenance.at() of the form answer (the url is asked twice: GET for the form, POST for the body)."""
     lab = labels(page)
     area, btype = split_type(body)
     phone = lab["phone"] if re.sub(r"\D", "", lab["phone"]).strip("0") else ""
@@ -113,6 +115,8 @@ def parse(page, body, district=None, lgd=None, url=URL):
               if v}
     common = {"district": district, "body_type": btype, "list_name": body, "lgd_code": lgd, **office}
     seen = set()
+    common.update(src or {})
+    common["src_pos"] = {"selector": "span#ContentPlaceHolderBody_*", "labels": sorted(LABELS.values())}
     name = lab["eo"] if re.search(r"[A-Za-zऀ-ॿ]", lab["eo"]) else ""
     mob = lab["eo_mobile"] if re.sub(r"\D", "", lab["eo_mobile"]).strip("0") else ""
     if name or mob:
@@ -135,5 +139,5 @@ def fetch(p, get):
     if r2 is None:
         return [], [], "no answer to the form"
     files = [_esw.keep(MODULE, _esw.slug(p["body"]), r2.content)]
-    recs = parse(r2.text, p["body"], p.get("district"), p.get("lgd_code"), p["url"])
+    recs = parse(r2.text, p["body"], p.get("district"), p.get("lgd_code"), p["url"], provenance.at(r2, p["url"]))
     return recs, files, "" if recs else "no rows"

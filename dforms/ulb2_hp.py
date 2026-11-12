@@ -15,7 +15,7 @@ Not India-only: mcnadaun.in, mchamirpur.com and npamb.in answered from Germany o
 """
 from dforms import _esw, _ulb2_nw
 
-METHOD = "pdf text (pypdf) + json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (start page and its officer / contact pages)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb2_hp"
 STATE = "HP"

@@ -40,14 +40,15 @@ def items(get=None):
 def parse_directory(html, district=None, url=YANAM):
     recs, seen = [], set()
     for t in _esw.soup(html).find_all("table"):
-        rows = _esw.grid(t)
+        tp = []
+        rows = _esw.grid(t, pos=tp)
         if not rows:
             continue
         head = [h.lower() for h in rows[0]]
         if "designation" not in head:
             continue
         ix = {k: next((i for i, h in enumerate(head) if k in h), None) for k in ("name", "designation", "email", "mobile", "landline", "fax")}
-        for r in rows[1:]:
+        for r, pos in zip(rows[1:], tp[1:]):
             def col(k):
                 i = ix[k]
                 return r[i] if i is not None and i < len(r) else ""
@@ -62,7 +63,7 @@ def parse_directory(html, district=None, url=YANAM):
             if _esw.phones(col("fax").replace("+91-", "")):
                 extra["fax"] = _esw.phones(col("fax"))
             recs.append(_ulb.record(MODULE, STATE, body, post, seen, name=col("name"), phone=col("mobile"), email=col("email"),
-                                    district=district, body_type="Municipality", source=url, **extra))
+                                    district=district, body_type="Municipality", source=url, src_pos=pos, **extra))
     return recs
 
 
@@ -81,13 +82,13 @@ def parse_home(html, body, district=None, url=OULGARET, lgd_code=None):
     lu = last_updated(soup)
     if lu:
         extra["last_updated"] = lu
-    for card in soup.select("div.who-card"):
+    for k, card in enumerate(soup.select("div.who-card"), 1):
         h, p = card.find("h4"), card.find("p")
         post, name = _esw.clean(h.get_text(" ") if h else ""), _esw.clean(p.get_text(" ") if p else "")
         if not post or not name or STATE_POSTS.search(post):
             continue
         recs.append(_ulb.record(MODULE, STATE, body, post, seen, name=name, district=district, body_type="Municipality", source=url,
-                                **extra))
+                                src_pos={"selector": "div.who-card", "card": k}, method="html cards (div.who-card)", **extra))
     return recs
 
 
