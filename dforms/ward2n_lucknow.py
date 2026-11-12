@@ -9,6 +9,7 @@ Records: level "zone"; ids dept:ward2n_lucknow:<zones slug>:<post slug>.
 """
 import re
 
+import provenance
 from dforms import _esw, _ward, _ward_kd as kd
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map + spreadsheet"     # source trail (provenance.py): how this reader reads its sources
@@ -27,32 +28,32 @@ def items(get=None):
 
 
 def rows(pages):
-    """[(name kd, post kd, posting, [phones])] of the table rows."""
+    """[(name kd, post kd, posting, [phones], src_pos)] of the table rows (src_pos: the numbered line, "to" its last line)."""
     out = []
-    for pg in pages:
-        for ln in pg.splitlines():
-            cells = [c for c in re.split(r"\s{2,}", ln.strip()) if c]
-            if not cells:
-                continue
-            if re.fullmatch(r"\d{1,3}", cells[0]) and len(cells) >= 3:
-                cur = {"name": cells[1], "post": cells[2], "area": [], "phones": []}
-                rest = cells[3:]
-                out.append(cur)
-            elif out:
-                cur, rest = out[-1], cells
-            else:
-                continue
-            for c in rest:
-                if re.fullmatch(r"[\d/,\s-]+", c):
-                    cur["phones"] += re.findall(r"\d{10,11}", c)
-                elif DEVA.search(c):
-                    cur["area"].append(c)
-    return [(r["name"], r["post"], " ".join(r["area"]), r["phones"]) for r in out]
+    for pn, lno, ln in _ward.pdf_lines(pages):
+        cells = [c for c in re.split(r"\s{2,}", ln.strip()) if c]
+        if not cells:
+            continue
+        if re.fullmatch(r"\d{1,3}", cells[0]) and len(cells) >= 3:
+            cur = {"name": cells[1], "post": cells[2], "area": [], "phones": [], "pos": provenance.line_pos(pn, lno, ln)}
+            rest = cells[3:]
+            out.append(cur)
+        elif out:
+            cur, rest = out[-1], cells
+            cur["pos"]["to"] = {"page": pn, "line": lno}      # the row goes on over this line
+        else:
+            continue
+        for c in rest:
+            if re.fullmatch(r"[\d/,\s-]+", c):
+                cur["phones"] += re.findall(r"\d{10,11}", c)
+            elif DEVA.search(c):
+                cur["area"].append(c)
+    return [(r["name"], r["post"], " ".join(r["area"]), r["phones"], r["pos"]) for r in out]
 
 
 def parse(pages, p):
     seen, recs = set(), []
-    for name_kd, post_kd, area, phones in rows(pages):
+    for name_kd, post_kd, area, phones, pos in rows(pages):
         area = _ward.hi_norm(area).replace("जेान", "जोन")
         zones = re.findall(r"\d+", area) if "जोन" in area else []
         if not zones:
@@ -65,7 +66,8 @@ def parse(pages, p):
         recs.append(_ward.record(MODULE, f"zone-{'-'.join(zones)}:{_esw.slug(en)}", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level="zone", area=area_en, area_regional=area, zone=area_en, post=en,
                                  post_regional=post_hi, name=name, name_regional=name or None, phone=", ".join(phones),
-                                 wing=WINGS.get(en), last_updated="2026-10-01", source=p["url"]))
+                                 wing=WINGS.get(en), last_updated="2026-10-01", source=p["url"],
+                                 src_pos=pos))
     return recs
 
 

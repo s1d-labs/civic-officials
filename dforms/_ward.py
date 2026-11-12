@@ -13,6 +13,7 @@ wards_of() reads ward lists as the sources write them ("31, 32, 46", "1 to 10", 
 """
 import re
 
+import provenance
 from dforms import _esw
 
 WINGS = (
@@ -100,18 +101,67 @@ def record(module, key, seen, *, body, lgd, state, level, area, post, source, na
                        source=source, **extra)
 
 
+def tag(recs, r, url=None, method=None, pos=None):
+    """Source trail for records parsed from one response r of a multi-source item: src_url + src_sha256 (provenance.at), and
+    method / src_pos when given and the record has none yet. Returns recs."""
+    src = provenance.at(r, url)
+    for _, d in recs:
+        for k, v in src.items():
+            d.setdefault(k, v)
+        if method:
+            d.setdefault("method", method)
+        if pos:
+            d.setdefault("src_pos", pos)
+    return recs
+
+
+def pdf_lines(pages):
+    """[(page, line, text)] of PDF page texts: 1-based page, 1-based line of that page's text split at line ends."""
+    return [(pn, ln, t) for pn, pg in enumerate(pages, 1) for ln, t in enumerate(pg.splitlines(), 1)]
+
+
+def joined_at(pages):
+    """For each line of "\n".join(pages).splitlines() (the joined text some readers parse): (page, line in that page), both
+    1-based (source trail)."""
+    text = "\n".join(pages).replace("\f", "\n")
+    ends, n = [], 0
+    for pg in pages:
+        n += len(pg) + 1
+        ends.append(n)
+    out, off, pn = [], 0, 0
+    for ln in text.splitlines(True):
+        while pn < len(ends) - 1 and off >= ends[pn]:
+            pn += 1
+        start = ends[pn - 1] if pn else 0
+        out.append((pn + 1, text.count("\n", start, off) + 1))
+        off += len(ln)
+    return out
+
+
+class Row(dict):
+    """A table row dict (header -> cell) that also carries its src_pos as an attribute (not a key: readers walk the items)."""
+    pos = None
+
+
 def header_tables(html, *words, soup=None):
     """[(heading cells, [row dict heading -> cell])] of every table that has a row holding all the words (case-insensitive) in its
-    cells: that row is the heading, the rows below it are the data. rowspan / colspan are carried (_esw.grid)."""
+    cells: that row is the heading, the rows below it are the data. rowspan / colspan are carried (_esw.grid).
+    Each row is a Row: row.pos is its src_pos {"table", "row"}."""
     soup = soup or _esw.soup(html)
     out = []
     for t in soup.find_all("table"):
-        g = _esw.grid(t)
+        pos = []
+        g = _esw.grid(t, pos=pos)
         for i, r in enumerate(g):
             low = [c.lower() for c in r]
             if all(any(w.lower() in c for c in low) for w in words):
                 head = [_esw.clean(c) for c in r]
-                rows = [dict(zip(head, [_esw.clean(c) for c in row])) for row in g[i + 1:] if any(_esw.clean(c) for c in row)]
+                rows = []
+                for row, ps in zip(g[i + 1:], pos[i + 1:]):
+                    if any(_esw.clean(c) for c in row):
+                        d = Row(zip(head, [_esw.clean(c) for c in row]))
+                        d.pos = ps
+                        rows.append(d)
                 out.append((head, rows))
                 break
     return out

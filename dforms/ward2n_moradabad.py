@@ -8,6 +8,7 @@ Names are Hindi: name and name_regional carry the same text. Record ids: dept:wa
 """
 import re
 
+import provenance
 from dforms import _esw, _ward, _ward_kd as kd
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
@@ -24,31 +25,31 @@ def items(get=None):
 
 
 def rows(pages):
-    """[(ward no, ward name kd, supervisor kd, mobile, zone letter)]."""
+    """[(ward no, ward name kd, supervisor kd, mobile, zone letter, src_pos)]."""
     out = []
-    for pg in pages:
-        for ln in pg.splitlines():
-            cells = [c for c in re.split(r"\s{2,}", ln.strip()) if c]
-            if len(cells) < 5 or not re.fullmatch(r"\d{1,2}", cells[0]):
-                continue
-            zi = next((i for i, c in enumerate(cells) if c in ZONES), None)
-            if zi is None or zi < 4:
-                continue
-            sup = cells[zi - 1]
-            m = MOB.search(sup)
-            out.append((str(int(cells[0])), cells[1], _esw.clean(MOB.sub(" ", sup)).strip(" ]"), m.group(1) if m else "",
-                        cells[zi]))
+    for pn, lno, ln in _ward.pdf_lines(pages):
+        cells = [c for c in re.split(r"\s{2,}", ln.strip()) if c]
+        if len(cells) < 5 or not re.fullmatch(r"\d{1,2}", cells[0]):
+            continue
+        zi = next((i for i, c in enumerate(cells) if c in ZONES), None)
+        if zi is None or zi < 4:
+            continue
+        sup = cells[zi - 1]
+        m = MOB.search(sup)
+        out.append((str(int(cells[0])), cells[1], _esw.clean(MOB.sub(" ", sup)).strip(" ]"), m.group(1) if m else "",
+                    cells[zi], provenance.line_pos(pn, lno, ln)))
     return out
 
 
 def parse(pages, p):
     seen, recs = set(), []
-    for ward, wname, sup, mob, z in rows(pages):
+    for ward, wname, sup, mob, z, pos in rows(pages):
         name = _esw.clean(kd.convert(sup)).strip(" ,")
         recs.append(_ward.record(MODULE, f"ward-{ward}:sanitation-supervisor", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level="ward", area=f"Ward {ward}", area_regional=_esw.clean(kd.convert(wname)),
                                  zone=ZONES[z], post="Sanitation Supervisor", post_regional="सफाई नायक", name=name,
-                                 name_regional=name or None, phone=mob, wards=[ward], wing="sanitation", source=p["url"]))
+                                 name_regional=name or None, phone=mob, wards=[ward], wing="sanitation", source=p["url"],
+                                 src_pos=pos))
     return recs
 
 

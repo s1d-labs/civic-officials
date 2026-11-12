@@ -35,19 +35,23 @@ def _runs(line):
     return [(m.start(), m.group(0)) for m in re.finditer(r"\S+(?: \S+)*", line)]
 
 
-def blocks(page):
-    """[(Kruti Dev text of the block, [phones])] of one page: one row = the lines between blank lines (after the heading line)."""
+def blocks(page, at=None):
+    """[(Kruti Dev text of the block, [phones])] of one page: one row = the lines between blank lines (after the heading line).
+    at: a list; when given, it gets each block's src_pos (its first line, 1-based in page.splitlines(); "to" = its last line)."""
     lines = page.splitlines()
     hi = next((i for i, ln in enumerate(lines) if re.search(r"\bin uke\b", ln)), None)
     if hi is None:
         return []
-    out, cur = [], []
-    for ln in lines[hi + 1:] + [""]:
+    out, cur, first, spans = [], [], 0, []
+    for i, ln in enumerate(lines[hi + 1:] + [""], hi + 2):
         if not ln.strip() or re.search(r"\bin uke\b", ln):
             if cur:
                 out.append(cur)
+                spans.append((first, i - 1))
             cur = []
             continue
+        if not cur:
+            first = i
         cur.append(ln)
     rows = []
     for b in out:
@@ -55,6 +59,8 @@ def blocks(page):
         text = " ".join(t for ln in b for _, t in _runs(ln)
                         if not (re.fullmatch(r"[\d\s/@,.-]+", t) or "@" in t or re.search(r"\.(GOV|IN)\b|RAJASTHAN|^\.?IN$|^N,?$", t)))
         rows.append((text, phones))
+    if at is not None:
+        at += [{"line": a, "to": b, "line_text": lines[a - 1]} for a, b in spans]
     return rows
 
 
@@ -63,8 +69,9 @@ NAME = re.compile(r"(?:श्रीमती|श्री|सुश्री|ड
 
 def parse(pages, p):
     seen, recs, n = set(), [], {}
-    for pg in pages:
-        for text_kd, phones in blocks(pg):
+    for pn, pg in enumerate(pages, 1):
+        at = []
+        for (text_kd, phones), bpos in zip(blocks(pg, at), at):
             text = _ward.hi_norm(kd.convert(text_kd)).replace("ुु", "ु").replace("ु ु", "ु")
             m = re.search(r"(उपायु\S*(?:\s+त(?=\s))?|अधिशाषी\s+अभियं?\S*|सहायक\s+अभियं?\S*|कनिष्ठ\s+अभियं?\S*|राजस्व\s+अधिकारी)\s+([^\s].{1,20}?)\s+जोन", text)
             if not m:
@@ -81,7 +88,7 @@ def parse(pages, p):
             recs.append(_ward.record(MODULE, f"{key}:{n[key]}", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level="zone",
                                      area=f"{zone} Zone", zone=f"{zone} Zone", post=en, post_regional=post, name=name,
                                      name_regional=name or None, phone=", ".join(dict.fromkeys(phones)),
-                                     vacant=None if name else True, source=p["url"]))
+                                     vacant=None if name else True, source=p["url"], src_pos={"page": pn, **bpos}))
     return recs
 
 

@@ -13,6 +13,7 @@ Record ids: dept:ward2n_kota:<n> (the row number of the list).
 """
 import re
 
+import provenance
 from dforms import _esw, _ward, _ward_kd as kd
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
@@ -103,11 +104,12 @@ def rows(pages):
     "ditto"}] with name / post in Unicode Devanagari. Lines without a row number are given to the numbered line just above or below
     them when that line lacks a phone, a post or a name (the PDF centres a wrapped row on its number). A post "-------" repeats the
     post of the row above (ditto True; without its bracketed part: "कनिष्ठ अभियंता (मैकेनिकल)" -> "कनिष्ठ अभियंता")."""
-    lines = []
-    for pg in pages:
-        for ln in pg.splitlines():
+    lines, at = [], []
+    for pn, pg in enumerate(pages, 1):
+        for lno, ln in enumerate(pg.splitlines(), 1):
             if ln.strip() and not re.search(r"\\Users\\|^\s*\d{1,2}\s*$|Ø-?\s*l|uke\s+(vf/kdkjh|in\b)|^\s*la-\s*$|eksckbZy", ln):
                 lines.append(ln)
+                at.append((pn, lno))
     num_at = [i for i, ln in enumerate(lines) if NUM.match(ln)]
     claimed = set()
     out, last_post = [], ""
@@ -152,7 +154,7 @@ def rows(pages):
         nm = _esw.clean(HONOR.sub("", kd_text(name))) if name else ""
         out.append({"n": m.group(1), "name": nm, "service": " ".join(service), "post": post,
                     "post_latin": " ".join(dict.fromkeys(latin)), "phones": list(dict.fromkeys(phones)), "note": "; ".join(notes),
-                    "ditto": ditto})
+                    "ditto": ditto, "pos": provenance.line_pos(*at[i], lines[i])})
     return out
 
 
@@ -165,7 +167,8 @@ def record_of(module, r, seen, *, body, lgd, state, district, area, source, key=
     return _ward.record(module, key or r["n"], seen, body=body, lgd=lgd, state=state, district=district, level="body", area=area,
                         post=en or "Staff", post_regional=post_regional, name=r["name"], name_regional=r["name"] or None,
                         service=r["service"] or None, phone=", ".join(r["phones"]), notes=r["note"] or None,
-                        post_from_row_above=True if r["ditto"] else None, vacant=None if r["name"] else True, source=source, **extra)
+                        post_from_row_above=True if r["ditto"] else None, vacant=None if r["name"] else True, source=source,
+                        src_pos=r.get("pos"), **extra)
 
 
 def parse(pages, p):

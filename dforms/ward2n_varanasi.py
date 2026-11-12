@@ -55,20 +55,22 @@ def _runs(line):
     return out
 
 
-def beats(pages):
+def beats(pages, at=None):
     """[(ward, zone or None, sub zone or None, sup name, sup mobile, sfi name, sfi mobile)] of the beat rows. The two mobile
     columns are found per page from the start positions of the mobiles (the two most common ones: left = supervisor, right =
-    SFI); a row with one mobile gives it to the nearer column. The name is the text run just before the mobile."""
+    SFI); a row with one mobile gives it to the nearer column. The name is the text run just before the mobile.
+    at: a list; when given, it gets each row's {"page", "line"} (source trail)."""
     out = []
-    for pg in pages:
-        lines = [ln for ln in pg.splitlines() if re.match(r"\s*\d{1,3}-\d{2,3}\s{2,}", ln)]
+    for pn, pg in enumerate(pages, 1):
+        numbered = [(i, ln) for i, ln in enumerate(pg.splitlines(), 1) if re.match(r"\s*\d{1,3}-\d{2,3}\s{2,}", ln)]
+        lines = [ln for _, ln in numbered]
         pos = collections.Counter(m.start() for ln in lines for m in MOB.finditer(ln))
         cols = sorted(x for x, _ in pos.most_common(2))
         if len(cols) == 2 and cols[1] - cols[0] < 12:
             cols = sorted(x for x, _ in pos.most_common(3))[:2]
         if len(cols) < 2:
             continue
-        for ln in lines:
+        for lno, ln in numbered:
             m = re.match(r"\s*(\d{1,3})-\d{2,3}\s{2,}(.*)", ln)
             cells = re.split(r"\s{2,}", m.group(2).strip())
             z = zone_of(cells[0]) if cells else None
@@ -85,11 +87,14 @@ def beats(pages):
             if got:
                 (sn, sm), (fn, fm) = got.get(0, ("", "")), got.get(1, ("", ""))
                 out.append((str(int(m.group(1))), z, sub, sn, sm, fn, fm))
+                if at is not None:
+                    at.append({"page": pn, "line": lno})
     return out
 
 
 def parse(pages, p):
-    rows = beats(pages)
+    at = []
+    rows = beats(pages, at)
     by_mob = collections.defaultdict(collections.Counter)
     for _, _, _, sn, sm, fn, fm in rows:
         for nm, mob in ((sn, sm), (fn, fm)):
@@ -117,7 +122,7 @@ def parse(pages, p):
         col_of[sm]["sup"] += 1
         col_of[fm]["sfi"] += 1
     people = {}
-    for ward, z, sub, sn, sm, fn, fm in rows:
+    for ri, (ward, z, sub, sn, sm, fn, fm) in enumerate(rows):
         for kind, nm, mob in (("sup", sn, sm), ("sfi", fn, fm)):
             kind = col_of[mob].most_common(1)[0][0] if mob else kind
             nm = nm or (by_mob[mob].most_common(1)[0][0] if by_mob[mob] else "")
@@ -128,10 +133,11 @@ def parse(pages, p):
             first = re.sub(r"(?i)^(dr|shri|smt)\.?\s+", "", nm)[:1].lower()
             d = people.setdefault((kind, canon.get((mob, first), mob), first),
                                   {"names": collections.Counter(), "mobs": collections.Counter(), "wards": [],
-                                   "zones": collections.Counter(), "subs": [], "rows": 0})
+                                   "zones": collections.Counter(), "subs": [], "rows": 0, "at": []})
             d["names"][nm] += 1
             d["mobs"][mob] += 1
             d["rows"] += 1
+            d["at"].append(at[ri])
             if ward not in d["wards"]:
                 d["wards"].append(ward)
             if z:
@@ -153,7 +159,8 @@ def parse(pages, p):
                                  other_names=[n for n in d["names"] if n != d["names"].most_common(1)[0][0]] or None,
                                  zone=f"{zones[0]} Zone" if zones else None,
                                  zones=[f"{z} Zone" for z in zones] if len(zones) > 1 else None, sub_zones=d["subs"] or None,
-                                 beats=d["rows"], wing=wing, source=p["url"]))
+                                 beats=d["rows"], wing=wing, source=p["url"],
+                                 src_pos={"rows": d["at"], "note": "one person summed over these beat rows"}))
     return recs
 
 

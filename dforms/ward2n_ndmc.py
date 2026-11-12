@@ -15,6 +15,7 @@ TELEPHONE NO.pdf (made 2015) is not read. Record ids: dept:ward2n_ndmc:<circle-n
 """
 import re
 
+import provenance
 from dforms import _esw, _ward
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
@@ -82,9 +83,18 @@ def section(lines, start_rx, end_rx):
 
 def parse(pages, p):
     text = "\n".join(pages).replace("\f", "\n")
+    at = _ward.joined_at(pages)
     text = re.sub(r"(\d{10})(?=[A-Za-z])", r"\1 ", text)
     lines = text.splitlines()
     seen, recs = set(), []
+    pos = {}
+
+    def where(start_rx):
+        """src_pos of a section: its heading line (rows inside a section are not tied to single lines)."""
+        i = next((k for k, ln in enumerate(lines) if re.search(start_rx, ln)), None)
+        pos.clear()
+        if i is not None and i < len(at):
+            pos.update(provenance.line_pos(at[i][0], at[i][1], lines[i], section=lines[i].strip()))
 
     def add(level, key, post, name, phones, circles=None, area=None, note=None, wing=None):
         if not (name or phones):
@@ -93,9 +103,11 @@ def parse(pages, p):
                         ("Circles " + ", ".join(circles) if circles else BODY))
         recs.append(_ward.record(MODULE, f"{key}:{_esw.slug(post)}:{_esw.slug(name) or 'n'}", seen, body=BODY, lgd=LGD, state=STATE,
                                  district=DISTRICT, level=level, area=area, post=post, name=name, phone=", ".join(dict.fromkeys(phones)),
-                                 circles=circles or None, jurisdiction=note or None, wing=wing or "sanitation", source=p["url"]))
+                                 circles=circles or None, jurisdiction=note or None, wing=wing or "sanitation", source=p["url"],
+                                 src_pos=dict(pos) or None))
 
     # 1. head office officers: Name | Designation | Mobile | Office, rows split by blank lines
+    where(r"PHONE NUMBER OF OFFICERS")
     hq = section(lines, r"PHONE NUMBER OF OFFICERS", r"LIST OF CHIEF SANITARY")
     head = next((ln for ln in hq if re.search(r"Name\s+Designation\s+Mobile", ln)), None)
     if head:
@@ -132,6 +144,7 @@ def parse(pages, p):
                         else ("health" if re.search(r"(?i)medical|cmo|health|vety", post) else None))
 
     # 2. chief sanitary inspectors by circles
+    where(r"LIST OF CHIEF SANITARY")
     csi = section(lines, r"LIST OF CHIEF SANITARY", r"LIST SANITARY INSPECTOR")
     head = next((ln for ln in csi if "Designation" in ln), None)
     if head:
@@ -155,6 +168,7 @@ def parse(pages, p):
                 area=None if cs else _esw.clean(circ))
 
     # 3. sanitary inspectors and assistant sanitary inspectors of each circle
+    where(r"LIST SANITARY INSPECTOR")
     si = section(lines, r"LIST SANITARY INSPECTOR", r"AIR POLLUTION CELL")
     blocks, cur = [], None
     for ln in si:
