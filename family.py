@@ -147,6 +147,8 @@ _ocr_tn = [{"key": i["key"], "payload": {**i["payload"], "stored": "civic-offici
            for i in _ocr if i["payload"].get("state") == "TN"]
 # Tamil Nadu again, from the text layer of the same saved PDFs (cforms/tn_text.py: mPDF Tamil glyphs mapped, no OCR; one item = one
 # PDF): every ward, where the OCR items found about half. Same project (runners, no proxy, task name known to new checkouts only).
+# Maharashtra nagar panchayats 2021-22 (cforms/mh_np_ocr.py, seeds/stored_councillors_mh_np_ocr.json): the e-Gazette notices in
+# legacy fonts or scans, OCR of the copies that the india-direct save-only items keep in the bucket. Same project.
 _ocr_tn += [i for f in sorted((HERE / "seeds").glob("stored_councillors_*.json")) for i in json.loads(f.read_text())]
 _ocr = [i for i in _ocr if i["payload"].get("state") != "TN"]
 if _ocr:
@@ -156,7 +158,7 @@ if _ocr:
                      "unit_label": "6 PDF pages", "record_label": "councillor", "items": _ocr, "workers": 8, "threads": 1,
                      "delay_ms": 1000, "proxy": "IN"})
 if _ocr_tn:
-    PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-b", "title": "Tamil Nadu ward councillors by OCR, from the saved results PDFs",
+    PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-b", "title": "Ward councillors by OCR, from the saved results PDFs (Tamil Nadu 2022, Maharashtra nagar panchayats 2021-22)",
                      "task": "councillors-ocr-b", "target": f"{FAMILY}-councillors-ocr-b", "env": {}, "probe": None,
                      "unit_label": "6 PDF pages", "record_label": "councillor", "items": _ocr_tn, "workers": 100, "threads": 1,
                      "delay_ms": 0})
