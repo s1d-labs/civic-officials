@@ -1,0 +1,114 @@
+[
+ {
+  "key": "gp_mh_palghar:dahanu",
+  "payload": {
+   "reader": "gp_mh_palghar",
+   "host": "psdahanu.zppalghar.gov.in",
+   "samiti": "dahanu",
+   "block": "Dahanu",
+   "url": "https://psdahanu.zppalghar.gov.in/en/center-type/grampanchayat/",
+   "district": "Palghar",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gp_mh_palghar:jawhar",
+  "payload": {
+   "reader": "gp_mh_palghar",
+   "host": "psjawhar.zppalghar.gov.in",
+   "samiti": "jawhar",
+   "block": "Jawhar",
+   "url": "https://psjawhar.zppalghar.gov.in/en/center-type/grampanchayat/",
+   "district": "Palghar",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gp_mh_palghar:mokhada",
+  "payload": {
+   "reader": "gp_mh_palghar",
+   "host": "psmokhada.zppalghar.gov.in",
+   "samiti": "mokhada",
+   "block": "Mokhada",
+   "url": "https://psmokhada.zppalghar.gov.in/en/center-type/grampanchayat/",
+   "district": "Palghar",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gp_mh_palghar:palghar",
+  "payload": {
+   "reader": "gp_mh_palghar",
+   "host": "pspalghar.zppalghar.gov.in",
+   "samiti": "palghar",
+   "block": "Palghar",
+   "url": "https://pspalghar.zppalghar.gov.in/en/center-type/grampanchayat/",
+   "district": "Palghar",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gp_mh_palghar:talasari",
+  "payload": {
+   "reader": "gp_mh_palghar",
+   "host": "pstalasari.zppalghar.gov.in",
+   "samiti": "talasari",
+   "block": "Talasari",
+   "url": "https://pstalasari.zppalghar.gov.in/en/center-type/grampanchayat/",
+   "district": "Palghar",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gp_mh_palghar:vasai",
+  "payload": {
+   "reader": "gp_mh_palghar",
+   "host": "psvasai.zppalghar.gov.in",
+   "samiti": "vasai",
+   "block": "Vasai",
+   "url": "https://psvasai.zppalghar.gov.in/en/center-type/grampanchayat/",
+   "district": "Palghar",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gp_mh_palghar:vikramgad",
+  "payload": {
+   "reader": "gp_mh_palghar",
+   "host": "psvikramgad.zppalghar.gov.in",
+   "samiti": "vikramgad",
+   "block": "Vikramgad",
+   "url": "https://psvikramgad.zppalghar.gov.in/en/center-type/grampanchayat/",
+   "district": "Palghar",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "gp_mh_palghar:wada",
+  "payload": {
+   "reader": "gp_mh_palghar",
+   "host": "pswada.zppalghar.gov.in",
+   "samiti": "wada",
+   "block": "Wada",
+   "url": "https://pswada.zppalghar.gov.in/en/center-type/grampanchayat/",
+   "district": "Palghar",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ }
+]

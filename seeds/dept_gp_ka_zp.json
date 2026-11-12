@@ -1,0 +1,372 @@
+[
+ {
+  "key": "gp_ka_zp:zpbagalkote",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpbagalkote.karnataka.gov.in/",
+   "host": "zpbagalkote.karnataka.gov.in",
+   "district": "Bagalkote",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpbelagavi",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpbelagavi.karnataka.gov.in/",
+   "host": "zpbelagavi.karnataka.gov.in",
+   "district": "Belagavi",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpbellary",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpbellary.karnataka.gov.in/",
+   "host": "zpbellary.karnataka.gov.in",
+   "district": "Ballari",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpbengaluruurban",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpbengaluruurban.karnataka.gov.in/",
+   "host": "zpbengaluruurban.karnataka.gov.in",
+   "district": "Bengaluru Urban",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpchamarajanagar",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpchamarajanagar.karnataka.gov.in/",
+   "host": "zpchamarajanagar.karnataka.gov.in",
+   "district": "Chamarajanagar",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpchikkaballapur",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpchikkaballapur.karnataka.gov.in/",
+   "host": "zpchikkaballapur.karnataka.gov.in",
+   "district": "Chikkaballapura",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpchikkamagaluru",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpchikkamagaluru.karnataka.gov.in/",
+   "host": "zpchikkamagaluru.karnataka.gov.in",
+   "district": "Chikkamagaluru",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpchitradurga",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpchitradurga.karnataka.gov.in/",
+   "host": "zpchitradurga.karnataka.gov.in",
+   "district": "Chitradurga",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpdavanagere",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpdavanagere.karnataka.gov.in/",
+   "host": "zpdavanagere.karnataka.gov.in",
+   "district": "Davanagere",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpdharwad",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpdharwad.karnataka.gov.in/",
+   "host": "zpdharwad.karnataka.gov.in",
+   "district": "Dharwad",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpdk",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpdk.karnataka.gov.in/",
+   "host": "zpdk.karnataka.gov.in",
+   "district": "Dakshina Kannada",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpgadag",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpgadag.karnataka.gov.in/",
+   "host": "zpgadag.karnataka.gov.in",
+   "district": "Gadag",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zphassan",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zphassan.karnataka.gov.in/",
+   "host": "zphassan.karnataka.gov.in",
+   "district": "Hassan",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zphaveri",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zphaveri.karnataka.gov.in/",
+   "host": "zphaveri.karnataka.gov.in",
+   "district": "Haveri",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpkalaburagi",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpkalaburagi.karnataka.gov.in/",
+   "host": "zpkalaburagi.karnataka.gov.in",
+   "district": "Kalaburagi",
+   "state": "KA",
+   "pages": [
+    "https://zpkalaburagi.karnataka.gov.in/17/gram-panchayats/en"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpkodagu",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpkodagu.karnataka.gov.in/",
+   "host": "zpkodagu.karnataka.gov.in",
+   "district": "Kodagu",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpkolar",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpkolar.karnataka.gov.in/",
+   "host": "zpkolar.karnataka.gov.in",
+   "district": "Kolar",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpkoppal",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpkoppal.karnataka.gov.in/",
+   "host": "zpkoppal.karnataka.gov.in",
+   "district": "Koppal",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpmandya",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpmandya.karnataka.gov.in/",
+   "host": "zpmandya.karnataka.gov.in",
+   "district": "Mandya",
+   "state": "KA",
+   "pages": [
+    "https://zpmandya.karnataka.gov.in/119/gram-panchayat-officers/en"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpmysuru",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpmysuru.karnataka.gov.in/",
+   "host": "zpmysuru.karnataka.gov.in",
+   "district": "Mysuru",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpraichur",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpraichur.karnataka.gov.in/",
+   "host": "zpraichur.karnataka.gov.in",
+   "district": "Raichur",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpshivamogga",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpshivamogga.karnataka.gov.in/",
+   "host": "zpshivamogga.karnataka.gov.in",
+   "district": "Shivamogga",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zptumakuru",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zptumakuru.karnataka.gov.in/",
+   "host": "zptumakuru.karnataka.gov.in",
+   "district": "Tumakuru",
+   "state": "KA",
+   "pages": [
+    "https://zptumakuru.karnataka.gov.in/46/gram-panchayat/en"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpudupi",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpudupi.karnataka.gov.in/",
+   "host": "zpudupi.karnataka.gov.in",
+   "district": "Udupi",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpuk",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpuk.karnataka.gov.in/",
+   "host": "zpuk.karnataka.gov.in",
+   "district": "Uttara Kannada",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpvijayanagara",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpvijayanagara.karnataka.gov.in/",
+   "host": "zpvijayanagara.karnataka.gov.in",
+   "district": "Vijayanagara",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpvijayapura",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpvijayapura.karnataka.gov.in/",
+   "host": "zpvijayapura.karnataka.gov.in",
+   "district": "Vijayapura",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "gp_ka_zp:zpyadgiri",
+  "payload": {
+   "reader": "gp_ka_zp",
+   "url": "https://zpyadgiri.karnataka.gov.in/",
+   "host": "zpyadgiri.karnataka.gov.in",
+   "district": "Yadgir",
+   "state": "KA",
+   "pages": [],
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
