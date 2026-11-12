@@ -48,6 +48,29 @@ def test_up_items():
     assert {i["payload"]["post"] for i in items} == {"7", "8", "9", "10", "11", "12"}
 
 
+def test_up_sec_paging():
+    """Live answers of 2026-11-12 (view state cut): Lucknow corporators, post 8, district 47, 100 + 10 rows on two pages."""
+    import gzip
+    pages = {k: gzip.decompress((DATA / f"cr_up_sec_{k}.html.gz").read_bytes()).decode() for k in ("lko_p1", "lko_p2", "bothset")}
+    assert cr_up.selected(pages["bothset"]) == ("12", "0")      # both lists in one postback: post for the whole state
+    calls = []
+
+    class R:
+        def __init__(self, t):
+            self.text = t
+
+    def get(url, method="GET", data=None, headers=None):
+        calls.append((data or {}).get("__EVENTTARGET", "$GET").split("$")[-1] + (data or {}).get("__EVENTARGUMENT", ""))
+        return R(pages["lko_p2"] if data and data["__EVENTARGUMENT"] == "Page$Next" else pages["lko_p1"])
+
+    recs, files, why = cr_up.fetch({"post": "8", "district_id": "47"}, get)
+    assert why == "" and len(recs) == 110 and len(files) == 2
+    assert calls == ["GET", "DropDownList1", "ddlDistrict", "winnerdetailPage$Next"]
+    r = dict(recs)
+    assert {d["lgd_code"] for d in r.values()} == {"249234"} and {d["ward_no"] for d in r.values()} == {str(i) for i in range(1, 111)}
+    assert cr_up.fetch({"post": "8", "district_id": "5"}, get)[2].startswith("page shows post/district")
+
+
 # ---- Punjab: e-Nigam Digital MC-House
 
 def test_pb_cards():
