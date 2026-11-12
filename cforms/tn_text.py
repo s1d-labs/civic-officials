@@ -244,7 +244,8 @@ def fetch(p, get):
             return [], [], "no answer"
         content = r.content
         import hashlib
-        files = [(f"councillors/TN/{hashlib.sha1(p['url'].encode()).hexdigest()[:12]}.pdf", content, "application/pdf")]
+        if not p.get("stored"):        # an item that names a stored copy does not store the file a second time
+            files = [(f"councillors/TN/{hashlib.sha1(p['url'].encode()).hexdigest()[:12]}.pdf", content, "application/pdf")]
     with tempfile.TemporaryDirectory() as tmp:
         pdf = os.path.join(tmp, "r.pdf")
         with open(pdf, "wb") as f:
