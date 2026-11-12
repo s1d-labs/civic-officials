@@ -88,6 +88,12 @@ def at(r, url=None):
     return out
 
 
+def line_pos(page, line, line_text, **more):
+    """src_pos of one line of PDF / OCR text: {"page": 1-based page, "line": 1-based line in that page's text as the reader split
+    it, "line_text": the raw line}; more = row, col, conf, cells ..."""
+    return {"page": page, "line": line, "line_text": line_text, **{k: v for k, v in more.items() if v is not None}}
+
+
 def file_src(body, url, file):
     """src for data read from a copy saved in the bucket earlier: {"sha256" of the bytes read, "url" of the original, "file" key}."""
     return {"sha256": hashlib.sha256(body or b"").hexdigest(), "url": url or "", "file": file}

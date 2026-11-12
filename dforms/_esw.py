@@ -98,12 +98,23 @@ def cell_text(td):
     return re.sub(r"(\s*\|\s*)+", " | ", t).strip(" |")
 
 
-def grid(table, text=cell_text):
-    """Rows of an HTML table as lists of cell texts, rowspan and colspan filled in (the value is repeated)."""
+def table_no(table):
+    """Source trail: the table's place among the page's <table> elements (1-based, document order, nested tables counted) -
+    the same number as officials.tables gives."""
+    return len(table.find_all_previous("table")) + 1
+
+
+def grid(table, text=cell_text, pos=None):
+    """Rows of an HTML table as lists of cell texts, rowspan and colspan filled in (the value is repeated).
+    pos: a list; when given, it gets for each returned row its src_pos {"table": table_no, "row": <tr> number in the table,
+    1-based, header row counted}."""
     out, carry = [], {}
+    tno = table_no(table) if pos is not None else 0
+    trn = 0
     for tr in table.find_all("tr"):
         if tr.find_parent("table") is not table:
             continue
+        trn += 1
         row, col = [], 0
         cells = tr.find_all(["td", "th"], recursive=False)
         pending = list(cells)
@@ -128,6 +139,8 @@ def grid(table, text=cell_text):
                 col += 1
         if any(row):
             out.append(row)
+            if pos is not None:
+                pos.append({"table": tno, "row": trn})
     return out
 
 
