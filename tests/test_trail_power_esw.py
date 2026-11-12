@@ -102,3 +102,74 @@ def test_grid_pos_and_out_at():
     out = _power.Out("m", "XX", "s").at(r, "https://x.in/a")
     d = out.add("k", "division", "A", post="EE")
     assert d["src_url"] == "https://x.in/a" and len(d["src_sha256"]) == 64
+
+
+def _seed(module, key=None):
+    items = json.loads((ROOT / "seeds" / f"dept_{module}.json").read_text())
+    return next(i for i in items if key is None or i["key"] == key)["payload"]
+
+
+def _esw_get(routes):
+    sys.path.insert(0, str(ROOT / "tests"))
+    from esw_common import fake_get
+    return fake_get(routes)
+
+
+def test_postback_records_name_the_exact_answer():
+    """ero_tn: GET then POST to the same url; records carry the hash of the POST answer and their table row."""
+    import hashlib
+    from dforms import ero_tn
+    p = _seed("ero_tn", "ero_tn-ero-d2")
+    recs, _, why = ero_tn.fetch(p, _esw_get({("GET", p["url"]): "ero_tn_ero_get.html", ("POST", p["url"]): "ero_tn_ero_d2.html"}))
+    want = hashlib.sha256((DATA / "ero_tn_ero_d2.html").read_bytes()).hexdigest()
+    assert recs and all(d["src_sha256"] == want and d["src_url"] == p["url"] and set(d["src_pos"]) == {"table", "row"}
+                        for _, d in recs)
+
+
+def test_water_wb_search_answer_and_sro_tn_pages():
+    import hashlib
+    from dforms import sro_tn, water_wb
+    p = next(i["payload"] for i in json.loads((ROOT / "seeds" / "dept_water_wb.json").read_text())
+             if i["payload"]["designation"] == "Executive Engineer")
+    recs, _, _ = water_wb.fetch(p, _esw_get({p["url"]: "water_wb_form.html", ("POST", water_wb.SEARCH): "water_wb_ee.html"}))
+    sha = hashlib.sha256((DATA / "water_wb_ee.html").read_bytes()).hexdigest()
+    assert recs and all(d["src_url"] == water_wb.SEARCH and d["src_sha256"] == sha and d["src_pos"]["card"] >= 1 for _, d in recs)
+    p = _seed("sro_tn")
+    get = _esw_get({
+        "https://tnreginet.gov.in/portal/": "sro_tn_portal.html",
+        (lambda u, m, d: m == "POST" and "actionVal=homePage" in u): "sro_tn_portal.html",
+        (lambda u, m, d: m == "POST" and "actionVal=sroList" in u and "_csrf=bd81dca9" in u): "sro_tn_list_p1.html",
+        (lambda u, m, d: m == "GET" and u.endswith("d-4033352-p=2")): "sro_tn_list_p2.html"})
+    recs, _, _ = sro_tn.fetch(p, get)
+    shas = {d["src_sha256"] for _, d in recs}
+    assert recs and shas <= {hashlib.sha256((DATA / f).read_bytes()).hexdigest() for f in ("sro_tn_list_p1.html", "sro_tn_list_p2.html")}
+
+
+def test_xlsx_rows_and_json_paths():
+    from dforms import ero_ka, power_apdcl, power_tgspdcl, sro_gj
+    p = _seed("sro_gj")
+    recs, _, _ = sro_gj.fetch(p, _esw_get({p["url"]: "sro_gj_offices.xlsx"}))
+    assert all(d["src_pos"]["sheet"] == "sheet1" and d["src_pos"]["row"] >= 2 for _, d in recs)
+    recs = power_apdcl.parse(json.loads((PW / "apdcl.json").read_text()))
+    assert all(d["src_pos"]["path"].startswith("allContact[") for _, d in recs)
+    recs = power_tgspdcl.parse(json.loads((PW / "tgspdcl.json").read_text()))
+    assert all(d["src_pos"]["path"].startswith("circles[") for _, d in recs)
+    doc = {"no": 5, "name": "X", "district": "Y", "parts": [[1, "s", "b", "1", "", "", "Aero A", "9876543210", "Ero E", "9876543211"],
+                                                            [2, "s", "b", "1", "", "", "Aero A", "9876543210", "Ero E", "9876543211"]]}
+    recs = ero_ka.parse(doc, "u")
+    assert {d["post"]: d["src_pos"] for _, d in recs}["Electoral Registration Officer"] == {"key": "parts", "index": 0,
+                                                                                           "indexes": [0, 1], "col": 8}
+
+
+def test_methods():
+    import importlib
+    import glob
+    for f in sorted(glob.glob(str(ROOT / "dforms" / "*.py"))):
+        name = Path(f).stem
+        if name.startswith("_") or not name.startswith(("power", "ero_", "sro_", "water")):
+            continue
+        m = importlib.import_module("dforms." + name)
+        assert isinstance(getattr(m, "METHOD", None), str) and m.METHOD, name
+    from dforms import power_mepdcl, power_nbpdcl, sro_gj, water_tn
+    assert power_mepdcl.METHOD == "pdf text (pypdf layout)" and power_nbpdcl.METHOD.startswith("html table")
+    assert sro_gj.METHOD == "spreadsheet (xlsx)" and water_tn.METHOD.startswith("html cards")
