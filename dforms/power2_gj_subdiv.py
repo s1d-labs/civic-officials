@@ -1,6 +1,6 @@
 """Gujarat: UGVCL (Uttar Gujarat Vij Company, Mehsana) field officers by circle, division and sub-division, www.ugvcl.com/contact
 (India only: no answer from Germany; sample fetched from India 2026-11-11; the page footer says "Last updated on: 05-11-2026").
-The server does not send its intermediate certificate (Sectigo Public Server Authentication CA OV R36: certs/
+The server does not send its intermediate certificate (Sectigo Public Server Authentication CA OV R36: scrape_hub_client/certs/
 sectigo_public_server_ov_r36.pem). Page structure: tabs CORPORATE OFFICE (empty table) | MEHSANA | SABARMATI | HIMATNAGAR | PALANPUR
 CIRCLE, one table each (class "employee"): Circle | Division | Sub-Division | Name | Designation, ~660 rows. Rows with a
 sub-division = the sub-division office (Deputy Engineer, Junior Engineers, Dy. S.A.); rows with only a division = the division

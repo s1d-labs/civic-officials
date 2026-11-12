@@ -12,8 +12,8 @@ import hashlib
 import io
 import json
 import os
-import signal
 import sys
+import threading
 import time
 
 import requests
@@ -24,12 +24,7 @@ from officials import normalise, pubutility, tables
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
 PLAIN_UA = "s1d-labs-public-records/1.0 (+https://labs.s1d.me)"     # one retry on a 406 (see whoswho.py)
-stop = False
-
-
-def on_signal(*_):
-    global stop
-    stop = True
+stop = threading.Event()     # main() swaps in scrape_hub_client.stop_flag(), set on SIGINT / SIGTERM
 
 
 def objects(doc):
@@ -107,12 +102,12 @@ def run(item, get):
 
 
 def main():
-    from scrape_hub_client import HubClient
+    global stop
+    from scrape_hub_client import HubClient, count_request, stop_flag
     project = os.environ["SCRAPE_POOL_PROJECT"]
     deadline = time.time() + float(os.environ.get("SCRAPE_MAX_HOURS", "1")) * 3600 - 300
     hub = HubClient(project, job_index=int(os.environ.get("SCRAPE_JOB_INDEX", 0)), total_jobs=int(os.environ.get("SCRAPE_TOTAL_JOBS", 1)))
-    signal.signal(signal.SIGINT, on_signal)
-    signal.signal(signal.SIGTERM, on_signal)
+    stop = stop_flag()
     s = requests.Session()
     s.verify = trust()
     s.headers.update(HEADERS)
@@ -125,21 +120,16 @@ def main():
                 hub.metric("http_406_plain_retry")
                 r = s.request(method, url, data=data, timeout=(20, 120), headers={"User-Agent": PLAIN_UA})
         except requests.RequestException:
-            hub.metric("http_error")
-            hub.error()
+            count_request(hub, None)                             # http_error
             return None
-        hub.metric("n_http")
-        hub.metric("t_http_s", time.time() - t)
+        count_request(hub, r.status_code, time.time() - t)       # n_http, t_http_s, http_<code>, block on 403/429/503
         time.sleep(max(0.5, hub.settings.get("delay_ms", 0) / 1000))
         if r.status_code != 200:
-            hub.metric(f"http_{r.status_code}")
-            if r.status_code in (403, 429, 503):
-                hub.block()
             return None
         return r
 
     try:
-        while time.time() < deadline and not stop:
+        while time.time() < deadline and not stop.is_set():
             if hub.settings.get("paused"):
                 time.sleep(30)
                 continue
@@ -164,7 +154,7 @@ def main():
                 hub.complete([item["key"]], "failed", error=why)
             else:
                 hub.complete([item["key"]], "done", fetched=len(recs))
-        hub.close("finished" if not stop else "failed", "" if not stop else "stopped by signal")
+        hub.close("finished" if not stop.is_set() else "failed", "" if not stop.is_set() else "stopped by signal")
     except BaseException as e:
         hub.close("failed", f"{type(e).__name__}: {e}"[:200])
         raise

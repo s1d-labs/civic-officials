@@ -7,7 +7,7 @@ The corporator is an elected member (the councillors task reads those), so the r
 often holds two posts in a ward (ward officer and junior engineer): both records are kept. Names are in capitals, as on the page.
 The pages show no "Last Updated" date.
 India only: no answer from Germany (2026-11-11, connect timeout); answers from India over https. The server does not send its
-intermediate certificate (Sectigo Public Server Authentication CA DV R36, in certs/): the family's trust() completes the chain.
+intermediate certificate (Sectigo Public Server Authentication CA DV R36, in scrape-hub-client's ca_bundle()): the family's trust() completes the chain.
 Not in archive.s1d.me (only the home page, cut short). Sample: ward 1, live from India 2026-11-11.
 Records: level "ward", wards = [N]. Record ids: dept:ward2s_cuttack:w<N>:<post slug>:<name slug>.
 """

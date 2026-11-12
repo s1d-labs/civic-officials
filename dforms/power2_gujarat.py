@@ -6,7 +6,7 @@
   About 25 senior officers.
 Level: a post naming a circle -> circle (area = the circle), a division -> division; else state (head office). No officer lists
 below circle are public on these sites (division / sub-division offices are in the GUVNL consumer app only).
-TLS: www.ugvcl.com sends no intermediate certificate: certs/sectigo_public_server_ov_r36.pem completes it. www.dgvcl.com and
+TLS: www.ugvcl.com sends no intermediate certificate: scrape_hub_client/certs/sectigo_public_server_ov_r36.pem completes it. www.dgvcl.com and
 www.pgvcl.com closed the TLS handshake from Germany and from India on 2026-11-11 (SSL_ERROR_SYSCALL): their items may fail.
 Records "dept:power2_gujarat:<discom>:<post>:<name>".
 """

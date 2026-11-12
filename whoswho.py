@@ -11,7 +11,6 @@ import hashlib
 import json
 import os
 import re
-import signal
 import sys
 import threading
 import time
@@ -38,12 +37,7 @@ MAX_ATTEMPTS = 3
 # pages (193 sites in civic-officials-in, 2026-11-09: Rajasthan, Assam, Odisha district portals), which ended as "done" with 0 rows.
 DEFAULT_PAGE = re.compile(r"^(welcome to nginx!?|web server'?s default page|apache2 \w+ default page.*|test page for the .*http server.*|"
                           r"it works!?|iis windows server|index of /|403 forbidden|404 not found|502 bad gateway|503 service .*)$", re.I)
-stop = False
-
-
-def on_signal(*_):
-    global stop
-    stop = True
+stop = threading.Event()     # main() swaps in scrape_hub_client.stop_flag(), set on SIGINT / SIGTERM
 
 
 class Site:
@@ -136,7 +130,7 @@ class Site:
                 continue
             for b in pg["blocks"]:
                 p = 1
-                while p < b["pages"] and calls < MAX_AJAX and not stop:
+                while p < b["pages"] and calls < MAX_AJAX and not stop.is_set():
                     r, _ = self.get(pg["ajaxurl"], "POST", {"action": pg["action"], "paged": p, "tax_slug": b["slug"], "type": "next",
                                                            "profile_image": pg["profile"], "filter": pg["filter"], "security": pg["nonce"]})
                     calls += 1
@@ -177,7 +171,7 @@ class Site:
             n0 += self.ajax(base, home.text)
         self.keep_page(self.url, base, home.text, n0)    # a home page's tables are mostly tenders and notices: read only when told
         seen, fetched = {base.rstrip("/")}, 0
-        while todo and fetched < MAX_PAGES and not stop:
+        while todo and fetched < MAX_PAGES and not stop.is_set():
             u = todo.pop(0)
             if u.rstrip("/") in seen:
                 continue
@@ -209,18 +203,18 @@ class Site:
 
 
 def main():
-    from scrape_hub_client import HubClient
+    global stop
+    from scrape_hub_client import HubClient, stop_flag
     project = os.environ["SCRAPE_POOL_PROJECT"]
     deadline = time.time() + float(os.environ.get("SCRAPE_MAX_HOURS", "1")) * 3600 - 300
     hub = HubClient(project, job_index=int(os.environ.get("SCRAPE_JOB_INDEX", 0)), total_jobs=int(os.environ.get("SCRAPE_TOTAL_JOBS", 1)))
-    signal.signal(signal.SIGINT, on_signal)
-    signal.signal(signal.SIGTERM, on_signal)
+    stop = stop_flag()
     lock = threading.Lock()
 
     def worker():
         s = requests.Session()
         s.headers.update(HEADERS)
-        while time.time() < deadline and not stop:
+        while time.time() < deadline and not stop.is_set():
             with lock:
                 if hub.settings.get("paused"):
                     items = None
@@ -264,7 +258,7 @@ def main():
             t.start()
         for t in ts:
             t.join()
-        hub.close("finished" if not stop else "failed", "" if not stop else "stopped by signal")
+        hub.close("finished" if not stop.is_set() else "failed", "" if not stop.is_set() else "stopped by signal")
     except BaseException as e:
         hub.close("failed", f"{type(e).__name__}: {e}"[:200])
         raise

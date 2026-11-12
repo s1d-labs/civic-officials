@@ -1,7 +1,7 @@
 """Assam: the Deputy Commissioner, Additional Deputy Commissioners, Sub-Divisional Officers (Civil), council secretaries and the food
 and civil supplies officers of every district, from the PDS portal's "DC Offices" page pds.assam.gov.in/portal/dc-offices.html
 (Food, Public Distribution & Consumer Affairs Department). Answers only from India; the server does not send its intermediate
-certificate (GoDaddy Secure CA - G2: certs/godaddy_secure_ca_g2.pem completes the chain, verification stays on).
+certificate (GoDaddy Secure CA - G2: scrape_hub_client/certs/godaddy_secure_ca_g2.pem completes the chain, verification stays on).
 
 One GET (about 320 KB, saved 2026-11-11): "Statewise All District List", one <h5> "District - NAME" per district, then one card per
 officer (name, designation, email, mobile, office phone, office address, PIN). 35 districts, about 290 officers. The district

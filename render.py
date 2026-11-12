@@ -10,20 +10,15 @@ import gzip
 import hashlib
 import json
 import os
-import signal
 import sys
+import threading
 import time
 from urllib.parse import urlsplit
 
 from officials import (LINK_WORDS, candidate_links, normalise, page_title, pubutility, row_id, tables, text_people)
 
 MAX_PAGES = 12
-stop = False
-
-
-def on_signal(*_):
-    global stop
-    stop = True
+stop = threading.Event()     # main() swaps in scrape_hub_client.stop_flag(), set on SIGINT / SIGTERM
 
 
 def render_site(page, item, metric=lambda *a: None, delay=1.0):
@@ -56,7 +51,7 @@ def render_site(page, item, metric=lambda *a: None, delay=1.0):
             if urlsplit(u).path.startswith(urlsplit(url).path.rstrip("/"))]
     # Angular menus are often <a> without href: also click-free routes the page shows as text links
     seen, pages = {url.rstrip("/")}, [(url, home)]
-    while todo and len(pages) < MAX_PAGES and not stop:
+    while todo and len(pages) < MAX_PAGES and not stop.is_set():
         u = todo.pop(0)
         if u.rstrip("/") in seen:
             continue
@@ -97,15 +92,15 @@ def browser():
 
 
 def main():
-    from scrape_hub_client import HubClient
+    global stop
+    from scrape_hub_client import HubClient, stop_flag
     project = os.environ["SCRAPE_POOL_PROJECT"]
     deadline = time.time() + float(os.environ.get("SCRAPE_MAX_HOURS", "1")) * 3600 - 300
     hub = HubClient(project, job_index=int(os.environ.get("SCRAPE_JOB_INDEX", 0)), total_jobs=int(os.environ.get("SCRAPE_TOTAL_JOBS", 1)))
-    signal.signal(signal.SIGINT, on_signal)
-    signal.signal(signal.SIGTERM, on_signal)
+    stop = stop_flag()
     pw, b, page = browser()
     try:
-        while time.time() < deadline and not stop:
+        while time.time() < deadline and not stop.is_set():
             if hub.settings.get("paused"):
                 time.sleep(30)
                 continue
@@ -130,7 +125,7 @@ def main():
             else:
                 hub.failure("site", item["key"], why, url=item["payload"]["url"])
                 hub.complete([item["key"]], "failed", error=why)
-        hub.close("finished" if not stop else "failed", "" if not stop else "stopped by signal")
+        hub.close("finished" if not stop.is_set() else "failed", "" if not stop.is_set() else "stopped by signal")
     except BaseException as e:
         hub.close("failed", f"{type(e).__name__}: {e}"[:200])
         raise

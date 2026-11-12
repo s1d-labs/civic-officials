@@ -4,6 +4,9 @@ sites.csv holds the sites (from the India Gov Status list of igod.gov.in sites):
 police units. One project per kind; one queue item per site. The work runs on GitHub runners (most NIC sites answer from abroad).
 Sites that do not answer from abroad go to the `-in` project, which runs through the hub's Indian proxies: list their domains in
 retry_in.txt and run Setup again.
+
+Since 2026-11-12 the India pool servers do not scrape: setup_family.route() sends every project marked "geo" and/or "proxy" "IN" below
+to GitHub runners through the hub's Mumbai proxies (proxy="IN", geo cleared). The "geo" marks below are kept as that signal.
 """
 import hashlib
 import csv

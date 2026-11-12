@@ -6,7 +6,7 @@ polling stations. Two sets:
   of the district, ECI Annexure VI form: Sr. No., Locality, Building in which it will be located, Area of the P.S., separate
   entrance, Polling Areas, voters). Bhiwani: 84 pages, 4 ACs, dated 08-05-2023. Eight of these file names are known.
 The site sends its certificate without the intermediate "GlobalSign GCC R46 AlphaSSL CA 2025": requests fails until that public
-intermediate is in certs/ (certs_trust.py), see certs/globalsign_gcc_r46_alphassl_ca_2025.pem. Verification stays on.
+intermediate is in scrape-hub-client's ca_bundle() (certs_trust.py), see scrape_hub_client/certs/globalsign_gcc_r46_alphassl_ca_2025.pem. Verification stays on.
 Parsing (pdf_pages, pypdf layout mode): a row starts at a line whose first cell is the serial number; the cells of that first line
 give the column starts; the next lines' cells join the column they start under. The AC comes from the "For 57-Bhiwani Assembly
 Constituency" title, carried over pages. Town rows name the ward ("Town Bhiwani Ward No. 1"): kept as town / ward_no.

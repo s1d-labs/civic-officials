@@ -1,5 +1,5 @@
 """Sikkim Police: police.sikkim.gov.in/visitor/telephonepolice. India only. The server omits its intermediate certificate
-(GlobalSign GCC R6 AlphaSSL CA 2025, now in certs/). One table: Sl.No | Rank | Official Mobile Number | Official Email ID,
+(GlobalSign GCC R6 AlphaSSL CA 2025, in scrape-hub-client's ca_bundle()). One table: Sl.No | Rank | Official Mobile Number | Official Email ID,
 with a row per district ("PAKYONG DISTRICT" ...) before its officers. Kept: SHO/<station> rows (27 police stations), SDPO/<place>
 (subdivisions) and SP, SSP, ASP of each district. Headquarters posts above the first district row are left out. No names.
 Record id dept:police_sk:<district>:<post>."""

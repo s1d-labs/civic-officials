@@ -1,22 +1,8 @@
-"""Certificate trust for sites that fail to send their intermediate certificate: certifi plus the public intermediates in certs/.
-Verification stays on; this only completes chains the server should have sent itself."""
-import tempfile
-from pathlib import Path
-
-import certifi
-
-_bundle = None
+"""Certificate trust for sites that fail to send their intermediate certificate: certifi plus the public intermediates that
+scrape-hub-client ships (scrape_hub_client/certs/ in s1d-labs/runner, ca_bundle()). Verification stays on; this only completes
+chains the server should have sent itself. A new intermediate goes into s1d-labs/runner, not into this repo."""
+from scrape_hub_client import ca_bundle
 
 
 def trust():
-    global _bundle
-    if _bundle is None:
-        extra = sorted(Path(__file__).parent.glob("certs/*.pem"))
-        if not extra:
-            _bundle = True
-        else:
-            with tempfile.NamedTemporaryFile("wb", suffix=".pem", delete=False) as f:
-                for p in [Path(certifi.where())] + extra:
-                    f.write(p.read_bytes() + b"\n")
-            _bundle = f.name
-    return _bundle
+    return ca_bundle()
