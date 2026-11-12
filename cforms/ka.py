@@ -4,8 +4,8 @@ first and uses https when it answers (certificate checks stay on), http only whe
 One queue item = one body: payload {"kind": "form-ka", "state": "KA", "url": "<scheme>://<host>/en/<path>", "host", "path",
 "body", "body_type", "district", "lgd_code", "slug"}. The English page comes first; when it has no member table (some bodies
 fill only the Kannada side), the same path under /kn/ is read. Tables differ per body: ward number, name, designation, address,
-phone, party or reservation, in English or Kannada. A table that lists only the Administrator (council term over) gives no
-records and the reason "no council members listed (administrator only)"; a template with ward rows but empty names, or notices
+phone, party or reservation, in English or Kannada. A table that lists only the Administrator (council term over) gives one
+record body_status:KA:<slug> (type body_status, status "administrator", the administrator's name and post); a template with ward rows but empty names, or notices
 in the name column ("Election Not Held", "Stay in High Court"), gives "... (ward table with empty names)". MP/MLA/MLC rows
 (ex-officio) are left out. Record id councillor:KA:<slug>:<ward no>; nominated members get nominated-<n>, and members on a page
 without ward numbers sl-<serial no>. Seeds: seeds/councillors_ka.json."""
@@ -199,7 +199,7 @@ def fetch(p, get):
             continue
         files.append((f"councillors/KA/{sl}-{lang}.html.gz", gzip.compress(r.content), "application/gzip"))
         rows, adm, term, nb = members(r.text)
-        admins += adm
+        admins += [(a, url, r) for a in adm]
         blank += nb
         if not rows:
             continue
@@ -227,8 +227,14 @@ def fetch(p, get):
                    **provenance.at(r), "src_pos": d.get("_pos")}
             recs.append((f"councillor:KA:{sl}:{key}", {k: v for k, v in rec.items() if v not in (None, "")}))
         return recs, files, ""
-    if admins:
-        return [], files, "no council members listed (administrator only)"
+    if admins:      # the council's term is over: one body_status record (sql/73 of civic-india shows it on the town page)
+        a, url, r = admins[0]
+        who = "; ".join(dict.fromkeys(" · ".join(x for x in (d.get("name"), d.get("position")) if x) or d.get("text", "")
+                                      for d, _, _ in admins))
+        rec = {"type": "body_status", "state": "KA", "body": p.get("body"), "body_type": p.get("body_type"), "district": p.get("district"),
+               "lgd_code": p.get("lgd_code"), "status": "administrator", "administrator": who[:300],
+               "note": "no council members listed (administrator only)", "url": url, **provenance.at(r), "src_pos": a.get("_pos")}
+        return [(f"body_status:KA:{sl}", {k: v for k, v in rec.items() if v not in (None, "")})], files, ""
     if blank:
         return [], files, "no council members listed (ward table with empty names)"
     return [], files, why or "no council members listed"
