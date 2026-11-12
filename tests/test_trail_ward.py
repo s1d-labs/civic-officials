@@ -11,7 +11,7 @@ from esw_common import DATA, ROOT, fake_get, mod
 
 import provenance
 
-DIRS = ("ward", "ward2n", "ward2s")
+DIRS = ("ward", "ward2n", "ward2s", "ward3")
 CASES = [p for d in DIRS for p in sorted((DATA / d).glob("*.json"))]
 MODULES = sorted(p.stem for p in (ROOT / "dforms").glob("ward*.py"))
 
