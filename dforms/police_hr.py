@@ -13,6 +13,7 @@ import re
 
 from bs4 import BeautifulSoup
 
+from dforms import _civic
 from dforms._police import ascii_digits, clean, email, gz, phones, rec, slug, uniq
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
@@ -74,7 +75,8 @@ def parse_state(html, url=URL):
             continue
         st = c[1]
         recs.append(rec(M, f"{slug(district or section or 'haryana')}:{slug(st)}", area=st, office_type=section, post="SHO (station CUG)",
-                        phone=ph(c[3], c[2]), email=mail(c[4]), state="HR", district=district, last_updated=last, source=url))
+                        phone=ph(c[3], c[2]), email=mail(c[4]), state="HR", district=district, last_updated=last, source=url,
+                        src_pos=_civic.tr_pos(tr)))
     return uniq(recs)
 
 
@@ -120,7 +122,8 @@ def parse_sho(html, district, url):
             is_post = post_table or bool(re.match(r"^P\.?P\b", st, re.I))
             recs.append(rec(M, f"sho:{slug(district)}:{slug(st)}", area=st, office_type="police post" if is_post else "police station",
                             post="Officer in charge" if is_post else "SHO", name=who, rank=rank, phone=ph(cell(mob_i), cell(tel_i)),
-                            mhc_mobile=ph(cell(mhc_i)), email=mail(cell(mail_i)), state="HR", district=district.title(), source=url))
+                            mhc_mobile=ph(cell(mhc_i)), email=mail(cell(mail_i)), state="HR", district=district.title(), source=url,
+                            src_pos=_civic.tr_pos(tr)))
     return uniq(recs)
 
 

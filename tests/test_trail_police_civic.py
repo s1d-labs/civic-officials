@@ -178,3 +178,39 @@ def test_emerg_table_rows():
     m = mod("emerg_hosp_s3waas")
     recs, _, _ = m.fetch({"url": url, "state": "MH", "district": "Buldhana"}, fake_get({url: "emerg_hosp_s3waas_buldhana_p1.html"}))
     assert all(d["src_url"] == url and d["src_pos"]["card"] >= 1 for _, d in recs)
+
+
+def all_rows_text(html, pos):
+    """Text of the row(s) a src_pos names: {"table", "row"} (row = n-th <tr> of the table, all <tr> counted, as tr_pos) or
+    {"rows": [...]} (a record merged from several rows)."""
+    from dforms import _esw
+    soup = _esw.soup(html)
+    out = []
+    for p in pos.get("rows") or [pos]:
+        t = soup.find_all("table")[p["table"] - 1]
+        out.append(" ".join(t.find_all("tr")[p["row"] - 1].get_text(" ").split()))
+    return " ".join(out)
+
+
+def test_police_table_rows():
+    from test_dept_police import FakeGet
+    from dforms import police_hr, police_jh, police_mz, police_nl, police_od, police_sk, police_tr
+    cases = [(police_hr, {"url": police_hr.URL}, police_hr.URL, "police_hr_state.html"),
+             (police_jh, {"id": 397, "district": "x"}, police_jh.district_url(397), "police_jh.html"),
+             (police_mz, {}, police_mz.URL, "police_mz.html"),
+             (police_sk, {}, police_sk.URL, "police_sk.html"),
+             (police_nl, {"state": "NL", "district": "Phek"}, "https://phek.nic.in/x/", "police_nl_phek.html"),
+             (police_od, {"district": "Jharsuguda"}, "https://jharsuguda.odisha.gov.in/x", "police_od_jharsuguda.html")]
+    for m, p, url, fixture in cases:
+        p = {"url": url, **p}
+        if m is police_jh:
+            p = {"url": url, "nid": 397, "district": "x"}
+        recs, _, _ = m.fetch(p, FakeGet({url: fixture}))
+        html = (DATA / fixture).read_text(errors="replace")
+        n = 0
+        for _, d in recs:
+            if d.get("phone"):
+                ph = digits(d["phone"].split(",")[0])[-5:]
+                assert ph in digits(all_rows_text(html, d["src_pos"])), (m.M, d["area"], d["src_pos"])
+                n += 1
+        assert n, m.M
