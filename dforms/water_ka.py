@@ -13,6 +13,7 @@ No date on either page.
 import re
 
 from dforms import _esw, _water
+from dforms._water import pgrid
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -32,7 +33,7 @@ def kuwsdb(html, url=PAGES["kuwsdb"]):
     t = next((t for t in soup.find_all("table") if "Name of the officer" in t.get_text(" ")), None)
     if t is None:
         return []
-    rows = _esw.grid(t)
+    rows = pgrid(t)
     head = [h.lower() for h in rows[0]]
     recs, seen = [], set()
     for row in rows[1:]:
@@ -51,7 +52,7 @@ def kuwsdb(html, url=PAGES["kuwsdb"]):
         recs.append(_esw.record(MODULE, key, dept="water", level=level, area=div, post=post, name=name if not re.match(r"(?i)vacant", name) else None,
                                 phone=_esw.phones(c.get("office numbers")), email=_esw.emails(c.get("email id")),
                                 address=c.get("office address"), state="KA", district=c.get("location"),
-                                office_id=f"KA-KUWSDB-{_esw.slug(div)}", org=ORGS["kuwsdb"], source=url))
+                                office_id=f"KA-KUWSDB-{_esw.slug(div)}", org=ORGS["kuwsdb"], source=url, src_pos=row.pos))
     return recs
 
 
@@ -87,14 +88,14 @@ def bwssb(html, url=PAGES["bwssb"]):
     if t is None:
         return []
     recs, done = [], set()
-    for row in _esw.grid(t)[1:]:
+    for row in pgrid(t)[1:]:
         if len(row) < 3:
             continue
         cells = [officer_cell(x) for x in row[:3]]
         div, sub, stn = (c.get("code", "") for c in cells)
-        for c, level, area, parent, post in ((cells[0], "division", div, None, "Executive Engineer"),
+        for col, (c, level, area, parent, post) in enumerate(((cells[0], "division", div, None, "Executive Engineer"),
                                              (cells[1], "subdivision", sub, div, "Assistant Executive Engineer"),
-                                             (cells[2], "section", stn, sub, "Assistant Engineer")):
+                                             (cells[2], "section", stn, sub, "Assistant Engineer")), 1):
             key = f"KA-BWSSB-{_esw.slug(area)}" if level != "section" else f"KA-BWSSB-{_esw.slug(parent)}-{_esw.slug(area)}"
             if not area or key in done:
                 continue
@@ -106,7 +107,8 @@ def bwssb(html, url=PAGES["bwssb"]):
             recs.append(_esw.record(MODULE, key, dept="water", level=level, area=area, post=c.get("post") or post, name=name,
                                     phone=_esw.phones(c.get("office"), c.get("mobile")), email=_esw.emails(c.get("mail")),
                                     address=c.get("address"), state="KA", district="Bengaluru Urban", office_id=key,
-                                    org=ORGS["bwssb"], parent=f"KA-BWSSB-{_esw.slug(parent)}" if parent else None, source=url))
+                                    org=ORGS["bwssb"], parent=f"KA-BWSSB-{_esw.slug(parent)}" if parent else None, source=url,
+                                    src_pos=dict(row.pos, col=col)))
     return recs
 
 

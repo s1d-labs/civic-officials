@@ -36,3 +36,20 @@ def unique(key, seen):
         k, i = f"{key}:{i}", i + 1
     seen.add(k)
     return k
+
+
+class Row(list):
+    """One row of _esw.grid that knows its place: .pos = {"table", "row"} (source trail src_pos)."""
+    pos = None
+
+
+def pgrid(table, *a, **k):
+    """_esw.grid(table) with each row a Row carrying .pos ({"table": n, "row": m}, as officials.tables counts them)."""
+    from dforms import _esw
+    pos = []
+    out = []
+    for r, p in zip(_esw.grid(table, *a, pos=pos, **k), pos):
+        r = Row(r)
+        r.pos = p
+        out.append(r)
+    return out

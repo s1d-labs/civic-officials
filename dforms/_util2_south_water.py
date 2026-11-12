@@ -89,7 +89,7 @@ def parse_page(html, url, module, state, district, wing, extra=None):
     recs, seen = [], set()
     base = dict(dept="water", state=state, district=district, source=url, last_updated=last, wing=wing, **(extra or {}))
 
-    def add(post, name, place, phone, email):
+    def add(post, name, place, phone, email, sp=None):
         post, name, place = _esw.clean(post).strip(" ,."), clean_name(name or ""), _esw.clean(place)
         if not post and not name:
             return
@@ -99,14 +99,15 @@ def parse_page(html, url, module, state, district, wing, extra=None):
         area = area_of(post, place) or district
         key = unique(_esw.slug(f"{lvl}-{area}-{post}") or "office", seen)
         recs.append(_esw.record(module, f"{_esw.slug(district)}:{key}", level=lvl, area=area, post=post, name=name,
-                                phone=phone, email=email, **base))
+                                phone=phone, email=email, **base, method=(sp or {}).pop("_m", None), src_pos=sp))
 
     for tb in main.find_all("table"):
-        rows = _esw.grid(tb, _esw.cell_text)
+        tpos = []
+        rows = _esw.grid(tb, _esw.cell_text, pos=tpos)
         if not rows or not MOBILE.search(tb.get_text(" ")) and not re.search(r"\d{5,}", tb.get_text(" ")):
             continue
         head, cols = None, None
-        for r in rows:
+        for r, rp in zip(rows, tpos):
             m = head_map(r)
             if cols is None and len(m) >= 2 and ("phone" in m or "email" in m):
                 cols = m
@@ -121,7 +122,9 @@ def parse_page(html, url, module, state, district, wing, extra=None):
                 post, place = place, ""                          # "Division/Mandal Attached" = "Executive Engineer(P),Vijayawada."
             if not cols.get("post") and not cols.get("name") and not post:
                 continue
-            add(post, col("name"), place, _esw.phones(col("phone")), _esw.emails(col("email")))
+            # table numbers count the page's main content only (nav, header, footer, forms taken out)
+            add(post, col("name"), place, _esw.phones(col("phone")), _esw.emails(col("email")),
+                dict(rp, html="main content", _m="html table"))
     if not recs:                                                  # officers named in text lines
         lines = [l for l in main.get_text("\n").split("\n")]
         for i, line in enumerate(lines):
@@ -137,7 +140,8 @@ def parse_page(html, url, module, state, district, wing, extra=None):
                 continue
             post = m.group(1)
             place = re.sub(r"(?i)^(rws\s*&\s*s|rws&s|rws)\s*,?\s*", "", m.group(2)).strip(" ,")
-            add(f"{post}, {m.group(2)}".strip(" ,"), "", place, _esw.phones(*MOBILE.findall(ctx)), _esw.emails(ctx))
+            add(f"{post}, {m.group(2)}".strip(" ,"), "", place, _esw.phones(*MOBILE.findall(ctx)), _esw.emails(ctx),
+                {"text_line": i + 1, "line_text": t, "html": "main content text lines", "_m": "html text lines"})
     return recs, title
 
 

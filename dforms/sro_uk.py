@@ -7,6 +7,7 @@ Record ids: dept:sro_uk:UK-SRO-<town>, UK-DR-<town>, UK-AIG-<town>, UK-DIG-<town
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -36,7 +37,7 @@ def parse(html, url=URL):
     table = soup.find("table", class_="data-table-1") or soup.find("table")
     if table is None:
         return []
-    rows = _esw.grid(table)
+    rows = pgrid(table)
     recs, seen = [], set()
     for row in rows[1:]:
         if len(row) < 6:
@@ -56,7 +57,7 @@ def parse(html, url=URL):
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept="registration", level=level, area=area, post=post,
                                 designation=desig if desig.lower() != post.lower() else None, name=name,
-                                phone=_esw.phones(mobile, land), email=_esw.emails(mail), state="UK", office_id=key, source=url))
+                                phone=_esw.phones(mobile, land), email=_esw.emails(mail), state="UK", office_id=key, source=url, src_pos=row.pos))
     return recs
 
 

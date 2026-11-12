@@ -7,6 +7,7 @@ Three queue items (one per page). Record ids: dept:water_uk:<slug of designation
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -47,7 +48,7 @@ def parse(html, url=BASE):
     recs, seen = [], set()
     for t in soup.find_all("table"):
         cap = t.find("caption")
-        rows = _esw.grid(t)
+        rows = pgrid(t)
         if not rows or [h.lower() for h in rows[0][:2]] != ["name", "designation"]:
             continue
         head = [h.lower() for h in rows[0]]
@@ -69,7 +70,8 @@ def parse(html, url=BASE):
             recs.append(_esw.record(MODULE, k, dept="water", level=level, area=area, post=desig, name=c.get("name"),
                                     phone=_esw.phones(c.get("phone")), email=_esw.emails(c.get("email")),
                                     address=c.get("address"), state="UK", office_id=f"UK-UJS-{k.replace(':', '-')}", org=ORG,
-                                    serves=served, fax=_esw.phones(c.get("fax")), source=url, last_updated=updated))
+                                    serves=served, fax=_esw.phones(c.get("fax")), source=url, last_updated=updated,
+                                    src_pos=row.pos))
     return recs
 
 

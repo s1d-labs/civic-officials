@@ -11,6 +11,7 @@ Record ids: dept:ero_dh:DH-DEO-<district>, dept:ero_dh:DH-PC-<no>:ero, dept:ero_
 import re
 
 from dforms import _esw
+from dforms._power import tr_pos
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -63,7 +64,7 @@ def parse(html, url=URL):
             if all(r != "none" for r in roles):
                 cols = [r for r, n in zip(roles, spans) for _ in range(n)]
                 continue
-            col = 0
+            col, tp = 0, tr_pos(tr)
             for text, n in zip(texts, spans):
                 role = cols[col] if col < len(cols) else None
                 col += n
@@ -73,7 +74,7 @@ def parse(html, url=URL):
                 if not o["name"]:
                     continue
                 f = dict(dept="elections", designation=o["designation"], name=o["name"], phone=o["phone"], email=o["email"],
-                         address=o["address"], state="DH", source=url)
+                         address=o["address"], state="DH", source=url, src_pos=dict(tp, col=col - n + 1))
                 if role == "deo":
                     dist = re.sub(r"(?i)^collector\s*,?\s*", "", o["designation"]).strip(" ,")
                     key = f"DH-DEO-{_esw.slug(dist)}"

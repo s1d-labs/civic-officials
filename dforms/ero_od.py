@@ -10,6 +10,7 @@ Record ids: dept:ero_od:OD-AC-<no>:ero, dept:ero_od:OD-AC-<no>:aero:<slug of des
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -41,10 +42,10 @@ def parse(html, url=URL):
     soup = _esw.soup(html)
     recs, seen = [], set()
     for t in soup.find_all("table"):
-        rows = _esw.grid(t)
+        rows = pgrid(t)
         last = None
         for row in rows:
-            row = row + [""] * (9 - len(row))
+            rp, row = row.pos, row + [""] * (9 - len(row))
             m = AC.match(row[0])
             role = row[1].strip().upper()
             if m and not role and last == m.group(1):     # a blank role cell under the AC's AEROs (6 - Brajarajnagar)
@@ -73,7 +74,8 @@ def parse(html, url=URL):
                 seen.add(key)
                 rec = _esw.record(MODULE, key, dept="elections", level="ac", area=f"{no} - {acname}", post=post, designation=desig,
                                   name=_flat(name), phone=_esw.phones(_landline(row[4], row[5]), mobile),
-                                  email=_esw.emails(" ".join((mail, row[8]))), state="OD", office_id=ac, source=url)
+                                  email=_esw.emails(" ".join((mail, row[8]))), state="OD", office_id=ac, source=url,
+                                  src_pos=rp)
                 if rec[1].get("name") or rec[1].get("phone") or rec[1].get("email"):
                     recs.append(rec)
     return recs

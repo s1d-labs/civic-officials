@@ -11,6 +11,7 @@ Record ids: dept:water_kl:KL-KWA-<slug of block>:<slug of post>.
 import re
 
 from dforms import _esw, _water
+from dforms._water import pgrid
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -35,7 +36,7 @@ def parse(html, url=URL):
         return []
     last = updated(html)
     recs, seen, block = [], set(), "HEAD OFFICE"
-    for row in _esw.grid(t)[1:]:
+    for row in pgrid(t)[1:]:
         if len(row) < 5:
             continue
         head, post, phone, mobile, mail = row[0], row[1].lstrip("• ").strip(), row[2], row[3], row[4]
@@ -51,7 +52,7 @@ def parse(html, url=URL):
         key = _water.unique(f"KL-KWA-{_esw.slug(block)}:{_esw.slug(post)}", seen)
         recs.append(_esw.record(MODULE, key, dept="water", level=level, area=area, post=post, phone=ph, email=em, state="KL",
                                 office_id=f"KL-KWA-{_esw.slug(post if _water.area_after(post) else block)}", org=ORG, block=block if block != area else None,
-                                source=url, last_updated=last))
+                                source=url, last_updated=last, src_pos=row.pos))
     return recs
 
 

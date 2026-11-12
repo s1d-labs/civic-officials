@@ -7,6 +7,7 @@ Record ids: dept:sro_ka:KA-SRO-<slug of office>.
 import re
 
 from dforms import _esw
+from dforms._water import pgrid
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -31,7 +32,7 @@ def parse(html, url=URL):
     table = next((t for t in soup.find_all("table") if "Sub Registrar Office" in t.get_text(" ")), None)
     if table is None:
         return []
-    rows = _esw.grid(table)
+    rows = pgrid(table)
     recs, seen = [], set()
     for row in rows[1:]:
         if len(row) < 7 or not row[0].strip().isdigit():
@@ -45,7 +46,7 @@ def parse(html, url=URL):
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept="registration", level="office", area=office, post="Sub Registrar",
                                 designation=desig if desig.lower() != "sub registrar" else None, name=name, phone=_esw.phones(phone), email=_esw.emails(email), address=address,
-                                registration_district=re.sub(r"^DRO\s*", "", dro).strip(), state="KA", office_id=key, source=url))
+                                registration_district=re.sub(r"^DRO\s*", "", dro).strip(), state="KA", office_id=key, source=url, src_pos=row.pos))
     return recs
 
 

@@ -4,6 +4,7 @@ Office Address, Phone, Mail. The district comes from the region (Karaikal, Mahe,
 One queue item. Record ids: dept:sro_py:PY-SRO-<slug of region>.
 """
 from dforms import _esw
+from dforms._water import pgrid
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -28,7 +29,7 @@ def parse(html, url=URL):
     if table is None:
         return []
     recs, seen = [], set()
-    for row in _esw.grid(table)[1:]:
+    for row in pgrid(table)[1:]:
         if len(row) < 5 or not row[0].strip():
             continue
         region, name, address, phone, mail = row[:5]
@@ -39,7 +40,7 @@ def parse(html, url=URL):
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept="registration", level="subdistrict", area=region, post="Sub Registrar", name=name,
                                 phone=_esw.phones(phone), email=_esw.emails(mail), address=address.replace(" | ", ", ").strip(", "),
-                                state="PY", district=_district(region), office_id=key, source=url))
+                                state="PY", district=_district(region), office_id=key, source=url, src_pos=row.pos))
     return recs
 
 

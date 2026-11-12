@@ -11,8 +11,9 @@ two searches gets the same id).
 import re
 
 from dforms import _esw
+import provenance
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (search answer, div.contact-person-panel)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "water_wb"
 FORM = "https://www.wbphed.gov.in/en/contacts"
@@ -65,10 +66,12 @@ def _level(post):
     return "state"
 
 
-def parse(html, designation, url=SEARCH):
+def parse(html, designation, url=SEARCH, src=None):
+    """src: provenance.at() of the search answer (records name it: the item also read the form page)."""
+    src = src or {}
     soup = _esw.soup(html)
     recs, seen = [], set()
-    for card in soup.select("div.contact-person-panel"):
+    for cn, card in enumerate(soup.select("div.contact-person-panel"), 1):
         h5 = card.find("h5")
         pp = h5.find_next_sibling("p") if h5 else None
         name = _esw.clean(h5.get_text()) if h5 else ""
@@ -96,7 +99,8 @@ def parse(html, designation, url=SEARCH):
         recs.append(_esw.record(MODULE, k, dept="water", level=_level(post), area=office, post=post, name=name,
                                 phone=_esw.phones(info.get("phone")), fax=_esw.phones(info.get("fax")),
                                 email=_esw.emails(info.get("email")), address=info.get("address"), state="WB",
-                                office_id=f"WB-PHED-{_esw.slug(office)}" if office else None, org=ORG, source=FORM))
+                                office_id=f"WB-PHED-{_esw.slug(office)}" if office else None, org=ORG, source=FORM,
+                                src_pos={"selector": "div.contact-person-panel", "card": cn}, **src))
     return recs
 
 
@@ -112,5 +116,5 @@ def fetch(p, get):
     if s is None:
         return [], [], "search did not answer"
     files = [_esw.keep(MODULE, f"search-{_esw.slug(d)}", s.content)]
-    recs = parse(s.text, d)
+    recs = parse(s.text, d, src=provenance.at(s, SEARCH))
     return recs, files, "" if recs else "no contacts"

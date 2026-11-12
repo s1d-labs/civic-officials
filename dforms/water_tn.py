@@ -9,7 +9,7 @@ import re
 
 from dforms import _esw, _water
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (div.officer_block)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "water_tn"
 BASE = "https://www.twadboard.tn.gov.in/engineer-details/"
@@ -39,7 +39,7 @@ def field(body, label):
 def parse(html, url, rank="executive-engineer"):
     soup = _esw.soup(html)
     recs, seen = [], set()
-    for blk in soup.select("div.officer_block"):
+    for bn, blk in enumerate(soup.select("div.officer_block"), 1):
         h = blk.find("h3")
         if not h:
             continue
@@ -55,7 +55,8 @@ def parse(html, url, rank="executive-engineer"):
         key = _water.unique(f"TN-TWAD-{_esw.slug(post)}", seen)
         recs.append(_esw.record(MODULE, key, dept="water", level=LEVEL.get(rank) if _water.level_of(title) == "state" else _water.level_of(title), area=area,
                                 post=title, phone=_esw.phones(field(blk, "Phone Number")), email=_esw.emails(field(blk, "Email")),
-                                address=address, state="TN", city=city, office_id=key, org=ORG, office=post, source=url))
+                                address=address, state="TN", city=city, office_id=key, org=ORG, office=post, source=url,
+                                src_pos={"selector": "div.officer_block", "block": bn}))
     return recs
 
 

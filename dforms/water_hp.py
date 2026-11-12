@@ -10,6 +10,7 @@ Record ids: dept:water_hp:HP-JSV-<slug of post>.
 import re
 
 from dforms import _esw, _water
+from dforms._power import tr_pos
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -60,7 +61,8 @@ def parse(html, url=URL):
         area = RANK.sub("", post).strip(" ,-") or office
         key = _water.unique(f"HP-JSV-{_esw.slug(post)}", seen)
         recs.append(_esw.record(MODULE, key, dept="water", level=_water.level_of(post, "state"), area=area, post=post, name=name,
-                                phone=phone, email=email, state="HP", office_id=key, org=ORG, office=office, source=url))
+                                phone=phone, email=email, state="HP", office_id=key, org=ORG, office=office, source=url,
+                                src_pos=tr_pos(tr)))
     return recs
 
 

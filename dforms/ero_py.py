@@ -11,6 +11,7 @@ import re
 from datetime import datetime
 
 from dforms import _esw
+from dforms._water import pgrid
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -69,7 +70,7 @@ def parse(html, url=URL):
 
     for t in soup.find_all("table"):
         head = t.find_previous(string=DEO_HEAD)
-        rows = _esw.grid(t)
+        rows = pgrid(t)
         if any(AC.match(r[0]) for r in rows[:3] if r):
             for row in rows:
                 m = AC.match(row[0]) if row else None
@@ -83,15 +84,16 @@ def parse(html, url=URL):
                         continue
                     key = f"{ac}:ero" if role == "ero" else f"{ac}:aero:{_esw.slug(desig) or _esw.slug(name)}"
                     add(key, level="ac", area=area, office_id=ac, name=name, designation=desig, phone=phone, district=district_of(no),
-                        post="Electoral Registration Officer" if role == "ero" else "Assistant Electoral Registration Officer")
+                        post="Electoral Registration Officer" if role == "ero" else "Assistant Electoral Registration Officer",
+                        src_pos=dict(row.pos, col=col + 1))
         elif head and t.find_previous(string=re.compile("Electoral Registration Officers", re.I)) is None:
             district = DEO_HEAD.search(head).group(1).title()
             for row in rows:
-                row = row + [""] * (4 - len(row))
+                rp, row = row.pos, row + [""] * (4 - len(row))
                 if re.match(r"(?i)^DEO", row[1]):
                     add(f"PY-DEO-{_esw.slug(district)}", level="district", area=district, district=district,
                         office_id=f"PY-DEO-{_esw.slug(district)}", post="District Election Officer", designation=row[1],
-                        name=row[0], phone=_esw.phones(row[2]), email=_esw.emails(row[3]))
+                        name=row[0], phone=_esw.phones(row[2]), email=_esw.emails(row[3]), src_pos=rp)
     return recs
 
 
