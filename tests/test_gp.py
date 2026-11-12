@@ -109,3 +109,21 @@ def test_gp_ka_zp_names_only_page_gives_nothing():
     m, p = _ka("zpkalaburagi")
     recs, files, why = m.fetch(p, fake_get({p["pages"][0]: "gp/ka_kalaburagi_gps.html"}))
     assert recs == [] and why == "no PDO table"
+
+
+# ---- Maharashtra, Palghar: panchayat samiti office cards ----
+def test_gp_mh_palghar_cards_and_pages():
+    m = mod("gp_mh_palghar")
+    seeds = json.loads((ROOT / "seeds" / "dept_gp_mh_palghar.json").read_text())
+    assert seeds == m.items() and len(seeds) == 8 and m.METHOD
+    p = next(s["payload"] for s in seeds if s["key"] == "gp_mh_palghar:vikramgad")
+    get = fake_get({p["url"]: "gp/mh_palghar_vikramgad_p1.html"})
+    recs, files, why = m.fetch(p, get)
+    assert why == "" and len(recs) == 12 and len(get.calls) == 2      # page 2 is linked, not saved here: the item stops there
+    check_records(recs, "gp_mh_palghar", "rural_development")
+    r = dict(recs)["dept:gp_mh_palghar:vikramgad:wedhi-chari"]
+    assert r["name"] == "Umesh Ladakya Guhe" and r["phone"] == "8830083988" and r["email"] == "vpzpvikramgadvedhe@gmail.com"
+    assert r["post"] == "Gram Panchayat Adhikari (Panchayat Secretary)" and r["block"] == "Vikramgad" and r["district"] == "Palghar"
+    assert (r["lat"], r["lon"]) == (19.79327, 72.995973) and r["src_pos"] == {"page": 1, "card": 1}
+    four = m.records((DATA / "gp/mh_palghar_vikramgad_p4.html").read_text(), p["url"] + "page/4/", p, 4, set())
+    assert len(four) == 6 and all(d["src_pos"]["page"] == 4 for _, d in four)
