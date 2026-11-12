@@ -14,4 +14,5 @@ def items(get=None):
 
 
 def fetch(p, get):
-    return _leg_neva.fetch(MODULE, p, get, alias=ALIAS)
+    recs, files, why = _leg_neva.fetch(MODULE, p, get, alias=ALIAS)
+    return [(k, d) for k, d in recs if d.get("name", "").strip().lower() != "vacant"], files, why   # an empty seat's card
