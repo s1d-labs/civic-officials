@@ -2,3 +2,5 @@
 __pycache__/
 .scrape-check/
 .venv/
+.pytest_cache/
+.DS_Store
