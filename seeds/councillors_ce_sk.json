@@ -1,0 +1,26 @@
+[
+ {
+  "key": "ce-sk-2026-gazette-236",
+  "payload": {
+   "kind": "form-ce_sk",
+   "state": "SK",
+   "url": "https://sikkim.gov.in/uploads//Notifications/Gazette_Num_236_74_20260502.pdf",
+   "gazette": 236,
+   "label": "Sikkim Government Gazette Extraordinary No. 236 of 25.04.2026, notification 07/UDD/2026 (elected uncontested)",
+   "uncontested": true,
+   "election": "Sikkim General Municipal Elections 2026 (poll 24.04.2026, count 25.04.2026)"
+  }
+ },
+ {
+  "key": "ce-sk-2026-gazette-237",
+  "payload": {
+   "kind": "form-ce_sk",
+   "state": "SK",
+   "url": "https://sikkim.gov.in/uploads//Notifications/Gazette_Num_237_74_20260502.pdf",
+   "gazette": 237,
+   "label": "Sikkim Government Gazette Extraordinary No. 237 of 25.04.2026, notification 08/UDD/2026 (contested ward)",
+   "uncontested": false,
+   "election": "Sikkim General Municipal Elections 2026 (poll 24.04.2026, count 25.04.2026)"
+  }
+ }
+]
