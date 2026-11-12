@@ -32,13 +32,14 @@ def cell(td):
     return " ".join(td.get_text(" ", strip=True).split())
 
 
-def amc_rows(html):
-    """Rows of the corporators table: dicts with name, position, ward_no, ward_roman, party."""
+def amc_rows(html, pos=None):
+    """Rows of the corporators table: dicts with name, position, ward_no, ward_roman, party. pos: a list that gets each row's
+    src_pos {"table", "row"} (source trail)."""
     soup = BeautifulSoup(html, "lxml")
     out = []
-    for table in soup.find_all("table"):
+    for ti, table in enumerate(soup.find_all("table"), 1):
         head = None
-        for tr in table.find_all("tr"):
+        for ri, tr in enumerate(table.find_all("tr"), 1):
             tds = [cell(td) for td in tr.find_all(["td", "th"])]
             low = [t.lower() for t in tds]
             if head is None:
@@ -57,6 +58,8 @@ def amc_rows(html):
             out.append({"name": name, "ward_no": str(n), "ward_roman": ward if roman(ward) else None,
                         "position": tds[head["post"]] if head["post"] is not None else None,
                         "party": tds[head["party"]] if head["party"] is not None else None})
+            if pos is not None:
+                pos.append({"table": ti, "row": ri})
         if out:
             break
     return out
@@ -69,8 +72,9 @@ def amc_table(p, get):
     st = p["state"]
     files = [(f"councillors/{st}/{p['slug']}.html.gz", gzip.compress(r.content), "application/gzip")]
     recs = []
-    for d in amc_rows(r.text):
-        d.update({"type": "councillor", "state": st, "body": p["body"], "body_en": p.get("body_en") or p["body"],
+    pos = []
+    for d, sp in zip(amc_rows(r.text, pos), pos):
+        d.update({"src_pos": sp, "type": "councillor", "state": st, "body": p["body"], "body_en": p.get("body_en") or p["body"],
                   "body_type": p.get("body_type"), "district": p.get("district"), "lgd_code": p.get("lgd_code"),
                   "election": p.get("election"), "url": p["url"]})
         recs.append((f"councillor:{st}:{p['slug']}:{d['ward_no']}", d))

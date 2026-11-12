@@ -193,3 +193,61 @@ def test_as_od_line_positions():
         pages = [Page()]
     rows = od.list_rows(Reader(), {})
     assert rows[0][2]["src_pos"]["line"] == 2 and rows[0][2]["name"] == "Ram Das"
+
+
+def test_cr_up_rows_and_page_answer():
+    from cforms import cr_up
+    html = (DATA / "cr_up_sec_winners.html").read_text(encoding="utf-8")
+    rows = cr_up.winners(html)
+    recs = dict(cr_up.records(rows, "8"))
+    d = recs["councillor:UP:249062:7"]
+    assert d["src_pos"]["table_id"] == "ctl00_ContentPlaceHolder1_winnerdetail" and d["src_pos"]["row"] >= 2
+    assert "_pos" not in d and "html table" in cr_up.METHOD
+
+
+def test_cr_body_and_ce_ne_table_rows():
+    from bs4 import BeautifulSoup
+    from cforms import ce_ne, cr_body
+    html = (DATA / "cr_body_gj_chanasma.html").read_text(encoding="utf-8")
+    p = {"state": "GJ", "slug": "chanasma", "body": "Chanasma", "url": "https://chanasmanagarpalika.org/Members_List.html"}
+    d = dict(cr_body.records(html, p))["councillor:GJ:chanasma:6"]
+    tr = BeautifulSoup(html, "lxml").find_all("table")[d["src_pos"]["table"] - 1].find_all("tr")[d["src_pos"]["row"] - 1]
+    assert "પ્રતીક્ષાબેન" in tr.get_text(" ")
+    html = (DATA / "ce_mz_aizawl.html").read_text(encoding="utf-8")
+    pos = []
+    rows = ce_ne.amc_rows(html, pos)
+    assert len(pos) == len(rows) and pos[0]["row"] < pos[1]["row"]
+
+
+def test_cw_mh_city_list_cell_and_detail():
+    from cforms import cw_mh_city
+    routes = {"https://www.pcmcindia.gov.in/corporator-details?Id=288": "cw_mh_pcmc_288.html",
+              "https://www.pcmcindia.gov.in/corporator": "cw_mh_pcmc_list.html"}
+
+    class A:
+        def __init__(self, path):
+            self.content = (DATA / path).read_bytes()
+            self.text = self.content.decode("utf-8")
+    recs = dict(cw_mh_city.fetch({"site": "pcmc"}, lambda url, *a, **k: A(routes[url]) if url in routes else None)[0])
+    r = recs["councillor:MH:pimpri-chinchwad-mc:2-अ"]
+    assert r["src_url"] == cw_mh_city.SITES["pcmc"]["url"] and r["src_pos"]["col"] == 2
+    assert r["src_pos"]["detail_page"].endswith("Id=288")
+    assert "detail_page" not in recs["councillor:MH:pimpri-chinchwad-mc:32-ड"]["src_pos"]
+
+
+def test_aspnet_readers_name_the_answer_by_hash():
+    from cforms import tg
+    a = ("<table id='GridView1'><tr><td>WARD Name : 1, Reserved for : GEN</td></tr>"
+         "<tr><td>1</td><td>A</td><td>INC</td><td>10</td><td>Won</td></tr><tr><td>2</td><td>B</td><td>BJP</td><td>5</td><td></td></tr></table>")
+
+    class R:
+        def __init__(self, t):
+            self.text, self.content = t, t.encode()
+    tok = '<input name="org.apache.struts.taglib.html.TOKEN" value="t1">'
+
+    def get(url, method="GET", data=None, headers=None):
+        return R(tok if method == "GET" else a)
+    recs, _, why = tg.fetch({"district_id": "1", "ulb_id": "2", "ulb": "X"}, get)
+    if recs:
+        d = recs[0][1]
+        assert d["src_pos"] == {"table_id": "GridView1", "row": 2} and d["src_sha256"] == hashlib.sha256(a.encode()).hexdigest()

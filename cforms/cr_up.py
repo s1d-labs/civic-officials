@@ -25,10 +25,12 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
+import provenance
+
 from cforms.cr_common import best_body, clean, digits, key, latin, sim
 from forms.aspnet import hidden
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (ASP.NET winner grid, dropdown and page postbacks)"     # source trail (provenance.py): how this reader reads its sources
 
 URL = "https://sec.up.nic.in/site/NewWinnerList2023.aspx"
 P = "ctl00$ContentPlaceHolder1$"
@@ -82,10 +84,11 @@ def winners(html):
     """Rows of the winner table as dicts (COLS)."""
     t = BeautifulSoup(html, "lxml").find("table", id="ctl00_ContentPlaceHolder1_winnerdetail")
     out = []
-    for tr in (t.find_all("tr") if t else []):
+    for ri, tr in enumerate(t.find_all("tr") if t else [], 1):
         c = [clean(td.get_text(" ", strip=True)) for td in tr.find_all("td")]
         if len(c) == len(COLS):
             out.append(dict(zip(COLS, c)))
+            out[-1]["_pos"] = {"table_id": "ctl00_ContentPlaceHolder1_winnerdetail", "row": ri}
     return out
 
 
@@ -113,17 +116,20 @@ def records(rows, post, url=URL):
              "party_hi": r["party_hi"], "gender": r["gender"], "age": num(r["age"]), "phone": num(r["phone"]),
              "votes": num(r["votes"]), "vote_pct": num(r["vote_pct"]), "turnout_pct": num(r["turnout_pct"]),
              "unopposed": True if "निर्विरोध" in r["result"] else None, "result": r["result"], "election": ELECTION,
-             "url": url, "sec_post": post}
+             "url": url, "sec_post": post, "src_pos": r.get("_pos"), **(r.get("_src") or {})}
         place = code or f"{slug(dn or r['district'])}-{slug(r['body'])}"
         recs.append((f"councillor:UP:{place}:{ward_no}", {k2: v for k2, v in d.items() if v not in (None, "")}))
     return recs
 
 
-def _post(get, html, target, post, district, arg=""):
+def _post(get, html, target, post, district, arg="", resp=None):
+    """The answer's text; resp (a list), when given, gets the response itself (source trail)."""
     d = hidden(html)
     d.update({"__EVENTTARGET": P + target, "__EVENTARGUMENT": arg, "__LASTFOCUS": "", P + "DropDownList1": post,
               P + "ddlDistrict": district})
     r = get(URL, method="POST", data=d)
+    if resp is not None:
+        resp[:] = [r]
     return r.text if r is not None else None
 
 
@@ -152,22 +158,24 @@ def fetch(p, get):
     # the steps a person takes: choose the post (the server then resets the district list to "all"), then the district.
     # One postback with both set gives the post for the WHOLE state (seen 2026-11-12), so it is not used.
     post, did = p["post"], p["district_id"]
-    h = _post(get, r.text, "DropDownList1", post, "0")
+    last = []
+    h = _post(get, r.text, "DropDownList1", post, "0", resp=last)
     if h and did != "0":
-        h = _post(get, h, "ddlDistrict", post, did)
+        h = _post(get, h, "ddlDistrict", post, did, resp=last)
     if not h:
         return [], [], "postback did not answer"
     if selected(h) != (post, did):
         return [], [], f"page shows post/district {selected(h)}, not {(post, did)}"
     # the winner table shows 100 rows per page, with Next / Last links (GridView paging postbacks)
-    pages, rows = [h], winners(h)
-    seen = {json.dumps(rows[:1], sort_keys=True)}
+    # source trail: every page is a POST to the same url, so each row names its page's answer by its bytes
+    pages, rows = [h], [{**x, "_src": {**provenance.at(last[0], URL)}} for x in winners(h)]
+    seen = {json.dumps([{k: v for k, v in x.items() if k != "_src"} for x in rows[:1]], sort_keys=True)}
     while has_next(h) and len(pages) < MAX_PAGES:
-        h = _post(get, h, "winnerdetail", post, did, "Page$Next")
+        h = _post(get, h, "winnerdetail", post, did, "Page$Next", resp=last)
         if not h:
             return [], [], f"page {len(pages) + 1} did not answer"
-        w = winners(h)
-        first = json.dumps(w[:1], sort_keys=True)
+        w = [{**x, "_src": provenance.at(last[0], URL)} for x in winners(h)]
+        first = json.dumps([{k: v for k, v in x.items() if k != "_src"} for x in w[:1]], sort_keys=True)
         if not w or first in seen:
             break
         seen.add(first)
