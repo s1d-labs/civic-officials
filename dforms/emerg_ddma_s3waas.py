@@ -12,7 +12,8 @@ Two forms on one page, both read:
   ("District Emergency Operation Centre : 06189-222080", "District Control Room Numbers: | Landline: ... | Mobile: ...").
 Every record: dept disaster, layer emerg_ddma, level district (taluk / tehsil / block / mandal columns: subdistrict; sub-division:
 subdivision), area = the row's place or the district, section = table caption or the heading before the table, post, name, phone,
-fax, email, helpline (short codes 1077 / 1070 / 112 ... in the row). The DDMA lists often hold the other members too (SP, EE PWD,
+fax, email, helpline (short codes 1077 / 1070 / 112 ... in the row). Letter dates ("25-03-2026") and year ranges are
+not phones; a row whose post is a sub-division ("Kurseong Subdivision") gets level subdivision. The DDMA lists often hold the other members too (SP, EE PWD,
 CMO ...): they are kept, with their posts, because the page lists them as the district's disaster contacts.
 The same table reader also reads plain (non-S3WaaS) state pages: payload "level": "state" (no district) gives level state and
 area = payload "area"; with "area_is_district": true a row's place column is the district (USDMA's EOC and DM lists).
@@ -37,6 +38,7 @@ NAME_HINT = re.compile(r"(?i)^(shri|sri|sh|smt|smti|sushri|ms|mrs|mr|dr|er|km|ku
 SERVICE = re.compile(r",?\s*\(?\b(IAS|IPS|IFS|MCS|PCS|HCS|RAS|WBCS|KAS|NCS|JCS|TCS|ACS|OCS|BAS|MPS|HPAS|PPS|IRS)\)?\.?$")
 FIRE = re.compile(r"(?i)\bfire\b(?!.*\bdisaster\b)|अग्निशमन|दमकल")
 YEARS = re.compile(r"^(19|20)\d\d\s*[-–/]\s*(19|20)?\d\d$")
+DATE = re.compile(r"^\d{1,2}\s*[-./]\s*\d{1,2}\s*[-./]\s*(19|20)\d\d$")     # "25-03-2026": a letter date, not a phone
 SUBDIST = re.compile(r"(?i)\b(taluka?|tehsil|tahsil|block|mandal|circle|anchal)\b")
 SUBDIV = re.compile(r"(?i)\b(sub-?division|subdivision)\b")
 
@@ -268,13 +270,15 @@ def records(html, p):
     recs, seen = [], set()
 
     def add(section, area, post_, name, phone, fax, email, address, helpline, covers, org, labels, pos=None, method=None):
-        phone = ", ".join(x for x in (phone or "").split(", ") if x and not YEARS.match(x))
+        phone = ", ".join(x for x in (phone or "").split(", ") if x and not YEARS.match(x) and not DATE.match(x))
         name = name if re.search(r"[^\W\d_]", name or "") else ""
         if not (phone or email or helpline):
             return
         lvl = level_of(" ".join(x for x in (section, labels or "") if x)) if area and area != district else "district"
         if re.match(r"(?i)state\b", post_ or "") and not name:
             lvl = "state"
+        elif lvl == "district" and not area and SUBDIV.search(post_ or "") and not name:
+            lvl = "subdivision"          # a control-room row named after its sub-division ("Kurseong Subdivision", Darjeeling)
         dist = district
         if not district and p.get("level") == "state":
             lvl = "district" if area and lvl == "district" and p.get("area_is_district") else "state"

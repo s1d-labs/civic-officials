@@ -84,3 +84,55 @@ def test_discover_kaushambi():
     b = d["dept:sub_s3waas:kaushambi.nic.in:block:chail"]
     assert b["dept"] == "rural_development" and b["phone"] == "9454464582" and b["post"] == "Block Development Officer"
     assert m.fetch({**p, "url": "https://example.nic.in/"}, fake_get({}))[2] == "no answer"
+
+
+def test_discover_fallback_portal_pages_chandauli():
+    # Chandauli's home page links no tehsil / block category; the fallback reads the portal's own /tehsil/ page (archive copy
+    # 2026-11-05): "Tehsil | Sub Divisional Magistrate | Teshildar", one phone column per post -> two records per tehsil
+    home = "https://chandauli.nic.in/"
+    m = mod("sub_s3waas")
+    html = (DATA / "sub/s3waas_chandauli_home.html").read_text()
+    assert m.categories(html, home) == []
+    assert "https://chandauli.nic.in/tehsil/" in m.page_links(html, home)
+    p = {"reader": "sub_s3waas", "url": home, "discover": True, "state": "UP", "district": "Chandauli"}
+    get = fake_get({home: "sub/s3waas_chandauli_home.html", "https://chandauli.nic.in/tehsil/": "sub/s3waas_chandauli_tehsil_page.html"})
+    recs, files, why = m.fetch(p, get)
+    assert why == "" and [f[0] for f in files] == ["depts/sub_s3waas/chandauli.nic.in-home.html.gz",
+                                                   "depts/sub_s3waas/chandauli.nic.in-tehsil.html.gz"] and len(recs) == 10
+    d = dict(recs)
+    s = d["dept:sub_s3waas:chandauli.nic.in:subdivision:sakaldiha"]
+    assert s["post"] == "Sub-Divisional Magistrate" and s["phone"] == "9454417060" and s["level"] == "subdivision"
+    t = d["dept:sub_s3waas:chandauli.nic.in:tehsil:sakaldiha"]
+    assert t["post"] == "Tahsildar" and t["phone"] == "9454417064" and t["dept"] == "revenue" and t["level"] == "subdistrict"
+    assert t["src_url"] == "https://chandauli.nic.in/tehsil/" and set(t["src_pos"]) == {"table", "row"}
+    for _, r in recs:
+        assert r["state"] == "UP" and r["district"] == "Chandauli" and r["source"] and r["method"]
+    # no tehsil page answers: the old reason, with the number of pages read
+    get = fake_get({home: "sub/s3waas_chandauli_home.html"})
+    assert m.fetch(p, get)[2] == "no tehsil or block categories"
+
+
+def _tab(name, url, state):
+    return mod("sub_s3waas").table_records((DATA / f"sub/{name}").read_text(), url, {"state": state, "district": "X"})
+
+
+def test_table_layouts():
+    # headerless "post - place | phone, email" rows (Sheikhpura, archive copy 2026-11-05)
+    d = dict(_tab("s3waas_sheikhpura_subdivision_block.html", "https://sheikhpura.nic.in/sub-division-block/", "BR"))
+    b = d["dept:sub_s3waas:sheikhpura.nic.in:block:barbigha"]
+    assert b["post"] == "Block Development Officer" and b["phone"] == "9431818578" and b["email"] == "bdo.bar-sp-bih@nic.in"
+    assert len(d) == 6 and d["dept:sub_s3waas:sheikhpura.nic.in:block:ghatkusumbha"]["phone"] == "7549346830, 9431818264"
+    # "Block Name | Email Id | No. of Panchayat ..." (Hazaribag): email only, counts left out
+    recs = _tab("s3waas_hazaribag_blocks.html", "https://hazaribag.nic.in/blocks/", "JH")
+    check_records(recs, "sub_s3waas", "rural_development")
+    h = dict(recs)["dept:sub_s3waas:hazaribag.nic.in:block:barhi"]
+    assert h["email"] == "bdobarhi@gmail.com" and h["post"] == "Block Development Officer" and "phone" not in h
+    # "Office | Contact No | EMail | Office Address" (Navsari): Prant office = sub-division, Mamlatdar office = taluka
+    d = dict(_tab("s3waas_navsari_subdivision_blocks.html", "https://navsari.nic.in/subdivision-blocks/", "GJ"))
+    n = d["dept:sub_s3waas:navsari.nic.in:subdivision:chikhali"]
+    assert n["post"] == "Prant Officer" and n["phone"] == "02637233544" and n["office"] == "Prant,Chikhali"
+    assert any(r["post"] == "Mamlatdar" and r["level"] == "subdistrict" for r in d.values())
+    # a bare "Name" column of one-word places (Ayodhya): the place, not a person
+    d = dict(_tab("s3waas_ayodhya_subdivision_blocks.html", "https://ayodhya.nic.in/subdivision-blocks/", "UP"))
+    a = d["dept:sub_s3waas:ayodhya.nic.in:block:masodha"]
+    assert "name" not in a and a["area"] == "Masodha" and a["email"] == "bdo.msd@gmail.com"

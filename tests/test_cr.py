@@ -81,6 +81,14 @@ def test_pb_cards():
     assert cs[0]["url"].endswith("CouncillorsDetail?mcid=1094&MemberCode=2884")
 
 
+def test_pb_cards_ward_number():
+    # Alawalpur (mcid 1041) writes "Councillor Ward Number-1", "President Ward Number-5" (fixture: the cards of its home page, 2026-11-12)
+    cs = cr_pb.cards(read("cr_pb_alawalpur_home.html"))
+    assert [c["ward_no"] for c in cs] == [str(i) for i in range(1, 12)]
+    assert cs[4]["position"] == "President" and cs[4]["name"] == "Smt. Neelam Rani" and cs[0]["code"] == 2785
+    assert cr_pb.post_ward("Councillor  Ward Number-11") == (None, "11")
+
+
 def test_pb_detail():
     d = cr_pb.detail(read("cr_pb_patiala_687.html"))
     assert d["name"] == "Sh. Harvinder Shukla" and d["ward_no"] == "2" and d["phone"] == "9814357168"

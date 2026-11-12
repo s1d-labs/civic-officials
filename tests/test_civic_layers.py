@@ -61,6 +61,27 @@ def test_pollst_hr():
     assert all(d["station"] not in ("2", "3") for d in by.values())
 
 
+def test_pollst_hr_2024_hindi():
+    """2024 district list (Panipat, first 2 of 89 pages): Kruti Dev titles, cells in a legacy font map, numbers under the row."""
+    m = mod("civic_pollst_hr")
+    pages = json.loads((DATA / "civic_pollst_hr_2024_pages.json").read_text())
+    url = "https://ceoharyana.gov.in/Website/ELECTIONCOMMISSION/Images/c74ce7b9-8216-4b28-9907-2622d935a8e7.pdf"
+    recs = m.parse(pages, url, "Panipat")
+    check_pollst(recs, "civic_pollst_hr", "HR")
+    by = {r: d for r, d in recs}
+    assert sorted(int(d["part_no"]) for d in by.values()) == list(range(1, 19))
+    d = by["dept:civic_pollst_hr:HR-24-2"]
+    assert (d["ac_no"], d["ac_name"], d["locality"]) == (24, "पानीपत ग्रामीण", "ददलाना")
+    assert d["station"].startswith("राजकीय सीनियर") and d["station"].endswith("का मध्य कक्ष")
+    assert d["station_raw"].startswith("राजकȧय सीǓनयर")
+    assert d["polling_area"] == "मतदाता ग्राम ददलाना ब्लाक न० 3 आबादी रिफाइनरी टाउनशिप"
+    # the number stands on the line under the row (row 18); the note under the table is no row
+    d = by["dept:civic_pollst_hr:HR-24-18"]
+    assert (d["locality"], d["polling_area"]) == ("खोतपरा", "मतदाता ग्राम खोतपरा ब्लाक न० 1")
+    assert all("lHkh" not in d["station"] and "तरतीबवार" not in d.get("locality", "") for d in by.values())
+    assert d["src_pos"]["page"] == 2
+
+
 def test_pollst_hr_fetch_keeps_pdf():
     m = mod("civic_pollst_hr")
     url = "https://ceoharyana.gov.in/Website/ELECTIONCOMMISSION/Images/x.pdf"
@@ -432,6 +453,19 @@ def test_post_s3waas():
     so = by_id(recs)["dept:civic_post_s3waas:ashoknagar.nic.in:473335-isagarh-so"]
     assert so["post"] == "Sub Postmaster" and so["source"] == url + "page/2/"
     assert m.post_of("Greamspet Post Office") == (None, "Postmaster") and m.post_of("Nallavadu B.O")[0] == "BO"
+
+
+def test_post_s3waas_theme5_cards():
+    """Kolasib (district-theme-5, 2026-11): cards are "ul.pub-ut-container > li.box", not ".public-utlty-catg"."""
+    m = mod("civic_post_s3waas")
+    url = "https://kolasib.nic.in/public-utility-category/postal/"
+    p = {"reader": "civic_post_s3waas", "url": url, "state": "MZ", "district": "Kolasib", "max_pages": 30}
+    recs, files, why = m.fetch(p, fake_get({url: "civic_post_s3waas_kolasib_theme5.html"}))
+    assert why == "" and len(recs) == 4
+    check_c(recs, "civic_post_s3waas", "postal", "post")          # Bilkhawthlir's phone is "03837-" only
+    d = next(d for _, d in recs if d["area"] == "Kawnpui Sub Post Office")
+    assert d["phone"] == "03837-266647" and d["pincode"] == "796070" and d["post"] == "Sub Postmaster"
+    assert d["src_pos"]["selector"] == ".pub-ut-container > li"
 
 
 def test_csc_s3waas():

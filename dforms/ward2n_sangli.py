@@ -27,8 +27,10 @@ def items(get=None):
 def parse(html, p):
     soup = _esw.soup(html)
     n = p["office"]
-    title = soup.find(string=re.compile(r"Regional\)\s*Offices\s*-\s*\d"))
-    if title and int(re.search(r"-\s*(\d)", title).group(1)) != n:
+    # the page's own heading (h1#..._deptName); the side menu names all 4 offices, so the first match on the page is always "- 1"
+    head = soup.find(id=re.compile(r"deptName$")) or soup.find("h1")
+    m = re.search(r"Regional\)\s*Offices\s*-\s*(\d)", head.get_text(" ") if head else "")
+    if m and int(m.group(1)) != n:
         return []
     area = f"Ward Committee {n}"
     seen, recs = set(), []

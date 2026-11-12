@@ -1,0 +1,20 @@
+{
+ "module": "ward2n_mcd",
+ "payload": {
+  "reader": "ward2n_mcd",
+  "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=344a5905-d3f0-41e5-b4e9-7a4d9bf5b45b",
+  "zone": "Rohini Zone",
+  "state": "DL"
+ },
+ "routes": {
+  "https://mcdonline.nic.in/portal/showSubMenu?menuguide=344a5905-d3f0-41e5-b4e9-7a4d9bf5b45b": "mcd_rohini_sub.txt",
+  "https://mcdonline.nic.in/portal/showContent?menuguide=cb52b3b0-cf26-49f3-a515-3da962f72852": "mcd_rohini_kc.txt"
+ },
+ "min_records": 30,
+ "expect": [
+  {"post": "^Deputy Commissioner$", "name": "Anshul Sirohi"},
+  {"post": "^Assistant Commissioner$", "name": "Bhaskar Seal"},
+  {"post": "Chief Engineer", "name": "VK Gupta"},
+  {"post": "^Zone Office$"}
+ ]
+}
