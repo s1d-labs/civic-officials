@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 from dforms._police import ascii_digits, clean, email, gz, phones, rec, slug, uniq
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_mumbai"
 URL = "https://mumbaipolice.gov.in/Police_incharge?page={}"
@@ -31,7 +31,7 @@ def std(nums, code="022"):
 def parse(html, url):
     soup = BeautifulSoup(html, "lxml")
     recs = []
-    for card in soup.select("div.senior-officer-item"):
+    for ci, card in enumerate(soup.select("div.senior-officer-item"), 1):
         up = card.select_one(".card-up")
         if not up:
             continue
@@ -57,7 +57,8 @@ def parse(html, url):
         landline = std(f.get("landline"))
         recs.append(rec(M, key(station), area=station, post="Police station in-charge", name=name, rank=rank,
                         phone=phones(f.get("mobile"), landline), mobile=f.get("mobile"), landline=landline,
-                        fax=std(f.get("fax")), email=f.get("email"), state="MH", district="Mumbai", source=url))
+                        fax=std(f.get("fax")), email=f.get("email"), state="MH", district="Mumbai", source=url,
+                        src_pos={"selector": "div.senior-officer-item", "card": ci}))
     return uniq(recs)
 
 

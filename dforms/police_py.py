@@ -7,9 +7,10 @@ import re
 
 from bs4 import BeautifulSoup
 
+import provenance
 from dforms._police import clean, email, gz, phones, rec, uniq
 
-METHOD = "json api + html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "json api (station list) + html page (station page)"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_py"
 BASE = "https://police.py.gov.in/"
@@ -48,7 +49,7 @@ def fetch(p, get):
     except ValueError:
         return [], files, "not json"
     recs, cards, missed = [], [], 0
-    for x in rows:
+    for xi, x in enumerate(rows):
         url = f"{BASE}station.php?id={x['id']}"
         s = get(url)
         d = {}
@@ -59,7 +60,10 @@ def fetch(p, get):
             missed += 1
         recs.append(rec(M, x.get("ps_code") or f"id{x['id']}", area=x.get("ps_name"), post="Officer in charge",
                         name=d.get("name"), rank=d.get("rank"), phone=d.get("phone"), email=d.get("email"), state="PY",
-                        district=(x.get("district") or "").title() or None, office_id=x.get("ps_code"), source=url))
+                        district=(x.get("district") or "").title() or None, office_id=x.get("ps_code"), source=url,
+                        **(provenance.at(s, url) if d else provenance.at(r, p.get("url", BASE + "get_station.php"))),
+                        src_pos={"list_index": xi, "id": x["id"], **({"selector": ".station-page"} if d else {})},
+                        method="json api (station list) + html page (station page)" if d else "json api (station list)"))
     files.append(gz(M, "stations.html", "<html><body>" + "\n".join(cards) + "</body></html>"))
     recs = uniq(recs)
     return recs, files, "" if recs and missed < len(rows) else "station pages did not answer"

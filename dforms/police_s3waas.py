@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table + html cards (S3WaaS public utility), paged /page/N/"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_s3waas"
 
@@ -174,13 +174,13 @@ def table_rows(html):
     """Yield (fields, context) for every data row of every table: fields = {kind: text}."""
     soup = BeautifulSoup(html, "lxml")
     last_head = None
-    for t in soup.find_all("table"):
+    for ti, t in enumerate(soup.find_all("table"), 1):
         cap = t.find("caption")
         h = t.find_previous(["h1", "h2", "h3", "h4", "h5", "strong"])
         context = clean(cap.get_text(" ", strip=True)) if cap else None
         head, section = None, None
         rows = grid(t)
-        for r in rows:
+        for ri, r in enumerate(rows, 1):
             if not any(r):
                 continue
             hk = header_of(r)
@@ -203,7 +203,8 @@ def table_rows(html):
                 continue
             yield f, {"caption": context, "section": section, "heading": clean(h.get_text(" ", strip=True)) if h else None,
                       "station_head": bool(use and any(k == "station" for k in use)) and any(
-                          STATION_HEAD.search(x or "") for x, k in zip(rows[0], use) if k == "station")}
+                          STATION_HEAD.search(x or "") for x, k in zip(rows[0], use) if k == "station"),
+                      "pos": {"table": ti, "row": ri}}
         if head:
             last_head = head
 
@@ -299,8 +300,9 @@ def records(module, pages, p):
             out.append(rec(module, key, level=level, office_type=otype, area=label, post=post, name=name,
                            rank=rank if rank != post else None, phone=ph, email=mail, address=f.get("address"),
                            pincode=f.get("pincode"), circle=f.get("circle"), subdivision=sub, state=state, district=district,
-                           source=url, last_updated=lu))
-        for c in cards(html):
+                           source=url, last_updated=lu, src_url=url, src_pos=ctx.get("pos"), method="html table"))
+        cw = []
+        for ci, c in enumerate(cards(html, cw)):
             label = c["title"]
             if p.get("police_only") and not POLICE.search(f"{label} {c.get('type') or ''}"):
                 continue
@@ -312,7 +314,7 @@ def records(module, pages, p):
                            post="SHO" if otype == "police station" else "Officer in charge" if otype == "police post" else label,
                            phone=fix_phone(c.get("phone"), std, std_prefix), email=email(c.get("email")),
                            address=c.get("address"), pincode=c.get("pincode"), state=state, district=district, source=url,
-                           last_updated=lu))
+                           last_updated=lu, src_url=url, src_pos=cw[ci], method="html cards (S3WaaS public utility)"))
     return merge(out)
 
 

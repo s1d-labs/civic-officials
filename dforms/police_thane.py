@@ -11,9 +11,10 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup
 
+import provenance
 from dforms._police import clean, gz, phones, rec, uniq
 
-METHOD = "json api + html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "json (Next.js server action) + html text (officer line)"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_thane"
 BASE = "https://thanepolice.gov.in"
@@ -83,7 +84,7 @@ def fetch(p, get):
     files.append(gz(M, "stations.rsc", r.content))
     rows = stations(r.text)
     recs = []
-    for s in rows:
+    for si, s in enumerate(rows):
         url = f"{MAP}/{s['id']}"
         name = mobile = rank = None
         x = get(url)
@@ -97,5 +98,9 @@ def fetch(p, get):
         recs.append(rec(M, s["id"], area=s.get("name"), area_regional=s.get("nameMr"), post="Senior Police Inspector (in charge)",
                         name=name, rank=rank, phone=phones(mobile, s.get("contactNo")), mobile=mobile,
                         landline=phones(s.get("contactNo")), address=s.get("address"), address_regional=s.get("addressMr"),
-                        zone=s.get("zone"), state="MH", district="Thane", office_id=s["id"], lat=lat, lon=lon, source=url))
+                        zone=s.get("zone"), state="MH", district="Thane", office_id=s["id"], lat=lat, lon=lon, source=url,
+                        # station fields: the server-action list (line "1:", array index); the officer: the station page text
+                        **provenance.at(r, BASE + "/en"), src_pos={"line": "1:", "index": si, "id": s["id"],
+                                                                   **({"officer_from": url} if name else {})},
+                        method="json (Next.js server action)" + (" + html text (officer line)" if name else "")))
     return uniq(recs), files, "" if recs else ("; ".join(why) or "no stations")

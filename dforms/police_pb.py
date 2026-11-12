@@ -12,6 +12,7 @@ Record id dept:police_pb:<district code>:<row id>."""
 import json
 import re
 
+from dforms import _civic
 from dforms._police import clean, email, gz, phones, rec, slug
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
@@ -92,7 +93,7 @@ def latlon(lat, lon):
 
 def parse(rows, district_code, url=SOURCE):
     recs = []
-    for x in rows:
+    for i, x in enumerate(rows):
         st = clean(x.get("cctnsPsName"))
         name, rank, belt, name_phone = split_name(x.get("shoName"))
         mhc, mhc_rank, mhc_belt, _ = split_name(x.get("mhcName"))
@@ -108,7 +109,7 @@ def parse(rows, district_code, url=SOURCE):
                         email=email(x.get("psEmail") or ""), address=clean(x.get("psAddress")),
                         mhc_name=mhc, mhc_rank=mhc_rank, mhc_belt_no=mhc_belt, mhc_mobile=phones(x.get("mhcMobile")), saanjh_centre=clean(x.get("saanjhName")),
                         state="PB", district=clean(x.get("cctnsDistrictName")), office_id=str(x["cctnsPsCode"]) if x.get("cctnsPsCode") else None,
-                        lat=lat, lon=lon, source=url))
+                        lat=lat, lon=lon, source=url, src_pos={"index": i, "id": x.get("id")}))
     return recs
 
 
@@ -126,5 +127,5 @@ def fetch(p, get):
         except (ValueError, json.JSONDecodeError):
             why.append(f"{t}: not json")
             continue
-        recs += parse(rows if isinstance(rows, list) else rows.get("data") or [], code)
+        recs += _civic.tag(parse(rows if isinstance(rows, list) else rows.get("data") or [], code), r, details_url(code, t))
     return recs, files, "" if recs else ("; ".join(why) or "no stations")

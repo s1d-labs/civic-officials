@@ -19,7 +19,7 @@ import re
 from dforms import police_s3waas as s3
 from dforms._police import clean, gz, rec, slug, uniq
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table + html cards (S3WaaS public utility), paged /page/N/"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police2n_dir"
 

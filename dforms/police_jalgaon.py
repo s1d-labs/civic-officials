@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 from dforms._police import ascii_digits, clean, email, gz, phones, rec
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (fields by icon class)"     # source trail (provenance.py): how this reader reads its sources
 
 M = "police_jalgaon"
 LIST = "https://jalgaonpolice.gov.in/police-stations"
@@ -63,7 +63,8 @@ def parse(html, url, sid):
                 mobile_as_published=mob_raw.strip() if mob_raw.strip() and not mob else None, landline=phones(stn.get("fa-phone")),
                 email=email(stn.get("fa-envelope") or ""), address=stn.get("fa-map-marker"), subdivision=stn.get("fa-building"),
                 digipin=dp.group(1) if dp else None, lat=float(m.group(2)) if m else None, lon=float(m.group(1)) if m else None,
-                state="MH", district="Jalgaon", office_id=str(sid), source=url)]
+                state="MH", district="Jalgaon", office_id=str(sid), source=url,
+                src_pos={"selector": ".stn-prof-card (fields by icon class)"})]
 
 
 def fetch(p, get):

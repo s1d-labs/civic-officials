@@ -5,6 +5,7 @@ circleOffice, stationName, address, phone (the station / SHO CUG mobile, 9440xxx
 No officer names. One queue item = the whole table (2-3 requests). Record id dept:police_ap:<district>:<station>."""
 import json
 
+import provenance
 from dforms._police import gz, phones, rec, slug, uniq
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
@@ -15,9 +16,10 @@ URL = BASE + "/our-organization/police-stations"
 PAGE = 1000
 
 
-def parse(rows, url=URL):
+def parse(rows, url=URL, where=None):
+    """where: per row, its source answer as {src_url, src_sha256, src_pos} (source trail), when known."""
     recs = []
-    for x in rows:
+    for i, x in enumerate(rows):
         st = x.get("stationName")
         if not st:
             continue
@@ -27,7 +29,7 @@ def parse(rows, url=URL):
                         address=x.get("address"), state="AP", district=x.get("district"), subdivision=x.get("sdpoOffice"),
                         circle=x.get("circleOffice"), office_id=x.get("stationTableId"),
                         last_updated=(x.get("updatedAt") or "")[:10] or None, lat=lat if ok else None, lon=lon if ok else None,
-                        source=url))
+                        source=url, **((where or [])[i] if where and i < len(where) else {})))
     return uniq(recs)
 
 
@@ -35,7 +37,7 @@ def fetch(p, get):
     base = p.get("base", BASE)
     if get(base + "/public/session/init") is None:
         return [], [], "session/init did not answer"
-    rows, files, total, off = [], [], None, 0
+    rows, files, total, off, where = [], [], None, 0, []
     while total is None or off < total:
         r = get(f"{base}/public/organization/police-station-table?offset={off}&limit={PAGE}")
         if r is None:
@@ -47,11 +49,14 @@ def fetch(p, get):
             return [], files, "not json: " + r.text[:80]
         data = js.get("data") or []
         rows += data
+        at = provenance.at(r, f"{base}/public/organization/police-station-table?offset={off}&limit={PAGE}")
+        where += [{**at, "src_pos": {"key": "data", "index": k, "offset": off, "id": x.get("stationTableId")}}
+                  for k, x in enumerate(data)]
         total = int(js.get("totalCount") or len(rows))
         if not data:
             break
         off += len(data)
     if len(rows) < total:
         return [], files, f"only {len(rows)} of {total} rows"
-    recs = parse(rows, p.get("url", URL))
+    recs = parse(rows, p.get("url", URL), where)
     return recs, files, "" if recs else "no rows"

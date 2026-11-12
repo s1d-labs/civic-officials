@@ -27,14 +27,15 @@ def items(get):
 
 def parse(rows, url=SOURCE):
     recs = []
-    for x in rows:
+    for i, x in enumerate(rows):
         st = x.get("ps_name_en") or x.get("ps_name")
         if not st:
             continue
         key = str(x["ps_id"]) if x.get("ps_id") is not None else f"{slug(x.get('district_name'))}:{slug(st)}"
         recs.append(rec(M, key, area=st, area_regional=x.get("ps_name_hi"), post="SHO (station CUG)", phone=phones(x.get("mobile")),
                         email=email(x.get("email")), state="BR", district=x.get("district_name"),
-                        office_id=str(x["ps_id"]) if x.get("ps_id") is not None else None, source=url))
+                        office_id=str(x["ps_id"]) if x.get("ps_id") is not None else None, source=url,
+                        src_pos={"key": "data", "index": i, "ps_id": x.get("ps_id")}))
     return recs
 
 

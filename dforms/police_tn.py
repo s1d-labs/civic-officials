@@ -53,7 +53,7 @@ def level_of(unit, desig):
 
 def parse(rows, dist_id, district, url=SOURCE):
     recs = []
-    for x in rows:
+    for i, x in enumerate(rows):
         unit, desig, name = clean(x.get("unitName")), clean(x.get("designationName")), clean(x.get("empName"))
         if not unit:
             continue
@@ -65,7 +65,8 @@ def parse(rows, dist_id, district, url=SOURCE):
         recs.append(rec(M, f"{dist_id}:{slug(unit)}:{slug(name or desig)}", level=level, area=unit,
                         office_type="wing" if level == "police_station" and WING.search(unit) else None, post=desig, name=name,
                         phone=phone if CUG.match(phone) else None, email=mail,
-                        address=None if addr in (None, "TAMILNADU, INDIA") else addr, state="TN", district=district, source=url))
+                        address=None if addr in (None, "TAMILNADU, INDIA") else addr, state="TN", district=district, source=url,
+                        src_pos={"key": "responseObject.data", "index": i}))
     return uniq(recs)
 
 
