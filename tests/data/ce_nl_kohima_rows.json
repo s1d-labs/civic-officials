@@ -1,0 +1,422 @@
+[
+{
+"cells": [
+"Ward No.",
+"Ward Name",
+"Reservatio n status",
+"Name of Candidate",
+"Gender",
+"Party that Won",
+"Remarks"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 0
+},
+{
+"cells": [
+"1",
+"High School",
+"Reserved",
+"Kelhousenuo Khruomo",
+"F",
+"NDPP",
+"Elected Unopposed"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 80
+},
+{
+"cells": [
+"2",
+"Bayavü",
+"Unreserved",
+"Avelie Rio",
+"M",
+"NDP P",
+"Elected Unopposed"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 160
+},
+{
+"cells": [
+"3",
+"North Block",
+"Unreserved",
+"Ruokuovolie Rutsa",
+"M",
+"NDPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 240
+},
+{
+"cells": [
+"4",
+"Naga Bazar",
+"Reserved",
+"Zeneivonuo Nakhro",
+"F",
+"NDPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 320
+},
+{
+"cells": [
+"5",
+"Kitsubozou",
+"Unreserved",
+"Vimhalie Pienyü",
+"IN D",
+"IND",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 400
+},
+{
+"cells": [
+"6",
+"D Block",
+"Unreserved",
+"Thenusou Sekhose",
+"F",
+"NDPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 480
+},
+{
+"cells": [
+"7",
+"Daklane",
+"Reserved",
+"Kazheli Tungoe",
+"F",
+"NDPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 560
+},
+{
+"cells": [
+"8",
+"New Market",
+"Unreserved",
+"Thejavizo Philip Solo",
+"M",
+"NDPP",
+"Elected Unopposed"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 640
+},
+{
+"cells": [
+"9",
+"Midlane",
+"Unreserved",
+"Kekhrieselhou Angami",
+"M",
+"NDPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 720
+},
+{
+"cells": [
+"10",
+"Hospital",
+"Reserved",
+"Kevinei-Ü Sekhose",
+"F",
+"IND",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 800
+},
+{
+"cells": [
+"l1",
+"P.W.D",
+"Unreserved",
+"Neibodzelie Solo",
+"M",
+"NDPP",
+"Elected Unopposed"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 880
+},
+{
+"cells": [
+"12",
+"Chandmari Upper",
+"Unreserved",
+"Ahelie Theyo",
+"M",
+"IND",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 960
+},
+{
+"cells": [
+"13",
+"Lower Chandmari",
+"Reserved",
+"K. Asangla Jamir",
+"F",
+"NDPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 1040
+},
+{
+"cells": [
+"14",
+"Porter lane",
+"Unreserved",
+"Vizokhoto George Kirha",
+"M",
+"NPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 1120
+},
+{
+"cells": [
+"15",
+"A.G.",
+"Unreserved",
+"Ketuosie Khamo",
+"M",
+"NDPP",
+"Elected Unoppesed"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 1200
+},
+{
+"cells": [
+"16",
+"NMH/Lerie/NST/ Dairy Farm",
+"Reserved",
+"Ane U. Khaming",
+"F",
+"NPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 1280
+},
+{
+"cells": [
+"17",
+"Agri/Electrical/ Forest",
+"Unreserved",
+"Khrielievi Chusi",
+"M",
+"NDPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 1360
+},
+{
+"cells": [
+"18",
+"Para Medical",
+"Unreserved",
+"Neikhozo Suokhrie",
+"M",
+"NDPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 1440
+},
+{
+"cells": [
+"19",
+"P.R Hill",
+"Unreserved",
+"Medoviu Martin Suohu",
+"M",
+"NPP",
+"Elected Through Contest"
+],
+"new": [
+true,
+true,
+true,
+true,
+true,
+true,
+true
+],
+"y": 1520
+}
+]
