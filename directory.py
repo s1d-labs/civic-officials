@@ -19,6 +19,7 @@ import time
 import requests
 
 from certs_trust import trust
+import provenance
 
 from officials import normalise, pubutility, tables
 
@@ -116,6 +117,7 @@ def main():
     s = requests.Session()
     s.verify = trust()
     s.headers.update(HEADERS)
+    trail = provenance.Trail(os.environ.get("SCRAPE_TASK", "directory"), project, getattr(hub, "run_id", ""))
 
     def get(method, url, data):
         t = time.time()
@@ -136,6 +138,7 @@ def main():
             if r.status_code in (403, 429, 503):
                 hub.block()
             return None
+        trail.note(r, url, method, data)
         return r
 
     try:
@@ -151,19 +154,22 @@ def main():
                 hub.failure("source", item["key"], "gave up after 3 attempts", url=item["payload"]["url"])
                 hub.complete([item["key"]], "done", fetched=0)
                 continue
+            trail.begin(item, item["payload"].get("reader") or item["payload"].get("kind") or "")
             try:
                 recs, files, why = run(item, get)
             except Exception as e:
                 recs, files, why = [], [], f"{type(e).__name__}: {e}"[:200]
-            if files:
-                hub.upload_many(files)
+            n_data = len(recs)
+            recs, files = trail.finish(recs, files)
+            for i in range(0, len(files), 100):      # source copies can make many files: links in chunks
+                hub.upload_many(files[i:i + 100])
             for rid, data in recs:
                 hub.record(rid, data)
             if why:
                 hub.failure("source", item["key"], why, url=item["payload"]["url"])
                 hub.complete([item["key"]], "failed", error=why)
             else:
-                hub.complete([item["key"]], "done", fetched=len(recs))
+                hub.complete([item["key"]], "done", fetched=n_data)
         hub.close("finished" if not stop else "failed", "" if not stop else "stopped by signal")
     except BaseException as e:
         hub.close("failed", f"{type(e).__name__}: {e}"[:200])

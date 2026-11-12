@@ -20,6 +20,7 @@ from urllib.parse import urlsplit
 import requests
 
 from certs_trust import trust
+import provenance
 from forms.aspnet import LegacyTLS, insecure_retry
 
 from officials import (PEOPLE_PATH, ajax_rows, candidate_links, common_links, normalise, page_title, pager_blocks, pubutility,
@@ -109,6 +110,8 @@ class Site:
             return None, f"http {r.status_code}"
         if not r.encoding or r.encoding.lower() == "iso-8859-1":
             r.encoding = r.apparent_encoding or "utf-8"
+        if getattr(self, "trail", None):
+            self.trail.note(r, url, method, data)
         return r, ""
 
     def keep_page(self, url, final, html, n_rows):
@@ -220,6 +223,7 @@ def main():
     def worker():
         s = requests.Session()
         s.headers.update(HEADERS)
+        trail = provenance.Trail("whoswho", project, getattr(hub, "run_id", ""))     # one per thread
         while time.time() < deadline and not stop:
             with lock:
                 if hub.settings.get("paused"):
@@ -238,10 +242,13 @@ def main():
                     hub.complete([item["key"]], "done", fetched=0)
                 continue
             site = Site(hub, s, item, max(0.5, hub.settings.get("delay_ms", 0) / 1000))
+            trail.begin(item, "whoswho")
+            site.trail = trail
             try:
                 ok, why = site.run()
             except Exception as e:      # one odd site must not stop the worker
                 ok, why = False, f"{type(e).__name__}: {e}"[:200]
+            site.records, site.files = trail.finish(site.records, site.files, "html page")
             if getattr(site, "tls_unverified", False):     # some page came without a certificate check: say so on every record
                 for _, data in site.records:
                     data["tls_unverified"] = True

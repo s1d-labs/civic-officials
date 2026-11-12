@@ -22,6 +22,7 @@ import time
 import requests
 
 from certs_trust import trust
+import provenance
 
 from forms import aspnet
 from officials import normalise, tables
@@ -152,6 +153,7 @@ def main():
     s = requests.Session()
     s.verify = trust()
     s.headers.update(HEADERS)
+    trail = provenance.Trail(os.environ.get("SCRAPE_TASK", "blo"), project, getattr(hub, "run_id", ""))
 
     def get(method, url, data):
         t = time.time()
@@ -172,6 +174,7 @@ def main():
             if r.status_code in (403, 429, 503):
                 hub.block()
             return None
+        trail.note(r, url, method, data)
         return r
     get.hub = hub      # readers that keep their files in the bucket (forms/blo2_ocr.py) read them back through the hub
 
@@ -192,21 +195,24 @@ def main():
                 hub.failure("blo", item["key"], "gave up after 3 attempts", url=item["payload"].get("url", ""))
                 hub.complete([item["key"]], "done", fetched=0)
                 continue
+            trail.begin(item, item["payload"].get("reader") or item["payload"].get("kind") or "")
             try:
                 recs, files, why = run(item, get)
             except Exception as e:
                 recs, files, why = [], [], f"{type(e).__name__}: {e}"[:200]
+            n_data = len(recs)
+            recs, files = trail.finish(recs, files)
             for attempt in range(5):
                 try:
-                    if files:
-                        hub.upload_many(files)
+                    for i in range(0, len(files), 100):      # source copies can make many files: links in chunks
+                        hub.upload_many(files[i:i + 100])
                     for rid, data in recs:
                         hub.record(rid, data)
-                    if why and not recs:
+                    if why and not n_data:
                         hub.failure("blo", item["key"], why, url=item["payload"].get("url", ""))
                         hub.complete([item["key"]], "failed", error=why)
                     else:
-                        hub.complete([item["key"]], "done", fetched=len(recs))
+                        hub.complete([item["key"]], "done", fetched=n_data)
                     break
                 except requests.RequestException:  # same item again after a pause; records are keyed, so a repeat is harmless
                     time.sleep(30 * (attempt + 1))

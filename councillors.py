@@ -27,6 +27,7 @@ import requests
 from bs4 import BeautifulSoup
 
 import archive_first
+import provenance
 from certs_trust import trust
 from forms.aspnet import LegacyTLS, insecure_retry
 
@@ -151,6 +152,23 @@ def run(item, get):
     return KINDS[p["kind"]](p, get)
 
 
+def reader_of(p):
+    """The module that reads this item: dforms.<reader> (depts), cforms.<xx> (form-<xx>), else the built-in kind."""
+    if p.get("reader"):
+        return "dforms." + p["reader"]
+    k = p.get("kind", "")
+    if k.startswith("form-"):
+        return "cforms." + k.split("-", 1)[1]
+    if k == "seed" and p.get("module"):
+        return "dforms." + p["module"]
+    return "councillors." + k if k else ""
+
+
+def reader_method(p):
+    """The reader module's METHOD constant ("pdf text", "ocr", "html table" ...), when it has one and is loaded."""
+    return getattr(sys.modules.get(reader_of(p)), "METHOD", "") or ""
+
+
 def main(run_fn=None, task="councillors"):
     """The pool loop; depts.py reuses it with its own run_fn and failure kind."""
     run_fn = run_fn or run
@@ -165,6 +183,7 @@ def main(run_fn=None, task="councillors"):
     s.headers.update(HEADERS)
     af = archive_first.from_env()        # ARCHIVE_FIRST=1 + read key in the project env: saved copy before the live site
     live_only = [af is None]
+    trail = provenance.Trail(task, project, getattr(hub, "run_id", ""))     # source trail: every response read, copied once
 
     def get(url, method="GET", data=None, headers=None):
         if not live_only[0] and archive_first.plain_get(method, data, headers):
@@ -173,6 +192,7 @@ def main(run_fn=None, task="councillors"):
             if r is not None:
                 if not r.encoding or r.encoding.lower() == "iso-8859-1":
                     r.encoding = r.apparent_encoding or "utf-8"
+                trail.note(r, url, method, data)
                 return r
         t = time.time()
         try:
@@ -207,6 +227,7 @@ def main(run_fn=None, task="councillors"):
             return None
         if not r.encoding or r.encoding.lower() == "iso-8859-1":
             r.encoding = r.apparent_encoding or "utf-8"
+        trail.note(r, url, method, data)
         return r
     get.hub = hub      # readers that keep their source files in the bucket (cforms/tn.py) read them back through the hub
 
@@ -231,6 +252,7 @@ def main(run_fn=None, task="councillors"):
             before = set(getattr(s, "unverified_hosts", ()))
             if af:
                 af.reset()
+            trail.begin(item, reader_of(item["payload"]))
             try:
                 recs, files, why = run_fn(item, get)
                 if why and not recs and af and af.used:
@@ -259,17 +281,19 @@ def main(run_fn=None, task="councillors"):
             if af and af.used:
                 for _, data in recs:     # read (partly) from archive.s1d.me copies: the newest capture time used
                     data["archived_at"] = max(af.used)
+            n_data = len(recs)
+            recs, files = trail.finish(recs, files, reader_method(item["payload"]))
             for attempt in range(5):
                 try:
-                    if files:
-                        hub.upload_many(files)
+                    for i in range(0, len(files), 100):      # source copies can make many files: links in chunks
+                        hub.upload_many(files[i:i + 100])
                     for rid, data in recs:
                         hub.record(rid, data)
-                    if why and not recs:
+                    if why and not n_data:
                         hub.failure(task, item["key"], why, url=url)
                         hub.complete([item["key"]], "failed", error=why)
                     else:
-                        hub.complete([item["key"]], "done", fetched=len(recs))
+                        hub.complete([item["key"]], "done", fetched=n_data)
                     break
                 except requests.RequestException:  # same item again after a pause; records are keyed, so a repeat is harmless
                     time.sleep(30 * (attempt + 1))
