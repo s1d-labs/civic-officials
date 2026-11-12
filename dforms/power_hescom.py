@@ -11,9 +11,10 @@ Records: dept:power_hescom:<level>:<name>.
 """
 import re
 
+import provenance
 from dforms._power import Out, clean, pdf_pages, phone, raw
 
-METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 BASE = "https://hescom.karnataka.gov.in/storage/pdf-files/"
 URLS = {"sections": BASE + "Contact%20Details/Section%20Officers%20Mobile%20Number.pdf",
@@ -24,8 +25,8 @@ SEC_ROW = re.compile(r"^\s*(\d{1,3})\s{2,}(\S.*)$")
 
 def parse_sections(pages, url=URLS["sections"]):
     out = Out("power_hescom", "KA", url, discom="HESCOM")
-    for pg in pages:
-        for line in pg.splitlines():
+    for pn, pg in enumerate(pages, 1):
+        for ln, line in enumerate(pg.splitlines(), 1):
             m = SEC_ROW.match(line)
             if not m:
                 continue
@@ -41,7 +42,7 @@ def parse_sections(pages, url=URLS["sections"]):
             if not name or re.fullmatch(r"[\d\s/-]+", name):
                 continue
             out.add(f"section:{m.group(1)}:{name}", "section", name, post="Section Officer", phone_=phone(mob, land),
-                    office_id=m.group(1))
+                    office_id=m.group(1), src_pos=provenance.line_pos(pn, ln, line))
     return out.recs
 
 
@@ -108,7 +109,8 @@ def parse_officers(pages, url=URLS["officers"]):
     rows = []                                    # (line no, {col: [texts]}) over all pages
     n = 0
     zone_lines = []
-    for pg in pages:
+    where = {}                                   # line no over all pages -> source trail position
+    for pn, pg in enumerate(pages, 1):
         lines = pg.splitlines()
         hi = next((i for i, l in enumerate(lines) if "Zonal Office" in l and "Sub Division AEE" in l), None)
         if hi is None:
@@ -118,6 +120,7 @@ def parse_officers(pages, url=URLS["officers"]):
             continue
         for i, line in enumerate(lines):
             n += 1
+            where[n] = provenance.line_pos(pn, i + 1, line)
             if i == hi or not line.strip():
                 continue
             cols = {}
@@ -177,21 +180,22 @@ def parse_officers(pages, url=URLS["officers"]):
     for at, ci, ph in circles:
         czone[ci] = nearest(zone_lines, at)
         out.add(f"circle:{ci}", "circle", ci, post="Superintending Engineer (Ele), O&M Circle", phone_=phone(*ph),
-                parents={"zone": czone[ci]})
+                parents={"zone": czone[ci]}, src_pos=where.get(at))
     dpar = []
     for j, (at, dv, eee, aee) in enumerate(dl):
         ci = circles[div_circle[j]][1] if div_circle and div_circle[j] is not None else None
         par = {"zone": czone.get(ci), "circle": ci}
         dpar.append(par)
         if eee:
-            out.add(f"division:{dv}:eee", "division", dv, post="Executive Engineer (Ele), O&M Division", phone_=phone(*eee), parents=par)
+            out.add(f"division:{dv}:eee", "division", dv, post="Executive Engineer (Ele), O&M Division", phone_=phone(*eee), parents=par,
+                    src_pos=where.get(at))
         if aee:
             out.add(f"division:{dv}:aee", "division", dv, post="Assistant Executive Engineer, Division Office", phone_=phone(*aee),
-                    parents=par)
+                    parents=par, src_pos=where.get(at))
     for (at, sd, ph), j in zip(subs, sub_div):
         par = {**dpar[j], "division": dl[j][1]} if j is not None else {}
         out.add(f"subdivision:{sd}", "subdivision", sd, post="Assistant Executive Engineer (Ele), O&M Sub-Division",
-                phone_=phone(*ph), parents=par)
+                phone_=phone(*ph), parents=par, src_pos=where.get(at))
     return out.recs
 
 

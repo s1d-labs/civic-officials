@@ -22,11 +22,13 @@ tpcentralodisha.com and tpnodl.com time out from Germany: India only. Records "d
 """
 import re
 
+import provenance
+from dforms._pdftext import block_pos
 from dforms import _power, _util2_east
 from dforms._pdftext import layout_pages
 from dforms._power import pdf_pages
 
-METHOD = "pdf text (pdftotext -layout, else pypdf layout) + spreadsheet + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pdftotext -layout for the RTI manual, pypdf layout for the PIO list)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "power2_tpodisha"
 SITES = {"TPCODL": "https://www.tpcentralodisha.com/", "TPSODL": "https://tpsouthernodisha.com/", "TPNODL": "https://www.tpnodl.com/",
@@ -75,7 +77,7 @@ def parse_xlsx(content, discom, url):
     for sheet, rows in _util2_east.xlsx_rows(content).items():
         level = "division" if re.search(r"divi", sheet, re.I) else "circle"
         head = None
-        for row in rows:
+        for rn, row in enumerate(rows, 1):
             if head is None:
                 if any(re.search(r"designation", c, re.I) for c in row):
                     head = _util2_east.head_map(row, HEADS)
@@ -88,7 +90,8 @@ def parse_xlsx(content, discom, url):
             par = {"circle": _area(g.get("circle"))} if level == "division" and g.get("circle") else None
             _add(out, discom, level, area, post=_power.clean(g.get("post")), name=_util2_east.person(g.get("name")),
                  phone_=_power.phone(g.get("mobile")), email_=_power.email(" ".join(filter(None, (g.get("email"), g.get("email2"))))),
-                 address=g.get("address"), parents=par, office_id=office)
+                 address=g.get("address"), parents=par, office_id=office, src_pos={"sheet": sheet, "row_seq": rn},   # n-th non-empty row of the sheet
+                 method="spreadsheet (xlsx)")
     return out.recs
 
 
@@ -144,15 +147,24 @@ def parse_manual(pages, discom, url):
     if start < 0:
         return []
     lines = text[start:end if end > 0 else None].splitlines()
-    starts, section, block = None, "CORPORATE OFFICE", []
+    # source trail: line k of `lines` -> (page, line in that page); the pages were joined with "\n"
+    first = text[:start].count("\n")
+    pl = [(pn, ln) for pn, pg in enumerate(pages, 1) for ln in range(1, pg.count("\n") + 2)]
+    raw = text.split("\n")
+
+    def where(k):
+        g = first + k
+        return provenance.line_pos(pl[g][0], pl[g][1], raw[g]) if g < len(pl) else None
+    starts, section, block, bidx = None, "CORPORATE OFFICE", [], []
     blocks = []
 
     def close():
         if block:
-            blocks.append((section, starts, list(block)))
+            blocks.append((section, starts, list(block), [where(k) for k in bidx]))
         block.clear()
+        bidx.clear()
 
-    for ln in lines:
+    for k, ln in enumerate(lines):
         h = _header(ln)
         if h:
             close()
@@ -169,9 +181,10 @@ def parse_manual(pages, discom, url):
             starts = {"office": 0, "area": 20, "name": 60, "mobile": 95, "email": 108}
         if starts:
             block.append(ln)                  # blank lines kept: they part the officers
+            bidx.append(k)
     close()
-    for section, st, blines in blocks:
-        _manual_block(out, discom, section, st, blines)
+    for section, st, blines, at in blocks:
+        _manual_block(out, discom, section, st, blines, at)
     return out.recs
 
 
@@ -213,7 +226,7 @@ def _assign(items, rows, own, col):
         own[r][col].append(t)
 
 
-def _manual_block(out, discom, section, starts, blines):
+def _manual_block(out, discom, section, starts, blines, at=None):
     """One section: officer = a line with Mr./Ms. in the name column; every other cell goes to the nearest officer line. A name
     cut over lines continues on the line below; a mobile or an e-mail goes first to the officer on its own line, then to the
     nearest officer that has none yet."""
@@ -252,6 +265,8 @@ def _manual_block(out, discom, section, starts, blines):
             own[min(free, key=lambda a: (abs(a - i), -a))][col].append(t)
     for r in rows:
         o = own[r]
+        # source trail: the officer's name line (the row's anchor; the other cells come from the lines next to it)
+        out.src = {"src_pos": at[r]} if at and r < len(at) and at[r] else {}
         name = re.sub(r"^(Mr|Ms|Mrs)\.?\s*", "", " ".join(o["name"]), flags=re.I)
         name = re.sub(r"(?<=[a-z])\.(?=[A-Z])", " ", name)                      # "Aparna.Raut"
         name = _util2_east.person(re.sub(r"(?<=\b[A-Z])\.(?=\S)", ". ", name))   # "T.Tapanrasmi" -> "T. Tapanrasmi"
@@ -273,6 +288,7 @@ def _manual_block(out, discom, section, starts, blines):
         area = circle if is_circle else (office or circle)
         _add(out, discom, level, area, post=post, name=name, phone_=phone, email_=mail, address=" ".join(o["address"]),
              office_id=office, parents=None if is_circle else {"circle": circle})
+    out.src = {}
 
 
 # ---- TPCODL PIO list (pypdf layout) ----
@@ -301,7 +317,7 @@ def _faa(lines, start, end, x_faa):
 
 def parse_pio(pages, discom, url):
     out = _out(discom, url)
-    for page in pages:
+    for pn, page in enumerate(pages, 1):
         lines = page.splitlines()
         head = next((ln for ln in lines if "Authority Name" in ln and "Designation" in ln), None)
         if head is None:
@@ -318,6 +334,7 @@ def parse_pio(pages, discom, url):
             post = _power.clean(" ".join(ln[x_post:x_faa].strip() for ln in block if ln[x_post:x_faa].strip())) or ""
             name = _util2_east.person(re.sub(r"^(Mr|Ms|Mrs)\.?\s+", "", m.group("name").strip(), flags=re.I))
             mail = _power.email(m.group("email"))
+            out.src = {"src_pos": block_pos(pn, lines, range(i, i + len(block)))}
             if re.search(r"CIRCLE\s+HEAD", post, re.I) and re.search(r"circle", office, re.I):
                 circle = office
                 _add(out, discom, "circle", circle, post="Public Information Officer (TA to Circle Head)", name=name, email_=mail,
@@ -335,6 +352,7 @@ def parse_pio(pages, discom, url):
                 _add(out, discom, "circle" if circle else "state", circle or office,
                      post=f"{(fpost or 'Circle Head').title()} (First Appellate Authority)", name=fname, email_=_power.email(fmail),
                      office_id=femp)
+    out.src = {}
     return out.recs
 
 
@@ -345,9 +363,9 @@ DOCX_HEADS = {"office": r"division|circle|office|location", "name": r"name", "po
 
 def parse_docx(content, discom, url, level=None):
     out = _out(discom, url)
-    for rows in _util2_east.docx_tables(content):
+    for tn, rows in enumerate(_util2_east.docx_tables(content), 1):
         head = None
-        for row in rows:
+        for rn, row in enumerate(rows, 1):
             if head is None:
                 if any(re.search(r"name", c, re.I) for c in row) and any(re.search(r"mobile|phone|contact|e-?\s?mail", c, re.I) for c in row):
                     head = _util2_east.head_map(row, DOCX_HEADS)
@@ -358,7 +376,8 @@ def parse_docx(content, discom, url, level=None):
                 continue
             lvl = level or ("circle" if re.search(r"circle", (office or "") + " " + (post or ""), re.I) else "division")
             _add(out, discom, lvl, _area(office) if lvl == "circle" else (office or post), post=post,
-                 name=_util2_east.person(g.get("name")), phone_=_power.phone(g.get("mobile")), email_=_power.email(g.get("email")))
+                 name=_util2_east.person(g.get("name")), phone_=_power.phone(g.get("mobile")), email_=_power.email(g.get("email")),
+                 src_pos={"table": tn, "row": rn}, method="word tables (docx)")
     return out.recs
 
 

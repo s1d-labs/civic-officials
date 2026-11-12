@@ -10,9 +10,11 @@ Record ids: dept:ero_an:AN-DEO-<district>, dept:ero_an:AN-PC-1:ero, dept:ero_an:
 """
 import re
 
+import provenance
 from dforms import _esw
+from dforms._pdftext import page_lines
 
-METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ero_an"
 URL = "https://www.ceoandaman.nic.in/election/downloads/List%20of%20officers.pdf"
@@ -36,15 +38,17 @@ def _cols(lines):
     return None
 
 
-def entries(text):
-    """[(role, name+designation text, phones text, email)] from the layout text of the PDF."""
-    lines = text.splitlines()
+def entries(text, pos=None):
+    """[(role, name+designation text, phones text, email)] from the layout text of the PDF (one string, or the pages as a list).
+    pos: a list; when given, it gets each entry's source trail position."""
+    where = list(page_lines(text)) if isinstance(text, list) else [(None, i, x) for i, x in enumerate(text.splitlines(), 1)]
+    lines = [x for _, _, x in where]
     cols = _cols(lines)
     if not cols:
         return []
     p_at, m_at, e_at = cols
     out, role, cur = [], None, None
-    for ln in lines:
+    for k, ln in enumerate(lines):
         if not ln.strip():
             continue
         head = ln.strip().lower()
@@ -53,11 +57,12 @@ def entries(text):
             role, cur = sec, None
             continue
         if ENTRY.match(ln):
-            cur = {"role": role, "name": [], "phone": [], "email": ""}
+            cur = {"role": role, "name": [], "phone": [], "email": "", "at": []}
             out.append(cur)
             ln = re.sub(r"^\s*\d{1,2}\.?", lambda m: " " * len(m.group(0)), ln, count=1)
         if cur is None:
             continue
+        cur["at"].append(where[k])
         for m in re.finditer(r"\S+(?:\s\S+)*", ln):
             at, chunk = m.start(), m.group(0)
             if at >= e_at:
@@ -66,19 +71,26 @@ def entries(text):
                 cur["phone"].append(chunk)
             else:
                 cur["name"].append(chunk)
+    if pos is not None:
+        for e in out:
+            if e["role"]:
+                at = [w for w in e["at"] if w[0] == e["at"][0][0]]
+                pos.append(provenance.line_pos(at[0][0], at[0][1], "\n".join(w[2] for w in at),
+                                               lines=[w[1] for w in at] if len(at) > 1 else None))
     return [(e["role"], _esw.clean(" ".join(e["name"])), " ".join(e["phone"]), e["email"]) for e in out if e["role"]]
 
 
 def parse(pages, url=URL):
     recs, seen = [], set()
-    for role, text, ph, mail in entries("\n".join(pages)):
+    pos = []
+    for (role, text, ph, mail), sp in zip(entries(list(pages), pos), pos):
         m = ROLE.search(text)
         area = m.group(2).strip(" ,") if m else ""
         person = text[:m.start()] if m else text
         desig = ", ".join(x.strip() for x in SERVICE.findall(person))
         name = SERVICE.split(person)[0].strip(" ,")
         f = dict(dept="elections", name=name, designation=desig, phone=_esw.phones(ph), email=_esw.emails(mail), state="AN",
-                 source=url, last_updated=UPDATED)
+                 source=url, last_updated=UPDATED, src_pos=sp)
         if role == "deo":
             key = f"AN-DEO-{_esw.slug(area)}"
             f.update(level="district", area=area, post="District Election Officer", district=area, office_id=key)

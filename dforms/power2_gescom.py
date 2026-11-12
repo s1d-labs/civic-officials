@@ -14,9 +14,10 @@ import re
 
 from bs4 import BeautifulSoup
 
-from dforms._power import Out, cells, clean, email, pdf_pages, phone, raw
+import provenance
+from dforms._power import tr_pos, Out, cells, clean, email, pdf_pages, phone, raw
 
-METHOD = "pdf text (pypdf) + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table + pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "power2_gescom"
 BASE = "https://gescom.karnataka.gov.in/"
@@ -34,6 +35,7 @@ def parse_table(html, level, url):
         head = None
         for tr in tb.find_all("tr"):
             c = [clean(x) or "" for x in cells(tr)]
+            tpos = tr_pos(tr)
             low = [x.lower() for x in c]
             if "designation" in low:
                 head = low
@@ -47,7 +49,7 @@ def parse_table(html, level, url):
                 continue
             area = re.sub(r"\s*\b(DIVISION|DVN|CIRCLE|ZONE)\b\s*$", "", place, flags=re.I) or place
             out.add(f"{level}:{place}:{post}", level, area, post=re.sub(r"\s+El$", " (Elec.)", post),
-                    phone_=phone(d.get("mobile")), office_name=place)
+                    phone_=phone(d.get("mobile")), office_name=place, src_pos=tpos, method="html table")
     return out.recs
 
 
@@ -69,8 +71,8 @@ def _area(name):
 def parse_emails(pages, url):
     out = Out(MODULE, "KA", url, discom="GESCOM")
     level = kind = None
-    for pg in pages:
-        for line in pg.splitlines():
+    for pn, pg in enumerate(pages, 1):
+        for ln, line in enumerate(pg.splitlines(), 1):
             m = re.match(r"\s*Sl\s*no\s+(.+?)\s{2,}Webmail ID", line, re.I)
             if m:
                 level, kind = _block_level(m.group(1))
@@ -87,7 +89,8 @@ def parse_emails(pages, url):
             post = {"zone": "Chief Engineer (Elec.)", "circle": "Superintending Engineer (Elec.)",
                     "division": "Executive Engineer (Elec.)", "subdivision": "Assistant Executive Engineer (Elec.)"}.get(kind)
             out.add(f"email:{kind}:{m.group(1)}:{name}", level, area, post=post or name, email_=email(" ".join(mails)),
-                    office_name=name, office_id=m.group(1))
+                    office_name=name, office_id=m.group(1), src_pos=provenance.line_pos(pn, ln, line),
+                    method="pdf text (pypdf layout)")
     return out.recs
 
 

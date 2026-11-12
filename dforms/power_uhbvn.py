@@ -9,7 +9,7 @@ Record id dept:power_uhbvn:<circle>:<office>.
 """
 import re
 
-from dforms._pdftext import cut, layout_pages, settle
+from dforms._pdftext import block_pos, cut, layout_pages, settle
 from dforms._power import Out, clean, email, raw
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
@@ -65,20 +65,20 @@ def parse_text(pages, circle, url):
     out = Out(MOD, "HR", url, discom="UHBVN")
     division = None
     rows = []
-    for text in pages:
+    for pn, text in enumerate(pages, 1):
         lines = text.splitlines()
         cols = header(lines)
         if not cols:
             continue
         cols = settle(cols, [ln for ln in lines if re.match(r"\s{0,8}\d{1,3}\s", ln)] or lines)
         cur = None
-        for ln in lines:
+        for li, ln in enumerate(lines):
             if not ln.strip() or "Name of Office" in ln or re.match(r"\s*(Telephone|No\.)\s*$", ln) or "1912" in ln:
                 continue
             m = re.match(r"\s{0,8}(\d{1,3})\s+(\S.*)", ln)
             if m and cols and len(ln) > cols[1]:
                 cur = {"division": division, "lines": [" " * (len(ln) - len(ln.lstrip()) + len(m.group(1))) +
-                                                       ln[len(ln) - len(ln.lstrip()) + len(m.group(1)):]]}
+                                                       ln[len(ln) - len(ln.lstrip()) + len(m.group(1)):]], "at": [li]}
                 rows.append(cur)
                 continue
             if re.match(r"^(XEN|SE)\b", ln) and not TEL.search(ln):
@@ -86,8 +86,9 @@ def parse_text(pages, circle, url):
                 continue
             if cur is not None and ln.startswith(" "):
                 cur["lines"].append(ln)
+                cur["at"].append(li)
         for r in rows:
-            _row(out, dict(r, cols=cols), circle)
+            _row(out, dict(r, cols=cols, src_pos=block_pos(pn, lines, r["at"])), circle)
         rows = []
     return out.recs
 
@@ -123,7 +124,8 @@ def _row(out, r, circle):
            "division": r["division"] if lvl == "subdivision" else None}
     area = f"Operation Circle {circle}" if lvl == "circle" else area_of(office, lvl)
     out.add(f"{circle}:{office}", lvl, area, post=post, name=nm, phone_=", ".join(dict.fromkeys(tels)) or None,
-            email_=mails(r["lines"]), address=clean(" ".join(" ".join(addr).split())), parents=par, office=office)
+            email_=mails(r["lines"]), address=clean(" ".join(" ".join(addr).split())), parents=par, office=office,
+            src_pos=r.get("src_pos"))
 
 
 def fetch(p, get):

@@ -7,9 +7,11 @@ Record ids: dept:water_hr:HR-PHED-<slug of office name>.
 """
 import re
 
+import provenance
 from dforms import _esw
+from dforms._pdftext import page_lines
 
-METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "water_hr"
 URL = "https://phedharyana.gov.in/Telephone_Dir/TelDir.aspx?id=w"
@@ -29,7 +31,7 @@ def parse_text(pages, url=URL):
     m = re.search(r"as on:\s*(\d{2})/(\d{2})/(\d{4})", text)
     last = f"{m.group(3)}-{m.group(2)}-{m.group(1)}" if m else None
     recs, seen = [], set()
-    for line in text.splitlines():
+    for pn, ln, line in page_lines(pages):
         m = LINE.match(line.rstrip())
         if not m:
             continue
@@ -45,7 +47,8 @@ def parse_text(pages, url=URL):
         recs.append(_esw.record(MODULE, key, dept="water", level=level, area=office, post=post,
                                 name=None if re.match(r"(?i)vacant", name) else name, phone=_esw.phones(mobile, tel[0] if tel else ""),
                                 phone_residence=_esw.phones(*tel[1:]) if len(tel) > 1 else None, email=_esw.emails(m.group("email")),
-                                state="HR", office_id=key, org=ORG, source=url, last_updated=last))
+                                state="HR", office_id=key, org=ORG, source=url, last_updated=last,
+                                src_pos=provenance.line_pos(pn, ln, line)))
     return recs
 
 

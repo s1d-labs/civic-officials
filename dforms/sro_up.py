@@ -12,9 +12,10 @@ The PDF shows no date. Record ids: dept:sro_up:UP-SRO-<row no>, dept:sro_up:UP-D
 """
 import re
 
+import provenance
 from dforms import _esw
 
-METHOD = "pdf text (pypdf) + Devanagari font map"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "pdf text (pypdf layout) + Devanagari font map"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sro_up"
 URL = "https://igrsup.gov.in/prernadoc/Adhiniyam/ContactUs/Contacts/officers_Name_No.pdf"
@@ -56,6 +57,11 @@ def cols(line):
 
 def parse_pages(pages, url=URL):
     lines = [legacy(l) for p in pages for l in p.split("\n")]
+    # source trail: (page, line, raw text) of each line in `lines` (pages split at "\n")
+    where = [(pn, ln, x) for pn, p in enumerate(pages, 1) for ln, x in enumerate(p.split("\n"), 1)]
+
+    def lp(i):
+        return provenance.line_pos(where[i][0], where[i][1], where[i][2])
     recs, offices, dig, aig = [], [], None, None
     addr_x = None
     for i, line in enumerate(lines):
@@ -83,12 +89,12 @@ def parse_pages(pages, url=URL):
                 dig = {"name": who, "cug": cug, "mandal": mandal}
                 recs.append(_esw.record(MODULE, f"UP-DIG-{cug}", dept="registration", level="division", area=mandal, area_regional=mandal,
                                         post="Deputy Inspector General (Registration)", name=who, name_regional=who, phone=cug, state="UP",
-                                        office_id=f"UP-DIG-{cug}", source=url))
+                                        office_id=f"UP-DIG-{cug}", source=url, src_pos=lp(i)))
             else:
                 aig = {"name": who, "cug": cug, "district": dist}
                 recs.append(_esw.record(MODULE, f"UP-AIG-{cug}", dept="registration", level="district", area=dist, area_regional=dist,
                                         post="Assistant Inspector General (Registration)", name=who, name_regional=who, phone=cug, state="UP",
-                                        district=dist, office_id=f"UP-AIG-{cug}", source=url))
+                                        district=dist, office_id=f"UP-AIG-{cug}", source=url, src_pos=lp(i)))
         if after:
             addr_x = line.find(after[:6], last.end()) if addr_x is None else addr_x
         if sr_no is None:                     # the row number stands alone on the line above or below
@@ -122,7 +128,8 @@ def parse_pages(pages, url=URL):
                                 name_regional=None if incharge else o["name"],
                                 in_charge=True if incharge else None, phone=o["mobile"], address=" ".join(o["address"]),
                                 state="UP", district=o["district"], division=o["mandal"], office_id=key, sr_no=o["sr"],
-                                dig=(o["dig"] or {}).get("name"), aig=(o["aig"] or {}).get("name"), source=url))
+                                dig=(o["dig"] or {}).get("name"), aig=(o["aig"] or {}).get("name"), source=url,
+                                src_pos=lp(o["i"])))
     return recs
 
 
