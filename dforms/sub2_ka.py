@@ -16,7 +16,7 @@ sub-division as the page spells it. Ids: dept:sub2_ka:<host>:<level>:<slug of ar
 """
 from dforms import sub2_ap
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (district portal pages from its menu)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub2_ka"
 STATE = "KA"

@@ -15,7 +15,7 @@ as the page spells it. Ids: dept:sub2_tg:<host>:<level>:<slug of area>[:n].
 """
 from dforms import sub2_ap
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (district portal pages from its menu)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "sub2_tg"
 STATE = "TG"
