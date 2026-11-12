@@ -44,3 +44,62 @@ def test_ap_hmfw_fetch():
     get = fake_get({m.CONTACT: "gaps2/ap_hmfw_contact.html", m.CSMS: "gaps2/ap_hmfw_csms.html"})
     recs, files, why = m.fetch(m.items()[0]["payload"], get)
     assert not why and len(recs) == 154 and len(files) == 2
+
+
+# ---- Rajasthan: Jankalyan portals (districtfrontwebapi GetDepartmentContactDetail, answers saved 2026-11-12) ----
+def _rj_payload(label):
+    m = mod("rj_jankalyan")
+    return next(i["payload"] for i in m.items() if i["key"] == f"rj_jankalyan:{label}")
+
+
+def test_rj_jankalyan_items():
+    m = mod("rj_jankalyan")
+    its = m.items()
+    assert len(its) == len({i["key"] for i in its}) == 94
+    p = _rj_payload("jaipur")
+    assert (p["code"], p["district"], p["dept"], p["india_only"]) == ("37", "Jaipur", "administration", True)
+    assert _rj_payload("nhm")["level"] == "state" and _rj_payload("jaipurruralpolice")["dept"] == "police"
+    assert json.dumps(m.body("37"))[:60].startswith('{"Page": 1, "PageSize": 10000')
+
+
+def test_rj_jankalyan_parse_kota():
+    m = mod("rj_jankalyan")
+    recs, files = m.parse(json.loads((G / "rj_jankalyan_kota.json").read_text()), _rj_payload("kota"))
+    by = dict(recs)
+    d = by[next(r for r, x in recs if x.get("post") == "DISTRICT COLLECTOR")]
+    assert (d["name"], d["dept"], d["level"], d["district"]) == ("SHRI PIYUSH SAMARIYA", "administration", "district", "Kota")
+    assert d["phone"] == "9982910228, 0744-2451200"
+    sdm = [x for x in by.values() if x["level"] == "subdivision"]
+    assert len(sdm) == 6 and all(x["dept"] == "administration" for x in sdm)
+    assert len([x for x in by.values() if x.get("category") == "Pradhan" and x["level"] == "block"]) == 5
+    assert len(files) == 17 and all(u.startswith("https://jankalyanfile.rajasthan.gov.in/") for _, u, _ in files)
+    assert len(recs) == 41 and len(by) == 41
+
+
+def test_rj_jankalyan_parse_barmer():
+    m = mod("rj_jankalyan")
+    recs, files = m.parse(json.loads((G / "rj_jankalyan_barmer.json").read_text()), _rj_payload("barmer"))
+    by = dict(recs)
+    dso = [x for x in by.values() if x["dept"] == "food_supplies"]
+    assert len(dso) == 1 and dso[0]["email"] == "dsofood-bar-rj@nic.in" and dso[0]["phone"] == "02982 220164"
+    sp = [x for x in by.values() if x["dept"] == "police"]
+    assert sp and sp[0]["post"].startswith("SUPERINTENDENT OF POLICE")
+    rti = [x for x in by.values() if x.get("category") == "Right to Information"]
+    assert rti and all(x["dept"] == "administration" for x in rti)
+    assert all("DateOfBirth" not in json.dumps(x) for x in by.values())
+
+
+def test_rj_jankalyan_fetch():
+    m = mod("rj_jankalyan")
+    p = _rj_payload("kota")
+    get = fake_get({("POST", m.API): "gaps2/rj_jankalyan_kota.json",
+                    (lambda u, meth, d: u.startswith("https://jankalyanfile.rajasthan.gov.in/")): "gaps2/tiny.pdf"})
+    recs, files, why = m.fetch(p, get)
+    assert not why
+    srcs = [d for _, d in recs if d["type"] == "source_file"]
+    assert len(srcs) == 17 and all(d["fetched"] and d["stored"].startswith("depts/rj_jankalyan/kota/") for d in srcs)
+    assert len(files) == 18 and files[0][0] == "depts/rj_jankalyan/kota/contact-detail.json.gz"
+    post = [c for c in get.calls if c[0] == "POST"][0]
+    assert json.loads(post[2])["AdvanceSearchModel"]["DepartmentCode"] == 44
+    check_records([r for r in recs if r[1]["type"] == "dept_office" and r[1]["dept"] == "administration"], "rj_jankalyan",
+                  "administration")
