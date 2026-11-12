@@ -200,14 +200,15 @@ def ocr_pages(pdf_bytes, lang, first=1, last=None):
 # ---------------------------------------------------------------- table -> BLO rows
 
 DEV = re.compile(r"[ऀ-ॿ]")
-BOOTH = r"(?:ब[ुू]?[थधद]|भाग|मतद[ेा]\S*|part|booth|polling\s*station|p\.?\s*s\.?)"
+BOOTH = r"(?:ब[ुू]?[थधद]|भाग|मतद[ेा]\S*|part|booth|polling\s*station|p\.?\s*/?\s*s\.?)"
 NUMW = r"(?:सं|संख्या|क्र|न0|नं|नम्बर|no|number|num)"
 H_RULES = [   # (field, pattern) in order: the first field whose pattern matches a header cell takes the column
     ("blo_phone", re.compile(r"mob|contact|phone|cell|मोबा|मोत्रा|मोबइ|मो0|मो\.|दूरभाष|फोन|फ़ोन", re.I)),
     ("designation", re.compile(r"^(?!.*(?:नाम\s*(?:एवं|व|और)|name\s*(?:and|&))).*(?:design|^\W*post\W*$|पद\s*[नत]ाम|पदनाम|का पद|^पद)", re.I)),
-    ("blo_name", re.compile(r"(blo|b\.l\.o|officer|अधिकारी|अधिकरी|बी0\s*एल0|बीएलओ|बी\.एल\.ओ)|^\W*name\W*$|^\W*नाम\W*$", re.I)),
+    ("blo_name", re.compile(r"(blo|b\.l\.o|officer|अधिकारी|अधिकरी|बी0\s*एल0|बीएलओ|बी\.एल\.ओ)|^\W*(?:full\s*)?name\W*$|^\W*नाम\W*$",
+                            re.I)),
     ("part_no", re.compile(rf"^(?!.*(?:नाम|name)).*{BOOTH}\W*\s*{NUMW}|^\W*part\W*$", re.I)),
-    ("serial", re.compile(r"^\W*(sl|sr|s)\W*\s*no|^\W*s\.?\s*n\.?\W*$|क्र\W*\s*सं|क्र0|क्रम|क्रमांक|^\W*क्र", re.I)),
+    ("serial", re.compile(r"^\W*(sl|sr|si|s)\W*\s*no|^\W*s\.?\s*n\.?\W*$|क्र\W*\s*सं|क्र0|क्रम|क्रमांक|^\W*क्र", re.I)),
     ("station", re.compile(rf"{BOOTH}|station|building|location|केन्द्र|केंद्र|भवन|स्थल|विद्यालय", re.I)),
     ("department", re.compile(r"depart|institution|office|विभाग|कार्यालय|संस्था", re.I)),
     ("address", re.compile(r"address|पता|निवास", re.I)),
@@ -328,8 +329,12 @@ def _numbering(cells):
     return len(vals) >= 4 and all(re.fullmatch(r"\d{1,2}\W?", v) for v in vals)
 
 
+AC_PART = re.compile(r"^\W*\d{1,3}\s*/\s*\d{1,4}\W*$")
+
+
 def _datalike(cells, digits):
-    return any(phone_of(x) for x in list(cells) + list(digits))
+    """A data row: a mobile number, or an "<AC>/<part>" cell ("10/ 1": Manipur lists that give names but no mobiles)."""
+    return any(phone_of(x) for x in list(cells) + list(digits)) or any(AC_PART.match(x or "") for x in list(cells) + list(digits))
 
 
 def _ac_prefix(vals):
@@ -490,11 +495,29 @@ def stored(p, hub):
     return None
 
 
+def stored_ocr(p, hub, sha):
+    """The OCR pages an earlier run saved for this file (<project>/<path>.ocr.json.gz of this project), when its sha256 is the
+    file's: the rows are read again without OCR. None when there is none."""
+    own = os.environ.get("SCRAPE_POOL_PROJECT")
+    if not hub or not own:
+        return None
+    k = f"{own}/{store_path(p)[:-4]}.ocr.json.gz"
+    try:
+        url = hub.read_urls(own, [k]).get(k)
+        if not url:
+            return None
+        r = requests.get(url, timeout=(20, 180))
+        if r.status_code != 200:
+            return None
+        raw = json.loads(gzip.decompress(r.content))
+        return raw.get("pages") if raw.get("sha256") == sha and raw.get("pages") else None
+    except Exception:  # noqa: BLE001 - no usable saved OCR: run OCR
+        return None
+
+
 def read(s, p, hub=None):
     """(rows, files, why). files: the PDF when it had to be fetched from the site, and the OCR result."""
     lang = lang_of(p)
-    if not tools(lang):
-        return [], [], f"tesseract {lang} not available"
     files = []
     content = stored(p, hub)
     if content is None:
@@ -504,10 +527,15 @@ def read(s, p, hub=None):
             return [], [], "not a PDF"
         content = r.content
         files.append((store_path(p), content, "application/pdf"))
-    pages = ocr_pages(content, lang, int(p.get("first", 1)), p.get("last"))
-    raw = {"url": p["url"], "lang": lang, "sha256": hashlib.sha256(content).hexdigest(), "pages": pages}
-    files.append((store_path(p)[:-4] + ".ocr.json.gz", gzip.compress(json.dumps(raw, ensure_ascii=False).encode()),
-                   "application/gzip"))
+    sha = hashlib.sha256(content).hexdigest()
+    pages = stored_ocr(p, hub, sha) if not p.get("first") and not p.get("last") else None
+    if pages is None:
+        if not tools(lang):
+            return [], [], f"tesseract {lang} not available"
+        pages = ocr_pages(content, lang, int(p.get("first", 1)), p.get("last"))
+        raw = {"url": p["url"], "lang": lang, "sha256": sha, "pages": pages}
+        files.append((store_path(p)[:-4] + ".ocr.json.gz", gzip.compress(json.dumps(raw, ensure_ascii=False).encode()),
+                       "application/gzip"))
     rows = parse(pages, p)
     if rows:
         return rows, files, ""
