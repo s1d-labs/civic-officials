@@ -87,5 +87,30 @@
    "first": 1,
    "last": 2
   }
+ },
+ {
+  "key": "dl-summary2022",
+  "payload": {
+   "kind": "form-dl",
+   "state": "DL",
+   "source": "summary2022",
+   "url": "https://sec.delhi.gov.in/sites/default/files/SEC/universal-tab/result_summary-ward_wise_1.pdf",
+   "first": 1,
+   "last": 12,
+   "bye_wards": [
+    35,
+    56,
+    65,
+    74,
+    76,
+    120,
+    128,
+    139,
+    163,
+    164,
+    173,
+    198
+   ]
+  }
  }
 ]
