@@ -208,11 +208,12 @@ def table_rows(html):
             last_head = head
 
 
-def cards(html):
-    """S3WaaS public-utility cards: {title, address, phone, email, pincode, website, type}."""
+def cards(html, where=None):
+    """S3WaaS public-utility cards: {title, address, phone, email, pincode, website, type}. where (a list) gets each card's
+    src_pos {"selector": ".public-utlty-catg", "card": n} (1-based among the page's cards)."""
     soup = BeautifulSoup(html, "lxml")
     out = []
-    for c in soup.select(".public-utlty-catg"):
+    for n, c in enumerate(soup.select(".public-utlty-catg"), 1):
         h = c.select_one(".heading4, h2, h3")
         d = {"title": clean(h.get_text(" ", strip=True)) if h else None}
         for li in c.select("li"):
@@ -228,6 +229,8 @@ def cards(html):
                 d["address"] = txt
         if d.get("title"):
             out.append(d)
+            if where is not None:
+                where.append({"selector": ".public-utlty-catg", "card": n})
     return out
 
 

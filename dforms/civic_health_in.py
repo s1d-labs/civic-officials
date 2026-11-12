@@ -30,7 +30,7 @@ import urllib.parse
 
 from dforms import _esw
 
-METHOD = "arcgis feature layer (json)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "arcgis feature layer (json query)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_health_in"
 LAYER = "https://livingatlas.esri.in/server/rest/services/LivingAtlas/IND_Hospital_Directory/MapServer/0"
@@ -121,7 +121,7 @@ def in_india(lat, lon):
 def parse(doc, url=LAYER, layer="directory"):
     recs = []
     tag = LAYERS[layer][1]
-    for f in doc.get("features") or []:
+    for fi, f in enumerate(doc.get("features") or []):
         a = f.get("attributes") or {}
         oid = a.get("objectid")
         if layer == "centres":
@@ -139,7 +139,7 @@ def parse(doc, url=LAYER, layer="directory"):
                                     state=STATE.get(st.lower(), st), state_name=st, district=val(a.get("districtname")),
                                     subdistrict=val(a.get("subdistrictname")), office_id=f"{tag}-{oid}",
                                     lat=round(lat, 6) if ok else None, lon=round(lon, 6) if ok else None,
-                                    source=f"{CENTRES}?objectid={oid}"))
+                                    source=f"{CENTRES}?objectid={oid}", src_pos={"key": "features", "index": fi, "objectid": oid}))
             continue
         name = val(a.get("health_facility_name"))
         if oid is None or not name:
@@ -154,7 +154,8 @@ def parse(doc, url=LAYER, layer="directory"):
                                 phone=landline(val(a.get("landline_number")), pin, addr), address=", ".join(x for x in (addr, pin) if x),
                                 pin=pin, state=STATE.get(st.lower(), st), state_name=st, district=val(a.get("district_name")),
                                 block=val(a.get("block_name")), subdistrict=val(a.get("taluka_name")), office_id=f"{tag}-{oid}",
-                                lat=lat if ok else None, lon=lon if ok else None, source=f"{LAYER}?objectid={oid}"))
+                                lat=lat if ok else None, lon=lon if ok else None, source=f"{LAYER}?objectid={oid}",
+                                src_pos={"key": "features", "index": fi, "objectid": oid}))
     return recs
 
 

@@ -102,3 +102,31 @@ def test_police_pdf_positions():
     k = next(v for v in d.values() if v.get("phone"))
     assert k["src_url"] == police_ld.URL and k["src_pos"]["table"] >= 1 and k["src_pos"]["row"] >= 2
     assert k["src_pos"]["charter_page"] >= 1 and k["method"] == "html table + pdf text (pypdf)"
+
+
+def test_civic_json_and_html_positions():
+    m = mod("civic_health_in")
+    doc = json.loads((DATA / "civic_health_in.json").read_text())
+    recs = m.parse(doc)
+    for _, d in recs:
+        i = d["src_pos"]["index"]
+        assert doc["features"][i]["attributes"]["objectid"] == d["src_pos"]["objectid"]
+    from dforms import _civic_fps as F
+    mp = F.jsp_parse((DATA / "civic_fps_mp_names.html").read_text(), "civic_fps_mp", "MP", "https://epos.mp.gov.in")
+    from dforms import _esw
+    soup = _esw.soup((DATA / "civic_fps_mp_names.html").read_text())
+    for _, d in mp:
+        tr = soup.find_all("table")[d["src_pos"]["table"] - 1].find_all("tr")[d["src_pos"]["row"] - 1]
+        assert d["fps_id"] in tr.get_text()
+
+
+def test_civic_tag_and_tr_pos():
+    from dforms import _civic, _esw
+    import requests
+    r = requests.Response()
+    r._content, r.url = b"<x>", "https://a.gov.in/p"
+    recs = _civic.tag([("a", {}), ("b", {"src_url": "keep"})], r, "https://a.gov.in/p", method="html table")
+    assert recs[0][1]["src_url"] == "https://a.gov.in/p" and len(recs[0][1]["src_sha256"]) == 64
+    assert recs[1][1]["src_url"] == "keep" and recs[1][1]["method"] == "html table"
+    s = _esw.soup("<table><tr><td>a</td></tr></table><table><tr><th>h</th></tr><tr><td>b</td></tr></table>")
+    assert _civic.tr_pos(s.find_all("tr")[2]) == {"table": 2, "row": 2}

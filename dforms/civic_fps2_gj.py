@@ -11,9 +11,9 @@ Record ids: dept:civic_fps2_gj:<FPSUID>. The bucket file keeps only the result t
 """
 import re
 
-from dforms import _civic_fps, _esw
+from dforms import _civic, _civic_fps, _esw
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table (ASP.NET grid, all rows; row = n-th <tr> after the heading 'FPS Dealers Details')"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_fps2_gj"
 STATE = "GJ"
@@ -56,6 +56,7 @@ def table_part(html):
 def parse(html, src=PAGE):
     recs, seen = [], set()
     soup = _esw.soup(html)
+    trs = {id(t): n for n, t in enumerate(soup.find_all("tr"), 1)}
     for tr in soup.find_all("tr", class_="dg_Item"):
         tds = [_esw.clean(td.get_text(" ")) for td in tr.find_all("td")]
         if len(tds) < 7 or not re.fullmatch(r"\d+", tds[1]):
@@ -68,7 +69,7 @@ def parse(html, src=PAGE):
             MODULE, fid, dept="food_supplies", level="facility", layer="fps", area=taluka, area_regional=taluka,
             post=_civic_fps.POST, name=name, state=STATE, district=DISTRICTS.get(dist_gu, dist_gu), district_regional=dist_gu,
             supply_district=CITY.get(dist_gu, ""), subdistrict=taluka, block=taluka, village=village, fps_id=fid, office_id=fid,
-            status=status, source=src))
+            status=status, source=src, src_pos={"after": "FPS Dealers Details", "row": trs[id(tr)]}))
     return recs
 
 
@@ -85,5 +86,5 @@ def fetch(p, get):
     if r is None:
         return [], [], "no answer to the ALL request"
     table = table_part(r.text)                # the 32 MB answer is mostly ViewState: parse and keep the table only
-    recs = parse(table, url)
+    recs = _civic.tag(parse(table, url), r, url)
     return recs, [_esw.keep(MODULE, "dealer-list", table)], "" if recs else "no rows"

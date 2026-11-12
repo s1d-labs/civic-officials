@@ -9,7 +9,7 @@ epos.telangana.gov.in (the old AePDS site) has no public dealer list. Record ids
 """
 from dforms import _civic_fps
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "json api (SMART-PDS device list + supply office search)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_fps2_tg"
 STATE = "TG"

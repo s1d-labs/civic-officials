@@ -17,7 +17,7 @@ from urllib.parse import unquote, urlparse
 from dforms import _civic, _esw
 from dforms.police_s3waas import cards, last_updated
 
-METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (S3WaaS public utility, paged /page/N/)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_csc_s3waas"
 PLACE = re.compile(r"(?i)\b(village|vill|vpo|v\.?p\.?o|office|road|near|opp|sector|sec|chowk|panchayat|tehsil|block|market|bazar|"
@@ -48,7 +48,8 @@ def records(pages, p):
     lu = next((last_updated(h) for _, h in pages if last_updated(h)), None)
     recs, seen = [], set()
     for url, html in pages:
-        for c in cards(html):
+        cw = []
+        for ci, c in enumerate(cards(html, cw)):
             centre = _esw.clean(c.get("title"))
             if not centre:
                 continue
@@ -60,7 +61,7 @@ def records(pages, p):
                 MODULE, key, "csc", dept="digital_services", level="facility", area=centre, post="Operator" if name else None,
                 name=name, phone=_esw.phones(c.get("phone") or ""), email=_esw.emails(c.get("email") or ""), address=adr,
                 pincode=pin, centre_type=p.get("centre_type") or cat, district=p.get("district"), state=p.get("state"),
-                office_id=key, website=c.get("website"), source=url, last_updated=lu))
+                office_id=key, website=c.get("website"), source=url, last_updated=lu, src_url=url, src_pos=cw[ci]))
     return recs
 
 

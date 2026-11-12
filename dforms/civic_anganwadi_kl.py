@@ -17,7 +17,7 @@ from urllib.parse import urlparse
 
 from dforms import _esw
 
-METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_anganwadi_kl"
 PATH = "/en/page/anganwady-details"
@@ -65,7 +65,8 @@ def parse(html, url, p=None):
     hk = host_key(url)
     recs, seen = [], set()
     for table in soup.find_all("table"):
-        g = _esw.grid(table)
+        gp = []
+        g = _esw.grid(table, pos=gp)
         if not g:
             continue
         cols = header_map(g[0])
@@ -89,7 +90,7 @@ def parse(html, url, p=None):
                                     name=name, phone=phone, centre_no=cno, ward_no=cell("ward_no"), ward_name=cell("ward_name"),
                                     helper=cell("helper"), helper_phone=_esw.phones(cell("helper_phone")), body=body,
                                     local_body_code=p.get("local_body_code"), body_type=p.get("body_type"), state="KL",
-                                    district=p.get("district"), office_id=key, source=url))
+                                    district=p.get("district"), office_id=key, source=url, src_pos=gp[n]))
     return recs
 
 

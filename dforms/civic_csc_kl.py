@@ -13,9 +13,10 @@ leading 0 of an STD code that the site lost ("4872998822" -> 04872998822: 10 dig
 """
 import re
 
+import provenance
 from dforms import _civic, _esw
 
-METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html page (list card + detail page blocks)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_csc_kl"
 BASE = "https://akshaya.kerala.gov.in"
@@ -146,12 +147,17 @@ def fetch(p, get):
     if not cs:
         return [], files, "" if "center-tl-head" not in r.text else "cards not read"   # past the last page: done, no rows
     recs = []
-    for c in cs:
+    for ci, c in enumerate(cs, 1):
         d = {}
         if p.get("details", True):
             m = get(c["url"])
             if m is not None:
                 files.append(_esw.keep(MODULE, f"centre-{c['id']}", m.content))
                 d = detail(m.text)
-        recs.append(record(c, d, url))
+        rec = record(c, d, url)
+        # the centre's fields come from its detail page when it answered, else from its card on the list page
+        rec[1].update(provenance.at(m, c["url"]) if d else provenance.at(r, url))
+        rec[1]["src_pos"] = {"list_card": ci, **({"detail": "labelled blocks (h2.title)"} if d else {})}
+        rec[1]["method"] = "html page (list card + detail page blocks)" if d else "html page (list card)"
+        recs.append(rec)
     return recs, files, ""

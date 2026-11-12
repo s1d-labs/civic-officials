@@ -24,6 +24,7 @@ import datetime
 import json
 import re
 
+import provenance
 from dforms import _esw
 
 POST = "FPS dealer"
@@ -126,12 +127,13 @@ def sp_offices(get, base, dist_code):
     return out, raw
 
 
-def sp_parse(device, offices, module, state, base, dist_code="", district=""):
-    """Records from one district's device list (dict) joined with the {fps_id: office} map."""
+def sp_parse(device, offices, module, state, base, dist_code="", district="", src=None):
+    """Records from one district's device list (dict) joined with the {fps_id: office} map. src = provenance.at(answer) of the
+    device list (source trail); src_pos = the shop's place in its "list" (0-based) and its fps_id."""
     recs, seen = [], set()
     district = _esw.clean(device.get("dist_name_en")) or district
-    src = f"{base}/FPS_Device_Mapping"
-    for x in device.get("list") or []:
+    src, trail = f"{base}/FPS_Device_Mapping", src
+    for li, x in enumerate(device.get("list") or []):
         fid = _esw.clean(x.get("fps_id"))
         if not fid or TEST_ID.match(fid) or fid in seen:
             continue
@@ -153,7 +155,8 @@ def sp_parse(device, offices, module, state, base, dist_code="", district=""):
             fps_id=fid, office_id=fid, terminal_id=_esw.clean(x.get("terminal_id")), dist_code=dist_code or x.get("dist_code"),
             nominee_1=n1, nominee_1_phone=unmasked(x.get("nom_1_mob")) or n1_ph, nominee_2=n2,
             nominee_2_phone=unmasked(x.get("nom_2_mob")) or n2_ph, name_number=", ".join(nums),
-            source=src))
+            source=src, src_pos={"key": "list", "index": li, "fps_id": fid},
+            method="json api (device list" + (" + supply office search)" if afso_code else ")"), **(trail or {})))
     return recs
 
 
@@ -172,7 +175,7 @@ def sp_fetch(p, get, module, state):
         offices, raw = sp_offices(get, base, code)
         files.append(_esw.keep(module, f"device-{code}", r.content, "json"))
         files.append(_esw.keep(module, f"search-{code}", json.dumps(raw, ensure_ascii=False), "json"))
-        recs += sp_parse(device, offices, module, state, base, code, dname)
+        recs += sp_parse(device, offices, module, state, base, code, dname, provenance.at(r, f"{base}/Epos_Spring/api/fpsdevicemapping/device"))
     return recs, files, "" if recs else "no rows"
 
 
@@ -190,7 +193,8 @@ def jsp_items(module, state, base, districts, india_only=False):
     return [{"key": f"{module}-{c}", "payload": dict(pay, dist_code=c, district=n)} for c, n in districts]
 
 
-def jsp_parse(html, module, state, base, dist_code="", district=""):
+def jsp_parse(html, module, state, base, dist_code="", district="", src=None):
+    """src = provenance.at(answer) (source trail); src_pos = table and row of the shop."""
     soup = _esw.soup(html)
     u = soup.find("u")
     district = _esw.clean(u.get_text()) if u and _esw.clean(u.get_text()) else district
@@ -198,8 +202,9 @@ def jsp_parse(html, module, state, base, dist_code="", district=""):
     recs, seen = [], set()
     if table is None:
         return recs
-    src = f"{base}/FPS_Device_Mapping.jsp"
+    src, trail, tno, trn = f"{base}/FPS_Device_Mapping.jsp", src, _esw.table_no(table), 0
     for tr in table.find_all("tr"):
+        trn += 1
         tds = [_esw.clean(td.get_text(" ")) for td in tr.find_all("td")]
         if len(tds) < 4 or not re.fullmatch(r"\d{4,15}", tds[1]):
             continue
@@ -228,7 +233,8 @@ def jsp_parse(html, module, state, base, dist_code="", district=""):
         recs.append(_esw.record(
             module, fid, dept="food_supplies", level="facility", layer="fps", area=district, post=post, name=dealer,
             phone=dealer_phone, state=state, district=district, fps_id=fid, office_id=fid, terminal_id=term,
-            dist_code=dist_code, nominee_1=n1, nominee_2=n2, name_number=", ".join(nums), source=src))
+            dist_code=dist_code, nominee_1=n1, nominee_2=n2, name_number=", ".join(nums), source=src,
+            src_pos={"table": tno, "row": trn}, **(trail or {})))
     return recs
 
 
@@ -248,5 +254,5 @@ def jsp_fetch(p, get, module, state):
         if r is None:
             continue
         files.append(_esw.keep(module, f"device-{code}", r.content))
-        recs += jsp_parse(r.text, module, state, base, code, dname)
+        recs += jsp_parse(r.text, module, state, base, code, dname, provenance.at(r, f"{base}/fps_device.action"))
     return recs, files, "" if recs else "no rows"

@@ -39,7 +39,7 @@ def parse(html, url, ac=None):
         ac = int(head.group(1))
     body = html[html.find("<tbody"):] if "<tbody" in html else html
     recs, seen = [], set()
-    for piece in re.split(r"(?i)<tr[^>]*>", body)[1:]:
+    for trn, piece in enumerate(re.split(r"(?i)<tr[^>]*>", body)[1:], 1):
         cells = [_esw.clean(_esw.soup(c).get_text(" ")) for c in re.findall(r"(?is)<td[^>]*>(.*?)</td>", piece)]
         if len(cells) < 2:
             continue
@@ -56,7 +56,7 @@ def parse(html, url, ac=None):
         recs.append(_esw.record(MODULE, key, dept="elections", level="polling_station", area=cells[1], post="BLO", name=name,
                                 phone=phone, state="PY", district=DISTRICT.get(acn), office_id=key, source=url,
                                 last_updated=as_on(html), layer="pollst", ac_no=acn, ac_name=ac_name, part_no=part,
-                                station=cells[1]))
+                                station=cells[1], src_pos={"after": "<tbody", "row": trn, "cells": cells}))
     return recs
 
 

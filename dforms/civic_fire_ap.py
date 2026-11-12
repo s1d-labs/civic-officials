@@ -13,7 +13,7 @@ import re
 
 from dforms import _civic, _esw
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table + html page (label spans)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "civic_fire_ap"
 URL = "https://fireservices.ap.gov.in/Fire/fire_contact_distofficersingle?distId={}"
@@ -65,10 +65,12 @@ def parse(html, url):
         recs.append(_civic.record(
             MODULE, f"{ds}:dfo", "fire", dept="fire", level="district", area=district, post=o.get("post"), name=o.get("name"),
             phone=_esw.phones(o.get("mobile", ""), o.get("office_phone", "")), email=_esw.emails(o.get("email", "")),
-            address=o.get("address"), district=district, state="AP", office_id=f"AP-FIRE-{ds}-DFO", source=url))
+            address=o.get("address"), district=district, state="AP", office_id=f"AP-FIRE-{ds}-DFO", source=url,
+            src_pos={"selector": "officer block (label spans)"}, method="html page (label spans)"))
     table = soup.find("table")
     if table:
-        for row in _esw.grid(table):
+        gp = []
+        for gi, row in enumerate(_esw.grid(table, pos=gp)):
             if len(row) < 7 or not re.fullmatch(r"\d+", row[0].strip()):
                 continue
             _, station, address, name, phone, mobile, mail = row[:7]
@@ -81,7 +83,7 @@ def parse(html, url):
                 office=station if outpost else f"{station} Fire Station", post="Station Fire Officer", name=name,
                 phone=_esw.phones(phone, mobile), email=_esw.emails(mail), address=address, district=district, state="AP",
                 station_type="outpost" if outpost else "station", office_id=f"AP-FIRE-{key}", lat=pt[0], lon=pt[1],
-                source=url))
+                source=url, src_pos=gp[gi], method="html table"))
     return recs
 
 

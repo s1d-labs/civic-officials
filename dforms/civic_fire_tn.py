@@ -52,13 +52,14 @@ def parse(html, url, region=""):
     lu = last_updated(html)
     recs, seen = [], set()
     for table in soup.find_all("table"):
-        g = _esw.grid(table)
+        gp = []
+        g = _esw.grid(table, pos=gp)
         if not g or "fire station" not in " ".join(g[0]).lower():
             continue
         head = [h.lower() for h in g[0]]
         col = {k: next((i for i, h in enumerate(head) if k in h), None) for k in ("station", "tab", "landline", "cug", "mail")}
         district = heading(table)
-        for row in g[1:]:
+        for gi, row in enumerate(g[1:], 1):
             if col["station"] is None or len(row) <= col["station"]:
                 continue
             station = _esw.clean(row[col["station"]])
@@ -72,7 +73,7 @@ def parse(html, url, region=""):
                 post="Station Officer", phone=_esw.phones(cell("landline"), cell("cug"), cell("tab")),
                 landline=_esw.phones(cell("landline")), cug=_esw.phones(cell("cug")), tab=_esw.phones(cell("tab")),
                 email=_esw.emails(cell("mail")), district=district, region=region, state="TN", office_id=f"TN-FIRE-{key}",
-                source=url, last_updated=lu))
+                source=url, last_updated=lu, src_pos=gp[gi]))
     return recs
 
 
