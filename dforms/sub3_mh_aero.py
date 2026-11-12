@@ -51,11 +51,21 @@ ITEM = re.compile(r"^[\s|_“\"'.]*(\d{1,2})\s*[.,]?\s*[|\]!]\s*(.*)$|^[\s|_“\
 SKIP = re.compile(r"(?i)no\.?\s*&\s*name|assembly\s*constitu|assistant\s*electoral\s*registration|^\s*1\s+2\s*$|^\s*[(\[]?\s*\d+\s*[)\]]?\s*$")
 
 
+# pages whose 10-page items gave up three times (2026-11-12: p011, p021; no OCR text saved): three pages per item, each item
+# starting on the last page of the one before it, so a constituency that runs over a page break is read whole in one of
+# them (the same rows from two items have the same record ids)
+RETRY = [(f, f + 2) for f in range(10, 30, 2)]
+
+
 def items(get=None):
     out = []
     for first in range(1, PAGES + 1, STEP):
         last = min(PAGES, first + STEP - 1)
         out.append({"key": f"sub3_mh_aero-p{first:03d}", "payload": {
+            "reader": MODULE, "url": URL, "state": "MH", "first": first, "last": last, "open": True, "ocr": True,
+            "stored": f"{PROJECT}/{PDF_PATH}", "expected": 0}})
+    for first, last in RETRY:
+        out.append({"key": f"sub3_mh_aero-r{first:03d}-{last:03d}", "payload": {
             "reader": MODULE, "url": URL, "state": "MH", "first": first, "last": last, "open": True, "ocr": True,
             "stored": f"{PROJECT}/{PDF_PATH}", "expected": 0}})
     return out
@@ -174,11 +184,21 @@ def stored(p, get):
 
 
 def ocr_page(pdf, page, tmp):
-    base = os.path.join(tmp, f"p{page}")
-    subprocess.run(["pdftoppm", "-r", "300", "-gray", "-png", "-singlefile", "-f", str(page), "-l", str(page), pdf, base],
-                   capture_output=True, timeout=300)
-    r = subprocess.run(["tesseract", base + ".png", "-", "-l", "eng", "--psm", "4"], capture_output=True, text=True, timeout=600)
-    return r.stdout
+    """OCR text of one page. Tesseract runs single-threaded (OMP_THREAD_LIMIT=1: the pages already run in parallel; nested
+    OpenMP threads made pages 11-30 run past the time limit on 2026-11-12). A page that takes longer than 300 s is read again
+    at 200 dpi with --psm 6; when that fails too the page gives "" (its rows are missing, the rest of the item is kept)."""
+    env = {**os.environ, "OMP_THREAD_LIMIT": "1"}
+    for dpi, psm, limit in (("300", "4", 300), ("200", "6", 240)):
+        base = os.path.join(tmp, f"p{page}-{dpi}")
+        try:
+            subprocess.run(["pdftoppm", "-r", dpi, "-gray", "-png", "-singlefile", "-f", str(page), "-l", str(page), pdf, base],
+                           capture_output=True, timeout=300)
+            r = subprocess.run(["tesseract", base + ".png", "-", "-l", "eng", "--psm", psm], capture_output=True, text=True,
+                               timeout=limit, env=env)
+            return r.stdout
+        except subprocess.TimeoutExpired:
+            continue
+    return ""
 
 
 def fetch(p, get):

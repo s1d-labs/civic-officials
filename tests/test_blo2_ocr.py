@@ -160,7 +160,8 @@ def test_read_fetches_once_when_nothing_is_saved(monkeypatch):
     rows, files, why = blo2_ocr.read(Site(), p, hub)
     assert Site.n == 1 and why == "" and len(rows) == 23
     assert [k for _, ks in hub.asked for k in ks] == ["civic-officials-blo2/blo2/UP/x.pdf",
-                                                       "civic-officials-blo2-ocr/" + blo2_pdf.store_path(p)]
+                                                       "civic-officials-blo2-ocr/" + blo2_pdf.store_path(p),
+                                                       "civic-officials-blo2-ocr/" + blo2_pdf.store_path(p)[:-4] + ".ocr.json.gz"]
     assert files[0] == (blo2_pdf.store_path(p), PDF, "application/pdf") and files[1][0].endswith(".ocr.json.gz")
 
 
@@ -208,3 +209,38 @@ def test_seed_and_project():
     pj = [x for x in family.PROJECTS if x["name"] == "civic-officials-blo2-ocr"][0]
     assert pj["task"] == "blo2-ocr" and not pj.get("geo") and not pj.get("proxy") and len(pj["items"]) == len(items)
     assert json.loads((ROOT / "scrape.json").read_text())["tasks"]["blo2-ocr"] == ["python", "blo.py"]
+
+
+def test_ocr_manipur_names_without_mobiles():
+    """Imphal West, 23-Mayang Imphal (saved OCR result of 2026-11-12): "Si. No. | P/S No. | Name of Polling Stations | Name of
+    Booth Level Officers | Designation | Department", no mobile column. Data rows are found by their "23/1" cells."""
+    import gzip
+    import json
+    from pathlib import Path
+
+    from forms import blo2_ocr
+    d = json.loads(gzip.decompress((Path(__file__).parent / "data" / "blo2" / "mn_imphalwest_23_noMobile.ocr.json.gz").read_bytes()))
+    rows = blo2_ocr.parse(d["pages"], {"state": "MN", "url": d["url"], "ac_no": 23, "district": "Imphal West"})
+    assert len(rows) == 41 and sorted(r["part_no"] for r in rows) == list(range(1, 42))
+    r = rows[0]
+    assert (r["part_no"], r["blo_name"], r["designation"], r["blo_phone"], r["station"]) == (
+        1, "Chungkham Pramodhini Devi", "Teachers", "", "Samushang Shantipur")
+    assert blo2_ocr.labels(["Part No.", "Polling Station Name", "Full Name", "Designation", "Department"])[2] == "blo_name"
+
+
+def test_read_reuses_saved_ocr_of_the_same_file(monkeypatch):
+    """An item queued again after a parser fix: the OCR result saved by the first run (same sha256) is read again; no
+    Tesseract install, no OCR, no new OCR file."""
+    import hashlib
+    pages, p = ocr("ocr_mn_thangmeiband.json")
+    p = {**p, "kind": "form-blo2_ocr", "stored": ["civic-officials-blo2-in/blo/MN/abc.pdf"]}
+    saved = gzip.compress(json.dumps({"url": p["url"], "lang": "eng", "sha256": hashlib.sha256(PDF).hexdigest(),
+                                      "pages": pages}).encode())
+    monkeypatch.setattr(blo2_ocr, "tools", lambda lang: (_ for _ in ()).throw(AssertionError("no OCR tools needed")))
+    monkeypatch.setattr(blo2_ocr, "ocr_pages", lambda *a, **k: (_ for _ in ()).throw(AssertionError("no OCR")))
+    monkeypatch.setattr(blo2_ocr.requests, "get", lambda url, timeout=None: Resp(saved if url.endswith(".ocr.json.gz") else PDF))
+    monkeypatch.setenv("SCRAPE_POOL_PROJECT", "civic-officials-blo2-ocr")
+    ocr_key = "civic-officials-blo2-ocr/" + blo2_pdf.store_path(p)[:-4] + ".ocr.json.gz"
+    hub = Hub({"civic-officials-blo2-in/blo/MN/abc.pdf", ocr_key})
+    rows, files, why = blo2_ocr.read(None, p, hub)
+    assert why == "" and len(rows) == 42 and files == []

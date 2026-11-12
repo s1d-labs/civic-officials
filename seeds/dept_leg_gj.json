@@ -1,0 +1,15 @@
+[
+ {
+  "key": "leg_gj-list",
+  "payload": {
+   "reader": "leg_gj",
+   "url": "https://gujarat.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=15&Assemblyid=15",
+   "host": "gujarat.neva.gov.in",
+   "state": "GJ",
+   "house": 15,
+   "house_name": "Gujarat Legislative Assembly (15th)",
+   "kind": "AC",
+   "india_only": false
+  }
+ }
+]

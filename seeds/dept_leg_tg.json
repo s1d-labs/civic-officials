@@ -1,0 +1,26 @@
+[
+ {
+  "key": "leg_tg-ac",
+  "payload": {
+   "reader": "leg_tg",
+   "url": "https://legislature.telangana.gov.in/assemblymemprofile?selectedtab=m",
+   "state": "TS",
+   "kind": "AC",
+   "house_name": "Telangana Legislative Assembly",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "leg_tg-lc",
+  "payload": {
+   "reader": "leg_tg",
+   "url": "https://legislature.telangana.gov.in/councilmemprofile?selectedtab=m",
+   "state": "TS",
+   "kind": "LC",
+   "house_name": "Telangana Legislative Council",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

@@ -1,0 +1,15 @@
+[
+ {
+  "key": "leg_pb-list",
+  "payload": {
+   "reader": "leg_pb",
+   "url": "https://pvs.neva.gov.in/ContactDirectory/FetchMembersList?MLT=16&MSLT=16&Assemblyid=16",
+   "host": "pvs.neva.gov.in",
+   "state": "PB",
+   "house": 16,
+   "house_name": "Punjab Vidhan Sabha (16th)",
+   "kind": "AC",
+   "india_only": false
+  }
+ }
+]
