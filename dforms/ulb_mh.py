@@ -21,7 +21,8 @@ import re
 
 from dforms import _esw, _ulb
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table"     # kind "cards" (Satara): "html cards (S3WaaS public utility)" on each record
+METHOD_CARDS = "html cards (S3WaaS public utility)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb_mh"
 PAGES = (
@@ -126,13 +127,14 @@ def parse_table(html, url, district):
     recs, seen = [], set()
     up = updated(html)
     for t in _esw.soup(html).find_all("table"):
-        rows = _esw.grid(t)
+        tp = []
+        rows = _esw.grid(t, pos=tp)
         if not rows:
             continue
         col = columns(rows[0])
         if "co_name" not in col or "body" not in col:
             continue
-        for row in rows[1:]:
+        for row, pos in zip(rows[1:], tp[1:]):
             c = {k: (row[i] if i < len(row) else "") for k, i in col.items()}
             body = blank(c["body"]).replace(" | ", " ").replace("|", " ")
             if not body or re.fullmatch(r"[\d\s.]+", body):
@@ -142,12 +144,12 @@ def parse_table(html, url, district):
             name, phone, email = blank(c["co_name"]), blank(c.get("phone", "")).translate(DIGITS), blank(c.get("email", ""))
             if name or phone or email:
                 recs.append(_ulb.record(MODULE, "MH", body, "Chief Officer", seen, name=name, phone=phone, email=email, district=district,
-                                        body_type=btype, source=url, last_updated=up, **extra))
+                                        body_type=btype, source=url, last_updated=up, src_pos=pos, **extra))
             fname, fdesig = person(c.get("fire_name", ""))
             fphone = blank(c.get("fire_phone", "")).translate(DIGITS)
             if fname or fphone:                       # the head of the fire wing; often another officer holds it (designation)
                 recs.append(_ulb.record(MODULE, "MH", body, "Fire Department Head", seen, name=fname, phone=fphone, district=district,
-                                        body_type=btype, source=url, last_updated=up, designation=fdesig or None))
+                                        body_type=btype, source=url, last_updated=up, designation=fdesig or None, src_pos=pos))
     return recs
 
 
@@ -157,7 +159,7 @@ CO = re.compile(r"(?i)^(?:chief\s*officer|c\.?\s?o\.?)\b[\s,.:-]*")
 def parse_cards(html, url, district):
     recs, seen = [], set()
     up = updated(html)
-    for card in _esw.soup(html).select("li.public-utlty-catg"):
+    for k, card in enumerate(_esw.soup(html).select("li.public-utlty-catg"), 1):
         body = blank(card.h2.get_text(" ")) if card.h2 else ""
         lines = [blank(li.get_text(" ")) for li in card.select("ul.pubutility-list > li")]
         post = next((ln for ln in lines if CO.match(ln)), "")
@@ -168,7 +170,8 @@ def parse_cards(html, url, district):
         if not (phone or email):
             continue
         recs.append(_ulb.record(MODULE, "MH", body, "Chief Officer", seen, phone=phone, email=email, district=district, source=url,
-                                last_updated=up, post_as_written=post))
+                                last_updated=up, post_as_written=post, src_pos={"selector": "li.public-utlty-catg", "card": k},
+                                method=METHOD_CARDS))
     return recs
 
 

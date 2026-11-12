@@ -33,19 +33,20 @@ def parse(html, url=URL):
     recs, seen = [], set()
     up = updated(html)
     for t in _esw.soup(html).find_all("table"):
-        rows = _esw.grid(t)
+        tp = []
+        rows = _esw.grid(t, pos=tp)
         if not rows or not any(re.search(r"(?i)phone", h) for h in rows[0]):
             continue
         head = [h.lower() for h in rows[0]]
         ix = {k: next((i for i, h in enumerate(head) if re.search(rx, h)), None)
               for k, rx in (("name", r"name"), ("addr", r"address"), ("phone", r"phone"))}
-        for row in rows[1:]:
+        for row, pos in zip(rows[1:], tp[1:]):
             cell = lambda k: _esw.clean(row[ix[k]]) if ix[k] is not None and ix[k] < len(row) else ""   # noqa: E731
             body, addr, phone = cell("name"), cell("addr"), cell("phone")
             if not body or not CO.search(addr) or not phone:
                 continue
             recs.append(_ulb.record(MODULE, "GA", body, "Chief Officer", seen, phone=phone, body_type="Municipal Council", source=url,
-                                    last_updated=up, address=addr))
+                                    last_updated=up, address=addr, src_pos=pos))
     return recs
 
 

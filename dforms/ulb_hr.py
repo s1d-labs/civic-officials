@@ -59,7 +59,8 @@ def parse(html, url=URL):
     date = page_date(soup)
     recs, seen = [], set()
     for t in soup.find_all("table"):
-        rows = _esw.grid(t)
+        tp = []
+        rows = _esw.grid(t, pos=tp)
         if not rows:
             continue
         col = {}
@@ -69,7 +70,7 @@ def parse(html, url=URL):
                     col[k] = i
         if not {"body", "post"} <= set(col):
             continue
-        for row in rows[1:]:
+        for row, pos in zip(rows[1:], tp[1:]):
             c = {k: (_esw.clean(row[i]) if i < len(row) else "") for k, i in col.items()}
             bodies = [b.strip() for b in c["body"].split(",") if b.strip()]
             email = _esw.emails(c.get("email", ""))
@@ -79,7 +80,7 @@ def parse(html, url=URL):
             others = [b for b in bodies if b != body]
             recs.append(_ulb.record(MODULE, "HR", body, c["post"], seen, name=c.get("name", ""), email=email, district=c.get("district"),
                                     source=url, last_updated=date, nodal_for=", ".join(others) or None,
-                                    list_post="Nodal Officer (Haryana Litigation Policy, 2025)"))
+                                    list_post="Nodal Officer (Haryana Litigation Policy, 2025)", src_pos=pos))
     return recs
 
 

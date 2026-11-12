@@ -35,7 +35,8 @@ def blank(s):
 def parse_tp(html, url=TP_URL):
     recs, seen, district = [], set(), None
     for t in _esw.soup(html).find_all("table"):
-        for row in _esw.grid(t):
+        tp = []
+        for row, pos in zip(_esw.grid(t, pos=tp), tp):
             m = re.match(r"(?i)name of the district\s*:?\s*(.+)", row[0])
             if m:
                 district = _esw.clean(m.group(1))
@@ -46,14 +47,16 @@ def parse_tp(html, url=TP_URL):
             if not body or not (office or eo):
                 continue
             recs.append(_ulb.record(MODULE, "TN", body, "Executive Officer", seen, phone=eo, district=district,
-                                    body_type="Town Panchayat", source=url, office_phone=_esw.phones(office) if office else None))
+                                    body_type="Town Panchayat", source=url, office_phone=_esw.phones(office) if office else None,
+                                    src_pos=pos))
     return recs
 
 
 def parse_cma(html, url=CMA_URL):
     recs, seen, region = [], set(), None
     for t in _esw.soup(html).find_all("table"):
-        for row in _esw.grid(t):
+        tp = []
+        for row, pos in zip(_esw.grid(t, pos=tp), tp):
             m = re.match(r"(?i)name of the region\s*:?\s*(.+)", row[0])
             if m:
                 region = _esw.clean(m.group(1))
@@ -64,7 +67,7 @@ def parse_cma(html, url=CMA_URL):
             if not body or not email:
                 continue
             recs.append(_ulb.record(MODULE, "TN", body, "Commissioner", seen, email=email, district=district or None,
-                                    body_type="Municipality", source=url, grade=grade or None, region=region))
+                                    body_type="Municipality", source=url, grade=grade or None, region=region, src_pos=pos))
     return recs
 
 

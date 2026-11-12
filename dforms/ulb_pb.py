@@ -50,7 +50,7 @@ def post_of(email):
 def parse(data, url=URL):
     tenants = data.get("MdmsRes", {}).get("tenant", {}).get("tenants", [])
     recs, seen = [], set()
-    for t in tenants:
+    for i, t in enumerate(tenants):
         code = t.get("code") or ""
         city = t.get("city") or {}
         if re.match(r"pb\.(it|testing)", code) or "pwssb" in code or code == "pb.punjab" or re.search(r"(?i)test", t.get("ulbName") or ""):
@@ -68,7 +68,8 @@ def parse(data, url=URL):
                                 district=_esw.clean(city.get("districtName")), body_type=city.get("ulbType"), source=SOURCE,
                                 lgd_code=t.get("ulbLgdCode") if re.fullmatch(r"\d{5,6}", t.get("ulbLgdCode") or "") and t["ulbLgdCode"] != "000000" else None,
                                 ulb_grade=city.get("ulbGrade"), address=_esw.clean(t.get("address")) or None,
-                                grievance_phone=phone(t.get("PGRMasterContact")) or None, post_from="email", tenant=code))
+                                grievance_phone=phone(t.get("PGRMasterContact")) or None, post_from="email", tenant=code,
+                                src_pos={"key": "MdmsRes.tenant.tenants", "index": i, "code": code}))
     return recs
 
 

@@ -23,7 +23,7 @@ from datetime import datetime
 
 from dforms import _esw, _ulb
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards (div.team-card) or name tables, home page of the body"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ulb_kl"
 INDEX = "https://lsgkerala.gov.in/en/website/web"
@@ -104,39 +104,45 @@ def parse(html, p, url=None):
     body, district, btype = p.get("body"), p.get("district"), p.get("body_type")
     extra = {"lb_code": p.get("code"), "last_updated": last_updated(soup)}
     office_phone, office_email = office(soup)
-    people = cards(soup) or name_tables(soup)
+    where = []
+    people = cards(soup, where)
+    if not people:
+        where = []
+        people = name_tables(soup, where)
     recs, seen, roles = [], set(), set()
-    for post, name, phone in people:
+    for (post, name, phone), pos in zip(people, where):
         more = {}
         if _ulb.role_of(post) == "head":
             more = {"office_phone": office_phone or None, "office_email": office_email or None}
         roles.add(_ulb.role_of(post))
         recs.append(_ulb.record(MODULE, "KL", body, post, seen, name=name, phone=phone, district=district, body_type=btype,
-                                source=url, **extra, **more))
+                                source=url, src_pos=pos, **extra, **more))
     if "head" not in roles and (office_phone or office_email):
         # the body's office line: in Kerala bodies the secretary's office (the email is "secretary<town>@...")
         recs.append(_ulb.record(MODULE, "KL", body, "Secretary (office)", seen, phone=office_phone, email=office_email,
-                                district=district, body_type=btype, source=url, **extra))
+                                district=district, body_type=btype, source=url, src_pos={"selector": "contact block"}, **extra))
     return recs
 
 
 POST = re.compile(r"(?i)^(chair\s*(person|man|woman)|vice\s*chair\s*(person|man|woman)|mayor|deputy\s*mayor|secretary|additional\s*secretary)$")
 
 
-def cards(soup):
+def cards(soup, where=None):
     """lsgwebnew template: div.team-card with .team-name (post) and .team-position spans (name, mobile)."""
     out = []
-    for card in soup.select("div.team-card"):
+    for k, card in enumerate(soup.select("div.team-card"), 1):
         post = _txt(card.select_one(".team-name"))
         pos = [_txt(s) for s in card.select(".team-position")]
         name = next((x for x in pos if x and not re.search(r"\d{6,}", x)), "")
         phone = _esw.phones(" ".join(x for x in pos if re.search(r"\d{6,}", x)))
         if post and (name or phone):
             out.append((post, name, phone))
+            if where is not None:
+                where.append({"selector": "div.team-card", "card": k})
     return out
 
 
-def name_tables(soup):
+def name_tables(soup, where=None):
     """Older template (corporations, e.g. Kochi): small tables "photo | post | name", one per person; no phones."""
     out = []
     for t in soup.find_all("table"):
@@ -146,6 +152,8 @@ def name_tables(soup):
             if POST.match(c) and not POST.match(cells[i + 1]) and not re.search(r"\d{5,}", cells[i + 1]):
                 if (c, cells[i + 1], "") not in out:
                     out.append((c, cells[i + 1], ""))
+                    if where is not None:       # cell = the post cell's place among the table's non-empty <td>
+                        where.append({"table": _esw.table_no(t), "cell": i + 1})
     return out
 
 

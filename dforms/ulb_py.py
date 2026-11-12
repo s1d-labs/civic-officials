@@ -29,7 +29,8 @@ def items(get=None):
 def parse(html, url=KARAIKAL, district=None):
     recs, seen = [], set()
     for t in _esw.soup(html).find_all("table"):
-        for row in _esw.grid(t):
+        tp = []
+        for row, pos in zip(_esw.grid(t, pos=tp), tp):
             if len(row) < 4:
                 continue
             name, post, address = row[0], row[1], row[2]
@@ -39,7 +40,7 @@ def parse(html, url=KARAIKAL, district=None):
             phone, email = row[3], _esw.emails(row[4]) if len(row) > 4 else ""
             post = re.sub(r"(?i),?\s*\b" + re.escape(m.group(0)) + r"\b", "", post).strip(" ,") or post
             recs.append(_ulb.record(MODULE, "PY", m.group(1), post, seen, name=name, phone=phone, email=email, district=district,
-                                    body_type="Municipality", source=url, address=address))
+                                    body_type="Municipality", source=url, address=address, src_pos=pos))
     return recs
 
 

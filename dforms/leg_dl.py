@@ -109,7 +109,7 @@ def _left(ln, i, addr_x, cons, name, addr):
                     addr.append(rest)
 
 
-def _member(no, lines, addr_x, url, prev_mail="", tail=""):
+def _member(no, lines, addr_x, url, prev_mail="", tail="", pos=None):
     """(record, orphan): orphan = an email tail printed on this row's first line that belongs to the row above ("com").
     prev_mail: the row above's email; a fragment that repeats its start is the row above's second, hidden email
     (the PDF prints it under this row's cell) and is left out."""
@@ -145,7 +145,7 @@ def _member(no, lines, addr_x, url, prev_mail="", tail=""):
     ok = _leg.emails(mail) == mail.lower()
     return _leg.member(MODULE, "DL", "AC", seat, " ".join(name), constituency=cons_s.title(), party=party, source=url,
                        phone=", ".join(phones), email=mail if ok else "", address=" ".join(addr), seat_no=no, note=note,
-                       email_raw="" if ok else mail, email_overlap=", ".join(cut_off)), orphan
+                       email_raw="" if ok else mail, email_overlap=", ".join(cut_off), src_pos=pos), orphan
 
 
 def parse(pages, url=URL):
@@ -159,9 +159,9 @@ def parse(pages, url=URL):
     # an email that ends in "." continues in the next row: as a lone "com" on its first line, or glued into its email ("@gcom")
     tails = [""] * len(rows)
     for n in range(len(rows) - 1):
-        (_, d), _ = _member(*rows[n], url)
+        (_, d), _ = _member(*rows[n], url, pos=at[n])
         if d.get("email_raw", "").endswith("."):
-            (_, _), orphan = _member(*rows[n + 1], url)
+            (_, _), orphan = _member(*rows[n + 1], url, pos=at[n + 1])
             if orphan:
                 tails[n] = orphan
             elif any(re.search(r"@gcom", ln) for ln in rows[n + 1][1]):
@@ -169,9 +169,8 @@ def parse(pages, url=URL):
                 tails[n] = "com"
     recs, prev = {}, ""
     for n, row in enumerate(rows):
-        (rid, d), _ = _member(*row, url, prev_mail=prev, tail=tails[n])
+        (rid, d), _ = _member(*row, url, prev_mail=prev, tail=tails[n], pos=at[n])
         prev = d.get("email") or d.get("email_raw", "")
-        d["src_pos"] = at[n]
         recs.setdefault(rid, (rid, d))
     return list(recs.values())
 
