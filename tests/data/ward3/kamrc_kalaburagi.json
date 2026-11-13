@@ -1,0 +1,25 @@
+{
+ "module": "ward3_kamrc_staff",
+ "payload": {
+  "reader": "ward3_kamrc_staff",
+  "url": "http://www.kalaburagicity.mrc.gov.in/en/city-staff",
+  "state": "KA",
+  "city": "kalaburagi",
+  "india_only": true,
+  "route": "direct"
+ },
+ "routes": {
+  "http://www.kalaburagicity.mrc.gov.in/en/city-staff": "kamrc_kalaburagi_city-staff.html"
+ },
+ "min_records": 73,
+ "expect": [
+  {
+   "post": "Zonal Commissioner",
+   "level": "zone"
+  },
+  {
+   "post": "Junior Engineer \\(Water Supply\\)",
+   "level": "body"
+  }
+ ]
+}
