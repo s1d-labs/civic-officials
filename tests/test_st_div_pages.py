@@ -33,7 +33,7 @@ def test_karnataka_regional_commissioner_table():
 def test_office_contact_block():
     p = {"key": "ka-belagavi", "state": "KA", "division": "Belagavi"}
     recs = M.office_record(p, page("ka_belagavi_contact.html"), "https://rcbelagavi.karnataka.gov.in/34/contact-us/en", 0,
-                           "Regional Commissioner")
+                           {"post": "Regional Commissioner"})
     assert len(recs) == 1
     rid, d = recs[0]
     assert rid == "dept:st_div_pages:ka-belagavi:office:0"
@@ -117,3 +117,23 @@ def test_seeds_are_well_formed():
             assert pl.get("route") in ("abroad", "direct") and isinstance(pl.get("india_only"), bool)
             if pl["reader"] == "st_div_pages":
                 assert pl["urls"] or pl.get("office")
+
+
+def test_jk_police_zone_cards_and_range_tables():
+    p = {"key": "jk-police", "state": "JK", "division": "Jammu", "kind": "police", "body": "Jammu and Kashmir Police",
+         "table_divisions": {"1": "Jammu", "2": "Kashmir"}, "police_unit_rx": r"(?i)\b[\w -]+\b(range|zone)\b|\b(NKR|SKR|CKR)\b"}
+    html = page("jk_police_zones.html")
+    url = "https://jkpolice.gov.in/Zonal-Range-Hqrs"
+    recs = M.parse_page(p, html, url)
+    assert len(recs) == 7
+    d = by_post(recs)
+    dig = next(v for k, v in d.items() if "Rajouri Poonch" in k)
+    assert dig["division"] == "Jammu" and dig["post_kind"] == "dig" and dig["dept"] == "police"
+    assert dig["name"].startswith("Sh. Sandeep Wazir") and dig["email"] == "digrajourioff@jkpolice.gov.in"
+    assert sum(1 for v in d.values() if v["division"] == "Kashmir") == 3
+    ig = M.office_record(p, html, url, 9, {"post": "IGP Kashmir Zone", "anchor": r"Kashmir Zone\nJ&K", "division": "Kashmir",
+                                           "police_unit": "Kashmir Zone"})
+    assert len(ig) == 1
+    rid, v = ig[0]
+    assert v["division"] == "Kashmir" and v["post"].startswith("IGP") and v["name"].startswith("Sh. Sujit Kumar")
+    assert v["email"] == "igkmr@jkpolice.gov.in" and v["phone"].startswith("0194-2458735") and v["post_kind"] == "igp"

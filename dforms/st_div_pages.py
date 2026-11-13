@@ -91,6 +91,26 @@ def district_in(text, names):
     return best[0], best[1]
 
 
+SERVICE_END = re.compile(r"^(.{3,80}?[-,(\s]\s*(?:IAS|IPS|IFS|KAS|JKAS|JKPS|HCS|PCS|RAS|BAS|OAS|WBCS|MCS)\)?)\s*[,-]?\s+(.+)$")
+RANK_START = re.compile(r"(?i)\b(DIGP?|IGP?|ADGP?|SSP|SP|DGP|Inspector General|Deputy Inspector General|Superintendent)\b")
+
+
+def name_post(s):
+    """"Sh. Sandeep Wazir -IPS, DIG Rajouri Poonch Range" -> ("Sh. Sandeep Wazir -IPS", "DIG Rajouri Poonch Range");
+    "Sh. Vikas Kundal, IAS Divisional Commissioner Jammu" -> ("Sh. Vikas Kundal, IAS", "Divisional Commissioner Jammu")."""
+    s = _esw.clean(s)
+    m = SERVICE_END.match(s)
+    if m:
+        return m.group(1).strip(" ,-"), m.group(2).strip(" ,-")
+    n, p = split_name_post(s)
+    if p:
+        return n, p
+    m = RANK_START.search(s)
+    if m and len(s[: m.start()].split()) >= 2:
+        return s[: m.start()].strip(" ,-"), s[m.start():].strip(" ,-")
+    return s, ""
+
+
 def fields(row):
     """{name, post, email, phone, mobile, fax, address} of one {header: cell} row."""
     f, phones = {}, []
@@ -104,8 +124,7 @@ def fields(row):
         elif k and k not in f:
             f[k] = v
     if "name_post" in f:
-        f["name"], f["post"] = split_name_post(f.pop("name_post"))
-        f["post"] = re.sub(r"(?i)^(?:,?\s*(?:IAS|IPS|KAS|JKAS|PCS|HCS)\b\.?)+\s*", "", f["post"])
+        f["name"], f["post"] = name_post(f.pop("name_post"))
     f["phone_raw"] = phones
     return f
 
@@ -187,7 +206,13 @@ def rows_records(p, rows, section, ids, poss, url, src=None):
             body = p.get("body") or f"Office of the Divisional Commissioner, {div}"
         else:
             body = section or p.get("body") or ""
-        kw = {"division": div}
+        tdiv = (p.get("table_divisions") or {}).get(str((pos or {}).get("table", "")))
+        kw = {"division": tdiv or div}
+        if p.get("police_unit_rx"):
+            u = re.search(p["police_unit_rx"], post + " " + address)
+            kw["police_unit"] = _esw.clean(u.group(0)) if u else None
+        if level == "division" and p.get("districts") and not tdiv:
+            kw["districts"] = p["districts"]
         if level == "district":
             kw.update(district=dname, district_code=code, districts=[code])
         out.append(_state.rec(
@@ -244,48 +269,70 @@ def pager(p, html, url, get):
 STOP = re.compile(r"(?i)district informatics|national informatics|screen reader|website (is )?(designed|content)")
 
 
-def office_record(p, html, url, n, post):
-    """One record for the office from its contact text: the first e-mail and the phones after "Phone"."""
+def office_record(p, html, url, n, o):
+    """One record for an office from contact text on the page: o = {"post", "anchor" (regex where the text starts; default
+    the first of Office Address / Postal Address / Contact Us / Address), "division" (default the payload's)}. Phone = the
+    numbers after "Phone", e-mail = the first address; a line "<name>-IPS, IGP Jammu Zone" (name with service, then the post)
+    gives name and post."""
+    post = o.get("post", "")
     soup = _esw.soup(html)
     for x in soup(["script", "style", "nav", "header", "footer"]):
         x.decompose()
     text = soup.get_text("\n", strip=True)
     m = None
-    for rx in (r"(?i)office address", r"(?i)postal address", r"(?i)contact us", r"(?i)address", r"संपर्क"):
+    for rx in ([o["anchor"]] if o.get("anchor") else []) + [r"(?i)office address", r"(?i)postal address", r"(?i)contact us",
+                                                            r"(?i)address", r"संपर्क"]:
         m = re.search(rx, text)
-        if m:
+        if m or o.get("anchor"):
             break
+    if o.get("anchor") and not m:
+        return []
     chunk = text[m.start():] if m else text
     s = STOP.search(chunk)
-    chunk = chunk[: s.start()] if s else chunk[:800]
+    chunk = chunk[: s.start()] if s else chunk
+    chunk = chunk[: int(o.get("chars", 800))]
     email = _esw.emails(chunk).split(", ")[0] if _esw.emails(chunk) else ""
-    ph = re.search(r"(?i)(phone|tel|telephone|दूरध्वनी|दूरभाष)[^:]*:?\s*([\d\s,()/+-]{6,})", chunk)
+    ph = re.search(r"(?i)(phone|tel|telephone|दूरध्वनी|दूरभाष)[^:\d]*:?\s*([\d\s,()/+-]{6,})", chunk)
     phone = _esw.phones(ph.group(2)) if ph else ""
     if not (email or phone):
         return []
-    lines = [x for x in chunk.split("\n")[1:] if not re.search(r"(?i)phone|e-?mail|website|tel\b|share on|share of|contact us|^\W*or\W*$|\[", x)]
+    name = ""
+    nm = re.search(r"(?m)^(.{3,60}?\b(?:IPS|IAS))\W+(.{3,80})$", chunk)
+    if nm:
+        name, post = nm.group(1).strip(" -,"), _esw.clean(nm.group(2))
+    fax = re.search(r"(?i)fax\W*([\d\s,()/-]{6,})", chunk)
+    lines = [x for x in chunk.split("\n")[1:] if not re.search(r"(?i)phone|e-?mail|website|tel\b|fax|share on|share of|contact us|"
+                                                             r"^\W*or\W*$|\[|\b(IPS|IAS)\b|^address\W*$", x)]
+    police = p.get("kind") == "police"
+    div = o.get("division") or p["division"]
     return [_state.rec(MODULE, f"{p['key']}:office:{n}", state=p["state"], level="division", post=post,
-                       post_kind="divisional_commissioner" if HEAD_OF_OFFICE.search(post) else None, name="",
-                       body=p.get("body") or f"Office of the Divisional Commissioner, {p['division']}",
-                       body_kind="police" if p.get("kind") == "police" else "division",
-                       dept="police" if p.get("kind") == "police" else "revenue", division=p["division"], phone=phone,
-                       email=email, address=", ".join(lines[:5]).strip(", "), office_contact=True,
-                       division_kind=p.get("kind") or "revenue", host=urlparse(url).netloc, source=url, src_url=url,
+                       post_kind=("divisional_commissioner" if is_head(p, post) else None) if not police else None, name=name,
+                       body=p.get("body") or f"Office of the Divisional Commissioner, {div}",
+                       body_kind="police" if police else "division", dept="police" if police else "revenue", division=div,
+                       districts=p.get("districts") if o.get("division") in (None, p["division"]) else None,
+                       police_unit=o.get("police_unit"), phone=phone, email=email, fax=_esw.phones(fax.group(1)) if fax else None,
+                       address=", ".join(lines[:5]).strip(", "), office_contact=True, division_kind=p.get("kind") or "revenue",
+                       host=urlparse(url).netloc, source=url, src_url=url,
                        src_pos={"text": "contact", "chars": [m.start() if m else 0, (m.start() if m else 0) + len(chunk)]})]
 
 
 def fetch(p, get):
-    recs, files, seen = [], [], set()
-    pages = [(u, None) for u in p.get("urls", [])] + [(o["url"], o.get("post", "")) for o in p.get("office", [])]
-    for n, (url, post) in enumerate(pages):
-        r = get(url)
-        if r is None or getattr(r, "status_code", 200) >= 400:
+    recs, files, seen, cache = [], [], set(), {}
+    pages = [(u, None) for u in p.get("urls", [])] + [(o["url"], o) for o in p.get("office", [])]
+    for n, (url, o) in enumerate(pages):
+        if url not in cache:
+            r = get(url)
+            if r is not None and getattr(r, "status_code", 200) < 400:
+                if not r.encoding or r.encoding.lower() == "iso-8859-1":
+                    r.encoding = "utf-8"
+                files.append(_esw.keep(MODULE, f"{p['key']}/{slug(url)}", r.content))
+                cache[url] = r.text
+            else:
+                cache[url] = None
+        html = cache[url]
+        if html is None:
             continue
-        if not r.encoding or r.encoding.lower() == "iso-8859-1":
-            r.encoding = "utf-8"
-        html = r.text
-        files.append(_esw.keep(MODULE, f"{p['key']}/{slug(url)}", r.content))
-        got = office_record(p, html, url, n, post) if post is not None else parse_page(p, html, url) + pager(p, html, url, get)
+        got = office_record(p, html, url, n, o) if o is not None else parse_page(p, html, url) + pager(p, html, url, get)
         for rid, d in got:
             if rid not in seen:
                 seen.add(rid)
