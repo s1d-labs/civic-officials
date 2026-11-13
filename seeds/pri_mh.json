@@ -1,0 +1,546 @@
+[
+ {
+  "key": "pri_mh_zp:ahilyanagar",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://nagarzp.gov.in/",
+   "host": "nagarzp.gov.in",
+   "district": "Ahilyanagar",
+   "lgd_code": "424",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:akola",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://akolazp.gov.in/",
+   "host": "akolazp.gov.in",
+   "district": "Akola",
+   "lgd_code": "425",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:amravati",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpamravati.gov.in/",
+   "host": "zpamravati.gov.in",
+   "district": "Amravati",
+   "lgd_code": "426",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:beed",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpbeed.gov.in/",
+   "host": "zpbeed.gov.in",
+   "district": "Beed",
+   "lgd_code": "428",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:bhandara",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpbhandara.maharashtra.gov.in/",
+   "host": "zpbhandara.maharashtra.gov.in",
+   "district": "Bhandara",
+   "lgd_code": "429",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:buldhana",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpbuldhana.maharashtra.gov.in/",
+   "host": "zpbuldhana.maharashtra.gov.in",
+   "district": "Buldhana",
+   "lgd_code": "430",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:chandrapur",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpchandrapur.maharashtra.gov.in/",
+   "host": "zpchandrapur.maharashtra.gov.in",
+   "district": "Chandrapur",
+   "lgd_code": "431",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:chhatrapati-sambhajinagar",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://aurangabadzp.gov.in/",
+   "host": "aurangabadzp.gov.in",
+   "district": "Chhatrapati Sambhajinagar",
+   "lgd_code": "427",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:dharashiv",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpdharashiv.maharashtra.gov.in/",
+   "host": "zpdharashiv.maharashtra.gov.in",
+   "district": "Dharashiv",
+   "lgd_code": "444",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:dhule",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpdhule.maharashtra.gov.in/",
+   "host": "zpdhule.maharashtra.gov.in",
+   "district": "Dhule",
+   "lgd_code": "432",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:gadchiroli",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpgadchiroli.maharashtra.gov.in/",
+   "host": "zpgadchiroli.maharashtra.gov.in",
+   "district": "Gadchiroli",
+   "lgd_code": "433",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:gondia",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpgondia.gov.in/",
+   "host": "zpgondia.gov.in",
+   "district": "Gondia",
+   "lgd_code": "434",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:hingoli",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zphingoli.gov.in/",
+   "host": "zphingoli.gov.in",
+   "district": "Hingoli",
+   "lgd_code": "435",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:jalgaon",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpjalgaon.gov.in/",
+   "host": "zpjalgaon.gov.in",
+   "district": "Jalgaon",
+   "lgd_code": "436",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:jalna",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpjalna.maharashtra.gov.in/",
+   "host": "zpjalna.maharashtra.gov.in",
+   "district": "Jalna",
+   "lgd_code": "437",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:kolhapur",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpkolhapur.gov.in/",
+   "host": "zpkolhapur.gov.in",
+   "district": "Kolhapur",
+   "lgd_code": "438",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:latur",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zplatur.gov.in/",
+   "host": "zplatur.gov.in",
+   "district": "Latur",
+   "lgd_code": "439",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:nagpur",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpnagpur.maharashtra.gov.in/",
+   "host": "zpnagpur.maharashtra.gov.in",
+   "district": "Nagpur",
+   "lgd_code": "440",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:nanded",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpnanded.maharashtra.gov.in/",
+   "host": "zpnanded.maharashtra.gov.in",
+   "district": "Nanded",
+   "lgd_code": "441",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:nandurbar",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpnandurbar.maharashtra.gov.in/",
+   "host": "zpnandurbar.maharashtra.gov.in",
+   "district": "Nandurbar",
+   "lgd_code": "442",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:nashik",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpnashik.maharashtra.gov.in/",
+   "host": "zpnashik.maharashtra.gov.in",
+   "district": "Nashik",
+   "lgd_code": "443",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:palghar",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zppalghar.gov.in/",
+   "host": "zppalghar.gov.in",
+   "district": "Palghar",
+   "lgd_code": "261449",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:parbhani",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpparbhani.gov.in/",
+   "host": "zpparbhani.gov.in",
+   "district": "Parbhani",
+   "lgd_code": "445",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:pune",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://punezp.gov.in/",
+   "host": "punezp.gov.in",
+   "district": "Pune",
+   "lgd_code": "446",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:raigad",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpraigad.gov.in/",
+   "host": "zpraigad.gov.in",
+   "district": "Raigad",
+   "lgd_code": "447",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:ratnagiri",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpratnagiri.gov.in/",
+   "host": "zpratnagiri.gov.in",
+   "district": "Ratnagiri",
+   "lgd_code": "448",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:sangli",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpsangli.maharashtra.gov.in/",
+   "host": "zpsangli.maharashtra.gov.in",
+   "district": "Sangli",
+   "lgd_code": "449",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:satara",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://www.zpsatara.gov.in/",
+   "host": "www.zpsatara.gov.in",
+   "district": "Satara",
+   "lgd_code": "450",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:sindhudurg",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpsindhudurg.maharashtra.gov.in/",
+   "host": "zpsindhudurg.maharashtra.gov.in",
+   "district": "Sindhudurg",
+   "lgd_code": "451",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:solapur",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpsolapur.gov.in/",
+   "host": "zpsolapur.gov.in",
+   "district": "Solapur",
+   "lgd_code": "452",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:thane",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpthane.maharashtra.gov.in/",
+   "host": "zpthane.maharashtra.gov.in",
+   "district": "Thane",
+   "lgd_code": "453",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:wardha",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpwardha.maharashtra.gov.in/",
+   "host": "zpwardha.maharashtra.gov.in",
+   "district": "Wardha",
+   "lgd_code": "454",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:washim",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpwashim.gov.in/",
+   "host": "zpwashim.gov.in",
+   "district": "Washim",
+   "lgd_code": "455",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ },
+ {
+  "key": "pri_mh_zp:yavatmal",
+  "payload": {
+   "kind": "form-pri_mh",
+   "state": "MH",
+   "level": "zp",
+   "url": "https://zpyavatmal.gov.in/",
+   "host": "zpyavatmal.gov.in",
+   "district": "Yavatmal",
+   "lgd_code": "456",
+   "election": "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website",
+   "pages": [],
+   "route": "abroad",
+   "expected": 60
+  }
+ }
+]
