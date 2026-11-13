@@ -26,7 +26,7 @@ The records say which election they come from ("election"); the loader decides w
 One queue item = one file. Payload {"kind": "form-pri_ap", "state": "AP", "url", "file" ("gp" | "mptc" | "zptc" | "mpp" |
 "zpp"), "district" (gp files), "level", "election", "route"; optional "stored" (bucket copy: then the site is not asked)}.
 Records: type pri_member (cforms/_pri.py). Ids: pri:AP:gp:<lgd or names>:head|vice|w<ward>; pri:AP:ps:<mandal>:head|vice|
-vice-2|coopted|w<MPTC name>; pri:AP:zp:<zpp>:head|w<ZPTC name>.
+vice-2|coopted|w<MPTC name>; pri:AP:zp:<zpp>:head|vice|vice-2|coopted-1|coopted-2|w<ZPTC name>.
 """
 import os
 import re
@@ -209,17 +209,20 @@ def parse_table(raw, kind):
                 owner[i] = min(mates, key=lambda d: (abs(d - i), 0 if d > i else 1))
         for d in data:
             cells = {c: [] for c in cols}
+            at = {c: [] for c in cols}          # line index (on the page) of each piece
             for idx in sorted([d] + [i for i, o in owner.items() if o == d]):
                 ps = pieces(lines[idx])
                 if idx == d and len(ps) == len(cols):      # a complete row: columns in order
                     for c, (_, _, t) in zip(cols, ps):
                         cells[c].append(t)
+                        at[c].append(idx)
                     continue
                 for n, (a, b, t) in enumerate(ps):
                     # serial, district and mandal / ZPP are never empty on a data line: the first three pieces, in order
                     k = n if idx == d and n < 3 else max(column(lay, a, b), 3 if idx == d else 0)
                     cells[cols[k]].append(t)
-            rows.append({"cells": cells, "page": pno, "line": d + 1, "line_text": lines[d],
+                    at[cols[k]].append(idx)
+            rows.append({"cells": cells, "at": at, "page": pno, "line": d + 1, "line_text": lines[d],
                          "wrapped": sorted(i + 1 for i, o in owner.items() if o == d) or None})
     return rows
 
@@ -338,12 +341,46 @@ def pz_records(rows, p, lgd):
                     ward_no=c["seat"], ward_name=c["seat"], name=c["name"], party=c["party"], reservation=c["reservation"],
                     gender=c["gender"], community=c["community"])
             else:
-                # the two vice-chairpersons and two co-opted members stand in one cell each, over several lines: kept as the
-                # lines read (a line can hold a wrapped part of one name), not split into persons
+                # a short co-opted name ("Md. Gouse", "M. Ameen") can stand nearer the party column: back to the co-opted cell
+                cl, at = r["cells"], r.setdefault("at", {})
+                if len(at.get("vice_party") or []) == len(cl["vice_party"]):
+                    keep = [(t, ln) for t, ln in zip(cl["vice_party"], at["vice_party"]) if PARTY.fullmatch(t)]
+                    moved = [(t, ln) for t, ln in zip(cl["vice_party"], at["vice_party"]) if not PARTY.fullmatch(t)]
+                    if moved:
+                        co = sorted(list(zip(cl["coopted"], at.get("coopted") or [])) + moved, key=lambda x: x[1])
+                        cl["vice_party"], at["vice_party"] = [t for t, _ in keep], [ln for _, ln in keep]
+                        cl["coopted"], at["coopted"] = [t for t, _ in co], [ln for _, ln in co]
                 add("zp", bkey, "head", r, **common, post="Zilla Praja Parishad Chairperson", name=c["name"], party=c["party"],
                     reservation=c["reservation"], head=True, head_rank=1, vice_chairpersons_lines=r["cells"]["vice"],
                     vice_parties=r["cells"]["vice_party"], coopted_members_lines=r["cells"]["coopted"])
+                # the two vice-chairpersons and the two co-opted members stand in one cell each, over several lines (a long
+                # name wraps around the line of its party). One person per party line: each line goes to the nearest party line
+                vices = persons(r, "vice", "vice_party")
+                for n, (name, party) in enumerate(vices, 1):
+                    add("zp", bkey, "vice" if n == 1 else f"vice-{n}", r, **common, post="Zilla Praja Parishad Vice-Chairperson",
+                        name=name, party=party, head=True, head_rank=2)
+                for n, (name, _) in enumerate(persons(r, "coopted", "vice_party"), 1):
+                    add("zp", bkey, f"coopted-{n}", r, **common, post="Co-opted Member", name=name)
     return recs
+
+
+PARTY = re.compile(r"[A-Z][A-Z()&.\-]{1,11}|(?i:independent|ind)")
+
+
+def persons(row, col, anchor):
+    """[(name, party)] of a cell that holds several persons over several lines (ZPP file): the lines of the anchor column (the
+    vice-chairpersons' party, one per person) are the persons; every line of the cell joins the nearest anchor line (a tie goes
+    to the earlier one). Without anchors, each line is one person."""
+    texts, lines = row["cells"].get(col) or [], (row.get("at") or {}).get(col) or []
+    anc = list(zip((row.get("at") or {}).get(anchor) or [], row["cells"].get(anchor) or []))
+    if not texts:
+        return []
+    if not anc or len(lines) != len(texts):
+        return [(t, "") for t in texts]
+    groups = {i: [] for i in range(len(anc))}
+    for t, ln in zip(texts, lines):
+        groups[min(range(len(anc)), key=lambda i: (abs(anc[i][0] - ln), anc[i][0]))].append(t)
+    return [(" ".join(g), anc[i][1] if col != "coopted" else "") for i, g in groups.items() if g]
 
 
 def fetch(p, get):

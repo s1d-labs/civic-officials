@@ -58,8 +58,21 @@ def test_zptc_and_mpp():
 
 
 def test_zpp_heads():
+    """The whole ZPP file (tests/data/pri_ap/zpp.pdf = the bucket copy 6d6b0b159d21...): 13 chairpersons, 26 vice-chairpersons
+    and 26 co-opted members. Before 2026-11-13 the vice-chairpersons and co-opted members were lines on the head record only
+    (13 records): the reader audit found 13 records for 38 person rows."""
     recs = pri_ap.pz_records(pri_ap.parse_table(txt("zpp.txt"), "zpp"), {"url": "u", "file": "zpp"}, LGD)
-    assert len(recs) == 13 and all(d["lgd_code"] for _, d in recs)
+    assert len(recs) == 65 and all(d["lgd_code"] for _, d in recs)
+    posts = {}
+    for _, d in recs:
+        posts[d["post"]] = posts.get(d["post"], 0) + 1
+    assert posts == {"Zilla Praja Parishad Chairperson": 13, "Zilla Praja Parishad Vice-Chairperson": 26, "Co-opted Member": 26}
+    d = dict(recs)
+    assert d["pri:AP:zp:474:vice-2"]["name"] == "Siripurapu Jaganmohanarao"          # wrapped around its party line
+    assert d["pri:AP:zp:475:coopted-1"]["name"] == "Petakamsetti Siva Satyanaraya Joseph"
+    assert d["pri:AP:zp:465:coopted-1"]["name"] == "Md. Gouse"                        # stood in the party column
+    assert d["pri:AP:zp:459:coopted-1"]["name"] == "M. Ameen" and d["pri:AP:zp:459:vice"]["party"] == "YSRCP"
+    recs = [(rid, d) for rid, d in recs if rid.endswith(":head")]
     by = {d["serial"]: d for _, d in recs}
     assert by["4"]["name"] == "Vipparthi Venugopal Rao" and by["4"]["vice_chairpersons_lines"][:1] == ["Burra Anubabu"]
     assert by["7"]["district"] == "Guntur" and by["7"]["name"] == "Kattera Heny Christina"
@@ -73,7 +86,7 @@ def test_fetch_from_pdf():
     p = pri_ap.items()[-1]["payload"]
     assert p["file"] == "zpp"
     recs, files, why = pri_ap.fetch(p, lambda url, **k: R())
-    assert why == "" and len(recs) == 13 and files[0][0] == "pri/AP/zpp-state-2021.pdf"
+    assert why == "" and len(recs) == 65 and files[0][0] == "pri/AP/zpp-state-2021.pdf"
 
 
 def test_items():
