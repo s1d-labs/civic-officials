@@ -1,0 +1,26 @@
+{
+ "module": "ward3_aligarh",
+ "payload": {
+  "reader": "ward3_aligarh",
+  "url": "https://nnaligarh.in/ASCL/SectionInformation.html?editForm&rowId=7&page=",
+  "state": "UP"
+ },
+ "routes": {
+  "https://nnaligarh.in/ASCL/SectionInformation.html?editForm&rowId=7&page=": "aligarh_important_numbers.html"
+ },
+ "min_records": 25,
+ "expect": [
+  {
+   "post": "Sanitary and Food Inspector",
+   "name": "विशन",
+   "level": "body"
+  },
+  {
+   "post": "Junior Engineer \\(Water\\)",
+   "name": "नरेन्द्र"
+  },
+  {
+   "post": "Zonal Sanitary Officer"
+  }
+ ]
+}
