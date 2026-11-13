@@ -101,6 +101,7 @@ def test_upcl_zone_layout_b():
 # ---- MSEDCL (Maharashtra) telephone diary
 
 def test_msedcl_diary():
+    from dforms import power3_msedcl
     recs, files, why, rows = run("power3_msedcl", {}, [("Mahavitaran_Index_Diary", "msedcl_diary.pdf")])
     assert why == "" and files[0][0] == "depts/power/power3_msedcl/Mahavitaran_Index_Diary.pdf"
     assert check(recs, "power3_msedcl") == {"section": 5229, "subdivision": 2956, "division": 969, "circle": 218, "zone": 113,
@@ -128,3 +129,13 @@ def test_msedcl_diary():
     assert ae["post"] == "A.E.Recovery" and ae["phone"] == "7875273378" and ae["parents"]["circle"] == "BEED O&M CIRCLE"
     # the invisible OCR layer is not read ("AE (Recovery-Il)")
     assert not any("Recovery-Il" in (r.get("post") or "") for r in d.values())
+    # district of each circle / division (LGD names and codes); regions and zones (but Pune zone) span several districts
+    assert sum(1 for r in d.values() if r.get("district")) == 9373
+    assert Counter(r["level"] for r in d.values() if not r.get("district")) == {"zone": 112, "state": 56}
+    assert sec["district"] == "Jalna" and sec["district_code"] == "479" and ae["district"] == "Beed"
+    dist = Counter(r.get("district") for r in d.values())
+    assert dist["Pune"] == 755 and dist["Thane"] == 474 and dist["Raigad"] == 258 and dist["Mumbai Suburban"] == 83
+    assert len(dist) == 36 and all(r["district_code"] == power3_msedcl.LGD_DISTRICT[r["district"]] for r in d.values() if r.get("district"))
+    by_div = {r["parents"].get("division"): r["district"] for r in d.values() if r.get("parents", {}).get("division")}
+    assert by_div["Mulund O&M Dn"] == "Mumbai Suburban" and by_div["Panvel Urban O&M Dn"] == "Raigad"
+    assert by_div["Bramhapuri O&M Dn"] == "Chandrapur" and by_div["Vashi Dn"] == "Thane" and by_div["Alibag Dn"] == "Raigad"

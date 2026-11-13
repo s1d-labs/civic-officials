@@ -25,6 +25,10 @@ area, post and name) is one record with the phones of both.
 On the June 2026 file: 9,541 records; offices: 4 regions, 16 zones, 44 circles, 152 divisions, 659 sub-divisions;
 5,229 section offices and sub-stations; the other records are posts and named officers of these offices.
 Record id dept:power3_msedcl:<level>:<sub-division or office>:<area>:<post>:<name>.
+District (2026-11-14): the diary names no district. Each circle lies in one district, except where a division is named in
+DIV_DISTRICT (Thane urban circle: Mulund and Bhandup are in Mumbai Suburban; Vashi circle: Panvel Urban is in Raigad; Gadchiroli
+circle: Bramhapuri is in Chandrapur). Every record of a circle and below gets "district" (LGD name) and "district_code" (LGD
+code, lgd.districts of state 27). Regions and zones span several districts and get none (Pune zone: Pune only).
 """
 import html
 import io
@@ -62,6 +66,44 @@ TITLE = re.compile(r"(?i)^(\*?\s*)?(jt\.?\s*managing\s*director|chief\s*engineer
 NAME_BAD = re.compile(r"(?i)engineer|manager|officer|\bae\b|\bje\b|maintenance|nsc|recovery|\bsec\b|wing|dist|team|unit|stn|kv\b|"
                       r"o\s*&\s*m|b\s*&\s*r|urban|rural|sub\b|division|circle|zone|region|office|email|std|control")
 DEVANAGARI = re.compile(r"[ऀ-ॿ]")
+LGD_DISTRICT = {"Ahilyanagar": "466", "Akola": "467", "Amravati": "468", "Beed": "470", "Bhandara": "471", "Buldhana": "472",
+                "Chandrapur": "473", "Chhatrapati Sambhajinagar": "469", "Dharashiv": "488", "Dhule": "474", "Gadchiroli": "475",
+                "Gondia": "476", "Hingoli": "477", "Jalgaon": "478", "Jalna": "479", "Kolhapur": "480", "Latur": "481",
+                "Mumbai": "482", "Mumbai Suburban": "483", "Nagpur": "484", "Nanded": "485", "Nandurbar": "486", "Nashik": "487",
+                "Palghar": "665", "Parbhani": "489", "Pune": "490", "Raigad": "491", "Ratnagiri": "492", "Sangli": "493",
+                "Satara": "494", "Sindhudurg": "495", "Solapur": "496", "Thane": "497", "Wardha": "498", "Washim": "499",
+                "Yavatmal": "500"}
+# circle (pattern on its heading) -> district; first match wins
+CIRCLE_DISTRICT = [
+    (r"sambhajinagar", "Chhatrapati Sambhajinagar"), (r"jalna", "Jalna"), (r"beed", "Beed"), (r"latur", "Latur"),
+    (r"dharashiv|osmanabad", "Dharashiv"), (r"nanded", "Nanded"), (r"parbhani", "Parbhani"), (r"hingoli", "Hingoli"),
+    (r"thane", "Thane"), (r"vashi", "Thane"), (r"\bpen\b", "Raigad"), (r"kalyan", "Thane"), (r"palghar", "Palghar"),
+    (r"vasai", "Palghar"), (r"nashik", "Nashik"), (r"malegaon", "Nashik"), (r"ahilyanagar|ahmednagar", "Ahilyanagar"),
+    (r"dhule", "Dhule"), (r"jalgaon", "Jalgaon"), (r"nandurbar", "Nandurbar"), (r"ratnagiri", "Ratnagiri"),
+    (r"sindhudurg", "Sindhudurg"), (r"akola", "Akola"), (r"washim", "Washim"), (r"buldh?ana", "Buldhana"),
+    (r"amravati", "Amravati"), (r"yavatmal", "Yavatmal"), (r"chandrapur", "Chandrapur"), (r"gadchiroli", "Gadchiroli"),
+    (r"bhandara", "Bhandara"), (r"gondia", "Gondia"), (r"nagpur", "Nagpur"), (r"wardha", "Wardha"), (r"baramati", "Pune"),
+    (r"satara", "Satara"), (r"solapur", "Solapur"), (r"kolhapur", "Kolhapur"), (r"sangli", "Sangli"),
+    (r"ganeshkhind|rastapeth|pune", "Pune")]
+# divisions in another district than their circle
+DIV_DISTRICT = [(r"mulund|bhandup", "Mumbai Suburban"), (r"panvel\s*urban", "Raigad"), (r"bramhapuri|brahmapuri", "Chandrapur")]
+ZONE_DISTRICT = [(r"^pune\s+zone", "Pune")]
+
+
+def district_of(level, area, parents):
+    """(district, LGD district code) of a record from its circle / division (see the module text), else (None, None)."""
+    p = dict(parents or {})
+    if level in ("circle", "division", "subdivision", "zone"):
+        p.setdefault(level, area)
+    for k, table in (("division", DIV_DISTRICT), ("circle", CIRCLE_DISTRICT), ("zone", ZONE_DISTRICT)):
+        if k == "zone" and p.get("circle"):
+            continue
+        for rx, dist in table:
+            if p.get(k) and re.search(rx, p[k], re.I):
+                return dist, LGD_DISTRICT[dist]
+        if k == "circle" and p.get("circle"):
+            return None, None
+    return None, None
 
 
 def _mul(a, b):
@@ -394,9 +436,10 @@ def parse(content, url=URL):
             continue
         sub = (r.get("parents") or {}).get("subdivision") or (r.get("parents") or {}).get("division") or ""
         key = f"{r['level']}:{sub}:{r['area']}:{r.get('post') or ''}:{r.get('name') or ''}"
+        dist, dcode = district_of(r["level"], r["area"], r.get("parents"))
         out.add(key, r["level"], r["area"], post=r.get("post"), name=r.get("name"), phone_=phone(*r["phones"]) if r["phones"] else None,
                 email_=r.get("email"), address=r.get("address"), parents=r.get("parents"), src_pos=r.get("src_pos"),
-                method="pdf text")
+                method="pdf text", district=dist, district_code=dcode)
     return out.recs
 
 
