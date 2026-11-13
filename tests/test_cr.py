@@ -132,3 +132,28 @@ def test_body_name_with_post():
     assert "position" not in recs["councillor:WB:budge-budge:1"] and r["note"] == "x"
     seeds = json.loads((SEEDS / "councillors_cr_body.json").read_text())
     assert len(seeds) == 7 and all(i["key"].startswith("cr-body-") for i in seeds)
+
+
+def test_pb_heads_keep_the_member_list_mohali():
+    """Mohali (mcid 1001, a 2026 body: heads_only), the vice president's detail page (full saved page). Its #tblDataList lists
+    all 50 members with name, ward, address and mobile; LBPAMS (cforms/pb.py) has no mobiles, and before 2026-11-13 the reader
+    kept only the head. Now: 1 head + 50 member-list records councillor:PB:mohali:site:<ward>."""
+    import gzip
+
+    class R:
+        def __init__(self, t):
+            self.text = t
+    page = gzip.decompress((DATA / "cr_pb_mohali_vice_detail_full.html.gz").read_bytes()).decode("utf-8")
+    ml = cr_pb.member_list(page)
+    assert len(ml) == 50 and all(m["name"] and m["phone"] for m in ml)
+    assert [m["ward_no"] for m in ml] == [str(i) for i in range(1, 51)]
+    assert ml[0] == {"name": "Charanjit Kaur", "ward_no": "1", "address": "#1813, Phase-5, SAS Nagar", "phone": "9815122132",
+                     "email": None, "card_no": 1}
+    url = "https://mcpatiala.punjab.gov.in/Councilors/CouncillorsDetail?mcid=1001&MemberCode=3486"
+    cs = [{"code": 3486, "url": url, "name": "x", "position": "Vice President", "ward_no": "2", "card": "Vice President 2"}]
+    recs, _, err = cr_pb.heads({"body": "Mohali", "slug": "mohali"}, lambda u: R(page) if u == url else None, "home", cs, [])
+    ids = [rid for rid, _ in recs]
+    assert err == "" and ids[0] == "councillor:PB:mohali:vice" and len(recs) == 51
+    assert ids[1:] == [f"councillor:PB:mohali:site:{i}" for i in range(1, 51)]
+    d = dict(recs)["councillor:PB:mohali:site:1"]
+    assert d["phone"] == "9815122132" and d["source_kind"] == "e-Nigam member list" and d["src_pos"]["card"] == 1
