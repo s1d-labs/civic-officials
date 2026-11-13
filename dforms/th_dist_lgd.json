@@ -1,0 +1,9331 @@
+{
+"_about": "LGD urban local bodies (civic.ulb, 2026-11-13) of MP, MH, RJ, GJ, GA, DD: code -> [state, district, name, local name, type]. th_dist.lgd_of() ties a body name read from a district page to one of these within the page's district. alias: names a page writes that LGD writes in another way (state|district|name as the page writes it -> code), each checked by hand.",
+"alias": {
+"MH|Ahilyanagar|अहिल्यानगर": "251548",
+"MH|Ahilyanagar|राहाता": "251543",
+"MH|Ahilyanagar|कोपरंगाव": "251540",
+"MH|Ahilyanagar|शेवगाव": "276331",
+"MP|Umaria|नौरोजाबाद": "250803",
+"MP|Sheopur|बड़ौदा": "250674",
+"MH|Dharashiv|धाराशिव": "251569"
+},
+"lgd": {
+"248065": [
+"MP",
+"Sidhi",
+"Sidhi",
+"Sidhi",
+"Municipality"
+],
+"248066": [
+"MP",
+"Singrauli",
+"Singrauli",
+"Singrauli",
+"Municipal Corporation"
+],
+"248067": [
+"MP",
+"Sidhi",
+"Rampur Naikin",
+"Rampur Naikin",
+"Town Panchayat"
+],
+"248068": [
+"MP",
+"Sidhi",
+"Churhat",
+"Churhat",
+"Town Panchayat"
+],
+"248069": [
+"MP",
+"Betul",
+"Sarni",
+"Sarni",
+"Municipality"
+],
+"248070": [
+"MP",
+"Betul",
+"Betul Bazar",
+"Betul Bazar",
+"Town Panchayat"
+],
+"248071": [
+"MP",
+"Betul",
+"Multai",
+"Multai",
+"Municipality"
+],
+"248072": [
+"MP",
+"Betul",
+"Betul",
+"Betul",
+"Municipality"
+],
+"248073": [
+"MP",
+"Betul",
+"Amla",
+"Amla",
+"Municipality"
+],
+"248075": [
+"MP",
+"Mandla",
+"Nagar Palika, Nainpur",
+"Nagar Palika, Nainpur",
+"Municipality"
+],
+"248076": [
+"GJ",
+"Panch Mahals",
+"Shahera",
+"Shahera",
+"Municipality"
+],
+"248077": [
+"MH",
+"Bhandara",
+"Pauni",
+"पौनी",
+"Municipality"
+],
+"248078": [
+"MH",
+"Bhandara",
+"Bhandara",
+"भंडारा",
+"Municipality"
+],
+"248079": [
+"MH",
+"Bhandara",
+"Tumsar",
+"तुमसर",
+"Municipality"
+],
+"248080": [
+"MH",
+"Gadchiroli",
+"Municipal Council Gadchiroli",
+"गडचिरोली",
+"Municipality"
+],
+"248081": [
+"MH",
+"Gadchiroli",
+"Municipal Council Desaiganj ( Wadsa)",
+"देसाईगंज",
+"Municipality"
+],
+"248082": [
+"MH",
+"Chandrapur",
+"Chandrapur",
+"चंद्रपूर",
+"Municipal Corporation"
+],
+"248649": [
+"RJ",
+"Ganganagar",
+"Kesrisinghpur",
+"केसरीसिंहपुर",
+"Municipality(Nagar Palika)"
+],
+"248650": [
+"RJ",
+"Ganganagar",
+"Srikaranpur",
+"श्रीकरणपुर",
+"Municipality(Nagar Palika)"
+],
+"248651": [
+"RJ",
+"Ganganagar",
+"Sri Ganganagar",
+"श्री गंगानगर",
+"Municipal Council"
+],
+"248652": [
+"RJ",
+"Ganganagar",
+"Sadulshahar",
+"सादुलशहर",
+"Municipality(Nagar Palika)"
+],
+"248653": [
+"RJ",
+"Ganganagar",
+"Padampur",
+"पदमपुर",
+"Municipality(Nagar Palika)"
+],
+"248654": [
+"RJ",
+"Ganganagar",
+"Gajsinghpur",
+"गजसिंहपुर",
+"Municipality(Nagar Palika)"
+],
+"248655": [
+"RJ",
+"Ganganagar",
+"Raisinghnagar",
+"रायसिंहनगर",
+"Municipality(Nagar Palika)"
+],
+"248656": [
+"RJ",
+"Ganganagar",
+"Anupgarh",
+"अनूपगढ",
+"Municipality(Nagar Palika)"
+],
+"248658": [
+"RJ",
+"Ganganagar",
+"Srivijainagar",
+"श्रीविजयनगर",
+"Municipality(Nagar Palika)"
+],
+"248660": [
+"RJ",
+"Ganganagar",
+"Suratgarh",
+"सूरतगढ",
+"Municipality(Nagar Palika)"
+],
+"248661": [
+"RJ",
+"Hanumangarh",
+"Sangaria",
+"सांगरिया",
+"Municipality(Nagar Palika)"
+],
+"248662": [
+"RJ",
+"Hanumangarh",
+"Hanumangarh",
+"हनुमानगढ",
+"Municipal Council"
+],
+"248663": [
+"RJ",
+"Hanumangarh",
+"Pilibanga",
+"पीलीबंगा",
+"Municipality(Nagar Palika)"
+],
+"248664": [
+"RJ",
+"Hanumangarh",
+"Rawatsar",
+"रावतसर",
+"Municipal Council"
+],
+"248665": [
+"RJ",
+"Hanumangarh",
+"Nohar",
+"नोहर",
+"Municipal Council"
+],
+"248666": [
+"RJ",
+"Hanumangarh",
+"Bhadra",
+"भादरा",
+"Municipal Council"
+],
+"248667": [
+"RJ",
+"Bikaner",
+"Bikaner",
+"बीकानेर",
+"Municipal Corporation"
+],
+"248668": [
+"RJ",
+"Bikaner",
+"Deshnoke",
+"देशनोक",
+"Municipality(Nagar Palika)"
+],
+"248669": [
+"RJ",
+"Bikaner",
+"Nokha",
+"नोखा",
+"Municipality(Nagar Palika)"
+],
+"248670": [
+"RJ",
+"Churu",
+"Taranagar",
+"तारानगर",
+"Municipality(Nagar Palika)"
+],
+"248671": [
+"RJ",
+"Alwar",
+"Rajgarh (Alwar)",
+"राजगढ़ (अलवर)",
+"Municipal Council"
+],
+"248672": [
+"RJ",
+"Churu",
+"Sardarshahar",
+"सरदारशहर",
+"Municipality(Nagar Palika)"
+],
+"248673": [
+"RJ",
+"Churu",
+"Churu",
+"चूरू",
+"Municipal Council"
+],
+"248674": [
+"RJ",
+"Churu",
+"Ratannagar",
+"रतननगर",
+"Municipality(Nagar Palika)"
+],
+"248675": [
+"RJ",
+"Bikaner",
+"Sri Dungargarh",
+"श्री डूंगरगढ ",
+"Municipality(Nagar Palika)"
+],
+"248676": [
+"RJ",
+"Churu",
+"Ratangarh",
+"रतनगढ",
+"Municipal Council"
+],
+"248677": [
+"RJ",
+"Churu",
+"Rajaldesar",
+"राजलदेसर",
+"Municipality(Nagar Palika)"
+],
+"248678": [
+"RJ",
+"Churu",
+"Bidasar",
+"बीदासर",
+"Municipal Council"
+],
+"248679": [
+"RJ",
+"Churu",
+"Chhapar",
+"छापर",
+"Municipality(Nagar Palika)"
+],
+"248680": [
+"RJ",
+"Churu",
+"Sujangarh",
+"सुजानगढ",
+"Municipal Council"
+],
+"248681": [
+"RJ",
+"Jhunjhunu",
+"Bissau",
+"बिसाउ",
+"Municipality(Nagar Palika)"
+],
+"248682": [
+"RJ",
+"Jhunjhunu",
+"Mandawa",
+"मण्डावा",
+"Municipality(Nagar Palika)"
+],
+"248683": [
+"RJ",
+"Jhunjhunu",
+"Jhunjhunun",
+"झुुंझुनूू",
+"Municipal Council"
+],
+"248684": [
+"RJ",
+"Jhunjhunu",
+"Baggar",
+"बग्गड",
+"Municipality(Nagar Palika)"
+],
+"248685": [
+"RJ",
+"Jhunjhunu",
+"Pilani",
+"पिलानी",
+"Municipality(Nagar Palika)"
+],
+"248686": [
+"RJ",
+"Jhunjhunu",
+"Vidyavihar",
+"विद्याविहार",
+"Municipality(Nagar Palika)"
+],
+"248687": [
+"RJ",
+"Jhunjhunu",
+"Chirawa",
+"चिडावा",
+"Municipality(Nagar Palika)"
+],
+"248688": [
+"RJ",
+"Jhunjhunu",
+"Surajgarh",
+"सूरजगढ",
+"Municipality(Nagar Palika)"
+],
+"248690": [
+"RJ",
+"Jhunjhunu",
+"Khetri",
+"खेतडी",
+"Municipal Council"
+],
+"248691": [
+"RJ",
+"Jhunjhunu",
+"Mukandgarh",
+"मुकूून्दगढ",
+"Municipality(Nagar Palika)"
+],
+"248692": [
+"RJ",
+"Jhunjhunu",
+"Nawalgarh",
+"नवलगढ",
+"Municipality(Nagar Palika)"
+],
+"248693": [
+"RJ",
+"Jhunjhunu",
+"Udaipurwati",
+"उदयपुरवाटी",
+"Municipality(Nagar Palika)"
+],
+"248694": [
+"RJ",
+"Kotputli-Behror",
+"Behror",
+"बहरोर",
+"Municipality(Nagar Palika)"
+],
+"248695": [
+"RJ",
+"Khairthal-Tijara",
+"Bhiwadi",
+"भिवाडी",
+"Municipal Council"
+],
+"248696": [
+"RJ",
+"Khairthal-Tijara",
+"Tijara",
+"तिजारा",
+"Municipality(Nagar Palika)"
+],
+"248698": [
+"RJ",
+"Khairthal-Tijara",
+"Khairthal-Tijara",
+"खैरथल",
+"Municipal Council"
+],
+"248699": [
+"RJ",
+"Alwar",
+"Alwar",
+"अलवर",
+"Municipal Corporation"
+],
+"248700": [
+"RJ",
+"Churu",
+"Rajgarh(Churu)",
+"राजगढ",
+"Municipality(Nagar Palika)"
+],
+"248702": [
+"RJ",
+"Alwar",
+"Kherli",
+"खेेडली",
+"Municipal Council"
+],
+"248703": [
+"RJ",
+"Deeg",
+"Kaman",
+"कामां",
+"Municipality(Nagar Palika)"
+],
+"248704": [
+"RJ",
+"Deeg",
+"Nagar",
+"नगर",
+"Municipality(Nagar Palika)"
+],
+"248705": [
+"RJ",
+"Deeg",
+"Deeg",
+"डीग",
+"Municipal Council"
+],
+"248706": [
+"RJ",
+"Bharatpur",
+"Nadbai",
+"नदबई",
+"Municipal Council"
+],
+"248707": [
+"RJ",
+"Deeg",
+"Kumher",
+"कुम्हेर",
+"Municipality(Nagar Palika)"
+],
+"248708": [
+"RJ",
+"Bharatpur",
+"Bharatpur",
+"भरतपुर",
+"Municipal Corporation"
+],
+"248709": [
+"RJ",
+"Bharatpur",
+"Bhusawar",
+"भुसावर",
+"Municipality(Nagar Palika)"
+],
+"248710": [
+"RJ",
+"Bharatpur",
+"Weir",
+"वैर",
+"Municipality(Nagar Palika)"
+],
+"248711": [
+"RJ",
+"Bharatpur",
+"Bayana",
+"बयाना",
+"Municipality(Nagar Palika)"
+],
+"248712": [
+"RJ",
+"Dholpur",
+"Bari",
+"बाडी",
+"Municipality(Nagar Palika)"
+],
+"248713": [
+"RJ",
+"Dholpur",
+"Dhaulpur",
+"धौलपुर",
+"Municipal Council"
+],
+"248714": [
+"RJ",
+"Dholpur",
+"Rajakhera",
+"राजाखेडा",
+"Municipality(Nagar Palika)"
+],
+"248715": [
+"RJ",
+"Karauli",
+"Todabhim",
+"टोडाभीम",
+"Municipal Council"
+],
+"248716": [
+"RJ",
+"Karauli",
+"Hindaun City",
+"",
+"Municipal Council"
+],
+"248717": [
+"RJ",
+"Karauli",
+"Karauli",
+"करौली",
+"Municipal Council"
+],
+"248718": [
+"RJ",
+"Sawai Madhopur",
+"Gangapur City",
+"गंगापुर सिटी",
+"Municipal Council"
+],
+"248720": [
+"RJ",
+"Sawai Madhopur",
+"Sawai Madhopur",
+"सवाई माधोपुर",
+"Municipal Council"
+],
+"248722": [
+"RJ",
+"Dausa",
+"Bandikui",
+"बांदीकुई",
+"Municipal Council"
+],
+"248725": [
+"RJ",
+"Dausa",
+"Dausa",
+"दौसा",
+"Municipal Council"
+],
+"248726": [
+"RJ",
+"Dausa",
+"Lalsot",
+"लालसोट",
+"Municipal Council"
+],
+"248727": [
+"RJ",
+"Kotputli-Behror",
+"Kotputli",
+"कोटपुुतली",
+"Municipal Council"
+],
+"248728": [
+"RJ",
+"Kotputli-Behror",
+"Viratnagar",
+"विराटनगर",
+"Municipality(Nagar Palika)"
+],
+"248729": [
+"RJ",
+"Jaipur",
+"Shahpura",
+"शाहपुरा",
+"Municipal Council"
+],
+"248730": [
+"RJ",
+"Jaipur",
+"Chomu",
+"चौमूं",
+"Municipality(Nagar Palika)"
+],
+"248731": [
+"RJ",
+"Jaipur",
+"Kishangarh Renwal",
+"किशनगढ रेनवाल",
+"Municipality(Nagar Palika)"
+],
+"248732": [
+"RJ",
+"Jaipur",
+"Jobner",
+"जोबनेर",
+"Municipality(Nagar Palika)"
+],
+"248733": [
+"RJ",
+"Jaipur",
+"Sambhar",
+"सांभर",
+"Municipality(Nagar Palika)"
+],
+"248734": [
+"RJ",
+"Jaipur",
+"Phulera",
+"फुलेरा",
+"Municipality(Nagar Palika)"
+],
+"248735": [
+"RJ",
+"Jaipur",
+"Bagru",
+"बगरू",
+"Municipality(Nagar Palika)"
+],
+"248737": [
+"RJ",
+"Jaipur",
+"Chaksu",
+"चाकसूू",
+"Municipality(Nagar Palika)"
+],
+"248738": [
+"RJ",
+"Sikar",
+"Ramgarh",
+"रामगढ",
+"Municipality(Nagar Palika)"
+],
+"248739": [
+"RJ",
+"Sikar",
+"Fatehpur",
+"फतेहपुुुर",
+"Municipality(Nagar Palika)"
+],
+"248740": [
+"RJ",
+"Sikar",
+"Lachhmangarh",
+"लक्ष्मणगढ",
+"Municipal Council"
+],
+"248741": [
+"RJ",
+"Sikar",
+"Sikar",
+"सीकर",
+"Municipal Council"
+],
+"248742": [
+"RJ",
+"Sikar",
+"Losal",
+"लोसल",
+"Municipal Council"
+],
+"248743": [
+"RJ",
+"Sikar",
+"Khandela",
+"खण्डेला",
+"Municipal Council"
+],
+"248744": [
+"RJ",
+"Sikar",
+"Sri Madhopur",
+"श्री माधोपुर",
+"Municipal Council"
+],
+"248745": [
+"RJ",
+"Sikar",
+"Reengus",
+"रींगस",
+"Municipality(Nagar Palika)"
+],
+"248746": [
+"RJ",
+"Sikar",
+"Neem-Ka-Thana",
+"नीम-का-थाना",
+"Municipal Council"
+],
+"248747": [
+"RJ",
+"Didwana-Kuchaman",
+"Ladnu",
+"लाडनूू",
+"Municipality(Nagar Palika)"
+],
+"248748": [
+"RJ",
+"Didwana-Kuchaman",
+"Didwana",
+"डीडवाना",
+"Municipality(Nagar Palika)"
+],
+"248749": [
+"RJ",
+"Nagaur",
+"Nagaur",
+"नागौर",
+"Municipal Council"
+],
+"248751": [
+"RJ",
+"Nagaur",
+"Mundwa",
+"मुण्डवा",
+"Municipality(Nagar Palika)"
+],
+"248752": [
+"RJ",
+"Nagaur",
+"Kuchera",
+"कुचेरा",
+"Municipality(Nagar Palika)"
+],
+"248753": [
+"RJ",
+"Nagaur",
+"Merta City",
+"मेडता सिटी",
+"Municipality(Nagar Palika)"
+],
+"248755": [
+"RJ",
+"Didwana-Kuchaman",
+"Parbatsar",
+"परबतसर",
+"Municipality(Nagar Palika)"
+],
+"248756": [
+"RJ",
+"Didwana-Kuchaman",
+"Makrana",
+"मकराना",
+"Municipal Council"
+],
+"248757": [
+"RJ",
+"Didwana-Kuchaman",
+"Kuchaman City",
+"कुचामन सिटी",
+"Municipality(Nagar Palika)"
+],
+"248758": [
+"RJ",
+"Didwana-Kuchaman",
+"Nawa",
+"नावा",
+"Municipality(Nagar Palika)"
+],
+"248759": [
+"RJ",
+"Phalodi",
+"Phalodi",
+"फलाैैैैदी",
+"Municipality(Nagar Palika)"
+],
+"248761": [
+"RJ",
+"Jodhpur",
+"Pipar City",
+"पीपाड सिटी",
+"Municipality(Nagar Palika)"
+],
+"248762": [
+"RJ",
+"Jodhpur",
+"Bilara",
+"बिलाडा",
+"Municipality(Nagar Palika)"
+],
+"248763": [
+"RJ",
+"Jaisalmer",
+"Jaisalmer",
+"जैसलमेर",
+"Municipal Council"
+],
+"248764": [
+"RJ",
+"Jaisalmer",
+"Pokaran",
+"पोकरण",
+"Municipality(Nagar Palika)"
+],
+"248765": [
+"RJ",
+"Balotra",
+"Balotra",
+"बालोतरा",
+"Municipal Council"
+],
+"248766": [
+"RJ",
+"Barmer",
+"Barmer",
+"बाडमेर",
+"Municipal Council"
+],
+"248767": [
+"RJ",
+"Jalore",
+"Jalore",
+"जालौर",
+"Municipal Council"
+],
+"248768": [
+"RJ",
+"Jalore",
+"Bhinmal",
+"भीनमाल",
+"Municipality(Nagar Palika)"
+],
+"248769": [
+"RJ",
+"Jalore",
+"Sanchore",
+"सांचोर",
+"Municipality(Nagar Palika)"
+],
+"248770": [
+"RJ",
+"Sirohi",
+"Sheoganj",
+"शिवगंज",
+"Municipality(Nagar Palika)"
+],
+"248771": [
+"RJ",
+"Sirohi",
+"Sirohi",
+"सिरोही",
+"Municipal Council"
+],
+"248773": [
+"RJ",
+"Sirohi",
+"Mount Abu",
+"माउण्ट आबू",
+"Municipality(Nagar Palika)"
+],
+"248774": [
+"RJ",
+"Sirohi",
+"Abu Road",
+"आबू रोड",
+"Municipality(Nagar Palika)"
+],
+"248775": [
+"RJ",
+"Beawar",
+"Jaitaran",
+"जैतारण",
+"Municipality(Nagar Palika)"
+],
+"248776": [
+"RJ",
+"Pali",
+"Sojat",
+"सोजत",
+"Municipality(Nagar Palika)"
+],
+"248778": [
+"RJ",
+"Pali",
+"Pali",
+"पाली",
+"Municipal Corporation"
+],
+"248780": [
+"RJ",
+"Pali",
+"Rani",
+"रानी",
+"Municipality(Nagar Palika)"
+],
+"248781": [
+"RJ",
+"Pali",
+"Sadri",
+"सादडी",
+"Municipality(Nagar Palika)"
+],
+"248782": [
+"RJ",
+"Pali",
+"Takhatgarh",
+"तख्तगढ",
+"Municipality(Nagar Palika)"
+],
+"248783": [
+"RJ",
+"Pali",
+"Sumerpur",
+"सूमेरपुर",
+"Municipal Council"
+],
+"248784": [
+"RJ",
+"Pali",
+"Falna",
+"फालना",
+"Municipality(Nagar Palika)"
+],
+"248785": [
+"RJ",
+"Pali",
+"Bali",
+"बाली",
+"Municipality(Nagar Palika)"
+],
+"248786": [
+"RJ",
+"Ajmer",
+"Kishangarh",
+"किशनगढ",
+"Municipal Council"
+],
+"248787": [
+"RJ",
+"Ajmer",
+"Pushkar",
+"पुष्कर",
+"Municipal Council"
+],
+"248788": [
+"RJ",
+"Ajmer",
+"Ajmer",
+"अजमेर",
+"Municipal Corporation"
+],
+"248790": [
+"RJ",
+"Beawar",
+"Beawar",
+"ब्यावर",
+"Municipal Council"
+],
+"248791": [
+"RJ",
+"Beawar",
+"Vijainagar",
+"विजयनगर",
+"Municipal Council"
+],
+"248792": [
+"RJ",
+"Ajmer",
+"Sarwar",
+"सरवाड",
+"Municipality(Nagar Palika)"
+],
+"248793": [
+"RJ",
+"Ajmer",
+"Kekri",
+"केकडी",
+"Municipality(Nagar Palika)"
+],
+"248794": [
+"RJ",
+"Tonk",
+"Malpura",
+"मालपुुुुरा",
+"Municipal Council"
+],
+"248796": [
+"RJ",
+"Tonk",
+"Niwai",
+"निवाई",
+"Municipality(Nagar Palika)"
+],
+"248797": [
+"RJ",
+"Tonk",
+"Tonk",
+"टोंक",
+"Municipal Council"
+],
+"248798": [
+"RJ",
+"Tonk",
+"Todaraisingh",
+"टोडारायसिंह",
+"Municipality(Nagar Palika)"
+],
+"248799": [
+"RJ",
+"Tonk",
+"Deoli",
+"देवली",
+"Municipal Council"
+],
+"248800": [
+"RJ",
+"Tonk",
+"Uniara",
+"उनियारा",
+"Municipality(Nagar Palika)"
+],
+"248801": [
+"RJ",
+"Bundi",
+"Nainwa",
+"नैनवा",
+"Municipality(Nagar Palika)"
+],
+"248802": [
+"RJ",
+"Bundi",
+"Indragarh",
+"इन्द्रगढ",
+"Municipality(Nagar Palika)"
+],
+"248803": [
+"RJ",
+"Bundi",
+"Lakheri",
+"लाखेरी",
+"Municipality(Nagar Palika)"
+],
+"248804": [
+"RJ",
+"Bundi",
+"Kaprain",
+"कापरेन",
+"Municipality(Nagar Palika)"
+],
+"248805": [
+"RJ",
+"Bundi",
+"Keshoraipatan",
+"केशवरायपाटन",
+"Municipality(Nagar Palika)"
+],
+"248806": [
+"RJ",
+"Bundi",
+"Bundi",
+"बूंदी",
+"Municipal Council"
+],
+"248808": [
+"RJ",
+"Bhilwara",
+"Asind",
+"आसिंद",
+"Municipality(Nagar Palika)"
+],
+"248809": [
+"RJ",
+"Bhilwara",
+"Gulabpura",
+"गुलाबपुरा",
+"Municipality(Nagar Palika)"
+],
+"248811": [
+"RJ",
+"Bhilwara",
+"Gangapur",
+"गंगापुर",
+"Municipality(Nagar Palika)"
+],
+"248812": [
+"RJ",
+"Bhilwara",
+"Bhilwara",
+"भीलवाडा",
+"Municipal Corporation"
+],
+"248813": [
+"RJ",
+"Bhilwara",
+"Jahazpur",
+"जहाजपुर",
+"Municipality(Nagar Palika)"
+],
+"248814": [
+"RJ",
+"Bhilwara",
+"Mandalgarh",
+"मण्डलगढ",
+"Municipality(Nagar Palika)"
+],
+"248816": [
+"RJ",
+"Rajsamand",
+"Deogarh",
+"देवगढ",
+"Municipality(Nagar Palika)"
+],
+"248817": [
+"RJ",
+"Rajsamand",
+"Amet",
+"आमेट",
+"Municipality(Nagar Palika)"
+],
+"248818": [
+"RJ",
+"Rajsamand",
+"Rajsamand",
+"राजसमंद",
+"Municipal Council"
+],
+"248820": [
+"RJ",
+"Rajsamand",
+"Nathdwara",
+"नाथद्वारा",
+"Municipality(Nagar Palika)"
+],
+"248821": [
+"RJ",
+"Udaipur",
+"Fatehnagar",
+"फतेहनगर",
+"Municipality(Nagar Palika)"
+],
+"248822": [
+"RJ",
+"Udaipur",
+"Udaipur",
+"उदयपुर",
+"Municipal Corporation"
+],
+"248823": [
+"RJ",
+"Udaipur",
+"Bhinder",
+"भीण्डर",
+"Municipality(Nagar Palika)"
+],
+"248824": [
+"RJ",
+"Udaipur",
+"Kanor",
+"कानोर",
+"Municipality(Nagar Palika)"
+],
+"248826": [
+"RJ",
+"Salumbar",
+"Salumbar",
+"सलूम्बर",
+"Municipal Council"
+],
+"248831": [
+"RJ",
+"Dungarpur",
+"Dungarpur",
+"डूंगरपुर",
+"Municipal Council"
+],
+"248832": [
+"RJ",
+"Dungarpur",
+"Sagwara",
+"सगवाडा",
+"Municipality(Nagar Palika)"
+],
+"248835": [
+"RJ",
+"Banswara",
+"Banswara",
+"बांसवाडा",
+"Municipal Council"
+],
+"248836": [
+"RJ",
+"Banswara",
+"Kushalgarh",
+"कुशलगढ",
+"Municipality(Nagar Palika)"
+],
+"248837": [
+"RJ",
+"Chittorgarh",
+"Begun",
+"बेेेेेगूं",
+"Municipality(Nagar Palika)"
+],
+"248838": [
+"RJ",
+"Chittorgarh",
+"Rawatbhata",
+"रावतभाटा",
+"Municipal Council"
+],
+"248839": [
+"RJ",
+"Chittorgarh",
+"Chittorgarh",
+"",
+"Municipal Council"
+],
+"248840": [
+"RJ",
+"Chittorgarh",
+"Kapasan",
+"कपासन",
+"Municipality(Nagar Palika)"
+],
+"248841": [
+"RJ",
+"Chittorgarh",
+"Nimbahera",
+"निम्बाहेडा",
+"Municipality(Nagar Palika)"
+],
+"248842": [
+"RJ",
+"Pratapgarh",
+"Chhoti Sadri",
+"छोटी सादडी",
+"Municipality(Nagar Palika)"
+],
+"248843": [
+"RJ",
+"Chittorgarh",
+"Bari Sadri",
+"बडी सादडी",
+"Municipality(Nagar Palika)"
+],
+"248844": [
+"RJ",
+"Pratapgarh",
+"Pratapgarh",
+"प्रतापगढ",
+"Municipal Council"
+],
+"248851": [
+"RJ",
+"Kota",
+"Ramganj Mandi",
+"रामगंज मण्डी",
+"Municipality(Nagar Palika)"
+],
+"248855": [
+"RJ",
+"Kota",
+"Sangod",
+"सांगोद",
+"Municipality(Nagar Palika)"
+],
+"248856": [
+"RJ",
+"Baran",
+"Mangrol",
+"मांगरोल",
+"Municipality(Nagar Palika)"
+],
+"248857": [
+"RJ",
+"Baran",
+"Anta",
+"अंता",
+"Municipality(Nagar Palika)"
+],
+"248858": [
+"RJ",
+"Baran",
+"Baran",
+"बारा",
+"Municipal Council"
+],
+"248860": [
+"RJ",
+"Baran",
+"Chhabra",
+"छबडा",
+"Municipality(Nagar Palika)"
+],
+"248862": [
+"RJ",
+"Jhalawar",
+"Jhalawar",
+"झालावाड",
+"Municipal Council"
+],
+"248863": [
+"RJ",
+"Jhalawar",
+"Jhalrapatan",
+"झालरापाटन",
+"Municipal Council"
+],
+"248865": [
+"RJ",
+"Jhalawar",
+"Aklera",
+"अकलेरा",
+"Municipality(Nagar Palika)"
+],
+"248867": [
+"RJ",
+"Jhalawar",
+"Bhawani Mandi",
+"भवानी मण्डी",
+"Municipality(Nagar Palika)"
+],
+"248868": [
+"RJ",
+"Jhalawar",
+"Pirawa",
+"पिडावा",
+"Municipality(Nagar Palika)"
+],
+"250672": [
+"MP",
+"Sheopur",
+"Vijaypur",
+"Vijaypur",
+"Town Panchayat"
+],
+"250673": [
+"MP",
+"Sheopur",
+"Sheopur",
+"Sheopur",
+"Municipality"
+],
+"250674": [
+"MP",
+"Sheopur",
+"Badoda",
+"Badoda",
+"Town Panchayat"
+],
+"250675": [
+"MP",
+"Morena",
+"Ambah",
+"Ambah",
+"Municipality"
+],
+"250676": [
+"MP",
+"Morena",
+"Porsa",
+"Porsa",
+"Municipality"
+],
+"250677": [
+"MP",
+"Morena",
+"Morena",
+"Morena",
+"Municipal Corporation"
+],
+"250678": [
+"MP",
+"Morena",
+"Banmor",
+"Banmor",
+"Town Panchayat"
+],
+"250679": [
+"MP",
+"Morena",
+"Joura",
+"Joura",
+"Town Panchayat"
+],
+"250680": [
+"MP",
+"Morena",
+"Kailaras",
+"Kailaras",
+"Town Panchayat"
+],
+"250681": [
+"MP",
+"Morena",
+"Jhundpura",
+"Jhundpura",
+"Town Panchayat"
+],
+"250682": [
+"MP",
+"Morena",
+"Sabalgarh",
+"Sabalgarh",
+"Municipality"
+],
+"250683": [
+"MP",
+"Bhind",
+"Phuphkalan",
+"Phuphkalan",
+"Town Panchayat"
+],
+"250684": [
+"MP",
+"Bhind",
+"Bhind",
+"Bhind",
+"Municipality"
+],
+"250685": [
+"MP",
+"Bhind",
+"Akoda",
+"Akoda",
+"Town Panchayat"
+],
+"250686": [
+"MP",
+"Bhind",
+"Gormi",
+"Gormi",
+"Town Panchayat"
+],
+"250688": [
+"MP",
+"Bhind",
+"Gohad",
+"Gohad",
+"Municipality"
+],
+"250689": [
+"MP",
+"Bhind",
+"Mau",
+"Mau",
+"Town Panchayat"
+],
+"250690": [
+"MP",
+"Bhind",
+"Mihona",
+"Mihona",
+"Town Panchayat"
+],
+"250691": [
+"MP",
+"Bhind",
+"Lahar",
+"Lahar",
+"Municipality"
+],
+"250692": [
+"MP",
+"Bhind",
+"Alampur",
+"Alampur",
+"Town Panchayat"
+],
+"250693": [
+"MP",
+"Bhind",
+"Daboh",
+"Daboh",
+"Town Panchayat"
+],
+"250694": [
+"MP",
+"Gwalior",
+"Gwalior",
+"Gwalior",
+"Municipal Corporation"
+],
+"250695": [
+"MP",
+"Gwalior",
+"Bilaua",
+"Bilaua",
+"Town Panchayat"
+],
+"250697": [
+"MP",
+"Gwalior",
+"Pichhore Gwalior",
+"Pichhore Gwalior",
+"Town Panchayat"
+],
+"250698": [
+"MP",
+"Gwalior",
+"Dabra",
+"Dabra",
+"Municipality"
+],
+"250699": [
+"MP",
+"Gwalior",
+"Antari",
+"Antari",
+"Town Panchayat"
+],
+"250700": [
+"MP",
+"Gwalior",
+"Bhitarwar",
+"Bhitarwar",
+"Town Panchayat"
+],
+"250701": [
+"MP",
+"Datia",
+"Seondha",
+"Seondha",
+"Town Panchayat"
+],
+"250702": [
+"MP",
+"Datia",
+"Indergarh",
+"Indergarh",
+"Town Panchayat"
+],
+"250703": [
+"MP",
+"Datia",
+"Datia",
+"Datia",
+"Municipality"
+],
+"250704": [
+"MP",
+"Datia",
+"Bhander",
+"Bhander",
+"Town Panchayat"
+],
+"250705": [
+"MP",
+"Shivpuri",
+"Shivpuri",
+"Shivpuri",
+"Municipality"
+],
+"250706": [
+"MP",
+"Shivpuri",
+"Narwar",
+"Narwar",
+"Town Panchayat"
+],
+"250707": [
+"MP",
+"Shivpuri",
+"Karera",
+"Karera",
+"Town Panchayat"
+],
+"250708": [
+"MP",
+"Shivpuri",
+"Kolaras",
+"Kolaras",
+"Town Panchayat"
+],
+"250709": [
+"MP",
+"Shivpuri",
+"Badarwas",
+"Badarwas",
+"Town Panchayat"
+],
+"250710": [
+"MP",
+"Shivpuri",
+"Pichhore Shivpuri",
+"Pichhore Shivpuri",
+"Town Panchayat"
+],
+"250711": [
+"MP",
+"Shivpuri",
+"Khaniyadhana",
+"Khaniyadhana",
+"Town Panchayat"
+],
+"250712": [
+"MP",
+"Ashoknagar",
+"Isagarh",
+"Isagarh",
+"Town Panchayat"
+],
+"250713": [
+"MP",
+"Ashoknagar",
+"Chanderi",
+"Chanderi",
+"Municipality"
+],
+"250714": [
+"MP",
+"Guna",
+"Guna",
+"Guna",
+"Municipality"
+],
+"250715": [
+"MP",
+"Ashoknagar",
+"Ashoknagar",
+"Ashoknagar",
+"Municipality"
+],
+"250716": [
+"MP",
+"Guna",
+"Raghogarh-Vijaypur",
+"Raghogarh-Vijaypur",
+"Municipality"
+],
+"250717": [
+"MP",
+"Ashoknagar",
+"Mungaoli",
+"Mungaoli",
+"Town Panchayat"
+],
+"250718": [
+"MP",
+"Guna",
+"Kumbhraj",
+"Kumbhraj",
+"Town Panchayat"
+],
+"250719": [
+"MP",
+"Guna",
+"Aron",
+"Aron",
+"Town Panchayat"
+],
+"250720": [
+"MP",
+"Guna",
+"Chachaura -Binaganj",
+"Chachaura -Binaganj",
+"Town Panchayat"
+],
+"250733": [
+"MP",
+"Agar-Malwa",
+"Badagaaon",
+"बडागांव",
+"Town Panchayat"
+],
+"250734": [
+"MP",
+"Chhatarpur",
+"Barigarh",
+"Barigarh",
+"Town Panchayat"
+],
+"250735": [
+"MP",
+"Chhatarpur",
+"Lavkush Nagar",
+"लवकुश नगर",
+"Town Panchayat"
+],
+"250736": [
+"MP",
+"Chhatarpur",
+"Chandla",
+"Chandla",
+"Town Panchayat"
+],
+"250737": [
+"MP",
+"Chhatarpur",
+"Harpalpur",
+"Harpalpur",
+"Town Panchayat"
+],
+"250738": [
+"MP",
+"Chhatarpur",
+"Nowgong",
+"Nowgong",
+"Municipality"
+],
+"250739": [
+"MP",
+"Chhatarpur",
+"Garhi -Malhara",
+"Garhi -Malhara",
+"Town Panchayat"
+],
+"250740": [
+"MP",
+"Chhatarpur",
+"Maharajpur",
+"Maharajpur",
+"Municipality"
+],
+"250741": [
+"MP",
+"Chhatarpur",
+"Chhatarpur",
+"Chhatarpur",
+"Municipality"
+],
+"250742": [
+"MP",
+"Chhatarpur",
+"Rajnagar",
+"Rajnagar",
+"Town Panchayat"
+],
+"250743": [
+"MP",
+"Chhatarpur",
+"Khajuraho",
+"Khajuraho",
+"Town Panchayat"
+],
+"250744": [
+"MP",
+"Chhatarpur",
+"Bada -Malhera",
+"Bada -Malhera",
+"Town Panchayat"
+],
+"250745": [
+"MP",
+"Chhatarpur",
+"Ghuwara",
+"Ghuwara",
+"Town Panchayat"
+],
+"250746": [
+"MP",
+"Chhatarpur",
+"Satai",
+"Satai",
+"Town Panchayat"
+],
+"250747": [
+"MP",
+"Chhatarpur",
+"Bijawar",
+"Bijawar",
+"Town Panchayat"
+],
+"250748": [
+"MP",
+"Chhatarpur",
+"Buxwaha",
+"Buxwaha",
+"Town Panchayat"
+],
+"250749": [
+"MP",
+"Panna",
+"Ajaygarh",
+"Ajaygarh",
+"Town Panchayat"
+],
+"250750": [
+"MP",
+"Panna",
+"Panna",
+"Panna",
+"Municipality"
+],
+"250751": [
+"MP",
+"Panna",
+"Devendranagar",
+"Devendranagar",
+"Town Panchayat"
+],
+"250752": [
+"MP",
+"Panna",
+"Kakarhati",
+"Kakarhati",
+"Town Panchayat"
+],
+"250753": [
+"MP",
+"Panna",
+"Amanganj",
+"Amanganj",
+"Town Panchayat"
+],
+"250754": [
+"MP",
+"Panna",
+"Pawai",
+"Pawai",
+"Town Panchayat"
+],
+"250755": [
+"MP",
+"Sagar",
+"Bina",
+"Bina",
+"Municipality"
+],
+"250756": [
+"MP",
+"Chhindwara",
+"Chand",
+"Chand",
+"Town Panchayat"
+],
+"250758": [
+"MP",
+"Sagar",
+"Khurai",
+"Khurai",
+"Municipality"
+],
+"250759": [
+"MP",
+"Sagar",
+"Shahgarh",
+"Shahgarh",
+"Town Panchayat"
+],
+"250760": [
+"MP",
+"Sagar",
+"Banda",
+"Banda",
+"Town Panchayat"
+],
+"250761": [
+"MP",
+"Sagar",
+"Rahatgarh",
+"Rahatgarh",
+"Town Panchayat"
+],
+"250764": [
+"MP",
+"Sagar",
+"Sagar",
+"Sagar",
+"Municipal Corporation"
+],
+"250766": [
+"MP",
+"Sagar",
+"Makronia Buzurg",
+"Makronia Buzurg",
+"Municipality"
+],
+"250768": [
+"MP",
+"Sagar",
+"Garhakota",
+"Garhakota",
+"Municipality"
+],
+"250769": [
+"MP",
+"Sagar",
+"Rehli",
+"Rehli",
+"Municipality"
+],
+"250770": [
+"MP",
+"Sagar",
+"Deori",
+"Deori",
+"Municipality"
+],
+"250771": [
+"MP",
+"Damoh",
+"Hatta",
+"हटा",
+"Municipality"
+],
+"250772": [
+"MP",
+"Damoh",
+"Patharia",
+"पथरिया",
+"Town Panchayat"
+],
+"250773": [
+"MP",
+"Damoh",
+"Hindoria",
+"हिंडोरिया",
+"Town Panchayat"
+],
+"250774": [
+"MP",
+"Damoh",
+"Damoh",
+"दमोह",
+"Municipality"
+],
+"250777": [
+"MP",
+"Satna",
+"Chitrakoot",
+"Chitrakoot",
+"Town Panchayat"
+],
+"250778": [
+"MP",
+"Satna",
+"Birsinghpur",
+"Birsinghpur",
+"Town Panchayat"
+],
+"250779": [
+"MP",
+"Satna",
+"Kothi",
+"Kothi",
+"Town Panchayat"
+],
+"250780": [
+"MP",
+"Satna",
+"Jaitwara",
+"Jaitwara",
+"Town Panchayat"
+],
+"250781": [
+"MP",
+"Satna",
+"Satna",
+"Satna",
+"Municipal Corporation"
+],
+"250782": [
+"MP",
+"Satna",
+"Nagod",
+"Nagod",
+"Town Panchayat"
+],
+"250783": [
+"MP",
+"Satna",
+"Unchahara",
+"Unchahara",
+"Town Panchayat"
+],
+"250784": [
+"MP",
+"Satna",
+"Kotar",
+"Kotar",
+"Town Panchayat"
+],
+"250785": [
+"MP",
+"Satna",
+"Rampur Baghelan",
+"Rampur Baghelan",
+"Town Panchayat"
+],
+"250786": [
+"MP",
+"Maihar",
+"Amarpatan",
+"Amarpatan",
+"Town Panchayat"
+],
+"250787": [
+"MP",
+"Maihar",
+"Maihar",
+"Maihar",
+"Municipality"
+],
+"250788": [
+"MP",
+"Rewa",
+"Chakghat",
+"Chakghat",
+"Town Panchayat"
+],
+"250789": [
+"MP",
+"Rewa",
+"Teonthar",
+"Teonthar",
+"Town Panchayat"
+],
+"250790": [
+"MP",
+"Rewa",
+"Sirmaur",
+"Sirmaur",
+"Town Panchayat"
+],
+"250791": [
+"MP",
+"Rewa",
+"Semaria",
+"Semaria",
+"Town Panchayat"
+],
+"250792": [
+"MP",
+"Rewa",
+"Baikunthpur",
+"Baikunthpur",
+"Town Panchayat"
+],
+"250793": [
+"MP",
+"Rewa",
+"Mangawan",
+"Mangawan",
+"Town Panchayat"
+],
+"250794": [
+"MP",
+"MAUGANJ",
+"Hanumana",
+"Hanumana",
+"Town Panchayat"
+],
+"250795": [
+"MP",
+"MAUGANJ",
+"Nai-Garhi",
+"Nai-Garhi",
+"Town Panchayat"
+],
+"250796": [
+"MP",
+"MAUGANJ",
+"Mauganj",
+"Mauganj",
+"Town Panchayat"
+],
+"250797": [
+"MP",
+"Rewa",
+"Rewa",
+"Rewa",
+"Municipal Corporation"
+],
+"250798": [
+"MP",
+"Rewa",
+"Govindgarh",
+"Govindgarh",
+"Town Panchayat"
+],
+"250799": [
+"MP",
+"Rewa",
+"Gurh",
+"Gurh",
+"Town Panchayat"
+],
+"250800": [
+"MP",
+"Umaria",
+"Chandia",
+"Chandia",
+"Town Panchayat"
+],
+"250801": [
+"MP",
+"Umaria",
+"Umaria",
+"Umaria",
+"Municipality"
+],
+"250802": [
+"MP",
+"Umaria",
+"Pali",
+"Pali",
+"Municipality"
+],
+"250803": [
+"MP",
+"Umaria",
+"Nowrozabad - Khodargama",
+"Nowrozabad - Khodargama",
+"Town Panchayat"
+],
+"250804": [
+"MP",
+"Shahdol",
+"Khand - Bansagar",
+"Khand - Bansagar",
+"Town Panchayat"
+],
+"250805": [
+"MP",
+"Shahdol",
+"Beohari",
+"Beohari",
+"Town Panchayat"
+],
+"250806": [
+"MP",
+"Shahdol",
+"Jaisinghnagar",
+"Jaisinghnagar",
+"Town Panchayat"
+],
+"250807": [
+"MP",
+"Shahdol",
+"Shahdol",
+"Shahdol",
+"Municipality"
+],
+"250808": [
+"MP",
+"Shahdol",
+"Burhar",
+"Burhar",
+"Town Panchayat"
+],
+"250809": [
+"MP",
+"Shahdol",
+"Dhanpuri",
+"Dhanpuri",
+"Municipality"
+],
+"250815": [
+"MP",
+"Raisen",
+"Devri",
+"देवरी ",
+"Town Panchayat"
+],
+"250818": [
+"MP",
+"Sidhi",
+"Majhauli",
+"Majhauli",
+"Town Panchayat"
+],
+"250819": [
+"MP",
+"Neemuch",
+"Singoli",
+"Singoli",
+"Town Panchayat"
+],
+"250820": [
+"MP",
+"Neemuch",
+"Ratangarh",
+"Ratangarh",
+"Town Panchayat"
+],
+"250821": [
+"MP",
+"Neemuch",
+"Diken",
+"Diken",
+"Town Panchayat"
+],
+"250822": [
+"MP",
+"Neemuch",
+"Jawad",
+"Jawad",
+"Town Panchayat"
+],
+"250823": [
+"MP",
+"Neemuch",
+"Neemuch",
+"Neemuch",
+"Municipality"
+],
+"250824": [
+"MP",
+"Neemuch",
+"Jiran",
+"Jiran",
+"Town Panchayat"
+],
+"250825": [
+"MP",
+"Neemuch",
+"Rampura",
+"Rampura",
+"Town Panchayat"
+],
+"250826": [
+"MP",
+"Neemuch",
+"Manasa",
+"Manasa",
+"Town Panchayat"
+],
+"250827": [
+"MP",
+"Mandsaur",
+"Bhanpura",
+"Bhanpura",
+"Town Panchayat"
+],
+"250828": [
+"MP",
+"Mandsaur",
+"Malhargarh",
+"Malhargarh",
+"Town Panchayat"
+],
+"250829": [
+"MP",
+"Mandsaur",
+"Narayangarh",
+"Narayangarh",
+"Town Panchayat"
+],
+"250830": [
+"MP",
+"Mandsaur",
+"Piplya Mandi",
+"Piplya Mandi",
+"Town Panchayat"
+],
+"250831": [
+"MP",
+"Mandsaur",
+"Garoth",
+"Garoth",
+"Town Panchayat"
+],
+"250832": [
+"MP",
+"Mandsaur",
+"Shamgarh",
+"Shamgarh",
+"Town Panchayat"
+],
+"250833": [
+"MP",
+"Mandsaur",
+"Mandsaur",
+"Mandsaur",
+"Municipality"
+],
+"250834": [
+"MP",
+"Mandsaur",
+"Nagri",
+"Nagri",
+"Town Panchayat"
+],
+"250835": [
+"MP",
+"Mandsaur",
+"Sitamau",
+"Sitamau",
+"Town Panchayat"
+],
+"250836": [
+"MP",
+"Ratlam",
+"Piploda",
+"Piploda",
+"Town Panchayat"
+],
+"250837": [
+"MP",
+"Ratlam",
+"Jaora",
+"Jaora",
+"Municipality"
+],
+"250838": [
+"MP",
+"Ratlam",
+"Badawada",
+"Badawada",
+"Town Panchayat"
+],
+"250839": [
+"MP",
+"Ratlam",
+"Alot",
+"Alot",
+"Town Panchayat"
+],
+"250840": [
+"MP",
+"Ratlam",
+"Tal",
+"Tal",
+"Town Panchayat"
+],
+"250841": [
+"MP",
+"Ratlam",
+"Sailana",
+"Sailana",
+"Town Panchayat"
+],
+"250842": [
+"MP",
+"Ratlam",
+"Namli",
+"Namli",
+"Town Panchayat"
+],
+"250843": [
+"MP",
+"Ratlam",
+"Ratlam",
+"Ratlam",
+"Municipal Corporation"
+],
+"250845": [
+"MP",
+"Ujjain",
+"Khacharod",
+"Khacharod",
+"Municipality"
+],
+"250846": [
+"MP",
+"Ujjain",
+"Nagda",
+"Nagda",
+"Municipality"
+],
+"250847": [
+"MP",
+"Ujjain",
+"Unhel",
+"Unhel",
+"Town Panchayat"
+],
+"250849": [
+"MP",
+"Ujjain",
+"Mahidpur",
+"Mahidpur",
+"Municipality"
+],
+"250850": [
+"MP",
+"Ujjain",
+"Tarana",
+"Tarana",
+"Town Panchayat"
+],
+"250851": [
+"MP",
+"Ujjain",
+"Ujjain",
+"Ujjain",
+"Municipal Corporation"
+],
+"250852": [
+"MP",
+"Ujjain",
+"Badnagar",
+"Badnagar",
+"Municipality"
+],
+"250853": [
+"MP",
+"Agar-Malwa",
+"Soyatkalan",
+"Soyatkalan",
+"Town Panchayat"
+],
+"250854": [
+"MP",
+"Agar-Malwa",
+"Susner",
+"Susner",
+"Town Panchayat"
+],
+"250855": [
+"MP",
+"Agar-Malwa",
+"Nalkheda",
+"Nalkheda",
+"Town Panchayat"
+],
+"250857": [
+"MP",
+"Agar-Malwa",
+"Badod",
+"Badod",
+"Town Panchayat"
+],
+"250858": [
+"MP",
+"Agar-Malwa",
+"Agar",
+"Agar",
+"Municipality"
+],
+"250859": [
+"MP",
+"Agar-Malwa",
+"Kanad",
+"Kanad",
+"Town Panchayat"
+],
+"250860": [
+"MP",
+"Shajapur",
+"Shajapur",
+"Shajapur",
+"Municipality"
+],
+"250861": [
+"MP",
+"Shajapur",
+"Maksi",
+"Maksi",
+"Town Panchayat"
+],
+"250862": [
+"MP",
+"Shajapur",
+"Shujalpur",
+"Shujalpur",
+"Municipality"
+],
+"250863": [
+"MP",
+"Shajapur",
+"Akodia",
+"Akodia",
+"Town Panchayat"
+],
+"250864": [
+"MP",
+"Shajapur",
+"Polaykalan",
+"Polaykalan",
+"Town Panchayat"
+],
+"250865": [
+"MP",
+"Dewas",
+"Bhaurasa",
+"Bhaurasa",
+"Town Panchayat"
+],
+"250866": [
+"MP",
+"Dewas",
+"Sonkatch",
+"Sonkatch",
+"Town Panchayat"
+],
+"250867": [
+"MP",
+"Dewas",
+"Dewas",
+"Dewas",
+"Municipal Corporation"
+],
+"250868": [
+"MP",
+"Dewas",
+"Kannod",
+"Kannod",
+"Town Panchayat"
+],
+"250869": [
+"MP",
+"Dewas",
+"Loharda",
+"Loharda",
+"Town Panchayat"
+],
+"250870": [
+"MP",
+"Dewas",
+"Kantaphod",
+"Kantaphod",
+"Town Panchayat"
+],
+"250871": [
+"MP",
+"Dewas",
+"Satwas",
+"Satwas",
+"Town Panchayat"
+],
+"250872": [
+"MP",
+"Dewas",
+"Hatpipalya",
+"Hatpipalya",
+"Town Panchayat"
+],
+"250873": [
+"MP",
+"Dewas",
+"Karnawad",
+"Karnawad",
+"Town Panchayat"
+],
+"250875": [
+"MP",
+"Dewas",
+"Khategaon",
+"Khategaon",
+"Town Panchayat"
+],
+"250876": [
+"MP",
+"Jhabua",
+"Thandla",
+"Thandla",
+"Town Panchayat"
+],
+"250877": [
+"MP",
+"Jhabua",
+"Petlawad",
+"Petlawad",
+"Town Panchayat"
+],
+"250879": [
+"MP",
+"Jhabua",
+"Jhabua",
+"Jhabua",
+"Municipality"
+],
+"250880": [
+"MP",
+"Alirajpur",
+"Chandra Shekhar Azad Nagar",
+"चंद्रशेखर आज़ाद नगर",
+"Town Panchayat"
+],
+"250881": [
+"MP",
+"Alirajpur",
+"Jobat",
+"Jobat",
+"Town Panchayat"
+],
+"250882": [
+"MP",
+"Alirajpur",
+"Alirajpur",
+"Alirajpur",
+"Municipality"
+],
+"250883": [
+"MP",
+"Jhabua",
+"Ranapur",
+"Ranapur",
+"Town Panchayat"
+],
+"250884": [
+"MP",
+"Dhar",
+"Badnawar",
+"Badnawar",
+"Town Panchayat"
+],
+"250885": [
+"MP",
+"Rajgarh",
+"Rajgarh",
+"Rajgarh",
+"Municipality"
+],
+"250886": [
+"MP",
+"Dhar",
+"Sardarpur",
+"Sardarpur",
+"Town Panchayat"
+],
+"250887": [
+"MP",
+"Dhar",
+"Dhar",
+"Dhar",
+"Municipality"
+],
+"250888": [
+"MP",
+"Dhar",
+"Pithampur",
+"Pithampur",
+"Municipality"
+],
+"250889": [
+"MP",
+"Dhar",
+"Mandav",
+"Mandav",
+"Town Panchayat"
+],
+"250891": [
+"MP",
+"Dhar",
+"Kukshi",
+"Kukshi",
+"Town Panchayat"
+],
+"250892": [
+"MP",
+"Dhar",
+"Manawar",
+"Manawar",
+"Municipality"
+],
+"250893": [
+"MP",
+"Ratlam",
+"Dhamnod Ratlam",
+"Dhamnod Ratlam",
+"Town Panchayat"
+],
+"250894": [
+"MP",
+"Dhar",
+"Dharampuri",
+"Dharampuri",
+"Town Panchayat"
+],
+"250895": [
+"MP",
+"Indore",
+"Runji -Gautampura",
+"Runji -Gautampura",
+"Town Panchayat"
+],
+"250896": [
+"MP",
+"Indore",
+"Depalpur",
+"Depalpur",
+"Town Panchayat"
+],
+"250897": [
+"MP",
+"Indore",
+"Betma",
+"Betma",
+"Town Panchayat"
+],
+"250898": [
+"MP",
+"Indore",
+"Sawer",
+"Sawer",
+"Town Panchayat"
+],
+"250900": [
+"MP",
+"Indore",
+"Hatod",
+"Hatod",
+"Town Panchayat"
+],
+"250901": [
+"MP",
+"Indore",
+"Indore",
+"इन्दौर",
+"Municipal Corporation"
+],
+"250904": [
+"MP",
+"Indore",
+"Rau",
+"Rau",
+"Town Panchayat"
+],
+"250905": [
+"MP",
+"Indore",
+"Mhowgaon",
+"Mhowgaon",
+"Town Panchayat"
+],
+"250906": [
+"MP",
+"Indore",
+"Manpur",
+"Manpur",
+"Town Panchayat"
+],
+"250907": [
+"MP",
+"Khargone (West Nimar)",
+"Barwaha",
+"बड़वाह",
+"Municipality"
+],
+"250908": [
+"MP",
+"Khargone (West Nimar)",
+"Sanawad",
+"सनावद",
+"Municipality"
+],
+"250909": [
+"MP",
+"Khargone (West Nimar)",
+"Maheshwar",
+"Maheshwar",
+"Town Panchayat"
+],
+"250910": [
+"MP",
+"Khargone (West Nimar)",
+"Mandleshwar",
+"Mandleshwar",
+"Town Panchayat"
+],
+"250911": [
+"MP",
+"Khargone (West Nimar)",
+"Kasrawad",
+"Kasrawad",
+"Town Panchayat"
+],
+"250912": [
+"MP",
+"Khargone (West Nimar)",
+"Bhikangaon",
+"Bhikangaon",
+"Town Panchayat"
+],
+"250913": [
+"MP",
+"Khargone (West Nimar)",
+"Khargone",
+"खरगौन",
+"Municipality"
+],
+"250914": [
+"MP",
+"Barwani",
+"Barwani",
+"बड़वानी",
+"Municipality"
+],
+"250915": [
+"MP",
+"Barwani",
+"Anjad",
+"Anjad",
+"Town Panchayat"
+],
+"250916": [
+"MP",
+"Barwani",
+"Rajpur",
+"Rajpur",
+"Town Panchayat"
+],
+"250917": [
+"MP",
+"Barwani",
+"Pansemal",
+"Pansemal",
+"Town Panchayat"
+],
+"250918": [
+"MP",
+"Barwani",
+"Khetia",
+"Khetia",
+"Town Panchayat"
+],
+"250919": [
+"MP",
+"Barwani",
+"Sendhwa",
+"सेंधवा",
+"Municipality"
+],
+"250920": [
+"MP",
+"Khandwa (East Nimar)",
+"Harsud",
+"हरसूद",
+"Town Panchayat"
+],
+"250921": [
+"MP",
+"Khandwa (East Nimar)",
+"Omkareshwar",
+"ओंकारेश्वर",
+"Town Panchayat"
+],
+"250922": [
+"MP",
+"Khandwa (East Nimar)",
+"Mundi",
+"मुंदी",
+"Town Panchayat"
+],
+"250923": [
+"MP",
+"Khandwa (East Nimar)",
+"Khandwa",
+"खण्‍डवा",
+"Municipal Corporation"
+],
+"250924": [
+"MP",
+"Khandwa (East Nimar)",
+"Pandhana",
+"पंधाना",
+"Town Panchayat"
+],
+"250925": [
+"MP",
+"Burhanpur",
+"Burhanpur",
+"Burhanpur",
+"Municipal Corporation"
+],
+"250926": [
+"MP",
+"Burhanpur",
+"Shahpur Burhanpur",
+"Shahpur Burhanpur",
+"Town Panchayat"
+],
+"250927": [
+"MP",
+"Burhanpur",
+"Nepanagar",
+"Nepanagar",
+"Municipality"
+],
+"250928": [
+"MP",
+"Rajgarh",
+"Machalpur",
+"Machalpur",
+"Town Panchayat"
+],
+"250929": [
+"MP",
+"Rajgarh",
+"Jirapur",
+"Jirapur",
+"Town Panchayat"
+],
+"250930": [
+"MP",
+"Rajgarh",
+"Khilchipur",
+"Khilchipur",
+"Town Panchayat"
+],
+"250931": [
+"MP",
+"Dhar",
+"Rajgarh",
+"Rajgarh",
+"Town Panchayat"
+],
+"250932": [
+"MP",
+"Rajgarh",
+"Khujner",
+"Khujner",
+"Town Panchayat"
+],
+"250933": [
+"MP",
+"Rajgarh",
+"Suthaliya",
+"Suthaliya",
+"Town Panchayat"
+],
+"250934": [
+"MP",
+"Rajgarh",
+"Biaora",
+"Biaora",
+"Municipality"
+],
+"250935": [
+"MP",
+"Rajgarh",
+"Pachore",
+"Pachore",
+"Town Panchayat"
+],
+"250936": [
+"MP",
+"Rajgarh",
+"Sarangpur",
+"Sarangpur",
+"Municipality"
+],
+"250937": [
+"MP",
+"Rajgarh",
+"Narsinghgarh",
+"Narsinghgarh",
+"Municipality"
+],
+"250938": [
+"MP",
+"Rajgarh",
+"Boda",
+"Boda",
+"Town Panchayat"
+],
+"250939": [
+"MP",
+"Rajgarh",
+"Talen",
+"Talen",
+"Town Panchayat"
+],
+"250940": [
+"MP",
+"Vidisha",
+"Lateri",
+"Lateri",
+"Town Panchayat"
+],
+"250941": [
+"MP",
+"Vidisha",
+"Sironj",
+"Sironj",
+"Municipality"
+],
+"250942": [
+"MP",
+"Vidisha",
+"Kurwai",
+"Kurwai",
+"Town Panchayat"
+],
+"250944": [
+"MP",
+"Vidisha",
+"Vidisha",
+"Vidisha",
+"Municipality"
+],
+"250945": [
+"MP",
+"Bhopal",
+"Berasia",
+"Berasia",
+"Municipality"
+],
+"250946": [
+"MP",
+"Bhopal",
+"Bhopal",
+"Bhopal",
+"Municipal Corporation"
+],
+"250947": [
+"MP",
+"Sehore",
+"Sehore",
+"सीहोर",
+"Municipality"
+],
+"250948": [
+"MP",
+"Sehore",
+"Jawar",
+"जावर",
+"Town Panchayat"
+],
+"250949": [
+"MP",
+"Sehore",
+"Ashta",
+"आष्टा",
+"Municipality"
+],
+"250950": [
+"MP",
+"Sehore",
+"Ichhawar",
+"इछावर",
+"Town Panchayat"
+],
+"250951": [
+"MP",
+"Sehore",
+"Nasrullaganj",
+"नसरूलागंज",
+"Town Panchayat"
+],
+"250952": [
+"MP",
+"Sehore",
+"Budni",
+"बुदनी",
+"Town Panchayat"
+],
+"250953": [
+"MP",
+"Sehore",
+"Rehti",
+"रेहटी",
+"Town Panchayat"
+],
+"250954": [
+"MP",
+"Raisen",
+"Sanchi",
+"Sanchi",
+"Town Panchayat"
+],
+"250955": [
+"MP",
+"Raisen",
+"Raisen",
+"Raisen",
+"Municipality"
+],
+"250956": [
+"MP",
+"Raisen",
+"Gairatganj",
+"Gairatganj",
+"Town Panchayat"
+],
+"250957": [
+"MP",
+"Raisen",
+"Begamganj",
+"Begamganj",
+"Municipality"
+],
+"250958": [
+"MP",
+"Raisen",
+"Sultanpur",
+"Sultanpur",
+"Town Panchayat"
+],
+"250959": [
+"MP",
+"Raisen",
+"Mandideep",
+"Mandideep",
+"Municipality"
+],
+"250960": [
+"MP",
+"Raisen",
+"Obedullaganj",
+"Obedullaganj",
+"Town Panchayat"
+],
+"250961": [
+"MP",
+"Raisen",
+"Badi",
+"Badi",
+"Town Panchayat"
+],
+"250962": [
+"MP",
+"Raisen",
+"Bareli",
+"Bareli",
+"Town Panchayat"
+],
+"250963": [
+"MP",
+"Raisen",
+"Udaipura",
+"Udaipura",
+"Town Panchayat"
+],
+"250964": [
+"MP",
+"Betul",
+"Bhainsdehi",
+"Bhainsdehi",
+"Town Panchayat"
+],
+"250965": [
+"MP",
+"Sagar",
+"Shahpur Sagar",
+"Shahpur Sagar",
+"Town Panchayat"
+],
+"250966": [
+"MP",
+"Harda",
+"Khirkiya",
+"Khirkiya",
+"Town Panchayat"
+],
+"250967": [
+"MP",
+"Harda",
+"Harda",
+"Harda",
+"Municipality"
+],
+"250968": [
+"MP",
+"Harda",
+"Timarni",
+"Timarni",
+"Town Panchayat"
+],
+"250969": [
+"MP",
+"Narmadapuram",
+"Seoni-Malwa",
+"Seoni-Malwa",
+"Municipality"
+],
+"250970": [
+"MP",
+"Narmadapuram",
+"Itarsi",
+"Itarsi",
+"Municipality"
+],
+"250974": [
+"MP",
+"Narmadapuram",
+"Narmadapuram",
+"नर्मदापुरम",
+"Municipality"
+],
+"250975": [
+"MP",
+"Narmadapuram",
+"Babai",
+"Babai",
+"Town Panchayat"
+],
+"250976": [
+"MP",
+"Narmadapuram",
+"Sohagpur",
+"Sohagpur",
+"Town Panchayat"
+],
+"250977": [
+"MP",
+"Narmadapuram",
+"Pipariya",
+"Pipariya",
+"Municipality"
+],
+"250978": [
+"MP",
+"Katni",
+"Barhi",
+"Barhi",
+"Town Panchayat"
+],
+"250979": [
+"MP",
+"Katni",
+"Murwara - Katni",
+"Murwara - Katni",
+"Municipal Corporation"
+],
+"250980": [
+"MP",
+"Katni",
+"Kymore",
+"Kymore",
+"Town Panchayat"
+],
+"250981": [
+"MP",
+"Katni",
+"Vijayraghavgarh",
+"Vijayraghavgarh",
+"Town Panchayat"
+],
+"250982": [
+"MP",
+"Jabalpur",
+"Manjholi Jabalpur",
+"Manjholi Jabalpur",
+"Town Panchayat"
+],
+"250983": [
+"MP",
+"Jabalpur",
+"Sihora",
+"Sihora",
+"Municipality"
+],
+"250984": [
+"MP",
+"Balaghat",
+"Katangi",
+"Katangi",
+"Town Panchayat"
+],
+"250985": [
+"MP",
+"Jabalpur",
+"Patan",
+"Patan",
+"Town Panchayat"
+],
+"250986": [
+"MP",
+"Dindori",
+"Shahpura Dindori",
+"Shahpura Dindori",
+"Town Panchayat"
+],
+"250987": [
+"MP",
+"Jabalpur",
+"Panagar",
+"Panagar",
+"Municipality"
+],
+"250995": [
+"MP",
+"Jabalpur",
+"Jabalpur",
+"Jabalpur",
+"Municipal Corporation"
+],
+"250996": [
+"MP",
+"Jabalpur",
+"Bhedaghat",
+"Bhedaghat",
+"Town Panchayat"
+],
+"250997": [
+"MP",
+"Jabalpur",
+"Barela",
+"Barela",
+"Town Panchayat"
+],
+"250998": [
+"MP",
+"Narsimhapur",
+"Gotegaon",
+"Gotegaon",
+"Municipality"
+],
+"250999": [
+"MP",
+"Narsimhapur",
+"Gadarwara",
+"Gadarwara",
+"Municipality"
+],
+"251000": [
+"MP",
+"Narsimhapur",
+"Chichli",
+"Chichli",
+"Town Panchayat"
+],
+"251001": [
+"MP",
+"Narsimhapur",
+"Narsimhapur",
+"Narsimhapur",
+"Municipality"
+],
+"251002": [
+"MP",
+"Narsimhapur",
+"Kareli",
+"Kareli",
+"Municipality"
+],
+"251003": [
+"MP",
+"Jabalpur",
+"Shahpura",
+"Shahpura",
+"Town Panchayat"
+],
+"251007": [
+"MP",
+"Chhindwara",
+"Harrai",
+"Harrai",
+"Town Panchayat"
+],
+"251008": [
+"MP",
+"Chhindwara",
+"Amarwara",
+"Amarwara",
+"Municipality"
+],
+"251009": [
+"MP",
+"Chhindwara",
+"Chaurai",
+"Chaurai",
+"Municipality"
+],
+"251010": [
+"MP",
+"Chhindwara",
+"Jamai",
+"Jamai",
+"Municipality"
+],
+"251018": [
+"MP",
+"Chhindwara",
+"Newton Chikhli Kalan",
+"Newton Chikhli Kalan",
+"Town Panchayat"
+],
+"251022": [
+"MP",
+"Chhindwara",
+"Dongar Parasia",
+"Dongar Parasia",
+"Municipality"
+],
+"251023": [
+"MP",
+"Chhindwara",
+"Chandameta -Butaria",
+"Chandameta -Butaria",
+"Town Panchayat"
+],
+"251025": [
+"MP",
+"Chhindwara",
+"Badkuhi",
+"Badkuhi",
+"Town Panchayat"
+],
+"251026": [
+"MP",
+"Chhindwara",
+"Chhindwara",
+"Chhindwara",
+"Municipal Corporation"
+],
+"251027": [
+"MP",
+"Pandhurna",
+"Sausar",
+"Sausar",
+"Municipality"
+],
+"251028": [
+"MP",
+"Pandhurna",
+"Mohgaon",
+"Mohgaon",
+"Town Panchayat"
+],
+"251029": [
+"MP",
+"Pandhurna",
+"Lodhikheda",
+"Lodhikheda",
+"Town Panchayat"
+],
+"251030": [
+"MP",
+"Pandhurna",
+"Pandhurna",
+"Pandhurna",
+"Municipality"
+],
+"251031": [
+"MP",
+"Seoni",
+"Lakhnadon",
+"Lakhnadon",
+"Town Panchayat"
+],
+"251033": [
+"MP",
+"Seoni",
+"Seoni",
+"Seoni",
+"Municipality"
+],
+"251034": [
+"MP",
+"Seoni",
+"Barghat",
+"Barghat",
+"Town Panchayat"
+],
+"251035": [
+"MP",
+"Jabalpur",
+"Katangi Jabalpur",
+"Katangi Jabalpur",
+"Town Panchayat"
+],
+"251037": [
+"MP",
+"Balaghat",
+"Waraseoni",
+"Waraseoni",
+"Municipality"
+],
+"251040": [
+"MP",
+"Balaghat",
+"Balaghat",
+"Balaghat",
+"Municipality"
+],
+"251041": [
+"MP",
+"Balaghat",
+"Baihar",
+"Baihar",
+"Town Panchayat"
+],
+"251042": [
+"MP",
+"Balaghat",
+"Malajkhand",
+"Malajkhand",
+"Municipality"
+],
+"251044": [
+"GJ",
+"Kachchh",
+"Rapar",
+"Rapar",
+"Municipality"
+],
+"251045": [
+"GJ",
+"Kachchh",
+"Bhachau",
+"Bhachau",
+"Municipality"
+],
+"251046": [
+"GJ",
+"Kachchh",
+"Anjar",
+"Anjar",
+"Municipality"
+],
+"251047": [
+"GJ",
+"Kachchh",
+"Bhuj",
+"Bhuj",
+"Municipality"
+],
+"251048": [
+"GJ",
+"Surat",
+"Mandvi",
+"Mandvi",
+"Municipality"
+],
+"251050": [
+"GJ",
+"Kachchh",
+"Gandhidham",
+"Gandhidham",
+"Municipal Corporation"
+],
+"251052": [
+"GJ",
+"Vav-Tharad",
+"Tharad",
+"થરાદ",
+"Municipality"
+],
+"251053": [
+"GJ",
+"Banas Kantha",
+"Dhanera",
+"Dhanera",
+"Municipality"
+],
+"251055": [
+"GJ",
+"Banas Kantha",
+"Palanpur",
+"Palanpur",
+"Municipality"
+],
+"251057": [
+"GJ",
+"Banas Kantha",
+"Deesa",
+"Deesa",
+"Municipality"
+],
+"251058": [
+"GJ",
+"Patan",
+"Radhanpur",
+"Radhanpur",
+"Municipality"
+],
+"251059": [
+"GJ",
+"Patan",
+"Sidhpur",
+"Sidhpur",
+"Municipality"
+],
+"251060": [
+"GJ",
+"Patan",
+"Patan",
+"Patan",
+"Municipality"
+],
+"251061": [
+"GJ",
+"Patan",
+"Harij",
+"Harij",
+"Municipality"
+],
+"251062": [
+"GJ",
+"Patan",
+"Chanasma",
+"Chanasma",
+"Municipality"
+],
+"251063": [
+"GJ",
+"Mahesana",
+"Kheralu",
+"Kheralu",
+"Municipality"
+],
+"251064": [
+"GJ",
+"Mahesana",
+"Unjha",
+"Unjha",
+"Municipality"
+],
+"251065": [
+"GJ",
+"Mahesana",
+"Visnagar",
+"Visnagar",
+"Municipality"
+],
+"251066": [
+"GJ",
+"Mahesana",
+"Vadnagar",
+"Vadnagar",
+"Municipality"
+],
+"251067": [
+"GJ",
+"Mahesana",
+"Vijapur",
+"Vijapur",
+"Municipality"
+],
+"251068": [
+"GJ",
+"Mahesana",
+"Mahesana",
+"Mahesana",
+"Municipal Corporation"
+],
+"251070": [
+"GJ",
+"Mahesana",
+"Kadi",
+"Kadi",
+"Municipality"
+],
+"251071": [
+"GJ",
+"Sabar Kantha",
+"Khedbrahma",
+"Khedbrahma",
+"Municipality"
+],
+"251072": [
+"GJ",
+"Sabar Kantha",
+"Idar",
+"Idar",
+"Municipality"
+],
+"251074": [
+"GJ",
+"Sabar Kantha",
+"Himatnagar",
+"હિંમતનગર",
+"Municipality"
+],
+"251075": [
+"GJ",
+"Sabar Kantha",
+"Prantij",
+"BJP Gujarati",
+"Municipality"
+],
+"251076": [
+"GJ",
+"Sabar Kantha",
+"Talod",
+"Talod",
+"Municipality"
+],
+"251077": [
+"GJ",
+"Arvalli",
+"Modasa",
+"Modasa",
+"Municipality"
+],
+"251081": [
+"GJ",
+"Gandhinagar",
+"Kalol",
+"Kalol",
+"Municipality"
+],
+"251082": [
+"GJ",
+"Gandhinagar",
+"Mansa",
+"Mansa",
+"Municipality"
+],
+"251088": [
+"GJ",
+"Gandhinagar",
+"Dehgam",
+"Dehgam",
+"Municipality"
+],
+"251089": [
+"GJ",
+"Ahmedabad",
+"Viramgam",
+"Viramgam",
+"Municipality"
+],
+"251090": [
+"GJ",
+"Ahmedabad",
+"Sanand",
+"Sanand",
+"Municipality"
+],
+"251096": [
+"GJ",
+"Ahmedabad",
+"Ahmadabad",
+"Ahmadabad",
+"Municipal Corporation"
+],
+"251108": [
+"GJ",
+"Ahmedabad",
+"Dholka",
+"Dholka",
+"Municipality"
+],
+"251109": [
+"GJ",
+"Ahmedabad",
+"Bavla",
+"Bavla",
+"Municipality"
+],
+"251110": [
+"GJ",
+"Ahmedabad",
+"Dhandhuka",
+"Dhandhuka",
+"Municipality"
+],
+"251111": [
+"GJ",
+"Morbi",
+"Halvad",
+"Halvad",
+"Municipality"
+],
+"251112": [
+"GJ",
+"Surendranagar",
+"Dhrangadhra",
+"Dhrangadhra",
+"Municipality"
+],
+"251114": [
+"GJ",
+"Surendranagar",
+"Surendranagar",
+"Surendranagar-Dudhrej-Wadhwan",
+"Municipal Corporation"
+],
+"251116": [
+"GJ",
+"Surendranagar",
+"Thangadh",
+"Thangadh",
+"Municipality"
+],
+"251117": [
+"GJ",
+"Surendranagar",
+"Limbdi",
+"Limbdi",
+"Municipality"
+],
+"251118": [
+"GJ",
+"Morbi",
+"Morbi",
+"Morbi",
+"Municipal Corporation"
+],
+"251119": [
+"GJ",
+"Morbi",
+"Wankaner",
+"Wankaner",
+"Municipality"
+],
+"251120": [
+"GJ",
+"Rajkot",
+"Rajkot",
+"Rajkot",
+"Municipal Corporation"
+],
+"251121": [
+"GJ",
+"Rajkot",
+"Jasdan",
+"Jasdan",
+"Municipality"
+],
+"251122": [
+"GJ",
+"Rajkot",
+"Gondal",
+"Gondal",
+"Municipality"
+],
+"251123": [
+"GJ",
+"Rajkot",
+"Bhayavadar",
+"Bhayavadar",
+"Municipality"
+],
+"251124": [
+"GJ",
+"Rajkot",
+"Upleta",
+"Upleta",
+"Municipality"
+],
+"251125": [
+"GJ",
+"Rajkot",
+"Dhoraji",
+"Dhoraji",
+"Municipality"
+],
+"251126": [
+"GJ",
+"Rajkot",
+"Jetpur Navagadh",
+"Jetpur Navagadh",
+"Municipality"
+],
+"251127": [
+"GJ",
+"Devbhumi Dwarka",
+"Okha",
+"Okha",
+"Municipality"
+],
+"251129": [
+"GJ",
+"Devbhumi Dwarka",
+"Dwarka",
+"Dwarka",
+"Municipality"
+],
+"251130": [
+"GJ",
+"Devbhumi Dwarka",
+"Salaya",
+"Salaya",
+"Municipality"
+],
+"251131": [
+"GJ",
+"Devbhumi Dwarka",
+"Khambhalia",
+"Khambhalia",
+"Municipality"
+],
+"251132": [
+"GJ",
+"Jamnagar",
+"Sikka",
+"Sikka",
+"Municipality"
+],
+"251133": [
+"GJ",
+"Jamnagar",
+"Jamnagar",
+"Jamnagar",
+"Municipal Corporation"
+],
+"251134": [
+"GJ",
+"Jamnagar",
+"Dhrol",
+"Dhrol",
+"Municipality"
+],
+"251135": [
+"GJ",
+"Jamnagar",
+"Kalavad",
+"Kalavad",
+"Municipality"
+],
+"251136": [
+"GJ",
+"Devbhumi Dwarka",
+"Bhanvad",
+"Bhanvad",
+"Municipality"
+],
+"251137": [
+"GJ",
+"Jamnagar",
+"Jamjodhpur",
+"Jamjodhpur",
+"Municipality"
+],
+"251138": [
+"GJ",
+"Porbandar",
+"Porbandar",
+"Porbandar-Chhaya",
+"Municipal Corporation"
+],
+"251141": [
+"GJ",
+"Porbandar",
+"Ranavav",
+"Ranavav",
+"Municipality"
+],
+"251142": [
+"GJ",
+"Porbandar",
+"Kutiyana",
+"Kutiyana",
+"Municipality"
+],
+"251143": [
+"GJ",
+"Junagadh",
+"Bantwa",
+"Bantwa",
+"Municipality"
+],
+"251144": [
+"GJ",
+"Junagadh",
+"Manavadar",
+"Manavadar",
+"Municipality"
+],
+"251145": [
+"GJ",
+"Junagadh",
+"Vanthali",
+"Vanthali",
+"Municipality"
+],
+"251147": [
+"GJ",
+"Junagadh",
+"Junagadh",
+"Junagadh",
+"Municipal Corporation"
+],
+"251148": [
+"GJ",
+"Junagadh",
+"Visavadar",
+"Visavadar",
+"Municipality"
+],
+"251149": [
+"GJ",
+"Junagadh",
+"Keshod",
+"Keshod",
+"Municipality"
+],
+"251150": [
+"GJ",
+"Junagadh",
+"Mangrol",
+"Mangrol",
+"Municipality"
+],
+"251151": [
+"GJ",
+"Junagadh",
+"Chorvad",
+"Chorvad",
+"Municipality"
+],
+"251152": [
+"GJ",
+"Gir Somnath",
+"Veraval",
+"Veraval",
+"Municipality"
+],
+"251153": [
+"GJ",
+"Gir Somnath",
+"Kodinar",
+"Kodinar",
+"Municipality"
+],
+"251154": [
+"GJ",
+"Gir Somnath",
+"Una",
+"Una",
+"Municipality"
+],
+"251155": [
+"GJ",
+"Amreli",
+"Lathi",
+"Lathi",
+"Municipality"
+],
+"251156": [
+"GJ",
+"Amreli",
+"Damnagar",
+"Damnagar",
+"Municipality"
+],
+"251157": [
+"GJ",
+"Amreli",
+"Amreli",
+"Amreli",
+"Municipality"
+],
+"251158": [
+"GJ",
+"Amreli",
+"Bagasara",
+"Bagasara",
+"Municipality"
+],
+"251159": [
+"GJ",
+"Amreli",
+"Chalala",
+"Chalala",
+"Municipality"
+],
+"251160": [
+"GJ",
+"Amreli",
+"Savarkundla",
+"Savarkundla",
+"Municipality"
+],
+"251161": [
+"GJ",
+"Amreli",
+"Jafrabad",
+"Jafrabad",
+"Municipality"
+],
+"251162": [
+"GJ",
+"Amreli",
+"Rajula",
+"Rajula",
+"Municipality"
+],
+"251163": [
+"GJ",
+"Botad",
+"Botad",
+"Botad",
+"Municipality"
+],
+"251164": [
+"GJ",
+"Botad",
+"Gadhada",
+"Gadhada",
+"Municipality"
+],
+"251165": [
+"GJ",
+"Bhavnagar",
+"Bhavnagar",
+"Bhavnagar",
+"Municipal Corporation"
+],
+"251166": [
+"GJ",
+"Bhavnagar",
+"Sihor",
+"Sihor",
+"Municipality"
+],
+"251167": [
+"GJ",
+"Bhavnagar",
+"Gariadhar",
+"Gariadhar",
+"Municipality"
+],
+"251168": [
+"GJ",
+"Bhavnagar",
+"Palitana",
+"Palitana",
+"Municipality"
+],
+"251169": [
+"GJ",
+"Bhavnagar",
+"Talaja",
+"Talaja",
+"Municipality"
+],
+"251170": [
+"GJ",
+"Bhavnagar",
+"Mahuva",
+"Mahuva",
+"Municipality"
+],
+"251171": [
+"GJ",
+"Anand",
+"Umreth",
+"Umreth",
+"Municipality"
+],
+"251172": [
+"GJ",
+"Anand",
+"Boriavi",
+"Boriavi",
+"Municipality"
+],
+"251173": [
+"GJ",
+"Anand",
+"Ode",
+"Ode",
+"Municipality"
+],
+"251174": [
+"GJ",
+"Anand",
+"Anand",
+"Anand",
+"Municipal Corporation"
+],
+"251178": [
+"GJ",
+"Anand",
+"Petlad",
+"Petlad",
+"Municipality"
+],
+"251179": [
+"GJ",
+"Anand",
+"Khambhat",
+"Khambhat",
+"Municipality"
+],
+"251180": [
+"GJ",
+"Anand",
+"Borsad",
+"Borsad",
+"Municipality"
+],
+"251182": [
+"GJ",
+"Anand",
+"Anklav",
+"Anklav",
+"Municipality"
+],
+"251183": [
+"GJ",
+"Kheda",
+"Kapadvanj",
+"Kapadvanj",
+"Municipality"
+],
+"251184": [
+"GJ",
+"Mahisagar",
+"Balasinor",
+"Balasinor",
+"Municipality"
+],
+"251185": [
+"GJ",
+"Kheda",
+"Mehmedabad",
+"Mehmedabad",
+"Municipality"
+],
+"251186": [
+"GJ",
+"Kheda",
+"Kheda",
+"Kheda",
+"Municipality"
+],
+"251187": [
+"GJ",
+"Kheda",
+"Nadiad",
+"Nadiad",
+"Municipal Corporation"
+],
+"251188": [
+"GJ",
+"Kheda",
+"Chaklasi",
+"Chaklasi",
+"Municipality"
+],
+"251189": [
+"GJ",
+"Kheda",
+"Mahudha",
+"Mahudha",
+"Municipality"
+],
+"251190": [
+"GJ",
+"Kheda",
+"Dakor",
+"Dakor",
+"Municipality"
+],
+"251191": [
+"GJ",
+"Mahisagar",
+"Santrampur",
+"Santrampur",
+"Municipality"
+],
+"251192": [
+"GJ",
+"Mahisagar",
+"Lunawada",
+"Lunawada",
+"Municipality"
+],
+"251193": [
+"GJ",
+"Panch Mahals",
+"Godhra",
+"Godhra",
+"Municipality"
+],
+"251194": [
+"GJ",
+"Panch Mahals",
+"Kaalol",
+"Kaalol",
+"Municipality"
+],
+"251196": [
+"GJ",
+"Panch Mahals",
+"Halol",
+"Halol",
+"Municipality"
+],
+"251197": [
+"GJ",
+"Dahod",
+"Jhalod",
+"Jhalod",
+"Municipality"
+],
+"251199": [
+"GJ",
+"Dahod",
+"Dahod",
+"Dahod",
+"Municipality"
+],
+"251200": [
+"GJ",
+"Dahod",
+"Devgadbaria",
+"Devgadbaria",
+"Municipality"
+],
+"251209": [
+"GJ",
+"Vadodara",
+"Vadodara",
+"Vadodara",
+"Municipal Corporation"
+],
+"251211": [
+"GJ",
+"Chhotaudepur",
+"Chhota-Udepur",
+"છોટા-ઉદેપુર",
+"Municipality"
+],
+"251213": [
+"GJ",
+"Vadodara",
+"Dabhoi",
+"Dabhoi",
+"Municipality"
+],
+"251214": [
+"GJ",
+"Vadodara",
+"Padra",
+"Padra",
+"Municipality"
+],
+"251215": [
+"GJ",
+"Vadodara",
+"Karjan",
+"Karjan",
+"Municipality"
+],
+"251216": [
+"GJ",
+"Narmada",
+"Rajpipla",
+"Rajpipla",
+"Municipality"
+],
+"251219": [
+"GJ",
+"Bharuch",
+"Jambusar",
+"Jambusar",
+"Municipality"
+],
+"251222": [
+"GJ",
+"Bharuch",
+"Bharuch",
+"Bharuch",
+"Municipality"
+],
+"251225": [
+"GJ",
+"Bharuch",
+"Anklesvar",
+"Anklesvar",
+"Municipality"
+],
+"251230": [
+"GJ",
+"Tapi",
+"Songadh",
+"Songadh",
+"Municipality"
+],
+"251231": [
+"GJ",
+"Surat",
+"Surat",
+"Surat",
+"Municipal Corporation"
+],
+"251243": [
+"GJ",
+"Surat",
+"Bardoli",
+"Bardoli",
+"Municipality"
+],
+"251244": [
+"GJ",
+"Tapi",
+"Vyara",
+"Vyara",
+"Municipality"
+],
+"251245": [
+"GJ",
+"Navsari",
+"Navsari-Vijalpor",
+"Navsari-Vijalpor",
+"Municipal Corporation"
+],
+"251249": [
+"GJ",
+"Navsari",
+"Gandevi",
+"Gandevi",
+"Municipality"
+],
+"251251": [
+"GJ",
+"Navsari",
+"Bilimora",
+"Bilimora",
+"Municipality"
+],
+"251254": [
+"GJ",
+"Valsad",
+"Valsad",
+"Valsad",
+"Municipality"
+],
+"251261": [
+"GJ",
+"Valsad",
+"Dharampur",
+"Dharampur",
+"Municipality"
+],
+"251262": [
+"GJ",
+"Valsad",
+"Pardi",
+"Pardi",
+"Municipality"
+],
+"251264": [
+"GJ",
+"Valsad",
+"Vapi",
+"Vapi",
+"Municipal Corporation"
+],
+"251269": [
+"GJ",
+"Valsad",
+"Ummargam",
+"ઉમરગામ",
+"Municipality"
+],
+"251271": [
+"DD",
+"Diu",
+"Diu",
+"Diu",
+"Municipal Council"
+],
+"251272": [
+"DD",
+"Daman",
+"Daman",
+"Daman",
+"Municipal Council"
+],
+"251273": [
+"DD",
+"Dadra And Nagar Haveli",
+"Silvassa",
+"Silvassa",
+"Municipal Council"
+],
+"251275": [
+"MH",
+"Nandurbar",
+"Talode",
+"तालोडे",
+"Municipality"
+],
+"251277": [
+"MH",
+"Nandurbar",
+"Shahade",
+"शाहाडे",
+"Municipality"
+],
+"251278": [
+"MH",
+"Nandurbar",
+"Nandurbar",
+"नंदुरबार",
+"Municipality"
+],
+"251279": [
+"MH",
+"Nandurbar",
+"Nawapur",
+"नवापुर",
+"Municipality"
+],
+"251280": [
+"MH",
+"Dhule",
+"Shirpur-Warwade",
+"शिरपूर-वारावडे",
+"Municipality"
+],
+"251281": [
+"MH",
+"Dhule",
+"Dondaicha-Warwade",
+"दोंडाईचा",
+"Municipality"
+],
+"251282": [
+"MH",
+"Dhule",
+"Dhule",
+"धुळे",
+"Municipal Corporation"
+],
+"251283": [
+"MH",
+"Jalgaon",
+"Chopda",
+"चोपडा",
+"Municipality"
+],
+"251284": [
+"MH",
+"Jalgaon",
+"Yawal",
+"यावल",
+"Municipality"
+],
+"251285": [
+"MH",
+"Jalgaon",
+"Faizpur",
+"फैजपूर",
+"Municipality"
+],
+"251286": [
+"MH",
+"Jalgaon",
+"Savda",
+"सावधा",
+"Municipality"
+],
+"251287": [
+"MH",
+"Jalgaon",
+"Raver",
+"रावेर",
+"Municipality"
+],
+"251290": [
+"MH",
+"Jalgaon",
+"Bhusawal",
+"भुसावळ",
+"Municipality"
+],
+"251292": [
+"MH",
+"Jalgaon",
+"Erandol",
+"एरंडोल",
+"Municipality"
+],
+"251293": [
+"MH",
+"Jalgaon",
+"Dharangaon",
+"धरणगाव",
+"Municipality"
+],
+"251294": [
+"MH",
+"Jalgaon",
+"Amalner",
+"अंमळनेर",
+"Municipality"
+],
+"251295": [
+"MH",
+"Jalgaon",
+"Parola",
+"पारोला",
+"Municipality"
+],
+"251296": [
+"MH",
+"Jalgaon",
+"Chalisgaon",
+"चाळीसगाव",
+"Municipality"
+],
+"251297": [
+"MH",
+"Jalgaon",
+"Pachora",
+"पाचोरा",
+"Municipality"
+],
+"251298": [
+"MH",
+"Buldhana",
+"Jalgaon - Jamod",
+"जळगाव जामोद",
+"Municipality"
+],
+"251299": [
+"MH",
+"Buldhana",
+"Shegaon",
+"शेगाव",
+"Municipality"
+],
+"251300": [
+"MH",
+"Buldhana",
+"Nandura",
+"नंदूरा",
+"Municipality"
+],
+"251301": [
+"MH",
+"Buldhana",
+"Malkapur",
+"मलकापूर",
+"Municipality"
+],
+"251302": [
+"MH",
+"Buldhana",
+"Khamgaon",
+"खामगाव",
+"Municipality"
+],
+"251303": [
+"MH",
+"Buldhana",
+"Mehkar",
+"मेहेकर",
+"Municipality"
+],
+"251304": [
+"MH",
+"Buldhana",
+"Chikhli",
+"चिखली",
+"Municipality"
+],
+"251305": [
+"MH",
+"Buldhana",
+"Buldana",
+"बुलढाणा",
+"Municipality"
+],
+"251306": [
+"MH",
+"Buldhana",
+"Deulgaon Raja",
+"देऊळगाव राजा",
+"Municipality"
+],
+"251307": [
+"MH",
+"Buldhana",
+"Sindkhed Raja",
+"सिंदखेड राजा",
+"Municipality"
+],
+"251308": [
+"MH",
+"Buldhana",
+"Lonar",
+"लोणार",
+"Municipality"
+],
+"251309": [
+"MH",
+"Akola",
+"Telhara",
+"तेल्हारा",
+"Municipality"
+],
+"251310": [
+"MH",
+"Akola",
+"Akot",
+"अकोट",
+"Municipality"
+],
+"251311": [
+"MH",
+"Akola",
+"Balapur",
+"बाळापूर",
+"Municipality"
+],
+"251312": [
+"MH",
+"Akola",
+"Akola",
+"अकोला",
+"Municipal Corporation"
+],
+"251314": [
+"MH",
+"Satara",
+"Malkapur",
+"मलकापूर",
+"Nagar Panchayat"
+],
+"251315": [
+"MH",
+"Akola",
+"Murtijapur",
+"मुर्तीजापुर",
+"Municipality"
+],
+"251316": [
+"MH",
+"Akola",
+"Patur",
+"पातुर",
+"Municipality"
+],
+"251317": [
+"MH",
+"Washim",
+"Mangrulpir",
+"मंगरूळपीर",
+"Municipality"
+],
+"251318": [
+"MH",
+"Washim",
+"Karanja",
+"कारंजा",
+"Municipality"
+],
+"251319": [
+"MH",
+"Washim",
+"Washim",
+"वाशिम",
+"Municipality"
+],
+"251320": [
+"MH",
+"Washim",
+"Risod",
+"रीसोड",
+"Municipality"
+],
+"251322": [
+"MH",
+"Amravati",
+"Anjangaon",
+"अंजनगाव सुर्जी",
+"Municipality"
+],
+"251323": [
+"MH",
+"Amravati",
+"Achalpur",
+"अचलपूर",
+"Municipality"
+],
+"251324": [
+"MH",
+"Amravati",
+"Chandurbazar",
+"चांदूर बाजार",
+"Municipality"
+],
+"251325": [
+"MH",
+"Amravati",
+"Morshi",
+"मोर्शी",
+"Municipality"
+],
+"251326": [
+"MH",
+"Amravati",
+"Warud",
+"वरूड",
+"Municipality"
+],
+"251327": [
+"MH",
+"Amravati",
+"Shendurjana",
+"शेंदुरजना",
+"Municipality"
+],
+"251328": [
+"MH",
+"Amravati",
+"Amravati",
+"अमरावती",
+"Municipal Corporation"
+],
+"251329": [
+"MH",
+"Amravati",
+"Daryapur Banosa",
+"दर्यापूर",
+"Municipality"
+],
+"251330": [
+"MH",
+"Amravati",
+"Chandur",
+"चांदुर रेल्वे",
+"Municipality"
+],
+"251331": [
+"MH",
+"Amravati",
+"Dattapur Dhamangaon",
+"धामणगाव रेल्वे",
+"Municipality"
+],
+"251332": [
+"MH",
+"Wardha",
+"Arvi",
+"आर्वी",
+"Municipality"
+],
+"251333": [
+"MH",
+"Wardha",
+"Sindi",
+"सिंडी",
+"Municipality"
+],
+"251334": [
+"MH",
+"Wardha",
+"Wardha",
+"वर्धा",
+"Municipality"
+],
+"251336": [
+"MH",
+"Wardha",
+"Pulgaon",
+"पुलगाव",
+"Municipality"
+],
+"251337": [
+"MH",
+"Wardha",
+"Deoli",
+"देवळी",
+"Municipality"
+],
+"251338": [
+"MH",
+"Wardha",
+"Hinganghat",
+"हिंगनघाट",
+"Municipality"
+],
+"251339": [
+"MH",
+"Nagpur",
+"Mowad",
+"मोवाड",
+"Municipality"
+],
+"251340": [
+"MH",
+"Nagpur",
+"Narkhed",
+"नरखेड",
+"Municipality"
+],
+"251341": [
+"MH",
+"Nagpur",
+"Katol",
+"काटोल",
+"Municipality"
+],
+"251342": [
+"MH",
+"Nagpur",
+"Kalameshwar",
+"कळमेश्वर-ब्राम्हणी",
+"Municipality"
+],
+"251343": [
+"MH",
+"Nagpur",
+"Mohpa",
+"मोहपा",
+"Municipality"
+],
+"251344": [
+"MH",
+"Nagpur",
+"Savner",
+"सावनेर",
+"Municipality"
+],
+"251345": [
+"MH",
+"Nagpur",
+"Khapa",
+"खापा",
+"Municipality"
+],
+"251350": [
+"MH",
+"Nagpur",
+"Kanhan - Pipri",
+"कन्हान पिंपरी",
+"Municipality"
+],
+"251353": [
+"MH",
+"Nagpur",
+"Ramtek",
+"रामटेक",
+"Municipality"
+],
+"251356": [
+"MH",
+"Nagpur",
+"Kamptee",
+"कामठी",
+"Municipality"
+],
+"251358": [
+"MH",
+"Nagpur",
+"Mahadula",
+"महादुला",
+"Nagar Panchayat"
+],
+"251359": [
+"MH",
+"Nagpur",
+"Wadi",
+"वाडी",
+"Municipality"
+],
+"251362": [
+"MH",
+"Nagpur",
+"Nagpur",
+"नागपूर",
+"Municipal Corporation"
+],
+"251363": [
+"MH",
+"Nagpur",
+"Wanadongri",
+"वानाडोंगरी",
+"Municipality"
+],
+"251366": [
+"MH",
+"Nagpur",
+"Umred",
+"उमरेड",
+"Municipality"
+],
+"251370": [
+"MH",
+"Gondia",
+"Tirora",
+"तिरोरा",
+"Municipality"
+],
+"251371": [
+"MH",
+"Gondia",
+"Gondiya",
+"गोंदिया",
+"Municipality"
+],
+"251373": [
+"MH",
+"Chandrapur",
+"Brahmapuri",
+"ब्रह्मपूरी",
+"Municipality"
+],
+"251375": [
+"MH",
+"Chandrapur",
+"Bhadravati",
+"भद्रावती",
+"Municipality"
+],
+"251376": [
+"MH",
+"Chandrapur",
+"Warora",
+"वॉरोरा",
+"Municipality"
+],
+"251381": [
+"MH",
+"Chandrapur",
+"Ballarpur",
+"बल्लारपूर",
+"Municipality"
+],
+"251382": [
+"MH",
+"Chandrapur",
+"Mul",
+"मूल",
+"Municipality"
+],
+"251384": [
+"MH",
+"Chandrapur",
+"Rajura",
+"राजूरा",
+"Municipality"
+],
+"251386": [
+"MH",
+"Yavatmal",
+"Yavatmal",
+"यवतमाळ",
+"Municipality"
+],
+"251389": [
+"MH",
+"Yavatmal",
+"Darwha",
+"दारव्हा",
+"Municipality"
+],
+"251390": [
+"MH",
+"Yavatmal",
+"Digras",
+"दिग्रस",
+"Municipality"
+],
+"251391": [
+"MH",
+"Yavatmal",
+"Pusad",
+"पुसद",
+"Municipality"
+],
+"251393": [
+"MH",
+"Yavatmal",
+"Umarkhed",
+"उमरखेड",
+"Municipality"
+],
+"251394": [
+"MH",
+"Yavatmal",
+"Ghatanji",
+"घाटंजी",
+"Municipality"
+],
+"251395": [
+"MH",
+"Yavatmal",
+"Pandharkawda",
+"पांढरकवडा",
+"Municipality"
+],
+"251397": [
+"MH",
+"Yavatmal",
+"Wani",
+"वणी",
+"Municipality"
+],
+"251398": [
+"MH",
+"Nanded",
+"Kinwat",
+"किनवट",
+"Municipality"
+],
+"251399": [
+"MH",
+"Nanded",
+"Hadgaon",
+"हदगाव",
+"Municipality"
+],
+"251401": [
+"MH",
+"Nanded",
+"Nanded-Waghala",
+"नांदेड-वाघाळा",
+"Municipal Corporation"
+],
+"251402": [
+"MH",
+"Nanded",
+"Mudkhed",
+"मुदखेड",
+"Municipality"
+],
+"251403": [
+"MH",
+"Nanded",
+"Peth Umri",
+"पेठ उमरी",
+"Municipality"
+],
+"251404": [
+"MH",
+"Nanded",
+"Dharmabad",
+"धर्माबाद",
+"Municipality"
+],
+"251405": [
+"MH",
+"Nanded",
+"Kundalwadi",
+"कुंडलवाडी",
+"Municipality"
+],
+"251406": [
+"MH",
+"Nanded",
+"Biloli",
+"बिलोली",
+"Municipality"
+],
+"251407": [
+"MH",
+"Nanded",
+"Loha",
+"लोहा",
+"Municipality"
+],
+"251408": [
+"MH",
+"Nanded",
+"Kandhar",
+"कंधार",
+"Municipality"
+],
+"251409": [
+"MH",
+"Nanded",
+"Mukhed",
+"मुखेड",
+"Municipality"
+],
+"251410": [
+"MH",
+"Nanded",
+"Deglur",
+"देगलूर",
+"Municipality"
+],
+"251411": [
+"MH",
+"Hingoli",
+"Hingoli",
+"हिंगोली",
+"Municipality"
+],
+"251412": [
+"MH",
+"Hingoli",
+"Kalamnuri",
+"कळमनुरी",
+"Municipality"
+],
+"251413": [
+"MH",
+"Hingoli",
+"Basmath",
+"वसमत",
+"Municipality"
+],
+"251414": [
+"MH",
+"Parbhani",
+"Sailu",
+"सेलू",
+"Municipality"
+],
+"251415": [
+"MH",
+"Parbhani",
+"Jintur",
+"जिंतुर",
+"Municipality"
+],
+"251416": [
+"MH",
+"Parbhani",
+"Parbhani",
+"परभणी",
+"Municipal Corporation"
+],
+"251417": [
+"MH",
+"Parbhani",
+"Manwath",
+"मानवत",
+"Municipality"
+],
+"251418": [
+"MH",
+"Parbhani",
+"Pathri",
+"पाथरी",
+"Municipality"
+],
+"251419": [
+"MH",
+"Parbhani",
+"Sonpeth",
+"सोनापेथ",
+"Municipality"
+],
+"251420": [
+"MH",
+"Parbhani",
+"Gangakhed",
+"गंगाखेड",
+"Municipality"
+],
+"251421": [
+"MH",
+"Parbhani",
+"Purna",
+"पूर्ण",
+"Municipality"
+],
+"251422": [
+"MH",
+"Jalna",
+"Bhokardan",
+"भोकरदन",
+"Municipality"
+],
+"251423": [
+"MH",
+"Jalna",
+"Jalna",
+"जालना",
+"Municipal Corporation"
+],
+"251424": [
+"MH",
+"Jalna",
+"Ambad",
+"अंबड",
+"Municipality"
+],
+"251425": [
+"MH",
+"Jalna",
+"Partur",
+"परतूर",
+"Municipality"
+],
+"251426": [
+"MH",
+"Chhatrapati Sambhajinagar",
+"Kannad",
+"कन्नड",
+"Municipality"
+],
+"251428": [
+"MH",
+"Chhatrapati Sambhajinagar",
+"Aurangabad",
+"औरंगाबाद",
+"Municipal Corporation"
+],
+"251430": [
+"MH",
+"Chhatrapati Sambhajinagar",
+"Khuldabad",
+"खुल्दाबाद",
+"Municipality"
+],
+"251431": [
+"MH",
+"Chhatrapati Sambhajinagar",
+"Vaijapur",
+"वैजापूर",
+"Municipality"
+],
+"251432": [
+"MH",
+"Chhatrapati Sambhajinagar",
+"Gangapur",
+"गंगापूर",
+"Municipality"
+],
+"251433": [
+"MH",
+"Chhatrapati Sambhajinagar",
+"Paithan",
+"पैठण",
+"Municipality"
+],
+"251434": [
+"MH",
+"Nashik",
+"Surgana",
+"सुरगाणा",
+"Nagar Panchayat"
+],
+"251435": [
+"MH",
+"Nashik",
+"Satana",
+"सटाणा",
+"Municipality"
+],
+"251436": [
+"MH",
+"Chhatrapati Sambhajinagar",
+"Soyagaon",
+"सोयगाव",
+"Nagar Panchayat"
+],
+"251438": [
+"MH",
+"Nashik",
+"Malegaon",
+"मालेगांव",
+"Municipal Corporation"
+],
+"251439": [
+"MH",
+"Nashik",
+"Nandgaon",
+"नांदगाव",
+"Municipality"
+],
+"251440": [
+"MH",
+"Nashik",
+"Manmad",
+"मनमाड",
+"Municipality"
+],
+"251441": [
+"MH",
+"Nashik",
+"Trimbak",
+"त्रंबक",
+"Municipality"
+],
+"251442": [
+"MH",
+"Nashik",
+"Nashik",
+"नाशिक",
+"Municipal Corporation"
+],
+"251444": [
+"MH",
+"Nashik",
+"Bhagur",
+"भगूर",
+"Municipality"
+],
+"251445": [
+"MH",
+"Nashik",
+"Igatpuri",
+"इगतपूरी",
+"Municipality"
+],
+"251447": [
+"MH",
+"Nashik",
+"Sinnar",
+"सिन्नर",
+"Municipality"
+],
+"251450": [
+"MH",
+"Nashik",
+"Yevla",
+"येवला",
+"Municipality"
+],
+"251451": [
+"MH",
+"Palghar",
+"Dahanu",
+"डहाणू",
+"Municipality"
+],
+"251453": [
+"MH",
+"Palghar",
+"Jawhar",
+"जव्हार",
+"Municipality"
+],
+"251460": [
+"MH",
+"Palghar",
+"Palghar",
+"पालघर",
+"Municipality"
+],
+"251463": [
+"MH",
+"Palghar",
+"Vasai-Virar",
+"वासी-विरार",
+"Municipal Corporation"
+],
+"251470": [
+"MH",
+"Thane",
+"Mira-Bhayandar",
+"मिरा-भाईंदर",
+"Municipal Corporation"
+],
+"251471": [
+"MH",
+"Thane",
+"Thane",
+"ठाणे",
+"Municipal Corporation"
+],
+"251472": [
+"MH",
+"Thane",
+"Navi Mumbai",
+"नवी मुंबई",
+"Municipal Corporation"
+],
+"251477": [
+"MH",
+"Thane",
+"Bhiwandi",
+"भिवंडी",
+"Municipal Corporation"
+],
+"251483": [
+"MH",
+"Thane",
+"Kalyan-Dombivli",
+"कल्याण-डोंबिवली",
+"Municipal Corporation"
+],
+"251484": [
+"MH",
+"Thane",
+"Ulhasnagar",
+"उल्हासनगर",
+"Municipal Corporation"
+],
+"251485": [
+"MH",
+"Thane",
+"Ambarnath",
+"अंबरनाथ",
+"Municipality"
+],
+"251486": [
+"MH",
+"Thane",
+"Badlapur",
+"बदलापूर",
+"Municipality"
+],
+"251487": [
+"MH",
+"Thane",
+"Murbad",
+"मुरबाड",
+"Nagar Panchayat"
+],
+"251488": [
+"MH",
+"Mumbai Suburban",
+"Greater Mumbai",
+"मोठे मुंबई",
+"Municipal Corporation"
+],
+"251491": [
+"MH",
+"Raigad",
+"Uran",
+"उरण",
+"Municipality"
+],
+"251492": [
+"MH",
+"Raigad",
+"Panvel",
+"पनवेल",
+"Municipal Corporation"
+],
+"251497": [
+"MH",
+"Raigad",
+"Matheran",
+"माथेरान",
+"Municipality"
+],
+"251498": [
+"MH",
+"Raigad",
+"Karjat",
+"कर्जत",
+"Municipality"
+],
+"251501": [
+"MH",
+"Raigad",
+"Khopoli",
+"खोपोली",
+"Municipality"
+],
+"251502": [
+"MH",
+"Raigad",
+"Pen",
+"पेन",
+"Municipality"
+],
+"251503": [
+"MH",
+"Raigad",
+"Alibag",
+"अलिबाग",
+"Municipality"
+],
+"251504": [
+"MH",
+"Raigad",
+"Murud",
+"मुरुड",
+"Municipality"
+],
+"251506": [
+"MH",
+"Raigad",
+"Roha Ashtami",
+"रोहा अष्टमी",
+"Municipality"
+],
+"251510": [
+"MH",
+"Gondia",
+"Goregaon",
+"गोरेगाव",
+"Nagar Panchayat"
+],
+"251511": [
+"MH",
+"Raigad",
+"Shrivardhan",
+"श्रीवर्धन",
+"Municipality"
+],
+"251512": [
+"MH",
+"Raigad",
+"Mhasla",
+"म्हसळा",
+"Nagar Panchayat"
+],
+"251513": [
+"MH",
+"Raigad",
+"Mahad",
+"महाड",
+"Municipality"
+],
+"251516": [
+"MH",
+"Pune",
+"Junnar",
+"जुन्नर",
+"Municipality"
+],
+"251518": [
+"MH",
+"Pune",
+"Shirur",
+"शिरूर",
+"Municipality"
+],
+"251520": [
+"MH",
+"Pune",
+"Chakan",
+"चाकण",
+"Municipality"
+],
+"251521": [
+"MH",
+"Pune",
+"Alandi",
+"आळंदी",
+"Municipality"
+],
+"251522": [
+"MH",
+"Pune",
+"Talegaon Dabhade",
+"तळेगाव दाभाडे",
+"Municipality"
+],
+"251526": [
+"MH",
+"Pune",
+"Lonavala",
+"लोणावळा",
+"Municipality"
+],
+"251528": [
+"MH",
+"Pune",
+"Pimpri Chinchwad",
+"पिंपरी चिंचवड",
+"Municipal Corporation"
+],
+"251530": [
+"MH",
+"Pune",
+"Pune",
+"पुणे",
+"Municipal Corporation"
+],
+"251531": [
+"MH",
+"Pune",
+"Daund",
+"दौंड",
+"Municipality"
+],
+"251532": [
+"MH",
+"Pune",
+"Sasvad",
+"सासवड",
+"Municipality"
+],
+"251533": [
+"MH",
+"Pune",
+"Jejuri",
+"जेजुरी",
+"Municipality"
+],
+"251535": [
+"MH",
+"Pune",
+"Bhor",
+"भोर",
+"Municipality"
+],
+"251536": [
+"MH",
+"Pune",
+"Baramati",
+"बारामती",
+"Municipality"
+],
+"251537": [
+"MH",
+"Pune",
+"Indapur",
+"इंदापूर",
+"Municipality"
+],
+"251539": [
+"MH",
+"Ahilyanagar",
+"Sangamner",
+"संगमनेर",
+"Municipality"
+],
+"251540": [
+"MH",
+"Ahilyanagar",
+"Kopargaon",
+"कोपरगाव",
+"Municipality"
+],
+"251542": [
+"MH",
+"Ahilyanagar",
+"Shirdi",
+"शिर्डी",
+"Nagar Panchayat"
+],
+"251543": [
+"MH",
+"Ahilyanagar",
+"Rahta Pimplas",
+"राहाता पिंपलस",
+"Municipality"
+],
+"251544": [
+"MH",
+"Ahilyanagar",
+"Shrirampur",
+"श्रीरामपूर",
+"Municipality"
+],
+"251546": [
+"MH",
+"Ahilyanagar",
+"Pathardi",
+"पाथर्डी",
+"Municipality"
+],
+"251548": [
+"MH",
+"Ahilyanagar",
+"Ahmadnagar",
+"अहमदनगर",
+"Municipal Corporation"
+],
+"251551": [
+"MH",
+"Ahilyanagar",
+"Rahuri",
+"राहुरी",
+"Municipality"
+],
+"251552": [
+"MH",
+"Ahilyanagar",
+"Deolali Pravara",
+"देवळाली प्रवरा",
+"Municipality"
+],
+"251553": [
+"MH",
+"Ahilyanagar",
+"Shrigonda",
+"श्रीगोंदा",
+"Municipality"
+],
+"251554": [
+"MH",
+"Ahilyanagar",
+"Jamkhed",
+"जामखेड",
+"Municipality"
+],
+"251555": [
+"MH",
+"Beed",
+"Georai",
+"गेवराई",
+"Municipality"
+],
+"251556": [
+"MH",
+"Beed",
+"Majalgaon",
+"माजलगांव",
+"Municipality"
+],
+"251557": [
+"MH",
+"Beed",
+"Bid",
+"बीड",
+"Municipality"
+],
+"251558": [
+"MH",
+"Beed",
+"Kille Dharur",
+" किल्ले धारूर",
+"Municipality"
+],
+"251559": [
+"MH",
+"Beed",
+"Parli",
+"परळी",
+"Municipality"
+],
+"251560": [
+"MH",
+"Beed",
+"Ambajogai",
+"अंबाजोगाई",
+"Municipality"
+],
+"251561": [
+"MH",
+"Latur",
+"Latur",
+"लातूर",
+"Municipal Corporation"
+],
+"251562": [
+"MH",
+"Latur",
+"Ahmadpur",
+"अहमदपूर",
+"Municipality"
+],
+"251563": [
+"MH",
+"Latur",
+"Ausa",
+"औसा",
+"Municipality"
+],
+"251564": [
+"MH",
+"Latur",
+"Nilanga",
+"निलंगा",
+"Municipality"
+],
+"251565": [
+"MH",
+"Latur",
+"Udgir",
+"उदगीर",
+"Municipality"
+],
+"251566": [
+"MH",
+"Dharashiv",
+"Paranda",
+"पारंडा",
+"Municipality"
+],
+"251567": [
+"MH",
+"Dharashiv",
+"Bhum",
+"भूम",
+"Municipality"
+],
+"251568": [
+"MH",
+"Dharashiv",
+"Kalamb",
+"कळंब",
+"Municipality"
+],
+"251569": [
+"MH",
+"Dharashiv",
+"Osmanabad",
+"उस्मानाबाद",
+"Municipality"
+],
+"251570": [
+"MH",
+"Dharashiv",
+"Tuljapur",
+"तुळजापूर",
+"Municipality"
+],
+"251571": [
+"MH",
+"Dharashiv",
+"Naldurg",
+"नळदुर्ग",
+"Municipality"
+],
+"251572": [
+"MH",
+"Dharashiv",
+"Murum",
+"मुरुम",
+"Municipality"
+],
+"251573": [
+"MH",
+"Dharashiv",
+"Umarga",
+"उमरगा",
+"Municipality"
+],
+"251574": [
+"MH",
+"Solapur",
+"Karmala",
+"करमाळा",
+"Municipality"
+],
+"251575": [
+"MH",
+"Solapur",
+"Kurduvadi",
+"कुर्डुवाडी",
+"Municipality"
+],
+"251576": [
+"MH",
+"Solapur",
+"Barshi",
+"बार्शी",
+"Municipality"
+],
+"251577": [
+"MH",
+"Solapur",
+"Solapur",
+"सोलापूर",
+"Municipal Corporation"
+],
+"251579": [
+"MH",
+"Solapur",
+"Sangole",
+"सांगोला",
+"Municipality"
+],
+"251580": [
+"MH",
+"Solapur",
+"Mangalvedhe",
+"मंगळवेढा",
+"Municipality"
+],
+"251581": [
+"MH",
+"Solapur",
+"Akkalkot",
+"अक्कलकोट",
+"Municipality"
+],
+"251582": [
+"MH",
+"Solapur",
+"Maindargi",
+"मैन्दरगी",
+"Municipality"
+],
+"251583": [
+"MH",
+"Solapur",
+"Dudhani",
+"दूधनी",
+"Municipality"
+],
+"251584": [
+"MH",
+"Satara",
+"Mahabaleshwar",
+"महाबळेश्वर",
+"Municipality"
+],
+"251585": [
+"MH",
+"Satara",
+"Panchgani",
+"पंचगनी",
+"Municipality"
+],
+"251586": [
+"MH",
+"Satara",
+"Wai",
+"वाई",
+"Municipality"
+],
+"251588": [
+"MH",
+"Satara",
+"Phaltan",
+"फलटण",
+"Municipality"
+],
+"251589": [
+"MH",
+"Satara",
+"Mhaswad",
+"म्हसवड",
+"Municipality"
+],
+"251590": [
+"MH",
+"Satara",
+"Rahimatpur",
+"राहिमतपूर",
+"Municipality"
+],
+"251593": [
+"MH",
+"Satara",
+"Satara",
+"सातारा",
+"Municipality"
+],
+"251596": [
+"MH",
+"Satara",
+"Patan",
+"पाटण",
+"Nagar Panchayat"
+],
+"251598": [
+"MH",
+"Satara",
+"Karad",
+"कराड",
+"Municipality"
+],
+"251599": [
+"MH",
+"Ratnagiri",
+"Dapoli Camp",
+"दापोली",
+"Nagar Panchayat"
+],
+"251601": [
+"MH",
+"Ratnagiri",
+"Khed",
+"खेड",
+"Municipality"
+],
+"251602": [
+"MH",
+"Ratnagiri",
+"Chiplun",
+"चिपळूण",
+"Municipality"
+],
+"251604": [
+"MH",
+"Ratnagiri",
+"Guhagar",
+"गुहागर",
+"Nagar Panchayat"
+],
+"251605": [
+"MH",
+"Ratnagiri",
+"Ratnagiri",
+"रत्नागिरी",
+"Municipality"
+],
+"251607": [
+"MH",
+"Ratnagiri",
+"Lanja",
+"लांजा",
+"Nagar Panchayat"
+],
+"251608": [
+"MH",
+"Ratnagiri",
+"Rajapur",
+"राजापूर",
+"Municipality"
+],
+"251609": [
+"MH",
+"Sindhudurg",
+"Kankavli",
+"कणकवली",
+"Nagar Panchayat"
+],
+"251610": [
+"MH",
+"Sindhudurg",
+"Malwan",
+"मालवण",
+"Municipality"
+],
+"251611": [
+"MH",
+"Sindhudurg",
+"Vengurla",
+"वेंगुर्ला",
+"Municipality"
+],
+"251612": [
+"MH",
+"Sindhudurg",
+"Kudal",
+"कुडाळ",
+"Nagar Panchayat"
+],
+"251613": [
+"MH",
+"Sindhudurg",
+"Sawantwadi",
+"सावंतवाडी",
+"Municipality"
+],
+"251614": [
+"MH",
+"Kolhapur",
+"Malkapur-Kolhapur",
+"मलकापूर-कोल्हापुर",
+"Municipality"
+],
+"251615": [
+"MH",
+"Kolhapur",
+"Panhala",
+"पन्हाला",
+"Municipality"
+],
+"251616": [
+"MH",
+"Kolhapur",
+"Vadgaon Kasba",
+"वडगाव कसबा",
+"Municipality"
+],
+"251619": [
+"MH",
+"Kolhapur",
+"Ichalkaranji",
+"इचलकरंजी",
+"Municipal Corporation"
+],
+"251621": [
+"MH",
+"Kolhapur",
+"Jaysingpur",
+"जयसिंगपूर",
+"Municipality"
+],
+"251622": [
+"MH",
+"Kolhapur",
+"Kurundvad",
+"कुरूंदवाड",
+"Municipality"
+],
+"251625": [
+"MH",
+"Kolhapur",
+"Kolhapur",
+"कोल्हापूर",
+"Municipal Corporation"
+],
+"251628": [
+"MH",
+"Kolhapur",
+"Kagal",
+"कागल",
+"Municipality"
+],
+"251629": [
+"MH",
+"Kolhapur",
+"Murgud",
+"मुर्गुद",
+"Municipality"
+],
+"251630": [
+"MH",
+"Kolhapur",
+"Ajara",
+"आजरा",
+"Nagar Panchayat"
+],
+"251631": [
+"MH",
+"Kolhapur",
+"Gadhinglaj",
+"गडहिंग्लज",
+"Municipality"
+],
+"251633": [
+"MH",
+"Sangli",
+"Uran Islampur",
+"उरण इस्लामपूर",
+"Municipality"
+],
+"251634": [
+"MH",
+"Sangli",
+"Ashta",
+"आष्टा",
+"Municipality"
+],
+"251635": [
+"MH",
+"Sangli",
+"Vita",
+"विटा",
+"Municipality"
+],
+"251636": [
+"MH",
+"Sangli",
+"Tasgaon",
+"तसगाव",
+"Municipality"
+],
+"251639": [
+"MH",
+"Sangli",
+"Sangli-Miraj Kupwad",
+"सांगली-मिरज कुपवाड",
+"Municipal Corporation"
+],
+"252057": [
+"GA",
+"North Goa",
+"Pernem",
+"Pernem",
+"Municipality"
+],
+"252061": [
+"GA",
+"North Goa",
+"Mapusa",
+"Mapusa",
+"Municipality"
+],
+"252071": [
+"GA",
+"North Goa",
+"City Corporation Panaji",
+"City Corporation Panaji",
+"Municipal Corporation"
+],
+"252075": [
+"GA",
+"North Goa",
+"Bicholim",
+"Bicholim",
+"Municipality"
+],
+"252077": [
+"GA",
+"North Goa",
+"Sankhali",
+"Sankhali",
+"Municipality"
+],
+"252079": [
+"GA",
+"North Goa",
+"Valpoi",
+"Valpoi",
+"Municipality"
+],
+"252082": [
+"GA",
+"South Goa",
+"Ponda",
+"Ponda",
+"Municipality"
+],
+"252084": [
+"GA",
+"South Goa",
+"Mormugao",
+"Mormugao",
+"Municipality"
+],
+"252087": [
+"GA",
+"South Goa",
+"Margao",
+"Margao",
+"Municipality"
+],
+"252095": [
+"GA",
+"South Goa",
+"Cuncolim",
+"Cuncolim",
+"Municipality"
+],
+"252096": [
+"GA",
+"Kushavati",
+"Curchorem Cacora",
+"Curchorem Cacora",
+"Municipality"
+],
+"252097": [
+"GA",
+"Kushavati",
+"Quepem",
+"Quepem",
+"Municipality"
+],
+"252099": [
+"GA",
+"Kushavati",
+"Sanguem",
+"Sanguem",
+"Municipality"
+],
+"252100": [
+"GA",
+"Kushavati",
+"Canacona",
+"Canacona",
+"Municipality"
+],
+"253103": [
+"GJ",
+"Vav-Tharad",
+"Bhabhar",
+"Bhabhar",
+"Municipality"
+],
+"253125": [
+"MP",
+"Raisen",
+"Silwani",
+"Silwani",
+"Town Panchayat"
+],
+"253126": [
+"GJ",
+"Bhavnagar",
+"Vallabhipur",
+"Vallabhipur",
+"Municipality"
+],
+"253127": [
+"GJ",
+"Arvalli",
+"Bayad",
+"Bayad",
+"Municipality"
+],
+"253128": [
+"GJ",
+"Sabar Kantha",
+"Vadali",
+"Vadali",
+"Municipality"
+],
+"253134": [
+"MP",
+"Neemuch",
+"Kukdeshwar",
+"Kukdeshwar",
+"Town Panchayat"
+],
+"253135": [
+"GJ",
+"Morbi",
+"Maliya Miyana",
+"Maliya Miyana",
+"Municipality"
+],
+"253137": [
+"GJ",
+"Surendranagar",
+"Chotila",
+"Chotila",
+"Municipality"
+],
+"253138": [
+"GJ",
+"Surendranagar",
+"Patdi",
+"Patdi",
+"Municipality"
+],
+"253139": [
+"MH",
+"Jalgaon",
+"Jamner",
+"जामनेर",
+"Municipality"
+],
+"253140": [
+"MH",
+"Jalgaon",
+"Bhadgaon",
+"भडगाव",
+"Municipality"
+],
+"253143": [
+"GJ",
+"Devbhumi Dwarka",
+"Raval",
+"રાવલ",
+"Municipality"
+],
+"253147": [
+"GJ",
+"Amreli",
+"Babra",
+"Babra",
+"Municipality"
+],
+"253162": [
+"MP",
+"Balaghat",
+"Lanji",
+"Lanji",
+"Town Panchayat"
+],
+"253164": [
+"GJ",
+"Banas Kantha",
+"Thara",
+"Thara",
+"Municipality"
+],
+"253170": [
+"MP",
+"Mandla",
+"Niwas",
+"Niwas",
+"Town Panchayat"
+],
+"253171": [
+"MP",
+"Chhindwara",
+"Bhuwa Bichhia",
+"Bhuwa Bichhia",
+"Town Panchayat"
+],
+"253193": [
+"MP",
+"Anuppur",
+"Kotma",
+"Kotma",
+"Municipality"
+],
+"253194": [
+"MP",
+"Anuppur",
+"Bijuri",
+"Bijuri",
+"Municipality"
+],
+"253195": [
+"MP",
+"Anuppur",
+"Amarkantak",
+"Amarkantak",
+"Town Panchayat"
+],
+"253196": [
+"MP",
+"Anuppur",
+"Jaithari",
+"Jaithari",
+"Town Panchayat"
+],
+"253197": [
+"MP",
+"Anuppur",
+"Pasan",
+"Pasan",
+"Municipality"
+],
+"253223": [
+"GJ",
+"Bharuch",
+"Amod",
+"Amod",
+"Municipality"
+],
+"253224": [
+"GJ",
+"Kheda",
+"Thasra",
+"Thasra",
+"Municipality"
+],
+"253225": [
+"GJ",
+"Kheda",
+"Kathlal",
+"Kathlal",
+"Municipality"
+],
+"253226": [
+"GJ",
+"Kheda",
+"Kanajari",
+"કણજરી",
+"Municipality"
+],
+"253230": [
+"GJ",
+"Anand",
+"Sojitra",
+"Sojitra",
+"Municipality"
+],
+"253241": [
+"GJ",
+"Botad",
+"Barwala",
+"Barwala",
+"Municipality"
+],
+"253247": [
+"GJ",
+"Vadodara",
+"Savli",
+"Savli",
+"Municipality"
+],
+"253251": [
+"MP",
+"Barwani",
+"Palsud",
+"Palsud",
+"Town Panchayat"
+],
+"258020": [
+"MH",
+"Nanded",
+"Ardhapur",
+"अर्धापूर्",
+"Nagar Panchayat"
+],
+"258024": [
+"MH",
+"Nanded",
+"Mahur",
+"माहूर",
+"Nagar Panchayat"
+],
+"259672": [
+"MH",
+"Nagpur",
+"Mouda",
+"मौदा",
+"Nagar Panchayat"
+],
+"259684": [
+"MH",
+"Ratnagiri",
+"Devrukh",
+"देवरुख",
+"Nagar Panchayat"
+],
+"259696": [
+"MH",
+"Beed",
+"Kaij",
+"केज",
+"Nagar Panchayat"
+],
+"259697": [
+"MH",
+"Nanded",
+"Bhokar",
+"भोकर",
+"Municipality"
+],
+"259699": [
+"MH",
+"Sangli",
+"Jath",
+"जत",
+"Municipality"
+],
+"259701": [
+"MH",
+"Dhule",
+"Sindhakeda",
+"सिंदखेडा",
+"Nagar Panchayat"
+],
+"259703": [
+"MH",
+"Yavatmal",
+"Arni",
+"आर्णी",
+"Municipality"
+],
+"259704": [
+"MH",
+"Yavatmal",
+"Ner Nababpur",
+"नेर नबाबपूर",
+"Municipality"
+],
+"262903": [
+"MP",
+"Sehore",
+"Shahganj",
+"Shahganj",
+"Town Panchayat"
+],
+"262908": [
+"MP",
+"Rajgarh",
+"Kurawar",
+"KURAWAR",
+"Town Panchayat"
+],
+"262977": [
+"MP",
+"Ashoknagar",
+"Shadora",
+"Shadora",
+"Town Panchayat"
+],
+"262992": [
+"MP",
+"Rajgarh",
+"Chhapiheda",
+"Chhapiheda",
+"Town Panchayat"
+],
+"262993": [
+"MP",
+"Vidisha",
+"Samsabad",
+"शमशाबाद",
+"Town Panchayat"
+],
+"263007": [
+"RJ",
+"Kota",
+"Itawa",
+"ईटावा",
+"Municipality(Nagar Palika)"
+],
+"263008": [
+"RJ",
+"Bharatpur",
+"Roopbas",
+"रूपबास",
+"Municipality(Nagar Palika)"
+],
+"263010": [
+"MP",
+"Shajapur",
+"Pankhedi Kalapipal",
+"पानखेड़ी (कालापीपल)",
+"Town Panchayat"
+],
+"263020": [
+"MP",
+"Narmadapuram",
+"Bankhedi",
+"BANKHEDI",
+"Town Panchayat"
+],
+"263072": [
+"MP",
+"Chhindwara",
+"Bichhua",
+"बिछुआ",
+"Town Panchayat"
+],
+"263154": [
+"MP",
+"Neemuch",
+"Nayagoan",
+"Nayagaon",
+"Town Panchayat"
+],
+"263155": [
+"MP",
+"Neemuch",
+"Sarwaniya Maharaj",
+"Sarwaniya Maharaj",
+"Town Panchayat"
+],
+"263205": [
+"MP",
+"Ujjain",
+"Makdon",
+"makdon",
+"Town Panchayat"
+],
+"263211": [
+"MP",
+"Shivpuri",
+"Bairad",
+"Bairad",
+"Town Panchayat"
+],
+"263217": [
+"MP",
+"Narsimhapur",
+"Sainkheda",
+"साईंखेड़ा",
+"Town Panchayat"
+],
+"263218": [
+"MP",
+"Betul",
+"Chicholi",
+"Chicholi",
+"Town Panchayat"
+],
+"263361": [
+"MP",
+"Betul",
+"Athner",
+"Athner",
+"Town Panchayat"
+],
+"263362": [
+"MH",
+"Nagpur",
+"Hingna",
+"हिंगणा",
+"Nagar Panchayat"
+],
+"263363": [
+"MH",
+"Nagpur",
+"Bhiwapur",
+"भिवापूर",
+"Nagar Panchayat"
+],
+"263364": [
+"MH",
+"Nagpur",
+"Kuhi Nagar Parishad",
+"कुही ",
+"Nagar Panchayat"
+],
+"263834": [
+"MH",
+"Sindhudurg",
+"Vabhave Vaibhavwadi Nagar Panchayat",
+"वाभवे -वैभववाडी",
+"Nagar Panchayat"
+],
+"263884": [
+"MH",
+"Sindhudurg",
+"Kasai Dodamarg",
+"कसाई दोडामार्ग  नगर पंचायत",
+"Nagar Panchayat"
+],
+"265713": [
+"MH",
+"Chandrapur",
+"Chimur",
+"चिमुर",
+"Municipality"
+],
+"265791": [
+"MH",
+"Chandrapur",
+"Gadchandur Nagar Parishad",
+"गडचांदूर",
+"Municipality"
+],
+"265847": [
+"MP",
+"Anuppur",
+"Anuppur Np",
+"अनूपपुर",
+"Municipality"
+],
+"266073": [
+"MH",
+"Yavatmal",
+"Kalamb Nagar Panchayat",
+"कळंब नगर पंचायत",
+"Nagar Panchayat"
+],
+"272842": [
+"MH",
+"Yavatmal",
+"Babhulgaon Nagar Panchayat",
+"बाभूळगाव नगर पंचायत",
+"Nagar Panchayat"
+],
+"272845": [
+"MH",
+"Yavatmal",
+"Zari Zamani",
+"झरी झामणी",
+"Nagar Panchayat"
+],
+"273379": [
+"MP",
+"Jhabua",
+"Meghnagar New",
+"Meghnagar",
+"Town Panchayat"
+],
+"274350": [
+"MP",
+"Dewas",
+"Nemawar",
+"Nemawar",
+"Town Panchayat"
+],
+"275691": [
+"RJ",
+"Dausa",
+"Mahwa",
+"महवा",
+"Municipal Council"
+],
+"275726": [
+"MH",
+"Beed",
+"Shirur Kasar",
+"शिरुर कासार",
+"Nagar Panchayat"
+],
+"275728": [
+"MH",
+"Ahilyanagar",
+"Akole",
+"अकोले",
+"Nagar Panchayat"
+],
+"275729": [
+"MH",
+"Ahilyanagar",
+"Karjat",
+"कर्जत",
+"Nagar Panchayat"
+],
+"275730": [
+"MH",
+"Ahilyanagar",
+"Parner",
+"पारनेर",
+"Nagar Panchayat"
+],
+"275731": [
+"MH",
+"Beed",
+"Wadvani",
+"वडवणी",
+"Nagar Panchayat"
+],
+"275732": [
+"MH",
+"Beed",
+"Patoda.",
+"पाटोदा",
+"Nagar Panchayat"
+],
+"275734": [
+"MH",
+"Beed",
+"Ashti",
+"आष्टी",
+"Nagar Panchayat"
+],
+"276024": [
+"GJ",
+"Surat",
+"Kadodara",
+"Kadodara",
+"Municipality"
+],
+"276026": [
+"GJ",
+"Surat",
+"Tarsadi",
+"Tarsadi",
+"Municipality"
+],
+"276267": [
+"MH",
+"Raigad",
+"Khalapur",
+"खालापूर",
+"Nagar Panchayat"
+],
+"276268": [
+"MH",
+"Raigad",
+"Mangaon",
+"माणगांव",
+"Nagar Panchayat"
+],
+"276270": [
+"MH",
+"Raigad",
+"Tala",
+"तळा",
+"Nagar Panchayat"
+],
+"276272": [
+"MH",
+"Jalgaon",
+"Bodwad",
+"बोदवड",
+"Nagar Panchayat"
+],
+"276273": [
+"MH",
+"Jalgaon",
+"Varangaon",
+"वरणगांव",
+"Municipality"
+],
+"276274": [
+"MH",
+"Buldhana",
+"Sangrampur",
+"संग्रामपूर",
+"Nagar Panchayat"
+],
+"276275": [
+"MH",
+"Buldhana",
+"Motala",
+"मेाताला",
+"Nagar Panchayat"
+],
+"276276": [
+"MH",
+"Nashik",
+"Dindori",
+"दिंडोरी",
+"Nagar Panchayat"
+],
+"276277": [
+"MH",
+"Nashik",
+"Deola",
+"देवळा",
+"Nagar Panchayat"
+],
+"276278": [
+"MH",
+"Nashik",
+"Kalwan",
+"कळवण",
+"Nagar Panchayat"
+],
+"276279": [
+"MH",
+"Nashik",
+"Niphad",
+"निफाड",
+"Nagar Panchayat"
+],
+"276280": [
+"MH",
+"Nashik",
+"Peth",
+"पेठ",
+"Nagar Panchayat"
+],
+"276281": [
+"MH",
+"Nashik",
+"Chandwad",
+"चांदवड",
+"Municipality"
+],
+"276283": [
+"MH",
+"Gadchiroli",
+"Bhamragad",
+"भामरागड",
+"Nagar Panchayat"
+],
+"276284": [
+"MH",
+"Gadchiroli",
+"Dhanora",
+"धनोरा",
+"Nagar Panchayat"
+],
+"276286": [
+"MH",
+"Gadchiroli",
+"Kurkheda",
+"कूरखेडा",
+"Nagar Panchayat"
+],
+"276287": [
+"MH",
+"Gadchiroli",
+"Mulchera",
+"मूलचेरा",
+"Nagar Panchayat"
+],
+"276288": [
+"MH",
+"Gadchiroli",
+"Sironcha",
+"सिरोंचा",
+"Nagar Panchayat"
+],
+"276289": [
+"MH",
+"Amravati",
+"Tiwsa",
+"तिवसा",
+"Nagar Panchayat"
+],
+"276290": [
+"MH",
+"Amravati",
+"Bhatkuli",
+"भातकूली",
+"Nagar Panchayat"
+],
+"276291": [
+"MH",
+"Amravati",
+"Nandgaon Khandeshwar",
+"नांदगाव खंंडेश्वर",
+"Nagar Panchayat"
+],
+"276292": [
+"MH",
+"Amravati",
+"Dharni",
+"धारणी",
+"Nagar Panchayat"
+],
+"276293": [
+"MH",
+"Washim",
+"Malegaon",
+"मालेगाव",
+"Nagar Panchayat"
+],
+"276294": [
+"MH",
+"Washim",
+"Manora",
+"मनोरा",
+"Nagar Panchayat"
+],
+"276295": [
+"MH",
+"Ratnagiri",
+"Mandangad",
+"मंडणगड",
+"Nagar Panchayat"
+],
+"276296": [
+"MH",
+"Kolhapur",
+"Hupari",
+"हुपरी",
+"Municipality"
+],
+"276297": [
+"MH",
+"Parbhani",
+"Palam",
+"पालम",
+"Nagar Panchayat"
+],
+"276301": [
+"MH",
+"Solapur",
+"Mohol",
+"मोहोळ",
+"Municipality"
+],
+"276302": [
+"MH",
+"Solapur",
+"Madha",
+"माढा",
+"Nagar Panchayat"
+],
+"276303": [
+"MH",
+"Solapur",
+"Malshiras",
+"माळशिरस",
+"Nagar Panchayat"
+],
+"276305": [
+"MH",
+"Nagpur",
+"Parshivni",
+"पारशिवनी",
+"Nagar Panchayat"
+],
+"276308": [
+"MH",
+"Yavatmal",
+"Ralegaon",
+"राळेगांव",
+"Nagar Panchayat"
+],
+"276309": [
+"MH",
+"Yavatmal",
+"Mahagaon",
+"महागांव",
+"Nagar Panchayat"
+],
+"276310": [
+"MH",
+"Yavatmal",
+"Maregaon",
+"मारेगांव",
+"Nagar Panchayat"
+],
+"276312": [
+"MH",
+"Dharashiv",
+"Washi",
+"वाशी",
+"Nagar Panchayat"
+],
+"276313": [
+"MH",
+"Dharashiv",
+"Lohara (Bk)",
+"लोहरा (बु)",
+"Nagar Panchayat"
+],
+"276315": [
+"MH",
+"Palghar",
+"Talasari",
+"तलासरी",
+"Nagar Panchayat"
+],
+"276316": [
+"MH",
+"Palghar",
+"Vikramgad",
+"विक्रमगड",
+"Nagar Panchayat"
+],
+"276317": [
+"MH",
+"Palghar",
+"Mokhada",
+"मोखाडा",
+"Nagar Panchayat"
+],
+"276318": [
+"MH",
+"Palghar",
+"Wada",
+"वाडा",
+"Nagar Panchayat"
+],
+"276319": [
+"MH",
+"Bhandara",
+"Sakoli",
+"साकोली",
+"Municipality"
+],
+"276320": [
+"MH",
+"Ahilyanagar",
+"Nevasa",
+"नेवासा खु.",
+"Nagar Panchayat"
+],
+"276321": [
+"MH",
+"Sindhudurg",
+"Devgad-Jamsande",
+"देवगड-जामसांडे",
+"Nagar Panchayat"
+],
+"276323": [
+"MH",
+"Bhandara",
+"Lakhani",
+"लाखणी",
+"Nagar Panchayat"
+],
+"276324": [
+"MH",
+"Bhandara",
+"Lakhandur",
+"लाखांदूर",
+"Nagar Panchayat"
+],
+"276325": [
+"MH",
+"Bhandara",
+"Mohadi",
+"मोहाडी",
+"Nagar Panchayat"
+],
+"276327": [
+"MH",
+"Gadchiroli",
+"Aheri",
+"अहेरी",
+"Nagar Panchayat"
+],
+"276329": [
+"MH",
+"Gadchiroli",
+"Chamorshi",
+"चामोर्शी",
+"Nagar Panchayat"
+],
+"276330": [
+"MH",
+"Gadchiroli",
+"Etapalli",
+"एटापल्ली",
+"Nagar Panchayat"
+],
+"276331": [
+"MH",
+"Ahilyanagar",
+"Shevgaon",
+"शेवगांव",
+"Municipality"
+],
+"276332": [
+"MH",
+"Akola",
+"Barshitakli",
+"बार्शीटाकळी",
+"Nagar Panchayat"
+],
+"276333": [
+"MH",
+"Thane",
+"Shahapur",
+"शहापूर",
+"Nagar Panchayat"
+],
+"276339": [
+"MH",
+"Dhule",
+"Sakri",
+"साक्री",
+"Nagar Panchayat"
+],
+"276345": [
+"MH",
+"Nandurbar",
+"Dhadgaon",
+"धडगांव",
+"Nagar Panchayat"
+],
+"276346": [
+"MH",
+"Sangli",
+"Kavthemahankal",
+"कवठेमहांकाळ",
+"Nagar Panchayat"
+],
+"276348": [
+"MH",
+"Sangli",
+"Khanapur",
+"खानापूर",
+"Nagar Panchayat"
+],
+"276349": [
+"MH",
+"Sangli",
+"Shirala",
+"शिराळा",
+"Nagar Panchayat"
+],
+"276350": [
+"MH",
+"Sangli",
+"Palus",
+"पलूस",
+"Municipality"
+],
+"276353": [
+"MH",
+"Chhatrapati Sambhajinagar",
+"Fulambri",
+"फुलंब्री",
+"Nagar Panchayat"
+],
+"276355": [
+"MH",
+"Chandrapur",
+"Jiwati",
+"जिवती",
+"Nagar Panchayat"
+],
+"276356": [
+"MH",
+"Chandrapur",
+"Saoli",
+"सावली",
+"Nagar Panchayat"
+],
+"276357": [
+"MH",
+"Chandrapur",
+"Korpana",
+"कोरपणा",
+"Nagar Panchayat"
+],
+"276358": [
+"MH",
+"Chandrapur",
+"Gondpimpri",
+"गोंडपिंपरी",
+"Nagar Panchayat"
+],
+"276359": [
+"MH",
+"Chandrapur",
+"Pombhurna",
+"पोंभूर्णा",
+"Nagar Panchayat"
+],
+"276361": [
+"MH",
+"Chandrapur",
+"Nagbhid Muncipal Council",
+"नागभीड नगरपरिषद",
+"Municipality"
+],
+"276362": [
+"MH",
+"Chandrapur",
+"Sindewahi",
+"सिंदेवाही",
+"Nagar Panchayat"
+],
+"276363": [
+"MH",
+"Gondia",
+"Deori",
+"देवरी",
+"Nagar Panchayat"
+],
+"276364": [
+"MH",
+"Gondia",
+"Amgaon",
+"आमगांव",
+"Municipality"
+],
+"276365": [
+"MH",
+"Gondia",
+"Salekasa",
+"सालेकसा",
+"Nagar Panchayat"
+],
+"276366": [
+"MH",
+"Gondia",
+"Arjuni",
+"अर्जुनी",
+"Nagar Panchayat"
+],
+"276368": [
+"MH",
+"Gondia",
+"Sadak-Arjuni",
+"सडकअर्जुनी",
+"Nagar Panchayat"
+],
+"276369": [
+"MH",
+"Jalna",
+"Badnapur",
+"बदनापूर",
+"Nagar Panchayat"
+],
+"276370": [
+"MH",
+"Jalna",
+"Ghansawangi",
+"घनसावंगी",
+"Nagar Panchayat"
+],
+"276371": [
+"MH",
+"Jalna",
+"Mantha",
+"मंठा",
+"Nagar Panchayat"
+],
+"276372": [
+"MH",
+"Jalna",
+"Jafrabad",
+"जाफ़्राबाद",
+"Nagar Panchayat"
+],
+"276373": [
+"MH",
+"Latur",
+"Jalkot",
+"जळकोट",
+"Nagar Panchayat"
+],
+"276374": [
+"MH",
+"Latur",
+"Shirur-Anantpal",
+"शिरुर-अनंतपाल",
+"Nagar Panchayat"
+],
+"276375": [
+"MH",
+"Latur",
+"Chakur",
+"चाकूर",
+"Nagar Panchayat"
+],
+"276376": [
+"MH",
+"Latur",
+"Renapur",
+"रेनापूर",
+"Nagar Panchayat"
+],
+"276377": [
+"MH",
+"Latur",
+"Deoni (Bk)",
+"देवणी",
+"Nagar Panchayat"
+],
+"276378": [
+"MH",
+"Wardha",
+"Seloo",
+"सेळू",
+"Nagar Panchayat"
+],
+"276379": [
+"MH",
+"Wardha",
+"Samudrapur",
+"समुद्रपुर",
+"Nagar Panchayat"
+],
+"276380": [
+"MH",
+"Wardha",
+"Ashti (Wardha)",
+"आष्टी",
+"Nagar Panchayat"
+],
+"276381": [
+"MH",
+"Satara",
+"Koregaon",
+"कोरेगांव",
+"Nagar Panchayat"
+],
+"276383": [
+"MH",
+"Satara",
+"Khandala",
+"खंडाळा",
+"Nagar Panchayat"
+],
+"276414": [
+"MH",
+"Satara",
+"Lonand",
+"लोणंद",
+"Nagar Panchayat"
+],
+"276415": [
+"MH",
+"Satara",
+"Medha",
+"मेधा",
+"Nagar Panchayat"
+],
+"276416": [
+"MH",
+"Satara",
+"Vaduj",
+"वडुज",
+"Nagar Panchayat"
+],
+"276417": [
+"MH",
+"Satara",
+"Dahiwadi",
+"दहिवडी",
+"Nagar Panchayat"
+],
+"276421": [
+"MH",
+"Jalgaon",
+"Muktainagar",
+"मुक्ताईनगर",
+"Nagar Panchayat"
+],
+"276440": [
+"GJ",
+"Gandhinagar",
+"Gandhinagar",
+"Gandhinagar",
+"Municipal Corporation"
+],
+"276571": [
+"MH",
+"Jalgaon",
+"Jalgaon",
+"जळगाव",
+"Municipal Corporation"
+],
+"276606": [
+"MH",
+"Nanded",
+"Himayatnagar Nagarpanchayat",
+"हिमायतनगर नगर पंचायत",
+"Nagar Panchayat"
+],
+"276623": [
+"MH",
+"Nanded",
+"Naigaon (Khairgaon)",
+"नाइगांव",
+"Nagar Panchayat"
+],
+"276633": [
+"MH",
+"Wardha",
+"Karanja Wardha",
+"कारंजा",
+"Nagar Panchayat"
+],
+"276634": [
+"MH",
+"Amravati",
+"Chikhaldara",
+"चिखलदरा",
+"Municipality"
+],
+"276635": [
+"MH",
+"Kolhapur",
+"Shirol",
+"शिरोल",
+"Municipality"
+],
+"276636": [
+"MH",
+"Raigad",
+"Poladpur",
+"पोलादपूर",
+"Nagar Panchayat"
+],
+"276637": [
+"MH",
+"Pune",
+"Vadgaon Mawal",
+"वडगाव मावळ",
+"Nagar Panchayat"
+],
+"277165": [
+"GJ",
+"Ahmedabad",
+"Bareja",
+"Bareja",
+"Municipality"
+],
+"277167": [
+"GJ",
+"Dangs",
+"Saputara",
+"Saputara",
+"Notified Area Council"
+],
+"277169": [
+"GJ",
+"Kachchh",
+"Mandvi Kachchh",
+"Mandvi Kachchh",
+"Municipality"
+],
+"277170": [
+"GJ",
+"Gir Somnath",
+"Talala",
+"Talala",
+"Municipality"
+],
+"277171": [
+"GJ",
+"Gir Somnath",
+"Sutrapada",
+"Sutrapada",
+"Municipality"
+],
+"277231": [
+"RJ",
+"Nagaur",
+"Degana",
+"डेगाना",
+"Municipality(Nagar Palika)"
+],
+"277232": [
+"RJ",
+"Ajmer",
+"Nasirabad",
+"नसीराबाद",
+"Municipal Council"
+],
+"277233": [
+"RJ",
+"Khairthal-Tijara",
+"Kishangarhbas",
+"किशनगढबास",
+"Municipality(Nagar Palika)"
+],
+"277234": [
+"RJ",
+"Sirohi",
+"Pindwara",
+"पिण्डवारा",
+"Municipality(Nagar Palika)"
+],
+"277235": [
+"RJ",
+"Bhilwara",
+"Shahpura..(Bhilwara)",
+"शाहपुरा(भीलवाड़ा)",
+"Municipality(Nagar Palika)"
+],
+"277237": [
+"MP",
+"Datia",
+"Badonee",
+"बडोनी",
+"Town Panchayat"
+],
+"277411": [
+"MH",
+"Nagpur",
+"Butibori",
+"बुटीबोरी",
+"Nagar Panchayat"
+],
+"277413": [
+"MH",
+"Jalgaon",
+"Shendurni",
+"शेंदुर्णी",
+"Nagar Panchayat"
+],
+"277475": [
+"MH",
+"Pune",
+"Wadgaon",
+"वडगांव",
+"Municipality"
+],
+"277601": [
+"RJ",
+"Sikar",
+"Khatushyamji",
+"खाटुश्यामजी",
+"Municipality(Nagar Palika)"
+],
+"277602": [
+"RJ",
+"Banswara",
+"Partapur -Garhi",
+"परतापुर-गढी",
+"Municipality(Nagar Palika)"
+],
+"289259": [
+"MP",
+"Mandla",
+"Mandla",
+"mandla",
+"Municipality"
+],
+"289260": [
+"MP",
+"Mandla",
+"Bamhni Banjar",
+"BAMHNI BANJAR",
+"Town Panchayat"
+],
+"289710": [
+"MP",
+"Shivpuri",
+"Pohari",
+"पोहरी",
+"Town Panchayat"
+],
+"290253": [
+"MP",
+"Tikamgarh",
+"Lidhorakhas",
+"Lidhorakhas",
+"Town Panchayat"
+],
+"290256": [
+"MP",
+"Tikamgarh",
+"Kari",
+"कारी",
+"Town Panchayat"
+],
+"290257": [
+"MP",
+"Tikamgarh",
+"Jatara",
+"जतारा",
+"Town Panchayat"
+],
+"290258": [
+"MP",
+"Tikamgarh",
+"Badagaon",
+"Badagaon",
+"Town Panchayat"
+],
+"290271": [
+"MP",
+"Dewas",
+"Tonk Khurd",
+"टोंक खुर्द",
+"Town Panchayat"
+],
+"290272": [
+"MP",
+"Dewas",
+"Pipalrawan",
+"पीपलरावां",
+"Town Panchayat"
+],
+"290276": [
+"MP",
+"Tikamgarh",
+"Baldevgarh",
+"Baldevgarh",
+"Town Panchayat"
+],
+"290285": [
+"MP",
+"Tikamgarh",
+"Tikamgarh",
+"Tikamgarh",
+"Municipality"
+],
+"290306": [
+"MP",
+"Tikamgarh",
+"Khargapur",
+"Khargapur",
+"Town Panchayat"
+],
+"290323": [
+"MP",
+"Niwari",
+"Jeron Khalsa",
+"Jeron Khalsa",
+"Town Panchayat"
+],
+"290343": [
+"MP",
+"Tikamgarh",
+"Palera",
+"Palera",
+"Town Panchayat"
+],
+"290358": [
+"MH",
+"Sangli",
+"Kadegaon.",
+"कडेगाव",
+"Nagar Panchayat"
+],
+"290379": [
+"MP",
+"Dhar",
+"Dhamnod- Dhar",
+"धामनोद- धार",
+"Town Panchayat"
+],
+"290381": [
+"MP",
+"Mandsaur",
+"Suwasra",
+"Suwasra",
+"Town Panchayat"
+],
+"290382": [
+"MP",
+"Niwari",
+"Niwari",
+"निवाड़ी",
+"Town Panchayat"
+],
+"290383": [
+"MP",
+"Sehore",
+"Kothri",
+"कोठरी",
+"Town Panchayat"
+],
+"290389": [
+"MP",
+"Dewas",
+"Bagali",
+"Bagali",
+"Town Panchayat"
+],
+"290390": [
+"MP",
+"Dindori",
+"Dindori",
+"डिंडौरी",
+"Town Panchayat"
+],
+"290392": [
+"MP",
+"Bhind",
+"Mehgaon",
+"मेहगाँव",
+"Town Panchayat"
+],
+"290394": [
+"MP",
+"Dhar",
+"Dahi",
+"Dahi",
+"Town Panchayat"
+],
+"290395": [
+"MP",
+"Pandhurna",
+"Pipla Narayanwar",
+"Pipla Narayanwar",
+"Town Panchayat"
+],
+"290429": [
+"MP",
+"Narsimhapur",
+"Tendukheda- Narsimhapur",
+"Tendukheda- Narsimhapur",
+"Town Panchayat"
+],
+"290430": [
+"MH",
+"Yavatmal",
+"Dhanki",
+"ढाणकी",
+"Nagar Panchayat"
+],
+"290432": [
+"RJ",
+"Alwar",
+"Thanagaji",
+"थानागाजी",
+"Municipality(Nagar Palika)"
+],
+"290433": [
+"MH",
+"Kolhapur",
+"Chandgad.",
+"चंदगड",
+"Nagar Panchayat"
+],
+"290434": [
+"MH",
+"Kolhapur",
+"Hatkanangale.",
+"हातकणंगले",
+"Nagar Panchayat"
+],
+"290462": [
+"MP",
+"Damoh",
+"Tendukheda- Damoh",
+"Tendukheda- Damoh",
+"Town Panchayat"
+],
+"293808": [
+"MP",
+"Chhindwara",
+"Damua",
+"Damua",
+"Municipality"
+],
+"293809": [
+"MP",
+"Vidisha",
+"Ganjbasoda",
+"गंजबासौदा",
+"Municipality"
+],
+"293817": [
+"MP",
+"Neemuch",
+"Athana",
+"अठाना",
+"Town Panchayat"
+],
+"293818": [
+"MP",
+"Niwari",
+"Taricharkala",
+"तारिचरकला",
+"Town Panchayat"
+],
+"293819": [
+"MP",
+"Maihar",
+"New Ramnagar",
+" न्यू रामनगर",
+"Town Panchayat"
+],
+"293820": [
+"MP",
+"Narsimhapur",
+"Salichauka",
+"सालीचौका",
+"Town Panchayat"
+],
+"293821": [
+"MP",
+"Niwari",
+"Prithvipur",
+"पृथ्वीपुर",
+"Town Panchayat"
+],
+"293822": [
+"MP",
+"Khargone (West Nimar)",
+"Karahi",
+"करही",
+"Town Panchayat"
+],
+"293826": [
+"MP",
+"Damoh",
+"Patera",
+"पटेरा",
+"Town Panchayat"
+],
+"293827": [
+"MP",
+"Niwari",
+"Orchha",
+"ओरछा",
+"Town Panchayat"
+],
+"296909": [
+"MH",
+"Hingoli",
+"Aundha Nagnath",
+"औंढा नागनाथ",
+"Nagar Panchayat"
+],
+"296910": [
+"MH",
+"Hingoli",
+"Sengaon",
+"सेनगावं",
+"Nagar Panchayat"
+],
+"296912": [
+"MH",
+"Pune",
+"Rajgurunagar",
+"राजगुरुनगर",
+"Municipality"
+],
+"296915": [
+"RJ",
+"Alwar",
+"Laxmangarh (Alwar)",
+"लक्ष्मणगढ़ (अलवर)",
+"Municipality(Nagar Palika)"
+],
+"296916": [
+"RJ",
+"Alwar",
+"Ramgarh (Alwar)",
+"रामगढ़ (अलवर)",
+"Municipality(Nagar Palika)"
+],
+"296922": [
+"RJ",
+"Kotputli-Behror",
+"Paota-Pragpura",
+"Paota-Pragpura",
+"Municipal Council"
+],
+"296923": [
+"RJ",
+"Kotputli-Behror",
+"Bansur",
+"बानसूर",
+"Municipality(Nagar Palika)"
+],
+"296924": [
+"RJ",
+"Jodhpur",
+"Bhopalgarh",
+"भोपालगढ़",
+"Municipality(Nagar Palika)"
+],
+"296925": [
+"RJ",
+"Jaipur",
+"Bassi",
+"बस्सी",
+"Municipality(Nagar Palika)"
+],
+"296926": [
+"RJ",
+"Dausa",
+"Mandawari",
+"मंडावरी",
+"Municipality(Nagar Palika)"
+],
+"296930": [
+"RJ",
+"Dholpur",
+"Sarmathura",
+"सरमथुरा",
+"Municipality(Nagar Palika)"
+],
+"296931": [
+"RJ",
+"Dholpur",
+"Baseri",
+"बसेड़ी",
+"Municipality(Nagar Palika)"
+],
+"296932": [
+"RJ",
+"Karauli",
+"Sapotra",
+"सपोटरा",
+"Municipal Council"
+],
+"296933": [
+"RJ",
+"Kota",
+"Sultanpur",
+"सुल्तानपुर",
+"Municipality(Nagar Palika)"
+],
+"296934": [
+"RJ",
+"Baran",
+"Atru",
+"अटरू",
+"Municipality(Nagar Palika)"
+],
+"296936": [
+"RJ",
+"Sawai Madhopur",
+"Bamanwas",
+"बामनवास",
+"Municipality(Nagar Palika)"
+],
+"297006": [
+"MH",
+"Solapur",
+"Pandharpur",
+"पंढरपूर",
+"Municipality"
+],
+"297092": [
+"MH",
+"Chhatrapati Sambhajinagar",
+"Sillod Municipal Council",
+"सिल्लोड नगरपरिषद",
+"Municipality"
+],
+"297099": [
+"GJ",
+"Kachchh",
+"Mundra-Baroi",
+"Mundra-Baroi",
+"Municipality"
+],
+"297114": [
+"MP",
+"Sagar",
+"Bandri",
+"बाँदरी",
+"Town Panchayat"
+],
+"297116": [
+"MP",
+"Sagar",
+"Malthone",
+"मालथौन",
+"Town Panchayat"
+],
+"297118": [
+"MP",
+"Barwani",
+"Niwali Bujurg",
+"निवाली बुजुर्ग ",
+"Town Panchayat"
+],
+"297119": [
+"MP",
+"Barwani",
+"Thikri",
+"ठीकरी",
+"Town Panchayat"
+],
+"297136": [
+"MP",
+"Umaria",
+"Manpur (Umaria)",
+"मानपुर (उमरिया)",
+"Town Panchayat"
+],
+"297866": [
+"MH",
+"Gadchiroli",
+"Municipal Council Armori",
+"नगर परिषद आरमोरी ",
+"Municipality"
+],
+"297930": [
+"MP",
+"Panna",
+"Gunnor",
+"गुन्नौर",
+"Town Panchayat"
+],
+"298888": [
+"MH",
+"Pune",
+"Dehu",
+"देहू",
+"Nagar Panchayat"
+],
+"298893": [
+"MH",
+"Solapur",
+"Mahalung Shripur",
+"Mahalung Shripur",
+"Municipality"
+],
+"298902": [
+"MH",
+"Chandrapur",
+"Ghugus",
+"Ghugus",
+"Municipality"
+],
+"298917": [
+"MP",
+"Sagar",
+"Bilhara",
+"बिलहरा",
+"Town Panchayat"
+],
+"298918": [
+"MP",
+"Harda",
+"Sirali",
+"Sirali",
+"Town Panchayat"
+],
+"298919": [
+"MP",
+"Betul",
+"Ghodadongri",
+"Ghodadongri",
+"Town Panchayat"
+],
+"298920": [
+"MP",
+"Betul",
+"Shahpur",
+"Shahpur",
+"Town Panchayat"
+],
+"298921": [
+"MP",
+"Shivpuri",
+"Rannod",
+"Rannod",
+"Town Panchayat"
+],
+"298922": [
+"MP",
+"Mandsaur",
+"Bhensoda",
+"Bhensoda",
+"Town Panchayat"
+],
+"298923": [
+"MP",
+"Bhind",
+"Roun",
+"रौन",
+"Town Panchayat"
+],
+"298924": [
+"MP",
+"Bhind",
+"Malanpur",
+"Malanpur",
+"Town Panchayat"
+],
+"298925": [
+"MP",
+"Rewa",
+"Dabhaura",
+"Dabhaura",
+"Town Panchayat"
+],
+"298926": [
+"MP",
+"Shahdol",
+"Bakho",
+"Bakho",
+"Town Panchayat"
+],
+"298927": [
+"MP",
+"Anuppur",
+"Dola",
+"Dola",
+"Town Panchayat"
+],
+"298928": [
+"MP",
+"Anuppur",
+"Doomar Kachhar",
+"Doomar Kachhar",
+"Town Panchayat"
+],
+"298931": [
+"MP",
+"Khargone (West Nimar)",
+"Bistan",
+"Bistan",
+"Town Panchayat"
+],
+"298932": [
+"MP",
+"Seoni",
+"Chhapara",
+"Chhapara",
+"Town Panchayat"
+],
+"298933": [
+"MP",
+"Seoni",
+"Keolari",
+"Keolari",
+"Town Panchayat"
+],
+"298934": [
+"MP",
+"Sagar",
+"Surkhi",
+"Surkhi",
+"Town Panchayat"
+],
+"298994": [
+"RJ",
+"Bharatpur",
+"Uchchain",
+"Uchchain",
+"Municipality(Nagar Palika)"
+],
+"298995": [
+"RJ",
+"Deeg",
+"Sikri",
+"Sikri",
+"Municipality(Nagar Palika)"
+],
+"299252": [
+"MP",
+"Ashoknagar",
+"Piprai",
+"पिपरई ",
+"Town Panchayat"
+],
+"299255": [
+"MP",
+"Guna",
+"Madhusudangarh",
+"मधुसूदनगढ़  ",
+"Town Panchayat"
+],
+"299278": [
+"MP",
+"Anuppur",
+"Rajnagar Bangawan",
+"राजनगर बनगवां ",
+"Town Panchayat"
+],
+"299289": [
+"MP",
+"Gwalior",
+"Mohna",
+"मोहना ",
+"Town Panchayat"
+],
+"299299": [
+"MP",
+"Shivpuri",
+"Magroni",
+"मगरोनी ",
+"Town Panchayat"
+],
+"299534": [
+"RJ",
+"Didwana-Kuchaman",
+"Borawar",
+"बोरावड़",
+"Municipality(Nagar Palika)"
+],
+"299535": [
+"RJ",
+"Khairthal-Tijara",
+"Kotkasim",
+"Kotkasim",
+"Municipality(Nagar Palika)"
+],
+"299536": [
+"RJ",
+"Alwar",
+"Govindgarh",
+"गोविन्दगढ़ ",
+"Municipal Council"
+],
+"299753": [
+"RJ",
+"Bikaner",
+"Khajuwala",
+"खाजूवाला",
+"Municipality(Nagar Palika)"
+],
+"299757": [
+"RJ",
+"Balotra",
+"Siwana",
+"सिवाना",
+"Municipality(Nagar Palika)"
+],
+"299764": [
+"RJ",
+"Nagaur",
+"Jayal",
+"Jayal",
+"Municipality(Nagar Palika)"
+],
+"299765": [
+"RJ",
+"Dausa",
+"Mandawar",
+"Mandawar",
+"Municipality(Nagar Palika)"
+],
+"299784": [
+"RJ",
+"Jodhpur",
+"Balesar Satta",
+"Balesar Satta",
+"Municipality(Nagar Palika)"
+],
+"299804": [
+"MP",
+"Anuppur",
+"Bargawan (Amlai)",
+"बरगवाँ (अमलाई)",
+"Town Panchayat"
+],
+"299825": [
+"RJ",
+"Sawai Madhopur",
+"Bonli",
+"Bonli",
+"Municipality(Nagar Palika)"
+],
+"299934": [
+"RJ",
+"Khairthal-Tijara",
+"Tapukara",
+"Tapukara",
+"Municipality(Nagar Palika)"
+],
+"299935": [
+"RJ",
+"Kotputli-Behror",
+"Neemrana",
+"Neemrana",
+"Municipal Council"
+],
+"299936": [
+"RJ",
+"Bhilwara",
+"Hameergarh",
+"Hameergarh",
+"Municipality(Nagar Palika)"
+],
+"299937": [
+"RJ",
+"Hanumangarh",
+"Tibbi",
+"Tibbi",
+"Municipality(Nagar Palika)"
+],
+"299941": [
+"RJ",
+"Sikar",
+"Danta",
+"Danta",
+"Municipality(Nagar Palika)"
+],
+"299942": [
+"RJ",
+"Pratapgarh",
+"Dhariawad",
+"Dhariawad",
+"Municipality(Nagar Palika)"
+],
+"299974": [
+"RJ",
+"Kotputli-Behror",
+"Bardod",
+"Bardod",
+"Municipality(Nagar Palika)"
+],
+"299976": [
+"RJ",
+"Nagaur",
+"Basni",
+"Basni",
+"Municipality(Nagar Palika)"
+],
+"299977": [
+"RJ",
+"Sikar",
+"Ajeetgarh",
+"Ajeetgarh",
+"Municipality(Nagar Palika)"
+],
+"300027": [
+"MH",
+"Raigad",
+"Pali",
+"पाली",
+"Nagar Panchayat"
+],
+"300085": [
+"MP",
+"Sagar",
+"Barodiyakalan",
+"बरोदियाकलां",
+"Town Panchayat"
+],
+"300321": [
+"RJ",
+"Jaipur",
+"Narayana",
+"Narayana",
+"Municipality(Nagar Palika)"
+],
+"300322": [
+"RJ",
+"Pali",
+"Marwar Junction",
+"Marwar Junction",
+"Municipality(Nagar Palika)"
+],
+"300344": [
+"RJ",
+"Alwar",
+"Bahadurpur",
+"Bahadurpur",
+"Municipality(Nagar Palika)"
+],
+"300347": [
+"RJ",
+"Alwar",
+"Baroda Meo",
+"Baroda Meo",
+"Municipality(Nagar Palika)"
+],
+"300350": [
+"RJ",
+"Jaipur",
+"Manoharpur",
+"Manoharpur",
+"Municipality(Nagar Palika)"
+],
+"300382": [
+"MH",
+"Solapur",
+"Angar",
+"अनगर",
+"Nagar Panchayat"
+],
+"300383": [
+"MH",
+"Solapur",
+"Akluj",
+"अकलूज",
+"Municipality"
+],
+"300384": [
+"MH",
+"Solapur",
+"Natepute",
+"नातेपुते",
+"Nagar Panchayat"
+],
+"300385": [
+"MH",
+"Solapur",
+"Vairag",
+"वैराग",
+"Nagar Panchayat"
+],
+"300386": [
+"MP",
+"Singrauli",
+"Sarai",
+"सरई ",
+"Town Panchayat"
+],
+"300387": [
+"MP",
+"Sagar",
+"Karrapur",
+"कर्रापुर ",
+"Town Panchayat"
+],
+"300388": [
+"MP",
+"Khandwa (East Nimar)",
+"Punasa",
+"पुनासा ",
+"Town Panchayat"
+],
+"300391": [
+"MH",
+"Pune",
+"Manchar",
+"मंचर",
+"Nagar Panchayat"
+],
+"300392": [
+"MH",
+"Chandrapur",
+"Bhisi",
+"भिसी",
+"Nagar Panchayat"
+],
+"300394": [
+"MH",
+"Pune",
+"Malegaon Budruk",
+"माळेगाव (बु.)",
+"Nagar Panchayat"
+],
+"300395": [
+"MP",
+"Singrauli",
+"Bargawan",
+"बरगवाँ ",
+"Town Panchayat"
+],
+"300410": [
+"MH",
+"Sangli",
+"Atpadi",
+"आटपाडी",
+"Nagar Panchayat"
+],
+"301078": [
+"MH",
+"Nagpur",
+"Besa Pipla Nagar Panchayat",
+"Besa Pipla Nagar Panchayat",
+"Nagar Panchayat"
+],
+"301085": [
+"MH",
+"Nagpur",
+"Bahadura Nagar Panchayat",
+"Bahadura Nagar Panchayat",
+"Nagar Panchayat"
+],
+"301086": [
+"MH",
+"Nagpur",
+"Kandri Kanhan Nagar Panchayat",
+"Kandri Kanhan Nagar Panchayat",
+"Nagar Panchayat"
+],
+"301161": [
+"GJ",
+"Kachchh",
+"Nakhatrana",
+"Nakhtrana",
+"Municipality"
+],
+"301405": [
+"RJ",
+"Jalore",
+"Ahore",
+"Ahore",
+"Municipality(Nagar Palika)"
+],
+"301406": [
+"RJ",
+"Dausa",
+"Lawan",
+"Lawan",
+"Municipal Council"
+],
+"301407": [
+"RJ",
+"Alwar",
+"Malakheda",
+"Malakheda",
+"Municipal Council"
+],
+"301408": [
+"RJ",
+"Udaipur",
+"Vallabhnagar",
+"Vallabhnagar",
+"Municipal Council"
+],
+"301409": [
+"RJ",
+"Jhunjhunu",
+"Singhana",
+"Singhana",
+"Municipal Council"
+],
+"301410": [
+"RJ",
+"Dausa",
+"Ramgarh Pachwara",
+"Ramgarh Pachwara",
+"Municipal Council"
+],
+"301411": [
+"RJ",
+"Dausa",
+"Baswa",
+"Baswa",
+"Municipality(Nagar Palika)"
+],
+"301412": [
+"RJ",
+"Phalodi",
+"Bap",
+"Bap",
+"Municipality(Nagar Palika)"
+],
+"301413": [
+"RJ",
+"Karauli",
+"Mandrayal",
+"Mandrayal",
+"Municipal Council"
+],
+"301414": [
+"RJ",
+"Bundi",
+"Dei",
+"Dei",
+"Municipality(Nagar Palika)"
+],
+"301415": [
+"RJ",
+"Alwar",
+"Kathumar",
+"Kathumar",
+"Municipal Council"
+],
+"301417": [
+"RJ",
+"Ajmer",
+"Sawar",
+"Sawar",
+"Municipal Council"
+],
+"301433": [
+"RJ",
+"Chittorgarh",
+"Akola",
+"आकोला",
+"Municipality(Nagar Palika)"
+],
+"301435": [
+"RJ",
+"Dausa",
+"Bhandarej",
+"भाण्‍डारेज",
+"Municipality(Nagar Palika)"
+],
+"301436": [
+"RJ",
+"Rajsamand",
+"Bhim",
+"Bhim",
+"Municipality(Nagar Palika)"
+],
+"301438": [
+"RJ",
+"Jaipur",
+"Dudu",
+"Dudu",
+"Municipal Council"
+],
+"301439": [
+"RJ",
+"Tonk",
+"Dooni",
+"Dooni",
+"Municipality(Nagar Palika)"
+],
+"301440": [
+"RJ",
+"Jaipur",
+"Fhagi",
+"Fhagi",
+"Municipality(Nagar Palika)"
+],
+"301442": [
+"RJ",
+"Hanumangarh",
+"Goluwala",
+"गोलुवाला",
+"Municipality(Nagar Palika)"
+],
+"301445": [
+"RJ",
+"Udaipur",
+"Mawali",
+"Mawali",
+"Municipal Council"
+],
+"301446": [
+"RJ",
+"Alwar",
+"Nauganwa",
+"Nauganwa",
+"Municipality(Nagar Palika)"
+],
+"301451": [
+"RJ",
+"Dausa",
+"Sikaray",
+"Sikaray",
+"Municipal Council"
+],
+"301453": [
+"RJ",
+"Kota",
+"Suket",
+"सुकेत",
+"Municipality(Nagar Palika)"
+],
+"301454": [
+"RJ",
+"Sawai Madhopur",
+"Vajirpur",
+"वजीरपुर",
+"Municipality(Nagar Palika)"
+],
+"301455": [
+"RJ",
+"Jaipur",
+"Vatika",
+"वाटिका",
+"Municipal Council"
+],
+"301460": [
+"RJ",
+"Baran",
+"Seeswali",
+"Seeswali",
+"Municipality(Nagar Palika)"
+],
+"301461": [
+"RJ",
+"Khairthal-Tijara",
+"Mundawar",
+"मुण्‍डावर",
+"Municipality(Nagar Palika)"
+],
+"301901": [
+"RJ",
+"Ajmer",
+"Tantoti",
+"",
+"Municipal Council"
+],
+"301905": [
+"RJ",
+"Kotputli-Behror",
+"Narayanpur",
+"",
+"Municipal Council"
+],
+"301906": [
+"RJ",
+"Nagaur",
+"Mertaroad",
+"",
+"Municipality(Nagar Palika)"
+],
+"301909": [
+"RJ",
+"Tonk",
+"Lambaharising",
+"",
+"Municipal Council"
+],
+"301911": [
+"RJ",
+"Jaipur",
+"Jamwa Ramgarh",
+"",
+"Municipal Council"
+],
+"301912": [
+"RJ",
+"Jhunjhunu",
+"Jakhal",
+"",
+"Municipal Council"
+],
+"301913": [
+"RJ",
+"Jhunjhunu",
+"Dundlod",
+"",
+"Municipal Council"
+],
+"301914": [
+"RJ",
+"Tonk",
+"Diggi",
+"",
+"Municipal Council"
+],
+"301915": [
+"RJ",
+"Bhilwara",
+"Bijoliya",
+"",
+"Municipal Council"
+],
+"302180": [
+"RJ",
+"Bikaner",
+"Napasar",
+"",
+"Municipal Council"
+],
+"302181": [
+"RJ",
+"Barmer",
+"Chohtan",
+"",
+"Municipal Council"
+],
+"302182": [
+"RJ",
+"Bikaner",
+"Lunkaransar",
+"",
+"Municipal Council"
+],
+"302204": [
+"RJ",
+"Balotra",
+"Gudhamalani",
+"",
+"Municipality(Nagar Palika)"
+],
+"302206": [
+"RJ",
+"Deeg",
+"Pahari ",
+"",
+"Municipal Council"
+],
+"302222": [
+"RJ",
+"Kotputli-Behror",
+"Mandhan",
+"",
+"Municipal Council"
+],
+"302249": [
+"RJ",
+"Pali",
+"Sojat Road",
+"",
+"Municipal Council"
+],
+"302253": [
+"RJ",
+"Jodhpur",
+"Tinwari",
+"तिवंरी",
+"Municipality(Nagar Palika)"
+],
+"302254": [
+"RJ",
+"Jalore",
+"Sayla",
+"सायला ",
+"Municipality(Nagar Palika)"
+],
+"302255": [
+"RJ",
+"Sikar",
+"Dhod",
+"धोद ",
+"Municipality(Nagar Palika)"
+],
+"302257": [
+"RJ",
+"Barmer",
+"Dhorimanna",
+"धोरीमन्ना ",
+"Municipality(Nagar Palika)"
+],
+"302258": [
+"RJ",
+"Jhunjhunu",
+"Sultana",
+"सुलताना ",
+"Municipality(Nagar Palika)"
+],
+"302259": [
+"RJ",
+"Tonk",
+"Peeplu",
+"पीपलू ",
+"Municipality(Nagar Palika)"
+],
+"302261": [
+"RJ",
+"Beawar",
+"Masuda",
+"मसूदा ",
+"Municipality(Nagar Palika)"
+],
+"302262": [
+"RJ",
+"Sawai Madhopur",
+"Khandar",
+"खण्डार ",
+"Municipality(Nagar Palika)"
+],
+"302263": [
+"RJ",
+"Ganganagar",
+"Gharsana",
+"घडसाना ",
+"Municipality(Nagar Palika)"
+],
+"302612": [
+"RJ",
+"Jhunjhunu",
+"Malsisar",
+"",
+"Municipal Council"
+],
+"302660": [
+"GJ",
+"Amreli",
+"DHARI",
+"",
+"Municipality"
+],
+"302662": [
+"GJ",
+"Morbi",
+"TANKARA",
+"",
+"Municipality"
+],
+"302800": [
+"RJ",
+"Jaipur",
+"Kaladera",
+"",
+"Municipal Council"
+],
+"302801": [
+"RJ",
+"Jhunjhunu",
+"Mandrela",
+"",
+"Municipality(Nagar Palika)"
+],
+"302802": [
+"RJ",
+"Jodhpur",
+"Mathaniya",
+"",
+"Municipality(Nagar Palika)"
+],
+"302813": [
+"RJ",
+"Jaipur",
+"Khejroli",
+"",
+"Municipal Council"
+],
+"302855": [
+"RJ",
+"Jhalawar",
+"Dag",
+"",
+"Municipal Council"
+],
+"302856": [
+"RJ",
+"Jhalawar",
+"Khanpur",
+"",
+"Municipal Council"
+],
+"302858": [
+"RJ",
+"Jhalawar",
+"Manoharthana",
+"",
+"Municipal Council"
+],
+"302860": [
+"RJ",
+"Beawar",
+"Raipur",
+"",
+"Municipal Council"
+],
+"302861": [
+"RJ",
+"Churu",
+"Sahwa",
+"",
+"Municipal Council"
+],
+"302862": [
+"RJ",
+"Dholpur",
+"Saipau",
+"",
+"Municipal Council"
+],
+"302863": [
+"RJ",
+"Balotra",
+"Samadari",
+"",
+"Municipal Council"
+],
+"302876": [
+"RJ",
+"Jhunjhunu",
+"Buhana",
+"",
+"Municipal Council"
+],
+"302889": [
+"RJ",
+"Pratapgarh",
+"Arnod",
+"",
+"Municipal Council"
+],
+"302890": [
+"RJ",
+"Sirohi",
+"Mandar",
+"",
+"Municipal Council"
+],
+"302896": [
+"RJ",
+"Dholpur",
+"Maniyan",
+"",
+"Municipal Council"
+],
+"302909": [
+"RJ",
+"Ajmer",
+"Pisangan",
+"",
+"Municipal Council"
+],
+"302919": [
+"RJ",
+"Didwana-Kuchaman",
+"Khatu Khurd",
+"",
+"Municipal Council"
+],
+"302921": [
+"RJ",
+"Jaipur",
+"Kanota",
+"",
+"Municipal Council"
+],
+"302924": [
+"RJ",
+"Bhilwara",
+"Banera",
+"",
+"Municipal Council"
+],
+"302942": [
+"RJ",
+"Nagaur",
+"Riyan Bari",
+"",
+"Municipal Council"
+],
+"302948": [
+"RJ",
+"Sikar",
+"Palsana",
+"",
+"Municipal Council"
+],
+"302962": [
+"RJ",
+"Karauli",
+"Suroth",
+"",
+"Municipal Council"
+],
+"302984": [
+"RJ",
+"Balotra",
+"Jasol",
+"",
+"Municipal Council"
+],
+"302998": [
+"RJ",
+"Bhilwara",
+"Bigod",
+"",
+"Municipal Council"
+],
+"303075": [
+"MH",
+"Nashik",
+"Pimpalgaon Baswant",
+"",
+"Municipality"
+],
+"303088": [
+"RJ",
+"Jaipur",
+"Jaipur",
+"जयपुर",
+"Municipal Corporation"
+],
+"303089": [
+"RJ",
+"Jodhpur",
+"Jodhpur",
+"जोधपुर",
+"Municipal Corporation"
+],
+"303090": [
+"RJ",
+"Kota",
+"Kota",
+"कोटा",
+"Municipal Corporation"
+],
+"303111": [
+"RJ",
+"Balotra",
+"Sindhari",
+"सिणधरी",
+"Municipality(Nagar Palika)"
+],
+"303112": [
+"RJ",
+"Bundi",
+"Hindoli",
+"हिंडोली",
+"Municipality(Nagar Palika)"
+],
+"303119": [
+"MH",
+"Akola",
+"Hiwarkhed",
+"",
+"Municipality"
+],
+"303126": [
+"MH",
+"Nagpur",
+"Bidgaon Tarodi Khurd Pandhurna",
+"",
+"Nagar Panchayat"
+],
+"303127": [
+"MH",
+"Nagpur",
+"Digdoh Devi Municipal Council",
+"",
+"Municipality"
+],
+"303128": [
+"MH",
+"Nagpur",
+"Godhani Railway",
+"",
+"Nagar Panchayat"
+],
+"303129": [
+"MH",
+"Nagpur",
+"Kondhali",
+"",
+"Nagar Panchayat"
+],
+"303130": [
+"MH",
+"Nagpur",
+"NIldoh",
+"",
+"Nagar Panchayat"
+],
+"303131": [
+"MH",
+"Nagpur",
+"Yerkheda",
+"",
+"Nagar Panchayat"
+],
+"303133": [
+"MH",
+"Dhule",
+"Pimpalner Nagar Pnchayat",
+"",
+"Nagar Panchayat"
+],
+"303134": [
+"MH",
+"Pune",
+"Fursungi Uruli Devachi",
+"फुरसुंगी -उरुळी देवाची ",
+"Municipality"
+],
+"305191": [
+"GJ",
+"Mahesana",
+"Bechar-Becharaji",
+"",
+"Municipality"
+],
+"305192": [
+"GJ",
+"Chhotaudepur",
+"Bodeli",
+"",
+"Municipality"
+],
+"305196": [
+"GJ",
+"Vadodara",
+"Vaghodiya",
+"વાઘોડિયા",
+"Municipality"
+],
+"305197": [
+"GJ",
+"Anand",
+"Tarapur",
+"તારાપુર ",
+"Municipality"
+],
+"305207": [
+"MH",
+"Gadchiroli",
+"Korchi",
+"कोरची ",
+"Nagar Panchayat"
+]
+}
+}
