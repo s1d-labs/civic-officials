@@ -10,7 +10,8 @@ level "zone": area = the zone the post names ("Surathkal Zone", "Zone 1"), else 
 say which wards a zone holds. Every other post is level "body" (area = the corporation): deputy commissioners, executive /
 assistant / junior engineers by wing, health officers and inspectors, revenue officers and inspectors, bill collectors, town
 planning. Clerical posts (first / second division assistants, office managers and assistants, stenographers, typists, PAs,
-programmers, accountants) are left out. Kannada posts get an English post from POSTS (post_regional keeps the Kannada).
+programmers, accountants) are kept too, with role "staff" and clerical true (before 2026-11-13 they were left out: Kalaburagi 24
+of 97 rows, every one with a name and a mobile). Kannada posts get an English post from POSTS (post_regional keeps the Kannada).
 Mangaluru's contact page (/en/contact-us) names its three zonal offices (Surathkal Zonal Office - 1, Lalbag - 2, Kadri - 3) with
 address and phone: read too for Mangaluru (payload "contact").
 One queue item = one corporation. Record ids: dept:ward3_kamrc_staff:<city>:<area slug>:<post slug>:<name slug>.
@@ -145,9 +146,10 @@ def parse(html, p, contact_html=None):
     for section, name, post, ph, pos in rows(html):
         name = re.sub(r"(?i)^(shri|smt|sri)\.?\s*$", "", name).strip()
         ph = re.sub(r"(\d{3,5})\s*-\s*(\d{6,8})", r"\1-\2", ph)
-        if not post or CLERICAL.search(post) or not (name or ph):
-            provenance.skipped('skip: not post or CLERICAL.search(post) or not (name or ph)')
+        if not post or not (name or ph):
+            provenance.skipped('skip: not post or not (name or ph)')
             continue
+        clerical = bool(CLERICAL.search(post))
         en = english(post) if KANNADA.search(post) else None
         post_en = en or post
         regional = post if en else None
@@ -163,8 +165,8 @@ def parse(html, p, contact_html=None):
         else:
             recs.append(_ward.record(MODULE, f"{city}:body:{_esw.slug(post_en)}:{_esw.slug(name) or len(recs)}", seen,
                                      level="body", area=body, post=post_en, post_regional=regional, name=name,
-                                     name_regional=name if kn_name else None, phone=ph, section=section or None, **kw,
-                                     src_pos=pos))
+                                     name_regional=name if kn_name else None, phone=ph, section=section or None,
+                                     **({"role": "staff", "clerical": True} if clerical else {}), **kw, src_pos=pos))
     if contact_html:
         for office, addr, ph, text, pos in zonal_offices(contact_html):
             zone = office.split(" Zonal")[0] + " Zone"
