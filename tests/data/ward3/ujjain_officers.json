@@ -1,0 +1,5 @@
+{"module": "ward3_ujjain", "payload": {"reader": "ward3_ujjain", "kind": "officers", "url": "https://nagarnigamujjain.org/hindi/officer.php", "state": "MP"},
+ "routes": {"https://nagarnigamujjain.org/hindi/officer.php": "ujjain_officer.html"},
+ "min_records": 9,
+ "expect": [{"post": "^Executive Engineer$", "name": "मालवीय", "level": "body"},
+            {"post": "Assistant Engineer \\(in charge\\)", "name": "परिहार", "level": "body"}]}

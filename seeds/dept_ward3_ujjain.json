@@ -1,0 +1,22 @@
+[
+ {
+  "key": "ward3_ujjain-zones",
+  "payload": {
+   "reader": "ward3_ujjain",
+   "kind": "zones",
+   "url": "https://nagarnigamujjain.org/hindi/contact.php",
+   "state": "MP",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ward3_ujjain-officers",
+  "payload": {
+   "reader": "ward3_ujjain",
+   "kind": "officers",
+   "url": "https://nagarnigamujjain.org/hindi/officer.php",
+   "state": "MP",
+   "route": "abroad"
+  }
+ }
+]
