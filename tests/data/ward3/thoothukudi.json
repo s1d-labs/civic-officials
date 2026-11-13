@@ -1,0 +1,35 @@
+{
+ "module": "ward3_thoothukudi",
+ "payload": {
+  "reader": "ward3_thoothukudi",
+  "url": "https://thoothukudicorporation.com/departments/zone",
+  "state": "TN"
+ },
+ "routes": {
+  "https://thoothukudicorporation.com/downloads/general-info-zones-and-wards": "thoothukudi_wards.html",
+  "https://thoothukudicorporation.com/departments/zone": "thoothukudi_zone.html",
+  "https://thoothukudicorporation.com/departments/sanitation": "thoothukudi_sanitation.html"
+ },
+ "min_records": 11,
+ "min_wards": 60,
+ "expect": [
+  {
+   "post": "Assistant Commissioner",
+   "name": "VENKATRAMAN",
+   "level": "zone",
+   "wards": [
+    "21",
+    "47"
+   ]
+  },
+  {
+   "post": "Sanitary Officer",
+   "name": "Rajasekaran",
+   "wards": [
+    "1",
+    "14",
+    "20"
+   ]
+  }
+ ]
+}
