@@ -210,3 +210,5 @@ def test_vacant_posts_and_police_headers_are_not_data_rows():
     assert not audit.person_row(vacant)
     assert not audit.person_row(["S.No", "Name of IPS Officer", "Rank", "Posted as", "CUG / Mobile No.", "Office No.", "Email Id"])
     assert audit.person_row(["6", "Barawal", "General (Woman)", "2", "GHEESA KANWAR", "BHERU SINGH", "F", "8990836618"])
+    # a vacant post with its CUG phone and office e-mail is kept (MVVNL: the reader makes a record of it)
+    assert audit.person_row(["1", "Vacant", "Superintending Engineer(D)", "Lucknow", "MAHANAGAR", "8004910763", "se.mahanagar@mvvnl.org"])

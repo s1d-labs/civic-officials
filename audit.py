@@ -71,7 +71,7 @@ HEADER_WORDS = {"name", "names", "designation", "post", "s no", "sno", "sl no", 
                 "phone", "email", "e-mail", "contact", "contact no", "mobile no", "phone no", "address", "office", "नाम", "पद",
                 "क्रम", "क्र", "मोबाइल", "फोन", "पदनाम", "क्रमांक", "officer", "name of officer", "name of the officer", "rank",
                 "posted as", "email id", "office no", "cug", "cug mobile no", "name of ips officer", "name of pps officer"}
-# a post that the source marks vacant names no person: such a row is not a data row (UP SEC winner lists: "पद रिक्त")
+# a post that the source marks vacant, with no phone or e-mail, names no person: not a data row (UP SEC lists: "पद रिक्त")
 VACANT = re.compile(r"(?i)(पद\s*रिक्त|^\s*रिक्त\s*$|^\s*vacant\s*$|\bpost\s+(?:is\s+)?vacant\b)")
 # words of posts, offices and places: a cell with one of them is not a person's name ("Executive Engineer", "Electricity Test Division")
 NOT_NAME = set("""engineer engineers officer officers division divisional circle electricity distribution department dept office offices
@@ -160,11 +160,14 @@ def is_header(cells):
 
 
 def person_row(cells):
-    """A data row: >= 3 filled cells and a phone, an e-mail or a name-like cell; header rows and vacant posts are not."""
+    """A data row: >= 3 filled cells and a phone, an e-mail or a name-like cell; header rows are not, nor vacant posts without
+    a phone or e-mail."""
     filled = [c for c in cells if c and c.strip()]
-    if len(filled) < 3 or is_header(filled) or any(VACANT.search(c) for c in filled):
+    if len(filled) < 3 or is_header(filled):
         return False
-    return has_contact(" | ".join(filled)) or any(name_like(c) for c in filled)
+    if has_contact(" | ".join(filled)):          # a vacant post with its CUG phone or office e-mail is still a row to keep
+        return True
+    return not any(VACANT.search(c) for c in filled) and any(name_like(c) for c in filled)
 
 
 # ---- sources
