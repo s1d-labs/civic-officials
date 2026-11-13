@@ -1,0 +1,15 @@
+[
+ {
+  "key": "vil_br_prd:ps_ea_ta_acc",
+  "payload": {
+   "reader": "vil_br_prd",
+   "url": "https://betastate.bihar.gov.in/biharprd/DyPageView.aspx?PageTitleID=3111",
+   "file_url": "https://betastate.bihar.gov.in/file_2/FileUpload/2024/May/07-May-2024/44/DyPage/787de287-61a0-482f-9f19-5404b680f4bc.pdf",
+   "host": "betastate.bihar.gov.in",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct",
+   "expected": 18800
+  }
+ }
+]
