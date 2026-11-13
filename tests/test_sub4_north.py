@@ -48,3 +48,42 @@ def test_sub4_jk_other_block_rows_dropped():
     m = mod("sub4_jk_rdd")
     html = (DATA / "sub4" / "jk_gp_chanum.html").read_text()
     assert m.build("Baramulla", "Boniyar", [("Chanum", "u", html)]) == []
+
+
+# ---------- Himachal Pradesh ----------
+
+def test_sub4_hp_seeds_and_media():
+    m = mod("sub4_hp_bdo")
+    assert json.loads((ROOT / "seeds" / "dept_sub4_hp.json").read_text()) == m.items()
+    url, date = m.media_url(json.loads((DATA / "sub4" / "hp_directory_page.json").read_text()))
+    assert url == "https://rural.hp.gov.in/cms/api/media/v1/view/698f0643d8e490600bb00966" and date == "2026-02-13"
+
+
+def test_sub4_hp_fetch():
+    m = mod("sub4_hp_bdo")
+    media = "https://rural.hp.gov.in/cms/api/media/v1/view/698f0643d8e490600bb00966"
+    get = fake_get({m.PAGE: "sub4/hp_directory_page.json", media: "sub4/hp_ddo_bdo.pdf"})
+    recs, files, why = m.fetch(m.items()[0]["payload"], get)
+    assert why == "" and [f[0] for f in files] == ["depts/sub4_hp_bdo/ddo-bdo-contacts.pdf"]
+    check_records(recs, "sub4_hp_bdo", "rural_development")
+    by = dict(recs)
+    ddo = [d for d in by.values() if d["level"] == "district"]
+    bdo = [d for d in by.values() if d["level"] == "block"]
+    assert len(ddo) == 12 and len(bdo) == 91 and sum(1 for d in bdo if d.get("vacant")) == 15
+    assert len({d["lgd_block_code"] for d in bdo if d.get("lgd_block_code")}) == 91
+    assert all(d["state"] == "HP" and d["src_url"] == media and d["last_updated"] == "2026-02-13" for d in by.values())
+    # names that wrap onto a second line, merged cells, continuation of a wrapped block name
+    assert by["dept:sub4_hp_bdo:kangra:dehra"]["name"] == "Vivek Kumar Chauhan"
+    assert by["dept:sub4_hp_bdo:kangra:indora"]["name"] == "Sudershan Singh"
+    assert (by["dept:sub4_hp_bdo:kangra:nagrota-bagwan"]["name"], by["dept:sub4_hp_bdo:kangra:nagrota-bagwan"]["lgd_block_code"]) \
+        == ("Latika Sejhpal", "158")
+    d = by["dept:sub4_hp_bdo:mandi:ddo"]
+    assert (d["name"], d["phone"], d["email"]) == ("Gopi Chand Pathak", "98055-51755, 01905-222191, 01905-22798",
+                                                    "manpodrda-hp@nic.in, podrdamandi@gmail.com")
+    assert by["dept:sub4_hp_bdo:shimla:ddo"]["email"] == "drdashi-hp@nic.in, itproshimla@gmail.com"
+    assert by["dept:sub4_hp_bdo:kullu:kullu"]["phone"] == "94182-04133, 70186-06762, 01902-222494"
+    assert by["dept:sub4_hp_bdo:shimla:narkanda"]["email"] == "developmentblock_narkanda@yahoo.com"
+    assert by["dept:sub4_hp_bdo:lahaul-and-spiti:kaza"]["lgd_block_code"] == "174"
+    k = by["dept:sub4_hp_bdo:kinnaur:ddo"]
+    assert k["vacant"] is True and "name" not in k and k["email"] == "drdakinhp@gmail.com, drdakin-hp@nic.in"
+    assert by["dept:sub4_hp_bdo:bilaspur:ghumarwin"]["src_pos"]["page"] == 1
