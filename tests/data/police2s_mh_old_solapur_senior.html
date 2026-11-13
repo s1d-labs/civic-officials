@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Senior Officers - Solapur Police</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --police-blue:#0b4d91;
+      --accent-blue:#4ac3ff;
+      --bg-soft:#f5f7fa;
+      --text-dark:#1a2a6c;
+      --text-muted:#555;
+      --card-bg:#ffffff;
+    }
+
+    body {
+      background: linear-gradient(180deg, #f7f9fc 0%, #eef3fa 100%);
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Language visibility */
+    body.marathi .lang-en { display:none !important; }
+    body.marathi .lang-mr { display:inline !important; }
+    body.english .lang-en { display:inline !important; }
+    body.english .lang-mr { display:none !important; }
+
+    /* ===== Breadcrumb ===== */
+    .breadcrumb {
+      background:#f5f7fb;
+      border-bottom:1px solid #e5e7eb;
+    }
+    .breadcrumb .page-wrap { display:flex;align-items:center;gap:10px; }
+    .breadcrumb ol { list-style:none;display:flex;gap:10px;flex-wrap:wrap;margin:0;padding:10px 0; }
+    .breadcrumb a { color:#0a3d62;text-decoration:none;font-weight:600; }
+    .breadcrumb li { display:flex;align-items:center;gap:10px;color:#334155;font-weight:600 }
+    .breadcrumb li:not(:last-child)::after { content:"/";color:#94a3b8 }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    /* ===== Search ===== */
+    .search-container {
+      background-color: #fff;
+      padding: 20px 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      margin: 25px 0;
+      text-align:center;
+    }
+    .search-box {
+      display:flex; justify-content:center; max-width:700px; margin:0 auto; flex-wrap:wrap;
+    }
+    .search-input {
+      flex:1;
+      padding:14px 18px;
+      border:2px solid #e1e5eb;
+      border-radius:8px 0 0 8px;
+      font-size:16px;
+      outline:none;
+      transition:0.2s;
+    }
+    .search-input:focus {
+      border-color:var(--police-blue);
+      box-shadow:0 0 0 3px rgba(11,77,145,0.15);
+    }
+    .search-btn {
+      background:linear-gradient(90deg,var(--police-blue),var(--accent-blue));
+      color:#fff; border:none; padding:0 25px;
+      border-radius:0 8px 8px 0;
+      cursor:pointer; font-size:16px;
+      transition:all .2s;
+    }
+    .search-btn:hover {
+      background:linear-gradient(90deg,var(--accent-blue),var(--police-blue));
+      transform:translateY(-1px);
+    }
+
+    /* ===== Officer Grid ===== */
+    .officers-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+      gap:25px;
+      margin-top:30px;
+    }
+
+    .officer-card {
+      position:relative;
+      background:var(--card-bg);
+      border-radius:15px;
+      box-shadow:0 4px 14px rgba(0,0,0,0.08);
+      overflow:hidden;
+      transition:all .3s ease;
+      border-top:6px solid var(--police-blue);
+    }
+
+    .officer-card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 10px 24px rgba(11,77,145,0.2);
+    }
+
+    .officer-img {
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(145deg,#eaf1fb,#ffffff);
+      padding:25px;
+    }
+
+    .officer-img img {
+      width:160px;
+      height:160px;
+      border-radius:50%;
+      object-fit:cover;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:transform 0.3s ease;
+    }
+
+    .officer-card:hover img { transform:scale(1.05); }
+
+    .officer-info {
+      padding:20px 25px 25px;
+      text-align:center;
+    }
+
+    .officer-info h2 {
+      color:var(--text-dark);
+      font-size:20px;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+
+    .officer-designation {
+      color:var(--police-blue);
+      font-weight:600;
+      margin-bottom:15px;
+      border-bottom:1px dashed #e3e6ec;
+      display:inline-block;
+      padding-bottom:5px;
+    }
+
+    .officer-contact {
+      margin-top:15px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:10px;
+    }
+
+    .contact-item {
+      display:flex;
+      align-items:center;
+      gap:10px;
+      color:var(--text-muted);
+      font-weight:500;
+      transition:color 0.2s;
+    }
+    .contact-item i {
+      color:var(--police-blue);
+      font-size:16px;
+      transition:transform .2s;
+    }
+    .contact-item:hover i {
+      transform:scale(1.2);
+      color:var(--accent-blue);
+    }
+    .contact-item a { color:inherit; text-decoration:none; }
+
+    /* ===== No Results ===== */
+    .no-results {
+      text-align:center;
+      padding:40px;
+      background:#fff;
+      border-radius:10px;
+      grid-column:1 / -1;
+      box-shadow:0 4px 12px rgba(0,0,0,0.05);
+    }
+    .no-results i {font-size:50px;color:#ccc;margin-bottom:10px;}
+    .no-results h3 {color:#555;}
+
+    @media (max-width:768px){
+      .search-box{flex-direction:column;}
+      .search-input{border-radius:8px;margin-bottom:10px;}
+      .search-btn{border-radius:8px;padding:12px;}
+      .officers-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+
+<body class="marathi">
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SOLAPUR CITY POLICE</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://solapurcitypolice.gov.in/public/assets/css/style.css">
+  <link rel="stylesheet" href="https://solapurcitypolice.gov.in/public/assets/css/style.enhanced.css">
+
+  <style>
+    /* ===========================
+       HEADER STYLES
+    ============================ */
+    header {
+      background: #001B44; /* Dark Blue */
+      color: #fff;
+      font-family: 'Noto Sans', sans-serif;
+    }
+
+    /* Language toggle */
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding-left: 15px;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    .lang-toggle button {
+      border: none;
+      background: #fff;
+      color: #003399;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      font-size: 0.9rem;
+    }
+
+    .lang-toggle button.active {
+      background: #003399;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+
+    .lang-toggle span.sep {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* Police Station Dropdown */
+    .station-select select {
+      background: #fff;
+      border: none;
+      color: #003399;
+      font-weight: 600;
+      border-radius: 20px;
+      padding: 5px 14px;
+      outline: none;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: 0.2s ease;
+      min-width: 180px;
+    }
+
+    .station-select select:hover,
+    .station-select select:focus {
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    }
+
+    .station-select select option {
+      color: #003399;
+    }
+
+    /* Search Box Mobile Centering */
+    @media (max-width: 768px) {
+      .col-lg-3.col-md-3.col-12.text-center.mt-2.mt-md-0 {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+      }
+      
+      #search-bar {
+        float: none !important;
+        margin: 0 auto !important;
+      }
+    }
+
+    /* Language handling */
+    body.marathi .lang-en { display: none !important; }
+    body.marathi .lang-mr { display: inline-block !important; }
+
+    body.english .lang-mr { display: none !important; }
+    body.english .lang-en { display: inline-block !important; }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .lang-toggle button {
+        padding: 3px 8px;
+        font-size: 0.85rem;
+      }
+
+      .station-select select {
+        font-size: 0.85rem;
+        padding: 4px 10px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .lang-toggle, .station-select {
+        flex: 1 1 100%;
+        text-align: center;
+        justify-content: center;
+        margin: 4px 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="marathi">
+  <!-- Loader -->
+  <div id="site-loader">
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+  </div>
+
+  <div class="container-fluid p-0">
+    <!-- HEADER -->
+    <header class="bg-primary text-white">
+      <div class="container-fluid d-flex flex-wrap p-0">
+        <div class="row align-items-center w-100 no-gutters">
+          
+          <!-- Language toggle + Police Station Dropdown -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex align-items-center pl-3 py-2">
+            <div class="lang-toggle mr-3">
+              <button id="btnMr" class="active">मराठी</button>
+              <span class="sep">|</span>
+              <button id="btnEn">English</button>
+            </div>
+
+            <div class="station-select ml-3">
+              
+              <!-- Marathi Dropdown -->
+              <select onchange="window.location.href=this.value;" class="lang-mr">
+                <option value="" selected disabled>🔽 पोलीस स्टेशन निवडा</option>
+                                                      <option value="https://solapurcitypolice.gov.in/police-station/faujdar-chawadi-police-station">
+                      फौजदार चावडी पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/jail-road-police-station">
+                      जेल रोड पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/jodbhavi-peth-police-station">
+                      जोडभवानी पेठ पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/midc-police-station">
+                      एम.आय.डी.सी. पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/sadar-bazar-police-station">
+                      सदर बाजार पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/salgar-wasti-police-station">
+                      सलगर वस्ती पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/vijapur-naka-police-station">
+                      विजापूर नाका पोलीस स्टेशन
+                    </option>
+                                                                                  </select>
+
+              <!-- English Dropdown -->
+              <select onchange="window.location.href=this.value;" class="lang-en">
+                <option value="" selected disabled>🔽 Select Police Station</option>
+                                                      <option value="https://solapurcitypolice.gov.in/police-station/faujdar-chawadi-police-station">
+                      Faujdar Chawadi Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/jail-road-police-station">
+                      Jail Road Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/jodbhavi-peth-police-station">
+                      Jodbhavi Peth Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/midc-police-station">
+                      M.I.D.C. Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/sadar-bazar-police-station">
+                      Sadar Bazar Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/salgar-wasti-police-station">
+                      Salgar Wasti Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/vijapur-naka-police-station">
+                      Vijapur Naka Police Station
+                    </option>
+                                                                                  </select>
+            </div>
+          </div>
+
+          <!-- Logo -->
+          <div class="col-lg-6 col-md-5 col-12 text-center">
+            <a href="https://solapurcitypolice.gov.in" class="navbar-brand text-white w-100 d-flex justify-content-center align-items-center flex-wrap">
+              <img src="https://solapurcitypolice.gov.in/public/assets/images/Maharashtra_Police_Insignia_India_wHITE.png" alt="Logo" height="48" class="mx-2">
+              <span class="lang-en font-weight-bold" style="font-size:1.4rem;">SOLAPUR CITY POLICE</span>
+              <span class="lang-mr font-weight-bold" style="font-size:1.4rem;">सोलापूर शहर पोलीस</span>
+              <img src="https://solapurcitypolice.gov.in/public/assets/images/Maharashtra_Police_Insignia_India_wHITE.png" alt="Logo" height="48" class="mx-2">
+            </a>
+          </div>
+
+          <!-- Search -->
+          <div class="col-lg-3 col-md-3 col-12 text-center mt-2 mt-md-0">
+            <div id="search-bar" class="ml-2 float-right w-100">
+              <i id="search-icon" class="fas fa-search text-dark"></i>
+              <input id="search-input" placeholder="">
+              <i id="mic-icon" class="fas fa-microphone text-dark"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAVBAR -->
+<section class="reveal" id="section_about_us_two">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <a class="navbar-brand d-block d-sm-none font-weight-bold text-primary" href="#">
+      <i class="fas fa-shield-alt mr-1"></i> <span class="lang-en">Solapur Police</span><span class="lang-mr">सोलापूर पोलीस</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://solapurcitypolice.gov.in">
+            <span class="lang-en">Home</span>
+            <span class="lang-mr">मुख्यपृष्ठ</span>
+          </a>
+        </li>
+
+        <!-- About Us -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-toggle="dropdown">
+            <span class="lang-en">About Us</span>
+            <span class="lang-mr">आमच्याबद्दल</span>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/our-mission"><span class="lang-en">Our Mission</span><span class="lang-mr">आमचे ध्येय</span></a>
+            <a class="dropdown-item" href="https://solapurcitypolice.gov.in/senior_officers"><span class="lang-en">Senior Police Officers</span><span class="lang-mr">वरिष्ठ पोलीस अधिकारी</span></a>
+<a class="dropdown-item" href="https://solapurcitypolice.gov.in/jurisdiction">
+  <span class="lang-en">Jurisdiction</span>
+  <span class="lang-mr">कार्यक्षेत्र नकाशा</span>
+</a>
+</a>
+            <a class="dropdown-item" href="https://solapurcitypolice.gov.in/contact"><span class="lang-en">Contact Us</span><span class="lang-mr">संपर्क करा</span></a>
+          </div>
+        </li>
+
+        <!-- Police Corner -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="policeDropdown" data-toggle="dropdown">
+<span class="lang-en">Police Corner</span>
+<span class="lang-mr">पोलीस कॉर्नर</span>
+
+          </a>
+                <div class="dropdown-menu" aria-labelledby="policeDropdown">
+                  <a class="dropdown-item" href="https://solapurcitypolice.gov.in/press-release"><span class="lang-en">Press
+                      Release</span><span class="lang-mr">पत्रकार परिषद</span></a>
+                  <a class="dropdown-item" href="https://solapurcitypolice.gov.in/crime_review"><span class="lang-en">Crime
+                      Review</span><span class="lang-mr">गुन्हेगारी पुनरावलोकन</span></a>
+                  <a class="dropdown-item" href="https://solapurcitypolice.gov.in/poa-pcr-cases"><span class="lang-en">POA-PCR
+                      Cases</span><span class="lang-mr">POA-PCR प्रकरणे</span></a>
+                  <a class="dropdown-item" href="https://solapurcitypolice.gov.in/tender"><span class="lang-en">Tenders</span><span
+                      class="lang-mr">निविदा</span></a>
+                  <a class="dropdown-item" href="https://solapurcitypolice.gov.in/faqs"><span class="lang-en">FAQs</span><span
+                      class="lang-mr">वारंवार विचारले जाणारे प्रश्न</span></a>
+                  <!--<a class="dropdown-item" href="https://solapurcitypolice.gov.in/transfer-orders"><span class="lang-en">Transfer-->
+                  <!--    Orders</span><span class="lang-mr">बदली आदेश</span></a>-->
+                </div>
+        </li>
+
+        <!-- Services -->
+        <!--<li class="nav-item dropdown">-->
+        <!--  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" data-toggle="dropdown">-->
+        <!--    <span class="lang-en">Services</span>-->
+        <!--    <span class="lang-mr">सेवा</span>-->
+        <!--  </a>-->
+        <!--  <div class="dropdown-menu">-->
+        <!--    <a class="dropdown-item" href="#"><span class="lang-en">Passport Verification</span><span class="lang-mr">पासपोर्ट पडताळणी</span></a>-->
+        <!--    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/character_certificate"><span class="lang-en">Character Verification</span><span class="lang-mr">चरित्र पडताळणी</span></a>-->
+        <!--    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/tenant_verification"><span class="lang-en">Tenant Verification</span><span class="lang-mr">भाडेकरू पडताळणी</span></a>-->
+        <!--  </div>-->
+        <!--</li>-->
+
+        <!-- Citizen Corner -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="citizenDropdown" data-toggle="dropdown">
+<span class="lang-en">Citizens Corner</span>
+<span class="lang-mr">सिटिझन कॉर्नर</span>
+          </a>
+          <div class="dropdown-menu">
+                    <a class="dropdown-item"
+                      href="https://solapurcitypolice.gov.in/page/maharashtra-right-to-public-services-act%2C-2015"><span
+                        class="lang-en">Maharashtra Right to Service Act</span><span
+                        class="lang-mr">महाराष्ट्र हक्क सेवा अधिनियम</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/public/uploads/charter_citizen.pdf"><span class="lang-en">Charter of Citizens</span><span
+                        class="lang-mr">नागरिक सनद</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/accident_compensation"><span class="lang-en">Accident
+                        Compensation</span><span class="lang-mr">अपघात भरपाई</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/useful-websites"><span class="lang-en">Useful
+                        Websites</span><span class="lang-mr">उपयुक्त संकेतस्थळे</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/rti"><span class="lang-en">Right to
+                        Information</span><span class="lang-mr">माहितीचा अधिकार</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/police_recruitment"><span
+                        class="lang-en">Recruitment</span><span class="lang-mr">भरती</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/safety-tips"><span class="lang-en">Safety
+                        Tips</span><span class="lang-mr">सुरक्षा टिप्स</span></a>
+<a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/citizen-alert-wall">
+  <span class="lang-en">Citizens Alert Wall</span>
+  <span class="lang-mr">नागरिक अलर्ट वॉल</span>
+</a>
+<a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/cyber-alert-wall">
+  <span class="lang-en">Cyber Alert Wall</span>
+  <span class="lang-mr">सायबर अलर्ट वॉल</span>
+</a>
+                  <a class="dropdown-item" href="https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3223"> 
+  <span class="lang-en">Procession Permission</span> 
+  <span class="lang-mr">मिरवणुकीची परवानगी</span>
+</a>
+
+<a class="dropdown-item" href="https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3220"> 
+  <span class="lang-en">Loud Speaker Permission</span> 
+  <span class="lang-mr">लाउडस्पीकर परवानगी</span>
+</a>
+<a class="dropdown-item" href="https://solapurcitypolice.gov.in/confidential_info">
+    <span class="lang-en">Confidential Info</span>
+    <span class="lang-mr">गोपनीय माहिती</span>
+</a>
+<a class="dropdown-item" href="#">
+    <span class="lang-en">Feedback</span>
+    <span class="lang-mr">अभिप्राय</span>
+</a>
+
+          </div>
+        </li>
+
+        <!-- Special Units -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="specialUnitsDropdown" data-toggle="dropdown">
+            <span class="lang-en">Special Units</span>
+            <span class="lang-mr">विशेष शाखा</span>
+          </a>
+          <div class="dropdown-menu">
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/police-head-quarter">
+      <span class="lang-en">Police Head Quarter</span>
+      <span class="lang-mr">पोलीस मुख्यालय</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/control-room">
+      <span class="lang-en">Control Room</span>
+      <span class="lang-mr">नियंत्रण कक्ष</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/solapur-city-cyber-police-station">
+      <span class="lang-en">Solapur City Cyber Police Station</span>
+      <span class="lang-mr">सोलापूर शहर सायबर पोलीस ठाणे</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/women-help-cell">
+      <span class="lang-en">Bharosa Cell</span>
+      <span class="lang-mr">भरोसा सेल</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/cctns">
+      <span class="lang-en">CCTNS</span>
+      <span class="lang-mr">सीसीटीएनएस</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/economic-offence-wing">
+      <span class="lang-en">Economic Offence Wing</span>
+      <span class="lang-mr">आर्थिक गुन्हे शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/special-branch">
+      <span class="lang-en">Special Branch</span>
+      <span class="lang-mr">विशेष शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/foreigners-registration-office">
+      <span class="lang-en">Foreigners Registration Office</span>
+      <span class="lang-mr">परदेशी नोंदणी कार्यालय</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/quick-response-team">
+      <span class="lang-en">Quick Response Team</span>
+      <span class="lang-mr">त्वरित प्रतिसाद पथक</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/crime-branch">
+      <span class="lang-en">Crime Branch</span>
+      <span class="lang-mr">गुन्हे शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/police-welfare-branch">
+      <span class="lang-en">Police Welfare Branch</span>
+      <span class="lang-mr">पोलीस कल्याण शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/motor-transport-section">
+      <span class="lang-en">Motor Transport Branch</span>
+      <span class="lang-mr">वाहतूक शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/bdds">
+      <span class="lang-en">BDDS</span>
+      <span class="lang-mr">बीडीडीएस</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/wireless-branch">
+      <span class="lang-en">Wireless Branch</span>
+      <span class="lang-mr">वायरलेस शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/anti-terrorism-cell">
+      <span class="lang-en">Anti Terrorism Branch</span>
+      <span class="lang-mr">दहशतवाद विरोधी शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/anti-human-trafficking-unit">
+      <span class="lang-en">Anti Human Trafficking Unit</span>
+      <span class="lang-mr">मानव तस्करी प्रतिबंधक युनिट</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/reader-branch">
+      <span class="lang-en">Reader Branch</span>
+      <span class="lang-mr">रीडर शाखा</span>
+    </a>
+    
+<a class="dropdown-item" href="#">
+  <span class="lang-en">Traffic Branch</span>
+  <span class="lang-mr">वाहतूक शाखा</span>
+</a>
+
+          </div>
+        </li>
+
+        <!-- Dashboard -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://solapurcitypolice.gov.in/dashboard">
+            <span class="lang-en">Dashboard</span>
+            <span class="lang-mr">डॅशबोर्ड</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</section>
+  </div>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const btnMr = document.getElementById("btnMr");
+      const btnEn = document.getElementById("btnEn");
+
+      btnMr.addEventListener("click", () => {
+        document.body.classList.add("marathi");
+        document.body.classList.remove("english");
+        btnMr.classList.add("active");
+        btnEn.classList.remove("active");
+      });
+
+      btnEn.addEventListener("click", () => {
+        document.body.classList.add("english");
+        document.body.classList.remove("marathi");
+        btnEn.classList.add("active");
+        btnMr.classList.remove("active");
+      });
+    });
+  </script>
+
+  <script src="https://solapurcitypolice.gov.in/public/assets/js/main.enhanced.js" defer></script>
+</body>
+</html>
+  <div class="container">
+
+    <!-- ===== Breadcrumb ===== -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <div class="page-wrap">
+        <ol>
+          <li><a href="https://solapurcitypolice.gov.in"><i class="fas fa-home"></i> <span class="lang-en">Home</span><span class="lang-mr">मुख्यपृष्ठ</span></a></li>
+          <li><a href="#"><span class="lang-en">About Us</span><span class="lang-mr">आमच्याविषयी</span></a></li>
+          <li aria-current="page"><span class="lang-en">Senior Officers</span><span class="lang-mr">वरिष्ठ पोलीस अधिकारी</span></li>
+        </ol>
+      </div>
+    </nav>
+
+    <!-- ===== Search ===== -->
+    <div class="search-container">
+      <div class="search-box">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search officers by name, designation, or contact...">
+        <button id="searchBtn" class="search-btn"><i class="fas fa-search"></i> <span class="lang-en">Search</span><span class="lang-mr">शोधा</span></button>
+      </div>
+    </div>
+
+    <!-- ===== Officers Grid ===== -->
+    <div class="officers-grid" id="officersGrid">
+              <div class="officer-card" 
+          data-name="m. raj kumar" 
+          data-title="commissioner of police"
+          data-mobile="7798885173"
+          data-email="cp.solapur@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/1302_1756322675.jpeg"
+              alt="M. Raj Kumar">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">M. Raj Kumar</span>
+              <span class="lang-mr">एम. राजकुमार</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Commissioner Of Police</span>
+              <span class="lang-mr">पोलीस आयुक्त</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>7798885173</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>cp.solapur@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+              <div class="officer-card" 
+          data-name="vrushti jain" 
+          data-title="deputy commissioner of police (hq)"
+          data-mobile="7666031094"
+          data-email="cp.solapur.dcp.hq@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/HQ mam_1779804317.jpeg"
+              alt="Vrushti Jain">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">Vrushti Jain</span>
+              <span class="lang-mr">वृष्टी जैन</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Deputy Commissioner of Police (HQ)</span>
+              <span class="lang-mr">पोलीस उपायुक्त (मुख्यालय)</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>7666031094</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>cp.solapur.dcp.hq@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+              <div class="officer-card" 
+          data-name="pritam vikas yawalkar" 
+          data-title="deputy commissioner of police ( zone )"
+          data-mobile="9923473155"
+          data-email="dcp.zone.solapur@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/pritam_yawalkar_1779796165.jpeg"
+              alt="Pritam Vikas Yawalkar">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">Pritam Vikas Yawalkar</span>
+              <span class="lang-mr">प्रीतम विकास यावलकर</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Deputy Commissioner of Police ( Zone )</span>
+              <span class="lang-mr">पोलीस उप आयुक्त  परिमंडळ</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>9923473155</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>dcp.zone.solapur@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+              <div class="officer-card" 
+          data-name="ashwini patil" 
+          data-title="deputy commissioner of police (crime &amp; special branch)"
+          data-mobile="8451091833"
+          data-email="dcp.crime.solapur@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/DCP Crime_1760073899.jpeg"
+              alt="Ashwini Patil">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">Ashwini Patil</span>
+              <span class="lang-mr">अश्विनी पाटील</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Deputy Commissioner of Police (Crime &amp; Special Branch)</span>
+              <span class="lang-mr">पोलीस उपायुक्त (गुन्हे व विशेष शाखा)</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>8451091833</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>dcp.crime.solapur@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+              <div class="officer-card" 
+          data-name="dilip pawar" 
+          data-title="assistant commissioner of police (crime) solapur city"
+          data-mobile="9823266233"
+          data-email="acp.crime.solapur@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/dilip pawar sir_1783337540.jpg"
+              alt="Dilip Pawar">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">Dilip Pawar</span>
+              <span class="lang-mr">दिलीप पवार</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Assistant Commissioner of Police (Crime) Solapur City</span>
+              <span class="lang-mr">सहाय्यक पोलीस आयुक्त (गुन्हे) सोलापूर शहर</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>9823266233</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>acp.crime.solapur@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+              <div class="officer-card" 
+          data-name="arun ramchandra deokar" 
+          data-title="assistant commissioner of police (division - 1) solapur city"
+          data-mobile="9923388756"
+          data-email="acp.divone.solapur@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/WhatsApp Image 2026-08-05 at 11.13.25_1785925895.jpeg"
+              alt="Arun Ramchandra Deokar">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">Arun Ramchandra Deokar</span>
+              <span class="lang-mr">अरुण रामचंद्र देवकर</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Assistant Commissioner of Police (Division - 1) Solapur City</span>
+              <span class="lang-mr">सहाय्यक पोलीस आयुक्त (विभाग - १) सोलापूर शहर</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>9923388756</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>acp.divone.solapur@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+              <div class="officer-card" 
+          data-name="manojkumar madhavrao yadav" 
+          data-title="assistant commissioner of police (traffic) solapur city"
+          data-mobile="9823166636"
+          data-email="acp.traffic.solapur@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/ACP yadav Sir_1787834028.jpeg"
+              alt="Manojkumar Madhavrao Yadav">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">Manojkumar Madhavrao Yadav</span>
+              <span class="lang-mr">मनोजकुमार माधवराव यादव</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Assistant Commissioner of Police (Traffic) Solapur City</span>
+              <span class="lang-mr">सहाय्यक पोलीस आयुक्त (वाहतूक) सोलापूर शहर</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>9823166636</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>acp.traffic.solapur@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+              <div class="officer-card" 
+          data-name="surendra gajendra malale" 
+          data-title="assistant commissioner of police (administration) solapur city"
+          data-mobile="9307043845"
+          data-email="acp.adm.solapur@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/21_1756323151.png"
+              alt="Surendra Gajendra Malale">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">Surendra Gajendra Malale</span>
+              <span class="lang-mr">सुरेंद्र गजेन्द्र मलाले</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Assistant Commissioner of Police (Administration) Solapur City</span>
+              <span class="lang-mr">सहाय्यक पोलीस आयुक्त (प्रशासन) सोलापूर शहर</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>9307043845</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>acp.adm.solapur@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+              <div class="officer-card" 
+          data-name="vijayalakshmi kurri" 
+          data-title="assistant commissioner of police (division - 2) solapur city"
+          data-mobile="8888894236"
+          data-email="acp.divtwo.solapur@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/kurri madam_1783337688.jpg"
+              alt="Vijayalakshmi Kurri">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">Vijayalakshmi Kurri</span>
+              <span class="lang-mr">विजयलक्ष्मी कुर्री</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Assistant Commissioner of Police (Division - 2) Solapur City</span>
+              <span class="lang-mr">सहाय्यक पोलीस आयुक्त (विभाग - २) सोलापूर शहर</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>8888894236</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>acp.divtwo.solapur@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+              <div class="officer-card" 
+          data-name="sudhir ashok khiradkar" 
+          data-title="assistant commissioner of police (special branch) solapur city."
+          data-mobile="9423145361"
+          data-email="acp.sb.solapur@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/Khiradkar_1760074292_1785926103.jpg"
+              alt="Sudhir Ashok Khiradkar">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">Sudhir Ashok Khiradkar</span>
+              <span class="lang-mr">सुधीर अशोक खिराडकर</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Assistant Commissioner of Police (Special Branch) Solapur City.</span>
+              <span class="lang-mr">सहाय्यक पोलीस आयुक्त (विशेष शाखा) सोलापूर शहर.</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>9423145361</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>acp.sb.solapur@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+              <div class="officer-card" 
+          data-name="pratap dhondiram poman" 
+          data-title="assistant commissioner of police (control room) solapur city."
+          data-mobile="9765668099"
+          data-email="acp.control.solapur@mahapolice.gov.in">
+          
+          <div class="officer-img">
+            <img loading="lazy"
+              src="https://solapurcitypolice.gov.in/public/uploads/senior_officers/Adobe Express - file (4)_1760010587_1785925719.jpg"
+              alt="Pratap Dhondiram Poman">
+          </div>
+
+          <div class="officer-info">
+            <h2>
+              <span class="lang-en">Pratap Dhondiram Poman</span>
+              <span class="lang-mr">प्रताप धोंडीराम पोमन</span>
+            </h2>
+            <div class="officer-designation">
+              <span class="lang-en">Assistant Commissioner of Police (Control Room) Solapur City.</span>
+              <span class="lang-mr">सहाय्यक पोलीस आयुक्त (नियंत्रण कक्ष) सोलापूर शहर.</span>
+            </div>
+            <div class="officer-contact">
+              <div class="contact-item"><i class="fas fa-phone"></i> <span>9765668099</span></div>
+                            <div class="contact-item"><i class="fas fa-envelope"></i> <span>acp.control.solapur@mahapolice.gov.in</span></div>
+                          </div>
+          </div>
+        </div>
+          </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.querySelector('#searchInput');
+      const searchBtn = document.querySelector('#searchBtn');
+      const officerCards = document.querySelectorAll('.officer-card');
+      const noResults = document.querySelector('.no-results');
+
+      function filterAndSearch() {
+        const term = searchInput.value.toLowerCase().trim();
+        let visible = 0;
+        officerCards.forEach(card => {
+          const values = [
+            card.dataset.name,
+            card.dataset.title,
+            card.dataset.mobile,
+            card.dataset.email
+          ].join(' ');
+          if (values.includes(term) || term === '') {
+            card.style.display = 'block';
+            visible++;
+          } else card.style.display = 'none';
+        });
+        if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
+      }
+
+      searchBtn.addEventListener('click', filterAndSearch);
+      searchInput.addEventListener('keyup', filterAndSearch);
+    });
+  </script>
+</body>
+</html>

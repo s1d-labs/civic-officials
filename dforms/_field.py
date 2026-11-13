@@ -68,6 +68,8 @@ def header_kind(h):
         return "email", None
     if re.search(r"mobile|phone|contact|cug|\btel\b|telephone|\bcell\b|whatsapp|landline|\bmob\b", t) and not re.search(r"name", t):
         return "phone", None
+    if re.fullmatch(r"(?:patwari|kanungo|vao|lekhpal|talathi)\s+(?:no|number)\.?", t):     # Gurdaspur "patwari no" = his mobile
+        return "phone", None
     if SNO.match(t) and len(t) < 12:
         return "sno", None
     if COUNT_HEAD.search(t):

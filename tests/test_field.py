@@ -199,3 +199,16 @@ def test_seeds(module):
         assert p["reader"] == module and p["url"].startswith("http") and p.get("state"), it
     raw = json.loads((ROOT / "seeds" / f"dept_{module}.json").read_text())
     assert raw == items
+
+
+def test_revenue_gurdaspur_patwari_no_is_phone():
+    """Gurdaspur Kahnuwan tehsil PDF (Print To PDF, 2 pages, fetched 2026-11-13): "patwari Name | patwari no" (the mobile)."""
+    from test_dept_police import FakeGet
+    from dforms import field_revenue_s3waas as m
+    u = "https://cdn.s3waas.gov.in/s330bb3825e8f631cc6075c0f87bb4978c/uploads/2022/09/2022090572.pdf"
+    p = {"tag": "gurdaspur-pdf2", "url": u, "page": "https://gurdaspur.nic.in/list-of-patwaris-of-district-gurdaspur/", "post": "Patwari",
+         "state": "PB", "reader": "field_revenue_s3waas"}
+    recs, _, why = m.fetch(p, FakeGet({u: "field_revenue_gurdaspur_kahnuwan.pdf"}))
+    assert why == "" and len(recs) == 29 and all(d["name"] and d["phone"] for _, d in recs)
+    d = dict(recs)["dept:field_revenue_s3waas:cdn.s3waas.gov.in:gurdaspur-pdf2:1"]
+    assert d["name"] == "Sanjeev Kumar" and d["phone"] == "9417950200" and d["sub_area"] == "kahnuwan bangar" and d["src_pos"]["line"] == 2

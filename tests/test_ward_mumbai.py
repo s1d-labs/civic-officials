@@ -3,6 +3,7 @@ answers in tests/data/ward_mumbai/:
   ac_list.html       portal.mcgm.gov.in qlListofAsstMC, the officer table only (live answer 2026-11-11, "Last updated on 03/07/2026")
   docs_d.html        portal.mcgm.gov.in qlwrdd (D ward documents page), only its content iframe (live answer 2026-11-11)
   d_water.pdf        portal.mcgm.gov.in .../D Ward/Water Dept.pdf without font programs and tags (same text and positions)
+  water_t_*         T ward (2026-11-13): page iframe only, KM frame, WebDAV PROPFIND listing, "MCGM employee email id" PDF
   prabhag_topo.json  Vonter/city-officials mumbai/boundaries_bmc_prabhag.json, properties ward + prabhag_no only
 """
 import json
@@ -138,3 +139,34 @@ def test_seeds_match_items():
         assert seed == mod(name).items()
     keys = [i["key"] for i in json.loads((ROOT / "seeds" / "dept_ward2n_mumbai_water.json").read_text())]
     assert len(keys) == 24 and "ward2n_mumbai_water-gs" in keys and "ward2n_mumbai_water-kn" not in keys
+
+
+def test_water_t_ward_dav_and_maillist():
+    """T ward (2026-11-13): no water PDF; the frame names its KM folder, a WebDAV listing (saved: water_t_dav.xml, 21 files) shows
+    "MCGM employee email id for Ward T.pdf" (Excel 2013, 2015): its Water Works rows give post-mailbox records."""
+    import re
+    m = mod("ward2n_mumbai_water")
+    p = next(i["payload"] for i in m.items() if i["payload"]["ward"] == "T")
+    page = (D / "water_t_page.html").read_text()
+    frame = "https://portal.mcgm.gov.in" + m.km_frame(page)
+    fr = (D / "water_t_frame.html").read_text(encoding="utf-8", errors="replace")
+    assert m.folder_uri(fr) == "/documents/WardWiseInformation/WardT/"
+    dav = m.km_url("/irj/go/km/docs/documents/WardWiseInformation/WardT/")
+    ents = m.dav_entries((D / "water_t_dav.xml").read_text())
+    assert len(ents) == 21 and ("Solid Waste Management", ents[-1][1], True) == ents[-1]
+    mail = next(u for n, u, d in ents if "email" in n)
+    assert mail.endswith("/WardT/MCGM%20employee%20email%20id%20for%20Ward%20T.pdf")
+    get = fake_get({p["url"]: "water_t_page.html", frame: "water_t_frame.html", dav: "water_t_dav.xml", mail: "water_t_maillist.pdf"})
+    recs, files, why = m.fetch(p, get)
+    assert why == "" and [u for u, _ in get.calls] == [p["url"], frame, dav, mail]
+    assert get.calls[2][1]["Depth"] == "1"
+    r = by_id(recs)
+    assert len(recs) == 5 and all(d["mailbox_list"] and d["wing"] == "water" and not d.get("name") for d in r.values())
+    ae = r["dept:ward2n_mumbai_water:t:mail:aeww.t"]
+    assert ae["post"] == "Assistant Engineer (Water Works)" and ae["email"] == "aeww.t@mcgm.gov.in" and ae["role"] == "head"
+    assert ae["file_created"] == "2015-09-29" and ae["area"] == "T Ward" and ae["src_pos"]["page"] == 1 and ae["src_url"] == mail
+    assert {d["email"] for d in r.values()} == {"aeww.t@mcgm.gov.in", "seww01.t@mcgm.gov.in", "seww02.t@mcgm.gov.in",
+                                                 "jeww01.t@mcgm.gov.in", "jeww02.t@mcgm.gov.in"}
+    # no folder listing (PROPFIND failed): the old "<X> Ward/Water Dept.pdf" guess is tried
+    assert re.search(r"no water PDF found: .*/T%20Ward/Water%20Dept.pdf",
+                     m.fetch(p, fake_get({p["url"]: "water_t_page.html", frame: "water_t_frame.html"}))[2])

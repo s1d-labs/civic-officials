@@ -12,6 +12,14 @@ folder in an iframe (/irj/servlet/prt/portal/prtroot/pcd!3aportal_content!2fMCGM
 frame and takes every PDF whose name names water. When the frame gives no PDF it tries "<X> Ward/Water Dept.pdf" (the D ward
 pattern). Only the D ward file and the D ward page were sampled (2026-11-11, request limit): the frame listing and the other
 wards' file names are not checked yet. K/North and P/East have no documents page on the ward list.
+The KM folder view in the frame shows 15 files a page; the next pages need an htmlb form postback (tried 2026-11-13: the
+portal answers "Runtime Error" to a replayed postback). The frame names its folder ("StartUri=/documents/..."), and the same KM
+folder answers a WebDAV PROPFIND (Depth 1, HTTP 207, the "Web folder" access the portal offers on /irj/go/km/docs/...) with every
+file, so the reader lists the whole folder that way (one request) and reads every water PDF in it (and in a sub folder whose name
+names water). Wards without a water PDF: many ward folders hold "MCGM employee email id for Ward <X>.pdf" (an Excel 2013 export
+of 2015: Ward | Section | Title | Email address, one row per post mailbox, no names). Its "Water Works" rows give post-mailbox
+records (post + email, no name, mailbox_list True, file_created). Seen 2026-11-13: T, K/West, H/East have the list; N has neither
+file; T has no water PDF (21 files, NGO adverts).
 The portal needs a normal desktop browser User-Agent (owner's permission for portal.mcgm.gov.in and dm.mcgm.gov.in only,
 2026-11-11): ward2n_mumbai.UA. It answers from Germany.
 
@@ -88,6 +96,59 @@ def water_links(html):
         if WATER.search(unquote(u).rsplit("/", 1)[-1]) and u not in out:
             out.append(u)
     return out
+
+
+def folder_uri(frame_html):
+    """The KM folder the ward's frame shows ("/documents/WardWiseInformation/WardT/"), or None."""
+    m = re.search(r"StartUri=(/documents/[^*\"<>]+)", _html.unescape(frame_html or ""))
+    return m.group(1) if m else None
+
+
+def dav_entries(xml):
+    """[(name, url, is_folder)] of a WebDAV multistatus answer, without the folder itself (the first href)."""
+    hrefs = re.findall(r"<D:href>([^<]+)</D:href>", xml or "")
+    out = []
+    for h in hrefs[1:]:
+        h = _html.unescape(h)
+        out.append((unquote(h.rstrip("/").rsplit("/", 1)[-1]), km_url(h), h.endswith("/")))
+    return out
+
+
+def dav_list(get, uri):
+    r = get(km_url("/irj/go/km/docs" + uri), method="PROPFIND", headers={**UA, "Depth": "1"})
+    return (r, dav_entries(r.text)) if r is not None else (None, [])
+
+
+MAILLIST = re.compile(r"(?i)e-?\s?mail")
+MAILROW = re.compile(r"^\s*(\S.*?)\s{2,}(\S.*?)\s{2,}(\S.*?)\s{2,}([A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[a-z]{2,})\s*$")
+
+
+def mail_rows(content):
+    """[(section, title, email, src_pos)] of an "MCGM employee email id" list (layout text)."""
+    out = []
+    for pn, lno, line in _ward.pdf_lines(_ward.layout_pages(content)):
+        m = MAILROW.match(line)
+        if m:
+            out.append((_esw.clean(m.group(2)), _esw.clean(m.group(3)), m.group(4).lower(), provenance.line_pos(pn, lno, line)))
+    return out
+
+
+def parse_maillist(content, url, code, seen=None, created=None):
+    """Post-mailbox records for the Water Works rows of a ward's email list (no names on the list)."""
+    seen = set() if seen is None else seen
+    en = WARDS[code][0]
+    area = f"{en.replace(' ', '/', 1) if '/' in code else en} Ward"
+    recs = []
+    for sec, title, mail, pos in mail_rows(content):
+        if not WATER.search(sec):
+            continue
+        post = f"{title} (Water Works)" if "water" not in title.lower() else title
+        recs.append(_ward.record(MODULE, f"{slug(code)}:mail:{mail.split('@')[0]}", seen, body=BODY, lgd=LGD, state=STATE,
+                                 district=DISTRICT, level="ward", area=area, admin_ward=code, post=post, section=sec, email=mail,
+                                 wing="water", role="head" if title.startswith("Assistant Engineer") else "staff", mailbox_list=True,
+                                 source=url, file_created=created, src_pos=pos, method="pdf text (pdftotext -layout, else pypdf layout)",
+                                 src_url=url))
+    return recs
 
 
 def guesses(code):
@@ -298,7 +359,7 @@ def created_of(content):
 
 def fetch(p, get):
     code = p["ward"]
-    files, pdfs = [], list(p.get("pdfs") or [])
+    files, pdfs, lists = [], list(p.get("pdfs") or []), []
     if not pdfs:
         r = get(p["url"], headers=UA)
         if r is not None:
@@ -309,8 +370,19 @@ def fetch(p, get):
                 if f is not None:
                     files.append(_esw.keep(MODULE, f"{slug(code)}-folder", f.content))
                     pdfs += water_links(f.text)
+                    uri = folder_uri(f.text)
+                    if uri:                     # the whole folder (the frame shows 15 files a page)
+                        d, ents = dav_list(get, uri)
+                        if d is not None:
+                            files.append(_esw.keep(MODULE, f"{slug(code)}-folder-dav", d.content, "xml"))
+                        for name, u, is_dir in ents:
+                            if is_dir and WATER.search(name):
+                                d2, sub = dav_list(get, unquote(re.sub(r"^https?://[^/]+/irj/go/km/docs", "", u)))
+                                ents += [e for e in sub if not e[2]]
+                        pdfs += [u for name, u, is_dir in ents if not is_dir and name.lower().endswith(".pdf") and WATER.search(name)]
+                        lists += [u for name, u, is_dir in ents if not is_dir and name.lower().endswith(".pdf") and MAILLIST.search(name)]
     found = bool(pdfs)
-    pdfs = list(dict.fromkeys(pdfs)) or guesses(code)
+    pdfs = list(dict.fromkeys(pdfs)) or ([] if lists else guesses(code))
     recs, seen, tried = [], set(), []
     for i, u in enumerate(pdfs[:4]):
         a = get(u, headers=UA)
@@ -321,6 +393,16 @@ def fetch(p, get):
         recs += _ward.tag(parse(a.content, u, code, seen, created_of(a.content)), a, u)
         if recs and not found:
             break
+    if not recs:
+        for i, u in enumerate(dict.fromkeys(lists)):
+            a = get(u, headers=UA)
+            if a is None or not a.content.startswith(b"%PDF"):
+                tried.append(u)
+                continue
+            files.append(_esw.keep(MODULE, f"{slug(code)}-maillist-{i}", a.content, "pdf"))
+            recs += _ward.tag(parse_maillist(a.content, u, code, seen, created_of(a.content)), a, u)
+    if not recs and not pdfs and not lists:
+        return recs, files, "no water PDF and no employee email list in the ward's KM folder"
     why = "" if recs else (f"no rows in {len(pdfs) - len(tried)} PDF(s)" if len(tried) < len(pdfs[:4]) else
                            "no water PDF found: " + ", ".join(tried))
     return recs, files, why
