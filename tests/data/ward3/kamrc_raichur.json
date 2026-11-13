@@ -1,0 +1,25 @@
+{
+ "module": "ward3_kamrc_staff",
+ "payload": {
+  "reader": "ward3_kamrc_staff",
+  "url": "http://www.raichurcity.mrc.gov.in/en/city-staff",
+  "state": "KA",
+  "city": "raichur",
+  "india_only": true,
+  "route": "direct"
+ },
+ "routes": {
+  "http://www.raichurcity.mrc.gov.in/en/city-staff": "kamrc_raichur_city-staff.html"
+ },
+ "min_records": 34,
+ "expect": [
+  {
+   "post": "Zonal Commissioner",
+   "name": "Jaipal",
+   "level": "zone"
+  },
+  {
+   "post": "Junior Engineer"
+  }
+ ]
+}

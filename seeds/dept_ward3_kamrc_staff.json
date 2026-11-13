@@ -1,0 +1,36 @@
+[
+ {
+  "key": "ward3_kamrc_staff-kalaburagi",
+  "payload": {
+   "reader": "ward3_kamrc_staff",
+   "url": "http://www.kalaburagicity.mrc.gov.in/en/city-staff",
+   "state": "KA",
+   "city": "kalaburagi",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "ward3_kamrc_staff-mangaluru",
+  "payload": {
+   "reader": "ward3_kamrc_staff",
+   "url": "http://www.mangalurucity.mrc.gov.in/en/city-staff",
+   "state": "KA",
+   "city": "mangaluru",
+   "india_only": true,
+   "route": "direct",
+   "contact": "http://www.mangalurucity.mrc.gov.in/en/contact-us"
+  }
+ },
+ {
+  "key": "ward3_kamrc_staff-raichur",
+  "payload": {
+   "reader": "ward3_kamrc_staff",
+   "url": "http://www.raichurcity.mrc.gov.in/en/city-staff",
+   "state": "KA",
+   "city": "raichur",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

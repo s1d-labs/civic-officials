@@ -1,0 +1,32 @@
+{
+ "module": "ward3_kamrc_staff",
+ "payload": {
+  "reader": "ward3_kamrc_staff",
+  "url": "http://www.mangalurucity.mrc.gov.in/en/city-staff",
+  "state": "KA",
+  "city": "mangaluru",
+  "india_only": true,
+  "route": "direct",
+  "contact": "http://www.mangalurucity.mrc.gov.in/en/contact-us"
+ },
+ "routes": {
+  "http://www.mangalurucity.mrc.gov.in/en/city-staff": "kamrc_mangaluru_city-staff.html",
+  "http://www.mangalurucity.mrc.gov.in/en/contact-us": "kamrc_mangaluru_contact.html"
+ },
+ "min_records": 76,
+ "expect": [
+  {
+   "post": "Zonal Commissioner",
+   "name": "Balachandra",
+   "level": "zone"
+  },
+  {
+   "post": "Zonal Office",
+   "level": "zone"
+  },
+  {
+   "post": "Revenue Inspector",
+   "name": "Raju"
+  }
+ ]
+}
