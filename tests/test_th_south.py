@@ -138,3 +138,17 @@ def test_th_tn_officers_with_names_poonamallee():
     assert d["ASSISTANT REVENUE OFFICER"]["email"] == "commr.poonamallee@tn.gov.in"       # ",," repeats the row above
     assert d["SANITARY INSPECTOR"]["work"] == "BIRTH, DEATH AND SANITATION"
     assert d["MANAGER"]["vacant"] is True and not d["MANAGER"].get("name")
+
+
+def test_th_kl_seat_name_column_is_the_post():
+    """Shornur officials page, the full saved page (bucket copy c4a31ccf..., 2026-11-12): header "Sl No | Saet Name | Emp. Name |
+    Emp. PEN". Before, "Saet Name" was taken as the name column, no post column was found and the 36 officials were dropped
+    (1 office record). Now 36 officials + the office."""
+    import gzip
+    p = kl_item("shornurmunicipality")
+    html = gzip.decompress((DATA / "th_kl" / "shornur_officials_full.html.gz").read_bytes()).decode("utf-8")
+    recs = mod("th_kl").parse(html, p)[0]
+    people = [d for _, d in recs if d.get("name")]
+    assert len(recs) == 37 and len(people) == 36
+    assert people[0]["name"] == "RAJESH P S" and people[0]["post"] == "Secretary, Local Self Government Institution"
+    assert people[-1]["name"] == "MANEESHA M"

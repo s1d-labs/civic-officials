@@ -15,7 +15,10 @@ import re
 from dforms import _esw, _ward
 import provenance
 
-METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html table"
+# reader audit (audit.py): the zone page's people are in its label | value tables (7 on 2026-11-13: 4 Assistant Commissioners,
+# 3 Junior Engineers, all read); the blocks the audit sees are the site footer, no person
+AUDIT_LEAVES_OUT = r"^(?:big column|Copyright ©)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward3_thoothukudi"
 BODY, LGD, STATE, DISTRICT = "Thoothukudi City Municipal Corporation", "252970", "TN", "Thoothukudi"

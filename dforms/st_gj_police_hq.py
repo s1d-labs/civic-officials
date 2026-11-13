@@ -18,6 +18,9 @@ from dforms import _police, _state
 from dforms.police_gj import contact, norm, orgchart
 
 METHOD = "html page (org chart + designation contact table)"
+# reader audit (audit.py): a designation page names one officer (its contact table); the other blocks are the CMS's "send an
+# e-mail" / feedback forms (ઈ-મેઈલ કરો | પ્રતિ | તરફથી ..., પ્રતિભાવ | નામ | ઇ-મેલ ...), no person
+AUDIT_LEAVES_OUT = r"^(?:ઈ-મેઈલ કરો|પ્રતિભાવ)\s*(?:\||$)"
 
 M = "st_gj_police_hq"
 URL = "https://police.gujarat.gov.in/dgp/CMS.aspx?orgchart=true"

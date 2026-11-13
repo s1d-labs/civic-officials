@@ -23,7 +23,14 @@ METHOD = "html table (officials page of the body)"     # source trail (provenanc
 
 MODULE = "th_kl"
 STATE = "KL"
-COLS = [("name", r"name|പേര്"), ("post", r"designation|post|തസ്തിക|ഉദ്യോഗ"), ("phone", r"mob|phone|contact|tel|മൊബൈ|ഫോണ"),
+# reader audit (audit.py): pages without an officials table show only the site menus (blocks); their first piece is matched here
+AUDIT_LEAVES_OUT = (r"^(?:Birth Certificate|Marriage Certificate|First Appeal Authority|Budget Reports|AFS Reports|Localbody [^|]*|"
+                    r"Tourist Places|News|Notices|Institutions & Officials[^|]*|Knowledge Center|Attendance Register|"
+                    r"Elected Representatives|Services(?: & Certificates)?|Contact|Quick Links|State/ District Level Contacts|"
+                    r"Service Status|Plan Progress|Organizational Structure|Ward Committee[^|]*|About|Administration|Citizen|"
+                    r"Help & Support|Special Schemes)\s*(?:\||$)")
+# "Saet Name" / "Seat Name" (Shornur) is the post, "Emp. Name" the person: checked before the plain "name"
+COLS = [("post", r"^s(?:ea|ae)t\s*name"), ("name", r"name|പേര്"), ("post", r"designation|post|തസ്തിക|ഉദ്യോഗ"), ("phone", r"mob|phone|contact|tel|മൊബൈ|ഫോണ"),
         ("email", r"e-?\s?mail|ഇ-?\s?മെയി")]
 
 

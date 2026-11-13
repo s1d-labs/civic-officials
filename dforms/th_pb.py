@@ -21,6 +21,12 @@ from cforms.cr_pb import PLATFORM
 import provenance
 
 METHOD = "html cards (e-Nigam home page, .massage-card .name_overlay)"
+# reader audit (audit.py): the page lists every member (ward cards with phones: Ludhiana, Phagwara, Abohar); this reader keeps the
+# two heads only, and cforms/cr_pb.py (councillor:PB:<body>:<ward>) holds the members (checked 2026-11-13: Ludhiana wards 1, 2,
+# Phagwara ward 1, Abohar vice president, with the same phones). The platform's body switcher blocks ("<town> | House - ... |
+# Councillor - 50 | House Meetings - 0 | ...") hold no person.
+AUDIT_HEADS = "cforms.cr_pb"
+AUDIT_LEAVES_OUT = r"House Meetings - "
 
 MODULE = "th_pb"
 STATE = "PB"

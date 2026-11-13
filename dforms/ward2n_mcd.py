@@ -15,6 +15,9 @@ DEPARTMENT IN <ZONE>" whose header row names the columns (Administrative & Accou
 cells are cards "<strong>Name</strong><br>Post<br>(O) - phone (M) - mobile". parse_cells() reads it when parse() finds no
 Name / Designation table; section = the column heading (none for cells right of the last heading); src_pos {table, row, col}.
 Repeated cells (same post and name) are read once; "--" cells are empty.
+Third layout (West, 2026-11-12): the Deputy Commissioner's box, then one table per department whose first row is the department
+title (one cell across) and whose second row is the S. No. | Name | Designation | Phone | Mobile | e-mail header. Before
+2026-11-13 these tables were missed (header looked for in the first row only): 1 record (the box) of 72 officers.
 """
 import json
 import re
@@ -81,13 +84,18 @@ def parse(html, p, source=None):
         g = _esw.grid(t, pos=gp)
         if not g:
             continue
-        head = [c.lower() for c in g[0]]
-        if not any("name" in h for h in head) or not any("designation" in h for h in head):
+        # the header is the first row, or (West zone, 2026-11-12) the row under a title row ("Office of the Dy. Commissioner",
+        # "Assessment and Collection Department": one cell across the table), which then names the department
+        hi = next((i for i, r in enumerate(g[:3]) if any("name" in c.lower() for c in r) and
+                   any("designation" in c.lower() for c in r)), None)
+        if hi is None:
             continue
+        head = [c.lower() for c in g[hi]]
+        titles = {c for r in g[:hi] for c in r if c}
         sec = t.find_previous(class_="section-title")
-        dept = _esw.clean(sec.get_text()) if sec else ""
-        rows = [dict(zip(head, r)) for r in g[1:]]
-        for r, rpos in zip(rows, gp[1:]):
+        dept = _esw.clean(sec.get_text()) if sec else (_esw.clean(next(iter(titles))) if len(titles) == 1 else "")
+        rows = [dict(zip(head, r)) for r in g[hi + 1:]]
+        for r, rpos in zip(rows, gp[hi + 1:]):
             name = _esw.clean(_ward.col(r, "name"))
             post = _esw.clean(_ward.col(r, "designation"))
             phone = " , ".join(x for x in (_ward.col(r, "phone"), _ward.col(r, "mobile")) if re.search(r"\d{5}", x or ""))
@@ -190,6 +198,12 @@ def fetch(p, get):
     except ValueError:
         return [], files, "Key Contacts is not JSON"
     html = d.get("menuName") or d.get("menuContentHtml") or ""
-    recs = parse(html, p, source=url) or parse_cells(html, p, source=url)
+    recs = parse(html, p, source=url)
+    cells = parse_cells(html, p, source=url)
+    if recs:        # name / designation tables: the boxes on top (the Deputy Commissioner, the zone office) are read too
+        have = {rid for rid, _ in recs}
+        recs += [(rid, d) for rid, d in cells if d.get("src_pos", {}).get("selector") == ".innarbox" and rid not in have]
+    else:
+        recs = cells
     why = "" if recs else ("Key Contacts is a PDF: " + d["pdfPath"] if d.get("pdfPath") else "no officer table in Key Contacts")
     return recs, files, why

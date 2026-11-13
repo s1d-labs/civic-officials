@@ -88,3 +88,16 @@ def test_every_reader_has_a_case_and_a_seed():
 def test_seeds_unique_across_files():
     keys = [i["key"] for p in sorted((ROOT / "seeds").glob("dept_ward*.json")) for i in json.loads(p.read_text())]
     assert len(keys) == len(set(keys))
+
+
+def test_kamrc_staff_keeps_clerical_rows():
+    """Kalaburagi city staff page, the full saved page (tests/data/audit/ward3_kamrc_staff.html = bucket copy 9e20b975...): 97 staff
+    rows with a name (96 with a mobile). Before, the 24 clerical rows (office managers, office assistants ...) were left out (73)."""
+    from dforms import ward3_kamrc_staff as m
+    html = (DATA / "audit" / "ward3_kamrc_staff.html").read_text(encoding="utf-8")
+    recs = m.parse(html, {"city": "kalaburagi", "url": "http://www.kalaburagicity.mrc.gov.in/en/city-staff"})
+    assert len(recs) == 97 and len({r for r, _ in recs}) == 97
+    cl = [d for _, d in recs if d.get("clerical")]
+    assert len(cl) == 24 and all(d["role"] == "staff" and d.get("name") for d in cl)
+    assert sum(1 for d in cl if d.get("phone")) == 23         # one office manager has no number on the page
+    assert any(d["name"] == "ಶ್ರೀ ನೀಲಕಂಠರಾಯ" and d["phone"] == "9980881996" for d in cl)
