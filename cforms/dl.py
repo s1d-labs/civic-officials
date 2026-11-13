@@ -28,6 +28,9 @@ from cforms import hr
 import provenance
 
 METHOD = "ocr tesseract eng (one strip per ruled row) or pdf text (pdftotext -layout), by payload source"     # source trail (provenance.py): how this reader reads its sources
+# reader audit (audit.py): the Result Summary rows name the winner and the runner-up of each ward, and its first table is the
+# party-wise totals; the reader keeps the winner. Saved summary (2026-11-13): 250 wards "(n) <name>" = 250 records
+AUDIT_RESULTS = True
 
 BODY = "Municipal Corporation of Delhi"
 COLS = ["sr", "ward", "ward_name", "reservation", "name", "party"]
