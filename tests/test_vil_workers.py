@@ -112,7 +112,7 @@ def test_mn_awc_split_pypdf_spacing():
 
 
 def test_vil_seeds():
-    for f in ("dept_vil_kl_asha.json", "dept_vil_s3waas_workers.json", "dept_vil_mn_awc.json"):
+    for f in ("dept_vil_kl_asha.json", "dept_vil_s3waas_workers.json", "dept_vil_mn_awc.json", "dept_vil_uk_ddmp.json"):
         items = json.loads((ROOT / "seeds" / f).read_text())
         keys = [i["key"] for i in items]
         assert items and len(keys) == len(set(keys))
@@ -121,3 +121,38 @@ def test_vil_seeds():
             assert p["reader"].startswith("vil_") and p["url"].startswith("https://") and p["state"] and p["route"]
             mod(p["reader"])
     assert len(json.loads((ROOT / "seeds" / "dept_vil_kl_asha.json").read_text())) > 1000
+
+
+UK = "https://cdn.s3waas.gov.in/s3f770b62bc8f42a0b66751fe636fc6eb0/uploads/2021/06/"
+
+
+def uk(fmt, name):
+    url = UK + name
+    recs, files, why = mod("vil_uk_ddmp").fetch({"url": url, "format": fmt, "state": "UK"}, fake_get({url: f"vil_uk_ddmp_{fmt}.pdf"}))
+    assert why == "" and files[0][0] == f"depts/vil_uk_ddmp/dehradun-{fmt}.pdf.gz"
+    check(recs, "vil_uk_ddmp")
+    return dict(recs)
+
+
+def test_uk_aww_page1():
+    d = uk("aww", "2021060969.pdf")
+    assert collections.Counter(x["post"] for x in d.values()) == {"Anganwadi Worker": 26, "Anganwadi Helper": 17}
+    w = d["dept:vil_uk_ddmp:aww:kalsi-1"]
+    assert (w["name"], w["phone"], w["area"], w["awc_type"], w["project"], w["district_code"]) == (
+        "kastura", "8755663467", "koti parihar", "Mini AWC", "Kalsi", "05060")
+    assert not any(x.get("split_unsure") for x in d.values())
+
+
+def test_uk_asha_ward_carried():
+    d = uk("asha", "2021060975.pdf")
+    assert len(d) == 49 and {x["post"] for x in d.values()} == {"ASHA"}
+    m = d["dept:vil_uk_ddmp:asha:2"]
+    assert (m["name"], m["phone"], m["ward_no"], m["area"]) == ("Meena", "9411138943", "1", "Ward 1 Malsi")
+
+
+def test_uk_gram_prahari_krutidev():
+    d = uk("prahari", "2021060974.pdf")
+    assert len(d) == 66 and {x["dept"] for x in d.values()} == {"police"}
+    t = d["dept:vil_uk_ddmp:prahari:s1:1"]
+    assert (t["name"], t["phone"], t["age"], t["tehsil"]) == ("श्री टीकम सिंह", "9805272602", "40", "त्यूनी")
+    assert t["src_pos"]["page"] == 1 and "9805272602" in t["src_pos"]["line_text"]

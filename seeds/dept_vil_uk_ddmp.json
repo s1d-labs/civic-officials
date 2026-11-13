@@ -1,0 +1,51 @@
+[
+ {
+  "key": "vil_uk_ddmp:dehradun-aww",
+  "payload": {
+   "reader": "vil_uk_ddmp",
+   "url": "https://cdn.s3waas.gov.in/s3f770b62bc8f42a0b66751fe636fc6eb0/uploads/2021/06/2021060969.pdf",
+   "format": "aww",
+   "state": "UK",
+   "district": "Dehradun",
+   "page": "https://dehradun.nic.in/disaster-management/",
+   "in_archive": "no (cdn.s3waas.gov.in); the page that links it is",
+   "route": "abroad",
+   "expect": {
+    "rows": 1555,
+    "records_measured": 2500
+   }
+  }
+ },
+ {
+  "key": "vil_uk_ddmp:dehradun-asha",
+  "payload": {
+   "reader": "vil_uk_ddmp",
+   "url": "https://cdn.s3waas.gov.in/s3f770b62bc8f42a0b66751fe636fc6eb0/uploads/2021/06/2021060975.pdf",
+   "format": "asha",
+   "state": "UK",
+   "district": "Dehradun",
+   "page": "https://dehradun.nic.in/disaster-management/",
+   "in_archive": "no (cdn.s3waas.gov.in); the page that links it is",
+   "route": "abroad",
+   "expect": {
+    "records_measured": 499
+   }
+  }
+ },
+ {
+  "key": "vil_uk_ddmp:dehradun-prahari",
+  "payload": {
+   "reader": "vil_uk_ddmp",
+   "url": "https://cdn.s3waas.gov.in/s3f770b62bc8f42a0b66751fe636fc6eb0/uploads/2021/06/2021060974.pdf",
+   "format": "prahari",
+   "state": "UK",
+   "district": "Dehradun",
+   "page": "https://dehradun.nic.in/disaster-management/",
+   "in_archive": "no (cdn.s3waas.gov.in); the page that links it is",
+   "route": "abroad",
+   "expect": {
+    "records_measured": 136
+   }
+  }
+ }
+]
