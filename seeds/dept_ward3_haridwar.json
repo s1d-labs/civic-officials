@@ -1,0 +1,74 @@
+[
+ {
+  "key": "ward3_haridwar-health-department",
+  "payload": {
+   "reader": "ward3_haridwar",
+   "url": "https://nnharidwar.uk.gov.in/health-department/",
+   "state": "UK",
+   "page": "health-department"
+  }
+ },
+ {
+  "key": "ward3_haridwar-public-work-department",
+  "payload": {
+   "reader": "ward3_haridwar",
+   "url": "https://nnharidwar.uk.gov.in/public-work-department/",
+   "state": "UK",
+   "page": "public-work-department"
+  }
+ },
+ {
+  "key": "ward3_haridwar-property-tax-department",
+  "payload": {
+   "reader": "ward3_haridwar",
+   "url": "https://nnharidwar.uk.gov.in/property-tax-department/",
+   "state": "UK",
+   "page": "property-tax-department"
+  }
+ },
+ {
+  "key": "ward3_haridwar-street-light-section",
+  "payload": {
+   "reader": "ward3_haridwar",
+   "url": "https://nnharidwar.uk.gov.in/street-light-section/",
+   "state": "UK",
+   "page": "street-light-section"
+  }
+ },
+ {
+  "key": "ward3_haridwar-establishment-cell",
+  "payload": {
+   "reader": "ward3_haridwar",
+   "url": "https://nnharidwar.uk.gov.in/establishment-cell/",
+   "state": "UK",
+   "page": "establishment-cell"
+  }
+ },
+ {
+  "key": "ward3_haridwar-account-section",
+  "payload": {
+   "reader": "ward3_haridwar",
+   "url": "https://nnharidwar.uk.gov.in/account-section/",
+   "state": "UK",
+   "page": "account-section"
+  }
+ },
+ {
+  "key": "ward3_haridwar-piu-cell",
+  "payload": {
+   "reader": "ward3_haridwar",
+   "url": "https://nnharidwar.uk.gov.in/piu-cell/",
+   "state": "UK",
+   "page": "piu-cell"
+  }
+ },
+ {
+  "key": "ward3_haridwar-trade-license",
+  "payload": {
+   "reader": "ward3_haridwar",
+   "url": "https://nnharidwar.uk.gov.in/trade-license/",
+   "state": "UK",
+   "page": "trade-license"
+  }
+ }
+]

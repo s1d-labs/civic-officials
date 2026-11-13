@@ -1,0 +1,19 @@
+{
+ "module": "ward3_haridwar",
+ "payload": {
+  "reader": "ward3_haridwar",
+  "url": "https://nnharidwar.uk.gov.in/public-work-department/",
+  "state": "UK",
+  "page": "public-work-department"
+ },
+ "routes": {
+  "https://nnharidwar.uk.gov.in/public-work-department/": "haridwar_public-work-department.html"
+ },
+ "min_records": 3,
+ "expect": [
+  {
+   "post": "Junior Engineer",
+   "name": "Anshika"
+  }
+ ]
+}

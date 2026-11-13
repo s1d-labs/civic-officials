@@ -1,0 +1,24 @@
+{
+ "module": "ward3_haridwar",
+ "payload": {
+  "reader": "ward3_haridwar",
+  "url": "https://nnharidwar.uk.gov.in/health-department/",
+  "state": "UK",
+  "page": "health-department"
+ },
+ "routes": {
+  "https://nnharidwar.uk.gov.in/health-department/": "haridwar_health-department.html"
+ },
+ "min_records": 15,
+ "expect": [
+  {
+   "post": "Chief Sanitary Inspector",
+   "name": "Shrikant",
+   "level": "body"
+  },
+  {
+   "post": "Senior Medical Officer of Health",
+   "name": "Taliyan"
+  }
+ ]
+}
