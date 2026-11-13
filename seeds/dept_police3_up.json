@@ -1,0 +1,76 @@
+[
+ {
+  "key": "police3_up:hardoi-policedepartment",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://hardoi.nic.in/policedepartment/",
+   "state": "UP",
+   "district": "Hardoi"
+  }
+ },
+ {
+  "key": "police3_up:rampur-police-stations-in-rampur",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://rampur.nic.in/police-stations-in-rampur/",
+   "state": "UP",
+   "district": "Rampur"
+  }
+ },
+ {
+  "key": "police3_up:farrukhabad-public-utility-category-police-station",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://farrukhabad.nic.in/public-utility-category/police-station/",
+   "state": "UP",
+   "district": "Farrukhabad"
+  }
+ },
+ {
+  "key": "police3_up:shravasti-public-utility-category-police-stations",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://shravasti.nic.in/public-utility-category/police-stations/",
+   "state": "UP",
+   "district": "Shrawasti"
+  }
+ },
+ {
+  "key": "police3_up:sonbhadra-public-utility-category-police-station",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://sonbhadra.nic.in/public-utility-category/police-station/",
+   "state": "UP",
+   "district": "Sonbhadra"
+  }
+ },
+ {
+  "key": "police3_up:deoria-contact-details",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://deoria.nic.in/contact-details/",
+   "state": "UP",
+   "district": "Deoria",
+   "police_only": true
+  }
+ },
+ {
+  "key": "police3_up:maharajganj-police-directory",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://maharajganj.nic.in/police-directory/",
+   "state": "UP",
+   "district": "Mahrajganj"
+  }
+ },
+ {
+  "key": "police3_up:bijnor-directory",
+  "payload": {
+   "reader": "police_up",
+   "url": "https://bijnor.nic.in/directory/",
+   "state": "UP",
+   "district": "Bijnor",
+   "police_only": true
+  }
+ }
+]

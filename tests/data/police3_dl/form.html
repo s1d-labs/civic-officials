@@ -1,0 +1,2414 @@
+
+
+<html>
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page Title -->
+    <title>
+	DELHI POLICE Shanti Sewa Nyay
+</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/fevicon-img.png" />
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" /><link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" /><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet" />
+    <!-- Bootstrap Css -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- SlickNav Css -->
+    <link href="assets/css/slicknav.min.css" rel="stylesheet" />
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- Bootstrap Icons (header, footer and navigation) -->
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Font Awesome Icon Css-->
+    <link href="assets/css/fontawesome-free-6.7.2-web/css/all.min.css" rel="stylesheet" media="screen" />
+    <!-- Animated Css -->
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <!-- Magnific Css -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <!-- Main Custom Css -->
+    <!--<link href="css/custom.css" rel="stylesheet" media="screen" />-->
+    <!-- news css  -->
+    <!--    <link rel="stylesheet" href="css/news.css" />-->
+    <!-- common css  -->
+    <link rel="stylesheet" href="assets/css/common.css" /><link rel="stylesheet" href="assets/css/owl.carousel.min.css" /><link rel="stylesheet" href="assets/css/owl.theme.default.min.css" /><link rel="stylesheet" href="assets/css/fullcalendar.css" /><link rel="stylesheet" href="assets/css/datatables.net-bs4/css/dataTables.bootstrap4.css" /><link rel="stylesheet" href="assets/css/datatables.net-bs4/css/responsive.dataTables.min.css" /><link rel="stylesheet" href="assets/css/glightbox.min.css" /><link rel="stylesheet" href="assets/css/slick-theme.min.css" /><link rel="stylesheet" href="assets/css/slick.min.css" /><link rel="stylesheet" href="assets/css/common.css" /><link rel="stylesheet" href="assets/css/offerings-layout-fix.css" />
+    
+    <script type="text/javascript">
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        }, false);
+</script>
+    <a href="Home.Master"></a>
+    <script type="text/javascript">
+        document.addEventListener('keydown', function (e) {
+            if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) ||
+                (e.ctrlKey && e.keyCode == 85)) {
+                e.preventDefault();
+            }
+        }, false);
+
+
+</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const menuButton = document.getElementById("dpMobileMenuToggle");
+            const navigation = document.getElementById("dpNavigation");
+
+            if (menuButton && navigation) {
+
+                menuButton.addEventListener("click", function () {
+                    const isOpen = navigation.classList.toggle("dp-menu-open");
+
+                    menuButton.setAttribute("aria-expanded", isOpen);
+                    menuButton.setAttribute(
+                        "aria-label",
+                        isOpen ? "Close navigation menu" : "Open navigation menu"
+                    );
+
+                    const icon = menuButton.querySelector("i");
+
+                    if (icon) {
+                        icon.className = isOpen
+                            ? "bi bi-x-lg"
+                            : "bi bi-list";
+                    }
+                });
+
+                document.querySelectorAll(".dp-has-dropdown > .dp-nav-link")
+                    .forEach(function (link) {
+
+                        link.addEventListener("click", function (event) {
+                            if (window.innerWidth <= 991.98) {
+                                event.preventDefault();
+
+                                const parent = link.parentElement;
+                                const isOpen = parent.classList.toggle(
+                                    "dp-dropdown-open"
+                                );
+
+                                link.setAttribute("aria-expanded", isOpen);
+                            }
+                        });
+                    });
+            }
+
+            const accessibilityButton =
+                document.getElementById("dpAccessibility");
+
+            if (accessibilityButton) {
+                accessibilityButton.addEventListener("click", function () {
+                    alert("Accessibility options can be configured here.");
+                });
+            }
+        });
+    </script>
+
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WYTQBD7QL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1WYTQBD7QL');
+    </script>
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script>
+        function BindDataTable() {
+            if ($.fn.DataTable.isDataTable('#grddata')) {
+                $('#grddata').DataTable().destroy();
+            }
+            $('#grddata').prepend($("<thead></thead>").append($('#grddata tr:first')));
+
+            $('#grddata').DataTable({
+                "pageLength": 10
+            });
+        }
+    </script>
+    <style>
+        .table-bordered thead th,
+        .table-bordered th {
+            background-color: #003366 !important;
+            color: #ffffff !important;
+        }
+    </style>
+</head>
+<body class="tt-magic-cursor">
+    <form method="post" action="./telephonedirectory" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZN-Snz6bGvzu3uFAIgNA-VtQj_khzOPvKseEg4kaK5OShpx_0rhtz-oiPi2UpXCGGA2&amp;t=638942408805310136" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=1HpV3OVB0CaEXoaafcqmhl3joQIri9NCUYtWs1pS8oI7MuvnOk5xn8MKkvXe7J-s9AUU60zZALkHlBxOH6tRLdarl7bWPB3dEuaKRJ5CNMN4XFMgjyFHtP3dzblZ1Sufbvs0gLP1J3pvd-HEvomYzw2&amp;t=ffffffffe6692900" type="text/javascript"></script>
+<script src="Scripts/WebForms/MsAjax/MicrosoftAjax.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BDB132ED" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="ycKBKWDztH413R1WHM9uw5Y1MmD9y0TLNpZ5PjtDyZ+kwyp41iOUT9gHZsfWXRbWLuQ2/GpA1q+wodcOxDS+REBXDHBlQppCE3d4iIshKNQrivQGWGn1PoC3kWG3BoRPkPbP2UYBEf5AQANG5xFLNLhMzIrDS8qTv/zqqM6ILy0di/NchRPDrQn85IDoiLo8BNVc8jS/QfPIvrXRgw/nINwG3aXFWrklTRDAG/REfYPIDoVD9IJRh+RgynW720pAa7iUH6HBgPSF3J6sSq0yV1BzQOs1+PIl4KylmwbXHXMIScYbmPQVO7USuo/2FCzVT95gMOsZrct9IbVRK8gdpngDowe5pvekVqD0ct7i8t8fetJ+gJmDvIqmIBTv529Z/ShMsL5oOXBz/N43FFgIvGHL/I3eaCUaU8/KKezT3GgIs4sZcqcoAKbOinc82CYVoIe+bGfIRCV5ADVHntB6uE08NiP9zVlWWuvpr/GgsH96Bzcmh3pkku10WdGoCZDVWTplN7YvAVGKls1Dr2NYh9lqCsgbzvTXnBst7OcCiZMORLGo3lIZetQe/dF+yWwaCblqvikPVPezA47Xc5habCUBY2BZasnMrJUlMQM52Yi7602gU9a6KuVRAzR16WAoIYi7tEWHVeX755uBssxj3rtCW3Phw/MlyTz+5wOuFvAkdW8kbZ3Vws1Mwn6JsxwRq1Vd1W6/+mNS1B/0F/NGb/NEc1lTbapPCTLqEKLG/RR6JFc/cOFZgJV5Rny3POjRW4exdR2PcQtdql9u8JT0JJPysEP5Trl2SYjqDjPwAmQGORiCQKhzpwHneiQoUgQQ/wF5xrEit+mgeWeR+idw92yZqjiXNPiUNI8Vh99lVVpbk2u/VXWQuu7SeOVfQ6fOsvIoC8ebuvrf/SafIhhPU6dA1rG/WnmAPdUk8x+qtQ9NkkGl4FFe5YylHn6hOXdgArGXEHQF8pQyHPQIx6ElchfxARiD2UEpxGY33AWY+kU9D9pMKB6SyA8QF2fe9YeUzFLVgrP4foCXslomqyAmLlEgMZsuaRffidqpf83iFo844nJV91mhAUQ8PoYdEF7UKvVWLsN4Gll9++DZj2OTIh8y7qSslYylKhR7K0ceD8HP6fCmoQ/BZzopekVVaQiY4QcvB5+bs29Y4OhYh99PcF/03iJ+mUHpkVt0SnhJBYoGBdp9HdOremPWpSopXc8ptAUErnFaRtDS03dqjvSEgT2di5tDidTXyYnj7NzF25TvA/RXVthgigVvVt6UTpVMiSjlKMguqLeLBj5swYOTvF3FyuxgFCqOmKDtmgljZ5uZbmmSqagula0OBxEFApXKDLzh2ZIhZuB6oudNAj4eKx6fU3bB7qP9oyC6SC+ejebzx+g1beP+Taw8/WxO5eE9lXynqCqz+JEdFukyYcbibAsQ3hnXp9CnfD/iLPnpguorI21zMxUc1y7yQP2GdB/Ft4Bsm8/EKnw7Hb8JzhSt8MIXrwdO2yJGvfflt72rGnRER093Nn8Ig5hNoaFRDayr7Suy3dtQWO1pI/6uavczle32rXIcNtsB4A/7/0NpsEaAx42cgL4BLuBwGCsK3Qnu1m+bLxXGuo5+8InJKui3qQ==" />
+</div>
+        
+        <!-- Floating Social Media bar Starts -->
+        <div id="div_FloatingSocialMedia_En">
+
+            
+            
+        </div>
+        
+        <!-- social media -->
+        
+        
+        
+
+        <!-- social media end-->
+        <!-- ======= Top Bar ======= -->
+        <!-- ================= TOP BAR ================= -->
+        
+        <div class="delhi-topbar">
+            <div class="container-fluid">
+                <div class="topbar-content">
+
+                    <div class="topbar-emails">
+                        <a href="mailto:cpdelhi@delhipolice.gov.in"
+                            class="topbar-email">
+                            <span class="top-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </span>
+                            <span>cpdelhi[at]delhipolice[dot]gov[dot]in</span>
+                        </a>
+
+                        <span class="topbar-divider" aria-hidden="true"></span>
+
+                        <a href="mailto:delpol.service@delhipolice.gov.in"
+                            class="topbar-email">
+                            <span class="top-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </span>
+                            <span>delpol[dot]service[at]delhipolice[dot]gov[dot]in</span>
+                        </a>
+                    </div>
+
+                    <a href="tel:112" class="emergency-contact">
+                        <span class="top-icon phone-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </span>
+                        <span class="emergency-text" id="spnERSS">Emergency Response Support System
+                        </span>
+                        <span class="dp-erss-divider" aria-hidden="true"></span>
+                        <strong class="emergency-number">112</strong>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <!-- ================= DELHI POLICE HEADER ================= -->
+        <header id="header" class="delhi-header">
+            <div class="container-fluid">
+
+                <div class="header-main">
+
+
+                    <!-- Government Logo and Title -->
+                    <a href="index.aspx" class="brand-section">
+                        <img src="assets/img/logodelhi.png" alt="Delhi Police Home" class="government-emblem" />
+                        <div class="brand-text">
+                            <span class="government-title">Delhi Police</span>
+                            <strong class="ministry-title">SHANTI SEWA NYAYA</strong>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Search (div avoids nested forms inside ASP.NET form) -->
+                    <div class="header-search" role="search">
+                        <input type="search" id="dpHeaderSearch" class="search-input"
+                            placeholder="Search..." aria-label="Search website" />
+                        <button type="button" id="dpHeaderSearchButton" aria-label="Submit search">
+                            <i class="bi bi-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <!-- Partner Logos -->
+                    <div class="partner-logos">
+                        <a href="#" aria-label="Beti Bachao Beti Padhao">
+                            <img src="assets/img/BBBP.png" alt="Beti Bachao Beti Padhao" />
+                        </a>
+                        <a href="https://amritmahotsav.nic.in/" target="_blank" rel="noopener noreferrer" aria-label="Azadi Ka Amrit Mahotsav">
+                            <img src="assets/img/azadi-ka-amrit-mahotsav-hindi-logo.png" alt="Azadi Ka Amrit Mahotsav" />
+                        </a>
+                    </div>
+
+                    <!-- Accessibility and Existing ASP.NET Language Controls -->
+                    <div class="header-utilities">
+                        <a href="#main-content" class="utility-btn" aria-label="Skip to main content" title="Skip to Main Content">
+                            <i class="bi bi-box-arrow-in-right" aria-hidden="true"></i>
+                        </a>
+                        <span class="utility-divider"></span>
+                        <div class="language-wrapper">
+                            <a onclick="btn1Click();" id="btnlanguage" class="utility-btn language-toggle" aria-label="Change language" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$btnlanguage&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">अ A</a>
+                            
+                        </div>
+                        <span class="utility-divider"></span>
+                        <button type="button" class="utility-btn accessibility-btn" id="dpAccessibility"
+                            aria-label="Accessibility options" title="Accessibility">
+                            <i class="bi bi-universal-access" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Search and Menu Button -->
+                <div class="mobile-nav-controls">
+                    <div class="mobile-search" role="search">
+                        <input type="search" id="dpMobileSearch" placeholder="Search..." aria-label="Search website" />
+                        <button type="button" id="dpMobileSearchButton" aria-label="Submit search">
+                            <i class="bi bi-search" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <button class="mobile-menu-toggle" type="button" id="dpMobileMenuToggle"
+                        aria-label="Open navigation menu" aria-expanded="false" aria-controls="dpNavigation">
+                        <i class="bi bi-list" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- ================= ENGLISH NAVIGATION ================= -->
+        <nav class="delhi-navbar" aria-label="Main navigation">
+            <div class="container-fluid">
+
+                <ul class="nav-menu" id="mainNavigation">
+
+                    <li class="nav-item">
+                        <a href="index.aspx" class="nav-link active">Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item has-dropdown">
+                        <button type="button"
+                            class="nav-link dropdown-toggle-custom"
+                            aria-expanded="false">
+                            Organization
+                   
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+
+                        <ul class="nav-dropdown">
+                            <li><a href="history.aspx">About Us</a></li>
+                            <li><a href="DepartmentsofDelhiPolice.aspx">Departments of Delhi Police</a></li>
+                            <li><a href="telephonedirectory.aspx">Directory</a></li>
+                            <li><a href="https://martyrs.delhipolice.gov.in" target="_blank">Martyrs</a></li>
+                            <li><a href="citizens-charter.aspx">Citizen’s Charter</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item has-dropdown">
+                        <button type="button"
+                            class="nav-link dropdown-toggle-custom"
+                            aria-expanded="false">
+                            Offerings
+                   
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="Services.aspx">Services </a>
+                            </li>
+
+                            <li>
+                                <a href="Vacancies.aspx">Vacancies </a>
+                            </li>
+
+                            <li>
+                                <a href="https://tender.delhipolice.gov.in" target="_blank">Tenders </a>
+                            </li>
+
+                            <li>
+                                <a href="medals.aspx">Medals </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item has-dropdown">
+                        <button type="button"
+                            class="nav-link dropdown-toggle-custom"
+                            aria-expanded="false">
+                            Documents
+                   
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="actsrules.aspx">Acts And Rules </a>
+                            </li>
+
+                            <li>
+                                <a href="Canoti.aspx">Circulars / Orders </a>
+                            </li>
+
+
+                            <li>
+                                <a href="download.aspx">Downloads</a>
+                            </li>
+
+                            <li>
+                                <a href="NewCriminalLaws.aspx" target="_blank">New Criminal Laws</a>
+                            </li>
+
+                            <!-- <li>
+        <a href="delhi-police-gazette.php"> Delhi Police Gazette </a>
+    </li>
+    <li>
+        <a href="welfare.php"> Welfare </a>
+    </li>
+    <li>
+        <a href="caw-instructions.php"> CAW Instructions </a>
+    </li>
+    <li>
+        <a href="fastdar-scheme.php"> FastDAR Scheme </a>
+    </li>
+    <li>
+        <a href="law-ledger.php"> Law Ledger </a>
+    </li>
+    <li>
+        <a href="reflection-of-dpa.php"> Reflection of DPA </a>
+    </li>-->
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item has-dropdown">
+                        <button type="button"
+                            class="nav-link dropdown-toggle-custom"
+                            aria-expanded="false">
+                            Media
+                   
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="podcast.aspx">Podcast </a>
+                            </li>
+
+                            <li>
+                                <a href="pressrelease.aspx">Press Release </a>
+                            </li>
+
+                            <li>
+                                <a href="newsletters.aspx">Kissa Khakhi Ka </a>
+                            </li>
+
+                            <!-- <li>
+        <a href="advertisements-of-delhi-police.php"> Advertisements </a>
+    </li>
+
+    <li>
+        <a href="delhi-police-samachar.php"> Delhi Police Samachar </a>
+    </li>-->
+
+                            <li>
+                                <a href="photogallarylist.aspx">Gallery </a>
+                            </li>
+
+                            <li>
+                                <a href="InNews.aspx">In News </a>
+                            </li>
+
+                            <li>
+                                <a href="VideoGallery.aspx">Videos </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item has-dropdown">
+                        <button type="button"
+                            class="nav-link dropdown-toggle-custom"
+                            aria-expanded="false">
+                            Connect
+                   
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+
+                        <ul class="nav-dropdown nav-dropdown-end">
+                            <li>
+                                <a href="ContactUs.aspx">Contact Us </a>
+                            </li>
+
+                            <li>
+                                <a href="ImportantContact.aspx">Important Contact </a>
+                            </li>
+
+                            <li>
+                                <a href="telephonedirectory.aspx">Directory </a>
+                            </li>
+                            <li>
+                                <a href="rtimanual.aspx">RTI </a>
+                            </li>
+
+                            <li>
+                                <a href="https://publicfeedback.delhipolice.gov.in/index.aspx" target="_blank">Feedback
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <input type="hidden" name="ctl00$hdnLanguage" id="hdnLanguage" value="1" />
+        
+        <div>
+            <div id="main-content" tabindex="-1">
+                
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$MainContent$ScriptManager1', 'form1', ['tctl00$MainContent$UpdatePanel1','MainContent_UpdatePanel1'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+    <div id="MainContent_UpdatePanel1">
+	
+            <main>
+                <section class="internal-page-banner" aria-label="Page breadcrumb and title">
+                    <div class="container internal-page-banner__inner">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb internal-page-banner__breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.aspx">Home</a></li>
+                                <li class="breadcrumb-item"><a href="index.aspx">Organization</a></li>
+                            </ol>
+                        </nav>
+                        <h1 class="internal-page-banner__title">Directory</h1>
+                    </div>
+                </section>
+
+
+                
+
+
+
+
+
+
+                <section class="about-ministry-section">
+                    <div class="container-fluid">
+                        <div class="card new_card mb-3">
+                            <div class="card-body">
+                                <div id="searchForm">
+                                    <div class="row g-3 align-items-end">
+                                        <!-- Title -->
+                                        <div class="col-md-4">
+                                            <label class="form-label">District/Unit</label>
+                                            <select name="ctl00$MainContent$ddldistrict" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$ddldistrict\&#39;,\&#39;\&#39;)&#39;, 0)" id="MainContent_ddldistrict" class="form-control">
+		<option value="0">Select District/Unit</option>
+		<option value="1st Bn.DAP">1st Bn.DAP</option>
+		<option value="2nd Bn.DAP">2nd Bn.DAP</option>
+		<option value="3rd Bn.DAP">3rd Bn.DAP</option>
+		<option value="4th Bn.DAP">4th Bn.DAP</option>
+		<option value="5th Bn.DAP">5th Bn.DAP</option>
+		<option value="6th Bn.DAP">6th Bn.DAP</option>
+		<option value="7th Bn.DAP">7th Bn.DAP</option>
+		<option value="8th Bn.DAP">8th Bn.DAP</option>
+		<option value="ANTI RIOT CELL">ANTI RIOT CELL</option>
+		<option value="CCTNS/CIPA">CCTNS/CIPA</option>
+		<option value="CP/SPL. CsP">CP/SPL. CsP</option>
+		<option value="CENTRAL DISTRICT">CENTRAL DISTRICT</option>
+		<option value="CRIME BRANCH">CRIME BRANCH</option>
+		<option value="CRO">CRO</option>
+		<option value="CYBER CELL">CYBER CELL</option>
+		<option value="DE CELL">DE CELL</option>
+		<option value="EAST DISTRICT">EAST DISTRICT</option>
+		<option value="DWARKA">DWARKA</option>
+		<option value="ECONOMIC OFFENCES WING">ECONOMIC OFFENCES WING</option>
+		<option value="F.R.R.O.">F.R.R.O.</option>
+		<option value="FINGER PRINT BUREAU">FINGER PRINT BUREAU</option>
+		<option value="HEADQUARTERS">HEADQUARTERS</option>
+		<option selected="selected" value="HELPLINE">HELPLINE</option>
+		<option value="IGI AIRPORT">IGI AIRPORT</option>
+		<option value="IFSO">IFSO</option>
+		<option value="JT. CsP/ADDL. CsP">JT. CsP/ADDL. CsP</option>
+		<option value="LICENSING BRANCH">LICENSING BRANCH</option>
+		<option value="METRO">METRO</option>
+		<option value="MISSING PERSONS SQUAD">MISSING PERSONS SQUAD</option>
+		<option value="NARCOTICS &amp; CRIME PREVENTION  CELL">NARCOTICS &amp; CRIME PREVENTION  CELL</option>
+		<option value="NEW DELHI DISTRICT">NEW DELHI DISTRICT</option>
+		<option value="NORTH DISTRICT">NORTH DISTRICT</option>
+		<option value="NORTH-WEST DISTRICT">NORTH-WEST DISTRICT</option>
+		<option value="NORTH-EAST DISTRICT">NORTH-EAST DISTRICT</option>
+		<option value="OPERATIONS &amp; COMMUNICATION">OPERATIONS &amp; COMMUNICATION</option>
+		<option value="OUTER DISTRICT">OUTER DISTRICT</option>
+		<option value="OUTER NORTH DISTT">OUTER NORTH DISTT</option>
+		<option value="POLICE CONTROL ROOM">POLICE CONTROL ROOM</option>
+		<option value="Police Station Email-ID">Police Station Email-ID</option>
+		<option value="POLICE TRAINING COLLEGE/JHARODHA KALAN">POLICE TRAINING COLLEGE/JHARODHA KALAN</option>
+		<option value="POLICE TRAINING SCHOOL WAZIRABAD">POLICE TRAINING SCHOOL WAZIRABAD</option>
+		<option value="PROV. &amp; LOGISTICS">PROV. &amp; LOGISTICS</option>
+		<option value="PRO">PRO</option>
+		<option value="RAILWAYS">RAILWAYS</option>
+		<option value="RASHTRAPATI BHAWAN">RASHTRAPATI BHAWAN</option>
+		<option value="RESERACH CELL">RESERACH CELL</option>
+		<option value="ROHINI">ROHINI</option>
+		<option value="SECURITY">SECURITY</option>
+		<option value="SHAHDARA">SHAHDARA</option>
+		<option value="SOUTH DISTRICT">SOUTH DISTRICT</option>
+		<option value="SOUTH-EAST DISTRICT">SOUTH-EAST DISTRICT</option>
+		<option value="SOUTH-WEST DISTRICT">SOUTH-WEST DISTRICT</option>
+		<option value="SPECIAL BRANCH">SPECIAL BRANCH</option>
+		<option value="SPECIAL CELL">SPECIAL CELL</option>
+		<option value="SPECIAL POLICE UNIT FOR WOMEN &amp; CHILDREN">SPECIAL POLICE UNIT FOR WOMEN &amp; CHILDREN</option>
+		<option value="SPECIAL UNIT FOR NORTH EAST REGION (SPUNER)">SPECIAL UNIT FOR NORTH EAST REGION (SPUNER)</option>
+		<option value="TRAFFIC">TRAFFIC</option>
+		<option value="VIGILANCE">VIGILANCE</option>
+		<option value="WEST DISTRICT">WEST DISTRICT</option>
+
+	</select>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="form-label">Search</label>
+                                            <input name="ctl00$MainContent$txtsearch" type="text" id="MainContent_txtsearch" class="form-select" placeholder="Enter Search" />
+                                            <span id="MainContent_RegularExpressionValidator1" style="color:Red;font-size:XX-Large;font-style:italic;display:none;">Invalid Input</span>
+                                        </div>
+                                        <div class="col-md-2 d-flex gap-2">
+                                            <input type="submit" name="ctl00$MainContent$btn_search" value="Search" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btn_search&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btn_search" class="btn btn-primary" />
+                                            <input type="submit" name="ctl00$MainContent$btnClear" value="Clear" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$MainContent$btnClear&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="MainContent_btnClear" class="btn btn-secondary" />
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Directory Grid Card -->
+                        <div class="card new_card">
+                            <div class="card-body">
+
+                                <div class="table-responsive">
+
+                                    <div>
+                                        <span id="MainContent_lblnoofrecords">11  Record Found</span>
+                                    </div>
+
+                                    <div style="display: none;">
+                                        <select name="ctl00$MainContent$ddlrecord" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$MainContent$ddlrecord\&#39;,\&#39;\&#39;)&#39;, 0)" id="MainContent_ddlrecord" class="">
+		<option selected="selected" value="25">25</option>
+		<option value="50">50</option>
+		<option value="100">100</option>
+		<option value="200">200</option>
+
+	</select>
+
+                                    </div>
+
+
+                                    <div>
+		<table class="table table-bordered thlight table-striped bg123 table-hover" cellspacing="0" rules="all" border="1" id="grddata" style="border-collapse:collapse;">
+			<tr class="HeaderStyle">
+				<th class="serial-col" scope="col">S.No.</th><th class="office-col" scope="col">Office/Police Station</th><th class="telephone-col" scope="col">Telephone No.</th><th scope="col">Mobile No.</th><th scope="col">Fax No.</th><th scope="col">District/Unit</th><th scope="col">Email ID</th>
+			</tr><tr class="RowStyle">
+				<td class="serial-col">
+                                                    1
+                                                </td><td class="office-col">Cyber Complaints</td><td class="telephone-col">
+                                                    1930
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr><tr class="AltRowStyle">
+				<td class="serial-col">
+                                                    2
+                                                </td><td class="office-col">Senior Citizen</td><td class="telephone-col">
+                                                    1291
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr><tr class="RowStyle">
+				<td class="serial-col">
+                                                    3
+                                                </td><td class="office-col">Railways</td><td class="telephone-col">
+                                                    1512
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr><tr class="AltRowStyle">
+				<td class="serial-col">
+                                                    4
+                                                </td><td class="office-col">For uploading Audio and Video Clips</td><td class="telephone-col">
+                                                    9910641064
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr><tr class="RowStyle">
+				<td class="serial-col">
+                                                    5
+                                                </td><td class="office-col">Vigilance&#160; (Anti Corruption Helpline )&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</td><td class="telephone-col">
+                                                    1064
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr><tr class="AltRowStyle">
+				<td class="serial-col">
+                                                    6
+                                                </td><td class="office-col">Traffic</td><td class="telephone-col">
+                                                    1095, 25844444
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr><tr class="RowStyle">
+				<td class="serial-col">
+                                                    7
+                                                </td><td class="office-col">Missing Persons</td><td class="telephone-col">
+                                                    1094, 27892844
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr><tr class="AltRowStyle">
+				<td class="serial-col">
+                                                    8
+                                                </td><td class="office-col">Special Cell (North-Eastern States)</td><td class="telephone-col">
+                                                    1093
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr><tr class="RowStyle">
+				<td class="serial-col">
+                                                    9
+                                                </td><td class="office-col">Women in distress</td><td class="telephone-col">
+                                                    1091
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr><tr class="AltRowStyle">
+				<td class="serial-col">
+                                                    10
+                                                </td><td class="office-col">Eyes and Ears</td><td class="telephone-col">
+                                                    14547 (Toll Free)
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr><tr class="RowStyle">
+				<td class="serial-col">
+                                                    11
+                                                </td><td class="office-col">PCR</td><td class="telephone-col">
+                                                    112 (24X7) (Toll Free) 011-27491106,27491115
+                                                </td><td>&nbsp;</td><td>&nbsp;</td><td>
+                                                    <span class='unit-label'>
+                                                        HELPLINE
+                                                    </span>
+                                                </td><td>&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    </div>
+
+                 </div>
+                </section>
+            </main>
+        
+</div>
+
+            </div>
+        </div>
+        <footer id="footer">
+            <div id="footer_En" class="container">
+
+                <div class="row">
+                    <!-- Contact -->
+                    <div class="col-lg-4  footer-column">
+                        <h3 class="footer-title">Useful Links</h3>
+                        <ul class="footer-links">
+
+                            <li>
+                                <a href="VideoGallery.aspx">Best Practices
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="actsrules.aspx">Acts and Rules
+                                </a>
+                            </li>
+                            <li>
+                                <a href="Sitemap.aspx">Sitemap
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="https://publicfeedback.delhipolice.gov.in/index.aspx" target="_blank">Feedback
+                                </a>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+
+                    <!-- Headquarters -->
+                    <div class="col-lg-4 footer-column">
+                        <div class="subscribe-title">
+                            Delhi Police HQ
+
+                        </div>
+
+                        <p class="text-white">
+                            DELHI
+                    POLICE HEADQUARTERS,
+
+                    <br>
+                            JAI SINGH ROAD, NEW DELHI
+
+                    <br>
+                            <strong>Pin Code:</strong> 110001<br>
+                        </p>
+
+                    </div>
+                    <!-- Useful Links -->
+                    
+                    <div class="col-lg-4 col-md-4 footer-column">
+
+                        <div class="subscribe-title">
+                            Contact Us
+
+                        </div>
+
+
+                        <div class="footer-social">
+
+                            <a href="https://www.facebook.com/DelhiPoliceOfficial/" target="_blank">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+
+                            <a href="https://www.twitter.com/DelhiPolice" target="_blank">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/channel/UCigG-Q9tD4u-BRMFVgGdFkw" target="_blank">
+                                <i class="bi bi-youtube"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/delhi.police_official/" target="_blank">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="contact-list">
+
+                            <!-- Toll Free -->
+                            <a href="tel:112" class="contact-item">
+                                <i class="bi bi-telephone-fill"></i>
+                                <span>Toll-Free : 112</span>
+                            </a>
+
+                            <!-- Email 1 -->
+                            <a href="mailto:cpdelhi@delhipolice.gov.in" class="contact-item">
+                                <i class="bi bi-envelope-fill"></i>
+                                <span>cpdelhi[at]delhipolice[dot]gov[dot]in</span>
+                            </a>
+
+                            <!-- Email 2 -->
+                            <a href="mailto:delpol.service@delhipolice.gov.in" class="contact-item">
+                                <i class="bi bi-envelope-fill"></i>
+                                <span>delpol[dot]service[at]delhipolice[dot]gov[dot]in</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+
+
+
+                    
+
+                    <div id="div_copyright_En" class="container">
+                        
+                        <div class="copyright">
+
+                            <div class="row">
+
+                                <div class="col-md-5">
+
+                                    <p class="copy-right">
+                                        All rights reserved by Delhi Police,
+                        Government of India
+
+                                    </p>
+
+                                </div>
+
+                                <div class="col-md-3 text-center">
+
+                                    <ul class="disclaimer-title">
+                                        <li><a href="PrivacyPolicy.aspx">Privacy Policy</a></li>
+                                        <li><a href="Disclaimer.aspx">Disclaimer</a></li>
+                                    </ul>
+
+                                </div>
+
+
+                                <div class="col-md-4 text-center update">
+                                    <p class="mb-0 text-white">
+                                        Last Updated On:
+                        04.11.2026
+
+                                    </p>
+                                    <p class="mb-0 text-white">
+                                        Visitors: <span id="spantotalVisitors"><a href="#"
+                                            title="Website visitor counter">
+                                            <img src="https://counter9.stat.ovh/private/freecounterstat.php?c=cnnllw5lf5twd4eg5puk62a2suj3cmwd"
+                                                border="0" title="Website visitor counter" alt="Website visitor counter"></a></span>
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        
+
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
+
+        <script src="assets/js/bootstrap.min.js"></script>
+
+
+        <script src="assets/js/validator.min.js"></script>
+   
+        <script src="assets/js/jquery.slicknav.js"></script>
+
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <script src="assets/js/jquery.waypoints.min.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+   
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  
+        <script src="assets/js/SmoothScroll.js"></script>
+    
+        <script src="assets/js/parallaxie.js"></script>
+    
+        <script src="assets/js/gsap.min.js"></script>
+        <script src="assets/js/magiccursor.js"></script>
+   
+        <script src="assets/js/SplitText.js"></script>
+        <script src="assets/js/ScrollTrigger.min.js"></script>
+
+        <script src="assets/js/jquery.mb.YTPlayer.min.js"></script>
+
+        <script src="assets/js/wow.js"></script>
+
+        <script src="assets/js/function.js"></script>
+
+        <script src="assets/js/common.js"></script>
+        <script src="assets/js/calender.js"></script>
+
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/fullcalendar.js"></script>
+        <script src="assets/js/jquery.dataTables.min.js"></script>
+        <script src="assets/js/dataTables.responsive.min.js"></script>
+        <script src="assets/js/datatable/datatable-basic.init.js"></script>
+        <script src="assets/js/glightbox.min.js"></script>
+        <script src="assets/js/chart.js"></script>
+        <script src="assets/js/chart-script.js"></script>
+        <script src="assets/js/slick.min.js" referrerpolicy="no-referrer"></script>
+
+
+
+        <script>
+            (function () {
+                function submitHeaderSearch(inputId) {
+                    var input = document.getElementById(inputId);
+                    if (!input) return;
+                    var query = input.value.trim();
+                    if (query) window.location.href = 'index.aspx?search=' + encodeURIComponent(query);
+                }
+                document.addEventListener('DOMContentLoaded', function () {
+                    var desktopButton = document.getElementById('dpHeaderSearchButton');
+                    var desktopInput = document.getElementById('dpHeaderSearch');
+                    var mobileButton = document.getElementById('dpMobileSearchButton');
+                    var mobileInput = document.getElementById('dpMobileSearch');
+                    if (desktopButton) desktopButton.addEventListener('click', function () { submitHeaderSearch('dpHeaderSearch'); });
+                    if (mobileButton) mobileButton.addEventListener('click', function () { submitHeaderSearch('dpMobileSearch'); });
+                    [desktopInput, mobileInput].forEach(function (input) {
+                        if (input) input.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); submitHeaderSearch(input.id); } });
+                    });
+                });
+            })();
+</script>
+        <script>
+
+            $(document).ready(function () {
+                $('.external-links').slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 2000,
+                    arrows: false,
+                    rtl: false,
+                    dots: true,
+                    infinite: true,
+                    responsive: [
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 3,
+                                infinite: true,
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 600,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 2,
+                                dots: true
+                            }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                dots: true
+                            }
+                        }
+                    ]
+                });
+            });
+        </script>
+        <script>
+       
+
+            const carouselElement =
+                document.getElementById("homeCarousel");
+
+            const playPauseButton =
+                document.getElementById("carouselPlayPause");
+
+            const playPauseIcon =
+                playPauseButton.querySelector("i");
+
+            const homeCarousel =
+                bootstrap.Carousel.getOrCreateInstance(
+                    carouselElement
+                );
+
+            let isPlaying = true;
+
+            playPauseButton.addEventListener(
+                "click",
+                function () {
+
+        
+
+                    if (isPlaying) {
+
+                        homeCarousel.pause();
+
+                        playPauseIcon.classList.remove(
+                            "bi-pause-fill"
+                        );
+
+                        playPauseIcon.classList.add(
+                            "bi-play-fill"
+                        );
+
+                        playPauseButton.title = "Play";
+
+                        playPauseButton.setAttribute(
+                            "aria-label",
+                            "Play carousel"
+                        );
+
+                        isPlaying = false;
+
+                    }
+
+    
+
+                    else {
+
+                        homeCarousel.cycle();
+
+                        playPauseIcon.classList.remove(
+                            "bi-play-fill"
+                        );
+
+                        playPauseIcon.classList.add(
+                            "bi-pause-fill"
+                        );
+
+                        playPauseButton.title = "Pause";
+
+                        playPauseButton.setAttribute(
+                            "aria-label",
+                            "Pause carousel"
+                        );
+
+                        isPlaying = true;
+
+                    }
+
+                }
+            );
+
+        </script>
+
+
+
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const slides = document.querySelectorAll(".persona-slide");
+                const dots = document.querySelectorAll(".persona-dot");
+
+                const prevBtn = document.getElementById("personaPrev");
+                const nextBtn = document.getElementById("personaNext");
+
+                let currentSlide = 0;
+
+
+
+                function showPersona(index) {
+
+                    if (index >= slides.length) {
+                        currentSlide = 0;
+                    }
+
+                    if (index < 0) {
+                        currentSlide = slides.length - 1;
+                    }
+
+                    slides.forEach(function (slide) {
+                        slide.classList.remove("active");
+                    });
+
+                    dots.forEach(function (dot) {
+                        dot.classList.remove("active");
+                    });
+
+
+                    slides[currentSlide].classList.add("active");
+                    dots[currentSlide].classList.add("active");
+
+                }
+
+
+      
+                nextBtn.addEventListener("click", function () {
+
+                    currentSlide++;
+
+                    if (currentSlide >= slides.length) {
+                        currentSlide = 0;
+                    }
+
+                    showPersona(currentSlide);
+
+                });
+
+
+
+
+                prevBtn.addEventListener("click", function () {
+
+                    currentSlide--;
+
+                    if (currentSlide < 0) {
+                        currentSlide = slides.length - 1;
+                    }
+
+                    showPersona(currentSlide);
+
+                });
+
+
+     
+
+                dots.forEach(function (dot, index) {
+
+                    dot.addEventListener("click", function () {
+
+                        currentSlide = index;
+
+                        showPersona(currentSlide);
+
+                    });
+
+                });
+
+
+            });
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const slides = document.querySelectorAll(".persona-slide");
+                const dots = document.querySelectorAll(".persona-dot");
+
+                const prevBtn = document.getElementById("personaPrev");
+                const nextBtn = document.getElementById("personaNext");
+
+                let currentSlide = 0;
+
+
+
+
+                function showPersona(index) {
+
+                    if (index >= slides.length) {
+                        currentSlide = 0;
+                    }
+
+                    if (index < 0) {
+                        currentSlide = slides.length - 1;
+                    }
+
+                    slides.forEach(function (slide) {
+                        slide.classList.remove("active");
+                    });
+
+                    dots.forEach(function (dot) {
+                        dot.classList.remove("active");
+                    });
+
+
+                    slides[currentSlide].classList.add("active");
+                    dots[currentSlide].classList.add("active");
+
+                }
+
+
+
+
+                nextBtn.addEventListener("click", function () {
+
+                    currentSlide++;
+
+                    if (currentSlide >= slides.length) {
+                        currentSlide = 0;
+                    }
+
+                    showPersona(currentSlide);
+
+                });
+
+
+
+
+                prevBtn.addEventListener("click", function () {
+
+                    currentSlide--;
+
+                    if (currentSlide < 0) {
+                        currentSlide = slides.length - 1;
+                    }
+
+                    showPersona(currentSlide);
+
+                });
+
+
+
+
+                dots.forEach(function (dot, index) {
+
+                    dot.addEventListener("click", function () {
+
+                        currentSlide = index;
+
+                        showPersona(currentSlide);
+
+                    });
+
+                });
+
+
+            });
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const track = document.getElementById("clientLogoTrack");
+                const prevBtn = document.getElementById("clientLogoPrev");
+                const nextBtn = document.getElementById("clientLogoNext");
+                const playBtn = document.getElementById("clientLogoPlay");
+
+                const items = document.querySelectorAll(".client-logo-item");
+
+                let currentIndex = 0;
+                let autoSlide = true;
+                let slideInterval;
+
+                function getItemsPerView() {
+
+                    if (window.innerWidth <= 575.98) {
+                        return 1;
+                    }
+
+                    if (window.innerWidth <= 991.98) {
+                        return 3;
+                    }
+
+                    return 4;
+                }
+
+
+                function updateSlider() {
+
+                    const itemsPerView = getItemsPerView();
+
+                    const maxIndex = Math.max(
+                        0,
+                        items.length - itemsPerView
+                    );
+
+                    if (currentIndex > maxIndex) {
+                        currentIndex = maxIndex;
+                    }
+
+                    const itemWidth = 100 / itemsPerView;
+
+                    track.style.transform =
+                        "translateX(-" +
+                        (currentIndex * itemWidth) +
+                        "%)";
+                }
+
+
+                function nextSlide() {
+
+                    const itemsPerView = getItemsPerView();
+
+                    const maxIndex = Math.max(
+                        0,
+                        items.length - itemsPerView
+                    );
+
+                    if (currentIndex >= maxIndex) {
+                        currentIndex = 0;
+                    } else {
+                        currentIndex++;
+                    }
+
+                    updateSlider();
+                }
+
+                function previousSlide() {
+
+                    const itemsPerView = getItemsPerView();
+
+                    const maxIndex = Math.max(
+                        0,
+                        items.length - itemsPerView
+                    );
+
+                    if (currentIndex <= 0) {
+                        currentIndex = maxIndex;
+                    } else {
+                        currentIndex--;
+                    }
+
+                    updateSlider();
+                }
+
+                function startAutoSlide() {
+
+                    clearInterval(slideInterval);
+
+                    slideInterval = setInterval(function () {
+
+                        if (autoSlide) {
+                            nextSlide();
+                        }
+
+                    }, 3000);
+                }
+
+                function updatePlayButton() {
+
+                    if (autoSlide) {
+
+                        playBtn.innerHTML = `
+                    <span class="pause-icon">
+                        <span></span>
+                        <span></span>
+                    </span>
+                `;
+
+                        playBtn.setAttribute(
+                            "aria-label",
+                            "Pause slider"
+                        );
+
+                        playBtn.setAttribute(
+                            "title",
+                            "Pause"
+                        );
+
+                    } else {
+
+                        playBtn.innerHTML = `
+                    <span class="play-icon"></span>
+                `;
+
+                        playBtn.setAttribute(
+                            "aria-label",
+                            "Play slider"
+                        );
+
+                        playBtn.setAttribute(
+                            "title",
+                            "Play"
+                        );
+                    }
+                }
+
+
+
+                nextBtn.addEventListener("click", function () {
+
+                    nextSlide();
+
+                });
+
+                prevBtn.addEventListener("click", function () {
+
+                    previousSlide();
+
+                });
+
+                playBtn.addEventListener("click", function () {
+
+                    autoSlide = !autoSlide;
+
+                    updatePlayButton();
+
+                });
+
+                window.addEventListener("resize", function () {
+
+                    updateSlider();
+
+                });
+
+                updateSlider();
+
+                updatePlayButton();
+
+                startAutoSlide();
+
+            });
+        </script>
+
+        <script>
+
+            const EmergencyopenPopup = document.getElementById("EmergencyopenPopup");
+            const EmergencyclosePopup = document.getElementById("EmergencyclosePopup");
+            const emergencyBox = document.getElementById("emergencyBox");
+
+            EmergencyopenPopup.addEventListener("click", function () {
+                emergencyBox.classList.toggle("show");
+            });
+
+            EmergencyclosePopup.addEventListener("click", function () {
+                emergencyBox.classList.remove("show");
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!e.target.closest(".emergency-wrapper")) {
+                    emergencyBox.classList.remove("show");
+                }
+            });
+
+        </script>
+        <script>
+
+            document.addEventListener(
+                "DOMContentLoaded",
+                function () {
+
+                    GLightbox({
+
+                        selector: ".glightbox",
+
+                        touchNavigation: true,
+
+                        loop: true,
+
+                        keyboardNavigation: true,
+
+                        closeButton: true,
+
+                        zoomable: true,
+
+                        draggable: true,
+
+                        preload: true
+
+                    });
+
+                }
+            );
+
+        </script>
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const videos = [
+                    {
+                        title: "Swachhata Hi Seva Campaign",
+                        image: "assets/img/maxres2.jpg",
+                        url: "https://www.youtube.com/watch?v=VIDEO_ID_1"
+                    },
+                    {
+                        title: "BRICS SUMMIT 2026",
+                        image: "assets/img/hqdefault.webp",
+                        url: "https://www.youtube.com/watch?v=OlqbyCECudk&t=19s"
+                    },
+                    {
+                        title: "DelhiPoliceNewsLine - Targeting 62 Congestion Points",
+                        image: "assets/img/hqdefault1.webp",
+                        url: "https://www.youtube.com/watch?v=R0OByV_TljM&pp=0gcJCTcMAYcqIYzv"
+                    },
+                    {
+                        title: "Down the memory lane with ACP Sh. Sunil Srivastava",
+                        image: "assets/img/hq720.webp",
+                        url: "https://www.youtube.com/watch?v=EibYTcT4mkE"
+                    },
+                    {
+                        title: "Down the memory lane with ACP Sh. Sanjay Kumar Nagpal",
+                        image: "assets/img/hq720-1.webp",
+                        url: "https://www.youtube.com/watch?v=3OoaCbNb5Rg"
+                    }
+                ];
+
+                const mainImage = document.getElementById("dpMainVideoImage");
+                const mainLink = document.getElementById("dpMainVideoLink");
+                const mainTitle = document.getElementById("dpMainVideoTitle");
+                const status = document.getElementById("dpVideoStatus");
+                const thumbnailList = document.getElementById("dpThumbnailList");
+
+                const prevButton = document.getElementById("dpPrev");
+                const nextButton = document.getElementById("dpNext");
+                const thumbPrevButton = document.getElementById("dpThumbPrev");
+                const thumbNextButton = document.getElementById("dpThumbNext");
+
+                if (!mainImage || !mainLink || !mainTitle || !thumbnailList) {
+                    console.error("Video gallery: required HTML elements not found.");
+                    return;
+                }
+
+                let currentIndex = 0;
+
+                function showVideo(index) {
+
+
+                    currentIndex = (index + videos.length) % videos.length;
+
+                    const video = videos[currentIndex];
+
+      
+                    mainImage.src = video.image;
+                    mainImage.alt = video.title + " thumbnail";
+                    mainLink.href = video.url;
+                    mainTitle.textContent = video.title;
+
+                    const thumbnails = thumbnailList.querySelectorAll(".dp-thumb");
+
+                    thumbnails.forEach(function (thumbnail, i) {
+                        const isActive = i === currentIndex;
+
+                        thumbnail.classList.toggle("is-active", isActive);
+                        thumbnail.setAttribute("aria-pressed", String(isActive));
+                    });
+
+                    if (status) {
+                        status.textContent =
+                            "Video " + (currentIndex + 1) +
+                            " of " + videos.length;
+                    }
+
+                    const activeThumbnail = thumbnails[currentIndex];
+
+                    if (activeThumbnail) {
+
+                        const listRect = thumbnailList.getBoundingClientRect();
+                        const thumbRect = activeThumbnail.getBoundingClientRect();
+
+                        if (thumbRect.left < listRect.left) {
+
+                            thumbnailList.scrollTo({
+                                left: thumbnailList.scrollLeft -
+                                    (listRect.left - thumbRect.left),
+                                behavior: "smooth"
+                            });
+
+                        } else if (thumbRect.right > listRect.right) {
+
+                            thumbnailList.scrollTo({
+                                left: thumbnailList.scrollLeft +
+                                    (thumbRect.right - listRect.right),
+                                behavior: "smooth"
+                            });
+
+                        }
+                    }
+                }
+
+                thumbnailList.addEventListener("click", function (event) {
+
+                    const thumbnail = event.target.closest(".dp-thumb");
+
+                    if (!thumbnail || !thumbnailList.contains(thumbnail)) {
+                        return;
+                    }
+
+                    const index = Number(thumbnail.dataset.index);
+
+                    if (
+                        Number.isInteger(index) &&
+                        index >= 0 &&
+                        index < videos.length
+                    ) {
+                        showVideo(index);
+                    }
+                });
+
+
+                if (prevButton) {
+                    prevButton.addEventListener("click", function () {
+                        showVideo(currentIndex - 1);
+                    });
+                }
+
+      
+                if (nextButton) {
+                    nextButton.addEventListener("click", function () {
+                        showVideo(currentIndex + 1);
+                    });
+                }
+
+              
+                if (thumbPrevButton) {
+                    thumbPrevButton.addEventListener("click", function () {
+                        thumbnailList.scrollBy({
+                            left: -220,
+                            behavior: "smooth"
+                        });
+                    });
+                }
+
+            
+                if (thumbNextButton) {
+                    thumbNextButton.addEventListener("click", function () {
+                        thumbnailList.scrollBy({
+                            left: 220,
+                            behavior: "smooth"
+                        });
+                    });
+                }
+
+       
+                showVideo(0);
+
+            });
+        </script>
+
+        <script>
+
+            const marquee = document.getElementById('marqueeTrack');
+
+            const toggleBtn = document.getElementById('toggleBtn');
+
+            const toggleIcon = document.getElementById('toggleIcon');
+
+            toggleBtn.addEventListener('click', function () {
+
+                marquee.classList.toggle('paused');
+
+                if (marquee.classList.contains('paused')) {
+
+                    toggleIcon.classList.remove('bi-pause-fill');
+
+                    toggleIcon.classList.add('bi-play-fill');
+
+                } else {
+
+                    toggleIcon.classList.remove('bi-play-fill');
+
+                    toggleIcon.classList.add('bi-pause-fill');
+                }
+
+            });
+
+        </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const audioPlayers = document.querySelectorAll(
+                    ".podcast-audio"
+                );
+
+                audioPlayers.forEach(function (currentAudio) {
+
+                    currentAudio.addEventListener("play", function () {
+
+                        audioPlayers.forEach(function (otherAudio) {
+
+                            if (otherAudio !== currentAudio) {
+                                otherAudio.pause();
+                            }
+
+                        });
+
+                    });
+
+                });
+
+            });
+        </script>
+
+
+
+
+
+
+        <!-- Podcast Audio Control -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const languageToggle = document.getElementById("languageToggle");
+                const languageDropdown = document.getElementById("languageDropdown");
+                const languageOptions = document.querySelectorAll(".language-option");
+
+                const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+                const mainNavigation = document.getElementById("mainNavigation");
+
+                const dropdownItems = document.querySelectorAll(
+                    ".nav-item.has-dropdown"
+                );
+
+                const allNavLinks = document.querySelectorAll(
+                    ".nav-menu .nav-link"
+                );
+
+                const submenuLinks = document.querySelectorAll(
+                    ".nav-dropdown a"
+                );
+
+                const mobileBreakpoint = 767.98;
+
+
+                /* ================= LANGUAGE DROPDOWN ================= */
+
+                if (languageToggle && languageDropdown) {
+
+                    languageToggle.addEventListener("click", function (event) {
+                        event.stopPropagation();
+
+                        const isOpen = languageDropdown.classList.toggle("show");
+
+                        languageToggle.setAttribute(
+                            "aria-expanded",
+                            String(isOpen)
+                        );
+                    });
+
+                    languageDropdown.addEventListener("click", function (event) {
+                        event.stopPropagation();
+                    });
+
+                    languageOptions.forEach(function (option) {
+
+                        option.addEventListener("click", function () {
+
+                            languageOptions.forEach(function (item) {
+                                item.classList.remove("active");
+                            });
+
+                            this.classList.add("active");
+
+                            const selectedLanguage = this.dataset.lang;
+
+                            languageToggle.setAttribute(
+                                "data-selected-language",
+                                selectedLanguage
+                            );
+
+                            languageDropdown.classList.remove("show");
+
+                            languageToggle.setAttribute("aria-expanded", "false");
+
+                            /*
+                              Connect your English/Hindi translation system here.
+                              This selection currently updates the active option only.
+                            */
+                        });
+
+                    });
+                }
+
+
+                /* ================= CLOSE LANGUAGE ON OUTSIDE CLICK ================= */
+
+                document.addEventListener("click", function (event) {
+
+                    if (
+                        languageDropdown &&
+                        languageToggle &&
+                        !languageDropdown.contains(event.target) &&
+                        !languageToggle.contains(event.target)
+                    ) {
+                        languageDropdown.classList.remove("show");
+                        languageToggle.setAttribute("aria-expanded", "false");
+                    }
+
+                });
+
+
+                /* ================= MOBILE HAMBURGER ================= */
+
+                if (mobileMenuToggle && mainNavigation) {
+
+                    mobileMenuToggle.addEventListener("click", function () {
+
+                        const isOpen = mainNavigation.classList.toggle("show");
+
+                        mobileMenuToggle.setAttribute(
+                            "aria-expanded",
+                            String(isOpen)
+                        );
+
+                        const icon = mobileMenuToggle.querySelector("i");
+
+                        if (icon) {
+                            icon.classList.toggle("bi-list", !isOpen);
+                            icon.classList.toggle("bi-x-lg", isOpen);
+                        }
+
+                        if (!isOpen) {
+                            closeAllDropdowns();
+                        }
+
+                    });
+
+                }
+
+
+                /* ================= CLOSE ALL NAV DROPDOWNS ================= */
+
+                function closeAllDropdowns(exceptItem = null) {
+
+                    dropdownItems.forEach(function (item) {
+
+                        if (item === exceptItem) {
+                            return;
+                        }
+
+                        item.classList.remove("open");
+
+                        const button = item.querySelector(
+                            ".dropdown-toggle-custom"
+                        );
+
+                        if (button) {
+                            button.setAttribute("aria-expanded", "false");
+                        }
+
+                    });
+
+                }
+
+
+                /* ================= NAV DROPDOWN CLICK ================= */
+
+                dropdownItems.forEach(function (item) {
+
+                    const button = item.querySelector(
+                        ".dropdown-toggle-custom"
+                    );
+
+                    if (!button) {
+                        return;
+                    }
+
+                    button.addEventListener("click", function (event) {
+
+                        event.preventDefault();
+
+                        const isOpen = item.classList.contains("open");
+
+                        closeAllDropdowns(item);
+
+                        item.classList.toggle("open", !isOpen);
+
+                        button.setAttribute(
+                            "aria-expanded",
+                            String(!isOpen)
+                        );
+
+                        /*
+                          A dropdown parent becomes active when clicked.
+                          Clicking it again closes the dropdown.
+                        */
+
+                        setActiveMenu(item);
+
+                    });
+
+                });
+
+
+                /* ================= DESKTOP HOVER ================= */
+
+                function enableDesktopHover() {
+
+                    dropdownItems.forEach(function (item) {
+
+                        item.onmouseenter = function () {
+
+                            if (window.innerWidth > mobileBreakpoint) {
+
+                                closeAllDropdowns(item);
+                                item.classList.add("open");
+
+                                const button = item.querySelector(
+                                    ".dropdown-toggle-custom"
+                                );
+
+                                if (button) {
+                                    button.setAttribute("aria-expanded", "true");
+                                }
+
+                            }
+
+                        };
+
+                        item.onmouseleave = function () {
+
+                            if (window.innerWidth > mobileBreakpoint) {
+
+                                item.classList.remove("open");
+
+                                const button = item.querySelector(
+                                    ".dropdown-toggle-custom"
+                                );
+
+                                if (button) {
+                                    button.setAttribute("aria-expanded", "false");
+                                }
+
+                            }
+
+                        };
+
+                    });
+
+                }
+
+                enableDesktopHover();
+
+
+                /* ================= ACTIVE MENU ================= */
+
+                function clearActiveMenu() {
+                    document.querySelectorAll("#mainNavigation .nav-item").forEach(function (item) {
+                        item.classList.remove("active");
+                    });
+                    document.querySelectorAll("#mainNavigation .nav-link.active, #mainNavigation .nav-dropdown a.active").forEach(function (link) {
+                        link.classList.remove("active");
+                    });
+                }
+
+                function setActiveMenu(activeItem) {
+                    clearActiveMenu();
+                    if (!activeItem) return;
+                    activeItem.classList.add("active");
+                    const parentLink = activeItem.querySelector(":scope > .nav-link");
+                    if (parentLink) parentLink.classList.add("active");
+                }
+
+                // Detect the active main menu for every page using the actual URL and all
+                // navigation links. Supports .html/.php pages, clean URLs and trailing slashes.
+                function activateMenuForCurrentPage() {
+                    clearActiveMenu();
+
+                    function normalizePath(path) {
+                        let value = (path || "").toLowerCase().split(/[?#]/)[0];
+                        try { value = decodeURIComponent(value); } catch (e) { }
+                        value = value.replace(/\.(html?|php|aspx?)$/i, "").replace(/\/+$/, "");
+                        return value || "/";
+                    }
+
+                    function slug(value) {
+                        return (value || "").toLowerCase().replace(/\.(html?|php|aspx?)$/i, "")
+                            .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+                    }
+
+                    const currentPath = normalizePath(window.location.pathname);
+                    const currentFile = currentPath.split("/").pop() || "";
+                    const homeAliases = ["", "index", "index-hi"];
+                    const topItems = Array.from(document.querySelectorAll("#mainNavigation > .nav-item"));
+                    const homeItem = topItems.find(function (item) {
+                        const link = item.querySelector(":scope > a.nav-link");
+                        return link && slug(link.getAttribute("href").split("/").pop()) === "index";
+                    }) || topItems[0];
+
+                    // Home is active only for the site's root or an index page.
+                    if (currentPath === "/" || homeAliases.includes(currentFile)) {
+                        if (homeItem) {
+                            homeItem.classList.add("active");
+                            const homeLink = homeItem.querySelector(":scope > .nav-link");
+                            if (homeLink) homeLink.classList.add("active");
+                        }
+                        return;
+                    }
+
+                    const dropdownLinks = Array.from(document.querySelectorAll("#mainNavigation .nav-dropdown a"));
+                    let matchedLink = null;
+
+                    // First: exact URL match (works for every submenu page listed in the header).
+                    dropdownLinks.forEach(function (link) {
+                        const href = link.getAttribute("href");
+                        if (!href || href === "#" || /^javascript:/i.test(href)) return;
+                        try {
+                            const linkPath = normalizePath(new URL(href, window.location.href).pathname);
+                            if (linkPath === currentPath || linkPath.split("/").pop() === currentFile) {
+                                matchedLink = link;
+                            }
+                        } catch (e) { }
+                    });
+
+                    // Second: support clean URLs such as /citizens-charter even when the
+                    // header link points to citizens-charter.html, or labels differ slightly.
+                    if (!matchedLink) {
+                        dropdownLinks.forEach(function (link) {
+                            const href = link.getAttribute("href") || "";
+                            const hrefSlug = slug(href.split("/").pop());
+                            const textSlug = slug(link.textContent.trim());
+                            if (currentFile && (currentFile === hrefSlug || currentFile === textSlug)) {
+                                matchedLink = link;
+                            }
+                        });
+                    }
+
+                    if (matchedLink) {
+                        matchedLink.classList.add("active");
+                        const parentItem = matchedLink.closest(".nav-item.has-dropdown");
+                        if (parentItem) {
+                            parentItem.classList.add("active");
+                            const parentLink = parentItem.querySelector(":scope > .nav-link");
+                            if (parentLink) parentLink.classList.add("active");
+                        }
+                        return;
+                    }
+
+                    // Third: if the current page is not itself listed in the menu, use its
+                    // URL folder to infer the relevant dropdown section when possible.
+                    const currentFolder = currentPath.includes("/")
+                        ? currentPath.slice(0, currentPath.lastIndexOf("/")) : "";
+                    if (currentFolder && currentFolder !== "/") {
+                        const folderMatches = dropdownLinks.filter(function (link) {
+                            try {
+                                return normalizePath(new URL(link.getAttribute("href"), window.location.href).pathname)
+                                    .startsWith(currentFolder + "/");
+                            } catch (e) { return false; }
+                        });
+                        if (folderMatches.length) {
+                            const parentItem = folderMatches[0].closest(".nav-item.has-dropdown");
+                            if (parentItem) {
+                                parentItem.classList.add("active");
+                                const parentLink = parentItem.querySelector(":scope > .nav-link");
+                                if (parentLink) parentLink.classList.add("active");
+                            }
+                            return;
+                        }
+                    }
+
+                    // Do not highlight Home on an unknown inner page. Home remains active
+                    // only on the actual homepage; this avoids misleading active states.
+                }
+
+                activateMenuForCurrentPage();
+
+                allNavLinks.forEach(function (link) {
+
+                    link.addEventListener("click", function () {
+
+                        setActiveMenu(this.closest(".nav-item"));
+
+                    });
+
+                });
+
+
+                /* ================= ACTIVE SUBMENU LINK ================= */
+
+                submenuLinks.forEach(function (link) {
+
+                    link.addEventListener("click", function () {
+
+                        submenuLinks.forEach(function (item) {
+                            item.classList.remove("active");
+                        });
+
+                        this.classList.add("active");
+
+                        const parentItem = this.closest(".nav-item");
+
+                        setActiveMenu(parentItem);
+
+                        /*
+                          Normal navigation works because each link has
+                          its own href. The new page should also set its
+                          current menu as active when it loads.
+                        */
+
+                    });
+
+                });
+
+
+                /* ================= RESIZE HANDLING ================= */
+
+                window.addEventListener("resize", function () {
+
+                    closeAllDropdowns();
+
+                    if (window.innerWidth > mobileBreakpoint) {
+
+                        mainNavigation.classList.remove("show");
+
+                        if (mobileMenuToggle) {
+                            mobileMenuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                            const icon = mobileMenuToggle.querySelector("i");
+
+                            if (icon) {
+                                icon.classList.remove("bi-x-lg");
+                                icon.classList.add("bi-list");
+                            }
+                        }
+
+                    }
+
+                });
+
+
+                /* ================= ESC KEY ================= */
+
+                document.addEventListener("keydown", function (event) {
+
+                    if (event.key === "Escape") {
+
+                        closeAllDropdowns();
+
+                        if (languageDropdown) {
+                            languageDropdown.classList.remove("show");
+                        }
+
+                        if (languageToggle) {
+                            languageToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+                        }
+
+                        if (mainNavigation) {
+                            mainNavigation.classList.remove("show");
+                        }
+
+                        if (mobileMenuToggle) {
+                            mobileMenuToggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                            const icon = mobileMenuToggle.querySelector("i");
+
+                            if (icon) {
+                                icon.classList.remove("bi-x-lg");
+                                icon.classList.add("bi-list");
+                            }
+                        }
+
+                    }
+
+                });
+
+            });
+        </script>
+
+        <script>
+            // Replace these paths with the actual district-detail URLs used by your website.
+            const districtPages = {
+                central: "police-station-details.php?district=central",
+                dwarka: "dwarka.php?district=dwarka",
+                "new-delhi": "police-station-details.php?district=new-delhi",
+                north: "police-station-details.php?district=north",
+                "north-east": "police-station-details.php?district=north-east",
+                "north-west": "police-station-details.php?district=north-west",
+                "outer-north": "police-station-details.php?district=outer-north",
+                outer: "police-station-details.php?district=outer",
+                rohini: "police-station-details.php?district=rohini",
+                shahdara: "police-station-details.php?district=shahdara",
+                south: "police-station-details.php?district=south",
+                "south-east": "police-station-details.php?district=south-east",
+                "south-west": "police-station-details.php?district=south-west",
+                west: "police-station-details.php?district=west",
+                dwarka: "police-station-details.php?district=dwarka"
+            };
+            document.getElementById("stationFinderForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+                const district = document.getElementById("districtSelect").value;
+                const error = document.getElementById("stationError");
+                if (!district) {
+                    error.textContent = "Please select a district before searching.";
+                    document.getElementById("districtSelect").focus();
+                    return;
+                }
+                error.textContent = "";
+                window.location.href = districtPages[district] ||
+                    "police-station-details.php?district=" + encodeURIComponent(district);
+            });
+        </script>
+        
+        <script>
+            function performHeaderSearch(inputId) {
+
+                var searchBox = document.getElementById(inputId);
+
+                if (!searchBox) return;
+
+                var keyword = searchBox.value.trim();
+
+                if (keyword === "") {
+                    searchBox.focus();
+                    return;
+                }
+
+                var searchUrl = '/GlobalSearch.aspx';
+
+                window.location.href =
+                    searchUrl + "?q=" + encodeURIComponent(keyword) + "&lang=en";
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                var desktopButton = document.getElementById("dpHeaderSearchButton");
+                var mobileButton = document.getElementById("dpMobileSearchButton");
+
+                if (desktopButton) {
+                    desktopButton.addEventListener("click", function () {
+                        performHeaderSearch("dpHeaderSearch");
+                    });
+                }
+
+                if (mobileButton) {
+                    mobileButton.addEventListener("click", function () {
+                        performHeaderSearch("dpMobileSearch");
+                    });
+                }
+
+                ["dpHeaderSearch", "dpMobileSearch"].forEach(function (id) {
+
+                    var searchBox = document.getElementById(id);
+
+                    if (!searchBox) return;
+
+                    searchBox.addEventListener("keydown", function (event) {
+
+                        if (event.key === "Enter") {
+                            event.preventDefault();
+                            performHeaderSearch(id);
+                        }
+
+                    });
+
+                });
+
+            });
+        </script>
+        <script>
+            function performHeaderSearch(inputId) {
+
+                var searchBox = document.getElementById(inputId);
+
+                if (!searchBox) return;
+
+                var keyword = searchBox.value.trim();
+
+                if (keyword === "") {
+                    searchBox.focus();
+                    return;
+                }
+
+                var searchUrl = '/Search.aspx';
+
+                window.location.href =
+                    searchUrl + "?q=" + encodeURIComponent(keyword) + "&lang=en";
+            }
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                var desktopButton = document.getElementById("dpHeaderSearchButton");
+                var mobileButton = document.getElementById("dpMobileSearchButton");
+
+                if (desktopButton) {
+                    desktopButton.addEventListener("click", function () {
+                        performHeaderSearch("dpHeaderSearch");
+                    });
+                }
+
+                if (mobileButton) {
+                    mobileButton.addEventListener("click", function () {
+                        performHeaderSearch("dpMobileSearch");
+                    });
+                }
+
+                ["dpHeaderSearch", "dpMobileSearch"].forEach(function (id) {
+
+                    var searchBox = document.getElementById(id);
+
+                    if (!searchBox) return;
+
+                    searchBox.addEventListener("keydown", function (event) {
+
+                        if (event.key === "Enter") {
+                            event.preventDefault();
+                            performHeaderSearch(id);
+                        }
+
+                    });
+
+                });
+
+            });
+        </script>
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("MainContent_RegularExpressionValidator1"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var MainContent_RegularExpressionValidator1 = document.all ? document.all["MainContent_RegularExpressionValidator1"] : document.getElementById("MainContent_RegularExpressionValidator1");
+MainContent_RegularExpressionValidator1.controltovalidate = "MainContent_txtsearch";
+MainContent_RegularExpressionValidator1.errormessage = "Invalid Input";
+MainContent_RegularExpressionValidator1.display = "Dynamic";
+MainContent_RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+MainContent_RegularExpressionValidator1.validationexpression = "[a-zA-Z0-9]*[^!@%~?:#$%^&*()-+`0\']*";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+document.getElementById('MainContent_RegularExpressionValidator1').dispose = function() {
+    Array.remove(Page_Validators, document.getElementById('MainContent_RegularExpressionValidator1'));
+}
+//]]>
+</script>
+</form>
+</body>
+</html>

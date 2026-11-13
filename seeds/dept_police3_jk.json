@@ -1,0 +1,38 @@
+[
+ {
+  "key": "police3_jk:ganderbal-police-stations-posts",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://ganderbal.nic.in/police-stations-posts/",
+   "state": "JK",
+   "district": "Ganderbal"
+  }
+ },
+ {
+  "key": "police3_jk:ganderbal-police-posts",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://ganderbal.nic.in/police-posts/",
+   "state": "JK",
+   "district": "Ganderbal"
+  }
+ },
+ {
+  "key": "police3_jk:stations",
+  "payload": {
+   "reader": "police3_jk",
+   "url": "https://jkpolice.gov.in/Police-Stations",
+   "state": "JK",
+   "page": "stations"
+  }
+ },
+ {
+  "key": "police3_jk:women",
+  "payload": {
+   "reader": "police3_jk",
+   "url": "https://jkpolice.gov.in/Women-Police-Stations",
+   "state": "JK",
+   "page": "women"
+  }
+ }
+]

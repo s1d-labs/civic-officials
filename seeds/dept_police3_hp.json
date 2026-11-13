@@ -1,0 +1,47 @@
+[
+ {
+  "key": "police3_hp:hpbilaspur-police-station",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://hpbilaspur.nic.in/police-station/",
+   "state": "HP",
+   "district": "Bilaspur"
+  }
+ },
+ {
+  "key": "police3_hp:hpkinnaur-public-utility-category-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://hpkinnaur.nic.in/public-utility-category/police/",
+   "state": "HP",
+   "district": "Kinnaur"
+  }
+ },
+ {
+  "key": "police3_hp:hpmandi-public-utility-category-police",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://hpmandi.nic.in/public-utility-category/police/",
+   "state": "HP",
+   "district": "Mandi"
+  }
+ },
+ {
+  "key": "police3_hp:hpshimla-public-utility-category-police-stations",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://hpshimla.nic.in/public-utility-category/police-stations/",
+   "state": "HP",
+   "district": "Shimla"
+  }
+ },
+ {
+  "key": "police3_hp:hplahaulspiti-directory",
+  "payload": {
+   "reader": "police2n_dir",
+   "url": "https://hplahaulspiti.nic.in/directory/",
+   "state": "HP",
+   "district": "Lahaul And Spiti"
+  }
+ }
+]
