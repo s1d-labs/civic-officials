@@ -1,0 +1,34 @@
+[
+ {
+  "key": "vil_s3waas_workers:siaha-health-dept",
+  "payload": {
+   "reader": "vil_s3waas_workers",
+   "url": "https://siaha.nic.in/health-dept/",
+   "state": "MZ",
+   "district": "Siaha",
+   "in_archive": "yes, saved 2026-11-06",
+   "route": "abroad",
+   "expect": {
+    "rows": 109,
+    "ANM": 34,
+    "ASHA": 75
+   }
+  }
+ },
+ {
+  "key": "vil_s3waas_workers:siaha-anganwadi",
+  "payload": {
+   "reader": "vil_s3waas_workers",
+   "url": "https://siaha.nic.in/list-of-anganwadi-workers-centres/",
+   "state": "MZ",
+   "district": "Siaha",
+   "post": "Anganwadi Worker",
+   "dept": "women_child",
+   "in_archive": "yes, saved 2026-11-06",
+   "route": "abroad",
+   "expect": {
+    "rows": 115
+   }
+  }
+ }
+]
