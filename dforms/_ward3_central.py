@@ -12,27 +12,34 @@ import re
 from dforms import _esw, _ward
 
 MP_POSTS = (
-    (r"अधीक्षण\s*यंत्री", "Superintending Engineer"), (r"कार्यपालन\s*यंत्री", "Executive Engineer"),
+    (r"अधीक्षण\s*(?:यंत्री|अभिय(?:ं|न्)ता)", "Superintending Engineer"),
+    (r"अधि(?:शा[षस]ी)?\.?\s*अभि(?:य(?:ं|न्)ता|\.)", "Executive Engineer"), (r"सहायक\s*अभिय(?:ं|न्)ता", "Assistant Engineer"),
+    (r"कनिष्ठ\s*अभिय(?:ं|न्)ता", "Junior Engineer"),
+    (r"मुख्य\s*स्वा(?:स्थ्य)?\.?\s*निरी", "Chief Health Inspector"), (r"स्वा(?:स्थ्य)?\.?\s*निरी", "Health Inspector"), (r"कार्यपालन\s*यंत्री", "Executive Engineer"),
     (r"सहायक\s*यंत्री", "Assistant Engineer"), (r"उप\s*यंत्री", "Sub Engineer"),
     (r"जोनल\s*अधिकारी|ज़ोनल\s*अधिकारी", "Zonal Officer"), (r"जोन\s*आयुक्त|जोन\s*कमिश्नर", "Zone Commissioner"),
     (r"सहा\.?\s*स्वच्छता\s*अधिकारी|सहायक\s*स्वच्छता\s*अधिकारी", "Assistant Sanitation Officer"),
     (r"स्वच्छता\s*अधिकारी", "Sanitation Officer"), (r"स्वास्थ्य\s*निरीक्षक", "Health Inspector"),
     (r"स्वास्थ्य\s*अधिकारी", "Health Officer"), (r"दरोगा", "Ward Daroga (sanitation supervisor)"),
-    (r"उपायुक्त", "Deputy Commissioner"), (r"आयुक्त", "Commissioner"), (r"विधि\s*अधिकारी", "Law Officer"),
+    (r"अति(?:रिक्त)?\s*\.?\s*आयुक्त", "Additional Commissioner"), (r"उपायुक्त", "Deputy Commissioner"), (r"आयुक्त", "Commissioner"), (r"विधि\s*अधिकारी", "Law Officer"),
     (r"सहायक\s*लेखा\s*अधिकारी", "Assistant Accounts Officer"), (r"लेखा\s*अधिकारी", "Accounts Officer"),
     (r"राजस्व\s*निरीक्षक", "Revenue Inspector"), (r"राजस्व\s*अधिकारी", "Revenue Officer"),
 )
 
 
+def post_en_known(post):
+    """English post when one of MP_POSTS matches, else None."""
+    p = _ward.hi_norm(post)
+    for rx, e in MP_POSTS:
+        if re.search(rx, p):
+            return e
+    return None
+
+
 def post_en(post):
     """English post of a Hindi post; "प्र." (प्रभारी, in charge) at the start adds " (in charge)"."""
     p = _ward.hi_norm(post)
-    en = None
-    for rx, e in MP_POSTS:
-        if re.search(rx, p):
-            en = e
-            break
-    en = en or _ward.hi_post(post)
+    en = post_en_known(post) or _ward.hi_post(post)
     if re.match(r"\s*प्र\s*\.", p) and en != _esw.clean(post):
         en += " (in charge)"
     return en
