@@ -1,0 +1,293 @@
+[
+ {
+  "key": "pri_ga:seed",
+  "payload": {
+   "kind": "seed",
+   "module": "pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/elections/previous/",
+   "route": "direct",
+   "note": "lists the winners PDFs of every VP election page from the newest down to 2022 (bye-elections 2023-2026 too) and the ZP 2025 page"
+  }
+ },
+ {
+  "key": "pri_ga:bye-election-to-14-vacant-wards-of-village-panchayat-2026-elected-candidatses-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/bye-election-to-14-vacant-wards-of-village-panchayat-2026/elected-candidatses.pdf",
+   "level": "gp",
+   "election": "Goa SEC: Bye Election to 14 Vacant Wards of VP 2026",
+   "poll_year": "2026",
+   "bye": true,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/bye-election-to-14-vacant-wards-of-village-panchayat-2026/",
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-taleigao-village-panchayat-2024-winning-candidates-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-taleigao-village-panchayat-2024/winning-candidates.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to Taleigao VP 2024",
+   "poll_year": "2024",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-taleigao-village-panchayat-2024/",
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-harvalem-village-panchayat-2024-elected-member-harvalem-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-harvalem-village-panchayat-2024/elected-member-harvalem.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to Harvalem VP 2024",
+   "poll_year": "2024",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-harvalem-village-panchayat-2024/",
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-bardezwc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/BARDEZWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Bardez",
+   "district": "North Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-tiswadiwc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/TISWADIWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Tiswadi",
+   "district": "North Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-bicholimwc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/BICHOLIMWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Bicholim",
+   "district": "North Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-sattariwc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/SATTARIWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Sattari",
+   "district": "North Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-pernemwc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/PERNEMWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Pernem",
+   "district": "North Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-pondawc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/PONDAWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Ponda",
+   "district": "North Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-dharbandorawc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/DHARBANDORAWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Dharbandora",
+   "district": "South Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-sanguemwc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/SANGUEMWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Sanguem",
+   "district": "South Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-salcetewc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/SALCETEWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Salcete",
+   "district": "South Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-quepemwc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/QUEPEMWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Quepem",
+   "district": "South Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-canaconawc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/CANACONAWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Canacona",
+   "district": "South Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-186-village-panchayat-2022-mormugaowc-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-186-village-panchayat-2022/MORMUGAOWC.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to 186 Village Panchayat 2022",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-186-village-panchayat-2022/",
+   "route": "direct",
+   "taluka": "Mormugao",
+   "district": "South Goa"
+  }
+ },
+ {
+  "key": "pri_ga:general-election-to-three-village-panchayats-of-pernem-taluka-winning-candidates-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/general-election-to-three-village-panchayats-of-pernem-taluka/winning-candidates.pdf",
+   "level": "gp",
+   "election": "Goa SEC: General Election to Three Village Panchayat of Pernem Taluka",
+   "poll_year": "2022",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/village-panchayat/general-election-to-three-village-panchayats-of-pernem-taluka/",
+   "route": "direct",
+   "taluka": "Pernem",
+   "district": "North Goa"
+  }
+ },
+ {
+  "key": "pri_ga:zp-2025-winning-north-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/zp-2025/winning-north.pdf",
+   "level": "zp",
+   "election": "Goa SEC: General Election to Zilla Panchayat 2025",
+   "poll_year": "2025",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/zilla-panchayat/general-election-to-zilla-panchayat-2025/",
+   "route": "direct",
+   "district": "North Goa"
+  }
+ },
+ {
+  "key": "pri_ga:zp-2025-winning-south-1-pdf",
+  "payload": {
+   "kind": "form-pri_ga",
+   "state": "GA",
+   "url": "https://sec.goa.gov.in/assets/media/docs/zp-2025/winning-south-1.pdf",
+   "level": "zp",
+   "election": "Goa SEC: General Election to Zilla Panchayat 2025",
+   "poll_year": "2025",
+   "bye": false,
+   "page": "https://sec.goa.gov.in/elections/previous/zilla-panchayat/general-election-to-zilla-panchayat-2025/",
+   "route": "direct",
+   "district": "South Goa"
+  }
+ }
+]
