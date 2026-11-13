@@ -166,11 +166,13 @@ def insert(its):
     """Queue the items in the hub (owner's OK first). Same partition rule as the hub's seed endpoint."""
     rows = [json.dumps([it["key"], zlib.crc32(it["key"].encode()) % 1_000_000, json.dumps(it["payload"], ensure_ascii=False)],
                        ensure_ascii=False) for it in its]
-    sql = ("create temp table t (j jsonb); copy t from stdin; insert into queue (project, key, partition_id, payload) "
-           f"select '{PROJECT}', j->>0, (j->>1)::int, (j->>2)::jsonb from t on conflict (project, key) do nothing;")
+    ins = ("insert into queue (project, key, partition_id, payload) "
+           f"select '{PROJECT}', j->>0, (j->>1)::int, (j->>2)::jsonb from t on conflict (project, key) do nothing")
     data = "\n".join(r.replace("\\", "\\\\") for r in rows) + "\n"
-    r = subprocess.run(["psql", "-d", "scrape_hub", "-X", "-v", "ON_ERROR_STOP=1", "-c", sql], input=data, text=True,
-                       capture_output=True)
+    # separate -c commands in one session: COPY FROM STDIN inside a multi-statement -c string reads no rows
+    psql = ["psql"] if os.environ.get("USER") == "postgres" else ["sudo", "-n", "runuser", "-u", "postgres", "--", "psql"]
+    r = subprocess.run(psql + ["-d", "scrape_hub", "-X", "-v", "ON_ERROR_STOP=1", "-c", "create temp table t (j jsonb)",
+                               "-c", "copy t from stdin", "-c", ins], input=data, text=True, capture_output=True)
     print(r.stdout.strip() or r.stderr.strip())
 
 
