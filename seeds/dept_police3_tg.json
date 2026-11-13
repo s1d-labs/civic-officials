@@ -1,0 +1,1504 @@
+[
+ {
+  "key": "police3_tg:hyd_dir",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd_dir",
+   "url": "https://www.hyderabadpolice.gov.in/Important_Contacts.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:s3waas:hanumakonda-telangana-gov-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "s3waas",
+   "url": "https://hanumakonda.telangana.gov.in/public-utility-category/police-stations/",
+   "state": "TG",
+   "district": "Hanumakonda"
+  }
+ },
+ {
+  "key": "police3_tg:s3waas:nagarkurnool-telangana-gov-in-police",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "s3waas",
+   "url": "https://nagarkurnool.telangana.gov.in/police/",
+   "state": "TG",
+   "district": "Nagarkurnool"
+  }
+ },
+ {
+  "key": "police3_tg:s3waas:nagarkurnool-telangana-gov-in-police-2",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "s3waas",
+   "url": "https://nagarkurnool.telangana.gov.in/police-2/",
+   "state": "TG",
+   "district": "Nagarkurnool"
+  }
+ },
+ {
+  "key": "police3_tg:s3waas:mahabubnagar-telangana-gov-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "s3waas",
+   "url": "https://mahabubnagar.telangana.gov.in/public-utility-category/police-stations/",
+   "state": "TG",
+   "district": "Mahabubnagar"
+  }
+ },
+ {
+  "key": "police3_tg:s3waas:mahabubabad-telangana-gov-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "s3waas",
+   "url": "https://mahabubabad.telangana.gov.in/public-utility-category/police-stations/",
+   "state": "TG",
+   "district": "Mahabubabad"
+  }
+ },
+ {
+  "key": "police3_tg:s3waas:yadadri-telangana-gov-in-police",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "s3waas",
+   "url": "https://yadadri.telangana.gov.in/police/",
+   "state": "TG",
+   "district": "Yadadri Bhuvanagiri"
+  }
+ },
+ {
+  "key": "police3_tg:si:mahabubabad",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "si_table",
+   "url": "https://mahabubabad.telangana.gov.in/police/",
+   "state": "TG",
+   "district": "Mahabubabad"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:charminarzone_dcp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "dcp",
+   "url": "https://www.hyderabadpolice.gov.in/dcp/charminarzone_dcp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:charminar_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/charminar_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:charminar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/charminar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:hussainialam_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/hussainialam_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:moghalpura_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/moghalpura_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:shahalibanda_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/shahalibanda_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:malakpet_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/malakpet_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:malakpet_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/malakpet_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:chaderghat_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/chaderghat_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:dabeerpura_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/dabeerpura_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:mirchowk_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/mirchowk_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:mirchowk_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/mirchowk_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:bhavaninagar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/bhavaninagar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:reinbazaar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/reinbazaar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:saidabad_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/saidabad_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:saidabad_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/saidabad_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:madannapet_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/madannapet_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:santoshnagar_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/santoshnagar_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:santoshnagar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/santoshnagar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:issadan_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/issadan_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:chatrinaka_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/chatrinaka_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:shamshabadzone_dcp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "dcp",
+   "url": "https://www.hyderabadpolice.gov.in/dcp/shamshabadzone_dcp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:adibatla_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/adibatla_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:adibatla_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/adibatla_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:balapur_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/balapur_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:meerpet_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/meerpet_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:rgia_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/rgia_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:rgia_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/rgia_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:rgia_op_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/rgia_op_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:pahadishareef_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/pahadishareef_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:golcondazone_dcp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "dcp",
+   "url": "https://www.hyderabadpolice.gov.in/dcp/golcondazone_dcp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:asifnagar_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/asifnagar_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:asifnagar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/asifnagar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:Mehdipatnam_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/Mehdipatnam_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:habeebnagar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/habeebnagar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:masabtank_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/masabtank_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:goshamahal_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/goshamahal_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:goshamahal_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/goshamahal_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:begumbazaar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/begumbazaar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:afzalgunj_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/afzalgunj_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:kulsumpura_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/kulsumpura_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:kulusumpura_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/kulusumpura_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:tappachabutra_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/tappachabutra_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:gudimalkapur_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/gudimalkapur_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:mangalhat_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/mangalhat_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:tolichowki_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/tolichowki_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:tolichowki_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/tolichowki_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:golconda_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/golconda_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:langarhouse_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/langarhouse_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:rajendranagarzone_dcp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "dcp",
+   "url": "https://www.hyderabadpolice.gov.in/dcp/rajendranagarzone_dcp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:chandrayangutta_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/chandrayangutta_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:chandrayangutta_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/chandrayangutta_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:bandlaguda_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/bandlaguda_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:kanchnbagh_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/kanchnbagh_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:mailardevpally_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/mailardevpally_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:falaknuma_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/falaknuma_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:falaknuma_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/falaknuma_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:kamatipura_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/kamatipura_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:bahadurpura_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/bahadurpura_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:kalapathar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/kalapathar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:rajendranagar_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/rajendranagar_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:rajendranagar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/rajendranagar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:attapur_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/attapur_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:secunderabadzone_dcp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "dcp",
+   "url": "https://www.hyderabadpolice.gov.in/dcp/secunderabadzone_dcp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:chikkadpally_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/chikkadpally_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:chikkadpally_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/chikkadpally_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:musheerabad_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/musheerabad_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:kachiguda_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/kachiguda_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:chilkalguda_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/chilkalguda_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:chilkalguda_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/chilkalguda_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:lalaguda_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/lalaguda_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:warasiguda_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/warasiguda_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:gandhinagar_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/gandhinagar_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:gandhinagar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/gandhinagar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:domalguda_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/domalguda_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:mahankali_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/mahankali_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:mahankali_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/mahankali_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:ramgopalpet_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/ramgopalpet_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:ou_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/ou_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:ousity_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/ousity_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:nallakunta_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/nallakunta_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:amberpet_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/amberpet_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:jubileehillszone_dcp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "dcp",
+   "url": "https://www.hyderabadpolice.gov.in/dcp/jubileehillszone_dcp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:banjarahills_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/banjarahills_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:banjarahills_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/banjarahills_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:madhuranagar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/madhuranagar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:jubileehills_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/jubileehills_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:jubileehills_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/jubileehills_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:filmnagar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/filmnagar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:srnagar_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/srnagar_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:srnagar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/srnagar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:borabanda_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/borabanda_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:sanathnagar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/sanathnagar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:khairathabadzone_dcp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "dcp",
+   "url": "https://www.hyderabadpolice.gov.in/dcp/khairathabadzone_dcp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:abids_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/abids_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:abids_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/abids_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:nampally_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/nampally_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:panjagutta_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/panjagutta_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:panjagutta_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/panjagutta_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:khairatabad_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/khairatabad_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:saifabad_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/saifabad_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:saifabad_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/saifabad_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:lake_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/lake_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:sultanbazaar_acp",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "acp",
+   "url": "https://www.hyderabadpolice.gov.in/acp/sultanbazaar_acp.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:sultanbazaar_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/sultanbazaar_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:hyd:narayanaguda_ps",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "hyd",
+   "kind": "ps",
+   "url": "https://www.hyderabadpolice.gov.in/ps/narayanaguda_ps.html",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:34",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "dcp",
+   "label": "DCP Serilingampally",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=34",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:130",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "acp",
+   "label": "ACP RC Puram",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=130",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:284",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "acp",
+   "label": "ACP Narsingi",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=284",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:88",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Chandanagar PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=88",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:237",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Narsingi PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=237",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:96",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "RC Puram PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=96",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:299",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Gachibowli PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=299",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:294",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Patancheru PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=294",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:300",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Kollur PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=300",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:286",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Ameenpur PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=286",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:278",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "IDA Bollaram PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=278",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:126",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "dcp",
+   "label": "DCP Kukatpally",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=126",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:131",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "acp",
+   "label": "ACP KPHB",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=131",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:132",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "acp",
+   "label": "ACP Balanagar",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=132",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:35",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "acp",
+   "label": "ACP Madhapur",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=35",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:241",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "KPHB PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=241",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:204",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Balanagar PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=204",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:173",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Madhapur PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=173",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:123",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Miyapur PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=123",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:240",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Kukatpally PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=240",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:282",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Raidurgam PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=282",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:243",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Allapur PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=243",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:127",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "dcp",
+   "label": "DCP Quthbullapur",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=127",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:134",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "acp",
+   "label": "ACP Medchal",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=134",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:133",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "acp",
+   "label": "ACP Quthbullapur",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=133",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:235",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Medchal PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=235",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:107",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Jeedimetla PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=107",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:290",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Dundigal PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=290",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:106",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Jagadgirigutta PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=106",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:291",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Pet- Basheerbad PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=291",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:289",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Suraram PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=289",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:83",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Genome Valley PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=83",
+   "state": "TG"
+  }
+ },
+ {
+  "key": "police3_tg:cyb:242",
+  "payload": {
+   "reader": "police3_tg",
+   "form": "cyb",
+   "kind": "ps",
+   "label": "Bachupally PS",
+   "url": "https://www.cyberabadpolice.gov.in/Preview?page_id=242",
+   "state": "TG"
+  }
+ }
+]

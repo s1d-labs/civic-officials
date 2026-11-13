@@ -1,0 +1,2176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>ACP RC Puram</title>
+	<meta name="description" content="ACP RC Puram">
+	<meta name="keywords" content="ACP RC Puram">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="/static/assets/img/favicon.ico" />
+	<!-- Import CSS -->
+	<div>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/assets/img/favicon.ico" />
+
+<!-- Core Framework -->
+<link rel="stylesheet" href="/assets/vendor/bootstrap_5.3/css/bootstrap.css">
+
+<!-- CKEditor -->
+<link rel="stylesheet" href="/assets/vendor/ckeditor5-builder-44.3.0/style.css">
+<link rel="stylesheet" href="/assets/vendor/ckeditor5-builder-44.3.0/ckeditor5/ckeditor5.css">
+
+<!-- Custom Styles -->
+<link rel="stylesheet" href="/assets/custom/css/sliderhelper.css" media="all">
+<link rel="stylesheet" href="/assets/custom/css/custom-flexslider.css" media="all">
+<link rel="stylesheet" href="/assets/custom/css/news-ticker.css" media="all">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="/assets/vendor/fontawesome_6.4/css/all.min.css">
+
+<!-- Viewer.js -->
+<link rel="stylesheet" href="/assets/vendor/Viewerjs_1.11/css/viewer.css">
+<link rel="stylesheet" href="/assets/vendor/Viewerjs_1.11/css/main.css">
+
+<!-- DataTables -->
+<link rel="stylesheet" href="/assets/vendor/DataTables/DataTables-1.13.1/css/dataTables.bootstrap5.min.css">
+
+<!-- Application Styles -->
+<link rel="stylesheet" href="/assets/custom/css/style.css">
+<link rel="stylesheet" href="/assets/custom/css/inlinestyles.css">
+
+</div>
+
+	<!-- Import JS -->
+	<body>
+ 	<div id="preloader"></div>
+<!-- Core Dependencies -->
+<script src="/assets/vendor/jQuery_3.6/jquery.min.js"></script>
+<script src="/assets/vendor/bootstrap_5.3/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/fontawesome_6.4/js/all.min.js"></script>
+
+<!-- CKEditor -->
+<!-- <script type="module" th:src="@{/assets/vendor/ckeditor5-builder-44.3.0/ckeditor5/ckeditor5.js}"></script> -->
+
+<!-- DataTables -->
+<script type="text/javascript" src="/assets/vendor/DataTables/DataTables-1.13.1/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/assets/vendor/DataTables/DataTables-1.13.1/js/dataTables.bootstrap5.min.js"></script>
+
+<!-- Viewer.js -->
+<script type="text/javascript" src="/assets/vendor/Viewerjs_1.11/js/viewer.js"></script>
+<script type="text/javascript" src="/assets/vendor/Viewerjs_1.11/js/main.js"></script>
+
+<!-- Custom Scripts -->
+<script type="text/javascript" src="/assets/custom/js/font-size.js"></script>
+
+<!-- Drawio Scripts -->
+<script type="text/javascript" src="/assets/vendor/drawio/viewer-static.min.js"></script>
+</body>
+	<script>
+		$(function () {
+			new DataTable('.customTable');
+		});
+	</script>
+	<style>
+		.blink {
+			/* animation: blinkAnim 3s infinite; */
+			font-size: 20px;
+		}
+
+		@keyframes blinkAnim {
+
+			0%,
+			50%,
+			100% {
+				opacity: 1;
+			}
+
+			25%,
+			75% {
+				opacity: 0;
+			}
+		}
+	</style>
+	<style>
+		/* Gallery Card Hover Effects */
+		.gallery-card {
+			transition: all 0.3s ease;
+			border: 1px solid #dee2e6;
+		}
+
+		.gallery-card:hover {
+			box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
+			border-color: #0d6efd;
+		}
+
+		.gallery-card:active {
+			transform: scale(0.98) !important;
+		}
+
+		/* Badge styling */
+		.badge {
+			font-size: 0.75rem;
+			padding: 0.35em 0.65em;
+		}
+
+		/* Card title */
+		.gallery-card .card-title {
+			font-weight: 600;
+			color: #2c3e50;
+		}
+
+		/* Icon styling */
+		.gallery-card .fa-external-link-alt {
+			color: #0d6efd;
+		}
+	</style>
+</head>
+<script>
+	function marqueePopup(el) {
+		showAlertBox('info');
+		//	debugger;$('.myTest').parent().prev('dt').text();
+		//		console.log($(el).parent().prev('marquee').html());
+		$('#messageBoxText').html($(el).parent().prev('marquee').html());
+	}
+</script>
+
+<body>
+	<main>
+		<div class="">
+			<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
+<meta name="page-id" content="130"/>
+<script>
+    // Expose page_id from session to JavaScript
+    window.sessionPageId = 130;
+    console.log('Session page_id exposed to JavaScript:', window.sessionPageId);
+</script>
+
+<script src="/assets/custom/js/font-size.js"></script>
+<script src="/assets/js/url-navigation-tracker.js"></script>
+
+<style>
+.navbar-toggler-icon {
+	color: white !important;
+}
+</style>
+<style>
+.dropdown-menu.multi-column {
+	width: 400px; /* you can adjust this */
+	padding: 1rem;
+	column-count: 2;
+	column-gap: 1.5rem;
+}
+
+.dropdown-menu.multi-column a {
+	display: block;
+	padding: 0.25rem 0;
+	white-space: nowrap;
+}
+</style>
+<header id="header" class="align-items-center">
+			<section id="topHeader" class="topHeader section">
+				<div class="bg-blue px-5 py-2 text-white text-uppercase">
+					<div class="row">
+						<div class="slave">
+							<form action="/universalSearch" id="cse-search-box"
+								name="searchform"
+								onsubmit=" if(this.q.value == '' || this.q.value.length < 1) { alert('Please enter a Search Keyword'); return false; }else {return true;}"
+								role="search" class="navbar-form">
+								<div class="input-group input-group-sm d-none">
+									<input type="hidden" name="cx"
+										value="009166207481149357514:oulbmfsyia4"> <input
+										type="hidden" name="cof" value="FORID:10"> <input
+										type="hidden" name="ie" value="UTF-8"> <input
+										type="text" class="form-control search" id="q" name="value"
+										placeholder="Enter Your Keyword"
+										aria-label="Enter Your Keyword" aria-describedby="searchBtn">
+									<button class="btn btn-outline-secondary" type="submit"
+										id="searchBtn">Submit</button>
+								</div>
+							</form>
+						</div>
+						<div class="d-flex justify-content-between align-items-center">
+							<div id="dateTime"></div>
+							<div class="d-flex justify-content-end gap-5 align-items-center">
+								<!-- <a href="#main-content"
+									class="skip-link text-decoration-none text-white" role="link">Skip
+									to main content</a> -->
+								<!-- <div class="d-flex gap-2 align-items-center">
+									<div class="font-small" role="button"
+										onclick="set_font_size('decrease')">A-</div>
+									<div class="font" role="button"
+										onclick="set_font_size('reset')">A</div>
+									<div class="font-big" role="button"
+										onclick="set_font_size('increase')">A+</div>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="titleHeader" class="titleHeader section">
+			    <div class="px-5 py-2">
+			        <div class="d-grid align-items-center auto-center"
+			             style="grid-template-columns: 1fr auto 1fr;">
+			            <div class="d-flex align-items-center">
+			                <img src="/assets/cppmsImg/HeadLogo.png"
+			                     width="100" height="100">
+
+			                <div class="ms-2">
+			                    <h4 class="mb-0 text-uppercase fw-bold main">
+			                        Cyberabad Police
+			                    </h4>
+			                    <h6 class="mb-0 text-uppercase fw-bold sub">
+			                        Your safety, our concern
+			                    </h6>
+			                </div>
+			            </div>
+			            <div class="center-logo text-center">
+			                <img src="/assets/cppmsImg/FeedbackLogo.jpg"
+			                     width="100" height="100">
+			            </div>
+
+			            <div class="d-flex align-items-center justify-content-end gap-2">
+			                <img src="/assets/cppmsImg/TelanganaRising.png"
+			                    height="120">
+			                <img src="/assets/cppmsImg/TelanganaPoliceLogo.png"
+			                     width="100" height="100">
+			            </div>
+
+			        </div>
+			    </div>
+			</section>
+			<nav class="navbar navbar-expand-lg navbar-light bg-brown py-2">
+				<div class="container">
+					<a class="navbar-brand" href="/"><i class="fas fa-home"></i></a>
+
+					<button class="navbar-toggler" type="button"
+						data-bs-toggle="collapse" data-bs-target="#navbarNav">
+						<span class="navbar-toggler-icon bg-white"></span>
+					</button>
+
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<!-- Left-aligned menu -->
+						<ul class="navbar-nav">
+							<li class="nav-item dropdown"> <a class="nav-link" href="/Preview?page_id=5">
+									<span>Organization Structure</span>
+							</a> 
+
+								</li>
+							<li class="nav-item dropdown"><a
+								class="nav-link dropdown-toggle" href="#"
+								data-bs-toggle="dropdown">
+									<span>Citizen Services</span>
+							</a>  
+
+								<ul class="dropdown-menu">
+									<li class="dropdown dropend">  <a class="dropdown-item dropdown-toggle" href="#"
+										data-bs-toggle="dropdown"> <span>Traffic</span>
+									</a>
+
+										<ul class="dropdown-menu">
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://echallan.tspolice.gov.in/publicview/" target="_blank"> <span>e-Challan Status</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://cyberabadtrafficpulse.telangana.gov.in" target="_blank"> <span>Traffic Pulse</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+											<li class="dropdown dropend"> <a class="dropdown-item"
+												href="/Preview?page_id=61"> <span>Report a Violation</span>
+											</a> 
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+											<li class="dropdown dropend"> <a class="dropdown-item"
+												href="/Preview?page_id=38"> <span>Traffic Control Room</span>
+											</a> 
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+										</ul></li>
+									<li class="dropdown dropend">  <a class="dropdown-item dropdown-toggle" href="#"
+										data-bs-toggle="dropdown"> <span>Cyber Crime</span>
+									</a>
+
+										<ul class="dropdown-menu">
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://defreeze-cyb.tgpolice.crimeos.ai/" target="_blank"> <span>De-Freeze</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://cybercrime.gov.in" target="_blank"> <span>Register a Complaint</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://cybercrime.gov.in/Webform/chkackstatus.aspx" target="_blank"> <span>Track Your Complaint</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+										</ul></li>
+									<li class="dropdown dropend">  <a class="dropdown-item dropdown-toggle" href="#"
+										data-bs-toggle="dropdown"> <span>Passport-Verification</span>
+									</a>
+
+										<ul class="dropdown-menu">
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://pvc.tspolice.gov.in/policeverificationandclearence" target="_blank"> <span>PCC Online Registration</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="http://verifast.in/cybStatusCheck.jsp" target="_blank"> <span>Passport Verification Status</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+										</ul></li>
+									<li class="dropdown dropend">  <a class="dropdown-item dropdown-toggle" href="#"
+										data-bs-toggle="dropdown"> <span>Other Services</span>
+									</a>
+
+										<ul class="dropdown-menu">
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://cybpms.telangana.gov.in/" target="_blank"> <span>Event Permission</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://cybpms.telangana.gov.in/" target="_blank"> <span>Establishment Permission</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://cybpms.telangana.gov.in/" target="_blank"> <span>Blasting Permission</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://www.ceir.gov.in/Home/index.jsp" target="_blank"> <span>CEIR/Lost Mobile</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+											<li class="dropdown dropend"><a class="dropdown-item"
+												href="https://meeseva.telangana.gov.in/meeseva/home.htm" target="_blank"> <span>Mee Seva Services</span>
+											</a>  
+
+												<ul class="dropdown-menu">
+													
+												</ul></li>
+										</ul></li>
+								</ul></li>
+							<li class="nav-item dropdown"><a
+								class="nav-link dropdown-toggle" href="#"
+								data-bs-toggle="dropdown">
+									<span>Women &amp; Child Safety</span>
+							</a>  
+
+								<ul class="dropdown-menu">
+									<li class="dropdown dropend"> <a class="dropdown-item"
+										href="/Preview?page_id=25"> <span>Sexual Harassment at Work</span>
+									</a> 
+
+										<ul class="dropdown-menu">
+											
+										</ul></li>
+									<li class="dropdown dropend"> <a class="dropdown-item"
+										href="/Preview?page_id=15"> <span>Eve Teasing</span>
+									</a> 
+
+										<ul class="dropdown-menu">
+											
+										</ul></li>
+									<li class="dropdown dropend"> <a class="dropdown-item"
+										href="/Preview?page_id=212"> <span>SHE Team</span>
+									</a> 
+
+										<ul class="dropdown-menu">
+											
+										</ul></li>
+									<li class="dropdown dropend"> <a class="dropdown-item"
+										href="/Preview?page_id=213"> <span>Bharosa &amp; CDEW Centers</span>
+									</a> 
+
+										<ul class="dropdown-menu">
+											
+										</ul></li>
+									<li class="dropdown dropend"><a class="dropdown-item"
+										href="https://childlineindia.org/a/about/childline-india" target="_blank"> <span>Child Helpline</span>
+									</a>  
+
+										<ul class="dropdown-menu">
+											
+										</ul></li>
+								</ul></li>
+							<li class="nav-item dropdown"><a
+								class="nav-link dropdown-toggle" href="#"
+								data-bs-toggle="dropdown">
+									<span>Information</span>
+							</a>  
+
+								<ul class="dropdown-menu">
+									<li class="dropdown dropend"> <a class="dropdown-item"
+										href="/Preview?page_id=50"> <span>Videos on women safety</span>
+									</a> 
+
+										<ul class="dropdown-menu">
+											
+										</ul></li>
+									<li class="dropdown dropend"> <a class="dropdown-item"
+										href="/Preview?page_id=43"> <span>How do I Report a Crime</span>
+									</a> 
+
+										<ul class="dropdown-menu">
+											
+										</ul></li>
+									<li class="dropdown dropend"> <a class="dropdown-item"
+										href="/Preview?page_id=39"> <span>Telephone and Email Directory</span>
+									</a> 
+
+										<ul class="dropdown-menu">
+											
+										</ul></li>
+									<li class="dropdown dropend"> <a class="dropdown-item"
+										href="/Preview?page_id=39"> <span>FAQ&#39;s</span>
+									</a> 
+
+										<ul class="dropdown-menu">
+											
+										</ul></li>
+								</ul></li>
+							<li class="nav-item dropdown"> <a class="nav-link" href="/Preview?page_id=54">
+									<span>Contacts</span>
+							</a> 
+
+								</li>
+						</ul>
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item"><a class="btn btn-onMenu ms-2"
+								href="/Preview?page_id=60">Jurisdiction
+									Finder</a></li>
+							<li class="nav-item">
+							
+							<!--<a class="btn btn-warning ms-2"
+								th:href="@{/getsignin}"
+								th:if="${#strings.isEmpty(session.username)}">Login</a>-->
+								
+								</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+
+			<script>
+			
+			$(document).ready(function () {
+
+			    var analyticsData = {
+			        pageId: window.sessionPageId,
+			        pageName: document.title,
+			        currentUrl: window.location.href,
+			        refererUrl: document.referrer,
+			        browser: navigator.userAgent,
+			        language: navigator.language,
+			        screenResolution: window.screen.width + "x" + window.screen.height
+			    };
+
+			    $.ajax({
+			        type: "POST",
+			        url: "/saveAnalytics",
+			        contentType: "application/json",
+			        data: JSON.stringify(analyticsData),
+			        success: function (response) {
+			            console.log("Analytics saved:", response);
+			        },
+			        error: function (xhr, status, error) {
+			            console.error("Analytics error:", xhr.status, error);
+			        }
+			    });
+
+			});
+			
+				function langSelected(el, page_id) {
+					var language = el;
+					if (language == 'E') {
+						language = 'H';
+					} else {
+						language = 'E';
+					}
+					$
+							.ajax({
+								type : "GET",
+								url : "/updateCookie?langSelected=" + language,
+								dataType : 'text',
+								contentType : "application/json",
+								success : function(data) {
+									var newUrl = 'http://localhost:8089/Preview?page_id='
+											+ page_id;
+									//var newUrl = 'https://www.svpnpa.gov.in/Preview?page_id='+page_id;
+									window.location.href = newUrl;
+									return false;
+									location.reload();
+									//window.location = "//";
+								}
+							});
+				}
+			</script>
+			<script>
+				function chooseStyle(styletitle, days) { //Interface function to switch style sheets plus save "title" attr of selected stylesheet to cookie
+					alert(styletitle);
+					if (document.getElementById) {
+						setStylesheet(styletitle)
+						setCookie("mysheet", styletitle, days)
+					}
+				}
+			</script>
+			<script>
+				$('#layoutSwitch').change(function() {
+					$('#fontSize').toggleClass("bodyLayout");
+				});
+				localStorage.layoutSwitch === 'true' ? $('#layoutSwitch').prop(
+						'checked', true).trigger("change") : '';
+			</script>
+			<script>
+				document
+						.addEventListener(
+								'DOMContentLoaded',
+								function() {
+									// For touch and click devices
+									document
+											.querySelectorAll(
+													'.dropdown-submenu > .dropdown-toggle')
+											.forEach(
+													function(el) {
+														el
+																.addEventListener(
+																		'click',
+																		function(
+																				e) {
+																			e
+																					.preventDefault();
+																			e
+																					.stopPropagation();
+
+																			let nextMenu = this.nextElementSibling;
+																			if (nextMenu
+																					&& nextMenu.classList
+																							.contains('dropdown-menu')) {
+																				nextMenu.classList
+																						.toggle('show');
+
+																				// Close other open submenus at the same level
+																				let siblings = this
+																						.closest(
+																								'.dropdown-menu')
+																						.querySelectorAll(
+																								'.dropdown-menu.show');
+																				siblings
+																						.forEach(function(
+																								menu) {
+																							if (menu !== nextMenu) {
+																								menu.classList
+																										.remove('show');
+																							}
+																						});
+																			}
+																		});
+													});
+
+									// Prevent click inside submenus from closing parent
+									document
+											.querySelectorAll('.dropdown-menu')
+											.forEach(
+													function(menu) {
+														menu
+																.addEventListener(
+																		'click',
+																		function(
+																				e) {
+																			e
+																					.stopPropagation();
+																		});
+													});
+								});
+			</script>
+			<script>
+				var fontSize = 18; // Global fontSize variable
+
+				jQuery(document).ready(function($) {
+					//console.log("Font Size Script Loaded"); // Debugging
+					if (_getCookie("fontSize") != null) {
+						fontSize = parseInt(_getCookie("fontSize"), 10);
+					}
+					jQuery("#fontSize").css("font-size", fontSize + "%");
+				});
+
+				function _getCookie(name) {
+					var arg = name + "=";
+					var alen = arg.length;
+					var clen = document.cookie.length;
+					var i = 0;
+					while (i < clen) {
+						var j = i + alen;
+						if (document.cookie.substring(i, j) == arg) {
+							return _getCookieVal(j);
+						}
+						i = document.cookie.indexOf(" ", i) + 1;
+						if (i == 0)
+							break;
+					}
+					return null;
+				}
+
+				function _getCookieVal(offset) {
+					var endstr = document.cookie.indexOf(";", offset);
+					if (endstr == -1)
+						endstr = document.cookie.length;
+					return unescape(document.cookie.substring(offset, endstr));
+				}
+
+				function _setCookie(name, value, expires, path, domain, secure) {
+					if (jQuery.type(name) === "string") {
+						document.cookie = name
+								+ "="
+								+ escape(value)
+								+ ((expires) ? "; expires="
+										+ expires.toGMTString() : "")
+								+ ((path) ? "; path=" + path : "; path=/")
+								+ ((domain) ? "; domain=" + domain : "")
+								+ ((secure) ? "; secure" : "");
+					}
+				}
+
+				function _deleteCookie(name, path, domain) {
+					if (_getCookie(name)) {
+						document.cookie = name + "="
+								+ ((path) ? "; path=" + path : "; path=/")
+								+ ((domain) ? "; domain=" + domain : "")
+								+ "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+					}
+				}
+
+				function set_font_size(fontType) {
+					if (fontType === "increase") {
+						if (fontSize < 18) {
+							fontSize = parseInt(fontSize, 10) + 2;
+						}
+					} else if (fontType === "decrease") {
+						if (fontSize > 10) {
+							fontSize = parseInt(fontSize, 10) - 2;
+						}
+					} else {
+						fontSize = 14;
+					}
+					_setCookie("fontSize", fontSize, null, "/");
+					jQuery("#fontSize").css("font-size", fontSize + "%");
+				}
+			</script>
+		</header>
+			<div>
+		<div class="modal fade" id="messageBoxModal" tabindex="-1"
+			aria-labelledby="messageBoxTitle" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title fs-5" id="messageBoxTitle"></h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"
+							aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p id="messageBoxText"></p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" id="closeBtn" class="btn btn-secondary"
+							data-bs-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary"
+							id="messageBoxConfirmBtn">Confirm</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function showMessageBox(type) {
+				let iconClass = '';
+				let title = '';
+				let text = '';
+
+				switch (type) {
+					case 'info':
+						iconClass = 'fas fa-info-circle text-info';
+						title = 'Information';
+						text = 'This is an informational message.';
+						break;
+					case 'error':
+						iconClass = 'fas fa-times-circle text-danger';
+						title = 'Error';
+						text = 'An error occurred.';
+						break;
+					case 'warning':
+						iconClass = 'fas fa-exclamation-circle text-warning';
+						title = 'Warning';
+						break;
+					case 'success':
+						iconClass = 'fas fa-check-circle text-success';
+						title = 'Success';
+						text = 'Operation successful.';
+						break;
+					case 'delete':
+						iconClass = 'fas fa-trash text-danger';
+						title = 'Delete';
+						text = 'Are you sure of deleting this Item?';
+						break;
+					case 'template':
+						iconClass = 'fas fa-exclamation-circle text-danger';
+						title = 'Delete';
+						text = 'You can not delete the template';
+						break;
+				}
+
+				const modal = document.getElementById('messageBoxModal');
+				const modalTitle = document.getElementById('messageBoxTitle');
+				const modalText = document.getElementById('messageBoxText');
+				const confirmBtn = document.getElementById('messageBoxConfirmBtn');
+
+				modalTitle.innerHTML = `<i class="${iconClass}"></i> ${title}`;
+				modalText.innerHTML = text;
+
+				$(modal).modal('show');
+				confirmBtn.removeEventListener('click', showAlertBox);
+				confirmBtn.addEventListener('click', showAlertBox);
+			}
+
+			function confirmAction() {
+				console.log('Confirmed');
+				$('#messageBoxModal').modal('hide');
+			}
+
+			function showAlertBox(type) {
+				let iconClass = '';
+				let title = '';
+				let text = '';
+
+				switch (type) {
+					case 'info':
+						iconClass = 'fas fa-info-circle text-info';
+						title = 'Information';
+						text = 'This is an informational message.';
+						break;
+					case 'error':
+						iconClass = 'fas fa-times-circle text-danger';
+						title = 'Error';
+						text = 'An error occurred.';
+						break;
+					case 'warning':
+						iconClass = 'fas fa-exclamation-circle text-warning';
+						title = 'Warning';
+						break;
+					case 'success':
+						iconClass = 'fas fa-check-circle text-success';
+						title = 'Success';
+						text = 'Operation successful.';
+						break;
+					case 'delete':
+						iconClass = 'fas fa-trash text-danger';
+						title = 'Delete';
+						text = 'Are you sure of deleting this Item?';
+						break;
+					case 'template':
+						iconClass = 'fas fa-exclamation-circle text-danger';
+						title = 'Delete';
+						text = 'You can not delete the template';
+						break;
+				}
+
+				const modal = document.getElementById('messageBoxModal');
+				const modalTitle = document.getElementById('messageBoxTitle');
+				const modalText = document.getElementById('messageBoxText');
+				const closeBtn = document.getElementById('closeBtn');
+				const confirmBtn = document.getElementById('messageBoxConfirmBtn');
+
+				confirmBtn.style.display = "none";
+				modalTitle.innerHTML = `<i class="${iconClass}"></i> ${title}`;
+				modalText.innerHTML = text;
+				closeBtn.innerText = 'Okay';
+
+				$(modal).modal('show');
+				confirmBtn.removeEventListener('click', confirmAction);
+				confirmBtn.addEventListener('click', confirmAction);
+			}
+		</script>
+	</div>
+			<input type="hidden" id="csrf_token" name="_csrf" value="TLYCcYQhYGiQ_y1Z-LydpN_CXf-Npfg-NDJ5-eIX3etmFrY5Ko9gEOUQAgu9yUxowJGpwLr1cMa8nM0TDVRIy9cgv44EJoIN" /> <span
+				id="main-content" class="fadein">
+				<span><div id="page" class="container my-2"><div class="row" id="row">
+				<div class="templateBox col-md-5">
+					<span id="s1"><figure class="table"><table style="background-color:hsl(245, 78%, 32%);"><tbody><tr><td style="background-color:hsl(243, 80%, 28%);"><p style="text-align:center;"><span style="color:hsl(0,0%,100%);"><strong>ACP RC - Puram</strong></span></p></td></tr><tr><td style="text-align:center;"><figure class="image image_resized" style="width:40%;"><img style="aspect-ratio:1838/1902;" src="data:," width="1838" height="1902"></figure></td></tr><tr><td><figure class="table" style="width:100.25%;"><table class="ck-table-resized"><colgroup><col style="width:28.18%;"><col style="width:7.54%;"><col style="width:64.28%;"></colgroup><tbody><tr><td>Name</td><td>:</td><td>CH. Y. Srinivas Kumar</td></tr><tr><td>Designation</td><td>:</td><td>ACP (Asst. Commissioner of Police)</td></tr><tr><td><figure class="table"><table style="border-style:none;"><tbody><tr><td>Cell No.</td><td>&nbsp;</td></tr></tbody></table></figure></td><td>:</td><td>8712663460</td></tr><tr><td>Land Line</td><td>:</td><td style="margin:0px;padding:0px;" align="left" valign="middle">040-27853445</td></tr><tr><td>Fax</td><td>:</td><td style="margin:0px;padding:0px;" align="left" valign="middle">&nbsp; ---</td></tr><tr><td>Email</td><td>:</td><td style="margin:0px;padding:0px;" align="left" valign="middle">&nbsp;--</td></tr><tr><td>Facebook</td><td>:</td><td style="color:rgb(54, 69, 139);margin:0px;padding:0px;" align="left" valign="middle">&nbsp;</td></tr><tr><td>Twitter</td><td>:</td><td>Twitter Page</td></tr></tbody></table></figure></td></tr></tbody></table></figure></span>
+				</div>
+				<div class="templateBox col-md-7">
+					<div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+					<nav>
+						<div class="nav nav-tabs custom-tabs" id="nav-tab1" role="tablist">
+							<button class="nav-link active" id="nav-one-tab"
+								data-bs-toggle="tab" data-bs-target="#nav-one" type="button"
+								role="tab" aria-controls="nav-one" aria-selected="true">Details</button>
+							<button class="nav-link" id="nav-two-tab" data-bs-toggle="tab"
+								data-bs-target="#nav-two" type="button" role="tab"
+								aria-controls="nav-two" aria-selected="false">Jurisdiction</button>
+							<button class="nav-link" id="nav-three-tab" data-bs-toggle="tab"
+								data-bs-target="#nav-three" type="button" role="tab"
+								aria-controls="nav-three" aria-selected="false">Map</button>
+							<div class="tab-underline"></div>
+						</div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="nav-one"
+							role="tabpanel" aria-labelledby="nav-one-tab" tabindex="0">
+							<div class="templateBox col-md-12">
+								<span id="s2"><figure class="table"><table><tbody><tr><td>Designation</td><td>Asst. Commissioner of Police</td></tr><tr><td>Division</td><td>RC Puram</td></tr><tr><td>Zone</td><td>Serilingampally</td></tr><tr><td>Location</td><td>Miyapur Police Station Premises</td></tr><tr><td>Area in Sq.Km</td><td>---</td></tr><tr><td>Population</td><td>---</td></tr></tbody></table></figure></span>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="nav-two" role="tabpanel"
+							aria-labelledby="nav-two-tab" tabindex="0">
+							<div class="templateBox col-md-12">
+								<span id="s3"><figure class="table"><table><tbody><tr><td style="background-color:hsl(243, 80%, 28%);"><p style="text-align:center;"><span style="color:hsl(0,0%,100%);"><strong>RC Puram Division</strong></span></p></td></tr><tr><td>Chandanagar PS</td></tr><tr><td>RC Puram PS</td></tr><tr><td>Patancheru</td></tr><tr><td>Ameenpur</td></tr><tr><td>IDA Bollaram</td></tr></tbody></table></figure></span>
+							</div>
+							</div>
+						<div class="tab-pane fade" id="nav-three" role="tabpanel"
+							aria-labelledby="nav-three-tab" tabindex="0">
+							<div class="templateBox col-md-12">
+								<span id="s4"><div id="map_canvas_3" class="map-container" data-lat="17.494434" data-lng="78.316169" data-zoom="18" data-title="ACP RC Puram" data-description="ACP RC Puram" data-maptype="ROADMAP" style="width: 100%; height: 400px; overflow: hidden; "></div><div class="row m-3"><div class="col-auto"><button type="button" class="btn btn-primary" id="navigateButton_3" onclick='navigateToPs(3)'>Navigate to ACP RC Puram</button></div><div class="col-auto"><button type="button" class="btn btn-secondary" id="nearbyButton_3">Near by Police Stations</button></div></div></span>
+							</div>
+							</div>
+					</div>
+				</div>
+				</div>
+			</div>
+</div></span>
+			</span>
+			<textarea name="content" id="editor" style="display: none;"></textarea>
+		</div>
+	</main>
+	<footer class="bg-secondary-subtle mt-3"
+	id="footer">
+	<div id="scrollButton" style="display: block;" class="text-center">
+				<i class="fa-solid fa-chevron-up mt-2"></i><br> <i
+					class="fa-solid fa-chevron-down"></i>
+			</div>
+	<div class="text-center fs-7">
+		Content on this website is published and managed by IT Cell, Cyberabad
+		Police Commissionerate. For any queries and suggestions regarding this
+		website please Email to <a href="mailto:itcell@cyb.tspolice.gov.in"
+			class="text-blue fw-bold">itcell-cyb@tspolice.gov.in</a>
+		<div class="footer_msg">
+			Last Updated on <span id="currentDate" class="text-blue fw-bold"></span>
+		</div>
+	</div>
+	<div class="d-flex justify-content-between fs-7 px-5">
+		<div>
+			COPYRIGHT © 2025 Cyberabad police commissionerate - <a
+				href="Preview?page_id=37" target="_blank" class="text-blue fw-bold">
+				Website Policy </a>
+		</div>
+		<div>
+			<a href="website-policy.html" target="_blank"> </a>
+			<p align="right">
+				<a href="https://www.hitwebcounter.com" target="_blank"> <img
+					src="https://hitwebcounter.com/counter/counter.php?page=19184576&style=0021&nbdigits=5&type=page&initCount=0"
+					title="Counter Widget" Alt="Visit counter For Websites" border="0" /></a>
+			</p>
+		</div>
+	</div>
+	<script>
+            $(document).ready(function($) {
+                if ($(window).scrollTop() > 50) {
+                    $('#scrollButton').fadeIn();
+                } else {
+                    $('#scrollButton').fadeOut();
+                }
+
+                $(window).on('scroll', function() {
+                    if ($(this).scrollTop() > 50) {
+                        $('#scrollButton').fadeIn();
+                    } else {
+                        $('#scrollButton').fadeOut();
+                    }
+                });
+                $('#scrollButton').on('click', '.fa-chevron-up', function(e) {
+                    e.stopPropagation();
+                    $('html, body').animate({ scrollTop: 0 }, 400);
+                });
+
+                $('#scrollButton').on('click', '.fa-chevron-down', function(e) {
+                    e.stopPropagation();
+                    $('html, body').animate({ scrollTop: $(document).height() }, 400);
+                });
+            });
+        </script>
+</footer>
+</body>
+
+
+<script src="static/assets/vendor/flexslider/flexslider.min.js"></script>
+
+<script>
+	var cke = CKEDITOR
+		.replace(
+			'editor',
+			{
+				toolbarGroups: [
+					{
+						name: 'clipboard',
+						groups: ['clipboard', 'undo']
+					},
+					{
+						name: 'editing',
+						groups: ['find', 'selection',
+							'spellchecker', 'editing']
+					},
+					{
+						name: 'links',
+						groups: ['links']
+					},
+					{
+						name: 'insert',
+						groups: ['insert']
+					},
+					{
+						name: 'forms',
+						groups: ['forms']
+					},
+					{
+						name: 'tools',
+						groups: ['tools']
+					},
+					{
+						name: 'document',
+						groups: ['mode', 'document', 'doctools']
+					},
+					{
+						name: 'others',
+						groups: ['others']
+					},
+					{
+						name: 'basicstyles',
+						groups: ['basicstyles', 'cleanup']
+					},
+					{
+						name: 'paragraph',
+						groups: ['list', 'indent', 'blocks',
+							'align', 'bidi', 'paragraph']
+					}, {
+						name: 'styles',
+						groups: ['styles']
+					}, {
+						name: 'colors',
+						groups: ['colors']
+					}],
+				extraPlugins: 'lineheight',
+				// Remove the redundant plugins from toolbar groups defined above.
+				removePlugins: 'save,newpage,flash,about,iframe,language,templates,source,div,forms,scayt,specialchar,showblocks,sourcearea,'
+			});
+
+	cke.on("instanceReady", function () {
+		document.getElementById("cke_editor").setAttribute("style",
+			"display:none;");
+	});
+</script>
+<script>
+	function marqueePopup(el) {
+		debugger;
+		var ul = el.parentElement.querySelector('ul');
+		localStorage.setItem("listItem", ul.innerHTML)
+	}
+</script>
+<script>
+
+</script>
+<script>
+	/* 	$(document)
+				.ready(
+						function() {
+							var listItems = localStorage.getItem('listItem');
+							document.getElementById("listSelectedToDisplay").innerHTML = '<ul>'
+									+ listItems + '</ul>';
+						}); */
+</script>
+<script>
+	function getCurrentISTTime() {
+		let now = new Date();
+		let options = {
+			timeZone: "Asia/Kolkata",
+			hour12: true
+		};
+		let istTime = now.toLocaleString("en-US", options);
+
+		let dateObj = new Date(istTime);
+		let month = dateObj.toLocaleString('en-US', {
+			month: 'long'
+		});
+		let day = dateObj.getDate();
+		let hours = dateObj.getHours();
+		let minutes = dateObj.getMinutes().toString().padStart(2, '0');
+		let ampm = hours >= 12 ? "PM" : "AM";
+
+		hours = hours % 12 || 12;
+
+		let formattedTime = `${month} ${day}, ${hours}:${minutes}${ampm}`;
+		document.getElementById("dateTime").innerText = formattedTime;
+	}
+
+	getCurrentISTTime();
+</script>
+<script>
+	function updateDate() {
+		const today = new Date();
+		const options = {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric'
+		};
+		const formattedDate = today.toLocaleDateString('en-US', options);
+
+		document.getElementById('currentDate').textContent = formattedDate;
+	}
+	updateDate();
+	setInterval(updateDate, 86400000);
+</script>
+<!-- <script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const carouselElement = document
+				.getElementById("carouselExampleIndicators");
+		const pausePlayButton = document.getElementById("pausePlayButton");
+		let isPaused = false;
+
+		const carousel = new bootstrap.Carousel(carouselElement, {
+			interval : 1500,
+			ride : "carousel"
+		});
+
+		pausePlayButton.addEventListener("click", function() {
+			console.log("Pause/Play button clicked");
+			if (isPaused) {
+				carousel.cycle(); // Resume the carousel
+				pausePlayIcon.querySelector("i").classList.remove("fa-play");
+				pausePlayIcon.querySelector("i").classList.add("fa-pause");
+			} else {
+				carousel.pause(); // Pause the carousel
+				pausePlayIcon.querySelector("i").classList.remove("fa-pause");
+				pausePlayIcon.querySelector("i").classList.add("fa-play");
+			}
+			isPaused = !isPaused; // Toggle the paused state
+		});
+	});
+</script> -->
+<!-- <script>
+	$(document).ready(function() {
+		$('#example').DataTable({
+			scrollX : true
+		});
+	});
+</script> -->
+<script>
+	function shuffleCarousel() {
+		const carouselInner = document.querySelector('.random-slides');
+		const slides = Array.from(carouselInner.children);
+
+		for (let i = slides.length - 1; i > 0; i--) {
+			const randomIndex = Math.floor(Math.random() * (i + 1));
+			[slides[i], slides[randomIndex]] = [slides[randomIndex], slides[i]];
+		}
+
+		slides.forEach((slide, index) => {
+			if (index === 0) {
+				slide.classList.add('active');
+			} else {
+				slide.classList.remove('active');
+			}
+			carouselInner.appendChild(slide);
+		});
+	}
+
+	window.addEventListener('DOMContentLoaded', shuffleCarousel);
+</script>
+
+
+
+
+<script>
+	jQuery(document).ready(function (e) {
+		jQuery(".nth-flexslider .flexslider").flexslider({
+			animation: "slide",
+			directionNav: true,
+			pausePlay: true,
+			maxItems: 1,
+			controlNav: false,
+			slideshowSpeed: 5000
+		});
+	});
+</script>
+<script>
+	jQuery(document).ready(function ($) {
+		$('.home-slider').flexslider({
+			animation: ($('body').hasClass('rtl')) ? "fade" : "slide",
+			directionNav: true,
+			pausePlay: true,
+			pauseText: "<i class='fas fa-pause' aria-hidden='true'></i>",
+			playText: "<i class='fas fa-play' aria-hidden='true'></i>",
+			controlNav: true,
+			slideshowSpeed: 2000,
+			start: function (slider) {
+				$('body').find('.flexslider').resize();
+				if (slider.count == 1) {
+					slider.pausePlay.parent().remove();
+				}
+				slider.container.hover(
+					function () {
+						slider.pause();
+					},
+					function () {
+						slider.play();
+					}
+				);
+			}
+		});
+	});
+</script>
+
+<script>
+	function moveUnderlineForGroup(customTabs) {
+		const activeTab = customTabs.querySelector('.nav-link.active');
+		const underline = customTabs.querySelector('.tab-underline');
+
+		if (activeTab && underline) {
+			const rect = activeTab.getBoundingClientRect();
+			const parentRect = customTabs.getBoundingClientRect();
+
+			underline.style.width = `${rect.width}px`;
+			underline.style.left = `${rect.left - parentRect.left}px`;
+		}
+	}
+
+	function setupAllTabGroups() {
+		const allTabGroups = document.querySelectorAll('.custom-tabs');
+
+		allTabGroups.forEach(group => {
+			// Initial underline position
+			moveUnderlineForGroup(group);
+
+			// Update on tab change
+			group.querySelectorAll('.nav-link').forEach(btn => {
+				btn.addEventListener('shown.bs.tab', () => {
+					moveUnderlineForGroup(group);
+				});
+			});
+		});
+
+		// Update all underlines on window resize
+		window.addEventListener('resize', () => {
+			allTabGroups.forEach(moveUnderlineForGroup);
+		});
+	}
+
+	window.addEventListener('load', setupAllTabGroups);
+</script>
+<script>
+	/* window.addEventListener('DOMContentLoaded', function () { 
+		<img src="big-image.jpg" alt="..." loading="lazy">*/
+
+	window.addEventListener('load', function () {
+		const preloader = document.querySelector('.preloader');
+		preloader.style.display = 'none';
+	});
+</script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv6L0RWIXyH-8yGEhC1uyPPpnM1NeIfLw&libraries=places&callback=initMap&loading=async"
+	async defer></script>
+
+<script>
+	//Initialize maps and event listeners when document is ready
+	document.addEventListener('DOMContentLoaded', function () {
+		// Initialize maps that are visible on page load (active tab)
+		const activeTabContent = document.querySelector('.tab-pane.active');
+		if (activeTabContent) {
+			const visibleMaps = activeTabContent.querySelectorAll('.map-container');
+			visibleMaps.forEach((mapDiv) => {
+				const mapId = mapDiv.id;
+				const index = mapId.replace('map_canvas_', '');
+				const lat = parseFloat(mapDiv.getAttribute('data-lat'));
+				const lng = parseFloat(mapDiv.getAttribute('data-lng'));
+				const zoom = parseFloat(mapDiv.getAttribute('data-zoom'));
+				const title = mapDiv.getAttribute('data-title');
+				const description = mapDiv.getAttribute('data-description');
+				const mapType = mapDiv.getAttribute('data-maptype');
+
+				// Initialize map in active tab
+				initMap(index, lat, lng, zoom, title, description, mapType);
+			});
+		}
+
+		// Add event listener for Bootstrap 5 tab show event
+		const tabElms = document.querySelectorAll('button[data-bs-toggle="tab"], a[data-bs-toggle="tab"]');
+		tabElms.forEach(tabElm => {
+			tabElm.addEventListener('shown.bs.tab', function (event) {
+				// Get the newly activated tab content
+				const targetId = tabElm.getAttribute('data-bs-target') || tabElm.getAttribute('href');
+				const targetPane = document.querySelector(targetId);
+
+				if (targetPane) {
+					// Find all map containers in the newly activated tab
+					const mapDivs = targetPane.querySelectorAll('.map-container');
+					mapDivs.forEach((mapDiv) => {
+						const mapId = mapDiv.id;
+						const index = mapId.replace('map_canvas_', '');
+						const lat = parseFloat(mapDiv.getAttribute('data-lat'));
+						const lng = parseFloat(mapDiv.getAttribute('data-lng'));
+						const zoom = parseFloat(mapDiv.getAttribute('data-zoom'));
+						const title = mapDiv.getAttribute('data-title');
+						const description = mapDiv.getAttribute('data-description');
+						const mapType = mapDiv.getAttribute('data-maptype');
+
+						// Force Google Maps to resize and recenter
+						window.setTimeout(() => {
+							initMap(index, lat, lng, zoom, title, description, mapType);
+						}, 10);
+					});
+				}
+			});
+		});
+	});
+
+	// Initialize individual map
+	function initMap(index, lat, lng, zoom, title, description, mapType) {
+		const location = {lat: lat, lng: lng};
+		const mapDiv = document.getElementById("map_canvas_" + index);
+
+		if (!mapDiv) {
+			// console.log('Map container not found for index:', index);
+			return;
+		}
+
+		// Create map instance
+		const map = new google.maps.Map(mapDiv, {
+			zoom: zoom || 12,
+			center: location,
+			mapTypeId: google.maps.MapTypeId[mapType?.toUpperCase()] || google.maps.MapTypeId.ROADMAP
+		});
+
+		// Add marker
+		const marker = new google.maps.Marker({
+			position: location,
+			map: map,
+			title: title
+		});
+
+		// Optional: Add info window with description
+		if (description) {
+			const infoWindow = new google.maps.InfoWindow({
+				content: `<div><h5>${title}</h5><p>${description}</p></div>`
+			});
+
+			marker.addListener('click', () => {
+				infoWindow.open(map, marker);
+			});
+		}
+
+		// Force Google Maps to redraw
+		google.maps.event.trigger(map, 'resize');
+		map.setCenter(location);
+	}
+</script>
+<script>
+	function navigateToPs(index) {
+		if (typeof index === 'undefined') {
+			alert('Index is undefined in navigateToPs call.');
+			return;
+		}
+		const navigateButton = document.getElementById('navigateButton_' + index);
+		if (!navigateButton) {
+			alert("Navigate button not found for index " + index);
+			return;
+		}
+		const mapContainer = document.getElementById('map_canvas_' + index);
+		if (!mapContainer) {
+			alert("Map container not found for index " + index);
+			return;
+		}
+
+		const originalText = navigateButton.innerText;
+		navigateButton.innerText = "Getting your location...";
+		navigateButton.disabled = true;
+
+		if (!navigator.geolocation) {
+			alert("Your browser does not support geolocation services.");
+			navigateButton.innerText = originalText;
+			navigateButton.disabled = false;
+			return;
+		}
+
+		navigator.geolocation.getCurrentPosition(
+			(position) => {
+				const currentLat = position.coords.latitude;
+				const currentLng = position.coords.longitude;
+
+				const destLat = parseFloat(mapContainer.getAttribute('data-lat'));
+				const destLng = parseFloat(mapContainer.getAttribute('data-lng'));
+				const destTitle = mapContainer.getAttribute('data-title') || "Destination";
+
+				if (isNaN(destLat) || isNaN(destLng)) {
+					alert("Destination location not properly defined.");
+					navigateButton.innerText = originalText;
+					navigateButton.disabled = false;
+					return;
+				}
+
+				const url = `https://www.google.com/maps/dir/?api=1&origin=${currentLat},${currentLng}&destination=${destLat},${destLng}&travelmode=driving`;
+				window.open(url, '_blank');
+
+				navigateButton.innerText = originalText;
+				navigateButton.disabled = false;
+			},
+			(error) => {
+				navigateButton.innerText = originalText;
+				navigateButton.disabled = false;
+
+				let errorMessage;
+				switch (error.code) {
+					case error.PERMISSION_DENIED:
+						errorMessage = "Location permission denied. Please enable location services to use navigation.";
+						break;
+					case error.POSITION_UNAVAILABLE:
+						errorMessage = "Location information is unavailable.";
+						break;
+					case error.TIMEOUT:
+						errorMessage = "Request to get location timed out.";
+						break;
+					case error.UNKNOWN_ERROR:
+						errorMessage = "An unknown error occurred while getting location.";
+						break;
+					default:
+						errorMessage = "An unknown error occurred while getting location.";
+				}
+				alert(errorMessage);
+			},
+			{
+				enableHighAccuracy: true,
+				timeout: 10000,
+				maximumAge: 0
+			}
+		);
+	}
+</script>
+<script>
+	//Initialize global variables if they don't exist
+	window.maps = window.maps || {};
+	window.markers = window.markers || {};
+
+	function fetchNearbyPoliceStations(lat, lng, index) {
+		try {
+			const mapContainer = document.getElementById(`map_canvas_${index}`);
+			if (!mapContainer) {
+				throw new Error("Map container not found");
+			}
+
+			// Initialize map if needed
+			if (!window.maps[index]) {
+				window.maps[index] = new google.maps.Map(mapContainer, {
+					center: {lat: parseFloat(lat), lng: parseFloat(lng)},
+					zoom: 15
+				});
+			}
+
+			const service = new google.maps.places.PlacesService(window.maps[index]);
+
+			const request = {
+				location: new google.maps.LatLng(lat, lng),
+				radius: 5000,
+				type: 'police'
+			};
+
+			return new Promise((resolve, reject) => {
+				service.nearbySearch(request, (results, status) => {
+					if (status === google.maps.places.PlacesServiceStatus.OK) {
+						displayPoliceStations(results, index)
+							.then(resolve)
+							.catch(reject);
+					} else {
+						reject(new Error("Error fetching police stations: " + status));
+					}
+				});
+			});
+		} catch (error) {
+			return Promise.reject(error);
+		}
+	}
+
+	function displayPoliceStations(stations, index) {
+		return new Promise((resolve, reject) => {
+			try {
+				if (!window.maps[index]) {
+					throw new Error("Map not initialized for index " + index);
+				}
+
+				const map = window.maps[index];
+
+				// Clear existing markers
+				if (window.markers[index]) {
+					window.markers[index].forEach(marker => marker.setMap(null));
+				}
+				window.markers[index] = [];
+
+				// Add new markers
+				stations.forEach(station => {
+					const position = {
+						lat: station.geometry.location.lat(),
+						lng: station.geometry.location.lng()
+					};
+
+					const marker = new google.maps.Marker({
+						position,
+						map,
+						title: station.name,
+						icon: {
+							url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"
+						}
+					});
+
+					const infoWindow = new google.maps.InfoWindow({
+						content: `<h3>${station.name}</h3>
+                             <p>${station.vicinity}</p>
+                             ${station.rating ? `<p>Rating: ${station.rating}/5</p>` : ''}`
+					});
+
+					marker.addListener('click', () => {
+						infoWindow.open(map, marker);
+					});
+
+					window.markers[index].push(marker);
+				});
+
+				// Fit bounds to show all markers
+				if (stations.length > 1) {
+					const bounds = new google.maps.LatLngBounds();
+					stations.forEach(station => {
+						bounds.extend(new google.maps.LatLng(
+							station.geometry.location.lat(),
+							station.geometry.location.lng()
+						));
+					});
+					map.fitBounds(bounds);
+				}
+
+				resolve();
+			} catch (error) {
+				reject(error);
+			}
+		});
+	}
+
+	// Event listener for the nearby button
+	document.querySelectorAll('[id^="nearbyButton_"]').forEach(button => {
+		button.addEventListener('click', function () {
+			// Get user's current location instead of map container's data
+			navigator.geolocation.getCurrentPosition(
+				(position) => {
+					const lat = position.coords.latitude;
+					const lng = position.coords.longitude;
+					console.log("my positionssssssssssss------>" + lat + lng);
+
+
+					//const searchUrl = `https://www.google.com/maps/search/police+station/@${lat},${lng},15z/data=!3m1!4b1!4m8!2m7!3m6!1spolice+station!2s${lat},${lng}!3s0x0:0x0!4m2!1d${lng}!2d${lat}`;
+
+					const searchUrl = `https://www.google.com/maps/search/police+station+near+me/@${lat},${lng},15z`;
+
+					// Open in new tab
+					window.open(searchUrl, '_blank', 'noopener');
+				},
+				(error) => {
+					console.error("Geolocation error:", error);
+					alert("Unable to get your current location. Please allow location access.");
+				}
+			);
+		});
+	});
+</script>
+<script>
+	function generateHierarchyStyles(maxLevel) {
+		// Define your color palette (can have as many colors as you want)
+		const colors = [
+			'#0d6efd',  // Blue
+			'#6c757d',  // Gray
+			'#198754',  // Green
+			'#dc3545',  // Red
+			'#ffc107',  // Yellow
+			'#6f42c1',  // Purple
+			'#fd7e14',  // Orange
+			'#20c997',  // Teal
+			'#e83e8c',  // Pink
+			'#17a2b8',  // Cyan
+			'#495057',  // Dark Gray
+			'#7048e8',  // Indigo
+			'#2ecc71',  // Emerald
+			'#f1c40f',  // Sunflower
+			'#9b59b6',  // Amethyst
+			'#34495e',  // Wet Asphalt
+			'#16a085',  // Green Sea
+			'#8e44ad',  // Wisteria
+			'#3498db',  // Peter River
+			'#e67e22'   // Carrot
+		];
+
+		// Define border widths (gradually decreasing)
+		const getBorderWidth = (level) => {
+			return Math.max(3 - (level * 0.2), 1) + 'px';
+		};
+
+		// Create a style element
+		const styleElement = document.createElement('style');
+		let cssRules = '';
+
+		// Generate styles for each level
+		for (let i = 0; i <= maxLevel; i++) {
+			const colorIndex = i % colors.length;
+
+			cssRules += `
+	      .level-${i} > .org-node {
+	        background-color: ${i === 0 ? '#f8f9fa' : '#ffffff'};
+	        border-bottom: ${getBorderWidth(i)} solid ${colors[colorIndex]};
+	      }
+	    `;
+		}
+
+		// Add the CSS rules to the style element
+		styleElement.textContent = cssRules;
+
+		// Append the style element to the document head
+		document.head.appendChild(styleElement);
+
+		//console.log(`Hierarchy styles generated for ${maxLevel + 1} levels`);
+	}
+	generateHierarchyStyles(20);
+</script>
+<script>
+	// Carousel functionality
+	function initializeCarousel() {
+		const carousel = document.getElementById('serviceCarousel');
+		if (!carousel) return; // Exit if carousel not found
+
+		let currentSlide = 0;
+		let autoScrollTimer = null;
+
+		const slides = carousel.querySelectorAll('.carousel-slide');
+		const indicators = carousel.querySelectorAll('.indicator');
+		const prevBtn = carousel.querySelector('.carousel-nav.prev');
+		const nextBtn = carousel.querySelector('.carousel-nav.next');
+
+		// Get auto-scroll interval from data attribute or default to 0
+		const autoScrollInterval = parseInt(carousel.dataset.autoScroll || '0') * 1000;
+
+		function goToSlide(index) {
+			if (slides.length === 0) return;
+
+			// Remove active class from current slide and indicator
+			slides[currentSlide].classList.remove('active');
+			if (indicators[currentSlide]) {
+				indicators[currentSlide].classList.remove('active');
+			}
+
+			// Update current slide
+			currentSlide = index;
+
+			// Add active class to new slide and indicator
+			slides[currentSlide].classList.add('active');
+			if (indicators[currentSlide]) {
+				indicators[currentSlide].classList.add('active');
+			}
+
+			// Reset auto-scroll timer if enabled
+			if (autoScrollInterval > 0 && autoScrollTimer) {
+				clearInterval(autoScrollTimer);
+				autoScrollTimer = setInterval(nextSlide, autoScrollInterval);
+			}
+		}
+
+		function nextSlide() {
+			if (currentSlide < slides.length - 1) {
+				goToSlide(currentSlide + 1);
+			} else {
+				goToSlide(0);
+			}
+		}
+
+		function prevSlide() {
+			if (currentSlide > 0) {
+				goToSlide(currentSlide - 1);
+			} else {
+				goToSlide(slides.length - 1);
+			}
+		}
+
+		// Event listeners
+		if (prevBtn) {
+			prevBtn.addEventListener('click', prevSlide);
+		}
+		if (nextBtn) {
+			nextBtn.addEventListener('click', nextSlide);
+		}
+
+		// Indicator click events
+		indicators.forEach((indicator, index) => {
+			indicator.addEventListener('click', () => goToSlide(index));
+		});
+
+		// Auto-scroll setup
+		if (autoScrollInterval > 0) {
+			autoScrollTimer = setInterval(nextSlide, autoScrollInterval);
+
+			// Pause auto-scroll on hover
+			carousel.addEventListener('mouseenter', () => {
+				if (autoScrollTimer) {
+					clearInterval(autoScrollTimer);
+					autoScrollTimer = null;
+				}
+			});
+
+			// Resume auto-scroll on mouse leave
+			carousel.addEventListener('mouseleave', () => {
+				if (autoScrollInterval > 0) {
+					autoScrollTimer = setInterval(nextSlide, autoScrollInterval);
+				}
+			});
+		}
+	}
+
+	// Initialize when DOM is loaded
+	document.addEventListener('DOMContentLoaded', initializeCarousel);
+
+	// Also initialize when new content is dynamically loaded
+	// Call this function after inserting new carousel HTML
+	window.reinitializeCarousel = initializeCarousel;
+</script>
+<script>
+	// Animate the underline for scrollspy
+	document.addEventListener('DOMContentLoaded', function () {
+		const navLinks = document.querySelectorAll('.custom-scrollspy-nav .nav-link');
+		const underline = document.querySelector('.tab-underline');
+		const navContainer = document.querySelector('.custom-scrollspy-nav');
+
+		function updateUnderline(activeLink) {
+			if (!activeLink || !underline) return;
+
+			// Get the position relative to the nav container
+			const navRect = navContainer.getBoundingClientRect();
+			const linkRect = activeLink.getBoundingClientRect();
+
+			const top = linkRect.top - navRect.top;
+			const height = linkRect.height;
+
+			// Position the underline
+			underline.style.top = top + 'px';
+			underline.style.height = height + 'px';
+			underline.style.width = '3px';
+			underline.style.left = '0px';
+			underline.style.opacity = '1';
+		}
+
+		// Initialize underline on first load
+		setTimeout(() => {
+			const activeLink = document.querySelector('.custom-scrollspy-nav .nav-link.active');
+			if (activeLink) {
+				updateUnderline(activeLink);
+			} else {
+				// If no active link, set to first link
+				const firstLink = document.querySelector('.custom-scrollspy-nav .nav-link');
+				if (firstLink) {
+					updateUnderline(firstLink);
+				}
+			}
+		}, 100);
+
+		// Listen for scrollspy updates using MutationObserver
+		const observer = new MutationObserver(function (mutations) {
+			mutations.forEach(function (mutation) {
+				if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+					const target = mutation.target;
+					if (target.classList.contains('nav-link') && target.classList.contains('active')) {
+						updateUnderline(target);
+					}
+				}
+			});
+		});
+
+		// Observe all nav links for class changes
+		navLinks.forEach(link => {
+			observer.observe(link, {attributes: true, attributeFilter: ['class']});
+		});
+
+		// Also listen for click events on nav links
+		navLinks.forEach(link => {
+			link.addEventListener('click', function () {
+				// Remove active class from all links
+				navLinks.forEach(l => l.classList.remove('active'));
+				// Add active class to clicked link
+				this.classList.add('active');
+				updateUnderline(this);
+			});
+		});
+
+		// Listen for scroll events to manually update active states
+		const scrollspyEl = document.querySelector('[data-bs-spy="scroll"]');
+		if (scrollspyEl) {
+			scrollspyEl.addEventListener('scroll', function () {
+				// Check which section is currently in view
+				const sections = document.querySelectorAll('#item-1, #item-2, #item-3');
+				const scrollTop = this.scrollTop;
+				const scrollHeight = this.scrollHeight;
+				const clientHeight = this.clientHeight;
+
+				let activeSection = null;
+
+				sections.forEach(section => {
+					const sectionTop = section.offsetTop - 50; // 50px offset
+					const sectionBottom = sectionTop + section.offsetHeight;
+
+					if (scrollTop >= sectionTop && scrollTop < sectionBottom) {
+						activeSection = section;
+					}
+				});
+
+				// If we're at the bottom, make sure the last section is active
+				if (scrollTop + clientHeight >= scrollHeight - 10) {
+					activeSection = sections[sections.length - 1];
+				}
+
+				if (activeSection) {
+					const activeId = activeSection.id;
+					const activeLink = document.querySelector(`.custom-scrollspy-nav .nav-link[href="#${activeId}"]`);
+
+					// Update active states
+					navLinks.forEach(link => link.classList.remove('active'));
+					if (activeLink) {
+						activeLink.classList.add('active');
+						updateUnderline(activeLink);
+					}
+				}
+			});
+		}
+
+		// Update underline on window resize
+		window.addEventListener('resize', function () {
+			const activeLink = document.querySelector('.custom-scrollspy-nav .nav-link.active');
+			if (activeLink) {
+				updateUnderline(activeLink);
+			}
+		});
+	});
+</script>
+<script>
+	const scrollSpy = new bootstrap.ScrollSpy(document.querySelector('.scrollspy-example-2'), {
+		target: '#navbar-example3',
+		smoothScroll: true
+	});
+</script>
+<script>
+	$(document).ready(function () {
+		let $originalSlides = $('.news-ticker-horizontal .flexslider .slides > li:not(.clone)');
+
+		// If only 1 real slide exists, make it blink
+		if ($originalSlides.length === 1) {
+
+			$originalSlides.addClass('blink');
+			$originalSlides.before('<li class="new-gif-slide"><img src="static/assets/img/new.gif" alt="New" /></li>');
+		}
+
+		// Initialize FlexSlider
+		$('.news-ticker-horizontal .flexslider').flexslider({
+			animation: "slide",
+			animationLoop: true,
+			controlNav: false,
+			directionNav: true,
+			slideshow: true,
+			slideshowSpeed: 3000,
+			animationSpeed: 600
+		});
+	});
+
+</script>
+<script>
+	function openGalleryInNewTab(galleryIndex, groupId) {
+		var galleryContainer = $('.gallery-card-wrapper[data-gallery-id="' + galleryIndex + '"]');
+		var collapseSection = galleryContainer.next('.gallery-expanded-view');
+
+		var imageElements = collapseSection.find('ul.docs-pictures img[data-gallery-id="' + galleryIndex + '"]');
+
+		if (imageElements.length === 0) {
+			console.error('No images found for gallery index:', galleryIndex);
+			alert('No images found in this gallery');
+			return;
+		}
+
+		console.log('Converting', imageElements.length, 'images...');
+
+		var images = [];
+		var loadedCount = 0;
+
+		// Convert each image to base64
+		imageElements.each(function (index) {
+			var img = this;
+			var title = $(img).attr('title') || $(img).attr('alt') || 'Image';
+
+			// Create a canvas to convert image to base64
+			var canvas = document.createElement('canvas');
+			var ctx = canvas.getContext('2d');
+
+			// Create a new image to ensure it's loaded
+			var tempImg = new Image();
+			tempImg.crossOrigin = 'Anonymous'; // Handle CORS if needed
+
+			tempImg.onload = function () {
+				canvas.width = tempImg.naturalWidth || tempImg.width;
+				canvas.height = tempImg.naturalHeight || tempImg.height;
+				ctx.drawImage(tempImg, 0, 0);
+
+				try {
+					var dataUrl = canvas.toDataURL('image/jpeg', 0.9);
+					images.push({
+						src: dataUrl,
+						title: title
+					});
+				} catch (e) {
+					// If canvas conversion fails, use original src
+					console.warn('Could not convert image to base64, using original URL:', e);
+					images.push({
+						src: $(img).attr('src'),
+						title: title
+					});
+				}
+
+				loadedCount++;
+
+				// When all images are processed, open the tab
+				if (loadedCount === imageElements.length) {
+					console.log('All images loaded, opening gallery...');
+					createGalleryTab(groupId, images);
+				}
+			};
+
+			tempImg.onerror = function () {
+				// If image fails to load, use original src anyway
+				console.warn('Image failed to load, using original URL');
+				images.push({
+					src: $(img).attr('src'),
+					title: title
+				});
+
+				loadedCount++;
+
+				if (loadedCount === imageElements.length) {
+					createGalleryTab(groupId, images);
+				}
+			};
+
+			tempImg.src = $(img).attr('src');
+		});
+	}
+
+	// Create the gallery in a NEW TAB
+	function createGalleryTab(groupId, images) {
+		var html = `
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Gallery - ${groupId}</title>
+	    
+	    <!--CSS Imports for new Tab-->
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css" rel="stylesheet">
+	    
+	    <style>
+	        body {
+	            min-height: 100vh;
+	            padding: 20px;
+	            margin: 0;
+	        }
+	        
+	        .gallery-grid {
+	            display: grid;
+	            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	            gap: 20px;
+	            list-style: none;
+	            padding: 0;
+	            margin: 0;
+	        }
+	        
+	        .gallery-item {
+	            position: relative;
+	            overflow: hidden;
+	            border-radius: 10px;
+	            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+	            transition: transform 0.3s ease, box-shadow 0.3s ease;
+	            cursor: pointer;
+	        }
+	        
+	        .gallery-item:hover {
+	            transform: translateY(-5px);
+	            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+	        }
+	        
+	        .gallery-item img {
+	            width: 100%;
+	            height: 250px;
+	            object-fit: cover;
+	            display: block;
+	            transition: transform 0.3s ease;
+	        }
+	        
+	        .gallery-item:hover img {
+	            transform: scale(1.05);
+	        }
+	        
+	        .gallery-item-title {
+	            position: absolute;
+	            bottom: 0;
+	            left: 0;
+	            right: 0;
+	            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+	            color: white;
+	            padding: 15px 10px 10px;
+	            font-size: 14px;
+	            text-align: center;
+	        }
+	        
+	        .close-btn {
+	            position: fixed;
+	            top: 20px;
+	            right: 20px;
+	            z-index: 1000;
+	            background: white;
+	            border: none;
+	            width: 50px;
+	            height: 50px;
+	            border-radius: 50%;
+	            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	            cursor: pointer;
+	            transition: all 0.3s ease;
+	        }
+	        
+	        .close-btn:hover {
+	            background: #dc3545;
+	            color: white;
+	            transform: rotate(90deg);
+	        }
+	        
+	        .image-counter {
+	            position: absolute;
+	            top: 10px;
+	            left: 10px;
+	            background: rgba(0,0,0,0.7);
+	            color: white;
+	            padding: 5px 10px;
+	            border-radius: 20px;
+	            font-size: 12px;
+	            font-weight: bold;
+	        }
+	    </style>
+	</head>
+	<body>
+	    
+	    <div>
+	            <h2 class="text-capitalize mb-2">
+	                ${groupId}- ${images.length} ${images.length === 1 ? 'Image' : 'Images'}
+	            </h2>
+	        
+	        <ul class="gallery-grid" id="galleryGrid">
+	            ${images.map((img, index) => `
+	                <li class="gallery-item">
+	                    <img src="${img.src}" 
+	                         alt="${img.title || 'Image ' + (index + 1)}" 
+	                         title="${img.title || 'Image ' + (index + 1)}">
+	                </li>
+	            `).join('')}
+	        </ul>
+	    </div>
+	    
+	    <!--JS Imports for new Tab-->
+	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"><\/script>
+	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"><\/script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js"><\/script>
+	    
+	    <script>
+	        document.addEventListener('DOMContentLoaded', function() {
+	            const gallery = document.getElementById('galleryGrid');
+	            
+	            const viewer = new Viewer(gallery, {
+	                inline: false,
+	                navbar: true,
+	                title: false,
+	                toolbar: {
+	                    zoomIn: 4,
+	                    zoomOut: 4,
+	                    oneToOne: 4,
+	                    reset: 4,
+	                    prev: 4,
+	                    play: {
+	                        show: 4,
+	                        size: 'large',
+	                    },
+	                    next: 4,
+	                    rotateLeft: 4,
+	                    rotateRight: 4,
+	                    flipHorizontal: 4,
+	                    flipVertical: 4,
+	                },
+	                viewed() {
+	                    console.log('Image viewed');
+	                },
+	                transition: true,
+	                zoomable: true,
+	                scalable: true,
+	                movable: true,
+	                rotatable: true,
+	                keyboard: true,
+	                fullscreen: true
+	            });
+	            
+	            console.log('Gallery loaded with ${images.length} images');
+	        });
+	    <\/script>
+	</body>
+	</html>
+	    `;
+
+		var blob = new Blob([html], {type: 'text/html'});
+		var url = URL.createObjectURL(blob);
+		var newTab = window.open(url, '_blank');
+
+		if (!newTab) {
+			alert('Please allow popups for this site to view the gallery');
+			return;
+		}
+
+		setTimeout(function () {
+			URL.revokeObjectURL(url);
+		}, 1000);
+	}
+
+	// Initialize Viewer.js for current page galleries
+	$(document).ready(function () {
+		function initializeViewer(galleryElement) {
+			if (galleryElement && galleryElement.length > 0) {
+				console.log('Attempting to initialize viewer for gallery:', galleryElement.data('gallery-index'));
+
+				if (galleryElement[0].viewer) {
+					console.log('Destroying existing viewer...');
+					galleryElement[0].viewer.destroy();
+				}
+
+				var ulElement = galleryElement.find('ul.docs-pictures');
+				if (ulElement.length > 0) {
+					console.log('Found UL element, creating viewer...');
+					var galleryIndex = galleryElement.data('gallery-index');
+
+					new Viewer(ulElement[0], {
+						inline: false,
+						navbar: true,
+						title: false,
+						toolbar: {
+							zoomIn: 1,
+							zoomOut: 1,
+							oneToOne: 1,
+							reset: 1,
+							prev: 1,
+							play: {
+								show: 1,
+								size: 'large',
+							},
+							next: 1,
+							rotateLeft: 1,
+							rotateRight: 1,
+							flipHorizontal: 1,
+							flipVertical: 1,
+						},
+						transition: true,
+						zoomable: true,
+						scalable: true,
+						movable: true,
+						rotatable: true,
+						keyboard: true,
+						filter: function (image) {
+							return image.getAttribute('data-gallery-id') === String(galleryIndex);
+						}
+					});
+					console.log('Viewer initialized successfully for gallery:', galleryIndex);
+				} else {
+					console.error('UL element not found inside docs-galley');
+				}
+			} else {
+				console.error('Gallery element not found or invalid');
+			}
+		}
+
+		$('.docs-galley').each(function () {
+			if ($(this).closest('.collapse').hasClass('show') || !$(this).closest('.collapse').length) {
+				console.log('Initializing visible gallery on page load');
+				initializeViewer($(this));
+			}
+		});
+
+		$('.collapse').on('shown.bs.collapse', function () {
+			console.log('Folder opened, initializing viewer...');
+			var galleries = $(this).find('.docs-galley');
+			galleries.each(function () {
+				initializeViewer($(this));
+			});
+		});
+
+		$('.collapse').on('hidden.bs.collapse', function () {
+			$(this).find('.docs-galley ul.docs-pictures').each(function () {
+				if (this.viewer) {
+					console.log('Destroying viewer on collapse close');
+					this.viewer.destroy();
+				}
+			});
+		});
+	});
+
+</script>
+
+
+
+</html>
