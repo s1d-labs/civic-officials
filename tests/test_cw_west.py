@@ -472,3 +472,26 @@ def test_ga_orders_are_not_winners():
             '<a href="https://sec.goa.gov.in/assets/media/docs/x/DMA-WARD-COUNCILOR.pdf">Order</a>'
             '<a href="https://sec.goa.gov.in/assets/media/docs/x/winning-candidates-ponda.pdf">Winning Candidates Ponda</a>')
     assert [u for u, _ in cw_ga.winners_pdfs(html, cw_ga.BASE)] == ["https://sec.goa.gov.in/assets/media/docs/x/winning-candidates-ponda.pdf"]
+
+
+def test_mp_gap_preamble_cuts():
+    """The 18 OCR'd preamble names without an LGD code in civic.councillor on 2026-11-14 (352 members): 16 now tie;
+    पांडल्थाखुर्द (Khargone) stays open (no LGD body is close)."""
+    from cforms import cw_mp
+    cases = {("आगरमालवा जिला आगर मालवा", "आगरमालवा जिला आगर मालवा", "Municipality"): "250858",
+             ("बड़नगर जिला उज्जैन", "बड़नगर जिला उज्जैन", "Municipality"): "250852",
+             ("बड़ौद जिला आगर मालवा", "बड़ौद जिला आगर मालवा", "Nagar Parishad"): "250857",      # not Bairad (Shivpuri)
+             ("बरेलीं जिंला रायसेन", "बरेलीं जिंला रायसेन", "Nagar Parishad"): "250962",
+             ("गाशसिवनी", "बालाघाट", "Municipality"): "251037", ("ह॒ गरप़ालिका परिषद गाडरवाड़ा", "नरसिंहपुर", ""): "250999",
+             ("जुन्नारदेव", "छिंदवाड़ा", "Municipality"): "251010", ("कैंटनी", "कटनी", "Municipal Corporation"): "250979",
+             ("कानड़ जिला आगर मालवा", "कानड़ जिला आगर मालवा", "Nagar Parishad"): "250859",
+             ("क् नगर परिषद मालथान जिला", "क् नगर परिषद मालथान जिला", ""): "297116",
+             ("मिहाना जिंलाँ मिण्ड", "मिहाना जिंलाँ मिण्ड", "Nagar Parishad"): "250690",         # not Mandla
+             ("नगर-परिषद बड़ागांव जिला आगर मालवा", "नगर-परिषद बड़ागांव जिला आगर मालवा", ""): "250733",
+             ("नलखेडा जिला आगर मालवा", "नलखेडा जिला आगर मालवा", "Nagar Parishad"): "250855",
+             ("पंरिषद् करेली ह", "नरसिंहपुर", "Municipality"): "251002", ("फूप", "मिंण्ड", "Nagar Parishad"): "250683",
+             ("सोयतकलां जिला आगर मालवा", "सोयतकलां जिला आगर मालवा", "Nagar Parishad"): "250853",
+             ("पांडल्थाखुर्द", "खरगौन", "Nagar Parishad"): None}
+    got = {c: (cw_mp.lgd_of_split(*c) or [None])[0] for c in cases}
+    assert got == cases
+    assert cw_mp.split_body("बड़ौद जिला आगर मालवा", "बड़ौद जिला आगर मालवा") == ("बड़ौद", "आगर मालवा")

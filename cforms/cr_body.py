@@ -28,7 +28,7 @@ POSTS = {"प्रमुख": "President", "ઉપપ્રમુખ": "Vice Pr
 def post(s):
     """English post of a member row; plain councillors get none (as the other readers)."""
     s = (s or "").strip()
-    if not s or re.fullmatch(r"(?i)councill?or|corporator|member|सदस्य|सभ्य|સભ્ય", s):
+    if not s or re.fullmatch(r"(?i)councill?or|corporator|member|सदस्य|सभ्य|સભ્ય|पार्षद|सभासद", s):
         return None
     if s in POSTS:
         return POSTS[s]

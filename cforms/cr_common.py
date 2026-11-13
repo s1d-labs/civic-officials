@@ -117,6 +117,7 @@ def clean(s):
 
 ROLES = [  # (role, header pattern); the first role whose pattern matches a header cell wins
     ("name", r"name of the (councill?or|member|corporator)s?"),     # "Name of the Councillors with Designation"
+    ("name", r"^(नाम\s*(/|एवं|व|और)\s*पद|name\s*(/|and|&)\s*(post|designation))"),   # "नाम / पद" (MP town sites): the post in brackets
     ("father", r"पिता|पति|father|husband|पिता/पति|वडील"),
     ("ward_name", r"वार्ड\s*का\s*नाम|ward\s*name|मोहल्ला|वार्ड\s*का\s*क्षेत्र|area|locality|প্রভাগ নাম|વોર્ડનું નામ"),
     ("ward_no", r"वार्ड|ward|वॉर्ड|प्रभाग|ওয়ার্ড|વોર્ડ|ਵਾਰਡ"),
@@ -146,13 +147,19 @@ def member_tables(html):
         for hi, tr in enumerate(trs[:4]):
             head = [clean(c.get_text(" ", strip=True)) for c in tr.find_all(["th", "td"])]
             rs = roles(head)
-            if "name" in rs and ("ward_no" in rs or "ward_name" in rs):
+            if "name" in rs and ("ward_no" in rs or "ward_name" in rs or "position" in rs):
                 rows = []
                 for ri, r in enumerate(trs[hi + 1:], hi + 2):     # rows carry .pos = {"table", "row"} for the source trail
                     row = Cells(clean(c.get_text(" ", strip=True)) for c in r.find_all(["td", "th"]))
                     row.pos = {"table": ti, "row": ri}
                     rows.append(row)
-                found.append((rs, [r for r in rows if any(r)]))
+                rows = [r for r in rows if any(r)]
+                if "ward_no" not in rs and "ward_name" not in rs:
+                    # name | post table (MP town sites: "पार्षद वार्ड नं 02"): a member table only when its post cells name wards
+                    pi = rs.index("position")
+                    if not any(WARD_IN.search(digits(r[pi])) for r in rows if len(r) > pi):
+                        continue
+                found.append((rs, rows))
                 break
     return found
 
@@ -165,6 +172,10 @@ def ward_of(s):
     return (m.group(1) + (m.group(2) or "").upper()) if m else None
 
 
+# a ward number inside a post or name cell: "पार्षद वार्ड नं 02", "पार्षद — वार्ड क्र. 01", "Councillor Ward No. 7"
+WARD_IN = re.compile(r"(?:वार्ड|ward)\s*(?:नं|न|क्र|क्रमांक|संख्या|सं|no|number)?\s*[.:\-–—]?\s*(\d{1,3})\b", re.I)
+HI_POSTS = r"अध्यक्ष|उपाध्यक्ष|पार्षद|महापौर|उप\s*महापौर|सभापति|उप\s*सभापति|सदस्य"
+HI_POST_TAIL = re.compile(r"\s*\((" + HI_POSTS + r")\)\s*$")
 POST_TAIL = re.compile(r"\s+(Chairman|Chairperson|Vice[- ]Chairman|Vice[- ]Chairperson|Councillor|Mayor|Deputy Mayor|"
                        r"President|Vice[- ]President|Chairman[- ]in[- ]Council|MIC)\s*$", re.I)
 
@@ -186,18 +197,30 @@ def table_members(html, pos=None):
             if not name or re.fullmatch(r"[-–.\s]*", name):
                 provenance.skip_row(cells, 'skip: not name or re.fullmatch(r"[-–.\\s]*", name)')
                 continue
-            m = POST_TAIL.search(name)              # "Sri Gautam Dasgupta Chairman": the post written after the name
+            m = POST_TAIL.search(name) or HI_POST_TAIL.search(name)    # "Sri Gautam Dasgupta Chairman", "श्री ... (अध्यक्ष)"
             if m and m.start() > 0:
                 d.setdefault("position", m.group(1))
                 name = clean(name[:m.start()])
             d["name"] = name
             if d.get("ward_no"):
                 w = ward_of(d["ward_no"])
+                wi = None if w else WARD_IN.search(digits(d["ward_no"]))
                 if w:
                     d["ward_no"] = w
+                elif wi:                         # "पद / वार्ड" column: "पार्षद — वार्ड क्र. 01"
+                    d.setdefault("position", clean(d["ward_no"][:wi.start()].strip(" —–-,")) or None)
+                    d["ward_no"] = wi.group(1)
+                elif re.fullmatch(HI_POSTS, clean(d["ward_no"])):     # "पद / वार्ड" column holding a post only (अध्यक्ष)
+                    d.setdefault("position", clean(d.pop("ward_no")))
                 else:                            # "वार्ड" column with ward names (Khairabad): the name, no number
                     d.setdefault("ward_name", d["ward_no"])
                     d.pop("ward_no")
+            elif d.get("position") and WARD_IN.search(digits(d["position"])):    # "पद" column: "पार्षद वार्ड नं 02"
+                wi = WARD_IN.search(digits(d["position"]))
+                d["ward_no"] = wi.group(1)
+                d["position"] = clean(d["position"][:wi.start()].strip(" —–-,")) or None
+            if d.get("position") is None:
+                d.pop("position", None)
             if d.get("phone"):
                 d["phone"] = ", ".join(re.findall(r"(?<!\d)(?:\+?91[-\s]?)?([6-9]\d{4}[-\s]?\d{5}|0\d{2,4}[-\s]?\d{6,8})(?!\d)",
                                                   digits(d["phone"]))) or digits(d["phone"])

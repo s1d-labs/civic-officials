@@ -179,3 +179,21 @@ def test_pb_heads_keep_the_member_list_mohali():
     assert ids[1:] == [f"councillor:PB:mohali:site:{i}" for i in range(1, 51)]
     d = dict(recs)["councillor:PB:mohali:site:1"]
     assert d["phone"] == "9815122132" and d["source_kind"] == "e-Nigam member list" and d["src_pos"]["card"] == 1
+
+
+def test_body_mp_town_sites():
+    """Madhya Pradesh town sites (archive.s1d.me copies, 2026-11-11), full pages: the four table layouts of the gap round."""
+    def recs(town):
+        return cr_body.records(read(f"cr_body_mp_{town}.html"), {"state": "MP", "slug": town, "body": town, "url": "u"})
+    wards = lambda rs: sorted(int(d["ward_no"]) for _, d in rs if d.get("ward_no"))     # noqa: E731
+    j = recs("joura")                     # क्र | वार्ड | नाम | मोबाइल: 18 of 18 wards
+    assert len(j) == 18 and wards(j) == list(range(1, 19))
+    i = dict(recs("isagarh"))             # नाम | "पद / वार्ड": अध्यक्ष, उपाध्यक्ष, "पार्षद — वार्ड क्र. 01"
+    assert len(i) == 15 and wards(i.items()) == [1, 2, 3, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15]
+    assert i["councillor:MP:isagarh:s1"]["position"] == "Chairperson" and "position" not in i["councillor:MP:isagarh:01"]
+    m = dict(recs("mauganj"))             # "नाम / पद" (post in brackets) | वार्ड | मोबाइल: 15 of 15
+    assert len(m) == 15 and wards(m.items()) == list(range(1, 16))
+    assert m["councillor:MP:mauganj:1"]["name"] == "श्री बृजवासी पटेल" and m["councillor:MP:mauganj:1"]["position"] == "Chairperson"
+    b = dict(recs("birsinghpur"))         # नाम | पद ("पार्षद वार्ड नं 02") | मोबाइल
+    assert len(b) == 15 and wards(b.items()) == [2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    assert b["councillor:MP:birsinghpur:02"]["phone"] == "7509146975"
