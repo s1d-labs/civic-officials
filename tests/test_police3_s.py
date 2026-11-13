@@ -82,3 +82,23 @@ def test_tg_district_pages():
     assert first["area"] == "Mahabubabad Town" and first["post"] == "SI-I" and first["phone"] == "9440795238"
     recs, _, why = police3_tg.fetch({"form": "s3waas", "url": u2, "district": "Hanumakonda"}, get)
     assert len(recs) == 10 and all(d["state"] == "TG" for _, d in recs)
+
+
+from dforms import police3_an  # noqa: E402
+
+
+def test_an_contact_pages():
+    get = FakeGet({police3_an.BASE + k + ".html": f"police3_an/{k}.html" for k in police3_an.PAGES})
+    out = {}
+    for it in police3_an.items():
+        recs, files, why = police3_an.fetch(it["payload"], get)
+        assert why == "" and files
+        out[it["payload"]["district"]] = recs
+    sho = {d: [r for _, r in v if r["level"] == "police_station"] for d, v in out.items()}
+    assert {d: len(v) for d, v in sho.items()} == {"South Andamans": 9, "North And Middle Andaman": 7, "Nicobars": 5}
+    a = sho["South Andamans"][0]
+    assert a["area"] == "Aberdeen" and a["name"] == "Sh.Vijay Kumar, Inspr" and a["phone"] == "03192-232400, 9531856156"
+    assert a["email"] == "shoaberdeen.and@nic.in" and a["src_pos"] == {"table": 7, "row": 6}
+    sp = out["Nicobars"][0][1]
+    assert sp["level"] == "district" and sp["post"] == "SP (D) Nicobar" and sp["name"] == "Shri Rahul L Nair, IPS"
+    assert sum(r["level"] == "subdivision" for _, r in out["South Andamans"]) == 4

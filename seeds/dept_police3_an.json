@@ -1,0 +1,29 @@
+[
+ {
+  "key": "police3_an:south-district",
+  "payload": {
+   "reader": "police3_an",
+   "url": "https://police.andamannicobar.gov.in/index.php/en/new-laws/contact-details/south-district.html",
+   "state": "AN",
+   "district": "South Andamans"
+  }
+ },
+ {
+  "key": "police3_an:n-m-district",
+  "payload": {
+   "reader": "police3_an",
+   "url": "https://police.andamannicobar.gov.in/index.php/en/new-laws/contact-details/n-m-district.html",
+   "state": "AN",
+   "district": "North And Middle Andaman"
+  }
+ },
+ {
+  "key": "police3_an:nicobar-district",
+  "payload": {
+   "reader": "police3_an",
+   "url": "https://police.andamannicobar.gov.in/index.php/en/new-laws/contact-details/nicobar-district.html",
+   "state": "AN",
+   "district": "Nicobars"
+  }
+ }
+]
