@@ -1,0 +1,146 @@
+[
+ {
+  "key": "st_py_portal:secretaries",
+  "payload": {
+   "reader": "st_py_portal",
+   "url": "https://www.py.gov.in/secretaries",
+   "page": "cards",
+   "name": "secretaries",
+   "body": "Government of Puducherry, Chief Secretariat",
+   "body_kind": "secretariat",
+   "level": "state",
+   "district": "",
+   "state": "PY",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_py_portal:secretaries-list",
+  "payload": {
+   "reader": "st_py_portal",
+   "url": "https://www.py.gov.in/secretaries-list",
+   "page": "table",
+   "name": "secretaries-list",
+   "body": "Government of Puducherry, Chief Secretariat",
+   "body_kind": "secretariat",
+   "level": "state",
+   "district": "",
+   "state": "PY",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_py_portal:section-heads",
+  "payload": {
+   "reader": "st_py_portal",
+   "url": "https://www.py.gov.in/section-heads-secretariat",
+   "page": "table",
+   "name": "section-heads",
+   "body": "Government of Puducherry, Secretariat",
+   "body_kind": "secretariat",
+   "level": "state",
+   "district": "",
+   "state": "PY",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_py_portal:hods",
+  "payload": {
+   "reader": "st_py_portal",
+   "url": "https://www.py.gov.in/heads-departments-puducherry",
+   "page": "table",
+   "name": "hods",
+   "body": "",
+   "body_kind": "directorate",
+   "level": "state",
+   "district": "",
+   "state": "PY",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_py_portal:dept-contacts",
+  "payload": {
+   "reader": "st_py_portal",
+   "url": "https://www.py.gov.in/department-contacts",
+   "page": "table",
+   "name": "dept-contacts",
+   "body": "",
+   "body_kind": "directorate",
+   "level": "state",
+   "district": "",
+   "state": "PY",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_py_portal:karaikal",
+  "payload": {
+   "reader": "st_py_portal",
+   "url": "https://www.py.gov.in/district-collector-and-heads-branch-offices-karaikal",
+   "page": "table",
+   "name": "karaikal",
+   "body": "",
+   "body_kind": "department",
+   "level": "district",
+   "district": "Karaikal",
+   "state": "PY",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_py_portal:mahe",
+  "payload": {
+   "reader": "st_py_portal",
+   "url": "https://www.py.gov.in/regional-administrator-and-heads-branch-offices-mahe",
+   "page": "table",
+   "name": "mahe",
+   "body": "",
+   "body_kind": "department",
+   "level": "district",
+   "district": "Mahe",
+   "state": "PY",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_py_portal:yanam",
+  "payload": {
+   "reader": "st_py_portal",
+   "url": "https://www.py.gov.in/regional-administrator-and-heads-branch-offices-yanam",
+   "page": "table",
+   "name": "yanam",
+   "body": "",
+   "body_kind": "department",
+   "level": "district",
+   "district": "Yanam",
+   "state": "PY",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_py_portal:police",
+  "payload": {
+   "reader": "st_py_portal",
+   "url": "https://police.py.gov.in/senior-officer-address.php",
+   "page": "table",
+   "name": "police",
+   "body": "Puducherry Police",
+   "body_kind": "police",
+   "level": "state",
+   "district": "",
+   "state": "PY",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
