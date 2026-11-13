@@ -1,0 +1,5 @@
+{"module": "ward3_kdmc",
+ "payload": {"reader": "ward3_kdmc", "url": "https://kdmc.gov.in/kdmc/SectionInformation.html?editForm&rowId=426&page=", "state": "MH"},
+ "routes": {"https://kdmc.gov.in/kdmc/SectionInformation.html?editForm&rowId=426&page=": "kdmc_426.html"},
+ "min_records": 1,
+ "expect": [{"post": "आयुक्त", "level": "zone"}]}
