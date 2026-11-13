@@ -136,6 +136,7 @@ def sp_parse(device, offices, module, state, base, dist_code="", district="", sr
     for li, x in enumerate(device.get("list") or []):
         fid = _esw.clean(x.get("fps_id"))
         if not fid or TEST_ID.match(fid) or fid in seen:
+            provenance.skipped("test or repeated fps_id" if fid else "no fps_id")
             continue
         seen.add(fid)
         afso_code, afso, owner = offices.get(fid, ("", "", ""))
@@ -148,6 +149,7 @@ def sp_parse(device, offices, module, state, base, dist_code="", district="", sr
         if not name and n1 and not phone:            # a dealer with a phone but only a label ("PACX") stays the dealer
             name, post, phone = n1, "FPS nominee", unmasked(x.get("nom_1_mob")) or n1_ph
         if not name and not phone:
+            provenance.skipped("no name or phone")
             continue
         recs.append(_esw.record(
             module, fid, dept="food_supplies", level="facility", layer="fps", area=afso or district, post=post, name=name,
@@ -207,9 +209,11 @@ def jsp_parse(html, module, state, base, dist_code="", district="", src=None):
         trn += 1
         tds = [_esw.clean(td.get_text(" ")) for td in tr.find_all("td")]
         if len(tds) < 4 or not re.fullmatch(r"\d{4,15}", tds[1]):
+            provenance.skip_row(tds, "no fps_id")
             continue
         fid, term, rest = tds[1], tds[2], tds[3:]
         if TEST_ID.match(fid) or fid in seen:
+            provenance.skipped("test or repeated fps_id")
             continue
         seen.add(fid)
         names, phone_after, nums = [], {}, []
@@ -229,6 +233,7 @@ def jsp_parse(html, module, state, base, dist_code="", district="", src=None):
         if not dealer and n1 and not dealer_phone:
             dealer, post, dealer_phone = n1, "FPS nominee", phone_after.get(1, "")
         if not dealer and not dealer_phone:
+            provenance.skipped("no name or phone")
             continue
         recs.append(_esw.record(
             module, fid, dept="food_supplies", level="facility", layer="fps", area=district, post=post, name=dealer,

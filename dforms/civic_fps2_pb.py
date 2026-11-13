@@ -12,6 +12,7 @@ source value when it differs. Record ids: dept:civic_fps2_pb:<fps_id>.
 import re
 
 from dforms import _civic, _civic_fps, _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -71,15 +72,18 @@ def parse(html, dist_code, office_code="", office="", district=""):
     for tr in table.find_all("tr"):
         tds = [_esw.clean(td.get_text(" ")) for td in tr.find_all("td")]
         if len(tds) < 5 or not re.fullmatch(r"\d{6,15}", tds[1]):
+            provenance.skip_row(tds, "no fps_id")
             continue
         fid, cards, term, owner = tds[1], tds[2], tds[3], tds[4]
         mob = tds[5] if len(tds) > 5 else ""
         if _civic_fps.TEST_ID.match(fid) or fid in seen:
+            provenance.skipped("test or repeated fps_id")
             continue
         seen.add(fid)
         src_name = _civic_fps.name_of(owner)
         name = _esw.clean(src_name.replace("_", " "))
         if not name:
+            provenance.skipped("no name")
             continue
         recs.append(_esw.record(
             MODULE, fid, dept="food_supplies", level="facility", layer="fps", area=office or district, post=_civic_fps.POST,

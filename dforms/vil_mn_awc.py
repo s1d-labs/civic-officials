@@ -60,6 +60,7 @@ def rows(text):
         for ln, line in enumerate(page.splitlines(), 1):
             m = ROW.match(line)
             if not m:
+                provenance.skip_line(line, "line does not match the row pattern")
                 continue
             sno, before, code, after = m.group(1), m.group(2), m.group(3), m.group(4) or ""
             dist, proj, awc, sure = split_before(before)
@@ -78,6 +79,7 @@ def parse(content, url, p=None):
         for post, tag, name in (("Anganwadi Worker", "aww", worker), ("Anganwadi Helper", "awh", helper)):
             name = _esw.clean(name)
             if not name or VACANT.match(name):
+                provenance.skipped("vacant or no name")
                 continue
             key = f"{code}:{tag}"
             while key in seen:

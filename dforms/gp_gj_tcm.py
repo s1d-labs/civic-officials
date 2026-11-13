@@ -30,6 +30,7 @@ import re
 from urllib.parse import urljoin, urlparse
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table (district panchayat taluka pages, header words -> columns)"     # source trail (provenance.py)
 
@@ -129,6 +130,7 @@ def table_rows(grid, pos, strict=False):
         cells = [text(c) for c in r]
         if not any(cells) or any(c and c == header[i] and rl.get(i) in ("tcm", "sarpanch", "employee", "mobile")
                                  for i, c in enumerate(cells[:len(header)])):
+            provenance.skipped("header" if any(cells) else "empty")
             continue        # a second header row (rowspan repeats the first header's name cell)
         row = {"cells": {header[i] or f"col{i + 1}": c for i, c in enumerate(cells) if c and i < len(header)}}
         for i, c in enumerate(cells):

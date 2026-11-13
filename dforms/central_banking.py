@@ -17,6 +17,7 @@ import json
 from pathlib import Path
 
 from dforms import _civic, _esw
+import provenance
 
 METHOD = "csv file (RBI IFSC list)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -49,9 +50,11 @@ def records(text, p, url):
     dr = csv.DictReader(io.StringIO(text))
     for n, row in enumerate(dr, 1):
         if state_of(row) != p["state"]:
+            provenance.filtered("other state")
             continue
         ifsc = _esw.clean(row.get("IFSC")).upper()
         if len(ifsc) != 11:
+            provenance.skipped("no 11-character IFSC")
             continue
         out.append(_esw.record(
             MODULE, ifsc, dept="banking", level="facility", area=row.get("BRANCH"), post="Branch Manager",
