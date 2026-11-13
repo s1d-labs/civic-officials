@@ -20,6 +20,11 @@ import provenance
 
 METHOD = "html table (in a WordPress search answer: json api)"     # source trail (provenance.py): how this reader reads its sources
 
+# reader audit (audit.py): the search answer also holds the body's other pages (councillor lists, Public Disclosure, Citizen
+# Charter, schemes). This reader keeps the heads only. The ward councillors of every body are held from the SEC results by
+# cforms/tn.py (checked 2026-11-13: Devakottai 43, Nagercoil 70, Paramakudi 56, Arcot 32 records), their mobiles by cforms/cp_tn.py
+# (89 bodies seeded). The audit judges this reader by the heads' names on the page.
+AUDIT_HEADS = "cforms.tn"
 BASE = "https://www.tnurbantree.tn.gov.in/"
 TERMS = ("chair", "mayor", "தலைவர்")
 ELECTION = "Tamil Nadu 2022 indirect election of heads (04.03.2022), as listed on the body's website"

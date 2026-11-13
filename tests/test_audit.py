@@ -176,3 +176,16 @@ def test_pri_kl_member_pages_and_ward_table():
     assert a["verdict"] == "ok" and a["records_person"] == 24 and a["rows_matched"] == 24
     # only the 2 records whose member page did not answer take the table as source: that alone is low
     assert audit.audit_source(audit.read_source(body, "text/html", "x.html.gz"), recs[:2], "cforms.pri_kl")["verdict"] == "low"
+
+
+def test_tn_heads_judged_by_the_heads_names():
+    """Dharapuram, the WordPress search answer "chair" (the full saved answer, 673 KB): 343 person-like rows (councillor list,
+    schemes, disclosures); the reader keeps the 2 head pages (chair, vice-chair). cforms/tn.py holds the councillors; the audit
+    judges tn_heads by the heads' names (AUDIT_HEADS)."""
+    from cforms import tn_heads
+    body = gzip.decompress((DATA / "tn_heads_dharapuram.json.gz").read_bytes())
+    url = "https://www.tnurbantree.tn.gov.in/dharapuram/wp-json/wp/v2/pages?search=chair"
+    recs = tn_heads.parse([(url, body.decode("utf-8"))], {"site": "dharapuram"})
+    assert sorted(rid for rid, _ in recs) == ["councillor:TN:head:dharapuram:chair", "councillor:TN:head:dharapuram:vice-chair"]
+    a = audit.audit_source(audit.read_source(body, "application/json", "x.json.gz"), recs_of(recs), "cforms.tn_heads")
+    assert a["rows_visible"] == 343 and a["verdict"] == "ok" and a["reason"].startswith("heads only: 2 heads")
