@@ -1,0 +1,5 @@
+{"module": "ward3_guwahati",
+ "payload": {"reader": "ward3_guwahati", "url": "https://gmc.assam.gov.in/about-us/our-zones", "state": "AS", "kind": "zones"},
+ "routes": {"https://gmc.assam.gov.in/about-us/our-zones": "guwahati_zones.html"},
+ "min_records": 6, "min_wards": 59,
+ "expect": [{"post": "Deputy Commissioner, Central Zone", "name": "Ramen Talukdar", "wards": ["16", "30"], "level": "zone"}, {"post": "Deputy Commissioner, West Zone", "name": "Gunajit Das", "wards": ["1", "15"]}]}

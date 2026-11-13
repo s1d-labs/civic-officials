@@ -1,0 +1,26 @@
+[
+ {
+  "key": "ward3_guwahati-zones",
+  "payload": {
+   "reader": "ward3_guwahati",
+   "url": "https://gmc.assam.gov.in/about-us/our-zones",
+   "state": "AS",
+   "kind": "zones",
+   "india_only": true,
+   "route": "direct",
+   "route_note": "route unchecked: GitHub runners and an India server failed on 2026-11-11 (archive), Mumbai answered 2026-11-13"
+  }
+ },
+ {
+  "key": "ward3_guwahati-divisions",
+  "payload": {
+   "reader": "ward3_guwahati",
+   "url": "https://gmc.assam.gov.in/about-us/our-divisions",
+   "state": "AS",
+   "kind": "divisions",
+   "india_only": true,
+   "route": "direct",
+   "route_note": "route unchecked: GitHub runners and an India server failed on 2026-11-11 (archive), Mumbai answered 2026-11-13"
+  }
+ }
+]
