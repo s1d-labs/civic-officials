@@ -41,11 +41,18 @@ def level_of(type_name):
     return TYPE_LEVEL.get(" ".join((type_name or "").lower().split()), "")
 
 
+_KEEP = r"a-z0-9\u0900-\u0dff"     # Latin letters, digits and the Indic scripts (Devanagari ... Sinhala blocks)
+
+
 def norm(s):
-    """Name key for matching: lower case, ASCII letters and digits only, body-type words removed."""
-    s = unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode().lower()
-    s = _STOP.sub(" ", re.sub(r"[^a-z0-9]+", " ", s))
-    return re.sub(r"[^a-z0-9]", "", s)
+    """Name key for matching: lower case, Latin letters (accents dropped), digits and Indic letters, body-type words removed.
+    Indic text is kept (2026-11-13: an ASCII-only key made every Marathi/Tamil/Gujarati name empty, so LGD local names never
+    matched and different bodies got one record id)."""
+    s = unicodedata.normalize("NFC", s or "").lower()
+    s = "".join(c for c in unicodedata.normalize("NFKD", s) if not (unicodedata.combining(c) and ord(c) < 0x0900))
+    s = unicodedata.normalize("NFC", s)
+    s = _STOP.sub(" ", re.sub(rf"[^{_KEEP}]+", " ", s))
+    return re.sub(rf"[^{_KEEP}]", "", s)
 
 
 def digits(s):
@@ -104,14 +111,19 @@ class Lgd:
         for r in self.rows:
             code, lev, name, local, parent = r
             chain = self.chain(code)
-            dist = next((self.by_code[c][2] for c in chain if self.by_code[c][1] == "zp"), "")
-            blk = next((self.by_code[c][2] for c in chain if self.by_code[c][1] == "ps"), "")
+            zp = next((self.by_code[c] for c in chain if self.by_code[c][1] == "zp"), None)
+            ps = next((self.by_code[c] for c in chain if self.by_code[c][1] == "ps"), None)
+            dists = {x for x in (zp[2], zp[3]) if x} if zp else {""}       # district and block in English and the local script
+            blks = {x for x in (ps[2], ps[3]) if x} if ps else {""}
             for nm in {name, local}:
                 if not nm:
                     continue
                 n = norm(nm)
-                for key in ((lev, n), (lev, norm(dist), n), (lev, norm(dist), norm(blk), n)):
-                    self.idx.setdefault(key, set()).add(code)
+                self.idx.setdefault((lev, n), set()).add(code)
+                for dist in dists:
+                    self.idx.setdefault((lev, norm(dist), n), set()).add(code)
+                    for blk in blks:
+                        self.idx.setdefault((lev, norm(dist), norm(blk), n), set()).add(code)
 
     def chain(self, code):
         out, seen = [], set()
