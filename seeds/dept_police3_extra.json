@@ -1,0 +1,60 @@
+[
+ {
+  "key": "police3_extra:police_nl:mokokchung.nic.in:helpline",
+  "payload": {
+   "reader": "police_nl",
+   "url": "https://mokokchung.nic.in/helpline/",
+   "state": "NL",
+   "district": "Mokokchung"
+  }
+ },
+ {
+  "key": "police3_extra:police_nl:noklak.nic.in:helpline",
+  "payload": {
+   "reader": "police_nl",
+   "url": "https://noklak.nic.in/helpline/",
+   "state": "NL",
+   "district": "Noklak"
+  }
+ },
+ {
+  "key": "police3_extra:police_s3waas:tseminyu.nic.in:police",
+  "payload": {
+   "reader": "police_s3waas",
+   "url": "https://tseminyu.nic.in/police/",
+   "state": "NL",
+   "district": "Tseminyu",
+   "police_only": true
+  }
+ },
+ {
+  "key": "police3_extra:police_s3waas:namsai.nic.in:directory",
+  "payload": {
+   "reader": "police_s3waas",
+   "url": "https://namsai.nic.in/directory/",
+   "state": "AR",
+   "district": "Namsai",
+   "police_only": true
+  }
+ },
+ {
+  "key": "police3_extra:police_s3waas:shiyomi.nic.in:police",
+  "payload": {
+   "reader": "police_s3waas",
+   "url": "https://shiyomi.nic.in/police/",
+   "state": "AR",
+   "district": "Shi Yomi",
+   "police_only": true
+  }
+ },
+ {
+  "key": "police3_extra:police_s3waas:westkameng.nic.in:police-department",
+  "payload": {
+   "reader": "police_s3waas",
+   "url": "https://westkameng.nic.in/police-department/",
+   "state": "AR",
+   "district": "West Kameng",
+   "police_only": true
+  }
+ }
+]

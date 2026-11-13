@@ -102,3 +102,22 @@ def test_an_contact_pages():
     sp = out["Nicobars"][0][1]
     assert sp["level"] == "district" and sp["post"] == "SP (D) Nicobar" and sp["name"] == "Shri Rahul L Nair, IPS"
     assert sum(r["level"] == "subdivision" for _, r in out["South Andamans"]) == 4
+
+
+from dforms import police3_ar  # noqa: E402
+
+
+def test_ar_contact_directory():
+    recs, files, why = police3_ar.fetch({"url": police3_ar.URL}, FakeGet({police3_ar.URL: "police3_ar/contactdir.html"}))
+    assert why == "" and len(recs) == 201
+    by = {rid: d for rid, d in recs}
+    sp = by["dept:police3_ar:upper-subansiri:supdt-of-police"]
+    assert sp["level"] == "district" and sp["office_type"] == "office" and sp["name"] == "Pawan Kumar Yadav, IPS"
+    assert sp["phone"] == "03792-223255, 03792-223275, 8375097536" and sp["fax"] == "03792-223238"
+    assert sp["email"] == "spdaporijo@gmail.com" and sp["src_pos"] == {"table": 35, "row": 2}
+    sps = {d["district"] for d in by.values() if d["level"] == "district" and d.get("office_type") == "office"}
+    assert len(sps) == 26 and "Upper Siang" not in sps
+    assert by["dept:police3_ar:east-kameng:control-room"]["office_type"] == "control_room"
+    assert sum(d["level"] == "subdivision" for d in by.values()) == 11
+    assert police3_ar.district_of("LEPA RADA DISTRICT, Basar") == "Leparada"
+    assert police3_ar.district_of("PAPUMPARE DISTRICT, ITANAGAR (ICR)") == "Papum Pare"
