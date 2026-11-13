@@ -1,0 +1,4424 @@
+[
+ {
+  "key": "town2_kamrc-afzalpurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.afzalpurtown.mrc.gov.in/en/city-staff",
+   "site": "afzalpurtown",
+   "body": "Afzalpur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251849",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-ainapurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ainapurtown.mrc.gov.in/en/city-staff",
+   "site": "ainapurtown",
+   "body": "AINAPUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276618",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-ajjampuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ajjampuratown.mrc.gov.in/en/city-staff",
+   "site": "ajjampuratown",
+   "body": "AJJAMPURA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "296977",
+   "district": "Chikkamagaluru"
+  }
+ },
+ {
+  "key": "town2_kamrc-alandatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.alandatown.mrc.gov.in/en/city-staff",
+   "site": "alandatown",
+   "body": "Alanda Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251848",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-allipurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.allipurtown.mrc.gov.in/en/city-staff",
+   "site": "allipurtown",
+   "body": "Allipur Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "305603",
+   "district": "Chikkaballapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-almeltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.almeltown.mrc.gov.in/en/city-staff",
+   "site": "almeltown",
+   "body": "ALMEL TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276540",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-alnavartown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.alnavartown.mrc.gov.in/en/city-staff",
+   "site": "alnavartown",
+   "body": "ALNAVAR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251894",
+   "district": "Dharwad"
+  }
+ },
+ {
+  "key": "town2_kamrc-alurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.alurtown.mrc.gov.in/en/city-staff",
+   "site": "alurtown",
+   "body": "ALUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252013",
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "town2_kamrc-aminagadtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.aminagadtown.mrc.gov.in/en/city-staff",
+   "site": "aminagadtown",
+   "body": "Aminagad Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276597",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-anavattitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.anavattitown.mrc.gov.in/en/city-staff",
+   "site": "anavattitown",
+   "body": "ANAVATTI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299181",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-anekaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.anekaltown.mrc.gov.in/en/city-staff",
+   "site": "anekaltown",
+   "body": "Anekal Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "253189",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-ankalagiakkathangerahaalatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ankalagiakkathangerahaalatown.mrc.gov.in/en/city-staff",
+   "site": "ankalagiakkathangerahaalatown",
+   "body": "ANKALAGIAKKATHANGERAHAALA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299329",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-ankolatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ankolatown.mrc.gov.in/en/city-staff",
+   "site": "ankolatown",
+   "body": "Ankola Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251906",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-annigeritown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.annigeritown.mrc.gov.in/en/city-staff",
+   "site": "annigeritown",
+   "body": "Annigeri Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251896",
+   "district": "Dharwad"
+  }
+ },
+ {
+  "key": "town2_kamrc-arabhavitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.arabhavitown.mrc.gov.in/en/city-staff",
+   "site": "arabhavitown",
+   "body": "ARABHAVI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276577",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-arasikerecity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.arasikerecity.mrc.gov.in/en/city-staff",
+   "site": "arasikerecity",
+   "body": "Arasikere City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252010",
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "town2_kamrc-arkalgudtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.arkalgudtown.mrc.gov.in/en/city-staff",
+   "site": "arkalgudtown",
+   "body": "ARKALGUD TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252014",
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "town2_kamrc-athanitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.athanitown.mrc.gov.in/en/city-staff",
+   "site": "athanitown",
+   "body": "Athani Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251812",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-attibeletown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.attibeletown.mrc.gov.in/en/city-staff",
+   "site": "attibeletown",
+   "body": "Attibele Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276539",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-auradtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.auradtown.mrc.gov.in/en/city-staff",
+   "site": "auradtown",
+   "body": "Aurad Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251866",
+   "district": "Bidar"
+  }
+ },
+ {
+  "key": "town2_kamrc-babaleshwartown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.babaleshwartown.mrc.gov.in/en/city-staff",
+   "site": "babaleshwartown",
+   "body": "BABALESHWAR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299327",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-badamitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.badamitown.mrc.gov.in/en/city-staff",
+   "site": "badamitown",
+   "body": "Badami Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251837",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-bagalkotecity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bagalkotecity.mrc.gov.in/en/city-staff",
+   "site": "bagalkotecity",
+   "body": "Bagalkote City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251839",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-bagepallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bagepallitown.mrc.gov.in/en/city-staff",
+   "site": "bagepallitown",
+   "body": "BAGEPALLI Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251981",
+   "district": "Chikkaballapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-bailhongalacity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bailhongalacity.mrc.gov.in/en/city-staff",
+   "site": "bailhongalacity",
+   "body": "Bailhongala City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251827",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-baindurutown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.baindurutown.mrc.gov.in/en/city-staff",
+   "site": "baindurutown",
+   "body": "BAINDURU TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "297129",
+   "district": "Udupi"
+  }
+ },
+ {
+  "key": "town2_kamrc-bajapetown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bajapetown.mrc.gov.in/en/city-staff",
+   "site": "bajapetown",
+   "body": "BAJAPE TOWN PANCHAYAT",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299320",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-balaganurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.balaganurtown.mrc.gov.in/en/city-staff",
+   "site": "balaganurtown",
+   "body": "BALAGANUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276523",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-ballaricity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ballaricity.mrc.gov.in/en/city-staff",
+   "site": "ballaricity",
+   "body": "Ballari City Corporation",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251927",
+   "district": "Ballari"
+  }
+ },
+ {
+  "key": "town2_kamrc-banavaratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.banavaratown.mrc.gov.in/en/city-staff",
+   "site": "banavaratown",
+   "body": "Banavar Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "306031",
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "town2_kamrc-bangarpetcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bangarpetcity.mrc.gov.in/en/city-staff",
+   "site": "bangarpetcity",
+   "body": "Bangarpet City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299416",
+   "district": "Kolar"
+  }
+ },
+ {
+  "key": "town2_kamrc-bankapurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bankapurtown.mrc.gov.in/en/city-staff",
+   "site": "bankapurtown",
+   "body": "Bankapur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251913",
+   "district": "Haveri"
+  }
+ },
+ {
+  "key": "town2_kamrc-bannurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bannurtown.mrc.gov.in/en/city-staff",
+   "site": "bannurtown",
+   "body": "Bannur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252051",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-bantwaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bantwaltown.mrc.gov.in/en/city-staff",
+   "site": "bantwaltown",
+   "body": "Bantwal Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252033",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-basavakalyancity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.basavakalyancity.mrc.gov.in/en/city-staff",
+   "site": "basavakalyancity",
+   "body": "Basavakalyan City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251864",
+   "district": "Bidar"
+  }
+ },
+ {
+  "key": "town2_kamrc-basavanabagewaditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.basavanabagewaditown.mrc.gov.in/en/city-staff",
+   "site": "basavanabagewaditown",
+   "body": "Basavanabagewadi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251845",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-bashettihallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bashettihallitown.mrc.gov.in/en/city-staff",
+   "site": "bashettihallitown",
+   "body": "BASHETTIHALLI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299169",
+   "district": "Bengaluru Rural"
+  }
+ },
+ {
+  "key": "town2_kamrc-belagalitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.belagalitown.mrc.gov.in/en/city-staff",
+   "site": "belagalitown",
+   "body": "BELAGALI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276529",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-belagavicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.belagavicity.mrc.gov.in/en/city-staff",
+   "site": "belagavicity",
+   "body": "Belagavi City Corporation",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251824",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-bellurutown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bellurutown.mrc.gov.in/en/city-staff",
+   "site": "bellurutown",
+   "body": "BELLURU TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276602",
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "town2_kamrc-belthangaditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.belthangaditown.mrc.gov.in/en/city-staff",
+   "site": "belthangaditown",
+   "body": "BELTHANGADI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252034",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-belurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.belurtown.mrc.gov.in/en/city-staff",
+   "site": "belurtown",
+   "body": "Belur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252009",
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "town2_kamrc-benakanahallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.benakanahallitown.mrc.gov.in/en/city-staff",
+   "site": "benakanahallitown",
+   "body": "Benakanahalli Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "305546",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-bhadravathicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bhadravathicity.mrc.gov.in/en/city-staff",
+   "site": "bhadravathicity",
+   "body": "Bhadravathi City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251952",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-bhagyanagartown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bhagyanagartown.mrc.gov.in/en/city-staff",
+   "site": "bhagyanagartown",
+   "body": "BHAGYANAGAR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276604",
+   "district": "Koppal"
+  }
+ },
+ {
+  "key": "town2_kamrc-bhatkalcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bhatkalcity.mrc.gov.in/en/city-staff",
+   "site": "bhatkalcity",
+   "body": "Bhatkal City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251911",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-bidaditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bidaditown.mrc.gov.in/en/city-staff",
+   "site": "bidaditown",
+   "body": "Bidadi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276526",
+   "district": "Bengaluru South"
+  }
+ },
+ {
+  "key": "town2_kamrc-bidarcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bidarcity.mrc.gov.in/en/city-staff",
+   "site": "bidarcity",
+   "body": "Bidar City Corporation",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251867",
+   "district": "Bidar"
+  }
+ },
+ {
+  "key": "town2_kamrc-bilagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bilagitown.mrc.gov.in/en/city-staff",
+   "site": "bilagitown",
+   "body": "BILAGI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251834",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-birurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.birurtown.mrc.gov.in/en/city-staff",
+   "site": "birurtown",
+   "body": "Birur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251963",
+   "district": "Chikkamagaluru"
+  }
+ },
+ {
+  "key": "town2_kamrc-bogaditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bogaditown.mrc.gov.in/en/city-staff",
+   "site": "bogaditown",
+   "body": "Bogadi Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299334",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-bommasandratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.bommasandratown.mrc.gov.in/en/city-staff",
+   "site": "bommasandratown",
+   "body": "Bommasandra Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276537",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-boragaontown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.boragaontown.mrc.gov.in/en/city-staff",
+   "site": "boragaontown",
+   "body": "BORAGAON TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276583",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-byadagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.byadagitown.mrc.gov.in/en/city-staff",
+   "site": "byadagitown",
+   "body": "Byadagi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251917",
+   "district": "Haveri"
+  }
+ },
+ {
+  "key": "town2_kamrc-chadachanatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chadachanatown.mrc.gov.in/en/city-staff",
+   "site": "chadachanatown",
+   "body": "CHADACHANA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276559",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-challakerecity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.challakerecity.mrc.gov.in/en/city-staff",
+   "site": "challakerecity",
+   "body": "Challakere City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251933",
+   "district": "Chitradurga"
+  }
+ },
+ {
+  "key": "town2_kamrc-chamarajanagaracity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chamarajanagaracity.mrc.gov.in/en/city-staff",
+   "site": "chamarajanagaracity",
+   "body": "Chamarajanagara City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252054",
+   "district": "Chamarajanagar"
+  }
+ },
+ {
+  "key": "town2_kamrc-chandapuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chandapuratown.mrc.gov.in/en/city-staff",
+   "site": "chandapuratown",
+   "body": "Chandapura Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276533",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-channagiritown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.channagiritown.mrc.gov.in/en/city-staff",
+   "site": "channagiritown",
+   "body": "Channagiri Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251943",
+   "district": "Davanagere"
+  }
+ },
+ {
+  "key": "town2_kamrc-channapatnacity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.channapatnacity.mrc.gov.in/en/city-staff",
+   "site": "channapatnacity",
+   "body": "Channapatna City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "253185",
+   "district": "Bengaluru South"
+  }
+ },
+ {
+  "key": "town2_kamrc-channarayapatnatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.channarayapatnatown.mrc.gov.in/en/city-staff",
+   "site": "channarayapatnatown",
+   "body": "Channarayapatna Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252016",
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "town2_kamrc-chennamman-kitturtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chennamman-kitturtown.mrc.gov.in/en/city-staff",
+   "site": "chennamman-kitturtown",
+   "body": "CHENNAMMAN-KITTUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276578",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-chickamagalurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chickamagalurcity.mrc.gov.in/en/city-staff",
+   "site": "chickamagalurcity",
+   "body": "Chickamagalur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251965",
+   "district": "Chikkamagaluru"
+  }
+ },
+ {
+  "key": "town2_kamrc-chikkaballapurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chikkaballapurcity.mrc.gov.in/en/city-staff",
+   "site": "chikkaballapurcity",
+   "body": "Chikkaballapur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251979",
+   "district": "Chikkaballapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-chikkabanavaratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chikkabanavaratown.mrc.gov.in/en/city-staff",
+   "site": "chikkabanavaratown",
+   "body": "Chikkabanavara Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299318",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-chikkanayakanahallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chikkanayakanahallitown.mrc.gov.in/en/city-staff",
+   "site": "chikkanayakanahallitown",
+   "body": "Chikkanayakanahalli Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251968",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-chikkoditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chikkoditown.mrc.gov.in/en/city-staff",
+   "site": "chikkoditown",
+   "body": "Chikkodi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251811",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-chinchalitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chinchalitown.mrc.gov.in/en/city-staff",
+   "site": "chinchalitown",
+   "body": "CHINCHALI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276477",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-chincholitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chincholitown.mrc.gov.in/en/city-staff",
+   "site": "chincholitown",
+   "body": "Chincholi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276568",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-chintamanicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chintamanicity.mrc.gov.in/en/city-staff",
+   "site": "chintamanicity",
+   "body": "Chintamani City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251983",
+   "district": "Chikkaballapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-chitradurgacity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chitradurgacity.mrc.gov.in/en/city-staff",
+   "site": "chitradurgacity",
+   "body": "Chitradurga City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251934",
+   "district": "Chitradurga"
+  }
+ },
+ {
+  "key": "town2_kamrc-chittaguppatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chittaguppatown.mrc.gov.in/en/city-staff",
+   "site": "chittaguppatown",
+   "body": "Chittaguppa Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251869",
+   "district": "Bidar"
+  }
+ },
+ {
+  "key": "town2_kamrc-chittapuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.chittapuratown.mrc.gov.in/en/city-staff",
+   "site": "chittapuratown",
+   "body": "Chittapura Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251853",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-dandelicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.dandelicity.mrc.gov.in/en/city-staff",
+   "site": "dandelicity",
+   "body": "Dandeli City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251899",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-davanagerecity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.davanagerecity.mrc.gov.in/en/city-staff",
+   "site": "davanagerecity",
+   "body": "Davanagere City Corporation",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251941",
+   "district": "Davanagere"
+  }
+ },
+ {
+  "key": "town2_kamrc-devadurgatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.devadurgatown.mrc.gov.in/en/city-staff",
+   "site": "devadurgatown",
+   "body": "Devadurga Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251874",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-devanahallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.devanahallitown.mrc.gov.in/en/city-staff",
+   "site": "devanahallitown",
+   "body": "Devanahalli Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251994",
+   "district": "Bengaluru Rural"
+  }
+ },
+ {
+  "key": "town2_kamrc-devarahipparagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.devarahipparagitown.mrc.gov.in/en/city-staff",
+   "site": "devarahipparagitown",
+   "body": "Devarahipparagi Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276558",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-dhoranahallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.dhoranahallitown.mrc.gov.in/en/city-staff",
+   "site": "dhoranahallitown",
+   "body": "Dhoranahalli Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "305604",
+   "district": "Yadgir"
+  }
+ },
+ {
+  "key": "town2_kamrc-doddaballapurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.doddaballapurcity.mrc.gov.in/en/city-staff",
+   "site": "doddaballapurcity",
+   "body": "Doddaballapur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251992",
+   "district": "Bengaluru Rural"
+  }
+ },
+ {
+  "key": "town2_kamrc-doddathogurutown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.doddathogurutown.mrc.gov.in/en/city-staff",
+   "site": "doddathogurutown",
+   "body": "DODDATOGURU TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "301176",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-exambatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.exambatown.mrc.gov.in/en/city-staff",
+   "site": "exambatown",
+   "body": "EXAMBA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276575",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-gadag-betagericity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.gadag-betagericity.mrc.gov.in/en/city-staff",
+   "site": "gadag-betagericity",
+   "body": "Gadag-Betageri City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251888",
+   "district": "Gadag"
+  }
+ },
+ {
+  "key": "town2_kamrc-gajendragadatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.gajendragadatown.mrc.gov.in/en/city-staff",
+   "site": "gajendragadatown",
+   "body": "Gajendragada Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251886",
+   "district": "Gadag"
+  }
+ },
+ {
+  "key": "town2_kamrc-gangavathicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.gangavathicity.mrc.gov.in/en/city-staff",
+   "site": "gangavathicity",
+   "body": "Gangavathi City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251881",
+   "district": "Koppal"
+  }
+ },
+ {
+  "key": "town2_kamrc-ghataprabhatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ghataprabhatown.mrc.gov.in/en/city-staff",
+   "site": "ghataprabhatown",
+   "body": "Ghataprabha Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276574",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-gokakcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.gokakcity.mrc.gov.in/en/city-staff",
+   "site": "gokakcity",
+   "body": "Gokak City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251818",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-gowribidanurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.gowribidanurcity.mrc.gov.in/en/city-staff",
+   "site": "gowribidanurcity",
+   "body": "Gowribidanur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251978",
+   "district": "Chikkaballapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-gubbitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.gubbitown.mrc.gov.in/en/city-staff",
+   "site": "gubbitown",
+   "body": "GUBBI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251974",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-gudibandetown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.gudibandetown.mrc.gov.in/en/city-staff",
+   "site": "gudibandetown",
+   "body": "Gudibande TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251980",
+   "district": "Chikkaballapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-guledaguddatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.guledaguddatown.mrc.gov.in/en/city-staff",
+   "site": "guledaguddatown",
+   "body": "Guledagudda Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251838",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-gundlupettown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.gundlupettown.mrc.gov.in/en/city-staff",
+   "site": "gundlupettown",
+   "body": "Gundlupet Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252053",
+   "district": "Chamarajanagar"
+  }
+ },
+ {
+  "key": "town2_kamrc-gurumitkaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.gurumitkaltown.mrc.gov.in/en/city-staff",
+   "site": "gurumitkaltown",
+   "body": "Gurumitkal Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251862",
+   "district": "Yadgir"
+  }
+ },
+ {
+  "key": "town2_kamrc-guttaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.guttaltown.mrc.gov.in/en/city-staff",
+   "site": "guttaltown",
+   "body": "GUTTAL TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276521",
+   "district": "Haveri"
+  }
+ },
+ {
+  "key": "town2_kamrc-hagaribommanahallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hagaribommanahallitown.mrc.gov.in/en/city-staff",
+   "site": "hagaribommanahallitown",
+   "body": "Hagaribommanahalli Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276535",
+   "district": "Vijayanagara"
+  }
+ },
+ {
+  "key": "town2_kamrc-halikhedatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.halikhedatown.mrc.gov.in/en/city-staff",
+   "site": "halikhedatown",
+   "body": "Halikheda Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "277668",
+   "district": "Bidar"
+  }
+ },
+ {
+  "key": "town2_kamrc-haliyalatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.haliyalatown.mrc.gov.in/en/city-staff",
+   "site": "haliyalatown",
+   "body": "Haliyala Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251901",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-hanagaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hanagaltown.mrc.gov.in/en/city-staff",
+   "site": "hanagaltown",
+   "body": "Hanagal Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251915",
+   "district": "Haveri"
+  }
+ },
+ {
+  "key": "town2_kamrc-hanumasagaratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hanumasagaratown.mrc.gov.in/en/city-staff",
+   "site": "hanumasagaratown",
+   "body": "Hanumasagara Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "305606",
+   "district": "Koppal"
+  }
+ },
+ {
+  "key": "town2_kamrc-hanurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hanurtown.mrc.gov.in/en/city-staff",
+   "site": "hanurtown",
+   "body": "HANUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "253130",
+   "district": "Chamarajanagar"
+  }
+ },
+ {
+  "key": "town2_kamrc-harapanahallicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.harapanahallicity.mrc.gov.in/en/city-staff",
+   "site": "harapanahallicity",
+   "body": "Harapanahalli City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251939",
+   "district": "Vijayanagara"
+  }
+ },
+ {
+  "key": "town2_kamrc-hariharcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hariharcity.mrc.gov.in/en/city-staff",
+   "site": "hariharcity",
+   "body": "Harihar City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251938",
+   "district": "Davanagere"
+  }
+ },
+ {
+  "key": "town2_kamrc-harohallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.harohallitown.mrc.gov.in/en/city-staff",
+   "site": "harohallitown",
+   "body": "HAROHALLI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299326",
+   "district": "Bengaluru South"
+  }
+ },
+ {
+  "key": "town2_kamrc-harugeritown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.harugeritown.mrc.gov.in/en/city-staff",
+   "site": "harugeritown",
+   "body": "Harugeri Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276569",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-hassancity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hassancity.mrc.gov.in/en/city-staff",
+   "site": "hassancity",
+   "body": "Hassan City Corporation",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252012",
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "town2_kamrc-havericity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.havericity.mrc.gov.in/en/city-staff",
+   "site": "havericity",
+   "body": "Haveri City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251916",
+   "district": "Haveri"
+  }
+ },
+ {
+  "key": "town2_kamrc-hdkotetown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hdkotetown.mrc.gov.in/en/city-staff",
+   "site": "hdkotetown",
+   "body": "H.D.Kote Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252049",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-hdmc",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hdmc.mrc.gov.in/en/city-staff",
+   "site": "hdmc",
+   "body": "Hubbali-Dharwad City Corporation",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251893",
+   "district": "Dharwad"
+  }
+ },
+ {
+  "key": "town2_kamrc-hebbagodicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hebbagodicity.mrc.gov.in/en/city-staff",
+   "site": "hebbagodicity",
+   "body": "Hebbagodi City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276463",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-hindalagatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hindalagatown.mrc.gov.in/en/city-staff",
+   "site": "hindalagatown",
+   "body": "Hindalaga Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "305548",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-hirebagewaditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hirebagewaditown.mrc.gov.in/en/city-staff",
+   "site": "hirebagewaditown",
+   "body": "Hirebagewadi Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "305550",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-hirekerurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hirekerurtown.mrc.gov.in/en/city-staff",
+   "site": "hirekerurtown",
+   "body": "HIREKERUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251918",
+   "district": "Haveri"
+  }
+ },
+ {
+  "key": "town2_kamrc-hiriyurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hiriyurcity.mrc.gov.in/en/city-staff",
+   "site": "hiriyurcity",
+   "body": "Hiriyur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251937",
+   "district": "Chitradurga"
+  }
+ },
+ {
+  "key": "town2_kamrc-holalkeretown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.holalkeretown.mrc.gov.in/en/city-staff",
+   "site": "holalkeretown",
+   "body": "Holalkere Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251935",
+   "district": "Chitradurga"
+  }
+ },
+ {
+  "key": "town2_kamrc-holehonnurutown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.holehonnurutown.mrc.gov.in/en/city-staff",
+   "site": "holehonnurutown",
+   "body": "HOLEHONNURU TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299180",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-holenarasipurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.holenarasipurtown.mrc.gov.in/en/city-staff",
+   "site": "holenarasipurtown",
+   "body": "Holenarasipur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252015",
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "town2_kamrc-honnalitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.honnalitown.mrc.gov.in/en/city-staff",
+   "site": "honnalitown",
+   "body": "Honnali Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251942",
+   "district": "Davanagere"
+  }
+ },
+ {
+  "key": "town2_kamrc-honnavaratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.honnavaratown.mrc.gov.in/en/city-staff",
+   "site": "honnavaratown",
+   "body": "HONNAVARA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251909",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-hootagallicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hootagallicity.mrc.gov.in/en/city-staff",
+   "site": "hootagallicity",
+   "body": "Hootagalli City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299335",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-hoovinahadagalitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hoovinahadagalitown.mrc.gov.in/en/city-staff",
+   "site": "hoovinahadagalitown",
+   "body": "Hoovinahadagali Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251921",
+   "district": "Vijayanagara"
+  }
+ },
+ {
+  "key": "town2_kamrc-hosadurgatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hosadurgatown.mrc.gov.in/en/city-staff",
+   "site": "hosadurgatown",
+   "body": "Hosadurga Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251936",
+   "district": "Chitradurga"
+  }
+ },
+ {
+  "key": "town2_kamrc-hosakotecity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hosakotecity.mrc.gov.in/en/city-staff",
+   "site": "hosakotecity",
+   "body": "Hosakote City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251995",
+   "district": "Bengaluru Rural"
+  }
+ },
+ {
+  "key": "town2_kamrc-hosanagaratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hosanagaratown.mrc.gov.in/en/city-staff",
+   "site": "hosanagaratown",
+   "body": "HOSANAGARA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251949",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-hospetcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hospetcity.mrc.gov.in/en/city-staff",
+   "site": "hospetcity",
+   "body": "Hospet City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251922",
+   "district": "Vijayanagara"
+  }
+ },
+ {
+  "key": "town2_kamrc-hukkeritown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hukkeritown.mrc.gov.in/en/city-staff",
+   "site": "hukkeritown",
+   "body": "Hukkeri Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251820",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-huliyartown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.huliyartown.mrc.gov.in/en/city-staff",
+   "site": "huliyartown",
+   "body": "HULIYAR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "297133",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-hunasagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hunasagitown.mrc.gov.in/en/city-staff",
+   "site": "hunasagitown",
+   "body": "Hunasagi Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "296976",
+   "district": "Yadgir"
+  }
+ },
+ {
+  "key": "town2_kamrc-hunasamaranahallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hunasamaranahallitown.mrc.gov.in/en/city-staff",
+   "site": "hunasamaranahallitown",
+   "body": "Hunasamaranahalli Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299319",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-hungundtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hungundtown.mrc.gov.in/en/city-staff",
+   "site": "hungundtown",
+   "body": "Hungund Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251840",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-hunsurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.hunsurcity.mrc.gov.in/en/city-staff",
+   "site": "hunsurcity",
+   "body": "Hunsur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252043",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-huttitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.huttitown.mrc.gov.in/en/city-staff",
+   "site": "huttitown",
+   "body": "HUTTI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251873",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-ilkalcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ilkalcity.mrc.gov.in/en/city-staff",
+   "site": "ilkalcity",
+   "body": "Ilkal City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251841",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-indicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.indicity.mrc.gov.in/en/city-staff",
+   "site": "indicity",
+   "body": "Indi City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251843",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-jagalurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.jagalurtown.mrc.gov.in/en/city-staff",
+   "site": "jagalurtown",
+   "body": "JAGALUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251940",
+   "district": "Davanagere"
+  }
+ },
+ {
+  "key": "town2_kamrc-jalitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.jalitown.mrc.gov.in/en/city-staff",
+   "site": "jalitown",
+   "body": "JALI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town2_kamrc-jamkhandicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.jamkhandicity.mrc.gov.in/en/city-staff",
+   "site": "jamkhandicity",
+   "body": "Jamkhandi City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251832",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-jewargitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.jewargitown.mrc.gov.in/en/city-staff",
+   "site": "jewargitown",
+   "body": "Jewargi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251858",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-jiganitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.jiganitown.mrc.gov.in/en/city-staff",
+   "site": "jiganitown",
+   "body": "Jigani Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276464",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-jogkargaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.jogkargaltown.mrc.gov.in/en/city-staff",
+   "site": "jogkargaltown",
+   "body": "JOGKARGAL TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "263293",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-kabburtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kabburtown.mrc.gov.in/en/city-staff",
+   "site": "kabburtown",
+   "body": "KABBUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276483",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-kadabatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kadabatown.mrc.gov.in/en/city-staff",
+   "site": "kadabatown",
+   "body": "KADABA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "296954",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-kadakolatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kadakolatown.mrc.gov.in/en/city-staff",
+   "site": "kadakolatown",
+   "body": "KADAKOLA TOWN PANCHAYAT",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299323",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-kadurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kadurtown.mrc.gov.in/en/city-staff",
+   "site": "kadurtown",
+   "body": "Kadur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251964",
+   "district": "Chikkamagaluru"
+  }
+ },
+ {
+  "key": "town2_kamrc-kagawadatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kagawadatown.mrc.gov.in/en/city-staff",
+   "site": "kagawadatown",
+   "body": "KAGAWADA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299331",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-kaiwaratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kaiwaratown.mrc.gov.in/en/city-staff",
+   "site": "kaiwaratown",
+   "body": "Kaiwara Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "305605",
+   "district": "Chikkaballapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-kakkeratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kakkeratown.mrc.gov.in/en/city-staff",
+   "site": "kakkeratown",
+   "body": "Kakkera Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276560",
+   "district": "Yadgir"
+  }
+ },
+ {
+  "key": "town2_kamrc-kalaghatagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kalaghatagitown.mrc.gov.in/en/city-staff",
+   "site": "kalaghatagitown",
+   "body": "KALAGHATAGI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251897",
+   "district": "Dharwad"
+  }
+ },
+ {
+  "key": "town2_kamrc-kalagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kalagitown.mrc.gov.in/en/city-staff",
+   "site": "kalagitown",
+   "body": "KALAGI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "296978",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-kallollitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kallollitown.mrc.gov.in/en/city-staff",
+   "site": "kallollitown",
+   "body": "KALLOLLI TOWN PANCHAYAT",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276576",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-kamalapura-kbgtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kamalapura-kbgtown.mrc.gov.in/en/city-staff",
+   "site": "kamalapura-kbgtown",
+   "body": "KAMALAPURA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "301080",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-kamalapuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kamalapuratown.mrc.gov.in/en/city-staff",
+   "site": "kamalapuratown",
+   "body": "Kamalapura Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276611",
+   "district": "Vijayanagara"
+  }
+ },
+ {
+  "key": "town2_kamrc-kamatagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kamatagitown.mrc.gov.in/en/city-staff",
+   "site": "kamatagitown",
+   "body": "KAMATAGI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "301079",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-kamplitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kamplitown.mrc.gov.in/en/city-staff",
+   "site": "kamplitown",
+   "body": "Kampli Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251924",
+   "district": "Ballari"
+  }
+ },
+ {
+  "key": "town2_kamrc-kanakagiritown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kanakagiritown.mrc.gov.in/en/city-staff",
+   "site": "kanakagiritown",
+   "body": "KANAKAGIRI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276599",
+   "district": "Koppal"
+  }
+ },
+ {
+  "key": "town2_kamrc-kanakapuracity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kanakapuracity.mrc.gov.in/en/city-staff",
+   "site": "kanakapuracity",
+   "body": "Kanakapura City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "253188",
+   "district": "Bengaluru South"
+  }
+ },
+ {
+  "key": "town2_kamrc-kankanawaditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kankanawaditown.mrc.gov.in/en/city-staff",
+   "site": "kankanawaditown",
+   "body": "KANKANAWADI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276567",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-karatagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.karatagitown.mrc.gov.in/en/city-staff",
+   "site": "karatagitown",
+   "body": "Karatagi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276496",
+   "district": "Koppal"
+  }
+ },
+ {
+  "key": "town2_kamrc-karkalatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.karkalatown.mrc.gov.in/en/city-staff",
+   "site": "karkalatown",
+   "body": "Karkala Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251958",
+   "district": "Udupi"
+  }
+ },
+ {
+  "key": "town2_kamrc-karwarcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.karwarcity.mrc.gov.in/en/city-staff",
+   "site": "karwarcity",
+   "body": "Karwar City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251900",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-kauptown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kauptown.mrc.gov.in/en/city-staff",
+   "site": "kauptown",
+   "body": "Kaup Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "301055",
+   "district": "Udupi"
+  }
+ },
+ {
+  "key": "town2_kamrc-kavitalatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kavitalatown.mrc.gov.in/en/city-staff",
+   "site": "kavitalatown",
+   "body": "KAVITALA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276522",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-kembhavitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kembhavitown.mrc.gov.in/en/city-staff",
+   "site": "kembhavitown",
+   "body": "Kembhavi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276516",
+   "district": "Yadgir"
+  }
+ },
+ {
+  "key": "town2_kamrc-kerurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kerurtown.mrc.gov.in/en/city-staff",
+   "site": "kerurtown",
+   "body": "KERUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251836",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-khanapurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.khanapurtown.mrc.gov.in/en/city-staff",
+   "site": "khanapurtown",
+   "body": "KHANAPUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251825",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-kinnigolitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kinnigolitown.mrc.gov.in/en/city-staff",
+   "site": "kinnigolitown",
+   "body": "KINNIGOLI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299321",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-kolarcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kolarcity.mrc.gov.in/en/city-staff",
+   "site": "kolarcity",
+   "body": "Kolar City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251985",
+   "district": "Kolar"
+  }
+ },
+ {
+  "key": "town2_kamrc-kolhartown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kolhartown.mrc.gov.in/en/city-staff",
+   "site": "kolhartown",
+   "body": "KOLHAR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276543",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-kollegalacity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kollegalacity.mrc.gov.in/en/city-staff",
+   "site": "kollegalacity",
+   "body": "Kollegala City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252056",
+   "district": "Chamarajanagar"
+  }
+ },
+ {
+  "key": "town2_kamrc-konappanaagraharatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.konappanaagraharatown.mrc.gov.in/en/city-staff",
+   "site": "konappanaagraharatown",
+   "body": "Konappanaagrahara Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "301790",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-konnurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.konnurtown.mrc.gov.in/en/city-staff",
+   "site": "konnurtown",
+   "body": "Konnur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251816",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-koppalcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.koppalcity.mrc.gov.in/en/city-staff",
+   "site": "koppalcity",
+   "body": "Koppal City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251882",
+   "district": "Koppal"
+  }
+ },
+ {
+  "key": "town2_kamrc-koppatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.koppatown.mrc.gov.in/en/city-staff",
+   "site": "koppatown",
+   "body": "KOPPA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251960",
+   "district": "Chikkamagaluru"
+  }
+ },
+ {
+  "key": "town2_kamrc-koratageretown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.koratageretown.mrc.gov.in/en/city-staff",
+   "site": "koratageretown",
+   "body": "Koratagere Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251972",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-kotekartown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kotekartown.mrc.gov.in/en/city-staff",
+   "site": "kotekartown",
+   "body": "KOTEKAR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276555",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-kotturtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kotturtown.mrc.gov.in/en/city-staff",
+   "site": "kotturtown",
+   "body": "KOTTUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251931",
+   "district": "Vijayanagara"
+  }
+ },
+ {
+  "key": "town2_kamrc-krishnarajapetetown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.krishnarajapetetown.mrc.gov.in/en/city-staff",
+   "site": "krishnarajapetetown",
+   "body": "Krishnarajapete Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252001",
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "town2_kamrc-krnagaratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.krnagaratown.mrc.gov.in/en/city-staff",
+   "site": "krnagaratown",
+   "body": "K.R.Nagara Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "301081",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-kudachitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kudachitown.mrc.gov.in/en/city-staff",
+   "site": "kudachitown",
+   "body": "Kudachi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251813",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-kudalagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kudalagitown.mrc.gov.in/en/city-staff",
+   "site": "kudalagitown",
+   "body": "KUDALAGI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251930",
+   "district": "Vijayanagara"
+  }
+ },
+ {
+  "key": "town2_kamrc-kudathinitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kudathinitown.mrc.gov.in/en/city-staff",
+   "site": "kudathinitown",
+   "body": "KUDATHINI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276534",
+   "district": "Ballari"
+  }
+ },
+ {
+  "key": "town2_kamrc-kukanurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kukanurtown.mrc.gov.in/en/city-staff",
+   "site": "kukanurtown",
+   "body": "KUKANUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276497",
+   "district": "Koppal"
+  }
+ },
+ {
+  "key": "town2_kamrc-kumatatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kumatatown.mrc.gov.in/en/city-staff",
+   "site": "kumatatown",
+   "body": "Kumata Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251907",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-kundagoltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kundagoltown.mrc.gov.in/en/city-staff",
+   "site": "kundagoltown",
+   "body": "KUNDAGOL TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251898",
+   "district": "Dharwad"
+  }
+ },
+ {
+  "key": "town2_kamrc-kundapurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kundapurtown.mrc.gov.in/en/city-staff",
+   "site": "kundapurtown",
+   "body": "Kundapur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251953",
+   "district": "Udupi"
+  }
+ },
+ {
+  "key": "town2_kamrc-kunigaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kunigaltown.mrc.gov.in/en/city-staff",
+   "site": "kunigaltown",
+   "body": "Kunigal Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251977",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-kurekuppatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kurekuppatown.mrc.gov.in/en/city-staff",
+   "site": "kurekuppatown",
+   "body": "Kurekuppa Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276538",
+   "district": "Ballari"
+  }
+ },
+ {
+  "key": "town2_kamrc-kurugodutown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kurugodutown.mrc.gov.in/en/city-staff",
+   "site": "kurugodutown",
+   "body": "Kurugodu Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276532",
+   "district": "Ballari"
+  }
+ },
+ {
+  "key": "town2_kamrc-kushalnagartown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kushalnagartown.mrc.gov.in/en/city-staff",
+   "site": "kushalnagartown",
+   "body": "Kushalnagara Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252039",
+   "district": "Kodagu"
+  }
+ },
+ {
+  "key": "town2_kamrc-kustagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.kustagitown.mrc.gov.in/en/city-staff",
+   "site": "kustagitown",
+   "body": "Kustagi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251880",
+   "district": "Koppal"
+  }
+ },
+ {
+  "key": "town2_kamrc-lakshmishwaratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.lakshmishwaratown.mrc.gov.in/en/city-staff",
+   "site": "lakshmishwaratown",
+   "body": "Lakshmishwara Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251891",
+   "district": "Gadag"
+  }
+ },
+ {
+  "key": "town2_kamrc-lingasugurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.lingasugurtown.mrc.gov.in/en/city-staff",
+   "site": "lingasugurtown",
+   "body": "Lingasugur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251871",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-lokapurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.lokapurtown.mrc.gov.in/en/city-staff",
+   "site": "lokapurtown",
+   "body": "LOKAPUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299317",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-machchetown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.machchetown.mrc.gov.in/en/city-staff",
+   "site": "machchetown",
+   "body": "MACHCHE TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299332",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-madanayakanahallicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.madanayakanahallicity.mrc.gov.in/en/city-staff",
+   "site": "madanayakanahallicity",
+   "body": "Madanayakanahalli City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "296975",
+   "district": "Bengaluru Urban"
+  }
+ },
+ {
+  "key": "town2_kamrc-maddurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.maddurcity.mrc.gov.in/en/city-staff",
+   "site": "maddurcity",
+   "body": "Maddur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252006",
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "town2_kamrc-madhugiritown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.madhugiritown.mrc.gov.in/en/city-staff",
+   "site": "madhugiritown",
+   "body": "Madhugiri Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251971",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-madikericity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.madikericity.mrc.gov.in/en/city-staff",
+   "site": "madikericity",
+   "body": "Madikeri City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252037",
+   "district": "Kodagu"
+  }
+ },
+ {
+  "key": "town2_kamrc-magaditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.magaditown.mrc.gov.in/en/city-staff",
+   "site": "magaditown",
+   "body": "Magadi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251996",
+   "district": "Bengaluru South"
+  }
+ },
+ {
+  "key": "town2_kamrc-mahalingapuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mahalingapuratown.mrc.gov.in/en/city-staff",
+   "site": "mahalingapuratown",
+   "body": "Mahalingapura Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251830",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-malavallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.malavallitown.mrc.gov.in/en/city-staff",
+   "site": "malavallitown",
+   "body": "Malavalli Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252007",
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "town2_kamrc-malebennurutown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.malebennurutown.mrc.gov.in/en/city-staff",
+   "site": "malebennurutown",
+   "body": "Malebennuru Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276556",
+   "district": "Davanagere"
+  }
+ },
+ {
+  "key": "town2_kamrc-malurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.malurcity.mrc.gov.in/en/city-staff",
+   "site": "malurcity",
+   "body": "Malur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251986",
+   "district": "Kolar"
+  }
+ },
+ {
+  "key": "town2_kamrc-managulitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.managulitown.mrc.gov.in/en/city-staff",
+   "site": "managulitown",
+   "body": "MANAGULI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276541",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-mandyacity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mandyacity.mrc.gov.in/en/city-staff",
+   "site": "mandyacity",
+   "body": "Mandya City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252005",
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "town2_kamrc-mankitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mankitown.mrc.gov.in/en/city-staff",
+   "site": "mankitown",
+   "body": "MANKI TOWN PANCHAYAT",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299328",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-manvitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.manvitown.mrc.gov.in/en/city-staff",
+   "site": "manvitown",
+   "body": "Manvi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251877",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-mariyammanahallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mariyammanahallitown.mrc.gov.in/en/city-staff",
+   "site": "mariyammanahallitown",
+   "body": "MARIYAMMANAHALLI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276474",
+   "district": "Vijayanagara"
+  }
+ },
+ {
+  "key": "town2_kamrc-maskitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.maskitown.mrc.gov.in/en/city-staff",
+   "site": "maskitown",
+   "body": "Maski Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276519",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-mkhubballitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mkhubballitown.mrc.gov.in/en/city-staff",
+   "site": "mkhubballitown",
+   "body": "MKHUBBALLI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299417",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-molakalmurutown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.molakalmurutown.mrc.gov.in/en/city-staff",
+   "site": "molakalmurutown",
+   "body": "MOLAKALMURU TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251932",
+   "district": "Chitradurga"
+  }
+ },
+ {
+  "key": "town2_kamrc-moodbidritown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.moodbidritown.mrc.gov.in/en/city-staff",
+   "site": "moodbidritown",
+   "body": "Moodbidri Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252018",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-mudalagitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mudalagitown.mrc.gov.in/en/city-staff",
+   "site": "mudalagitown",
+   "body": "Mudalagi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251815",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-muddebihaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.muddebihaltown.mrc.gov.in/en/city-staff",
+   "site": "muddebihaltown",
+   "body": "Muddebihal Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251846",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-mudgaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mudgaltown.mrc.gov.in/en/city-staff",
+   "site": "mudgaltown",
+   "body": "Mudgal Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251870",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-mudholcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mudholcity.mrc.gov.in/en/city-staff",
+   "site": "mudholcity",
+   "body": "Mudhol City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251835",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-mudigeretown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mudigeretown.mrc.gov.in/en/city-staff",
+   "site": "mudigeretown",
+   "body": "MUDIGERE TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "301082",
+   "district": "Chikkamagaluru"
+  }
+ },
+ {
+  "key": "town2_kamrc-mugalkhodtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mugalkhodtown.mrc.gov.in/en/city-staff",
+   "site": "mugalkhodtown",
+   "body": "Mugalkhod Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276563",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-mulagundatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mulagundatown.mrc.gov.in/en/city-staff",
+   "site": "mulagundatown",
+   "body": "MULAGUNDA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251889",
+   "district": "Gadag"
+  }
+ },
+ {
+  "key": "town2_kamrc-mulbagalcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mulbagalcity.mrc.gov.in/en/city-staff",
+   "site": "mulbagalcity",
+   "body": "Mulbagal City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251989",
+   "district": "Kolar"
+  }
+ },
+ {
+  "key": "town2_kamrc-mulkitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mulkitown.mrc.gov.in/en/city-staff",
+   "site": "mulkitown",
+   "body": "MULKI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252017",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-munavallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.munavallitown.mrc.gov.in/en/city-staff",
+   "site": "munavallitown",
+   "body": "Munavalli Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276564",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-mundagodtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mundagodtown.mrc.gov.in/en/city-staff",
+   "site": "mundagodtown",
+   "body": "MUNDAGOD TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251904",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-mundargitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mundargitown.mrc.gov.in/en/city-staff",
+   "site": "mundargitown",
+   "body": "Mundargi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251892",
+   "district": "Gadag"
+  }
+ },
+ {
+  "key": "town2_kamrc-mysurucity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.mysurucity.mrc.gov.in/en/city-staff",
+   "site": "mysurucity",
+   "body": "Mysuru City Corporation",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252045",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-nagamangalatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.nagamangalatown.mrc.gov.in/en/city-staff",
+   "site": "nagamangalatown",
+   "body": "Nagamangala Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252002",
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "town2_kamrc-naganurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.naganurtown.mrc.gov.in/en/city-staff",
+   "site": "naganurtown",
+   "body": "NAGANUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "301061",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-nalatawadtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.nalatawadtown.mrc.gov.in/en/city-staff",
+   "site": "nalatawadtown",
+   "body": "NALATAWAD TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276544",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-nanjanaguducity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.nanjanaguducity.mrc.gov.in/en/city-staff",
+   "site": "nanjanaguducity",
+   "body": "Nanjanagudu City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252050",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-naragundatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.naragundatown.mrc.gov.in/en/city-staff",
+   "site": "naragundatown",
+   "body": "Naragunda Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251884",
+   "district": "Gadag"
+  }
+ },
+ {
+  "key": "town2_kamrc-narasimharajapuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.narasimharajapuratown.mrc.gov.in/en/city-staff",
+   "site": "narasimharajapuratown",
+   "body": "NARASIMHARAJAPURA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251961",
+   "district": "Chikkamagaluru"
+  }
+ },
+ {
+  "key": "town2_kamrc-naregaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.naregaltown.mrc.gov.in/en/city-staff",
+   "site": "naregaltown",
+   "body": "NAREGAL TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251887",
+   "district": "Gadag"
+  }
+ },
+ {
+  "key": "town2_kamrc-navalgundtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.navalgundtown.mrc.gov.in/en/city-staff",
+   "site": "navalgundtown",
+   "body": "Navalgund Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251895",
+   "district": "Dharwad"
+  }
+ },
+ {
+  "key": "town2_kamrc-nayakanahattitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.nayakanahattitown.mrc.gov.in/en/city-staff",
+   "site": "nayakanahattitown",
+   "body": "NAYAKANAHATTI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276542",
+   "district": "Chitradurga"
+  }
+ },
+ {
+  "key": "town2_kamrc-nelamangalacity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.nelamangalacity.mrc.gov.in/en/city-staff",
+   "site": "nelamangalacity",
+   "body": "Nelamangala City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251990",
+   "district": "Bengaluru Rural"
+  }
+ },
+ {
+  "key": "town2_kamrc-nidagunditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.nidagunditown.mrc.gov.in/en/city-staff",
+   "site": "nidagunditown",
+   "body": "NIDAGUNDI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276557",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-nippanicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.nippanicity.mrc.gov.in/en/city-staff",
+   "site": "nippanicity",
+   "body": "Nippani City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251809",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-nyamathitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.nyamathitown.mrc.gov.in/en/city-staff",
+   "site": "nyamathitown",
+   "body": "NYAMATHI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299183",
+   "district": "Davanagere"
+  }
+ },
+ {
+  "key": "town2_kamrc-pandavapuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.pandavapuratown.mrc.gov.in/en/city-staff",
+   "site": "pandavapuratown",
+   "body": "Pandavapura Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252003",
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "town2_kamrc-pavagadatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.pavagadatown.mrc.gov.in/en/city-staff",
+   "site": "pavagadatown",
+   "body": "Pavagada Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251970",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-peeranawaditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.peeranawaditown.mrc.gov.in/en/city-staff",
+   "site": "peeranawaditown",
+   "body": "PEERANAWADI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299333",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-periyapatnatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.periyapatnatown.mrc.gov.in/en/city-staff",
+   "site": "periyapatnatown",
+   "body": "Periyapatna Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252042",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-ponnampetetown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ponnampetetown.mrc.gov.in/en/city-staff",
+   "site": "ponnampetetown",
+   "body": "Ponnampete Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "301819",
+   "district": "Kodagu"
+  }
+ },
+ {
+  "key": "town2_kamrc-putturcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.putturcity.mrc.gov.in/en/city-staff",
+   "site": "putturcity",
+   "body": "Puttur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252035",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-rabkavi-banahatticity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.rabkavi-banahatticity.mrc.gov.in/en/city-staff",
+   "site": "rabkavi-banahatticity",
+   "body": "Rabkavi-Banahatti City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251833",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-raibagtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.raibagtown.mrc.gov.in/en/city-staff",
+   "site": "raibagtown",
+   "body": "RAIBAG TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251814",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-ramanagaracity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ramanagaracity.mrc.gov.in/en/city-staff",
+   "site": "ramanagaracity",
+   "body": "Ramanagara City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "253186",
+   "district": "Bengaluru South"
+  }
+ },
+ {
+  "key": "town2_kamrc-ramdurgatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ramdurgatown.mrc.gov.in/en/city-staff",
+   "site": "ramdurgatown",
+   "body": "Ramdurga Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251829",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-rammanahallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.rammanahallitown.mrc.gov.in/en/city-staff",
+   "site": "rammanahallitown",
+   "body": "RAMMANAHALLI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299322",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-ranebennurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ranebennurcity.mrc.gov.in/en/city-staff",
+   "site": "ranebennurcity",
+   "body": "Ranebennur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251919",
+   "district": "Haveri"
+  }
+ },
+ {
+  "key": "town2_kamrc-rattihallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.rattihallitown.mrc.gov.in/en/city-staff",
+   "site": "rattihallitown",
+   "body": "RATTIHALLI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "296955",
+   "district": "Haveri"
+  }
+ },
+ {
+  "key": "town2_kamrc-robertsonpetcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.robertsonpetcity.mrc.gov.in/en/city-staff",
+   "site": "robertsonpetcity",
+   "body": "Robertsonpet City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251988",
+   "district": "Kolar"
+  }
+ },
+ {
+  "key": "town2_kamrc-ronatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ronatown.mrc.gov.in/en/city-staff",
+   "site": "ronatown",
+   "body": "Rona Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251885",
+   "district": "Gadag"
+  }
+ },
+ {
+  "key": "town2_kamrc-sadalgatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sadalgatown.mrc.gov.in/en/city-staff",
+   "site": "sadalgatown",
+   "body": "Sadalga Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251810",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-sagaracity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sagaracity.mrc.gov.in/en/city-staff",
+   "site": "sagaracity",
+   "body": "sagara City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251945",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-sakaleshpuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sakaleshpuratown.mrc.gov.in/en/city-staff",
+   "site": "sakaleshpuratown",
+   "body": "Sakaleshpura Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252008",
+   "district": "Hassan"
+  }
+ },
+ {
+  "key": "town2_kamrc-saligramatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.saligramatown.mrc.gov.in/en/city-staff",
+   "site": "saligramatown",
+   "body": "SALIGRAMA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251954",
+   "district": "Udupi"
+  }
+ },
+ {
+  "key": "town2_kamrc-sandoortown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sandoortown.mrc.gov.in/en/city-staff",
+   "site": "sandoortown",
+   "body": "Sandoor Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251929",
+   "district": "Ballari"
+  }
+ },
+ {
+  "key": "town2_kamrc-sankeshwaratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sankeshwaratown.mrc.gov.in/en/city-staff",
+   "site": "sankeshwaratown",
+   "body": "Sankeshwara Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251819",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-sargurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sargurtown.mrc.gov.in/en/city-staff",
+   "site": "sargurtown",
+   "body": "SARGUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "253132",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-saundatticity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.saundatticity.mrc.gov.in/en/city-staff",
+   "site": "saundatticity",
+   "body": "Saundatti Yellamma City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251828",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-savanurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.savanurtown.mrc.gov.in/en/city-staff",
+   "site": "savanurtown",
+   "body": "Savanur Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251914",
+   "district": "Haveri"
+  }
+ },
+ {
+  "key": "town2_kamrc-sedamcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sedamcity.mrc.gov.in/en/city-staff",
+   "site": "sedamcity",
+   "body": "Sedam City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251852",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-shahabadcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shahabadcity.mrc.gov.in/en/city-staff",
+   "site": "shahabadcity",
+   "body": "Shahabad City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251855",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-shahapuracity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shahapuracity.mrc.gov.in/en/city-staff",
+   "site": "shahapuracity",
+   "body": "shahapur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251861",
+   "district": "Yadgir"
+  }
+ },
+ {
+  "key": "town2_kamrc-shedbaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shedbaltown.mrc.gov.in/en/city-staff",
+   "site": "shedbaltown",
+   "body": "SHEDBAL TOWN PANCHAYAT",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276579",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-shidlaghattacity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shidlaghattacity.mrc.gov.in/en/city-staff",
+   "site": "shidlaghattacity",
+   "body": "shidlaghatta City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251982",
+   "district": "Chikkaballapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-shiggaontown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shiggaontown.mrc.gov.in/en/city-staff",
+   "site": "shiggaontown",
+   "body": "Shiggaon Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251912",
+   "district": "Haveri"
+  }
+ },
+ {
+  "key": "town2_kamrc-shikaripuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shikaripuratown.mrc.gov.in/en/city-staff",
+   "site": "shikaripuratown",
+   "body": "Shikaripura Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251948",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-shirahattitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shirahattitown.mrc.gov.in/en/city-staff",
+   "site": "shirahattitown",
+   "body": "SHIRAHATTI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251890",
+   "district": "Gadag"
+  }
+ },
+ {
+  "key": "town2_kamrc-shiralakoppatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shiralakoppatown.mrc.gov.in/en/city-staff",
+   "site": "shiralakoppatown",
+   "body": "Shiralakoppa Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251947",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-shirurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shirurtown.mrc.gov.in/en/city-staff",
+   "site": "shirurtown",
+   "body": "SHIRUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299179",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-shivamoggacity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shivamoggacity.mrc.gov.in/en/city-staff",
+   "site": "shivamoggacity",
+   "body": "Shivamogga City Corporation",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251951",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-shringeritown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.shringeritown.mrc.gov.in/en/city-staff",
+   "site": "shringeritown",
+   "body": "SHRINGERI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251959",
+   "district": "Chikkamagaluru"
+  }
+ },
+ {
+  "key": "town2_kamrc-siddapuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.siddapuratown.mrc.gov.in/en/city-staff",
+   "site": "siddapuratown",
+   "body": "SIDDAPURA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251908",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-sindagicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sindagicity.mrc.gov.in/en/city-staff",
+   "site": "sindagicity",
+   "body": "Sindagi City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251844",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-sindhanurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sindhanurcity.mrc.gov.in/en/city-staff",
+   "site": "sindhanurcity",
+   "body": "sindhanur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251878",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-siracity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.siracity.mrc.gov.in/en/city-staff",
+   "site": "siracity",
+   "body": "sira City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251969",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-sirawartown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sirawartown.mrc.gov.in/en/city-staff",
+   "site": "sirawartown",
+   "body": "SIRAWAR TOWN PANCHAYAT",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276605",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-sirsicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sirsicity.mrc.gov.in/en/city-staff",
+   "site": "sirsicity",
+   "body": "sirsi City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251905",
+   "district": "Uttara Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-siruguppacity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.siruguppacity.mrc.gov.in/en/city-staff",
+   "site": "siruguppacity",
+   "body": "siruguppa City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251925",
+   "district": "Ballari"
+  }
+ },
+ {
+  "key": "town2_kamrc-someshwaratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.someshwaratown.mrc.gov.in/en/city-staff",
+   "site": "someshwaratown",
+   "body": "Someshwara Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252029",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-somwarpettown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.somwarpettown.mrc.gov.in/en/city-staff",
+   "site": "somwarpettown",
+   "body": "SOMWARPET TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252038",
+   "district": "Kodagu"
+  }
+ },
+ {
+  "key": "town2_kamrc-sorabatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sorabatown.mrc.gov.in/en/city-staff",
+   "site": "sorabatown",
+   "body": "Soraba Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251946",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-srinivasapuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.srinivasapuratown.mrc.gov.in/en/city-staff",
+   "site": "srinivasapuratown",
+   "body": "Srinivasapura Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251984",
+   "district": "Kolar"
+  }
+ },
+ {
+  "key": "town2_kamrc-srirampuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.srirampuratown.mrc.gov.in/en/city-staff",
+   "site": "srirampuratown",
+   "body": "SRIRAMPURA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299325",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-srirangapatnatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.srirangapatnatown.mrc.gov.in/en/city-staff",
+   "site": "srirangapatnatown",
+   "body": "Shrirangapattana Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252004",
+   "district": "Mandya"
+  }
+ },
+ {
+  "key": "town2_kamrc-sulliatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.sulliatown.mrc.gov.in/en/city-staff",
+   "site": "sulliatown",
+   "body": "SULLIA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252036",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-surpurcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.surpurcity.mrc.gov.in/en/city-staff",
+   "site": "surpurcity",
+   "body": "surpur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251859",
+   "district": "Yadgir"
+  }
+ },
+ {
+  "key": "town2_kamrc-talakadutown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.talakadutown.mrc.gov.in/en/city-staff",
+   "site": "talakadutown",
+   "body": "Talakadu Town Panchayath",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "305558",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-talikotetown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.talikotetown.mrc.gov.in/en/city-staff",
+   "site": "talikotetown",
+   "body": "Talikote Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251847",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-tarikeretown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.tarikeretown.mrc.gov.in/en/city-staff",
+   "site": "tarikeretown",
+   "body": "Tarikere Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251962",
+   "district": "Chikkamagaluru"
+  }
+ },
+ {
+  "key": "town2_kamrc-tavarageratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.tavarageratown.mrc.gov.in/en/city-staff",
+   "site": "tavarageratown",
+   "body": "TAVARAGERA TOWN PANCHAYAT",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276601",
+   "district": "Koppal"
+  }
+ },
+ {
+  "key": "town2_kamrc-tekkalakotetown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.tekkalakotetown.mrc.gov.in/en/city-staff",
+   "site": "tekkalakotetown",
+   "body": "TEKKALAKOTE TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251926",
+   "district": "Ballari"
+  }
+ },
+ {
+  "key": "town2_kamrc-terdaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.terdaltown.mrc.gov.in/en/city-staff",
+   "site": "terdaltown",
+   "body": "Terdal Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251831",
+   "district": "Bagalkote"
+  }
+ },
+ {
+  "key": "town2_kamrc-thirthahallitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.thirthahallitown.mrc.gov.in/en/city-staff",
+   "site": "thirthahallitown",
+   "body": "THIRTHAHALLI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251950",
+   "district": "Shivamogga"
+  }
+ },
+ {
+  "key": "town2_kamrc-tikotatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.tikotatown.mrc.gov.in/en/city-staff",
+   "site": "tikotatown",
+   "body": "TIKOTA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "297131",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-tipturcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.tipturcity.mrc.gov.in/en/city-staff",
+   "site": "tipturcity",
+   "body": "tiptur City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251975",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-tnarasipuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.tnarasipuratown.mrc.gov.in/en/city-staff",
+   "site": "tnarasipuratown",
+   "body": "T.Narasipura Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252052",
+   "district": "Mysuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-tumakurucity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.tumakurucity.mrc.gov.in/en/city-staff",
+   "site": "tumakurucity",
+   "body": "Tumakuru City Corporation",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251973",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-turuvekeretown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.turuvekeretown.mrc.gov.in/en/city-staff",
+   "site": "turuvekeretown",
+   "body": "TURUVEKERE TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251976",
+   "district": "Tumakuru"
+  }
+ },
+ {
+  "key": "town2_kamrc-turvihaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.turvihaltown.mrc.gov.in/en/city-staff",
+   "site": "turvihaltown",
+   "body": "TURVIHAL TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276524",
+   "district": "Raichur"
+  }
+ },
+ {
+  "key": "town2_kamrc-udupicity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.udupicity.mrc.gov.in/en/city-staff",
+   "site": "udupicity",
+   "body": "udupi City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251955",
+   "district": "Udupi"
+  }
+ },
+ {
+  "key": "town2_kamrc-ugar-khurdtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ugar-khurdtown.mrc.gov.in/en/city-staff",
+   "site": "ugar-khurdtown",
+   "body": "Ugar-Khurd Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276565",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-ullalcity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.ullalcity.mrc.gov.in/en/city-staff",
+   "site": "ullalcity",
+   "body": "ullal City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252027",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-vemagal-kurugaltown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.vemagal-kurugaltown.mrc.gov.in/en/city-staff",
+   "site": "vemagal-kurugaltown",
+   "body": "VEMAGAL-KURUGAL TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "301054",
+   "district": "Kolar"
+  }
+ },
+ {
+  "key": "town2_kamrc-vijayapuracity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.vijayapuracity.mrc.gov.in/en/city-staff",
+   "site": "vijayapuracity",
+   "body": "Vijayapura City Corporation",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251993",
+   "district": "Vijayapura"
+  }
+ },
+ {
+  "key": "town2_kamrc-vijayapuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.vijayapuratown.mrc.gov.in/en/city-staff",
+   "site": "vijayapuratown",
+   "body": "Vijayapura Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251842",
+   "district": "Bengaluru Rural"
+  }
+ },
+ {
+  "key": "town2_kamrc-virajpettown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.virajpettown.mrc.gov.in/en/city-staff",
+   "site": "virajpettown",
+   "body": "Virajpet Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252040",
+   "district": "Kodagu"
+  }
+ },
+ {
+  "key": "town2_kamrc-vitlatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.vitlatown.mrc.gov.in/en/city-staff",
+   "site": "vitlatown",
+   "body": "VITLA TOWN PANCHAYAT",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "276554",
+   "district": "Dakshina Kannada"
+  }
+ },
+ {
+  "key": "town2_kamrc-waditown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.waditown.mrc.gov.in/en/city-staff",
+   "site": "waditown",
+   "body": "Wadi Town Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251856",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-yadgircity",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.yadgircity.mrc.gov.in/en/city-staff",
+   "site": "yadgircity",
+   "body": "yadgir City Municipal Council",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251863",
+   "district": "Yadgir"
+  }
+ },
+ {
+  "key": "town2_kamrc-yadramitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.yadramitown.mrc.gov.in/en/city-staff",
+   "site": "yadramitown",
+   "body": "YADRAMI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "297132",
+   "district": "Kalaburagi"
+  }
+ },
+ {
+  "key": "town2_kamrc-yaragattitown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.yaragattitown.mrc.gov.in/en/city-staff",
+   "site": "yaragattitown",
+   "body": "YARAGATTI TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "299330",
+   "district": "Belagavi"
+  }
+ },
+ {
+  "key": "town2_kamrc-yelandurtown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.yelandurtown.mrc.gov.in/en/city-staff",
+   "site": "yelandurtown",
+   "body": "YELANDUR TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "252055",
+   "district": "Chamarajanagar"
+  }
+ },
+ {
+  "key": "town2_kamrc-yelburgatown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.yelburgatown.mrc.gov.in/en/city-staff",
+   "site": "yelburgatown",
+   "body": "YELBURGA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251879",
+   "district": "Koppal"
+  }
+ },
+ {
+  "key": "town2_kamrc-yellapuratown",
+  "payload": {
+   "reader": "town2_kamrc",
+   "url": "http://www.yellapuratown.mrc.gov.in/en/city-staff",
+   "site": "yellapuratown",
+   "body": "YELLAPURA TOWN PANCHAYATH",
+   "state": "KA",
+   "india_only": true,
+   "route": "direct",
+   "lgd_code": "251903",
+   "district": "Uttara Kannada"
+  }
+ }
+]

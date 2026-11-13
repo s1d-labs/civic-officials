@@ -1,0 +1,534 @@
+[
+ {
+  "key": "sho_ka-bagalkotpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://bagalkotpolice.karnataka.gov.in/en",
+   "site": "bagalkotpolice",
+   "district": "Bagalkote",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-ballaripolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://ballaripolice.karnataka.gov.in/en",
+   "site": "ballaripolice",
+   "district": "Ballari",
+   "pages": [
+    "/15/police-stations/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-bangaloreruralpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://bangaloreruralpolice.karnataka.gov.in/en",
+   "site": "bangaloreruralpolice",
+   "district": "Bengaluru Rural",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-belagavicitypolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://belagavicitypolice.karnataka.gov.in/en",
+   "site": "belagavicitypolice",
+   "district": "Belagavi City",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-belagavidistrictpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://belagavidistrictpolice.karnataka.gov.in/en",
+   "site": "belagavidistrictpolice",
+   "district": "Belagavi",
+   "pages": [
+    "/50/police-officers-contacts/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-bidarpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://bidarpolice.karnataka.gov.in/en",
+   "site": "bidarpolice",
+   "district": "Bidar",
+   "pages": [
+    "/67/police-officers-contact-details/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-chikkaballapurapolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://chikkaballapurapolice.karnataka.gov.in/en",
+   "site": "chikkaballapurapolice",
+   "district": "Chikkaballapura",
+   "pages": [
+    "/3/contact-us/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-chikkamagalurupolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://chikkamagalurupolice.karnataka.gov.in/en",
+   "site": "chikkamagalurupolice",
+   "district": "Chikkamagaluru",
+   "pages": [
+    "/4/police-stations/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-chitradurgapolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://chitradurgapolice.karnataka.gov.in/en",
+   "site": "chitradurgapolice",
+   "district": "Chitradurga",
+   "pages": [
+    "/3/police-stations/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-chnpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://chnpolice.karnataka.gov.in/en",
+   "site": "chnpolice",
+   "district": "Chamarajanagar",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-davangerepolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://davangerepolice.karnataka.gov.in/en",
+   "site": "davangerepolice",
+   "district": "Davanagere",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-dharwadpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://dharwadpolice.karnataka.gov.in/en",
+   "site": "dharwadpolice",
+   "district": "Dharwad",
+   "pages": [
+    "/18/contact-us/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-dkpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://dkpolice.karnataka.gov.in/en",
+   "site": "dkpolice",
+   "district": "Dakshina Kannada",
+   "pages": [
+    "/2/police-stations-contact-details/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-gadagpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://gadagpolice.karnataka.gov.in/en",
+   "site": "gadagpolice",
+   "district": "Gadag",
+   "pages": [
+    "/13/police-stations/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-hassanpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://hassanpolice.karnataka.gov.in/en",
+   "site": "hassanpolice",
+   "district": "Hassan",
+   "pages": [
+    "/10/police-station-details/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-haveripolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://haveripolice.karnataka.gov.in/en",
+   "site": "haveripolice",
+   "district": "Haveri",
+   "pages": [
+    "/392/haveri-district-police-officer-name/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-hubballidharwadcitypolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://hubballidharwadcitypolice.karnataka.gov.in/en",
+   "site": "hubballidharwadcitypolice",
+   "district": "Hubballi-Dharwad City",
+   "pages": [
+    "/5/contact-us/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-kalaburagicitypolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://kalaburagicitypolice.karnataka.gov.in/en",
+   "site": "kalaburagicitypolice",
+   "district": "Kalaburagi City",
+   "pages": [
+    "/33/police-officers-contacts/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-kalaburagidistrictpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://kalaburagidistrictpolice.karnataka.gov.in/en",
+   "site": "kalaburagidistrictpolice",
+   "district": "Kalaburagi",
+   "pages": [
+    "/58/police-officers-list/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-kgfpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://kgfpolice.karnataka.gov.in/en",
+   "site": "kgfpolice",
+   "district": "Kolar Gold Fields",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-kodagupolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://kodagupolice.karnataka.gov.in/en",
+   "site": "kodagupolice",
+   "district": "Kodagu",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-kolarpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://kolarpolice.karnataka.gov.in/en",
+   "site": "kolarpolice",
+   "district": "Kolar",
+   "pages": [
+    "/9/contact-us/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-koppalpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://koppalpolice.karnataka.gov.in/en",
+   "site": "koppalpolice",
+   "district": "Koppal",
+   "pages": [
+    "/11/contact-us/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-mandyapolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://mandyapolice.karnataka.gov.in/en",
+   "site": "mandyapolice",
+   "district": "Mandya",
+   "pages": [
+    "/2/police-stations/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-mangalorecitypolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://mangalorecitypolice.karnataka.gov.in/en",
+   "site": "mangalorecitypolice",
+   "district": "Mangaluru City",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-mysurucitypolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://mysurucitypolice.karnataka.gov.in/en",
+   "site": "mysurucitypolice",
+   "district": "Mysuru City",
+   "pages": [
+    "/18/contact-us/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-mysurupolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://mysurupolice.karnataka.gov.in/en",
+   "site": "mysurupolice",
+   "district": "Mysuru",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-raichurpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://raichurpolice.karnataka.gov.in/en",
+   "site": "raichurpolice",
+   "district": "Raichur",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-ramanagarapolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://ramanagarapolice.karnataka.gov.in/en",
+   "site": "ramanagarapolice",
+   "district": "Ramanagara",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-shivamoggapolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://shivamoggapolice.karnataka.gov.in/en",
+   "site": "shivamoggapolice",
+   "district": "Shivamogga",
+   "pages": [
+    "/10/contact-us/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-tumkurpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://tumkurpolice.karnataka.gov.in/en",
+   "site": "tumkurpolice",
+   "district": "Tumakuru",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-udupipolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://udupipolice.karnataka.gov.in/en",
+   "site": "udupipolice",
+   "district": "Udupi",
+   "pages": [
+    "/3/contact-us/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-uttarakannadapolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://uttarakannadapolice.karnataka.gov.in/en",
+   "site": "uttarakannadapolice",
+   "district": "Uttara Kannada",
+   "pages": [
+    "/31/contact-us/en"
+   ],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-vijayapurapolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://vijayapurapolice.karnataka.gov.in/en",
+   "site": "vijayapurapolice",
+   "district": "Vijayapura",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "sho_ka-yadgirpolice",
+  "payload": {
+   "reader": "sho_ka",
+   "url": "https://yadgirpolice.karnataka.gov.in/en",
+   "site": "yadgirpolice",
+   "district": "Yadgir",
+   "pages": [],
+   "find": true,
+   "state": "KA",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
