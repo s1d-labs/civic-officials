@@ -1,0 +1,6 @@
+{"module": "ward3_thane",
+ "payload": {"reader": "ward3_thane", "url": "https://thanecity.gov.in/tmc/SectionInformation.html?editForm&rowId=9", "state": "MH"},
+ "routes": {"https://thanecity.gov.in/tmc/SectionInformation.html?editForm&rowId=9": "thane_officers.html"},
+ "min_records": 50,
+ "expect": [{"post": "परिमंडळ", "name": "दिनेश तायडे", "level": "division"},
+            {"post": "मुंब्रा", "name": "विजय कावळे", "level": "zone"}]}

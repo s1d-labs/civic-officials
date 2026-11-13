@@ -1,0 +1,11 @@
+[
+ {
+  "key": "ward3_pune-zones-wards",
+  "payload": {
+   "reader": "ward3_pune",
+   "url": "https://webadmin.pmc.gov.in/api/zone-officer-data/zone_officers?lang=en",
+   "url_wards": "https://webadmin.pmc.gov.in/api/ward/ward_offices?zone=&lang=en",
+   "state": "MH"
+  }
+ }
+]
