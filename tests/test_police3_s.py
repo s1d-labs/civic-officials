@@ -121,3 +121,17 @@ def test_ar_contact_directory():
     assert sum(d["level"] == "subdivision" for d in by.values()) == 11
     assert police3_ar.district_of("LEPA RADA DISTRICT, Basar") == "Leparada"
     assert police3_ar.district_of("PAPUMPARE DISTRICT, ITANAGAR (ICR)") == "Papum Pare"
+
+
+from dforms import police3_mz  # noqa: E402
+
+
+def test_mz_senior_officers():
+    recs, files, why = police3_mz.fetch({"url": police3_mz.URL}, FakeGet({police3_mz.URL: "police3_mz/senior-police-officers.html"}))
+    by = dict(recs)
+    sps = [d for d in by.values() if d["level"] == "district"]
+    assert why == "" and len(sps) == 11 and {d["district"] for d in sps} == set(police3_mz.DISTRICTS)
+    a = by["dept:police3_mz:aizawl"]
+    assert a["name"] == "Pu Zosangliana, IPS" and a["phone"] == "0389-2315877" and a["post"] == "SP Aizawl"
+    assert by["dept:police3_mz:sp-traffic"]["office_type"] == "traffic"
+    assert "dept:police3_mz:addl-dgp" not in by          # vacant: no name, no number
