@@ -1,0 +1,885 @@
+[
+ {
+  "key": "pri_pb:ps-amritsar:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Amritsar.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Amritsar",
+   "district_file": "Amritsar",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Amritsar.pdf",
+   "samitis": [
+    "Ajnala",
+    "Attari",
+    "Chogawan",
+    "Harshe Chhina",
+    "Jandiala Guru",
+    "Majitha-1",
+    "Ramdas",
+    "Rayya",
+    "Tarsikka",
+    "Verka"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-amritsar:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Amritsar.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Amritsar",
+   "district_file": "Amritsar",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Amritsar.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-barnala:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Barnala.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Barnala",
+   "district_file": "Barnala",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Barnala.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-bathinda:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Bathinda.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Bathinda",
+   "district_file": "Bathinda",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Bathinda.pdf",
+   "samitis": [
+    "Bathinda",
+    "Bhagta Bhaika",
+    "Goniana",
+    "Maur",
+    "Nathana",
+    "Phul",
+    "Rampura",
+    "Sangat",
+    "Talwandi Sabo"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-bathinda:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Bathinda.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Bathinda",
+   "district_file": "Bathinda",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Bathinda.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-ferozepur:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Ferozepur.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Firozepur",
+   "district_file": "Ferozepur",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Ferozepur.pdf",
+   "samitis": [
+    "Firozpur",
+    "Ghall Khurd",
+    "Guru Har Sahai",
+    "Makhu",
+    "Mamdot",
+    "Zira"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-ferozepur:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Ferozepur.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Firozepur",
+   "district_file": "Ferozepur",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Ferozepur.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-faridkot:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Faridkot.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Faridkot",
+   "district_file": "Faridkot",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Faridkot.pdf",
+   "samitis": [
+    "Faridkot",
+    "Jaitu",
+    "Kot Kapura"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-faridkot:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Faridkot.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Faridkot",
+   "district_file": "Faridkot",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Faridkot.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-fazilka:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Fazilka.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Fazilka",
+   "district_file": "Fazilka",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Fazilka.pdf",
+   "samitis": [
+    "Abohar",
+    "Arniwala Sheikh Subhan",
+    "Fazilka",
+    "Jalalabad",
+    "Khuian Sarwar"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-fazilka:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Fazilka.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Fazilka",
+   "district_file": "Fazilka",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Fazilka.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-fatehgarh-sahib:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Fatehgarh_Sahib.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Fatehgarh Sahib",
+   "district_file": "Fatehgarh Sahib",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Fatehgarh_Sahib.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-gurdaspur:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Gurdaspur.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Gurdaspur",
+   "district_file": "Gurdaspur",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Gurdaspur.pdf",
+   "samitis": [
+    "Batala",
+    "Dera Baba Nanak",
+    "Dhariwal",
+    "Dinanagar",
+    "Dorangla",
+    "Fatehgarh Churian",
+    "Gurdaspur",
+    "Kahnuwan",
+    "Kalanaur",
+    "Qadian",
+    "Sri Hargobindpur"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-gurdaspur:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Gurdaspur.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Gurdaspur",
+   "district_file": "Gurdaspur",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Gurdaspur.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-hoshiarpur:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Hoshiarpur.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Hoshiarpur",
+   "district_file": "Hoshiarpur",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Hoshiarpur.pdf",
+   "samitis": [
+    "Bhunga",
+    "Dasuya",
+    "Garhshankar",
+    "Hajipur",
+    "Hoshiarpur-I",
+    "Hoshiarpur-Ii",
+    "Mahilpur",
+    "Mukerian",
+    "Talwara",
+    "Tanda"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-hoshiarpur:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Hoshiarpur.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Hoshiarpur",
+   "district_file": "Hoshiarpur",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Hoshiarpur.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-jalandhar:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Jalandhar.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Jalandhar",
+   "district_file": "Jalandhar",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Jalandhar.pdf",
+   "samitis": [
+    "Adampur",
+    "Bhogpur",
+    "Jalandhar-East",
+    "Jalandhar - West",
+    "Lohian",
+    "Mehatpur",
+    "Nakodar",
+    "Nurmahal",
+    "Phillaur",
+    "Rurka Kalan",
+    "Shahkot"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-jalandhar:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Jalandhar.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Jalandhar",
+   "district_file": "Jalandhar",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Jalandhar.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-kapurthala:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Kapurthala.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Kapurthala",
+   "district_file": "Kapurthala",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Kapurthala.pdf",
+   "samitis": [
+    "Fattu Dhinga At Dhilwan",
+    "Kapurthala",
+    "Nadala",
+    "Phagwara",
+    "Sultanpur Lodhi"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-kapurthala:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Kapurthala.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Kapurthala",
+   "district_file": "Kapurthala",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Kapurthala.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-ludhiana:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Ludhiana.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Ludhiana",
+   "district_file": "Ludhiana",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Ludhiana.pdf",
+   "samitis": [
+    "Dehlon",
+    "Doraha",
+    "Jagraon",
+    "Khanna",
+    "Koom Kalan",
+    "Ludhiana-1",
+    "Ludhiana-2",
+    "Machhiwara",
+    "Maloud",
+    "Mullanpur",
+    "Pakhowal",
+    "Raikot",
+    "Samrala",
+    "Sudhar"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-ludhiana:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Ludhiana.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Ludhiana",
+   "district_file": "Ludhiana",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Ludhiana.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-moga:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Moga.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Moga",
+   "district_file": "Moga",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Moga.pdf",
+   "samitis": [
+    "Baghapurana",
+    "Dharmkot",
+    "Kot-Ise-Khan",
+    "Moga",
+    "Moga-I",
+    "Nihal Singh Wala"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-moga:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Moga.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Moga",
+   "district_file": "Moga",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Moga.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-mansa:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Mansa.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Mansa",
+   "district_file": "Mansa",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Mansa.pdf",
+   "samitis": [
+    "Bhikhi",
+    "Budhlada",
+    "Jhunir",
+    "Mansa",
+    "Sardulgarh"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-mansa:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Mansa.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Mansa",
+   "district_file": "Mansa",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Mansa.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-malerkotla:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Malerkotla.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Malerkotla",
+   "district_file": "Malerkotla",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Malerkotla.pdf",
+   "samitis": [
+    "Ahmedgarh",
+    "Amargarh",
+    "Malerkotla (Head Quarter)"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-malerkotla:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Malerkotla.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Malerkotla",
+   "district_file": "Malerkotla",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Malerkotla.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-sri-muktsar-sahib:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Sri_Muktsar_Sahib.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Sri Muktsar Sahib",
+   "district_file": "Sri Muktsar Sahib",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Sri_Muktsar_Sahib.pdf",
+   "samitis": [
+    "Gidderbaha",
+    "Lambi",
+    "Malout",
+    "Sri Muktsar Sahib"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-sri-muktsar-sahib:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Sri_Muktsar_Sahib.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Sri Muktsar Sahib",
+   "district_file": "Sri Muktsar Sahib",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Sri_Muktsar_Sahib.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-patiala:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Patiala.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Patiala",
+   "district_file": "Patiala",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Patiala.pdf",
+   "samitis": [
+    "Bhuner Heri",
+    "Ghanaur",
+    "Nabha",
+    "Patiala",
+    "Patiala Rural",
+    "Patran",
+    "Rajpura",
+    "Samana",
+    "Sanour",
+    "Shambu Kalan"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-patiala:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Patiala.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Patiala",
+   "district_file": "Patiala",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Patiala.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-pathankot:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Pathankot.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Pathankot",
+   "district_file": "Pathankot",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Pathankot.pdf",
+   "samitis": [
+    "Bamial",
+    "Dharkalan",
+    "Gharota",
+    "Narot Jaimal Singh",
+    "Pathankot",
+    "Sujanpur"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-pathankot:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Pathankot.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Pathankot",
+   "district_file": "Pathankot",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Pathankot.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-roopnagar:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Roopnagar.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Rupnagar",
+   "district_file": "Roopnagar",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Roopnagar.pdf",
+   "samitis": [
+    "Anandpur Sahib",
+    "Chamkaur Sahib",
+    "Morinda",
+    "Nangal",
+    "Nurpur Bedi",
+    "Rupnagar"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-roopnagar:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Roopnagar.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Rupnagar",
+   "district_file": "Roopnagar",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Roopnagar.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-sbs-nagar:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_SBS_Nagar.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Shaheed Bhagat Singh Nagar",
+   "district_file": "SBS Nagar",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_SBS_Nagar.pdf",
+   "samitis": [
+    "Aur",
+    "Balachaur",
+    "Banga",
+    "Nawanshahr",
+    "Saroya"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-sbs-nagar:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_SBS_Nagar.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Shaheed Bhagat Singh Nagar",
+   "district_file": "SBS Nagar",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_SBS_Nagar.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-sas-nagar:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_SAS_Nagar.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Sahibjada Ajit Singh Nagar",
+   "district_file": "SAS Nagar",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_SAS_Nagar.pdf",
+   "samitis": [
+    "Dera Bassi",
+    "Kharar",
+    "Majri",
+    "Mohali"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-sangrur:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Sangrur.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Sangrur",
+   "district_file": "Sangrur",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Sangrur.pdf",
+   "samitis": [
+    "Andana",
+    "Bhawani Garh",
+    "Chhajli",
+    "Dhuri",
+    "Dirba",
+    "Lehragaga",
+    "Sangrur",
+    "Sherpur",
+    "Sunam",
+    "Sunam Udham Singh Wala-2 At Sangrur"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-sangrur:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Sangrur.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Sangrur",
+   "district_file": "Sangrur",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Sangrur.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-tarn-taran:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-PS_Tarn_Taran.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Tarn Taran",
+   "district_file": "Tarn Taran",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-PS_Tarn_Taran.pdf",
+   "samitis": [
+    "Bhikhi Wind-13",
+    "Chohla Sahib-8",
+    "Gandiwind-9",
+    "Khadur-Sahib-10",
+    "Nagoke",
+    "Naushehra Pannuan-11",
+    "Patti-14",
+    "Tarn Taran-12",
+    "Valtoha-15"
+   ],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:zp-tarn-taran:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report-ZP_Tarn_Taran.pdf",
+   "state": "PB",
+   "level": "zp",
+   "district": "Tarn Taran",
+   "district_file": "Tarn Taran",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report-ZP_Tarn_Taran.pdf",
+   "samitis": [],
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_pb:ps-fatehgarh-sahib:ocr",
+  "payload": {
+   "reader": "pri_pb",
+   "url": "https://sec.punjab.gov.in/media/documents/Final_Gazette_Report.pdf",
+   "state": "PB",
+   "level": "ps",
+   "district": "Fatehgarh Sahib",
+   "district_file": "(not named: the link sits in the Fatehgarh Sahib row; unchecked)",
+   "page": "https://sec.punjab.gov.in/en/panchayat-samitis-zila-parishads-2025/result-notification-of-zila-parishads-and-panchayat-samiti-elections-2025/",
+   "step": "ocr",
+   "stored": "civic-officials-depts-direct/pri/PB/Final_Gazette_Report.pdf",
+   "samitis": [
+    "Amloh",
+    "Bassi Pathana",
+    "Khamano",
+    "Khera",
+    "Sirhind"
+   ],
+   "route": "abroad"
+  }
+ }
+]

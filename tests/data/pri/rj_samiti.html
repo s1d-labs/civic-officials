@@ -1,0 +1,645 @@
+
+
+<!DOCTYPE html>
+
+
+<script>
+    function myFunctionblack() { 
+
+        document.body.style.backgroundColor = "black";
+        document.getElementById("topbar").className = "topnav-inverse";
+        document.getElementById("banner").style.backgroundColor = "black";
+        document.getElementById("banner_name").style.color = "yellow";
+        document.getElementById("aphone").style.color = "yellow";
+        document.getElementById("acontact").style.color = "yellow"; 
+        document.getElementById("MenuTopnav").className = "topnavmenu-inverse";
+        document.getElementById("Menu_ContactUs").className = "topnavdropdown-inverse";
+        document.getElementById("SubMenu_About_Us").className = "topnavdropdown-content-inverse";
+        document.getElementById("Menu_Commissioner").className = "topnavdropdown-inverse";
+        document.getElementById("Menu_TelephoneDirectory").className = "topnavdropdown-inverse";
+
+        document.getElementById("Menu_FAQ").style.color = "yellow";
+
+        document.getElementById("Div_bottom_menu").className = "bottomnav_menu-inverse";
+        document.getElementById("Div_bottom").className = "bottomnav-inverse";
+         
+        document.getElementById("Div_contain").className = "contain-inverse";
+        document.getElementById("Div_Container").className = "container_child-inverse";
+          
+        document.getElementById("sitemap1").className = "presentpage-inverse";
+       
+    }
+
+    function myFunctionwhite() {
+
+
+        document.body.style.backgroundColor = "white";
+        document.getElementById("topbar").className = "topnav";
+        document.getElementById("banner").style.backgroundColor = "white";
+        document.getElementById("banner_name").style.color = "black";
+        document.getElementById("aphone").style.color = "black";
+        document.getElementById("acontact").style.color = "black";
+        document.getElementById("MenuTopnav").className = "topnavmenu";
+        document.getElementById("Menu_ContactUs").className = "topnavdropdown";
+        document.getElementById("SubMenu_About_Us").className = "topnavdropdown-content";
+        document.getElementById("Menu_Commissioner").className = "topnavdropdown";
+        document.getElementById("Menu_TelephoneDirectory").className = "topnavdropdown";
+
+        document.getElementById("Menu_FAQ").style.color = "#fff";         
+
+        document.getElementById("Div_bottom_menu").className = "bottomnav_menu";
+        document.getElementById("Div_bottom").className = "bottomnav";
+
+        document.getElementById("Div_contain").className = "contain";
+        document.getElementById("Div_Container").className = "container_child";
+
+        document.getElementById("sitemap1").className = "presentpage";
+    }
+</script>
+
+ 
+ 
+
+<script>
+
+    function myFunction() {
+        var x = document.getElementById("topbar");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else if (x.className === "topnav-inverse") {
+            x.className += " responsive";
+        } else if (x.className === "topnav-inverse responsive") {
+            x.className = "topnav-inverse";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+    function myFunctionmenu() {
+        var x = document.getElementById("MenuTopnav");
+        if (x.className === "topnavmenu") {
+            x.className += " responsive";
+        } else if (x.className === "topnavmenu-inverse") {
+            x.className += " responsive";
+        } else if (x.className === "topnavmenu-inverse responsive") {
+            x.className = "topnavmenu-inverse";
+        } else {
+            x.className = "topnavmenu";
+        }
+    }
+
+    function myFunctionbottommenu() {
+        var x = document.getElementById("Div_bottom_menu");
+        if (x.className === "bottomnav_menu") {
+            x.className += " responsive";
+        } else if (x.className === "bottomnav_menu-inverse") {
+            x.className += " responsive";
+        } else if (x.className === "bottomnav_menu-inverse responsive") {
+            x.className = "bottomnav_menu-inverse";
+        } else {
+            x.className = "bottomnav_menu";
+        }
+    }
+
+</script>
+
+ <script  type="text/javascript">
+    var tgs = new Array('font', 'div', 'span', 'a', 'button');
+
+    //Specify spectrum of different font sizes:
+    var szs = new Array('xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large');
+    var startSz = 5;
+
+    function ts(trgt, inc) {         
+        if (!document.getElementById) return
+        var d = document, cEl = null, sz = startSz, i, j, cTags;
+    
+        
+        sz += inc;
+        if (sz < 0) sz = 0;
+        if (sz > 4) sz = 5;
+        startSz = sz;
+
+        if (!(cEl = d.getElementById(trgt))) cEl = d.getElementsByTagName(trgt)[0];
+        cEl.style.fontSize = szs[sz];
+
+        for (i = 0; i < tgs.length; i++) {
+            cTags = cEl.getElementsByTagName(tgs[i]);
+            for (j = 0; j < cTags.length; j++)
+            {                
+                cTags[j].style.fontSize = szs[sz];
+            }
+        }
+    }
+  </script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head><title>
+	State Election Commission, Rajasthan
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link href="css/design.css" rel="stylesheet" /><link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    
+    <script type="text/javascript">
+        $(function () {
+            //alert(1);
+            $('#tableWrap1').tabs();
+        });
+    </script>
+<link href="App_Themes/S/a.css" type="text/css" rel="stylesheet" /><link href="App_Themes/S/b.css" type="text/css" rel="stylesheet" /><link href="App_Themes/S/c.css" type="text/css" rel="stylesheet" /><link href="App_Themes/S/d.css" type="text/css" rel="stylesheet" /></head>
+<body>
+
+    <form method="post" action="./GramPanchayatDetails.aspx" id="Form2" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form2'];
+if (!theForm) {
+    theForm = document.Form2;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=LmmvlH-YodCiJl0yA7K0vpTGzPMnCeBNyQXNCHSv1_qL6U2ZLoc2um2a1vYrsUnRmLpIR5iGEilODUh3O6EFSBHCnws1&amp;t=639191031332169432" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=UBK245ymAV_z-wn1sWvS44nvXv60CAmW6azWhaO4bY5oRjzo9-Ddu_yfdGO4z5UI_FI_HzpO9Pf9d9BUQhknJ-wytGRMqO9f35OTeq855H8TaFBk0&amp;t=f2cd5c5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=R4REAQUWTZYPPPqLjfu5e-m5zYaNeDeU_sizJXO7peF2N9-tSEBme0dAfDP8FkH9HASscMUdCqE72KveV9z9ypaxuvb3abTwgiiAatSlDPD3JpP2Y2sHPpoOjVfY5WzPvrDqAA2&amp;t=f2cd5c5" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A4AE8801" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="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" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$scm', 'Form2', ['tctl00$ContentPlaceHolder1$up1','ContentPlaceHolder1_up1','tctl00$ContentPlaceHolder1$updatepanel','ContentPlaceHolder1_updatepanel','tctl00$ContentPlaceHolder1$updatepanel1','ContentPlaceHolder1_updatepanel1','tctl00$ContentPlaceHolder1$updatepanel2','ContentPlaceHolder1_updatepanel2','tctl00$ContentPlaceHolder1$updatepanel3','ContentPlaceHolder1_updatepanel3'], [], ['ctl00$ContentPlaceHolder1$btnSubmit','ContentPlaceHolder1_btnSubmit'], 90, 'ctl00');
+//]]>
+</script>
+
+         <div id="topbar" class="topnav">
+        <a href="AccessibilityStatement.aspx">Screen Reader Access</a>
+        <a href="#MenuTopnav">Skip to Navigation</a>
+        <a href="#ListContent">Skip to Main Content</a>
+        <a href="SiteMap.aspx">SiteMap</a>
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="topnav-right">
+            <button id="Button_dark" class="button_D" title="For Dark Theme" onclick="myFunctionblack()"  ></button>
+            <button id="Button_Normal" class="button_N" title="For Normal Theme" onclick="myFunctionwhite()"  ></button> 
+             
+            
+             
+          <a href="javascript:ts('body',1)">A+</a> 
+            <a href="javascript:ts('body',-1)">A-</a> 
+        </div>
+    </div>
+
+    <div id="banner" class="header">
+        <a>
+            <img id="aemb" src="Img/state_emb.png" alt='State Election Commission, Rajasthan' style="height: 90px;"/></a>
+         
+        <a id ="banner_name">राज्य निर्वाचन आयोग, राजस्थान
+                <br />
+            State Election Commission, Rajasthan</a>
+
+        <div class="header-right">
+            <a id="aphone" style="margin-right: 20px; margin-top: 5px; font-size: 18px; "><span class="fa fa-phone"></span>0141-2227407,2227037 </a>
+            <br />
+            <a id="acontact" style="margin-right: 20px; margin-top: 5px; font-size: 18px; "><span class="fa fa-envelope"></span>secraj[at]rajasthan[dot]gov[dot]in </a>
+        </div>
+    </div>
+
+    <div class="topnavmenu" id="MenuTopnav" style="font-weight: bold;" >
+        <a href="../default.aspx">Home</a>
+        <div id="Menu_ContactUs" class="topnavdropdown">
+            <button class="dropbtn">
+                About Us  
+            </button>
+            <div id="SubMenu_About_Us" class="topnavdropdown-content">
+                 <span id="baloonText" title="See Today&#39;s Birthday" style="    padding: 5px;background-color: #42B72A;border-radius: 50%;float: right;margin-top: 15px;margin-right: 5px;"></span> <a href="About-Us.aspx">About Us</a>
+                <a href="OrganizationChart.aspx">Organization Chart</a>
+            </div>
+        </div>
+
+         <div id="Menu_Commissioner" class="topnavdropdown">
+            <button class="dropbtn">
+                Commissioner's Desk  
+            </button>
+            <div id="SubMenu_Commissioner" class="topnavdropdown-content">
+                <a href="cdesk.aspx">Commissioner's Desk</a>
+                
+            </div>
+        </div>
+
+         
+
+
+        
+        <a href="ElectionLaw.aspx">Election Law</a>
+        <a href="StatisticsArchiveReports.aspx">Statistical Reports</a> 
+        
+        
+        <a href="../Events.aspx">Events</a>
+        <div id="Menu_TelephoneDirectory" class="topnavdropdown">
+            <button class="dropbtn">
+                Telephone Directory 
+            </button>
+            <div id="SubMenu_TelephoneDirectory" class="topnavdropdown-content">
+                <a href="officecontacts.aspx">Telephone nos. of Officers of SEC</a>
+                <a href="NewFunctionarieswithACRD.aspx">District Functionaries</a>
+            </div>
+        </div>
+
+        <a href="Contact-Us.aspx">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunctionmenu()">
+            <i class="fa fa-bars"></i></a>
+
+        <div class="topnavmenu-right" style="float: right;">
+            
+
+      
+
+              
+                                    <a href="Login.aspx"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;&nbsp;Log In</a>
+                                    
+
+             
+
+                     
+      
+        </div>
+    </div>
+  
+      
+    <div id="Div_contain" class="contain"  >
+        
+    <link rel="stylesheet" href="styles/design_web.css" />
+
+    <h3>
+        <span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;Gram Panchayat Details
+    </h3>
+
+    <div id="flip">
+        <span class="glyphicon glyphicon-filter" style="float: left"></span>
+        <span class="glyphicon-Heading">
+            Filter - Election Type, Election, Duration, Phase
+        </span>
+        <span class="glyphicon-imagearrow">
+            <img id="imagearrow" class="Up" src="Img/arrow-up.png" style="float: right" onclick="javascript:toggle();" />
+        </span>
+    </div>
+
+    <div id="panel" style="width: 100%;">
+        <div id="ContentPlaceHolder1_up1">
+	
+                <div id="ContentPlaceHolder1_Panel1">
+		
+                    <span id="ContentPlaceHolder1_lblresult"></span>
+                    <div id="ContentPlaceHolder1_ValidationSummary1" style="display:none;">
+
+		</div>
+                    <table style="width: 100%">
+                        <tr>
+                            <th class="leftwidth">Election Type:</th>
+                            <td>
+                                <select name="ctl00$ContentPlaceHolder1$DropDownListElection" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$DropDownListElection\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_DropDownListElection" class="form-control">
+			<option selected="selected" value="1">General Election</option>
+			<option value="2">By Election</option>
+
+		</select>
+                          </tr>
+
+                         <tr>
+                            <th class="leftwidth">Election Duration:</th>
+                            <td>
+                                <select name="ctl00$ContentPlaceHolder1$DropDownListPeriod" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$DropDownListPeriod\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_DropDownListPeriod" class="form-control">
+			<option value="0">--please select--</option>
+			<option selected="selected" value="64">OCT-NOV 2026</option>
+
+		</select>
+                          </tr>
+                        <tr>
+                            <th class="leftwidth">District:</th>
+                            <td>
+                                <select name="ctl00$ContentPlaceHolder1$DistrictDropDownList" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$DistrictDropDownList\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_DistrictDropDownList" class="form-control">
+			<option value="">--Please Select--</option>
+			<option value="1">AJMER</option>
+			<option value="2">ALWAR</option>
+			<option value="34">BALOTRA</option>
+			<option value="3">BANSWARA</option>
+			<option value="4">BARAN</option>
+			<option selected="selected" value="5">BARMER</option>
+			<option value="35">BEAWAR</option>
+			<option value="6">BHARATPUR</option>
+			<option value="7">BHILWARA</option>
+			<option value="8">BIKANER</option>
+			<option value="9">BUNDI</option>
+			<option value="10">CHITTORGARH</option>
+			<option value="11">CHURU</option>
+			<option value="12">DAUSA</option>
+			<option value="36">DEEDWANA-KUCHAMAN</option>
+			<option value="37">DEEG</option>
+			<option value="13">DHOLPUR</option>
+			<option value="14">DUNGARPUR</option>
+			<option value="15">GANGANAGAR</option>
+			<option value="16">HANUMANGARH</option>
+			<option value="17">JAIPUR</option>
+			<option value="18">JAISALMER</option>
+			<option value="19">JALORE</option>
+			<option value="20">JHALAWAR</option>
+			<option value="21">JHUNJHUNU</option>
+			<option value="22">JODHPUR</option>
+			<option value="23">KARAULI</option>
+			<option value="38">KHAIRTHAL-TIJARA</option>
+			<option value="24">KOTA</option>
+			<option value="39">KOTPUTLI-BEHROR</option>
+			<option value="25">NAGAUR</option>
+			<option value="26">PALI</option>
+			<option value="40">PHALODI</option>
+			<option value="27">PRATAPGARH</option>
+			<option value="28">RAJSAMAND</option>
+			<option value="29">S. MADHOPUR</option>
+			<option value="41">SALUMBER</option>
+			<option value="30">SIKAR</option>
+			<option value="31">SIROHI</option>
+			<option value="32">TONK</option>
+			<option value="33">UDAIPUR</option>
+
+		</select>
+                                
+                        </tr>
+                        <tr>
+                            <th class="leftwidth">Panchayat Samiti :</th>
+                            <td>
+                                <select name="ctl00$ContentPlaceHolder1$PanchayatSamitiDropDownList" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$PanchayatSamitiDropDownList\&#39;,\&#39;\&#39;)&#39;, 0)" id="PanchayatSamitiDropDownList" class="form-control">
+			<option value="0">--Please Select--</option>
+			<option value="300">AADEL PANCHAYAT SAMITI</option>
+			<option selected="selected" value="39">BARMER PANCHAYAT SAMITI</option>
+			<option value="301">BARMER RURAL PANCHAYAT SAMITI</option>
+			<option value="364">BATADOO PANCHAYAT SAMITI</option>
+			<option value="40">BAYTOO PANCHAYAT SAMITI</option>
+			<option value="365">BHIYAD PANCHAYAT SAMITI</option>
+			<option value="366">BISHALA PANCHAYAT SAMITI</option>
+			<option value="41">CHOHTAN PANCHAYAT SAMITI</option>
+			<option value="257">DHANAU PANCHAYAT SAMITI</option>
+			<option value="367">DOOGERO KA TALA PANCHAYAT SAMITI</option>
+			<option value="302">FAGLIYA PANCHAYAT SAMITI</option>
+			<option value="261">GADRA ROAD PANCHAYAT SAMITI</option>
+			<option value="368">LEELSAR PANCHAYAT SAMITI</option>
+			<option value="369">MANGTA PANCHAYAT SAMITI</option>
+			<option value="253">RAMSAR PANCHAYAT SAMITI</option>
+			<option value="258">SEDWA PANCHAYAT SAMITI</option>
+			<option value="43">SHEO PANCHAYAT SAMITI</option>
+
+		</select>
+                                
+                        </tr>
+                        <tr>
+                            <th class="leftwidth">Gram Panchayat :</th>
+                            <td>
+                                <select name="ctl00$ContentPlaceHolder1$GramPanchayatdrpdwn" id="ContentPlaceHolder1_GramPanchayatdrpdwn" class="form-control">
+			<option value="0">--All--</option>
+			<option value="14988">Aadrsh Dundha</option>
+			<option value="1496">Asada ki berry</option>
+			<option value="14955">Ati</option>
+			<option value="14945">Balera</option>
+			<option value="14986">Bandra</option>
+			<option value="14958">Barmer Agor</option>
+			<option value="14959">Barmer Agor Kishandaspura</option>
+			<option value="14960">Barmer Gadan</option>
+			<option value="14957">Barmer Gramin</option>
+			<option value="14972">Barmer Magra</option>
+			<option value="14971">Beedasar</option>
+			<option value="14983">Bhadkha</option>
+			<option value="14992">Bothiya Jageer</option>
+			<option value="14979">Dhokalsingh Ka Gaon</option>
+			<option value="14987">Dungarsar</option>
+			<option value="14981">Hariyali</option>
+			<option value="14954">Himalaya sagar</option>
+			<option value="14965">Indrasingh Nagar</option>
+			<option value="14973">Jalipa</option>
+			<option value="14943">Jasai</option>
+			<option value="14947">Juna patrasar</option>
+			<option value="14980">Kapurdi</option>
+			<option value="14990">Kau Ka Kheda</option>
+			<option value="14989">Kawas</option>
+			<option value="14984">Khariya Tala</option>
+			<option value="14951">Kurja</option>
+			<option value="14977">Lakhetali</option>
+			<option value="14956">Langera</option>
+			<option value="14952">Mahabar</option>
+			<option value="14950">Maroodi</option>
+			<option value="14962">meethda</option>
+			<option value="14944">Meethri khurd</option>
+			<option value="14967">Mewanagar</option>
+			<option value="14974">Moondhon Ki Dhani</option>
+			<option value="14968">Murtala Gala</option>
+			<option value="14975">Nagana</option>
+			<option value="14942">Para</option>
+			<option value="14976">Purohiton Ki Basti</option>
+			<option value="14982">Rajuoni jakharo Ki Dhani</option>
+			<option value="14949">Randwa</option>
+			<option value="14970">Ranigaon</option>
+			<option value="14969">Ranigaon Kala</option>
+			<option value="14978">Rohili</option>
+			<option value="14946">Sujan nagar</option>
+			<option value="14966">Thakarsingh Nagar</option>
+			<option value="14964">Undhkha</option>
+			<option value="14991">Utarlai</option>
+			<option value="14953">Vankalpura</option>
+			<option value="14985">Veeramnagar</option>
+
+		</select>
+                                </td>
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td>&nbsp;&nbsp;
+                                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnSubmit" value="Submit" id="ContentPlaceHolder1_btnSubmit" class="btn btn-primary" />
+                            </td>
+
+                        </tr>
+                    </table>
+                    
+                
+	</div>
+            
+</div>
+    </div>
+
+    <div id="Print">
+        <br />
+        <div>
+            <div id="tableWrap1" style="font-size: 16px; font-family: Calibri">
+                <ul>
+
+                    <li><a href="#tabs-1">Contesting Sarpanch</a></li>
+                    
+                    <li><a href="#tabs-3">Statistics for Nomination</a></li>
+                    <li><a href="#tabs-4">Winner Sarpanch</a></li>
+                    
+                    
+                    <li><a href="#tabs-7">Ward Winning Panch</a></li>
+                </ul>
+
+                <div id="tabs-1">
+                    <span class="glyphicon-overflow-y">
+                        <a id="ContentPlaceHolder1_btnExport_repeatorSarpanch" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnExport_repeatorSarpanch&#39;,&#39;&#39;)"><span class="glyphicon glyphicon-file"></span></a>
+                    </span>
+                    <div id="ContentPlaceHolder1_updatepanel" class="update-panel-overflow-y">
+	
+                            
+                        
+</div>
+                </div>
+                <div id="tabs-3">
+                    <span class="glyphicon-overflow-y">
+                        <a id="ContentPlaceHolder1_btnExport_NominationStatistics" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnExport_NominationStatistics&#39;,&#39;&#39;)"><span class="glyphicon glyphicon-file"></span></a>
+                    </span>
+                    <div id="ContentPlaceHolder1_updatepanel1" class="update-panel-overflow-y">
+	
+                            
+                        
+</div>
+                </div>
+                <div id="tabs-4">
+                    <span class="glyphicon-overflow-y">
+                        <a id="ContentPlaceHolder1_btnExport_WinnerSarpanch" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnExport_WinnerSarpanch&#39;,&#39;&#39;)"><span class="glyphicon glyphicon-file"></span></a>
+                    </span>
+                    <div id="ContentPlaceHolder1_updatepanel2" class="update-panel-overflow-y">
+	
+                            
+                        
+</div>
+                </div>
+                <div id="tabs-7">
+                    <span class="glyphicon-overflow-y">
+                        <a id="ContentPlaceHolder1_btnExport_WardWinningPanch" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$btnExport_WardWinningPanch&#39;,&#39;&#39;)"><span class="glyphicon glyphicon-file"></span></a>
+                    </span>
+                    <div id="ContentPlaceHolder1_updatepanel3" class="update-panel-overflow-y">
+	
+                            
+                        
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ContentPlaceHolder1_ValidationSummary1"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ContentPlaceHolder1_ValidationSummary1 = document.all ? document.all["ContentPlaceHolder1_ValidationSummary1"] : document.getElementById("ContentPlaceHolder1_ValidationSummary1");
+ContentPlaceHolder1_ValidationSummary1.validationGroup = "valid";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+(function(id) {
+    var e = document.getElementById(id);
+    if (e) {
+        e.dispose = function() {
+            Array.remove(Page_ValidationSummaries, document.getElementById(id));
+        }
+        e = null;
+    }
+})('ContentPlaceHolder1_ValidationSummary1');
+//]]>
+</script>
+</form>
+     <div id="Div_bottom_menu" class="bottomnav_menu">
+        <a href="TermsandCondition.aspx">Terms & Conditions</a>
+        <a href="PrivacyPolicy.aspx">Privacy Policy</a>
+        <a href="CopyRightPolicy.aspx">Copyright Policy</a>
+        <a href="HyperLinkPolicy.aspx">Hyperlink policy</a>
+        <a href="AccessibilityStatement.aspx">Screen Reader Access</a>
+        <a href="Disclaimer.aspx">Disclaimer</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunctionbottommenu()">
+            <i class="fa fa-bars"></i></a>
+    </div>
+
+    <div id="Div_bottom" class="bottomnav">
+        <div class="col-sm-2 p-3" style="text-align: center">
+            <a>
+                <span id="Total_Visitors"></span>
+
+                <span id="Label1"></span>
+
+            </a>
+            <br />
+            <a>
+                <span id="Today_Count"></span></a>
+        </div>
+        <div class="col-sm-4 p-3" style="text-align: center">
+            <a style="pointer-events: none;">Nodal Officer : Smt. Kiran Meena, ACP (Deputy Director)
+                    <br />
+                Contact Number :0141-2227407
+            </a>
+        </div>
+        <div class="col-sm-6 p-3 " style="text-align: right">
+            <a>© This is the official website of State Election Commission, Rajasthan. All rights reserved. Website maintained by Rajasthan Electronics & Instruments Ltd., Jaipur.
+            </a>
+
+        </div>
+
+
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").stop(true, true).slideToggle("slow");
+            });
+        });
+        function toggle() {
+
+            var panel = document.getElementById("panel");
+            var arrow = document.getElementById("imagearrow");
+
+            if (panel.style.display === "none") {
+                arrow.src = "Img/arrow-up.png";
+                arrow.classList.remove("Down");
+                arrow.classList.add("Up");
+            }
+            else {
+                arrow.src = "Img/arrow.png";
+                arrow.classList.remove("Up");
+                arrow.classList.add("Down");
+            }
+        }
+    </script>
+</body>
+</html>
