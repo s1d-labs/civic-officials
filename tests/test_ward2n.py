@@ -88,3 +88,27 @@ def test_every_reader_has_a_case_and_a_seed():
 def test_seeds_unique_across_files():
     keys = [i["key"] for p in sorted((ROOT / "seeds").glob("dept_ward*.json")) for i in json.loads(p.read_text())]
     assert len(keys) == len(set(keys))
+
+
+def test_mcd_west_title_row_tables():
+    """MCD West zone Key Contacts, the full saved answer (bucket copy 92ee73b8..., 2026-11-12): the DC's box and 15 tables whose
+    first row is the department title and second row the header. Before, only the box was read (1 record); now 1 + 37."""
+    import gzip
+    body = gzip.decompress((DATA / "ward2n_mcd" / "west_key_contacts_full.json.gz").read_bytes())
+
+    class A:
+        def __init__(self, b):
+            self.content, self.text = b, b.decode("utf-8")
+
+        def json(self):
+            return json.loads(self.content)
+    sub = json.dumps({"x": [{"menuGuide": "c8fed5c6-830c-4416-b39c-7b2b35f26a8f", "menuName": "Key Contacts"}]}).encode()
+    m = mod("ward2n_mcd")
+    p = {"zone": "West Zone", "url": "https://mcdonline.nic.in/portal/showSubMenu?menuguide=3e636f52-ae9f-48c6-80dc-70763595b80f"}
+    recs, files, why = m.fetch(p, lambda u, *a, **k: A(sub if "showSubMenu" in u else body))
+    d = [x for _, x in recs]
+    assert why == "" and len(recs) == 38 and len({r for r, _ in recs}) == 38
+    assert sum(1 for x in d if x.get("section") == "Engineering Department") == 12
+    assert any(x.get("name") == "Col. Vinod Atri" and x["post"] == "Deputy Commissioner" for x in d)
+    r = next(x for x in d if x.get("name") == "Sh. Ranjan Kumar")
+    assert r["section"] == "Assessment and Collection Department" and "9868134231" in r["phone"]
