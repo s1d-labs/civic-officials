@@ -4,11 +4,14 @@
   "reader": "ward3_bengaluru",
   "url": "https://bengalurusouth.karnataka.gov.in/home",
   "state": "KA",
-  "city": "south"
+  "city": "south",
+  "zones_url": "https://gba.karnataka.gov.in/KnowYourNewCorporation/index.html"
  },
  "routes": {
   "https://bengalurusouth.karnataka.gov.in/home": "bengaluru_south_home.html",
-  "https://bengalurusouth.karnataka.gov.in/static/js/main.d4bca926.js": "bengaluru_south.js"
+  "https://bengalurusouth.karnataka.gov.in/static/js/main.d4bca926.js": "bengaluru_south.js",
+  "https://gba.karnataka.gov.in/KnowYourNewCorporation/index.html": "bengaluru_gba_zones_home.html",
+  "https://gba.karnataka.gov.in/KnowYourNewCorporation/static/js/main.ca02ac23.js": "bengaluru_gba_zones.js"
  },
  "min_records": 8,
  "expect": [

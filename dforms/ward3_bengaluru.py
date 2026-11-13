@@ -8,6 +8,9 @@ the "Zone Offices" footer are in the app's script bundle (/static/js/main.<hash>
     zone<n>_address for the zone offices.
 Live samples from Mumbai (dev-vps-3) 2026-11-13; not in archive.s1d.me; the sites show no date. bbmp.gov.in and site.bbmp.gov.in
 did not answer (time-out / refused) on 2026-11-13. The pages do not say which wards each zone holds: zone records have no "wards".
+The zone names (Zone-1 of West = Rajarajeshwarinagar, ...), their head offices and assembly constituencies come from a second
+app, the GBA "Know Your New City Corporation" page (gba.karnataka.gov.in/KnowYourNewCorporation/, its bundle's zone list; payload
+"zones_url"): extra keys zone_name, zone_head_office, zone_assembly_constituencies.
 A name key with no English text in the locale (some entries are placeholders) gives a record with post and email but no name.
 Emails are kept as written (one ends ".comm" on the site).
 Records: zone officers and zone offices at level "zone" (area "Zone-1" / "Zone-2"), the Commissioner and Additional
@@ -44,12 +47,13 @@ POSTS = {"commissioner": "Commissioner", "add_comm_dev": "Additional Commissione
 
 
 def items(get=None):
-    return [{"key": f"{MODULE}-{c}", "payload": {"reader": MODULE, "url": f"https://{h}/home", "state": STATE, "city": c}}
+    return [{"key": f"{MODULE}-{c}", "payload": {"reader": MODULE, "url": f"https://{h}/home", "state": STATE, "city": c,
+                                                 "zones_url": ZONES_URL}}
             for c, (h, _, _) in BODIES.items()]
 
 
 def bundle_url(html, base):
-    m = re.search(r'src="(/static/js/main\.[0-9a-f]+\.js)"', html)
+    m = re.search(r'src="((?:/[\w-]+)?/static/js/main\.[0-9a-f]+\.js)"', html)
     return re.match(r"https?://[^/]+", base).group(0) + m.group(1) if m else None
 
 
@@ -88,7 +92,24 @@ def _name(s):
     return "" if re.fullmatch(r"[-–.\s]*", s) else s
 
 
-def parse(js, p, source=None):
+ZONES_URL = "https://gba.karnataka.gov.in/KnowYourNewCorporation/index.html"
+ZONES_JSON = re.compile(r"JSON\.parse\('(\[\{\"corporationName.*?\])'\)", re.S)
+
+
+def zone_names(js):
+    """{corporation name: {"Zone-1": {"zone_name", "headOffice", "assemblyConstitution"}}} from the GBA "Know Your New City
+    Corporation" app bundle (its zone list object)."""
+    m = ZONES_JSON.search(js or "")
+    if not m:
+        return {}
+    try:
+        data = json.loads(m.group(1).replace("\\'", "'"))
+    except ValueError:
+        return {}
+    return {c.get("corporationName", ""): {z.get("zone"): z for z in c.get("zones", [])} for c in data}
+
+
+def parse(js, p, source=None, zones=None):
     city = p["city"]
     host, body, lgd = BODIES[city]
     en, kn = locales(js)
@@ -121,6 +142,13 @@ def parse(js, p, source=None):
                                  post="Zone Office", address=addr.replace("\n", " "),
                                  address_regional=_name(kn.get(f"zone{n}_address", "")) or None, wing="administration",
                                  role="staff", **kw, src_pos={"object": "locale", "key": f"zone{n}_address"}))
+    for _, d in recs:      # zone names and assembly constituencies from the GBA app (second source)
+        z = (zones or {}).get(d.get("zone"))
+        if z:
+            d["zone_name"] = _esw.clean(z.get("zone_name")) or None
+            d["zone_assembly_constituencies"] = _esw.clean(z.get("assemblyConstitution")) or None
+            d["zone_head_office"] = _esw.clean(z.get("headOffice")) or None
+            d["zone_source"] = p.get("zones_url")
     return recs
 
 
@@ -134,5 +162,14 @@ def fetch(p, get):
     j = get(js_url)
     if j is None:
         return [], [], "no answer (script bundle)"
-    recs = _ward.tag(parse(j.text, p, source=js_url), j, js_url)
-    return recs, [_esw.keep(MODULE, f"{p['city']}-bundle", j.content, "js")], "" if recs else "no officer object in the bundle"
+    files = [_esw.keep(MODULE, f"{p['city']}-bundle", j.content, "js")]
+    zones = {}
+    z = get(p["zones_url"]) if p.get("zones_url") else None
+    zjs_url = bundle_url(z.text, p["zones_url"]) if z is not None else None
+    if zjs_url:
+        zj = get(zjs_url)
+        if zj is not None:
+            zones = zone_names(zj.text).get(BODIES[p["city"]][1], {})
+            files.append(_esw.keep(MODULE, "gba-zones-bundle", zj.content, "js"))
+    recs = _ward.tag(parse(j.text, p, source=js_url, zones=zones), j, js_url)
+    return recs, files, "" if recs else "no officer object in the bundle"

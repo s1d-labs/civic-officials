@@ -5,7 +5,8 @@
    "reader": "ward3_bengaluru",
    "url": "https://bengaluruwest.karnataka.gov.in/home",
    "state": "KA",
-   "city": "west"
+   "city": "west",
+   "zones_url": "https://gba.karnataka.gov.in/KnowYourNewCorporation/index.html"
   }
  },
  {
@@ -14,7 +15,8 @@
    "reader": "ward3_bengaluru",
    "url": "https://bengalurunorth.karnataka.gov.in/home",
    "state": "KA",
-   "city": "north"
+   "city": "north",
+   "zones_url": "https://gba.karnataka.gov.in/KnowYourNewCorporation/index.html"
   }
  },
  {
@@ -23,7 +25,8 @@
    "reader": "ward3_bengaluru",
    "url": "https://bengalurusouth.karnataka.gov.in/home",
    "state": "KA",
-   "city": "south"
+   "city": "south",
+   "zones_url": "https://gba.karnataka.gov.in/KnowYourNewCorporation/index.html"
   }
  },
  {
@@ -32,7 +35,8 @@
    "reader": "ward3_bengaluru",
    "url": "https://bengalurucentral.karnataka.gov.in/home",
    "state": "KA",
-   "city": "central"
+   "city": "central",
+   "zones_url": "https://gba.karnataka.gov.in/KnowYourNewCorporation/index.html"
   }
  },
  {
@@ -41,7 +45,8 @@
    "reader": "ward3_bengaluru",
    "url": "https://bengalurueast.karnataka.gov.in/home",
    "state": "KA",
-   "city": "east"
+   "city": "east",
+   "zones_url": "https://gba.karnataka.gov.in/KnowYourNewCorporation/index.html"
   }
  }
 ]

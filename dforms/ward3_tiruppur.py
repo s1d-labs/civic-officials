@@ -10,7 +10,12 @@ The page is the state's citizen charter template, in HTML tables:
                                   posts (City Engineer, City Health Officer, Assistant Engineer (Electrical), Commissioner).
 The same block repeats for many services: one record per post (and zone); the services are kept as "services" and every table
 that names the post is in src_pos. Phones are local numbers without the STD code; the reader adds 0421 (Tiruppur) to 6-8 digit
-numbers. The page names no officers (posts and phones only).
+numbers. The page names no officers (posts and phones only). The second page, "Office Staffs" (/tiruppur/office-staffs/, payload "staff";
+live 2026-11-13: S.NO | NAME | DESIGNATION | CONTACT NUMBER | LANDLINE NUMBER, 108 rows), names them: posts that name a zone
+("Assistant Commissioner (Zone 2)", "Executive Engineer (Zone 1)", "Administrative Officer Zone-2 (I/c) & Zone-3", "Assistant City
+Planner (Zone 3 & 4)") are level "zone" with the wards of their zone(s); the other field posts (engineers, sanitary officers and
+inspectors, health officer, deputy commissioners) level "body". Clerical posts (superintendents, technical assistants,
+draughtsmen, programmers) are left out. post = the first post without the zone; post_as_written keeps the cell.
 Other Tamil Nadu corporations on the same platform (Hosur, Erode, Tirunelveli: checked 2026-11-13) have no zone table in their
 charter page (Tirunelveli: a PDF). Record ids: dept:ward3_tiruppur:<zone-n | body>:<post slug>.
 """
@@ -23,6 +28,10 @@ METHOD = "html table"     # source trail (provenance.py): how this reader reads 
 MODULE = "ward3_tiruppur"
 BODY, LGD, STATE, DISTRICT, STD = "Tiruppur City Municipal Corporation", "252621", "TN", "Tiruppur", "0421"
 URL = "https://www.tnurbantree.tn.gov.in/tiruppur/citizen-charter/"
+STAFF_URL = "https://www.tnurbantree.tn.gov.in/tiruppur/office-staffs/"
+ZONE_TAG = re.compile(r"(?i)\(?\s*zones?\s*[-–]?\s*(\d)(?:\s*(?:&|and|,)\s*(?:zone\s*[-–]?\s*)?(\d))?\s*\)?(?:\s*\(i/c\))?")
+CLERICAL = re.compile(r"(?i)\b(superintendent|programmer|draughtsman|technical\s+assistant|public\s+relation|assistant$|"
+                      r"junior\s+assistant|typist|record\s+clerk|driver|office\s+assistant|watchman)\b")
 ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5, "VI": 6, "VII": 7, "VIII": 8, "IX": 9, "X": 10}
 ZONE_POST = re.compile(r"^(.*?)\s*[–—-]\s*([IVX]{1,4})\s*$")
 PHONE = re.compile(r"(?<!\d)(\d[\d -]{5,12}\d)(?!\d)")
@@ -30,7 +39,7 @@ PHONE = re.compile(r"(?<!\d)(\d[\d -]{5,12}\d)(?!\d)")
 
 def items(get=None):
     return [{"key": f"{MODULE}-citizen-charter", "payload": {"reader": MODULE, "url": URL, "state": STATE, "india_only": True,
-                                                             "route": "direct"}}]
+                                                             "route": "direct", "staff": STAFF_URL}}]
 
 
 def lines(td):
@@ -101,7 +110,50 @@ def contacts(soup):
     return out
 
 
-def parse(html, p):
+def staff_rows(html):
+    """[(name, post as written, mobile, landline, src_pos)] of the "Office Staffs" table (S.NO | NAME | DESIGNATION | CONTACT
+    NUMBER | LANDLINE NUMBER)."""
+    out = []
+    soup = _esw.soup(html)
+    for ti, t in enumerate(soup.find_all("table"), 1):
+        trs = [tr for tr in t.find_all("tr") if tr.find_parent("table") is t]
+        if not trs or "designation" not in trs[0].get_text(" ").lower():
+            continue
+        for ri, tr in enumerate(trs[1:], 2):
+            c = [_esw.clean(x.get_text(" ")) for x in tr.find_all(["td", "th"])]
+            if len(c) >= 4:
+                out.append((c[1], c[2], c[3], c[4] if len(c) > 4 else "", {"table": ti, "row": ri}))
+    return out
+
+
+def staff(html, zones, p, seen):
+    """Records of the staff page: a post that names its zone(s) ("Assistant Commissioner (Zone 2)", "Administrative Officer
+    Zone-2 (I/c) & Zone-3") is level "zone" with that zone's wards (the charter's table); other field posts level "body"."""
+    recs = []
+    for name, post, mob, land, pos in staff_rows(html):
+        zs = []
+        for m in ZONE_TAG.finditer(post):
+            zs += [int(x) for x in m.groups() if x and int(x) not in zs]
+        base = _esw.clean(ZONE_TAG.sub(" ", post)).strip(" -–,&")
+        first = re.split(r"\s+(?=(?:Assistant|Superintendent|Council|Deputy)\b)", base)[0] if base else post
+        if not name or CLERICAL.search(first if zs else post):
+            continue
+        name = re.sub(r"(?i)^(thiru|tmt|ms|mr|mrs|selvi)\.?\s*", "", name)
+        kw = dict(body=BODY, lgd=LGD, state=STATE, district=DISTRICT, source=STAFF_URL, src_url=STAFF_URL, src_pos=pos,
+                  post_as_written=post, name=name, phone=", ".join(
+                      x for x in (mob, land) if x))
+        if zs:
+            area = ("Zone " if len(zs) == 1 else "Zones ") + ", ".join(map(str, zs))
+            wards = [w for z in zs for w in zones.get(z, ("", [], None))[1]]
+            recs.append(_ward.record(MODULE, f"{_esw.slug(area)}:{_esw.slug(first)}:{_esw.slug(name)}", seen, level="zone",
+                                     area=area, zone=area, post=first, wards=wards, **kw))
+        else:
+            recs.append(_ward.record(MODULE, f"body:{_esw.slug(post)}:{_esw.slug(name)}", seen, level="body", area=BODY,
+                                     post=post, **kw))
+    return recs
+
+
+def parse(html, p, staff_html=None):
     soup = _esw.soup(html)
     zones = zones_table(soup)
     seen, recs, people = set(), [], {}
@@ -128,6 +180,8 @@ def parse(html, p):
             recs.append(_ward.record(MODULE, f"body:{_esw.slug(post)}", seen, level="body", area=BODY, post=post,
                                      phone=", ".join(g["phones"]), contact_tier=", ".join(g["tiers"]), **kw,
                                      src_pos={"rows": g["pos"]}))
+    if staff_html:
+        recs += staff(staff_html, zones, p, seen)
     return recs
 
 
@@ -135,5 +189,12 @@ def fetch(p, get):
     r = get(p["url"])
     if r is None:
         return [], [], "no answer"
-    recs = parse(r.text, p)
-    return recs, [_esw.keep(MODULE, "citizen-charter", r.content)], "" if recs else "no zone contacts in the page"
+    files = [_esw.keep(MODULE, "citizen-charter", r.content)]
+    st = get(p["staff"]) if p.get("staff") else None
+    if st is not None:
+        files.append(_esw.keep(MODULE, "office-staffs", st.content))
+    recs = parse(r.text, p, st.text if st is not None else None)
+    _ward.tag([x for x in recs if x[1].get("source") == p["url"]], r, p["url"])
+    if st is not None:
+        _ward.tag([x for x in recs if x[1].get("source") == p["staff"]], st, p["staff"])
+    return recs, files, "" if recs else "no zone contacts in the page"

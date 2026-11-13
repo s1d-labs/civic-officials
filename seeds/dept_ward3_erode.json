@@ -1,0 +1,18 @@
+[
+ {
+  "key": "ward3_erode-zone-staff",
+  "payload": {
+   "reader": "ward3_erode",
+   "url": "https://www.tnurbantree.tn.gov.in/erode/general-administration/",
+   "state": "TN",
+   "india_only": true,
+   "route": "direct",
+   "pages": [
+    "https://www.tnurbantree.tn.gov.in/erode/general-administration/",
+    "https://www.tnurbantree.tn.gov.in/erode/engineering/",
+    "https://www.tnurbantree.tn.gov.in/erode/public-health-2/",
+    "https://www.tnurbantree.tn.gov.in/erode/revenue/"
+   ]
+  }
+ }
+]
