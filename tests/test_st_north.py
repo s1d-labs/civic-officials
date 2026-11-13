@@ -44,7 +44,7 @@ def test_methods_and_seeds():
     for f in sorted((ROOT / "seeds").glob("dept_st_*.json")):
         for it in json.loads(f.read_text()):
             p = it["payload"]
-            assert p["route"] in ("abroad", "proxy", "direct") and p["reader"].startswith("st_")
+            assert p["route"] in ("abroad", "proxy", "direct") and (p["reader"].startswith("st_") or p["reader"] == "rj_jankalyan")
             assert hasattr(__import__("dforms." + p["reader"], fromlist=["fetch"]), "fetch")
             keys.append(it["key"])
     assert len(keys) == len(set(keys)) >= 11

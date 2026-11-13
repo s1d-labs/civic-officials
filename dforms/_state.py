@@ -40,11 +40,14 @@ STATES = {
 
 # rank keys, tried in this order (the specific secretaries before the plain "secretary"); RANK below is the sort order
 POST_KINDS = [
+    ("personal_staff", r"\b(?:p\.?\s?p\.?\s?s|private secretary|personal secretary|personal assistant|p\.?\s?a\.?|o\.?\s?s\.?\s?d|"
+                       r"a\.?\s?d\.?\s?c|aide[- ]de[- ]camp)\.?\s+to\b"),
     ("governor", r"\bgovernor\b(?!.*secretar)|\blt\.? governor\b|\badministrator\b(?=.*\bUT\b|$)"),
     ("chief_minister", r"^(hon'?ble\s+)?chief minister\b"),
     ("minister", r"\b(cabinet |deputy |state )?minister\b(?!.*secretar)"),
     ("chief_secretary", r"^(the\s+)?chief secretary\b|^cs\b"),
-    ("acs", r"\badditional chief secretary\b|\badd(?:l|itional)?\.?\s*c\.?\s*s\.?\b|\bACS\b"),
+    ("acs", r"\badditional chief secretary\b|\badd(?:l|itional)?\.?\s*chief secretary\b|\bspecial chief secretary\b|"
+            r"\bspl\.?\s*chief secretary\b|\badd(?:l|itional)?\.?\s*c\.?\s*s\.?\b|\bACS\b"),
     ("principal_secretary", r"\bprincipal secretary\b|\bpr\.?\s*secy\b|\bP\.?S\.?\b(?=\s*(?:to|,|-|\(|$))"),
     ("special_secretary", r"\bspecial secretary\b|\bspl\.?\s*secy"),
     ("additional_secretary", r"\badditional secretary\b|\baddl\.?\s*secy"),
@@ -52,18 +55,26 @@ POST_KINDS = [
     ("deputy_secretary", r"\bdeputy secretary\b|\bdy\.?\s*secy"),
     ("under_secretary", r"\bunder secretary\b|\bassistant secretary\b|\bsection officer\b"),
     ("secretary", r"^(the\s+)?(commissioner\s*(?:&|and)\s*)?secretary\b|\bsecretary\s*(?:to|,|-|\(|$)|^secy\b"),
+    ("adgp", r"\badd(?:l|itional)?\.?\s*director general\b|\bADGP?\b|\bA\.D\.G\b"),
     ("dgp", r"\bdirector general of police\b|\bDGP\b|\bD\.G\.P\b|\bDG\s*(?:&|and)\s*IGP?\b"),
-    ("adgp", r"\badditional director general\b|\bADGP?\b|\bA\.D\.G\b"),
-    ("cp", r"\bcommissioner of police\b|\bpolice commissioner\b|\bC\.?P\.?\b(?=\s*[,(-]|\s*$)"),
+    ("special_cp", r"\bspecial commissioner of police\b|\bspl\.?\s*c\.?p\b"),
+    ("joint_cp", r"\bjoint commissioner of police\b|\bjt\.?\s*c\.?p\b"),
+    ("cp", r"(?<!additional )(?<!deputy )(?<!assistant )\bcommissioner of police\b|\bpolice commissioner\b|\bC\.?P\.?\b(?=\s*[,(-]|\s*$)"),
+    ("dig", r"\bdeputy inspector general\b|\bDIGP?\b|\bD\.I\.G\b"),
     ("igp", r"\binspector general\b|\bIGP?\b|\bI\.G\.P?\b"),
-    ("dig", r"\bdeputy inspector general\b|\bDIG\b|\bD\.I\.G\b"),
-    ("divisional_commissioner", r"\bdivisional commissioner\b|\bcommissioner,?\s+\w+\s+(?:revenue\s+)?division\b|"
+    ("ssp", r"\bsenior superintendent of police\b|\bSSP\b"),
+    ("dysp", r"\bdeputy superintendent of police\b|\bdy\.?\s*s\.?p\b|\bDSP\b"),
+    ("sp", r"\bsuperintendent of police\b|\bS\.?P\.?\b(?=\s*[,(-]|\s*$)"),
+    ("divisional_commissioner", r"(?<!additional )(?<!deputy )(?<!joint )\bdivisional commissioner\b|"
+                                r"(?<!additional )(?<!deputy )(?<!joint )\bcommissioner,?\s+\w+\s+(?:revenue\s+)?division\b|"
                                 r"\bregional commissioner\b|\brevenue divisional commissioner\b"),
     ("state_election_commissioner", r"\bstate election commissioner\b"),
     ("chief_information_commissioner", r"\bchief information commissioner\b|\bCIC\b"),
     ("information_commissioner", r"\binformation commissioner\b|\bSIC\b"),
-    ("chairperson", r"\bchair(?:person|man|woman)\b"),
     ("vice_chairperson", r"\bvice[- ]chair"),
+    ("chairperson", r"\bchair(?:person|man|woman)\b"),
+    ("collector", r"\bdistrict collector\b|^collector\b|\bdistrict magistrate\b|\bdeputy commissioner\b(?!.*police)"),
+    ("officer", r"\b(?:joint|deputy|additional|addl\.?|assistant|asst\.?)\s+director\b"),
     ("member", r"^(hon'?ble\s+)?member\b|\bmember\s*(?:secretary)?\b"),
     ("head_of_department", r"\bdirector general\b|\bdirector\b|\bcommissioner\b|\bcontroller\b|\bregistrar\b|"
                            r"\bchief engineer\b|\bconservator\b|\bmission director\b|\bmanaging director\b|\bchief executive\b"),
@@ -71,10 +82,13 @@ POST_KINDS = [
     ("pio", r"\bpublic information officer\b|\bP\.?I\.?O\b|\bappellate authority\b"),
 ]
 RANK = ["governor", "chief_minister", "minister", "chief_secretary", "acs", "principal_secretary", "special_secretary",
-        "secretary", "additional_secretary", "joint_secretary", "deputy_secretary", "under_secretary", "dgp", "adgp", "cp", "igp",
-        "dig", "divisional_commissioner", "state_election_commissioner", "chief_information_commissioner",
-        "information_commissioner", "chairperson", "vice_chairperson", "member", "head_of_department", "grievance_officer", "pio"]
+        "secretary", "additional_secretary", "joint_secretary", "deputy_secretary", "under_secretary", "dgp", "adgp", "special_cp",
+        "joint_cp", "cp", "igp", "dig", "divisional_commissioner", "collector", "ssp", "sp", "dysp", "state_election_commissioner",
+        "chief_information_commissioner", "information_commissioner", "chairperson", "vice_chairperson", "member",
+        "head_of_department", "officer", "grievance_officer", "pio", "personal_staff"]
 _POST_RX = [(k, re.compile(rx, re.I)) for k, rx in POST_KINDS]
+_POST_D = dict(_POST_RX)
+_TO_HIGH = re.compile(r"(?<=\w)[\s,.]+to\s+(?:the\s+)?(?:hon'?ble\s+)?(?:chief minister|c\.?\s?m\.?|minister\b|governor|lt\.? governor)\b.*$", re.I)
 
 # department words -> TAGGING.md dept key (first match wins)
 DEPTS = [
@@ -86,12 +100,13 @@ DEPTS = [
     ("food_supplies", r"food|civil supplies|consumer"),
     ("rural_development", r"rural|panchayat"),
     ("town_body", r"urban|municipal|housing|town planning|local (self )?government|local bodies"),
-    ("public_works", r"public works|\bpwd\b|roads|building"),
+    ("public_works", r"public works|\bworks\b|\bpwd\b|roads|building"),
     ("water", r"water|irrigation|phed|jal|public health engineering|drinking"),
     ("electricity", r"power|energy|electric"),
     ("women_child", r"women|child|icds"),
-    ("social_welfare", r"social|welfare|tribal|scheduled|backward|minorit|disab|empowerment"),
     ("agriculture", r"agricultur|horticultur|animal|fisher|veterinar|dairy|cooperati|sericulture"),
+    ("labour_industry", r"micro,? small|\bmsme\b"),
+    ("social_welfare", r"social|welfare|tribal|scheduled|backward|minorit|disab|empowerment"),
     ("transport", r"transport"),
     ("forest", r"forest|environment|wildlife|climate"),
     ("treasury", r"finance|treasur|account|budget"),
@@ -111,6 +126,10 @@ _DEPT_RX = [(k, re.compile(r"\b(?:" + rx + ")", re.I)) for k, rx in DEPTS]
 def post_kind(post):
     """The rank key of a post text ("Principal Secretary to Govt.", "IGP, Jalandhar Range") or "" when none fits."""
     t = _esw.clean(post)
+    if _POST_D["personal_staff"].search(t):      # PPS / PA / OSD / ADC to someone: their own rank, not the principal's
+        return "personal_staff"
+    # "Principal Secretary to the Chief Minister", "Secretary to Governor": the post's own rank, not the CM's or Governor's
+    t = _TO_HIGH.sub("", t) or t
     for k, rx in _POST_RX:
         if rx.search(t):
             return k
