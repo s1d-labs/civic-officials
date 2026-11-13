@@ -10,7 +10,10 @@ import re
 
 from dforms import _esw, _ward
 
-METHOD = "html cards"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html cards"
+# reader audit (audit.py): the two officer cards are the page's people; the other blocks are the site's service links
+# ("दिव्यांग नोंदणी | NEW", "लोकसेवा हक्क अधिनियम | NEW"), no person
+AUDIT_LEAVES_OUT = r"\| NEW$"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "ward2n_sangli"
 BODY, LGD, STATE, DISTRICT = "Sangli-Miraj-Kupwad Shahar Mahanagarpalika", "251639", "MH", "Sangli"
