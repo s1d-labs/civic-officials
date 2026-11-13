@@ -153,19 +153,39 @@ def staff_rows(html):
 
 
 def officer_rows(html):
-    """[(pos, office, post, phone)] of the Officers Details table, only the body's own office rows (office of the first row)."""
-    out, own = [], None
-    for ti, ri, c in table_rows(html, r"அலுவலர்|officer|designation"):
+    """[(pos, office, post, phone, extra)] of the Officers Details table. Two layouts:
+    - office | post | mobile (no names): only the body's own office rows (office of the first row) are kept;
+    - S.No | name | designation | mobile | e-mail | work (names, e.g. Poonamallee 2026): every row; "VACANT" gives a vacant post, and
+      ",," (ditto) in the e-mail column repeats the row above. (Before 2026-11-13 this layout lost every row after the first.)"""
+    rows = table_rows(html, r"அலுவலர்|officer|designation")
+    hdr = next((c for _, _, c in rows if c and not re.fullmatch(r"\d{1,4}\.?", c[0])), [])
+    named = len(hdr) > 2 and bool(re.search(r"(?i)name|பெயர்", hdr[1])) and bool(re.search(r"(?i)designation|post|பதவி", hdr[2]))
+    col = lambda rx: next((i for i, h in enumerate(hdr) if re.search(rx, h, re.I)), None)
+    c_mail, c_work = col(r"e-?\s*mail|மின்னஞ்சல்"), col(r"responsib|work|duty|பணி")
+    out, own, last_mail = [], None, ""
+    for ti, ri, c in rows:
         if len(c) < 3 or not re.fullmatch(r"\d{1,4}\.?", c[0]):
-            provenance.skipped('skip: len(c) < 3 or not re.fullmatch(r"\\d{1,4}\\.?", c[0])')
+            provenance.skip_row(c, "not a data row (no serial)")
+            continue
+        if named:
+            name, post = c[1], c[2]
+            vacant = bool(re.fullmatch(r"(?i)\s*(vacant|காலி(ப்பணியிடம்)?)\s*", name))
+            phone = _esw.phones(" ".join(x for i, x in enumerate(c[3:], 3) if i not in (c_mail, c_work)))
+            raw_mail = c[c_mail] if c_mail is not None and c_mail < len(c) else ""
+            mail = last_mail if re.fullmatch(r"\s*(,,|\"|〃|do|-do-)\s*", raw_mail or "") else _esw.emails(raw_mail)
+            last_mail = mail or last_mail
+            work = c[c_work] if c_work is not None and c_work < len(c) else ""
+            out.append(({"table": ti, "row": ri}, "", post, phone,
+                        {"name": "" if vacant else name, "email": mail, "work": work, "vacant": vacant or None}))
+            provenance.used()
             continue
         office, post = c[1], c[2]
         phone = _esw.phones(" ".join(c[3:])) if len(c) > 3 else ""
         own = own or office
         if office != own:
-            provenance.skipped('skip: office != own')
+            provenance.filtered("another office's row (police, hospital ...)")
             continue
-        out.append(({"table": ti, "row": ri}, office, post, phone))
+        out.append(({"table": ti, "row": ri}, office, post, phone, {}))
     return out
 
 
@@ -229,11 +249,14 @@ def parse(answers, p):
     if officers:
         officers.sort(key=lambda x: x[0]["modified"], reverse=True)
         meta, rows = officers[0]
-        for pos, office, post, phone in rows:
-            if not phone:
-                provenance.skipped('skip: not phone')
+        for pos, office, post, phone, extra in rows:
+            if heads and extra.get("name") and _ulb.role_of(post) == "head":
+                provenance.filtered("the commissioner: the head record has them")
                 continue
-            add(meta, post, pos, phone=phone, office=office, post_from="directory")
+            if not phone and not extra.get("name") and not extra.get("vacant"):
+                provenance.skipped("no phone and no name")
+                continue
+            add(meta, post, pos, phone=phone, office=office or None, post_from="directory", **{k: v for k, v in extra.items() if v})
     return recs
 
 

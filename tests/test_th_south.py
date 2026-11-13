@@ -123,3 +123,18 @@ def test_th_kl_plain_table():
     d = dict(recs)
     eng = [v for v in d.values() if v.get("section") == "Engineering Department"]
     assert len(eng) == 3 and d["dept:th_kl:KL-kottayam-ettumanoor-municipal-secretary"]["name"] == "Shri Shibu C K"
+
+
+def test_th_tn_officers_with_names_poonamallee():
+    # Officers Details with a name column (S.No | name | designation | mobile | e-mail | work), full search answer 2026-11-13:
+    # the reader used to keep the first row only (2 of the 8 data rows). Now every row: 6 officers, 2 vacant posts.
+    recs, files, why = tn_run("poonamallee", "th_tn_poonamallee_en.json")
+    assert why == ""
+    d = {v["post"]: v for _, v in recs if v.get("post_from") == "directory"}
+    assert set(d) == {"ASSISTANT EXECUTIVE ENGINEER (I/C)", "ASSISTANT REVENUE OFFICER", "TOWN PLANNING OFFICER", "MANAGER",
+                      "ACCOUNTANT", "SANITARY OFFICER", "SANITARY INSPECTOR"}      # the commissioner row: the head record has it
+    assert len(recs) == 8 and dict(recs)["dept:th_tn:TN--poonamallee-commissioner"]["name"] == "M. SARAVANAKUMAR"
+    assert d["ASSISTANT REVENUE OFFICER"]["name"] == "R.S. RAJAN" and d["ASSISTANT REVENUE OFFICER"]["phone"] == "8939403799"
+    assert d["ASSISTANT REVENUE OFFICER"]["email"] == "commr.poonamallee@tn.gov.in"       # ",," repeats the row above
+    assert d["SANITARY INSPECTOR"]["work"] == "BIRTH, DEATH AND SANITATION"
+    assert d["MANAGER"]["vacant"] is True and not d["MANAGER"].get("name")
