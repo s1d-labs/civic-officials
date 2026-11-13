@@ -24,6 +24,7 @@ import time
 from urllib.parse import urljoin, urlsplit
 
 import requests
+from scrape_hub_client import HubRejected
 from bs4 import BeautifulSoup
 
 import archive_first
@@ -306,6 +307,9 @@ def main(run_fn=None, task="councillors"):
             n_skip = sum((trail.row_counts.get("rows_skipped") or {}).values())
             if n_skip:          # data rows a reader left out (the reasons are on the trail record)
                 hub.metric("rows_skipped", n_skip)
+            # the hub accepts only plain path characters: a reader's file name with %28, spaces or brackets was refused (422) and
+            # the refusal stopped the whole worker (2026-11-14, st_tr_dirs)
+            files = [(re.sub(r"[^A-Za-z0-9._/-]+", "-", f[0]), *f[1:]) for f in files]
             for attempt in range(5):
                 try:
                     for i in range(0, len(files), 100):      # source copies can make many files: links in chunks
@@ -320,6 +324,10 @@ def main(run_fn=None, task="councillors"):
                     break
                 except requests.RequestException:  # same item again after a pause; records are keyed, so a repeat is harmless
                     time.sleep(30 * (attempt + 1))
+                except HubRejected as e:   # the hub refused this item's data: the item fails, the worker goes on
+                    hub.failure(task, item["key"], f"hub refused: {e}"[:200], url=url)
+                    hub.complete([item["key"]], "failed", error=f"hub refused: {e}"[:200])
+                    break
         hub.close("finished" if not stop else "failed", "" if not stop else "stopped by signal")
     except BaseException as e:
         hub.close("failed", f"{type(e).__name__}: {e}"[:200])
