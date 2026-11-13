@@ -88,3 +88,75 @@ def test_tgcdma_suryapet():
     assert d["dept:town2_tgcdma:suryapetmunicipality:town-planning-officer:j-sukanya"]["phone"] == "9849906793"
     assert sum(1 for v in d.values() if v["post"] == "TPBO") == 2
     assert rows == {"rows_seen": 24, "rows_used": 23, "rows_skipped": {}, "rows_not_data": {"header": 1}, "rows_given": 24}
+
+
+# ---- sho_ka (Karnataka district police sites, <site>.karnataka.gov.in) ----
+def sho_run(site, page):
+    provenance.rows_reset()
+    p = item("sho_ka", site)
+    base = f"https://{site}.karnataka.gov.in"
+    recs, files, why = mod("sho_ka").fetch(p, fake_get({base + p["pages"][0]: f"sho/{page}"}))
+    return recs, files, why, provenance.rows(len(recs))
+
+
+def levels(recs):
+    out = {}
+    for _, d in recs:
+        out[d["level"]] = out.get(d["level"], 0) + 1
+    return out
+
+
+def test_sho_ka_items_match_seed():
+    s = load_seed("sho_ka")
+    assert mod("sho_ka").items() == s and len(s) == 35
+    assert all(i["payload"]["india_only"] and i["payload"]["find"] for i in s)
+
+
+def test_sho_ka_shivamogga_contact_table():
+    recs, files, why, rows = sho_run("shivamoggapolice", "ka_shivamogga_contact.html")
+    assert why == "" and len(recs) == 72 and len(files) == 1      # the home page did not answer: the known page only
+    check_records(recs, "sho_ka", "police")
+    assert levels(recs) == {"police_station": 54, "circle": 7, "subdivision": 6, "district": 5}
+    d = dict(recs)
+    pi = d["dept:sho_ka:shivamoggapolice-pi-doddapete-ps-9480803330"]
+    assert pi["area"] == "DODDAPETE" and pi["sho_rank"] == "PI" and pi["telephone"] == "08182-261406"
+    assert pi["email"] == "cpidoddapeteshi@ksp.gov.in" and pi["post"] == "Police Inspector"
+    assert d["dept:sho_ka:shivamoggapolice-psi-doddapete-ps-9480803372"]["sho_rank"] == "PSI"
+    assert rows["rows_used"] == 72 and rows["rows_skipped"] == {}
+    assert rows["rows_filtered"] == {"site furniture table (screen readers, file viewers)": 20}
+
+
+def test_sho_ka_belagavi_subdivision_blocks():
+    recs, files, why, rows = sho_run("belagavidistrictpolice", "ka_belagavi_officers.html")
+    assert why == "" and len(recs) == 51 and levels(recs)["police_station"] == 34
+    d = dict(recs)
+    k = d["dept:sho_ka:belagavidistrictpolice-psi-katkol-ps-9480804081"]
+    assert k["area"] == "KATKOL" and k["subdivision"] == "RAMADURGA SUB-DIVISION" and k["district"] == "Belagavi"
+    assert d["dept:sho_ka:belagavidistrictpolice-dysp-gokak-9480804023"]["level"] == "subdivision"
+
+
+def test_sho_ka_bidar_station_rows_without_rank():
+    recs, files, why, rows = sho_run("bidarpolice", "ka_bidar_officers.html")
+    assert why == "" and len(recs) == 54 and levels(recs)["police_station"] == 32
+    nt = dict(recs)["dept:sho_ka:bidarpolice-post-new-town-ps-9480803446"]
+    assert nt["post"] == "Police Station" and nt["area"] == "NEW TOWN" and "sho_rank" not in nt
+
+
+def test_sho_ka_haveri_names():
+    recs, files, why, rows = sho_run("haveripolice", "ka_haveri_officers.html")
+    assert why == "" and len(recs) == 70 and levels(recs)["police_station"] == 50
+    d = dict(recs)
+    h = d["dept:sho_ka:haveripolice-pi-haveri-town-ps-motilal-pawar"]
+    assert h["name"] == "Motilal Pawar" and h["area"] == "Haveri Town" and h["sho_rank"] == "PI" and "phone" not in h
+    g = [v for v in d.values() if v.get("name") == "Parusharam Lamani"][0]
+    assert g["level"] == "police_station" and g["area"] == "Guttal" and g["duty"] == "Senior PSI (L&O & Traffic)"
+    assert d["dept:sho_ka:haveripolice-pi-dsb-s-k-pawar"]["level"] == "district"
+
+
+def test_sho_ka_links_and_no_answer():
+    m = mod("sho_ka")
+    html = (ROOT / "tests" / "data" / "sho" / "ka_haveri_officers.html").read_text(encoding="utf-8")
+    assert m.links(html, "https://haveripolice.karnataka.gov.in")[:2] == [
+        "https://haveripolice.karnataka.gov.in/392/haveri-district-police-officer-name/en",
+        "https://haveripolice.karnataka.gov.in/3/police-stations/en"]
+    assert m.fetch(item("sho_ka", "kodagupolice"), fake_get({})) == ([], [], "no answer")
