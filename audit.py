@@ -69,7 +69,10 @@ HONOR_TOKENS = {"shri", "sri", "smt", "shrimati", "kumari", "km", "kum", "dr", "
                 "tmt", "selvi", "श्री", "श्रीमती", "सुश्री", "डॉ", "कु", "ias", "ips", "ifs", "pcs", "hcs", "ras", "late"}
 HEADER_WORDS = {"name", "names", "designation", "post", "s no", "sno", "sl no", "sr no", "s.no", "sl.no", "sr.no", "mobile",
                 "phone", "email", "e-mail", "contact", "contact no", "mobile no", "phone no", "address", "office", "नाम", "पद",
-                "क्रम", "क्र", "मोबाइल", "फोन", "पदनाम", "क्रमांक", "officer", "name of officer", "name of the officer"}
+                "क्रम", "क्र", "मोबाइल", "फोन", "पदनाम", "क्रमांक", "officer", "name of officer", "name of the officer", "rank",
+                "posted as", "email id", "office no", "cug", "cug mobile no", "name of ips officer", "name of pps officer"}
+# a post that the source marks vacant names no person: such a row is not a data row (UP SEC winner lists: "पद रिक्त")
+VACANT = re.compile(r"(?i)(पद\s*रिक्त|^\s*रिक्त\s*$|^\s*vacant\s*$|\bpost\s+(?:is\s+)?vacant\b)")
 # words of posts, offices and places: a cell with one of them is not a person's name ("Executive Engineer", "Electricity Test Division")
 NOT_NAME = set("""engineer engineers officer officers division divisional circle electricity distribution department dept office offices
 assistant asst executive superintending chief deputy dy joint addl additional commissioner collector secretary director manager
@@ -157,9 +160,9 @@ def is_header(cells):
 
 
 def person_row(cells):
-    """A data row: >= 3 filled cells and a phone, an e-mail or a name-like cell; header rows are not."""
+    """A data row: >= 3 filled cells and a phone, an e-mail or a name-like cell; header rows and vacant posts are not."""
     filled = [c for c in cells if c and c.strip()]
-    if len(filled) < 3 or is_header(filled):
+    if len(filled) < 3 or is_header(filled) or any(VACANT.search(c) for c in filled):
         return False
     return has_contact(" | ".join(filled)) or any(name_like(c) for c in filled)
 

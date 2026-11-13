@@ -201,3 +201,12 @@ def test_photo_alt_text_counts_as_source_text():
     recs = [("vice", d["name"], d.get("phone") or "", "")] + [(m["ward_no"], m["name"], m["phone"], "") for m in cr_pb.member_list(t)]
     a = audit.audit_source(audit.read_source(body, "text/html", "x.html.gz"), recs, "cforms.cr_pb")
     assert a["names_found"] == 1.0 and a["records_person"] == 51 and a["rows_matched"] == 51 and a["rows_left_out"] >= 30
+
+
+def test_vacant_posts_and_police_headers_are_not_data_rows():
+    """UP SEC winner list rows of a vacant post ("पद रिक्त", no person) and the UP Police header rows ("S.No | Name of IPS
+    Officer | Rank | Posted as | CUG / Mobile No. | ...") are not data rows; a real winner row is."""
+    vacant = ["6 - जोया", "1 - औरंगाबाद", "2", "अनुसूचित जाति महिला", "-", "-", "-", "पद रिक्त"]
+    assert not audit.person_row(vacant)
+    assert not audit.person_row(["S.No", "Name of IPS Officer", "Rank", "Posted as", "CUG / Mobile No.", "Office No.", "Email Id"])
+    assert audit.person_row(["6", "Barawal", "General (Woman)", "2", "GHEESA KANWAR", "BHERU SINGH", "F", "8990836618"])
