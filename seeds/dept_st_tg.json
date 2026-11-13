@@ -1,0 +1,24 @@
+[
+ {
+  "key": "st_tg_portal:secretariat",
+  "payload": {
+   "reader": "st_tg_portal",
+   "url": "https://telangana.gov.in/contacts/secretariat/",
+   "page": "secretariat",
+   "state": "TG",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_tg_portal:district-officials",
+  "payload": {
+   "reader": "st_tg_portal",
+   "url": "https://telangana.gov.in/contacts/district-officials/",
+   "page": "district-officials",
+   "state": "TG",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

@@ -1,0 +1,79 @@
+[
+ {
+  "key": "st_ap_portal:secretaries",
+  "payload": {
+   "reader": "st_ap_portal",
+   "group": "secretaries",
+   "url": "https://www.ap.gov.in/api/api/ApSecretariesChilds",
+   "state": "AP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ap_portal:hods",
+  "payload": {
+   "reader": "st_ap_portal",
+   "group": "hods",
+   "url": "https://www.ap.gov.in/api/api/ApHodsChilds",
+   "state": "AP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ap_portal:district",
+  "payload": {
+   "reader": "st_ap_portal",
+   "group": "district",
+   "url": "https://www.ap.gov.in/api/api/ApDistrictOfficialsChilds",
+   "state": "AP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ap_portal:cmo",
+  "payload": {
+   "reader": "st_ap_portal",
+   "group": "cmo",
+   "url": "https://www.ap.gov.in/api/api/ChiefMinisterOffice",
+   "state": "AP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ap_portal:advisors",
+  "payload": {
+   "reader": "st_ap_portal",
+   "group": "advisors",
+   "url": "https://www.ap.gov.in/api/api/ApAdvisorsToGovernmentChilds",
+   "state": "AP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ap_portal:psus",
+  "payload": {
+   "reader": "st_ap_portal",
+   "group": "psus",
+   "url": "https://www.ap.gov.in/api/api/ApPsusChilds",
+   "state": "AP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ap_portal:nominated",
+  "payload": {
+   "reader": "st_ap_portal",
+   "group": "nominated",
+   "url": "https://www.ap.gov.in/api/api/ApNominatedOfficersChilds",
+   "state": "AP",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
