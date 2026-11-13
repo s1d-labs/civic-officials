@@ -1,0 +1,79 @@
+[
+ {
+  "key": "pri_od:zp_president",
+  "payload": {
+   "reader": "pri_od",
+   "list": "zp_president",
+   "url": "https://panchayat.odisha.gov.in/sites/default/files/2025-08/ZP%20President.pdf",
+   "state": "OD",
+   "expected": 30,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "pri_od:zp_vice_president",
+  "payload": {
+   "reader": "pri_od",
+   "list": "zp_vice_president",
+   "url": "https://panchayat.odisha.gov.in/sites/default/files/2025-08/ZP%20Vice%20President.pdf",
+   "state": "OD",
+   "expected": 30,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "pri_od:ps_chairman",
+  "payload": {
+   "reader": "pri_od",
+   "list": "ps_chairman",
+   "url": "https://panchayat.odisha.gov.in/sites/default/files/2025-08/PS%20Chairman%20and%20Vice%20Chairman.pdf",
+   "state": "OD",
+   "expected": 628,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "pri_od:zp_member",
+  "payload": {
+   "reader": "pri_od",
+   "list": "zp_member",
+   "url": "https://panchayat.odisha.gov.in/sites/default/files/2025-08/ZP%20Member_0.pdf",
+   "state": "OD",
+   "expected": 852,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "pri_od:sarpanch",
+  "payload": {
+   "reader": "pri_od",
+   "list": "sarpanch",
+   "url": "https://sec.odisha.gov.in/CMS/GetCMSTableData?TableId=57",
+   "state": "OD",
+   "expected": 6790,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "pri_od:ps_member",
+  "payload": {
+   "reader": "pri_od",
+   "list": "ps_member",
+   "url": "https://sec.odisha.gov.in/CMS/GetCMSTableData?TableId=57",
+   "state": "OD",
+   "expected": 6790,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "pri_od:ward_member_file",
+  "payload": {
+   "reader": "pri_od",
+   "list": "ward_member_file",
+   "url": "https://sec.odisha.gov.in/CMS/GetCMSTableData?TableId=57",
+   "state": "OD",
+   "expected": 0,
+   "route": "proxy"
+  }
+ }
+]
