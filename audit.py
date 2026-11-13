@@ -35,7 +35,10 @@ Per source one record "audit:<sha256>" (type audit_source):
                     takes the place of coverage in the verdict.
 
 A reader can name the tables it leaves out on purpose: AUDIT_LEAVES_OUT = r"<regex>" in its module, matched against the text of
-a table's first row (e.g. power_mvvnl: the head quarter, store and workshop tables). Those rows are counted in rows_left_out.
+a table's first row (e.g. power_mvvnl: the head quarter, store and workshop tables), or against the whole text of a block on a
+page without tables (menus, forms). Those rows are counted in rows_left_out.
+A reader of election results (AUDIT_RESULTS = True) or of the heads of bodies from a page of all members (AUDIT_HEADS = "<the
+reader that holds the other members>") is judged by the names of its records on the page, not by the row count.
 
 `python audit.py --local items.json [--keys FILE] [--limit N] [--out FILE]` runs items without the hub: it reads the bucket
 with a read-only key (an env file with B2_BUCKET, B2_ENDPOINT, B2_REGION, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY).
@@ -77,7 +80,7 @@ in at to from with total grand list name designation contact phone mobile email 
 government govt state india officer-in-charge incharge in-charge sdo sdm bdo ceo cmo dm sp ssp dsp sho circle-officer area
 nagar nigam parishad taluk tehsil mandal village gram court hospital school college bank road street building floor
 अधिकारी अभियंता कार्यालय विभाग जिला सहायक अधिशासी अधीक्षण मुख्य उप निरीक्षक सचिव थाना खंड प्रखंड ब्लॉक नाम पद मोबाइल
-क्रम संख्या पता""".split())
+क्रम संख्या पता modal""".split())
 PHONE = re.compile(r"(?<![\d])(?:\+?91[\s\-]?|0)?(?:[6-9]\d{4}[\s\-]?\d{5}|\d{2,4}[\s\-/]{0,2}\d{6,8})(?![\d])")
 EMAIL = re.compile(r"(?i)[a-z0-9._%+\-]+\s*(?:@|\[\s*at\s*\]|\(\s*at\s*\)|\{\s*at\s*\})\s*[a-z0-9\-]+(?:\s*(?:\.|\[\s*dot\s*\]|"
                    r"\(\s*dot\s*\))\s*[a-z0-9\-]+)+")
@@ -246,7 +249,7 @@ def repeated_blocks(doc):
             continue
         sig = (el.tag, " ".join(sorted((el.get("class") or "").split())))
         groups.setdefault(sig, []).append(el)
-    best = []
+    best, found = [], []
     for sig, els in groups.items():
         if len(els) < 3:
             continue
@@ -255,11 +258,29 @@ def repeated_blocks(doc):
             parts = [" ".join(t.split()) for t in el.itertext()]
             parts = [t for t in parts if t]
             if 2 <= len(parts) <= 40 and (has_contact(" | ".join(parts)) or any(name_like(t) for t in parts)):
-                rows.append({"cells": parts, "hidden": False, "table": None, "title": "", "el": el})
+                # a block's title is its own text, so AUDIT_LEAVES_OUT can name blocks too (menus, forms, page furniture)
+                rows.append({"cells": parts, "hidden": False, "table": None, "title": " | ".join(parts)[:200], "el": el})
+        # a block inside another block of the same signature is not counted again
+        ids = {id(r["el"]) for r in rows}
+        rows = [r for r in rows if not any(id(a) in ids for a in r["el"].iterancestors())]
+        if len(rows) >= 3:
+            found.append(rows)
         # prefer the innermost signature with as many blocks: more blocks first, then fewer pieces per block
         if len(rows) > len(best) or (best and len(rows) == len(best) and
                                      sum(len(r["cells"]) for r in rows) < sum(len(r["cells"]) for r in best)):
             best = rows
+    # the lines of a card ("Email : | x", "Phone : | y": 2 pieces each) are not blocks of their own: when most of the best
+    # blocks are such lines inside the blocks of another signature (the cards), the cards are the blocks
+    if best and sorted(len(r["cells"]) for r in best)[len(best) // 2] <= 2:
+        cards = None
+        for rows in found:
+            if rows is best or len(rows) >= len(best):
+                continue
+            outer = {id(r["el"]) for r in rows}
+            n_in = sum(1 for r in best if any(id(a) in outer for a in r["el"].iterancestors()))
+            if n_in >= 0.6 * len(best) and (cards is None or len(rows) > len(cards)):
+                cards = rows
+        best = cards or best
     for r in best:
         r.pop("el", None)
     return best if len(best) >= 3 else []
@@ -415,10 +436,16 @@ def reader_mod(reader):
 
 
 def results_page(reader):
-    """True when the reader keeps one record per seat from a page that lists every candidate (election results:
-    AUDIT_RESULTS = True in its module). Its rows are candidates, so the row count says nothing; the names say it all."""
+    """How the reader's records are judged when its pages list more people than it keeps on purpose; "" = by the row count.
+    "results page": one record per seat from a page that lists every candidate (election results: AUDIT_RESULTS = True).
+    "heads only": the heads (Mayor, Chairperson, President and their deputies) from a page that lists every member, whose other
+    members another reader holds (AUDIT_HEADS = "<that reader>"). The rows say nothing then; the names say it all."""
     mod = reader_mod(reader) if reader else None
-    return bool(getattr(mod, "AUDIT_RESULTS", False))
+    if getattr(mod, "AUDIT_RESULTS", False):
+        return "results page"
+    if getattr(mod, "AUDIT_HEADS", False):
+        return "heads only"
+    return ""
 
 
 def leaves_out(reader):
@@ -529,10 +556,11 @@ def verdict_of(src, n_rows, person, coverage, row_match, names_found, phones_fou
     if not n_rows:
         return "not_tabular", src.note or f"no data rows found in the {src.kind} source"
     found = names_found if names_found is not None else phones_found
-    if results:     # one winner per seat from a list of candidates: the names decide, not the row count
+    if results:     # one winner per seat from a list of candidates (or the heads from a list of members): the names decide
+        kept = "winners" if results == "results page" else "heads"
         if found is not None and found >= VERDICT_OK_NAMES:
-            return "ok", f"results page: {person} winners from {n_rows} candidate rows"
-        return "check", f"results page: {0 if found is None else found:.0%} of the winners' names are in the source"
+            return "ok", f"{results}: {person} {kept} from {n_rows} rows"
+        return "check", f"{results}: {0 if found is None else found:.0%} of the {kept}' names are in the source"
     eff = coverage if coverage <= 1.1 else row_match
     found = names_found if names_found is not None else phones_found
     if eff < VERDICT_LOW:

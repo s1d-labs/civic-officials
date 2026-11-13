@@ -141,3 +141,17 @@ def test_results_page_judged_by_names():
     assert audit.verdict_of(src, 300, 1, 1 / 300, 0.0, 0.5, None, results=True)[0] == "check"
     assert audit.verdict_of(src, 300, 1, 1 / 300, 0.0, 1.0, None)[0] == "low"
     assert audit.results_page("pri_br") and not audit.results_page("power_mvvnl")
+
+
+def test_card_lines_are_not_blocks_the_cards_are():
+    """Kamareddy hospitals, page 3 (S3WaaS public utility, the full saved page): 12 cards (li.public-utlty-catg), each with
+    lines "Email : | x", "Category/Type : | y". The lines are not the blocks; the 12 cards are, and the reader keeps all 12."""
+    from dforms import emerg_hosp_s3waas
+    body = gzip.decompress((DATA / "emerg_hosp_kamareddy.html.gz").read_bytes())
+    url = "https://kamareddy.telangana.gov.in/public-utility-category/hospitals/page/3/"
+    recs = emerg_hosp_s3waas.records([(url, body.decode("utf-8"))], {"url": url})
+    assert len(recs) == 12
+    src = audit.read_source(body, "text/html", "x.html.gz")
+    assert len(src.rows) == 12 and all(r["title"] for r in src.rows) and "repeated blocks" in src.note
+    a = audit.audit_source(src, [(rid, "", d.get("phone") or "", d.get("email") or "") for rid, d in recs], "dforms.emerg_hosp_s3waas")
+    assert a["verdict"] == "ok" and a["records_person"] == 12
