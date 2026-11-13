@@ -99,14 +99,18 @@ def fetch(p, get):
     url = p["url"]
     host = urlparse(url).hostname
     r = get(url)
-    if r is None:
-        return [], [], "no answer"
+    if r is None:                                    # /en/about/ is 404 on sites that still run their older layout
+        from dforms import police2s_mh_old
+        return police2s_mh_old.fetch(p, get, None)
     name = slug(re.sub(r"^https?://", "", url))[:80]
     files = [gz(M, f"{name}.html", r.content)]
     en = cards(r.text)
     if not en:
-        why = "site under maintenance" if "Under Maintenance" in r.text else "no officer cards on the page (old template?)"
-        return [], files, why
+        if "Under Maintenance" in r.text:
+            return [], files, "site under maintenance"
+        from dforms import police2s_mh_old           # the site's older layout (own CMS or the static Next.js export + API)
+        recs, more, why = police2s_mh_old.fetch(p, get, r)
+        return recs, files + more, why
     mr = {}
     if p.get("marathi", True):
         x = get(url.replace("/en/", "/mr/", 1))

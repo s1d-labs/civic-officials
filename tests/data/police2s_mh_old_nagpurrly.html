@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Nagpur Railway Police</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="msvalidate.01" content="6485E702C56DB87778CEE122D646C0EA" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/lib/animate/animate.min.css"/>
+    <link href="assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<script>
+    let currentScale = 1;
+    
+    function changeSize(value) {
+        currentScale += value;
+        if (currentScale < 0.8) currentScale = 0.8;
+        if (currentScale > 1.6) currentScale = 1.6;
+        document.body.style.transform = `scale(${currentScale})`;
+        document.body.style.transformOrigin = "top left";
+    }
+</script>
+<!-- Topbar Start -->
+        <div class="container-fluid topbar px-0 px-lg-4 bg-light py-2 d-lg-block">
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-6 col-md-12 text-center text-lg-start mb-lg-0 d-none d-lg-block">
+                        <div class="d-flex flex-wrap ">
+                            <div class="border-end border-primary pe-3">
+                                <a href="#" class="text-muted small"><i class="fas fa-phone text-primary me-2"></i>Helpline : 1512</a>
+                            </div>
+                            <div class="ps-3">
+                                <i class="fas fa-envelope text-primary me-2"></i>sp[dot]railways[dot]nagpur[at]mahapolice[dot]gov[dot]in
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 text-center text-lg-end">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex border-end border-primary pe-3">
+                                <button onclick="changeSize(0.1)">A+</button>
+                                <button onclick="">A&nbsp;</button>
+                                <button onclick="changeSize(-0.1)">A-</button>
+                            </div>
+                            <div class="d-flex border-end border-primary pe-3 ms-3">
+                                <a href="/en/contactus" class="text-muted small">Contact Us</a>
+                            </div>
+                            <div class="border-end border-primary pe-3 ms-3">
+                                <a href="/en/feedback" class="text-muted small">Feedback</a>
+                            </div>
+                            <div class="border-end border-primary pe-3 ms-3">
+                                <a href="https://indianrail.gov.in/enquiry/PNR/PnrEnquiry.html?locale=en2," target="_blank" class="text-muted small">PNR Status</a>
+                            </div>
+
+                                                        <div class="dropdown ms-3">
+                                <select class="dropdown-toggle text-dark" id="custom_translate" onchange="changeLanguage(this.value)">
+                                    <option value="">Language</option>
+                                    <!--option value="mr" data-url="mr/officerslist">Marathi</option-->
+                                    <option value="en" data-url="en/officerslist" selected>English</option>
+                                </select>
+                            </div>
+
+                            <!-- Language switch: jump to the other site folder, same page -->
+                            <script type="text/javascript">
+                                function changeLanguage(lang) {
+                                    if (!lang) return;
+                                    var sel = document.getElementById('custom_translate');
+                                    var opt = sel.querySelector('option[value="' + lang + '"]');
+                                    var path = opt ? opt.getAttribute('data-url') : '';
+                                    // Always build from the domain root so /en/ or /mr/ is never doubled up.
+                                    window.location.href = window.location.origin + '/' + path;
+                                }
+                            </script>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid topbar px-0 px-lg-4">
+            <div class="container" style="margin:0px; padding:0px;">
+                <!-- Topbar End -->
+                <div class="row">
+                    <div class="col-sm-2 col-lg-2 wow fadeInLeft bg-white"data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;padding-top:6px;">
+                        <!--<h6 style="text-align:right;padding:5px; background-color:#083998;color:#fff;"> What's New</h6>-->
+                    </div>
+                    <div class="col-sm-10 col-lg-7 wow fadeInUp team bg-white" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInRight;padding-top:15px;">
+                        <!--<marquee behavior="" direction="left" scrollamount="4">
+                            <h6 class="text-primary">
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/23.08.2025 ADG.pdf" target="_blank">23.08.2025 ADG</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/22.08.2025 ADG.pdf" target="_blank">22.08.2025 ADG</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/21.08.2025 ADG.pdf" target="_blank">21.08.2025</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/20.08.2025 ADG.pdf" target="_blank">20.08.2025 ADG</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/19.08.2025 ADG.pdf" target="_blank">19.08.2025 ADG</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/18.08.2025 ADG.pdf" target="_blank">18.08.2025 ADG</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/17.08.2025 ADG.pdf" target="_blank">17.08.2025 ADG</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/DCR 15.08.pdf" target="_blank">DCR 15.08.2025</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/DCR  14-08-2025.pdf" target="_blank">dcr 14.08.2025</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/DCR 12-08-2025.pdf" target="_blank">DCR 12-08-2025</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/DCR 25_0.pdf" target="_blank">11.08.2025</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/09.08.2025 ADG.pdf" target="_blank">09.08.2025 ADG</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/26.07.2025 ADG.pdf" target="_blank">26.07.2025 ADG</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/25-07-2025 ADG.pdf" target="_blank">25.07.2025 ADG</a> &nbsp; &nbsp;
+                                    </li>
+                                                            <li>
+                                        <a href="https://www.nagpurrailwaypolice.gov.in/en/files/pdf/gradations/24-07-2025 ADG.pdf" target="_blank">24.07.2025 ADG</a> &nbsp; &nbsp;
+                                    </li>
+                                                    </h6>
+                        </marquee>
+                    </div> -->
+                    <div class="col-sm-12 col-lg-3 bg-white" style="text-align:right;padding-top:5px;">
+                        <div class="border-primary">
+                          <form action="search" method="post">
+                            <div class="search-wrapper">
+                              <input type="text" name="q" value="" id="searchInput" placeholder="Type to search..." x-webkit-speech>
+                              <button type="button" id="micBtn"><i class="fas fa-microphone text-primary"></i></button>
+                              <button class="btn" type="submit"><i class="fas fa-search text-primary me-2"></i></button>
+                            </div>
+                          </form>
+                        </div>
+                        
+                        <script>
+                        const micBtn = document.getElementById("micBtn");
+                        const input = document.getElementById("searchInput");
+                        
+                        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                        if (SpeechRecognition) {
+                          const recognition = new SpeechRecognition();
+                          recognition.lang = "hi-IN"; // Hindi ke liye, ya "en-US"
+                        
+                          micBtn.addEventListener("click", () => recognition.start());
+                        
+                          recognition.onresult = (event) => {
+                            input.value = event.results[0][0].transcript;
+                          };
+                        
+                          recognition.onerror = () => recognition.stop();
+                        } else {
+                          //alert("Your browser does not support voice input.");
+                        }
+                        </script>
+                        
+                        <style>
+                        .search-wrapper {
+                          position: relative;
+                          display: flex;
+                          align-items: center;
+                          gap: 6px;
+                        }
+                        
+                        #searchInput {
+                          flex: 1;
+                          padding-right: 36px;
+                        }
+                        
+                        #micBtn {
+                          position: absolute;
+                          right: 42px; /* search button se pehle mic */
+                          background: none;
+                          border: none;
+                          cursor: pointer;
+                          font-size: 16px;
+                        }
+                        </style>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+            <div class="container" style="margin:0px; padding:0px;">
+                <nav class="navbar navbar-expand-lg navbar-light"> 
+                    <a href="/en/home" class="navbar-brand p-0">
+                        <img src="/en/assets/img/logo.png" id="main_logo" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto">
+                            <a href="/en/home" class="nav-item nav-link active">Home</a>
+
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">About Us</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="/en/aboutus" class="dropdown-item">About Us</a>
+                                    <a href="/en/message" class="dropdown-item">SP's Message</a>
+                                    <a href="/en/organisation" class="dropdown-item">Organisation</a>
+                                    <a href="/en/headquarter" class="dropdown-item">Headquarter</a>
+                                    <a href="/en/sptillnow" class="dropdown-item">SP's Till Now</a>
+                                    <a href="/en/officerslist" class="dropdown-item">Officers</a>
+                                    
+                                </div>
+                            </div>
+                            <a href="/en/jurisdiction" class="nav-item nav-link">Jurisdiction</a>
+                            
+                            <div class="nav-item dropdown">
+                              <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Branches</span>
+                              </a>
+                              <div class="dropdown-menu">
+                                                                        <a href="/en/officers?ofcr=11" class="dropdown-item">WIRELESS</a>
+                                                                        <a href="/en/officers?ofcr=16" class="dropdown-item">LOCAL CRIME BRANCH</a>
+                                                                        <a href="/en/officers?ofcr=17" class="dropdown-item">DCTC</a>
+                                                                        <a href="/en/officers?ofcr=20" class="dropdown-item">CYBER CELL</a>
+                                                                        <a href="/en/officers?ofcr=21" class="dropdown-item">DSB</a>
+                                                                        <a href="/en/officers?ofcr=22" class="dropdown-item">CRO</a>
+                                                                        <a href="/en/officers?ofcr=23" class="dropdown-item">READER</a>
+                                                                        <a href="/en/officers?ofcr=24" class="dropdown-item">WELLFARE</a>
+                                                                        <a href="/en/officers?ofcr=25" class="dropdown-item">MAHILA CELL</a>
+                                                                        <a href="/en/officers?ofcr=18" class="dropdown-item">HQ RAILWAY POLICE</a>
+                                                                        <a href="/en/officers?ofcr=19" class="dropdown-item">BDDS UNIT</a>
+                                                                        <a href="/en/officers?ofcr=26" class="dropdown-item">Dog Unit</a>
+                                                                    </div>
+                            </div>
+
+                            <div class="nav-item dropdown">
+                              <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Employee Corner</span>
+                              </a>
+                              <div class="dropdown-menu">
+                                  <a href="/en/welfareactivty" class="dropdown-item">Welfare Activty</a>
+                                  <a href="/en/circular" class="dropdown-item">Circular</a>
+                                  <a href="/en/positivestories" class="dropdown-item">Positive Stories</a>
+                                  <a href="/en/tranferlist" class="dropdown-item">Transfer List</a>
+                                  <a href="/en/gazzette" class="dropdown-item">Gazzette</a>
+                                  <a href="/en/gradation" class="dropdown-item">Gradations</a>
+                              </div>
+                            </div>
+
+                            <div class="nav-item dropdown">
+                              <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Citizen Corner</span>
+                              </a>
+                              <div class="dropdown-menu">
+                                  <a href="/en/rtifiles" class="dropdown-item">Right to Information</a>
+                                  <a href="/en/maharashtrarighttoserviceact" class="dropdown-item">Maharashtra Right To Service Act</a>
+                                <a href="/en/recruitment" class="dropdown-item">Police Recruitment</a>
+                                <a href="/en/dcr" class="dropdown-item">DCR</a>
+                                <a href="/en/fir" class="dropdown-item">FIR</a>
+                                <a href="/en/howtoreportcrime" class="dropdown-item">Report Offence</a>
+                                <a href="/en/missingperson" class="dropdown-item">Missing Persons</a>
+                                <a href="/en/unidentifieddeadbodies" class="dropdown-item">Unidentified Dead Bodies</a>
+                                <a href="/en/files/pdf/citizencorner/Special-Juvenile-Police-Unit-RPN.pdf" target="_blank" class="dropdown-item">Special Juvenile Police Unit</a>
+
+                              </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                              <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                <span class="dropdown-toggle">Police Station</span>
+                              </a>
+                              <div class="dropdown-menu">
+                                                                        <a href="/en/branches?br=1" class="dropdown-item">Nagpur</a>
+                                                                        <a href="/en/branches?br=8" class="dropdown-item">Aakola</a>
+                                                                        <a href="/en/branches?br=2" class="dropdown-item">Gondia</a>
+                                                                        <a href="/en/branches?br=3" class="dropdown-item">Wardha</a>
+                                                                        <a href="/en/branches?br=4" class="dropdown-item">Badnera</a>
+                                                                        <a href="/en/branches?br=7" class="dropdown-item">Itwari</a>
+                                                                    </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">Dashboard</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="https://cmdashboard.maharashtra.gov.in/" target="_blank" class="dropdown-item">CM Dashboard</a>
+                                    <a href="https://www.nagpurrailwaypolice.gov.in/en/dist/" target="_blank" class="dropdown-item">Crime Statistics</a>
+                                    <a href="https://www.nagpurrailwaypolice.gov.in/en/dist/applicationanalytics" target="_blank" class="dropdown-item">Application Analytics</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Search by keyword</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center bg-primary">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="btn bg-light border nput-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+<div class="container-fluid bg-breadcrumb">
+    <div class="container text-center" style="max-width: 900px;">
+        <h4 class="text-white display-4 wow fadeInDown" data-wow-delay="0.1s" style="font-size:30px;margin-bottom:0px; padding: 20px;">Officers</h4>
+
+    </div>
+</div>
+<!-- Header End -->
+        <div class="container-fluid bg-light about py-5">
+          <div class="container">
+            <div class="row g-5">
+              <div class="col-md-12 header_img">
+                  <h2 style="text-align: center;">ADDL SP</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <img src="https://www.nagpurrailwaypolice.gov.in/en/files/images/officers/SHRI_DATTARAM_RATHOD_ADDL_SP.jpg" class="img-responsive" alt="incharge-photo" width="240px">
+              </div>
+              <div class="col-md-9 sp_p">
+                <div class="of_conte table-responsive">
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                          <td width="250">OFFICER NAME</td>
+                          <td>SHRI DATTARAM RATHOD</td>
+                        </tr>
+                        <tr>
+                          <td width="250">DESIGNATION</td>
+                          <td>ADDL SP</td>
+                        </tr>
+                        <tr>
+                          <td width="250">BRANCH</td>
+                          <td>ADDL SP</td>
+                        </tr>
+                        <tr>
+                          <td width="250">MOBILE NUMBER</td>
+                          <td>8999869649</td>
+                        </tr>
+                        <tr>
+                          <td width="250">EMAIL ID</td>
+                          <td>addlsprailwayngp[at]gmail[dot]com</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr>
+                <!--<div class="container-fluid bg-light about py-5">-->
+                <!--    <div class="container py-5">-->
+                <!--        <div class="row g-5">-->
+                <!--            <p></p>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="container-fluid bg-light about py-5">
+          <div class="container">
+            <div class="row g-5">
+              <div class="col-md-12 header_img">
+                  <h2 style="text-align: center;">DYSP HOME</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <img src="https://www.nagpurrailwaypolice.gov.in/en/files/images/officers/SHRI_RAVINDRA_SHINDE_DYSP.jpg" class="img-responsive" alt="incharge-photo" width="240px">
+              </div>
+              <div class="col-md-9 sp_p">
+                <div class="of_conte table-responsive">
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                          <td width="250">OFFICER NAME</td>
+                          <td>SHRI RAVINDRA SHINDE</td>
+                        </tr>
+                        <tr>
+                          <td width="250">DESIGNATION</td>
+                          <td>DYSP</td>
+                        </tr>
+                        <tr>
+                          <td width="250">BRANCH</td>
+                          <td>DYSP HOME</td>
+                        </tr>
+                        <tr>
+                          <td width="250">MOBILE NUMBER</td>
+                          <td>8698355883</td>
+                        </tr>
+                        <tr>
+                          <td width="250">EMAIL ID</td>
+                          <td>dysphomerly[at]gmail[dot]com</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr>
+                <!--<div class="container-fluid bg-light about py-5">-->
+                <!--    <div class="container py-5">-->
+                <!--        <div class="row g-5">-->
+                <!--            <p></p>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="container-fluid bg-light about py-5">
+          <div class="container">
+            <div class="row g-5">
+              <div class="col-md-12 header_img">
+                  <h2 style="text-align: center;">SDPO NAGPUR</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <img src="https://www.nagpurrailwaypolice.gov.in/en/files/images/officers/PANDURANG_SONWANE_SDPO_Akola.jpg" class="img-responsive" alt="incharge-photo" width="240px">
+              </div>
+              <div class="col-md-9 sp_p">
+                <div class="of_conte table-responsive">
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                          <td width="250">OFFICER NAME</td>
+                          <td>SHRI PANDURANG SONWANE</td>
+                        </tr>
+                        <tr>
+                          <td width="250">DESIGNATION</td>
+                          <td>SDPO</td>
+                        </tr>
+                        <tr>
+                          <td width="250">BRANCH</td>
+                          <td>SDPO NAGPUR</td>
+                        </tr>
+                        <tr>
+                          <td width="250">MOBILE NUMBER</td>
+                          <td>9422145455</td>
+                        </tr>
+                        <tr>
+                          <td width="250">EMAIL ID</td>
+                          <td>sdporly[at]gmail[dot]com</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr>
+                <!--<div class="container-fluid bg-light about py-5">-->
+                <!--    <div class="container py-5">-->
+                <!--        <div class="row g-5">-->
+                <!--            <p></p>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="container-fluid bg-light about py-5">
+          <div class="container">
+            <div class="row g-5">
+              <div class="col-md-12 header_img">
+                  <h2 style="text-align: center;">SDPO AKOLA</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <img src="https://www.nagpurrailwaypolice.gov.in/en/files/images/officers/PANDURANG_SONWANE_SDPO_Akola.jpg" class="img-responsive" alt="incharge-photo" width="240px">
+              </div>
+              <div class="col-md-9 sp_p">
+                <div class="of_conte table-responsive">
+                  <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                          <td width="250">OFFICER NAME</td>
+                          <td>SHRI PANDURANG SONWANE</td>
+                        </tr>
+                        <tr>
+                          <td width="250">DESIGNATION</td>
+                          <td>SDPO Additional Charge</td>
+                        </tr>
+                        <tr>
+                          <td width="250">BRANCH</td>
+                          <td>SDPO AKOLA</td>
+                        </tr>
+                        <tr>
+                          <td width="250">MOBILE NUMBER</td>
+                          <td>9920211266</td>
+                        </tr>
+                        <tr>
+                          <td width="250">EMAIL ID</td>
+                          <td>sdporlyakola[at]gmail[dot]com</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <hr>
+                <!--<div class="container-fluid bg-light about py-5">-->
+                <!--    <div class="container py-5">-->
+                <!--        <div class="row g-5">-->
+                <!--            <p></p>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+              </div>
+            </div>
+          </div>
+        </div>
+    <!-- Footer Link Styling -->
+<style>
+    .footer-item a {
+        display: block;
+        padding: 6px 0;
+        line-height: 1.4;
+        color: #fff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 2;
+        pointer-events: auto;
+    }
+    .footer-item a:hover {
+        color: #ffc107;
+        padding-left: 8px;
+    }
+    /* Keep social circle buttons and heading links inline */
+    .footer-item .footer-btn a,
+    .footer-item a.p-0 {
+        display: inline-flex;
+        padding: 0;
+    }
+    .footer-item .footer-btn a:hover {
+        padding-left: 0;
+    }
+    @media (max-width: 768px) {
+        .footer-item a {
+            padding: 10px 0;
+        }
+    }
+</style>
+
+<!-- Footer Start -->
+        <div class="container-fluid footer py-2 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-2">
+                <div class="row g-5">
+                    <div class="col-xl-10">
+                        <div class="row g-4">
+                            <h4 class="text-white mb-4">Nagpur Railway Police</h4>
+                            <div class="col-md-6 col-lg-4 col-xl-4">
+                                <div class="footer-item">
+                                    <a href="aboutus"><i class="fas fa-angle-right me-2"></i> About Us</a>
+                                    <a href="message"><i class="fas fa-angle-right me-2"></i> SP's Message</a>
+                                    <a href="organisation"><i class="fas fa-angle-right me-2"></i> Organisation</a>
+                                    <a href="jurisdiction"><i class="fas fa-angle-right me-2"></i> Jurisdiction</a>
+                                    <a href="headquarter"><i class="fas fa-angle-right me-2"></i> Headquarter</a>
+                                    <a href="sptillnow"><i class="fas fa-angle-right me-2"></i> SP's Till Now</a>
+                                    <a href="https://www.nagpurrailwaypolice.gov.in/en/dist/" target="_blank"><i class="fas fa-angle-right me-2"></i> Crime Statistics</a>
+                                    <a href="https://www.nagpurrailwaypolice.gov.in/en/dist/applicationanalytics" target="_blank"><i class="fas fa-angle-right me-2"></i> Application Analytics</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-4">
+                                <div class="footer-item">
+                                    <a href="sitemap"><i class="fas fa-angle-right me-2"></i> Site Map</a>
+                                    <a href="privacy"><i class="fas fa-angle-right me-2"></i> Privacy</a>
+                                    <a href="termsconditions"><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4 col-xl-4">
+                                <div class="footer-item">
+                                    <a href="index.html" class="p-0">
+                                        <h5 class="text-white"> Contact Us</h5> 
+                                    </a>
+                                    <p class="text-white mb-1">Office Of The</p>
+                                    <p class="text-white mb-1">Superintendent Of Police,</p>
+                                    <p class="text-white mb-1">3/32, Kukde Layout, Rameshwari,</p>
+                                    <p class="text-white mb-1">Nagpur, Maharashtra 440027</p>
+                                    <p class="text-white mb-1">Contact No. +91 77988 88813</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                        <div class="footer-item">
+                            <div class="footer-item"><br>
+                                <p><br></p>
+                                <p><br></p>
+                                <p><br></p>
+                                <div class="footer-btn d-flex">
+                                    <a class="btn btn-md-square rounded-circle me-3" href="https://www.facebook.com/nagpurrailwaypolice" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-md-square rounded-circle me-3" href="https://x.com/Nagpurrailway" target="_blank"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-2">
+            <div class="container">
+                <div class="row g-4 align-items-center text-white" style="font-size: 14px;">
+                    <div class="col-md-3 text-center mb-md-0">
+                        <p>Last Update On : <a href="#" class="border-bottom text-white">13-Nov-2026 01:59:35</a></p>
+                    </div>
+                    <div class="col-md-2 text-center mb-md-0">
+                         <p>Visitor Count: <span id="website-counter">140746</span></p>
+                    </div>
+                    <div class="col-md-4 text-center mb-md-0">
+                        <span>All Rights Reserved. <a href="#" class="border-bottom text-white">Nagpur Railway Police</a></span>
+                    </div>
+                    <div class="col-md-3 text-center mb-md-0">
+                        Designed By <a class="border-bottom text-white" href="https://www.ionicsys.com" target="_blank">IONICSYS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/lib/wow/wow.min.js"></script>
+        <script src="assets/lib/easing/easing.min.js"></script>
+        <script src="assets/lib/waypoints/waypoints.min.js"></script>
+        <script src="assets/lib/counterup/counterup.min.js"></script>
+        <script src="assets/lib/lightbox/js/lightbox.min.js"></script>
+        <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="assets/js/main.js"></script>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const baseCount = 140746;
+            let visitCount = localStorage.getItem("page_view");
+
+            if (visitCount) {
+              visitCount = Number(visitCount) + 1;
+            } else {
+              visitCount = baseCount;
+            }
+
+            localStorage.setItem("page_view", visitCount);
+            document.getElementById("website-counter").innerHTML = visitCount;
+          });
+        </script>
+
+    </body>
+
+</html></body>
+</html>

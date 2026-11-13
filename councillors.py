@@ -240,7 +240,7 @@ def main(run_fn=None, task="councillors"):
         hub.metric("n_http")
         hub.metric("t_http_s", time.time() - t)
         time.sleep(max(0.5, hub.settings.get("delay_ms", 0) / 1000))
-        if r.status_code != 200:
+        if r.status_code != 200 and not (method == "PROPFIND" and r.status_code == 207):    # 207: a WebDAV folder listing
             hub.metric(f"http_{r.status_code}")
             if r.status_code in (403, 429, 503):
                 hub.block()

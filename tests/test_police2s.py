@@ -1,7 +1,7 @@
 """Police readers South and West, second pass (dforms/police2s_*.py) on saved samples (tests/data/police2s_*): no network."""
 from test_dept_police import FakeGet, check_common, check_seed
 
-from dforms import police2s_gj, police2s_kl, police2s_mh, police2s_mh_misc, police2s_mp, police2s_tg, police_gj
+from dforms import police2s_gj, police2s_kl, police2s_mh, police2s_mh_misc, police2s_mh_old, police2s_mp, police2s_tg, police_gj
 
 
 # --- Kerala: district unit sites (cards, blocks, tables) ---------------------------------------------------------------------
@@ -139,3 +139,79 @@ def test_tg_s3waas():
     check_common(recs, "police2s_tg", "TG")
     assert any(d["level"] == "circle" and d["phone"] == "8712686163" for _, d in recs)
     check_seed("police2s_tg")
+
+
+# --- Maharashtra: sites on their older layout (police2s_mh -> police2s_mh_old) -------------------------------------------------
+OLD = {
+    "https://nashikruralpolice.gov.in/police-station-incharge": "police2s_mh_old_nashikr_psi.html",
+    "https://nashikruralpolice.gov.in/_next/static/chunks/pages/police-station-incharge-f972e540c07c7c56.js": "police2s_mh_old_nashikr_psi.js",
+    "https://nrbkapi.neuronexdevelopers.com/api/officers-admin": "police2s_mh_old_nashikr_psi.json",
+    "https://nashikruralpolice.gov.in/senior-officers": "police2s_mh_old_nashikr_senior.html",
+    "https://nashikruralpolice.gov.in/_next/static/chunks/pages/senior-officers-ef23064bac25a44e.js": "police2s_mh_old_nashikr_senior.js",
+    "https://nrbkapi.neuronexdevelopers.com/api/get-senior-officer": "police2s_mh_old_nashikr_senior.json",
+    "https://solapurcitypolice.gov.in/senior_officers": "police2s_mh_old_solapur_senior.html",
+    "https://solapurcitypolice.gov.in/police-station/jail-road-police-station": "police2s_mh_old_solapur_ps.html",
+    "https://jalnapolice.gov.in/seniorofficers.html": "police2s_mh_old_jalna_senior.html",
+    "https://jalnapolice.gov.in/psambad.html": "police2s_mh_old_jalna_ambad.html",
+    "https://jalnapolice.gov.in/": "police2s_mh_old_jalna_home.html",
+    "https://hingolipolice.gov.in/Officers": "police2s_mh_old_hingoli_officers.html",
+    "https://hingolipolice.gov.in/PoliceStation?ps=8": "police2s_mh_old_hingoli_ps8.html",
+    "https://hingolipolice.gov.in/PoliceStation": "police2s_mh_old_hingoli_ps.html",
+    "https://nagpurrailwaypolice.gov.in/en/officerslist": "police2s_mh_old_nagpurrly.html",
+    "https://gadchirolipolice.gov.in/en/about/police-station-incharge": "police2s_mh_old_gadchiroli_psi_empty.html",
+}
+
+
+def run_old(key, host, section):
+    get = FakeGet(OLD)
+    recs, files, why = police2s_mh.fetch({"reader": "police2s_mh", "key": key, "url": f"https://{host}/en/about/{section}", "state": "MH",
+                                          "district": "D"}, get)
+    return recs, files, why, get
+
+
+def test_mh_old_nextapi():
+    recs, files, why, get = run_old("nashikruralpolice", "nashikruralpolice.gov.in", "police-station-incharge")
+    check_common(recs, "police2s_mh", "MH")
+    assert not why and len(recs) == 41 and len(files) == 2
+    assert [c[1] for c in get.calls][1:] == list(OLD)[:3]          # /en/about/ (404), old page, its script, the API it names
+    d = dict(recs)["dept:police2s_mh:nashikruralpolice:67b487056de1c479f0e56ce4"]
+    assert d["area"] == "Lasalgaon Police Station" and d["area_regional"] == "लासलगाव" and d["name"] == "Shri. Sagar Kote"
+    assert d["phone"] == "9518527855, 02550266055" and d["email"] == "ps.lasalgaon.nr@mahapolice.gov.in" and d["level"] == "police_station"
+    assert d["src_url"] == "https://nrbkapi.neuronexdevelopers.com/api/officers-admin" and d["src_pos"]["index"] == 1
+    recs, _, why, _ = run_old("nashikruralpolice", "nashikruralpolice.gov.in", "senior-officers")
+    check_common(recs, "police2s_mh", "MH")
+    sp = dict(recs)["dept:police2s_mh:nashikruralpolice:67b49d266de1c479f0e56f03"]
+    assert len(recs) == 13 and sp["post"] == "Superintendent of Police, Nashik Rural" and sp["level"] == "district"
+    assert sp["phone"] == "0253-2200495" and sp["post_regional"] == "पोलीस अधीक्षक, नाशिक ग्रामीण"
+    assert police2s_mh_old.api_urls('fetch("".concat("https://x.example","/api/get-visitors")),fetch("".concat("https://x.example","/api/a"))') \
+        == ["https://x.example/api/a"]
+
+
+def test_mh_old_own_sites():
+    recs, _, why, _ = run_old("solapurcitypolice", "solapurcitypolice.gov.in", "senior-officers")
+    check_common(recs, "police2s_mh", "MH")
+    d = {x["post"]: x for _, x in recs}
+    assert len(recs) == 11 and d["Commissioner Of Police"]["name"] == "M. Raj Kumar" and d["Commissioner Of Police"]["name_regional"] == "एम. राजकुमार"
+    assert d["Deputy Commissioner of Police (HQ)"]["email"] == "cp.solapur.dcp.hq@mahapolice.gov.in"
+    recs, _, why, get = run_old("solapurcitypolice", "solapurcitypolice.gov.in", "police-station-incharge")
+    assert len([c for c in get.calls if "/police-station/" in c[1]]) == 7 and len(recs) == 1      # only one station page saved
+    ps = recs[0][1]
+    assert ps["area"] == "Jail Road Police Station" and ps["name"] == "Udaysingh Shyamrao Patil" and ps["phone"] == "02172744631, 9923357799"
+    assert ps["subdivision"] == "Assistant Commissioner of Police (Div-1) Solapur City" and ps["level"] == "police_station"
+    recs, _, _, _ = run_old("jalnapolice", "jalnapolice.gov.in", "senior-officers")
+    assert len(recs) == 7 and {x["post"] for _, x in recs} >= {"Superintendent of Police", "DYSP Partur"}
+    recs, _, _, get = run_old("jalnapolice", "jalnapolice.gov.in", "police-station-incharge")
+    assert len([c for c in get.calls if c[1].startswith("https://jalnapolice.gov.in/ps")]) == 19
+    a = recs[0][1]
+    assert a["name"] == "Shri. Santosh Ghodke" and a["phone"] == "9657478003, 02483-220029" and a["email"] == "psambad.jalna@mahapolice.gov.in"
+    recs, _, _, _ = run_old("hingolipolice", "hingolipolice.gov.in", "senior-officers")
+    assert len(recs) == 6 and recs[0][1]["name"] == "डॉ. श्रेणिक लोढा" and recs[0][1]["post"] == "पोलीस अधीक्षक"
+    recs, _, _, get = run_old("hingolipolice", "hingolipolice.gov.in", "police-station-incharge")
+    assert len([c for c in get.calls if "?ps=" in c[1]]) == 13
+    h = recs[0][1]
+    assert h["area"] == "हिंगोली शहर पोलीस ठाणे" and h["phone"] == "8208328532, 8669900678" and h["email"] == "ps.hingolicity.hnl@mahapolice.gov.in"
+    recs, _, _, _ = run_old("nagpurrailwaypolice", "www.nagpurrailwaypolice.gov.in", "senior-officers")
+    check_common(recs, "police2s_mh", "MH")
+    assert len(recs) == 4 and dict(recs)["dept:police2s_mh:nagpurrailwaypolice:sdpo-nagpur"]["email"] == "sdporly@gmail.com"
+    assert run_old("nagpurrailwaypolice", "www.nagpurrailwaypolice.gov.in", "police-station-incharge")[2].startswith("no station incharge")
+    assert run_old("gadchirolipolice", "gadchirolipolice.gov.in", "police-station-incharge")[2] == "the site's page says 'No records yet'"

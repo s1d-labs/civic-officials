@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>SOLAPUR CITY POLICE</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://solapurcitypolice.gov.in/public/assets/css/style.css">
+  <link rel="stylesheet" href="https://solapurcitypolice.gov.in/public/assets/css/style.enhanced.css">
+
+  <style>
+    /* ===========================
+       HEADER STYLES
+    ============================ */
+    header {
+      background: #001B44; /* Dark Blue */
+      color: #fff;
+      font-family: 'Noto Sans', sans-serif;
+    }
+
+    /* Language toggle */
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding-left: 15px;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    .lang-toggle button {
+      border: none;
+      background: #fff;
+      color: #003399;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      font-size: 0.9rem;
+    }
+
+    .lang-toggle button.active {
+      background: #003399;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+
+    .lang-toggle span.sep {
+      color: #fff;
+      font-weight: 700;
+    }
+
+    /* Police Station Dropdown */
+    .station-select select {
+      background: #fff;
+      border: none;
+      color: #003399;
+      font-weight: 600;
+      border-radius: 20px;
+      padding: 5px 14px;
+      outline: none;
+      font-size: 0.9rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: 0.2s ease;
+      min-width: 180px;
+    }
+
+    .station-select select:hover,
+    .station-select select:focus {
+      box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+    }
+
+    .station-select select option {
+      color: #003399;
+    }
+
+    /* Search Box Mobile Centering */
+    @media (max-width: 768px) {
+      .col-lg-3.col-md-3.col-12.text-center.mt-2.mt-md-0 {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+      }
+      
+      #search-bar {
+        float: none !important;
+        margin: 0 auto !important;
+      }
+    }
+
+    /* Language handling */
+    body.marathi .lang-en { display: none !important; }
+    body.marathi .lang-mr { display: inline-block !important; }
+
+    body.english .lang-mr { display: none !important; }
+    body.english .lang-en { display: inline-block !important; }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .lang-toggle button {
+        padding: 3px 8px;
+        font-size: 0.85rem;
+      }
+
+      .station-select select {
+        font-size: 0.85rem;
+        padding: 4px 10px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .lang-toggle, .station-select {
+        flex: 1 1 100%;
+        text-align: center;
+        justify-content: center;
+        margin: 4px 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="marathi">
+  <!-- Loader -->
+  <div id="site-loader">
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+  </div>
+
+  <div class="container-fluid p-0">
+    <!-- HEADER -->
+    <header class="bg-primary text-white">
+      <div class="container-fluid d-flex flex-wrap p-0">
+        <div class="row align-items-center w-100 no-gutters">
+          
+          <!-- Language toggle + Police Station Dropdown -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex align-items-center pl-3 py-2">
+            <div class="lang-toggle mr-3">
+              <button id="btnMr" class="active">मराठी</button>
+              <span class="sep">|</span>
+              <button id="btnEn">English</button>
+            </div>
+
+            <div class="station-select ml-3">
+              
+              <!-- Marathi Dropdown -->
+              <select onchange="window.location.href=this.value;" class="lang-mr">
+                <option value="" selected disabled>🔽 पोलीस स्टेशन निवडा</option>
+                                                      <option value="https://solapurcitypolice.gov.in/police-station/faujdar-chawadi-police-station">
+                      फौजदार चावडी पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/jail-road-police-station">
+                      जेल रोड पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/jodbhavi-peth-police-station">
+                      जोडभवानी पेठ पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/midc-police-station">
+                      एम.आय.डी.सी. पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/sadar-bazar-police-station">
+                      सदर बाजार पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/salgar-wasti-police-station">
+                      सलगर वस्ती पोलीस स्टेशन
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/vijapur-naka-police-station">
+                      विजापूर नाका पोलीस स्टेशन
+                    </option>
+                                                                                  </select>
+
+              <!-- English Dropdown -->
+              <select onchange="window.location.href=this.value;" class="lang-en">
+                <option value="" selected disabled>🔽 Select Police Station</option>
+                                                      <option value="https://solapurcitypolice.gov.in/police-station/faujdar-chawadi-police-station">
+                      Faujdar Chawadi Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/jail-road-police-station">
+                      Jail Road Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/jodbhavi-peth-police-station">
+                      Jodbhavi Peth Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/midc-police-station">
+                      M.I.D.C. Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/sadar-bazar-police-station">
+                      Sadar Bazar Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/salgar-wasti-police-station">
+                      Salgar Wasti Police Station
+                    </option>
+                                                                        <option value="https://solapurcitypolice.gov.in/police-station/vijapur-naka-police-station">
+                      Vijapur Naka Police Station
+                    </option>
+                                                                                  </select>
+            </div>
+          </div>
+
+          <!-- Logo -->
+          <div class="col-lg-6 col-md-5 col-12 text-center">
+            <a href="https://solapurcitypolice.gov.in" class="navbar-brand text-white w-100 d-flex justify-content-center align-items-center flex-wrap">
+              <img src="https://solapurcitypolice.gov.in/public/assets/images/Maharashtra_Police_Insignia_India_wHITE.png" alt="Logo" height="48" class="mx-2">
+              <span class="lang-en font-weight-bold" style="font-size:1.4rem;">SOLAPUR CITY POLICE</span>
+              <span class="lang-mr font-weight-bold" style="font-size:1.4rem;">सोलापूर शहर पोलीस</span>
+              <img src="https://solapurcitypolice.gov.in/public/assets/images/Maharashtra_Police_Insignia_India_wHITE.png" alt="Logo" height="48" class="mx-2">
+            </a>
+          </div>
+
+          <!-- Search -->
+          <div class="col-lg-3 col-md-3 col-12 text-center mt-2 mt-md-0">
+            <div id="search-bar" class="ml-2 float-right w-100">
+              <i id="search-icon" class="fas fa-search text-dark"></i>
+              <input id="search-input" placeholder="">
+              <i id="mic-icon" class="fas fa-microphone text-dark"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- NAVBAR -->
+<section class="reveal" id="section_about_us_two">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <a class="navbar-brand d-block d-sm-none font-weight-bold text-primary" href="#">
+      <i class="fas fa-shield-alt mr-1"></i> <span class="lang-en">Solapur Police</span><span class="lang-mr">सोलापूर पोलीस</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://solapurcitypolice.gov.in">
+            <span class="lang-en">Home</span>
+            <span class="lang-mr">मुख्यपृष्ठ</span>
+          </a>
+        </li>
+
+        <!-- About Us -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-toggle="dropdown">
+            <span class="lang-en">About Us</span>
+            <span class="lang-mr">आमच्याबद्दल</span>
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/our-mission"><span class="lang-en">Our Mission</span><span class="lang-mr">आमचे ध्येय</span></a>
+            <a class="dropdown-item" href="https://solapurcitypolice.gov.in/senior_officers"><span class="lang-en">Senior Police Officers</span><span class="lang-mr">वरिष्ठ पोलीस अधिकारी</span></a>
+<a class="dropdown-item" href="https://solapurcitypolice.gov.in/jurisdiction">
+  <span class="lang-en">Jurisdiction</span>
+  <span class="lang-mr">कार्यक्षेत्र नकाशा</span>
+</a>
+</a>
+            <a class="dropdown-item" href="https://solapurcitypolice.gov.in/contact"><span class="lang-en">Contact Us</span><span class="lang-mr">संपर्क करा</span></a>
+          </div>
+        </li>
+
+        <!-- Police Corner -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="policeDropdown" data-toggle="dropdown">
+<span class="lang-en">Police Corner</span>
+<span class="lang-mr">पोलीस कॉर्नर</span>
+
+          </a>
+                <div class="dropdown-menu" aria-labelledby="policeDropdown">
+                  <a class="dropdown-item" href="https://solapurcitypolice.gov.in/press-release"><span class="lang-en">Press
+                      Release</span><span class="lang-mr">पत्रकार परिषद</span></a>
+                  <a class="dropdown-item" href="https://solapurcitypolice.gov.in/crime_review"><span class="lang-en">Crime
+                      Review</span><span class="lang-mr">गुन्हेगारी पुनरावलोकन</span></a>
+                  <a class="dropdown-item" href="https://solapurcitypolice.gov.in/poa-pcr-cases"><span class="lang-en">POA-PCR
+                      Cases</span><span class="lang-mr">POA-PCR प्रकरणे</span></a>
+                  <a class="dropdown-item" href="https://solapurcitypolice.gov.in/tender"><span class="lang-en">Tenders</span><span
+                      class="lang-mr">निविदा</span></a>
+                  <a class="dropdown-item" href="https://solapurcitypolice.gov.in/faqs"><span class="lang-en">FAQs</span><span
+                      class="lang-mr">वारंवार विचारले जाणारे प्रश्न</span></a>
+                  <!--<a class="dropdown-item" href="https://solapurcitypolice.gov.in/transfer-orders"><span class="lang-en">Transfer-->
+                  <!--    Orders</span><span class="lang-mr">बदली आदेश</span></a>-->
+                </div>
+        </li>
+
+        <!-- Services -->
+        <!--<li class="nav-item dropdown">-->
+        <!--  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" data-toggle="dropdown">-->
+        <!--    <span class="lang-en">Services</span>-->
+        <!--    <span class="lang-mr">सेवा</span>-->
+        <!--  </a>-->
+        <!--  <div class="dropdown-menu">-->
+        <!--    <a class="dropdown-item" href="#"><span class="lang-en">Passport Verification</span><span class="lang-mr">पासपोर्ट पडताळणी</span></a>-->
+        <!--    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/character_certificate"><span class="lang-en">Character Verification</span><span class="lang-mr">चरित्र पडताळणी</span></a>-->
+        <!--    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/tenant_verification"><span class="lang-en">Tenant Verification</span><span class="lang-mr">भाडेकरू पडताळणी</span></a>-->
+        <!--  </div>-->
+        <!--</li>-->
+
+        <!-- Citizen Corner -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="citizenDropdown" data-toggle="dropdown">
+<span class="lang-en">Citizens Corner</span>
+<span class="lang-mr">सिटिझन कॉर्नर</span>
+          </a>
+          <div class="dropdown-menu">
+                    <a class="dropdown-item"
+                      href="https://solapurcitypolice.gov.in/page/maharashtra-right-to-public-services-act%2C-2015"><span
+                        class="lang-en">Maharashtra Right to Service Act</span><span
+                        class="lang-mr">महाराष्ट्र हक्क सेवा अधिनियम</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/public/uploads/charter_citizen.pdf"><span class="lang-en">Charter of Citizens</span><span
+                        class="lang-mr">नागरिक सनद</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/accident_compensation"><span class="lang-en">Accident
+                        Compensation</span><span class="lang-mr">अपघात भरपाई</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/useful-websites"><span class="lang-en">Useful
+                        Websites</span><span class="lang-mr">उपयुक्त संकेतस्थळे</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/rti"><span class="lang-en">Right to
+                        Information</span><span class="lang-mr">माहितीचा अधिकार</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/police_recruitment"><span
+                        class="lang-en">Recruitment</span><span class="lang-mr">भरती</span></a>
+                    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/safety-tips"><span class="lang-en">Safety
+                        Tips</span><span class="lang-mr">सुरक्षा टिप्स</span></a>
+<a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/citizen-alert-wall">
+  <span class="lang-en">Citizens Alert Wall</span>
+  <span class="lang-mr">नागरिक अलर्ट वॉल</span>
+</a>
+<a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/cyber-alert-wall">
+  <span class="lang-en">Cyber Alert Wall</span>
+  <span class="lang-mr">सायबर अलर्ट वॉल</span>
+</a>
+                  <a class="dropdown-item" href="https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3223"> 
+  <span class="lang-en">Procession Permission</span> 
+  <span class="lang-mr">मिरवणुकीची परवानगी</span>
+</a>
+
+<a class="dropdown-item" href="https://aaplesarkar.mahaonline.gov.in/en/Login/Certificate_Documents?ServiceId=3220"> 
+  <span class="lang-en">Loud Speaker Permission</span> 
+  <span class="lang-mr">लाउडस्पीकर परवानगी</span>
+</a>
+<a class="dropdown-item" href="https://solapurcitypolice.gov.in/confidential_info">
+    <span class="lang-en">Confidential Info</span>
+    <span class="lang-mr">गोपनीय माहिती</span>
+</a>
+<a class="dropdown-item" href="#">
+    <span class="lang-en">Feedback</span>
+    <span class="lang-mr">अभिप्राय</span>
+</a>
+
+          </div>
+        </li>
+
+        <!-- Special Units -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="specialUnitsDropdown" data-toggle="dropdown">
+            <span class="lang-en">Special Units</span>
+            <span class="lang-mr">विशेष शाखा</span>
+          </a>
+          <div class="dropdown-menu">
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/police-head-quarter">
+      <span class="lang-en">Police Head Quarter</span>
+      <span class="lang-mr">पोलीस मुख्यालय</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/control-room">
+      <span class="lang-en">Control Room</span>
+      <span class="lang-mr">नियंत्रण कक्ष</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/solapur-city-cyber-police-station">
+      <span class="lang-en">Solapur City Cyber Police Station</span>
+      <span class="lang-mr">सोलापूर शहर सायबर पोलीस ठाणे</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/women-help-cell">
+      <span class="lang-en">Bharosa Cell</span>
+      <span class="lang-mr">भरोसा सेल</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/cctns">
+      <span class="lang-en">CCTNS</span>
+      <span class="lang-mr">सीसीटीएनएस</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/economic-offence-wing">
+      <span class="lang-en">Economic Offence Wing</span>
+      <span class="lang-mr">आर्थिक गुन्हे शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/special-branch">
+      <span class="lang-en">Special Branch</span>
+      <span class="lang-mr">विशेष शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/foreigners-registration-office">
+      <span class="lang-en">Foreigners Registration Office</span>
+      <span class="lang-mr">परदेशी नोंदणी कार्यालय</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/quick-response-team">
+      <span class="lang-en">Quick Response Team</span>
+      <span class="lang-mr">त्वरित प्रतिसाद पथक</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/crime-branch">
+      <span class="lang-en">Crime Branch</span>
+      <span class="lang-mr">गुन्हे शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/police-welfare-branch">
+      <span class="lang-en">Police Welfare Branch</span>
+      <span class="lang-mr">पोलीस कल्याण शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/motor-transport-section">
+      <span class="lang-en">Motor Transport Branch</span>
+      <span class="lang-mr">वाहतूक शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/bdds">
+      <span class="lang-en">BDDS</span>
+      <span class="lang-mr">बीडीडीएस</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/wireless-branch">
+      <span class="lang-en">Wireless Branch</span>
+      <span class="lang-mr">वायरलेस शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/anti-terrorism-cell">
+      <span class="lang-en">Anti Terrorism Branch</span>
+      <span class="lang-mr">दहशतवाद विरोधी शाखा</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/anti-human-trafficking-unit">
+      <span class="lang-en">Anti Human Trafficking Unit</span>
+      <span class="lang-mr">मानव तस्करी प्रतिबंधक युनिट</span>
+    </a>
+
+    <a class="dropdown-item" href="https://solapurcitypolice.gov.in/page/reader-branch">
+      <span class="lang-en">Reader Branch</span>
+      <span class="lang-mr">रीडर शाखा</span>
+    </a>
+    
+<a class="dropdown-item" href="#">
+  <span class="lang-en">Traffic Branch</span>
+  <span class="lang-mr">वाहतूक शाखा</span>
+</a>
+
+          </div>
+        </li>
+
+        <!-- Dashboard -->
+        <li class="nav-item">
+          <a class="nav-link" href="https://solapurcitypolice.gov.in/dashboard">
+            <span class="lang-en">Dashboard</span>
+            <span class="lang-mr">डॅशबोर्ड</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</section>
+  </div>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const btnMr = document.getElementById("btnMr");
+      const btnEn = document.getElementById("btnEn");
+
+      btnMr.addEventListener("click", () => {
+        document.body.classList.add("marathi");
+        document.body.classList.remove("english");
+        btnMr.classList.add("active");
+        btnEn.classList.remove("active");
+      });
+
+      btnEn.addEventListener("click", () => {
+        document.body.classList.add("english");
+        document.body.classList.remove("marathi");
+        btnEn.classList.add("active");
+        btnMr.classList.remove("active");
+      });
+    });
+  </script>
+
+  <script src="https://solapurcitypolice.gov.in/public/assets/js/main.enhanced.js" defer></script>
+</body>
+</html>
+<style>
+/* ────────────────────────────────────────────────
+   FONTS & COLORS
+──────────────────────────────────────────────── */
+@import  url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Noto+Sans:wght@400;500&display=swap');
+
+:root {
+  --police-blue: #002b80;
+  --police-light: #0059ff;
+  --bg-light: #f7f9fc;
+  --text-dark: #1f2937;
+}
+
+/* ────────────────────────────────────────────────
+   GLOBAL STYLES
+──────────────────────────────────────────────── */
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* Language visibility (syncs with header toggle) */
+body.marathi .lang-en { display: none !important; }
+body.marathi .lang-mr { display: inline !important; }
+body.english .lang-mr { display: none !important; }
+body.english .lang-en { display: inline !important; }
+
+/* ────────────────────────────────────────────────
+   PAGE STRUCTURE
+──────────────────────────────────────────────── */
+.site-main {
+  padding: 40px 0;
+}
+
+.ps-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  overflow: hidden;
+  max-width: 1200px;
+  margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.ps-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* ────────────────────────────────────────────────
+   HEADER SECTION
+──────────────────────────────────────────────── */
+.ps-header {
+  background: linear-gradient(135deg, var(--police-blue), var(--police-light));
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+  position: relative;
+}
+.ps-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: #fff;
+}
+.ps-header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin-bottom: 0;
+  letter-spacing: 0.5px;
+}
+
+/* ────────────────────────────────────────────────
+   CONTENT GRID
+──────────────────────────────────────────────── */
+.ps-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  padding: 40px;
+}
+@media (max-width: 992px) {
+  .ps-content {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+}
+
+/* ────────────────────────────────────────────────
+   OFFICER CARD
+──────────────────────────────────────────────── */
+.officer-card {
+  background: rgba(255,255,255,0.97);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: center;
+  padding: 30px 20px;
+  transition: all 0.3s ease;
+}
+.officer-card:hover {
+  box-shadow: 0 8px 24px rgba(0,64,255,0.15);
+  transform: translateY(-4px);
+}
+
+.officer-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--police-light);
+  margin-bottom: 18px;
+  transition: transform 0.3s ease;
+}
+.officer-card:hover .officer-photo { transform: scale(1.05); }
+
+.officer-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--police-blue);
+  margin-bottom: 6px;
+}
+.officer-post {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 22px;
+}
+
+/* ────────────────────────────────────────────────
+   CONTACT INFO
+──────────────────────────────────────────────── */
+.contact-info {
+  text-align: left;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.8;
+}
+.contact-info i {
+  color: var(--police-light);
+  width: 22px;
+}
+.contact-info a {
+  color: var(--police-blue);
+  text-decoration: none;
+}
+.contact-info a:hover { text-decoration: underline; }
+
+/* ────────────────────────────────────────────────
+   STATION IMAGE + INFO
+──────────────────────────────────────────────── */
+.station-image {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.station-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+.station-image img:hover { transform: scale(1.04); }
+
+.station-info {
+  margin-top: 25px;
+  padding: 18px 20px;
+  background: #f1f4ff;
+  border-radius: 8px;
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  border-left: 4px solid var(--police-light);
+  box-shadow: inset 0 0 6px rgba(0,64,255,0.05);
+}
+.station-info strong i {
+  margin-right: 6px;
+  color: var(--police-blue);
+}
+@media (max-width: 576px) {
+  .station-info { font-size: 0.9rem; }
+}
+
+/* Fade-in animation */
+.ps-card {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.ps-card.loaded {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+</style>
+
+<main class="site-main">
+  <div class="ps-card" id="psCard">
+    <div class="ps-header">
+      <h1>
+        <span class="lang-en">Jail Road Police Station</span>
+        <span class="lang-mr">जेल रोड पोलीस स्टेशन</span>
+      </h1>
+    </div>
+
+    <div class="ps-content">
+      <!-- Officer Card -->
+      <div class="officer-card">
+        <img class="officer-photo"
+             src="https://solapurcitypolice.gov.in/public/uploads/police-station/police_photo/blank_1783423868police_photo.jpeg" 
+             alt="Officer Photo">
+
+        <div class="officer-name">
+          <span class="lang-en">Udaysingh Shyamrao Patil</span>
+          <span class="lang-mr">उदयसिंह श्यामराव पाटील</span>
+        </div>
+
+        <div class="officer-post">
+          <span class="lang-en">Sr. Police Inspector</span>
+          <span class="lang-mr">वरिष्ठ पोलीस निरीक्षक</span>
+        </div>
+
+        <div class="contact-info">
+          <p>
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="lang-en">Kidwai Chowk, Muslim Paccha Peth, Solapur.</span>
+            <span class="lang-mr">किदवाई चौक, मुस्लिम पक्का पेठ, सोलापूर.०२१७२७४४६३१, ०२१७२७४४६३१</span>
+          </p>
+
+                      <p><i class="fa-solid fa-phone"></i>
+              <span class="lang-en">
+                <a href="tel:02172744631">02172744631</a>
+              </span>
+              <span class="lang-mr">
+                <a href="tel:०२१७२७४४६३१">०२१७२७४४६३१</a>
+              </span>
+            </p>
+          
+                      <p><i class="fa-solid fa-mobile-screen"></i>
+              <span class="lang-en">
+                <a href="tel:9923357799">9923357799</a>
+              </span>
+              <span class="lang-mr">
+                <a href="tel:९९२३३५७७९९">९९२३३५७७९९</a>
+              </span>
+            </p>
+          
+                      <p><i class="fa-solid fa-envelope"></i>
+              <a href="mailto:ps.jailroad.cpsol@mahapolice.gov.in">ps.jailroad.cpsol@mahapolice.gov.in</a>
+            </p>
+                  </div>
+      </div>
+
+      <!-- Station Image and Info -->
+      <div>
+        <div class="station-image">
+          <img src="https://solapurcitypolice.gov.in/public/uploads/police-station/police_station_image/2_1756320572police_station_image.png" 
+               alt="Police Station Image">
+        </div>
+
+        <div class="station-info">
+          <span class="lang-en">
+            <strong><i class="fa-solid fa-circle-info"></i> About this Station:</strong><br>
+            This police station serves the citizens of <strong>Assistant Commissioner of Police (Div-1) Solapur City</strong>.
+            It is committed to maintaining law, order, and citizen safety under the leadership of 
+            <strong>Udaysingh Shyamrao Patil</strong> (Sr. Police Inspector).
+          </span>
+
+          <span class="lang-mr">
+            <strong><i class="fa-solid fa-circle-info"></i> या पोलीस ठाण्याबद्दल:</strong><br>
+            हे पोलीस ठाणे 
+            <strong>सहाय्यक पोलीस आयुक्त(विभाग-१) सोलापूर शहर</strong> 
+            येथील नागरिकांची सेवा करते.
+            <strong>उदयसिंह श्यामराव पाटील</strong> 
+            (वरिष्ठ पोलीस निरीक्षक) यांच्या नेतृत्वाखाली कायदा आणि सुव्यवस्था राखण्यास कटिबद्ध आहे.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const card = document.getElementById("psCard");
+  setTimeout(() => card.classList.add("loaded"), 100);
+});
+</script>
