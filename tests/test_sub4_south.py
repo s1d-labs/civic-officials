@@ -75,3 +75,10 @@ def test_sub4_kl_gp_emoji_headers_and_empty_page():
     p = m.body_item("Alangad Block Panchayat", "B070200", "http://alangadblockpanchayat.lsgkerala.gov.in/")["payload"]
     recs = m.build(p, [], {"phone": "0484 2603020", "email": "bdo@x.in"}, [], "https://alangadblockpanchayat.lsgkerala.gov.in/en/emails")
     assert [r for r, _ in recs] == ["dept:sub4_kl_lsg:b070200:office"] and recs[0][1]["district"] == "Ernakulam"
+
+
+def test_sub4_kl_staff_links_skip_implementing_officers():
+    m = mod("sub4_kl_lsg")
+    html = ('<a href="/en/node/39">നിർവ്വഹണ ഉദ്യോഗസ്ഥർ</a><a href="/en/node/44">ജീവനക്കാർ</a>'
+            '<a href="/en/page/implementing-officers">Implementing Officers</a><a href="https://other.in/staff">Staff</a>')
+    assert m.staff_links(html, "https://x.lsgkerala.gov.in/en", "x.lsgkerala.gov.in") == ["https://x.lsgkerala.gov.in/en/node/44"]

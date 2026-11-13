@@ -9,8 +9,9 @@ D = district panchayat (14), M / C = towns (read by ulb_kl). Code digits 1-2 = d
 Body site (measured 2026-11-13 from Mumbai on Adimaly block panchayat B060100, Adat G080601, Adimaly G060101, Alangad B070200):
 - /en (home): the menu links a staff page whose title differs per body: "Officials and Employees" (Adimaly block), "Staff
   Details" (Adat, Adimaly GP), "Block Panchayath Staffs" (Alangad: empty page on 2026-11-13). The reader follows menu links of
-  the same host whose text names officials / staff / employees (not "Implementing Officers", "Official Web Portals", elected
-  members or "Employees of Constituent Institutions"), at most 2.
+  the same host whose text names officials / staff / employees (not "Implementing Officers" / "നിർവ്വഹണ ഉദ്യോഗസ്ഥർ", "Official Web
+  Portals", elected members or "Employees of Constituent Institutions"), at most 2. Some staff pages are empty (Alangad,
+  Agali G090601 "ജീവനക്കാർ" on 2026-11-13): the office record still comes from /en/emails.
 - the staff page: an HTML table (Sl. No. | Full Name | Designation | Seat | Date of Joining | Mobile Number; headers carry
   emoji on some sites) or cards (article.employee-card: div.name, div.designation, "Section" / "Responsibility" values,
   div.phone). Every row is kept: Secretary, Assistant Secretary, JBDOs, clerks, VEOs, engineers, drivers.
@@ -48,10 +49,10 @@ TYPES = {"B": ("Block Panchayat", "block", "Block Development Officer (Secretary
 SUFFIX = re.compile(r"\s+(Block Panchayath?|Grama Panchayath?|Gram Panchayath?|District Panchayath?)\s*$", re.I)
 STAFF_LINK = re.compile(r"(?i)officials?\s*(and|&)\s*employees|staff|employees|\bofficials\b|ജീവനക്കാർ|ഉദ്യോഗസ്ഥ")
 NOT_LINK = re.compile(r"(?i)implementing|web\s*portal|elected|member|constituent|institution|rti|right\s*to\s*information|"
-                      r"order|transfer|asha|anganwadi|kudumbashree")
+                      r"order|transfer|asha|anganwadi|kudumbashree|നിർവ്വഹണ|നിർവഹണ|ജനപ്രതിനിധി")
 EMOJI = re.compile("[\U0001F000-\U0001FAFF☀-➿️]")
 NAME_H = re.compile(r"(?i)name|പേര്")
-DESIG_H = re.compile(r"(?i)designation|post\b|position|ഉദ്യോഗ")
+DESIG_H = re.compile(r"(?i)designation|post\b|position|ഉദ്യോഗപ്പേര്|തസ്തിക")
 PHONE_H = re.compile(r"(?i)phone|mobile|contact|ഫോൺ|മൊബൈൽ")
 EMAIL_H = re.compile(r"(?i)e-?mail")
 SECT_H = re.compile(r"(?i)section|seat|department|responsib|duty|duties|charge|subject")
