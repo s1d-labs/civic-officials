@@ -36,6 +36,8 @@ PARTY = ((r"उद्ध?व|ठाकरे", "SS(UBT)"), (r"शरद", "NCP(S
 RESV = re.compile(r"सर्वसाधारण|सर्व\s*साधारण|अनुसूचित|अनुसुचित|मागास|महिला|प्रवर्ग|स्त्री")
 SEAT = re.compile(r"^\(?\s*[0-9०-९]*\s*[-.]?\s*([अबकडइ])\s*\)?$")
 SHORT = re.compile(r"[\s()0-9०-९.,\-–अबकडइ]*[0-9०-९अबकडइ][\s()0-9०-९.,\-–अबकडइ]*")
+WARD_SEAT = re.compile(r"(प्रभाग|प्र\.|क्रमांक|क्र\.)\D{0,20}[0-9०-९]+\s*-?\s*\(?\s*[अबकडइ]\s*\)?$")   # "प्रभाग क्रमांक १ (अ)"
+FRONT = re.compile(r"आघाडी|पार्टी|पक्ष|पाट")
 HEAD = re.compile(r"नाव|सदस्य|उमेदवार|क्रमांक|पक्ष|आरक्षण|मते$")
 
 
@@ -108,8 +110,9 @@ def roles(cells):
         k = len(filled)
         nums = [int(num(v)) for v in filled if re.fullmatch(r"[\s(]*[0-9०-९,]+[\s.)]*", v)]
         score[c] = {
-            "seat": sum(bool(SEAT.match(v.strip())) or bool(re.fullmatch(r"[0-9०-९]+\s*-\s*[अबकडइ]", v.strip()))
-                        for v in filled) / k,
+            "seat": sum(bool(SEAT.match(v.strip())) or bool(re.fullmatch(r"[0-9०-९]+\s*-\s*[अबकडइ]", v.strip())) or
+                        bool(WARD_SEAT.search(v.strip())) for v in filled) / k,
+            "front": sum(bool(FRONT.search(v)) for v in filled) / k,
             "reservation": sum(bool(RESV.search(v)) for v in filled) / k,
             "party": sum(bool(party_of(v)) for v in filled) / k,
             "number": len(nums) / k,
@@ -126,6 +129,8 @@ def roles(cells):
             out[role] = max(best, key=lambda c: score[c][key])
     take("votes", "big", lambda s: s["number"] > 0.6 and s["big"] >= 200)
     take("party", "party", lambda s: s["party"] > 0.4)
+    if "party" not in out:          # local fronts only ("शिव-शाहू विकास आघाडी"): the column that names fronts / parties
+        take("party", "front", lambda s: s["front"] > 0.6 and s["number"] == 0)
     take("seat", "seat", lambda s: s["seat"] > 0.5)
     take("reservation", "reservation", lambda s: s["reservation"] > 0.4)
     nums = [c for c in score if c not in out.values() and score[c]["number"] > 0.6]
@@ -200,6 +205,12 @@ def get_pdf(p, get):
     return r.content, ""
 
 
+def is_head(row):
+    if sum(bool(re.search(r"[0-9०-९]", v)) for v in row.values()) >= 2:
+        return False
+    return any(HEAD.search(v) and not re.search(r"[0-9०-९]", v) for v in row.values())
+
+
 def parse(pdf, p, use_ocr=True):
     from pypdf import PdfReader
     import concurrent.futures
@@ -229,7 +240,9 @@ def parse(pdf, p, use_ocr=True):
     with concurrent.futures.ThreadPoolExecutor(max(1, min(len(pages), os.cpu_count() or 1))) as ex:
         cells = dict(zip(sorted(pages), ex.map(read, sorted(pages))))
     data = [(pg, k, row) for pg in sorted(pages) for k, row in enumerate(cells[pg])
-            if row and not any(HEAD.search(v) for v in row.values()) and not all(re.fullmatch(r"\W*[0-9०-९]*\W*", v) for v in row.values())]
+            # a head row: a head word in a cell without a number, and not two cells with numbers (a data row has its serial,
+            # ward and address numbers; "प्रभाग क्रमांक १ (अ)" is a ward cell, not a head: Ichalkaranji 2026)
+            if row and not is_head(row) and not all(re.fullmatch(r"\W*[0-9०-९]*\W*", v) for v in row.values())]
     role = roles([row for _, _, row in data])
     recs = []
     if "name" not in role:

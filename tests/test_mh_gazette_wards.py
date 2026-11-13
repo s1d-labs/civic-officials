@@ -39,3 +39,30 @@ def test_sangli_ward_cells_in_brackets(monkeypatch):
     recs = _parse(monkeypatch, 33, 33)
     assert len(recs) == 11 and {d["ward_no"] for _, d in recs} == {"18", "19", "20"}
 
+
+
+def _parse_ich(monkeypatch, first, last):
+    cells = json.loads(gzip.decompress((DATA / "ichalkaranji_ocr_cells_p10_p16.json.gz").read_bytes()))
+    monkeypatch.setattr(gj, "ocr_boxes", lambda pdf, page, boxes, tmp, lang, **k: cells[str(page)])
+    p = {"kind": "form-mh", "slug": "ichalkaranji-mc", "body": "Ichalkaranji Municipal Corporation", "lgd_code": "251619",
+         "url": "https://egazzete.mahaonline.gov.in/Forms/GazetteSearch.aspx", "first": first, "last": last}
+    return mh.parse(str(PDF), p)
+
+
+@pytest.mark.skipif(not shutil.which("pdftotext"), reason="pdftotext (poppler) not installed")
+def test_ichalkaranji_ward_cells_with_kramank(monkeypatch):
+    """Pages 10-16 (OCR cells read here, Tesseract 5.3.4 mar, 2026-11-14): the ward cell reads "प्रभाग क्रमांक १ (अ)", and
+    "क्रमांक" is a head word, so every row was taken as a head row: 0 records (items mh-div-ichalkaranji-mc-p10, -p16).
+    Now 65 records = 15 wards x 4 seats + ward 16 x 5 seats; the local front "शिव-शाहू विकास आघाडी" is the party."""
+    recs = _parse_ich(monkeypatch, 10, 15) + _parse_ich(monkeypatch, 16, 16)
+    assert len(recs) == len({rid for rid, _ in recs}) == 65
+    wards = {}
+    for _, d in recs:
+        wards[d["ward_no"]] = wards.get(d["ward_no"], 0) + 1
+    assert sorted(wards, key=int) == [str(n) for n in range(1, 17)] and wards["16"] == 5 and wards["1"] == 4
+    d = dict(recs)
+    a = d["councillor:MH:ichalkaranji-mc:1-अ"]
+    assert a["name"] == "लोखंडे स्वाती राजेंद्र" and a["reservation"] == "SC woman" and a["party"] == "शिव-शाहू विकास आघाडी"
+    assert d["councillor:MH:ichalkaranji-mc:2-क"]["name"] == "जाधव रणजीत गंगाराम"       # OCR lost "२ (क)": text layer
+    assert d["councillor:MH:ichalkaranji-mc:16-इ"]["name"] == "सुनील शंकरराव तेलनाडे"
+    assert sum(x["party"] == "BJP" for x in d.values()) == 43
