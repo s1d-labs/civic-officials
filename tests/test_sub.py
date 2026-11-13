@@ -100,9 +100,9 @@ def test_discover_fallback_portal_pages_chandauli():
     assert why == "" and [f[0] for f in files] == ["depts/sub_s3waas/chandauli.nic.in-home.html.gz",
                                                    "depts/sub_s3waas/chandauli.nic.in-tehsil.html.gz"] and len(recs) == 10
     d = dict(recs)
-    s = d["dept:sub_s3waas:chandauli.nic.in:subdivision:sakaldiha"]
+    s = d["dept:sub_s3waas:chandauli.nic.in:page:subdivision:sakaldiha"]
     assert s["post"] == "Sub-Divisional Magistrate" and s["phone"] == "9454417060" and s["level"] == "subdivision"
-    t = d["dept:sub_s3waas:chandauli.nic.in:tehsil:sakaldiha"]
+    t = d["dept:sub_s3waas:chandauli.nic.in:page:tehsil:sakaldiha"]
     assert t["post"] == "Tahsildar" and t["phone"] == "9454417064" and t["dept"] == "revenue" and t["level"] == "subdistrict"
     assert t["src_url"] == "https://chandauli.nic.in/tehsil/" and set(t["src_pos"]) == {"table", "row"}
     for _, r in recs:
@@ -119,20 +119,33 @@ def _tab(name, url, state):
 def test_table_layouts():
     # headerless "post - place | phone, email" rows (Sheikhpura, archive copy 2026-11-05)
     d = dict(_tab("s3waas_sheikhpura_subdivision_block.html", "https://sheikhpura.nic.in/sub-division-block/", "BR"))
-    b = d["dept:sub_s3waas:sheikhpura.nic.in:block:barbigha"]
+    b = d["dept:sub_s3waas:sheikhpura.nic.in:page:block:barbigha"]
     assert b["post"] == "Block Development Officer" and b["phone"] == "9431818578" and b["email"] == "bdo.bar-sp-bih@nic.in"
-    assert len(d) == 6 and d["dept:sub_s3waas:sheikhpura.nic.in:block:ghatkusumbha"]["phone"] == "7549346830, 9431818264"
+    assert len(d) == 6 and d["dept:sub_s3waas:sheikhpura.nic.in:page:block:ghatkusumbha"]["phone"] == "7549346830, 9431818264"
     # "Block Name | Email Id | No. of Panchayat ..." (Hazaribag): email only, counts left out
     recs = _tab("s3waas_hazaribag_blocks.html", "https://hazaribag.nic.in/blocks/", "JH")
     check_records(recs, "sub_s3waas", "rural_development")
-    h = dict(recs)["dept:sub_s3waas:hazaribag.nic.in:block:barhi"]
+    h = dict(recs)["dept:sub_s3waas:hazaribag.nic.in:page:block:barhi"]
     assert h["email"] == "bdobarhi@gmail.com" and h["post"] == "Block Development Officer" and "phone" not in h
     # "Office | Contact No | EMail | Office Address" (Navsari): Prant office = sub-division, Mamlatdar office = taluka
     d = dict(_tab("s3waas_navsari_subdivision_blocks.html", "https://navsari.nic.in/subdivision-blocks/", "GJ"))
-    n = d["dept:sub_s3waas:navsari.nic.in:subdivision:chikhali"]
+    n = d["dept:sub_s3waas:navsari.nic.in:page:subdivision:chikhali"]
     assert n["post"] == "Prant Officer" and n["phone"] == "02637233544" and n["office"] == "Prant,Chikhali"
     assert any(r["post"] == "Mamlatdar" and r["level"] == "subdistrict" for r in d.values())
     # a bare "Name" column of one-word places (Ayodhya): the place, not a person
     d = dict(_tab("s3waas_ayodhya_subdivision_blocks.html", "https://ayodhya.nic.in/subdivision-blocks/", "UP"))
-    a = d["dept:sub_s3waas:ayodhya.nic.in:block:masodha"]
+    a = d["dept:sub_s3waas:ayodhya.nic.in:page:block:masodha"]
     assert "name" not in a and a["area"] == "Masodha" and a["email"] == "bdo.msd@gmail.com"
+
+
+def test_gadwal_mandal_table_ids_do_not_meet_the_card_ids():
+    """Gadwal /mandals/ (the full saved copy, 2026-11-13): 14 mandal tahsildars with name and mobile. Their ids are not those of the
+    /tehsil/ category cards (dept:sub_s3waas:gadwal.telangana.gov.in:tehsil:gadwal ...), which overwrote 7 of them before."""
+    import gzip
+    html = gzip.decompress((DATA / "sub/s3waas_gadwal_mandals_full.html.gz").read_bytes()).decode("utf-8")
+    recs = mod("sub_s3waas").table_records(html, "https://gadwal.telangana.gov.in/mandals/", {"state": "TG", "district": "Gadwal"})
+    d = dict(recs)
+    assert len(recs) == 14 and all(k.startswith("dept:sub_s3waas:gadwal.telangana.gov.in:page:tehsil:") for k in d)
+    assert sum(1 for r in d.values() if r.get("name")) == 14 and sum(1 for r in d.values() if r.get("phone")) == 13
+    g = d["dept:sub_s3waas:gadwal.telangana.gov.in:page:tehsil:gadwal"]
+    assert (g["name"], g["phone"], g["post"]) == ("Sri Mallikarjun", "9000101492", "Tahsildar")
