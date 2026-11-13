@@ -1,0 +1,22 @@
+[
+ {
+  "key": "th_jk-jammu",
+  "payload": {
+   "reader": "th_jk",
+   "part": "jammu",
+   "url": "https://ulbjammu.jk.gov.in/ulb%20AboUsWhoSWho.html",
+   "state": "JK",
+   "india_only": true
+  }
+ },
+ {
+  "key": "th_jk-kashmir",
+  "payload": {
+   "reader": "th_jk",
+   "part": "kashmir",
+   "url": "https://ulbk.jk.gov.in/Key%20Contacts%20Urban%20Local%20Bodies%20of%20Kashmir%20Division.pdf",
+   "state": "JK",
+   "india_only": true
+  }
+ }
+]

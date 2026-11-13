@@ -1,0 +1,387 @@
+{
+ "note": "body name (type words cut, a-z only) -> LGD local_body_code; made 2026-11-13 by name match in the state against civic.ulb, each match checked by eye (Tangmarg = Gulmarg Tangmarg)",
+ "rows": {
+  "achabal": "248172",
+  "akhnoor": "248192",
+  "anantnag": "248171",
+  "arnia": "248198",
+  "ashmuqam": "296990",
+  "awantipora": "248165",
+  "bandipora": "248146",
+  "banihal": "248036",
+  "baramulla": "248151",
+  "baribrahmana": "248199",
+  "basholi": "276585",
+  "batote": "248039",
+  "beerwah": "248158",
+  "bhaderwah": "248040",
+  "bijbehara": "248169",
+  "billawar": "248204",
+  "bishnah": "248197",
+  "budgam": "248159",
+  "chadoora": "253136",
+  "chararisharief": "248161",
+  "chenani": "276588",
+  "devsar": "296987",
+  "doda": "248038",
+  "dooruverinaag": "248176",
+  "frisal": "296989",
+  "ganderbal": "248155",
+  "ghoumanhasan": "248195",
+  "hajin": "248147",
+  "handwara": "248035",
+  "hiranagar": "276594",
+  "jourian": "248191",
+  "kalakote": "296984",
+  "kathua": "276581",
+  "katra": "276591",
+  "khansahib": "248160",
+  "khour": "248193",
+  "khrew": "248163",
+  "kishtwar": "248041",
+  "kokernag": "248173",
+  "kulgam": "248174",
+  "kunzer": "248153",
+  "kupwara": "248034",
+  "lakhanpur": "276584",
+  "langate": "248139",
+  "magam": "248157",
+  "mattan": "248170",
+  "nowshera": "276593",
+  "pahalgam": "248168",
+  "pampore": "248162",
+  "parole": "276586",
+  "pattan": "248150",
+  "poonch": "248042",
+  "pulwama": "248166",
+  "qazigund": "248175",
+  "rajouri": "276592",
+  "ramban": "248037",
+  "ramgarh": "248203",
+  "ramnagar": "276589",
+  "reasi": "276590",
+  "rspura": "248196",
+  "samba": "248202",
+  "seerhamdan": "296991",
+  "shopian": "248167",
+  "sopore": "248149",
+  "sumbal": "248148",
+  "sunderbani": "248190",
+  "surankote": "253142",
+  "tangmarg": "248154",
+  "thannamandi": "248187",
+  "thathri": "254926",
+  "tral": "248164",
+  "udhampur": "276587",
+  "uri": "248152",
+  "vijaypur": "248201",
+  "watergam": "296985",
+  "yaripora": "296988"
+ },
+ "lgd": {
+  "248034": {
+   "name": "Municipal Council Kupwara",
+   "district": "Kupwara"
+  },
+  "248035": {
+   "name": "Municipal Committee Handwara",
+   "district": "Kupwara"
+  },
+  "248036": {
+   "name": "Municipal Committee Banihal",
+   "district": "Ramban"
+  },
+  "248037": {
+   "name": "Municipal Council Ramban",
+   "district": "Ramban"
+  },
+  "248038": {
+   "name": "Municipal Council Doda",
+   "district": "Doda"
+  },
+  "248039": {
+   "name": "Municipal Committee Batote",
+   "district": "Ramban"
+  },
+  "248040": {
+   "name": "Municipal Committee Bhaderwah",
+   "district": "Doda"
+  },
+  "248041": {
+   "name": "Municipal Council Kishtwar",
+   "district": "Kishtwar"
+  },
+  "248042": {
+   "name": "Municipal Council Poonch",
+   "district": "Poonch"
+  },
+  "248139": {
+   "name": "Municipal Committee Langate",
+   "district": "Kupwara"
+  },
+  "248146": {
+   "name": "Municipal Council Bandipora",
+   "district": "Bandipora"
+  },
+  "248147": {
+   "name": "Municipal Committee Hajin",
+   "district": "Bandipora"
+  },
+  "248148": {
+   "name": "Municipal Committee Sumbal",
+   "district": "Bandipora"
+  },
+  "248149": {
+   "name": "Municipal Council Sopore",
+   "district": "Baramulla"
+  },
+  "248150": {
+   "name": "Municipal Committee Pattan",
+   "district": "Baramulla"
+  },
+  "248151": {
+   "name": "Municipal Council Baramulla",
+   "district": "Baramulla"
+  },
+  "248152": {
+   "name": "Municipal Committee Uri",
+   "district": "Baramulla"
+  },
+  "248153": {
+   "name": "Municipal Committee Kunzer",
+   "district": "Baramulla"
+  },
+  "248154": {
+   "name": "Municipal Committee Gulmarg Tangmarg",
+   "district": "Baramulla"
+  },
+  "248155": {
+   "name": "Municipal Council Ganderbal",
+   "district": "Ganderbal"
+  },
+  "248157": {
+   "name": "Municipal Committee Magam",
+   "district": "Budgam"
+  },
+  "248158": {
+   "name": "Municipal Committee Beerwah",
+   "district": "Budgam"
+  },
+  "248159": {
+   "name": "Municipal Council Budgam",
+   "district": "Budgam"
+  },
+  "248160": {
+   "name": "Municipal Committee Khansahib",
+   "district": "Budgam"
+  },
+  "248161": {
+   "name": "Municipal Committee Chrari Sharief",
+   "district": "Budgam"
+  },
+  "248162": {
+   "name": "Municipal Committee Pampore",
+   "district": "Pulwama"
+  },
+  "248163": {
+   "name": "Municipal Committee Khrew",
+   "district": "Pulwama"
+  },
+  "248164": {
+   "name": "Municipal Committee Tral",
+   "district": "Pulwama"
+  },
+  "248165": {
+   "name": "Municipal Committee Awantipora",
+   "district": "Pulwama"
+  },
+  "248166": {
+   "name": "Municipal Council Pulwama",
+   "district": "Pulwama"
+  },
+  "248167": {
+   "name": "Municipal Council Shopian",
+   "district": "Shopian"
+  },
+  "248168": {
+   "name": "Municipal Committee Pahalgam",
+   "district": "Anantnag"
+  },
+  "248169": {
+   "name": "Municipal Committee Bijbehara",
+   "district": "Anantnag"
+  },
+  "248170": {
+   "name": "Municipal Committee Mattan",
+   "district": "Anantnag"
+  },
+  "248171": {
+   "name": "Municipal Council Anantnag",
+   "district": "Anantnag"
+  },
+  "248172": {
+   "name": "Municipal Committee Achabal",
+   "district": "Anantnag"
+  },
+  "248173": {
+   "name": "Municipal Committee Kokernag",
+   "district": "Anantnag"
+  },
+  "248174": {
+   "name": "Municipal Council Kulgam",
+   "district": "Kulgam"
+  },
+  "248175": {
+   "name": "Municipal Committee Qazigund",
+   "district": "Anantnag"
+  },
+  "248176": {
+   "name": "Municipal Committee Dooru Verinag",
+   "district": "Anantnag"
+  },
+  "248187": {
+   "name": "Municipal Committee Thanamandi",
+   "district": "Rajouri"
+  },
+  "248190": {
+   "name": "Municipal Committee Sunderbani",
+   "district": "Rajouri"
+  },
+  "248191": {
+   "name": "Municipal Committee Jourian",
+   "district": "Jammu"
+  },
+  "248192": {
+   "name": "Municipal Committee Akhnoor",
+   "district": "Jammu"
+  },
+  "248193": {
+   "name": "Municipal Committee Khour",
+   "district": "Jammu"
+  },
+  "248195": {
+   "name": "Municipal Committee Ghou-Manhasan",
+   "district": "Jammu"
+  },
+  "248196": {
+   "name": "Municipal Committee R S Pura",
+   "district": "Jammu"
+  },
+  "248197": {
+   "name": "Municipal Committee Bishnah",
+   "district": "Jammu"
+  },
+  "248198": {
+   "name": "Municipal Committee Arnia",
+   "district": "Jammu"
+  },
+  "248199": {
+   "name": "Municipal Committee Bari Brahmana",
+   "district": "Samba"
+  },
+  "248201": {
+   "name": "Municipal Committee Vijaypur",
+   "district": "Samba"
+  },
+  "248202": {
+   "name": "Municipal Council Samba",
+   "district": "Samba"
+  },
+  "248203": {
+   "name": "Municipal Committee Ramgarh",
+   "district": "Samba"
+  },
+  "248204": {
+   "name": "Municipal Committee Billawar",
+   "district": "Kathua"
+  },
+  "253136": {
+   "name": "Municipal Committee Chadoora",
+   "district": "Budgam"
+  },
+  "253142": {
+   "name": "Municipal Committee Surankote",
+   "district": "Poonch"
+  },
+  "254926": {
+   "name": "Municipal Committee Thathri",
+   "district": "Doda"
+  },
+  "276581": {
+   "name": "Municipal Council Kathua",
+   "district": "Kathua"
+  },
+  "276584": {
+   "name": "Municipal Committee Lakhanpur",
+   "district": "Kathua"
+  },
+  "276585": {
+   "name": "Municipal Committee Basohli",
+   "district": "Kathua"
+  },
+  "276586": {
+   "name": "Municipal Committee Parole",
+   "district": "Kathua"
+  },
+  "276587": {
+   "name": "Municipal Council Udhampur",
+   "district": "Udhampur"
+  },
+  "276588": {
+   "name": "Municipal Committee Chenani",
+   "district": "Udhampur"
+  },
+  "276589": {
+   "name": "Municipal Committee Ramnagar",
+   "district": "Udhampur"
+  },
+  "276590": {
+   "name": "Municipal Council Reasi",
+   "district": "Reasi"
+  },
+  "276591": {
+   "name": "Municipal Committee Katra",
+   "district": "Reasi"
+  },
+  "276592": {
+   "name": "Municipal Council Rajouri",
+   "district": "Rajouri"
+  },
+  "276593": {
+   "name": "Municipal Committee Nowshera",
+   "district": "Rajouri"
+  },
+  "276594": {
+   "name": "Municipal Committee Hiranagar",
+   "district": "Kathua"
+  },
+  "296984": {
+   "name": "Municipal Committee Kalakote",
+   "district": "Rajouri"
+  },
+  "296985": {
+   "name": "Municipal Committee Watergam",
+   "district": "Baramulla"
+  },
+  "296987": {
+   "name": "Municipal Committee Devsar",
+   "district": "Kulgam"
+  },
+  "296988": {
+   "name": "Municipal Committee Yaripora",
+   "district": "Kulgam"
+  },
+  "296989": {
+   "name": "Municipal Committee Frisal",
+   "district": "Kulgam"
+  },
+  "296990": {
+   "name": "Municipal Committee Ashmuqam",
+   "district": "Anantnag"
+  },
+  "296991": {
+   "name": "Municipal Committee Seer Hamdan",
+   "district": "Anantnag"
+  }
+ }
+}

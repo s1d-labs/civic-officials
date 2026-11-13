@@ -1,0 +1,62 @@
+[
+ {
+  "key": "th_up_cug-p01",
+  "payload": {
+   "reader": "th_up_cug",
+   "url": "http://localbodies.up.nic.in/pdf/ulb-cug2005.pdf",
+   "state": "UP",
+   "first": 1,
+   "last": 4,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/th_up_cug/cug.pdf",
+   "india_only": false,
+   "expected": 0
+  }
+ },
+ {
+  "key": "th_up_cug-p05",
+  "payload": {
+   "reader": "th_up_cug",
+   "url": "http://localbodies.up.nic.in/pdf/ulb-cug2005.pdf",
+   "state": "UP",
+   "first": 5,
+   "last": 8,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/th_up_cug/cug.pdf",
+   "india_only": false,
+   "expected": 0
+  }
+ },
+ {
+  "key": "th_up_cug-p09",
+  "payload": {
+   "reader": "th_up_cug",
+   "url": "http://localbodies.up.nic.in/pdf/ulb-cug2005.pdf",
+   "state": "UP",
+   "first": 9,
+   "last": 12,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/th_up_cug/cug.pdf",
+   "india_only": false,
+   "expected": 0
+  }
+ },
+ {
+  "key": "th_up_cug-p13",
+  "payload": {
+   "reader": "th_up_cug",
+   "url": "http://localbodies.up.nic.in/pdf/ulb-cug2005.pdf",
+   "state": "UP",
+   "first": 13,
+   "last": 16,
+   "open": true,
+   "ocr": true,
+   "stored": "civic-officials-depts-open/depts/th_up_cug/cug.pdf",
+   "india_only": false,
+   "expected": 0
+  }
+ }
+]
