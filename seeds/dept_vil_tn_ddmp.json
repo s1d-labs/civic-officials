@@ -1,0 +1,505 @@
+[
+ {
+  "key": "vil_tn_ddmp:ariyalur",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Ariyalur Dist -DDMP 2024(Signed).pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Ariyalur",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy",
+   "expected": 29
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:chengalpattu",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Chengalpattu DDMP 2024-2025 (2).pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Chengalpattu",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:chennai",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/chennai Gcc ddmp.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Chennai",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:coimbatore",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Coimbatore_DDMP 2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Coimbatore",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy",
+   "expected": 288
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:cuddalore",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Cuddalore - District Disaster Management Plan 2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Cuddalore",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:kanniyakumari",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/DDMP Kanniyakumari District 2024 update.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Kanniyakumari",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:dharmapuri",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Dharmapuri District DDMA Plan-24.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Dharmapuri",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:dindigul",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/dindukal DDMA Plan.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Dindigul",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:erode",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/erode 2024100947(1).pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Erode",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:kallakurichi",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/kallakurichi DDMP Booklet -2024-2025-11.10.2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Kallakurichi",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:kancheepuram",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/kanchipuram KPM_Dist_DDMP_2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Kancheepuram",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:karur",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Karur.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Karur",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy",
+   "expected": 170
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:krishnagiri",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Krishnagiri.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Krishnagiri",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:madurai",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Madurai District DDMP Book 2024-25 (2).pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Madurai",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:mayiladuthurai",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Mayiladuthurai District Checklist  14-10-2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Mayiladuthurai",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy",
+   "scanned": true
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:nagapattinam",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/nagapattinam 1-18 - TOPIC - DM PLAN - 2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Nagapattinam",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy",
+   "expected": 201
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:namakkal",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Namakkal district.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Namakkal",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy",
+   "expected": 281
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:the-nilgiris",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Nilgiris-DDMP.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "The Nilgiris",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:perambalur",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Perambalur DISTRICT DISASTER MANAGEMENT PLAN-2024 (12.10.2024).pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Perambalur",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:pudukkottai",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/pudukotai DISTRICT DISASTER MANAGEMENT PLAN 2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Pudukkottai",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:ramanathapuram",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Ramanathapuram - DDMP.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Ramanathapuram",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:ranipet",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/RANIPET - DDMP BOOK - 2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Ranipet",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:salem",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Salem.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Salem",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:sivaganga",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Sivaganga DDMP Plan Book 2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Sivaganga",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:tenkasi",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Tenkasi District- DDMP -2024 (1).pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Tenkasi",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy",
+   "expected": 120
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:thanjavur",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Thanjavur DDMA Plan Book 2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Thanjavur",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:theni",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Theni DDMP -2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Theni",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:thiruvarur",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Thiruvarur.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Thiruvarur",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:thoothukkudi",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Thoothukudi.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Thoothukkudi",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:tirunelveli",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Tirunelveli DDMP V5.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Tirunelveli",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:tirupathur",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/TIRUPATHUR.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Tirupathur",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:tiruppur",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/TIRUPPUR DISTRICT - DDMP 2024- WORD.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Tiruppur",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:thiruvallur",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Tiruvallur DDMP-2024- FINAL.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Thiruvallur",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:tiruvannamalai",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Tiruvannamalai.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Tiruvannamalai",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:tiruchirappalli",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Trichy.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Tiruchirappalli",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy",
+   "expected": 439
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:vellore",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Vellore.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Vellore",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:viluppuram",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/VilupuramDDMP PLAN 2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Viluppuram",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "vil_tn_ddmp:virudhunagar",
+  "payload": {
+   "reader": "vil_tn_ddmp",
+   "url": "http://tnsdma.tn.gov.in/img/document/DDMPPDF/Virudhunagar Dist DDMP-2024.pdf",
+   "host": "tnsdma.tn.gov.in",
+   "district": "Virudhunagar",
+   "state": "TN",
+   "plan": "DDMP 2024",
+   "india_only": true,
+   "route": "proxy",
+   "scanned": true
+  }
+ }
+]
