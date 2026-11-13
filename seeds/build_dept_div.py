@@ -32,6 +32,8 @@ ITEMS = {
     "BR": [
         {"key": "br-magadh", "division": "Magadh", "urls": ["https://magadhdivision.bihar.gov.in/whoiswho.php",
                                                            "https://magadhdivision.bihar.gov.in/contact_commissioner.php"], **DIRECT},
+        {"key": "br-tirhut", "division": "Tirhut", "urls": ["https://tirhutdivision.nic.in/whos-who/",
+                                                           "https://tirhutdivision.nic.in/directory/"], **ABROAD},
     ],
     "MH": [
         {"key": "mh-konkan", "division": "Konkan",
