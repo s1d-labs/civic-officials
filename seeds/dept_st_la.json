@@ -1,0 +1,12 @@
+[
+ {
+  "key": "st_la_dir:directory",
+  "payload": {
+   "reader": "st_la_dir",
+   "url": "https://ladakh.gov.in/directory/",
+   "state": "LA",
+   "india_only": true,
+   "route": "proxy"
+  }
+ }
+]

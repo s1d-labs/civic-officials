@@ -1,0 +1,38 @@
+{
+ "source": "revenue divisions as the state's revenue department lists them, written by hand 2026-11-13 with LGD district codes (lgd.districts); not checked against the latest state notification",
+ "divisions": {
+  "Patiala": [
+   "41",
+   "43",
+   "605",
+   "30",
+   "36",
+   "737"
+  ],
+  "Rupnagar": [
+   "42",
+   "608",
+   "40"
+  ],
+  "Jalandhar": [
+   "34",
+   "35",
+   "33",
+   "27",
+   "32",
+   "662",
+   "609"
+  ],
+  "Ferozepur": [
+   "31",
+   "651",
+   "38"
+  ],
+  "Faridkot": [
+   "29",
+   "28",
+   "37",
+   "39"
+  ]
+ }
+}

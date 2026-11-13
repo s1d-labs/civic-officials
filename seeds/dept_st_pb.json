@@ -1,0 +1,13 @@
+[
+ {
+  "key": "st_pb_whoswho:admin-secretaries",
+  "payload": {
+   "reader": "st_pb_whoswho",
+   "url": "https://punjab.gov.in/government/whos-who/admin-secretaries/",
+   "cs_url": "https://punjab.gov.in/government/whos-who/chief-secretary/",
+   "state": "PB",
+   "india_only": true,
+   "route": "proxy"
+  }
+ }
+]

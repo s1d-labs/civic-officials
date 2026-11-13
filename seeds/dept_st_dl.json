@@ -1,0 +1,12 @@
+[
+ {
+  "key": "st_dl_police:important-contact",
+  "payload": {
+   "reader": "st_dl_police",
+   "url": "https://delhipolice.gov.in/important-contact.html",
+   "state": "DL",
+   "india_only": true,
+   "route": "proxy"
+  }
+ }
+]
