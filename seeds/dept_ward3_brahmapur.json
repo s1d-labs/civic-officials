@@ -1,0 +1,92 @@
+[
+ {
+  "key": "ward3_brahmapur-account",
+  "payload": {
+   "reader": "ward3_brahmapur",
+   "url": "https://www.berhampur.gov.in/department.php?slug=account",
+   "state": "OD",
+   "section": "account",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ward3_brahmapur-engineering",
+  "payload": {
+   "reader": "ward3_brahmapur",
+   "url": "https://www.berhampur.gov.in/department.php?slug=engineering",
+   "state": "OD",
+   "section": "engineering",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ward3_brahmapur-establishment",
+  "payload": {
+   "reader": "ward3_brahmapur",
+   "url": "https://www.berhampur.gov.in/department.php?slug=establishment",
+   "state": "OD",
+   "section": "establishment",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ward3_brahmapur-fees",
+  "payload": {
+   "reader": "ward3_brahmapur",
+   "url": "https://www.berhampur.gov.in/department.php?slug=fees",
+   "state": "OD",
+   "section": "fees",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ward3_brahmapur-health",
+  "payload": {
+   "reader": "ward3_brahmapur",
+   "url": "https://www.berhampur.gov.in/department.php?slug=health",
+   "state": "OD",
+   "section": "health",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ward3_brahmapur-planning",
+  "payload": {
+   "reader": "ward3_brahmapur",
+   "url": "https://www.berhampur.gov.in/department.php?slug=planning",
+   "state": "OD",
+   "section": "planning",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ward3_brahmapur-record",
+  "payload": {
+   "reader": "ward3_brahmapur",
+   "url": "https://www.berhampur.gov.in/department.php?slug=record",
+   "state": "OD",
+   "section": "record",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ward3_brahmapur-town-survey",
+  "payload": {
+   "reader": "ward3_brahmapur",
+   "url": "https://www.berhampur.gov.in/department.php?slug=town-survey",
+   "state": "OD",
+   "section": "town-survey",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ward3_brahmapur-welfare",
+  "payload": {
+   "reader": "ward3_brahmapur",
+   "url": "https://www.berhampur.gov.in/department.php?slug=welfare",
+   "state": "OD",
+   "section": "welfare",
+   "route": "abroad"
+  }
+ }
+]
