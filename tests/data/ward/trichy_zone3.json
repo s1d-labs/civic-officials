@@ -1,0 +1,5 @@
+{"module": "ward_trichy",
+ "payload": {"reader": "ward_trichy", "url": "https://www.trichycorporation.gov.in/landing/wardofficers/3", "zonal": "https://www.trichycorporation.gov.in/landing/zonaladmins/3", "state": "TN", "zone_no": 3},
+ "routes": {"https://www.trichycorporation.gov.in/landing/wardofficers/3": "trichy_ward3.html", "https://www.trichycorporation.gov.in/landing/zonaladmins/3": "trichy_zonal1.html"},
+ "min_records": 2, "min_wards": 4,
+ "expect": [{"post": "Sanitary Inspector", "name": "Remila", "level": "ward", "wards": ["16", "35"]}]}

@@ -1,0 +1,6 @@
+{"module": "ward_kamrc",
+ "payload": {"reader": "ward_kamrc", "url": "http://davanagerecity.mrc.gov.in/en/Engwardstaffs", "state": "KA", "city": "davanagere", "page": "Engwardstaffs", "india_only": true},
+ "routes": {"http://davanagerecity.mrc.gov.in/en/Engwardstaffs": "kamrc_davanagere_eng.html"},
+ "min_records": 8, "min_wards": 2,
+ "expect": [{"post": "Valve man", "name": "^Veeresh$", "wards": ["1"]},
+            {"post": "Valve man", "name": "^Nagendrappa$", "wards": ["21"]}]}

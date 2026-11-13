@@ -1,0 +1,7 @@
+{"module": "ward_kamrc",
+ "payload": {"reader": "ward_kamrc", "url": "http://ballaricity.mrc.gov.in/en/Engwardstaffs", "state": "KA", "city": "ballari", "page": "Engwardstaffs", "india_only": true},
+ "routes": {"http://ballaricity.mrc.gov.in/en/Engwardstaffs": "kamrc_ballari_eng.html"},
+ "min_records": 14, "min_wards": 4,
+ "expect": [{"post": "Supervisor", "name": "^MAHINDRA$", "wards": ["24"]},
+            {"post": "Valve man", "name": "^RAMANJI$", "wards": ["17", "18"]},
+            {"post": "Valve man", "name": "^TIRUPAL$", "wards": ["17"]}]}
