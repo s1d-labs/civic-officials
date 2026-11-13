@@ -1,0 +1,182 @@
+[
+ {
+  "key": "vil_rev_north:kathua-revenue-contact-cug",
+  "payload": {
+   "reader": "vil_rev_north",
+   "url": "https://kathua.nic.in/revenue-contact-cug/",
+   "state": "JK",
+   "district": "Kathua",
+   "route": "abroad",
+   "india_only": false,
+   "in_archive": "yes, archive.s1d.me copy 2026-11-05 (vantage pool)",
+   "last_updated_seen": "2024-02-12",
+   "expect": {
+    "rows": 209,
+    "village": 131
+   }
+  }
+ },
+ {
+  "key": "vil_rev_north:kulgam-revenue-directory",
+  "payload": {
+   "reader": "vil_rev_north",
+   "url": "https://kulgam.nic.in/revenue-directory/",
+   "state": "JK",
+   "district": "Kulgam",
+   "route": "abroad",
+   "india_only": false,
+   "in_archive": "yes, archive.s1d.me copy 2026-11-05 (vantage pool)",
+   "last_updated_seen": "2026-02-25",
+   "expect": {
+    "rows": 104,
+    "village": 61
+   }
+  }
+ },
+ {
+  "key": "vil_rev_north:ramban-revenue-official-directory",
+  "payload": {
+   "reader": "vil_rev_north",
+   "url": "https://ramban.gov.in/revenue-official-directory/",
+   "state": "JK",
+   "district": "Ramban",
+   "route": "abroad",
+   "india_only": false,
+   "in_archive": "yes, archive.s1d.me copy 2026-11-11 (vantage pool)",
+   "last_updated_seen": "2025-06-23",
+   "expect": {
+    "rows": 92,
+    "village": 50
+   }
+  }
+ },
+ {
+  "key": "vil_rev_north:samba-revenue-cug-pdf",
+  "payload": {
+   "reader": "vil_rev_north",
+   "url": "https://cdn.s3waas.gov.in/s3a97da629b098b75c294dffdc3e463904/uploads/2022/09/2022090860.pdf",
+   "page": "https://samba.gov.in/document/contact-numbers-of-revenue-officers-officials-under-the-jurisdiction-of-district-samba/",
+   "tag": "samba-revenue-cug",
+   "state": "JK",
+   "district": "Samba",
+   "columns": [
+    "post",
+    "area",
+    "name"
+   ],
+   "route": "abroad",
+   "india_only": false,
+   "in_archive": "no (cdn.s3waas.gov.in); fetched once from dev-vps-3 2026-11-13: 200, text PDF, 2 pages",
+   "source_date": "2022-09-01",
+   "expect": {
+    "rows": 93,
+    "village": 54
+   }
+  }
+ },
+ {
+  "key": "vil_rev_north:srinagar-revenue-contacts-pdf",
+  "payload": {
+   "reader": "vil_rev_north",
+   "url": "https://cdn.s3waas.gov.in/s3f4b9ec30ad9f68f89b29639786cb62ef/uploads/2022/09/2022091039.pdf",
+   "page": "https://srinagar.nic.in/notice/contact-nos-of-revenue-officers-officials/",
+   "tag": "srinagar-revenue-contacts",
+   "state": "JK",
+   "district": "Srinagar",
+   "columns": [
+    "district",
+    "post",
+    "area"
+   ],
+   "route": "abroad",
+   "india_only": false,
+   "in_archive": "no (cdn.s3waas.gov.in); fetched once from dev-vps-3 2026-11-13: 200, text PDF, 3 pages",
+   "source_date": "2022-09-08",
+   "expect": {
+    "rows": 86,
+    "village": 56
+   }
+  }
+ },
+ {
+  "key": "vil_rev_north:jkrevenue-patwarhalqaj",
+  "payload": {
+   "reader": "vil_rev_north",
+   "url": "https://jkrevenue.nic.in/patwarhalqaj.html",
+   "state": "JK",
+   "post": "Patwari",
+   "route": "proxy",
+   "india_only": true,
+   "in_archive": "yes, archive.s1d.me copy 2026-11-05 (vantages IN / IN-proxy only: India-only, not checked abroad)",
+   "expect": {
+    "rows": 6
+   }
+  }
+ },
+ {
+  "key": "vil_rev_north:jkrevenue-patwarhalqaku",
+  "payload": {
+   "reader": "vil_rev_north",
+   "url": "https://jkrevenue.nic.in/patwarhalqaku.html",
+   "state": "JK",
+   "post": "Patwari",
+   "route": "proxy",
+   "india_only": true,
+   "in_archive": "yes, archive.s1d.me copy 2026-11-05 (vantages IN / IN-proxy only: India-only, not checked abroad)",
+   "expect": {
+    "rows": 5
+   }
+  }
+ },
+ {
+  "key": "vil_rev_north:jkrevenue-patwarhalqass",
+  "payload": {
+   "reader": "vil_rev_north",
+   "url": "https://jkrevenue.nic.in/patwarhalqass.html",
+   "state": "JK",
+   "post": "Patwari",
+   "district": "Srinagar",
+   "route": "proxy",
+   "india_only": true,
+   "in_archive": "yes, archive.s1d.me copy 2026-11-05 (vantages IN / IN-proxy only: India-only, not checked abroad)",
+   "expect": {
+    "rows": 29
+   }
+  }
+ },
+ {
+  "key": "vil_rev_north:ambala-revenue",
+  "payload": {
+   "reader": "vil_rev_north",
+   "url": "https://ambala.gov.in/revenue/",
+   "state": "HR",
+   "district": "Ambala",
+   "route": "abroad",
+   "india_only": false,
+   "in_archive": "yes, archive.s1d.me copy 2026-11-05 (vantage pool)",
+   "expect": {
+    "rows": 84,
+    "villages": 499,
+    "roster": 50
+   }
+  }
+ },
+ {
+  "key": "vil_rev_north:kushinagar-lekhpal-posting-pdf",
+  "payload": {
+   "reader": "vil_rev_north",
+   "url": "https://cdn.s3waas.gov.in/s39de6d14fff9806d4bcd1ef555be766cd/uploads/2025/09/17587850888428.pdf",
+   "page": "https://kushinagar.nic.in/notice/regarding-the-posting-of-lekhpal/",
+   "tag": "kushinagar-lekhpal-posting",
+   "state": "UP",
+   "district": "Kushinagar",
+   "post": "Lekhpal",
+   "needs_ocr": true,
+   "note": "SCANNED: 2 pages, no text layer; the item keeps the file in the bucket; OCR later on the runners",
+   "route": "abroad",
+   "india_only": false,
+   "in_archive": "no (cdn.s3waas.gov.in); fetched once from dev-vps-3 2026-11-13: 200, 815 KB",
+   "source_date": "2025-09-25"
+  }
+ }
+]

@@ -1,0 +1,21 @@
+[
+ {
+  "key": "vil_up_gp_contacts:hathras",
+  "payload": {
+   "reader": "vil_up_gp_contacts",
+   "url": "https://hathras.nic.in/panchayat-sachivgram-pradhan-panchayat-sahayak-rojgar-sewak-ration-dealer-contact-list/",
+   "state": "UP",
+   "district": "Hathras",
+   "route": "abroad",
+   "india_only": false,
+   "in_archive": "yes, archive.s1d.me copy 2026-11-06 (vantage pool)",
+   "last_updated_seen": "2026-08-04",
+   "expect": {
+    "gram_panchayats": 462,
+    "records": 2032,
+    "sachiv": 462,
+    "pradhan": 462
+   }
+  }
+ }
+]
