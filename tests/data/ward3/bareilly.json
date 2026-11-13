@@ -1,0 +1,23 @@
+{
+ "module": "ward3_bareilly",
+ "payload": {
+  "reader": "ward3_bareilly",
+  "url": "https://nagarnigambareilly.com/Download/WorkPlanSafai/SafaiNayak.pdf",
+  "state": "UP"
+ },
+ "routes": {
+  "https://nagarnigambareilly.com/Download/WorkPlanSafai/SafaiNayak.pdf": "bareilly_stand_in.pdf"
+ },
+ "min_records": 70,
+ "expect": [
+  {
+   "post": "Sanitary Inspector",
+   "name": "संजीव",
+   "level": "zone"
+  },
+  {
+   "post": "Safai Nayak",
+   "name": "हवासिंह"
+  }
+ ]
+}
