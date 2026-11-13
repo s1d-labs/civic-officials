@@ -1,0 +1,156 @@
+[
+ {
+  "key": "vil_kl_s3waas:alappuzha:village_office",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://alappuzha.nic.in/en/villages/",
+   "host": "alappuzha.nic.in",
+   "district": "Alappuzha",
+   "state": "KL",
+   "kind": "village_office",
+   "expected": 93,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_kl_s3waas:ernakulam:village_office",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://ernakulam.nic.in/en/revenue/",
+   "host": "ernakulam.nic.in",
+   "district": "Ernakulam",
+   "state": "KL",
+   "kind": "village_office",
+   "expected": 121,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_kl_s3waas:idukki:village_office",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://idukki.nic.in/en/revenue/",
+   "host": "idukki.nic.in",
+   "district": "Idukki",
+   "state": "KL",
+   "kind": "village_office",
+   "expected": 67,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_kl_s3waas:kollam:village_office",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://kollam.nic.in/en/revenue-officers/",
+   "host": "kollam.nic.in",
+   "district": "Kollam",
+   "state": "KL",
+   "kind": "village_office",
+   "expected": 104,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_kl_s3waas:kozhikode:village_office",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://kozhikode.nic.in/en/about-district/adminstration/villages/",
+   "host": "kozhikode.nic.in",
+   "district": "Kozhikode",
+   "state": "KL",
+   "kind": "village_office",
+   "expected": 118,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_kl_s3waas:palakkad:village_office",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://palakkad.nic.in/en/villages/",
+   "host": "palakkad.nic.in",
+   "district": "Palakkad",
+   "state": "KL",
+   "kind": "village_office",
+   "expected": 157,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_kl_s3waas:pathanamthitta:village_office",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://pathanamthitta.nic.in/en/revenue/",
+   "host": "pathanamthitta.nic.in",
+   "district": "Pathanamthitta",
+   "state": "KL",
+   "kind": "village_office",
+   "expected": 70,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_kl_s3waas:thrissur:village_office",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://thrissur.nic.in/en/villages-255/",
+   "host": "thrissur.nic.in",
+   "district": "Thrissur",
+   "state": "KL",
+   "kind": "village_office",
+   "expected": 255,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_kl_s3waas:trivandrum:village_office",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://trivandrum.nic.in/en/villages/",
+   "host": "trivandrum.nic.in",
+   "district": "Thiruvananthapuram",
+   "state": "KL",
+   "kind": "village_office",
+   "expected": 121,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_kl_s3waas:wayanad:village_office",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://wayanad.gov.in/en/village-panchayats/",
+   "host": "wayanad.gov.in",
+   "district": "Wayanad",
+   "state": "KL",
+   "kind": "village_office",
+   "expected": 49,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_kl_s3waas:kasargod:gram_panchayat",
+  "payload": {
+   "reader": "vil_kl_s3waas",
+   "url": "https://kasargod.nic.in/en/village-panchayats/",
+   "host": "kasargod.nic.in",
+   "district": "Kasaragod",
+   "state": "KL",
+   "kind": "gram_panchayat",
+   "expected": 75,
+   "india_only": false,
+   "route": "abroad"
+  }
+ }
+]
