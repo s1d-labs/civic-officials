@@ -203,6 +203,41 @@ def _assign(seg, anchors):
     return out
 
 
+def name_anchors(seg, cs, cols):
+    """Lines of seg that open a row of a table without a serial column: the first chunk starts in the name column (left of the
+    middle between the name and the next column), the line has a second chunk, and it has Hindi text or a phone (section titles
+    such as "SUB DIVISIONAL MAGISTRATE" or "Agriculture / Horticulture / Mandi" have neither)."""
+    q = cols["name"]
+    lo = (cs[q - 1] + cs[q]) / 2 if q else -10 ** 6
+    hi = (cs[q] + cs[q + 1]) / 2 if q + 1 < len(cs) else 10 ** 6
+    out = []
+    for j, L in enumerate(seg):
+        ch = _field._chunks(L[3])
+        if len(ch) < 2 or not (lo <= ch[0][0] < hi) or not re.search(r"[A-Za-zऀ-ॿ]{2}", ch[0][1]):
+            continue
+        first = re.sub(r"^(v-?\s?pk-?|अ\.?\s?चा\.?)\s+", "", ch[0][1])      # "v-pk-" / "अ.चा." = acting charge
+        if ROW_NO.match(L[3]) or not (re.search(r"[ऀ-ॿ]", L[3]) or MOBILE.search(L[3]) or KD_TITLE.match(first)
+                                      or TITLE.match(first) or re.match(r"MkW[0\-.]?(?=\s)", first)):     # Kruti Dev "MkW0" = डॉ0
+            continue
+        out.append(j)
+    return out
+
+
+def caption_lines(seg, cs, cols, anchors):
+    """Section titles inside a table without a serial column ("SUB DIVISIONAL MAGISTRATE", "Agriculture / Horticulture /
+    Mandi / KVK"): lines that are not row lines and have no Hindi text, no digit and no title word; they join no row."""
+    q = cols["name"]
+    hi = (cs[q] + cs[q + 1]) / 2 if q + 1 < len(cs) else 10 ** 6
+    out = set()
+    for j, L in enumerate(seg):
+        ch = _field._chunks(L[3])
+        if j in anchors or not ch or ch[0][0] >= hi:
+            continue
+        if not re.search(r"[ऀ-ॿ\d@]", L[3]) and not any(KD_TITLE.match(c) or TITLE.match(c) for _, c in ch):
+            out.add(j)
+    return out
+
+
 def table_rows(lines):
     """Rows of the tables in the page lines: a header line (dforms/_field rules) sets the columns until the next header; a line
     that starts with a serial number opens a row (when the table has none: a line with a phone or an email); other lines join the
@@ -225,12 +260,24 @@ def table_rows(lines):
         if not cols or not seg:
             continue
         cs = [x + len(c) / 2 for x, c in hd]
+        skip = set()
         anchors = [j for j, L in enumerate(seg) if ROW_NO.match(L[3])]
+        if cols.get("sno") is None and cols.get("name") is not None:
+            # no serial column (Banswara DLO list, 2026-11-14): a row starts on a line whose first chunk stands in the name
+            # column, beside a post or a phone; the few lines that start with a number there are phone or code cells
+            # (a table with no numbered line keeps the phone-line rows: Alwar 15224 reads right that way)
+            named = name_anchors(seg, cs, cols)
+            if len(anchors) >= 2 and len(named) > 5 * len(anchors):    # (no numbered lines: the phone lines below)
+                anchors = named
+                skip = caption_lines(seg, cs, cols, set(named))
         if len(anchors) < 2:
             anchors = [j for j, L in enumerate(seg) if PHONE.search(L[3]) or "@" in L[3]]
         if not anchors:
             continue
         own = _assign(seg, anchors)
+        for j in skip:
+            own.pop(j, None)
+            provenance.skip_line(seg[j][2], "section title in a table without a serial column")
         cap = _esw.clean(lines[hi - 1][3])[:120] if hi and len(_field._chunks(lines[hi - 1][3])) <= 2 else ""
         for a in anchors:
             cells = [[] for _ in hd]

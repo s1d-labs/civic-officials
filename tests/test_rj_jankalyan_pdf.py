@@ -150,3 +150,21 @@ def test_rows_with_a_phone_and_no_name_column_are_kept():
     assert len(recs) == 168 and sum(1 for d in recs.values() if d.get("name")) == 162
     assert any(d.get("name") == "Radhey Shyam Narwal" and d["post"] == "Dy Dir Agriculture" and d["phone"] == "9414773880"
                for d in recs.values())
+
+
+def test_banswara_dlo_no_serial_column():
+    """Banswara DLO list (bucket copy depts/rj_jankalyan/banswara/1845.pdf, 11 pages, Kruti Dev, 679,195 bytes): no serial
+    column, officers and their staff phones over several lines, section titles between. Before: the six lines that start with
+    a number (phone or code cells) opened the rows, so 6 records. Now one row per officer line: 240 records."""
+    recs = _parse("banswara_1845_dlo.pdf", _p("24", "1845", "DLO(PDF)", "Banswara"))
+    _trail(recs)
+    d = dict(recs)
+    assert len(recs) == 240 and sum(1 for _, x in recs if x.get("name")) == 239 and all(x.get("phone") for _, x in recs)
+    a = d["dept:rj_jankalyan_pdf:24:1845:2"]
+    assert a["name"] == "श्री पर्वत सिंह चुण्डावत" and a["post"] == "अतिरिक्त जिला कलक्टर ADM"
+    assert a["phone"] == "09414660116, 09460020189, 07737767683" and a["src_pos"]["page"] == 1 and a["src_pos"]["line"] == 10
+    s = d["dept:rj_jankalyan_pdf:24:1845:10"]          # the title "SUB DIVISIONAL MAGISTRATE" above it joins no row
+    assert s["name"] == "सुश्री सोनू कुमारी" and s["src_pos"]["line"] == 41
+    assert not any("MAGISTRATE" in (x.get("name") or "") or "COLLECTORATE" in (x.get("name") or "") for _, x in recs)
+    v = d["dept:rj_jankalyan_pdf:24:1845:193"]          # Kruti Dev "MkW0" (Dr) opens a row of its own
+    assert v["src_pos"]["page"] == 9 and v["src_pos"]["line"] == 21 and v["name"].startswith("MkW0 ")
