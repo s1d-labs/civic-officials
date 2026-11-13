@@ -1,0 +1,20 @@
+[
+ {
+  "key": "ward3_rudrapur-supervisors",
+  "payload": {
+   "reader": "ward3_rudrapur",
+   "url": "https://www.nagarnigamrudrapur.com/ward-supervisor-list/",
+   "state": "UK",
+   "page": "supervisors"
+  }
+ },
+ {
+  "key": "ward3_rudrapur-zonal",
+  "payload": {
+   "reader": "ward3_rudrapur",
+   "url": "https://www.nagarnigamrudrapur.com/zonal-office/",
+   "state": "UK",
+   "page": "zonal"
+  }
+ }
+]
