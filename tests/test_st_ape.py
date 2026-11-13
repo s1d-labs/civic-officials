@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from dforms import _field, _st_ape, st_od_portal, st_tg_portal, st_wb_par, st_wb_wbcs  # noqa: E402
+from dforms import _field, _st_ape, st_an_contact, st_ap_portal, st_od_portal, st_tg_portal, st_wb_par, st_wb_wbcs  # noqa: E402
 
 DATA = Path(__file__).parent / "data"
 
@@ -22,9 +22,9 @@ def by_id(recs):
 
 
 def test_methods_and_seeds():
-    for m in (st_tg_portal, st_od_portal, st_wb_par, st_wb_wbcs):
+    for m in (st_tg_portal, st_od_portal, st_wb_par, st_wb_wbcs, st_ap_portal, st_an_contact):
         assert m.METHOD
-    for st, n in (("tg", 2), ("od", 81), ("wb", 3)):
+    for st, n in (("tg", 2), ("od", 81), ("wb", 3), ("ap", 7), ("an", 1)):
         its = json.loads((ROOT / "seeds" / f"dept_st_{st}.json").read_text())
         assert len(its) == n and len({i["key"] for i in its}) == n
         assert all(i["payload"]["route"] in ("abroad", "proxy", "direct") and i["payload"]["reader"].startswith("st_") for i in its)
@@ -132,3 +132,46 @@ def test_wb_wbcs_excerpt():
     m = r["dept:st_wb_wbcs:sl1668"]
     assert m["level"] == "district" and m["district_code"] == "316" and m["name"] == "ARNAB BISWAS"
     assert m["address"] == "OFFICE OF THE DISTRICT MAGISTRATE, DIST- MALDA"
+
+
+
+
+def test_ap_portal_groups():
+    doc = json.loads((DATA / "st_ap_portal.json").read_text())
+    tot = 0
+    for g, v in st_ap_portal.GROUPS.items():
+        r = st_ap_portal.parse(g, doc[v["child"]], doc.get(v.get("master")), doc.get(v.get("sub")), st_ap_portal.API + v["child"])
+        assert r, g
+        assert all(d["src_pos"]["index"] >= 0 and d["state_code"] == "28" for _, d in r)
+        tot += len(r)
+    assert tot == 28
+    s = dict(st_ap_portal.parse("secretaries", doc["ApSecretariesChilds"], doc["ApSecretaries"]))
+    d = s["dept:st_ap_portal:secretaries:7"]
+    assert d["name"] == "Sri Budithi Rajsekhar, IAS (Retd.)" and d["post_kind"] == "acs" and d["dept"] == "agriculture"
+    assert d["phone"] == "0863-2444539" and d["email"] == "prlsecy_agr@ap.gov.in, apagricultureps@gmail.com"
+    assert d["department"] == "Agriculture & Cooperation" and d["dept_code"] == "AGC01"
+    h = dict(st_ap_portal.parse("hods", doc["ApHodsChilds"], doc["ApHoDs"], doc["ApSubHoDs"]))["dept:st_ap_portal:hods:14"]
+    assert h["office"] == "Commissionerate of Agriculture" and h["email"] == "comagr.ap@gmail.com"
+    dist = st_ap_portal.parse("district", doc["ApDistrictOfficialsChilds"], doc["ApDistrictOfficials"])
+    c = dict(dist)["dept:st_ap_portal:district:4"]
+    assert c["level"] == "district" and c["district_code"] == "502" and c["post_kind"] == "district_magistrate"
+    assert st_ap_portal.district_code("POTTI SREERAMULU, NELLORE") == "515" and st_ap_portal.district_code("NTR ") == "749"
+
+
+def test_ap_fetch_uses_master():
+    doc = json.loads((DATA / "st_ap_portal.json").read_text())
+
+    def get(url, **k):
+        return Resp(json.dumps(doc[url.rsplit("/", 1)[1]]).encode(), url)
+    recs, files, why = st_ap_portal.fetch({"group": "hods"}, get)
+    assert why == "" and len(files) == 3 and all(d.get("department") for _, d in recs)
+
+
+def test_an_contact():
+    r = dict(st_an_contact.parse((DATA / "st_an_contact.html").read_text()))
+    assert len(r) == 45
+    cs = r["dept:st_an_contact:2"]
+    assert cs["name"] == "Shri Gyanesh Bharti, IAS" and cs["post_kind"] == "chief_secretary" and cs["dept"] == "administration"
+    assert cs["email"] == "cs-andamannicobar@gov.in" and cs["phone"] == "03192-233110, 234087" and cs["src_pos"]["row"] == 2
+    dc = r["dept:st_an_contact:16"]
+    assert dc["level"] == "district" and dc["district_code"] == "632" and dc["post_kind"] == "district_magistrate"
