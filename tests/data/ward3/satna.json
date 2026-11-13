@@ -1,0 +1,6 @@
+{"module": "ward3_satna", "payload": {"reader": "ward3_satna", "url": "https://satnamunicipalcorporation.com/contact.php", "state": "MP"},
+ "routes": {"https://satnamunicipalcorporation.com/contact.php": "satna_contact.html"},
+ "min_records": 30,
+ "expect": [{"post": "^Zonal Officer$", "name": "आकाश कुमार बट्टी", "level": "zone"},
+            {"post": "^Sub Engineer$", "name": "हेम सिंह अजनार", "level": "zone"},
+            {"post": "^Commissioner$", "name": "शेर सिंह मीना", "level": "body"}]}
