@@ -1,0 +1,160 @@
+[
+ {
+  "key": "st_mh_divcom:divcomnashik-maharashtra-gov-in-en-whos-who",
+  "payload": {
+   "reader": "st_mh_divcom",
+   "url": "https://divcomnashik.maharashtra.gov.in/en/whos-who/",
+   "division": "Nashik",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "st_mh_divcom:divcomnashik-maharashtra-gov-in-en-directory",
+  "payload": {
+   "reader": "st_mh_divcom",
+   "url": "https://divcomnashik.maharashtra.gov.in/en/directory/",
+   "division": "Nashik",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "st_mh_divcom:divcompune-maharashtra-gov-in-en-whos-who",
+  "payload": {
+   "reader": "st_mh_divcom",
+   "url": "https://divcompune.maharashtra.gov.in/en/whos-who/",
+   "division": "Pune",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "st_mh_divcom:divcompune-maharashtra-gov-in-en-directory",
+  "payload": {
+   "reader": "st_mh_divcom",
+   "url": "https://divcompune.maharashtra.gov.in/en/directory/",
+   "division": "Pune",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "st_mh_divcom:divcomcsn-maharashtra-gov-in-whos-who",
+  "payload": {
+   "reader": "st_mh_divcom",
+   "url": "https://divcomcsn.maharashtra.gov.in/whos-who/",
+   "division": "Chhatrapati Sambhajinagar",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "st_mh_divcom:divcomcsn-maharashtra-gov-in-en-directory",
+  "payload": {
+   "reader": "st_mh_divcom",
+   "url": "https://divcomcsn.maharashtra.gov.in/en/directory/",
+   "division": "Chhatrapati Sambhajinagar",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "st_mh_divcom:divcomnagpur-maharashtra-gov-in-en-whos-who",
+  "payload": {
+   "reader": "st_mh_divcom",
+   "url": "https://divcomnagpur.maharashtra.gov.in/en/whos-who/",
+   "division": "Nagpur",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "st_mh_divcom:divcomnagpur-maharashtra-gov-in-en-directory",
+  "payload": {
+   "reader": "st_mh_divcom",
+   "url": "https://divcomnagpur.maharashtra.gov.in/en/directory/",
+   "division": "Nagpur",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "st_mh_police_emails:68668baee3e1",
+  "payload": {
+   "reader": "st_mh_police_emails",
+   "url": "https://www.mahapolice.gov.in/uploads/contact_email/68668baee3e1e673247df6ca88ac5e67.pdf",
+   "state": "MH",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_mh_police_emails:igcontact3",
+  "payload": {
+   "reader": "st_mh_police_emails",
+   "url": "https://www.mahapolice.gov.in/uploads/contact_email/igcontact3.pdf",
+   "state": "MH",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_mh_police_emails:opcontact5",
+  "payload": {
+   "reader": "st_mh_police_emails",
+   "url": "https://www.mahapolice.gov.in/uploads/contact_email/opcontact5.pdf",
+   "state": "MH",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_mh_police_emails:spcontact4",
+  "payload": {
+   "reader": "st_mh_police_emails",
+   "url": "https://www.mahapolice.gov.in/uploads/contact_email/spcontact4.pdf",
+   "state": "MH",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_mh_police_emails:dd35bfea79f9",
+  "payload": {
+   "reader": "st_mh_police_emails",
+   "url": "https://www.mahapolice.gov.in/uploads/contact_email/dd35bfea79f9781e930f648165ed7a08.pdf",
+   "state": "MH",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_mh_police_emails:743f2f0a6891",
+  "payload": {
+   "reader": "st_mh_police_emails",
+   "url": "https://www.mahapolice.gov.in/uploads/contact_email/743f2f0a6891748aca453b5432a98ce2.pdf",
+   "state": "MH",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_mh_police_emails:aa6513ff8e34",
+  "payload": {
+   "reader": "st_mh_police_emails",
+   "url": "https://www.mahapolice.gov.in/uploads/contact_email/aa6513ff8e34502a6614651b36920f5e.pdf",
+   "state": "MH",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

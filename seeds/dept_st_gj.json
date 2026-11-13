@@ -1,0 +1,12 @@
+[
+ {
+  "key": "st_gj_police_hq:dgp",
+  "payload": {
+   "reader": "st_gj_police_hq",
+   "url": "https://police.gujarat.gov.in/dgp/CMS.aspx?orgchart=true",
+   "state": "GJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

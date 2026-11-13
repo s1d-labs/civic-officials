@@ -1,0 +1,636 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title id="title">CMS</title>
+    <meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+    <meta name="CODE_LANGUAGE" content="Visual Basic .NET 7.1">
+    <meta name="vs_defaultClientScript" content="JavaScript">
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+    
+    <link rel="stylesheet" type="text/css" href="css/dgp.css">
+
+    <script language="javascript" src="../javascript_files/ajaxcomman.js"></script>
+
+    <script language="javascript" src="../javascript_files/getpsdata.js"></script>
+
+    <script language="javascript" src="../javascript_files/getpsvillagedata.js"></script>
+
+    <script language="javascript" src="../javascript_files/districtChange.js"></script>
+
+    <script language="javascript" src="../javascript_files/talukaChange.js"></script>
+
+    <script language="javascript" src="../javascript_files/villageChange.js"></script>
+
+    <link rel="shortcut icon" href="../ICO/dgp.ico">
+    <script type="text/javascript">
+  if(top != self) top.location.replace(location);
+</script>
+</head>
+<body bottommargin="0" leftmargin="0" topmargin="0" rightmargin="0">
+    <form method="post" action="./CMS.aspx?orgchart=true&amp;designation_id=733" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="74B22A5F" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="MovRaZDkewOS0bnHqABDYcDovKFm2FaWNE85ie7IhZMeJRRrhZrgwzxak4AwuFOrmEZCbW7Ew6+F+Td7yLtdHGEXPWG++KbEM2MWlNCKYt2K6ta22kmOehqQdq6Fm09+kQcicc+NATuv2Zg28JGYvkdn3WqK9WJVuiihlbIDhNxjP73aalmWYqI0Z/Xi0dLdPwGkK7ShHWwW6ZtFIomalq4xHf6STRUkgsWQHrZCxDj7qBo2RVNGv6zl1ttnAHiHRxo2u1gx8sF212GM1T3UVRtn69zFb3WezL/2fXGFoU+KardClHJufOcIbH4w48qiwjHsYR/S9+hL64tDw56gVSENeIUWIGbxK2A6GuIP6Vp9sJe1qIJi9RbsWYFjdoK/iwIwM6cvOJhDKaCamy8fgq29D7PKLpdlcVf7aCzX6heluquBKc/YcXcZITojG3HcXFaHVAgTJ500UkFv5URF6hzXmhOUCeTCt/DUkeHD8Bf6vxsbvtvBSgSKc5OgO9YthXQSEWqQF/Om4k62QnsWqdaej+2dAI2dt/Cajilwa/R9DLCu10ETwGSURLhIO3Mo3rvmVWXUHpJV+gYYq0RBqHZKmLYQCbJqw292ZUa2xuR0oYDLr6fYiloTTE/EUnF64rnfHX50h7RUIPnLjfOrChyHlAA48Ve6XnA1IaRE7axIrzrtA7AUkzujUGgD2o+0nKYTPibVxe1lMtk7/wgKXU1Pcje3qdACcxmHjT1pM0U=" />
+</div>
+        <table border="0" width="778" cellspacing="0" cellpadding="0" id="table1" bordercolor="#af753a" align="center">
+            <tr>
+                <td style="border-top-width: 1px; border-right: 1px solid; border-left-width: 1px;
+                    border-bottom-width: 1px" bgcolor="#d2d2d2" bordercolor="#999999">
+                    <table border="0" width="778" cellspacing="0" cellpadding="0" id="table2">
+                        <tr>
+                            <td>
+                                <table border="0" width="778" cellspacing="0" cellpadding="0" id="table3">
+                                    <tr>
+                                        <td width="150">
+                                            <img border="0" src="images/logoinside.jpg" width="150" height="113"></td>
+                                        <td valign="top">
+                                            <table border="0" width="100%" cellspacing="0" cellpadding="0" id="table4">
+                                                <tr>
+                                                    <td height="37" bgcolor="#dfdfdf">
+                                                        <p align="right">
+                                                            <a href="CMS.aspx?content_id=47">
+                                                                <img border="0" src="images/readingproblem-inside.gif" width="125" height="31"></a></p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="37" bgcolor="#c0c0c0">
+                                                        <table border="0" width="100%" cellspacing="0" cellpadding="0" id="table5">
+                                                            <tr>
+                                                                <td>
+                                                                    <p align="center">
+                                                                        <span id="IAM1_lbl_str1" class="IAM_lbl">&#2745;&#2753;&#2690; &#2742;&#2763;&#2727;&#2753;&#2690; &#2715;&#2753;&#2690; </span>
+<select name="IAM1$cmb_type" id="IAM1_cmb_type" class="cmb" style="width:100px;">
+	<option value="">All</option>
+	<option value="1">માહિતી</option>
+	<option value="2">યોજના</option>
+	<option value="4">કાયદા અને નિયમો</option>
+	<option value="12">અવનવું</option>
+
+</select>
+<label for="IAM1_cmb_type" id="IAM1_ima12" style="display:none;">asasa</label>
+<span id="IAM1_lbl_str2" class="IAM_lbl"></span>
+
+<label for="IAM1_cmb_classification" id="IAM1_Label111" style="display:none;">sdsd</label>
+<input type="submit" name="IAM1$Button1" value="શોધો" id="IAM1_Button1" />
+
+                                                                    </p>
+                                                                </td>
+                                                                <td id="search" width="50%">
+                                                                    <p align="right">
+                                                                        <input name="Global_search1$txt_search" type="text" id="Global_search1_txt_search" class="tb" style="width:120px;" />
+<label for="Global_search1_txt_search" id="Global_search1_lbl22" style="display:none;">sdsds</label>
+<input type="submit" name="Global_search1$Button1" value="શોધો" id="Global_search1_Button1" />
+
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="38" bgcolor="#999999">
+
+                                                        <div id="MenuPos" style="position:relative;width:100%;">
+
+</div>	
+
+                                                       </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_breadcrumb" bgcolor="#dfdfdf">
+                            
+<!--<meta name="vs_showGrid" content="False">
+<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">-->
+	<p align="left"><a id="uc_breadCrumb_GoHome1_lnk_home" tabindex="7" class="bfont" onmouseover="window.status=&#39;https://police.gujarat.gov.in/dgp/default.aspx&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" href="javascript:__doPostBack(&#39;uc_breadCrumb$GoHome1$lnk_home&#39;,&#39;&#39;)">
+&#2745;&#2763;&#2734;
+</a>&nbsp;|
+</p>
+<!--</BLOCKQUOTE>-->
+
+	</td>
+
+                        </tr>
+                        <tr>
+                            <td id="td_page_action" bgcolor="#c0c0c0">
+                            
+<script language="javascript" src="../javascript_files/ActPNL.js" type="text/javascript"></script>
+
+<div>
+  <table cellspacing="0" cellpadding="0" width="100%">
+	<tr>
+		<td valign="top" align="right"><table cellspacing="0" cellpadding="2" border="0">
+          <tbody>
+            <tr>
+              
+              
+              
+              <td><img src="../components/ActPNL/images/email1.gif" height="20" width="20" border="0" alt="Mail this page" title="Mail this page" /></td>
+              <td><a href="javascript:show_Mailto('uc_ActPNL_tr_mailto','uc_ActPNL_tr_feedback','uc_ActPNL_hd_mailto','uc_ActPNL_hd_feedback','uc_ActPNL_txt_m_to','uc_ActPNL_txt_m_from','uc_ActPNL_txt_m_comment','uc_ActPNL_lbl_to','uc_ActPNL_lbl_errormsg_mailto','uc_ActPNL_txt_fdb_name','uc_ActPNL_txt_fdb_email','uc_ActPNL_txt_fdb_comment','uc_ActPNL_lbl_name','uc_ActPNL_lbl_email','uc_ActPNL_bttn_fdb_send','uc_ActPNL_bttn_mailto_send')" id="uc_ActPNL_mailto" class="bfont" onmouseover="window.status=&#39;Click to Open Send Mail Window&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" title="Mail this page">
+                <span id="uc_ActPNL_lnk_mailto" style="color:Blue;">&#2696;-&#2734;&#2759;&#2696;&#2738; &#2709;&#2736;&#2763;</span>
+                </a></td>
+              <td><img src="../components/ActPNL/images/feedback.gif" height="18" width="20" border="0" alt="Feedback" title="Feedback" /></td>
+              <td><a href="javascript:show_feedback('uc_ActPNL_tr_mailto','uc_ActPNL_tr_feedback','uc_ActPNL_hd_mailto','uc_ActPNL_hd_feedback','uc_ActPNL_txt_m_to','uc_ActPNL_txt_m_from','uc_ActPNL_txt_m_comment','uc_ActPNL_lbl_to','uc_ActPNL_lbl_errormsg_mailto','uc_ActPNL_txt_fdb_name','uc_ActPNL_txt_fdb_email','uc_ActPNL_txt_fdb_comment','uc_ActPNL_lbl_name','uc_ActPNL_lbl_email','uc_ActPNL_bttn_fdb_send','uc_ActPNL_bttn_mailto_send')" id="uc_ActPNL_feedback" title="Feedback" class="bfont" onmouseover="window.status=&#39;Click to Open Send Feedback Window&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;">
+                <span id="uc_ActPNL_lnk_feedback" style="color:Blue;">&#2730;&#2765;&#2736;&#2724;&#2751;&#2733;&#2750;&#2741;</span>
+                </a></td>
+              <td><span id="uc_ActPNL_lbl_msg" class="lblerror" style="color:Black;"></span></td>
+            </tr>
+            </tbody>
+        </table></td>
+	</tr>
+</table>
+
+</div>
+<div id="uc_ActPNL_tr_mailto" style="display :none">
+  <table id="uc_ActPNL_tbl" style="border-right: #000000 1px solid; border-top: #000000 1px solid; border-left:#000000 1px solid; border-bottom: #000000 1px solid" cellspacing="0" cellpadding="0" width="100%" border="0">
+	<tr>
+		<td class="control_header" align="center" colspan="3"><span id="uc_ActPNL_lbl_mailto_header" class="ActPnlHeader">&#2696;-&#2734;&#2759;&#2696;&#2738; &#2709;&#2736;&#2763;</span></td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td align="right"><span id="uc_ActPNL_lbl_mailto_to" class="Small_label">&#2730;&#2765;&#2736;&#2724;&#2751;</span></td>
+		<td class="Small_label">&nbsp;:&nbsp;</td>
+		<td align="left" width="100%"><input name="uc_ActPNL$txt_m_to" type="text" id="uc_ActPNL_txt_m_to" class="tb" style="width:85%;" />
+        <span id="uc_ActPNL_lbl_to" class="lblerror" style="color:Red;"></span></td>
+	</tr>
+	<tr>
+		<td align="right"><span id="uc_ActPNL_lbl_mailto_from" class="Small_label">&#2724;&#2736;&#2731;&#2725;&#2752;</span></td>
+		<td class="Small_label">&nbsp;:&nbsp;</td>
+		<td align="left" width="100%"><input name="uc_ActPNL$txt_m_from" type="text" id="uc_ActPNL_txt_m_from" class="tb" style="width:85%;" /></td>
+	</tr>
+	<tr>
+		<td valign="top" align="right">&nbsp;
+        <span id="uc_ActPNL_lbl_mailto_comment" class="Small_label">&#2719;&#2752;&#2730;&#2765;&#8205;&#2730;&#2723;&#2752;</span></td>
+		<td class="Small_label" valign="top" align="right">&nbsp;:&nbsp; </td>
+		<td align="left" width="100%"><textarea name="uc_ActPNL$txt_m_comment" rows="4" cols="50" id="uc_ActPNL_txt_m_comment" class="tb" style="height:160px;width:85%;">
+</textarea></td>
+	</tr>
+	<tr>
+		<td align="left" colspan="3"><span id="uc_ActPNL_lbl_errormsg_mailto" class="lblerror"></span></td>
+	</tr>
+	<tr>
+		<td align="center" colspan="3"><input type="submit" name="uc_ActPNL$bttn_mailto_send" value="Send" onclick="javascript:return validate_mailto(&#39;uc_ActPNL_tr_mailto&#39;,&#39;uc_ActPNL_tr_feedback&#39;,&#39;uc_ActPNL_hd_mailto&#39;,&#39;uc_ActPNL_hd_feedback&#39;,&#39;uc_ActPNL_txt_m_to&#39;,&#39;uc_ActPNL_txt_m_from&#39;,&#39;uc_ActPNL_txt_m_comment&#39;,&#39;uc_ActPNL_lbl_to&#39;,&#39;uc_ActPNL_lbl_errormsg_mailto&#39;,&#39;uc_ActPNL_txt_fdb_name&#39;,&#39;uc_ActPNL_txt_fdb_email&#39;,&#39;uc_ActPNL_txt_fdb_comment&#39;,&#39;uc_ActPNL_lbl_name&#39;,&#39;uc_ActPNL_lbl_email&#39;,&#39;uc_ActPNL_bttn_fdb_send&#39;,&#39;uc_ActPNL_bttn_mailto_send&#39;);" id="uc_ActPNL_bttn_mailto_send" class="UniCode_button" />
+        &nbsp;
+        <input name="uc_ActPNL$bttn_mailto_close" type="button" id="uc_ActPNL_bttn_mailto_close" class="UniCode_button" value="Close" onclick="javascript:closepnl_mailto(&#39;uc_ActPNL_tr_mailto&#39;,&#39;uc_ActPNL_tr_feedback&#39;,&#39;uc_ActPNL_hd_mailto&#39;,&#39;uc_ActPNL_hd_feedback&#39;,&#39;uc_ActPNL_txt_m_to&#39;,&#39;uc_ActPNL_txt_m_from&#39;,&#39;uc_ActPNL_txt_m_comment&#39;,&#39;uc_ActPNL_lbl_to&#39;,&#39;uc_ActPNL_lbl_errormsg_mailto&#39;,&#39;uc_ActPNL_txt_fdb_name&#39;,&#39;uc_ActPNL_txt_fdb_email&#39;,&#39;uc_ActPNL_txt_fdb_comment&#39;,&#39;uc_ActPNL_lbl_name&#39;,&#39;uc_ActPNL_lbl_email&#39;,&#39;uc_ActPNL_bttn_fdb_send&#39;,&#39;uc_ActPNL_bttn_mailto_send&#39;);" /></td>
+	</tr>
+</table>
+
+</div>
+<div id="uc_ActPNL_tr_feedback" style="display :none">
+  <table style="border-radius: #000000 1px solid; border-top:#000000 1px solid; border-left:#000000 1px solid; border-bottom: #000000 1px solid"
+		cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tr>
+      <td class="control_header" align="center" colspan="3"><span id="uc_ActPNL_lbl_fdb_header" class="ActPnlHeader">&#2730;&#2765;&#2736;&#2724;&#2751;&#2733;&#2750;&#2741;</span></td>
+    </tr>
+    <tr>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+      <td align="right"><span id="uc_ActPNL_lbl_fdb_name" class="Small_label">&#2728;&#2750;&#2734;</span></td>
+      <td class="Small_label" align="right">&nbsp;:&nbsp;</td>
+      <td align="left" width="100%"><input name="uc_ActPNL$txt_fdb_name" type="text" id="uc_ActPNL_txt_fdb_name" class="tb" style="width:85%;" />
+        <span id="uc_ActPNL_lbl_name" class="lblerror" style="color:Red;"></span></td>
+    </tr>
+    <tr>
+      <td style="height: 24px" align="right"><span id="uc_ActPNL_lbl_fdb_email" class="Small_label">&#2695;-&#2734;&#2759;&#2738;</span></td>
+      <td class="Small_label" style="height: 24px" align="right">&nbsp;:&nbsp;</td>
+      <td style="height: 24px" align="left" width="100%"><input name="uc_ActPNL$txt_fdb_email" type="text" id="uc_ActPNL_txt_fdb_email" class="tb" style="width:85%;" />
+        <span id="uc_ActPNL_lbl_email" class="lblerror" style="color:Red;"></span></td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">&nbsp;
+        <span id="uc_ActPNL_lbl_fdb_comment" class="Small_label">&#2719;&#2752;&#2730;&#2765;&#8205;&#2730;&#2723;&#2752;</span></td>
+      <td class="Small_label" valign="top" align="right">&nbsp;:&nbsp;</td>
+      <td align="left" width="100%"><textarea name="uc_ActPNL$txt_fdb_comment" rows="4" cols="50" id="uc_ActPNL_txt_fdb_comment" class="tb" style="height:160px;width:85%;">
+</textarea></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="3"><input type="submit" name="uc_ActPNL$bttn_fdb_send" value="Send" onclick="javascript:return validate_feedback(&#39;uc_ActPNL_tr_mailto&#39;,&#39;uc_ActPNL_tr_feedback&#39;,&#39;uc_ActPNL_hd_mailto&#39;,&#39;uc_ActPNL_hd_feedback&#39;,&#39;uc_ActPNL_txt_m_to&#39;,&#39;uc_ActPNL_txt_m_from&#39;,&#39;uc_ActPNL_txt_m_comment&#39;,&#39;uc_ActPNL_lbl_to&#39;,&#39;uc_ActPNL_lbl_errormsg_mailto&#39;,&#39;uc_ActPNL_txt_fdb_name&#39;,&#39;uc_ActPNL_txt_fdb_email&#39;,&#39;uc_ActPNL_txt_fdb_comment&#39;,&#39;uc_ActPNL_lbl_name&#39;,&#39;uc_ActPNL_lbl_email&#39;,&#39;uc_ActPNL_bttn_fdb_send&#39;,&#39;uc_ActPNL_bttn_mailto_send&#39;);" id="uc_ActPNL_bttn_fdb_send" class="UniCode_button" />
+        &nbsp;
+        <input name="uc_ActPNL$bttn_fdb_close" type="button" id="uc_ActPNL_bttn_fdb_close" value="Close" class="normal_button" onclick="javascript:closepnl_feedback(&#39;uc_ActPNL_tr_mailto&#39;,&#39;uc_ActPNL_tr_feedback&#39;,&#39;uc_ActPNL_hd_mailto&#39;,&#39;uc_ActPNL_hd_feedback&#39;,&#39;uc_ActPNL_txt_m_to&#39;,&#39;uc_ActPNL_txt_m_from&#39;,&#39;uc_ActPNL_txt_m_comment&#39;,&#39;uc_ActPNL_lbl_to&#39;,&#39;uc_ActPNL_lbl_errormsg_mailto&#39;,&#39;uc_ActPNL_txt_fdb_name&#39;,&#39;uc_ActPNL_txt_fdb_email&#39;,&#39;uc_ActPNL_txt_fdb_comment&#39;,&#39;uc_ActPNL_lbl_name&#39;,&#39;uc_ActPNL_lbl_email&#39;,&#39;uc_ActPNL_bttn_fdb_send&#39;,&#39;uc_ActPNL_bttn_mailto_send&#39;);" />
+        &nbsp;
+        <span id="uc_ActPNL_lbl_fdb_errormsg" class="lblerror"></span></td>
+    </tr>
+  </table>
+</div>
+<input name="uc_ActPNL$hd_mailto" type="hidden" id="uc_ActPNL_hd_mailto" size="1" value="display :none" />
+<input name="uc_ActPNL$hd_feedback" type="hidden" id="uc_ActPNL_hd_feedback" size="1" value="display :none" />
+<input name="uc_ActPNL$hdRank" type="hidden" id="uc_ActPNL_hdRank" />
+</td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border="0" width="778" cellspacing="0" cellpadding="0" id="table6" bordercolor="#af753a">
+                                    <tr>
+                                        <td valign="top">
+                                            <div align="center">
+                                                <table border="0" width="98%" cellspacing="0" cellpadding="0" id="table194">
+                                                    <tr>
+                                                        <td>
+                                                            <img border="0" src="images/5pixelsapcer.gif" width="5" height="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td_content">
+                                                        <span id="uc_clp_lbl_errormsg" class="lblerror" style="color:Red;"></span>
+<TABLE id="Uc_ORGChart" cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<TR>
+		<TD id="uc_clp_tv_org" valign="top">
+			
+		</TD>
+
+		<TD id="uc_clp_detail">
+			<div id="uc_clp_div_professional">
+				<table id="table1" cellSpacing="0" cellPadding="0" width="100%" border="0">
+					<tr>
+						<td><a id="uc_clp_lnk_back" onmouseover="window.status=&#39;https://police.gujarat.gov.in/dgp/CMS.aspx?orgchart=true&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" href="javascript:__doPostBack(&#39;uc_clp$lnk_back&#39;,&#39;&#39;)" style="font-family:Verdana;font-size:X-Small;font-weight:bold;">&#2741;&#2745;&#2752;&#2741;&#2719;&#2752; &#2734;&#2750;&#2739;&#2710;&#2753;&#2690;</a></td>
+					</tr>
+					<tr>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td id="uc_clp_Td2">
+							<table id="uc_clp_Table5" style="BORDER-COLLAPSE: collapse" bordercolor="#000000" cellspacing="0" cellpadding="5" width="100%" border="1">
+	<tr>
+		<td align="center" colspan="3"><strong><span id="uc_clp_lbl_header_profssional" style="font-family:Verdana;font-size:X-Small;">&#2707;&#2731;&#2751;&#2744; &#2744;&#2690;&#2730;&#2736;&#2765;&#2709; &nbsp;</span></strong></td>
+	</tr>
+	<tr>
+		<td align="right" width="15%"><span id="uc_clp_lbl_name" style="font-family:Verdana;font-size:X-Small;font-weight:bold;">&#2728;&#2750;&#2734;</span></td>
+		<td align="left" width="56%"><span id="uc_clp_name" style="font-family:Verdana;font-size:X-Small;font-weight:bold;">શ્રી રાઘવેન્દ્ર વત્સ</span></td>
+		<td align="center" width="31%" rowspan="5">
+										<table cellSpacing="2" cellPadding="0" border="0">
+											<tr>
+												<td><img id="uc_clp_img_photo" src="../components/ORGChart/contact_photo.aspx?contact_id=554143" style="border-width:1px;border-style:Solid;height:80px;width:80px;" /></td>
+											</tr>
+											<tr>
+												<td align="center"></td>
+											</tr>
+										</table>
+									</td>
+	</tr>
+	<tr>
+		<td align="right" width="20%"><span id="uc_clp_lbl_designation" style="font-family:Verdana;font-size:X-Small;">&#2745;&#2763;&#2726;&#2765;&#2726;&#2763;</span></td>
+		<td align="left"><span id="uc_clp_designation" style="font-family:Verdana;font-size:X-Small;">પોલીસ મહાનિરિક્ષક, અમદાવાદ રેન્જ</span></td>
+	</tr>
+	<tr>
+		<td valign="top" align="right" width="20%"><span id="uc_clp_lbl_address" style="font-family:Verdana;font-size:X-Small;">&#2744;&#2736;&#2728;&#2750;&#2734;&#2753;&#2690;</span>&nbsp;</td>
+		<td align="left"><span id="uc_clp_pres_address" class="Org_TB_content" style="font-family:Verdana;font-size:X-Small;">અમદાવાદ રેન્જ, દિવ્ય ભાસ્કર પ્રેસ પાસે, એસ.જી.હાઇવે, મકરબા, અમદાવાદ -૩૮૦૦૫૫,
+
+અમદાવાદ, ગુજરાત, ભારત,<BR></span></td>
+	</tr>
+	<tr>
+		<td align="right" width="20%"><span id="uc_clp_lbl_phone" style="font-family:Verdana;font-size:X-Small;">&#2731;&#2763;&#2728;</span></td>
+		<td align="left"><span id="uc_clp_pers_phone" style="font-family:Verdana;font-size:X-Small;">૨૬૮૯૦૯૩૧</span></td>
+	</tr>
+	<tr>
+		<td align="right" width="20%"><span id="uc_clp_lbl_mobile" style="font-family:Verdana;font-size:X-Small;">&#2734;&#2763;&#2732;&#2750;&#2695;&#2738; </span></td>
+		<td align="left"><span id="uc_clp_pers_mobile" style="font-family:Verdana;font-size:X-Small;">94294 58968</span></td>
+	</tr>
+	<tr>
+		<td align="right" width="20%"><span id="uc_clp_lbl_fax" style="font-family:Verdana;font-size:X-Small;">&#2731;&#2759;&#2709;&#2765;&#2744;</span></td>
+		<td align="left" colspan="2"><span id="uc_clp_pers_fax" style="font-family:Verdana;font-size:X-Small;">૦૭૯-૨૨૬૮૬૪૬૧</span></td>
+	</tr>
+	<tr>
+		<td align="right" width="20%"><span id="uc_clp_lbl_email" style="font-family:Verdana;font-size:X-Small;">&#2695;-&#2734;&#2759;&#2695;&#2738;</span></td>
+		<td align="left" colspan="2"><a href="Mailto:spligp-ahd[at]gujarat[dot]gov[dot]in" id="uc_clp_ancEmail">spligp-ahd[at]gujarat[dot]gov[dot]in</a></td>
+	</tr>
+</table>
+
+							&nbsp;
+						</td>
+
+					</tr>
+				</table>
+			</div>
+			
+			<div class="control_header" id="div_grdi_header" align="center"></div>
+			<div id="function_grid"></div>
+		</TD>
+
+	</TR>
+</TABLE>
+<input name="uc_clp$hd_directory_path" type="hidden" id="uc_clp_hd_directory_path" />
+<input name="uc_clp$hdUrl" type="hidden" id="uc_clp_hdUrl" />
+
+</td>
+
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td width="190" valign="top" style="border-top-width: 1px; border-bottom-width: 1px;
+                                            border-left: 1px solid; border-right-width: 1px" bordercolor="#999999">
+                                            <table border="0" width="100%" cellspacing="0" cellpadding="0" id="table197">
+                                                <tr>
+                                                    <td>
+                                                        <img border="0" src="images/5pixelsapcer.gif" width="5" height="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td_rel2">
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table id="table447" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                            <tr>
+                                                                <td class="mainfonts" style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px;
+                                                                    padding-top: 0px" bgcolor="#ff6a6a" height="22">
+                                                                    <p class="commontopfonts">
+                                                                        <b>&nbsp;&#2694;&#2730;&#2728;&#2752; &#2744;&#2759;&#2741;&#2750;&#2734;&#2750;&#2690;
+                                                                        </b>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td bgcolor="#eeeeee">
+                                                                    <table id="table448" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <font size="2"><a href="CMS.aspx?Search=PS">&#2730;&#2763;&#2738;&#2752;&#2744; &#2744;&#2765;&#2719;&#2759;&#2742;&#2728;
+                                                                                    &#2742;&#2763;&#2727;&#2763;</a></font></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=571">&#2734;&#2750;&#2745;&#2751;&#2724;&#2752; &#2734;&#2759;&#2739;&#2741;&#2741;&#2750;&#2728;&#2763;
+                                                                                    &#2693;&#2727;&#2751;&#2709;&#2750;&#2736;</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=555">&#2728;&#2750;&#2711;&#2736;&#2751;&#2709; &#2693;&#2727;&#2751;&#2709;&#2750;&#2736;
+                                                                                    &#2730;&#2724;&#2765;&#2736; </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=522">&#2728;&#2750;&#2711;&#2736;&#2751;&#2709;&#2724;&#2765;&#8205;&#2741;</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=3807"><font size="2">&#2733;&#2750;&#2736;&#2724;&#2752;&#2735;
+                                                                                    &#2730;&#2750;&#2744;&#2730;&#2763;&#2736;&#2765;&#2719;</font></a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <p>
+                                                                                    <a href="CMS.aspx?content_id=3810"><font size="2">&#2730;&#2763;&#2738;&#2752;&#2744;
+                                                                                        &#2709;&#2751;&#2738;&#2735;&#2736;&#2728;&#2765;&#2744;&nbsp;&#2744;&#2736;&#2765;&#2719;&#2751;&#2731;&#2751;&#2709;&#2759;&#2719;
+                                                                                        &#2734;&#2750;&#2719;&#2759;&#2728;&#2750;
+                                                                                        <br>
+                                                                                        &#2745;&#2709;&#2765;&#2709;</font></a></p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=3809"><font size="2">&#2741;&#2751;&#2726;&#2759;&#2742;
+                                                                                    &#2716;&#2741;&#2750; &#2734;&#2750;&#2719;&#2759; "&#2728;&#2763; &#2707;&#2732;&#2765;&#2716;&#2759;&#2709;&#2765;&#2742;&#2728;
+                                                                                    &#2744;&#2736;&#2765;&#2719;&#2751;&#2731;&#2751;&#2709;&#2759;&#2719;"&#2728;&#2750;
+                                                                                    &#2745;&#2709;&#2765;&#2709;</font></a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                            </td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=520">&#2716;&#2750;&#2723;&#2741;&#2750; &#2716;&#2763;&#2711;</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=520">&#2716;&#2750;&#2723;&#2741;&#2750; &#2716;&#2763;&#2711;</a></td>
+                                                                        </tr>
+                                                                      <!--  <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="downloads/medal.pdf">&#2714;&#2690;&#2726;&#2765;&#2736;&#2709; &#2741;&#2751;&#2716;&#2759;&#2724;&#2750;</a></td>
+                                                                        </tr>-->
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=525">&#2694;&#2730;&#2728;&#2750; &#2730;&#2765;&#2736;&#8205;&#2742;&#2765;&#2736;&#2765;&#2728;&#2763;
+                                                                                    &#65533; &#2693;&#2734;&#2750;&#2736;&#2750; &#2697;&#2724;&#2765;&#2724;&#2736;
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=512">&#2716;&#2750;&#2745;&#2759;&#2736; &#2734;&#2750;&#2745;&#2751;&#2724;&#2752;
+                                                                                    &#2693;&#2727;&#2751;&#2709;&#2750;&#2736;&#2752; </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td valign="top" class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0" vspace="6"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=16233">પ્રાઈવેટ સિક્યુરિટી એજન્સી લાઈસન્સ બાબત</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td valign="top" class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0" vspace="6"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="downloads/copta.pdf" target="_blank">તમાકુ નિયંત્રણ અધિનિયમ-૨૦૦૩</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                    <td bgcolor="#ff6a6a" height="22" class="mainfonts">
+                                                        <p class="commontopfonts">
+                                                            <b><span lang="GU">&nbsp;&#2744;&#2690;&#2730;&#2736;&#2765;&#2709;</span> &#2734;&#2750;&#2739;&#2710;&#2753;&#2690;
+                                                            </b>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="contact_search">
+                                                        
+
+<table id="tbl_contactmatrix" cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td><table style="display: none;" cellspacing="0" cellpadding="0" width="100%" border="0">
+          <tr>
+            <td class="CS_title_BG"><p class="CS_title_BG" align="center"><font class="CS_title_BG">
+                <span id="Contact_search2_lbl_search_title">&#2744;&#2690;&#2730;&#2736;&#2765;&#2709; &#2734;&#2750;&#2739;&#2710;&#2753;&#2690;</span>
+                </font></p></td>
+            <td class="CS_title_BG"><img height="30" src="images/contactinfo.jpg" width="42" align="right" border="0" alt="" title="" /></td>
+          </tr>
+        </table>
+        <span id="Contact_search2_lbl_errormsg" class="lblerror" style="color:Red;"></span></td>
+    </tr>
+    <tr>
+      <td><img height="5" src="images/5pixelsapcer.gif" width="5" border="0" alt="" title="" /></td>
+    </tr>
+    <tr>
+      <td><table id="tbl_search1" cellspacing="0" cellpadding="0" width="100%" border="0">
+          <tbody>
+            <tr>
+              <td class="lcfont"><p>
+                  <span id="Contact_search2_lbl_name" class="lcfont">&nbsp;&#2728;&#2750;&#2734; &#2734;&#2753;&#2716;&#2732; &#2742;&#2763;&#2727;&#2763;</span>
+                </p></td>
+            </tr>
+            <tr>
+              <td><table cellspacing="0" cellpadding="0" width="100%" border="0">
+                  <tr>
+                    <td><input name="Contact_search2$txt_name" type="text" id="Contact_search2_txt_name" class="tb" style="width:70%;" />
+                     <label for="Contact_search2_txt_name" id="Contact_search2_lbl" style="display:none;">Name</label>
+                      <input type="submit" name="Contact_search2$bttn_search_name1" value=" શોધો" id="Contact_search2_bttn_search_name1" />
+                      </td>
+                    <td></td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr>
+              <td class="lcfont"><p>
+                  <span id="Contact_search2_lbl_location" class="lcfont">&nbsp;&#2744;&#2765;&#2725;&#2739; &#2734;&#2753;&#2716;&#2732; &#2742;&#2763;&#2727;</span>
+                </p></td>
+            </tr>
+            <tr>
+              <td><table cellspacing="0" cellpadding="0" width="100%" border="0">
+                  <tr>
+                    <td><input name="Contact_search2$txt_location" type="text" id="Contact_search2_txt_location" class="tb" style="width:70%;" />
+                     <label for="Contact_search2_txt_location" id="Contact_search2_lbl2" style="display:none;">dsd</label>
+                      <input type="submit" name="Contact_search2$bttn_search_location1" value="શોધો" id="Contact_search2_bttn_search_location1" />
+                      </td>
+                    <td></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+  </tbody>
+</table>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="mainfonts">
+                                                        <b>&nbsp; <font size="2"><a href="CMS.aspx?orgchart=true">&#2741;&#2751;&#2711;&#2724;&#2741;&#2750;&#2736;
+                                                            &#2716;&#2753;&#2707;</a></font>&nbsp; </b>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table border="0" width="778" cellspacing="0" cellpadding="0" id="table198">
+                        <tr>
+                            <td bgcolor="#fb514d" height="30" id="td_disclaimer" class="mainfonts">
+                                <p class="cfont">
+                                    &nbsp;&nbsp;<a href="CMS.aspx?content_id=143">&#2721;&#2751;&#2744;&#2765;&#2709;&#2765;&#2738;&#2759;&#2734;&#2736;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    |&nbsp;&nbsp;&nbsp;&nbsp; <a href="CMS.aspx?feedback=true">&#2730;&#2765;&#2736;&#2724;&#2751;&#2733;&#2750;&#2741;</a></FONT></p>
+                            </td>
+                            <td bgcolor="#fb514d" height="30" id="td_copyright">
+                                <p align="right">
+                                    <font face="Tahoma"><span style="font-size: 8pt"><font face="Tahoma" size="2"><span
+                                        style="font-size: 8pt" class="cfont"><font size="2">
+                                            <!--<a href="http://www.cybersurfindia.com" target="_blank">
+Developed by Cybersurf (India)</a>-->
+                                            &copy; &#2730;&#2763;&#2738;&#2752;&#2744; &#2734;&#2745;&#2750;&#2728;&#2751;&#2726;&#2759;&#2742;&#2709;&#2728;&#2752;
+                                            &#2709;&#2714;&#2759;&#2736;&#2752; - &#2711;&#2753;&#2716;&#2736;&#2750;&#2724;</font>
+                                        <font size="2">&#2744;&#2736;&#2709;&#2750;&#2736;</font></span></font>&nbsp;&nbsp;
+                                    </span></font>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <span id="lblcontentmodifiedon">Last updated on 02-11-2026</span>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+     <script type='text/javascript'>
+         function Go() { return }
+                                                        </script>
+
+                                                        <script type='text/javascript' src='menuinside/exmplmenu_var.js'></script>
+
+                                                        <script type='text/javascript' src='menuinside/menu_com.js'></script>
+
+                                                        <noscript>
+                                                            Your browser does not support script</noscript>
+
+    <script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12384112-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+    s
+</body>
+</html>

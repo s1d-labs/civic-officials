@@ -1,0 +1,653 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title id="title">CMS</title>
+    <meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+    <meta name="CODE_LANGUAGE" content="Visual Basic .NET 7.1">
+    <meta name="vs_defaultClientScript" content="JavaScript">
+    <meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+    
+    <link rel="stylesheet" type="text/css" href="css/dgp.css">
+
+    <script language="javascript" src="../javascript_files/ajaxcomman.js"></script>
+
+    <script language="javascript" src="../javascript_files/getpsdata.js"></script>
+
+    <script language="javascript" src="../javascript_files/getpsvillagedata.js"></script>
+
+    <script language="javascript" src="../javascript_files/districtChange.js"></script>
+
+    <script language="javascript" src="../javascript_files/talukaChange.js"></script>
+
+    <script language="javascript" src="../javascript_files/villageChange.js"></script>
+
+    <link rel="shortcut icon" href="../ICO/dgp.ico">
+    <script type="text/javascript">
+  if(top != self) top.location.replace(location);
+</script>
+</head>
+<body bottommargin="0" leftmargin="0" topmargin="0" rightmargin="0">
+    <form method="post" action="./CMS.aspx?orgchart=true" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form1'];
+if (!theForm) {
+    theForm = document.Form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="74B22A5F" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="XatmJrNcnk7V9lsVn4rLF0khOp/Zi8uA03Bgc9DKxw2MVd0T4+Ii+hUuAa3EmJl/aqu9wCov7pXGoliE8hO8VdNd0+0pE9l3EzyJHlIAZa+Yq6X3R1BtfFg5ixWqgrXat5uu3LHQZzILdya8uTbNvBVtzIypgbh0wR5a32TPH8r9hwKS6qF2hMreZjoej+v1iCJZ2aqsHd7P6phmADONUnrrxionrZ/JPRAkcLkP8/BD22jhQZjRiNsX1Cebwr3TQbB4BQ/YkkyvmpBvlgDITDNh0l99bTwnjgR8dnzpDzNZ5gHYZgC3nXVLvRMpryryVIexh+2oyCcTinFF7bKl9NO1BZX0nJQCjKenoFlWzH7P7PPUaAgUJST2jy1uP7qtjCbVupb+HR7s0Z2BfFunQbhG1ascbuJl4Q1H8bUJfna2w+MvhEjCifyZxXxrEO9h5GXlLcM3yR0hBbYBgty1I+6vAQFrDE+A/IJMdp8gDRdagRszOPJuWrTjEi7mDlzXvjXbjZudpBPBxrFvDaTS2UmcSntLSqNfiYpVqyIF7sBzO5IBvx2TyKnF+d7YNJzLLr3IwWKhF6qhIEQ7PT8sJJhqFyivXPoSUQQprv6gX7yErCawlPrBXY4k0vefgpbMYCDgluzs/7ubtKkN60H90c5LaQvf70O1JKcFjiUdK8R4fQT1uTyFjH/A7crGB6230kMwafq2lCALDIbdjEcqKQ==" />
+</div>
+        <table border="0" width="778" cellspacing="0" cellpadding="0" id="table1" bordercolor="#af753a" align="center">
+            <tr>
+                <td style="border-top-width: 1px; border-right: 1px solid; border-left-width: 1px;
+                    border-bottom-width: 1px" bgcolor="#d2d2d2" bordercolor="#999999">
+                    <table border="0" width="778" cellspacing="0" cellpadding="0" id="table2">
+                        <tr>
+                            <td>
+                                <table border="0" width="778" cellspacing="0" cellpadding="0" id="table3">
+                                    <tr>
+                                        <td width="150">
+                                            <img border="0" src="images/logoinside.jpg" width="150" height="113"></td>
+                                        <td valign="top">
+                                            <table border="0" width="100%" cellspacing="0" cellpadding="0" id="table4">
+                                                <tr>
+                                                    <td height="37" bgcolor="#dfdfdf">
+                                                        <p align="right">
+                                                            <a href="CMS.aspx?content_id=47">
+                                                                <img border="0" src="images/readingproblem-inside.gif" width="125" height="31"></a></p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="37" bgcolor="#c0c0c0">
+                                                        <table border="0" width="100%" cellspacing="0" cellpadding="0" id="table5">
+                                                            <tr>
+                                                                <td>
+                                                                    <p align="center">
+                                                                        <span id="IAM1_lbl_str1" class="IAM_lbl">&#2745;&#2753;&#2690; &#2742;&#2763;&#2727;&#2753;&#2690; &#2715;&#2753;&#2690; </span>
+<select name="IAM1$cmb_type" id="IAM1_cmb_type" class="cmb" style="width:100px;">
+	<option value="">All</option>
+	<option value="1">માહિતી</option>
+	<option value="2">યોજના</option>
+	<option value="4">કાયદા અને નિયમો</option>
+	<option value="12">અવનવું</option>
+
+</select>
+<label for="IAM1_cmb_type" id="IAM1_ima12" style="display:none;">asasa</label>
+<span id="IAM1_lbl_str2" class="IAM_lbl"></span>
+
+<label for="IAM1_cmb_classification" id="IAM1_Label111" style="display:none;">sdsd</label>
+<input type="submit" name="IAM1$Button1" value="શોધો" id="IAM1_Button1" />
+
+                                                                    </p>
+                                                                </td>
+                                                                <td id="search" width="50%">
+                                                                    <p align="right">
+                                                                        <input name="Global_search1$txt_search" type="text" id="Global_search1_txt_search" class="tb" style="width:120px;" />
+<label for="Global_search1_txt_search" id="Global_search1_lbl22" style="display:none;">sdsds</label>
+<input type="submit" name="Global_search1$Button1" value="શોધો" id="Global_search1_Button1" />
+
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="38" bgcolor="#999999">
+
+                                                        <div id="MenuPos" style="position:relative;width:100%;">
+
+</div>	
+
+                                                       </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="td_breadcrumb" bgcolor="#dfdfdf">
+                            
+<!--<meta name="vs_showGrid" content="False">
+<BLOCKQUOTE dir="ltr" style="MARGIN-RIGHT: 0px">-->
+	<p align="left"><a id="uc_breadCrumb_GoHome1_lnk_home" tabindex="7" class="bfont" onmouseover="window.status=&#39;https://police.gujarat.gov.in/dgp/default.aspx&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" href="javascript:__doPostBack(&#39;uc_breadCrumb$GoHome1$lnk_home&#39;,&#39;&#39;)">
+&#2745;&#2763;&#2734;
+</a>&nbsp;|
+</p>
+<!--</BLOCKQUOTE>-->
+
+	</td>
+
+                        </tr>
+                        <tr>
+                            <td id="td_page_action" bgcolor="#c0c0c0">
+                            
+<script language="javascript" src="../javascript_files/ActPNL.js" type="text/javascript"></script>
+
+<div>
+  <table cellspacing="0" cellpadding="0" width="100%">
+	<tr>
+		<td valign="top" align="right"><table cellspacing="0" cellpadding="2" border="0">
+          <tbody>
+            <tr>
+              
+              
+              
+              <td><img src="../components/ActPNL/images/email1.gif" height="20" width="20" border="0" alt="Mail this page" title="Mail this page" /></td>
+              <td><a href="javascript:show_Mailto('uc_ActPNL_tr_mailto','uc_ActPNL_tr_feedback','uc_ActPNL_hd_mailto','uc_ActPNL_hd_feedback','uc_ActPNL_txt_m_to','uc_ActPNL_txt_m_from','uc_ActPNL_txt_m_comment','uc_ActPNL_lbl_to','uc_ActPNL_lbl_errormsg_mailto','uc_ActPNL_txt_fdb_name','uc_ActPNL_txt_fdb_email','uc_ActPNL_txt_fdb_comment','uc_ActPNL_lbl_name','uc_ActPNL_lbl_email','uc_ActPNL_bttn_fdb_send','uc_ActPNL_bttn_mailto_send')" id="uc_ActPNL_mailto" class="bfont" onmouseover="window.status=&#39;Click to Open Send Mail Window&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;" title="Mail this page">
+                <span id="uc_ActPNL_lnk_mailto" style="color:Blue;">&#2696;-&#2734;&#2759;&#2696;&#2738; &#2709;&#2736;&#2763;</span>
+                </a></td>
+              <td><img src="../components/ActPNL/images/feedback.gif" height="18" width="20" border="0" alt="Feedback" title="Feedback" /></td>
+              <td><a href="javascript:show_feedback('uc_ActPNL_tr_mailto','uc_ActPNL_tr_feedback','uc_ActPNL_hd_mailto','uc_ActPNL_hd_feedback','uc_ActPNL_txt_m_to','uc_ActPNL_txt_m_from','uc_ActPNL_txt_m_comment','uc_ActPNL_lbl_to','uc_ActPNL_lbl_errormsg_mailto','uc_ActPNL_txt_fdb_name','uc_ActPNL_txt_fdb_email','uc_ActPNL_txt_fdb_comment','uc_ActPNL_lbl_name','uc_ActPNL_lbl_email','uc_ActPNL_bttn_fdb_send','uc_ActPNL_bttn_mailto_send')" id="uc_ActPNL_feedback" title="Feedback" class="bfont" onmouseover="window.status=&#39;Click to Open Send Feedback Window&#39;; return true;" onmouseout="window.status=&#39;&#39;; return true;">
+                <span id="uc_ActPNL_lnk_feedback" style="color:Blue;">&#2730;&#2765;&#2736;&#2724;&#2751;&#2733;&#2750;&#2741;</span>
+                </a></td>
+              <td><span id="uc_ActPNL_lbl_msg" class="lblerror" style="color:Black;"></span></td>
+            </tr>
+            </tbody>
+        </table></td>
+	</tr>
+</table>
+
+</div>
+<div id="uc_ActPNL_tr_mailto" style="display :none">
+  <table id="uc_ActPNL_tbl" style="border-right: #000000 1px solid; border-top: #000000 1px solid; border-left:#000000 1px solid; border-bottom: #000000 1px solid" cellspacing="0" cellpadding="0" width="100%" border="0">
+	<tr>
+		<td class="control_header" align="center" colspan="3"><span id="uc_ActPNL_lbl_mailto_header" class="ActPnlHeader">&#2696;-&#2734;&#2759;&#2696;&#2738; &#2709;&#2736;&#2763;</span></td>
+	</tr>
+	<tr>
+		<td colspan="3">&nbsp;</td>
+	</tr>
+	<tr>
+		<td align="right"><span id="uc_ActPNL_lbl_mailto_to" class="Small_label">&#2730;&#2765;&#2736;&#2724;&#2751;</span></td>
+		<td class="Small_label">&nbsp;:&nbsp;</td>
+		<td align="left" width="100%"><input name="uc_ActPNL$txt_m_to" type="text" id="uc_ActPNL_txt_m_to" class="tb" style="width:85%;" />
+        <span id="uc_ActPNL_lbl_to" class="lblerror" style="color:Red;"></span></td>
+	</tr>
+	<tr>
+		<td align="right"><span id="uc_ActPNL_lbl_mailto_from" class="Small_label">&#2724;&#2736;&#2731;&#2725;&#2752;</span></td>
+		<td class="Small_label">&nbsp;:&nbsp;</td>
+		<td align="left" width="100%"><input name="uc_ActPNL$txt_m_from" type="text" id="uc_ActPNL_txt_m_from" class="tb" style="width:85%;" /></td>
+	</tr>
+	<tr>
+		<td valign="top" align="right">&nbsp;
+        <span id="uc_ActPNL_lbl_mailto_comment" class="Small_label">&#2719;&#2752;&#2730;&#2765;&#8205;&#2730;&#2723;&#2752;</span></td>
+		<td class="Small_label" valign="top" align="right">&nbsp;:&nbsp; </td>
+		<td align="left" width="100%"><textarea name="uc_ActPNL$txt_m_comment" rows="4" cols="50" id="uc_ActPNL_txt_m_comment" class="tb" style="height:160px;width:85%;">
+</textarea></td>
+	</tr>
+	<tr>
+		<td align="left" colspan="3"><span id="uc_ActPNL_lbl_errormsg_mailto" class="lblerror"></span></td>
+	</tr>
+	<tr>
+		<td align="center" colspan="3"><input type="submit" name="uc_ActPNL$bttn_mailto_send" value="Send" onclick="javascript:return validate_mailto(&#39;uc_ActPNL_tr_mailto&#39;,&#39;uc_ActPNL_tr_feedback&#39;,&#39;uc_ActPNL_hd_mailto&#39;,&#39;uc_ActPNL_hd_feedback&#39;,&#39;uc_ActPNL_txt_m_to&#39;,&#39;uc_ActPNL_txt_m_from&#39;,&#39;uc_ActPNL_txt_m_comment&#39;,&#39;uc_ActPNL_lbl_to&#39;,&#39;uc_ActPNL_lbl_errormsg_mailto&#39;,&#39;uc_ActPNL_txt_fdb_name&#39;,&#39;uc_ActPNL_txt_fdb_email&#39;,&#39;uc_ActPNL_txt_fdb_comment&#39;,&#39;uc_ActPNL_lbl_name&#39;,&#39;uc_ActPNL_lbl_email&#39;,&#39;uc_ActPNL_bttn_fdb_send&#39;,&#39;uc_ActPNL_bttn_mailto_send&#39;);" id="uc_ActPNL_bttn_mailto_send" class="UniCode_button" />
+        &nbsp;
+        <input name="uc_ActPNL$bttn_mailto_close" type="button" id="uc_ActPNL_bttn_mailto_close" class="UniCode_button" value="Close" onclick="javascript:closepnl_mailto(&#39;uc_ActPNL_tr_mailto&#39;,&#39;uc_ActPNL_tr_feedback&#39;,&#39;uc_ActPNL_hd_mailto&#39;,&#39;uc_ActPNL_hd_feedback&#39;,&#39;uc_ActPNL_txt_m_to&#39;,&#39;uc_ActPNL_txt_m_from&#39;,&#39;uc_ActPNL_txt_m_comment&#39;,&#39;uc_ActPNL_lbl_to&#39;,&#39;uc_ActPNL_lbl_errormsg_mailto&#39;,&#39;uc_ActPNL_txt_fdb_name&#39;,&#39;uc_ActPNL_txt_fdb_email&#39;,&#39;uc_ActPNL_txt_fdb_comment&#39;,&#39;uc_ActPNL_lbl_name&#39;,&#39;uc_ActPNL_lbl_email&#39;,&#39;uc_ActPNL_bttn_fdb_send&#39;,&#39;uc_ActPNL_bttn_mailto_send&#39;);" /></td>
+	</tr>
+</table>
+
+</div>
+<div id="uc_ActPNL_tr_feedback" style="display :none">
+  <table style="border-radius: #000000 1px solid; border-top:#000000 1px solid; border-left:#000000 1px solid; border-bottom: #000000 1px solid"
+		cellspacing="0" cellpadding="0" width="100%" border="0">
+    <tr>
+      <td class="control_header" align="center" colspan="3"><span id="uc_ActPNL_lbl_fdb_header" class="ActPnlHeader">&#2730;&#2765;&#2736;&#2724;&#2751;&#2733;&#2750;&#2741;</span></td>
+    </tr>
+    <tr>
+      <td colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+      <td align="right"><span id="uc_ActPNL_lbl_fdb_name" class="Small_label">&#2728;&#2750;&#2734;</span></td>
+      <td class="Small_label" align="right">&nbsp;:&nbsp;</td>
+      <td align="left" width="100%"><input name="uc_ActPNL$txt_fdb_name" type="text" id="uc_ActPNL_txt_fdb_name" class="tb" style="width:85%;" />
+        <span id="uc_ActPNL_lbl_name" class="lblerror" style="color:Red;"></span></td>
+    </tr>
+    <tr>
+      <td style="height: 24px" align="right"><span id="uc_ActPNL_lbl_fdb_email" class="Small_label">&#2695;-&#2734;&#2759;&#2738;</span></td>
+      <td class="Small_label" style="height: 24px" align="right">&nbsp;:&nbsp;</td>
+      <td style="height: 24px" align="left" width="100%"><input name="uc_ActPNL$txt_fdb_email" type="text" id="uc_ActPNL_txt_fdb_email" class="tb" style="width:85%;" />
+        <span id="uc_ActPNL_lbl_email" class="lblerror" style="color:Red;"></span></td>
+    </tr>
+    <tr>
+      <td valign="top" align="right">&nbsp;
+        <span id="uc_ActPNL_lbl_fdb_comment" class="Small_label">&#2719;&#2752;&#2730;&#2765;&#8205;&#2730;&#2723;&#2752;</span></td>
+      <td class="Small_label" valign="top" align="right">&nbsp;:&nbsp;</td>
+      <td align="left" width="100%"><textarea name="uc_ActPNL$txt_fdb_comment" rows="4" cols="50" id="uc_ActPNL_txt_fdb_comment" class="tb" style="height:160px;width:85%;">
+</textarea></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="3"><input type="submit" name="uc_ActPNL$bttn_fdb_send" value="Send" onclick="javascript:return validate_feedback(&#39;uc_ActPNL_tr_mailto&#39;,&#39;uc_ActPNL_tr_feedback&#39;,&#39;uc_ActPNL_hd_mailto&#39;,&#39;uc_ActPNL_hd_feedback&#39;,&#39;uc_ActPNL_txt_m_to&#39;,&#39;uc_ActPNL_txt_m_from&#39;,&#39;uc_ActPNL_txt_m_comment&#39;,&#39;uc_ActPNL_lbl_to&#39;,&#39;uc_ActPNL_lbl_errormsg_mailto&#39;,&#39;uc_ActPNL_txt_fdb_name&#39;,&#39;uc_ActPNL_txt_fdb_email&#39;,&#39;uc_ActPNL_txt_fdb_comment&#39;,&#39;uc_ActPNL_lbl_name&#39;,&#39;uc_ActPNL_lbl_email&#39;,&#39;uc_ActPNL_bttn_fdb_send&#39;,&#39;uc_ActPNL_bttn_mailto_send&#39;);" id="uc_ActPNL_bttn_fdb_send" class="UniCode_button" />
+        &nbsp;
+        <input name="uc_ActPNL$bttn_fdb_close" type="button" id="uc_ActPNL_bttn_fdb_close" value="Close" class="normal_button" onclick="javascript:closepnl_feedback(&#39;uc_ActPNL_tr_mailto&#39;,&#39;uc_ActPNL_tr_feedback&#39;,&#39;uc_ActPNL_hd_mailto&#39;,&#39;uc_ActPNL_hd_feedback&#39;,&#39;uc_ActPNL_txt_m_to&#39;,&#39;uc_ActPNL_txt_m_from&#39;,&#39;uc_ActPNL_txt_m_comment&#39;,&#39;uc_ActPNL_lbl_to&#39;,&#39;uc_ActPNL_lbl_errormsg_mailto&#39;,&#39;uc_ActPNL_txt_fdb_name&#39;,&#39;uc_ActPNL_txt_fdb_email&#39;,&#39;uc_ActPNL_txt_fdb_comment&#39;,&#39;uc_ActPNL_lbl_name&#39;,&#39;uc_ActPNL_lbl_email&#39;,&#39;uc_ActPNL_bttn_fdb_send&#39;,&#39;uc_ActPNL_bttn_mailto_send&#39;);" />
+        &nbsp;
+        <span id="uc_ActPNL_lbl_fdb_errormsg" class="lblerror"></span></td>
+    </tr>
+  </table>
+</div>
+<input name="uc_ActPNL$hd_mailto" type="hidden" id="uc_ActPNL_hd_mailto" size="1" value="display :none" />
+<input name="uc_ActPNL$hd_feedback" type="hidden" id="uc_ActPNL_hd_feedback" size="1" value="display :none" />
+<input name="uc_ActPNL$hdRank" type="hidden" id="uc_ActPNL_hdRank" />
+</td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <table border="0" width="778" cellspacing="0" cellpadding="0" id="table6" bordercolor="#af753a">
+                                    <tr>
+                                        <td valign="top">
+                                            <div align="center">
+                                                <table border="0" width="98%" cellspacing="0" cellpadding="0" id="table194">
+                                                    <tr>
+                                                        <td>
+                                                            <img border="0" src="images/5pixelsapcer.gif" width="5" height="5"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td id="td_content">
+                                                        <span id="uc_clp_lbl_errormsg" class="lblerror" style="color:Red;"></span>
+<TABLE id="Uc_ORGChart" cellSpacing="0" cellPadding="0" width="100%" border="0">
+	<TR>
+		<TD id="uc_clp_tv_org" valign="top">
+			<div id="uc_clp_div_tvORG"><div class="small_label" id="uc_clp_tv_orgchart" class="small_label">
+<table CELLSPACING="0" CELLPADDING="0" BORDER="0">
+	<TR><TD valign='middle'>&nbsp;<a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Rminus.gif'></a><font COLOR="#000000" FACE="Verdana" SIZE="2" style="display:inline;font-face:Times;text-decoration:none;cursor:hand;overflow:hidden;font-size:x-small;font-family:Verdana;background-color:#08246B;background:#ffcc66;color:Black;font-weight:bold;"><b>&nbsp;&nbsp;&#2741;&#2745;&#2752;&#2741;&#2719;&#2752; &#2734;&#2750;&#2739;&#2710;&#2753;&#2690;</b></font></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='100px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Lminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=636"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ મહાનિદેશક</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.0&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=637"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ મહાનિરીક્ષક (વહીવટ)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1606"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;ઇ/ચા. નાયબ વહિવટી અધિકારી-૧</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=3684"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;મુખ્ય હિસાબી અધિકારી</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1607"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;હિસાબી અધિકારી</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1610"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;કચેરી અધિક્ષક (જનરલ)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.1&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=1608"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;અધિક પોલીસ મહાનિદેશક, ( આયોજન અને આધુનિકરણ)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1609"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;નાયબ વહીવટી અધિકારી - ૨</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.2&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=712"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ મહાનિદેશક (કાયદો અને વ્યવસ્થા)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1611"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક (સ્ટાફ ઓફીસર)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.2.1&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Lminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=713"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;નાયબ પોલીસ મહાનિરીક્ષક ( કાયદો અને વ્યવસ્થા)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' width='100px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=714"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;ઈન્ચા.નાયબ પોલીસઅધિક્ષક(સ્ટેટ કંટ્રોલ રૂમ)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=715"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;ઇન્ચાર્જલ, અધિક પોલીસ મહાનિદેશક,(પોલીસ સુધારણા)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.4&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=716"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;અધિક પોલીસ મહાનિદેશક (અ.જા/અ.જ.જા/મા.અ.)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=13702"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;નાયબ પોલીસ મહાનિરિક્ષક, ( માનવ અધિકાર અનેસામાજીક ન</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=717"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;નાયબ પોલીસ અધિક્ષક (અ.જા/અ.જ.જા/નબળા વર્ગો/ મા.અ.)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=720"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;ઇન્ચાર્જ અધિક પોલીસ મહાનિદેશક (તપાસ)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=722"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ મહાનિરિક્ષક (ઇન્ટેલીજન્સ)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=723"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ મહાનિદેશક, સી.આઇ.ડી.(ક્રાઇમ અને રેલ્વેઝ)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=724"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;ઇ.ચા પોલીસ મહાનિદેશક (હથિયારી એકમો)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=725"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;I/C. પોલીસ મહાનિદેશક (તાલીમ)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.10&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=726"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;ઇન્ચાર્જ અધિક પોલીસમહાનિદેશક(તકનિકી સેવાઓઅને SCRB)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=114488"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;અધિક પોલીસ મહાનિદેશક,SCRB,ગાંધીનગર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=114489"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક,તકનિકી સેવાઓ,ગાંધીનગર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=114490"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસઅધિક્ષક,મોટરટ્રાન્‍સપોર્ટ(એમ.ટી)ગાંધીનગર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.11&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=721"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;I.C. પોલીસ મહાનિરીક્ષક (સ્ટેટ મોનીટરીંગ સેલ)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=64214"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;નાયબ પોલીસ મહાનિરીક્ષક, સ્ટેટ મોનીટરીંગ સેલ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=23817"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, સ્ટેટ મોનીટરીંગ સેલ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.12&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=33875"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;I/c પોલીસ મહાનિરીક્ષક (સ્ટેટ ટ્રાફિક બ્રાન્ચ)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=33994"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધીક્ષક, સ્ટેટ ટ્રાફિક બ્રાન્ચ-૧</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=54100"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, સ્ટેટ ટ્રાફિક બ્રાન્ચ (૨)  ગાંધીનગર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=729"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ કમિશ્નર, અમદાવાદ શહેર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=730"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ કમિશ્નર, વડોદરા શહેર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=731"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;I/c પોલીસ કમિશનર, સુરત શહેર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=732"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ કમિશ્ન્રર, રાજકોટ શહેર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.17&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=733"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ મહાનિરિક્ષક, અમદાવાદ રેન્જ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1615"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, અમદાવાદ(ગ્રામ્ય)</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1616"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, ખેડા</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1617"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, આણંદ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.18&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=734"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;નાયબ પોલીસ મહાનિરિક્ષક, ગાંધીનગર રેન્જ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1618"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, ગાંધીનગર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1619"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, સાબરકાંઠા</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1620"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, મહેસાણા</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=3184"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, અરવલ્‍લી</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.19&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=735"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ મહાનિરિક્ષક, વડોદરા રેન્જ, વડોદરા</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1621"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, વડોદરા ગ્રામ્ય</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1622"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, ભરૂચ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1623"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, નર્મદા</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=3186"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, છોટા ઉદેપુર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.20&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=736"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ મહાનિરિક્ષક, સુરત રેન્જ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1626"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, સુરત ગ્રામ્ય</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1627"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક વલસાડ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1628"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, નવસારી</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1629"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, ડાંગ- આહવા</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=2219"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, તાપી-વ્યારા</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.21&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=737"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;નાયબ પોલીસ મહાનિરીક્ષક, જુનાગઢ રેન્જ, જુનાગઢ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1630"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, જુનાગઢ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1633"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, પોરબંદર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=3189"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, ગીર-સોમનાથ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.22&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=738"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;નાયબ પોલીસ મહાનિરીક્ષક રાજકોટ રેન્જ , રાજકોટ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1634"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;નાયબ પોલીસ મહાનિરીક્ષક, રાજકોટ ગ્રામ્‍ય</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1635"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, જામનગર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1636"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, સુરેન્દ્રનગર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=3187"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, મોરબી</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=3188"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, દેવભૂમિ-દ્વારકા</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.23&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=739"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ મહાનિરિક્ષક, સરહદી રેન્જ, ભુજ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1637"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધીક્ષક, પશ્ચિમ કચ્છ-ભુજ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=2691"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, પૂર્વ, કચ્છ-ગાંધીધામ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1638"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, પાટણ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=1639"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, બનાસકાંઠા</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=124728"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, વાવ-થરાદ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.24&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Tminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=13703"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ મહાનિરિક્ષક, ભાવનગર રેન્જ, ભાવનગર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=13704"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, ભાવનગર</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=13705"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, અમરેલી</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' SRC='../webctrl_client/1_0/treeimages/I.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=13706"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, બોટાદ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='200px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><a href="javascript:__doPostBack(&#39;uc_clp$tv_orgchart&#39;,&#39;oncollapse,0.0.25&#39;)"><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/Lminus.gif'></a><a href="CMS.aspx?orgchart=true&amp;designation_id=13707"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;નાયબ પોલીસ મહાનિરીક્ષક, પંચમહાલ-ગોધરા રેન્જ, ગોધરા</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='300px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=13708"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, પંચમહાલ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='300px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/T.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=13709"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, દાહોદ</font></a></TD></TR>
+<TR><TD valign='middle'>&nbsp;<IMG align='top' border='0' width='300px' height='1px' SRC='../webctrl_client/1_0/treeimages/white.gif'><IMG align='top' border='0' class='icon' SRC='../webctrl_client/1_0/treeimages/L.gif'><a href="CMS.aspx?orgchart=true&amp;designation_id=13710"><font COLOR="#000000" SIZE="2" style="display:inline;font-size:10pt;font-face:Times;color:black;text-decoration:none;cursor:hand;overflow:hidden;">&nbsp;પોલીસ અધિક્ષક, મહીસાગર</font></a></TD></TR>
+
+</table>
+</div></div>
+		</TD>
+
+		
+	</TR>
+</TABLE>
+<input name="uc_clp$hd_directory_path" type="hidden" id="uc_clp_hd_directory_path" />
+<input name="uc_clp$hdUrl" type="hidden" id="uc_clp_hdUrl" />
+
+</td>
+
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td width="190" valign="top" style="border-top-width: 1px; border-bottom-width: 1px;
+                                            border-left: 1px solid; border-right-width: 1px" bordercolor="#999999">
+                                            <table border="0" width="100%" cellspacing="0" cellpadding="0" id="table197">
+                                                <tr>
+                                                    <td>
+                                                        <img border="0" src="images/5pixelsapcer.gif" width="5" height="5"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="td_rel2">
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table id="table447" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                            <tr>
+                                                                <td class="mainfonts" style="padding-right: 0px; padding-left: 0px; padding-bottom: 0px;
+                                                                    padding-top: 0px" bgcolor="#ff6a6a" height="22">
+                                                                    <p class="commontopfonts">
+                                                                        <b>&nbsp;&#2694;&#2730;&#2728;&#2752; &#2744;&#2759;&#2741;&#2750;&#2734;&#2750;&#2690;
+                                                                        </b>
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td bgcolor="#eeeeee">
+                                                                    <table id="table448" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <font size="2"><a href="CMS.aspx?Search=PS">&#2730;&#2763;&#2738;&#2752;&#2744; &#2744;&#2765;&#2719;&#2759;&#2742;&#2728;
+                                                                                    &#2742;&#2763;&#2727;&#2763;</a></font></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=571">&#2734;&#2750;&#2745;&#2751;&#2724;&#2752; &#2734;&#2759;&#2739;&#2741;&#2741;&#2750;&#2728;&#2763;
+                                                                                    &#2693;&#2727;&#2751;&#2709;&#2750;&#2736;</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=555">&#2728;&#2750;&#2711;&#2736;&#2751;&#2709; &#2693;&#2727;&#2751;&#2709;&#2750;&#2736;
+                                                                                    &#2730;&#2724;&#2765;&#2736; </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=522">&#2728;&#2750;&#2711;&#2736;&#2751;&#2709;&#2724;&#2765;&#8205;&#2741;</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=3807"><font size="2">&#2733;&#2750;&#2736;&#2724;&#2752;&#2735;
+                                                                                    &#2730;&#2750;&#2744;&#2730;&#2763;&#2736;&#2765;&#2719;</font></a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <p>
+                                                                                    <a href="CMS.aspx?content_id=3810"><font size="2">&#2730;&#2763;&#2738;&#2752;&#2744;
+                                                                                        &#2709;&#2751;&#2738;&#2735;&#2736;&#2728;&#2765;&#2744;&nbsp;&#2744;&#2736;&#2765;&#2719;&#2751;&#2731;&#2751;&#2709;&#2759;&#2719;
+                                                                                        &#2734;&#2750;&#2719;&#2759;&#2728;&#2750;
+                                                                                        <br>
+                                                                                        &#2745;&#2709;&#2765;&#2709;</font></a></p>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=3809"><font size="2">&#2741;&#2751;&#2726;&#2759;&#2742;
+                                                                                    &#2716;&#2741;&#2750; &#2734;&#2750;&#2719;&#2759; "&#2728;&#2763; &#2707;&#2732;&#2765;&#2716;&#2759;&#2709;&#2765;&#2742;&#2728;
+                                                                                    &#2744;&#2736;&#2765;&#2719;&#2751;&#2731;&#2751;&#2709;&#2759;&#2719;"&#2728;&#2750;
+                                                                                    &#2745;&#2709;&#2765;&#2709;</font></a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                            </td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=520">&#2716;&#2750;&#2723;&#2741;&#2750; &#2716;&#2763;&#2711;</a></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=520">&#2716;&#2750;&#2723;&#2741;&#2750; &#2716;&#2763;&#2711;</a></td>
+                                                                        </tr>
+                                                                      <!--  <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="downloads/medal.pdf">&#2714;&#2690;&#2726;&#2765;&#2736;&#2709; &#2741;&#2751;&#2716;&#2759;&#2724;&#2750;</a></td>
+                                                                        </tr>-->
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=525">&#2694;&#2730;&#2728;&#2750; &#2730;&#2765;&#2736;&#8205;&#2742;&#2765;&#2736;&#2765;&#2728;&#2763;
+                                                                                    &#65533; &#2693;&#2734;&#2750;&#2736;&#2750; &#2697;&#2724;&#2765;&#2724;&#2736;
+                                                                                </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=512">&#2716;&#2750;&#2745;&#2759;&#2736; &#2734;&#2750;&#2745;&#2751;&#2724;&#2752;
+                                                                                    &#2693;&#2727;&#2751;&#2709;&#2750;&#2736;&#2752; </a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td valign="top" class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0" vspace="6"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="CMS.aspx?content_id=16233">પ્રાઈવેટ સિક્યુરિટી એજન્સી લાઈસન્સ બાબત</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td valign="top" class="cfont" style="width: 2px; text-align: center" height="22">
+                                                                                <img height="8" src="images/blackbullet.gif" width="7" border="0" vspace="6"></td>
+                                                                            <td class="cfont" height="22">
+                                                                                <a href="downloads/copta.pdf" target="_blank">તમાકુ નિયંત્રણ અધિનિયમ-૨૦૦૩</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                    <td bgcolor="#ff6a6a" height="22" class="mainfonts">
+                                                        <p class="commontopfonts">
+                                                            <b><span lang="GU">&nbsp;&#2744;&#2690;&#2730;&#2736;&#2765;&#2709;</span> &#2734;&#2750;&#2739;&#2710;&#2753;&#2690;
+                                                            </b>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td id="contact_search">
+                                                        
+
+<table id="tbl_contactmatrix" cellspacing="0" cellpadding="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td><table style="display: none;" cellspacing="0" cellpadding="0" width="100%" border="0">
+          <tr>
+            <td class="CS_title_BG"><p class="CS_title_BG" align="center"><font class="CS_title_BG">
+                <span id="Contact_search2_lbl_search_title">&#2744;&#2690;&#2730;&#2736;&#2765;&#2709; &#2734;&#2750;&#2739;&#2710;&#2753;&#2690;</span>
+                </font></p></td>
+            <td class="CS_title_BG"><img height="30" src="images/contactinfo.jpg" width="42" align="right" border="0" alt="" title="" /></td>
+          </tr>
+        </table>
+        <span id="Contact_search2_lbl_errormsg" class="lblerror" style="color:Red;"></span></td>
+    </tr>
+    <tr>
+      <td><img height="5" src="images/5pixelsapcer.gif" width="5" border="0" alt="" title="" /></td>
+    </tr>
+    <tr>
+      <td><table id="tbl_search1" cellspacing="0" cellpadding="0" width="100%" border="0">
+          <tbody>
+            <tr>
+              <td class="lcfont"><p>
+                  <span id="Contact_search2_lbl_name" class="lcfont">&nbsp;&#2728;&#2750;&#2734; &#2734;&#2753;&#2716;&#2732; &#2742;&#2763;&#2727;&#2763;</span>
+                </p></td>
+            </tr>
+            <tr>
+              <td><table cellspacing="0" cellpadding="0" width="100%" border="0">
+                  <tr>
+                    <td><input name="Contact_search2$txt_name" type="text" id="Contact_search2_txt_name" class="tb" style="width:70%;" />
+                     <label for="Contact_search2_txt_name" id="Contact_search2_lbl" style="display:none;">Name</label>
+                      <input type="submit" name="Contact_search2$bttn_search_name1" value=" શોધો" id="Contact_search2_bttn_search_name1" />
+                      </td>
+                    <td></td>
+                  </tr>
+                </table></td>
+            </tr>
+            <tr>
+              <td class="lcfont"><p>
+                  <span id="Contact_search2_lbl_location" class="lcfont">&nbsp;&#2744;&#2765;&#2725;&#2739; &#2734;&#2753;&#2716;&#2732; &#2742;&#2763;&#2727;</span>
+                </p></td>
+            </tr>
+            <tr>
+              <td><table cellspacing="0" cellpadding="0" width="100%" border="0">
+                  <tr>
+                    <td><input name="Contact_search2$txt_location" type="text" id="Contact_search2_txt_location" class="tb" style="width:70%;" />
+                     <label for="Contact_search2_txt_location" id="Contact_search2_lbl2" style="display:none;">dsd</label>
+                      <input type="submit" name="Contact_search2$bttn_search_location1" value="શોધો" id="Contact_search2_bttn_search_location1" />
+                      </td>
+                    <td></td>
+                  </tr>
+                </table></td>
+            </tr>
+          </tbody>
+        </table></td>
+    </tr>
+  </tbody>
+</table>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="mainfonts">
+                                                        <b>&nbsp; <font size="2"><a href="CMS.aspx?orgchart=true">&#2741;&#2751;&#2711;&#2724;&#2741;&#2750;&#2736;
+                                                            &#2716;&#2753;&#2707;</a></font>&nbsp; </b>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table border="0" width="778" cellspacing="0" cellpadding="0" id="table198">
+                        <tr>
+                            <td bgcolor="#fb514d" height="30" id="td_disclaimer" class="mainfonts">
+                                <p class="cfont">
+                                    &nbsp;&nbsp;<a href="CMS.aspx?content_id=143">&#2721;&#2751;&#2744;&#2765;&#2709;&#2765;&#2738;&#2759;&#2734;&#2736;</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    |&nbsp;&nbsp;&nbsp;&nbsp; <a href="CMS.aspx?feedback=true">&#2730;&#2765;&#2736;&#2724;&#2751;&#2733;&#2750;&#2741;</a></FONT></p>
+                            </td>
+                            <td bgcolor="#fb514d" height="30" id="td_copyright">
+                                <p align="right">
+                                    <font face="Tahoma"><span style="font-size: 8pt"><font face="Tahoma" size="2"><span
+                                        style="font-size: 8pt" class="cfont"><font size="2">
+                                            <!--<a href="http://www.cybersurfindia.com" target="_blank">
+Developed by Cybersurf (India)</a>-->
+                                            &copy; &#2730;&#2763;&#2738;&#2752;&#2744; &#2734;&#2745;&#2750;&#2728;&#2751;&#2726;&#2759;&#2742;&#2709;&#2728;&#2752;
+                                            &#2709;&#2714;&#2759;&#2736;&#2752; - &#2711;&#2753;&#2716;&#2736;&#2750;&#2724;</font>
+                                        <font size="2">&#2744;&#2736;&#2709;&#2750;&#2736;</font></span></font>&nbsp;&nbsp;
+                                    </span></font>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <span id="lblcontentmodifiedon">Last updated on 02-11-2026</span>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+
+     <script type='text/javascript'>
+         function Go() { return }
+                                                        </script>
+
+                                                        <script type='text/javascript' src='menuinside/exmplmenu_var.js'></script>
+
+                                                        <script type='text/javascript' src='menuinside/menu_com.js'></script>
+
+                                                        <noscript>
+                                                            Your browser does not support script</noscript>
+
+    <script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12384112-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+    s
+</body>
+</html>

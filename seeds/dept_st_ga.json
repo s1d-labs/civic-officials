@@ -1,0 +1,47 @@
+[
+ {
+  "key": "st_ga_portal:secretaries",
+  "payload": {
+   "reader": "st_ga_portal",
+   "kind": "secretaries",
+   "url": "https://www.goa.gov.in/secretaries/",
+   "state": "GA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ga_portal:deptdir",
+  "payload": {
+   "reader": "st_ga_portal",
+   "kind": "deptdir",
+   "url": "https://www.goa.gov.in/citizen/department-directory/",
+   "state": "GA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ga_portal:hod",
+  "payload": {
+   "reader": "st_ga_portal",
+   "kind": "hod",
+   "url": "https://www.goa.gov.in/government/head-of-the-departments/",
+   "state": "GA",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ga_teldir:2023",
+  "payload": {
+   "reader": "st_ga_teldir",
+   "url": "https://www.goa.gov.in/wp-content/uploads/2023/06/GovtOfficialTelephonedirectory2023.pdf",
+   "state": "GA",
+   "india_only": true,
+   "route": "direct",
+   "ocr": true,
+   "pages": 278
+  }
+ }
+]
