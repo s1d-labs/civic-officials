@@ -1,0 +1,5 @@
+{"module": "ward3_brahmapur", "payload": {"reader": "ward3_brahmapur", "url": "https://www.berhampur.gov.in/department.php?slug=engineering", "state": "OD", "section": "engineering"},
+ "routes": {"https://www.berhampur.gov.in/department.php?slug=engineering": "brahmapur_engineering.html"},
+ "min_records": 15,
+ "expect": [{"post": "City Engineer", "name": "Bikash Chandra Padhi", "level": "body"},
+            {"post": "Jr.Engineer", "name": "Binapani", "level": "body"}]}

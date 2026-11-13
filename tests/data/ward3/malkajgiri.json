@@ -1,0 +1,5 @@
+{"module": "ward3_malkajgiri", "payload": {"reader": "ward3_malkajgiri", "url": "https://mmc.telangana.gov.in/KeyContacts.aspx", "state": "TG", "india_only": true, "route": "direct"},
+ "routes": {"https://mmc.telangana.gov.in/KeyContacts.aspx": "malkajgiri_keycontacts.html"},
+ "min_records": 50,
+ "expect": [{"post": "Zonal Commissioner", "name": "Vikas Mahato", "level": "zone"},
+            {"post": "Sanitation officer", "name": "Mahesh", "level": "circle"}]}
