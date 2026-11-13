@@ -1,0 +1,38 @@
+{
+ "module": "ward3_panchkula",
+ "payload": {
+  "reader": "ward3_panchkula",
+  "url": "https://mcpanchkula.in/PDF/Sanitation.pdf",
+  "state": "HR"
+ },
+ "pages": "panchkula.pages",
+ "min_records": 45,
+ "min_wards": 20,
+ "expect": [
+  {
+   "post": "Supervisor",
+   "name": "Rajbir",
+   "wards": [
+    "2"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Safai Daroga$",
+   "name": "Ravinder Kumar",
+   "wards": [
+    "11"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Assistant Sanitary Inspector",
+   "name": "Ajay Kumar Sood",
+   "wards": [
+    "19",
+    "20"
+   ],
+   "level": "ward"
+  }
+ ]
+}
