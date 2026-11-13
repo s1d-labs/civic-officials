@@ -25,7 +25,8 @@ def run(key):
 
 def test_th_dist_items_match_seed():
     seed = json.loads((ROOT / "seeds" / "dept_th_dist.json").read_text())
-    assert mod("th_dist").items() == seed and len(seed) == len(FILES) and all(i["payload"]["india_only"] for i in seed)
+    assert mod("th_dist").items() == seed and len(seed) == len(FILES)
+    assert sorted(i["key"] for i in seed if i["payload"]["india_only"]) == ["th_dist-mh-ahilyanagar", "th_dist-mh-dharashiv"]
     assert hasattr(mod("th_dist"), "METHOD")
 
 

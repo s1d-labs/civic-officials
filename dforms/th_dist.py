@@ -27,8 +27,8 @@ post_as_written; name as written (honorific kept); phone (mobile and office numb
 dforms/th_dist_lgd.json (LGD bodies of the district: the Hindi / Marathi name or a Latin form of it, tied when exactly one body fits;
 alias table for names LGD writes in another way) or from the MP mailbox table; area_latin = the LGD name. last_updated = the page's
 "Last Updated" date when shown. src_pos = {table, row} of the row.
-Route: district portals answer from abroad in most cases, but some NIC hosts refuse foreign IPs: the items carry india_only=True
-(fetch through an Indian route; archive-first gives the saved copy).
+Route: the seven MP NIC hosts and palghar.gov.in answered the GitHub runners abroad (archive vantage "pool", HTTP 200);
+ahilyanagar.maharashtra.gov.in and dharashiv.maharashtra.gov.in answered only the Indian server: those two items carry india_only.
 """
 import json
 import re
@@ -243,9 +243,13 @@ def parse(html, url, state, district):
     return recs
 
 
+# hosts that answered only from India in the archive (2026-11-05..13: GitHub runners got no answer, the Indian server got 200)
+INDIA_ONLY = ("ahilyanagar.maharashtra.gov.in", "dharashiv.maharashtra.gov.in")
+
+
 def items(get=None):
-    return [{"key": f"{MODULE}-{k}", "payload": {"reader": MODULE, "url": url, "state": st, "district": dist, "india_only": True}}
-            for k, st, dist, url in PAGES]
+    return [{"key": f"{MODULE}-{k}", "payload": {"reader": MODULE, "url": url, "state": st, "district": dist,
+                                                  "india_only": url.split("/")[2] in INDIA_ONLY}} for k, st, dist, url in PAGES]
 
 
 def fetch(p, get):
