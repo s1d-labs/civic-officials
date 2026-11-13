@@ -1,0 +1,42 @@
+[
+ {
+  "key": "police3_hr:fatehabad",
+  "payload": {
+   "reader": "police3_hr",
+   "url": "https://fatehabad.haryanapolice.gov.in/contactus.html",
+   "state": "HR",
+   "district": "Fatehabad",
+   "std": "01667"
+  }
+ },
+ {
+  "key": "police3_hr:yamunanagar",
+  "payload": {
+   "reader": "police3_hr",
+   "url": "https://yamunanagar.haryanapolice.gov.in/Contactus.html",
+   "state": "HR",
+   "district": "Yamunanagar",
+   "std": "01732"
+  }
+ },
+ {
+  "key": "police3_hr:charkhidadri",
+  "payload": {
+   "reader": "police3_hr",
+   "url": "https://charkhidadri.haryanapolice.gov.in/Contacts.html",
+   "state": "HR",
+   "district": "Charkhi Dadri",
+   "std": "01250"
+  }
+ },
+ {
+  "key": "police3_hr:hansi",
+  "payload": {
+   "reader": "police3_hr",
+   "url": "https://hansi.haryanapolice.gov.in/Contacts.html",
+   "state": "HR",
+   "district": "Hansi",
+   "std": "01663"
+  }
+ }
+]
