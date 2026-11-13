@@ -1,0 +1,596 @@
+[
+ {
+  "key": "dm2:ahmedabad.nic.in",
+  "payload": {
+   "url": "https://ahmedabad.nic.in",
+   "name": "Ahmedabad",
+   "kind": "District administration",
+   "state": "GJ",
+   "jurisdiction": "Gujarat",
+   "district_code": "438",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:ahmedabad.nic.in/about-district/whos-who",
+  "payload": {
+   "url": "https://ahmedabad.nic.in/about-district/whos-who/",
+   "name": "Ahmedabad",
+   "kind": "District administration",
+   "state": "GJ",
+   "jurisdiction": "Gujarat",
+   "district_code": "438",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:ahmedabad.nic.in/directory",
+  "payload": {
+   "url": "https://ahmedabad.nic.in/directory/",
+   "name": "Ahmedabad",
+   "kind": "District administration",
+   "state": "GJ",
+   "jurisdiction": "Gujarat",
+   "district_code": "438",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:amreli.nic.in",
+  "payload": {
+   "url": "https://amreli.nic.in",
+   "name": "Amreli",
+   "kind": "District administration",
+   "state": "GJ",
+   "jurisdiction": "Gujarat",
+   "district_code": "439",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:amreli.nic.in/about-district/whos-who",
+  "payload": {
+   "url": "https://amreli.nic.in/about-district/whos-who/",
+   "name": "Amreli",
+   "kind": "District administration",
+   "state": "GJ",
+   "jurisdiction": "Gujarat",
+   "district_code": "439",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:amreli.nic.in/directory",
+  "payload": {
+   "url": "https://amreli.nic.in/directory/",
+   "name": "Amreli",
+   "kind": "District administration",
+   "state": "GJ",
+   "jurisdiction": "Gujarat",
+   "district_code": "439",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:anand.nic.in",
+  "payload": {
+   "url": "https://anand.nic.in",
+   "name": "Anand",
+   "kind": "District administration",
+   "state": "GJ",
+   "jurisdiction": "Gujarat",
+   "district_code": "440",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:anand.nic.in/about-district/whos-who",
+  "payload": {
+   "url": "https://anand.nic.in/about-district/whos-who/",
+   "name": "Anand",
+   "kind": "District administration",
+   "state": "GJ",
+   "jurisdiction": "Gujarat",
+   "district_code": "440",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:anand.nic.in/directory",
+  "payload": {
+   "url": "https://anand.nic.in/directory/",
+   "name": "Anand",
+   "kind": "District administration",
+   "state": "GJ",
+   "jurisdiction": "Gujarat",
+   "district_code": "440",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:akola.gov.in",
+  "payload": {
+   "url": "https://akola.gov.in",
+   "name": "Akola",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "467",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:akola.gov.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://akola.gov.in/en/about-district/whos-who/",
+   "name": "Akola",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "467",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:amravati.gov.in",
+  "payload": {
+   "url": "https://amravati.gov.in",
+   "name": "Amravati",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "468",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:amravati.gov.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://amravati.gov.in/en/about-district/whos-who/",
+   "name": "Amravati",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "468",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:amravati.gov.in/en/district-telephone-directory-2",
+  "payload": {
+   "url": "https://amravati.gov.in/en/district-telephone-directory-2/",
+   "name": "Amravati",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "468",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:kolhapur.gov.in",
+  "payload": {
+   "url": "https://kolhapur.gov.in",
+   "name": "Kolhapur",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "480",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:kolhapur.gov.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://kolhapur.gov.in/en/about-district/whos-who/",
+   "name": "Kolhapur",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "480",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:kolhapur.gov.in/en/directory",
+  "payload": {
+   "url": "https://kolhapur.gov.in/en/directory/",
+   "name": "Kolhapur",
+   "kind": "District administration",
+   "state": "MH",
+   "jurisdiction": "Maharashtra",
+   "district_code": "480",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:agarmalwa.nic.in",
+  "payload": {
+   "url": "https://agarmalwa.nic.in",
+   "name": "Agar-Malwa",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "667",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:agarmalwa.nic.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://agarmalwa.nic.in/en/about-district/whos-who/",
+   "name": "Agar-Malwa",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "667",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:agarmalwa.nic.in/en/district-officers-directory",
+  "payload": {
+   "url": "https://agarmalwa.nic.in/en/district-officers-directory/",
+   "name": "Agar-Malwa",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "667",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:alirajpur.nic.in",
+  "payload": {
+   "url": "https://alirajpur.nic.in",
+   "name": "Alirajpur",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "639",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:alirajpur.nic.in/en/whos-who",
+  "payload": {
+   "url": "https://alirajpur.nic.in/en/whos-who/",
+   "name": "Alirajpur",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "639",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:alirajpur.nic.in/en/department-directory",
+  "payload": {
+   "url": "https://alirajpur.nic.in/en/department-directory/",
+   "name": "Alirajpur",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "639",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:alirajpur.nic.in/en/collectors-contact",
+  "payload": {
+   "url": "https://alirajpur.nic.in/en/collectors-contact/",
+   "name": "Alirajpur",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "639",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:anuppur.nic.in",
+  "payload": {
+   "url": "https://anuppur.nic.in",
+   "name": "Anuppur",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "390",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:anuppur.nic.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://anuppur.nic.in/en/about-district/whos-who/",
+   "name": "Anuppur",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "390",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:maihar.nic.in",
+  "payload": {
+   "url": "https://maihar.nic.in",
+   "name": "Maihar",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "784",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:maihar.nic.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://maihar.nic.in/en/about-district/whos-who/",
+   "name": "Maihar",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "784",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:maihar.nic.in/en/directory",
+  "payload": {
+   "url": "https://maihar.nic.in/en/directory/",
+   "name": "Maihar",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "784",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:pandhurna.nic.in",
+  "payload": {
+   "url": "https://pandhurna.nic.in",
+   "name": "Pandhurna",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "785",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:pandhurna.nic.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://pandhurna.nic.in/en/about-district/whos-who/",
+   "name": "Pandhurna",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "785",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:pandhurna.nic.in/en/directory",
+  "payload": {
+   "url": "https://pandhurna.nic.in/en/directory/",
+   "name": "Pandhurna",
+   "kind": "District administration",
+   "state": "MP",
+   "jurisdiction": "Madhya Pradesh",
+   "district_code": "785",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:balod.gov.in",
+  "payload": {
+   "url": "https://balod.gov.in",
+   "name": "Balod",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "646",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:balod.gov.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://balod.gov.in/en/about-district/whos-who/",
+   "name": "Balod",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "646",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:balod.gov.in/en/directory",
+  "payload": {
+   "url": "https://balod.gov.in/en/directory/",
+   "name": "Balod",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "646",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:balodabazar.gov.in",
+  "payload": {
+   "url": "https://balodabazar.gov.in",
+   "name": "Balodabazar-Bhatapara",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "644",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:balodabazar.gov.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://balodabazar.gov.in/en/about-district/whos-who/",
+   "name": "Balodabazar-Bhatapara",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "644",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:balodabazar.gov.in/en/directory",
+  "payload": {
+   "url": "https://balodabazar.gov.in/en/directory/",
+   "name": "Balodabazar-Bhatapara",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "644",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:balrampur.gov.in",
+  "payload": {
+   "url": "https://balrampur.gov.in",
+   "name": "Balrampur-Ramanujganj",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "649",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:balrampur.gov.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://balrampur.gov.in/en/about-district/whos-who/",
+   "name": "Balrampur-Ramanujganj",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "649",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:balrampur.gov.in/en/directory",
+  "payload": {
+   "url": "https://balrampur.gov.in/en/directory/",
+   "name": "Balrampur-Ramanujganj",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "649",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:sarangarh-bilaigarh.cg.gov.in",
+  "payload": {
+   "url": "https://sarangarh-bilaigarh.cg.gov.in",
+   "name": "Sarangarh-Bilaigarh",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "763",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "dm2:sarangarh-bilaigarh.cg.gov.in/en/about-district/whos-who",
+  "payload": {
+   "url": "https://sarangarh-bilaigarh.cg.gov.in/en/about-district/whos-who/",
+   "name": "Sarangarh-Bilaigarh",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "763",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:sarangarh-bilaigarh.cg.gov.in/directory",
+  "payload": {
+   "url": "https://sarangarh-bilaigarh.cg.gov.in/directory/",
+   "name": "Sarangarh-Bilaigarh",
+   "kind": "District administration",
+   "state": "CG",
+   "jurisdiction": "Chhattisgarh",
+   "district_code": "763",
+   "route": "abroad",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:aurangabad.bih.nic.in",
+  "payload": {
+   "url": "https://aurangabad.bih.nic.in",
+   "name": "Aurangabad",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "189",
+   "route": "direct"
+  }
+ },
+ {
+  "key": "dm2:aurangabad.bih.nic.in/directory",
+  "payload": {
+   "url": "https://aurangabad.bih.nic.in/directory/",
+   "name": "Aurangabad",
+   "kind": "District administration",
+   "state": "BR",
+   "jurisdiction": "Bihar",
+   "district_code": "189",
+   "route": "direct",
+   "read_start": "1"
+  }
+ },
+ {
+  "key": "dm2:markapuram.ap.gov.in",
+  "payload": {
+   "url": "https://markapuram.ap.gov.in",
+   "name": "Markapuram",
+   "kind": "District administration",
+   "state": "AP",
+   "jurisdiction": "Andhra Pradesh",
+   "district_code": "790",
+   "route": "direct"
+  }
+ }
+]

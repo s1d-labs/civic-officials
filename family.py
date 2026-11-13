@@ -228,9 +228,15 @@ PROBES = []    # many hosts per project: no single health check would mean anyth
 
 # District portals that no project read before (seeds/directories_missing.json, 2026-11-11): whoswho items in the sites.csv item
 # format. "route" abroad = answered from Germany (GitHub runners); india = India servers and the Indian proxies.
+# seeds/directories_missing2.json (block-district, 2026-11-13): S3WaaS portals of districts with no official that sites.csv
+# lacks; same item format, keys "dm2:<host>[path]". Route "direct" items (answer only dev-vps-3) belong to the hub project
+# civic-officials-whoswho-direct (not in the GitHub pool; queued there by INSERT), so no family project lists them.
 _dmf = HERE / "seeds" / "directories_missing.json"
 if _dmf.exists():
     _dm = json.loads(_dmf.read_text())
+    _dm2f = HERE / "seeds" / "directories_missing2.json"
+    if _dm2f.exists():
+        _dm += json.loads(_dm2f.read_text())
     for _suffix, _route, _extra in (("dm-abroad", "abroad", {}), ("dm-in", "india", {"geo": "IN", "proxy": "IN"})):
         _p = project(_suffix, f"District officers: portals not read before ({_route})", [], **_extra)
         _p["items"] = [i for i in _dm if i["payload"]["route"] == _route]

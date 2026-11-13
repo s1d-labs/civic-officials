@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://row.nagaland.gov.in/assets/img/favicon.ico" type="image/x-icon">
+    <meta name="description" content="ROW Portal | Nagaland">
+    <meta name="author" content="Department of Information Technology & Communication, Nagaland">
+    <meta name="keywords" content="ROW, RoW, Nagaland, Right of Way, RoW Portal, Nagaland RoW">
+    <meta name="robots" content="index, follow">
+
+    <title>ROW Portal | Nagaland</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600,700&display=swap" rel="stylesheet" />
+
+    <!-- Styles / Scripts -->
+    <link rel="preload" as="style" href="https://row.nagaland.gov.in/build/assets/app-LlRWI0K0.css" /><link rel="modulepreload" href="https://row.nagaland.gov.in/build/assets/app-BMk88c99.js" /><link rel="modulepreload" href="https://row.nagaland.gov.in/build/assets/bootstrap-D2cA2E1q.js" /><link rel="stylesheet" href="https://row.nagaland.gov.in/build/assets/app-LlRWI0K0.css" data-navigate-track="reload" /><script type="module" src="https://row.nagaland.gov.in/build/assets/app-BMk88c99.js" data-navigate-track="reload"></script></head>
+
+<body class="font-sans antialiased">
+    <div class="bg-sky-600 px-4">
+        <div class="max-w-screen-3xl mx-auto ease-out duration-900 mx-1 md:mx-5">
+    <div class="py-3 flex justify-between">
+        <div class="flex">
+            <a href="https://row.nagaland.gov.in"><img src="https://row.nagaland.gov.in/assets/img/gon-logo.png" class="h-[80px]">
+                <div>
+                    <h1 class="mt-4 ml-6 text-gray-50 font-bold uppercase leading-0 text-xl">State ROW Portal
+                    </h1>
+                    <span class="text-gray-200 block font-normal ml-6 text-xs leading-0 mt-0">Government of
+                        Nagaland</span>
+            </a>
+        </div>
+    </div>
+    <nav>
+        <ul class="hidden md:block uppercase text-sm mt-4">
+            <li class="inline-block px-4 py-2 text-gray-50 font-semibold"><a href=https://row.nagaland.gov.in>Home</a></li>
+            <li class="inline-block px-4 py-2 text-gray-50 font-semibold" x-data="{ open: false }">
+                <button @click="open = !open" @click.away="open = false" class="uppercase">Undertaking Format
+                    <i class="bi bi-chevron-down text-sm ml-2"></i></button>
+                <ul class="absolute bg-white text-xs text-gray-600 shadow-sm p-3 w-[200px] mt-10 border border-gray-100 border-t-sky-600 border-t-4"
+                    x-show="open" x-transition>
+                    <li><a class="rounded-t hover:bg-gray-100 py-1 px-4 block whitespace-no-wrap rounded-md"
+                            href="https://row.nagaland.gov.in/docs/Undertaking/Undertaking_GBT_application_for_public_property.pdf"
+                            target="_blank">GBT (Public Property)</a></li>
+                    <li><a class="hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-md"
+                            href="https://row.nagaland.gov.in/docs/Undertaking/Undertaking_GBT_application_other_than_public_property.pdf"
+                            target="_blank">GBT (Private
+                            Property)</a></li>
+                    <li><a class="hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-md"
+                            href="https://row.nagaland.gov.in/docs/Undertaking/Undertaking_RTT_application_on_public_property.pdf"
+                            target="_blank">RTT (Public
+                            Property)</a>
+                    </li>
+                    <li><a class="rounded-b hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-md"
+                            href="https://row.nagaland.gov.in/docs/Undertaking/Undertaking_RTT_application_other_than_public_property.pdf"
+                            target="_blank">RTT (Private Property)</a></li>
+                    <li><a class="rounded-b hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-md"
+                            href="https://row.nagaland.gov.in/docs/Undertaking/Undertaking_OFC_application.pdf" target="_blank">OFC
+                        </a></li>
+                </ul>
+            </li>
+            <li class="inline-block px-4 py-2 text-gray-50 font-semibold" x-data="{ open: false }">
+                <button @click="open = !open" @click.away="open = false" class="uppercase">About <i
+                        class="bi bi-chevron-down text-sm ml-2"></i></button>
+                <ul class="absolute bg-white text-xs text-gray-600 shadow-sm p-3 w-[200px] mt-10 border border-gray-100 border-t-sky-600 border-t-4"
+                    x-show="open" x-transition>
+                    <li><a class="rounded-t hover:bg-gray-100 py-1 px-4 block whitespace-no-wrap rounded-md"
+                            href="#">About Us</a></li>
+                    <li><a class="hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-md" href="#">Vision</a>
+                    </li>
+                    <li><a class="hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-md" href="#">Mission</a>
+                    </li>
+                    <li><a class="rounded-b hover:bg-gray-100 py-2 px-4 block whitespace-no-wrap rounded-md"
+                            href="#">Objectives</a></li>
+                </ul>
+            </li>
+            <li class="inline-block px-4 py-2 text-gray-50 font-semibold">Contact</li>
+                            <li
+                    class="inline-block px-4 py-2 text-black font-semibold bg-gray-100 shadow-md hover:bg-gray-200 rounded-md">
+                    <a href=https://row.nagaland.gov.in/register class="text-xs"><i class="bi bi-person-add mr-1"></i>Register</a>
+                </li>
+                <li
+                    class="inline-block px-4 py-2 text-white font-semibold bg-cyan-800 shadow-md hover:bg-cyan-900 rounded-md">
+                    <a href=https://row.nagaland.gov.in/login class="text-xs"><i class="bi bi-box-arrow-in-right mr-1"></i>
+                        Login</a>
+                </li>
+            
+        </ul>
+        
+        <span x-data="{ navshow: false }">
+            <div class="h-full flex">
+                <button @click="navshow =! navshow"><i
+                        class="bi inline md:hidden text-3xl text-white font-semibold self-center bg-gray-900 px-2 py-1 rounded-md bg-opacity-50"
+                        :class="navshow ? 'bi-x-lg' : 'bi-list'" x-transition></i></button>
+            </div>
+            <ul class="absolute md:hidden left-0 top-0 bg-white text-black overflow-hidden shadow-sm border border-gray-100 p-4 w-[60%] transition-all bottom-0"
+                :class="navshow ? 'ml-0' : 'ml-[-900px]'" x-transition>
+                <div class="flex">
+                    <img src="https://row.nagaland.gov.in/assets/img/gon-logo.png" class="h-[70px]">
+                    <div>
+                        <h1 class="mt-3 ml-6 text-black font-bold uppercase leading-0 text-xl">State
+                            Portal
+                        </h1>
+                        <span class="text-gray-500 block font-normal ml-6 text-xs leading-0 mt-0">Government
+                            of
+                            Nagaland</span>
+                    </div>
+                </div>
+                <li>
+                    <hr class="my-5">
+                </li>
+                <li class="block px-4 py-3 text-black font-semibold">Home</li>
+                <li class="block px-4 py-3 text-black font-semibold" x-data="{ open: false }">
+                    <button @click="open =! open" @click.away="open=false" class="flex justify-between w-full">About
+                        <i class="bi bi-chevron-down text-sm ml-2"></i></button>
+                    <ul class="bg-white text-gray-600 p-2" x-show="open" x-transition>
+                        <li><a class="rounded-t
+                            hover:bg-gray-100 py-3 px-4 block whitespace-no-wrap rounded-md" href="#">About
+                                Us</a>
+                        </li>
+                        <li><a class=" hover:bg-gray-100 py-3 px-4 block whitespace-no-wrap rounded-md"
+                                href="#">Vision</a></li>
+                        <li><a class=" hover:bg-gray-100 py-3 px-4 block whitespace-no-wrap rounded-md"
+                                href="#">Mission</a></li>
+                        <li><a class="rounded-b  hover:bg-gray-100 py-3 px-4 block whitespace-no-wrap rounded-md"
+                                href="#">Objectives</a></li>
+                    </ul>
+                </li>
+                <li class="block px-4 py-3 text-black font-semibold">Contact</li>
+                <li class="block px-4 py-2 text-black font-semibold bg-gray-100 shadow-md hover:bg-gray-200 rounded-md">
+                    <a href=https://row.nagaland.gov.in/register><i class="bi bi-person-add mr-1"></i>Register</a>
+                </li>
+                <li
+                    class="block px-4 py-2 text-white mt-3 font-semibold bg-cyan-800 shadow-md hover:bg-cyan-900 rounded-md">
+                    <a href=https://row.nagaland.gov.in/login><i class="bi bi-box-arrow-in-right mr-1"></i>
+                        Login</a>
+                </li>
+
+            </ul>
+        </span>
+
+    </nav>
+
+</div>
+</div>    </div>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.min.js"></script>
+    <section class="px-5 md:px-auto bg-gray-100" id="title">
+        <div class="container mx-auto py-10 text-center">
+            <h1 class="font-semibold text-3xl">Public Entities for RoW Nagaland</h1>
+            <nav class="text-gray-700 text-sm font-medium mt-5" aria-label="Breadcrumb">
+                <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                    <li class="inline-flex items-center">
+                        <a href="https://row.nagaland.gov.in" class="text-gray-500 hover:text-gray-700">
+                            Home
+                        </a>
+                    </li>
+                    <li aria-current="page">
+                        <div class="flex items-center">
+                            <svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="ml-1 text-gray-400 md:ml-2">Public Entities</span>
+                        </div>
+                    </li>
+                </ol>
+            </nav>
+
+        </div>
+    </section>
+    <section class="mx-5 md:mx-0" id="body">
+        <div class="container mx-auto py-20">
+            <div class="relative overflow-x-auto">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-800" id="myTable">
+                    <thead class="text-xs text-white bg-gray-800">
+                        <tr>
+                            <th scope="col" class="px-6 py-3">
+                                Name of Public Entity
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Designation
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                District
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Contact
+                            </th>
+                            <th scope="col" class="px-6 py-3">
+                                Email
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mr. Polan John, IAS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Chumoukedima
+                                </td>
+                                <td class="px-6 py-4">
+                                    9436062951
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Dr. Tinojongshi Chang, NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Dimapur
+                                </td>
+                                <td class="px-6 py-4">
+                                    9862678400
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mr. Temsuwati Longkumer, NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Kiphire
+                                </td>
+                                <td class="px-6 py-4">
+                                    9612366843
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                     B. Henok Buchem, NCS 
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Kohima
+                                </td>
+                                <td class="px-6 py-4">
+                                    8787679448
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dckma-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mr. W. Manpai Phom, NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Longleng
+                                </td>
+                                <td class="px-6 py-4">
+                                    9612874711
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Shri.Ajit Kumar Verma, IAS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Mokokchung
+                                </td>
+                                <td class="px-6 py-4">
+                                    8880689343
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dcmok-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Shri Wennyei Konyak, NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Mon
+                                </td>
+                                <td class="px-6 py-4">
+                                    8880689345
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dcmon-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Ms. Sara S. Jamir, NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Niuland
+                                </td>
+                                <td class="px-6 py-4">
+                                    9436006007
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mr. Arikumba, NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Noklak
+                                </td>
+                                <td class="px-6 py-4">
+                                    8880689352
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mr. Haizu Meru, NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Peren
+                                </td>
+                                <td class="px-6 py-4">
+                                    9436012850
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mr. John Tsulise Sangtam, NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Phek
+                                </td>
+                                <td class="px-6 py-4">
+                                    7005317388
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Y.CHINGYAK KONYAK,NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Shamator
+                                </td>
+                                <td class="px-6 py-4">
+                                    9612915624
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dctsnyu-ngl@gov.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mr. Rohit Singh, IAS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Tseminyu
+                                </td>
+                                <td class="px-6 py-4">
+                                    7827252681
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Ms. Lithrongla Tongpi Rutsa, NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Tuensang
+                                </td>
+                                <td class="px-6 py-4">
+                                    8880689344
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mr. Vineet Kumar, IAS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Wokha
+                                </td>
+                                <td class="px-6 py-4">
+                                    8880689346
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mr. Rahul Bhanudas Mali, lAS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                Deputy Commissioner
+                                                                        </td>
+                                <td class="px-6 py-4">
+                                    Zunheboto
+                                </td>
+                                <td class="px-6 py-4">
+                                    8880689351
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Chumbenthung Murry
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                SDO
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Chumoukedima
+                                </td>
+                                <td class="px-6 py-4">
+                                    9774807187
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dio-chu@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Imlijungla
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Dimapur
+                                </td>
+                                <td class="px-6 py-4">
+                                    7982588143
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dcdmp-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Dr. Samuel
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Longleng
+                                </td>
+                                <td class="px-6 py-4">
+                                    8974989797
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dclong-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Kedoseno Rino
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Mon
+                                </td>
+                                <td class="px-6 py-4">
+                                    7630953594
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dcmon-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Neithozo Theunuo
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Mokokchung
+                                </td>
+                                <td class="px-6 py-4">
+                                    9599417216
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dcmok-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Pauding NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Peren
+                                </td>
+                                <td class="px-6 py-4">
+                                    9366942281
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dcperen-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mechietsho Koza
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Phek
+                                </td>
+                                <td class="px-6 py-4">
+                                    9436633839
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    phekdc@gmail.com
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    I Yentimongler
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Shamator
+                                </td>
+                                <td class="px-6 py-4">
+                                    7205528270
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dc.shamator@gmail.com
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Mhathung Ngullie
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Tseminyu
+                                </td>
+                                <td class="px-6 py-4">
+                                    8119076319
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dio-tsm@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Kiho NCS
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Tuensang
+                                </td>
+                                <td class="px-6 py-4">
+                                    8974728129
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dctsg-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Rechalungle
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Wokha
+                                </td>
+                                <td class="px-6 py-4">
+                                    8073140217
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dcwok-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Noklak SDO
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                SDO
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Noklak
+                                </td>
+                                <td class="px-6 py-4">
+                                    8415050062
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dcnoklak-ngl@gov.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Takatemjen Pongen
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Kiphire
+                                </td>
+                                <td class="px-6 py-4">
+                                    8700060985
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dckip-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Tiayanger Jamir
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                SDO
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Niuland
+                                </td>
+                                <td class="px-6 py-4">
+                                    9862853509
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dcniuland@gmail.com
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Tsoinchu ZA Sangtam
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                EAC
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Zunheboto
+                                </td>
+                                <td class="px-6 py-4">
+                                    7005602929
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dczhb-ngl@nic.in
+                                </td>
+                            </tr>
+                                                    <tr class="bg-white border-b text-dark">
+                                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
+                                    Er.Kevingoto Kulnu
+                                </th>
+                                <td class="px-6 py-4">
+                                                                                SDO
+                                                                    </td>
+                                <td class="px-6 py-4">
+                                    Kohima
+                                </td>
+                                <td class="px-6 py-4">
+                                    9856071214
+                                </td>
+                                <td class="px-6 py-4">
+                                    
+                                    dckma-ngl@nic.in
+                                </td>
+                            </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let table = new DataTable('#myTable');
+    </script>
+    <section class="py-10 bg-gray-100 px-5 md:px-0">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+            <div>
+                <div class="flex mb-4">
+                    <img src="https://row.nagaland.gov.in/assets/img/gon-logo.png" class="h-[70px]">
+                    <div>
+                        <h1 class="mt-3 ml-6 text-gray-800 font-bold uppercase leading-0 text-md tracking-tight">
+                            State ROW Portal
+                        </h1>
+                        <span class="text-gray-500 block font-normal ml-6 text-xs leading-0 mt-0">Government of
+                            Nagaland</span>
+                    </div>
+                </div>
+                <b class="text-gray-800 text-sm">Department of Information Technology <br> & Communication</b>
+                <p class="text-gray-500 mb-5 text-sm mt-3">
+                    Below Chief Minister's Office, <br> Road, Kohima 797001, Nagaland
+                </p>
+            </div>
+            <div>
+                <h4 class="title-small font-semibold uppercase text-sm">Quick links</h4>
+                <ul class="text-gray-500 text-sm leading-6">
+                    <li><a href="#" class="hover:underline hover:text-gray-800">Home</a></li>
+                    <li><a href="#" class="hover:underline hover:text-gray-800">About</a></li>
+                    <li><a href="#" class="hover:underline hover:text-gray-800">Guidelines</a></li>
+                    <li><a href="#" class="hover:underline hover:text-gray-800">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="title-small font-semibold uppercase text-sm">Important links</h4>
+                <ul class="text-gray-500 text-sm leading-6">
+                    <li><a href="#" class="hover:underline hover:text-gray-800">Home</a></li>
+                    <li><a href="#" class="hover:underline hover:text-gray-800">About</a></li>
+                    <li><a href="#" class="hover:underline hover:text-gray-800">Guidelines</a></li>
+                    <li><a href="#" class="hover:underline hover:text-gray-800">Contact</a></li>
+                </ul>
+            </div>
+            <div class="text-center hidden md:block">
+                <img src="https://row.nagaland.gov.in/assets/img/gon-logo.png" class="h-[100px] mx-auto mb-4">
+                <p class="text-xs text-gray-500">Visit the Official State Portal at</p>
+                <b><a href="https://nagaland.gov.in" target="_blank"
+                        class="text-sm text-sky-600">nagaland.gov.in</a></b>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5 px-5 md:px-0">
+    <div class="container mx-auto text-center">
+        <p class="text-gray-500 text-xs text-center">
+            For best experience view site in 1024 X 1080 resolution. Supports all modern browsers Chrome v84+,
+            Safari 4+, Mozilla Firefox v90+. <br>
+
+            The ROW Portal is W3C, GIGW and WCAG 2.0 compliant <br><br>
+            © Copyright <span class="text-gray-800">ROW Portal | Government of Nagaland</span>. All Rights
+            Reserved.
+            Developed by the <span class="text-sky-600">Department of Information Technology & Communication:
+                Nagaland</span>
+        </p>
+    </div>
+</section>
+<script>
+    function openTab(event, tabId) {
+        // Hide all tab content
+        const tabContents = document.querySelectorAll('.tab-content');
+        tabContents.forEach(tabContent => {
+            tabContent.classList.add('hidden');
+        });
+
+        // Remove active class from all tab buttons
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        tabButtons.forEach(tabButton => {
+            tabButton.classList.remove('active', 'border-sky-500', 'text-sky-500');
+            tabButton.setAttribute('aria-selected', 'false');
+            tabButton.classList.add('text-gray-600');
+        });
+
+        // Show the selected tab and add active class
+        document.getElementById(tabId).classList.remove('hidden');
+        event.currentTarget.classList.add('active', 'border-sky-500', 'text-sky-500');
+        event.currentTarget.setAttribute('aria-selected', 'true');
+    }
+
+    // Show the button when the user scrolls down
+    window.onscroll = function() {
+        const backToTopBtn = document.getElementById("backToTopBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopBtn.classList.remove("hidden");
+        } else {
+            backToTopBtn.classList.add("hidden");
+        }
+    };
+
+    // Scroll smoothly to the top of the page
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
+<!-- Back to Top Button -->
+<button id="backToTopBtn"
+    class="hidden fixed bottom-5 z-50 right-5 bg-sky-600 text-white px-4 py-[10px] rounded-full shadow-lg hover:bg-sky-700 transition-opacity duration-300"
+    onclick="scrollToTop()">
+    ↑
+</button>
+    <script>
+        function openTab(event, tabId) {
+            // Hide all tab content
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(tabContent => {
+                tabContent.classList.add('hidden');
+            });
+
+            // Remove active class from all tab buttons
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            tabButtons.forEach(tabButton => {
+                tabButton.classList.remove('active', 'border-sky-500', 'text-sky-500');
+                tabButton.classList.add('text-gray-600');
+            });
+
+            // Show the selected tab and add active class
+            document.getElementById(tabId).classList.remove('hidden');
+            event.currentTarget.classList.add('active', 'border-sky-500', 'text-sky-500');
+        }
+    </script>
+</body>
+
+</html>
