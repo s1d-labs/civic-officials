@@ -1,0 +1,47 @@
+[
+ {
+  "key": "ward3_bengaluru-west",
+  "payload": {
+   "reader": "ward3_bengaluru",
+   "url": "https://bengaluruwest.karnataka.gov.in/home",
+   "state": "KA",
+   "city": "west"
+  }
+ },
+ {
+  "key": "ward3_bengaluru-north",
+  "payload": {
+   "reader": "ward3_bengaluru",
+   "url": "https://bengalurunorth.karnataka.gov.in/home",
+   "state": "KA",
+   "city": "north"
+  }
+ },
+ {
+  "key": "ward3_bengaluru-south",
+  "payload": {
+   "reader": "ward3_bengaluru",
+   "url": "https://bengalurusouth.karnataka.gov.in/home",
+   "state": "KA",
+   "city": "south"
+  }
+ },
+ {
+  "key": "ward3_bengaluru-central",
+  "payload": {
+   "reader": "ward3_bengaluru",
+   "url": "https://bengalurucentral.karnataka.gov.in/home",
+   "state": "KA",
+   "city": "central"
+  }
+ },
+ {
+  "key": "ward3_bengaluru-east",
+  "payload": {
+   "reader": "ward3_bengaluru",
+   "url": "https://bengalurueast.karnataka.gov.in/home",
+   "state": "KA",
+   "city": "east"
+  }
+ }
+]

@@ -1,0 +1,24 @@
+{
+ "module": "ward3_bengaluru",
+ "payload": {
+  "reader": "ward3_bengaluru",
+  "url": "https://bengalurucentral.karnataka.gov.in/home",
+  "state": "KA",
+  "city": "central"
+ },
+ "routes": {
+  "https://bengalurucentral.karnataka.gov.in/home": "bengaluru_central_home.html",
+  "https://bengalurucentral.karnataka.gov.in/static/js/main.cec7f4ff.js": "bengaluru_central.js"
+ },
+ "min_records": 8,
+ "expect": [
+  {
+   "post": "Joint Commissioner",
+   "level": "zone"
+  },
+  {
+   "post": "Commissioner",
+   "level": "body"
+  }
+ ]
+}

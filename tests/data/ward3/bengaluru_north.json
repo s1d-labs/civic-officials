@@ -1,0 +1,24 @@
+{
+ "module": "ward3_bengaluru",
+ "payload": {
+  "reader": "ward3_bengaluru",
+  "url": "https://bengalurunorth.karnataka.gov.in/home",
+  "state": "KA",
+  "city": "north"
+ },
+ "routes": {
+  "https://bengalurunorth.karnataka.gov.in/home": "bengaluru_north_home.html",
+  "https://bengalurunorth.karnataka.gov.in/static/js/main.84bce4f2.js": "bengaluru_north.js"
+ },
+ "min_records": 8,
+ "expect": [
+  {
+   "post": "Joint Commissioner",
+   "level": "zone"
+  },
+  {
+   "post": "Commissioner",
+   "level": "body"
+  }
+ ]
+}
