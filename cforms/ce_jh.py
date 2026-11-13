@@ -268,6 +268,9 @@ ROLES = [("name", r"नाम|name|candidate|अभ्यर्थी|प्र�
          ("ward", r"वार्ड|ward"), ("party", r"दल|party"), ("votes", r"प्राप्त\s*मत|votes|मत$"),
          ("body", r"निकाय|body|क्षेत्र")]
 FORM23 = ["name", "post", "reservation", "women", "body"]
+# the body header "शहरी स्थानीय निकाय ... (... संख्या /नाम सहित)" also holds नाम: it is the body column (2026-11-14, Dhanbad page 2:
+# the name header was not read, so this cell became the name column and 14 records got the body text as the name)
+BODY_FIRST = [ROLES[-1]] + ROLES[:-1]
 
 
 def cols_of(cells):
@@ -276,22 +279,64 @@ def cols_of(cells):
         t = hr.clean(c).lower()
         if not t:
             continue
-        for role, rx in ROLES:
+        for role, rx in (BODY_FIRST if re.search(r"निकाय|स्थानीय", t) else ROLES):
             if role not in out and re.search(rx, t, re.I):
                 out[role] = i
                 break
     return out
 
 
+# The word after "वार्ड" that only says "number": सं० / सं0 (संख्या), and its OCR forms "Go", "ao", "Wo" (2026-11-14, Dhanbad:
+# "वार्ड सं० 40" gave ward "0" for 16 rows, because ० of सं० was read as the ward number).
+WARD_ABBR = re.compile(r"^[\s\-–—.:/,]*(?:संख्या|सं\s*[०0o.]?|no\.?|[A-Za-z][a-z]?o)(?=[\s\-–—.:/,]|$)", re.I)
+
+
 def ward_of(text):
-    """Ward number after "वार्ड संख्या" / "Ward No" (Devanagari digits and OCR letter slips in the number fixed), else None."""
+    """Ward number after "वार्ड संख्या" / "वार्ड सं०" / "Ward No" (Devanagari digits and OCR letter slips in the number fixed),
+    else None. The abbreviation for "number" is dropped first; ward 0 does not exist (None)."""
     t = text or ""
     m = re.search(r"(?:वार्ड|बार्ड|ward)", t, re.I)
     if not m:
         return None
-    tail = t[m.end():m.end() + 24].translate(str.maketrans("०१२३४५६७८९OoIl|", "012345678900111"))
+    tail = t[m.end():m.end() + 24]
+    tail = WARD_ABBR.sub("", tail, count=1)
+    tail = tail.translate(str.maketrans("०१२३४५६७८९OoIl|", "012345678900111"))
     d = re.search(r"\d{1,3}", tail)
-    return str(int(d.group(0))) if d else None
+    return str(int(d.group(0))) if d and int(d.group(0)) > 0 else None
+
+
+def fill_wards(recs):
+    """Members of one page are in ward order. A ward the OCR did not read (number cut off) or read against the order (a
+    duplicate) is set from its neighbours when the known wards before and after it bracket it exactly (ward_no_from =
+    "row order"); a run at the start of the page is filled when it ends at the run length + 1."""
+    mem = [d for d in recs if d.get("position") == "Member"]
+    num = [int(d["ward_no"]) if (d.get("ward_no") or "").isdigit() else None for d in mem]
+    for i in range(len(num)):      # a number against the order between two neighbours one apart from it: OCR slip
+        if num[i] is not None and 0 < i < len(num) - 1 and num[i - 1] is not None and num[i + 1] is not None \
+                and num[i + 1] - num[i - 1] == 2 and num[i] != num[i - 1] + 1:
+            mem[i]["ward_no_read"], num[i] = mem[i]["ward_no"], None
+    i = 0
+    while i < len(num):
+        if num[i] is not None:
+            i += 1
+            continue
+        j = i
+        while j < len(num) and num[j] is None:
+            j += 1
+        prev = num[i - 1] if i > 0 else None
+        nxt = num[j] if j < len(num) else None
+        start = None
+        if prev is not None and nxt is not None and nxt - prev == j - i + 1:
+            start = prev + 1
+        elif prev is None and nxt is not None and nxt == j - i + 1:
+            start = 1
+        if start is not None:
+            for k in range(i, j):
+                num[k] = start + k - i
+                mem[k]["ward_no"], mem[k]["ward_no_from"] = str(num[k]), "row order"
+                mem[k].pop("ward_no_missing", None)
+        i = j
+    return recs
 
 
 def women(s):
@@ -315,8 +360,9 @@ def page_records(rows, p, page):
     for r in rows:
         cells = r["cells"]
         c = cols_of(cells)
-        if "name" in c and len(c) >= 2:
-            cols = {k: i for i, k in enumerate(FORM23)} if len(cells) == 5 and c.get("name") == 0 else c
+        if ("name" in c or (c.get("body") == 4 and re.search(r"निकाय|स्थानीय", cells[4]))) and len(c) >= 2:
+            form = len(cells) in (5, 6) and c.get("name", 0) == 0 and c.get("body", 4) == 4
+            cols = {k: i for i, k in enumerate(FORM23)} if form else c
             continue
         if cols is not None and len(c) >= 2 and not hr.clean(cells[cols.get("name", 0)] if cols.get("name", 0) < len(cells) else ""):
             for k, i in c.items():      # second header line (पद | आरक्षित/अनारक्षित | महिला/अन्य under "पद का विवरण")
@@ -325,7 +371,7 @@ def page_records(rows, p, page):
         if not any(hr.clean(x) for x in cells) or all(re.fullmatch(r"[\d\s०-९]*", hr.clean(x)) for x in cells):
             provenance.skip_row(r, 'skip: not any(hr.clean(x) for x in cells) or all(re.fullmatch(r"[\\d\\s०-९]...')
             continue          # empty row or the column numbers row "1 2 3 4 5"
-        use = cols or ({k: i for i, k in enumerate(FORM23)} if len(cells) == 5 else None)
+        use = cols or ({k: i for i, k in enumerate(FORM23)} if len(cells) in (5, 6) else None)
         if not use:
             provenance.skip_row(r, 'skip: not use')
             continue
@@ -359,7 +405,7 @@ def page_records(rows, p, page):
         if not d["ward_no"]:
             d["ward_no_missing"] = True
         recs.append(d)
-    return recs
+    return fill_wards(recs)
 
 
 def record_id(d, n):

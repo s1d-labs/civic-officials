@@ -80,3 +80,38 @@ def test_seed_file():
     items = json.loads((Path(__file__).parent.parent / "seeds" / "councillors_ce_jh26.json").read_text())
     assert len({i["key"] for i in items}) == len(items) >= 20
     assert items[-1]["payload"] == {"kind": "seed", "module": "ce_jh", "state": "JH", "url": "https://sec.jharkhand.gov.in/MElection.aspx"}
+
+
+DHANBAD = "https://cdn.s3waas.gov.in/s337f0e884fbad9667e38940169d0a3c95/uploads/17724546091813.pdf"
+
+
+def test_ward_abbreviation():
+    assert ce_jh.ward_of("XIV धनबाद /05 धनबाद नगर निगम (वर्ग- क) / वार्ड सं० 40") == "40"
+    assert ce_jh.ward_of("XIV धनबाद /05 धनबाद नगर निगम (at— क)/ वार्ड Wo 08") == "8"
+    assert ce_jh.ward_of("XIV धनबाद / 05 धनबाद नगर निगम (वर्ग- क)/ वार्ड Go") is None
+    assert ce_jh.ward_of("XIV धनबाद /05 धनबाद नगर निगम (वर्ग- क) / वार्ड सं०") is None
+    assert ce_jh.ward_of("Ward No. 12") == "12" and ce_jh.ward_of("वार्ड संख्या -01") == "1"
+
+
+def test_dhanbad_saved_rows():
+    """Every OCR row of item ce-jh26-29c25cf89a84 (Dhanbad Prapatra-23 (क), run 2026-11-12, 30 rows on pages 2 and 4, as
+    stored in src_pos.cells). Before: 16 rows of page 4 got ward "0" (० of सं०) and 14 rows of page 2 got the body text as name."""
+    rows = json.loads((DATA / "ce_jh_dhanbad_rows.json").read_text())
+    assert len(rows) == 30
+    p = {"url": DHANBAD, "district": "Dhanbad", "lgd_code": "250378"}
+    p2 = ce_jh.page_records([r for r in rows if r["page"] == 2], p, 2)
+    p4 = ce_jh.page_records([r for r in rows if r["page"] == 4], p, 4)
+    assert len(p2) == 14 and len(p4) == 16
+    assert not any(d["ward_no"] == "0" for d in p2 + p4)
+    assert [d["ward_no"] for d in p4] == [str(w) for w in range(40, 56)]
+    assert p4[11]["ward_no_read"] == "54" and p4[11]["ward_no_from"] == "row order"      # OCR "54" between 50 and 52
+    assert p4[1]["ward_no_from"] == "row order"                                           # "वार्ड Go": number not read
+    assert [d["ward_no"] for d in p2] == [str(w) for w in range(1, 10)] + [None] * 5   # 10-14: number cut off, no bracket
+    assert p2[0]["name"] == "मधुमाला" and p2[0]["ward_no_from"] == "row order"
+    assert all(d["lgd_code"] == "250378" and "नगर निगम" not in d["name"] for d in p2 + p4)
+    # the page-2 header (rows 1-3, not stored) with the name header unread: the body header must not become the name column
+    head = [{"row": 1, "cells": ["व्यक्ति का", "पद का विवरण", "", "", "शहरी स्थानीय निकाय जिससे पद संबंधित है (प्रादेशिक निर्वाचन "
+                                  "क्षेत्र संख्या /नाम सहित)", ""]},
+            {"row": 2, "cells": ["", "पद", "आरक्षित /अनारक्षित", "महिला /अन्य", "", ""]}]
+    h2 = ce_jh.page_records(head + [r for r in rows if r["page"] == 2], p, 2)
+    assert [d["name"] for d in h2] == [d["name"] for d in p2]
