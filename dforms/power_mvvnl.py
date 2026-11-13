@@ -2,7 +2,7 @@
 - "directory": mvvnl.in/post/en/directory?cd=NQA2AA%3d%3d, one HTML page with one table per zone (Sitapur, Raebareli, Ayodhya,
   Bareilly 1 and 2, Devipatan, store and workshop circles). Header rows name the zone and the circle ("ELECTRICITY DISTRIBUTION
   CIRCLE - X"); rows = S.No, title, name, designation, district, area, phone, email. Chief Engineer = zone, Superintending
-  Engineer = circle, Executive Engineer = division: about 140 rows. The Head Quarter, store and workshop tables are left out. The page also holds about
+  Engineer = circle, Executive Engineer = division: about 140 rows. Some tables have no title column (7 cells, not 8): read the same way. The Head Quarter, store and workshop tables are left out. The page also holds about
   360 sub-division rows (Assistant Engineer, EDSD) inside HTML comments: public page source, so they are read too.
 - "lesa": the Lucknow (LESA) telephone directory PDF (50 pages, Dec 2025): zone officer tables (CE, SE, EE with office
   address and mobile), the AE of each sub-division under its EE division, and the JE (33 kV / 11 kV and LT) offices with the
@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 
 import provenance
 from dforms._pdftext import cut, layout_pages
-from dforms._power import tr_pos, Out, cells, clean, email, phone, raw
+from dforms._power import tr_pos, Out, cells, clean, email, phone, raw, slug
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout) + html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -42,38 +42,54 @@ def level(post):
 
 def parse_directory(html, url=DIR_URL):
     out = Out(MOD, "UP", url, discom="MVVNL")
-    # rows inside HTML comments (about 360 sub-divisions) are part of the public page source: read them too (owner 2026-11-11)
-    soup = BeautifulSoup(re.sub(r"(?s)<!--(.*?)-->", r"\1", html), "lxml")
-    for t in soup.find_all("table"):
-        trs = t.find_all("tr")
-        if not trs or len(trs) < 3:
-            continue
-        zone = clean(cells(trs[0])[0]) if len(cells(trs[0])) == 1 else None
-        if not zone or re.search(r"(?i)head quarter|work allotment|store|workshop", zone):
-            continue
-        circle = cdist = None
-        for tr in trs[1:]:
-            c = cells(tr)
-            tpos = {**tr_pos(tr), "html": "comments opened"}
-            if len(c) == 1:
-                circle = clean(re.sub(r"(?i)^ELECTRICITY DISTRIBUTION CIRCLE\s*-\s*", "EDC ", c[0]))
-                cdist = None
+    # The visible tables first. Then the rows inside HTML comments (about 140 Assistant Engineers, EDSD sub-divisions, and some
+    # older division rows): they are part of the public page source, so they are read too (owner 2026-11-11), with
+    # hidden_in_page true. They look like an older copy of the list (e.g. "EDD-1 BADAUN" with the phone of the visible
+    # "EDD-BADAUN"), so a hidden row for a post or a phone that a visible row already gives is left out.
+    # comments are opened in place (they hold single rows inside visible tables, and whole tables); their rows carry data-hidden
+    soup = BeautifulSoup(re.sub(r"(?s)<!--(.*?)-->", lambda m: re.sub(r"(?i)<tr\b", '<tr data-hidden="1"', m.group(1)), html), "lxml")
+    for hid in (False, True):
+        for t in soup.find_all("table"):
+            trs = t.find_all("tr")
+            if not trs or len(trs) < 3:
                 continue
-            if len(c) < 8 or not c[0].isdigit():
+            zone = clean(cells(trs[0])[0]) if len(cells(trs[0])) == 1 else None
+            if not zone or re.search(r"(?i)head quarter|work allotment|store|workshop", zone):
                 continue
-            title, name, post, dist, area, tel, mail = c[1], c[2], clean(c[3]), clean(c[4]), clean(c[5]), c[6], c[7]
-            lvl = level(post)
-            if not lvl:
-                continue
-            if dist and lvl in ("zone", "circle"):
-                cdist = dist                     # the district is printed once, on the zone or circle row
-            dist = dist or cdist
-            nm = clean(name)
-            if nm and title and not nm.lower().startswith(title.lower()):
-                nm = f"{title} {nm}"
-            par = {"zone": zone if lvl != "zone" else None, "circle": circle if lvl in ("division", "subdivision") else None}
-            out.add(f"{zone}:{post}:{area}", lvl, area, post=post, name=nm, phone_=phone(tel), email_=email(mail),
-                    district=dist.title() if dist else None, parents=par, src_pos=tpos, method="html table")
+            circle = cdist = None
+            for tr in trs[1:]:
+                c = cells(tr)
+                if len(c) != 1 and bool(tr.get("data-hidden")) != hid:
+                    continue
+                tpos = {**tr_pos(tr), "html": "inside an HTML comment" if hid else "table"}
+                if len(c) == 1:
+                    circle = clean(re.sub(r"(?i)^ELECTRICITY DISTRIBUTION CIRCLE\s*-\s*", "EDC ", c[0]))
+                    cdist = None
+                    continue
+                if len(c) == 7 and c[0].isdigit() and level(clean(c[2])):
+                    c = [c[0], ""] + c[1:]           # tables without the title column (Shri / Smt): S.No, name, designation, ...
+                if len(c) < 8 or not c[0].isdigit():
+                    continue
+                title, name, post, dist, area, tel, mail = c[1], c[2], clean(c[3]), clean(c[4]), clean(c[5]), c[6], c[7]
+                lvl = level(post)
+                if not lvl:
+                    continue
+                if dist and lvl == "circle":
+                    cdist = dist                     # the district is printed once, on the circle row
+                if not dist and lvl != "zone":
+                    dist = cdist                     # not the zone's district: a zone spans several districts
+                key = f"{zone}:{post}:{area}"
+                if hid and (slug(key) in out.seen or any(not d.get("hidden_in_page") and (d.get("area") == clean(area) and d.get("post") == post
+                                                                                         or phone(tel) and d.get("phone") == phone(tel))
+                                                         for _, d in out.recs)):
+                    continue                         # the same post (or its phone) in the visible list: the visible row wins
+                nm = clean(name)
+                if nm and title and not nm.lower().startswith(title.lower()):
+                    nm = f"{title} {nm}"
+                par = {"zone": zone if lvl != "zone" else None, "circle": circle if lvl in ("division", "subdivision") else None}
+                out.add(key, lvl, area, post=post, name=nm, phone_=phone(tel), email_=email(mail),
+                        district=dist.title() if dist else None, parents=par, src_pos=tpos, method="html table",
+                        **({"hidden_in_page": True} if hid else {}))
     return out.recs
 
 

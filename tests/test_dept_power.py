@@ -74,12 +74,30 @@ def test_mvvnl_directory():
                                          fake_get_g1([(None, "directory?cd=", "mvvnl.html")]))
     assert why == "" and files[0][0].endswith("directory.html.gz")
     lv = Counter(d["level"] for _, d in recs)
-    assert lv == {"division": 8, "circle": 2, "zone": 1}       # no head-quarter, store or commented rows
+    assert lv == {"division": 8, "circle": 2, "zone": 1, "subdivision": 1}       # no head-quarter or store rows
     se = by_area_g1(recs, "EDC-SITAPUR")[0]
     assert se["level"] == "circle" and se["name"] == "Shri Lalit Krishna" and se["phone"] == "9415901149"
     ee = by_area_g1(recs, "EDD-Sidhauli SITAPUR")[0]
     assert ee["district"] == "Sitapur" and ee["parents"] == {"zone": "SITAPUR ZONE", "circle": "EDC SITAPUR"}
-    assert not any("Madhvan" in d["area"] for _, d in recs)
+    # a row inside an HTML comment, 7 cells (no title column): read, marked hidden_in_page
+    ae = by_area_g1(recs, "EDSD-I Madhvan Raebareilly")[0]
+    assert ae["level"] == "subdivision" and ae["name"] == "Manish Kumar Yadav" and ae["phone"] == "9415901229" and ae["hidden_in_page"] is True
+    assert ae["src_pos"]["html"] == "inside an HTML comment" and not se.get("hidden_in_page")
+
+
+def test_mvvnl_hidden_rows_lose_to_visible():
+    from dforms import power_mvvnl
+    html = """<table><tr><td>BAREILLY ZONE - 2</td></tr>
+    <tr><td>ELECTRICITY DISTRIBUTION CIRCLE - BADAUN</td></tr>
+    <tr><td>1</td><td>Shri</td><td>Narendra Chaudhary</td><td>Executive Engineer(D)</td><td>Badaun</td><td>EDD-Bisauli</td><td>9453007468</td><td></td></tr>
+    <!--<tr><td>2</td><td>Ram Lal</td><td>Executive Engineer(D)</td><td></td><td>EDD-3 BISAULI</td><td>9453007468</td><td></td></tr>
+    <tr><td>3</td><td>Virendra Kumar Singh</td><td>Assistant Engineer(D)</td><td></td><td>EDSD-I BISAULI</td><td>9415901689</td><td></td></tr>-->
+    </table>"""
+    recs = power_mvvnl.parse_directory(html)
+    got = {d["area"]: d for _, d in recs}
+    assert set(got) == {"EDD-Bisauli", "EDSD-I BISAULI"}      # the older hidden row with the visible phone is left out
+    assert got["EDD-Bisauli"]["district"] == "Badaun" and "hidden_in_page" not in got["EDD-Bisauli"]
+    assert got["EDSD-I BISAULI"]["hidden_in_page"] is True and got["EDSD-I BISAULI"]["parents"]["circle"] == "EDC BADAUN"
 
 
 def test_mvvnl_lesa(monkeypatch):
