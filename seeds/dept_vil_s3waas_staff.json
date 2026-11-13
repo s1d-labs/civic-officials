@@ -1,0 +1,698 @@
+[
+ {
+  "key": "vil_s3waas_staff:anakapalli",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://anakapalli.ap.gov.in/",
+   "host": "anakapalli.ap.gov.in",
+   "district": "anakapalli",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:ananthapuramu",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://ananthapuramu.ap.gov.in/",
+   "host": "ananthapuramu.ap.gov.in",
+   "district": "ananthapuramu",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:annamayya",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://annamayya.ap.gov.in/",
+   "host": "annamayya.ap.gov.in",
+   "district": "annamayya",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:bapatla",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://bapatla.ap.gov.in/",
+   "host": "bapatla.ap.gov.in",
+   "district": "bapatla",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:chittoor",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://chittoor.ap.gov.in/",
+   "host": "chittoor.ap.gov.in",
+   "district": "chittoor",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:eastgodavari",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://eastgodavari.ap.gov.in/",
+   "host": "eastgodavari.ap.gov.in",
+   "district": "eastgodavari",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:eluru",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://eluru.ap.gov.in/",
+   "host": "eluru.ap.gov.in",
+   "district": "eluru",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:guntur",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://guntur.ap.gov.in/",
+   "host": "guntur.ap.gov.in",
+   "district": "guntur",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:kadapa",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://kadapa.ap.gov.in/",
+   "host": "kadapa.ap.gov.in",
+   "district": "kadapa",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:kakinada",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://kakinada.ap.gov.in/",
+   "host": "kakinada.ap.gov.in",
+   "district": "kakinada",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:konaseema",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://konaseema.ap.gov.in/",
+   "host": "konaseema.ap.gov.in",
+   "district": "konaseema",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:krishna",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://krishna.ap.gov.in/",
+   "host": "krishna.ap.gov.in",
+   "district": "krishna",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:kurnool",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://kurnool.ap.gov.in/",
+   "host": "kurnool.ap.gov.in",
+   "district": "kurnool",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:nandyal",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://nandyal.ap.gov.in/",
+   "host": "nandyal.ap.gov.in",
+   "district": "nandyal",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:ntr",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://ntr.ap.gov.in/",
+   "host": "ntr.ap.gov.in",
+   "district": "ntr",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:palnadu",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://palnadu.ap.gov.in/",
+   "host": "palnadu.ap.gov.in",
+   "district": "palnadu",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:parvathipurammanyam",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://parvathipurammanyam.ap.gov.in/",
+   "host": "parvathipurammanyam.ap.gov.in",
+   "district": "parvathipurammanyam",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:prakasam",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://prakasam.ap.gov.in/",
+   "host": "prakasam.ap.gov.in",
+   "district": "prakasam",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:spsnellore",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://spsnellore.ap.gov.in/",
+   "host": "spsnellore.ap.gov.in",
+   "district": "spsnellore",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:srikakulam",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://srikakulam.ap.gov.in/",
+   "host": "srikakulam.ap.gov.in",
+   "district": "srikakulam",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:srisathyasai",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://srisathyasai.ap.gov.in/",
+   "host": "srisathyasai.ap.gov.in",
+   "district": "srisathyasai",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:tirupati",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://tirupati.ap.gov.in/",
+   "host": "tirupati.ap.gov.in",
+   "district": "tirupati",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:visakhapatnam",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://visakhapatnam.ap.gov.in/",
+   "host": "visakhapatnam.ap.gov.in",
+   "district": "visakhapatnam",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:vizianagaram",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://vizianagaram.ap.gov.in/",
+   "host": "vizianagaram.ap.gov.in",
+   "district": "vizianagaram",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:westgodavari",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://westgodavari.ap.gov.in/",
+   "host": "westgodavari.ap.gov.in",
+   "district": "westgodavari",
+   "state": "AP",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:adilabad",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://adilabad.telangana.gov.in/",
+   "host": "adilabad.telangana.gov.in",
+   "district": "adilabad",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:asifabad",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://asifabad.telangana.gov.in/",
+   "host": "asifabad.telangana.gov.in",
+   "district": "asifabad",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:bhoopalapally",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://bhoopalapally.telangana.gov.in/",
+   "host": "bhoopalapally.telangana.gov.in",
+   "district": "bhoopalapally",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:gadwal",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://gadwal.telangana.gov.in/",
+   "host": "gadwal.telangana.gov.in",
+   "district": "gadwal",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:hanumakonda",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://hanumakonda.telangana.gov.in/",
+   "host": "hanumakonda.telangana.gov.in",
+   "district": "hanumakonda",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:hyderabad",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://hyderabad.telangana.gov.in/",
+   "host": "hyderabad.telangana.gov.in",
+   "district": "hyderabad",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:jagtial",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://jagtial.telangana.gov.in/",
+   "host": "jagtial.telangana.gov.in",
+   "district": "jagtial",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:jangaon",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://jangaon.telangana.gov.in/",
+   "host": "jangaon.telangana.gov.in",
+   "district": "jangaon",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:kamareddy",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://kamareddy.telangana.gov.in/",
+   "host": "kamareddy.telangana.gov.in",
+   "district": "kamareddy",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:karimnagar",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://karimnagar.telangana.gov.in/",
+   "host": "karimnagar.telangana.gov.in",
+   "district": "karimnagar",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:khammam",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://khammam.telangana.gov.in/",
+   "host": "khammam.telangana.gov.in",
+   "district": "khammam",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:kothagudem",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://kothagudem.telangana.gov.in/",
+   "host": "kothagudem.telangana.gov.in",
+   "district": "kothagudem",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:mahabubabad",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://mahabubabad.telangana.gov.in/",
+   "host": "mahabubabad.telangana.gov.in",
+   "district": "mahabubabad",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:mahabubnagar",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://mahabubnagar.telangana.gov.in/",
+   "host": "mahabubnagar.telangana.gov.in",
+   "district": "mahabubnagar",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:mancherial",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://mancherial.telangana.gov.in/",
+   "host": "mancherial.telangana.gov.in",
+   "district": "mancherial",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:medak",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://medak.telangana.gov.in/",
+   "host": "medak.telangana.gov.in",
+   "district": "medak",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:medchal-malkajgiri",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://medchal-malkajgiri.telangana.gov.in/",
+   "host": "medchal-malkajgiri.telangana.gov.in",
+   "district": "medchal-malkajgiri",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:mulugu",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://mulugu.telangana.gov.in/",
+   "host": "mulugu.telangana.gov.in",
+   "district": "mulugu",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:nagarkurnool",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://nagarkurnool.telangana.gov.in/",
+   "host": "nagarkurnool.telangana.gov.in",
+   "district": "nagarkurnool",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:nalgonda",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://nalgonda.telangana.gov.in/",
+   "host": "nalgonda.telangana.gov.in",
+   "district": "nalgonda",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:narayanpet",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://narayanpet.telangana.gov.in/",
+   "host": "narayanpet.telangana.gov.in",
+   "district": "narayanpet",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:nirmal",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://nirmal.telangana.gov.in/",
+   "host": "nirmal.telangana.gov.in",
+   "district": "nirmal",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:nizamabad",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://nizamabad.telangana.gov.in/",
+   "host": "nizamabad.telangana.gov.in",
+   "district": "nizamabad",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:peddapalli",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://peddapalli.telangana.gov.in/",
+   "host": "peddapalli.telangana.gov.in",
+   "district": "peddapalli",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:rajannasircilla",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://rajannasircilla.telangana.gov.in/",
+   "host": "rajannasircilla.telangana.gov.in",
+   "district": "rajannasircilla",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:rangareddy",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://rangareddy.telangana.gov.in/",
+   "host": "rangareddy.telangana.gov.in",
+   "district": "rangareddy",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:sangareddy",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://sangareddy.telangana.gov.in/",
+   "host": "sangareddy.telangana.gov.in",
+   "district": "sangareddy",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:siddipet",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://siddipet.telangana.gov.in/",
+   "host": "siddipet.telangana.gov.in",
+   "district": "siddipet",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:suryapet",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://suryapet.telangana.gov.in/",
+   "host": "suryapet.telangana.gov.in",
+   "district": "suryapet",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:vikarabad",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://vikarabad.telangana.gov.in/",
+   "host": "vikarabad.telangana.gov.in",
+   "district": "vikarabad",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:wanaparthy",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://wanaparthy.telangana.gov.in/",
+   "host": "wanaparthy.telangana.gov.in",
+   "district": "wanaparthy",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:warangal",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://warangal.telangana.gov.in/",
+   "host": "warangal.telangana.gov.in",
+   "district": "warangal",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "vil_s3waas_staff:yadadri",
+  "payload": {
+   "reader": "vil_s3waas_staff",
+   "url": "https://yadadri.telangana.gov.in/",
+   "host": "yadadri.telangana.gov.in",
+   "district": "yadadri",
+   "state": "TG",
+   "india_only": false,
+   "route": "abroad"
+  }
+ }
+]
