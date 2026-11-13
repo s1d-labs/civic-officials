@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="shortcut icon" href="img/download.jpg"></head>
+<body id="body" class="dark-mode">
+    <div id="wrapper">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Police Station | Satara Police </title>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- FAV ICON -->
+    <link rel="shortcut icon" href="images/mlogo.png">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins%7CQuicksand:400,500,700" rel="stylesheet">
+    <!-- FONT-AWESOME ICON CSS -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--== ALL CSS FILES ==-->
+    <!--<link rel="stylesheet" href="css/newheader.css">  -->
+
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/bootstrap.css"> 
+    <link rel="stylesheet" href="css/banner-animate.css"> 
+    <link rel="stylesheet" href="css/mob.css"> 
+     <link rel="stylesheet" href="css/thane.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+     <link href="css/jquery.bxslider.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css">
+     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+     <!--Adding demo page css file -->
+	<link rel="stylesheet" type="text/css" href="css/demo-page-styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+	<!--Adding plugin css file -->
+	<link rel="stylesheet" type="text/css" href="css/breaking-news-ticker.css">
+	<link rel='stylesheet prefetch' href='css/slick1.css'>
+    <link rel='stylesheet prefetch' href='css/slick2.css'>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>    </head>
+            <!-- MOBILE MENU -->
+ 
+ <style>
+ .blinking{
+    animation:blinkingText 1.9s linear infinite;
+   font-weight:600;
+   /*font-style: italic;*/
+}
+
+@keyframes  blinkingText{
+    0%{     color: #fa8620;   }
+    49%{    color: #fa8620; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #fa8620;    }
+}
+
+     .fa-fist-raised:before {
+    content: "\f6de";
+}
+
+.fab{
+        font-size: 20px!important;
+    margin: 3px 6px;
+}
+ </style>
+ 
+
+<header class="container-fluid no_all" id="sk_head">
+    <a href="https://satarapolice.gov.in">
+        <div class="top_fix"><span class="logo"><img src="https://satarapolice.gov.in/img/download.jpg" alt="Satara Police" title="Satara Police"></span>
+            <h3 class="top_bar" title="Satara Police" style="margin-top:5px!important;"><b>Satara Police</b></h3></div>
+    </a>
+    <input id="acc_menu" type="checkbox" alt="accessibility menu checkbox">
+    <input id="burger" type="checkbox" alt="Main Menu checkbox">
+    <input id="srch" type="checkbox" alt="Search Button checkbox" onClick="sr()">
+    <div class="container-fluid nav_acc">
+        <label for="acc_menu" class="nav_opener" onClick="sk()" title="Top Menu Minifier"><span class="fa fa-caret-right"></span></label>
+
+        <a title="मराठी भाषा निवडा " onclick="location.href='https://satarapolice.gov.in/SwitchLanguage'">मराठी</a>
+        <a href="https://cmdashboard.maharashtra.gov.in/login.php"target="_blank" title="CM Dashboard" style="color:white!important;">
+                            <p><span data-hover="CM Dashboard">CM Dashboard</span></p>
+                        </a>
+        <!--<a class="sdark" title="Deacrease Text Size" id="text_minus">A-</a><a class="sdark" title="Normalize Text Size" id="text_default">A</a><a class="sdark" title="Increase Text Size" id="text_plus">A+</a>-->
+        <!--<a class="sdark normal_acc" title="Skip to Main Content" href="#mymain">Go To Main Content</a>-->
+        <!--<a class="head_social srch_a hidden-xs" title="Search Opener">-->
+        <!--    <label for="srch"><span class="fa fa-search"></span></label>-->
+        <!--</a>-->
+        <a class="head_social gayab" href="https://www.facebook.com/Satara-Police-1570539786295977/" target="_blank" title="Facebook Page Link"><i class="fab fa-facebook"></i></a><a class="head_social gayab" href="https://twitter.com/SataraPolice?" target="_blank" title="Twiiter Profile Link"><i class="fab fa-twitter"></i></a><a class="head_social" href="https://satarapolice.gov.in" title="Home Page Link"><i class="fas fa-home" style=" font-size: 20px!important; margin: 3px 6px"></i></a>
+        <label for="burger" class="nav_home" onClick="sk2()" title="Main Menu Opener" style="color:white!important;"><span class="fas fa-bars" id="class_demo" onclick="removeClass()"></span> MENU</label>
+    </div>
+    <input class="hidden-xs" type="text" alt="Search" id="search_box" placeholder="Search Here..." title="Search Box checkbox" onKeyPress="my(event, this)">
+    <nav id="main_nav">
+        <ul class="container-fluid text-left">
+            <li class="col-md-4 col-sm-4 col-xs-12">
+                <ul>
+                    <h2 class="menu_heading" title="About Us">About Us</h2>
+                    <hr class="head_hr">
+                    <li>
+                        <a href="https://satarapolice.gov.in/mission" title="Our Mission">
+                            <p><span data-hover="Our Mission">Our Mission</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://satarapolice.gov.in/Senior_Officers" title="Senior Police Officers">
+                            <p><span data-hover="Senior Police Officers">Senior Police Officers</span></p>
+                        </a>
+                        </li>
+
+                    <!--<li>-->
+                    <!--    <a href="https://satarapolice.gov.in/Divisional_officers" title="SP&prime;s till Date">-->
+                    <!--        <p><span data-hover="SP&prime;s till Date">SP&prime;s till Date</span></p>-->
+                    <!--    </a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--    <a href="https://satarapolice.gov.in/OrganisationalStructure" title="Organizational Structure">-->
+                    <!--        <p><span data-hover="Organizational Structure">Organizational Structure</span></p>-->
+                    <!--    </a>-->
+                    <!--</li>-->
+                    <li>
+                        <a href="https://satarapolice.gov.in/sataramap" title="Satara Police Map">
+                            <p><span data-hover="Satara Police Map">Satara Police Map</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://satarapolice.gov.in/Initiative" title="Initiatives">
+                            <p><span data-hover="Initiatives">Initiatives</span></p>
+                        </a>
+                    </li>
+                    <!--<li>-->
+                    <!--    <a href="https://satarapolice.gov.in/Gallery" title="Gallery">-->
+                    <!--        <p><span data-hover="Gallery">Gallery</span></p>-->
+                    <!--    </a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                    <!--    <a href="https://satarapolice.gov.in/Martyrs" title="Martyrs">-->
+                    <!--        <p><span data-hover="Martyrs">Martyrs</span></p>-->
+                    <!--    </a>-->
+                    <!--</li>-->
+                    <li>
+                        <a href="https://satarapolice.gov.in/CovidWarriors" title="Our Covid Warriors">
+                            <p><span data-hover="Our Covid Warriors">Our Covid Warriors</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://satarapolice.gov.in/impcontacts" title="Important Conatcts">
+                            <p><span data-hover="Important Conatcts">Important Conatcts</span></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://satarapolice.gov.in/zillha-police-kalyan" title="Zillha Police Kalyan And Krida Mandal Satara">
+                            <p><span data-hover="Zillha Police Kalyan And Krida Mandal Satara">Zillha Police Kalyan And Krida Mandal Satara</span></p>
+                        </a>
+                    </li>
+                    <!-- <li>-->
+                    <!--    <a href="https://satarapolice.gov.in/contactus" title="Contact Us">-->
+                    <!--        <p><span data-hover="Contact Us">Contact Us</span></p>-->
+                    <!--    </a>-->
+                    <!--</li>-->
+                    
+                    
+                </ul>
+                <!--<ul style="margin-top:20px;">-->
+                <!--    <h2 class="menu_heading" title="Report Us">Report Us</h2>-->
+                <!--    <hr class="head_hr">-->
+                <!--    <li>-->
+                <!--        <a href="https://citizen.mahapolice.gov.in/Citizen/MH/index.aspx" title="Online Complaint" target="_blank">-->
+                <!--            <p><span data-hover="Online Complaint">Online Complaint</span></p>-->
+                <!--        </a>-->
+                <!--    </li>-->
+                <!--    <li>-->
+                <!--        <a href="https://citizen.mahapolice.gov.in/Citizen/MH/index.aspx" title="Lost / Found">-->
+                <!--            <p><span data-hover="Lost / Found">Lost / Found</span></p>-->
+                <!--        </a>-->
+                <!--    </li>-->
+                <!--    <li>-->
+                <!--        <a href="https://citizen.mahapolice.gov.in/Citizen/MH/index.aspx" target="_blank" title="Tenant Information">-->
+                <!--            <p><span data-hover="Tenant Information">Tenant Information</span></p>-->
+                <!--        </a>-->
+                <!--    </li>-->
+                <!--    <li>-->
+                <!--        <a href="https://satarapolice.gov.in/ConfidentialInfo" title="Report crime anonymously">-->
+                <!--            <p><span data-hover="Report crime anonymously">Report crime anonymously</span></p>-->
+                <!--        </a>-->
+                <!--    </li>-->
+                   
+                <!--</ul>-->
+                
+                <!--<ul style="margin-top:20px;">-->
+                <!--    <h2 class="menu_heading" title="Police Corner">Police Corner</h2>-->
+                <!--    <hr class="head_hr">-->
+                <!--    <li>-->
+                <!--        <a href="https://satarapolice.gov.in/MediaCoverage" title="Media Coverage" >-->
+                <!--            <p><span data-hover="Media Coverage">Media Coverage</span></p>-->
+                <!--        </a>-->
+                <!--    </li>-->
+                <!--    <li>-->
+                <!--        <a href="https://satarapolice.gov.in/PositiveStories" title="Positive Stories">-->
+                <!--            <p><span data-hover="Positive Stories">Positive Stories</span></p>-->
+                <!--        </a>-->
+                <!--    </li>-->
+                <!--    <li>-->
+                <!--        <a href="https://satarapolice.gov.in/infopolicemen"  title="Information For Police Officers &amp; Men">-->
+                <!--            <p><span data-hover="Information For Police Officers &amp; Men">Information For Police Officers &amp; Men</span></p>-->
+                <!--        </a>-->
+                <!--    </li>-->
+                   
+                   
+                <!--</ul>-->
+                
+                
+                <li class="col-md-8 col-sm-6 col-xs-12">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul>
+                            <h2 class="menu_heading" title="Police Corner">Police Corner</h2>
+                            <hr class="head_hr">
+                             
+                             
+                              <li>
+                                <a href="https://ess.satarapolice.gov.in/">
+                                    <p><span data-hover="E-Service Sheet" style="color: orange;">E-Service Sheet<img style="" src="img/newgif.gif"></span></p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                    </li>
+            </li>
+            
+            
+            
+            
+                           
+            <li class="col-md-8 col-sm-6 col-xs-12">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul>
+                            <h2 class="menu_heading" title="Special Units">Special Units</h2>
+                            <hr class="head_hr">
+                           
+                            <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=1" title="Police Head Quarter">
+                                    <p><span data-hover="Police Head Quarter">Police Head Quarter</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=2" title="Control Room">
+                                    <p><span data-hover="Control Room">Control Room</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=10" title="Local Crime Branch">
+                                    <p><span data-hover="Local Crime Branch">Local Crime Branch</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=3" title="BDDS">
+                                    <p><span data-hover="BDDS">BDDS</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=8" title="District Special Branch">
+                                    <p><span data-hover="District Special Branch">District Special Branch</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=9" title="Satara Traffic Branch">
+                                    <p><span data-hover="Satara Traffic Branch">Satara Traffic Branch</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=18" title="Karad Traffic Branch">
+                                    <p><span data-hover="Karad Traffic Branch">Karad Traffic Branch</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=17" title="District Traffic Branch">
+                                    <p><span data-hover="District Traffic Branch">District Traffic Branch</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=13" title="Motor Transport Branch">
+                                    <p><span data-hover="Motor Transport Branch">Motor Transport Branch</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=14" title="Wireless Branch">
+                                    <p><span data-hover="Wireless Branch">Wireless Branch</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=4" title="Anti Human Trafficking Unit">
+                                    <p><span data-hover="Anti Human Trafficking Unit">Anti Human Trafficking Unit</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=5" title="Anti Terrorism Branch">
+                                    <p><span data-hover="Anti Terrorism Branch">Anti Terrorism Branch</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=12" title="Police Welfare Branch">
+                                    <p><span data-hover="Police Welfare Branch">Police Welfare Branch</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=7" title="Economic Offence Wing">
+                                    <p><span data-hover="Economic Offence Wing">Economic Offence Wing</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=11" title="Foreigners Registration Office">
+                                    <p><span data-hover="Foreigners Registration Office">Foreigners Registration Office</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=6" title="CCTNS">
+                                    <p><span data-hover="CCTNS">CCTNS</span></p>
+                                </a>
+                            </li>
+                           
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=15" title="Finger Print">-->
+                            <!--        <p><span data-hover="Finger Print">Finger Print</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                       
+                             <li>
+                                <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=16" title="Bharosa Cell">
+                                    <p><span data-hover="Bharosa Cell">Bharosa Cell</span></p>
+                                </a>
+                            </li>
+                    
+                            
+                            
+                            
+                            
+                            
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/Ac"  title="Accident Compensation">-->
+                            <!--        <p><span data-hover="Accident Compensation">Accident Compensation</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/RTIfront" title="Right To Information (RTI)">-->
+                            <!--        <p><span data-hover="Right To Information (RTI)">Right To Information (RTI)</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/RighttoService" title="Right To Service">-->
+                            <!--        <p><span data-hover="Right To Service">Right To Service</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/Recruitment" title="Recruitment">-->
+                            <!--        <p><span data-hover="Recruitment">Recruitment</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/ImpWeb" title="Useful websites">-->
+                            <!--        <p><span data-hover="Useful websites">Useful websites</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                           
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/Safety_tips" title="Safety Tips">-->
+                            <!--        <p><span data-hover="Safety Tips">Safety Tips</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/faq" title="FAQs">-->
+                            <!--        <p><span data-hover="FAQs">FAQs</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                        </ul>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul>
+                            <h2 class="menu_heading" title="Citizen Corner">Citizen Corner</h2>
+                            <hr class="head_hr">
+                            <li>
+                                <a href="https://mahatrafficechallan.gov.in" target="_blank" title="PAY Your E-Challan">
+                                    <p><span data-hover="PAY Your E-Challan" class="blinking">PAY Your E-Challan</span></p>
+                                    
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/PressRelease" title="Press Release">
+                                    <p><span data-hover="Press Release">Press Release</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Tender" title="Tenders">
+                                    <p><span data-hover="Tenders">Tenders</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/Alert_wall" title="Citizens Alert Wall">
+                                    <p><span data-hover="Citizens Alert Wall">Citizens Alert Wall</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/RTIfront" title="Right To Information (RTI)">
+                                    <p><span data-hover="Right To Information (RTI)">Right To Information (RTI)</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://portal2.passportindia.gov.in/AppOnlineProject/statusTracker/trackStatusInpNew" target="_blank" title="Passport Status">
+                                    <p><span data-hover="Passport Status">Passport Status</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://satarapolice.gov.in/ImpWeb" title="Useful websites">
+                                    <p><span data-hover="Useful websites">Useful websites</span></p>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="https://citizen.mahapolice.gov.in/Citizen/MH/index.aspx" target="_blank" title="Citizen Portal">
+                                    <p><span data-hover="Citizen Portal">Citizen Portal</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://aaplesarkar.mahaonline.gov.in/" target="_blank" title="Aaple Sarkar">
+                                    <p><span data-hover="Aaple Sarkar">Aaple Sarkar</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Gallery" title="Gallery">
+                                    <p><span data-hover="Gallery">Gallery</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/faq" title="FAQs">
+                                    <p><span data-hover="FAQs">FAQs</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/ConfidentialInfo" title="Report crime anonymously">
+                                    <p><span data-hover="Report crime anonymously">Report crime anonymously</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Safety_tips" title="Safety Tips">
+                                    <p><span data-hover="Safety Tips">Safety Tips</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://citizen.mahapolice.gov.in/Citizen/MH/index.aspx" target="_blank" title="Report a complaint online">
+                                    <p><span data-hover="Report a complaint online">Report a complaint online</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://satarapolice.gov.in/Crime_info" title="Crime Review">
+                                    <p><span data-hover="Crime Review">Crime Review</span></p>
+                                </a>
+                            </li>
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/infopolicemen" title="Information For Police Officers &amp; Men">-->
+                            <!--        <p><span data-hover="Information For Police Officers &amp; Men">Information For Police Officers &amp; Men</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/MediaCoverage" title="Media Coverage">-->
+                            <!--        <p><span data-hover="Media Coverage">Media Coverage</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/Crime_info" title="Crime Review">-->
+                            <!--        <p><span data-hover="Crime Review">Crime Review</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/GoodWork" title="Good Work">-->
+                            <!--        <p><span data-hover="Good Work">Good Work</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                            <!--<li>-->
+                            <!--    <a href="https://satarapolice.gov.in/PositiveStories" title="Positive Stories">-->
+                            <!--        <p><span data-hover="Positive Stories">Positive Stories</span></p>-->
+                            <!--    </a>-->
+                            <!--</li>-->
+                           
+                        </ul>
+                    </div>
+                </div>
+              
+            </li>
+            <!--<li class="col-md-8 col-sm-6 col-xs-12">-->
+            <!--    <div class="row">-->
+            <!--        <h2 class="menu_heading" title="Special Units" style="margin-left: 61px;">Special Units</h2>-->
+            <!--        <hr class="head_hr" style="margin-left: 49px;">-->
+            <!--        <div class="col-md-6 col-sm-6 col-xs-12">-->
+            <!--            <ul>-->
+                            
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=1" title="Police Head Quarter">-->
+            <!--                        <p><span data-hover="Police Head Quarter">Police Head Quarter</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=2" title="Control Room">-->
+            <!--                        <p><span data-hover="Control Room">Control Room</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=3" title="BDDS">-->
+            <!--                        <p><span data-hover="BDDS">BDDS</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=4" title="Anti Human Trafficking Unit">-->
+            <!--                        <p><span data-hover="Anti Human Trafficking Unit">Anti Human Trafficking Unit</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=5" title="Anti Terrorism Branch">-->
+            <!--                        <p><span data-hover="Anti Terrorism Branch">Anti Terrorism Branch</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=6" title="CCTNS">-->
+            <!--                        <p><span data-hover="CCTNS">CCTNS</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=7" title="Economic Offence Wing">-->
+            <!--                        <p><span data-hover="Economic Offence Wing">Economic Offence Wing</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=15" title="Finger Print">-->
+            <!--                        <p><span data-hover="Finger Print">Finger Print</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--            </ul>-->
+            <!--        </div>-->
+            <!--        <div class="col-md-6 col-sm-6 col-xs-12">-->
+            <!--            <ul>-->
+                           
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=8" title="District Special Branch">-->
+            <!--                        <p><span data-hover="District Special Branch">District Special Branch</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=9" title="Satara Traffic Branch">-->
+            <!--                        <p><span data-hover="Satara Traffic Branch">Satara Traffic Branch</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=10" title="Local Crime Branch">-->
+            <!--                        <p><span data-hover="Local Crime Branch">Local Crime Branch</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=11" title="Foreigners Registration Office">-->
+            <!--                        <p><span data-hover="Foreigners Registration Office">Foreigners Registration Office</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=12" title="Police Welfare Branch">-->
+            <!--                        <p><span data-hover="Police Welfare Branch">Police Welfare Branch</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                 <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=13" title="Motor Transport Branch">-->
+            <!--                        <p><span data-hover="Motor Transport Branch">Motor Transport Branch</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=14" title="Wireless Branch">-->
+            <!--                        <p><span data-hover="Wireless Branch">Wireless Branch</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--                 <li>-->
+            <!--                    <a href="https://satarapolice.gov.in/Specialunitsinfo?specialunits_category=16" title="Bharosa Cell">-->
+            <!--                        <p><span data-hover="Bharosa Cell">Bharosa Cell</span></p>-->
+            <!--                    </a>-->
+            <!--                </li>-->
+            <!--            </ul>-->
+            <!--        </div>-->
+            <!--    </div>-->
+               
+            <!--</li>-->
+        </ul>
+    </nav>
+</header>
+<!--END HEADER SECTION-->
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>-->
+<script>
+    function changeFontSize(target) {
+        var demo = document.getElementById("demo");
+        var computedStyle = window.getComputedStyle ?
+            getComputedStyle(demo) // Standards
+            :
+            demo.currentStyle; // Old IE
+        var fontSize;
+
+        if (computedStyle) { // This will be true on nearly all browsers
+            fontSize = parseFloat(computedStyle && computedStyle.fontSize);
+
+            if (target == document.getElementById("button1")) {
+                fontSize += 5;
+            } else if (target == document.getElementById("button2")) {
+                fontSize -= 5;
+            }
+            demo.style.fontSize = fontSize + "px";
+        }
+    }
+
+    function fillme() {
+        var ur = location.protocol + "//" + location.host,
+            t = ur + '/ps?ps=',
+            y = '<option id="first_class" value="" title="
+        static.select_pstation " default>
+        static.select_pstation  </option>';
+        $.ajax({
+            url: ur + '/getpolicestations',
+            type: "GET",
+            dataType: "JSON",
+            success: function(result) {
+                $.each(result, function(i, val) {
+                    y += '<option value="' + t + val['id'] + '">' + val['name'] + '</option>';
+                });
+                $('.home-ds-select').append(y);
+                console.log(y);
+            }
+        });
+    }
+    $(document).ready(fillme());
+
+    $(".home-ds-select").change(function() {
+        var e = $(this).val(),
+            o = window.open(e, "_self");
+        o ? o.focus() : alert("Please allow popups for this website")
+    });
+    $(document).on("change", ".div-toggle", function() {
+        var e = $(this).data("target"),
+            t = $("option:selected", this).data("show");
+        $(e).children().addClass("hide"), $(t).removeClass("hide")
+    }), $(document).ready(function() {
+        $(".div-toggle").trigger("change")
+    });
+
+</script>
+
+
+
+<!--fontsize increament and decreament-->
+<script type="text/javascript">
+  <!-- font increment and decrement  script -->
+
+var fontSize = 100;
+jQuery(document).ready(function () {
+    //alert("ok");
+    if (_getCookie("fontSize") != null) {
+        var fontSize = _getCookie("fontSize");
+    } else {
+        var fontSize = 100;
+    }
+    jQuery("#wrapper").css("font-size", fontSize + "%");
+});
+
+function _getCookie(name) {
+    var arg = name + "=";
+    var alen = arg.length;
+    var clen = document.cookie.length;
+    var i = 0;
+    while (i < clen) {
+        var j = i + alen;
+        if (document.cookie.substring(i, j) == arg) {
+            return _getCookieVal(j);
+        }
+        i = document.cookie.indexOf(" ", i) + 1;
+        if (i == 0)
+            break;
+    }
+    return null;
+}
+
+function _deleteCookie(name, path, domain) {
+    if (_getCookie(name)) {
+        document.cookie = name + "=" +
+            ((path) ? "; path=" + path : "") +
+            ((domain) ? "; domain=" + domain : "") +
+            "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+    }
+}
+
+function _setCookie(name, value, expires, path, domain, secure) {
+    var vurl = true;
+    if (path != '' && path != undefined) {
+        vurl = validUrl(path);
+    }
+    if (jQuery.type(name) == "string" && vurl) {
+        document.cookie = name + "=" + escape(value) +
+            ((expires) ? "; expires=" + expires.toGMTString() : "") +
+            ((path) ? "; path=" + path : "") +
+            ((domain) ? "; domain=" + domain : "") +
+            ((secure) ? "; secure" : "");
+    }
+}
+
+function _getCookieVal(offset) {
+    var endstr = document.cookie.indexOf(";", offset);
+    if (endstr == -1) {
+        endstr = document.cookie.length;
+    }
+    return unescape(document.cookie.substring(offset, endstr));
+}
+/*********Font size resize**********/
+function set_font_size(fontType) {
+    if (fontType == "increase") {
+        if (fontSize < 130) {
+            fontSize = parseInt(fontSize) + 15;
+        }
+    } else if (fontType == "decrease") {
+        if (fontSize > 70) {
+            fontSize = parseInt(fontSize) - 15;
+        }
+    } else {
+        fontSize = 100;
+    }
+    _setCookie("fontSize", fontSize);
+    jQuery("#wrapper").css("font-size", fontSize + "%");
+    //jQuery("#template_three_column").css("font-size",fontSize + "%");
+}
+
+</script>
+
+
+
+<script type="text/javascript">
+    function removeClass()
+    {
+        document.getElementById('class_demo').classList.toggle('fa-times');
+       
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+            
+
+<main id="mymain">
+
+	<section >
+		
+			<style>
+    .card-up img {
+    border-radius: 10%!important;
+    width: 210px!important;
+    height: 210px!important;
+    /* object-fit: contain; */
+}
+</style>
+<main>
+    <section class=" marg-20-70">
+        <div class="container" style="max-width:1055px">
+            <div class="row">
+                <div class="row mb-0 spe-title">
+                    <h2 title="वाई Police Station"> वाई <span>Police Station</span></h2>
+                    <div class="title-line">
+                        <div class="tl-1"></div>
+                        <div class="tl-2"></div>
+                        <div class="tl-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class=" pol-info-wrapper" id="contact-us">
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-md-8 nopadding">
+                                     <div class"station-image="" mt-2"="" align="center"> <img src="images/PoliceStation/8.png" class="img-thumbnail ps-img" alt="" style="height: 350px;width:663px"></div>
+                                 
+            </div>
+
+            <div class="col-md-4">  
+                 <div class="card-up" style="border: solid 1px #413d4a54;padding: 15px 0;">
+                                <div>
+                                                            <img src="https://satarapolice.gov.in/images/Officer/140.png" alt="श्री प्रदीप बाळासो सूर्यवंशी" class="tableimg">
+                                     
+                                </div>
+
+                               <h3 title="श्री प्रदीप बाळासो सूर्यवंशी">श्री प्रदीप बाळासो सूर्यवंशी</h3>
+                                <h4 title="पोलीस निरीक्षक">पोलीस निरीक्षक</h4>
+                                <h4><i class="fa fa-mobile"></i>&nbsp;<a href="tel:+9223006147">9223006147</a></h4>
+                                <h4><i class="fa fa-mobile"></i>&nbsp;<a href="tel:+9823899325">9823899325</a></h4>
+                                
+                            </div>
+                
+                
+               
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class=" row">
+                    </div><div class="row">
+                    </div><div class="row">
+
+                    </div><table>
+                <tbody><tr><td class="col-xs-12 hidden-md hidden-lg hidden-sm" colspan="2" style="text-align:center;">
+                                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d564.221718878761!2d73.88745628853029!3d17.95004790236153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdbda278a47669368!2zMTfCsDU3JzAxLjYiTiA3M8KwNTMnMTQuOSJF!5e0!3m2!1sen!2sin!4v1648446965670!5m2!1sen!2sin" width="100%" height="350" frameborder="0" style="border:0"></iframe>
+                                           
+                    
+                        <!--<div class="">-->
+                        <!--    -->
+                        <!--    <img src="https://satarapolice.gov.in/images/Officer/140.png" alt="श्री प्रदीप बाळासो सूर्यवंशी">-->
+                        <!--    -->
+                        <!--    <h4 title="श्री प्रदीप बाळासो सूर्यवंशी">श्री प्रदीप बाळासो सूर्यवंशी</h4>-->
+                        <!--    <p title="पोलीस निरीक्षक">पोलीस निरीक्षक</p>-->
+                        <!--</div>-->
+                        
+                        
+                        
+                    </td>
+                
+                </tr><tr>
+                        <td class="col-md-3 hidden-xs" rowspan="6">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d564.221718878761!2d73.88745628853029!3d17.95004790236153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdbda278a47669368!2zMTfCsDU3JzAxLjYiTiA3M8KwNTMnMTQuOSJF!5e0!3m2!1sen!2sin!4v1648446965670!5m2!1sen!2sin" width="100%" height="350" frameborder="0" style="border:0"></iframe>
+                                           
+                           
+                        </td>
+                        <td class="col-md-3 col-xs-12">
+                        <p title="Satara Police Control Whatsapp No."><span>Satara Police Control Whatsapp No. :</span> <span class="txt-val"><a href="tel:+&#2413;&#2406;&#2411;&#2413;&#2412;&#2407;&#2407;&#2407;&#2406;&#2406;">&#2413;&#2406;&#2411;&#2413;&#2412;&#2407;&#2407;&#2407;&#2406;&#2406;</a></span></p>
+                        </td>
+                        <td class="col-md-3 ">
+                            <p title="Telephone No."><span>Telephone No. :</span> <span class="txt-val"><a href="tel:+&#2406;&#2408;&#2407;&#2412;&#2413;&#2408;&#2408;&#2413;&#2406;&#2409;&#2409;"> &#2406;&#2408;&#2407;&#2412;&#2413;&#2408;&#2408;&#2413;&#2406;&#2409;&#2409;</a></span></p>
+                        </td>
+                        
+
+                    </tr>
+                
+                <tr>
+                    <td class="col-md-3 col-xs-12">
+                        <p title="Division"><span>Division :</span> <span class="txt-val">वाई विभाग</span></p>
+                    </td>
+                    <td class="col-md-3 col-xs-12">
+                        <p title="Villages, Towns"><span>Villages, Towns :</span> <span class="txt-val">
+                                                        <a href="/files/PoliceStation/8.pdf" target="_blank" title="View Pdf"><img src="img/pdf.svg" class="pdf" alt="PDF view"></a>
+                              
+                            </span></p>
+                    </td>
+                </tr>
+
+                <!--<tr>-->
+                <!--    <td class="col-md-3 ">-->
+                <!--        <p title="Zone"> <span>Zone :</span> <span class="txt-val"></span></p>-->
+                <!--    </td>-->
+                <!--    <td class="col-md-3 ">-->
+                <!--        <p title="Population"><span>Population :</span> <span class="txt-val"></span></p>-->
+                <!--    </td>-->
+                <!--</tr>-->
+                <!--<tr>-->
+                <!--    <td class="col-md-3 ">-->
+                <!--        <p title="Total No. of wireless mobiles"> <span>Total No. of wireless mobiles :</span> <span class="txt-val"></span></p>-->
+                <!--    </td>-->
+                <!--    <td class="col-md-3 ">-->
+                <!--        <p title="No. of Beat Marshalls"><span>No. of Beat Marshalls :</span> <span class="txt-val"></span></p>-->
+                <!--    </td>-->
+                <!--</tr>-->
+
+                <td class="col-md-6" colspan="2">
+                            <p title="Email ID"><span>Email ID:</span> <span class="txt-val">waips.satara@mahapolice.gov.in</span></p>
+
+                        </td>
+                <tr>
+                        <td class="col-md-6" colspan="2">
+                            <p title="Address"><span>Address :<span class="txt-val"> </span></span></p>
+
+                        </td>
+                        
+
+                    </tr>
+                    
+                    
+                    
+
+                
+
+
+
+
+            </tbody></table>
+            <br>
+            <table>
+                 <thead>
+    <tr>
+      <td title="Police Station officers">Police Station officers</td>
+      <td title="Post">Post</td>
+      <td title="Mobile No.">Mobile No.</td>
+    </tr>
+  </thead>
+  <tbody>
+	<tbody>
+	    	</tbody>
+</table>
+<br>
+           <h5 title="List Of Police Chowkies">List Of Police Chowkies</h5><table>
+              
+                           <tbody>
+                                                                     
+                  
+                                                          
+                                                         
+                   
+                                                                               
+                                        
+                                </tbody></table>
+          
+
+        </div>
+
+    </div>
+        </div>
+    </section>
+</main>
+		
+	</section>
+	
+
+</main>
+
+
+            <!--====== FOOTER 1 ==========-->
+    <footer class="back-gray">
+       
+         <div class="footer-primary">
+        <div class="container other-links">
+           <ul class="bxslider" style="height: 60px;">
+                <li title=""><a href="https://digitizeindia.gov.in/" target="_blank"><img src="https://satarapolice.gov.in/images/Logowithlink/1.png" title="Digital India" alt="Digital India" /></a></li>
+    <li title=""><a href="https://www.startupindia.gov.in/" target="_blank"><img src="https://satarapolice.gov.in/images/Logowithlink/2.png" title="" alt="" /></a></li>
+    <li title=""><a href="https://aaplesarkar.mahaonline.gov.in/" target="_blank"><img src="https://satarapolice.gov.in/images/Logowithlink/8.png" title="Aaple Sarkar" alt="Aaple Sarkar" /></a></li>
+    <li title=""><a href="http://www.mhpolice.maharashtra.gov.in/Citizen/MH/Index.aspx" target="_blank"><img src="https://satarapolice.gov.in/images/Logowithlink/6.png" title="CCTNS" alt="CCTNS" /></a></li>
+    <li title=""><a href="http://mahapolice.gov.in/" target="_blank"><img src="https://satarapolice.gov.in/images/Logowithlink/7.png" title="Maharastra Police" alt="Maharastra Police" /></a></li>
+              </ul>
+
+      </div>
+    </div>
+        <!--<hr>-->
+       <!--<div class="container foiter">-->
+       <!--     <div class="row">-->
+       <!--        <div class="col-lg-5 col-md-4 col-sm-12 pad-0">-->
+       <!--             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-0">-->
+       <!--                 <h4 title="Satara Police">Satara Police</h4>-->
+       <!--             </div>-->
+       <!--             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 pad-0">-->
+       <!--                 <ul class="list-unstyled">-->
+                            
+       <!--                     <li><a href="https://satarapolice.gov.in/PressRelease" title="Press Release">Press Release</a></li>-->
+       <!--                       <li><a href="https://satarapolice.gov.in/faq" title="FAQs">FAQs</a></li>-->
+       <!--                     <li><a href="https://satarapolice.gov.in/Gallery" title="Gallery">Gallery</a></li>-->
+       <!--                       <li><a href="" target="_blank" title="Site Map">Site Map</a></li>-->
+       <!--                 </ul>-->
+       <!--             </div>-->
+       <!--             <div class="col-lg-6 col-md-7 col-sm-6 col-xs-6 pad-0">-->
+       <!--                 <ul class="list-unstyled">-->
+       <!--                      <li><a href="https://satarapolice.gov.in/Senior_Officers" title="Senior Police Officers">Senior Police Officers</a></li>-->
+       <!--                      <li><a href="https://satarapolice.gov.in/mission" title="Our Mission">Our Mission</a></li>-->
+       <!--                     <li><a href="https://satarapolice.gov.in/Recruitment" title="Recruitment">Recruitment</a></li>-->
+       <!--                     <li><a href="https://satarapolice.gov.in/Disclaimer" title="Disclaimer">Disclaimer</a></li>-->
+       <!--                 </ul>-->
+       <!--             </div>-->
+       <!--         </div>-->
+       <!--         <div class="col-lg-5 col-md-5 col-sm-12 pad-0">-->
+       <!--             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-0">-->
+       <!--                 <h4 title="Information &amp; Services">Information &amp; Services</h4>-->
+       <!--             </div>-->
+       <!--             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 pad-0 ">-->
+       <!--                 <ul class="list-unstyled">-->
+                            <!--<li><a href="https://satarapolice.gov.in/Safety_tips" title="Safety Tips">Safety Tips</a></li>-->
+                            <!--<li><a href="https://satarapolice.gov.in/Alert_wall" title="Citizens Alert Wall">Citizens Alert Wall</a></li>-->
+       <!--                     <li><a href="../files/Flag_code/flag_code_of_india.pdf" target="_blank" title="">Flag Code</a></li>-->
+       <!--                       <li><a href="https://satarapolice.gov.in/ActAndRule" title="Acts &amp; Rules">Acts &amp; Rules</a></li>-->
+       <!--                       <li><a href="https://satarapolice.gov.in/LegalMatters" title="Legal Matters">Legal Matters</a></li>-->
+                              <!--<li><a href="https://satarapolice.gov.in/Initiative" title="Initiatives">Initiatives</a></li>-->
+       <!--                    <li><a href="https://satarapolice.gov.in/Download" title="Download Forms">Download Forms</a></li>-->
+       <!--                 </ul>-->
+       <!--             </div>-->
+       <!--             <div class="col-lg-6 col-md-7 col-sm-6 col-xs-6 pad-0 ">-->
+       <!--                 <ul class="list-unstyled">-->
+                           <!--<li><a href="http://www.mhpolice.maharashtra.gov.in/Citizen/MH/SearchView.aspx" title="Missing Persons" target="_blank">Missing Persons</a></li>-->
+                           <!--<li><a href="http://www.mhpolice.maharashtra.gov.in/Citizen/MH/SearchDeadBodyList.aspx" title="Unidentified Dead Bodies" target="_blank">Unidentified Dead Bodies</a></li>-->
+       <!--                     <li><a href="https://satarapolice.gov.in/ImpWeb" title="Useful websites">Useful websites</a></li>-->
+       <!--                     <li><a href="https://satarapolice.gov.in/RTIfront" title="Right To Information (RTI)">Right To Information (RTI)</a></li>-->
+       <!--                     <li><a href="https://play.google.com/store/apps/details?id=com.manish.patel" target="_blank" title="">Download Khoj App</a></li>-->
+       <!--                     <li><a href="https://citizen.mahapolice.gov.in/Citizen/MH/index.aspx" target="_blank" title="Online Complaint">Online Complaint</a></li>-->
+
+       <!--                 </ul>-->
+       <!--             </div>-->
+       <!--         </div>-->
+       <!--         <div class="col-lg-2 col-md-3 col-sm-12 pad-0 ">-->
+       <!--             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-0">-->
+       <!--                 <h4 title="Quick Links">Quick Links</h4>-->
+       <!--             </div>-->
+       <!--             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 pad-0">-->
+
+       <!--                 <ul class="list-unstyled">-->
+       <!--                     <li><a href="https://satarapolice.gov.in/Tender" title="Tenders">Tenders</a></li>-->
+       <!--                      <li><a href="https://citizen.mahapolice.gov.in/Citizen/MH/index.aspx" title="Lost / Found">Lost / Found</a></li>-->
+       <!--                      <li><a href="https://satarapolice.gov.in/ConfidentialInfo" title="Confidential Info">Confidential Info</a></li>-->
+       <!--                     <li><a href="../files/Flag_code/sov.pdf" target="_blank" title="">Souveniers</a></li>-->
+
+       <!--                 </ul>-->
+       <!--             </div>-->
+       <!--         </div>-->
+       <!--     </div>-->
+       <!-- </div>-->
+       
+       <section class="footer-secondary">
+             <div class="container copyright-top">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="col-sm-12 col-md-4 col-sm-4 col-xs-12 text-center">
+                        <span title="Help Line">Help Line :</span> <a href="tel:02162233833">02162-233833</a>
+                        
+                        <br/>
+                        
+                         <a href="https://satarapolice.gov.in/privacy_policy">Privacy Policy</a>
+                         
+                                   
+                        <br/>
+                        
+                         <a href="https://satarapolice.gov.in/terms_conditions">Terms and Conditions</a>
+                       
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-sm-4 col-xs-12 text-center">
+                        <!--<span title="Women Helpline">Women Helpline :</span> <a href="tel:1091">1091</a>-->
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-sm-4 col-xs-12 text-center">
+                        <span title="Control Room">Control Room :</span> <a href="tel:112" title="112">112</a>
+                    </div>
+                    <!--<div class="col-sm-12 col-md-3 col-sm-3 col-xs-12 text-center">-->
+                    <!--    <span title="Elder Line">Elder Line :</span> <a href="tel:1090">1098</a>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <br>
+            <hr style="margin-bottom: 10px;">
+        </div> 
+        
+        <div class="container copyright-top copyright-bottom">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="row">
+                    <div class="col-md-7 pad-0" title="Copyright © 2025 Satara Police | Developed By : "><span>Copyright © 2025 Satara Police | Zillha Police Kalyan And Krida Mandal Satara <br/> Developed By : <a href="https://www.dreamcaredevelopers.com/" target="_blank" title="Dreamcare Developers">Dreamcare Developers</a> </span>
+                       
+                    </div>
+                   
+                        
+                       <!-- <div class="col-md-5 pad-0" style="display: inline-block;" id="visitors">-->
+                           
+                       <!--  <div class=" updated" style="float: left;" title="Last Update On: 2025-06-23 16:56:23"> Last Update On: 2025-06-23 16:56:23  &nbsp;&nbsp;</div> -->
+                         
+                       <!--                        Visitors : 1001207 -->
+                
+                        
+                     
+                    
+                       <!--</div>-->
+                       
+                       <div class="col-md-5 pad-0" style="display: inline-block;" id="visitors">
+                    <div class="col-md-8 col-xs-12 no_all">
+                        <h5 class="updated" title="Last Update On: 2025-06-23 16:56:23"> Last Update On: 2025-06-23 16:56:23 <span></span></h5></div>
+                    <div class="col-md-4 col-xs-12 no_all">
+                        
+                                                 
+                       <h5 class="visit" title="Visitors"> Visitors :<strong> <span title=""></span></strong> </h5>
+                </div>
+                <hr>
+                <!--<div class="row no_all text-center" id="minor_links"><a href="https://satarapolice.gov.in/Disclaimer" title="Disclaimer">Disclaimer</a><a href="sitemap.xml" target="_blank" title="Site Map">Site Map</a></div>-->
+            </div>
+                       
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+       </section>
+    </footer>
+     <section>
+    </section>
+    <!--====== FOOTER - COPYRIGHT ==========-->
+   
+	<script type="text/javascript">
+    
+    /**
+    * jQuery.marquee - scrolling text like old marquee element
+    * @author  Aamir Afridi - aamirafridi(at)gmail(dot)com / http://aamirafridi.com/jquery/jquery-marquee-plugin
+    */
+    ;(function(d){d.fn.marquee=function(w){return this.each(function(){var a=d.extend({},d.fn.marquee.defaults,w),b=d(this),c,k,p,q,h,l=3,x="animation-play-state",e=!1,B=function(a,b,c){for(var d=["webkit","moz","MS","o",""],e=0;e<d.length;e++)d[e]||(b=b.toLowerCase()),a.addEventListener(d[e]+b,c,!1)},E=function(a){var b=[],c;for(c in a)a.hasOwnProperty(c)&&b.push(c+":"+a[c]);b.push();return"{"+b.join(",")+"}"},g={pause:function(){e&&a.allowCss3Support?c.css(x,"paused"):d.fn.pause&&c.pause();b.data("runningStatus",
+    "paused");b.trigger("paused")},resume:function(){e&&a.allowCss3Support?c.css(x,"running"):d.fn.resume&&c.resume();b.data("runningStatus","resumed");b.trigger("resumed")},toggle:function(){g["resumed"==b.data("runningStatus")?"pause":"resume"]()},destroy:function(){clearTimeout(b.timer);b.css("visibility","hidden").html(b.find(".js-marquee:first"));setTimeout(function(){b.css("visibility","visible")},0)}};if("string"===typeof w)d.isFunction(g[w])&&(c||(c=b.find(".js-marquee-wrapper")),!0===b.data("css3AnimationIsSupported")&&
+    (e=!0),g[w]());else{var r;d.each(a,function(c,d){r=b.attr("data-"+c);if("undefined"!==typeof r){switch(r){case "true":r=!0;break;case "false":r=!1}a[c]=r}});a.duration=a.speed||a.duration;q="up"==a.direction||"down"==a.direction;a.gap=a.duplicated?a.gap:0;b.wrapInner('<div class="js-marquee"></div>');var f=b.find(".js-marquee").css({"margin-right":a.gap,"float":"left"});a.duplicated&&f.clone(!0).appendTo(b);b.wrapInner('<div style="width:100000px" class="js-marquee-wrapper"></div>');c=b.find(".js-marquee-wrapper");
+    if(q){var m=b.height();c.removeAttr("style");b.height(m);b.find(".js-marquee").css({"float":"none","margin-bottom":a.gap,"margin-right":0});a.duplicated&&b.find(".js-marquee:last").css({"margin-bottom":0});var s=b.find(".js-marquee:first").height()+a.gap;a.duration*=(parseInt(s,10)+parseInt(m,10))/parseInt(m,10)}else h=b.find(".js-marquee:first").width()+a.gap,k=b.width(),a.duration*=(parseInt(h,10)+parseInt(k,10))/parseInt(k,10);a.duplicated&&(a.duration/=2);if(a.allowCss3Support){var f=document.body||
+    document.createElement("div"),n="marqueeAnimation-"+Math.floor(1E7*Math.random()),z=["Webkit","Moz","O","ms","Khtml"],A="animation",t="",u="";f.style.animation&&(u="@keyframes  "+n+" ",e=!0);if(!1===e)for(var y=0;y<z.length;y++)if(void 0!==f.style[z[y]+"AnimationName"]){f="-"+z[y].toLowerCase()+"-";A=f+A;x=f+x;u="@"+f+"keyframes "+n+" ";e=!0;break}e&&(t=n+" "+a.duration/1E3+"s "+a.delayBeforeStart/1E3+"s infinite "+a.css3easing,b.data("css3AnimationIsSupported",!0))}var C=function(){c.css("margin-top",
+    "up"==a.direction?m+"px":"-"+s+"px")},D=function(){c.css("margin-left","left"==a.direction?k+"px":"-"+h+"px")};a.duplicated?(q?c.css("margin-top","up"==a.direction?m:"-"+(2*s-a.gap)+"px"):c.css("margin-left","left"==a.direction?k+"px":"-"+(2*h-a.gap)+"px"),l=1):q?C():D();var v=function(){a.duplicated&&(1===l?(a._originalDuration=a.duration,a.duration=q?"up"==a.direction?a.duration+m/(s/a.duration):2*a.duration:"left"==a.direction?a.duration+k/(h/a.duration):2*a.duration,t&&(t=n+" "+a.duration/1E3+
+    "s "+a.delayBeforeStart/1E3+"s "+a.css3easing),l++):2===l&&(a.duration=a._originalDuration,t&&(n+="0",u=d.trim(u)+"0 ",t=n+" "+a.duration/1E3+"s 0s infinite "+a.css3easing),l++));q?a.duplicated?(2<l&&c.css("margin-top","up"==a.direction?0:"-"+s+"px"),p={"margin-top":"up"==a.direction?"-"+s+"px":0}):(C(),p={"margin-top":"up"==a.direction?"-"+c.height()+"px":m+"px"}):a.duplicated?(2<l&&c.css("margin-left","left"==a.direction?0:"-"+h+"px"),p={"margin-left":"left"==a.direction?"-"+h+"px":0}):(D(),p={"margin-left":"left"==
+    a.direction?"-"+h+"px":k+"px"});b.trigger("beforeStarting");if(e){c.css(A,t);var f=u+" { 100%  "+E(p)+"}",g=d("style");0!==g.length?g.filter(":last").append(f):d("head").append("<style>"+f+"</style>");B(c[0],"AnimationIteration",function(){b.trigger("finished")});B(c[0],"AnimationEnd",function(){v();b.trigger("finished")})}else c.animate(p,a.duration,a.easing,function(){b.trigger("finished");a.pauseOnCycle?b.timer=setTimeout(v,a.delayBeforeStart):v()});b.data("runningStatus","resumed")};b.bind("pause",
+    g.pause);b.bind("resume",g.resume);a.pauseOnHover&&b.bind("mouseenter mouseleave",g.toggle);e&&a.allowCss3Support?v():b.timer=setTimeout(v,a.delayBeforeStart)}})};d.fn.marquee.defaults={allowCss3Support:!0,css3easing:"linear",easing:"linear",delayBeforeStart:1E3,direction:"left",duplicated:!1,duration:5E3,gap:20,pauseOnCycle:!1,pauseOnHover:!1}})(jQuery);
+    </script>
+    <!-- js for headlines scrolling horizontal like marquee element -->
+<script>   
+
+$("#updates").marquee({duration:19e3,duplicated:!0,pauseOnHover:!0,startVisible:!0,yScroll:"bottom"}),$("#m_slider2").marquee({duration:15e3,direction:"up",pauseOnHover:!0,delayBeforeStart:0,duplicated:!0,startVisible:!0}),$("#n_slider2").marquee({duration:15e3,direction:"up",pauseOnHover:!0,delayBeforeStart:0,duplicated:!0,startVisible:!0});
+    function hpause(){$('#updates').marquee('pause');}
+    function hresume(){$('#updates').marquee('resume');}
+    function mpause(){$('#n_slider2').marquee('pause');}
+    function mresume(){$('#n_slider2').marquee('resume');}
+</script>
+ 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="js/breaking-news-ticker.min.js"></script>
+	<script type="text/javascript">
+
+		jQuery(document).ready(function($){
+
+			$('#newsTicker1').breakingNews();
+			//$('#newsTicker2').data('breakingNews').next();
+		});
+
+	</script>
+	 <script type="text/javascript"> 
+ $('.noslider').slick({
+  vertical: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  speed: 300
+}); 
+    </script>                        <!--news marquee script-->
+<!--jQuery.marquee - scrolling text like old marquee element-->
+	<script src="js/jquery.marquee.min.js"></script>
+
+ <script type="text/javascript">
+    
+    /**
+    * jQuery.marquee - scrolling text like old marquee element
+    * @author  Aamir Afridi - aamirafridi(at)gmail(dot)com / http://aamirafridi.com/jquery/jquery-marquee-plugin
+    */
+    ;(function(d){d.fn.marquee=function(w){return this.each(function(){var a=d.extend({},d.fn.marquee.defaults,w),b=d(this),c,k,p,q,h,l=3,x="animation-play-state",e=!1,B=function(a,b,c){for(var d=["webkit","moz","MS","o",""],e=0;e<d.length;e++)d[e]||(b=b.toLowerCase()),a.addEventListener(d[e]+b,c,!1)},E=function(a){var b=[],c;for(c in a)a.hasOwnProperty(c)&&b.push(c+":"+a[c]);b.push();return"{"+b.join(",")+"}"},g={pause:function(){e&&a.allowCss3Support?c.css(x,"paused"):d.fn.pause&&c.pause();b.data("runningStatus",
+    "paused");b.trigger("paused")},resume:function(){e&&a.allowCss3Support?c.css(x,"running"):d.fn.resume&&c.resume();b.data("runningStatus","resumed");b.trigger("resumed")},toggle:function(){g["resumed"==b.data("runningStatus")?"pause":"resume"]()},destroy:function(){clearTimeout(b.timer);b.css("visibility","hidden").html(b.find(".js-marquee:first"));setTimeout(function(){b.css("visibility","visible")},0)}};if("string"===typeof w)d.isFunction(g[w])&&(c||(c=b.find(".js-marquee-wrapper")),!0===b.data("css3AnimationIsSupported")&&
+    (e=!0),g[w]());else{var r;d.each(a,function(c,d){r=b.attr("data-"+c);if("undefined"!==typeof r){switch(r){case "true":r=!0;break;case "false":r=!1}a[c]=r}});a.duration=a.speed||a.duration;q="up"==a.direction||"down"==a.direction;a.gap=a.duplicated?a.gap:0;b.wrapInner('<div class="js-marquee"></div>');var f=b.find(".js-marquee").css({"margin-right":a.gap,"float":"left"});a.duplicated&&f.clone(!0).appendTo(b);b.wrapInner('<div style="width:100000px" class="js-marquee-wrapper"></div>');c=b.find(".js-marquee-wrapper");
+    if(q){var m=b.height();c.removeAttr("style");b.height(m);b.find(".js-marquee").css({"float":"none","margin-bottom":a.gap,"margin-right":0});a.duplicated&&b.find(".js-marquee:last").css({"margin-bottom":0});var s=b.find(".js-marquee:first").height()+a.gap;a.duration*=(parseInt(s,10)+parseInt(m,10))/parseInt(m,10)}else h=b.find(".js-marquee:first").width()+a.gap,k=b.width(),a.duration*=(parseInt(h,10)+parseInt(k,10))/parseInt(k,10);a.duplicated&&(a.duration/=2);if(a.allowCss3Support){var f=document.body||
+    document.createElement("div"),n="marqueeAnimation-"+Math.floor(1E7*Math.random()),z=["Webkit","Moz","O","ms","Khtml"],A="animation",t="",u="";f.style.animation&&(u="@keyframes  "+n+" ",e=!0);if(!1===e)for(var y=0;y<z.length;y++)if(void 0!==f.style[z[y]+"AnimationName"]){f="-"+z[y].toLowerCase()+"-";A=f+A;x=f+x;u="@"+f+"keyframes "+n+" ";e=!0;break}e&&(t=n+" "+a.duration/1E3+"s "+a.delayBeforeStart/1E3+"s infinite "+a.css3easing,b.data("css3AnimationIsSupported",!0))}var C=function(){c.css("margin-top",
+    "up"==a.direction?m+"px":"-"+s+"px")},D=function(){c.css("margin-left","left"==a.direction?k+"px":"-"+h+"px")};a.duplicated?(q?c.css("margin-top","up"==a.direction?m:"-"+(2*s-a.gap)+"px"):c.css("margin-left","left"==a.direction?k+"px":"-"+(2*h-a.gap)+"px"),l=1):q?C():D();var v=function(){a.duplicated&&(1===l?(a._originalDuration=a.duration,a.duration=q?"up"==a.direction?a.duration+m/(s/a.duration):2*a.duration:"left"==a.direction?a.duration+k/(h/a.duration):2*a.duration,t&&(t=n+" "+a.duration/1E3+
+    "s "+a.delayBeforeStart/1E3+"s "+a.css3easing),l++):2===l&&(a.duration=a._originalDuration,t&&(n+="0",u=d.trim(u)+"0 ",t=n+" "+a.duration/1E3+"s 0s infinite "+a.css3easing),l++));q?a.duplicated?(2<l&&c.css("margin-top","up"==a.direction?0:"-"+s+"px"),p={"margin-top":"up"==a.direction?"-"+s+"px":0}):(C(),p={"margin-top":"up"==a.direction?"-"+c.height()+"px":m+"px"}):a.duplicated?(2<l&&c.css("margin-left","left"==a.direction?0:"-"+h+"px"),p={"margin-left":"left"==a.direction?"-"+h+"px":0}):(D(),p={"margin-left":"left"==
+    a.direction?"-"+h+"px":k+"px"});b.trigger("beforeStarting");if(e){c.css(A,t);var f=u+" { 100%  "+E(p)+"}",g=d("style");0!==g.length?g.filter(":last").append(f):d("head").append("<style>"+f+"</style>");B(c[0],"AnimationIteration",function(){b.trigger("finished")});B(c[0],"AnimationEnd",function(){v();b.trigger("finished")})}else c.animate(p,a.duration,a.easing,function(){b.trigger("finished");a.pauseOnCycle?b.timer=setTimeout(v,a.delayBeforeStart):v()});b.data("runningStatus","resumed")};b.bind("pause",
+    g.pause);b.bind("resume",g.resume);a.pauseOnHover&&b.bind("mouseenter mouseleave",g.toggle);e&&a.allowCss3Support?v():b.timer=setTimeout(v,a.delayBeforeStart)}})};d.fn.marquee.defaults={allowCss3Support:!0,css3easing:"linear",easing:"linear",delayBeforeStart:1E3,direction:"left",duplicated:!1,duration:5E3,gap:20,pauseOnCycle:!1,pauseOnHover:!1}})(jQuery);
+    </script>
+    <!-- js for headlines scrolling horizontal like marquee element -->
+<script>   
+
+$("#updates").marquee({duration:19e3,duplicated:!0,pauseOnHover:!0,startVisible:!0,yScroll:"bottom"}),$("#m_slider2").marquee({duration:15e3,direction:"up",pauseOnHover:!0,delayBeforeStart:0,duplicated:!0,startVisible:!0}),$("#n_slider2").marquee({duration:15e3,direction:"up",pauseOnHover:!0,delayBeforeStart:0,duplicated:!0,startVisible:!0});
+    function hpause(){$('#updates').marquee('pause');}
+    function hresume(){$('#updates').marquee('resume');}
+    function mpause(){$('#n_slider2').marquee('pause');}
+    function mresume(){$('#n_slider2').marquee('resume');}
+</script>
+
+<script>
+function fillme(){var ur=location.protocol+"//"+location.host,t=ur+'/ps?ps=',y='<option id="first_class" value="" title="Select Police Station" default>Select Police Station </option>';
+$.ajax({url:ur+'/getpolicestations',type:"GET",dataType:"JSON",success: function(result){$.each(result, function(i, val){y+='<option value="'+t+val['id']+'">'+val['name']+'</option>';});$('.home-ds-select').append(y);console.log(y);}});}$(document).ready(fillme());
+
+$(".home-ds-select").change(function(){var e=$(this).val(),o=window.open(e,"_self");o?o.focus():alert("Please allow popups for this website")});
+$(document).on("change",".div-toggle",function(){var e=$(this).data("target"),t=$("option:selected",this).data("show");$(e).children().addClass("hide"),$(t).removeClass("hide")}),$(document).ready(function(){$(".div-toggle").trigger("change")});
+</script>
+<script>
+function fillme(){
+    var ur = window.location.href;
+    var url = new URL(ur);
+    var c = url.searchParams.get("ps_id");
+    var ur=location.protocol+"//"+location.host,t=ur+'/policestation?ps=',y='<option id="first_class" value="" title="Select Police Station" default>Select Police Station </option>';
+$.ajax({url:ur+'/getpolicestations',type:"GET",dataType:"JSON",success: function(result){
+    
+    $.each(result, function(i, val){
+        var selected = '';
+            if(c == val['id']) { 
+                var selected = 'selected="selected"'
+            }
+        y+='<option '+selected+' '+7777+' value="'+t+val['id']+'">'+val['name']+'</option>';
+        
+    });
+    $('.home-ds-select1').append(y);console.log(y);}});
+    
+}
+$(document).ready(fillme());
+
+$(".home-ds-select1").change(function(){var e=$(this).val(),o=window.open(e,"_self");o?o.focus():alert("Please allow popups for this website")});
+$(document).on("change",".div-toggle",function(){var e=$(this).data("target"),t=$("option:selected",this).data("show");$(e).children().addClass("hide"),$(t).removeClass("hide")}),$(document).ready(function(){$(".div-toggle").trigger("change")});
+</script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/breaking-news-ticker.min.js"></script>
+	<script type="text/javascript">
+
+		jQuery(document).ready(function($){
+
+			$('#newsTicker1').breakingNews();
+			//$('#newsTicker2').data('breakingNews').next();
+		});
+
+	</script>
+<script>
+        window.ga = function() {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview')
+    </script>
+   <!--footer logo slider-->
+<script>
+        window.ga = function() {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview')
+    </script>
+    <!--========= Scripts ===========-->
+    <script>
+        $(document).ready(function() {
+            $('.slider').slider({
+                full_width: true
+            });
+        });
+    </script>
+
+    <script src="js/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/slick.min.js"></script> 
+    <script src="js/ddslick.min.js"></script>
+    <script src="js/main.js"></script>
+
+<!--sliderfooter-->
+
+<script src="js/jquery.bxslider.min.js" ></script>
+
+<script src="js/jquery.bxslider.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.bxslider').bxSlider({
+			mode: 'horizontal',
+			moveSlides: 1,
+			slideMargin: 40,
+			infiniteLoop: true,
+			slideWidth: 660,
+			minSlides: 6,
+			maxSlides: 6,
+			speed: 800,
+			auto: true,
+  autoControls: true,
+  stopAutoOnClick: true,
+pager:false,
+  slideWidth: 600
+		});
+	});
+	
+</script>
+
+<script>
+// tabbed content
+    // http://www.entheosweb.com/tutorials/css/tabs.asp
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+  /* if in tab mode */
+    $("ul.tabs li").click(function() {
+		
+      $(".tab_content").hide();
+      var activeTab = $(this).attr("rel"); 
+      $("#"+activeTab).fadeIn();		
+		
+      $("ul.tabs li").removeClass("active");
+      $(this).addClass("active");
+
+	  $(".tab_drawer_heading").removeClass("d_active");
+	  $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+	  
+    });
+	/* if in drawer mode */
+	$(".tab_drawer_heading").click(function() {
+      
+      $(".tab_content").hide();
+      var d_activeTab = $(this).attr("rel"); 
+      $("#"+d_activeTab).fadeIn();
+	  
+	  $(".tab_drawer_heading").removeClass("d_active");
+      $(this).addClass("d_active");
+	  
+	  $("ul.tabs li").removeClass("active");
+	  $("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
+    });
+	
+	
+	/* Extra class "tab_last" 
+	   to add border to right side
+	   of last tab */
+	$('ul.tabs li').last().addClass("tab_last");
+	    
+    
+</script>
+<script type="text/javascript">
+        $('#myDropdown').ddslick({
+            onSelected: function(selectedData) {
+                //callback function: do something with selectedData;
+            }
+        });
+
+
+    </script>
+      <script type="text/javascript"> 
+ $('.noslider').slick({
+  vertical: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  speed: 300
+}); 
+    </script>
+ <script>
+    
+    $('.tab-nav-wrapper ul li a').click(function(){ 
+  $('.active').removeClass('active');
+  $(this).addClass('active');
+  $('.tab-content-wrapper > div').hide();
+ $('.tab-content-wrapper > div').eq($(this).parent().index()).show();  
+});
+</script>
+<script>
+    <!-- font increment and decrement  script -->
+
+var fontSize = 100;
+jQuery(document).ready(function () {
+    //alert("ok");
+    if (_getCookie("fontSize") != null) {
+        var fontSize = _getCookie("fontSize");
+    } else {
+        var fontSize = 100;
+    }
+    jQuery("#wrapper").css("font-size", fontSize + "%");
+});
+
+function _getCookie(name) {
+    var arg = name + "=";
+    var alen = arg.length;
+    var clen = document.cookie.length;
+    var i = 0;
+    while (i < clen) {
+        var j = i + alen;
+        if (document.cookie.substring(i, j) == arg) {
+            return _getCookieVal(j);
+        }
+        i = document.cookie.indexOf(" ", i) + 1;
+        if (i == 0)
+            break;
+    }
+    return null;
+}
+
+function _deleteCookie(name, path, domain) {
+    if (_getCookie(name)) {
+        document.cookie = name + "=" +
+            ((path) ? "; path=" + path : "") +
+            ((domain) ? "; domain=" + domain : "") +
+            "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+    }
+}
+
+function _setCookie(name, value, expires, path, domain, secure) {
+    var vurl = true;
+    if (path != '' && path != undefined) {
+        vurl = validUrl(path);
+    }
+    if (jQuery.type(name) == "string" && vurl) {
+        document.cookie = name + "=" + escape(value) +
+            ((expires) ? "; expires=" + expires.toGMTString() : "") +
+            ((path) ? "; path=" + path : "") +
+            ((domain) ? "; domain=" + domain : "") +
+            ((secure) ? "; secure" : "");
+    }
+}
+
+function _getCookieVal(offset) {
+    var endstr = document.cookie.indexOf(";", offset);
+    if (endstr == -1) {
+        endstr = document.cookie.length;
+    }
+    return unescape(document.cookie.substring(offset, endstr));
+}
+/*********Font size resize**********/
+function set_font_size(fontType) {
+    if (fontType == "increase") {
+        if (fontSize < 130) {
+            fontSize = parseInt(fontSize) + 15;
+        }
+    } else if (fontType == "decrease") {
+        if (fontSize > 70) {
+            fontSize = parseInt(fontSize) - 15;
+        }
+    } else {
+        fontSize = 100;
+    }
+    _setCookie("fontSize", fontSize);
+    jQuery("#wrapper").css("font-size", fontSize + "%");
+    //jQuery("#template_three_column").css("font-size",fontSize + "%");
+}
+
+</script>
+                </div>
+</body>
+</html>

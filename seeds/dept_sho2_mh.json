@@ -1,0 +1,50 @@
+[
+ {
+  "key": "sho2_mh-satara",
+  "payload": {
+   "reader": "sho2_mh",
+   "url": "https://satarapolice.gov.in/Senior_Officers",
+   "site": "satara",
+   "base": "https://satarapolice.gov.in",
+   "district": "Satara",
+   "dc": "494",
+   "ps": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+   ],
+   "state": "MH",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
