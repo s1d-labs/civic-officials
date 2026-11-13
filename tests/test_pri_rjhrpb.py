@@ -145,3 +145,43 @@ def test_pri_pb_seeds():
     assert {s["payload"]["route"] for s in ocr} == {"abroad"}
     assert all(s["payload"]["stored"].endswith(s["payload"]["url"].rsplit("/", 1)[-1]) for s in ocr)
     assert all(s["payload"]["samitis"] for s in ocr if s["payload"]["level"] == "ps")
+
+
+def _hr_full(name):
+    """The pypdf layout text of a whole saved block file (bucket copy, 2026-11-13), pages split by form feeds."""
+    import gzip
+    return gzip.decompress((DATA / "pri" / f"hr_full_{name}.txt.gz").read_bytes()).decode("utf-8").split("\f")
+
+
+def _langs(recs):
+    from collections import Counter
+    return dict(Counter(d["lang"] + ":" + d["role"] for _, d in recs))
+
+
+def test_pri_hr_full_hisar1_sarpanch_lines_without_ward():
+    """Hisar-I (2022120274-1.pdf, 38 pages): the Hindi list writes the Sarpanch line without a ward cell ("1  vyhiqj  <name>
+    <father>  ljiap"). Before, every such line was read as a header: no GP, and all 607 Hindi rows were dropped (607 records).
+    Every post line of the file is a record now: 47 + 560 Hindi, 47 + 560 English."""
+    p = {"kind": "gp", "district": "Hisar", "block": "Hisar-I", "url": "u"}
+    m = mod("pri_hr")
+    pages = _hr_full("hisar_hisar1")
+    recs = m.build(m.parse(pages, p), p, pages, p["url"])
+    assert len(recs) == 1214
+    assert _langs(recs) == {"hi:head": 47, "hi:member": 560, "en:head": 47, "en:member": 560}
+    d = dict(recs)
+    assert d["pri:pri_hr:hisar:hisar-i:g1:sarpanch"]["body_name"] == "अलीपुर"
+    assert d["pri:pri_hr:hisar:hisar-i:g1:w1"]["name"] == "गोविन्द"
+
+
+def test_pri_hr_full_karnal_two_indents():
+    """Karnal (2022120282.pdf, 31 pages): pages 2-16 hold rows at two indents, so the learned columns put the name into the
+    father's column (74 Hindi rows without a name, dropped) or a Sarpanch line without a ward was a header. Before: 854 records
+    (41 + 358 Hindi, 26 + 429 English); now 950 = every post line (45 + 431, 45 + 429)."""
+    p = {"kind": "gp", "district": "Karnal", "block": "Karnal", "url": "u"}
+    m = mod("pri_hr")
+    pages = _hr_full("karnal_karnal")
+    recs = m.build(m.parse(pages, p), p, pages, p["url"])
+    assert len(recs) == 950
+    assert _langs(recs) == {"hi:head": 45, "hi:member": 431, "en:head": 45, "en:member": 429}
+    assert all(d["name"] and d["body_name"] for _, d in recs)
+

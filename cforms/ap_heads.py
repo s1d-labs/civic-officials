@@ -21,6 +21,9 @@ import tempfile
 import provenance
 
 METHOD = "pdf text (pdftotext -layout)"     # source trail (provenance.py): how this reader reads its sources
+# reader audit (audit.py): the files list every candidate; the reader keeps the elected one per body. Saved files (2026-11-13):
+# Mayors 13 "Elected" rows = 13 records, Chairpersons 86 = 86 records
+AUDIT_RESULTS = True
 
 BASE = "https://sec.ap.gov.in/Uploads/Doc26/Rsls/"
 FILES = {"Mayor": BASE + "Mayors%20-%20Results%202026.pdf", "Chairperson": BASE + "Chairpersons%20-%20Results,%202026.pdf"}

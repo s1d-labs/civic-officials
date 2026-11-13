@@ -24,6 +24,11 @@ from dforms import _esw
 import provenance
 
 METHOD = "html table (Zilla Parishad website: office bearer, member and panchayat samiti chairperson pages; header words -> columns)"
+# reader audit (audit.py): the site's menus (about the ZP, departments, the list of panchayat samiti chair pages, RTI, schemes,
+# circulars, gallery) are lists of links, not people. The office bearers stand in a 2-column table (name | post) that the audit
+# does not count; the Pune page (2026-11-13) has 6 office bearers and the reader makes 6 records
+AUDIT_LEAVES_OUT = (r"^(जिल्हा परिषद विषयी|सामान्य प्रशासन विभाग|पंचायत समिती सभापती \||तक्रार निवारण|राज्य सरकार \||"
+                    r"परिपत्रके|छायाचित्र दालन|माहितीचा अधिकार)")
 
 ELECTION = "Maharashtra Zilla Parishad / Panchayat Samiti, as listed on the Zilla Parishad website"
 L_BEARERS = re.compile(r"पदाधिकारी|office\s*bearer|elected\s*representative|लोकप्रतिनिधी")

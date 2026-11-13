@@ -25,6 +25,10 @@ from dforms import _pri
 
 METHOD = "html table (ASP.NET WebForms elected representatives list, header words -> columns)"     # source trail
 MODULE = "pri_hp"
+# reader audit (audit.py): tables that hold no representative: the two tab menus (PRI / municipal bodies; Pradhan, Up-Pradhan,
+# ward members ...) and the empty candidate-detail table, whose only row is its header. Checked on the 2 saved answers
+# (2026-11-13): every row of the representatives table is a record (17 of 17, 28 of 28)
+AUDIT_LEAVES_OUT = r"^(पंचायती राज संस्थान|प्रधान\s*उप-प्रधान|क्र\. सं\.\s*आरक्षण स्थिति)"
 URL = "https://sechimachal.hp.gov.in/dpmis/repList.aspx"
 TERM = "2026-2031"
 ELECTION = "Himachal Pradesh Panchayati Raj General Election 2026 (term 2026-2031)"

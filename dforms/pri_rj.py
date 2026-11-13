@@ -34,6 +34,10 @@ from forms.aspnet import hidden, options
 METHOD = "html table (ASP.NET result page after dropdown postbacks; tabs Winner Sarpanch, Contesting Sarpanch, Ward Winning Panch)"
 
 MODULE = "pri_rj"
+# reader audit (audit.py): the answer lists every contesting Sarpanch (#tabs-1, losers too, with mobile) beside the winners; the
+# reader keeps every winner row of #tabs-4 and #tabs-7 and only the winners' rows of #tabs-1. Checked on the 59 saved answers
+# (2026-11-13): 1,857 Winner Sarpanch rows + 15,741 Ward Winning Panch rows = 17,598 records; 11,132 contesting rows are candidates
+AUDIT_RESULTS = True
 URL = "https://sec.rajasthan.gov.in/GramPanchayatDetails.aspx"
 P = "ctl00$ContentPlaceHolder1$"
 PERIOD = "64"

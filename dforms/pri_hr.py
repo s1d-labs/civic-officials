@@ -163,18 +163,34 @@ def parse(pages, p):
             if k is not None:
                 if kind == "gp":
                     pre, post = ch[:k], ch[k:]
-                    wi = next((i for i in range(len(pre) - 1, -1, -1) if re.match(r"^(\d{1,3}|&|-+|–)$", pre[i][1])
+                    wi = next((i for i in range(len(pre) - 1, -1, -1) if re.match(r"^((?:Wa)?\d{1,3}|&|-+|–)$", pre[i][1])
                                and abs(pre[i][0] - cols.get("ward", pre[i][0])) <= 6), None)
-                    if wi is None:                      # a header line ("Name of Post"): not a row
-                        cur = None
-                        continue
+                    if wi is None:
+                        # a line that starts a GP without a ward cell (Hisar-I, Hindi list: "1  vyhiqj  <name>  <father>  ljiap";
+                        # Palwal, English: "18  Jalhaka  Om Wati  Rajender  Panch"): serial and GP stand before the name
+                        # column (else the first two runs), the name and the father after them. The ward stays empty
+                        nl = sum(1 for s, _ in pre if s < cols.get("name", -10) - 2)
+                        nl = nl if 2 <= nl < len(pre) else 2
+                        if len(pre) > nl and pre[0][1].rstrip(".").isdigit():
+                            pre = pre[:nl] + [(cols.get("ward", 0), "&")] + pre[nl:]
+                            wi = nl
+                        else:                           # a header line ("Name of Post"): not a row
+                            cur = None
+                            continue
                     lead = pre[:wi]
                     if lead:                            # [serial] GP before the ward: a new GP starts
                         sno = lead[0][1].rstrip(".") if len(lead) >= 2 else ""
                         gname = " ".join(x for _, x in (lead[1:] if sno.isdigit() else lead))
+                        gname = re.sub(r"\s+[-&–]+$", "", gname)   # a ward dash glued to the GP ("igkMh -")
                         gp = {"text": gname, "serial": sno if sno.isdigit() else ""}
-                    cells = {c: " ".join(v) for c, v in _assign(pre[wi + 1:], {c: cols[c] for c in ("name", "father") if c in cols}).items()}
-                    cells["ward"] = pre[wi][1] if pre else ""
+                    rest = pre[wi + 1:]
+                    cells = {c: " ".join(v) for c, v in _assign(rest, {c: cols[c] for c in ("name", "father") if c in cols}).items()}
+                    if len(rest) == 2 or (rest and not cells.get("name")):
+                        # two runs (name, father), or the name ran into the father's column: a page's lists can stand at two
+                        # indents (Karnal, pages 2-4), so the columns of the other indent misplace them. Between the ward and
+                        # the post the first run is the name, the rest the father
+                        cells = {"name": rest[0][1], **({"father": " ".join(x for _, x in rest[1:])} if len(rest) > 1 else {})}
+                    cells["ward"] = re.sub(r"^Wa", "", pre[wi][1]) if pre else ""     # "Wa1" (Rewari, page 6) = ward 1
                     cells["post"] = post[0][1]
                     cells["reservation"] = " ".join(x for _, x in post[1:])
                 else:
