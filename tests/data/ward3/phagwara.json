@@ -1,0 +1,23 @@
+{
+ "module": "ward3_phagwara",
+ "payload": {
+  "reader": "ward3_phagwara",
+  "url": "https://mcphagwara.punjab.gov.in/Home",
+  "pdf": "https://enigambackuprestore.blob.core.windows.net/securefilestructure/MC/Phagwara/MCSubMenu/pdf/linkpdf_9_21_2026_7_433.MC%20Staff%2021-09-26.pdf",
+  "state": "PB"
+ },
+ "pages": "phagwara.pages",
+ "min_records": 75,
+ "expect": [
+  {
+   "post": "^Sanitary Inspector",
+   "name": "Hitesh Sharma",
+   "level": "body"
+  },
+  {
+   "post": "Junior Engineer \\(Civil\\)",
+   "name": "Kanwarpal",
+   "level": "body"
+  }
+ ]
+}
