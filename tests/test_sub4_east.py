@@ -55,3 +55,48 @@ def test_sub4_tr_page_down_uses_payload_url():
     p = {s["payload"]["kind"]: s["payload"] for s in m.items()}["bdo"]
     recs, files, why = m.fetch(p, fake_get({p["url"]: "sub4/tr_bdo.pdf"}))
     assert why == "" and len(recs) == 58 and [f[0] for f in files] == ["depts/sub4_tr/bdo.pdf"]
+
+
+# ---------- Nagaland ----------
+
+def test_sub4_nl_row():
+    m = mod("sub4_nl_row")
+    assert _seeds("nl", 1) == m.items()
+    recs, files, why = m.fetch(m.items()[0]["payload"], fake_get({m.URL: "sub4/nl_row.html"}))
+    assert why == "" and files[0][0] == "depts/sub4_nl_row/public-entities.html.gz"
+    check_records(recs, "sub4_nl_row", "administration")
+    by = dict(recs)
+    assert len(recs) == 32 and all(d["district_code"] for _, d in recs)
+    assert sum(d["level"] == "district" for _, d in recs) == 16 and sum(d["level"] == "subdivision" for _, d in recs) == 16
+    d = by["dept:sub4_nl_row:dc:kohima"]
+    assert (d["name"], d["cadre"], d["phone"], d["email"], d["district_code"]) == \
+        ("Henok Buchem", "NCS", "8787679448", "dckma-ngl@nic.in", "245")
+    d = by["dept:sub4_nl_row:eac:dimapur"]
+    assert (d["name"], d["post"], d["phone"], d["src_pos"]) == ("Imlijungla", "Extra Assistant Commissioner", "7982588143",
+                                                              {"table": 1, "row": 19})
+    assert "name" not in by["dept:sub4_nl_row:sdo:noklak"]          # "Noklak SDO": a post without a person
+
+
+# ---------- Meghalaya ----------
+
+def test_sub4_ml_mcs():
+    m = mod("sub4_ml_mcs")
+    assert _seeds("ml", 1) == m.items()
+    routes = {m.URL: "sub4/ml_mcs.html"}
+    routes.update({f"{m.URL}?page={n}": f"sub4/ml_mcs_{n}.html" for n in (1, 2, 3, 4)})
+    get = fake_get(routes)
+    recs, files, why = m.fetch(m.items()[0]["payload"], get)
+    assert why == "" and len(get.calls) == 5 and len(files) == 4          # page 4 has no officers: the reader stops there
+    check_records([r for r in recs if r[1]["level"] == "block"], "sub4_ml_mcs", "rural_development")
+    by = dict(recs)
+    bdo = [d for _, d in recs if d["level"] == "block"]
+    assert len(recs) == 68 and len(bdo) == 45 and all(d["lgd_block_code"] and d["district_code"] for d in bdo)
+    assert all(d["district_code"] for _, d in recs)
+    d = by["dept:sub4_ml_mcs:bdo:umsning"]
+    assert (d["name"], d["charge_date"], d["lgd_block_code"], d["district_code"], d["post"]) == \
+        ("Andrew L. Myrthong", "2024-06-27", "2470", "276", "Block Development Officer")
+    d = by["dept:sub4_ml_mcs:bdo:mawlai"]
+    assert d["charge_report_pending"] is True and "charge_date" not in d and d["src_url"].endswith("?page=1")
+    d = by["dept:sub4_ml_mcs:sdo:ranikor"]
+    assert d["in_charge"] is True and d["district_code"] == "658" and d["level"] == "subdivision"
+    assert by["dept:sub4_ml_mcs:bdo:selsella"]["lgd_block_code"] == "2480"          # "Selsella" in the list
