@@ -1,0 +1,370 @@
+[
+ {
+  "key": "st_div_pages:div3-jh-santhal-pargana",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "JH",
+   "all_division": true,
+   "key": "div3-jh-santhal-pargana",
+   "division": "Santhal Pargana",
+   "urls": [
+    "https://dumka.nic.in/about-district/whos-who/"
+   ],
+   "sections": "(?i)division",
+   "note": "Dumka who's who, table 'Divisional Level Officer': Commissioner, IG, DIG",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "322": [
+     "Bokaro"
+    ],
+    "323": [
+     "Chatra"
+    ],
+    "324": [
+     "Deoghar"
+    ],
+    "325": [
+     "Dhanbad"
+    ],
+    "326": [
+     "Dumka"
+    ],
+    "327": [
+     "East Singhbum"
+    ],
+    "328": [
+     "Garhwa"
+    ],
+    "329": [
+     "Giridih"
+    ],
+    "330": [
+     "Godda"
+    ],
+    "331": [
+     "Gumla"
+    ],
+    "332": [
+     "Hazaribagh"
+    ],
+    "333": [
+     "Jamtara"
+    ],
+    "334": [
+     "Koderma"
+    ],
+    "335": [
+     "Latehar"
+    ],
+    "336": [
+     "Lohardaga"
+    ],
+    "337": [
+     "Pakur"
+    ],
+    "338": [
+     "Palamu"
+    ],
+    "339": [
+     "Ranchi"
+    ],
+    "340": [
+     "Sahebganj"
+    ],
+    "341": [
+     "Saraikela Kharsawan"
+    ],
+    "342": [
+     "Simdega"
+    ],
+    "343": [
+     "West Singhbhum"
+    ],
+    "606": [
+     "Khunti"
+    ],
+    "607": [
+     "Ramgarh"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-jh-north-chotanagpur",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "JH",
+   "all_division": true,
+   "key": "div3-jh-north-chotanagpur",
+   "division": "North Chotanagpur",
+   "urls": [
+    "https://hazaribag.nic.in/whos-who/"
+   ],
+   "sections": "(?i)commissioner officials",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "322": [
+     "Bokaro"
+    ],
+    "323": [
+     "Chatra"
+    ],
+    "324": [
+     "Deoghar"
+    ],
+    "325": [
+     "Dhanbad"
+    ],
+    "326": [
+     "Dumka"
+    ],
+    "327": [
+     "East Singhbum"
+    ],
+    "328": [
+     "Garhwa"
+    ],
+    "329": [
+     "Giridih"
+    ],
+    "330": [
+     "Godda"
+    ],
+    "331": [
+     "Gumla"
+    ],
+    "332": [
+     "Hazaribagh"
+    ],
+    "333": [
+     "Jamtara"
+    ],
+    "334": [
+     "Koderma"
+    ],
+    "335": [
+     "Latehar"
+    ],
+    "336": [
+     "Lohardaga"
+    ],
+    "337": [
+     "Pakur"
+    ],
+    "338": [
+     "Palamu"
+    ],
+    "339": [
+     "Ranchi"
+    ],
+    "340": [
+     "Sahebganj"
+    ],
+    "341": [
+     "Saraikela Kharsawan"
+    ],
+    "342": [
+     "Simdega"
+    ],
+    "343": [
+     "West Singhbhum"
+    ],
+    "606": [
+     "Khunti"
+    ],
+    "607": [
+     "Ramgarh"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-jh-palamu",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "JH",
+   "all_division": true,
+   "key": "div3-jh-palamu",
+   "division": "Palamu",
+   "urls": [
+    "https://palamu.nic.in/directory/"
+   ],
+   "keep": "(?i)^commissioner palamu|to commissioner\\b|\\bI\\.?G\\.? palamu|D\\.I\\.G\\.? palamu|palamu (zone|range)",
+   "header_kinds": {
+    "(?i)^office$": "phone"
+   },
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "322": [
+     "Bokaro"
+    ],
+    "323": [
+     "Chatra"
+    ],
+    "324": [
+     "Deoghar"
+    ],
+    "325": [
+     "Dhanbad"
+    ],
+    "326": [
+     "Dumka"
+    ],
+    "327": [
+     "East Singhbum"
+    ],
+    "328": [
+     "Garhwa"
+    ],
+    "329": [
+     "Giridih"
+    ],
+    "330": [
+     "Godda"
+    ],
+    "331": [
+     "Gumla"
+    ],
+    "332": [
+     "Hazaribagh"
+    ],
+    "333": [
+     "Jamtara"
+    ],
+    "334": [
+     "Koderma"
+    ],
+    "335": [
+     "Latehar"
+    ],
+    "336": [
+     "Lohardaga"
+    ],
+    "337": [
+     "Pakur"
+    ],
+    "338": [
+     "Palamu"
+    ],
+    "339": [
+     "Ranchi"
+    ],
+    "340": [
+     "Sahebganj"
+    ],
+    "341": [
+     "Saraikela Kharsawan"
+    ],
+    "342": [
+     "Simdega"
+    ],
+    "343": [
+     "West Singhbhum"
+    ],
+    "606": [
+     "Khunti"
+    ],
+    "607": [
+     "Ramgarh"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-jh-south-chotanagpur",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "JH",
+   "all_division": true,
+   "key": "div3-jh-south-chotanagpur",
+   "division": "South Chotanagpur",
+   "urls": [
+    "https://ranchi.nic.in/whos-who/"
+   ],
+   "keep": "(?i)^divisional commissioner",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "322": [
+     "Bokaro"
+    ],
+    "323": [
+     "Chatra"
+    ],
+    "324": [
+     "Deoghar"
+    ],
+    "325": [
+     "Dhanbad"
+    ],
+    "326": [
+     "Dumka"
+    ],
+    "327": [
+     "East Singhbum"
+    ],
+    "328": [
+     "Garhwa"
+    ],
+    "329": [
+     "Giridih"
+    ],
+    "330": [
+     "Godda"
+    ],
+    "331": [
+     "Gumla"
+    ],
+    "332": [
+     "Hazaribagh"
+    ],
+    "333": [
+     "Jamtara"
+    ],
+    "334": [
+     "Koderma"
+    ],
+    "335": [
+     "Latehar"
+    ],
+    "336": [
+     "Lohardaga"
+    ],
+    "337": [
+     "Pakur"
+    ],
+    "338": [
+     "Palamu"
+    ],
+    "339": [
+     "Ranchi"
+    ],
+    "340": [
+     "Sahebganj"
+    ],
+    "341": [
+     "Saraikela Kharsawan"
+    ],
+    "342": [
+     "Simdega"
+    ],
+    "343": [
+     "West Singhbhum"
+    ],
+    "606": [
+     "Khunti"
+    ],
+    "607": [
+     "Ramgarh"
+    ]
+   }
+  }
+ }
+]

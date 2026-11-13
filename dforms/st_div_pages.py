@@ -15,6 +15,18 @@ Header words (English, Hindi, Marathi): Name / नाम / नाव, Designatio
 A second header row ("Code | Office | Residence | Mobile No.", Haryana Police) is skipped; its phone columns are read as
 phones. Rows without name and post (notes such as "Updated on 21.10.2026") are skipped.
 
+District pages that also list the division's officers (2026-11-13, seeds/dept_div3_<st>.json: the headquarters district's
+Who's Who / directory names the Divisional Commissioner, the zone IG and the range DIG next to the district's own officers):
+  "sections": regex; only tables (and pager categories) whose caption matches are read ("Divisional Level Officer",
+              "Commissioner Officials"); the rows of other tables are counted as skipped;
+  "keep":     regex; only rows whose "post | name | section" matches are read (the other rows are counted as skipped);
+  "header_kinds": {header regex: field}, tried before the header words above ("NAME OF THE OFFICES" -> post);
+  "all_division": true when "sections" / "keep" leave only division posts: no row is taken for a district head
+              ("Inspector General of Police, S.P. Division Dumka": S.P. is Santhal Pargana there);
+  "default_post": the post of a row that gives a name but no post (Assam GAD "Name of the Commissioner");
+  "division_col" + "division_rx": a page that lists every division of the state (Assam GAD divisions, HP revenue courts):
+              the row's own division from that column; with "keep", rows of other offices are left out.
+
 Records (_state.rec, type dept_office): level division (division = the payload's, districts from dforms/st_div_<st>.json);
 a row whose post or section names a district head (Collector / District Magistrate / Deputy Commissioner / SP / SSP / ZP CEO /
 Municipal Commissioner / Commissioner of Police, in English, Hindi or Marathi) and a district of the payload's
@@ -64,8 +76,11 @@ DISTRICT_HEAD = re.compile(
 POLICE = re.compile(r"(?i)\b(police|\bIGP?\b|\bDIGP?\b|\bS\.?S\.?P\b|\bS\.?P\b|range|zone|\bIPS\b)\b|पोलीस|पुलिस|भापोसे")
 
 
-def kind(h):
+def kind(h, over=None):
     h = _esw.clean(h)
+    for rx, k in (over or {}).items():
+        if re.search(rx, h):
+            return k
     for k, rx in FIELDS:
         if re.search(rx, h):
             return k
@@ -111,14 +126,14 @@ def name_post(s):
     return s, ""
 
 
-def fields(row):
+def fields(row, over=None):
     """{name, post, email, phone, mobile, fax, address} of one {header: cell} row."""
     f, phones = {}, []
     for h, v in row.items():
         v = _esw.clean(v)
         if not v:
             continue
-        k = kind(h)
+        k = kind(h, over)
         if k == "phone":
             phones.append(v)
         elif k and k not in f:
@@ -158,13 +173,16 @@ def classify(p, post, name, section, address, email):
     police_item = p.get("kind") == "police"
     text = " ".join([post, section])
     level, code, dname = "division", "", ""
-    if DISTRICT_HEAD.search(post) or (DISTRICT_HEAD.search(section) and not HEAD_OF_OFFICE.search(post)):
+    if p.get("all_division"):
+        pass                                            # the payload says every row it keeps is a division post
+    elif DISTRICT_HEAD.search(post) or (DISTRICT_HEAD.search(section) and not HEAD_OF_OFFICE.search(post)):
         code, dname = district_in(" ".join([post, section, address]), p.get("district_names"))
         if not code and email:
             code, dname = district_in(email.split("@")[0].replace(".", " ").replace("-", " "), p.get("district_names"))
         if code:
             level = "district"
-    police = police_item or bool(POLICE.search(text + " " + name))
+    # "Divisional Commissioner S.P. Division Dumka": S.P. = Santhal Pargana there, not Superintendent of Police
+    police = police_item or (bool(POLICE.search(text + " " + name)) and not (level == "division" and is_head(p, post)))
     if police:
         dept, body_kind = "police", "police"
     elif level == "district":
@@ -184,6 +202,23 @@ def classify(p, post, name, section, address, email):
     return level, code, dname, dept, body_kind, pk
 
 
+def row_division(p, row):
+    """The division a row names itself, for pages that list every division of the state (payload "division_col": header regex,
+    "division_rx": regex whose group 1 is the division name in that cell, default the whole cell); the name as
+    dforms/st_div_<st>.json writes it, "" when the row names none of them."""
+    if not p.get("division_col"):
+        return ""
+    for h, v in row.items():
+        if re.search(p["division_col"], h or ""):
+            v = _esw.clean(v)
+            m = re.search(p["division_rx"], v) if p.get("division_rx") else None
+            return _state.districts_of(p["state"], m.group(1) if m else ("" if p.get("division_rx") else v))[0]
+    return ""
+
+
+PLACEHOLDER = re.compile(r"(?:,\s*)?\b(\d)\1{9}\b")         # "9999999999": the CMS's sample number, not a phone
+
+
 def rows_records(p, rows, section, ids, poss, url, src=None):
     out = []
     st, div = p["state"], p["division"]
@@ -192,14 +227,19 @@ def rows_records(p, rows, section, ids, poss, url, src=None):
         if vals and all(HEADER_WORD.match(v) for v in vals):
             provenance.skip_row(row, 'skip: vals and all(HEADER_WORD.match(v) for v in vals)')
             continue                                    # a second header row ("Code | Office | Residence | Mobile No.")
-        f = fields(row)
-        name, post = f.get("name", ""), f.get("post", "")
+        f = fields(row, p.get("header_kinds"))
+        name, post = f.get("name", ""), f.get("post", "") or (p.get("default_post", "") if f.get("name") else "")
         if not (name or post) or re.fullmatch(r"(?i)name|नाम|नाव|designation", name or ""):
             provenance.skip_row(row, 'skip: not (name or post) or re.fullmatch(r"(?i)name|नाम|नाव|designation",...')
             continue
+        if p.get("keep") and not re.search(p["keep"], " | ".join([post, name, section or ""])):
+            provenance.skip_row(row, "skip: not a division post (payload keep)")
+            continue
         email = _esw.emails(" ".join([f.get("email", "")] + f["phone_raw"]))
-        phone = _esw.phones(*f["phone_raw"])
-        mobile = _esw.phones(f.get("mobile", ""))
+        phone = PLACEHOLDER.sub("", _esw.phones(*f["phone_raw"])).strip(" ,")
+        mobile = PLACEHOLDER.sub("", _esw.phones(f.get("mobile", ""))).strip(" ,")
+        if name and post and _esw.clean(name).lower().startswith(_esw.clean(post).lower()):
+            name = ""                                   # CMS template text: the name cell repeats the post
         address = f.get("address", "")
         level, code, dname, dept, body_kind, pk = classify(p, post, name, section or "", address, email)
         if body_kind == "police":
@@ -208,7 +248,7 @@ def rows_records(p, rows, section, ids, poss, url, src=None):
             body = p.get("body") or f"Office of the Divisional Commissioner, {div}"
         else:
             body = section or p.get("body") or ""
-        tdiv = (p.get("table_divisions") or {}).get(str((pos or {}).get("table", "")))
+        tdiv = (p.get("table_divisions") or {}).get(str((pos or {}).get("table", ""))) or row_division(p, row)
         kw = {"division": tdiv or div}
         if p.get("police_unit_rx"):
             u = re.search(p["police_unit_rx"], post + " " + address)
@@ -229,9 +269,13 @@ def rows_records(p, rows, section, ids, poss, url, src=None):
 def parse_page(p, html, url):
     out = []
     for t in officials.tables(html):
-        heads = [kind(h) for h in t.get("headers", [])]
+        heads = [kind(h, p.get("header_kinds")) for h in t.get("headers", [])]
         if not ({"name", "post", "name_post"} & set(heads)):
             continue                                    # accessibility / file format tables of the CMS
+        if p.get("sections") and not re.search(p["sections"], t.get("caption") or ""):
+            for row in t["rows"]:
+                provenance.skip_row(row, "skip: table not of the division (payload sections)")
+            continue
         n = len(t["rows"])
         poss = t.get("pos") or [{} for _ in range(n)]
         ids = [f"{slug(url)}:{ps.get('table', 0)}:{ps.get('row', i + 1)}" for i, ps in enumerate(poss)]
@@ -246,6 +290,8 @@ def pager(p, html, url, get):
         if not pg:
             continue
         for b in pg["blocks"]:
+            if p.get("sections") and not re.search(p["sections"], b.get("name") or ""):
+                continue                                # a category of the district's own officers: not asked for
             n = 1
             while n < b["pages"] and calls < MAX_AJAX:
                 r = get(pg["ajaxurl"], "POST", {"action": pg["action"], "paged": n, "tax_slug": b["slug"], "type": "next",

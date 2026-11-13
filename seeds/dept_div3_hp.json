@@ -1,0 +1,64 @@
+[
+ {
+  "key": "st_div_pages:div3-hp-courts",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HP",
+   "all_division": true,
+   "key": "div3-hp-courts",
+   "division": "Shimla",
+   "urls": [
+    "https://rms.hp.gov.in/CourtsList.aspx"
+   ],
+   "header_kinds": {
+    "(?i)^court$": "post",
+    "(?i)office address": "address"
+   },
+   "keep": "(?i)^divisional commissioner-",
+   "division_col": "(?i)^court$",
+   "division_rx": "(?i)divisional commissioner-\\s*(\\w+)",
+   "note": "Revenue court list: the three Divisional Commissioner offices with address only (no name, no phone)",
+   "india_only": true,
+   "route": "direct",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked",
+   "district_names": {
+    "15": [
+     "Bilaspur"
+    ],
+    "16": [
+     "Chamba"
+    ],
+    "17": [
+     "Hamirpur"
+    ],
+    "18": [
+     "Kangra"
+    ],
+    "19": [
+     "Kinnaur"
+    ],
+    "20": [
+     "Kullu"
+    ],
+    "21": [
+     "Lahaul And Spiti"
+    ],
+    "22": [
+     "Mandi"
+    ],
+    "23": [
+     "Shimla"
+    ],
+    "24": [
+     "Sirmaur"
+    ],
+    "25": [
+     "Solan"
+    ],
+    "26": [
+     "Una"
+    ]
+   }
+  }
+ }
+]

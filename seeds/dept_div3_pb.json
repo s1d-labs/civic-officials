@@ -1,0 +1,356 @@
+[
+ {
+  "key": "st_div_pages:div3-pb-ferozepur",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "PB",
+   "all_division": true,
+   "key": "div3-pb-ferozepur",
+   "division": "Ferozepur",
+   "urls": [
+    "https://ferozepur.nic.in/contact-directory/"
+   ],
+   "keep": "(?i)^divisional commissioner|ferozepur range",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "27": [
+     "Amritsar"
+    ],
+    "28": [
+     "Bathinda"
+    ],
+    "29": [
+     "Faridkot"
+    ],
+    "30": [
+     "Fatehgarh Sahib"
+    ],
+    "31": [
+     "Ferozepur"
+    ],
+    "32": [
+     "Gurdaspur"
+    ],
+    "33": [
+     "Hoshiarpur"
+    ],
+    "34": [
+     "Jalandhar"
+    ],
+    "35": [
+     "Kapurthala"
+    ],
+    "36": [
+     "Ludhiana"
+    ],
+    "37": [
+     "Mansa"
+    ],
+    "38": [
+     "Moga"
+    ],
+    "39": [
+     "Sri Muktsar Sahib"
+    ],
+    "40": [
+     "Shahid Bhagat Singh Nagar"
+    ],
+    "41": [
+     "Patiala"
+    ],
+    "42": [
+     "Rupnagar"
+    ],
+    "43": [
+     "Sangrur"
+    ],
+    "605": [
+     "Barnala"
+    ],
+    "608": [
+     "S.A.S Nagar"
+    ],
+    "609": [
+     "Tarn Taran"
+    ],
+    "651": [
+     "Fazilka"
+    ],
+    "662": [
+     "Pathankot"
+    ],
+    "737": [
+     "Malerkotla"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-pb-jalandhar",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "PB",
+   "all_division": true,
+   "key": "div3-pb-jalandhar",
+   "division": "Jalandhar",
+   "urls": [
+    "https://jalandhar.nic.in/about-district/whos-who/"
+   ],
+   "sections": "(?i)commissioner jalandhar division",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "27": [
+     "Amritsar"
+    ],
+    "28": [
+     "Bathinda"
+    ],
+    "29": [
+     "Faridkot"
+    ],
+    "30": [
+     "Fatehgarh Sahib"
+    ],
+    "31": [
+     "Ferozepur"
+    ],
+    "32": [
+     "Gurdaspur"
+    ],
+    "33": [
+     "Hoshiarpur"
+    ],
+    "34": [
+     "Jalandhar"
+    ],
+    "35": [
+     "Kapurthala"
+    ],
+    "36": [
+     "Ludhiana"
+    ],
+    "37": [
+     "Mansa"
+    ],
+    "38": [
+     "Moga"
+    ],
+    "39": [
+     "Sri Muktsar Sahib"
+    ],
+    "40": [
+     "Shahid Bhagat Singh Nagar"
+    ],
+    "41": [
+     "Patiala"
+    ],
+    "42": [
+     "Rupnagar"
+    ],
+    "43": [
+     "Sangrur"
+    ],
+    "605": [
+     "Barnala"
+    ],
+    "608": [
+     "S.A.S Nagar"
+    ],
+    "609": [
+     "Tarn Taran"
+    ],
+    "651": [
+     "Fazilka"
+    ],
+    "662": [
+     "Pathankot"
+    ],
+    "737": [
+     "Malerkotla"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-pb-jalandhar-range",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "PB",
+   "all_division": true,
+   "key": "div3-pb-jalandhar-range",
+   "division": "Jalandhar",
+   "urls": [
+    "https://jalandhar.nic.in/keycontacts/"
+   ],
+   "header_kinds": {
+    "(?i)office name": "post"
+   },
+   "keep": "(?i)^DIG Jalandhar Range",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "27": [
+     "Amritsar"
+    ],
+    "28": [
+     "Bathinda"
+    ],
+    "29": [
+     "Faridkot"
+    ],
+    "30": [
+     "Fatehgarh Sahib"
+    ],
+    "31": [
+     "Ferozepur"
+    ],
+    "32": [
+     "Gurdaspur"
+    ],
+    "33": [
+     "Hoshiarpur"
+    ],
+    "34": [
+     "Jalandhar"
+    ],
+    "35": [
+     "Kapurthala"
+    ],
+    "36": [
+     "Ludhiana"
+    ],
+    "37": [
+     "Mansa"
+    ],
+    "38": [
+     "Moga"
+    ],
+    "39": [
+     "Sri Muktsar Sahib"
+    ],
+    "40": [
+     "Shahid Bhagat Singh Nagar"
+    ],
+    "41": [
+     "Patiala"
+    ],
+    "42": [
+     "Rupnagar"
+    ],
+    "43": [
+     "Sangrur"
+    ],
+    "605": [
+     "Barnala"
+    ],
+    "608": [
+     "S.A.S Nagar"
+    ],
+    "609": [
+     "Tarn Taran"
+    ],
+    "651": [
+     "Fazilka"
+    ],
+    "662": [
+     "Pathankot"
+    ],
+    "737": [
+     "Malerkotla"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-pb-faridkot",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "PB",
+   "all_division": true,
+   "key": "div3-pb-faridkot",
+   "division": "Faridkot",
+   "urls": [
+    "https://faridkot.nic.in/commissioner-faridkot-division-faridkot/"
+   ],
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "27": [
+     "Amritsar"
+    ],
+    "28": [
+     "Bathinda"
+    ],
+    "29": [
+     "Faridkot"
+    ],
+    "30": [
+     "Fatehgarh Sahib"
+    ],
+    "31": [
+     "Ferozepur"
+    ],
+    "32": [
+     "Gurdaspur"
+    ],
+    "33": [
+     "Hoshiarpur"
+    ],
+    "34": [
+     "Jalandhar"
+    ],
+    "35": [
+     "Kapurthala"
+    ],
+    "36": [
+     "Ludhiana"
+    ],
+    "37": [
+     "Mansa"
+    ],
+    "38": [
+     "Moga"
+    ],
+    "39": [
+     "Sri Muktsar Sahib"
+    ],
+    "40": [
+     "Shahid Bhagat Singh Nagar"
+    ],
+    "41": [
+     "Patiala"
+    ],
+    "42": [
+     "Rupnagar"
+    ],
+    "43": [
+     "Sangrur"
+    ],
+    "605": [
+     "Barnala"
+    ],
+    "608": [
+     "S.A.S Nagar"
+    ],
+    "609": [
+     "Tarn Taran"
+    ],
+    "651": [
+     "Fazilka"
+    ],
+    "662": [
+     "Pathankot"
+    ],
+    "737": [
+     "Malerkotla"
+    ]
+   }
+  }
+ }
+]

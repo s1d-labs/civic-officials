@@ -1,0 +1,135 @@
+[
+ {
+  "key": "st_div_pages:div3-br-bhagalpur",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "BR",
+   "all_division": true,
+   "key": "div3-br-bhagalpur",
+   "division": "Bhagalpur",
+   "urls": [
+    "https://bhagalpur.nic.in/directory/"
+   ],
+   "sections": "(?i)bhagalpur division",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "188": [
+     "Araria"
+    ],
+    "189": [
+     "Aurangabad"
+    ],
+    "190": [
+     "Banka"
+    ],
+    "191": [
+     "Begusarai"
+    ],
+    "192": [
+     "Bhagalpur"
+    ],
+    "193": [
+     "Bhojpur"
+    ],
+    "194": [
+     "Buxar"
+    ],
+    "195": [
+     "Darbhanga"
+    ],
+    "196": [
+     "Gaya"
+    ],
+    "197": [
+     "Gopalganj"
+    ],
+    "198": [
+     "Jamui"
+    ],
+    "199": [
+     "Jehanabad"
+    ],
+    "200": [
+     "Kaimur (Bhabua)"
+    ],
+    "201": [
+     "Katihar"
+    ],
+    "202": [
+     "Khagaria"
+    ],
+    "203": [
+     "Kishanganj"
+    ],
+    "204": [
+     "Lakhisarai"
+    ],
+    "205": [
+     "Madhepura"
+    ],
+    "206": [
+     "Madhubani"
+    ],
+    "207": [
+     "Munger"
+    ],
+    "208": [
+     "Muzaffarpur"
+    ],
+    "209": [
+     "Nalanda"
+    ],
+    "210": [
+     "Nawada"
+    ],
+    "211": [
+     "Pashchim Champaran"
+    ],
+    "212": [
+     "Patna"
+    ],
+    "213": [
+     "Purbi Champaran"
+    ],
+    "214": [
+     "Purnia"
+    ],
+    "215": [
+     "Rohtas"
+    ],
+    "216": [
+     "Saharsa"
+    ],
+    "217": [
+     "Samastipur"
+    ],
+    "218": [
+     "Saran"
+    ],
+    "219": [
+     "Sheikhpura"
+    ],
+    "220": [
+     "Sheohar"
+    ],
+    "221": [
+     "Sitamarhi"
+    ],
+    "222": [
+     "Siwan"
+    ],
+    "223": [
+     "Supaul"
+    ],
+    "224": [
+     "Vaishali"
+    ],
+    "611": [
+     "Arwal"
+    ]
+   }
+  }
+ }
+]

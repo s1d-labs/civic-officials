@@ -1,0 +1,238 @@
+[
+ {
+  "key": "st_div_pages:div3-cg-durg",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "CG",
+   "all_division": true,
+   "key": "div3-cg-durg",
+   "division": "Durg",
+   "urls": [
+    "https://durg.gov.in/en/about-district/whos-who/"
+   ],
+   "sections": "(?i)commissioner durg division",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "374": [
+     "Bastar"
+    ],
+    "375": [
+     "Bilaspur"
+    ],
+    "376": [
+     "Dakshin Bastar Dantewada"
+    ],
+    "377": [
+     "Dhamtari"
+    ],
+    "378": [
+     "Durg"
+    ],
+    "379": [
+     "Janjgir-Champa"
+    ],
+    "380": [
+     "Jashpur"
+    ],
+    "381": [
+     "Uttar Bastar Kanker"
+    ],
+    "382": [
+     "Kabeerdham"
+    ],
+    "383": [
+     "Korba"
+    ],
+    "384": [
+     "Korea"
+    ],
+    "385": [
+     "Mahasamund"
+    ],
+    "386": [
+     "Raigarh"
+    ],
+    "387": [
+     "Raipur"
+    ],
+    "388": [
+     "Rajnandgaon"
+    ],
+    "389": [
+     "Surguja"
+    ],
+    "636": [
+     "Bijapur"
+    ],
+    "637": [
+     "Narayanpur"
+    ],
+    "642": [
+     "Sukma"
+    ],
+    "643": [
+     "Kondagaon"
+    ],
+    "644": [
+     "Balodabazar-Bhatapara"
+    ],
+    "645": [
+     "Gariyaband"
+    ],
+    "646": [
+     "Balod"
+    ],
+    "647": [
+     "Mungeli"
+    ],
+    "648": [
+     "Surajpur"
+    ],
+    "649": [
+     "Balrampur-Ramanujganj"
+    ],
+    "650": [
+     "Bemetara"
+    ],
+    "734": [
+     "Gaurela-Pendra-Marwahi"
+    ],
+    "759": [
+     "Khairagarh-Chhuikhadan-Gandai"
+    ],
+    "760": [
+     "Manendragarh-Chirmiri-Bharatpur(M C B)"
+    ],
+    "761": [
+     "Mohla-Manpur-Ambagarh Chouki"
+    ],
+    "762": [
+     "Sakti"
+    ],
+    "763": [
+     "Sarangarh-Bilaigarh"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-cg-raipur",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "CG",
+   "all_division": true,
+   "key": "div3-cg-raipur",
+   "division": "Raipur",
+   "urls": [
+    "https://raipur.gov.in/en/directory/"
+   ],
+   "keep": "(?i)^commissioner raipur",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "374": [
+     "Bastar"
+    ],
+    "375": [
+     "Bilaspur"
+    ],
+    "376": [
+     "Dakshin Bastar Dantewada"
+    ],
+    "377": [
+     "Dhamtari"
+    ],
+    "378": [
+     "Durg"
+    ],
+    "379": [
+     "Janjgir-Champa"
+    ],
+    "380": [
+     "Jashpur"
+    ],
+    "381": [
+     "Uttar Bastar Kanker"
+    ],
+    "382": [
+     "Kabeerdham"
+    ],
+    "383": [
+     "Korba"
+    ],
+    "384": [
+     "Korea"
+    ],
+    "385": [
+     "Mahasamund"
+    ],
+    "386": [
+     "Raigarh"
+    ],
+    "387": [
+     "Raipur"
+    ],
+    "388": [
+     "Rajnandgaon"
+    ],
+    "389": [
+     "Surguja"
+    ],
+    "636": [
+     "Bijapur"
+    ],
+    "637": [
+     "Narayanpur"
+    ],
+    "642": [
+     "Sukma"
+    ],
+    "643": [
+     "Kondagaon"
+    ],
+    "644": [
+     "Balodabazar-Bhatapara"
+    ],
+    "645": [
+     "Gariyaband"
+    ],
+    "646": [
+     "Balod"
+    ],
+    "647": [
+     "Mungeli"
+    ],
+    "648": [
+     "Surajpur"
+    ],
+    "649": [
+     "Balrampur-Ramanujganj"
+    ],
+    "650": [
+     "Bemetara"
+    ],
+    "734": [
+     "Gaurela-Pendra-Marwahi"
+    ],
+    "759": [
+     "Khairagarh-Chhuikhadan-Gandai"
+    ],
+    "760": [
+     "Manendragarh-Chirmiri-Bharatpur(M C B)"
+    ],
+    "761": [
+     "Mohla-Manpur-Ambagarh Chouki"
+    ],
+    "762": [
+     "Sakti"
+    ],
+    "763": [
+     "Sarangarh-Bilaigarh"
+    ]
+   }
+  }
+ }
+]
