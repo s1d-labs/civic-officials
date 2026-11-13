@@ -4,11 +4,14 @@
   "reader": "ward3_bengaluru",
   "url": "https://bengaluruwest.karnataka.gov.in/home",
   "state": "KA",
-  "city": "west"
+  "city": "west",
+  "zones_url": "https://gba.karnataka.gov.in/KnowYourNewCorporation/index.html"
  },
  "routes": {
   "https://bengaluruwest.karnataka.gov.in/home": "bengaluru_west_home.html",
-  "https://bengaluruwest.karnataka.gov.in/static/js/main.eef24237.js": "bengaluru_west.js"
+  "https://bengaluruwest.karnataka.gov.in/static/js/main.eef24237.js": "bengaluru_west.js",
+  "https://gba.karnataka.gov.in/KnowYourNewCorporation/index.html": "bengaluru_gba_zones_home.html",
+  "https://gba.karnataka.gov.in/KnowYourNewCorporation/static/js/main.ca02ac23.js": "bengaluru_gba_zones.js"
  },
  "min_records": 8,
  "expect": [
