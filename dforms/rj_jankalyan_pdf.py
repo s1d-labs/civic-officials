@@ -67,10 +67,12 @@ HINDI_HEAD = [  # Hindi header words -> English header words (header lines only)
 ]
 EN_HEAD = [(r"(?i)\b(official|office|off\.|residence|resi\.|res\.)\s*(no\.?|number|contact( no\.?)?|phone|tel\.?)(?=\s|$)", "Office Phone"),
            (r"(?i)\binstitute\b", "Institution")]
-TITLE = re.compile(r"(?i)^(dr|sh|shri|smt|sri|mr|mrs|ms|km|kumari)\b\.?|^(श्री|श्रीमती|सुश्री|डॉ|डा\.|कु\.|सुश्री)")
+TITLE = re.compile(r"(?i)^(dr|sh|shri|smt|sri|mr|mrs|ms|km|kumari)\b\.?|^(श्री|श्रीमती|सुश्री|डॉ|डा\.|डा\s|कु\.|सुश्री)")
+KD_TITLE = re.compile(r"^(Jh|Jhefr|Jherh|Jefr|Jheku|lqJh|Mk0|Mk-|Mk\.)(?=\s)")      # Kruti Dev श्री, श्रीमति, श्रीमती, सुश्री, डॉ0
+NAME_HEAD = re.compile(r"(?i)name|नाम|पार्षद|सदस्य|सरपंच|प्रधान")
 CHUNK = re.compile(r"\S+(?: \S+)*")
 ROW_NO = re.compile(r"^\s*(\d{1,4})\s*[.)\-]?(?:\s+|$)")    # "1", "4-", "12." open a row
-MOBILE = re.compile(r"(?<!\d)(?:[6-9]\d{9}|0\d{2,4}[\s-]\d{5,8})(?!\d)")   # sure phone numbers (not a PIN code or a count)
+MOBILE = re.compile(r"(?<!\d)(?:0?[6-9]\d{9}|[6-9]\d{4} \d{5}|0\d{2,4}[\s-]\d{5,8})(?!\d)")   # sure phone numbers (not a PIN code or a count)
 PHONE = re.compile(r"(?<!\d)(?:[6-9]\d{9}|0\d{2,4}[\s-]?\d{5,8}|\d{6,8})(?!\d)")
 
 
@@ -290,6 +292,39 @@ def loose_rows(lines):
     return rows
 
 
+KD_TITLES = {"Jh": "श्री", "Jheku": "श्रीमान", "Jhefr": "श्रीमति", "Jefr": "श्रीमति", "Jherh": "श्रीमती", "lqJh": "सुश्री", "Mk0": "डॉ0", "Mk-": "डॉ.",
+             "Mk.": "डॉ."}
+
+
+def person_of(cells, titled_only=False, post_hint=""):
+    """(name, post) of a row that has a phone or an e-mail but no name (or no post) column the header map knows (2026-11-13:
+    these rows were dropped, 76 of 102 in a Baran file). The name: a cell under a name-like header ("User Name", "निर्वाचित
+    पार्षद"), else a cell with a title (Shri, श्री, Kruti Dev "Jhefr"); unless titled_only: else the first Hindi cell that is not
+    a post, else the last text cell. The post: the next Hindi cell after the name."""
+    texts = []
+    for h, c in cells.items():
+        c = _esw.clean(MOBILE.sub(" ", _esw.EMAIL.sub(" ", c)))
+        c = re.sub(r"^\d{1,4}[.)]?\s+", "", c)
+        if not re.search(r"[A-Za-zऀ-ॿ]{2}", c) or "@" in c:
+            continue
+        m = KD_TITLE.match(c)
+        if m:
+            rest = c[m.end():].strip()
+            c = KD_TITLES[m.group(1)] + " " + (rest if re.search(r"[ऀ-ॿ]", rest) else kd_chunk(rest))
+        texts.append((h, re.split(r"\]", c)[0].strip(" ,")))
+    vals = [c for _, c in texts]
+    name = next((c for h, c in texts if NAME_HEAD.search(h) and not _field.is_post_text(c) and
+                 not re.fullmatch(r"(?i)(name|नाम)", c)), "") or next((c for c in vals if TITLE.match(c)), "")
+    if not name and titled_only and post_hint in vals:    # the cell after the post: "Dy Dir Agriculture | Radhey Shyam Narwal"
+        nxt = vals[vals.index(post_hint) + 1:vals.index(post_hint) + 2]
+        if nxt and not _field.is_post_text(nxt[0]) and not re.search(r"\d", nxt[0]) and 1 <= len(nxt[0].split()) <= 5:
+            name = nxt[0]
+    if not name and not titled_only:
+        name = next((c for c in vals if re.search(r"[ऀ-ॿ]", c) and not _field.is_post_text(c)), "") or (vals[-1] if vals else "")
+    post = next((c for c in vals[vals.index(name) + 1:] if re.search(r"[ऀ-ॿ]", c)), "") if name in vals else ""
+    return name, post
+
+
 def build(rows, p):
     cat = p.get("category") or ""
     el = next(((d, lv, post) for rx, d, lv, post in ELECTED if rx.search(cat)), None)
@@ -303,6 +338,15 @@ def build(rows, p):
             post, name = name, ""
         phone = _esw.phones(r["phone"])
         email = _esw.emails(r["email"])
+        if re.fullmatch(r"[\d\s+()/,-]*", name):
+            name = ""
+        if not phone:                                   # a mobile printed in a column the header map does not know
+            phone = _esw.phones(" , ".join(MOBILE.findall(" ".join(_esw.EMAIL.sub(" ", c) for c in r["cells"].values()))))
+        name = _esw.clean(MOBILE.sub(" ", name))           # "श्रीमति मंजू धंनते वाल 9950363890" (loose rows)
+        if (phone or email) and not name:
+            n2, p2 = person_of(r["cells"], titled_only=bool(post), post_hint=post)
+            if n2 != post:
+                name, post = n2, post or p2
         if health_fac and not (name or post) and r["area"]:
             post = f"{cat.strip()} {r['area']}"
         if not (phone or email) or not (name or post):
