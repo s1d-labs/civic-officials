@@ -1,0 +1,28 @@
+{
+ "module": "ward3_mohali",
+ "payload": {
+  "reader": "ward3_mohali",
+  "url": "https://mcmohali.punjab.gov.in/Home",
+  "pdf": "https://enigambackuprestore.blob.core.windows.net/securefilestructure/MC/Mohali/MCSubMenu/pdf/linkpdf_9_23_2026_36_821.List%20of%20official.pdf",
+  "state": "PB"
+ },
+ "pages": "mohali.pages",
+ "min_records": 70,
+ "expect": [
+  {
+   "post": "A\\.C\\.E",
+   "name": "Pawanpreet",
+   "level": "zone"
+  },
+  {
+   "post": "S\\.I\\.",
+   "name": "Ravinder Kumar",
+   "level": "zone"
+  },
+  {
+   "post": "Commissioner",
+   "name": "Sundeep",
+   "level": "body"
+  }
+ ]
+}
