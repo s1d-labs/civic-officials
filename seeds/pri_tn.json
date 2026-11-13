@@ -1,0 +1,2178 @@
+[
+ {
+  "key": "pri_tn:seed",
+  "payload": {
+   "kind": "seed",
+   "module": "pri_tn",
+   "state": "TN",
+   "route": "proxy",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/rlbe2019.php"
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_ari",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_ari.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "ari",
+   "district": "Ariyalur",
+   "zp_lgd": "560",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_ari",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_ari.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "ari",
+   "district": "Ariyalur",
+   "zp_lgd": "560",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_ari",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_ari.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "ari",
+   "district": "Ariyalur",
+   "zp_lgd": "560",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_rmd",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_rmd.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "rmd",
+   "district": "Ramanathapuram",
+   "zp_lgd": "537",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_rmd",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_rmd.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "rmd",
+   "district": "Ramanathapuram",
+   "zp_lgd": "537",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_rmd",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_rmd.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "rmd",
+   "district": "Ramanathapuram",
+   "zp_lgd": "537",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_erd",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_erd.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "erd",
+   "district": "Erode",
+   "zp_lgd": "527",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_erd",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_erd.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "erd",
+   "district": "Erode",
+   "zp_lgd": "527",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_erd",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_erd.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "erd",
+   "district": "Erode",
+   "zp_lgd": "527",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_cud",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_cud.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "cud",
+   "district": "Cuddalore",
+   "zp_lgd": "524",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_cud",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_cud.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "cud",
+   "district": "Cuddalore",
+   "zp_lgd": "524",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_cud",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_cud.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "cud",
+   "district": "Cuddalore",
+   "zp_lgd": "524",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_kar",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_kar.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "kar",
+   "district": "Karur",
+   "zp_lgd": "530",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_kar",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_kar.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "kar",
+   "district": "Karur",
+   "zp_lgd": "530",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_kar",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_kar.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "kar",
+   "district": "Karur",
+   "zp_lgd": "530",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_kkm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_kkm.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "kkm",
+   "district": "Kanniyakumari",
+   "zp_lgd": "529",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_kkm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_kkm.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "kkm",
+   "district": "Kanniyakumari",
+   "zp_lgd": "529",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_kkm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_kkm.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "kkm",
+   "district": "Kanniyakumari",
+   "zp_lgd": "529",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_kgi",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_kgi.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "kgi",
+   "district": "Krishnagiri",
+   "zp_lgd": "531",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_kgi",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_kgi.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "kgi",
+   "district": "Krishnagiri",
+   "zp_lgd": "531",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_kgi",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_kgi.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "kgi",
+   "district": "Krishnagiri",
+   "zp_lgd": "531",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_cbe",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_cbe.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "cbe",
+   "district": "Coimbatore",
+   "zp_lgd": "523",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_cbe",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_cbe.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "cbe",
+   "district": "Coimbatore",
+   "zp_lgd": "523",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_cbe",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_cbe.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "cbe",
+   "district": "Coimbatore",
+   "zp_lgd": "523",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_svg",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_svg.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "svg",
+   "district": "Sivagangai",
+   "zp_lgd": "539",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_svg",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_svg.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "svg",
+   "district": "Sivagangai",
+   "zp_lgd": "539",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_svg",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_svg.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "svg",
+   "district": "Sivagangai",
+   "zp_lgd": "539",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_slm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_slm.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "slm",
+   "district": "Salem",
+   "zp_lgd": "538",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_slm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_slm.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "slm",
+   "district": "Salem",
+   "zp_lgd": "538",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_slm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_slm.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "slm",
+   "district": "Salem",
+   "zp_lgd": "538",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_tnj",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_tnj.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "tnj",
+   "district": "Thanjavur",
+   "zp_lgd": "540",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_tnj",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_tnj.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "tnj",
+   "district": "Thanjavur",
+   "zp_lgd": "540",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_tnj",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_tnj.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "tnj",
+   "district": "Thanjavur",
+   "zp_lgd": "540",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_dpi",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_dpi.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "dpi",
+   "district": "Dharmapuri",
+   "zp_lgd": "525",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_dpi",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_dpi.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "dpi",
+   "district": "Dharmapuri",
+   "zp_lgd": "525",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_dpi",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_dpi.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "dpi",
+   "district": "Dharmapuri",
+   "zp_lgd": "525",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_dgl",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_dgl.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "dgl",
+   "district": "Dindigul",
+   "zp_lgd": "526",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_dgl",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_dgl.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "dgl",
+   "district": "Dindigul",
+   "zp_lgd": "526",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_dgl",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_dgl.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "dgl",
+   "district": "Dindigul",
+   "zp_lgd": "526",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_try",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_try.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "try",
+   "district": "Tiruchirappalli",
+   "zp_lgd": "545",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_try",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_try.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "try",
+   "district": "Tiruchirappalli",
+   "zp_lgd": "545",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_try",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_try.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "try",
+   "district": "Tiruchirappalli",
+   "zp_lgd": "545",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_tpr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_tpr.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "tpr",
+   "district": "Tiruppur",
+   "zp_lgd": "578",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_tpr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_tpr.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "tpr",
+   "district": "Tiruppur",
+   "zp_lgd": "578",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_tpr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_tpr.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "tpr",
+   "district": "Tiruppur",
+   "zp_lgd": "578",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_tvm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_tvm.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "tvm",
+   "district": "Tiruvannamalai",
+   "zp_lgd": "547",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_tvm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_tvm.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "tvm",
+   "district": "Tiruvannamalai",
+   "zp_lgd": "547",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_tvm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_tvm.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "tvm",
+   "district": "Tiruvannamalai",
+   "zp_lgd": "547",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_tlr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_tlr.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "tlr",
+   "district": "Tiruvallur",
+   "zp_lgd": "543",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_tlr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_tlr.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "tlr",
+   "district": "Tiruvallur",
+   "zp_lgd": "543",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_tlr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_tlr.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "tlr",
+   "district": "Tiruvallur",
+   "zp_lgd": "543",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_tvr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_tvr.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "tvr",
+   "district": "Tiruvarur",
+   "zp_lgd": "544",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_tvr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_tvr.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "tvr",
+   "district": "Tiruvarur",
+   "zp_lgd": "544",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_tvr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_tvr.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "tvr",
+   "district": "Tiruvarur",
+   "zp_lgd": "544",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_tut",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_tut.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "tut",
+   "district": "Thoothukkudi",
+   "zp_lgd": "548",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_tut",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_tut.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "tut",
+   "district": "Thoothukkudi",
+   "zp_lgd": "548",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_tut",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_tut.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "tut",
+   "district": "Thoothukkudi",
+   "zp_lgd": "548",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_thn",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_thn.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "thn",
+   "district": "Theni",
+   "zp_lgd": "542",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_thn",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_thn.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "thn",
+   "district": "Theni",
+   "zp_lgd": "542",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_thn",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_thn.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "thn",
+   "district": "Theni",
+   "zp_lgd": "542",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_ngp",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_ngp.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "ngp",
+   "district": "Nagapattinam",
+   "zp_lgd": "533",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_ngp",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_ngp.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "ngp",
+   "district": "Nagapattinam",
+   "zp_lgd": "533",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_ngp",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_ngp.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "ngp",
+   "district": "Nagapattinam",
+   "zp_lgd": "533",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_nmk",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_nmk.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "nmk",
+   "district": "Namakkal",
+   "zp_lgd": "534",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_nmk",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_nmk.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "nmk",
+   "district": "Namakkal",
+   "zp_lgd": "534",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_nmk",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_nmk.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "nmk",
+   "district": "Namakkal",
+   "zp_lgd": "534",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_nlg",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_nlg.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "nlg",
+   "district": "The Nilgiris",
+   "zp_lgd": "541",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_nlg",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_nlg.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "nlg",
+   "district": "The Nilgiris",
+   "zp_lgd": "541",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_nlg",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_nlg.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "nlg",
+   "district": "The Nilgiris",
+   "zp_lgd": "541",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_pdk",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_pdk.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "pdk",
+   "district": "Pudukkottai",
+   "zp_lgd": "536",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_pdk",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_pdk.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "pdk",
+   "district": "Pudukkottai",
+   "zp_lgd": "536",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_pdk",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_pdk.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "pdk",
+   "district": "Pudukkottai",
+   "zp_lgd": "536",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_pmb",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_pmb.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "pmb",
+   "district": "Perambalur",
+   "zp_lgd": "535",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_pmb",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_pmb.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "pmb",
+   "district": "Perambalur",
+   "zp_lgd": "535",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_pmb",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_pmb.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "pmb",
+   "district": "Perambalur",
+   "zp_lgd": "535",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_mdu",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_mdu.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "mdu",
+   "district": "Madurai",
+   "zp_lgd": "532",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_mdu",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_mdu.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "mdu",
+   "district": "Madurai",
+   "zp_lgd": "532",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_mdu",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_mdu.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "mdu",
+   "district": "Madurai",
+   "zp_lgd": "532",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:dpwm_vnr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/dpwm_vnr.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2019",
+   "district_code": "vnr",
+   "district": "Virudhunagar",
+   "zp_lgd": "551",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:puwm_vnr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/puwm_vnr.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2019",
+   "district_code": "vnr",
+   "district": "Virudhunagar",
+   "zp_lgd": "551",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpp_vnr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpp_vnr.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "vnr",
+   "district": "Virudhunagar",
+   "zp_lgd": "551",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:dpwm_cpt",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/dpwm_cpt.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2021",
+   "district_code": "cpt",
+   "district": "Chengalpattu",
+   "zp_lgd": "296974",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:puwm_cpt",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/puwm_cpt.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2021",
+   "district_code": "cpt",
+   "district": "Chengalpattu",
+   "zp_lgd": "296974",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:vpp_cpt",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/vpp_cpt.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2021",
+   "district_code": "cpt",
+   "district": "Chengalpattu",
+   "zp_lgd": "296974",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:dpwm_kki",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/dpwm_kki.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2021",
+   "district_code": "kki",
+   "district": "Kallakurichi",
+   "zp_lgd": "296959",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:puwm_kki",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/puwm_kki.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2021",
+   "district_code": "kki",
+   "district": "Kallakurichi",
+   "zp_lgd": "296959",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:vpp_kki",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/vpp_kki.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2021",
+   "district_code": "kki",
+   "district": "Kallakurichi",
+   "zp_lgd": "296959",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:dpwm_kpm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/dpwm_kpm.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2021",
+   "district_code": "kpm",
+   "district": "Kancheepuram",
+   "zp_lgd": "528",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:puwm_kpm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/puwm_kpm.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2021",
+   "district_code": "kpm",
+   "district": "Kancheepuram",
+   "zp_lgd": "528",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:vpp_kpm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/vpp_kpm.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2021",
+   "district_code": "kpm",
+   "district": "Kancheepuram",
+   "zp_lgd": "528",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:dpwm_rpt",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/dpwm_rpt.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2021",
+   "district_code": "rpt",
+   "district": "Ranipet",
+   "zp_lgd": "296957",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:puwm_rpt",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/puwm_rpt.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2021",
+   "district_code": "rpt",
+   "district": "Ranipet",
+   "zp_lgd": "296957",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:vpp_rpt",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/vpp_rpt.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2021",
+   "district_code": "rpt",
+   "district": "Ranipet",
+   "zp_lgd": "296957",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:dpwm_tki",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/dpwm_tki.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2021",
+   "district_code": "tki",
+   "district": "Tenkasi",
+   "zp_lgd": "296956",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:puwm_tki",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/puwm_tki.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2021",
+   "district_code": "tki",
+   "district": "Tenkasi",
+   "zp_lgd": "296956",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:vpp_tki",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/vpp_tki.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2021",
+   "district_code": "tki",
+   "district": "Tenkasi",
+   "zp_lgd": "296956",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:dpwm_tnv",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/dpwm_tnv.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2021",
+   "district_code": "tnv",
+   "district": "Tirunelveli",
+   "zp_lgd": "546",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:puwm_tnv",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/puwm_tnv.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2021",
+   "district_code": "tnv",
+   "district": "Tirunelveli",
+   "zp_lgd": "546",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:vpp_tnv",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/vpp_tnv.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2021",
+   "district_code": "tnv",
+   "district": "Tirunelveli",
+   "zp_lgd": "546",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:dpwm_tpt",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/dpwm_tpt.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2021",
+   "district_code": "tpt",
+   "district": "Tirupathur",
+   "zp_lgd": "296958",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:puwm_tpt",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/puwm_tpt.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2021",
+   "district_code": "tpt",
+   "district": "Tirupathur",
+   "zp_lgd": "296958",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:vpp_tpt",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/vpp_tpt.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2021",
+   "district_code": "tpt",
+   "district": "Tirupathur",
+   "zp_lgd": "296958",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:dpwm_vlr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/dpwm_vlr.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2021",
+   "district_code": "vlr",
+   "district": "Vellore",
+   "zp_lgd": "549",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:puwm_vlr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/puwm_vlr.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2021",
+   "district_code": "vlr",
+   "district": "Vellore",
+   "zp_lgd": "549",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:vpp_vlr",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/vpp_vlr.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2021",
+   "district_code": "vlr",
+   "district": "Vellore",
+   "zp_lgd": "549",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:dpwm_vpm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/dpwm_vpm.pdf",
+   "file": "dpwm",
+   "level": "zp",
+   "year": "2021",
+   "district_code": "vpm",
+   "district": "Villupuram",
+   "zp_lgd": "550",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:puwm_vpm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/puwm_vpm.pdf",
+   "file": "puwm",
+   "level": "ps",
+   "year": "2021",
+   "district_code": "vpm",
+   "district": "Villupuram",
+   "zp_lgd": "550",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2021:vpp_vpm",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2021/vpp_vpm.pdf",
+   "file": "vpp",
+   "level": "gp",
+   "year": "2021",
+   "district_code": "vpm",
+   "district": "Villupuram",
+   "zp_lgd": "550",
+   "union_code": null,
+   "election": "Tamil Nadu rural local bodies 2021",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpwm_ari_ariyal",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpwm_ari_ariyal.pdf",
+   "file": "vpwm",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "ari",
+   "district": "Ariyalur",
+   "zp_lgd": "560",
+   "union_code": "ariyal",
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpwm_ari_andima",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpwm_ari_andima.pdf",
+   "file": "vpwm",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "ari",
+   "district": "Ariyalur",
+   "zp_lgd": "560",
+   "union_code": "andima",
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpwm_ari_sendur",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpwm_ari_sendur.pdf",
+   "file": "vpwm",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "ari",
+   "district": "Ariyalur",
+   "zp_lgd": "560",
+   "union_code": "sendur",
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpwm_ari_jayamk",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpwm_ari_jayamk.pdf",
+   "file": "vpwm",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "ari",
+   "district": "Ariyalur",
+   "zp_lgd": "560",
+   "union_code": "jayamk",
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpwm_ari_tpalur",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpwm_ari_tpalur.pdf",
+   "file": "vpwm",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "ari",
+   "district": "Ariyalur",
+   "zp_lgd": "560",
+   "union_code": "tpalur",
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_tn:2019:vpwm_ari_thirum",
+  "payload": {
+   "kind": "form-pri_tn",
+   "state": "TN",
+   "url": "https://tnsec.tn.gov.in/tnsec_static/election_results/rlbe2019/vpwm_ari_thirum.pdf",
+   "file": "vpwm",
+   "level": "gp",
+   "year": "2019",
+   "district_code": "ari",
+   "district": "Ariyalur",
+   "zp_lgd": "560",
+   "union_code": "thirum",
+   "election": "Tamil Nadu rural local bodies 2019",
+   "bye_election": false,
+   "route": "proxy",
+   "india_only": true
+  }
+ }
+]
