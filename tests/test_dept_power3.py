@@ -96,3 +96,35 @@ def test_upcl_zone_layout_b():
     assert sd["area"] == "SDO: BINDAL, GOVIND GARH, GHANTA GHAR" and sd["phone"] == "9412075907"
     je = d["dept:power3_upcl:garhwal-je-dehradun-central-sdo-9412075907-9412075914"]
     assert je["area"] == "BINDAL" and je["substations"] == [{"name": "BINDAL", "phone": "01352716105"}]
+
+
+# ---- MSEDCL (Maharashtra) telephone diary
+
+def test_msedcl_diary():
+    recs, files, why, rows = run("power3_msedcl", {}, [("Mahavitaran_Index_Diary", "msedcl_diary.pdf")])
+    assert why == "" and files[0][0] == "depts/power/power3_msedcl/Mahavitaran_Index_Diary.pdf"
+    assert check(recs, "power3_msedcl") == {"section": 5229, "subdivision": 2956, "division": 969, "circle": 218, "zone": 113,
+                                            "state": 56}
+    assert rows == {"rows_seen": 18143, "rows_used": 13365,
+                    "rows_skipped": {"head office pages": 1753, "not a field office": 225, "heading printed twice": 7,
+                                     "pages after the field offices": 2327},
+                    "rows_not_data": {"header": 354, "empty": 112}}
+    d = dict(recs)
+    offices = Counter(r["level"] for r in d.values() if r["level"] != "section" and not r.get("post") and not r.get("name"))
+    assert offices == {"subdivision": 659, "division": 152, "circle": 44, "zone": 16, "state": 4}
+    z = d["dept:power3_msedcl:zone-latur-zone"]
+    assert z["phone"] == "7875762021" and z["email"] == "celatur@mahadiscom.in, celatur@gmail.com"
+    ce = d["dept:power3_msedcl:zone-latur-zone-chief-engineer-arvind-bulbule"]
+    assert ce["post"] == "Chief Engineer" and ce["phone"] == "7875762111 (M)"
+    # the designation in regular type under a name
+    assert d["dept:power3_msedcl:zone-latur-zone-admn-safety-rajabhau-wadane"]["post"] == "(Admn. & Safety)"
+    sd = d["dept:power3_msedcl:subdivision-jalna-o-m-dn-1-badnapur-sub-dn"]
+    assert sd["phone"] == "261212" and sd["address"] == "STD: 02482"
+    sec = d["dept:power3_msedcl:section-badnapur-sub-dn-badnapur-rural-unit-no-1"]
+    assert sec["area"] == "Badnapur Rural Unit No.1" and sec["phone"] == "7875764202"
+    assert sec["parents"] == {"region": "CHHATRAPATI SAMBHAJINAGAR REGION", "zone": "CHHATRAPATI SAMBHAJINAGAR ZONE",
+                              "circle": "JALNA O&M CIRCLE", "division": "Jalna O&M Dn.1", "subdivision": "Badnapur Sub Dn"}
+    ae = d["dept:power3_msedcl:subdivision-ambajogai-o-m-dn-kaij-sub-dn-a-e-recovery"]
+    assert ae["post"] == "A.E.Recovery" and ae["phone"] == "7875273378" and ae["parents"]["circle"] == "BEED O&M CIRCLE"
+    # the invisible OCR layer is not read ("AE (Recovery-Il)")
+    assert not any("Recovery-Il" in (r.get("post") or "") for r in d.values())
