@@ -79,3 +79,20 @@ def test_json_with_embedded_table():
     recs, _, _ = directory.run({"key": "k", "payload": {"url": "u", "fmt": "json"}}, lambda m, u, d: R())
     rows = [d for _, d in recs if d["type"] == "row"]
     assert rows[0]["name"] == "A B" and rows[0]["phone"] == "9999999999"
+
+
+def test_rows_keep_names_and_phones_the_headers_do_not_name():
+    """Full saved pages the reader audit flagged (2026-11-13). Balrampur directory: police station tables whose first row is a data
+    row ("01 | Shri. Rajkumar Lehre | Inspector, SHO, Basantpur | 94791-93816") lost that row and had no fields: rows 136 -> 140,
+    named 117 -> 140, with phone 104 -> 137. Bengaluru Rural police: "NAME (SRIYUTHS)" and a second phone column "DEPT ISSUED MOB
+    NO.": named 0 -> 107, with phone 36 -> 84."""
+    import gzip
+    h = gzip.decompress((PAGES / "balrampur_directory_full.html.gz").read_bytes()).decode("utf-8")
+    rows = [normalise(r) for t in tables(h) for r in t["rows"]]
+    assert (len(rows), sum(1 for r in rows if r.get("name")), sum(1 for r in rows if r.get("phone"))) == (140, 140, 137)
+    assert {"name": "Shri. Rajkumar Lehre", "phone": "94791-93816"}.items() <= next(
+        r for r in rows if r.get("name") == "Shri. Rajkumar Lehre").items()
+    h = gzip.decompress((PAGES / "bangaloreruralpolice_contact_full.html.gz").read_bytes()).decode("utf-8")
+    rows = [normalise(r) for t in tables(h) for r in t["rows"]]
+    assert (len(rows), sum(1 for r in rows if r.get("name")), sum(1 for r in rows if r.get("phone"))) == (131, 107, 84)
+    assert rows[1]["name"] == "SRI CHANDRAKANTH.M.V - I.P.S." and rows[1]["phone"].endswith("9480802401")
