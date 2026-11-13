@@ -27,7 +27,8 @@ page's own words; "election" says "as listed on the district panchayat website")
 One queue item = one district: payload {"kind": "form-pri_gj", "state": "GJ", "url" (https://<host>/), "host", "district"
 (LGD name), "lgd_code" (district panchayat), "level": "zp+ps+gp", "election", "route"}; optional "talukas": [English names] to
 read only those talukas. About 1 + talukas + 2-6 GETs per taluka (30-70 requests).
-Record ids: pri:GJ:<level>:<LGD code or names>:<head | vice | w<seat> | r<table>-<row>>; files: pri_gj/<district slug>/... .
+Record ids: pri:GJ:<level>:<LGD code or names>:<head | vice | w<seat> | r<table>-<row>>, with "-dp" after head / vice / w<seat>
+when the body has an LGD code (eGramSwaraj uses the plain ids for the same bodies); files: pri_gj/<district slug>/... .
 """
 import hashlib
 import re
@@ -38,6 +39,14 @@ from cforms import _pri
 from dforms import _esw
 from dforms.gp_gj_tcm import HOSTS, talukas
 import provenance
+
+# reader audit (audit.py): the portal's menus (blocks of a page without tables, e.g. About-President, whose one person is in
+# div.contact-box: "પંચાયત વિષે | પ્રસ્‍તાવના | ...", "મહેસૂલ શાખા | શાખાની કામગીરી | સં૫ર્ક માહિતી", "યોજનાઓ | ...") name
+# branches, schemes and links, no person. Their first piece is matched here; member tables start with "ક્રમ" / a name column.
+AUDIT_LEAVES_OUT = (r"^(?:[^|]*(?:વિષે|શાખા|શાખાઓ|વિભાગ)|યોજનાઓ|ઈ-સીટીઝન|સંબંધીત વેબસાઈટસ|આર\.ટી\.આઇ|આંકડાકીય માહિતી|બાંઘકામ|"
+                    r"સિંચાઇ|શિક્ષણ|પશુપાલન|મીડિયા|ખેતી ?વાડી|ઇતિહાસ|પ્રસ્\u200dતાવના|માહિતી મેળવવાનો અધિકાર|રાજ્ય સ્રરકાર|"
+                    r"પ્રોએક્ટિવ ડિસ્ક્લોઝર|સરદાર આવાસ યોજના|પ્રકાશનો|કોવીડ[^|]*|રેકોર્ડ[^|]*|મિશન મંગલમ|સ્વચ્છ ભારત[^|]*|"
+                    r"શરતો અને નિયમો|અંદાજપત્ર)\s*(?:\||$)")
 
 METHOD = "html table (district panchayat portal member / sarpanch pages, header words -> columns) and div.contact-box (About-President)"
 STATE = "GJ"
@@ -70,8 +79,23 @@ OFFICER_POST = re.compile(r"(?i)અધિકારી|officer|મંત્રી
 ELECTED_POST = re.compile(r"(?i)પ્રમુખ|સભ્ય|સદસ્ય|સ્ભ્ય|અધ્યક્ષ|ચેરમેન|સરપંચ|નેતા|દંડક|member|president|chair|sarpanch|leader|whip")
 
 
+GU_IN_WORD = re.compile(r"(?<=[\u0a81-\u0ae3])[૦-૯]+|[૦-૯]+(?=[\u0a81-\u0ae3])")
+
+
 def text(s):
-    return _esw.clean(unicodedata.normalize("NFC", s or "").translate(GU_DIGITS))
+    """Gujarati digits as digits, except inside a word: typists write ૫ (5) for પ ("૫ટેલ" = Patel); there it stays as written."""
+    t = unicodedata.normalize("NFC", s or "")
+    keep = {m.start(): m.group(0) for m in GU_IN_WORD.finditer(t)}
+    if not keep:
+        return _esw.clean(t.translate(GU_DIGITS))
+    out, i = [], 0
+    for st, g in sorted(keep.items()):
+        if st < i:
+            continue
+        out.append(t[i:st].translate(GU_DIGITS) + g)
+        i = st + len(g)
+    out.append(t[i:].translate(GU_DIGITS))
+    return _esw.clean("".join(out))
 
 
 def roles(header):
@@ -329,6 +353,11 @@ def table_records(html, url, p, link_text, ids, taluka_names):
                 pkey = "w" + seat_no
             else:
                 pkey = f"r{sp['table']}-{sp['row']}"
+            if code and pkey[:1] in ("h", "v", "w"):
+                # eGramSwaraj (cforms/pri_ka.py, seeds/pri_egs.json) writes the same ids for LGD bodies (pri:GJ:gp:<code>:head,
+                # :vice, :w<n>): the later run replaced the portal's rows (audit 2026-11-13: 80 of 229 rows on the audited pages,
+                # with their unmasked mobiles). The portal copy keeps its own key, as pri_kl's "head-site".
+                pkey += "-dp"
             rid, d = _pri.record(STATE, level, body_key=bkey, pkey=pkey, **f)
             recs.append((ids.take(rid, sp), d))
     return recs
