@@ -1,0 +1,220 @@
+[
+ {
+  "key": "st_div_pages:div3-od-southern",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "OD",
+   "all_division": true,
+   "key": "div3-od-southern",
+   "division": "Southern",
+   "urls": [
+    "https://rdcsdbmp.nic.in/whos-who/"
+   ],
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked (S3WaaS)",
+   "district_names": {
+    "344": [
+     "Anugola"
+    ],
+    "345": [
+     "Balangir"
+    ],
+    "346": [
+     "Baleshwar"
+    ],
+    "347": [
+     "Baragada"
+    ],
+    "348": [
+     "Bhadrak"
+    ],
+    "349": [
+     "Boudh"
+    ],
+    "350": [
+     "Kataka"
+    ],
+    "351": [
+     "Debagada"
+    ],
+    "352": [
+     "Dhenkanal"
+    ],
+    "353": [
+     "Gajapati"
+    ],
+    "354": [
+     "Ganjam"
+    ],
+    "355": [
+     "Jagatsinghapur"
+    ],
+    "356": [
+     "Jajpur"
+    ],
+    "357": [
+     "Jharsuguda"
+    ],
+    "358": [
+     "Kalahandi"
+    ],
+    "359": [
+     "Kandhamala"
+    ],
+    "360": [
+     "Kendrapada"
+    ],
+    "361": [
+     "Kendujhar"
+    ],
+    "362": [
+     "Khordha"
+    ],
+    "363": [
+     "Koraput"
+    ],
+    "364": [
+     "Malkangiri"
+    ],
+    "365": [
+     "Mayurbhanj"
+    ],
+    "366": [
+     "Nabarangpur"
+    ],
+    "367": [
+     "Nayagada"
+    ],
+    "368": [
+     "Nuapada"
+    ],
+    "369": [
+     "Puri"
+    ],
+    "370": [
+     "Rayagada"
+    ],
+    "371": [
+     "Sambalpur"
+    ],
+    "372": [
+     "Subarnapur"
+    ],
+    "373": [
+     "Sundaragada"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-od-southern-rdc",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "OD",
+   "all_division": true,
+   "key": "div3-od-southern-rdc",
+   "division": "Southern",
+   "urls": [
+    "https://rdcsdbmp.nic.in/department/department-1/"
+   ],
+   "keep": "(?i)^revenue divisional commissioner \\|",
+   "note": "the S3WaaS 'Department 1' list: only the RDC row (office phone); its other rows are template text",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked (S3WaaS)",
+   "district_names": {
+    "344": [
+     "Anugola"
+    ],
+    "345": [
+     "Balangir"
+    ],
+    "346": [
+     "Baleshwar"
+    ],
+    "347": [
+     "Baragada"
+    ],
+    "348": [
+     "Bhadrak"
+    ],
+    "349": [
+     "Boudh"
+    ],
+    "350": [
+     "Kataka"
+    ],
+    "351": [
+     "Debagada"
+    ],
+    "352": [
+     "Dhenkanal"
+    ],
+    "353": [
+     "Gajapati"
+    ],
+    "354": [
+     "Ganjam"
+    ],
+    "355": [
+     "Jagatsinghapur"
+    ],
+    "356": [
+     "Jajpur"
+    ],
+    "357": [
+     "Jharsuguda"
+    ],
+    "358": [
+     "Kalahandi"
+    ],
+    "359": [
+     "Kandhamala"
+    ],
+    "360": [
+     "Kendrapada"
+    ],
+    "361": [
+     "Kendujhar"
+    ],
+    "362": [
+     "Khordha"
+    ],
+    "363": [
+     "Koraput"
+    ],
+    "364": [
+     "Malkangiri"
+    ],
+    "365": [
+     "Mayurbhanj"
+    ],
+    "366": [
+     "Nabarangpur"
+    ],
+    "367": [
+     "Nayagada"
+    ],
+    "368": [
+     "Nuapada"
+    ],
+    "369": [
+     "Puri"
+    ],
+    "370": [
+     "Rayagada"
+    ],
+    "371": [
+     "Sambalpur"
+    ],
+    "372": [
+     "Subarnapur"
+    ],
+    "373": [
+     "Sundaragada"
+    ]
+   }
+  }
+ }
+]

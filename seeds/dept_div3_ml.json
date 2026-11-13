@@ -1,0 +1,60 @@
+[
+ {
+  "key": "st_div_pages:div3-ml-tura",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "ML",
+   "all_division": true,
+   "key": "div3-ml-tura",
+   "division": "Tura",
+   "kind": "police",
+   "body": "Western Range, Meghalaya Police",
+   "urls": [
+    "https://westgarohills.gov.in/directory/"
+   ],
+   "sections": "(?i)\\bDIG\\b",
+   "note": "DIG Western Range, Tura: the range covers the Garo Hills districts (= Tura division)",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "273": [
+     "East Garo Hills"
+    ],
+    "274": [
+     "East Khasi Hills"
+    ],
+    "275": [
+     "West Jaintia Hills"
+    ],
+    "276": [
+     "Ri Bhoi"
+    ],
+    "277": [
+     "South Garo Hills"
+    ],
+    "278": [
+     "West Garo Hills"
+    ],
+    "279": [
+     "West Khasi Hills"
+    ],
+    "656": [
+     "North Garo Hills"
+    ],
+    "657": [
+     "East Jaintia Hills"
+    ],
+    "658": [
+     "South West Khasi Hills"
+    ],
+    "663": [
+     "South West Garo Hills"
+    ],
+    "740": [
+     "Eastern West Khasi Hills"
+    ]
+   }
+  }
+ }
+]

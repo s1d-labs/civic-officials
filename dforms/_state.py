@@ -61,7 +61,7 @@ POST_KINDS = [
     ("joint_cp", r"\bjoint commissioner of police\b|\bjt\.?\s*c\.?p\b"),
     ("cp", r"(?<!additional )(?<!deputy )(?<!assistant )\bcommissioner of police\b|\bpolice commissioner\b|\bC\.?P\.?\b(?=\s*[,(-]|\s*$)"),
     ("dig", r"\bdeputy inspector general\b|\bDIGP?\b|\bD\.I\.G\b"),
-    ("igp", r"\binspector general\b|\bIGP?\b|\bI\.G\.P?\b"),
+    ("igp", r"\binspector general\b|\bIGP?\b|\bI\.G\.P?\b|\bI\.G\.(?:P\.?)?(?!\w)"),
     ("ssp", r"\bsenior superintendent of police\b|\bSSP\b"),
     ("dysp", r"\bdeputy superintendent of police\b|\bdy\.?\s*s\.?p\b|\bDSP\b"),
     ("sp", r"\bsuperintendent of police\b|\bS\.?P\.?\b(?=\s*[,(-]|\s*$)"),

@@ -1,0 +1,57 @@
+[
+ {
+  "key": "st_div_postlist:div3-gj-ips-civil-list",
+  "payload": {
+   "reader": "st_div_postlist",
+   "state": "GJ",
+   "key": "div3-gj-ips-civil-list",
+   "kind": "police",
+   "as_on": "01.01.2026 (updated up to 26.01.2026)",
+   "list_title": "List of members of the Indian Police Service (Gujarat cadre) as on 1st January 2026",
+   "url": "https://www.police.gujarat.gov.in/upload/IPS_Civil_List-2026_Web18022026.pdf",
+   "first_rx": "^\\s{0,3}(?P<sno>\\d{1,3})\\s{3,}(?P<name>\\S.*?)\\s+IPS/\\S+\\s+(?:\\d{4}\\s+)?\\d\\d/\\d\\d/\\d{4}\\s+\\d\\d/\\d\\d/\\d{4}\\s+(?P<post>\\S.*?)(?:\\s{2,}|$)",
+   "break_rx": "^\\s{0,3}\\d{1,3}\\s{3,}(?:Shri|Smt|Dr|Ms|Kum|Miss|Mr)\\b",
+   "posts": [
+    {
+     "rx": "(?i)(?:(?:special|addl\\.?|additional|deputy)\\s+)?inspector\\s+general\\s+of\\s+police,?\\s*(?:[\\w.-]+\\s+)?Ahmedabad\\s+range",
+     "division": "Ahmedabad Range"
+    },
+    {
+     "rx": "(?i)(?:(?:special|addl\\.?|additional|deputy)\\s+)?inspector\\s+general\\s+of\\s+police,?\\s*(?:[\\w.-]+\\s+)?Gandhinagar\\s+range",
+     "division": "Gandhinagar Range"
+    },
+    {
+     "rx": "(?i)(?:(?:special|addl\\.?|additional|deputy)\\s+)?inspector\\s+general\\s+of\\s+police,?\\s*(?:[\\w.-]+\\s+)?Vadodara\\s+range",
+     "division": "Vadodara Range"
+    },
+    {
+     "rx": "(?i)(?:(?:special|addl\\.?|additional|deputy)\\s+)?inspector\\s+general\\s+of\\s+police,?\\s*(?:[\\w.-]+\\s+)?Surat\\s+range",
+     "division": "Surat Range"
+    },
+    {
+     "rx": "(?i)(?:(?:special|addl\\.?|additional|deputy)\\s+)?inspector\\s+general\\s+of\\s+police,?\\s*(?:[\\w.-]+\\s+)?Junagadh\\s+range",
+     "division": "Junagadh Range"
+    },
+    {
+     "rx": "(?i)(?:(?:special|addl\\.?|additional|deputy)\\s+)?inspector\\s+general\\s+of\\s+police,?\\s*(?:[\\w.-]+\\s+)?Rajkot\\s+range",
+     "division": "Rajkot Range"
+    },
+    {
+     "rx": "(?i)(?:(?:special|addl\\.?|additional|deputy)\\s+)?inspector\\s+general\\s+of\\s+police,?\\s*(?:[\\w.-]+\\s+)?Border\\s+range",
+     "division": "Border Range"
+    },
+    {
+     "rx": "(?i)(?:(?:special|addl\\.?|additional|deputy)\\s+)?inspector\\s+general\\s+of\\s+police,?\\s*(?:[\\w.-]+\\s+)?Bhavnagar\\s+range",
+     "division": "Bhavnagar Range"
+    },
+    {
+     "rx": "(?i)(?:(?:special|addl\\.?|additional|deputy)\\s+)?inspector\\s+general\\s+of\\s+police,?\\s*(?:[\\w.-]+\\s+)?Panchmahal[-, ]*Godha?ra\\s+range",
+     "division": "Panchmahal-Godhra Range"
+    }
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked"
+  }
+ }
+]

@@ -1,0 +1,133 @@
+[
+ {
+  "key": "st_div_pages:div3-wb-burdwan",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "WB",
+   "all_division": true,
+   "key": "div3-wb-burdwan",
+   "division": "Burdwan",
+   "urls": [
+    "https://hooghly.nic.in/important-telephone-number/"
+   ],
+   "header_kinds": {
+    "(?i)name of the offices": "post"
+   },
+   "keep": "(?i)divisional commissioner",
+   "note": "office phones of the Divisional Commissioner, Burdwan Division (Chinsurah); no name",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "303": [
+     "North 24 Parganas"
+    ],
+    "304": [
+     "South 24 Parganas"
+    ],
+    "305": [
+     "Bankura"
+    ],
+    "306": [
+     "Purba Bardhaman"
+    ],
+    "307": [
+     "Birbhum"
+    ],
+    "308": [
+     "Cooch Behar"
+    ],
+    "309": [
+     "Darjeeling"
+    ],
+    "310": [
+     "Dakshin Dinajpur"
+    ],
+    "311": [
+     "Uttar Dinajpur"
+    ],
+    "312": [
+     "Hooghly"
+    ],
+    "313": [
+     "Howrah"
+    ],
+    "314": [
+     "Jalpaiguri"
+    ],
+    "315": [
+     "Kolkata"
+    ],
+    "316": [
+     "Malda"
+    ],
+    "317": [
+     "Purba Medinipur"
+    ],
+    "318": [
+     "Paschim Medinipur"
+    ],
+    "319": [
+     "Murshidabad"
+    ],
+    "320": [
+     "Nadia"
+    ],
+    "321": [
+     "Purulia"
+    ],
+    "664": [
+     "Alipurduar"
+    ],
+    "702": [
+     "Kalimpong"
+    ],
+    "703": [
+     "Jhargram"
+    ],
+    "704": [
+     "Paschim Bardhaman"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_postlist:div3-wb-ias-postings",
+  "payload": {
+   "reader": "st_div_postlist",
+   "state": "WB",
+   "key": "div3-wb-ias-postings",
+   "kind": "revenue",
+   "as_on": "06.11.2026",
+   "list_title": "Posting of IAS Officers as on 06.11.2026 (Personnel & Administrative Reforms Department)",
+   "url": "https://par.wb.gov.in/writereaddata/WBCSdirectory/Posting%20of%20IAS%20Officers%20as%20on%2006112026.pdf",
+   "first_rx": "^\\s*(?P<sno>\\d{1,3})\\.\\s+\\d{4}\\s+(?P<name>\\S.*?)\\s{2,}(?P<post>\\S.*?)\\s*$",
+   "posts": [
+    {
+     "rx": "(?i)(?:(?:additional|addl\\.?|assistant|asst\\.?|joint|deputy|special)\\s+)?(?:divisional\\s+)?commissioner,\\s*presidency\\s+division",
+     "division": "Presidency"
+    },
+    {
+     "rx": "(?i)(?:(?:additional|addl\\.?|assistant|asst\\.?|joint|deputy|special)\\s+)?(?:divisional\\s+)?commissioner,\\s*(?:bardhaman|burdwan)(?:\\s+division)?",
+     "division": "Burdwan"
+    },
+    {
+     "rx": "(?i)(?:(?:additional|addl\\.?|assistant|asst\\.?|joint|deputy|special)\\s+)?(?:divisional\\s+)?commissioner,\\s*medinipur(?:\\s+division)?",
+     "division": "Medinipur"
+    },
+    {
+     "rx": "(?i)(?:(?:additional|addl\\.?|assistant|asst\\.?|joint|deputy|special)\\s+)?(?:divisional\\s+)?commissioner,\\s*jalpaiguri(?:\\s+division)?",
+     "division": "Jalpaiguri"
+    },
+    {
+     "rx": "(?i)(?:(?:additional|addl\\.?|assistant|asst\\.?|joint|deputy|special)\\s+)?(?:divisional\\s+)?commissioner,\\s*malda(?:\\s+division)?",
+     "division": "Malda"
+    }
+   ],
+   "note": "the file name changes with each update: par.wb.gov.in/wbcsdirectory.php names the newest",
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked"
+  }
+ }
+]

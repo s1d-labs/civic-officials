@@ -1,0 +1,131 @@
+[
+ {
+  "key": "st_div_pages:div3-as-divisions",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "AS",
+   "all_division": true,
+   "key": "div3-as-divisions",
+   "division": "Lower Assam",
+   "urls": [
+    "https://gad.assam.gov.in/divisions"
+   ],
+   "default_post": "Commissioner",
+   "division_col": "(?i)division name",
+   "header_kinds": {
+    "(?i)divisional office": "address"
+   },
+   "note": "GAD 'Divisions': the five Commissioners with phones (the Central Assam row repeats the Lower Assam phones)",
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked",
+   "district_names": {
+    "280": [
+     "Barpeta"
+    ],
+    "281": [
+     "Bongaigaon"
+    ],
+    "282": [
+     "Cachar"
+    ],
+    "283": [
+     "Darrang"
+    ],
+    "284": [
+     "Dhemaji"
+    ],
+    "285": [
+     "Dhubri"
+    ],
+    "286": [
+     "Dibrugarh"
+    ],
+    "287": [
+     "Goalpara"
+    ],
+    "288": [
+     "Golaghat"
+    ],
+    "289": [
+     "Hailakandi"
+    ],
+    "290": [
+     "Jorhat"
+    ],
+    "291": [
+     "Kamrup"
+    ],
+    "292": [
+     "Karbi Anglong"
+    ],
+    "293": [
+     "Sribhumi"
+    ],
+    "294": [
+     "Kokrajhar"
+    ],
+    "295": [
+     "Lakhimpur"
+    ],
+    "296": [
+     "Marigaon"
+    ],
+    "297": [
+     "Nagaon"
+    ],
+    "298": [
+     "Nalbari"
+    ],
+    "299": [
+     "Dima Hasao"
+    ],
+    "300": [
+     "Sivasagar"
+    ],
+    "301": [
+     "Sonitpur"
+    ],
+    "302": [
+     "Tinsukia"
+    ],
+    "612": [
+     "Chirang"
+    ],
+    "616": [
+     "Baksa"
+    ],
+    "617": [
+     "Udalguri"
+    ],
+    "618": [
+     "Kamrup Metro"
+    ],
+    "705": [
+     "Biswanath"
+    ],
+    "706": [
+     "Majuli"
+    ],
+    "707": [
+     "South Salmara Mancachar"
+    ],
+    "708": [
+     "Charaideo"
+    ],
+    "709": [
+     "Hojai"
+    ],
+    "710": [
+     "West Karbi Anglong"
+    ],
+    "739": [
+     "Bajali"
+    ],
+    "756": [
+     "Tamulpur"
+    ]
+   }
+  }
+ }
+]

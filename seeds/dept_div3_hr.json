@@ -1,0 +1,463 @@
+[
+ {
+  "key": "st_div_pages:div3-hr-ambala",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "all_division": true,
+   "key": "div3-hr-ambala",
+   "division": "Ambala",
+   "urls": [
+    "https://ambala.gov.in/whos-who/"
+   ],
+   "sections": "(?i)^commissioner ambala division",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-hr-faridabad",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "all_division": true,
+   "key": "div3-hr-faridabad",
+   "division": "Faridabad",
+   "urls": [
+    "https://faridabad.nic.in/whos-who/"
+   ],
+   "keep": "(?i)^commissioner faridabad division",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-hr-karnal",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "all_division": true,
+   "key": "div3-hr-karnal",
+   "division": "Karnal",
+   "urls": [
+    "https://karnal.gov.in/whos-who/"
+   ],
+   "note": "the who's who under 'Divisional Commissioner Karnal': the Commissioner and the office staff",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-hr-rohtak",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "all_division": true,
+   "key": "div3-hr-rohtak",
+   "division": "Rohtak",
+   "urls": [
+    "https://rohtak.gov.in/whos-who/"
+   ],
+   "sections": "(?i)commissioner rohtak division",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div3-hr-gurugram",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "all_division": true,
+   "key": "div3-hr-gurugram",
+   "division": "Gurugram",
+   "urls": [
+    "https://rewari.gov.in/whos-who/"
+   ],
+   "sections": "(?i)gurugram division",
+   "note": "Rewari who's who (Gurugram division)",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "archive.s1d.me copy 2026-11-05..11 (saved from India); abroad unchecked (S3WaaS)",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ }
+]
