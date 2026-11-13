@@ -736,5 +736,20 @@
    "route": "direct",
    "index": "https://tripura.gov.in/contact-directory"
   }
+ },
+ {
+  "key": "st_ne_page:tr-tcw",
+  "payload": {
+   "reader": "st_ne_page",
+   "url": "https://tcw.tripura.gov.in/index.php/who-is-who",
+   "page_key": "tr-tcw",
+   "state": "TR",
+   "body": "Tripura Commission for Women",
+   "body_kind": "commission",
+   "dept": "women_child",
+   "level": "state",
+   "india_only": false,
+   "route": "direct"
+  }
  }
 ]

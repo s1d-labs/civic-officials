@@ -261,6 +261,10 @@ def post_kind(post):
     t = _esw.clean(post)
     if re.match(r"(?i)^(DS|Dy\.?\s*Secy)\b", t):
         return "deputy_secretary"
+    if re.search(r"(?i)\b(addl\.?|additional|spl\.?|special)\s+director general\b", t):
+        return "adgp" if re.search(r"(?i)police|\bIPS\b", t) else "head_of_department"
+    if re.search(r"(?i)\bvice[- ]?chair", t):
+        return "vice_chairperson"
     if re.match(r"(?i)^(i/c\s+)?DIGP?\b", t):
         return "dig"
     if re.match(r"(?i)^US\b", t):

@@ -7,11 +7,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from dforms import (_field, _state, st_ar_whoswho, st_as_secretaries, st_ml_keycontacts, st_mn_police, st_ne,  # noqa: E402
+from dforms import (_field, _state, st_ar_whoswho, st_as_secretaries, st_ml_keycontacts, st_mn_police, st_ne, st_ne_page,  # noqa: E402
                     st_sk_portal, st_tr_dirs, st_tr_portal)
 
 DATA = Path(__file__).parent / "data"
-MODULES = [st_sk_portal, st_tr_portal, st_tr_dirs, st_ml_keycontacts, st_ar_whoswho, st_as_secretaries, st_mn_police]
+MODULES = [st_ne_page, st_sk_portal, st_tr_portal, st_tr_dirs, st_ml_keycontacts, st_ar_whoswho, st_as_secretaries, st_mn_police]
 
 
 def page(name):
@@ -33,7 +33,7 @@ def trail_ok(recs):
 def test_methods_and_seeds():
     for m in MODULES:
         assert m.METHOD
-    for st in ("sk", "tr", "ml", "ar", "as", "mn"):
+    for st in ("sk", "tr", "ml", "ar", "as", "mn", "mz"):
         items = json.loads((ROOT / "seeds" / f"dept_st_{st}.json").read_text())
         assert items and all(i["payload"]["reader"].startswith("st_") and i["payload"]["route"] in ("abroad", "proxy", "direct")
                              and "india_only" in i["payload"] for i in items)
@@ -153,3 +153,24 @@ def test_pdf_blocks_phone_fragments():
     text = "Sl. Name            Designation   Contact No\n1   Shri A B, IAS   Director      0381 241\n                                  4007\n"
     b = st_ne.pdf_blocks(text)
     assert st_ne.block_fields(b[0])[:3] == ("Shri A B, IAS", "Director", "0381 241 4007")
+
+
+def test_generic_pages():
+    from dforms import st_ne_page
+    seeds = {i["payload"]["page_key"]: i["payload"] for st in ("ml", "tr", "ar", "mz")
+             for i in json.loads((ROOT / "seeds" / f"dept_st_{st}.json").read_text()) if i["payload"]["reader"] == "st_ne_page"}
+    fx = {"ml-police-tel": "st_ml_police_tel.html", "tr-tcw": "st_tr_tcw.html", "ar-sec": "st_ar_secap.html",
+          "mz-sec": "st_mz_sec_table.html", "ml-labour": "st_ml_meglc.html"}
+    got = {k: st_ne_page.parse((DATA / f).read_text(errors="replace"), seeds[k]) for k, f in fx.items()}
+    assert {k: len(v) for k, v in got.items()} == {"ml-police-tel": 63, "tr-tcw": 5, "ar-sec": 5, "mz-sec": 29, "ml-labour": 65}
+    pol = got["ml-police-tel"]
+    assert pol[0][1]["post_kind"] == "dgp" and pol[0][1]["name"] == "Smti. I. Nongrang, IPS" and pol[1][1]["post_kind"] == "adgp"
+    assert got["tr-tcw"][1][1]["post_kind"] == "vice_chairperson" and got["tr-tcw"][0][1]["email"] == "tripuracommissionforwomen@gmail.com"
+    sec = got["ar-sec"][1][1]
+    assert "name" not in sec and sec["post"] == "Secretary to the Commission" and sec["phone"] == "0360-2290621"
+    mz = got["mz-sec"][0][1]
+    assert mz["post_kind"] == "state_election_commissioner" and mz["dept"] == "elections" and "9436154739" in mz["phone"]
+    lab = got["ml-labour"][0][1]
+    assert "name" not in lab and lab["office"].startswith("Office of the Labour Commissioner")
+    for v in got.values():
+        trail_ok(v)

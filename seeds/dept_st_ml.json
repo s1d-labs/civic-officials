@@ -850,5 +850,35 @@
    "india_only": false,
    "route": "direct"
   }
+ },
+ {
+  "key": "st_ne_page:ml-police-tel",
+  "payload": {
+   "reader": "st_ne_page",
+   "url": "https://megpolice.gov.in/telephone-directory",
+   "page_key": "ml-police-tel",
+   "state": "ML",
+   "body": "Meghalaya Police Headquarters",
+   "body_kind": "police",
+   "dept": "police",
+   "level": "state",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ne_page:ml-labour",
+  "payload": {
+   "reader": "st_ne_page",
+   "url": "https://meglc.gov.in/telephone_directory.html",
+   "page_key": "ml-labour",
+   "state": "ML",
+   "body": "Office of the Labour Commissioner, Meghalaya",
+   "body_kind": "directorate",
+   "dept": "labour_industry",
+   "level": "state",
+   "india_only": false,
+   "route": "direct"
+  }
  }
 ]
