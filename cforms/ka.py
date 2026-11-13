@@ -49,8 +49,9 @@ EX_OFFICIO = re.compile(r"\bM\.?\s?P\b|\bM\.?\s?L\.?\s?[AC]\b|member of parliame
 PLACEHOLDER = re.compile(r"vacant|ಖಾಲಿ|\bterm\b|election|not held|ಚುನಾವಣೆ|ಅವಧಿ|\bstay\b|\bcourt\b|conduct|upgraded|\bclosed\b|council members|ನ್ಯಾಯಾಲಯ|ಇರುವುದಿಲ್ಲ|ಮೇಲ್ದ", re.I)
 HONORIFIC = re.compile(r"^(?:(?:shri|sri|smt|mrs?|ms|dr|kum|ಶ್ರೀಮತಿ|ಶ್ರೀ|ಕುಮಾರಿ|ಡಾ)(?=[\s.,]|$)\.?\s*)+", re.I)
 ALL_WARDS = re.compile(r"^\s*all\b|ಎಲ್ಲಾ", re.I)
-# "ನಾಮಿನಿ ಸದಸ್ಯರು" (nominee member, Channarayapatna), "Name Direction Member" (a machine translation of ನಾಮನಿರ್ದೇಶನ, Hosapete)
-NOMINATED = re.compile(r"nominated|nominee|ನಾಮನಿರ್ದೇಶ|ನಾಮ ನಿರ್ದೇಶ|ನಾಮಿನಿ|name\s*direction", re.I)
+# "ನಾಮಿನಿ ಸದಸ್ಯರು" (nominee member, Channarayapatna), "Name Direction Member" (a machine translation of ನಾಮನಿರ್ದೇಶನ, Hosapete),
+# "NOMINATTED MEMBERS DETAILS" (Kembhavi)
+NOMINATED = re.compile(r"nominat|nominee|ನಾಮನಿರ್ದೇಶ|ನಾಮ ನಿರ್ದೇಶ|ನಾಮಿನಿ|name\s*direction", re.I)
 HONBLE = re.compile(r"\bHon'?ble\b|\bHonourable\b|ಮಾನ್ಯ|ಪೂಜ್ಯ", re.I)
 TERM = re.compile(r"(?:term|ಅವಧಿ)\D{0,20}((?:19|20)\d\d\s*(?:-|–|to|ರಿಂದ)\s*(?:19|20)\d\d)", re.I)
 
@@ -76,6 +77,24 @@ def _ward(s):
     if not m:                       # a ward cell: "23", "12 - Gandhi Nagar"
         m = re.match(r"\s*(\d{1,3})(?:\s*[-.,:)]|\s*$|\s+\D)", s)
     return str(int(m.group(1))) if m else None
+
+
+def _ward_in_address(s):
+    """(ward number, ward name) from an "Address & Ward Number" cell, else (None, None). Only a ward the cell clearly states:
+    "Ward No 01", "ವಾರ್ಡ್ ನಂ 01 ...", a cell that is only "23" or "12 - Gandhi Nagar", or a ward written at the end of the
+    address as "<no>-<ward name>" (Saligrama: "... ಮನೆ ನಂ: 2-12 ಹೊಳೆಕೆರೆ -ಚಿತ್ರಪಾಡಿ 6 -ಮಾರಿ ಗುಡಿ" = ward 6 Mari Gudi).
+    A house number at the start of an address ("1-175 Hoigekere House, Kadaba") is no ward (2026-11-14: _ward() read it as ward 1)."""
+    t = (s or "").translate(KN_DIGITS).strip()
+    if not t or ALL_WARDS.search(t):
+        return None, None
+    if re.search(r"ward|ವಾರ್ಡ", t, re.I):
+        return _ward(t), None
+    m = re.fullmatch(r"(\d{1,3})(?:\s*[-.,:)]\s*([^\d]{2,40}))?", t)
+    if not m:
+        m = re.search(r"(?:^|[\s,.;'\"])(\d{1,3})\s*-\s*([^\d,;/()\-]{2,30}?)\s*$", t)
+    if not m:
+        return None, None
+    return str(int(m.group(1))), (m.group(2) or "").strip(" .,-") or None
 
 
 def _phone(s):
@@ -118,8 +137,13 @@ def members(html):
         cols = [_col(h) for h in head]
         nominated = bool(NOMINATED.search(heading)) or "ward_no" not in cols and "ward_addr" not in cols and bool(NOMINATED.search(" ".join(head)))
         for cells in body:
-            if len(cells) < 2:
+            if len([c for c in cells if c]) < 2:
+                if NOMINATED.search(" ".join(cells)):     # a title row in the table: "TMC KEMBHAVI NOMINATTED MEMBERS DETAILS"
+                    nominated = True
                 provenance.skip_row(cells, 'skip: len(cells) < 2')
+                continue
+            if sum(1 for c in cells if _col(c) in ("sl", "name", "position", "phone", "ward_no", "ward_addr")) >= 3:
+                provenance.skip_row(cells, 'skip: the header row again (second block of the table)')
                 continue
             d = {"_pos": getattr(cells, "pos", None)}
             for c, v in zip(cols, cells):
@@ -134,7 +158,12 @@ def members(html):
                 admins.append(d)
                 continue
             if "ward_addr" in d:
-                d["ward_no"] = d["address"] = d.pop("ward_addr")
+                d["address"] = d.pop("ward_addr")
+                w, wn = _ward_in_address(d["address"])
+                if w:
+                    d["ward_no"] = w
+                    if wn:
+                        d.setdefault("ward_name", wn)
                 if re.fullmatch(r"(?:ward|ವಾರ್ಡ್?)\W*(?:no|ನಂ|ಸಂಖ್ಯೆ)?\W*[\d೦-೯]+", d["address"], re.I):
                     del d["address"]            # the cell holds only the ward number
             if EX_OFFICIO.search(d.get("position", "")):

@@ -77,3 +77,59 @@ def test_message_page_names_administrator(monkeypatch):
     assert "Administrator , Shivamogga City Corporation" in d["administrator"] and d["url"].endswith("/administrator-message")
     assert d["src_url"].endswith("/administrator-message") and len(files) == 3
     assert ka.admin_message("<article>Message of the President, Smt. X</article>") is None
+
+
+# ---- 2026-11-14: ward numbers from the full saved council pages (bucket copies, civic-officials-india-direct sources/)
+def _town(name):
+    import gzip
+    return gzip.decompress((DATA / "ka" / f"town_{name}.html.gz").read_bytes()).decode("utf-8")
+
+
+def _wards(rows):
+    return [(r["name"], r["nominated"], None if r["nominated"] else ka._ward(r.get("ward_no")), r.get("ward_name")) for r in rows]
+
+
+def test_saligrama_ward_at_end_of_address(monkeypatch):
+    """Saligrama (kn page, sha256 811f2314...): "Address & Ward Number" cells end with "<ward no>-<ward name>"."""
+    from esw_common import Answer
+    page = _town("saligramatown")
+    rows, admins, term, blank = ka.members(page)
+    w = _wards(rows)
+    assert len(w) == 16 and sum(1 for x in w if x[2]) == 16 and not any(x[1] for x in w)
+    assert w[0] == ("ಸುಕನ್ಯ ಜೆ ಶೆಟ್ಟಿ", False, "6", "ಮಾರಿ ಗುಡಿ") and w[1][2:] == ("10", "ತೆಂಕುಹೋಳಿ")
+    assert w[5][2:] == ("4", "ತೋಡುಕಟ್ಟು") and w[15][2:] == ("16", "ಯಕ್ಷಿಮಠ")
+    assert [x[2] for x in w].count("15") == 2           # two rows write ward 15 (as the page writes it)
+    monkeypatch.setattr(ka, "_base", lambda p: "http://" + p["host"])
+    p = {"host": "www.saligramatown.mrc.gov.in", "url": "http://www.saligramatown.mrc.gov.in/en/council-members",
+         "slug": "saligram-town-panchayat", "body": "Saligram Town Panchayat", "lgd_code": "251954"}
+    recs, files, why = ka.fetch(p, lambda url, **kw: Answer(page.encode(), url) if "/kn/" in url else None)
+    d = dict(recs)
+    assert why == "" and len(d) == 16 and all(v["ward_no"] for v in d.values())
+    assert d["councillor:KA:saligram-town-panchayat:6"]["ward_name"] == "ಮಾರಿ ಗುಡಿ"
+    assert "councillor:KA:saligram-town-panchayat:15-2" in d
+
+
+def test_kadaba_house_number_is_no_ward():
+    """Kadaba: "1-175 Hoigekere House ..." is a house number; the ward is the "Ward Name" column (no number on the page)."""
+    w = _wards(ka.members(_town("kadabatown"))[0])
+    assert len(w) == 13 and sum(1 for x in w if x[2]) == 0 and sum(1 for x in w if x[3]) == 13
+    assert ("K M Hanief", False, None, "Maleshwara") in w
+
+
+def test_nominated_block_inside_the_table():
+    """A title row inside the member table starts the nominated block: Kembhavi "NOMINATTED MEMBERS DETAILS" (+ the header row
+    again), Srinivasapura "ನಾಮನಿರ್ದೇಶಿತ ಸದಸ್ಯರು", Kakkera "Nominated Member" (a title row, not a person)."""
+    k = _wards(ka.members(_town("kembhavitown"))[0])
+    assert len(k) == 28 and sum(x[1] for x in k) == 5 and sum(1 for x in k if x[2]) == 23 and "Name" not in [x[0] for x in k]
+    s = _wards(ka.members(_town("srinivasapuratown"))[0])
+    assert len(s) == 28 and sum(x[1] for x in s) == 5 and sum(1 for x in s if x[2]) == 23
+    kk = _wards(ka.members(_town("kakkeratown"))[0])
+    assert len(kk) == 28 and sum(x[1] for x in kk) == 5 and "Nominated Member" not in [x[0] for x in kk]
+
+
+def test_ward_in_address():
+    assert ka._ward_in_address("ವಾರ್ಡ್ ನಂ 01 ಗೂರಮಾರನಹಳ್ಳಿ ಬಡಾವಣೆ") == ("1", None)
+    assert ka._ward_in_address("12 - Gandhi Nagar") == ("12", "Gandhi Nagar") and ka._ward_in_address("23") == ("23", None)
+    assert ka._ward_in_address("1-175 Hoigekere House Near Govt PU college,kadaba") == (None, None)
+    assert ka._ward_in_address("Pulikukku 2-164 , Kodimbala") == (None, None)
+    assert ka._ward_in_address("Ainapur") == (None, None)
