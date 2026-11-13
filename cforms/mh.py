@@ -43,6 +43,15 @@ def tools():
     return gj.tools("mar")
 
 
+PAREN = re.compile(r"^\s*\(\s*([0-9०-९]+)\s*\)")
+
+
+def ward_num(t):
+    """The ward number of a ward cell: "(1) Kupwad, ..." -> 1 (a number in brackets first), else the first number."""
+    m = PAREN.match((t or "").translate(DIGITS))
+    return str(int(m.group(1))) if m else num(t)
+
+
 def num(t):
     m = re.search(r"\d+", (t or "").translate(DIGITS))
     return str(int(m.group(0))) if m else ""
@@ -127,6 +136,13 @@ def roles(cells):
         else:       # one number column: the ward, unless the seat cells carry the ward ("6-अ")
             seat_has_ward = "seat" in out and score[out["seat"]]["digits"] > 0.5
             out["serial" if seat_has_ward else "ward"] = nums[0]
+    if "ward" not in out:
+        # the ward cell spans its seats and holds "(1)" and the ward's area names (Sangli-Miraj-Kupwad): a column where
+        # some cells start with a number in brackets and no cell is a seat, party or reservation
+        paren = [c for c in score if c not in out.values() and
+                 sum(bool(PAREN.match(r.get(c, ""))) for r in cells) >= 1]
+        if paren:
+            out["ward"] = min(paren)
     rest = [c for c in score if c not in out.values() and score[c]["len"] >= 1.5]
     if rest:
         addr = [c for c in rest if score[c]["digits"] > 0.4 and score[c]["len"] > 3]
@@ -219,7 +235,7 @@ def parse(pdf, p, use_ocr=True):
     if "name" not in role:
         shutil.rmtree(tmp, ignore_errors=True)
         return recs
-    last_ward, ward_n = "", 0
+    last_ward, ward_n, unknown = "", 0, []
     for pg, k, row in data:
         ws, hs, rows = pages[pg]
         cols, a, b = rows[k]
@@ -239,10 +255,16 @@ def parse(pdf, p, use_ocr=True):
         seat = m.group(1) if m else ""
         if not re.search(r"[0-9०-९]", seat_t):
             seat_t = gj.norm(layer("seat")) or seat_t
-        ward = num(layer("ward", merged=True)) or num(row.get(role.get("ward"), "")) if "ward" in role else ""
+        ward = ward_num(layer("ward", merged=True)) or ward_num(row.get(role.get("ward"), "")) if "ward" in role else ""
         if not ward and re.search(r"[0-9०-९]", seat_t):
             ward = num(seat_t)
         ward = ward or last_ward
+        if not ward:
+            # no ward number at all: the seats restart at अ with each ward; count the wards so that no row takes the id of
+            # another (before 2026-11-13 the 67 Sangli rows collapsed into 4 ids "x-अ" .. "x-ड")
+            if not unknown or seat == "अ" or (seat and seat in unknown[-1]):
+                unknown.append(set())
+            unknown[-1].add(seat or str(len(unknown[-1])))
         if ward in (p.get("skip_wards") or []):
             last_ward = ward
             continue
@@ -280,7 +302,10 @@ def parse(pdf, p, use_ocr=True):
         if alias:
             rec["name_alias"] = alias
         serial = num(row.get(role.get("serial"), "")) if "serial" in role else ""
-        recs.append((f"councillor:MH:{p.get('slug', 'x')}:{ward or 'x'}" + (f"-{seat}" if seat else (f"-s{serial}" if not ward else "")), rec))
+        if not ward:
+            rec["ward_from"] = f"order: ward {len(unknown)} of the notice, no ward number read"
+        wkey = ward or f"x{len(unknown)}"
+        recs.append((f"councillor:MH:{p.get('slug', 'x')}:{wkey}" + (f"-{seat}" if seat else (f"-s{serial}" if not ward else "")), rec))
     shutil.rmtree(tmp, ignore_errors=True)
     return recs
 
