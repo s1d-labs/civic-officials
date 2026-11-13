@@ -73,6 +73,18 @@
   "state": "OD"
  },
  {
+  "reader": "town3_own",
+  "site": "dholkanagarpalika.org",
+  "home": "https://dholkanagarpalika.org/",
+  "pages": [
+   "http://dholkanagarpalika.org/Nagarpalika/staff.html"
+  ],
+  "body": "Dholka Municipality",
+  "lgd_code": "251108",
+  "district": "Ahmedabad",
+  "state": "GJ"
+ },
+ {
   "reader": "town3_od_aspx",
   "site": "gudarinac.in",
   "home": "https://gudarinac.in/",
@@ -95,6 +107,18 @@
   "lgd_code": "250564",
   "district": "Rayagada",
   "state": "OD"
+ },
+ {
+  "reader": "town3_own",
+  "site": "himatnagarnagarpalika.org",
+  "home": "https://himatnagarnagarpalika.org/",
+  "pages": [
+   "http://himatnagarnagarpalika.org/Staffs.html"
+  ],
+  "body": "Himatnagar Municipality",
+  "lgd_code": "251074",
+  "district": "Sabar Kantha",
+  "state": "GJ"
  },
  {
   "reader": "town3_od_aspx",
@@ -130,6 +154,18 @@
   "body": "Jayapur Municipality",
   "lgd_code": "250574",
   "district": "Koraput",
+  "state": "OD"
+ },
+ {
+  "reader": "town3_od_cards",
+  "site": "jharsugudamunicipality.in",
+  "home": "https://jharsugudamunicipality.in/",
+  "pages": [
+   "https://jharsugudamunicipality.in/about-us/staff-position/"
+  ],
+  "body": "Jharsuguda Municipality",
+  "lgd_code": "250452",
+  "district": "Jharsuguda",
   "state": "OD"
  },
  {
@@ -376,6 +412,18 @@
  },
  {
   "reader": "town3_own",
+  "site": "nppghatampur.in",
+  "home": "https://nppghatampur.in/",
+  "pages": [
+   "http://nppghatampur.in/employe.html"
+  ],
+  "body": "Ghatampur Municipality",
+  "lgd_code": "249290",
+  "district": "Kanpur Nagar",
+  "state": "UP"
+ },
+ {
+  "reader": "town3_own",
   "site": "nppmubarakpur.com",
   "home": "https://nppmubarakpur.com/",
   "pages": [
@@ -408,6 +456,18 @@
   "body": "Paradeep Municipality",
   "lgd_code": "263324",
   "district": "Jagatsinghapur",
+  "state": "OD"
+ },
+ {
+  "reader": "town3_od_cards",
+  "site": "paralakhemundimunicipality.com",
+  "home": "https://www.paralakhemundimunicipality.com/",
+  "pages": [
+   "https://www.paralakhemundimunicipality.com/about-us/staff-position/"
+  ],
+  "body": "Paralakhemundi Municipality",
+  "lgd_code": "250544",
+  "district": "Gajapati",
   "state": "OD"
  },
  {

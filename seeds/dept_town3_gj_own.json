@@ -1,5 +1,39 @@
 [
  {
+  "key": "town3_own-dholkanagarpalika.org",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://dholkanagarpalika.org/",
+   "site": "dholkanagarpalika.org",
+   "body": "Dholka Municipality",
+   "lgd_code": "251108",
+   "district": "Ahmedabad",
+   "state": "GJ",
+   "pages": [
+    "http://dholkanagarpalika.org/Nagarpalika/staff.html"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-himatnagarnagarpalika.org",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://himatnagarnagarpalika.org/",
+   "site": "himatnagarnagarpalika.org",
+   "body": "Himatnagar Municipality",
+   "lgd_code": "251074",
+   "district": "Sabar Kantha",
+   "state": "GJ",
+   "pages": [
+    "http://himatnagarnagarpalika.org/Staffs.html"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
   "key": "town3_own-keshodnagarpalika.co.in",
   "payload": {
    "reader": "town3_own",

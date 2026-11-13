@@ -5,7 +5,7 @@ import json
 import provenance
 from esw_common import ROOT, check_records, fake_get, mod
 
-READERS = ("town3_od_aspx", "town3_od_wp", "town3_own")
+READERS = ("town3_od_aspx", "town3_od_wp", "town3_od_cards", "town3_own")
 
 
 def seeds(template):
@@ -29,7 +29,7 @@ def run(module, site, pages):
 
 def test_items_match_seeds():
     n = {}
-    for m, t in zip(READERS, ("aspx", "wp", "own")):
+    for m, t in zip(READERS, ("aspx", "wp", "cards", "own")):
         it = mod(m).items()
         assert sorted(it, key=lambda i: i["key"]) == sorted(seeds(t), key=lambda i: i["key"])
         n[m] = len(it)
@@ -37,12 +37,12 @@ def test_items_match_seeds():
             p = i["payload"]
             assert p["india_only"] and p["route"] == "direct" and p["lgd_code"] and p["district"] and 1 <= len(p["pages"]) <= 2
             assert p["url"].startswith("http") and i["key"] == f"{m}-{p['site']}"
-    assert n == {"town3_od_aspx": 10, "town3_od_wp": 9, "town3_own": 22}
+    assert n == {"town3_od_aspx": 10, "town3_od_wp": 9, "town3_od_cards": 2, "town3_own": 25}
     states = {}
     for m in READERS:
         for i in mod(m).items():
             states[i["payload"]["state"]] = states.get(i["payload"]["state"], 0) + 1
-    assert states == {"OD": 25, "UP": 7, "HR": 3, "HP": 3, "PB": 1, "MP": 1, "GJ": 1}
+    assert states == {"OD": 27, "UP": 8, "HR": 3, "HP": 3, "PB": 1, "MP": 1, "GJ": 3}
     # sites left out on purpose (copied staff of another town, past chief officers, a town of another state)
     sites = {i["payload"]["site"] for m in READERS for i in mod(m).items()}
     assert not sites & {"npislamnagar.in", "npdaranagar.in", "nprenukoot.in", "petladnagarpalika.org", "npaurangabad.in"}
@@ -101,6 +101,19 @@ def test_od_wp_bhuban():
     assert "phone" not in d["dept:town3_od_wp:bhubannac.in:driver:suresh-kumar-sahoo"]        # the Mobile column is empty
 
 
+# ---- town3_od_cards (Odisha "Staff Position" cards) ----
+def test_od_cards_jharsuguda():
+    recs, files, why, rows, get = run("town3_od_cards", "jharsugudamunicipality.in", ["od_jharsuguda_staff_position.html"])
+    assert why == "" and len(files) == 1 and len(recs) == 62
+    check_records(recs, "town3_od_cards", "town_body")
+    d = dict(recs)
+    eo = d["dept:town3_od_cards:jharsugudamunicipality.in:executive-officer:sri-manas-ranjan-mallick"]
+    assert eo["role"] == "head" and eo["phone"] == "+91 06645272236" and eo["src_pos"] == {"card": 1} and eo["lgd_code"] == "250452"
+    assert d["dept:town3_od_cards:jharsugudamunicipality.in:health-officer:dr-purnendu-sekhar-biswas"]["phone"] == "+91 8763430330"
+    assert "phone" not in d["dept:town3_od_cards:jharsugudamunicipality.in:peon:sri-arjun-behera"]      # "Contact No.: +91"
+    assert rows["rows_used"] == 62 and rows["rows_skipped"] == {}
+
+
 # ---- town3_own (single-vendor own sites) ----
 def test_own_kundarki_hindi():
     recs, files, why, rows, get = run("town3_own", "npkundarki.in", ["up_kundarki_staff.html"])
@@ -121,6 +134,23 @@ def test_own_keshod_gujarati():
     assert co["role"] == "head" and co["section"] == "વહીવટી" and co["area"] == "Keshod Municipality"
     assert sum(1 for v in d.values() if v["role"] == "head") == 1
     assert rows["rows_used"] == 106 and rows["rows_skipped"] == {}
+
+
+def test_own_dholka_gujarati_long_i():
+    recs, files, why, rows, get = run("town3_own", "dholkanagarpalika.org", ["gj_dholka_staff.html"])
+    assert why == "" and len(recs) == 48 and sum(1 for _, v in recs if v.get("phone")) == 29
+    d = dict(recs)
+    co = d["dept:town3_own:dholkanagarpalika.org:ચીફ-ઓફીસર:શ્રી-જતીનકુમાર-વી-મહેતા"]       # ઓફીસર: long ી
+    assert co["role"] == "head" and co["phone"] == "9879561000" and co["src_pos"] == {"table": 7, "row": 3}
+    assert rows["rows_skipped"] == {"before the heading row": 21, "no post": 1}
+
+
+def test_own_ghatampur():
+    recs, files, why, rows, get = run("town3_own", "nppghatampur.in", ["up_ghatampur_staff.html"])
+    assert why == "" and len(recs) == 23
+    d = dict(recs)
+    assert d["dept:town3_own:nppghatampur.in:executive-officer:shri-dr-mahendra-kumrr"]["phone"] == "8189078134"
+    assert [v["post"] for v in d.values() if v["role"] == "head"] == ["Executive Officer"]
 
 
 def test_own_palwal_avatar_letter():

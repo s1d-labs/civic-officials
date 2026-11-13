@@ -1,0 +1,36 @@
+[
+ {
+  "key": "town3_od_cards-jharsugudamunicipality.in",
+  "payload": {
+   "reader": "town3_od_cards",
+   "url": "https://jharsugudamunicipality.in/",
+   "site": "jharsugudamunicipality.in",
+   "body": "Jharsuguda Municipality",
+   "lgd_code": "250452",
+   "district": "Jharsuguda",
+   "state": "OD",
+   "pages": [
+    "https://jharsugudamunicipality.in/about-us/staff-position/"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_cards-paralakhemundimunicipality.com",
+  "payload": {
+   "reader": "town3_od_cards",
+   "url": "https://www.paralakhemundimunicipality.com/",
+   "site": "paralakhemundimunicipality.com",
+   "body": "Paralakhemundi Municipality",
+   "lgd_code": "250544",
+   "district": "Gajapati",
+   "state": "OD",
+   "pages": [
+    "https://www.paralakhemundimunicipality.com/about-us/staff-position/"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

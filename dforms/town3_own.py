@@ -11,7 +11,9 @@ Sites (dforms/town3_sites.json, reader town3_own; found as dforms/_town3.py says
 - Haryana: Palwal (employee_data), Radaur (webhome/office-directory), Rewari (officers-directory, Drupal).
 - Himachal Pradesh: Rampur and Theog (Web/officer, Web/Employee), Nirmand (Home/official).
 - Punjab: Zirakpur (OrganizationList.aspx). Madhya Pradesh: Katangi (staff.html, शाखा का नाम | कर्मचारी का नाम | पदनाम).
-- Gujarat: Keshod (content.aspx?Id=473: કર્મચારીનું નામ | હોદ્દો | શાખા).
+- Gujarat: Keshod (content.aspx?Id=473: કર્મચારીનું નામ | હોદ્દો | શાખા), Dholka (Nagarpalika/staff.html: કર્મચારીનું પુરૂ નામ |
+  હોદ્દો | સરનામું | મોબાઈલ નંબર; the Chief Officer is written ચીફ ઓફીસર), Himatnagar (Staffs.html, by department).
+- Uttar Pradesh also: Ghatampur (employe.html: कर्मचारी नाम | पिता का नाम | पद नाम | Departmental Work | मोबाइल नम्बर).
 Left out on purpose: Islamnagar (its page lists the staff of Kundarki), Daranagar and Renukoot (the rows of Anpara), Petlad
 (a list of past chief officers), Roun (placeholder rows), and sites whose host name fits a town of another state.
 Samples (live from India, dev-vps-3 Mumbai, 2026-11-13). Route "direct" (not checked from abroad), india_only.

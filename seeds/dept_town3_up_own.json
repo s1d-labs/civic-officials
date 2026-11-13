@@ -87,6 +87,23 @@
   }
  },
  {
+  "key": "town3_own-nppghatampur.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://nppghatampur.in/",
+   "site": "nppghatampur.in",
+   "body": "Ghatampur Municipality",
+   "lgd_code": "249290",
+   "district": "Kanpur Nagar",
+   "state": "UP",
+   "pages": [
+    "http://nppghatampur.in/employe.html"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
   "key": "town3_own-nppmubarakpur.com",
   "payload": {
    "reader": "town3_own",

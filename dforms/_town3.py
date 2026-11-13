@@ -10,8 +10,10 @@ statewide list of these websites. dforms/town3_sites.json was made once on dev-v
      (links found by their text), 2.5 s apart;
   3. a site is kept when one of these pages has a staff table (staff_rows below), the site names the same town and district
      as LGD, and the table is the town's own (a page that copies the staff of another town is left out).
-Sites per template: town3_od_aspx (Odisha ASP.NET vendor), town3_od_wp (Odisha WordPress theme), town3_own (other own
-sites: PHP / HTML / ASP.NET pages of single vendors).
+Sites per template: town3_od_aspx (Odisha ASP.NET vendor), town3_od_wp (Odisha WordPress theme), town3_od_cards (Odisha
+WordPress theme with "Staff Position" cards: card_rows), town3_own (other own sites: PHP / HTML / ASP.NET pages of single
+vendors). seeds/town3_found_sites.json lists every (LGD code, host) that answered in DNS and what became of it ("read: <reader>",
+"left out: <why>", "MahaULB town site: no TCP answer ...", "no staff table on the staff pages read", parked, HTTP errors).
 
 staff_rows(html) = _town2.staff_rows with more column words: Hindi (अधिकारी / कर्मचारी का नाम, पद का नाम, पदनाम, मोबाईल,
 संपर्क सूत्र, ई.मेल), Gujarati (નામ, હોદ્દો), Odia (ନାମ, ପଦବୀ), "Staff Name", and a section column (Section, Branch,
@@ -38,16 +40,16 @@ from dforms import _esw, _town2
 
 COLS = {
     "name": re.compile(r"(?i)^(name|officer'?s?\s*name|employee\s*name|staff\s*name|name\s*of\s*(the\s*)?(officers?|employees?|staff|official))\b|"
-                       r"^नाम|(अधिकारी|कर्मचारी)\s*(/\s*कर्मचारी\s*)?का\s*नाम|नाम\s*कर्मचारी|નામ|ନାମ|ಹೆಸರು"),
+                       r"^नाम|(अधिकारी|कर्मचारी)\s*(/\s*कर्मचारी\s*)?(का\s*)?नाम|नाम\s*कर्मचारी|નામ|ନାମ|ಹೆಸರು"),
     "post": re.compile(r"(?i)^(designation|post|rank)\b|^पद|हुद्दा|^હોદ્દો|ପଦବୀ|ಹುದ್ದೆ"),
-    "phone": re.compile(r"(?i)contact|mobile|phone|cell|मोबा[इई]ल|फोन|संपर्क|सम्पर्क|મોબાઇલ|ફોન|ମୋବାଇଲ"),
+    "phone": re.compile(r"(?i)contact|mobile|phone|cell|मोबा[इई]ल|फोन|संपर्क|सम्पर्क|મોબા[ઇઈ]લ|ફોન|ମୋବାଇଲ"),
     "email": re.compile(r"(?i)e-?\s?mail|ई\s*[-.]?\s*मेल|ઇ-?મેલ"),
     "section": re.compile(r"(?i)^(section|branch|department|dept\.?)\b|शाखा|विभाग|શાખા|ବିଭାଗ"),
 }
 PLACEHOLDER = re.compile(r"(?i)^(test|demo|abc|xyz)$")
 DOTS = re.compile(r"(?i)^\s*(श्री(मती)?|sri|shri|smt|mr|mrs|ms)?\.?\s*[.\-–—_*]{3,}\s*$")
 AVATAR = re.compile(r"^[A-Z]\s*\|\s*(?=\S)")        # mcpalwal.in: "M | Manoj Kumar" (the letter of a round avatar, then the name)
-HEAD = re.compile(r"ચીફ\s*ઓફિસર|મુખ્ય\s*અધિકારી|ମୁଖ୍ୟ\s*ଅଧିକାରୀ|ନିର୍ବାହୀ\s*ଅଧିକାରୀ")
+HEAD = re.compile(r"ચીફ\s*ઓફ[િી]સર|મુખ્ય\s*અધિકારી|ମୁଖ୍ୟ\s*ଅଧିକାରୀ|ନିର୍ବାହୀ\s*ଅଧିକାରୀ")
 HEAD_POST = re.compile(r"(?i)^\s*(executive\s*officer|e\.?\s?o\.?|commissioner|municipal\s*commissioner|chief\s*officer|chief\s*municipal\s*officer|"
                        r"c\.?\s?m\.?\s?o\.?|secretary|administrator|sub-collector.*administrator)\s*$|अधिशासी\s*अधिकारी|मुख्य\s*नगर\s*पालिका\s*अधिकारी")
 NOT_DEPUTY = re.compile(r"^उपयंत्री|^उप\s*यंत्री|^उप\s*अभियंता")             # sub-engineer, not a deputy of the head
@@ -96,6 +98,25 @@ def staff_rows(html):
     return out
 
 
+def card_rows(html):
+    """[{section, name, post, phone, email, cells, pos}] of the "Staff Position" cards of the Odisha municipal WordPress theme:
+    <div class="single-author staff-position"> with <p class="author-name">, <p class="deg"> and <p class="cont">Contact No.:
+    ...</p>. pos = {"card": n} (1-based, page order)."""
+    out = []
+    for i, c in enumerate(_esw.soup(html).select("div.staff-position"), 1):
+        f = {k: _esw.clean(x.get_text(" ")) if (x := c.select_one(f"p.{k}")) else "" for k in ("author-name", "deg", "cont")}
+        name, post, phone = f["author-name"], f["deg"], re.sub(r"(?i)^contact\s*no\.?\s*:?\s*", "", f["cont"])
+        if not post:
+            provenance.skip_row([name, post, phone], "no post")
+            continue
+        if _town2.NO_NAME.match(name) or _town2.VACANT.search(name):
+            provenance.skipped("no name" if _town2.NO_NAME.match(name) else "vacant post")
+            continue
+        out.append({"section": "", "name": name, "post": post, "phone": phone, "email": "", "cells": [name, post, f["cont"]],
+                    "pos": {"card": i}})
+    return out
+
+
 def role(post, role, state):
     """_ulb.role_of, with three corrections for these sites: the Gujarati / Odia head posts are head; "head" only when the whole
     post names the head (role_of also takes "C.O." = Community Organiser, "D.E.O." = Data Entry Operator, "Peon to E.O");
@@ -126,7 +147,9 @@ def links(html, base):
     return first + rest
 
 
-def fetch(module, p, get):
+def fetch(module, p, get, rows=None):
+    """rows: the function that reads one page (default staff_rows)."""
+    rows = rows or staff_rows
     files, recs, seen, pairs = [], [], set(), set()
     n = [0, 0]                    # requests made, requests answered
 
@@ -140,7 +163,7 @@ def fetch(module, p, get):
         files.append(_esw.keep(module, f"{p['site']}-{_esw.slug(path) or 'home'}", r.content))
         if not staff:
             return r
-        for row in staff_rows(r.text):
+        for row in rows(r.text):
             k = (uslug(row["post"]), uslug(row["name"]))
             if k in pairs:
                 provenance.skipped("same row twice")
