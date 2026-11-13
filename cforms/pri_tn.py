@@ -60,6 +60,10 @@ LABELS = (("district", "மாவட்டம்"), ("union", "ஊராட்�
 ORDER = ["district", "union", "gp", "ward"]
 LABEL = re.compile(r"(மாவட்டம்|ஊராட்சி ஒன்றியம்|கிராம ஊராட்சி|வார்டு எண்)\s*:\s*")
 WON = ("வெற்றி", "போட்டியின்றி")
+# reader audit (audit.py): the files list every candidate of each contest; the reader keeps the winner. Checked on the 2 saved
+# files (2026-11-13): 127 and 98 result lines "won / unopposed" = 127 and 98 contests = 127 and 98 records. The raw text layer
+# (mPDF glyphs before convert()) does not hold the names as the records write them, so the audit's names_found stays low
+AUDIT_RESULTS = True
 
 
 def tkey(s):
