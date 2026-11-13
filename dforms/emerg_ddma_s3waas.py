@@ -30,6 +30,10 @@ import provenance
 METHOD = "html table + html text (label lines)"     # source trail (provenance.py): how this reader reads its sources
 
 MODULE = "emerg_ddma_s3waas"
+# page furniture the reader audit (audit.py) counts as blocks on pages without tables: the S3WaaS accessibility widget, the
+# state banner, the site menus and footer. They hold no person; the audit leaves them out.
+AUDIT_LEAVES_OUT = (r"^(हिन्दी \| )?(Accessibility Links|Accessibility Tools|High Contrast|Font Size Increase|Big Cursor|Skip to|"
+                    r"Home \| About District|Useful Links \| Website Policies)|(सरकार|அரசு|ସରକାର|সরকার|ಸರ್ಕಾರ) \| Gov")
 
 HEAD_WORDS = re.compile(r"(?i)\b(name|designation|post|contact|phone|mobile|tel|telephone|landline|e-?mail|mail id|officer|"
                         r"district|taluka?|tehsil|block|centre|center|address|fax|office|number|no\.?)\b")

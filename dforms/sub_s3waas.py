@@ -20,7 +20,9 @@ Their tables are read by header words (dforms/_field.header_kind: name, post, ar
 row comes from its post, then the column headers, the table caption and the page path (ROW_KINDS); a row of no kind (a judge,
 a department list) is left out. A table with one phone column per post ("Tehsil | SDM Mobile No. | Tehsildar Mobile No.")
 gives one record per post. Pages that field_revenue_s3waas already reads (seeds/dept_field_revenue_s3waas.json) are skipped.
-Record ids of these rows: dept:sub_s3waas:<host>:<kind>:<slug of area> (a serial suffix when an area repeats).
+Record ids of these rows: dept:sub_s3waas:<host>:page:<kind>:<slug of area> (a serial suffix when an area repeats). Until
+2026-11-13 they had the ids of the category cards (no "page:"): a portal with both (Gadwal: /tehsil/ cards, /mandals/ table of
+tahsildars) lost the names and mobiles of one of the two to the other item's write (7 of 14 mandals; found by the reader audit).
 """
 import json
 import re
@@ -343,7 +345,7 @@ def table_records(html, url, p):
                 src = office if office and not cell("place") else post_cell
                 where = _area_of(place if place != office else "") or _area_of(
                     re.sub(r"(?i)^.*?(officer|magistrate|tah?s[ie]ldar|mamlatdar|prant|office)\b[\s,.–-]*", "", src or ""))
-                key = _civic.unique(f"{host}:{kind}:{_esw.slug(where) or 'row'}", seen)
+                key = _civic.unique(f"{host}:page:{kind}:{_esw.slug(where) or 'row'}", seen)
                 regional = bool(re.search(r"[ऀ-ൿ]", where or ""))
                 recs.append(_esw.record(
                     MODULE, key, dept=dept, level=level, area=where, area_regional=where if regional else None, post=post,

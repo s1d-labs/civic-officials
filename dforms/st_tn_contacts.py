@@ -25,6 +25,10 @@ import provenance
 METHOD = "html table (Designation | Name | Direct | Residence) + html cards (secretaries)"
 
 MODULE = "st_tn_contacts"
+# tn.gov.in site menus (Governor / Chief Minister ..., G.Os, Online Services ...): blocks the reader audit (audit.py) counts on
+# a page whose contacts are not in blocks; they hold no person. The audit leaves them out.
+AUDIT_LEAVES_OUT = (r"^(Governor / Chief Minister|G\.Os|Announcements|Online Services|Forms \| RTI|Press Releases|Polls \| "
+                    r"Competition|What's New \| Help)")
 BASE = "https://www.tn.gov.in/"
 LISTS = [("dept", "cont_dir_department_list.php", r"cont_dir_dept_view\.php\?[^'\"]+", "department"),
          ("hod", "cont_dir_All_hod_list.php", r"detail_contact_hod\.php\?[^'\"]+", "directorate"),

@@ -131,3 +131,22 @@ def test_items_from_file_records():
     assert len(seeds) == len({i["key"] for i in seeds}) >= 250
     assert all(i["payload"]["stored"].startswith("civic-officials-depts-direct/depts/rj_jankalyan/") for i in seeds)
     json.dumps(seeds)
+
+
+def test_rows_with_a_phone_and_no_name_column_are_kept():
+    """The reader audit (2026-11-13) found rows with a phone that were dropped because no name or post column was known. Full saved
+    files, records before -> after: Pratapgarh sarpanch list (loose rows, Kruti Dev titles "Jhefr") 21 -> 101, Jaipur BDO list (names
+    without a title) 1 -> 16, Jaisalmer officers (name in the column after the post) 106 -> 168 (named 14 -> 162)."""
+    m = mod("rj_jankalyan_pdf")
+    p = {"code": "t", "entry_id": "1"}
+    recs = dict(m.parse((R / "pratapgarh_loose_full.pdf").read_bytes(), p)[0])
+    assert len(recs) == 101 and all(d.get("name") and d.get("phone") for d in recs.values())
+    assert sum(d["name"].startswith(("श्री", "सुश्री")) for d in recs.values()) == 56
+    assert not any(d["name"].startswith(("Jh", "Jefr")) or any(ch.isdigit() for ch in d["name"]) for d in recs.values())
+    recs = dict(m.parse((R / "jaipur_bdo_untitled_full.pdf").read_bytes(), p)[0])
+    assert len(recs) == 16 and all(d.get("name") and d.get("email") for d in recs.values())
+    assert sum(d.get("post") == "बी० डी०" for d in recs.values()) == 14
+    recs = dict(m.parse((R / "jaisalmer_name_after_post_full.pdf").read_bytes(), p)[0])
+    assert len(recs) == 168 and sum(1 for d in recs.values() if d.get("name")) == 162
+    assert any(d.get("name") == "Radhey Shyam Narwal" and d["post"] == "Dy Dir Agriculture" and d["phone"] == "9414773880"
+               for d in recs.values())

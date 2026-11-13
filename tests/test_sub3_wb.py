@@ -1,6 +1,7 @@
 """Offline tests of the West Bengal CEO officials reader (dforms/sub3_wb.py) on saved PDFs in tests/data/sub3_wb/ (fetched
 2026-11-12 from ceowestbengal.wb.gov.in): Hooghly and Purulia district lists (Google Sheets), Kolkata North (Not Applicable
-rows, AC in the designation, AEO section), the ERO list of 04.02.2026 (Excel) and the CEO office list. Needs poppler (pdftotext)."""
+rows, AC in the designation, AEO section), the ERO list of 04.02.2026 (Excel) and the CEO office list; South 24 Parganas,
+Malda and Alipurduar (the full bucket copies the reader audit flagged on 2026-11-13). Needs poppler (pdftotext)."""
 import json
 import shutil
 
@@ -28,7 +29,7 @@ def test_sub3_wb_seeds():
 def test_sub3_wb_hooghly():
     r = _recs("hooghly.pdf", file="hooghly", district="Hooghly")
     posts = [d["post"] for d in r.values()]
-    assert len(r) == 44 and posts.count("Block Development Officer") == 18 and posts.count("Returning Officer") == 18
+    assert len(r) == 63 and posts.count("Block Development Officer") == 18 and posts.count("Returning Officer") == 18
     a = r["dept:sub3_wb:hooghly:adm:additional-district-magistrate-gen-hooghly"]
     assert (a["name"], a["service"], a["mobile"], a["email"]) == ("Tarun Bhattacharyya", "WBCS (Exe.)", "9231847777", "admghoog@gmail.com")
     b = r["dept:sub3_wb:hooghly:bdo:balagarh"]
@@ -72,3 +73,30 @@ def test_sub3_wb_ceo_office():
     assert len(r) == 11
     c = [d for d in r.values() if d["designation"] == "Chief Electoral Officer"][0]
     assert (c["name"], c["level"], c["phone"], c["fax"]) == ("Smt. Neelam Meena", "state", "033-2231-0880", "033-2231-0840")
+
+
+def test_sub3_wb_full_district_files_keep_every_officer():
+    """The reader audit (2026-11-13) found 38 records for 116 rows (South 24 Parganas): Returning Officer rows with the AC inside
+    the designation ("RO 127-Gosaba(SC) & PD, DRDC") or with no AC (Purulia, Alipurduar) were dropped, and the Cell In-Charge
+    table was not read. Full files, records before -> after: S24P 38 -> 90, Purulia 28 -> 55, Malda 22 -> 54, Alipurduar 11 -> 39."""
+    for name, district, n, ro, cell in (("south_24_parganas.pdf", "South 24 Parganas", 90, 31, 21), ("purulia.pdf", "Purulia", 55, 9, 18),
+                                        ("malda.pdf", "Malda", 54, 12, 20), ("alipurduar.pdf", "Alipurduar", 39, 5, 23)):
+        r = _recs(name, file=name[:-4], district=district)
+        posts = [d["post"] for d in r.values()]
+        assert len(r) == n and posts.count("Returning Officer") == ro, name
+        assert sum(p.startswith(("Officer In-Charge", "ADM In-Charge")) for p in posts) == cell, name
+        assert all(d.get("name") and (d.get("phone") or d.get("email") or "In-Charge" in d["post"]) for d in r.values()), name
+    r = _recs("south_24_parganas.pdf", file="s24p", district="South 24 Parganas")
+    ro = r["dept:sub3_wb:s24p:ro:127"]
+    assert (ro["name"], ro["ac_name"], ro["mobile"], ro["email"]) == ("Shri Soumen Maity", "Gosaba(SC)", "9830011225",
+                                                                       "gosaba127ro@gmail.com")
+    c = r["dept:sub3_wb:s24p:cell:training-management"]
+    assert (c["name"], c["mobile"], c["email"], c["adm_phone"]) == ("Shri Achintya Hajra", "8583949888",
+                                                                     "trainingcells24pgs@gmail.com", "9836632555")
+    assert c["adm_in_charge"].startswith("Shri Avneet Punia")
+    r = _recs("malda.pdf", file="malda", district="Malda")
+    assert r["dept:sub3_wb:malda:ro:43"]["name"] == "Shri Anjan Chowdhury"
+    r = _recs("purulia.pdf", file="purulia", district="Purulia")
+    assert r["dept:sub3_wb:purulia:ro:debashis-manna"]["area"] == "Purulia"
+    k = _recs("kolkata_north.pdf", file="kolkata-north", district="Kolkata North")
+    assert len(k) == 28 and not any("Not Applicable" in json.dumps(d) for d in k.values())

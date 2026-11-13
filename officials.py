@@ -65,25 +65,48 @@ def deobfuscate(s):
 
 
 FIELD = {
-    "name": re.compile(r"^(name|officer|officer'?s? name|name of (the )?officer|नाम|नाव|अधिकाऱ्याचे नाव|अधिकारी का नाम|ಹೆಸರು|பெயர்|ନାମ)$", re.I),
+    # "NAME (SRIYUTHS)", "ಹೆಸರು (ಶ್ರೀಯುತರು)": a bracket after the word is allowed
+    "name": re.compile(r"^(name|officer|officer'?s? name|name of (the )?officers?|नाम|नाव|अधिकाऱ्याचे नाव|अधिकारी का नाम|ಹೆಸರು|பெயர்|ନାମ)"
+                       r"(\s*\([^)]*\))?$", re.I),
     "designation": re.compile(r"(designation|post|पद|ಹುದ್ದೆ|பதவி|ପଦବୀ)", re.I),
     "email": re.compile(r"(e-?mail|ई-?मेल|ಇಮೇಲ್|ଇମେଲ)", re.I),
-    "phone": re.compile(r"(phone|mobile|contact|tel|फ़ोन|फोन|मोबाइल|दूरध्वनी|भ्रमणध्वनी|ದೂರವಾಣಿ|தொலைபேசி|ଦୂରଭାଷ|ଦୁରଭାଷ|ମୋବାଇଲ)", re.I),
+    "phone": re.compile(r"(phone|mobile|\bmob\b|\bmo\.?\s*no|contact|tel|फ़ोन|फोन|मोबाइल|दूरध्वनी|भ्रमणध्वनी|ದೂರವಾಣಿ|தொலைபேசி|ଦୂରଭାଷ|ଦୁରଭାଷ|ମୋବାଇଲ)", re.I),
     "address": re.compile(r"(address|पता|ವಿಳಾಸ|முகவரி|ଠିକଣା)", re.I),
     # the office or department a row is about (lists without a post column: "Name of Office", "Department Name", "विभाग नाम")
     "department": re.compile(r"(department|^office$|name of (the )?office$|office name|विभाग|ବିଭାଗ|କାର୍ଯ୍ୟାଳୟ)", re.I),
 }
 
 
+TITLED = re.compile(r"^(shri|smt|sri|sh|dr|kum|km|ms|mrs|mr|श्री|श्रीमती|ಶ್ರೀ|ಶ್ರೀಮತಿ|திரு|திருமதி)\b\.?\s*\S", re.I)
+PHONE_CELL = re.compile(r"^(?:\+?91[\s-]*)?(?:0\d{2,4}[\s-]?\d{6,8}|[6-9]\d{4}[\s-]?\d{5})(?:\s*[,/]\s*.*)?$")
+
+
 def normalise(cells):
-    """Map a row's {header: value} to the common fields name/designation/email/phone/address (keeps the raw cells too)."""
+    """Map a row's {header: value} to the common fields name/designation/email/phone/address (keeps the raw cells too).
+    Several phone columns ("OFFICE PHONE NUMBER", "DEPT ISSUED MOB NO.") are joined. A row whose headers name no person or
+    phone (a data row taken as the header row, "col0" ...) gets them from the cells: a titled cell ("Shri. Rajkumar Lehre") is the
+    name, a phone-shaped cell the phone (2026-11-13, found by the reader audit)."""
     out = {}
     for h, v in cells.items():
         v = " ".join(str(v or "").split())
         for f, rx in FIELD.items():
-            if f not in out and rx.search(h or ""):
-                out[f] = deobfuscate(v) if f == "email" else v
+            if rx.search(h or ""):
+                if f == "phone" and out.get("phone") is not None and v and v not in out["phone"]:
+                    out["phone"] = f"{out['phone']}, {v}" if out["phone"] else v
+                elif f not in out:
+                    out[f] = deobfuscate(v) if f == "email" else v
+                else:
+                    continue
                 break
+    vals = [" ".join(str(v or "").split()) for v in cells.values()]
+    if not out.get("name"):
+        n = next((v for v in vals if TITLED.match(v) and len(v) <= 80 and not re.search(r"\d{5}", v)), "")
+        if n:
+            out["name"] = n
+    if not out.get("phone"):
+        ph = next((v for v in vals if PHONE_CELL.match(v)), "")
+        if ph:
+            out["phone"] = ph
     return out
 
 
@@ -107,6 +130,22 @@ def tables(html):
             nxt = [" ".join(c.get_text(" ", strip=True).split()) for c in trs[1].find_all(["th", "td"])]
             if sum(1 for h in nxt if h) >= 2 and any(rx.search(h) for h in nxt for rx in FIELD.values()):
                 title, head, trs, first = next(h for h in head if h), nxt, trs[1:], 2
+        if len(head) >= 2 and not any(rx.search(h) for h in head for rx in FIELD.values()) and \
+                any(TITLED.match(h) for h in head) and any(PHONE_CELL.match(h) for h in head):
+            # the first row is a data row ("01 | Shri. Rajkumar Lehre | Inspector, SHO, Basantpur | 94791-93816"): no header
+            rows = [{f"col{i}": v for i, v in enumerate(head)}]
+            nos = [{"table": ti, "row": 1}]
+            for n, tr in enumerate(trs[1:], 2):
+                cells = [" ".join(c.get_text(" ", strip=True).split()) for c in tr.find_all(["td", "th"])]
+                if any(cells):
+                    rows.append({f"col{i}": v for i, v in enumerate(cells)})
+                    nos.append({"table": ti, "row": n})
+                else:
+                    provenance.skipped("empty")
+            provenance.given(len(rows))
+            out.append({"caption": " ".join(cap.get_text(" ", strip=True).split()) if cap else title, "headers": [], "rows": rows,
+                        "pos": nos})
+            continue
         if not any(head) or len(head) < 2:
             # no header row: a layout table, or data the readers do not see; rows with 2+ filled cells are counted as left out
             n_data = sum(1 for tr in trs[1:] if sum(1 for c in tr.find_all(["td", "th"]) if c.get_text(strip=True)) >= 2)
