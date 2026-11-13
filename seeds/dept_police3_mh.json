@@ -1,0 +1,319 @@
+[
+ {
+  "key": "police3_mh:jalna:impcon",
+  "payload": {
+   "reader": "police3_mh",
+   "url": "https://jalnapolice.gov.in/impcon.html",
+   "state": "MH",
+   "district": "Jalna"
+  }
+ },
+ {
+  "key": "police3_mh:raigad:alibag",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/alibag",
+   "contacts": true
+  }
+ },
+ {
+  "key": "police3_mh:raigad:dadar-coastal",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/dadar%20coastal",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:dighi-coastal",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/dighi%20coastal",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:goregaon",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/goregaon",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:karjat",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/karjat",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:khalapur",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/khalapur",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:khopoli",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/khopoli",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:kolad",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/kolad",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:mahad",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/mahad",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:mahad-city",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/mahad%20city",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:mahad-midc",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/mahad%20midc",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:mandwa-coastal",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/mandwa%20coastal",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:mangaon",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/mangaon",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:matheran",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/matheran",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:mhasala",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/mhasala",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:murud",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/murud",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:nagothane",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/nagothane",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:neral",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/neral",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:pali",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/pali",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:pen",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/pen",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:poladpur",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/poladpur",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:poynad",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/poynad",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:rasayani",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/rasayani",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:revdanda",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/revdanda",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:roha",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/roha",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:shrivardhan",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/shrivardhan",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:tala",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/tala",
+   "contacts": false
+  }
+ },
+ {
+  "key": "police3_mh:raigad:wadkhal",
+  "payload": {
+   "reader": "police3_mh",
+   "kind": "raigad",
+   "state": "MH",
+   "district": "Raigad",
+   "url": "https://www.raigadpolice.gov.in/en/police-station-details/wadkhal",
+   "contacts": false
+  }
+ }
+]
