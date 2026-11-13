@@ -122,3 +122,32 @@ def test_wb_bidhannagar():
     assert recs["dept:police3_wb:bidhannagar:airport-traffic-guard"]["phone"] == "9147889435"
     assert recs["dept:police3_wb:bidhannagar:control-room-24x7"]["phone"] == "033-23358788, 033-23410465"
     assert "dept:police3_wb:bidhannagar:bidhannagar-traffic" not in recs
+
+
+# ---------- Jharkhand ----------
+def test_jh_imp_contacts():
+    from dforms import police3_jh as j
+    recs, files, why = j.fetch({"reader": "police3_jh", "url": j.URL}, FakeGet({j.URL: "police3_jh/imp-contacts.html"}))
+    assert why == "" and len(recs) >= 190
+    ds = [d for _, d in recs if d["level"] == "district"]
+    assert len({d["district"] for d in ds}) == 24
+    du = next(d for d in ds if d["district"] == "Dumka")
+    assert (du["name"], du["post"], du["email"]) == ("Shri Pitambar Singh Kherwar", "SP, Dumka", "sp-dumka@jhpolice.gov.in")
+    assert du["phone"] == "06434-232733, 06434-222226, 9470591001" and du["fax"] == "06434-237403"
+    tr = next(d for d in ds if d["post"] == "SP, Traffic Ranchi")
+    assert tr["office_type"] == "traffic" and tr["district"] == "Ranchi"
+    assert next(d for d in ds if d["post"] == "SP, Chaibasa")["district"] == "West Singhbhum"
+    dgp = next(d for _, d in recs if d["post"] == "DGP")
+    assert dgp["level"] == "state" and dgp["name"] == "Smt.Tadasha Mishra"
+
+
+# ---------- Bihar ----------
+def test_br_field_officers():
+    from dforms import police3_br as b
+    recs, files, why = b.fetch({"reader": "police3_br", "url": b.URL}, FakeGet({b.URL: "police3_br/field-officers.json"}))
+    assert why == "" and len(recs) == 76
+    ds = {d["district"] for _, d in recs if d["level"] == "district" and d.get("district")}
+    assert len(ds) == 38 and {"Aurangabad", "Pashchim Champaran", "Patna"} <= ds
+    ssp = dict(recs)["dept:police3_br:2-ssp-patna"]
+    assert ssp["phone"].startswith("9031825812") and ssp["email"] == "ssp-patna-bih@nic.in" and ssp["src_pos"] == {"index": 1, "id": 2}
+    assert dict(recs)["dept:police3_br:2-ssp-patna"]["office_phone"] == "0612-2214318, 0612-2219745"

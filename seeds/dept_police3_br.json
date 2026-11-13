@@ -1,0 +1,3 @@
+[
+ {"key": "police3_br:field-officers", "payload": {"reader": "police3_br", "url": "https://police.bihar.gov.in/FieldOfficerHandler.ashx?action=getall&lang=en&page=1&pageSize=100", "state": "BR", "expected": 76}}
+]
