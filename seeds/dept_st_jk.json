@@ -1,0 +1,35 @@
+[
+ {
+  "key": "st_jk_gad:ias",
+  "payload": {
+   "reader": "st_jk_gad",
+   "url": "https://jkgad.nic.in/En/CivilList.aspx",
+   "list": "ias",
+   "state": "JK",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_jk_gad:kas",
+  "payload": {
+   "reader": "st_jk_gad",
+   "url": "https://jkgad.nic.in/En/KAS_Officers.aspx",
+   "list": "kas",
+   "state": "JK",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_jk_gad:email",
+  "payload": {
+   "reader": "st_jk_gad",
+   "url": "https://jkgad.nic.in/leftMenu/Email_Directory.aspx?depType=D",
+   "list": "email",
+   "state": "JK",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

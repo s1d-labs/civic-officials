@@ -1,0 +1,24 @@
+[
+ {
+  "key": "st_hr_cs:contact-us",
+  "payload": {
+   "reader": "st_hr_cs",
+   "url": "https://csharyana.gov.in/contact-us",
+   "state": "HR",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "st_nt_commission:hr-state-election-commission-haryana",
+  "payload": {
+   "reader": "st_nt_commission",
+   "url": "https://secharyana.gov.in/whos-who/",
+   "state": "HR",
+   "body": "State Election Commission, Haryana",
+   "dept": "elections",
+   "india_only": true,
+   "route": "proxy"
+  }
+ }
+]

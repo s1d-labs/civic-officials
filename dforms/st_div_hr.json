@@ -1,0 +1,40 @@
+{
+ "source": "revenue divisions as the state's revenue department lists them, written by hand 2026-11-13 with LGD district codes (lgd.districts); not checked against the latest state notification",
+ "divisions": {
+  "Ambala": [
+   "58",
+   "68",
+   "70",
+   "76"
+  ],
+  "Faridabad": [
+   "60",
+   "619",
+   "604"
+  ],
+  "Gurugram": [
+   "62",
+   "72",
+   "69"
+  ],
+  "Hisar": [
+   "63",
+   "61",
+   "65",
+   "74",
+   "792"
+  ],
+  "Karnal": [
+   "67",
+   "71",
+   "66"
+  ],
+  "Rohtak": [
+   "73",
+   "64",
+   "75",
+   "59",
+   "701"
+  ]
+ }
+}

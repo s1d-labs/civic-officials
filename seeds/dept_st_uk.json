@@ -1,0 +1,27 @@
+[
+ {
+  "key": "st_uk_sad:officers",
+  "payload": {
+   "reader": "st_uk_sad",
+   "url": "https://sad.uk.gov.in/officerss-staff/",
+   "state": "UK",
+   "india_only": true,
+   "route": "proxy"
+  }
+ },
+ {
+  "key": "st_nt_commission:uk-state-election-commission-uttarakhand",
+  "payload": {
+   "reader": "st_nt_commission",
+   "url": "https://sec.uk.gov.in/whos-who/",
+   "pages": [
+    "https://sec.uk.gov.in/whos-who/page/2"
+   ],
+   "state": "UK",
+   "body": "State Election Commission, Uttarakhand",
+   "dept": "elections",
+   "india_only": true,
+   "route": "proxy"
+  }
+ }
+]
