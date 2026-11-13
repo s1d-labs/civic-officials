@@ -1,0 +1,5373 @@
+[
+ {
+  "key": "pri_mp:district:1",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 1,
+   "district": "SHEOPUR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24024",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 1,
+   "district": "SHEOPUR",
+   "janpad_id": 24024,
+   "janpad": "विजयपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24025",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 1,
+   "district": "SHEOPUR",
+   "janpad_id": 24025,
+   "janpad": "श्योपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24026",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 1,
+   "district": "SHEOPUR",
+   "janpad_id": 24026,
+   "janpad": "काराहाल",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:2",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 2,
+   "district": "MORENA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24027",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 2,
+   "district": "MORENA",
+   "janpad_id": 24027,
+   "janpad": "पोरसा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24028",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 2,
+   "district": "MORENA",
+   "janpad_id": 24028,
+   "janpad": "अम्बाह",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24029",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 2,
+   "district": "MORENA",
+   "janpad_id": 24029,
+   "janpad": "मुरैना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24030",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 2,
+   "district": "MORENA",
+   "janpad_id": 24030,
+   "janpad": "जौरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24031",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 2,
+   "district": "MORENA",
+   "janpad_id": 24031,
+   "janpad": "पहाड़गढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24032",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 2,
+   "district": "MORENA",
+   "janpad_id": 24032,
+   "janpad": "कैलारस",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24033",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 2,
+   "district": "MORENA",
+   "janpad_id": 24033,
+   "janpad": "सबलगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:3",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 3,
+   "district": "BHIND",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24034",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 3,
+   "district": "BHIND",
+   "janpad_id": 24034,
+   "janpad": "रौन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24035",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 3,
+   "district": "BHIND",
+   "janpad_id": 24035,
+   "janpad": "मेहगांव",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24036",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 3,
+   "district": "BHIND",
+   "janpad_id": 24036,
+   "janpad": "भिण्ड",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24037",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 3,
+   "district": "BHIND",
+   "janpad_id": 24037,
+   "janpad": "लहार",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24038",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 3,
+   "district": "BHIND",
+   "janpad_id": 24038,
+   "janpad": "अटेर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24039",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 3,
+   "district": "BHIND",
+   "janpad_id": 24039,
+   "janpad": "गोहद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:4",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 4,
+   "district": "GWALIOR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24040",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 4,
+   "district": "GWALIOR",
+   "janpad_id": 24040,
+   "janpad": "डबरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24041",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 4,
+   "district": "GWALIOR",
+   "janpad_id": 24041,
+   "janpad": "भितरवार",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24042",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 4,
+   "district": "GWALIOR",
+   "janpad_id": 24042,
+   "janpad": "घाटीगांव",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24043",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 4,
+   "district": "GWALIOR",
+   "janpad_id": 24043,
+   "janpad": "मूरार(ग्रामीण)",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:5",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 5,
+   "district": "DATIA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24044",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 5,
+   "district": "DATIA",
+   "janpad_id": 24044,
+   "janpad": "दतिया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24045",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 5,
+   "district": "DATIA",
+   "janpad_id": 24045,
+   "janpad": "सेवढ़ा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24046",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 5,
+   "district": "DATIA",
+   "janpad_id": 24046,
+   "janpad": "भाण्डेर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:6",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 6,
+   "district": "SHIVPURI",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24047",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 6,
+   "district": "SHIVPURI",
+   "janpad_id": 24047,
+   "janpad": "शिवपुरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24048",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 6,
+   "district": "SHIVPURI",
+   "janpad_id": 24048,
+   "janpad": "कोलारस",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24049",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 6,
+   "district": "SHIVPURI",
+   "janpad_id": 24049,
+   "janpad": "बदरवास",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24050",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 6,
+   "district": "SHIVPURI",
+   "janpad_id": 24050,
+   "janpad": "खनियाधाना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24051",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 6,
+   "district": "SHIVPURI",
+   "janpad_id": 24051,
+   "janpad": "पोहरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24052",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 6,
+   "district": "SHIVPURI",
+   "janpad_id": 24052,
+   "janpad": "करैरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24053",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 6,
+   "district": "SHIVPURI",
+   "janpad_id": 24053,
+   "janpad": "नरवर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24054",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 6,
+   "district": "SHIVPURI",
+   "janpad_id": 24054,
+   "janpad": "पिछोर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:7",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 7,
+   "district": "GUNA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24055",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 7,
+   "district": "GUNA",
+   "janpad_id": 24055,
+   "janpad": "आरोन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24056",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 7,
+   "district": "GUNA",
+   "janpad_id": 24056,
+   "janpad": "बमोरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24057",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 7,
+   "district": "GUNA",
+   "janpad_id": 24057,
+   "janpad": "चांचौडा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24058",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 7,
+   "district": "GUNA",
+   "janpad_id": 24058,
+   "janpad": "गुना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24059",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 7,
+   "district": "GUNA",
+   "janpad_id": 24059,
+   "janpad": "राघौगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:8",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 8,
+   "district": "TIKAMGARH",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24060",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 8,
+   "district": "TIKAMGARH",
+   "janpad_id": 24060,
+   "janpad": "बल्देवगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24061",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 8,
+   "district": "TIKAMGARH",
+   "janpad_id": 24061,
+   "janpad": "जतारा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24063",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 8,
+   "district": "TIKAMGARH",
+   "janpad_id": 24063,
+   "janpad": "पलेरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24065",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 8,
+   "district": "TIKAMGARH",
+   "janpad_id": 24065,
+   "janpad": "टीकमगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:9",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 9,
+   "district": "CHHATARPUR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24066",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 9,
+   "district": "CHHATARPUR",
+   "janpad_id": 24066,
+   "janpad": "बडामलहरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24067",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 9,
+   "district": "CHHATARPUR",
+   "janpad_id": 24067,
+   "janpad": "बुक्स्वहा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24068",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 9,
+   "district": "CHHATARPUR",
+   "janpad_id": 24068,
+   "janpad": "बिजावर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24069",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 9,
+   "district": "CHHATARPUR",
+   "janpad_id": 24069,
+   "janpad": "गौरिहार",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24070",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 9,
+   "district": "CHHATARPUR",
+   "janpad_id": 24070,
+   "janpad": "छतरपुर/इशानगर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24071",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 9,
+   "district": "CHHATARPUR",
+   "janpad_id": 24071,
+   "janpad": "लौंड़ी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24072",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 9,
+   "district": "CHHATARPUR",
+   "janpad_id": 24072,
+   "janpad": "नौगांव",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24073",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 9,
+   "district": "CHHATARPUR",
+   "janpad_id": 24073,
+   "janpad": "राजनगर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:10",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 10,
+   "district": "PANNA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24074",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 10,
+   "district": "PANNA",
+   "janpad_id": 24074,
+   "janpad": "अजयगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24075",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 10,
+   "district": "PANNA",
+   "janpad_id": 24075,
+   "janpad": "गुनौर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24076",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 10,
+   "district": "PANNA",
+   "janpad_id": 24076,
+   "janpad": "पन्ना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24077",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 10,
+   "district": "PANNA",
+   "janpad_id": 24077,
+   "janpad": "पवई",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24078",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 10,
+   "district": "PANNA",
+   "janpad_id": 24078,
+   "janpad": "शाहनगर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:11",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24079",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24079,
+   "janpad": "मालथौन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24080",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24080,
+   "janpad": "जैसीनगर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24081",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24081,
+   "janpad": "शाहगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24082",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24082,
+   "janpad": "बीना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24083",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24083,
+   "janpad": "खुरई",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24084",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24084,
+   "janpad": "देवरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24085",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24085,
+   "janpad": "केसली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24086",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24086,
+   "janpad": "राहतगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24087",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24087,
+   "janpad": "बण्डा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24088",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24088,
+   "janpad": "सागर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24089",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 11,
+   "district": "SAGAR",
+   "janpad_id": 24089,
+   "janpad": "रहली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:12",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 12,
+   "district": "DAMOH",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24090",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 12,
+   "district": "DAMOH",
+   "janpad_id": 24090,
+   "janpad": "पटेरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24091",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 12,
+   "district": "DAMOH",
+   "janpad_id": 24091,
+   "janpad": "पथरिया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24092",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 12,
+   "district": "DAMOH",
+   "janpad_id": 24092,
+   "janpad": "दमोह",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24093",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 12,
+   "district": "DAMOH",
+   "janpad_id": 24093,
+   "janpad": "हटा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24094",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 12,
+   "district": "DAMOH",
+   "janpad_id": 24094,
+   "janpad": "तेंदूखेडा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24095",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 12,
+   "district": "DAMOH",
+   "janpad_id": 24095,
+   "janpad": "जबेरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24096",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 12,
+   "district": "DAMOH",
+   "janpad_id": 24096,
+   "janpad": "बटियागढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:13",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 13,
+   "district": "SATNA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24097",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 13,
+   "district": "SATNA",
+   "janpad_id": 24097,
+   "janpad": "अमरपाटन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24098",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 13,
+   "district": "SATNA",
+   "janpad_id": 24098,
+   "janpad": "मैहर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24099",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 13,
+   "district": "SATNA",
+   "janpad_id": 24099,
+   "janpad": "मझगवां",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24100",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 13,
+   "district": "SATNA",
+   "janpad_id": 24100,
+   "janpad": "नागौद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24101",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 13,
+   "district": "SATNA",
+   "janpad_id": 24101,
+   "janpad": "रामनगर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24102",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 13,
+   "district": "SATNA",
+   "janpad_id": 24102,
+   "janpad": "रामपुर-बधेलान",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24103",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 13,
+   "district": "SATNA",
+   "janpad_id": 24103,
+   "janpad": "सोहावल",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24104",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 13,
+   "district": "SATNA",
+   "janpad_id": 24104,
+   "janpad": "उचेहरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:14",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 14,
+   "district": "REWA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24105",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 14,
+   "district": "REWA",
+   "janpad_id": 24105,
+   "janpad": "रीवा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24106",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 14,
+   "district": "REWA",
+   "janpad_id": 24106,
+   "janpad": "रायपुर(K)",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24107",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 14,
+   "district": "REWA",
+   "janpad_id": 24107,
+   "janpad": "मउगंज",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24108",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 14,
+   "district": "REWA",
+   "janpad_id": 24108,
+   "janpad": "सिरमौर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24109",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 14,
+   "district": "REWA",
+   "janpad_id": 24109,
+   "janpad": "नईगढी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24110",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 14,
+   "district": "REWA",
+   "janpad_id": 24110,
+   "janpad": "त्यौंथर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24111",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 14,
+   "district": "REWA",
+   "janpad_id": 24111,
+   "janpad": "हनुमना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24112",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 14,
+   "district": "REWA",
+   "janpad_id": 24112,
+   "janpad": "गंगेओ",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24113",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 14,
+   "district": "REWA",
+   "janpad_id": 24113,
+   "janpad": "जवा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:15",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 15,
+   "district": "UMARIA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24114",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 15,
+   "district": "UMARIA",
+   "janpad_id": 24114,
+   "janpad": "करकेली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24115",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 15,
+   "district": "UMARIA",
+   "janpad_id": 24115,
+   "janpad": "मानपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24116",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 15,
+   "district": "UMARIA",
+   "janpad_id": 24116,
+   "janpad": "पालि-2 (गोह्पारु)",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:16",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 16,
+   "district": "SHAHDOL",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24117",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 16,
+   "district": "SHAHDOL",
+   "janpad_id": 24117,
+   "janpad": "ब्यौहारी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24118",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 16,
+   "district": "SHAHDOL",
+   "janpad_id": 24118,
+   "janpad": "बुढार",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24119",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 16,
+   "district": "SHAHDOL",
+   "janpad_id": 24119,
+   "janpad": "गोहपारू (पालि-1)",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24120",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 16,
+   "district": "SHAHDOL",
+   "janpad_id": 24120,
+   "janpad": "जयसिंहनगर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24121",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 16,
+   "district": "SHAHDOL",
+   "janpad_id": 24121,
+   "janpad": "सोहागपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:17",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 17,
+   "district": "SIDHI",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24124",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 17,
+   "district": "SIDHI",
+   "janpad_id": 24124,
+   "janpad": "कुसमी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24125",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 17,
+   "district": "SIDHI",
+   "janpad_id": 24125,
+   "janpad": "मझौली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24126",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 17,
+   "district": "SIDHI",
+   "janpad_id": 24126,
+   "janpad": "रामपुर नैकिन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24127",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 17,
+   "district": "SIDHI",
+   "janpad_id": 24127,
+   "janpad": "सीधी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24128",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 17,
+   "district": "SIDHI",
+   "janpad_id": 24128,
+   "janpad": "सिंहावल",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:18",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 18,
+   "district": "NEEMUCH",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24130",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 18,
+   "district": "NEEMUCH",
+   "janpad_id": 24130,
+   "janpad": "जावद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24131",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 18,
+   "district": "NEEMUCH",
+   "janpad_id": 24131,
+   "janpad": "मनासा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24132",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 18,
+   "district": "NEEMUCH",
+   "janpad_id": 24132,
+   "janpad": "नीमच",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:19",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 19,
+   "district": "MANDSAUR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24133",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 19,
+   "district": "MANDSAUR",
+   "janpad_id": 24133,
+   "janpad": "भानपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24134",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 19,
+   "district": "MANDSAUR",
+   "janpad_id": 24134,
+   "janpad": "गरोठ",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24135",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 19,
+   "district": "MANDSAUR",
+   "janpad_id": 24135,
+   "janpad": "मल्हारगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24136",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 19,
+   "district": "MANDSAUR",
+   "janpad_id": 24136,
+   "janpad": "मन्दसौर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24137",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 19,
+   "district": "MANDSAUR",
+   "janpad_id": 24137,
+   "janpad": "सीतामऊ",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:20",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 20,
+   "district": "RATLAM",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24138",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 20,
+   "district": "RATLAM",
+   "janpad_id": 24138,
+   "janpad": "आलोट",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24139",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 20,
+   "district": "RATLAM",
+   "janpad_id": 24139,
+   "janpad": "बाजना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24140",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 20,
+   "district": "RATLAM",
+   "janpad_id": 24140,
+   "janpad": "जावरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24141",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 20,
+   "district": "RATLAM",
+   "janpad_id": 24141,
+   "janpad": "पिपलौदा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24142",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 20,
+   "district": "RATLAM",
+   "janpad_id": 24142,
+   "janpad": "रतलाम",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24143",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 20,
+   "district": "RATLAM",
+   "janpad_id": 24143,
+   "janpad": "सैलाना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:21",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 21,
+   "district": "UJJAIN",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24144",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 21,
+   "district": "UJJAIN",
+   "janpad_id": 24144,
+   "janpad": "उज्जैन ग्रामीण",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24145",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 21,
+   "district": "UJJAIN",
+   "janpad_id": 24145,
+   "janpad": "घटिया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24146",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 21,
+   "district": "UJJAIN",
+   "janpad_id": 24146,
+   "janpad": "बडनगर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24147",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 21,
+   "district": "UJJAIN",
+   "janpad_id": 24147,
+   "janpad": "खाचरौद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24148",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 21,
+   "district": "UJJAIN",
+   "janpad_id": 24148,
+   "janpad": "तराना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24149",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 21,
+   "district": "UJJAIN",
+   "janpad_id": 24149,
+   "janpad": "महिदपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:22",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 22,
+   "district": "SHAJAPUR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24153",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 22,
+   "district": "SHAJAPUR",
+   "janpad_id": 24153,
+   "janpad": "मो.बडोदिया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24154",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 22,
+   "district": "SHAJAPUR",
+   "janpad_id": 24154,
+   "janpad": "कालापीपल",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24155",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 22,
+   "district": "SHAJAPUR",
+   "janpad_id": 24155,
+   "janpad": "शाजापुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24156",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 22,
+   "district": "SHAJAPUR",
+   "janpad_id": 24156,
+   "janpad": "शुजालपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:23",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 23,
+   "district": "DEWAS",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24158",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 23,
+   "district": "DEWAS",
+   "janpad_id": 24158,
+   "janpad": "देवास",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24159",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 23,
+   "district": "DEWAS",
+   "janpad_id": 24159,
+   "janpad": "टोंकरखुर्द",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24160",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 23,
+   "district": "DEWAS",
+   "janpad_id": 24160,
+   "janpad": "सोनकच्छ",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24161",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 23,
+   "district": "DEWAS",
+   "janpad_id": 24161,
+   "janpad": "बागली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24162",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 23,
+   "district": "DEWAS",
+   "janpad_id": 24162,
+   "janpad": "कन्नौद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24163",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 23,
+   "district": "DEWAS",
+   "janpad_id": 24163,
+   "janpad": "खातेगांव",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:24",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 24,
+   "district": "JHABUA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24167",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 24,
+   "district": "JHABUA",
+   "janpad_id": 24167,
+   "janpad": "थांदला",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24171",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 24,
+   "district": "JHABUA",
+   "janpad_id": 24171,
+   "janpad": "झाबुआ",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24172",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 24,
+   "district": "JHABUA",
+   "janpad_id": 24172,
+   "janpad": "पेटलावद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24173",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 24,
+   "district": "JHABUA",
+   "janpad_id": 24173,
+   "janpad": "रामा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24174",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 24,
+   "district": "JHABUA",
+   "janpad_id": 24174,
+   "janpad": "मेघनगर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24175",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 24,
+   "district": "JHABUA",
+   "janpad_id": 24175,
+   "janpad": "रानापुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:25",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24176",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24176,
+   "janpad": "बदनावर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24177",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24177,
+   "janpad": "बाघ",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24178",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24178,
+   "janpad": "डही",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24179",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24179,
+   "janpad": "धार",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24180",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24180,
+   "janpad": "धरमपुरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24181",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24181,
+   "janpad": "गंधवानी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24182",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24182,
+   "janpad": "कुक्षी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24183",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24183,
+   "janpad": "मनावर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24184",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24184,
+   "janpad": "नालछा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24185",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24185,
+   "janpad": "निसरपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24186",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24186,
+   "janpad": "सरदारपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24187",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24187,
+   "janpad": "तिरला",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24188",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 25,
+   "district": "DHAR",
+   "janpad_id": 24188,
+   "janpad": "उमरबन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:26",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 26,
+   "district": "INDORE",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24189",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 26,
+   "district": "INDORE",
+   "janpad_id": 24189,
+   "janpad": "महू",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24190",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 26,
+   "district": "INDORE",
+   "janpad_id": 24190,
+   "janpad": "देपालपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24191",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 26,
+   "district": "INDORE",
+   "janpad_id": 24191,
+   "janpad": "सांवेर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24192",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 26,
+   "district": "INDORE",
+   "janpad_id": 24192,
+   "janpad": "इंदौर ग्रामीण",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:27",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 27,
+   "district": "KHARGONE",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24193",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 27,
+   "district": "KHARGONE",
+   "janpad_id": 24193,
+   "janpad": "सेगांव",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24194",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 27,
+   "district": "KHARGONE",
+   "janpad_id": 24194,
+   "janpad": "भगवानपुरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24195",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 27,
+   "district": "KHARGONE",
+   "janpad_id": 24195,
+   "janpad": "भीकनगांव",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24196",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 27,
+   "district": "KHARGONE",
+   "janpad_id": 24196,
+   "janpad": "झिरन्या",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24197",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 27,
+   "district": "KHARGONE",
+   "janpad_id": 24197,
+   "janpad": "गोगवा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24198",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 27,
+   "district": "KHARGONE",
+   "janpad_id": 24198,
+   "janpad": "कसरवाद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24199",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 27,
+   "district": "KHARGONE",
+   "janpad_id": 24199,
+   "janpad": "बडवाह",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24200",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 27,
+   "district": "KHARGONE",
+   "janpad_id": 24200,
+   "janpad": "महेश्वर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24201",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 27,
+   "district": "KHARGONE",
+   "janpad_id": 24201,
+   "janpad": "खरगौन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:28",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 28,
+   "district": "BARWANI",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24202",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 28,
+   "district": "BARWANI",
+   "janpad_id": 24202,
+   "janpad": "राजपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24203",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 28,
+   "district": "BARWANI",
+   "janpad_id": 24203,
+   "janpad": "बड़वानी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24204",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 28,
+   "district": "BARWANI",
+   "janpad_id": 24204,
+   "janpad": "पाटी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24205",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 28,
+   "district": "BARWANI",
+   "janpad_id": 24205,
+   "janpad": "सेंधवा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24206",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 28,
+   "district": "BARWANI",
+   "janpad_id": 24206,
+   "janpad": "पानसेमल",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24207",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 28,
+   "district": "BARWANI",
+   "janpad_id": 24207,
+   "janpad": "निवाली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24208",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 28,
+   "district": "BARWANI",
+   "janpad_id": 24208,
+   "janpad": "ठीकरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:29",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 29,
+   "district": "KHANDWA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24209",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 29,
+   "district": "KHANDWA",
+   "janpad_id": 24209,
+   "janpad": "बलडी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24210",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 29,
+   "district": "KHANDWA",
+   "janpad_id": 24210,
+   "janpad": "छेगांवमाखन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24211",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 29,
+   "district": "KHANDWA",
+   "janpad_id": 24211,
+   "janpad": "हरसूद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24212",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 29,
+   "district": "KHANDWA",
+   "janpad_id": 24212,
+   "janpad": "खालवा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24213",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 29,
+   "district": "KHANDWA",
+   "janpad_id": 24213,
+   "janpad": "खण्डवा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24214",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 29,
+   "district": "KHANDWA",
+   "janpad_id": 24214,
+   "janpad": "पंधाना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24215",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 29,
+   "district": "KHANDWA",
+   "janpad_id": 24215,
+   "janpad": "पुनासा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:30",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 30,
+   "district": "RAJGARH",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24216",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 30,
+   "district": "RAJGARH",
+   "janpad_id": 24216,
+   "janpad": "राजगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24217",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 30,
+   "district": "RAJGARH",
+   "janpad_id": 24217,
+   "janpad": "ब्यावरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24218",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 30,
+   "district": "RAJGARH",
+   "janpad_id": 24218,
+   "janpad": "नरसिंहगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24219",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 30,
+   "district": "RAJGARH",
+   "janpad_id": 24219,
+   "janpad": "सारंगपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24220",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 30,
+   "district": "RAJGARH",
+   "janpad_id": 24220,
+   "janpad": "खिलचीपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24221",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 30,
+   "district": "RAJGARH",
+   "janpad_id": 24221,
+   "janpad": "जीरापुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:31",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 31,
+   "district": "VIDISHA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24222",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 31,
+   "district": "VIDISHA",
+   "janpad_id": 24222,
+   "janpad": "बासौदा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24223",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 31,
+   "district": "VIDISHA",
+   "janpad_id": 24223,
+   "janpad": "ग्यारसपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24224",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 31,
+   "district": "VIDISHA",
+   "janpad_id": 24224,
+   "janpad": "कुरवाई",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24225",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 31,
+   "district": "VIDISHA",
+   "janpad_id": 24225,
+   "janpad": "लटेरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24226",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 31,
+   "district": "VIDISHA",
+   "janpad_id": 24226,
+   "janpad": "नटेरन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24227",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 31,
+   "district": "VIDISHA",
+   "janpad_id": 24227,
+   "janpad": "सिरोंज",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24228",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 31,
+   "district": "VIDISHA",
+   "janpad_id": 24228,
+   "janpad": "विदिशा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:32",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 32,
+   "district": "BHOPAL",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24229",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 32,
+   "district": "BHOPAL",
+   "janpad_id": 24229,
+   "janpad": "बैरसिया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24230",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 32,
+   "district": "BHOPAL",
+   "janpad_id": 24230,
+   "janpad": "फंदा ग्रमीण",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:33",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 33,
+   "district": "SEHORE",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24231",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 33,
+   "district": "SEHORE",
+   "janpad_id": 24231,
+   "janpad": "आष्टा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24232",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 33,
+   "district": "SEHORE",
+   "janpad_id": 24232,
+   "janpad": "बुदनी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24233",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 33,
+   "district": "SEHORE",
+   "janpad_id": 24233,
+   "janpad": "इछावर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24234",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 33,
+   "district": "SEHORE",
+   "janpad_id": 24234,
+   "janpad": "नस.गंज",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24235",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 33,
+   "district": "SEHORE",
+   "janpad_id": 24235,
+   "janpad": "सीहोर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:34",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 34,
+   "district": "RAISEN",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24236",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 34,
+   "district": "RAISEN",
+   "janpad_id": 24236,
+   "janpad": "बाडी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24237",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 34,
+   "district": "RAISEN",
+   "janpad_id": 24237,
+   "janpad": "बेगमगंज",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24238",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 34,
+   "district": "RAISEN",
+   "janpad_id": 24238,
+   "janpad": "गैरतगंज",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24239",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 34,
+   "district": "RAISEN",
+   "janpad_id": 24239,
+   "janpad": "औबेदुल्लागंज",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24240",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 34,
+   "district": "RAISEN",
+   "janpad_id": 24240,
+   "janpad": "सांची",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24241",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 34,
+   "district": "RAISEN",
+   "janpad_id": 24241,
+   "janpad": "सिलवानी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24242",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 34,
+   "district": "RAISEN",
+   "janpad_id": 24242,
+   "janpad": "उदयपुरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:35",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24243",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "janpad_id": 24243,
+   "janpad": "आमला",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24244",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "janpad_id": 24244,
+   "janpad": "आठनेर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24245",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "janpad_id": 24245,
+   "janpad": "बैतूल",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24246",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "janpad_id": 24246,
+   "janpad": "भैंसदेही",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24247",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "janpad_id": 24247,
+   "janpad": "भीमपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24248",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "janpad_id": 24248,
+   "janpad": "चिचोली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24249",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "janpad_id": 24249,
+   "janpad": "घोडाडोंगरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24250",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "janpad_id": 24250,
+   "janpad": "मुलताई",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24251",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "janpad_id": 24251,
+   "janpad": "प्रभातपट्टन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24252",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 35,
+   "district": "BETUL",
+   "janpad_id": 24252,
+   "janpad": "शाहपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:36",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 36,
+   "district": "HARDA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24253",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 36,
+   "district": "HARDA",
+   "janpad_id": 24253,
+   "janpad": "हरदा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24254",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 36,
+   "district": "HARDA",
+   "janpad_id": 24254,
+   "janpad": "टिमरनी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24255",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 36,
+   "district": "HARDA",
+   "janpad_id": 24255,
+   "janpad": "खिरकिया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:37",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 37,
+   "district": "NARMADAPURAM (HOSHANGABAD)",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24256",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 37,
+   "district": "NARMADAPURAM (HOSHANGABAD)",
+   "janpad_id": 24256,
+   "janpad": "बनखेडी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24257",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 37,
+   "district": "NARMADAPURAM (HOSHANGABAD)",
+   "janpad_id": 24257,
+   "janpad": "माखन नगर (बाबई)",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24258",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 37,
+   "district": "NARMADAPURAM (HOSHANGABAD)",
+   "janpad_id": 24258,
+   "janpad": "होशंगाबाद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24259",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 37,
+   "district": "NARMADAPURAM (HOSHANGABAD)",
+   "janpad_id": 24259,
+   "janpad": "केसला",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24260",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 37,
+   "district": "NARMADAPURAM (HOSHANGABAD)",
+   "janpad_id": 24260,
+   "janpad": "सोहागपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24261",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 37,
+   "district": "NARMADAPURAM (HOSHANGABAD)",
+   "janpad_id": 24261,
+   "janpad": "पिपरिया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24262",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 37,
+   "district": "NARMADAPURAM (HOSHANGABAD)",
+   "janpad_id": 24262,
+   "janpad": "सिवनीमालवा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:38",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 38,
+   "district": "KATNI",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24263",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 38,
+   "district": "KATNI",
+   "janpad_id": 24263,
+   "janpad": "बहोरीबंद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24264",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 38,
+   "district": "KATNI",
+   "janpad_id": 24264,
+   "janpad": "कटनी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24265",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 38,
+   "district": "KATNI",
+   "janpad_id": 24265,
+   "janpad": "बडवारा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24266",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 38,
+   "district": "KATNI",
+   "janpad_id": 24266,
+   "janpad": "रीठी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24267",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 38,
+   "district": "KATNI",
+   "janpad_id": 24267,
+   "janpad": "विजयराधवगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24268",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 38,
+   "district": "KATNI",
+   "janpad_id": 24268,
+   "janpad": "ढीमरखेडा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:39",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 39,
+   "district": "JABALPUR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24269",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 39,
+   "district": "JABALPUR",
+   "janpad_id": 24269,
+   "janpad": "जबलपुर ग्रामीण",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24270",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 39,
+   "district": "JABALPUR",
+   "janpad_id": 24270,
+   "janpad": "मझौली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24271",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 39,
+   "district": "JABALPUR",
+   "janpad_id": 24271,
+   "janpad": "पनागर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24272",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 39,
+   "district": "JABALPUR",
+   "janpad_id": 24272,
+   "janpad": "पाटन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24273",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 39,
+   "district": "JABALPUR",
+   "janpad_id": 24273,
+   "janpad": "शहपुरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24274",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 39,
+   "district": "JABALPUR",
+   "janpad_id": 24274,
+   "janpad": "सिहोरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24275",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 39,
+   "district": "JABALPUR",
+   "janpad_id": 24275,
+   "janpad": "कुण्डम",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:40",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 40,
+   "district": "NARSINGHPUR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24276",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 40,
+   "district": "NARSINGHPUR",
+   "janpad_id": 24276,
+   "janpad": "नरसिंहपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24277",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 40,
+   "district": "NARSINGHPUR",
+   "janpad_id": 24277,
+   "janpad": "चिचली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24278",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 40,
+   "district": "NARSINGHPUR",
+   "janpad_id": 24278,
+   "janpad": "गोटेगांव (श्रीधाम)",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24279",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 40,
+   "district": "NARSINGHPUR",
+   "janpad_id": 24279,
+   "janpad": "करेली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24280",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 40,
+   "district": "NARSINGHPUR",
+   "janpad_id": 24280,
+   "janpad": "साईंखेडा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24281",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 40,
+   "district": "NARSINGHPUR",
+   "janpad_id": 24281,
+   "janpad": "चावरपाथा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:41",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 41,
+   "district": "DINDORI",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24282",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 41,
+   "district": "DINDORI",
+   "janpad_id": 24282,
+   "janpad": "डिण्डौरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24283",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 41,
+   "district": "DINDORI",
+   "janpad_id": 24283,
+   "janpad": "अमरपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24284",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 41,
+   "district": "DINDORI",
+   "janpad_id": 24284,
+   "janpad": "करंजिया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24285",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 41,
+   "district": "DINDORI",
+   "janpad_id": 24285,
+   "janpad": "समनापुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24286",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 41,
+   "district": "DINDORI",
+   "janpad_id": 24286,
+   "janpad": "बजाग",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24287",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 41,
+   "district": "DINDORI",
+   "janpad_id": 24287,
+   "janpad": "मेंहदवानी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24288",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 41,
+   "district": "DINDORI",
+   "janpad_id": 24288,
+   "janpad": "शहपुरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:42",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 42,
+   "district": "MANDLA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24289",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 42,
+   "district": "MANDLA",
+   "janpad_id": 24289,
+   "janpad": "मण्डला",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24290",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 42,
+   "district": "MANDLA",
+   "janpad_id": 24290,
+   "janpad": "नैनपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24291",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 42,
+   "district": "MANDLA",
+   "janpad_id": 24291,
+   "janpad": "बिछिया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24292",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 42,
+   "district": "MANDLA",
+   "janpad_id": 24292,
+   "janpad": "मोहगाव",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24293",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 42,
+   "district": "MANDLA",
+   "janpad_id": 24293,
+   "janpad": "मवई",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24294",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 42,
+   "district": "MANDLA",
+   "janpad_id": 24294,
+   "janpad": "घुंघरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24295",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 42,
+   "district": "MANDLA",
+   "janpad_id": 24295,
+   "janpad": "निवास",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24296",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 42,
+   "district": "MANDLA",
+   "janpad_id": 24296,
+   "janpad": "नारयनगंज",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24297",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 42,
+   "district": "MANDLA",
+   "janpad_id": 24297,
+   "janpad": "बीजाडांडी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:43",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24298",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24298,
+   "janpad": "छिंदवाडा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24299",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24299,
+   "janpad": "मोहखेड़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24300",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24300,
+   "janpad": "पराकसया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24301",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24301,
+   "janpad": "जुन्नारदेव",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24302",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24302,
+   "janpad": "तामिया",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24303",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24303,
+   "janpad": "सौंसर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24304",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24304,
+   "janpad": "बिछुआ",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24305",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24305,
+   "janpad": "पांढुर्ना",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24306",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24306,
+   "janpad": "अमरवाडा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24307",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24307,
+   "janpad": "हर्रई",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24308",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 43,
+   "district": "CHHINDWARA",
+   "janpad_id": 24308,
+   "janpad": "चौरई",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:44",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 44,
+   "district": "SEONI",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24309",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 44,
+   "district": "SEONI",
+   "janpad_id": 24309,
+   "janpad": "सिवनी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24310",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 44,
+   "district": "SEONI",
+   "janpad_id": 24310,
+   "janpad": "बरघाट",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24311",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 44,
+   "district": "SEONI",
+   "janpad_id": 24311,
+   "janpad": "क्योलारी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24312",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 44,
+   "district": "SEONI",
+   "janpad_id": 24312,
+   "janpad": "कुरइ",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24313",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 44,
+   "district": "SEONI",
+   "janpad_id": 24313,
+   "janpad": "छापारा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24314",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 44,
+   "district": "SEONI",
+   "janpad_id": 24314,
+   "janpad": "लखनादौन",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24315",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 44,
+   "district": "SEONI",
+   "janpad_id": 24315,
+   "janpad": "घंसौर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24316",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 44,
+   "district": "SEONI",
+   "janpad_id": 24316,
+   "janpad": "धनौरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:45",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24317",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "janpad_id": 24317,
+   "janpad": "बालाघाट",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24318",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "janpad_id": 24318,
+   "janpad": "किरनापुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24319",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "janpad_id": 24319,
+   "janpad": "कटंगी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24320",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "janpad_id": 24320,
+   "janpad": "खैरलांझी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24321",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "janpad_id": 24321,
+   "janpad": "परसवाडा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24322",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "janpad_id": 24322,
+   "janpad": "लालबुर्रा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24323",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "janpad_id": 24323,
+   "janpad": "वारासिवनी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24324",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "janpad_id": 24324,
+   "janpad": "लांझी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24325",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "janpad_id": 24325,
+   "janpad": "बैहर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24326",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 45,
+   "district": "BALAGHAT",
+   "janpad_id": 24326,
+   "janpad": "बिरसा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:46",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 46,
+   "district": "ASHOKNAGAR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24327",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 46,
+   "district": "ASHOKNAGAR",
+   "janpad_id": 24327,
+   "janpad": "अशोकनगर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24328",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 46,
+   "district": "ASHOKNAGAR",
+   "janpad_id": 24328,
+   "janpad": "चन्देरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24329",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 46,
+   "district": "ASHOKNAGAR",
+   "janpad_id": 24329,
+   "janpad": "ईसागढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24330",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 46,
+   "district": "ASHOKNAGAR",
+   "janpad_id": 24330,
+   "janpad": "मुंगावली",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:47",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 47,
+   "district": "ANUPPUR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24331",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 47,
+   "district": "ANUPPUR",
+   "janpad_id": 24331,
+   "janpad": "अनूपपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24332",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 47,
+   "district": "ANUPPUR",
+   "janpad_id": 24332,
+   "janpad": "जैतहरी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24333",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 47,
+   "district": "ANUPPUR",
+   "janpad_id": 24333,
+   "janpad": "कोतमा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24334",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 47,
+   "district": "ANUPPUR",
+   "janpad_id": 24334,
+   "janpad": "पुष्पराजगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:48",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 48,
+   "district": "BURHANPUR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24335",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 48,
+   "district": "BURHANPUR",
+   "janpad_id": 24335,
+   "janpad": "बुरहानपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24336",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 48,
+   "district": "BURHANPUR",
+   "janpad_id": 24336,
+   "janpad": "खकनार",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:49",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 49,
+   "district": "ALIRAJPUR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24164",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 49,
+   "district": "ALIRAJPUR",
+   "janpad_id": 24164,
+   "janpad": "जोबट",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24165",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 49,
+   "district": "ALIRAJPUR",
+   "janpad_id": 24165,
+   "janpad": "अलीराजपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24166",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 49,
+   "district": "ALIRAJPUR",
+   "janpad_id": 24166,
+   "janpad": "कट्ठीवाडा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24168",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 49,
+   "district": "ALIRAJPUR",
+   "janpad_id": 24168,
+   "janpad": "उदयगढ़",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24169",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 49,
+   "district": "ALIRAJPUR",
+   "janpad_id": 24169,
+   "janpad": "सोण्डवा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24170",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 49,
+   "district": "ALIRAJPUR",
+   "janpad_id": 24170,
+   "janpad": "भाबरा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:50",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 50,
+   "district": "SINGROULI",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24122",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 50,
+   "district": "SINGROULI",
+   "janpad_id": 24122,
+   "janpad": "चितरंगी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24123",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 50,
+   "district": "SINGROULI",
+   "janpad_id": 24123,
+   "janpad": "देवसर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24129",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 50,
+   "district": "SINGROULI",
+   "janpad_id": 24129,
+   "janpad": "बैढ़न",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:51",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 51,
+   "district": "AGAR MALWA",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24150",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 51,
+   "district": "AGAR MALWA",
+   "janpad_id": 24150,
+   "janpad": "बडौद",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24151",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 51,
+   "district": "AGAR MALWA",
+   "janpad_id": 24151,
+   "janpad": "नलखेड़ा",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24152",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 51,
+   "district": "AGAR MALWA",
+   "janpad_id": 24152,
+   "janpad": "सुसनेर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24157",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 51,
+   "district": "AGAR MALWA",
+   "janpad_id": 24157,
+   "janpad": "AGAR",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:district:52",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "district",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 52,
+   "district": "NIWARI",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24062",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 52,
+   "district": "NIWARI",
+   "janpad_id": 24062,
+   "janpad": "निवाडी",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ },
+ {
+  "key": "pri_mp:janpad:24064",
+  "payload": {
+   "reader": "pri_mp",
+   "kind": "janpad",
+   "url": "https://mppanchayatdarpan.gov.in/panchayat/Search.aspx",
+   "district_id": 52,
+   "district": "NIWARI",
+   "janpad_id": 24064,
+   "janpad": "पृथ्वीपुर",
+   "state": "MP",
+   "route": "proxy",
+   "india_only": true
+  }
+ }
+]
