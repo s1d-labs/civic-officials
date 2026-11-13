@@ -1,0 +1,34 @@
+{
+ "module": "ward3_tiruppur",
+ "payload": {
+  "reader": "ward3_tiruppur",
+  "url": "https://www.tnurbantree.tn.gov.in/tiruppur/citizen-charter/",
+  "state": "TN",
+  "india_only": true,
+  "route": "direct"
+ },
+ "routes": {
+  "https://www.tnurbantree.tn.gov.in/tiruppur/citizen-charter/": "tiruppur_charter.html"
+ },
+ "min_records": 13,
+ "min_wards": 60,
+ "expect": [
+  {
+   "post": "Zonal Assistant Commissioner",
+   "level": "zone",
+   "wards": [
+    "1",
+    "9",
+    "27"
+   ]
+  },
+  {
+   "post": "Sanitary Officer",
+   "level": "zone",
+   "wards": [
+    "28",
+    "57"
+   ]
+  }
+ ]
+}
