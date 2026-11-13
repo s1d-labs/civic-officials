@@ -13,7 +13,7 @@ def check(recs, module):
     assert len(ids) == len(set(ids))
     for rid, d in recs:
         assert rid.startswith(f"dept:{module}:")
-        assert d["type"] == "dept_office" and d["layer"] == "village_worker" and d["level"] in ("village", "section")
+        assert d["type"] == "dept_office" and d["layer"] == "village_worker" and d["level"] in ("village", "section", "ward")
         assert d["dept"] in ("health", "women_child", "police") and d.get("source") and d.get("state") and d.get("post")
         assert d.get("name") or d.get("phone")
         assert d.get("src_pos") and d.get("src_url")
@@ -147,7 +147,7 @@ def test_uk_asha_ward_carried():
     d = uk("asha", "2021060975.pdf")
     assert len(d) == 49 and {x["post"] for x in d.values()} == {"ASHA"}
     m = d["dept:vil_uk_ddmp:asha:2"]
-    assert (m["name"], m["phone"], m["ward_no"], m["area"]) == ("Meena", "9411138943", "1", "Ward 1 Malsi")
+    assert (m["name"], m["phone"], m["ward_no"], m["area"], m["level"]) == ("Meena", "9411138943", "1", "Ward 1 Malsi", "ward")
 
 
 def test_uk_gram_prahari_krutidev():

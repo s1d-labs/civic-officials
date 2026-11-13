@@ -13,7 +13,8 @@ The other lists on the page (Village Pradhan, Patwari) are other readers' posts.
 Lines are read from the layout text (pdftotext -layout, else pypdf layout). AWW rows are anchored on "Main AWC" / "Mini AWC"
 and the mobile numbers; the text before them splits at runs of 2+ spaces into district, project, sector, AWC and worker name. A
 row that does not split into these five gets "split_unsure": true (the raw line stays in src_pos).
-Records: level village, layer village_worker: AWW + helper (dept women_child), ASHA (dept health, area "Ward <n> <name>"),
+Records: layer village_worker, level village: AWW + helper (dept women_child); level ward: urban ASHA (dept health, area
+"Ward <n> <name>", body Dehradun Municipal Corporation); level village:
 Gram Prahari (dept police, post "Gram Prahari", age, address, tehsil). "_" / blank names give no record.
 Ids dept:vil_uk_ddmp:aww:<project slug>-<serial>[:awh], asha:<serial>, prahari:s<tehsil section>:<serial>.
 """
@@ -99,7 +100,7 @@ def asha_records(pages, url, p, engine):
                 k += "-b"
             seen.add(k)
             recs.append(_esw.record(
-                MODULE, k, dept="health", level="village", layer="village_worker", post="ASHA", name=name, phone=phone(mob),
+                MODULE, k, dept="health", level="ward", layer="village_worker", post="ASHA", name=name, phone=phone(mob),
                 area=f"Ward {ward}" + (f" {ward_name}" if ward_name else ""), ward_no=ward, ward_name=ward_name or None,
                 body="Dehradun Municipal Corporation", district="Dehradun", state="UK", serial=sno, office_id=k, source=url,
                 src_url=url, src_pos=provenance.line_pos(pg, ln, line), method=f"pdf text ({engine}), rows by serial number",
