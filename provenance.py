@@ -21,6 +21,8 @@ How a record names its source, most exact first:
   4. the record's own url field ("url", "source", "page", "pdf_url", "file_url") when it is a url the item read and that url gave
      one answer: src then carries "via": "record url" (the reader did not say it in so many words).
 A reader that reads a copy saved in the bucket earlier sets data["src"] = {"sha256", "url", "file"} itself; it is kept.
+Row counts (2026-11-13): readers and the shared table helpers call used() / skipped(reason) / given() for the rows they read; the
+trail record then has rows_seen, rows_used, rows_skipped {reason: n} and rows_not_data {"header", "empty"} (see used() below).
 """
 import gzip
 import hashlib
@@ -116,6 +118,67 @@ def hook(trail):
     return _note
 
 
+# Row counts (owner, 2026-11-13: readers must not drop rows silently). A reader or a shared table helper says what it did with each
+# table row / text line it looked at: used(n) = read into a record, skipped(reason, n) = left out. Reasons "header" and "empty"
+# (header rows, repeated header rows, empty or spacer rows) are not data and go in rows_not_data; every other reason is a data
+# skip and goes in rows_skipped. given(n) = rows a shared helper (officials.tables, _esw.grid) handed to the reader. The counts
+# are per thread and per queue item: Trail.begin clears them, Trail.finish puts them on the trail record:
+#   rows_seen = rows_used + sum(rows_skipped) + sum(rows_not_data); rows_used = the reader's used() count, else the number of
+#   data records (then rows_used_from = "records"); rows_given when a helper counted it.
+# Nothing is added to the trail record when nothing was counted (a reader that is not wired yet).
+NOT_DATA = ("header", "empty")
+_rows = threading.local()
+
+
+def _counts():
+    c = getattr(_rows, "c", None)
+    if c is None:
+        c = _rows.c = {"used": 0, "given": 0, "skipped": {}, "not_data": {}}
+    return c
+
+
+def used(n=1):
+    """n rows read into records."""
+    if n:
+        _counts()["used"] += n
+
+
+def skipped(reason, n=1):
+    """n rows left out, and why ("header", "empty", or a data reason like "short row", "no name", "no number")."""
+    if n:
+        d = _counts()["not_data" if reason in NOT_DATA else "skipped"]
+        d[reason] = d.get(reason, 0) + n
+
+
+def given(n=1):
+    """n rows a shared helper returned to the reader (the reader then uses or skips them)."""
+    if n:
+        _counts()["given"] += n
+
+
+def rows_reset():
+    _rows.c = None
+
+
+def rows(n_records=None):
+    """The row counts of this thread since rows_reset(): {} when nothing was counted, else {"rows_seen", "rows_used",
+    "rows_skipped": {reason: n}, "rows_not_data": {reason: n}, ...}. n_records: data records made; it is rows_used when the
+    reader did not call used()."""
+    c = getattr(_rows, "c", None)
+    if not c or not (c["used"] or c["given"] or c["skipped"] or c["not_data"]):
+        return {}
+    out = {}
+    u = c["used"]
+    if not u and n_records is not None:
+        u = n_records
+        out["rows_used_from"] = "records"
+    out.update({"rows_seen": u + sum(c["skipped"].values()) + sum(c["not_data"].values()), "rows_used": u,
+                "rows_skipped": dict(c["skipped"]), "rows_not_data": dict(c["not_data"])})
+    if c["given"]:
+        out["rows_given"] = c["given"]
+    return out
+
+
 def default_method(ctype):
     c = (ctype or "").lower()
     if "pdf" in c:
@@ -137,11 +200,14 @@ class Trail:
         self.lock = threading.Lock()
         self.item = None
         self.sources, self.bodies, self.held = [], {}, 0
+        self.row_counts = {}
 
     def begin(self, item, reader=""):
         self.item, self.reader = item, reader
         self.started = now()
         self.sources, self.bodies, self.held = [], {}, 0
+        rows_reset()
+        self.row_counts = {}
 
     def note(self, r, url, method="GET", data=None):
         """A response the reader got (status 200, or any status the loop hands on). Never raises."""
@@ -212,6 +278,8 @@ class Trail:
             # the reader's word first; else from this record's source, or from the one content type all sources share
             data.setdefault("method", reader_method or default_method((src or {}).get("content_type", "")
                                                                          or (next(iter(ctypes)) if len(ctypes) == 1 else "")))
+        self.row_counts = rows(sum(1 for _, d in recs if isinstance(d, dict)))
+        rows_reset()
         extra_recs, extra_files = [], []
         for s in self.sources:
             c = s.get("copy") or {}
@@ -229,6 +297,6 @@ class Trail:
         extra_recs.append((tid, {"type": "trail", "item": key, "project": self.project, "task": self.task, "reader": self.reader,
                                  "payload": self.item.get("payload", {}), "commit": commit(), "run_id": self.run_id,
                                  "worker": self.worker, "started": self.started, "finished": now(), "records": len(recs),
-                                 "sources": self.sources}))
+                                 **self.row_counts, "sources": self.sources}))
         self.item, self.bodies, self.held = None, {}, 0
         return list(recs) + extra_recs, list(files) + extra_files

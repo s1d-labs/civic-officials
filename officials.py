@@ -10,6 +10,8 @@ from urllib.parse import urljoin, urlsplit
 
 from bs4 import BeautifulSoup
 
+import provenance
+
 # Link text or address of a page that lists officials or their contacts (English, Hindi, Kannada, Tamil, Bengali, Marathi words).
 LINK_WORDS = re.compile(
     r"who'?\s*'?s[\s_-]*who|who[\s_-]*is[\s_-]*who|whoswho|whos-who|directory|telephone|contact|officer|official|key[\s_-]*person|"
@@ -106,13 +108,21 @@ def tables(html):
             if sum(1 for h in nxt if h) >= 2 and any(rx.search(h) for h in nxt for rx in FIELD.values()):
                 title, head, trs, first = next(h for h in head if h), nxt, trs[1:], 2
         if not any(head) or len(head) < 2:
+            # no header row: a layout table, or data the readers do not see; rows with 2+ filled cells are counted as left out
+            n_data = sum(1 for tr in trs[1:] if sum(1 for c in tr.find_all(["td", "th"]) if c.get_text(strip=True)) >= 2)
+            if n_data >= 2:
+                provenance.skipped("table without header row", n_data)
             continue
+        provenance.skipped("header", first)        # the header row (and the title row above it)
         rows, nos = [], []
         for n, tr in enumerate(trs[1:], first + 1):
             cells = [" ".join(c.get_text(" ", strip=True).split()) for c in tr.find_all(["td", "th"])]
             if any(cells):
                 rows.append({(head[i] if i < len(head) and head[i] else f"col{i}"): v for i, v in enumerate(cells)})
                 nos.append({"table": ti, "row": n})
+            else:
+                provenance.skipped("empty")
+        provenance.given(len(rows))
         if rows:
             out.append({"caption": " ".join(cap.get_text(" ", strip=True).split()) if cap else title, "headers": head, "rows": rows,
                         "pos": nos})

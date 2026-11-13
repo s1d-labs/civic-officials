@@ -13,6 +13,8 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
+import provenance
+
 FIELDS = ("dept", "level", "area", "area_regional", "post", "name", "name_regional", "phone", "email", "address", "state",
           "district", "office_id", "source", "last_updated", "lat", "lon")
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+(?:\.[\w-]+)+")
@@ -141,6 +143,9 @@ def grid(table, text=cell_text, pos=None):
             out.append(row)
             if pos is not None:
                 pos.append({"table": tno, "row": trn})
+        else:
+            provenance.skipped("empty")
+    provenance.given(len(out))     # row counts (provenance.py): the reader uses or skips these, the header row too
     return out
 
 

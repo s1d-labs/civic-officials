@@ -303,6 +303,9 @@ def main(run_fn=None, task="councillors"):
                     data["archived_at"] = max(af.used)
             n_data = len(recs)
             recs, files = trail.finish(recs, files, reader_method(item["payload"]))
+            n_skip = sum((trail.row_counts.get("rows_skipped") or {}).values())
+            if n_skip:          # data rows a reader left out (the reasons are on the trail record)
+                hub.metric("rows_skipped", n_skip)
             for attempt in range(5):
                 try:
                     for i in range(0, len(files), 100):      # source copies can make many files: links in chunks
@@ -339,8 +342,9 @@ def local(payload, run_fn=None):
         if r.status_code == 200 and (not r.encoding or r.encoding.lower() == "iso-8859-1"):
             r.encoding = r.apparent_encoding or "utf-8"
         return r if r.status_code == 200 else None
+    provenance.rows_reset()
     recs, files, why = (run_fn or run)({"key": "local", "payload": json.loads(payload)}, get)
-    print(json.dumps({"why": why, "records": len(recs), "files": [f[0] for f in files]}))
+    print(json.dumps({"why": why, "records": len(recs), "files": [f[0] for f in files], **provenance.rows(len(recs))}))
     for rid, d in recs[:3]:
         print(rid, {k: d.get(k) for k in ("name", "position", "party", "ward_no", "ward_name", "ward_code", "phone", "body", "page")})
 
