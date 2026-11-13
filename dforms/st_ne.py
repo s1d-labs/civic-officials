@@ -152,23 +152,35 @@ def pdf_blocks(text):
     for pg, ptext in enumerate(text.split("\f"), 1):
         lines = [(ln, raw, chunks(raw)) for ln, raw in enumerate(ptext.split("\n"), 1) if raw.strip()]
         people, pend, sec = [], [], ""
+        # a name without a title opens a person too when its line starts with a serial number and the name stands in the
+        # column of the titled names ("3   Kabita Debbarma, TCS, Gr-II   Deputy Director ...": Tripura, 2026-11-13 audit)
+        name_cols = [s0 for _, _, cs in lines for s0, c in cs if TITLE.match(c)]
+        untitled = set()
         for ln, raw, cs in lines:
-            if HEADER.search(raw) and not any(TITLE.match(c) for _, c in cs):
+            if len(cs) >= 2 and _kind(cs[0][1]) == "sno" and _kind(cs[1][1]) == "text" and not TITLE.match(cs[1][1]) and \
+                    any(abs(cs[1][0] - x) <= 2 for x in name_cols) and not _field_post(cs[1][1]) and \
+                    not re.search(r"(?i)\b(division|district|office|sub|block|circle|department|section|branch|unit|cell|"
+                                  r"cent(re|er)|icat|tehsil|zone|tripura|police|station|hospital|school|college)\b", cs[1][1]) and \
+                    re.fullmatch(r"[A-Za-z][A-Za-z .'-]{2,40}(,\s*[A-Za-z][\w .()-]{1,25}){0,3}", cs[1][1]):
+                untitled.add((ln, cs[1][0]))
+        TITLED = lambda ln, s0, c: TITLE.match(c) or (ln, s0) in untitled
+        for ln, raw, cs in lines:
+            if HEADER.search(raw) and not any(TITLED(ln, s0, c) for s0, c in cs):
                 provenance.skip_line(ln, 'skip: HEADER.search(raw) and not any(TITLE.match(c) for _, c in cs)')
                 continue
             for s0, c in cs:
-                if TITLE.match(c):
+                if TITLED(ln, s0, c):
                     if pend:
                         sec, pend = _esw.clean(" ".join(pend)), []
                     people.append({"name_cell": c, "col": s0, "post_cells": [], "phones": [], "emails": [], "page": pg,
                                    "line": ln, "line_text": raw, "section": sec, "other": []})
             kinds = [_kind(c) for _, c in cs]
-            if people and "phone" in kinds and not any(TITLE.match(c) for _, c in cs) and people[-1]["line"] < ln:
+            if people and "phone" in kinds and not any(TITLED(ln, s0, c) for s0, c in cs) and people[-1]["line"] < ln:
                 people[-1]["seen_phone"] = True
             elif people and "phone" in kinds and people[-1]["line"] == ln:
                 people[-1]["seen_phone"] = True
-            texts = [(s0, c) for (s0, c), k in zip(cs, kinds) if k == "text" and not TITLE.match(c)]
-            if (not any(TITLE.match(c) for _, c in cs) and people and "phone" in kinds and texts
+            texts = [(s0, c) for (s0, c), k in zip(cs, kinds) if k == "text" and not TITLED(ln, s0, c)]
+            if (not any(TITLED(ln, s0, c) for s0, c in cs) and people and "phone" in kinds and texts
                     and people[-1].get("seen_phone") and _field_post(texts[0][1]) and abs(texts[0][0] - people[-1]["col"]) <= 4):
                 people.append({"name_cell": "", "col": texts[0][0], "post_cells": [], "phones": [], "emails": [], "page": pg,
                                "line": ln, "line_text": raw, "section": sec, "other": []})
@@ -179,11 +191,11 @@ def pdf_blocks(text):
             continue
         pend_cells = []
         for ln, raw, cs in lines:
-            if HEADER.search(raw) and not any(TITLE.match(c) for _, c in cs):
+            if HEADER.search(raw) and not any(TITLED(ln, s0, c) for s0, c in cs):
                 provenance.skip_line(ln, 'skip: HEADER.search(raw) and not any(TITLE.match(c) for _, c in cs)')
                 continue
             for s0, c in cs:
-                if TITLE.match(c):
+                if TITLED(ln, s0, c):
                     continue
                 k = _kind(c)
                 if k == "sno":

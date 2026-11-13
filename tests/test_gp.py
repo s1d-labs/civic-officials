@@ -1,5 +1,6 @@
 """Offline tests of the gram panchayat secretary readers (dforms/gp_*.py) on saved pages in tests/data/gp/."""
 import json
+import re
 
 from esw_common import DATA, ROOT, check_records, fake_get, mod  # noqa: F401
 
@@ -127,3 +128,72 @@ def test_gp_mh_palghar_cards_and_pages():
     assert (r["lat"], r["lon"]) == (19.79327, 72.995973) and r["src_pos"] == {"page": 1, "card": 1}
     four = m.records((DATA / "gp/mh_palghar_vikramgad_p4.html").read_text(), p["url"] + "page/4/", p, 4, set())
     assert len(four) == 6 and all(d["src_pos"]["page"] == 4 for _, d in four)
+
+
+def _gz(name):
+    import gzip
+    return gzip.decompress((DATA / "gp_gj_tcm" / f"{name}_full.html.gz").read_bytes())
+
+
+def test_gp_gj_tcm_two_lists_of_one_taluka_keep_all_rows():
+    """Sailla (Surendranagar), full saved pages (bucket copies bd60fb97..., a27a8ee3...): Information-Talati has 46 TCM rows,
+    information-sarpanches 12 rows. Both give ids 1-2 ...; before, the second page replaced 12 of the first page's records
+    (34 of 46 left). Now: 46 + 12 = 58 records, unique ids."""
+    m, p = _gj("surendranagardp")
+    base = "https://surendranagardp.gujarat.gov.in/gu/taluka/Sailla/"
+
+    class A:
+        def __init__(self, b, url):
+            self.content, self.url, self.status_code = b, url, 200
+            self.text = b.decode("utf-8")
+    pages = {p["url"]: b'<select id="ddtaluka"><option value="7||Sailla">Sailla</option></select>',
+             base + "home": ('<a href="/gu/taluka/Sailla/Information-Talati">તલાટી કમ મંત્રી</a>'
+                             '<a href="/gu/taluka/Sailla/information-sarpanches">સરપંચશ્રીઓ</a>').encode("utf-8"),
+             base + "Information-Talati": _gz("sailla_talati"), base + "information-sarpanches": _gz("sailla_sarpanches")}
+
+    def get(url, method="GET", data=None, headers=None):
+        return A(pages[url], url) if url in pages else None
+    recs, files, why = m.fetch(p, get)
+    _common(recs)
+    talati = [d for _, d in recs if d["src_url"].endswith("Information-Talati")]
+    sar = [r for r, d in recs if d["src_url"].endswith("information-sarpanches")]
+    assert why == "" and len(talati) == 46 and len(sar) == 12 and len(recs) == 58
+    assert all(":information-sarpanches:" in r for r in sar)
+    assert dict(recs)["dept:gp_gj_tcm:surendranagar:sailla:1-2"]["src_url"].endswith("Information-Talati")
+
+
+def test_gp_gj_tcm_administrator_column():
+    """Rapar (Kutch) sarpanch list, full saved page (bucket copy a43e451c...): 82 rows; 53 name a sarpanch, 29 have no sarpanch
+    ("-") and name the administrator (વહીવટદાર) with the one mobile. Before, the 29 administrator rows were dropped."""
+    m, p = _gj("kutchdp")
+    recs = m.records(_gz("rapar_sarpanch").decode("utf-8"), "https://kutchdp.gujarat.gov.in/gu/taluka/Rapar/sarpanch-list", p, "Rapar")
+    _common(recs)
+    kinds = [d["kind"] for _, d in recs]
+    assert len(recs) == 82 and kinds.count("sarpanch") == 53 and kinds.count("administrator") == 29
+    assert all(d.get("phone") for _, d in recs)
+    a = next(d for r, d in recs if r.endswith(":a"))
+    assert a["name"] == "જે.વી.પ્રજાપતિ" and a["phone"] == "9879670950" and a["post_regional"] == "વહીવટદાર"
+
+
+def test_gp_gj_tcm_deputy_age_and_name_phone_columns():
+    """Full saved pages (2026-11-12/13). Sanand: sarpanch and deputy sarpanch columns -> 69 + 69 records (before: 69 records with
+    both names in one). Detroj: a page of deputies keeps its ids (":s") with post Deputy Sarpanch. Bavala: the name column is
+    "હરીફ ઉમેદવાર"; the age and "first term?" columns are not names (before: 48 records named "હા | 35"). Bardoli: TCM name and
+    mobile in one cell -> name and phone apart (57 of 65 rows have a mobile)."""
+    def run(name, url, taluka):
+        recs = mod("gp_gj_tcm").records(_gz(name).decode("utf-8"), url, {"district": "Ahmedabad", "host": "x", "state": "GJ"}, taluka)
+        _common(recs)
+        return recs, dict(recs)
+    recs, d = run("sanand_sarpanch_deputy", "https://ahmedabaddp.gujarat.gov.in/gu/taluka/Sanand/Sarpanch-Deputy-Superintendent-List", "Sanand")
+    assert len(recs) == 138 and sum(1 for r in d if r.endswith(":d")) == 69
+    assert d["dept:gp_gj_tcm:ahmedabad:sanand:1-2:s"]["name"] == "ઝુબેદાબેન હબીબભાઇ કુરેશી"
+    assert d["dept:gp_gj_tcm:ahmedabad:sanand:1-2:d"]["name"] == "ઇમરાનભાઇ એહમદભાઇ વાઘેલા"
+    assert d["dept:gp_gj_tcm:ahmedabad:sanand:1-2:d"]["phone"] == "8866688828"
+    recs, d = run("detroj_upsarpanch", "https://ahmedabaddp.gujarat.gov.in/gu/taluka/Detroj/Upsarpanch-details", "Detroj")
+    assert len(recs) == 33 and all(r.endswith(":s") and x["post"] == "Deputy Sarpanch" for r, x in recs)
+    recs, d = run("bavala_sarpanch", "https://ahmedabaddp.gujarat.gov.in/gu/taluka/Bavala/Sarpanch-list", "Bavala")
+    assert len(recs) == 48 and d["dept:gp_gj_tcm:ahmedabad:bavala:1-2:s"]["name"] == "પૃથ્વીપાલસિંહપ્રતાપસિંહ રાઠોડ"
+    assert not any("|" in x["name"] for _, x in recs)
+    recs, d = run("bardoli_tcm", "https://suratdp.gujarat.gov.in/gu/taluka/Bardoli/Tcm-list", "Bardoli")
+    assert len(recs) == 65 and sum(1 for _, x in recs if x.get("phone")) == 57
+    assert not any(re.search(r"[0-9]{6}", x.get("name") or "") for _, x in recs)

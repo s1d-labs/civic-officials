@@ -141,3 +141,74 @@ def test_results_page_judged_by_names():
     assert audit.verdict_of(src, 300, 1, 1 / 300, 0.0, 0.5, None, results=True)[0] == "check"
     assert audit.verdict_of(src, 300, 1, 1 / 300, 0.0, 1.0, None)[0] == "low"
     assert audit.results_page("pri_br") and not audit.results_page("power_mvvnl")
+
+
+def test_card_lines_are_not_blocks_the_cards_are():
+    """Kamareddy hospitals, page 3 (S3WaaS public utility, the full saved page): 12 cards (li.public-utlty-catg), each with
+    lines "Email : | x", "Category/Type : | y". The lines are not the blocks; the 12 cards are, and the reader keeps all 12."""
+    from dforms import emerg_hosp_s3waas
+    body = gzip.decompress((DATA / "emerg_hosp_kamareddy.html.gz").read_bytes())
+    url = "https://kamareddy.telangana.gov.in/public-utility-category/hospitals/page/3/"
+    recs = emerg_hosp_s3waas.records([(url, body.decode("utf-8"))], {"url": url})
+    assert len(recs) == 12
+    src = audit.read_source(body, "text/html", "x.html.gz")
+    assert len(src.rows) == 12 and all(r["title"] for r in src.rows) and "repeated blocks" in src.note
+    a = audit.audit_source(src, [(rid, "", d.get("phone") or "", d.get("email") or "") for rid, d in recs], "dforms.emerg_hosp_s3waas")
+    assert a["verdict"] == "ok" and a["records_person"] == 12
+
+
+def test_pri_kl_member_pages_and_ward_table():
+    """Kerala SEC (cforms/pri_kl), full saved pages. A member page holds one member: its blocks are the site menus, the empty
+    dialogs (old template) or the sections of the one profile (2026 template), all named by pri_kl.AUDIT_LEAVES_OUT. The ward
+    table wyrw/2371 lists 24 members; their records take the member pages as source and name the table in list_url
+    (seeds/build_audit.py counts them for the table): 24 of 24 rows, ok."""
+    from cforms import pri_kl
+    for name, n_out in (("pri_kl_member_old", 5), ("pri_kl_member_2026", 8)):
+        src = audit.read_source(gzip.decompress((DATA / f"{name}.html.gz").read_bytes()), "text/html", "x.html.gz")
+        a = audit.audit_source(src, [("pri:KL:x:w1", "Member", "", "")], "cforms.pri_kl")
+        assert a["rows_left_out"] == n_out and a["rows_visible"] == 0 and a["verdict"] == "not_tabular"
+    body = gzip.decompress((DATA / "pri_kl_wyrw_2371.html.gz").read_bytes())
+    url = "https://sec.kerala.gov.in/public/wyrw/2371"
+    rows = pri_kl.ward_rows(body.decode("utf-8"), url)
+    assert len(rows) == 24 and all(r[3] and r[7] for r in rows)
+    recs = [(f"pri:KL:gp:x:w{r[1]}", r[3], "", "") for r in rows]
+    a = audit.audit_source(audit.read_source(body, "text/html", "x.html.gz"), recs, "cforms.pri_kl")
+    assert a["verdict"] == "ok" and a["records_person"] == 24 and a["rows_matched"] == 24
+    # only the 2 records whose member page did not answer take the table as source: that alone is low
+    assert audit.audit_source(audit.read_source(body, "text/html", "x.html.gz"), recs[:2], "cforms.pri_kl")["verdict"] == "low"
+
+
+def test_tn_heads_judged_by_the_heads_names():
+    """Dharapuram, the WordPress search answer "chair" (the full saved answer, 673 KB): 343 person-like rows (councillor list,
+    schemes, disclosures); the reader keeps the 2 head pages (chair, vice-chair). cforms/tn.py holds the councillors; the audit
+    judges tn_heads by the heads' names (AUDIT_HEADS)."""
+    from cforms import tn_heads
+    body = gzip.decompress((DATA / "tn_heads_dharapuram.json.gz").read_bytes())
+    url = "https://www.tnurbantree.tn.gov.in/dharapuram/wp-json/wp/v2/pages?search=chair"
+    recs = tn_heads.parse([(url, body.decode("utf-8"))], {"site": "dharapuram"})
+    assert sorted(rid for rid, _ in recs) == ["councillor:TN:head:dharapuram:chair", "councillor:TN:head:dharapuram:vice-chair"]
+    a = audit.audit_source(audit.read_source(body, "application/json", "x.json.gz"), recs_of(recs), "cforms.tn_heads")
+    assert a["rows_visible"] == 343 and a["verdict"] == "ok" and a["reason"].startswith("heads only: 2 heads")
+
+
+def test_photo_alt_text_counts_as_source_text():
+    """e-Nigam member list (Mohali, cforms/cr_pb): the members' names are only in the photos' alt / title. With them in the source
+    text, the 50 member-list records and the head are found by name (names_found 1.0), and the state switcher is left out."""
+    from cforms import cr_pb
+    body = gzip.decompress((ROOT / "tests" / "data" / "cr_pb_mohali_vice_detail_full.html.gz").read_bytes())
+    t = body.decode("utf-8")
+    d = cr_pb.detail(t)
+    recs = [("vice", d["name"], d.get("phone") or "", "")] + [(m["ward_no"], m["name"], m["phone"], "") for m in cr_pb.member_list(t)]
+    a = audit.audit_source(audit.read_source(body, "text/html", "x.html.gz"), recs, "cforms.cr_pb")
+    assert a["names_found"] == 1.0 and a["records_person"] == 51 and a["rows_matched"] == 51 and a["rows_left_out"] >= 30
+
+
+def test_vacant_posts_and_police_headers_are_not_data_rows():
+    """UP SEC winner list rows of a vacant post ("पद रिक्त", no person) and the UP Police header rows ("S.No | Name of IPS
+    Officer | Rank | Posted as | CUG / Mobile No. | ...") are not data rows; a real winner row is."""
+    vacant = ["6 - जोया", "1 - औरंगाबाद", "2", "अनुसूचित जाति महिला", "-", "-", "-", "पद रिक्त"]
+    assert not audit.person_row(vacant)
+    assert not audit.person_row(["S.No", "Name of IPS Officer", "Rank", "Posted as", "CUG / Mobile No.", "Office No.", "Email Id"])
+    assert audit.person_row(["6", "Barawal", "General (Woman)", "2", "GHEESA KANWAR", "BHERU SINGH", "F", "8990836618"])
+    # a vacant post with its CUG phone and office e-mail is kept (MVVNL: the reader makes a record of it)
+    assert audit.person_row(["1", "Vacant", "Superintending Engineer(D)", "Lucknow", "MAHANAGAR", "8004910763", "se.mahanagar@mvvnl.org"])

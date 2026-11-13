@@ -6,7 +6,10 @@ Runs on dev-vps-3 (needs psql on scrape_hub and civic). Reads:
   2. the data records with a src from civic.official_raw, the full copy of the family's records that civic-india/officials_pull.sh
      makes (not the live hub table): name, phones, e-mail and the trail of each record;
   3. the reader of each trail (trail records in the same copy).
-A source is queued when it has a saved copy and at least one record. Records that name a bucket copy themselves (src.file,
+A source is queued when it has a saved copy and at least one record. A record made from a list row whose source is the row's
+own detail page (data["list_url"] = the list page, e.g. cforms/pri_kl: SEC ward table -> member page) also counts for every saved
+copy of that list page, with its regional name when it has one (the list page is in the regional script); a record read from
+one copy of a list page also counts for the other copies of that page. Records that name a bucket copy themselves (src.file,
 provenance.file_src) use that copy. Small sources go together: at most 50 sources and 2000 records per item.
 
   python seeds/build_audit.py                  counts only
@@ -66,7 +69,7 @@ def records(shas=None):
     if shas:
         cond = " and data->'src'->>'sha256' in (" + ",".join(f"'{s}'" for s in shas) + ")"
     q = (f"select json_build_array(data->'src'->>'sha256', project, record_id, data->>'trail', {NAME}, {PHONES}, data->>'email', "
-         f"data->'src'->>'file', data->'src'->>'url') from civic.official_raw where data ? 'src' and record_id not like 'src:%' "
+         f"data->'src'->>'file', data->'src'->>'url', data->>'list_url', data->>'name_regional') from civic.official_raw where data ? 'src' and record_id not like 'src:%' "
          f"and record_id not like 'trail:%' and coalesce(data->>'type', '') not in ('source_copy', 'trail', 'audit_source'){cond}")
     return psql("civic", q)
 
@@ -93,12 +96,22 @@ def build(sample=0, projs=None):
     by_sha = defaultdict(list)
     meta = {}
     no_copy = Counter()
-    for sha, proj, rid, trail, name, phones, email, file, url in records():
+    by_url = defaultdict(list)
+    for sha, s in index.items():
+        if s["url"]:
+            by_url[(s["project"], s["url"])].append(sha)
+    for sha, proj, rid, trail, name, phones, email, file, url, list_url, name_reg in records():
         if not sha:
             continue
         by_sha[sha].append((rid, name or "", phones or "", email or ""))
         m = meta.setdefault(sha, {"trails": Counter(), "project": proj, "file": file, "url": url})
         m["trails"][trail_reader.get(trail or "", "")] += 1
+        if list_url:       # also the other saved copies of the list page when the record's source is the list page itself
+            for lsha in by_url.get((index[sha]["project"] if sha in index else proj, list_url), ()):
+                if lsha != sha:
+                    by_sha[lsha].append((rid, name_reg or name or "", phones or "", email or ""))
+                    lm = meta.setdefault(lsha, {"trails": Counter(), "project": proj, "file": None, "url": list_url})
+                    lm["trails"][trail_reader.get(trail or "", "")] += 1
     sources = []
     for sha, recs in by_sha.items():
         m = meta[sha]

@@ -21,6 +21,13 @@ from dforms._police import clean, email, gz, phones, rec, slug, uniq
 import provenance
 
 METHOD = "html table (S3WaaS police page)"     # source trail (provenance.py): how this reader reads its sources
+# reader audit (audit.py): no drop (2026-11-13: 14 cards on the saved pages, 14 records, one per card). A card with no phone
+# or e-mail names no person, so it is a record but not a "person" record. On pages without tables the audit counts page furniture
+# as blocks: the S3WaaS accessibility widget, the state banner, the site menus and footer, and on a page of 1-2 cards the lines of
+# a card ("Email : | x"; the card is the block). They hold no other person.
+AUDIT_LEAVES_OUT = (r"^(हिन्दी \| )?(Accessibility Links|Accessibility Tools|High Contrast|Font Size Increase|Big Cursor|Skip to|"
+                    r"Home \| About District|Useful Links \| Website Policies|Email :|Website Link :|Category/Type :|Phone :|"
+                    r"Pincode :)|(सरकार|शासन|அரசு|ସରକାର|সরকার|ಸರ್ಕಾರ|સરકાર) \| (?i:gov)")
 
 M = "police3_cg"
 

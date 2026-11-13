@@ -24,6 +24,10 @@ import provenance
 
 METHOD = "html table (ASP.NET GridView, postback paging)"
 MODULE = "st_jk_gad"
+# jkgad.nic.in left menus (Former Chief Secretaries ..., Orders, Telephone Directory ...): blocks the reader audit (audit.py)
+# counts; they hold no person. The audit leaves them out.
+AUDIT_LEAVES_OUT = (r"^(Former Chief Secretaries|Orders \| Statutory|Administrative Departments|Accord of Prosecution|"
+                    r"Telephone Directory|Vacancy Notifications)")
 PAGES = {"ias": "https://jkgad.nic.in/En/CivilList.aspx", "kas": "https://jkgad.nic.in/En/KAS_Officers.aspx",
          "email": "https://jkgad.nic.in/leftMenu/Email_Directory.aspx?depType=D"}
 CADRES = {"A": "AGMUT", "S": "Erstwhile JK Cadre", "O": "Outside", "U": "Inter Cadre Deputation"}

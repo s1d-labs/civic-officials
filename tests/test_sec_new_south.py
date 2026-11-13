@@ -85,7 +85,12 @@ def test_kl_heads_members_page_adoor():
          "body_type": "Municipality", "district": "Pathanamthitta", "name_list": "Adoor Municipality", "lgd_code": "252262"}
     url = p["url"] + "/members"
     recs = kl_heads.from_members(gz("kl_heads/adoor_members.html.gz"), p, url)
-    assert set(recs) == {"councillor:KL:head:M030100:chair", "councillor:KL:head:M030100:vice"}
+    heads = {k for k in recs if ":head:" in k}
+    assert heads == {"councillor:KL:head:M030100:chair", "councillor:KL:head:M030100:vice"}
+    # every one of the 29 member cards is also a member record (wards 1-29)
+    assert {k for k in recs if ":site:" in k} == {f"councillor:KL:site:M030100:w{i}" for i in range(1, 30)} and len(recs) == 31
+    m = recs["councillor:KL:site:M030100:w13"]
+    assert m["name"] == "Reena Samuel" and m["position"] == "Councillor" and m["source_kind"] == "body website"
     c = recs["councillor:KL:head:M030100:chair"]
     assert c["name"] == "Reena Samuel" and c["own_ward"] == "13" and c["own_ward_name"] == "Nethaji" and c["ward_no"] == "chair"
     assert c["src_pos"] == {"selector": "div.member-card", "index": 12} and c["url"].endswith("/en/member/6cd6cace-31ad-490c-a02d-689a4402856b")
@@ -94,6 +99,18 @@ def test_kl_heads_members_page_adoor():
     # standing committee chairmen are not heads
     assert kl_heads.post_of("Works Standing Committee Chairman") is None
     assert kl_heads.post_of("Vice Chairperson & Chairman Standing Committee for Finance")[0] == "vice"
+
+
+def test_kl_heads_keeps_every_member_koyilandy():
+    """Koyilandy (quilandymunicipality.lsgkerala.gov.in/en/members, the full saved page): 46 member cards, wards 1-46. No SEC
+    member page holds this body (2 records), so before 2026-11-13 the reader kept 2 of 46 people; now 2 heads + 46 members."""
+    from cforms import kl_heads
+    url = "https://quilandymunicipality.lsgkerala.gov.in/en/members"
+    recs = kl_heads.from_members(gz("kl_heads/koyilandy_members.html.gz"), {"code": "M110300", "body": "Koyilandy"}, url)
+    members = {k: d for k, d in recs.items() if ":site:" in k}
+    assert len(recs) == 48 and len(members) == 46
+    assert set(members) == {f"councillor:KL:site:M110300:w{i}" for i in range(1, 47)}
+    assert all(d["name"] and d["list_url"] == url and d["position_local"] for d in members.values())
 
 
 def test_kl_heads_home_page_fallback():

@@ -27,7 +27,11 @@ from bs4 import BeautifulSoup
 from cforms.cr_common import clean
 import provenance
 
-METHOD = "html page (member detail pages, home page cards)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "html page (member detail pages, home page cards)"
+# reader audit (audit.py): every page of the platform carries the state switcher, one block per body ("Abohar | House - House |
+# Councillor - 50 | House Meetings - 0 | F&CC Meetings - 0 | Website - ..."): 62 to 114 blocks that hold no person. A member detail
+# page holds one member.
+AUDIT_LEAVES_OUT = r"House Meetings - "     # source trail (provenance.py): how this reader reads its sources
 
 HOST = "https://mcpatiala.punjab.gov.in"
 ELECTION = "Punjab municipal general election 21.12.2024 (e-Nigam Digital MC-House member list)"
@@ -83,6 +87,24 @@ def detail(html):
     return d
 
 
+def member_list(html):
+    """The body's member list on a member detail page of the 2026 bodies (div#tblDataList, one a.card-box per member): [{name
+    (the photo's alt / title), ward_no, address, phone, email, card_no}]. Members without a name keep their ward and phone."""
+    out = []
+    for k, c in enumerate(BeautifulSoup(html, "lxml").select("#tblDataList .card-box"), 1):
+        img = c.find("img")
+        name = clean((img.get("alt") or img.get("title") or "") if img else "") or None
+        td = c.select_one("table.contact-info-label td")
+        _, ward = post_ward(td.get_text(" ", strip=True) if td else "")
+        li = {x: clean(e.get_text(" ", strip=True)) or None for x in ("address", "phone", "email")
+              for e in [c.select_one(f"li.{x}")] if e is not None}
+        if not (name or li.get("phone") or li.get("email")):
+            provenance.skip_row(c, "skip: card without name, phone or e-mail")
+            continue
+        out.append({"name": name, "ward_no": ward, **li, "card_no": k})
+    return out
+
+
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
 
@@ -97,8 +119,12 @@ def heads(p, get, home, cs, files):
     only the cards with a post (President, Vice President, Senior Vice President, Mayor, Deputy Mayors), elected by the members
     after the poll. Ids councillor:PB:<slug>:chair / vice / svice, so the ward records of cforms/pb.py are not replaced; the
     head's own ward goes to "seat_ward". A home page without such a card gives no records and no failure (not elected yet,
-    or not posted)."""
-    recs = []
+    or not posted).
+    The head's detail page also lists every member of the body (member_list(): name, ward, address, mobile). LBPAMS gives no
+    mobiles, so these become records councillor:PB:<slug>:site:<ward> (source_kind "e-Nigam member list"); cforms/pb.py holds
+    the same seat with party and votes (join on body + ward). Reader audit 2026-11-13: Mohali, Abohar, Batala, Hoshiarpur and
+    Barnala showed 49-50 members with mobiles each, and 13 of those 247 mobiles were in no record."""
+    recs, listed = [], {}
     for c in cs:
         post = c.get("position") or next((h for h in sorted(HEAD_KEYS, key=len, reverse=True)
                                           if (c.get("card") or "").lower().startswith(h.lower())), None)
@@ -116,7 +142,17 @@ def heads(p, get, home, cs, files):
                "src_pos": {"selector": ".card-body .row"} if d else {"selector": ".gallery_card2", "card": c.get("card_no")},
                "card": c.get("card"), "method": "html page (member detail)" if d else "html cards (home page)"}
         recs.append((f"councillor:PB:{p.get('slug') or slug(p['body'])}:{key}", {k: v for k, v in rec.items() if v not in (None, "")}))
-    return recs, files, ""
+        for m_ in (member_list(m.text) if m is not None and not listed else []):
+            rid = f"councillor:PB:{p.get('slug') or slug(p['body'])}:site:" + (m_["ward_no"] or f"card{m_['card_no']}")
+            listed.setdefault(rid, {k: v for k, v in {
+                "type": "councillor", "state": "PB", "body": p["body"], "body_type": p.get("body_type"),
+                "district": p.get("district"), "lgd_code": p.get("lgd_code"), "ward_no": m_["ward_no"], "name": m_["name"],
+                "position": "Councillor", "phone": m_.get("phone"), "email": m_.get("email"), "address": m_.get("address"),
+                "source_kind": "e-Nigam member list", "election": p.get("election") or "Punjab municipal general election 2026 "
+                "(poll 26.05.2026)", "url": c["url"], "list_url": c["url"], "src_url": c["url"],
+                "src_pos": {"selector": "#tblDataList .card-box", "card": m_["card_no"]}, "method": "html cards (member list)"}.items()
+                if v not in (None, "")})
+    return recs + list(listed.items()), files, ""
 
 
 def fetch(p, get):

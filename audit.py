@@ -35,7 +35,10 @@ Per source one record "audit:<sha256>" (type audit_source):
                     takes the place of coverage in the verdict.
 
 A reader can name the tables it leaves out on purpose: AUDIT_LEAVES_OUT = r"<regex>" in its module, matched against the text of
-a table's first row (e.g. power_mvvnl: the head quarter, store and workshop tables). Those rows are counted in rows_left_out.
+a table's first row (e.g. power_mvvnl: the head quarter, store and workshop tables), or against the whole text of a block on a
+page without tables (menus, forms). Those rows are counted in rows_left_out.
+A reader of election results (AUDIT_RESULTS = True) or of the heads of bodies from a page of all members (AUDIT_HEADS = "<the
+reader that holds the other members>") is judged by the names of its records on the page, not by the row count.
 
 `python audit.py --local items.json [--keys FILE] [--limit N] [--out FILE]` runs items without the hub: it reads the bucket
 with a read-only key (an env file with B2_BUCKET, B2_ENDPOINT, B2_REGION, AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY).
@@ -66,7 +69,10 @@ HONOR_TOKENS = {"shri", "sri", "smt", "shrimati", "kumari", "km", "kum", "dr", "
                 "tmt", "selvi", "श्री", "श्रीमती", "सुश्री", "डॉ", "कु", "ias", "ips", "ifs", "pcs", "hcs", "ras", "late"}
 HEADER_WORDS = {"name", "names", "designation", "post", "s no", "sno", "sl no", "sr no", "s.no", "sl.no", "sr.no", "mobile",
                 "phone", "email", "e-mail", "contact", "contact no", "mobile no", "phone no", "address", "office", "नाम", "पद",
-                "क्रम", "क्र", "मोबाइल", "फोन", "पदनाम", "क्रमांक", "officer", "name of officer", "name of the officer"}
+                "क्रम", "क्र", "मोबाइल", "फोन", "पदनाम", "क्रमांक", "officer", "name of officer", "name of the officer", "rank",
+                "posted as", "email id", "office no", "cug", "cug mobile no", "name of ips officer", "name of pps officer"}
+# a post that the source marks vacant, with no phone or e-mail, names no person: not a data row (UP SEC lists: "पद रिक्त")
+VACANT = re.compile(r"(?i)(पद\s*रिक्त|^\s*रिक्त\s*$|^\s*vacant\s*$|\bpost\s+(?:is\s+)?vacant\b)")
 # words of posts, offices and places: a cell with one of them is not a person's name ("Executive Engineer", "Electricity Test Division")
 NOT_NAME = set("""engineer engineers officer officers division divisional circle electricity distribution department dept office offices
 assistant asst executive superintending chief deputy dy joint addl additional commissioner collector secretary director manager
@@ -77,7 +83,7 @@ in at to from with total grand list name designation contact phone mobile email 
 government govt state india officer-in-charge incharge in-charge sdo sdm bdo ceo cmo dm sp ssp dsp sho circle-officer area
 nagar nigam parishad taluk tehsil mandal village gram court hospital school college bank road street building floor
 अधिकारी अभियंता कार्यालय विभाग जिला सहायक अधिशासी अधीक्षण मुख्य उप निरीक्षक सचिव थाना खंड प्रखंड ब्लॉक नाम पद मोबाइल
-क्रम संख्या पता""".split())
+क्रम संख्या पता modal""".split())
 PHONE = re.compile(r"(?<![\d])(?:\+?91[\s\-]?|0)?(?:[6-9]\d{4}[\s\-]?\d{5}|\d{2,4}[\s\-/]{0,2}\d{6,8})(?![\d])")
 EMAIL = re.compile(r"(?i)[a-z0-9._%+\-]+\s*(?:@|\[\s*at\s*\]|\(\s*at\s*\)|\{\s*at\s*\})\s*[a-z0-9\-]+(?:\s*(?:\.|\[\s*dot\s*\]|"
                    r"\(\s*dot\s*\))\s*[a-z0-9\-]+)+")
@@ -154,11 +160,14 @@ def is_header(cells):
 
 
 def person_row(cells):
-    """A data row: >= 3 filled cells and a phone, an e-mail or a name-like cell; header rows are not."""
+    """A data row: >= 3 filled cells and a phone, an e-mail or a name-like cell; header rows are not, nor vacant posts without
+    a phone or e-mail."""
     filled = [c for c in cells if c and c.strip()]
     if len(filled) < 3 or is_header(filled):
         return False
-    return has_contact(" | ".join(filled)) or any(name_like(c) for c in filled)
+    if has_contact(" | ".join(filled)):          # a vacant post with its CUG phone or office e-mail is still a row to keep
+        return True
+    return not any(VACANT.search(c) for c in filled) and any(name_like(c) for c in filled)
 
 
 # ---- sources
@@ -232,7 +241,9 @@ def html_source(body):
         if blocks:
             src.rows = blocks
             src.note = "no table rows: repeated blocks (cards, list items)"
-    src.text = " | ".join(x for x in doc.itertext())
+    # a photo's alt / title often is the only place of the person's name (e-Nigam member lists, cforms/cr_pb)
+    alts = [v for img in doc.iter("img") for v in (img.get("alt"), img.get("title")) if v and v.strip()]
+    src.text = " | ".join(x for x in doc.itertext()) + (" | " + " | ".join(alts) if alts else "")
     return src
 
 
@@ -246,7 +257,7 @@ def repeated_blocks(doc):
             continue
         sig = (el.tag, " ".join(sorted((el.get("class") or "").split())))
         groups.setdefault(sig, []).append(el)
-    best = []
+    best, found = [], []
     for sig, els in groups.items():
         if len(els) < 3:
             continue
@@ -255,11 +266,29 @@ def repeated_blocks(doc):
             parts = [" ".join(t.split()) for t in el.itertext()]
             parts = [t for t in parts if t]
             if 2 <= len(parts) <= 40 and (has_contact(" | ".join(parts)) or any(name_like(t) for t in parts)):
-                rows.append({"cells": parts, "hidden": False, "table": None, "title": "", "el": el})
+                # a block's title is its own text, so AUDIT_LEAVES_OUT can name blocks too (menus, forms, page furniture)
+                rows.append({"cells": parts, "hidden": False, "table": None, "title": " | ".join(parts)[:200], "el": el})
+        # a block inside another block of the same signature is not counted again
+        ids = {id(r["el"]) for r in rows}
+        rows = [r for r in rows if not any(id(a) in ids for a in r["el"].iterancestors())]
+        if len(rows) >= 3:
+            found.append(rows)
         # prefer the innermost signature with as many blocks: more blocks first, then fewer pieces per block
         if len(rows) > len(best) or (best and len(rows) == len(best) and
                                      sum(len(r["cells"]) for r in rows) < sum(len(r["cells"]) for r in best)):
             best = rows
+    # the lines of a card ("Email : | x", "Phone : | y": 2 pieces each) are not blocks of their own: when most of the best
+    # blocks are such lines inside the blocks of another signature (the cards), the cards are the blocks
+    if best and sorted(len(r["cells"]) for r in best)[len(best) // 2] <= 2:
+        cards = None
+        for rows in found:
+            if rows is best or len(rows) >= len(best):
+                continue
+            outer = {id(r["el"]) for r in rows}
+            n_in = sum(1 for r in best if any(id(a) in outer for a in r["el"].iterancestors()))
+            if n_in >= 0.6 * len(best) and (cards is None or len(rows) > len(cards)):
+                cards = rows
+        best = cards or best
     for r in best:
         r.pop("el", None)
     return best if len(best) >= 3 else []
@@ -415,10 +444,16 @@ def reader_mod(reader):
 
 
 def results_page(reader):
-    """True when the reader keeps one record per seat from a page that lists every candidate (election results:
-    AUDIT_RESULTS = True in its module). Its rows are candidates, so the row count says nothing; the names say it all."""
+    """How the reader's records are judged when its pages list more people than it keeps on purpose; "" = by the row count.
+    "results page": one record per seat from a page that lists every candidate (election results: AUDIT_RESULTS = True).
+    "heads only": the heads (Mayor, Chairperson, President and their deputies) from a page that lists every member, whose other
+    members another reader holds (AUDIT_HEADS = "<that reader>"). The rows say nothing then; the names say it all."""
     mod = reader_mod(reader) if reader else None
-    return bool(getattr(mod, "AUDIT_RESULTS", False))
+    if getattr(mod, "AUDIT_RESULTS", False):
+        return "results page"
+    if getattr(mod, "AUDIT_HEADS", False):
+        return "heads only"
+    return ""
 
 
 def leaves_out(reader):
@@ -529,10 +564,11 @@ def verdict_of(src, n_rows, person, coverage, row_match, names_found, phones_fou
     if not n_rows:
         return "not_tabular", src.note or f"no data rows found in the {src.kind} source"
     found = names_found if names_found is not None else phones_found
-    if results:     # one winner per seat from a list of candidates: the names decide, not the row count
+    if results:     # one winner per seat from a list of candidates (or the heads from a list of members): the names decide
+        kept = "winners" if results == "results page" else "heads"
         if found is not None and found >= VERDICT_OK_NAMES:
-            return "ok", f"results page: {person} winners from {n_rows} candidate rows"
-        return "check", f"results page: {0 if found is None else found:.0%} of the winners' names are in the source"
+            return "ok", f"{results}: {person} {kept} from {n_rows} rows"
+        return "check", f"{results}: {0 if found is None else found:.0%} of the {kept}' names are in the source"
     eff = coverage if coverage <= 1.1 else row_match
     found = names_found if names_found is not None else phones_found
     if eff < VERDICT_LOW:

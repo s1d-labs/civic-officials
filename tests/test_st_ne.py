@@ -174,3 +174,15 @@ def test_generic_pages():
     assert "name" not in lab and lab["office"].startswith("Office of the Labour Commissioner")
     for v in got.values():
         trail_ok(v)
+
+
+def test_tripura_untitled_name_with_serial_is_a_person():
+    """Welfare for Minorities list (the full saved file, 2026-11-13 audit): "3  Kabita Debbarma, TCS, Gr-II  Deputy Director" has
+    no title; she was not read and her phone went to row 2. Records 2 -> 3."""
+    t = _field.pdf_text((DATA / "st_tr_minorities.pdf").read_bytes())
+    r = st_tr_dirs.parse(t, {"url": "https://tripura.gov.in/f/Welfare_for_Minorities.pdf", "org": "Welfare for Minorities",
+                             "group": "department"})
+    assert [(d.get("name"), d["phone"]) for _, d in r] == [("Shri Sukla Charan Noatia", "0381-241-3388"),
+                                                          ("Shri. Nirmal Adhikari, IAS", "9436540890"),
+                                                          ("Kabita Debbarma, TCS", "+91-9366113876")]
+    assert r[2][1]["email"] == "mwtripura@gmail.com"

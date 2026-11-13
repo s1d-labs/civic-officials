@@ -19,6 +19,10 @@ from cforms.cp_common import column, emails, keyed, phones, record, table_rows, 
 import provenance
 
 METHOD = "html table (in a WordPress search answer: json api)"     # source trail (provenance.py): how this reader reads its sources
+# reader audit (audit.py): the WordPress search answer also holds the citizen's charter (service time limits: "i) COMPLAINTS /
+# DEFECTS IN WATER SUPPLY SERVICES", "ii) SOCIAL SERVICES") and the council meeting calendar ("2022 2023 2024 ..."): no people.
+# Bhavani (2026-11-13): 27 councillor rows + the header = 28 rows, 27 records. Karaikudi PDF: 36 wards, ward 14 vacant: 35 records
+AUDIT_LEAVES_OUT = r"^((?:i|ii|iii|iv|v|vi)\)\s|20\d\d \d{4} )"
 
 BASE = "https://www.tnurbantree.tn.gov.in/"
 TITLE = re.compile(r"^(?:(thiru|tmt|selvi|thirumathi|mr|mrs|ms|dr|adv)\b\.?|(?:திருமதி|திரு|செல்வி|முனைவர்|டாக்டர்)(?=[\s.]))\.?\s*", re.I)

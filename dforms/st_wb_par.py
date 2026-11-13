@@ -25,6 +25,9 @@ import provenance
 
 METHOD = "pdf text (pdftotext -layout) row blocks by column; html table (header names)"
 MODULE = "st_wb_par"
+# par.wb.gov.in site menus (About Department, Acts & Rules, Notifications & Orders, List of Officers, Publication / Reports):
+# blocks the reader audit (audit.py) counts; they hold no person. The audit leaves them out.
+AUDIT_LEAVES_OUT = r"^(About Department|Acts & Rules|Notifications & Orders|List of Officers|Publication / Reports) \|"
 IAS_PAGE = "https://par.wb.gov.in/iasdirectory.php"
 IAS_PDF = "https://par.wb.gov.in/writereaddata/WBCSdirectory/Posting%20of%20IAS%20Officers%20as%20on%2004112026.pdf"
 KEY_PEOPLE = "https://par.wb.gov.in/key_people.php"
