@@ -1,0 +1,195 @@
+ 
+ <!DOCTYPE html>
+<html lang="en-US">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home Page</title>
+
+    <link type="text/css" href="/Content/calendar_assets/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="/Content/calendar_assets/css/calendar_home.css" rel="stylesheet">
+    <link type="text/css" href="/Content/home/css/style.css" rel="stylesheet">
+    
+    
+
+    <link rel="stylesheet" type="text/css" href="/Content/calendar_assets/css/simptip.min.css" media="screen,projection" />
+    
+
+ 
+    
+    <style>
+        &.active span &:first-of-type transform rotate(-45deg) &:last-of-type transform rotate(45deg)
+    </style>
+    <style>
+        a {
+            color: black !important;
+        }
+    </style>
+</head>
+<body>
+
+   <header class="bg-black">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-5">
+                <a href="../Home/ViewCalendar" class="d-flex flex-wrap">
+                    <img src="/Content/calendar_assets/images/logo2.png" title="top-logo" style="width: 81px; height: 76px;" />
+                    
+                <span class="sitename">Government Diary and Calendar, Govt. of Madhya Pradesh</span>
+                </a>
+                
+            </div>
+            <div class="col-md-7 text-md-right">
+                <a href="/Home/GovermentHoliday" class="text-white py-2 d-inline-block">शासकीय अवकाश <span class="pili-line">|</span></a>
+                <a href="/Home/OptionalHoliday" class="text-white  py-2 d-inline-block">ऐच्छिक (आप्शनल) अवकाश <span class="pili-line">|</span></a>
+                
+                <a href="../Home/ViewCalendar" class="text-white d-inline-block"> <img src="/Content/calendar_assets/images/home.png" width="20px"/> <span class="pili-line">|</span </a>
+                 <a href="https://play.google.com/store/apps/details?id=gov.mp.mapit.dairy" class="text-white d-inline-block"> <img src="/Content/calendar_assets/images/google-play-button.png" width="120px"/> </a>
+
+                 <button class="nav-btn" onclick="navFunction()">
+                    <img src="/Content/calendar_assets/images/menu.png" style="width: 23px;"/>
+                 </button>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white border-bottom">
+    <div class="container">
+
+    <div class="row">
+    <div class="col-lg-9">
+        <nav id="top-nav" class="top-nav right-side-navigation">
+            <a href="#" id="top-nav-toggle" class="top-nav-toggle" title="Navigation" data-close-text="Close">
+                <span>Navigation</span> <i class="fa fa-angle-down"></i>
+            </a>
+            
+  <ul  id='menu-primary-navigation-2' class='nav-menu'> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>राष्ट्रपति भवन</a>   <ul class='sub-menu sub_menu_33' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=37' >राष्ट्रपति भवन</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=38' >भारत के उप-राष्ट्रपति</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=39' > उप-राष्ट्रपति  का सचिवालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=35' >संसद</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=34' >नेता प्रतिपक्ष</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>भारत सरकार </a>   <ul class='sub-menu sub_menu_34' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=51' >भारत के प्रधानमंत्री</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=40' >केन्‍द्रीय मंत्रि-परिषद्</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=43' >प्रधानमंत्री का सचिवालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=42' >राज्यमंत्री (प्रधानमंत्री कार्यालय )</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=45' >राज्यमंत्री</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=41' >राज्यमंत्री (स्वतंत्र प्रभार)</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=44' >भारत शासन में सचिव </a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>लोक भवन</a>   <ul class='sub-menu sub_menu_31' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=30' >मध्यप्रदेश के राज्यपाल</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=31' >राज्यपाल का सचिवालय, mprajbhavan@mp.gov.in</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>मध्यप्रदेश </a>   <ul class='sub-menu sub_menu_10' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=6' >मुख्यमंत्री</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=7' >मुख्यमंत्री कार्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=8' >मुख्यमंत्री निवास कार्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=11' >मंत्रि-परिषद्</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=33' >मध्यप्रदेश के संसद सदस्य</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=9' >मध्यप्रदेश मंत्रालय में पदस्थ विभागवार मुख्‍य सचिव/अपर मुख्‍य सचिव/प्रमुख सचिव/सचिव/अपर सचिव</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=23' >आयोग</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=16' >विभागाध्यक्ष</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=24' >मध्यप्रदेश के विश्‍वविद्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=10' >मध्यप्रदेश के निगम  एवं मण्डल</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=46' >मध्यप्रदेश के संभागवार आवश्यक दूरभाष </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=48' >मध्यप्रदेश के जिलेवार आवश्यक दूरभाष</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=21' >मध्‍यप्रदेश नगरपालिक निगम के महापौर एवं आयुक्‍त </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=20' >मध्‍यप्रदेश के जिला पंचायत, प्रशासकीय समिति के अध्‍यक्ष  एवं मुख्य कार्यपालन अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=17' >दिल्ली में पदस्थ मध्यप्रदेश केडर के आई.ए.एस.  अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=19' >दिल्ली में पदस्थ मध्यप्रदेश केडर के आई.पी.एस.  अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=18' >दिल्ली में पदस्थ मध्यप्रदेश केडर के आई.एफ.एस. अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=15' >नई दिल्‍ली स्थित मध्यप्रदेश शासन  के कार्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=14' >मध्यप्रदेश की सामान्य  प्रमुख जानकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=22' >मध्यप्रदेश एवं अखिल भारत के चुने हुए विकास संकेतांक </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=12' >मध्यप्रदेश की जिलेवार प्रमुख जानकारी (भाग-1)</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=13' >मध्यप्रदेश की जिलेवार प्रमुख जानकारी (भाग-2)</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=5' >भारत की जनगणना-2011जनसंख्‍या के अन्तिम आंकड़े एक नजर में</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>न्यायतंत्र</a>   <ul class='sub-menu sub_menu_26' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=3' >मध्यप्रदेश उच्च न्यायालय </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=26' >लोकायुक्‍त कार्यालय, मध्यप्रदेश</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=25' >औद्योगिक, न्यायालय मध्यप्रदेश</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>विधान सभा</a>   <ul class='sub-menu sub_menu_32' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=27' >अध्यक्ष, विधान सभा</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=29' >उपाध्‍यक्ष, विधान सभा </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=32' >नेता प्रतिपक्ष,  विधान सभा</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=28' >विधान सभा सचिवालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=2' >मध्यप्रदेश के विधान सभा सदस्य</a>  </li>  </ul> </li>  </ul>
+
+        </nav>
+        
+    </div>
+    <div class="col-lg-3">
+<form action="/Home/searchdata" method="post"><input name="__RequestVerificationToken" type="hidden" value="4kFk2FY8tSkzK9uJdjUdzh7YByRGCsoHvf9hqhTjPsDzQGp0ZFc0LptTRZ2xY4OqnP2EnEcusbea43SD2cLUYSjl3dnadmxXY1Ar-e-Moc01" />          <div class="input-group mt-1">
+  
+  
+</div>
+</form>    </div>
+    </div>
+
+
+  
+
+
+</div>
+</section>
+<main class="my-3">
+ <div class="container">
+ <div class="bg-light position-relative shadow">
+            
+
+
+<style>
+    .datatab { padding:10px; }
+    .datatab table tr th {}
+    .tabHead { font-weight:bold;  }
+    .tabSubHead { background-color: #ebebf3;}
+</style>
+ 
+
+    <div class="  ">
+        <div style="text-align:right; padding-right:30px;">
+            <a href="#" onclick="javascript:printSection('datatab');" style="font-weight: bold;color: #a58b57;z-index:999999999;" class="btn btn-warning  btn-sm mt-2">  Print</a>
+            
+        </div>
+        <div class="col-md-12   ">
+            <div class="datatab" id="datatab">
+
+                <center><h3>मध्यप्रदेश के संभागवार आवश्यक दूरभाष </h3></center><table class=' table  table-bordered table-hover'><tr> <th class='tabHead'>संभाग का नाम व एस.टी.डी. क्रमांक </th><th class='tabHead'>कार्यालय दूरभाष</th><th class='tabHead'>निवास दूरभाष</th><th class='tabHead'>संभागीय आयुक्त </th><th class='tabHead'>पुलिस महानिरीक्षक </th><th class='tabHead'>अपर आयुक्त </th><th class='tabHead'>पुलिस उप महानिरीक्षक </th><th class='tabHead'>मुख्य वन संरक्षक/वन संरक्षक</th><th class='tabHead'>उपायुक्त (राजस्व)</th><th class='tabHead'>उपायुक्त (विकास)</th><th class='tabHead'>मुख्य अभियंता/अधीक्षण यंत्री लो.नि.वि.</th><th class='tabHead'>मुख्य अभियंता/अधीक्षण यंत्री जल संसाधन </th><th class='tabHead'>मुख्य अभियंता/अधीक्षण यंत्री लो.स्वा.यां.</th><th class='tabHead'>संयुक्त संचालक कृषि </th><th class='tabHead'>संयुक्त संचालक लोक शिक्षण </th><th class='tabHead'>फैक्स </th></tr> <tr> <td> चम्‍बल 07532</td> <td> 232900</br></td> <td> 232660</br></td> <td> 232900</br>232660</td> <td> -</br>-</td> <td> 232910</br>231066</td> <td> -</br>-</td> <td> -</br>-</td> <td> 231065</br>-</td> <td> 233363 </br>232810</td> <td> 2340932</br>2340087</td> <td> 2340492 </br>230087</td> <td> -</br>-</td> <td> 225631 </br>225636</td> <td> 2340392</br>2231113</td> <td> 233970 आ.</br>-</td> </tr> <tr> <td> ग्‍वाालियर 0751</td> <td> 2452800</br></td> <td> 2340100</br></td> <td> 2452800</br>2340100</td> <td> -</br>-</td> <td> 2435712 </br>2447965</td> <td> -</br>-</td> <td> 2340050</br>2467478</td> <td> 2424125</br>-</td> <td> 2440034</br>-</td> <td> -</br>-</td> <td> 2340492</td> <td> 4031502</br>-</td> <td> -</br>-</td> <td> 2970682 </br>2456542</td> <td> 2457801 आ. </br>2340101 पु. </td> </tr> <tr> <td> उज्जैन 0734</td> <td> 2511671</br></td> <td> 2510670</br></td> <td> 2511671</br>2510670</td> <td> 2527120</br>2527121</td> <td> 2510350</br>-</td> <td> 2527122</br>2527160</td> <td> 2512101</br>2512105</td> <td> 2510553</br>-</td> <td> 2520058 </br>-</td> <td> 2524462</br>2554414</td> <td> 2513863</br>-</td> <td> 2551583 </br>2513819</td> <td> 2513781</br>2517771</td> <td> 2524054</br>2512084</td> <td> 2513151 आ.</br>2520100 पु.</td> </tr> <tr> <td> इन्‍दौर 0731</td> <td> 2435111</br></td> <td> 2700888</br></td> <td> 2435111 </br>2700888</td> <td> 2702777</br>2711753</td> <td> 2537576</br>-</td> <td> 2510001</br>2515111</td> <td> 2461292</br>2490532</td> <td> 2539552</br>-</td> <td> 2535222</br>-</td> <td> 2491825</br>2566062</td> <td> 2490496</br>2909720</td> <td> 4046145</br>2705629</td> <td> 2366967</br>2409293</td> <td> 2535318</br>2415416</td> <td> 2539555 आ. </br>2702810 पु.</td> </tr> <tr> <td> भोपाल  0755</td> <td> 2540399</br></td> <td> 2423718</br></td> <td> 2540399</br>2423718</td> <td> 2443599</br>-</td> <td> 2540859</br>-</td> <td> 2443499</br>-</td> <td> 2674296</br>-</td> <td> 2548643</br>-</td> <td> 2537030</br>-</td> <td> 2551403</br>-</td> <td> 2430354</br>-</td> <td> 2551594</br>-</td> <td> 2540890</br>-</td> <td> 2778106</br>-</td> <td> 2540772 आ. </br>2677345 पु.</td> </tr> <tr> <td> नर्मदापुरम 07574</td> <td> 250000</br></td> <td> 250500</br></td> <td> 250000</br>250500</td> <td> 250123</br>7049100305</td> <td> 250297</br>250341</td> <td> 250200</br>-</td> <td> 252521</br>253155</td> <td> 251262</br>-</td> <td> 250262</br>9893800340</td> <td> 252578</br>9165031706</td> <td> 252365</br>253886</td> <td> 250257</br>9425601371</td> <td> 254098</br>-</td> <td> 250052</br>-</td> <td> 254262 आ.</br>250123 पु.</td> </tr> <tr> <td> सागर 07582</td> <td> 224400</td> <td> 224554</td> <td> 224400</br>224554</td> <td> 267721</br>267711</td> <td> 220010</br>224326</td> <td> 267742</br>267766</td> <td> 236262</br>236045</td> <td> 225852</br>-</td> <td> 222298</br>222389</td> <td> 220840</br>-</td> <td> 236085</br>220411</td> <td> 222143</br>222043</td> <td> 222810</br>222929</td> <td> 240404</br>-</td> <td> 228087 आ.</br>267781 पु.</td> </tr> <tr> <td> जबलपुर 0761</td> <td> 2679000</br></td> <td> 2679001 </br>-</td> <td> 2679000</br>2679001 </td> <td> 2673103</br>-</td> <td> -</br>8989141300</td> <td> 2676105</br>2676205</td> <td> 2624341</br>2663955</td> <td> 2679000</br>-</td> <td> 2679000</br>-</td> <td> 2621541</br>9479608059</td> <td> 2600534</br>-</td> <td> 4019294</br>4019293</td> <td> 2624390</br>2680107</td> <td> 2933249</br>-</td> <td> -            आ.</br>-             पुु.</td> </tr> <tr> <td> रीवा 07662</td> <td> 241766</td> <td> 241888</td> <td> 241766</br>241888</td> <td> 255566</br>255568</td> <td> 299342</br>9425481817</td> <td> 258100</br>258101</td> <td> 299198</br>242153</td> <td> 242143</br>-</td> <td> 251173</br>241590</td> <td> 255200</br>255201</td> <td> 241629</br>241656</td> <td> 299171</br>254584</td> <td> 252078</br>252797</td> <td> 255635</br>9424374311</td> <td> 251766 आ.</br>241971 पु.</td> </tr> <tr> <td> शहडोल 07652</td> <td> 245555</td> <td> 242000</td> <td> 245555</br>242000</td> <td> 240712</br>240711</td> <td> 242250</br>242251</td> <td> 241888</br>241111</td> <td> 245361</br>292337</td> <td> -</br>-</td> <td> -</br>-</td> <td> 245102</br>-</td> <td> 299314</br>-</td> <td> 299231</br>-</td> <td> 292282</br>-</td> <td> 240822</br>-</td> <td> -           आ.</br>-            पु.</td> </tr> </table>
+            </div>
+        </div>
+    </div>
+
+<article id="post-83" class="inner-box post-83 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-travel">
+    <!--<div class="content-container">
+
+        <div class="entry-content">
+            <div class="col-md-12" style="display:none;">
+                <div class="heading">
+                    <h3>Madhya Pradesh Diary And Calendar</h3>
+                </div>
+            </div>
+            <div class="col-md-6 bx-lft">-->
+
+                
+            <!--</div>
+            <div class="col-md-6 bx-lfte">
+
+
+
+                <img src="~/Content/home/images/Calendar.jpg" />
+                <div class="lft_rgt">
+                    <center>
+                        <a href="/home/ViewCalendar" class="btn btn-menu3 center" target="_new">Open</a>
+                        <a href="~/Content/home/download/Calendar.jpg" class="btn btn-menu4 center" download>Download</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</article>
+
+
+</div>
+        </div>
+</main>
+<footer class="bg-white border-top mt-3">
+    <div class="container small text-secondary text-center py-2">
+    &#169; सर्वाधिकार सुरक्षित, मध्यप्रदेश शासन, सामान्य प्रशासन विभाग के लिए नियंत्रक, शासकीय मुद्रण तथा लेखन सामग्री मध्यप्रदेश, भोपाल द्वारा प्रकाशित 
+
+    </div>
+</footer>
+
+
+
+     <script type="text/javascript" src="/Content/calendar_assets/js/jquery-slim.min.js"></script>
+    <script type="text/javascript" src="/Content/calendar_assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Content/calendar_assets/js/popper.min.js"></script>
+    <script src="/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+    
+ 
+   <script>
+       
+       function printSection(obj) {
+           
+           var disp_setting = "toolbar=yes,location=no,directories=yes,menubar=yes,resizable=1,";
+           disp_setting += "scrollbars=yes,width=650, height=600, left=100, top=25";
+           var content_vlue = document.getElementById(obj).innerHTML;
+           var docprint = window.open("", "", disp_setting);
+           docprint.document.open();
+           docprint.document.write('<html><head><title>".:: Print ::."</title>');
+           docprint.document.write('<link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />');
+           //docprint.document.write('<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />');
+
+           docprint.document.write('</head><body onLoad="self.print()"><center>');
+           docprint.document.write(content_vlue);
+           docprint.document.write('</center></body></html>');
+           docprint.document.close();
+           docprint.focus();
+       }
+</script>
+
+    <script>
+      function navFunction() {
+  var element = document.getElementById("navbarSerch");
+  element.classList.toggle("openNav");
+}
+</script>
+
+</body>
+</html>
+
+

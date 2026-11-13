@@ -1,0 +1,103 @@
+{
+ "source": "Rajasthan divisions (7, after the 2024-12-28 decision that undid the Banswara, Pali and Sikar divisions and 9 districts), 41 districts (LGD codes); written by hand, unchecked against the notification",
+ "divisions": {
+  "Jaipur": [
+   "102",
+   "97",
+   "87",
+   "106",
+   "114",
+   "782",
+   "770"
+  ],
+  "Ajmer": [
+   "86",
+   "92",
+   "110",
+   "116",
+   "774",
+   "768"
+  ],
+  "Bharatpur": [
+   "91",
+   "98",
+   "108",
+   "113",
+   "767"
+  ],
+  "Bikaner": [
+   "93",
+   "96",
+   "100",
+   "101"
+  ],
+  "Jodhpur": [
+   "107",
+   "90",
+   "103",
+   "104",
+   "111",
+   "115",
+   "775",
+   "772"
+  ],
+  "Kota": [
+   "109",
+   "89",
+   "94",
+   "105"
+  ],
+  "Udaipur": [
+   "117",
+   "88",
+   "95",
+   "99",
+   "629",
+   "112",
+   "777"
+  ]
+ },
+ "district_names": {
+  "102": "Jaipur",
+  "97": "Dausa",
+  "87": "Alwar",
+  "106": "Jhunjhunu",
+  "114": "Sikar",
+  "782": "Kotputli-Behror",
+  "770": "Khairthal-Tijara",
+  "86": "Ajmer",
+  "92": "Bhilwara",
+  "110": "Nagaur",
+  "116": "Tonk",
+  "774": "Beawar",
+  "768": "Didwana-Kuchaman",
+  "91": "Bharatpur",
+  "98": "Dholpur",
+  "108": "Karauli",
+  "113": "Sawai Madhopur",
+  "767": "Deeg",
+  "93": "Bikaner",
+  "96": "Churu",
+  "100": "Ganganagar",
+  "101": "Hanumangarh",
+  "107": "Jodhpur",
+  "90": "Barmer",
+  "103": "Jaisalmer",
+  "104": "Jalore",
+  "111": "Pali",
+  "115": "Sirohi",
+  "775": "Balotra",
+  "772": "Phalodi",
+  "109": "Kota",
+  "89": "Baran",
+  "94": "Bundi",
+  "105": "Jhalawar",
+  "117": "Udaipur",
+  "88": "Banswara",
+  "95": "Chittorgarh",
+  "99": "Dungarpur",
+  "629": "Pratapgarh",
+  "112": "Rajsamand",
+  "777": "Salumbar"
+ }
+}

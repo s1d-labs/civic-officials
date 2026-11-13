@@ -1,0 +1,83 @@
+{
+ "source": "Chhattisgarh revenue divisions (5), 33 districts (LGD codes); written by hand, unchecked against the gazette",
+ "divisions": {
+  "Raipur": [
+   "387",
+   "644",
+   "645",
+   "385",
+   "377"
+  ],
+  "Durg": [
+   "378",
+   "646",
+   "650",
+   "388",
+   "382",
+   "759",
+   "761"
+  ],
+  "Bilaspur": [
+   "375",
+   "647",
+   "383",
+   "379",
+   "762",
+   "386",
+   "763",
+   "734"
+  ],
+  "Surguja": [
+   "389",
+   "648",
+   "649",
+   "384",
+   "760",
+   "380"
+  ],
+  "Bastar": [
+   "374",
+   "643",
+   "637",
+   "381",
+   "376",
+   "642",
+   "636"
+  ]
+ },
+ "district_names": {
+  "387": "Raipur",
+  "644": "Balodabazar-Bhatapara",
+  "645": "Gariyaband",
+  "385": "Mahasamund",
+  "377": "Dhamtari",
+  "378": "Durg",
+  "646": "Balod",
+  "650": "Bemetara",
+  "388": "Rajnandgaon",
+  "382": "Kabeerdham",
+  "759": "Khairagarh-Chhuikhadan-Gandai",
+  "761": "Mohla-Manpur-Ambagarh Chouki",
+  "375": "Bilaspur",
+  "647": "Mungeli",
+  "383": "Korba",
+  "379": "Janjgir-Champa",
+  "762": "Sakti",
+  "386": "Raigarh",
+  "763": "Sarangarh-Bilaigarh",
+  "734": "Gaurela-Pendra-Marwahi",
+  "389": "Surguja",
+  "648": "Surajpur",
+  "649": "Balrampur-Ramanujganj",
+  "384": "Korea",
+  "760": "Manendragarh-Chirmiri-Bharatpur(M C B)",
+  "380": "Jashpur",
+  "374": "Bastar",
+  "643": "Kondagaon",
+  "637": "Narayanpur",
+  "381": "Uttar Bastar Kanker",
+  "376": "Dakshin Bastar Dantewada",
+  "642": "Sukma",
+  "636": "Bijapur"
+ }
+}
