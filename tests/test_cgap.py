@@ -38,7 +38,7 @@ def test_gap_seeds():
             p = i["payload"]
             # Jharkhand items keep the key that cforms/ce_jh.py page_items() gives (a later seed run then finds them queued)
             assert i["key"].startswith(("cgap-", "ce-jh26-")) and p["kind"].startswith("form-") and p["state"]
-            assert p["url"].startswith("http") and (p.get("lgd_code") or p.get("district"))
+            assert p["url"].startswith("http") and (p.get("lgd_code") or p.get("district") or p.get("stored"))
             assert p.get("route") in ("abroad", "direct") and isinstance(p.get("india_only"), bool)
 
 
@@ -49,3 +49,18 @@ def test_jh_gap_seeds():
     assert len(items) == 7 and {i["payload"]["district"] for i in items} == {"Jamtara", "Koderma", "Garhwa"}
     assert sum(i["payload"].get("post") == "Vice Chairperson" for i in items) == 5
     assert all(i["payload"]["route"] == "abroad" for i in items)
+
+
+def test_gj25_gap_seeds():
+    """The 30 Gujarat Feb 2025 OCR items (stored_councillors_gj25.json) all ended "gave up after 3 attempts", 0 records: they
+    read the saved copy under civic-officials-councillors-ocr/, but the save items ran in civic-officials-india-direct, and the hub
+    keeps a project's files under that project. The gap items name the india-direct copy (same file name: sha1 of the url)."""
+    import hashlib
+    old = {i["payload"]["url"]: i for i in json.loads((SEEDS / "stored_councillors_gj25.json").read_text())}
+    items = json.loads((SEEDS / "councillors_gap_gj.json").read_text())
+    assert len(items) == 30 and {i["payload"]["url"] for i in items} == set(old)
+    for i in items:
+        p = i["payload"]
+        assert i["key"] == "cgap-" + old[p["url"]]["key"]
+        assert p["stored"] == f"civic-officials-india-direct/councillors/GJ/{hashlib.sha1(p['url'].encode()).hexdigest()[:12]}.pdf"
+        assert p["kind"] == "form-cw_gj" and p["route"] == "abroad" and p["ocr"] is True
