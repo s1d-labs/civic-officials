@@ -1,0 +1,58 @@
+[
+ {
+  "key": "pri_sk:sec-gp",
+  "payload": {
+   "reader": "pri_sk",
+   "url": "https://cdn.s3waas.gov.in/s38757150decbd89b0f5442ca3db4d0e0e/uploads/2022/11/2022111630.pdf",
+   "level": "gp",
+   "list": "sec",
+   "district": "",
+   "page": "https://namchi.nic.in/panchayati-raj-institutions/",
+   "state": "SK",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_sk:sec-zp",
+  "payload": {
+   "reader": "pri_sk",
+   "url": "https://cdn.s3waas.gov.in/s38757150decbd89b0f5442ca3db4d0e0e/uploads/2022/11/2022111619.pdf",
+   "level": "zp",
+   "list": "sec",
+   "district": "",
+   "page": "https://namchi.nic.in/panchayati-raj-institutions/",
+   "state": "SK",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_sk:soreng-gp",
+  "payload": {
+   "reader": "pri_sk",
+   "url": "https://cdn.s3waas.gov.in/s3f457c545a9ded88f18ecee47145a72c0/uploads/2022/12/2022121341.pdf",
+   "level": "gp",
+   "list": "dist",
+   "district": "Soreng",
+   "page": "https://soreng.nic.in/?p=2796",
+   "state": "SK",
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_sk:soreng-zp",
+  "payload": {
+   "reader": "pri_sk",
+   "url": "https://cdn.s3waas.gov.in/s3f457c545a9ded88f18ecee47145a72c0/uploads/2022/12/2022121365.pdf",
+   "level": "zp",
+   "list": "dist",
+   "district": "Soreng",
+   "page": "https://soreng.nic.in/?p=2796",
+   "state": "SK",
+   "india_only": false,
+   "route": "abroad"
+  }
+ }
+]
