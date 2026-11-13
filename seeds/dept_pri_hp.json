@@ -1,0 +1,842 @@
+[
+ {
+  "key": "pri_hp:1301:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1301",
+   "district": "Bilaspur",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1301:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1301",
+   "district": "Bilaspur",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1301:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1301",
+   "district": "Bilaspur",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1301:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1301",
+   "district": "Bilaspur",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1301:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1301",
+   "district": "Bilaspur",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1302:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1302",
+   "district": "Chamba",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1302:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1302",
+   "district": "Chamba",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1302:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1302",
+   "district": "Chamba",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1302:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1302",
+   "district": "Chamba",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1302:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1302",
+   "district": "Chamba",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1303:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1303",
+   "district": "Hamirpur",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1303:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1303",
+   "district": "Hamirpur",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1303:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1303",
+   "district": "Hamirpur",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1303:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1303",
+   "district": "Hamirpur",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1303:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1303",
+   "district": "Hamirpur",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1304:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1304",
+   "district": "Kangra",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1304:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1304",
+   "district": "Kangra",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1304:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1304",
+   "district": "Kangra",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1304:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1304",
+   "district": "Kangra",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1304:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1304",
+   "district": "Kangra",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1305:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1305",
+   "district": "Kinnaur",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1305:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1305",
+   "district": "Kinnaur",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1305:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1305",
+   "district": "Kinnaur",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1305:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1305",
+   "district": "Kinnaur",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1305:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1305",
+   "district": "Kinnaur",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1306:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1306",
+   "district": "Kullu",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1306:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1306",
+   "district": "Kullu",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1306:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1306",
+   "district": "Kullu",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1306:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1306",
+   "district": "Kullu",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1306:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1306",
+   "district": "Kullu",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1307:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1307",
+   "district": "Lahaul and Spiti",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1307:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1307",
+   "district": "Lahaul and Spiti",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1307:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1307",
+   "district": "Lahaul and Spiti",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1307:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1307",
+   "district": "Lahaul and Spiti",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1307:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1307",
+   "district": "Lahaul and Spiti",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1308:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1308",
+   "district": "Mandi",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1308:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1308",
+   "district": "Mandi",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1308:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1308",
+   "district": "Mandi",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1308:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1308",
+   "district": "Mandi",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1308:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1308",
+   "district": "Mandi",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1309:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1309",
+   "district": "Shimla",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1309:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1309",
+   "district": "Shimla",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1309:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1309",
+   "district": "Shimla",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1309:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1309",
+   "district": "Shimla",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1309:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1309",
+   "district": "Shimla",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1310:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1310",
+   "district": "Sirmaur",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1310:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1310",
+   "district": "Sirmaur",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1310:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1310",
+   "district": "Sirmaur",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1310:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1310",
+   "district": "Sirmaur",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1310:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1310",
+   "district": "Sirmaur",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1311:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1311",
+   "district": "Solan",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1311:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1311",
+   "district": "Solan",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1311:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1311",
+   "district": "Solan",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1311:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1311",
+   "district": "Solan",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1311:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1311",
+   "district": "Solan",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1312:P",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1312",
+   "district": "Una",
+   "post": "P",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1312:U",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1312",
+   "district": "Una",
+   "post": "U",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1312:W",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1312",
+   "district": "Una",
+   "post": "W",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1312:S",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1312",
+   "district": "Una",
+   "post": "S",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri_hp:1312:Z",
+  "payload": {
+   "reader": "pri_hp",
+   "url": "https://sechimachal.hp.gov.in/dpmis/repList.aspx",
+   "district_code": "1312",
+   "district": "Una",
+   "post": "Z",
+   "term": "2026-2031",
+   "state": "HP",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

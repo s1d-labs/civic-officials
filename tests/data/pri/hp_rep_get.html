@@ -1,0 +1,689 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" /><meta name="author" />
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png" /><title>
+	डाटा प्रोफाइलर मैनेजमेंट इन्फॉर्मेशन सिस्टम
+</title>
+    <!-- Custom CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet" />
+    <script src="assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/libs/jquery/dist/jquery-3.7.1.min.js"></script>
+
+    <script src="dist/js/common.js"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+    
+     
+    <link href="assets/extra-libs/DataTables/datatables.min.css" rel="stylesheet">
+    <style>
+        th {
+            background-color: #000F60;
+            color: whitesmoke;
+        }
+
+        input[type=radio] {
+            margin-left: 30px;
+        }
+
+            input[type=radio]:first-child {
+                margin-left: 10px;
+            }
+    </style>
+    
+
+    <script>
+        $(document).ready(function () {
+            $(".preloader").fadeOut();
+            $('#ddllang').find("option:selected").each(function () {
+                var optionValue = $(this).attr("value");
+                // alert(optionValue);
+                if (optionValue == 'en-GB') {
+                    $("#imgHi").hide();
+                    $("#imgEn").show();
+                }
+                else {
+
+                    $("#imgHi").show();
+                    $("#imgEn").hide();
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <form method="post" action="./repList.aspx" id="ctl01" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/DPMIS/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZP93pQjBPIWQja4Hey2RlUsnr3lPKJEHs9PK8xWsn7mX3ozvycnTuLGcEclQgc8Law2&amp;t=639191042600000000" type="text/javascript"></script>
+
+
+<script src="/DPMIS/ScriptResource.axd?d=qph9tUZ6hGPLbkznkRkqTRaaTuNnUEomv1AylB_MyvNY-pCnqNM0r24IVkPqhUJRxNP6E-dIq-iVb5Fqj7JgjIRUi6f5JAsSBl4U_eSd8j6Nn-BZgp6tvr_Sf-k3rXir0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/DPMIS/ScriptResource.axd?d=TvpD2YGOOsCm1yWcLkKnBd5gaZfzO-I0l989F0ge4sJ4YobBa3L_sLYwPzRllav2sLBPKH6BR9plKxk5Q-MazSLCVKYtcZtn7e9CSBlv5RHn6EUZMc8YVEOt67btioMx0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/DPMIS/WebResource.axd?d=JoBkLzP19aTuxbWOhHobYnMMhK2cVlprIkVoiT0iEUWcXMYdVxVRLIxONXLXT2WagISgP-Vg9f4lS9KK_iw88Q2&amp;t=639191042600000000" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0D13AE37" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Vl1S54fMl5gQwqEpN8Q40JI09vLX1rPue6UdACc1khviBap+18Z2YqwvKEc30UE+OmDyL8M6uTYxY/kgIYElbI9ck3HNkSZMCcrA30GzCvc7HVbghzfDDibGAIQC9eFft0BjuRuA7bHI5KuZL1E+NQIVTxAReE+IFsPQrgDKducH1A5j4qex9Vhceb3zvvcuEBnAc0m9dll5tYCUslPQkqNmANsiZrelAyfsGrKUUnWCGgVGKkcf1SiIY1BsNRiZq97WMRpljNqq3NGsPh7wR29s1VF05234p7FmerR5xa53XBovPssFYLQqP4jTQh3RQV/WSFF56DBLoNJo2Q3huovToqmYkhvY9KIVCemBUaNT14f/D/iBlK819xrGaG9FREcg7aEULFY6cwHmR50LhGdw0PxpoLQTvuQzez12be+WieATlWAtv3HDnT0u24P6Nz4UC0YJ8EtIl71bGPFhXNSkeyeLDuhTEDH860HBo8t1jeqBPsPEr5TzubGU+BdhkF2xZTUYydg9xiStY0/fDMgJCYJ5A8hxUO4VR/FlT50NNqUtKle045el3/gNpq1OrP8GfyZ1Cw8qv8tVV89y56rzAqFgyb3nCXbCjoq+HViMgYbuCxJMHuguv9wlZ6YjYHwjz2A94T1P7BnYAOshjdZtXegcN46WRaCyIYqJ3ciQ4opBpoCXVfe+6S4YdVHrO5MOpZ84jVqI/LOSBPZl0U1HRzJQ6mHWHFeoslUN/vzl5X2G5bHr0vCSf/Zat/OsdUMbWRWEv5c/VqQYdXzvQyjcjOJYhAJ8IMDD1M0+uiaNohcgCOh15tPcaxAKj1rNQdiSCiVe2zKM0SwrowkGzLka50VNkjBGKr+6Oqn3+KY=" />
+</div>
+            <!-- ============================================================== -->
+            <!-- Preloader - style you can find in spinners.css -->
+            <!-- ============================================================== -->
+            <div class="preloader">
+                <div class="lds-ripple">
+                    <div class="lds-pos"></div>
+                    <div class="lds-pos"></div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- Main wrapper - style you can find in pages.scss -->
+            <!-- ============================================================== -->
+
+            <!-- ============================================================== -->
+            <!-- Topbar header - style you can find in pages.scss -->
+            <!-- ============================================================== -->
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$sm1', 'ctl01', ['tctl00$ContentPlaceHolder1$panel1','ContentPlaceHolder1_panel1'], ['ctl00$ContentPlaceHolder1$rbPost','ContentPlaceHolder1_rbPost','ctl00$ContentPlaceHolder1$ddlPriTerm','ContentPlaceHolder1_ddlPriTerm','ctl00$ContentPlaceHolder1$ddlDis','ContentPlaceHolder1_ddlDis','ctl00$ContentPlaceHolder1$ddlBlk','ContentPlaceHolder1_ddlBlk','ctl00$ContentPlaceHolder1$ddlPanch','ContentPlaceHolder1_ddlPanch'], ['ctl00$ContentPlaceHolder1$btnShow','ContentPlaceHolder1_btnShow'], 90, 'ctl00');
+//]]>
+</script>
+
+            <header class="topbar" data-navbarbg="skin5">
+                <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                    <div class="navbar-header" data-logobg="skin5">
+                        <!-- This is for the sidebar toggle which is visible on mobile only -->
+                        <a rel="noopener noreferrer" class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+                        <!-- ============================================================== -->
+                        <!-- Logo -->
+                        <!-- ============================================================== -->
+                        <a rel="noopener noreferrer" class="navbar-brand" href="https://sechimachal.hp.gov.in/En/index.html" target="_blank">
+                            <!-- Logo icon -->
+                            <b class="logo-icon p-l-10">
+                                <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                                <!-- Dark Logo icon -->
+                                <img src="assets/images/secLogo50.png" alt="homepage" class="light-logo" />
+                            </b>
+                            <!--End Logo icon -->
+                            <!-- Logo text -->
+                            <span class="logo-text">
+                                <!-- dark Logo text -->
+                                <img id="imgEn" src="assets/images/logo-text.png" alt="homepage" class="light-logo" />
+                                <img id="imgHi" src="assets/images/logo-text-hindi.png" alt="homepage" class="light-logo" />
+                                
+                                
+                      
+
+                            </span>
+                            <!-- Logo icon -->
+                            <!-- <b class="logo-icon"> -->
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <!-- <img src="assets/images/logo-text.png" alt="homepage" class="light-logo" /> -->
+
+                            <!-- </b> -->
+                            <!--End Logo icon -->
+                        </a>
+                        <!-- ============================================================== -->
+                        <!-- End Logo -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Toggle which is visible on mobile only -->
+                        <!-- ============================================================== -->
+                        <a rel="noopener noreferrer" class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-bs-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- End Logo -->
+                    <!-- ============================================================== -->
+                    <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+                        <!-- ============================================================== -->
+                        <!-- toggle and nav items -->
+                        <!-- ============================================================== -->
+                        <ul class="navbar-nav float-left mr-auto">
+                            <li class="nav-item d-none d-md-block">
+                                <a rel="noopener noreferrer" class="nav-link sidebartoggler waves-effect waves-light" href="javascript:void(0)"
+                                    data-sidebartype="mini-sidebar"><i class="mdi mdi-menu font-24"></i></a></li>
+                            <!-- ============================================================== -->
+                            <!-- Search -->
+                            <!-- ============================================================== -->
+                            
+                            
+                        </ul>
+                        <ul class="waves-effect navbar-nav float-left mr-auto">
+                            <li class="nav-justified">
+                                <h3 class="waves-dark bg-transparent" style="color: whitesmoke; margin: 5px; vertical-align: middle;">डाटा प्रोफाइलर मैनेजमेंट इन्फॉर्मेशन सिस्टम</h3>
+                                <h5 class="waves-dark bg-transparent" style="text-align: center; color: whitesmoke; margin: 5px; vertical-align: middle;">राज्य निर्वाचन आयोग, हिमाचल प्रदेश</h5>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav float-right">
+                            <li class="nav-item waves-effect waves-dark dropdown-menu-right">
+                                <div style="float: right">
+                                    <select name="ctl00$ddllang" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ddllang\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddllang" class="form-control">
+	<option selected="selected" value="hi-IN">हिन्दी</option>
+	<option value="en-GB">English</option>
+
+</select>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- ============================================================== -->
+                        <!-- Right side toggle and nav items -->
+                        <!-- ============================================================== -->
+                        <ul class="navbar-nav float-right">
+                            <!-- ============================================================== -->
+                            <!-- User profile and search -->
+                            <!-- ============================================================== -->
+                            <li class="nav-item dropdown">
+                                <a rel="noopener noreferrer" class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                                <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                                    <a rel="noopener noreferrer" class="dropdown-item" href="Login.aspx"><i class="ti-user m-r-5 m-l-5"></i>लॉग इन</a>
+
+                                </div>
+                            </li>
+                            <!-- ============================================================== -->
+                            <!-- User profile and search -->
+                            <!-- ============================================================== -->
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- ============================================================== -->
+            <!-- End Topbar header -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+            <aside class="left-sidebar" data-sidebarbg="skin5">
+                <!-- Sidebar scroll-->
+                <div class="scroll-sidebar">
+                    <!-- Sidebar navigation-->
+                    <nav class="sidebar-nav">
+                        <ul id="sidebarnav" class="p-t-30">
+                            <li class="sidebar-item"><a rel="noopener noreferrer" class="sidebar-link waves-effect waves-dark sidebar-link" href="Login.aspx" aria-expanded="false"><i class="mdi mdi-account-key"></i><span class="hide-menu">मुख्य पृष्ठ</span></a></li>
+                            <li class="sidebar-item"><a rel="noopener noreferrer" class="sidebar-link waves-effect waves-dark sidebar-link" href="index.aspx" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span class="hide-menu">चुनावी डाटा</span></a></li>
+                            <li class="sidebar-item"><a rel="noopener noreferrer" class="sidebar-link waves-effect waves-dark sidebar-link" href="repList.aspx" aria-expanded="false"><i class="mdi mdi-trophy-award"></i><span class="hide-menu">निर्वाचित प्रतिनिधि</span></a></li>
+                            <li class="sidebar-item"><a rel="noopener noreferrer" class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-library-plus"></i><span class="hide-menu">ग्रामीण</span></a>
+                                <ul id="ulRural" aria-expanded="false" class="collapse  first-level">
+                                    <li class="sidebar-item"><a rel="noopener noreferrer" href="ReservationSummaryPublic.aspx?RuralUrban=001" class="sidebar-link"><i class="mdi mdi-nature-people"></i><span class="hide-menu">आरक्षण सारांश</span></a></li>
+                                    <li class="sidebar-item"><a rel="noopener noreferrer" href="NominationSummaryPublic.aspx?RuralUrban=001" class="sidebar-link"><i class="mdi mdi-star-circle"></i><span class="hide-menu">नामांकन सारांश</span></a></li>
+                                    <li class="sidebar-item"><a rel="noopener noreferrer" href="PollingDayDashBoardPublicRural.aspx" class="sidebar-link"><i class="fas fa-hand-point-up"></i><span class="hide-menu">मतदान दिवस सारांश</span></a></li>
+                                    <li class="sidebar-item"><a rel="noopener noreferrer" class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-trophy"></i><span class="hide-menu">पोल परिणाम सारांश</span></a>
+                                        <ul id="ul1" aria-expanded="false" class="collapse  first-level">
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="PollingResultDashBoardPublicRural.aspx" class="sidebar-link"><i class="fa fa-list"></i><span class="hide-menu">ग्राम पंचायत</span></a></li>
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="PollingResultDashBoardPublicRural.aspx?RuralPost=ZP" class="sidebar-link"><i class="fa fa-list"></i><span class="hide-menu">जिला परिषद</span></a></li>
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="PollingResultDashBoardPublicRural.aspx?RuralPost=PS" class="sidebar-link"><i class="fa fa-list"></i><span class="hide-menu">पंचायत समिति</span></a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li class="sidebar-item"><a rel="noopener noreferrer" class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-library-plus"></i><span class="hide-menu">शहरी</span></a>
+                                <ul id="ulUrban" aria-expanded="false" class="collapse  first-level">
+                                    <li class="sidebar-item"><a rel="noopener noreferrer" class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fa fa-list"></i><span class="hide-menu">नगर पंचायत</span></a>
+                                        <ul id="ul2" aria-expanded="false" class="collapse first-level">
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="ReservationSummaryPublic.aspx?RuralUrban=002" class="sidebar-link"><i class="mdi mdi-nature-people"></i><span class="hide-menu">आरक्षण सारांश</span></a></li>
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="NominationSummaryPublic.aspx?RuralUrban=002" class="sidebar-link"><i class="mdi mdi-star-circle"></i><span class="hide-menu">नामांकन सारांश</span></a></li>
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="PollingDayDashBoardPublic.aspx" class="sidebar-link"><i class="fas fa-hand-point-up"></i><span class="hide-menu">मतदान दिवस सारांश</span></a></li>
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="PollingResultDashBoardPublic.aspx" class="sidebar-link"><i class="mdi mdi-trophy"></i><span class="hide-menu">पोल परिणाम सारांश</span></a></li>
+                                            <li class="sidebar-item"></li>
+                                        </ul>
+                                    </li>
+                                    <li class="sidebar-item"><a rel="noopener noreferrer" class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="fa fa-list"></i><span class="hide-menu">नगर निगम</span></a>
+                                        <ul id="ul3" aria-expanded="false" class="collapse first-level">
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="ReservationSummaryPublic.aspx?RuralUrban=003" class="sidebar-link"><i class="mdi mdi-nature-people"></i><span class="hide-menu">आरक्षण सारांश</span></a></li>
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="NominationSummaryPublic.aspx?RuralUrban=003" class="sidebar-link"><i class="mdi mdi-star-circle"></i><span class="hide-menu">नामांकन सारांश</span></a></li>
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="PollingDayDashBoardPublicMC.aspx" class="sidebar-link"><i class="fas fa-hand-point-up"></i><span class="hide-menu">मतदान दिवस सारांश</span></a></li>
+                                            <li class="sidebar-item"><a rel="noopener noreferrer" href="PollingResultDashBoardPublicMC.aspx" class="sidebar-link"><i class="mdi mdi-trophy"></i><span class="hide-menu">पोल परिणाम सारांश</span></a></li>
+                                            <li class="sidebar-item"></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <!-- End Sidebar navigation -->
+                </div>
+                <!-- End Sidebar scroll-->
+            </aside>
+            <!-- ============================================================== -->
+            <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+            <!-- ============================================================== -->
+
+            <!-- Page wrapper  -->
+            <!-- ============================================================== -->
+            <div class="page-wrapper">
+                
+                
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">
+                    <span id="ContentPlaceHolder1_lblTitle">Elected Representatives</span></h4>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+        <!-- ============================================================== -->
+        <!-- Start Page Content -->
+        <!-- ============================================================== -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div id="ContentPlaceHolder1_panel1">
+	
+                            <div class="card-body">
+                                <div id="ContentPlaceHolder1_dvElec" class="form-group row">
+                                    <label for="rbPriPost" class="col-sm-3 text-right control-label col-form-label">चुनाव का स्तर</label>
+                                    <div class="col-sm-9">
+                                        <table id="ContentPlaceHolder1_rbPriPost" class="form-control">
+		<tr>
+			<td><input id="ContentPlaceHolder1_rbPriPost_0" type="radio" name="ctl00$ContentPlaceHolder1$rbPriPost" value="001" checked="checked" /><label for="ContentPlaceHolder1_rbPriPost_0">पंचायती राज संस्थान</label></td><td><input id="ContentPlaceHolder1_rbPriPost_1" type="radio" name="ctl00$ContentPlaceHolder1$rbPriPost" value="002" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rbPriPost$1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ContentPlaceHolder1_rbPriPost_1">नगरपालिका परिषद / नगर पंचायत</label></td><td><input id="ContentPlaceHolder1_rbPriPost_2" type="radio" name="ctl00$ContentPlaceHolder1$rbPriPost" value="003" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rbPriPost$2\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ContentPlaceHolder1_rbPriPost_2">नगर निगम</label></td>
+		</tr>
+	</table>
+                                    </div>
+                                </div>
+                                <div id="ContentPlaceHolder1_Div1" class="form-group row">
+                                    <label for="ddlPriTerm" class="col-sm-3 text-right control-label col-form-label">पी आर आई अवधि</label>
+                                    <div class="col-sm-3">
+                                        <select name="ctl00$ContentPlaceHolder1$ddlPriTerm" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlPriTerm\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlPriTerm" class="form-control" RepeatDirection="Horizontal">
+		<option selected="selected" value="0000-0000">सभी</option>
+		<option value="2026-2031">2026-2031</option>
+		<option value="2022-2027">2022-2027</option>
+		<option value="2020-2025">2020-2025</option>
+
+	</select>
+                                    </div>
+                                </div>
+                                <div id="ContentPlaceHolder1_formNom">
+                                    <div id="ContentPlaceHolder1_dvGP" class="row">
+                                        <span id="ContentPlaceHolder1_lblPostType" class="col-sm-3 text-md-right" Text1="District">Nomination For</span>
+                                        <div class="col-sm-9">
+                                            <table id="ContentPlaceHolder1_rbPost" class="form-control">
+		<tr>
+			<td><input id="ContentPlaceHolder1_rbPost_0" type="radio" name="ctl00$ContentPlaceHolder1$rbPost" value="P" checked="checked" /><label for="ContentPlaceHolder1_rbPost_0">प्रधान</label></td><td><input id="ContentPlaceHolder1_rbPost_1" type="radio" name="ctl00$ContentPlaceHolder1$rbPost" value="U" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rbPost$1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ContentPlaceHolder1_rbPost_1">उप-प्रधान</label></td><td><input id="ContentPlaceHolder1_rbPost_2" type="radio" name="ctl00$ContentPlaceHolder1$rbPost" value="W" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rbPost$2\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ContentPlaceHolder1_rbPost_2">वार्ड सदस्य</label></td><td><input id="ContentPlaceHolder1_rbPost_3" type="radio" name="ctl00$ContentPlaceHolder1$rbPost" value="S" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rbPost$3\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ContentPlaceHolder1_rbPost_3">पंचायत समिति वार्ड सदस्य</label></td><td><input id="ContentPlaceHolder1_rbPost_4" type="radio" name="ctl00$ContentPlaceHolder1$rbPost" value="Z" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rbPost$4\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ContentPlaceHolder1_rbPost_4">जिला परिषद वार्ड सदस्य</label></td>
+		</tr>
+	</table>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <span id="ContentPlaceHolder1_lblDis" class="col-sm-3 text-md-right" Text1="District">जिला परिषद</span>
+
+                                        <div class="col-sm-3">
+                                            <select name="ctl00$ContentPlaceHolder1$ddlDis" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlDis\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlDis" title="Choose District" class="form-control">
+		<option selected="selected" value="00">जिला चुनें</option>
+		<option value="1312">ऊना</option>
+		<option value="1304">कांगड़ा</option>
+		<option value="1305">किन्नौर</option>
+		<option value="1306">कुल्लू</option>
+		<option value="1302">चम्बा</option>
+		<option value="1301">बिलासपुर</option>
+		<option value="1308">मण्डी</option>
+		<option value="1307">लाहौल एवं स्पिति</option>
+		<option value="1309">शिमला</option>
+		<option value="1310">सिरमौर</option>
+		<option value="1311">सोलन</option>
+		<option value="1303">हमीरपुर</option>
+
+	</select>
+                                        </div>
+                                    </div>
+                                    <div id="ContentPlaceHolder1_dvBlock" class="row">
+                                        <span id="ContentPlaceHolder1_lblBlk" class="col-sm-3 text-md-right">पंचायत समिति</span>
+                                        <div class="col-sm-3">
+                                            <select name="ctl00$ContentPlaceHolder1$ddlBlk" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlBlk\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlBlk" title="Choose Block" class="form-control">
+
+	</select>
+                                        </div>
+                                    </div>
+                                    <div id="ContentPlaceHolder1_dvPanch" class="row">
+                                        <span id="ContentPlaceHolder1_lblPanch" class="col-sm-3 text-md-right control-label">ग्राम पंचायत</span>
+                                        <div class="col-sm-3">
+                                            <select name="ctl00$ContentPlaceHolder1$ddlPanch" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlPanch\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlPanch" class="form-control">
+
+	</select>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-sm-12 row offset-3">
+                                    
+                                    
+                                    <div id="ContentPlaceHolder1_uprog1" style="display:none;">
+		
+                                            <script>
+                                                $(".preloader").fadeIn();
+                                            </script>
+                                        
+	</div>
+                                </div>
+                                <div class="col-sm-12 row offset-3">
+                                    <input type="submit" name="ctl00$ContentPlaceHolder1$btnShow" value="View List" id="ContentPlaceHolder1_btnShow" class="col-sm-2 btn btn-md btn-info" /> 
+                                  
+                                    <input type="hidden" name="ctl00$ContentPlaceHolder1$gridrowscount" id="ContentPlaceHolder1_gridrowscount" value="0" />
+                                </div>
+                                
+                                <!-- Modal -->
+                                <div class="modal fade" id="Modal1" tabindex="-1" role="dialog" aria-hidden="true ">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="ModalLabel">
+                                                    <span id="ContentPlaceHolder1_lblModTitle"></span></h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true ">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                
+                                                <div class="row">
+                                                    <div class="comment-footer">
+                                                        <span class="text-muted float-right">
+                                                            <span id="ContentPlaceHolder1_lblPosts"></span>
+                                                        </span>
+                                                    </div>
+                                                    <table id="tbl_list" class="table table-sm table-striped table-bordered">
+                                                        <thead>
+                                                            <tr>
+                                                                <th><strong>क्र. सं. </strong></th>
+                                                                <th><strong>आरक्षण स्थिति बनाम उम्मीदवार की श्रेणी </strong></th>
+                                                                <th><strong>नाम (#पद) </strong></th>
+                                                                <th><strong>लिंग </strong></th>
+                                                                <th><strong>आयु </strong></th>
+                                                                <th><strong>मोबाइल नंबर </strong></th>
+                                                                <th><strong>पता </strong></th>
+                                                                <th><strong>उम्मीदवार को प्राप्त वोट / कुल </strong></th>
+                                                                
+                                                                <th><strong>सुरक्षा राशि जब्त </strong></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody></tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                <div class="d-flex footer col-12 row align-content-center bg-dark font-14 text-white">
+                    <div class="col-sm-12 row"><u>अस्वीकरण</u><br />
+                    </div>
+                    <div class="col-sm-12 row">इस डैशबोर्ड में उपलब्ध डेटा आम जनता की सुविधा के लिए है। एप्लीकेशन में प्रदर्शित डेटा को अदालत में वैध सबूत नहीं माना जाएगा। किसी भी संदेह की स्थिति में रिटर्निंग अधिकारी द्वारा दी गई जानकारी अंतिम मानी जाएगी।</div>
+                </div>
+            </div>
+        
+
+<script type="text/javascript">
+//<![CDATA[
+WebForm_AutoFocus('ContentPlaceHolder1_ddlDis');Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"ContentPlaceHolder1_panel1","displayAfter":500,"dynamicLayout":true}, null, null, $get("ContentPlaceHolder1_uprog1"));
+});
+//]]>
+</script>
+</form>
+    </div>
+
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    
+    <script src="dist/js/common.js"></script>
+
+    
+
+    <script src="dist/js/jquery.ui.touch-punch-improved.js"></script>
+    <script src="dist/js/jquery-ui.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+   <script src="assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- this page js -->
+    
+    <script src="assets/extra-libs/DataTables/datatables.min.js"></script>
+    <script>
+        $(".preloader").fadeOut();
+        $(document).ready(function () {
+            var gv = $('#ContentPlaceHolder1_gvNominationList');
+            var thead = $('<thead/>');
+            thead.append(gv.find('tr:eq(0)'));
+            gv.append(thead);
+            gv.dataTable({
+                "sPaginationType": "full_numbers",
+                "order": [],
+                "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]]
+            });
+        });
+
+        $("#ContentPlaceHolder1_gvNominationList").on('click', '.trElected', function () {
+
+            // get the current row
+            var currentRow = $(this).closest("tr");
+            var CONSTITUENCY_CODE = currentRow.find("td:eq(8)").text(); // get current row 10th TD value
+            var CONSTITUENCY_WARD = currentRow.find("td:last").text(); // get current row 11th TD value
+
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "ListNomination.aspx/setAutoID",
+                data: [],
+                dataType: "json",
+                success: function (data, textStatus, jQxhr) {
+                    var result = $.parseJSON(response.d);
+                    alert(result);
+                    CONSTITUENCY_CODE = result;
+                }
+            });
+            var CONSTITUENCY_CODE = currentRow.find("td:eq(8)").text(); // get current row 10th TD value
+            var CONSTITUENCY_WARD = currentRow.find("td:last").text(); // get current row 11th TD value
+            var POST = $("[id*=rbPriPost] input[type=radio]:checked").val();
+            var data = CONSTITUENCY_CODE + "\n" + CONSTITUENCY_WARD + "\n" + POST;
+            //ShowPopup(CONSTITUENCY_CODE, "4", "Z");
+            //   //ShowPopup(CONSTITUENCY_CODE, CONSTITUENCY_WARD, POST);
+        });
+
+        function ShowPopup(CONSTITUENCY_CODE, CONSTITUENCY_WARD) {
+            //$("#Modal1 .modal-title").html(title);
+            //$("#Modal1 .modal-body").html(body);
+            //$("#Modal1").modal('show');
+
+            $(".preloader").fadeOut();
+
+            var POST = $("[id*=rbPost] input[type=radio]:checked").val();
+            //alert(CONSTITUENCY_CODE + "\n" + CONSTITUENCY_WARD + "\n" + POST);
+            if ($.fn.DataTable.isDataTable('#tbl_list')) {
+                $('#tbl_list').DataTable().destroy();
+            }
+            $('#tbl_list tbody').empty();
+            var dataValue = { "CONSTITUENCY_CODE": CONSTITUENCY_CODE, "CONSTITUENCY_WARD": CONSTITUENCY_WARD, "POST": POST };
+            $.ajax({
+                type: "POST",
+                contentType: "application/json; charset=utf-8",
+                url: "repList.aspx/getResultDetails",
+                data: JSON.stringify(dataValue),
+                dataType: "json",
+                async: true,
+                success: function (response) {
+                    var result = $.parseJSON(response.d);
+                    var htm = '';
+                    if (result.length > 0) {
+                        $("[id*=ContentPlaceHolder1_lblModTitle]").html(result[0].Constituency + ": " + 'पी आर आई अवधि' + "- " + result[0].Pri_Term);
+                        for (var i = 0; i < result.length; i++) {
+                            //htm = htm + '----' + result[i].Name;
+                            $('#tbl_list > tbody').append("<tr><td>" +
+                                (i + 1).toString() + "</td> <td>" +
+                                result[i].ReservedForCategory + "</td> <td>" +
+                                result[i].Name + ' (' + result[i].Post + ")</td> <td>" +
+                                result[i].Gender + "</td> <td>" +
+                                result[i].Age + "</td> <td>" +
+                                result[i].MobileNo + "</td> <td>" +
+                                result[i].ResAddress + "</td> <td>" +
+                                result[i].votes_secured + "/" + result[i].PolledVotes + "</td> <td>" +
+                                //result[i].NotaVotes + "</td> <td>" +
+                                result[i].Security_Forfeited + "</td></tr>");
+                        }
+                        // alert(htm);
+                    }
+                    $('#tbl_list').show();
+
+                    $('#tbl_list').DataTable();
+                    var prm = Sys.WebForms.PageRequestManager.getInstance();
+                    prm.add_endRequest(function () {
+                        var gridrowscount = parseInt($('#tbl_list').val());
+                        if (gridrowscount != "0") {
+                            var gv = $('#tbl_list');
+                            var thead = $('<thead/>');
+                            thead.append(gv.find('tr:eq(0)'));
+                            gv.append(thead);
+                            gv.dataTable({
+                                "sPaginationType": "full_numbers",
+                                "order": [],
+                                "lengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "All"]],
+                                "bDestroy": true
+                            });
+                        }
+                    });
+                    $('#Modal1').fadeIn();
+                    $('#Modal1').show();
+                },
+                failure: function (response) {
+                    alert("Could not load details");
+                    //                    alert("Could not load details" + response.d);
+                    $('#tbl_list').DataTable({
+                        data: response.d
+                    })
+                },
+                error: function (response) {
+                    alert(response.d);
+                }
+            });
+        }
+    </script>
+
+
+    <script>
+        $(".preloader").fadeOut();
+        $('#ddllang').on("change", function () {
+            $(this).find("option:selected").each(function () {
+                var optionValue = $(this).attr("value");
+                // alert(optionValue);
+                if (optionValue == 'en-GB') {
+                    $("#imgHi").hide();
+                    $("#imgEn").show();
+                }
+                else {
+                    $("#imgHi").show();
+                    $("#imgEn").hide();
+                }
+            })
+        });
+        $(document).ready(function () {
+
+         
+
+            $("#save_button").click(function () {
+                // alert('saving profile');
+                var name = $("#txtUserPName").val();
+                var email = $("#txtUserEmail").val();
+                var mobile = $("#txtUserMobile").val();
+                var landLine = $("#txtUserLandLine").val();
+                //alert(email);
+                $.ajax({
+                    type: "POST",
+                    url: "ermsWS.asmx/UpdateUserProfile",
+                    data: JSON.stringify({ uName: name, email: email, mobile: mobile, landLine: landLine }),
+                    contentType: "application/json; charset=utf-8",
+                    dataTyp: "json",
+                    async: true,
+                    success: function (response) {
+                        var result = $.parseJSON(response.d);
+                        //alert(result.Relation);
+                        if (result == "Profile Updated Successfully") {
+                            $('#txtUserPName').val(name);
+                            $('#txtUserEmail').val(email);
+                            $('#txtUserMobile').val(mobile);
+                            $('#txtUserLandLine').val(landLine);
+                        }
+                        else {
+                            alert(result);
+                        }
+                    },
+                    error: function (response) {
+                        alert(response.d);
+                        //                        alert('Could not update profile');
+                    }
+
+                });
+            });
+        });
+    </script>
+</body>
+</html>
