@@ -1,0 +1,7 @@
+{"module": "ward3_latur",
+ "payload": {"reader": "ward3_latur", "url": "https://mclatur.org/wp-content/uploads/2026/10/Hod%200610.pdf", "state": "MH"},
+ "pages": "latur_hod.pages",
+ "min_records": 40,
+ "expect": [{"post": "क्षेत्र", "name": "राधा", "level": "zone"},
+            {"post": "क्षेत्र", "name": "शुभम गायकवाड", "level": "zone"},
+            {"post": "अतिरिक्त आयुक्त", "level": "body"}]}
