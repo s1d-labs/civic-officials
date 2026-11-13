@@ -19,6 +19,7 @@ MP_POSTS = (
     (r"स्वच्छता\s*अधिकारी", "Sanitation Officer"), (r"स्वास्थ्य\s*निरीक्षक", "Health Inspector"),
     (r"स्वास्थ्य\s*अधिकारी", "Health Officer"), (r"दरोगा", "Ward Daroga (sanitation supervisor)"),
     (r"उपायुक्त", "Deputy Commissioner"), (r"आयुक्त", "Commissioner"), (r"विधि\s*अधिकारी", "Law Officer"),
+    (r"सहायक\s*लेखा\s*अधिकारी", "Assistant Accounts Officer"), (r"लेखा\s*अधिकारी", "Accounts Officer"),
     (r"राजस्व\s*निरीक्षक", "Revenue Inspector"), (r"राजस्व\s*अधिकारी", "Revenue Officer"),
 )
 

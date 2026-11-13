@@ -1,0 +1,4 @@
+{"module": "ward3_ujjain", "payload": {"reader": "ward3_ujjain", "kind": "zones", "url": "https://nagarnigamujjain.org/hindi/contact.php", "state": "MP"},
+ "routes": {"https://nagarnigamujjain.org/hindi/contact.php": "ujjain_contact.html"},
+ "min_records": 6,
+ "expect": [{"post": "Zone Office", "level": "zone"}]}
