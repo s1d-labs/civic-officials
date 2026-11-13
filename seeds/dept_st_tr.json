@@ -1,0 +1,740 @@
+[
+ {
+  "key": "st_tr_portal:senior",
+  "payload": {
+   "reader": "st_tr_portal",
+   "url": "https://tripura.gov.in/senior-officers-administration",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_tr_dirs:governor-secretariat-12-11-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-11/Governor_Secretariat__12_11_2024.pdf",
+   "org": "Governor's Secretariat",
+   "group": "secretariat",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:chief-minister-21-07-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-07/Chief_Minister_21_07_2026.pdf",
+   "org": "Chief Minister's Secretariat",
+   "group": "secretariat",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:chief-secretary-office-18-06-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-06/Chief_Secretary_Office_18_06_2024.pdf",
+   "org": "Chief Secretary Office",
+   "group": "secretariat",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:district-magistrates-20-05-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-05/District_Magistrates_20_05_2026.pdf",
+   "org": "District Magistrate & Collector",
+   "group": "district",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:sub-divisional-magistrates-05-11-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-11/Sub_Divisional_Magistrates_05_11_2026.pdf",
+   "org": "Sub-Divisional Magistrates",
+   "group": "district",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:block-development-officers-27-10-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-10/Block_Development_Officers_27_10_2026.pdf",
+   "org": "Block Development Officers",
+   "group": "district",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:agartala-municipal-corporation-03-11-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-11/AGARTALA_MUNICIPAL_CORPORATION_03_11_2026.pdf",
+   "org": "Agartala Municipal Corporation",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:department-of-agriculture-21-06-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-06/Department_of_Agriculture_21_06_2024.pdf",
+   "org": "Agriculture",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:animal-resource-development-11-08-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-08/Animal_Resource_Development_11-08-2026.pdf",
+   "org": "Animal Resource Development",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:commissioner-of-taxes-08-07-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-07/COMMISSIONER_OF_TAXES_08_07_2024.pdf",
+   "org": "Commissioner of Taxes and Excise",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:directorate-of-audit-28-06-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-06/Directorate_of_Audit_28_06_2024.pdf",
+   "org": "Directorate of Audit",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:bio-technology-department-18-06-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-06/Bio_Technology_Department_18_06_2024.pdf",
+   "org": "Directorate of Biotechnology",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:elementary-education-21-07-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-07/Elementary_Education_21_07_2026.pdf",
+   "org": "Directorate of Elementary Education (School)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:handloom-handicrafts-26-sericulture-20-05-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-05/Handloom_Handicrafts_%26_Sericulture__20_05_2026.pdf",
+   "org": "Directorate of Handloom, Handicrafts and Sericulture",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:directorate-of-land-records-and-settlement-08-07-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-07/Directorate_of_Land_Records_and_Settlement_08_07_2024.pdf",
+   "org": "Directorate of Land Records and Settlement",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:higher-education-06-08-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-08/Higher_Education__06_08_2026.pdf",
+   "org": "Education (Higher)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:education-school-education-department-21-07-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-07/Education_School_Education_Department_21_07_2026.pdf",
+   "org": "Education (School)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:education-28social-welfare-20-and-20-social-education-29-department-17-02-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-02/Education_%28Social_Welfare%20_and%20_Social_Education_%29_Department_17-02-2026.pdf",
+   "org": "Education (Social Welfare & Social Education)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:education-youth-affairs-26-sports-21-07-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-07/Education_Youth_Affairs_%26_Sports_21_07_2026.pdf",
+   "org": "Education (Youth Affairs & Sports)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:election-department-29-10-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-10/Election_Department_29_10_2026.pdf",
+   "org": "Election",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:factories-and-boilers-organization-12-06-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-06/Factories_and_Boilers_Organization_12_06_2026.pdf",
+   "org": "Factories and Boilers Organisation",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:finance-department-12-05-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-05/Finance_Department_12_05_2026.pdf",
+   "org": "Finance",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:fisheries-11-08-2026-0",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-08/Fisheries_11_08_2026_0.pdf",
+   "org": "Fisheries",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:food-01-07-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-07/Food_01_07_2026.pdf",
+   "org": "Food, Civil Supplies Consumer Affairs",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:department-of-forest-11-11-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-11/Department_of_Forest_11_11_2024.pdf",
+   "org": "Forest",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:ga-p-26t-23-07-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-07/GA_P%26T_23_07_2026.pdf",
+   "org": "General Administration ( P & T)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:ga-administrative-reforms-29-10-2026-0",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-10/GA_Administrative_Reforms_29_10_2026_0.pdf",
+   "org": "General Administration (Administrative Reforms)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:general-administration-confidential-and-cabinet-24-07-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-07/General_Administration_Confidential_and_Cabinet_24_07_2026.pdf",
+   "org": "General Administration (Confidential and Cabinet)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:general-administration-departmental-inquiries-04-07-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-07/General_Administration_Departmental_Inquiries_04_07_2024.pdf",
+   "org": "General Administration (Departmental Inquiries)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:general-administration-political-29-10-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-10/General_Administration_Political_29_10_2026.pdf",
+   "org": "General Administration (Political)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:general-administration-printing-and-stationery-29-10-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-10/General_Administration_Printing_and_Stationery_29_10_2026.pdf",
+   "org": "General Administration (Printing And Stationary)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:general-administration-secretariat-administration-04-07-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-07/General_Administration_Secretariat_Administration__04_07_2024.pdf",
+   "org": "General Administration (Secretariat Administration)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:general-administration-vigilance-04-07-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-07/General_Administration_Vigilance__04_07_2024.pdf",
+   "org": "General Administration (Vigilance)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:general-administration-good-governance-04-07-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-07/General_Administration_Good_Governance__04_07_2024.pdf",
+   "org": "General Administration Good Governance",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:health-26-family-welfare-department-08-04-2025",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2025-04/Health_%26_Family_Welfare_Department__08_04_2025.pdf",
+   "org": "Health & Family Welfare Department",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:home-28fire-29-16-07-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-07/Home%28Fire%29__16_07_2024.pdf",
+   "org": "Home (Fire Service)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:home-police-administration-03-11-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-11/Home_Police_Administration_03_11_2026.pdf",
+   "org": "Home (Police)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:home-prisons-29-10-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-10/Home_Prisons_29_10_2026.pdf",
+   "org": "Home (Prisons)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:horticulture-26-soil-conservation-28-03-2025",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2025-03/Horticulture_%26_Soil_Conservation__28_03_2025.pdf",
+   "org": "Horticulture & Soil Conservation",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:industries-20-commerce-08-12-2025",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2025-12/Industries%20_Commerce_08_12_2025.pdf",
+   "org": "Industries and Commerce",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:information-cultural-affairs-21-07-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-07/Information_Cultural_Affairs_21_07_2026.pdf",
+   "org": "Information & Cultural Affairs",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:directorate-of-information-technology-27-07-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-07/Directorate_of_Information_Technology_27_07_2026.pdf",
+   "org": "Information Technology",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:labour-11-06-2025",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-06/Labour_11_06_2025.pdf",
+   "org": "Labour",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:public-works-department-28r-26b-29-05-08-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-08/Public_Works_Department_%28R%26B%29_05_08_2026.pdf",
+   "org": "Public Works Department (R&B)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:revenue-department-08-03-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-03/Revenue_Department_08_03_2024.pdf",
+   "org": "Revenue",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:department-of-rural-development-17-02-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-02/Department_of_Rural_Development_17_02_2026.pdf",
+   "org": "Rural Development",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:tribal-welfare-department-31-05-2025",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2025-05/Tribal_Welfare_Department_31_05_2025.pdf",
+   "org": "Tribal Welfare",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:tribal-research-26-cultural-institute-31-05-2025",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2025-05/Tribal_Research_%26_Cultural_Institute_31_05_2025.pdf",
+   "org": "Tribal welfare (Tribal Research)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:tribal-welfare-trp-26-ptg-31-05-2025",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2025-05/Tribal_Welfare_TRP_%26_PTG_31_05_2025.pdf",
+   "org": "Tribal Welfare (TRP and PGT)",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:tripura-board-of-secondary-20-education-06-01-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-01/Tripura_Board_of_Secondary%20_Education_06_01_2024.pdf",
+   "org": "Tripura Board Of Secondary Education",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:tripura-state-computerisartion-agency",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-11/TRIPURA_STATE_COMPUTERISARTION_AGENCY.pdf",
+   "org": "Tripura State Computerization Agency",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:tourism-department-08-07-2024",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2024-07/Tourism_Department_08_07_2024.pdf",
+   "org": "Tripura Tourism Development",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:urban-09-09-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-09/Urban_09_09_2026.pdf",
+   "org": "Urban Development",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:welfare-of-obc-9-09-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-09/Welfare_of_OBC_9_09_2026.pdf",
+   "org": "Welfare of OBCs",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:welfare-for-minorities-17-02-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-02/Welfare_for_Minorities_17_02_2026.pdf",
+   "org": "Welfare of Religious Minorities",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ },
+ {
+  "key": "st_tr_dirs:welfare-for-scs-11-08-2026",
+  "payload": {
+   "reader": "st_tr_dirs",
+   "url": "https://tripura.gov.in/sites/default/files/2026-08/Welfare_for_SCs_11_08_2026.pdf",
+   "org": "Welfare of SCs",
+   "group": "department",
+   "state": "TR",
+   "india_only": false,
+   "route": "direct",
+   "index": "https://tripura.gov.in/contact-directory"
+  }
+ }
+]

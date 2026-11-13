@@ -1,0 +1,12 @@
+[
+ {
+  "key": "st_as_secretaries:page",
+  "payload": {
+   "reader": "st_as_secretaries",
+   "url": "https://assam.gov.in/list-of-secretaries",
+   "state": "AS",
+   "india_only": false,
+   "route": "direct"
+  }
+ }
+]
