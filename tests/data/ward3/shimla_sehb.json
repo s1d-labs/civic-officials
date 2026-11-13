@@ -1,0 +1,24 @@
+{
+ "module": "ward3_shimla",
+ "payload": {
+  "reader": "ward3_shimla",
+  "url": "https://shimlamc.hp.gov.in/Contact/Index/5",
+  "page": "5",
+  "state": "HP"
+ },
+ "routes": {
+  "https://shimlamc.hp.gov.in/Contact/Index/5": "shimla_c5.html"
+ },
+ "min_records": 33,
+ "min_wards": 33,
+ "expect": [
+  {
+   "post": "Supervisor",
+   "name": "Rahul",
+   "wards": [
+    "13"
+   ],
+   "level": "ward"
+  }
+ ]
+}
