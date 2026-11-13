@@ -889,5 +889,15 @@
    "india_only": true,
    "route": "direct"
   }
+ },
+ {
+  "key": "st_od_sec:whoiswho",
+  "payload": {
+   "reader": "st_od_sec",
+   "url": "https://sec.odisha.gov.in/Landing/AUWhoIsWho",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct"
+  }
  }
 ]

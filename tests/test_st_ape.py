@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from dforms import _field, _st_ape, st_an_contact, st_ap_portal, st_od_portal, st_tg_portal, st_wb_par, st_wb_wbcs  # noqa: E402
+from dforms import _field, _st_ape, st_an_contact, st_ap_portal, st_od_portal, st_od_sec, st_tg_portal, st_wb_par, st_wb_police, st_wb_wbcs  # noqa: E402
 
 DATA = Path(__file__).parent / "data"
 
@@ -22,9 +22,9 @@ def by_id(recs):
 
 
 def test_methods_and_seeds():
-    for m in (st_tg_portal, st_od_portal, st_wb_par, st_wb_wbcs, st_ap_portal, st_an_contact):
+    for m in (st_tg_portal, st_od_portal, st_wb_par, st_wb_wbcs, st_ap_portal, st_an_contact, st_od_sec, st_wb_police):
         assert m.METHOD
-    for st, n in (("tg", 2), ("od", 81), ("wb", 3), ("ap", 7), ("an", 1)):
+    for st, n in (("tg", 2), ("od", 82), ("wb", 4), ("ap", 7), ("an", 1)):
         its = json.loads((ROOT / "seeds" / f"dept_st_{st}.json").read_text())
         assert len(its) == n and len({i["key"] for i in its}) == n
         assert all(i["payload"]["route"] in ("abroad", "proxy", "direct") and i["payload"]["reader"].startswith("st_") for i in its)
@@ -175,3 +175,31 @@ def test_an_contact():
     assert cs["email"] == "cs-andamannicobar@gov.in" and cs["phone"] == "03192-233110, 234087" and cs["src_pos"]["row"] == 2
     dc = r["dept:st_an_contact:16"]
     assert dc["level"] == "district" and dc["district_code"] == "632" and dc["post_kind"] == "district_magistrate"
+
+
+def test_od_sec():
+    r = dict(st_od_sec.parse((DATA / "st_od_sec_whoiswho.html").read_text()))
+    assert len(r) == 5
+    assert r["dept:st_od_sec:2"]["post_kind"] == "state_election_commissioner" and r["dept:st_od_sec:2"]["phone"] == "0674-2573426"
+    assert r["dept:st_od_sec:4"]["vacant"] is True and "name" not in r["dept:st_od_sec:4"]
+    assert all(d["dept"] == "elections" and d["body_kind"] == "commission" for d in r.values())
+
+
+def test_wb_police_page_and_pager():
+    raw = (DATA / "st_wb_police_p1.html").read_bytes()
+    h = raw.decode("utf-8", "replace")
+    assert st_wb_police.total(h) == 1251 and st_wb_police.pages_linked(h)[:2] == [2, 3]
+    r = dict(st_wb_police.keyed(st_wb_police.parse(h)))
+    assert len(r) == 20
+    sp = r["dept:st_wb_police:sp-alipurduar"]
+    assert sp["name"] == "Shaw Kumar Amit, IPS" and sp["district_code"] == "664" and sp["dept"] == "police"
+    assert sp["src_pos"] == {"page": 1, "table": 7, "row": 2}
+    assert r["dept:st_wb_police:alipurduar-ps"]["office_level"] == "police_station"
+    calls = []
+
+    def get(url, method="GET", data=None, headers=None):
+        calls.append((method, (data or {}).get("__EVENTARGUMENT")))
+        return Resp(raw, url)
+    recs, files, why = st_wb_police.fetch({"url": st_wb_police.URL}, get)
+    assert why == "" and calls[0] == ("GET", None) and calls[1] == ("POST", "Page$2")
+    assert len(files) == len(calls) == 11 and recs[-1][1]["type"] == "seed_note"

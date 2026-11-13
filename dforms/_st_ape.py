@@ -13,7 +13,7 @@ COLS = [  # header text -> field (first match wins)
     ("epabx", r"epabx|intercom|extn|\bext\b"),
     ("phone", r"phone|tel|mobile|contact|office\s*(no|number)|^office$"),
     ("district", r"district"),
-    ("department", r"department|dept|office$|organi[sz]ation|wing"),
+    ("department", r"department|dept|office$|organi[sz]ation|wing|establishment|name of office"),
     ("post", r"designation|post\b|rank"),
     ("name", r"name"),
 ]

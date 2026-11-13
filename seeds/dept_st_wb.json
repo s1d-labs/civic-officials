@@ -32,5 +32,15 @@
    "india_only": true,
    "route": "direct"
   }
+ },
+ {
+  "key": "st_wb_police:list",
+  "payload": {
+   "reader": "st_wb_police",
+   "url": "https://wbpolice.gov.in/wbp/Common/WBP_ContactList.aspx",
+   "state": "WB",
+   "india_only": true,
+   "route": "direct"
+  }
  }
 ]
