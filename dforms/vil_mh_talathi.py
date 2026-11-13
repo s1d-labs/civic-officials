@@ -239,10 +239,15 @@ def parse_pdf_text(text, p, url):
 
 
 # ---- HTML tables (Marathi or English headers) ----
-ROLES = [("sno", r"^(अ\.?\s*क्र|क्र|sr|s\.?\s*no|sl)"), ("co_name", r"मंडळ\s*अधिकारी|circle officer"),
-         ("talathi", r"ग्राम\s*महसूल|तलाठी\s*(यांचे)?\s*ना|talathi(?!.*saja)|village revenue officer"),
+ROLES = [("sno", r"^(अ\.?\s*क्र|क्र|sr|s\.?\s*no|sl)"), ("co_name", r"मंडळ\s*अधिकारी|circle officer|राजस्व निरीक्षक|revenue inspector|गिरदावर|girdawar|कानूनगो|kanungo|r\.?i\.?\s*name"),
+         ("talathi", r"ग्राम\s*महसूल|तलाठी\s*(यांचे)?\s*ना|talathi(?!.*sajj?a)|village revenue officer|पटवारी(?!\s*(हल्का|मंडल|सर्किल))|"
+                     r"patwari(?!\s*(halka|halqa|mandal|circle))|ग्राम\s*सेवक|ग्रामसेवक|gram\s*sevak|पंचायत\s*सचिव|सचिव\s*का\s*नाम|"
+                     r"panchayat secretary|ग्राम\s*पंचायत\s*अधिकारी|ग्राम\s*विकास\s*अधिकारी|village development officer|gram vikas adhikari|"
+                     r"તલાટી|talati|village accountant"),
          ("phone", r"मोबा|mobile|संपर्क|phone|contact"), ("email", r"ई-?मेल|e-?mail"),
-         ("charge", r"मुळ|अति|charge|regular|additional"), ("villages", r"गावे|villages|सजातर्गत"), ("saja", r"सजा|saja|sajja"),
+         ("charge", r"मुळ|अति|charge|regular|additional"), ("villages", r"गावे|villages|सजातर्गत|ग्राम(ों)?\s*के\s*नाम|शामिल\s*ग्राम|ગામો"),
+         ("saja", r"सजा|saja|sajja|हल्का|halka|halqa|पटवार\s*(मंडल|मण्डल)|patwar\s*mandal|ग्राम\s*पंचायत|gram\s*panchayat|ग्रामपंचायत|ગ્રામ\s*પંચાયત|"
+                  r"gram panchayat|village|गांव|ग्राम|गाव|ગામ"),
          ("circle", r"मंडळ|circle")]
 
 
@@ -257,7 +262,24 @@ def roles(head):
     return out
 
 
-def parse_html(html, p, url):
+GP_POST = re.compile(r"(?i)सेवक|sevak|सचिव|secretary|पंचायत\s*अधिकारी|विकास\s*अधिकारी|development officer|vikas adhikari|talati")
+PATWARI = re.compile(r"(?i)पटवारी|patwari")
+
+
+def post_of(header):
+    """(post, post_regional, dept, level) from the header of the official's column."""
+    h = _esw.clean(header)
+    if GP_POST.search(h) and not re.search(r"(?i)तलाठी|talathi|महसूल", h):
+        return "Gram Panchayat Secretary", h, "rural_development", "gram_panchayat"
+    if PATWARI.search(h):
+        return "Patwari", "पटवारी", "revenue", "village"
+    if re.search(r"(?i)village accountant", h):
+        return "Village Accountant", h, "revenue", "village"
+    return POST, POST_MR, "revenue", "village"
+
+
+def parse_html(html, p, url, module=MODULE):
+    MODULE = module
     host = urlparse(url).netloc
     tag = p.get("tag") or _esw.slug(urlparse(url).path)[-40:] or "page"
     soup = _esw.soup(html)
@@ -271,6 +293,10 @@ def parse_html(html, p, url):
             continue
         rl = roles(g[hi])
         col = {v: k for k, v in rl.items()}
+        post, post_reg, dept, level = post_of(g[hi][col["talathi"]])
+        coh = _esw.clean(g[hi][col["co_name"]]) if "co_name" in col else ""
+        co_post = ("Revenue Inspector" if re.search(r"(?i)राजस्व निरीक्षक|revenue inspector|r\.?i\.?", coh) else
+                   "Girdawar / Kanungo" if re.search(r"(?i)गिरदावर|girdawar|कानूनगो|kanungo", coh) else CO_POST)
         for row, sp in zip(g[hi + 1:], pos[hi + 1:]):
             cell = lambda k: _esw.clean(row[col[k]]).translate(DEV_DIGITS) if k in col and col[k] < len(row) else ""
             name, saja = cell("talathi"), cell("saja")
@@ -284,16 +310,17 @@ def parse_html(html, p, url):
             if ck not in circles and (co_name or circle):
                 circles[ck] = len(circles) + 1
                 k = f"{host}:{tag}:c{circles[ck]}"
-                recs.append(_esw.record(MODULE, k, dept="revenue", level="circle", post=CO_POST, post_regional=CO_POST_MR,
-                                        name=co_name, phone=co_phone, area=circle, circle=circle, state="MH",
+                recs.append(_esw.record(MODULE, k, dept="revenue", level="circle", post=co_post,
+                                        post_regional=CO_POST_MR if co_post == CO_POST else coh,
+                                        name=co_name, phone=co_phone, area=circle, circle=circle, state=p.get("state") or "MH",
                                         district=p.get("district"), tehsil=p.get("tehsil"), source=url, src_url=url,
                                         last_updated=lu, office_id=k, src_pos=sp))
             vill = [v.strip() for v in re.split(r"\s*[,،]\s*", cell("villages")) if v.strip()]
             k = f"{host}:{tag}:s{len([r for r in recs if ':s' in r[0]]) + 1}"
             recs.append(_esw.record(
-                MODULE, k, dept="revenue", level="village", post=POST, post_regional=POST_MR, name=name,
+                MODULE, k, dept=dept, level=level, post=post, post_regional=post_reg, name=name,
                 phone=_esw.phones(cell("phone")), email=_esw.emails(cell("email")) or None, area=saja, villages=vill,
-                circle=circle, circle_officer=co_name, charge=cell("charge"), state="MH", district=p.get("district"),
+                circle=circle, circle_officer=co_name, charge=cell("charge"), state=p.get("state") or "MH", district=p.get("district"),
                 tehsil=p.get("tehsil"), source=url, src_url=url, last_updated=lu, office_id=k, src_pos=sp,
                 table_row={_esw.clean(h): _esw.clean(c) for h, c in zip(g[hi], row) if h and c}))
     return recs
