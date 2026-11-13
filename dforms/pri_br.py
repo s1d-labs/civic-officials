@@ -36,6 +36,7 @@ from dforms import _pri
 from forms.aspnet import options
 
 METHOD = "html table (ASP.NET result page, one POST per panchayat / constituency / ward; winner marked विजेता)"
+AUDIT_RESULTS = True   # audit.py: one winner per seat from a list of every candidate, so the names are checked, not the row count
 MODULE = "pri_br"
 HOST = "http://sec2021.bihar.gov.in/claim-objection/"
 INDIRECT_URL = HOST + "Indirect_Final_WinningList.aspx"

@@ -29,6 +29,7 @@ import provenance
 from dforms import _pri
 
 METHOD = "json web method (WBSEC result portal, all candidates per seat; winner = most votes)"
+AUDIT_RESULTS = True   # audit.py: one winner per seat from a list of every candidate, so the names are checked, not the row count
 MODULE = "pri_wb"
 API = "https://portal.wbsec.org/Index.aspx/SelectCandidateVotesinFavourPortalList"
 PAGE = "https://portal.wbsec.org/"

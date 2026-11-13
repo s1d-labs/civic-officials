@@ -131,3 +131,13 @@ def test_family_has_the_audit_project():
     p = next(p for p in family.PROJECTS if p["name"] == "civic-officials-audit")
     assert p["task"] == "audit" and not p.get("proxy") and not p.get("geo")
     assert "audit" in json.loads((ROOT / "scrape.json").read_text())["tasks"]
+
+
+def test_results_page_judged_by_names():
+    import audit
+    from types import SimpleNamespace
+    src = SimpleNamespace(kind="html", note="")
+    assert audit.verdict_of(src, 300, 1, 1 / 300, 0.0, 1.0, None, results=True)[0] == "ok"
+    assert audit.verdict_of(src, 300, 1, 1 / 300, 0.0, 0.5, None, results=True)[0] == "check"
+    assert audit.verdict_of(src, 300, 1, 1 / 300, 0.0, 1.0, None)[0] == "low"
+    assert audit.results_page("pri_br") and not audit.results_page("power_mvvnl")

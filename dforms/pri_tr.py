@@ -28,6 +28,7 @@ from dforms import _pri
 import provenance
 
 METHOD = "json api (SEC Tripura result board, dashboard/get-data GP_Results_Summary)"     # source trail (provenance.py)
+AUDIT_RESULTS = True   # audit.py: one winner per seat from a list of every candidate, so the names are checked, not the row count
 MODULE = "pri_tr"
 BOARD = "https://sec-results.tripura.gov.in/sec"
 API = "https://sec-results.tripura.gov.in/electionresultscheduler/dashboard/get-data"

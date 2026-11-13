@@ -405,6 +405,22 @@ def read_source(body, ctype="", file=""):
 
 # ---- the comparison
 
+def reader_mod(reader):
+    for name in (reader, "dforms." + reader, "cforms." + reader, "forms." + reader):
+        try:
+            return importlib.import_module(name)
+        except Exception:  # noqa: BLE001 - not a module of this checkout
+            continue
+    return None
+
+
+def results_page(reader):
+    """True when the reader keeps one record per seat from a page that lists every candidate (election results:
+    AUDIT_RESULTS = True in its module). Its rows are candidates, so the row count says nothing; the names say it all."""
+    mod = reader_mod(reader) if reader else None
+    return bool(getattr(mod, "AUDIT_RESULTS", False))
+
+
 def leaves_out(reader):
     """The reader module's AUDIT_LEAVES_OUT regex (tables it leaves out on purpose), or None."""
     if not reader:
@@ -499,7 +515,7 @@ def audit_source(src, recs, reader="", left_out=None):
     row_match = round(matched / n_rows, 3) if n_rows else None
     names_found = round(n_name_found / n_name, 3) if n_name else None
     phones_found = round(n_phone_found / n_phone, 3) if n_phone else None
-    verdict, reason = verdict_of(src, n_rows, person, coverage, row_match, names_found, phones_found)
+    verdict, reason = verdict_of(src, n_rows, person, coverage, row_match, names_found, phones_found, results_page(reader))
     return {"kind": src.kind, "rows_visible": vis, "rows_hidden": hid, "rows_left_out": len(out_rows),
             "tables_left_out": sorted({r["title"][:80] for r in out_rows})[:20], "rows_matched": matched,
             "records": len(recs), "records_person": person, "coverage": coverage, "row_match": row_match,
@@ -507,11 +523,16 @@ def audit_source(src, recs, reader="", left_out=None):
             "unmatched_records": unmatched_recs, "verdict": verdict, "reason": reason, "note": src.note}
 
 
-def verdict_of(src, n_rows, person, coverage, row_match, names_found, phones_found):
+def verdict_of(src, n_rows, person, coverage, row_match, names_found, phones_found, results=False):
     if not person:
         return "not_tabular", "no record has a name, phone or e-mail (records of files, layers or pages)"
     if not n_rows:
         return "not_tabular", src.note or f"no data rows found in the {src.kind} source"
+    found = names_found if names_found is not None else phones_found
+    if results:     # one winner per seat from a list of candidates: the names decide, not the row count
+        if found is not None and found >= VERDICT_OK_NAMES:
+            return "ok", f"results page: {person} winners from {n_rows} candidate rows"
+        return "check", f"results page: {0 if found is None else found:.0%} of the winners' names are in the source"
     eff = coverage if coverage <= 1.1 else row_match
     found = names_found if names_found is not None else phones_found
     if eff < VERDICT_LOW:

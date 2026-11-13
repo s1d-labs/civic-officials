@@ -14,6 +14,7 @@ from cforms.br import BASE, COUNTING, WIN, ZW, _label, _post, _result, _votes, w
 from forms.aspnet import options
 
 METHOD = "html table (ASP.NET result page, one POST per post)"
+AUDIT_RESULTS = True   # audit.py: one winner per seat from a list of every candidate, so the names are checked, not the row count
 POSTS = {"1": ("chair", "मुख्य पार्षद"), "2": ("vice", "उप मुख्य पार्षद")}
 
 
