@@ -1,0 +1,689 @@
+{
+ "note": "e-Nigam mcid -> body, LGD local_body_code, district: from the cr_pb seeds (seeds/councillors_cr_pb*.json, 2026-11-11), the others matched by name in Punjab against civic.ulb on 2026-11-13 and checked by eye",
+ "mcid": {
+  "1001": {
+   "body": "Mohali",
+   "lgd_code": "248325",
+   "district": "S.A.S Nagar",
+   "lgd_name": "S.A.S.Nagar - Mohali"
+  },
+  "1002": {
+   "body": "Patiala",
+   "lgd_code": "248399",
+   "district": "Patiala",
+   "lgd_name": "Patiala"
+  },
+  "1003": {
+   "body": "Jalandhar",
+   "lgd_code": "248296",
+   "district": "Jalandhar",
+   "lgd_name": "Jalandhar"
+  },
+  "1004": {
+   "body": "Zirakpur",
+   "lgd_code": "248407",
+   "district": "S.A.S Nagar",
+   "lgd_name": "Zirakpur"
+  },
+  "1005": {
+   "body": "Kharar",
+   "lgd_code": "248324",
+   "district": "S.A.S Nagar",
+   "lgd_name": "Kharar"
+  },
+  "1006": {
+   "body": "Amritsar",
+   "lgd_code": "248273",
+   "district": "Amritsar",
+   "lgd_name": "Amritsar"
+  },
+  "1007": {
+   "body": "Bathinda",
+   "lgd_code": "248367",
+   "district": "Bathinda",
+   "lgd_name": "Bathinda"
+  },
+  "1008": {
+   "body": "Hoshiarpur",
+   "lgd_code": "248308",
+   "district": "Hoshiarpur",
+   "lgd_name": "Hoshiarpur"
+  },
+  "1009": {
+   "body": "Phagwara",
+   "lgd_code": "248286",
+   "district": "Kapurthala",
+   "lgd_name": "Phagwara"
+  },
+  "1010": {
+   "body": "Ludhiana",
+   "lgd_code": "248338",
+   "district": "Ludhiana",
+   "lgd_name": "Ludhiana"
+  },
+  "1011": {
+   "body": "Moga",
+   "lgd_code": "248347",
+   "district": "Moga",
+   "lgd_name": "Moga"
+  },
+  "1012": {
+   "body": "Pathankot",
+   "lgd_code": "248256",
+   "district": "Pathankot",
+   "lgd_name": "Pathankot"
+  },
+  "1013": {
+   "body": "Abohar",
+   "lgd_code": "248355",
+   "district": "Fazilka",
+   "lgd_name": "Abohar"
+  },
+  "1014": {
+   "body": "Batala",
+   "lgd_code": "248264",
+   "district": "Gurdaspur",
+   "lgd_name": "Batala"
+  },
+  "1015": {
+   "body": "Kapurthala",
+   "lgd_code": "248283",
+   "district": "Kapurthala",
+   "lgd_name": "Kapurthala"
+  },
+  "1016": {
+   "body": "Gurdaspur",
+   "lgd_code": "248260",
+   "district": "Gurdaspur",
+   "lgd_name": "Gurdaspur"
+  },
+  "1017": {
+   "body": "Jandiala Guru",
+   "lgd_code": "248272",
+   "district": "Amritsar",
+   "lgd_name": "Jandiala Guru"
+  },
+  "1018": {
+   "body": "Dinanagar",
+   "lgd_code": "248259",
+   "district": "Gurdaspur",
+   "lgd_name": "Dinanagar"
+  },
+  "1019": {
+   "body": "Dhariwal",
+   "lgd_code": "248262",
+   "district": "Gurdaspur",
+   "lgd_name": "Dhariwal"
+  },
+  "1020": {
+   "body": "Sujanpur",
+   "lgd_code": "248254",
+   "district": "Pathankot",
+   "lgd_name": "Sujanpur"
+  },
+  "1021": {
+   "body": "Tarn Taran",
+   "lgd_code": "248274",
+   "district": "Tarn Taran",
+   "lgd_name": "Tarn-Taran"
+  },
+  "1022": {
+   "body": "Patti",
+   "lgd_code": "248277",
+   "district": "Tarn Taran",
+   "lgd_name": "Patti"
+  },
+  "1023": {
+   "body": "Majitha",
+   "lgd_code": "248271",
+   "district": "Amritsar",
+   "lgd_name": "Majitha"
+  },
+  "1024": {
+   "body": "Ramdass",
+   "lgd_code": "248268",
+   "district": "Amritsar",
+   "lgd_name": "Ramdas"
+  },
+  "1025": {
+   "body": "Qadian",
+   "lgd_code": "248266",
+   "district": "Gurdaspur",
+   "lgd_name": "Qadian"
+  },
+  "1026": {
+   "body": "Sri Hargovindpur",
+   "lgd_code": "248265",
+   "district": "Gurdaspur",
+   "lgd_name": "Sri Hargobindpur"
+  },
+  "1027": {
+   "body": "Dera Baba Nanak",
+   "lgd_code": "248267",
+   "district": "Gurdaspur",
+   "lgd_name": "Dera Baba Nanak"
+  },
+  "1028": {
+   "body": "Fatehgarh Churian",
+   "lgd_code": "248263",
+   "district": "Gurdaspur",
+   "lgd_name": "Fatehgarh Churian"
+  },
+  "1029": {
+   "body": "Nakodar",
+   "lgd_code": "248289",
+   "district": "Jalandhar",
+   "lgd_name": "Nakodar"
+  },
+  "1030": {
+   "body": "Noormahal",
+   "lgd_code": "248291",
+   "district": "Jalandhar",
+   "lgd_name": "Nurmahal"
+  },
+  "1031": {
+   "body": "Phillaur",
+   "lgd_code": "248293",
+   "district": "Jalandhar",
+   "lgd_name": "Phillaur"
+  },
+  "1032": {
+   "body": "Kartarpur",
+   "lgd_code": "248299",
+   "district": "Jalandhar",
+   "lgd_name": "Kartarpur"
+  },
+  "1033": {
+   "body": "Bhogpur",
+   "lgd_code": "248298",
+   "district": "Jalandhar",
+   "lgd_name": "Bhogpur"
+  },
+  "1034": {
+   "body": "Adampur",
+   "lgd_code": "248294",
+   "district": "Jalandhar",
+   "lgd_name": "Adampur"
+  },
+  "1035": {
+   "body": "Goraya",
+   "lgd_code": "248292",
+   "district": "Jalandhar",
+   "lgd_name": "Goraya"
+  },
+  "1036": {
+   "body": "Sultanpur Lodhi",
+   "lgd_code": "248285",
+   "district": "Kapurthala",
+   "lgd_name": "Sultanpur Lodhi"
+  },
+  "1037": {
+   "body": "Dasuya",
+   "lgd_code": "248300",
+   "district": "Hoshiarpur",
+   "lgd_name": "Dasua"
+  },
+  "1038": {
+   "body": "Mukerian",
+   "lgd_code": "248303",
+   "district": "Hoshiarpur",
+   "lgd_name": "Mukerian"
+  },
+  "1039": {
+   "body": "Urmur Tanda",
+   "lgd_code": "248302",
+   "district": "Hoshiarpur",
+   "lgd_name": "Urmar Tanda"
+  },
+  "1040": {
+   "body": "Garh Shankar",
+   "lgd_code": "248311",
+   "district": "Hoshiarpur",
+   "lgd_name": "Garhshankar"
+  },
+  "1041": {
+   "body": "Alawalpur",
+   "lgd_code": "248295",
+   "district": "Jalandhar",
+   "lgd_name": "Alawalpur"
+  },
+  "1042": {
+   "body": "Garhdiwala",
+   "lgd_code": "248301",
+   "district": "Hoshiarpur",
+   "lgd_name": "Gardhiwala"
+  },
+  "1043": {
+   "body": "Hariana",
+   "lgd_code": "248306",
+   "district": "Hoshiarpur",
+   "lgd_name": "Hariana"
+  },
+  "1044": {
+   "body": "Sham Churasi",
+   "lgd_code": "248309",
+   "district": "Hoshiarpur",
+   "lgd_name": "Sham Chaurasi"
+  },
+  "1045": {
+   "body": "Nawan Shehar",
+   "lgd_code": "248313",
+   "district": "Shahid Bhagat Singh Nagar",
+   "lgd_name": "Nawanshahr"
+  },
+  "1046": {
+   "body": "Khanna",
+   "lgd_code": "248334",
+   "district": "Ludhiana",
+   "lgd_name": "Khanna"
+  },
+  "1047": {
+   "body": "Jagraon",
+   "lgd_code": "248343",
+   "district": "Ludhiana",
+   "lgd_name": "Jagraon"
+  },
+  "1048": {
+   "body": "Nangal",
+   "lgd_code": "277196",
+   "district": "Rupnagar",
+   "lgd_name": "Nangal"
+  },
+  "1049": {
+   "body": "Anandpur Sahib",
+   "lgd_code": "248317",
+   "district": "Rupnagar",
+   "lgd_name": "Anandpur Sahib"
+  },
+  "1050": {
+   "body": "Gobindgarh",
+   "lgd_code": "248329",
+   "district": "Fatehgarh Sahib",
+   "lgd_name": "Gobindgarh"
+  },
+  "1051": {
+   "body": "Rajpura",
+   "lgd_code": "248403",
+   "district": "Patiala",
+   "lgd_name": "Rajpura"
+  },
+  "1052": {
+   "body": "Nabha",
+   "lgd_code": "248397",
+   "district": "Patiala",
+   "lgd_name": "Nabha"
+  },
+  "1053": {
+   "body": "Samana",
+   "lgd_code": "248396",
+   "district": "Patiala",
+   "lgd_name": "Samana"
+  },
+  "1054": {
+   "body": "Sangrur",
+   "lgd_code": "248386",
+   "district": "Sangrur",
+   "lgd_name": "Sangrur"
+  },
+  "1055": {
+   "body": "Malerkotla",
+   "lgd_code": "248383",
+   "district": "Malerkotla",
+   "lgd_name": "Malerkotla"
+  },
+  "1056": {
+   "body": "Sunam Udham Singh Wala",
+   "lgd_code": "248390",
+   "district": "Sangrur",
+   "lgd_name": "Sunam"
+  },
+  "1057": {
+   "body": "Barnala",
+   "lgd_code": "248378",
+   "district": "Barnala",
+   "lgd_name": "Barnala"
+  },
+  "1058": {
+   "body": "Dera Bassi",
+   "lgd_code": "248405",
+   "district": "S.A.S Nagar",
+   "lgd_name": "Dera Bassi"
+  },
+  "1059": {
+   "body": "Mansa",
+   "lgd_code": "248376",
+   "district": "Mansa",
+   "lgd_name": "Mansa"
+  },
+  "1060": {
+   "body": "Sri Muktsar Sahib",
+   "lgd_code": "248359",
+   "district": "Sri Muktsar Sahib",
+   "lgd_name": "Muktsar"
+  },
+  "1061": {
+   "body": "Malout",
+   "lgd_code": "248356",
+   "district": "Sri Muktsar Sahib",
+   "lgd_name": "Malout"
+  },
+  "1062": {
+   "body": "Ferozepur",
+   "lgd_code": "248351",
+   "district": "Ferozepur",
+   "lgd_name": "Firozpur"
+  },
+  "1063": {
+   "body": "Fazilka",
+   "lgd_code": "248354",
+   "district": "Fazilka",
+   "lgd_name": "Fazilka"
+  },
+  "1064": {
+   "body": "Faridkot",
+   "lgd_code": "248360",
+   "district": "Faridkot",
+   "lgd_name": "Faridkot"
+  },
+  "1065": {
+   "body": "Kotkapura",
+   "lgd_code": "248361",
+   "district": "Faridkot",
+   "lgd_name": "Kot Kapura"
+  },
+  "1066": {
+   "body": "Lalru",
+   "lgd_code": "277203",
+   "district": "S.A.S Nagar",
+   "lgd_name": "Lalru"
+  },
+  "1068": {
+   "body": "Morinda",
+   "lgd_code": "248320",
+   "district": "Rupnagar",
+   "lgd_name": "Morinda"
+  },
+  "1069": {
+   "body": "Sirhind Fatehgarh Sahib",
+   "lgd_code": "248328",
+   "district": "Fatehgarh Sahib",
+   "lgd_name": "Sirhind Fatehgarh Sahib"
+  },
+  "1070": {
+   "body": "Patran",
+   "lgd_code": "248395",
+   "district": "Patiala",
+   "lgd_name": "Patran"
+  },
+  "1071": {
+   "body": "Ahmedgarh",
+   "lgd_code": "248382",
+   "district": "Malerkotla",
+   "lgd_name": "Ahmedgarh"
+  },
+  "1072": {
+   "body": "Dhuri",
+   "lgd_code": "248384",
+   "district": "Sangrur",
+   "lgd_name": "Dhuri"
+  },
+  "1073": {
+   "body": "Lehragaga",
+   "lgd_code": "248391",
+   "district": "Sangrur",
+   "lgd_name": "Lehragaga"
+  },
+  "1074": {
+   "body": "Kurali",
+   "lgd_code": "248321",
+   "district": "S.A.S Nagar",
+   "lgd_name": "Kurali"
+  },
+  "1075": {
+   "body": "Rampuraphul",
+   "lgd_code": "248363",
+   "district": "Bathinda",
+   "lgd_name": "Rampura Phul"
+  },
+  "1076": {
+   "body": "Bhucho Mandi",
+   "lgd_code": "248366",
+   "district": "Bathinda",
+   "lgd_name": "Bhucho Mandi"
+  },
+  "1077": {
+   "body": "Goniana",
+   "lgd_code": "248364",
+   "district": "Bathinda",
+   "lgd_name": "Goniana"
+  },
+  "1078": {
+   "body": "Maur",
+   "lgd_code": "248371",
+   "district": "Bathinda",
+   "lgd_name": "Maur"
+  },
+  "1079": {
+   "body": "Raman",
+   "lgd_code": "248370",
+   "district": "Bathinda",
+   "lgd_name": "Raman"
+  },
+  "1080": {
+   "body": "Budhladha",
+   "lgd_code": "248373",
+   "district": "Mansa",
+   "lgd_name": "Budhlada"
+  },
+  "1081": {
+   "body": "Gidderbaha",
+   "lgd_code": "248357",
+   "district": "Sri Muktsar Sahib",
+   "lgd_name": "Giddarbaha"
+  },
+  "1082": {
+   "body": "Guru Har Sahai",
+   "lgd_code": "248352",
+   "district": "Ferozepur",
+   "lgd_name": "Guru Har Sahai"
+  },
+  "1083": {
+   "body": "Zira",
+   "lgd_code": "248349",
+   "district": "Ferozepur",
+   "lgd_name": "Zira"
+  },
+  "1084": {
+   "body": "Talwandi Bhai",
+   "lgd_code": "248350",
+   "district": "Ferozepur",
+   "lgd_name": "Talwandi Bhai"
+  },
+  "1085": {
+   "body": "Jalalabad",
+   "lgd_code": "248353",
+   "district": "Fazilka",
+   "lgd_name": "Jalalabad"
+  },
+  "1086": {
+   "body": "Jaito",
+   "lgd_code": "248362",
+   "district": "Faridkot",
+   "lgd_name": "Jaitu"
+  },
+  "1087": {
+   "body": "Bagha Purana",
+   "lgd_code": "248345",
+   "district": "Moga",
+   "lgd_name": "Bhagha Purana"
+  },
+  "1088": {
+   "body": "Dharamkot",
+   "lgd_code": "248346",
+   "district": "Moga",
+   "lgd_name": "Dharamkot"
+  },
+  "1089": {
+   "body": "Banur",
+   "lgd_code": "248404",
+   "district": "S.A.S Nagar",
+   "lgd_name": "Banur"
+  },
+  "1090": {
+   "body": "Bhawanigarh",
+   "lgd_code": "248387",
+   "district": "Sangrur",
+   "lgd_name": "Bhawanigarh"
+  },
+  "1091": {
+   "body": "Nayagaon",
+   "lgd_code": "277194",
+   "district": "S.A.S Nagar",
+   "lgd_name": "Nayan Gaon"
+  },
+  "1092": {
+   "body": "Chamkaur Sahib",
+   "lgd_code": "261450",
+   "district": "Rupnagar",
+   "lgd_name": "Chamkaur Sahib"
+  },
+  "1093": {
+   "body": "Bassi Pathana",
+   "lgd_code": "248327",
+   "district": "Fatehgarh Sahib",
+   "lgd_name": "Bassi Pathana"
+  },
+  "1094": {
+   "body": "Talwara",
+   "lgd_code": "248305",
+   "district": "Hoshiarpur",
+   "lgd_name": "Talwara"
+  },
+  "1095": {
+   "body": "Talwandi Sabo",
+   "lgd_code": "253124",
+   "district": "Bathinda",
+   "lgd_name": "Talwandi Sabo"
+  },
+  "1096": {
+   "body": "Rahon",
+   "lgd_code": "248314",
+   "district": "Shahid Bhagat Singh Nagar",
+   "lgd_name": "Rahon"
+  },
+  "1097": {
+   "body": "Balachaur",
+   "lgd_code": "248315",
+   "district": "Shahid Bhagat Singh Nagar",
+   "lgd_name": "Balachaur"
+  },
+  "1098": {
+   "body": "Payal",
+   "lgd_code": "248336",
+   "district": "Ludhiana",
+   "lgd_name": "Payal"
+  },
+  "1099": {
+   "body": "Machhiwara",
+   "lgd_code": "248333",
+   "district": "Ludhiana",
+   "lgd_name": "Machhiwara"
+  },
+  "1101": {
+   "body": "Amloh",
+   "lgd_code": "248330",
+   "district": "Fatehgarh Sahib",
+   "lgd_name": "Amloh"
+  },
+  "1102": {
+   "body": "Sanaur",
+   "lgd_code": "248398",
+   "district": "Patiala",
+   "lgd_name": "Sanaur"
+  },
+  "1103": {
+   "body": "Longowal",
+   "lgd_code": "248385",
+   "district": "Sangrur",
+   "lgd_name": "Longowal"
+  },
+  "1104": {
+   "body": "Tapa",
+   "lgd_code": "248380",
+   "district": "Barnala",
+   "lgd_name": "Tapa"
+  },
+  "1105": {
+   "body": "Bhadaur",
+   "lgd_code": "248377",
+   "district": "Barnala",
+   "lgd_name": "Bhadaur"
+  },
+  "1106": {
+   "body": "Dhanaula",
+   "lgd_code": "248381",
+   "district": "Barnala",
+   "lgd_name": "Dhanaula"
+  },
+  "1108": {
+   "body": "Kotfatta",
+   "lgd_code": "248369",
+   "district": "Bathinda",
+   "lgd_name": "Kot Fatta"
+  },
+  "1109": {
+   "body": "Sangat",
+   "lgd_code": "248368",
+   "district": "Bathinda",
+   "lgd_name": "Sangat"
+  },
+  "1110": {
+   "body": "Bareta",
+   "lgd_code": "248374",
+   "district": "Mansa",
+   "lgd_name": "Bareta"
+  },
+  "2001": {
+   "body": "Banga",
+   "lgd_code": "248312",
+   "district": "Shahid Bhagat Singh Nagar",
+   "lgd_name": "Banga"
+  },
+  "2002": {
+   "body": "Samrala",
+   "lgd_code": "248332",
+   "district": "Ludhiana",
+   "lgd_name": "Samrala"
+  },
+  "2003": {
+   "body": "Raikot",
+   "lgd_code": "248342",
+   "district": "Ludhiana",
+   "lgd_name": "Raikot"
+  },
+  "2004": {
+   "body": "Sahnewal",
+   "lgd_code": "248339",
+   "district": "Ludhiana",
+   "lgd_name": "Sahnewal"
+  },
+  "2005": {
+   "body": "Doraha",
+   "lgd_code": "248337",
+   "district": "Ludhiana",
+   "lgd_name": "Doraha"
+  },
+  "2006": {
+   "body": "Mullanpur Dakha",
+   "lgd_code": "248340",
+   "district": "Ludhiana",
+   "lgd_name": "Mullanpur Dakha"
+  },
+  "2007": {
+   "body": "Roopnagar",
+   "lgd_code": "248319",
+   "district": "Rupnagar",
+   "lgd_name": "Rupnagar"
+  }
+ }
+}
