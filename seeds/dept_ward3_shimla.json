@@ -1,0 +1,38 @@
+[
+ {
+  "key": "ward3_shimla-sehb-supervisors",
+  "payload": {
+   "reader": "ward3_shimla",
+   "url": "https://shimlamc.hp.gov.in/Contact/Index/5",
+   "page": "5",
+   "state": "HP"
+  }
+ },
+ {
+  "key": "ward3_shimla-sehb-assistant-supervisors",
+  "payload": {
+   "reader": "ward3_shimla",
+   "url": "https://shimlamc.hp.gov.in/Contact/Index/7",
+   "page": "7",
+   "state": "HP"
+  }
+ },
+ {
+  "key": "ward3_shimla-zonal-offices",
+  "payload": {
+   "reader": "ward3_shimla",
+   "url": "https://shimlamc.hp.gov.in/Contact/Index/8",
+   "page": "8",
+   "state": "HP"
+  }
+ },
+ {
+  "key": "ward3_shimla-departments",
+  "payload": {
+   "reader": "ward3_shimla",
+   "url": "https://shimlamc.hp.gov.in/Contact/Index/4",
+   "page": "4",
+   "state": "HP"
+  }
+ }
+]
