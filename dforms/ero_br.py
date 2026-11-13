@@ -8,6 +8,7 @@ Record ids: dept:ero_br:BR-AC-<no>:ero (BR-AC-<slug>:ero when the name stays unm
 """
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -39,6 +40,7 @@ def parse(html, url=URL):
         c = dict(zip(head, row))
         name, district = c.get("assembly", ""), c.get("district", "").title()
         if not name or not c.get("ro/ero name"):
+            provenance.skip_row(row, 'skip: not name or not c.get("ro/ero name")')
             continue
         no = ac_no(name, district)
         ac = f"BR-AC-{no}" if no else f"BR-AC-{_esw.slug(name)}"

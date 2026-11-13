@@ -15,6 +15,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, clean, email, phone, raw, slug
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -52,6 +53,7 @@ def parse(html, circle_asked, url=BASE + "searchsection"):
                 d[FIELDS[th.get_text(strip=True)]] = lines(td)
         sec = (d.get("section") or [None])[0]
         if not sec:
+            provenance.skipped('skip: not sec')
             continue
         sd, sde, sdp = unit(d.get("subdivision", []))
         dv, dve, dvp = unit(d.get("division", []))

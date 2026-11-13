@@ -24,6 +24,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
 from dforms import _esw
+import provenance
 
 HEAD_WORDS = re.compile(r"(?i)name|designation|post\b|rank|mobile|phone|contact|cug|e-?mail|village|halq|halk|patwar|circle|"
                         r"saja|sajja|tehsil|taluk|block|district|phc|chc|sector|project|ward|mandal|firka|office|officer|s\.?\s?no|"
@@ -183,6 +184,7 @@ def html_rows(html):
         head = g[hi]
         for r, rp in zip(g[hi + 1:], gpos[hi + 1:]):
             if [c.lower() for c in r] == [c.lower() for c in head]:
+                provenance.skip_row(r, 'skip: [c.lower() for c in r] == [c.lower() for c in head]')
                 continue
             out.append((head, r, cap[:120], rp))
     return out
@@ -348,6 +350,7 @@ def text_rows(text):
         elif cur is not None and ch:
             rows[-1][3]["line_end"] = where[n][1]
         if cur is None:
+            provenance.skip_line(ln, 'skip: cur is None')
             continue
         for x, c in ch:
             span = (x, x + len(c))
@@ -380,6 +383,7 @@ def records(module, rows, p, url, lu=None, method=None):
         head, row, cap = t[:3]
         cols, hpost = header_map(head)
         if not cols:
+            provenance.skipped('skip: not cols')
             continue
 
         def cell(k):
@@ -398,6 +402,7 @@ def records(module, rows, p, url, lu=None, method=None):
         phone = _esw.phones(cell("phone"))
         email = _esw.emails(cell("email"))
         if not (name or phone or email):
+            provenance.skipped('skip: not (name or phone or email)')
             continue
         area = cell("area")
         if not area:

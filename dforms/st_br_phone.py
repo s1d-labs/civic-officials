@@ -12,6 +12,7 @@ section = Division/Office. Record id dept:st_br_phone:<orgId>:<data row n> (Sr.N
 One item = one department (3 GETs: home for the cookie, resetULB, directory). Route: direct (answers from Mumbai); abroad unchecked.
 """
 from dforms import _esw, _state
+import provenance
 
 METHOD = "html table (state portal phone directory, department chosen in the session)"
 MODULE = "st_br_phone"
@@ -63,6 +64,7 @@ def parse(html, url, org):
         g = lambda k: _esw.clean(cells[col[k]]) if col[k] is not None and col[k] < len(cells) else ""
         name, post = g("name"), g("post")
         if not (name or post):
+            provenance.skipped('skip: not (name or post)')
             continue
         dept = g("dept") or ORGS.get(org, "")
         phone = ", ".join(x for x in (g("tel"), g("mobile"), f"{g('fax')} (fax)" if g("fax") else "") if x.strip(". -"))

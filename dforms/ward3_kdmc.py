@@ -10,6 +10,7 @@ names none: wards_note). depts.py get() retries with LegacyTLS by itself on a re
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"
 
@@ -40,9 +41,11 @@ def parse(html, p):
     for d in rows:
         cells = d["cells"]
         if len(cells) < 3:
+            provenance.skip_row(d, 'skip: len(cells) < 3')
             continue
         name = _esw.clean(cells[1])
         if not PERSON.match(name):
+            provenance.skip_row(d, 'skip: not PERSON.match(name)')
             continue
         post = "सहाय्यक आयुक्त"
         m = re.search(r"\(([^)]*आयुक्त[^)]*)\)", name)

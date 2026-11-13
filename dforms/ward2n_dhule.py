@@ -10,6 +10,7 @@ dept:ward2n_dhule:kk<n>:ward-officer.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -42,6 +43,7 @@ def parse(html, p):
                 head = "officer" if "प्रभाग अधिकारी" in low else "office"
                 continue
             if not head or len(r) < 4:
+                provenance.skip_row(r, 'skip: not head or len(r) < 4')
                 continue
             r = [_ward.hi_norm(c) for c in r]
             if head == "office":
@@ -54,6 +56,7 @@ def parse(html, p):
     seen, recs = set(), []
     for n in sorted(set(offices) | set(officers), key=lambda x: x or 0):
         if not n:
+            provenance.skipped('skip: not n')
             continue
         o, f = offices.get(n, {}), officers.get(n, {})
         area = f"Kshetriya Karyalay {n}"

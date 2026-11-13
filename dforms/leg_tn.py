@@ -11,6 +11,7 @@ import re
 
 from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_se
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -49,14 +50,17 @@ def parse(html, url):
     for tr in _esw.soup(html).find_all("tr"):
         tds = tr.find_all("td", recursive=False)
         if len(tds) < 5 or not _esw.clean(tds[0].get_text()).isdigit():
+            provenance.skip_row(tr, 'skip: len(tds) < 5 or not _esw.clean(tds[0].get_text()).isdigit()')
             continue
         who = _esw.clean(tds[1].get_text(" "))
         lines = [x for x in _esw.cell_text(tds[1]).split(" | ") if x]
         if "vacant" in who.lower():
+            provenance.skip_row(tr, 'skip: "vacant" in who.lower()')
             continue
         text = re.sub(r"\((?:Tmt|Thiru|Selvi)\.?\)\.?", " ", " | ".join(lines)).replace("(@)", "@")
         groups = _parens(text)
         if len(groups) < 2:
+            provenance.skip_row(tr, 'skip: len(groups) < 2')
             continue
         constituency = groups[-1]
         party = next((g for g in groups[:-1] if PARTY.match(g)), "")
@@ -64,6 +68,7 @@ def parse(html, url):
         initials = [g for g in groups[:-1] if len(g) <= 2]          # "Vijayakumar (A)": an initial in brackets
         nm = _esw.clean(re.sub(r"\b(?:Hon|Thiru|Tmt|Selvi)\b\.?", " ", text.split("(")[0]) + " " + " ".join(initials))
         if not nm:
+            provenance.skip_row(tr, 'skip: not nm')
             continue
         img = tr.find("img")
         m = re.search(r"/(\d{1,3})\.jpe?g", img.get("src", "")) if img else None

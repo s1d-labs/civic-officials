@@ -18,6 +18,7 @@ from pathlib import Path
 
 from dforms import _esw, _ulb
 from cforms.cr_pb import PLATFORM
+import provenance
 
 METHOD = "html cards (e-Nigam home page, .massage-card .name_overlay)"
 
@@ -58,6 +59,7 @@ def parse(html, p):
     b = LGD.get(str(p.get("mcid")), {})
     for k, name, post, img in cards(html):
         if not name or not post or POSTWORD.search(name):     # "Exective Officer" typed as the name (Tapa, 2026-11-13)
+            provenance.skipped('skip: not name or not post or POSTWORD.search(name)')
             continue
         m = re.search(r"/(20\d\d)(\d\d)(\d\d)_\d{6}_", img)
         recs.append(_ulb.record(MODULE, STATE, p.get("body") or b.get("body", ""), post, seen, name=name,

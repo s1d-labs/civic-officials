@@ -13,6 +13,7 @@ Record ids: dept:ward2n_nashik:<division slug>:division-office, :<post slug>:<di
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -62,6 +63,7 @@ def parse_admin(html, p):
                 post, dept, phone, email = (_esw.cell_text(td) for td in tds)
                 divs = divisions(dept)
                 if not divs or not (re.search(r"\d{5}", phone) or "@" in email):
+                    provenance.skip_row(tr, 'skip: not divs or not (re.search(r"\\d{5}", phone) or "@" in email)')
                     continue
                 post = re.sub(r"\s*\|\s*", " ", post)
                 dept_names = [x for x in (s.strip() for s in dept.split("|")) if x]

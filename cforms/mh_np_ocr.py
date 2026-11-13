@@ -37,6 +37,7 @@ import tempfile
 import time
 
 from cforms import gj, mh, mh_np, mh_scan
+import provenance
 
 METHOD = ("ocr tesseract mar+eng (300 dpi, psm 6, word boxes) of the saved gazette notice; columns from the table's "
           "column-number row or head, borders at the white gaps")
@@ -95,6 +96,7 @@ def tsv_words(tsv):
     for ln in tsv.splitlines()[1:]:
         f = ln.split("\t")
         if len(f) < 12 or f[0] != "5" or not f[11].strip():
+            provenance.skip_line(ln, 'skip: len(f) < 12 or f[0] != "5" or not f[11].strip()')
             continue
         x, y, w, h = map(int, f[6:10])
         out.append({"x0": x, "y0": y, "x1": x + w, "y1": y + h, "text": f[11].strip(), "conf": float(f[10]),
@@ -334,6 +336,7 @@ def rows_of(data, bs, roles, h):
             if ws:
                 named[roles[c] or f"c{c + 1}"] = ws
         if not named:
+            provenance.skip_row(l, 'skip: not named')
             continue
         t = lambda r: gj.norm(" ".join(w["text"] for w in named.get(r, [])))  # noqa: E731
         name_ws = named.get("name", [])
@@ -353,6 +356,7 @@ def rows_of(data, bs, roles, h):
             cur = None
             continue
         elif not LETTERS.search(l["text"]):
+            provenance.skip_row(l, 'skip: not LETTERS.search(l["text"])')
             continue                             # a page number "(१)" under the table
         for r, ws in named.items():
             cur["cells"][r] = gj.norm(cur["cells"].get(r, "") + " " + " ".join(w["text"] for w in ws))
@@ -480,6 +484,7 @@ def records(segs, p):
         b, how = block_body(blk, bodies)
         named = [r for r in blk["rows"] if LETTERS.search(clean_name(r["cells"].get("name", "")))]
         if not named:
+            provenance.skip_row(blk, 'skip: not named')
             continue
         if b is None:
             why.append(f"block {bi} (page {blk['rows'][0]['page']}): body not named")

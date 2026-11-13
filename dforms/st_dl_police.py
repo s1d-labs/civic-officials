@@ -12,6 +12,7 @@ Ids: dept:st_dl_police:<spl|jt>:<S.No.>.
 import re
 
 from dforms import _esw, _state
+import provenance
 
 METHOD = "html table"
 MODULE = "st_dl_police"
@@ -38,6 +39,7 @@ def parse(html, url=URL):
         pos = []
         for row, p in zip(_esw.grid(t, pos=pos), pos):
             if len(row) < 4 or not re.fullmatch(r"\d{1,3}", row[0].strip()):
+                provenance.skip_row(row, 'skip: len(row) < 4 or not re.fullmatch(r"\\d{1,3}", row[0].strip())')
                 continue
             sn, post, mail, phone = (_esw.clean(c) for c in row[:4])
             unit = re.sub(r"(?i)^(spl\.?|jt\.?)\s*cp\s*/?\s*", "", post).strip()

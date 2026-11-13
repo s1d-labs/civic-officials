@@ -7,6 +7,7 @@ Records: level "ward", post "Ward Officer". Record ids: dept:ward_srinagar:ward-
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -27,6 +28,7 @@ def parse(html, p):
             name = re.sub(r"\s*\((SBI|JBI)\)\s*$", "", _ward.col(r, "ward officer")).strip()
             phone = _ward.col(r, "cell", "mobile", "phone")
             if not w or not (name or phone):
+                provenance.skip_row(r, 'skip: not w or not (name or phone)')
                 continue
             k = re.sub(r"\D", "", phone) or name.lower()
             g = groups.setdefault(k, {"name": name, "phone": phone, "wards": [], "areas": [], "rank": [], "at": []})

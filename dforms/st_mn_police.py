@@ -7,6 +7,7 @@ A posting that names a range or zone ("IGP (Zone-I)", "DIG (Range-II)") gets lev
 import re
 
 from dforms import _esw, _state, st_ne
+import provenance
 
 METHOD = "html table (manipurpolice.gov.in senior officers)"
 MODULE = "st_mn_police"
@@ -18,6 +19,7 @@ def parse(html, url=URL):
     for r in st_ne.table_rows(html):
         name, post = r.get("name", ""), r.get("post", "") or r.get("place", "")
         if not name:
+            provenance.skip_row(r, 'skip: not name')
             continue
         cells = r["cells"]
         office = cells[3] if len(cells) > 3 else ""

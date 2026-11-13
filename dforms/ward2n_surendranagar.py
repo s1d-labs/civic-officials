@@ -9,6 +9,7 @@ Record ids: dept:ward2n_surendranagar:<zone slug>:<branch slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -50,6 +51,7 @@ def parse(html, p):
         g = _esw.grid(t, pos=gp)
         for r, rp in zip(g[1:], gp[1:]):
             if len(r) < 3 or not r[1]:
+                provenance.skip_row(r, 'skip: len(r) < 3 or not r[1]')
                 continue
             branch, raw = _esw.clean(r[1]), _esw.clean(r[2])
             nm = re.sub(r"(?i)^(shree|shri|smt)\.?\s+", "", raw)

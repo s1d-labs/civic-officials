@@ -14,6 +14,7 @@ import re
 
 from dforms import _esw, _water
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -40,6 +41,7 @@ def kuwsdb(html, url=PAGES["kuwsdb"]):
         c = dict(zip(head, row))
         post, div = c.get("designation", ""), c.get("division", "")
         if not (post and div):
+            provenance.skip_row(row, 'skip: not (post and div)')
             continue
         level = _water.level_of(post, _water.level_of(div, "state"))
         if level == "state" and re.search(r"(?i)zone", div):
@@ -90,6 +92,7 @@ def bwssb(html, url=PAGES["bwssb"]):
     recs, done = [], set()
     for row in pgrid(t)[1:]:
         if len(row) < 3:
+            provenance.skip_row(row, 'skip: len(row) < 3')
             continue
         cells = [officer_cell(x) for x in row[:3]]
         div, sub, stn = (c.get("code", "") for c in cells)

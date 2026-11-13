@@ -12,6 +12,7 @@ from datetime import datetime
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -75,6 +76,7 @@ def parse(html, url=URL):
             for row in rows:
                 m = AC.match(row[0]) if row else None
                 if not m or len(row) < 3:
+                    provenance.skip_row(row, 'skip: not m or len(row) < 3')
                     continue
                 no, ac = int(m.group(1)), f"PY-AC-{int(m.group(1))}"
                 area = f"{no} - {m.group(2).title()}"

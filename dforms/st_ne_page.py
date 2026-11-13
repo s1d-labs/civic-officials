@@ -12,6 +12,7 @@ repeats the header ("Name | Designation | Mobile") is left out. Record ids: dept
 import re
 
 from dforms import _esw, _state, st_ne
+import provenance
 
 METHOD = "html table (state-level contact page)"
 MODULE = "st_ne_page"
@@ -23,6 +24,7 @@ def parse(html, p):
     for r in st_ne.table_rows(html):
         name, post = r.get("name", ""), r.get("post", "")
         if re.fullmatch(r"(?i)name( of .*)?", name or "") or re.fullmatch(r"(?i)designation", post or ""):
+            provenance.skip_row(r, 'skip: re.fullmatch(r"(?i)name( of .*)?", name or "") or re.fullmatch(r"(?...')
             continue
         office = ""
         if re.match(r"(?i)^(office|o/o|directorate|district|sub-?divisional)\b", name or ""):

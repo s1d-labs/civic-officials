@@ -8,6 +8,7 @@ Records: level "zone". Record ids: dept:ward_salem:<zone>:<post slug>:<name slug
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -42,11 +43,13 @@ def parse(html, p):
         n += 1
         for r, rp in zip(g[1:], gp[1:]):
             if len(r) < 3:
+                provenance.skip_row(r, 'skip: len(r) < 3')
                 continue
             name, post, phone = (_esw.clean(c) for c in r[:3])
             name = "" if name in ("-", "") else name
             phone = "" if phone == "-" else phone
             if not post or not (name or phone):
+                provenance.skip_row(r, 'skip: not post or not (name or phone)')
                 continue
             post = post.title() if post.isupper() else post
             recs.append(_ward.record(MODULE, f"{_esw.slug(zone)}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}", seen, body=BODY,

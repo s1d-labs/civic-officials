@@ -22,6 +22,7 @@ def parse(rows, url=URL, where=None):
     for i, x in enumerate(rows):
         st = x.get("stationName")
         if not st:
+            provenance.skip_row(x, 'skip: not st')
             continue
         lat, lon = x.get("latitude"), x.get("longitude")
         ok = isinstance(lat, (int, float)) and isinstance(lon, (int, float)) and 12 < lat < 20 and 76 < lon < 85

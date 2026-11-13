@@ -10,6 +10,7 @@ Commissioner / Additional Commissioner / MLA / MP / MLC / vigilance tables are l
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 SECTION_WING = (
     (r"property\s*tax|trade\s*licen|estates", "revenue"), (r"town\s*planning", "planning"),
@@ -51,12 +52,15 @@ def keycontacts(html, p, *, module, body, lgd, state, district):
             zone, circle = row.get("zone", ""), row.get("circle", "")
             contact, mail = _ward.col(row, "contact"), _ward.col(row, "email", "emaii")
             if not post or not (name or contact or mail):
+                provenance.skip_row(r, 'skip: not post or not (name or contact or mail)')
                 continue
             if HEAD_OFFICE.search(zone) and HEAD_OFFICE.search(circle):
+                provenance.skip_row(r, 'skip: HEAD_OFFICE.search(zone) and HEAD_OFFICE.search(circle)')
                 continue
             circle = "" if HEAD_OFFICE.search(circle) else circle
             zone = "" if HEAD_OFFICE.search(zone) or zone.lower() == "zonal office" else zone
             if not circle and not zone:
+                provenance.skip_row(r, 'skip: not circle and not zone')
                 continue
             if not zone and re.search(r"(?i)\bzone\b", circle):
                 zone, circle = circle, ""

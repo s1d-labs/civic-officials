@@ -11,6 +11,7 @@ import re
 
 from dforms import _esw, _water
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -43,6 +44,7 @@ def parse(html, url=URL):
             c = dict(zip([h.lower() for h in rows[0]], row))
             post, name = c.get("designation", ""), c.get("name", "")
             if not post:
+                provenance.skip_row(row, 'skip: not post')
                 continue
             level = _water.level_of(post, "zone" if region else "state")
             if level == "state" and region:

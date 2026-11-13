@@ -18,6 +18,7 @@ import re
 
 import officials
 from dforms import _esw, _state
+import provenance
 
 METHOD = "html table (S3WaaS whos-who / directory)"
 
@@ -70,6 +71,7 @@ def parse(html, division, url):
             f = officials.normalise(row)
             desig = f.get("designation", "")
             if not (f.get("name") or desig):
+                provenance.skip_row(row, 'skip: not (f.get("name") or desig)')
                 continue
             phone = _esw.phones(*[v for h, v in row.items() if re.search(r"(?i)phone|mobile|landline|contact|tel", h)])
             email = _esw.emails(" ".join(v for h, v in row.items() if re.search(r"(?i)e-?mail", h)))

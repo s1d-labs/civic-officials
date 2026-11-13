@@ -20,6 +20,7 @@ import subprocess
 import tempfile
 
 from bs4 import BeautifulSoup
+import provenance
 
 METHOD = "pdf text (pypdf layout), else ocr tesseract eng (scanned gazettes)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -50,9 +51,11 @@ def listing(html, base="https://ddd.gov.in/"):
         tds = tr.find_all("td")
         a = tr.find("a", href=re.compile(r"\.pdf$", re.I))
         if len(tds) < 2 or not a:
+            provenance.skip_row(tr, 'skip: len(tds) < 2 or not a')
             continue
         m = re.search(r"(\d{2})/(\d{2})/(\d{4})", tds[1].get_text())
         if not m:
+            provenance.skip_row(tr, 'skip: not m')
             continue
         day = datetime.date(int(m.group(3)), int(m.group(2)), int(m.group(1)))
         out.append((" ".join(tds[0].get_text(" ", strip=True).split()), day, a["href"]))
@@ -117,10 +120,12 @@ def members(text, pos=None):
         for li, line in enumerate(block.split("\n")):
             m = ROW.search(line)
             if not m:
+                provenance.skip_line(line, 'skip: not m')
                 continue
             ward = str(int(m.group(1)))
             name, party = split_name_party(m.group(2))
             if not name or ward in seen:
+                provenance.skip_line(line, 'skip: not name or ward in seen')
                 continue
             seen.add(ward)
             name = re.sub(r"^(Shri|Smt|Sh|Ms|Mr|Mrs|Kum|Km|Kumari|Dr),", r"\1.", name)     # OCR reads "Smt." as "Smt,"

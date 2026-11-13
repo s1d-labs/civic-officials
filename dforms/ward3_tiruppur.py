@@ -22,6 +22,7 @@ charter page (Tirunelveli: a PDF). Record ids: dept:ward3_tiruppur:<zone-n | bod
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -77,6 +78,7 @@ def zones_table(soup):
         for ri, tr in enumerate(rows, 1):
             tds = tr.find_all("td")
             if len(tds) < 3:
+                provenance.skip_row(tr, 'skip: len(tds) < 3')
                 continue
             m = re.match(r"(?i)zone\s*[–—-]?\s*([IVX]{1,4})\b", _esw.clean(tds[1].get_text(" ")))
             if m and m.group(1) in ROMAN:
@@ -93,9 +95,11 @@ def contacts(soup):
         for ri, tr in enumerate(rows, 1):
             tds = tr.find_all("td")
             if len(tds) < 3:
+                provenance.skip_row(tr, 'skip: len(tds) < 3')
                 continue
             tier = _esw.clean(tds[0].get_text(" "))
             if not re.search(r"(?i)\b(first|second|third|initial)\b.*\b(contact|complaint)\b", tier):
+                provenance.skip_row(tr, 'skip: not re.search(r"(?i)\\b(first|second|third|initial)\\b.*\\b(contact|co...')
                 continue
             posts, phones = lines(tds[1]), lines(tds[2])
             pos = {"table": ti, "row": ri}
@@ -137,6 +141,7 @@ def staff(html, zones, p, seen):
         base = _esw.clean(ZONE_TAG.sub(" ", post)).strip(" -–,&")
         first = re.split(r"\s+(?=(?:Assistant|Superintendent|Council|Deputy)\b)", base)[0] if base else post
         if not name or CLERICAL.search(first if zs else post):
+            provenance.skipped('skip: not name or CLERICAL.search(first if zs else post)')
             continue
         name = re.sub(r"(?i)^(thiru|tmt|ms|mr|mrs|selvi)\.?\s*", "", name)
         kw = dict(body=BODY, lgd=LGD, state=STATE, district=DISTRICT, source=STAFF_URL, src_url=STAFF_URL, src_pos=pos,

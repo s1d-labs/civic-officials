@@ -13,6 +13,7 @@ import re
 
 from dforms import _esw, _leg
 from dforms.ero_kl import ALIAS as ERO_ALIAS
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -46,6 +47,7 @@ def parse(html, url):
             row = row + [""] * (5 - len(row))
             m = re.match(r"\s*(.+?)\s*\|?\s*\(\s*(.+)\)\s*$", row[1])
             if not m:
+                provenance.skip_row(row, 'skip: not m')
                 continue
             name, const = m.group(1).strip(" |"), m.group(2).strip()
             const = re.sub(r"\s*\(\s*(SC|ST)\s*\)\s*", r" (\1)", const).strip()

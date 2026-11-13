@@ -13,6 +13,7 @@ import json
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
@@ -37,11 +38,13 @@ def parse(text, url=URL):
     for i, o in enumerate(rows or []):
         listed = _esw.clean(o.get("ulb_nm"))
         if not listed:
+            provenance.skip_row(o, 'skip: not listed')
             continue
         body = _esw.clean(re.sub(r"\s*\([^)]*\)\s*$", "", listed)).title()
         name = _esw.clean(o.get("comm_name"))
         phone = _esw.clean(str(o.get("mble_ph") or ""))
         if not (name or phone):
+            provenance.skip_row(o, 'skip: not (name or phone)')
             continue
         site = _esw.clean(o.get("erp_ulb_sbdmn_tx"))
         recs.append(_ulb.record(MODULE, "AP", body, "Commissioner", seen, name=name, phone=phone, district=_esw.clean(o.get("dstrt_nm")),

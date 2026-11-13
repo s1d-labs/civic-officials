@@ -13,6 +13,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table + html cards (S3WaaS public utility), paged /page/N/"     # source trail (provenance.py): how this reader reads its sources
 
@@ -182,6 +183,7 @@ def table_rows(html):
         rows = grid(t)
         for ri, r in enumerate(rows, 1):
             if not any(r):
+                provenance.skip_row(r, 'skip: not any(r)')
                 continue
             hk = header_of(r)
             if hk:
@@ -192,6 +194,7 @@ def table_rows(html):
                 continue
             use = head or (last_head if last_head and len(last_head) == len(r) else None)
             if not use:
+                provenance.skip_row(r, 'skip: not use')
                 continue
             f = {}
             for k, v in zip(use, r):
@@ -200,6 +203,7 @@ def table_rows(html):
                 elif k and v and k in ("phone", "mobile") and v != f[k]:
                     f[k] += ", " + v
             if not f:
+                provenance.skip_row(r, 'skip: not f')
                 continue
             yield f, {"caption": context, "section": section, "heading": clean(h.get_text(" ", strip=True)) if h else None,
                       "station_head": bool(use and any(k == "station" for k in use)) and any(
@@ -274,6 +278,7 @@ def records(module, pages, p):
             if rank and GENERIC.match(rank):
                 post, rank = rank, None          # "SHO", "POLICE STATION": the post, not a rank
             if not label:
+                provenance.skip_row(f, 'skip: not label')
                 continue
             original = label
             if label and not f.get("station") or (label and "," in label and RANKS.match(label.split(",")[0].strip())):
@@ -282,8 +287,10 @@ def records(module, pages, p):
                     rank, post, label = r2, p2, a2
             text = " ".join(x for x in (original, rank or "", post or "", ctx.get("caption") or "") if x)
             if p.get("police_only") and not POLICE.search(text):
+                provenance.skip_row(f, 'skip: p.get("police_only") and not POLICE.search(text)')
                 continue
             if not re.search(r"[A-Za-zऀ-ൿ]", label) or label.lower().startswith(("total", "read more")):
+                provenance.skip_row(f, 'skip: not re.search(r"[A-Za-zऀ-ൿ]", label) or label.lower().startswith(("...')
                 continue
             row_std = std
             sec = ctx.get("section") or ""
@@ -312,6 +319,7 @@ def records(module, pages, p):
         for ci, c in enumerate(cards(html, cw)):
             label = c["title"]
             if p.get("police_only") and not POLICE.search(f"{label} {c.get('type') or ''}"):
+                provenance.skip_row(c, 'skip: p.get("police_only") and not POLICE.search(f"{label} {c.get(\'type\')...')
                 continue
             level, otype = level_of(label, c.get("type") or "", "police_station")
             if otype == "unit":

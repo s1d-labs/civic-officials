@@ -21,6 +21,7 @@ from urllib.parse import urljoin, urlparse
 
 from cforms import _pri
 from dforms import _esw
+import provenance
 
 METHOD = "html table (Zilla Parishad website: office bearer, member and panchayat samiti chairperson pages; header words -> columns)"
 
@@ -169,11 +170,13 @@ def records(html, url, kind, p, lgd=None):
         last_taluka = ""
         for row, sp in zip(rows[hdr_i + 1:], pos[hdr_i + 1:]):
             if len(row) <= col["name"] or row == rows[hdr_i]:
+                provenance.skip_row(row, 'skip: len(row) <= col["name"] or row == rows[hdr_i]')
                 continue
             cell = {k: (row[i] if i < len(row) else "") for k, i in col.items()}
             written = cell["name"]
             name = plain_name(written)
             if not name or H_NAME.search(written) and len(written) < 25:
+                provenance.skip_row(row, 'skip: not name or H_NAME.search(written) and len(written) < 25')
                 continue
             ward_no, ward_name = division(cell.get("div", ""))
             taluka = cell.get("taluka", "") or last_taluka     # the taluka cell is written once per taluka, then left empty
@@ -183,8 +186,10 @@ def records(html, url, kind, p, lgd=None):
             elif "post" in cell and cell["post"]:
                 level, key, post_en, rank = post_of(cell["post"])
                 if kind == "whoswho" and (OFFICER.search(cell["post"]) or key.startswith("post-")):
+                    provenance.skip_row(row, 'skip: kind == "whoswho" and (OFFICER.search(cell["post"]) or key.startswi...')
                     continue        # Who's Who pages mostly list officers: keep elected posts only
             elif kind == "whoswho":
+                provenance.skip_row(row, 'skip: kind == "whoswho"')
                 continue
             else:
                 level, key, post_en, rank = "zp", "", "Member", 0

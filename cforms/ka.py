@@ -119,6 +119,7 @@ def members(html):
         nominated = bool(NOMINATED.search(heading)) or "ward_no" not in cols and "ward_addr" not in cols and bool(NOMINATED.search(" ".join(head)))
         for cells in body:
             if len(cells) < 2:
+                provenance.skip_row(cells, 'skip: len(cells) < 2')
                 continue
             d = {"_pos": getattr(cells, "pos", None)}
             for c, v in zip(cols, cells):
@@ -137,6 +138,7 @@ def members(html):
                 if re.fullmatch(r"(?:ward|ವಾರ್ಡ್?)\W*(?:no|ನಂ|ಸಂಖ್ಯೆ)?\W*[\d೦-೯]+", d["address"], re.I):
                     del d["address"]            # the cell holds only the ward number
             if EX_OFFICIO.search(d.get("position", "")):
+                provenance.skip_row(cells, 'skip: EX_OFFICIO.search(d.get("position", ""))')
                 continue
             if "addr_phone" in d:            # one cell with the address and the phone number
                 d["address"] = d["phone_raw"] = d.pop("addr_phone")

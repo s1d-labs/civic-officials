@@ -21,6 +21,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table (district portal pages from its menu)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -241,9 +242,11 @@ def rows(html, page_kind, where=None):
             else:
                 continue
             if SKIP_ROW.search(raw_area) or SKIP_ROW.search(post) or SKIP_ROW.search(name) or MC.match(post):
+                provenance.skip_row(r, 'skip: SKIP_ROW.search(raw_area) or SKIP_ROW.search(post) or SKIP_ROW.sear...')
                 continue
             area = clean_area(raw_area)
             if not area or re.fullmatch(r"[\d\s.]+", area) or JUNK_AREA.search(area) or len(re.sub(r"[^A-Za-z]", "", area)) < 3:
+                provenance.skip_row(r, 'skip: not area or re.fullmatch(r"[\\d\\s.]+", area) or JUNK_AREA.search(are...')
                 continue
             lv = (level_of_post(post) or level_of_post(raw_area) or (level_of_post(name) if name else None) or email_level(email)
                   or tkind)
@@ -255,6 +258,7 @@ def rows(html, page_kind, where=None):
             name = re.sub(r"(?i)\b(mpdo|tahsildar|mro|rdo)\b[\s,:-]*$", "", name).strip(" ,.-") if name else ""
             phone = _esw.phones(cell("phone"))
             if not (name or phone or email):
+                provenance.skip_row(r, 'skip: not (name or phone or email)')
                 continue
             if "division" in col and clean_area(cell("division")):
                 division = clean_area(re.sub(r"(?i)\bdivision\b", "", cell("division")))     # blank cell = as above

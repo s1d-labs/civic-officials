@@ -13,6 +13,7 @@ Record ids: dept:sub_la:LA-<district slug>:<designation slug>[:<n>].
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -54,6 +55,7 @@ def parse(html, url=URL):
         for row, pos in zip(rows[1:], tp[1:]):
             name, desig = col(row, "name"), col(row, "designation")
             if not (name or desig):
+                provenance.skip_row(row, 'skip: not (name or desig)')
                 continue
             base = key = f"LA-{_esw.slug(district)}:{_esw.slug(desig) or _esw.slug(name)}"
             n = 2

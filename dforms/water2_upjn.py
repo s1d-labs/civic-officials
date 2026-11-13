@@ -18,6 +18,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _esw
 from dforms._power import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -71,6 +72,7 @@ def civil(table, R):
         cells = [_esw.clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all(["td", "th"])]
         idx = next((i for i, c in enumerate(cells) if c.isdigit()), None)
         if idx is None:
+            provenance.skip_row(tr, 'skip: idx is None')
             continue
         tp = tr_pos(tr)
         for ci, c in enumerate(cells[:idx], 1):

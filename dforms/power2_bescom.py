@@ -17,6 +17,7 @@ import zipfile
 from io import BytesIO
 
 from dforms._power import Out, clean, email, phone, raw
+import provenance
 
 METHOD = "spreadsheet (xlsx)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -167,9 +168,11 @@ def parse(content, url=URL):
                 head = {v.strip().lower(): k for k, v in r.items()}
                 continue
             if not re.fullmatch(r"\d+", a) or not r.get("J") or r.get("B", "").strip() == "2":
+                provenance.skip_row(r, 'skip: not re.fullmatch(r"\\d+", a) or not r.get("J") or r.get("B", "").str...')
                 continue
             zone, circle, div, sub, unit = (_area(r.get(c)) for c in "BDFHJ")
             if not unit:
+                provenance.skip_row(r, 'skip: not unit')
                 continue
             area_col = (head or {}).get("areas", "L")
             ss_col = (head or {}).get("service station number")

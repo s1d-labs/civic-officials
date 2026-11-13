@@ -14,6 +14,7 @@ Record ids: dept:ward2s_chas:<body or zone-NN>:<post slug>:<name slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -66,6 +67,7 @@ def parse(html, p):
             cell = lambda k: _esw.clean(r[ix[k]]) if ix.get(k) is not None and ix[k] < len(r) else ""  # noqa: E731
             name, work, post, phone = cell("name"), cell("work"), cell("post"), cell("phone")
             if not name or name == head[ix["name"]]:
+                provenance.skip_row(r, 'skip: not name or name == head[ix["name"]]')
                 continue
             phone = "" if re.fullmatch(r"[-–\s]*", phone) else phone
             en = post_en(post) or "Staff"

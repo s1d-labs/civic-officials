@@ -13,6 +13,7 @@ Records: level "ward" (one per ward and wing) and "zone" (CSI, house tax). Recor
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html cards"     # source trail (provenance.py): how this reader reads its sources
 
@@ -78,6 +79,7 @@ def parse_swm(html, p, seen):
             wline = next((h for h in heads if re.match(r"(?i)ward\s*no", h)), "")
             ward, wname = _ward_no(wline)
             if not ward:
+                provenance.skip_row(card, 'skip: not ward')
                 continue
             wards.append(ward)
             nm, _, ic = _name(heads[0] if heads and heads[0] != wline else "")
@@ -101,6 +103,7 @@ def parse_drainage(html, p, seen):
         heads, addr, lat, lon, phone, email = _card(card)
         ward, wname = _ward_no(heads[0] if heads else "")
         if not ward:
+            provenance.skip_row(card, 'skip: not ward')
             continue
         nm, post, ic = _name(heads[1] if len(heads) > 1 else "")
         post = {"SSI": "Sub Sanitary Inspector (Drainage)"}.get((post or "").upper().replace(".", ""), "Drainage Ward In-charge")
@@ -122,6 +125,7 @@ def parse_officials(html, p, seen):
             continue
         m = re.match(r"(?i)house\s*tax\s+(east|west|central|north|south)$", section or "")
         if not m:
+            provenance.skipped('skip: not m')
             continue
         zone = f"{m.group(1).title()} Zone"
         f = {}

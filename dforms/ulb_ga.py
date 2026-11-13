@@ -12,6 +12,7 @@ South Goa or Kushavati, so the record gives no district (civic-india sql/87 ties
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -44,6 +45,7 @@ def parse(html, url=URL):
             cell = lambda k: _esw.clean(row[ix[k]]) if ix[k] is not None and ix[k] < len(row) else ""   # noqa: E731
             body, addr, phone = cell("name"), cell("addr"), cell("phone")
             if not body or not CO.search(addr) or not phone:
+                provenance.skip_row(row, 'skip: not body or not CO.search(addr) or not phone')
                 continue
             recs.append(_ulb.record(MODULE, "GA", body, "Chief Officer", seen, phone=phone, body_type="Municipal Council", source=url,
                                     last_updated=up, address=addr, src_pos=pos))

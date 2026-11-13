@@ -17,6 +17,7 @@ import re
 
 from dforms import _esw
 from dforms._water import unique
+import provenance
 
 MOBILE = re.compile(r"(?<!\d)(?:\+?91[\s-]?)?[6-9]\d{9}(?!\d)")
 LEVEL_RX = (
@@ -113,6 +114,7 @@ def parse_page(html, url, module, state, district, wing, extra=None):
                 cols = m
                 continue
             if cols is None:
+                provenance.skip_row(r, 'skip: cols is None')
                 continue
             def col(k):
                 i = cols.get(k)
@@ -121,6 +123,7 @@ def parse_page(html, url, module, state, district, wing, extra=None):
             if not post and place and level_of(place) != "district" and re.search(r"(?i)engineer|officer", place):
                 post, place = place, ""                          # "Division/Mandal Attached" = "Executive Engineer(P),Vijayawada."
             if not cols.get("post") and not cols.get("name") and not post:
+                provenance.skip_row(r, 'skip: not cols.get("post") and not cols.get("name") and not post')
                 continue
             # table numbers count the page's main content only (nav, header, footer, forms taken out)
             add(post, col("name"), place, _esw.phones(col("phone")), _esw.emails(col("email")),
@@ -130,6 +133,7 @@ def parse_page(html, url, module, state, district, wing, extra=None):
         for i, line in enumerate(lines):
             t = _esw.clean(line)
             if not MOBILE.search(t):
+                provenance.skip_line(line, 'skip: not MOBILE.search(t)')
                 continue
             ctx = t
             if not re.search(r"(?i)engineer|officer", t):         # "Contact No.…" on its own line: the post is on the line above
@@ -137,6 +141,7 @@ def parse_page(html, url, module, state, district, wing, extra=None):
                 ctx = (prev[-1] + ", " + t) if prev else t
             m = re.match(r"(?i)\s*(?:sri|smt|kum|dr)?\.?\s*(.*?(?:engineer|officer)[^,]*)\s*,\s*(.*?)\s*,?\s*(?:contact|ph|cell|mobile|mob)", ctx)
             if not m:
+                provenance.skip_line(line, 'skip: not m')
                 continue
             post = m.group(1)
             place = re.sub(r"(?i)^(rws\s*&\s*s|rws&s|rws)\s*,?\s*", "", m.group(2)).strip(" ,")

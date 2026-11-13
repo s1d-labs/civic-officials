@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms._police3e import kind
+import provenance
 
 METHOD = "html table"
 
@@ -64,6 +65,7 @@ def parse(html, url=URL, state="OD"):
         if head:
             for ri, c in enumerate(rows):
                 if c is head or len(c) < 5 or not re.match(r"^\d+\.?$", c[0]):
+                    provenance.skip_row(c, 'skip: c is head or len(c) < 5 or not re.match(r"^\\d+\\.?$", c[0])')
                     continue
                 name = c[1].strip(" .") or None
                 post = c[2]
@@ -81,6 +83,7 @@ def parse(html, url=URL, state="OD"):
     for (ti, rows), (upd, district) in zip(zone_tables, UPD):
         for ri, c in enumerate(rows):
             if len(c) < 3 or not re.match(r"^Zone\s+[IVX]+", c[0], re.I):
+                provenance.skip_row(c, 'skip: len(c) < 3 or not re.match(r"^Zone\\s+[IVX]+", c[0], re.I)')
                 continue
             zone = c[0]
             officer = c[1]

@@ -65,6 +65,7 @@ def _split(lines):
     for t in lines:
         t = _esw.clean(t)
         if not t or t.upper() in ("NA", "N/A", "-"):
+            provenance.skipped('skip: not t or t.upper() in ("NA", "N/A", "-")')
             continue
         if not re.search(r"[A-Za-z]", t):
             yield t, bool(PHONE.match(t) or re.fullmatch(r"\(?\s*\d(?:\s?\d){7,11}\s*\)?", t))   # "931543474": a short mobile
@@ -122,6 +123,7 @@ def table(pages, info=None):
                 break
             runs = _runs(ln)
             if not runs:
+                provenance.skip_line(ln, 'skip: not runs')
                 continue
             if len(runs) == 1 and not PHONE.match(runs[0][1]) and not POST.match(runs[0][1]) \
                     and min(abs(runs[0][0] - s) for s in starts) > 8:

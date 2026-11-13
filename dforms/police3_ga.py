@@ -12,6 +12,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -67,6 +68,7 @@ def parse(html, url=URL):
         for ri, tr in enumerate(rows[1:], 1):
             c = [clean(x.get_text(" ", strip=True)) or "" for x in tr.find_all(["td", "th"])]
             if len(c) < 5 or not c[1]:
+                provenance.skip_row(tr, 'skip: len(c) < 5 or not c[1]')
                 continue
             post = c[1]
             level, otype = kind_of(post)

@@ -10,6 +10,7 @@ Record ids: dept:ward3_aligarh:<post slug>:<mobile or row>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -46,6 +47,7 @@ def parse(html, p):
         for r in rows:
             name, post, ph = _ward.col(r, "अधिकारी"), _ward.col(r, "पद"), _ward.col(r, "मोबाइल")
             if not post or re.search(r"मेयर|महापौर", post) or "शिकायत" in name:
+                provenance.skip_row(r, 'skip: not post or re.search(r"मेयर|महापौर", post) or "शिकायत" in name')
                 continue
             en = en_post(post)
             wing = "water" if re.search(r"जल", post) else ("sanitation" if re.search(r"स्व[छच]|सफाई", post) else None)

@@ -12,6 +12,7 @@ area = the service as written. Record ids: dept:ward2n_panaji:<page>:<service sl
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -37,6 +38,7 @@ def parse_disposal(html, p, seen):
             service = _esw.clean(_ward.col(r, "services").split("|")[0])
             names, posts = _lines(_ward.col(r, "name")), _lines(_ward.col(r, "designation"))
             if not service or not names or service.lower() == "no result":
+                provenance.skip_row(r, 'skip: not service or not names or service.lower() == "no result"')
                 continue
             wards = _ward.wards_of(service) if re.search(r"(?i)\bward", service) else []
             phone = _ward.col(r, "phone").replace("|", " ")
@@ -63,6 +65,7 @@ def parse_sanitation(html, p, seen):
     for ui, ul in enumerate(_esw.soup(html).find_all("ul", class_="elementor-icon-list-items"), 1):
         items_ = [_esw.clean(li.get_text(" ")) for li in ul.find_all("li")]
         if not items_ or not re.match(r"(?i)contact\s+sanitary\s+inspector", items_[0]):
+            provenance.skipped('skip: not items_ or not re.match(r"(?i)contact\\s+sanitary\\s+inspector", i...')
             continue
         name = next((x for x in items_[1:] if not re.search(r"\d{6}", x)), "")
         phone = " ".join(x for x in items_[1:] if re.search(r"\d{6}", x))

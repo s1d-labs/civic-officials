@@ -138,6 +138,7 @@ def rows(pages):
                     t, lat, ph = _split(seg)
                     phones += ph
                     if not t or re.fullmatch(r"-{3,}", t):
+                        provenance.skipped('skip: not t or re.fullmatch(r"-{3,}", t)')
                         continue
                     if re.fullmatch(r"¼.*½", t) and "fuyfEcr" in t:
                         notes.append(kd_text(t).strip("()"))

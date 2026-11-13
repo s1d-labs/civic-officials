@@ -11,6 +11,7 @@ Gujarati), zone. Record ids: dept:ward_vadodara:w<NN>:<post slug>:<name slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -32,6 +33,7 @@ def parse_wing(html, p):
             post, name, phone = _ward.col(r, "designation"), _ward.col(r, "name"), _ward.col(r, "mobile")
             m = re.search(r"\(\s*WARD\s*0*(\d+)\s*\)", post, re.I)
             if not m or not (name or phone):
+                provenance.skip_row(r, 'skip: not m or not (name or phone)')
                 continue
             w = m.group(1)
             post = _esw.clean(post[:m.start()] + post[m.end():])
@@ -49,6 +51,7 @@ def parse_offices(html, p):
         for r in rows:
             w = _ward.wards_of(_ward.col(r, "ward"))
             if not w:
+                provenance.skip_row(r, 'skip: not w')
                 continue
             zone_en, _, zone_gu = _ward.col(r, "zone").partition("|")
             zone = f"{zone_en.strip()} Zone"

@@ -9,6 +9,7 @@ Record id dept:power_kpdcl:<division>:<sub-division>:<designation>.
 from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, cells, clean, phone, raw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -44,10 +45,12 @@ def parse(html, url=URL):
             out.src = {"src_pos": tr_pos(tr)}
             c = cells(tr)
             if len(c) != len(head):
+                provenance.skip_row(tr, 'skip: len(c) != len(head)')
                 continue
             g = lambda k: clean(c[ix[k]]) if k in ix else None  # noqa: E731
             lvl = level(g("office"))
             if not lvl:
+                provenance.skip_row(tr, 'skip: not lvl')
                 continue
             area = {"subdivision": g("sub-division"), "division": g("division"), "circle": g("circle")}.get(lvl) or g("sub-division")
             par = {"circle": g("circle") if lvl in ("division", "subdivision") else None,

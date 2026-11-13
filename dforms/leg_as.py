@@ -37,6 +37,7 @@ def parse_list(html, where=None):
         strong = p.find("strong")
         spans = [_esw.clean(s.get_text(" ")) for s in p.find_all("span")]
         if not strong or len(spans) < 2:
+            provenance.skip_line(p, 'skip: not strong or len(spans) < 2')
             continue
         m = re.match(r"(\d+)\s*-\s*(.+)", spans[1])
         no, cons = (int(m.group(1)), _esw.clean(m.group(2))) if m else (None, spans[1])

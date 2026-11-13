@@ -67,6 +67,7 @@ def parse_pages(pages, url=URL):
     for i, line in enumerate(lines):
         mobs = list(MOBILE.finditer(line))
         if not mobs or "क्रम" in line:
+            provenance.skip_line(line, 'skip: not mobs or "क्रम" in line')
             continue
         last = mobs[-1]
         before, after = line[:last.start()], _esw.clean(line[last.end():])
@@ -76,6 +77,7 @@ def parse_pages(pages, url=URL):
             sr_no = int(cells.pop(0)[1])
         texts = [t for _, t in cells]
         if len(texts) < 3:
+            provenance.skip_line(line, 'skip: len(texts) < 3')
             continue
         name, office = texts[-1], texts[-2]
         mid = texts[1:-2]

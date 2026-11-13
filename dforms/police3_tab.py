@@ -21,6 +21,7 @@ from bs4 import BeautifulSoup
 
 from dforms import police_s3waas
 from dforms._police import clean, email, phones, rec, slug, uniq
+import provenance
 
 H = [   # (field, head pattern), first match wins
     ("sno", r"^(s\.?\s*no|sr\.?\s*no|sl\.?\s*no|#|क्र)"),
@@ -101,10 +102,12 @@ def tables(html, url, module, district, state):
             rank, name = split_rank(_v(c, col.get("name")))
             place, post = _v(c, col.get("place")), _v(c, col.get("post"))
             if not (name or place or post):
+                provenance.skip_row(tr, 'skip: not (name or place or post)')
                 continue
             ph = phones(*(re.sub(r"\b(0\d{2,4})\s*/\s*(\d{5,8})\b", r"\1-\2", x)        # '02482/225601': STD code / number
                           for x in (_v(c, col.get("mobile")), _v(c, col.get("landline"))) if x))
             if not ph and not name:
+                provenance.skip_row(tr, 'skip: not ph and not name')
                 continue
             ut = unit_type(f"{place or ''} {post or ''}")
             if place and re.search(r"police station|thana|^ps|ps name|name of ps|पोलीस ठाणे", place_head) and ut is None:

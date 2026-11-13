@@ -20,6 +20,7 @@ import re
 from dforms import _emerg
 from dforms._pdftext import layout_pages
 from provenance import line_pos
+import provenance
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -84,10 +85,13 @@ def rows(pages, where=None):
     for i, ln in enumerate(lines):
         s = _emerg.clean(ln)
         if not s:
+            provenance.skipped("empty")
             continue
         if re.fullmatch(r"\d{1,2}", s) and len(ln) - len(ln.lstrip()) > 12:
+            provenance.skip_line(ln, 'skip: re.fullmatch(r"\\d{1,2}", s) and len(ln) - len(ln.lstrip()) > 12')
             continue  # page number
         if re.match(r"(?i)^(s[il]\.?\s*(no)?|no\.|sl\s*no|updated|address\b)", s) or "Landline/Mobile" in s or "TELENO" in s:
+            provenance.skip_line(ln, 'skip: re.match(r"(?i)^(s[il]\\.?\\s*(no)?|no\\.|sl\\s*no|updated|address\\b)",...')
             continue
         low = s.lower()
         hit = next(((k, lv) for rx, k, lv in PARTS if re.search(rx, low)), None)
@@ -97,6 +101,7 @@ def rows(pages, where=None):
             district = None if level == "state" else district
             continue
         if part is None:
+            provenance.skip_line(ln, 'skip: part is None')
             continue
         d = district_of(s) if not re.search(r"\d", s) else None
         if d and part in ("teoc", "district") and not ROW.match(ln) and (len(ln) - len(ln.lstrip()) >= 10 or "DISTRICT" in s):
@@ -141,6 +146,7 @@ def records(pages, url=URL, engine=None):
         phone = _emerg.phones(ph)
         helpline = _emerg.short_codes(ph)
         if not (phone or helpline) or not post:
+            provenance.skipped('skip: not (phone or helpline) or not post')
             continue
         area, lvl = district, level
         if part == "deoc":

@@ -8,6 +8,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -57,6 +58,7 @@ def parse(html, url=BASE):
             c = dict(zip(head, row))
             desig = c.get("designation", "")
             if not desig or desig.lower() == "designation":
+                provenance.skip_row(row, 'skip: not desig or desig.lower() == "designation"')
                 continue
             served = c.get("activity", "")
             area = _area(desig, c.get("address", ""), served)

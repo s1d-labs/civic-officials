@@ -14,6 +14,7 @@ cards); district Papum Pare. Pasighat Municipal Council (the state's other elect
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html cards (div.card-body)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -39,6 +40,7 @@ def cards(html, where=None):
     for n, body in enumerate(soup.find_all("div", class_="card-body"), 1):
         h = body.find("h5")
         if not h:
+            provenance.skipped('skip: not h')
             continue
         name = _esw.clean(h.get_text(" ").replace("account_circle", ""))
         f = {}
@@ -66,6 +68,7 @@ def parse(html, kind="officers", body=BODY, district=DISTRICT, url=""):
     for (name, f), pos in zip(cards(html, where), where):
         post = f.get("local_offer", "")
         if not post or (kind == "members" and not KEEP_MEMBER.search(post)):
+            provenance.skipped('skip: not post or (kind == "members" and not KEEP_MEMBER.search(post))')
             continue
         contact = f.get("contact_phone", "")
         ward = re.sub(r"(?i)^ward\s*no\.?\s*", "", f.get("device_hub", "")) if kind == "members" else None

@@ -12,6 +12,7 @@ Records: level "zone". Record ids: dept:ward_nagpur:z<NN>:<section slug>:<post s
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -61,6 +62,7 @@ def parse_zone(html, p):
                 section = cells[0]
                 continue
             if len(cells) < 4 or cells[1].lower() == "name":
+                provenance.skip_row(r, 'skip: len(cells) < 4 or cells[1].lower() == "name"')
                 continue
             name, post, phone = cells[1], cells[2], cells[3]
             if name or phone:
@@ -89,10 +91,12 @@ def parse_zonal(html, p):
             continue
         for r, rp in zip(g[1:], gp[1:]):
             if len(r) < 4:
+                provenance.skip_row(r, 'skip: len(r) < 4')
                 continue
             name, zno, zname, phone = (_esw.clean(c) for c in r[:4])
             m = re.search(r"\d+", zno)
             if not m:
+                provenance.skip_row(r, 'skip: not m')
                 continue
             zone = f"Zone {int(m.group(0)):02d} {zname}"
             out.append(_ward.record(MODULE, f"z{int(m.group(0)):02d}:zonal-officer:{_esw.slug(name)}", seen, body=BODY, lgd=LGD,

@@ -78,6 +78,7 @@ def parse(html, p, src=None):
         phone = _esw.phones(*(x for x in (col(row, "phone"), col(row, "mobile")) if re.sub(r"\D", "", x).strip("0")))
         email = _esw.emails(col(row, "email"))
         if not (name or phone or email):
+            provenance.skip_row(row, 'skip: not (name or phone or email)')
             continue
         long, level = POSTS.get(desig, POSTS.get(p.get("designation"), (desig, "district")))
         district, dc = district_of(dist_s) if dist_s else (None, "")

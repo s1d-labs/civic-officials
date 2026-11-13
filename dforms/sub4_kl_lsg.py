@@ -33,6 +33,7 @@ import re
 from urllib.parse import urljoin, urlparse
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table or cards (staff page of the body site) + office block of /en/emails"     # source trail (provenance.py)
 
@@ -83,6 +84,7 @@ def index_rows(html):
         for tr in t.find_all("tr"):
             td = tr.find_all("td")
             if len(td) < 4:
+                provenance.skip_row(tr, 'skip: len(td) < 4')
                 continue
             name, code = _esw.clean(td[1].get_text(" ")), _esw.clean(td[2].get_text(" "))
             a = td[3].find("a", href=True)
@@ -175,6 +177,7 @@ def table_people(soup):
                     v.setdefault(rl[i], []).append(c)
             f = {k: " | ".join(x) for k, x in v.items()}
             if not f.get("name") or [txt(c) for c in r] == header:
+                provenance.skip_row(r, 'skip: not f.get("name") or [txt(c) for c in r] == header')
                 continue
             f["cells"] = {header[i] or f"col{i + 1}": txt(c) for i, c in enumerate(r) if txt(c) and i < len(header)}
             out.append((f, sp))

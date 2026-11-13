@@ -87,6 +87,7 @@ def divisions_in(text):
     out = []
     for m in re.finditer(r"(?i)\b(?:divisional\s+)?commissioner\s*,\s*([A-Za-z]+)(?:\s+division)?", text or ""):
         if not re.search(r"(?i)divisional|division", m.group(0)):
+            provenance.skip_line(m, 'skip: not re.search(r"(?i)divisional|division", m.group(0))')
             continue
         d = DIVS.get(m.group(1).lower())
         if d and d not in out:
@@ -101,14 +102,17 @@ def blocks(text):
     for pg, page in enumerate(text.split("\f"), 1):
         for ln, raw in enumerate(page.split("\n"), 1):
             if not raw.strip():
+                provenance.skipped("empty")
                 continue
             h = re.search(r"\bName\b.*\bDesignation\b", raw)
             if h and re.match(r"^\s*No\.", raw):
                 name_col, des_col = raw.index("Name"), raw.index("Designation")
                 continue
             if re.fullmatch(r"\s*\d{1,3}\s*", raw) and len(raw) - len(raw.lstrip()) > 20:   # page number
+                provenance.skip_line(raw, 'skip: re.fullmatch(r"\\s*\\d{1,3}\\s*", raw) and len(raw) - len(raw.lstrip()...')
                 continue
             if re.search(r"(?i)posting of ias officers", raw):
+                provenance.skip_line(raw, 'skip: re.search(r"(?i)posting of ias officers", raw)')
                 continue
             m = ROW.match(raw)
             if m:
@@ -117,6 +121,7 @@ def blocks(text):
                 out.append(cur)
                 rest_at = m.end()
             elif cur is None:
+                provenance.skip_line(raw, 'skip: cur is None')
                 continue
             else:
                 rest_at = 0
@@ -182,6 +187,7 @@ def parse_key(html, url):
         for d, pos, cells in _st_ape.header_rows(t):
             post, name = d.get("post", ""), d.get("name", "")
             if not (post or name):
+                provenance.skip_row(d, 'skip: not (post or name)')
                 continue
             recs.append(_state.rec(MODULE, f"key:{ti}:{pos['row']}", state="WB", level="state", post=post,
                                    post_kind=_st_ape.post_kind(post), name=name,

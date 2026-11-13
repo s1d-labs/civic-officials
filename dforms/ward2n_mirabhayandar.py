@@ -13,6 +13,7 @@ Record ids: dept:ward2n_mirabhayandar:ps<n>:<post slug>:<k>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -91,6 +92,7 @@ def parse(html, p):
         section = ([_esw.clean(x) for x in SECTION.findall(before) if "JOB CHART" not in x] or [""])[-1]
         for r, rp in zip(g, gp):
             if len(r) < 3 or not re.fullmatch(r"\d{1,3}\.?", _esw.clean(r[0])) or t.find("table"):
+                provenance.skip_row(r, 'skip: len(r) < 3 or not re.fullmatch(r"\\d{1,3}\\.?", _esw.clean(r[0])) or ...')
                 continue
             pr = _ward.hi_norm(r[1])
             post_mr = _esw.clean(pr.split("|")[0])

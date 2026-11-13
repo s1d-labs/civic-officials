@@ -15,6 +15,7 @@ Not India-only (the archive copy came from India; the reader asks for no other p
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -59,6 +60,7 @@ def parse(html, url=URL):
     recs, seen, where = [], set(), []
     for (city, name, post, email, site), pos in zip(rows(html, where), where):
         if not city or not (name or email):
+            provenance.skipped('skip: not city or not (name or email)')
             continue
         code, district = CODES.get(re.sub(r"[^a-z]", "", city.lower()), (None, None))
         extra = {"lgd_code": code} if code else {}

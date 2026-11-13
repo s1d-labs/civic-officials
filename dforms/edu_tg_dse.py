@@ -13,6 +13,7 @@ is "-" is a vacant post (vacant=true, no name). Ids dept:edu_tg_dse:<deo|rjd|sta
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table"
 
@@ -50,6 +51,7 @@ def parse(html, url=URL):
         for ri, tr in enumerate(trs):
             tds = [_esw.cell_text(td) for td in tr.find_all("td")]
             if len(tds) < 4 or not re.match(r"^\d+$", tds[0] or ""):
+                provenance.skip_row(tr, 'skip: len(tds) < 4 or not re.match(r"^\\d+$", tds[0] or "")')
                 continue
             if kind in ("deo", "rjd"):
                 area, name, cell, mail = (tds + [""] * 5)[1:5]
@@ -60,6 +62,7 @@ def parse(html, url=URL):
                 area, mail, phone = "Telangana", "", _esw.phones(cell, tel)
             vacant = not re.search(r"[A-Za-z]{2}", name or "") or bool(re.fullmatch(r"(?i)vacant", name or ""))
             if vacant and not phone and not _esw.emails(mail):
+                provenance.skip_row(tr, 'skip: vacant and not phone and not _esw.emails(mail)')
                 continue
             key = f"{kind}:{_esw.slug(area if kind in ('deo', 'rjd') else post)}"
             if key in seen:

@@ -18,6 +18,7 @@ Record ids: dept:ward2s_madurai:<zone or central>:<post slug>:<name slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -104,6 +105,7 @@ def parse(html, p):
                     post0 = re.sub(r"\s*[–-]\s*", " - ", h)
                     continue
                 if len(r) < 4 or not (r[1] or r[3]):
+                    provenance.skip_row(r, 'skip: len(r) < 4 or not (r[1] or r[3])')
                     continue
                 name, where, phone = r[1], r[2], r[3]
                 post = post0
@@ -128,6 +130,7 @@ def parse(html, p):
                     zone, fitter, central = _zone_no(h), bool(re.search(r"(?i)fitter", h)), bool(re.search(r"(?i)central", h))
                     continue
                 if len(r) < 5 or not (r[1] or r[4]):
+                    provenance.skip_row(r, 'skip: len(r) < 5 or not (r[1] or r[4])')
                     continue
                 raw, wards_txt, place, phone = r[1], r[2], r[3], r[4]
                 place = "" if place in ("–", "-") else place

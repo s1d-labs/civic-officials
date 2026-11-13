@@ -19,6 +19,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+import provenance
 
 METHOD = "pdf text (pdftotext -layout) or ocr tesseract (ruled grid, one image per column), by payload mode"     # source trail (provenance.py): how this reader reads its sources
 
@@ -212,6 +213,7 @@ def words(png, lang, psm="6"):
     for ln in r.stdout.splitlines()[1:]:
         f = ln.split("\t")
         if len(f) < 12 or not f[11].strip():
+            provenance.skip_line(ln, 'skip: len(f) < 12 or not f[11].strip()')
             continue
         x, y, ww, hh = map(int, f[6:10])
         out.append((x + ww / 2, y + hh / 2, f[11].strip(), float(f[10])))
@@ -394,6 +396,7 @@ def text_rows(text):
             starts, cur = header_cols(ln), None
             continue
         if starts is None:
+            provenance.skip_line(ln, 'skip: starts is None')
             continue
         if not ln.strip() or re.search(r"HARYANA GOVT|Elected unopposed|State Election Commissioner|unopposed", ln, re.I):
             cur = None
@@ -406,6 +409,7 @@ def text_rows(text):
                 # ward and name sometimes share a chunk: "12 Suman Bala"
                 m = re.match(r"(\d+|-{2,})\.?\s+(.*)", (w + " " + c["name"]).strip())
                 if not m:
+                    provenance.skip_line(ln, 'skip: not m')
                     continue
                 w, c["name"] = m.group(1), m.group(2)
             c["ward"] = w if w.isdigit() else ""

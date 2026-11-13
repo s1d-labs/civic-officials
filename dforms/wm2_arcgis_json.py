@@ -22,6 +22,7 @@ in the stored file and its object id).
 """
 from dforms._wm2_arcgis import query, store
 from dforms.wm2_arcgis import towns     # same records as wm2_arcgis
+import provenance
 
 METHOD = "arcgis layer, esri json (object ids, then features by id), converted to geojson"
 
@@ -50,6 +51,7 @@ def esri_geometry(g):
         for ring in g["rings"] or []:
             ring = [list(p[:2]) for p in ring]
             if len(ring) < 4:
+                provenance.skipped('skip: len(ring) < 4')
                 continue
             (polys if _area2(ring) < 0 else holes).append([ring])
         if not polys:                   # rings drawn the other way round: take them as outer rings

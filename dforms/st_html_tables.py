@@ -16,6 +16,7 @@ whose rank the words do not tell: the SEC's "Commissioner" is the State Election
 import re
 
 from dforms import _esw, _state
+import provenance
 
 METHOD = "html table (innermost tables, header row found by its words)"
 MODULE = "st_html_tables"
@@ -82,6 +83,7 @@ def parse(html, p, url):
                 ks = h
                 continue
             if not ks:
+                provenance.skip_row(row, 'skip: not ks')
                 continue
             f = {}
             for k, v in zip(ks, row):
@@ -93,6 +95,7 @@ def parse(html, p, url):
                 f["name"], f["post"] = split_name_post(f["name_post"])
             name, post = re.sub(r"\s*\|\s*", " ", f.get("name", "")), re.sub(r"\s*\|\s*", " ", f.get("post", ""))
             if not (name or post) or (name and _esw.clean(name).lower() in ("name", "नाम")):
+                provenance.skip_row(row, 'skip: not (name or post) or (name and _esw.clean(name).lower() in ("name"...')
                 continue
             phone = _esw.phones(f.get("phone", ""))
             mobile = _esw.phones(f.get("mobile", ""))

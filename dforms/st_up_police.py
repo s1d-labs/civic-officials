@@ -19,6 +19,7 @@ Route: direct or proxy (answers from Mumbai); abroad unchecked. No captcha on th
 import re
 
 from dforms import _esw, _state, st_lgd_upbrjh as lgd
+import provenance
 
 METHOD = "html table (ASP.NET GridView)"
 MODULE = "st_up_police"
@@ -63,6 +64,7 @@ def parse(html, url, slug, unit=False):
             g = lambda k: cells[col[k]] if col[k] is not None and col[k] < len(cells) else ""
             sno, name, rank, posted = g("sno"), g("name"), g("rank"), g("posted")
             if not (name or posted) or not re.search(r"\d", sno or "0"):
+                provenance.skip_row(cells, 'skip: not (name or posted) or not re.search(r"\\d", sno or "0")')
                 continue
             name = re.sub(r"\s*\(\s*0\s*\)\s*$", "", name)      # "PRAGYA MISHRA ( 0 )": the grid's empty batch field
             post = f"{rank}, {posted}" if rank and posted and rank.lower() not in posted.lower() else (posted or rank)

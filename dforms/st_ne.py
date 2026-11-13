@@ -12,6 +12,7 @@ contact(text): (phones, emails, address) of a "Contact Details" cell ("Phone : 0
 import re
 
 from dforms import _esw
+import provenance
 
 HEAD = [
     ("name", r"^(name|name of the officer|officer'?s? name|name of officer|name\s*(?:&|and)\s*designation|officer)\b"),
@@ -153,6 +154,7 @@ def pdf_blocks(text):
         people, pend, sec = [], [], ""
         for ln, raw, cs in lines:
             if HEADER.search(raw) and not any(TITLE.match(c) for _, c in cs):
+                provenance.skip_line(ln, 'skip: HEADER.search(raw) and not any(TITLE.match(c) for _, c in cs)')
                 continue
             for s0, c in cs:
                 if TITLE.match(c):
@@ -173,10 +175,12 @@ def pdf_blocks(text):
             if not people and not any(k in ("phone", "email") for k in kinds):
                 pend.append(raw.strip())
         if not people:
+            provenance.skipped('skip: not people')
             continue
         pend_cells = []
         for ln, raw, cs in lines:
             if HEADER.search(raw) and not any(TITLE.match(c) for _, c in cs):
+                provenance.skip_line(ln, 'skip: HEADER.search(raw) and not any(TITLE.match(c) for _, c in cs)')
                 continue
             for s0, c in cs:
                 if TITLE.match(c):

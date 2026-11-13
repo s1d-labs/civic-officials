@@ -49,6 +49,7 @@ def aww_records(pages, url, p, engine):
         for ln, line in enumerate(page.splitlines(), 1):
             m = AWW.match(line)
             if not m:
+                provenance.skip_line(line, 'skip: not m')
                 continue
             sno, dcode, pre, mob, typ, helper, hmob = m.groups()
             parts = gaps(pre)
@@ -86,6 +87,7 @@ def asha_records(pages, url, p, engine):
         for ln, line in enumerate(page.splitlines(), 1):
             m = ASHA.match(line)
             if not m:
+                provenance.skip_line(line, 'skip: not m')
                 continue
             sno, ward, wname, name, mob = m.groups()
             if ward != last_ward:
@@ -94,6 +96,7 @@ def asha_records(pages, url, p, engine):
                 ward_name = _esw.clean(wname)
             name = _esw.clean(name)
             if NONAME.match(name):
+                provenance.skip_line(line, 'skip: NONAME.match(name)')
                 continue
             k = f"asha:{sno}"
             while k in seen:
@@ -121,12 +124,14 @@ def prahari_records(pages, url, p, engine):
                 continue
             m = PRAHARI.match(line)
             if not m or not m.group(3):
+                provenance.skip_line(line, 'skip: not m or not m.group(3)')
                 continue
             sno, mid, mob = m.groups()
             cells = [cn_krutidev.convert(x).replace("Œ", ".") for x in gaps(mid)]
             age = next((c for c in cells if re.fullmatch(r"\d{2}", c)), "")
             name = cells[0] if cells else ""
             if NONAME.match(name) or re.fullmatch(r"\d+", name):
+                provenance.skip_line(line, 'skip: NONAME.match(name) or re.fullmatch(r"\\d+", name)')
                 continue
             rest = [c for c in cells[1:] if c != age]
             k = f"prahari:s{section}:{sno}"

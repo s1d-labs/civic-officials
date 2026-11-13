@@ -15,6 +15,7 @@ gives no record (those bodies have their own rows). Body names as written ("Roha
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -76,6 +77,7 @@ def parse(html, url=URL):
             email = _esw.emails(c.get("email", ""))
             body = pick(bodies, c.get("district", ""), email)
             if not body or not (c.get("name") or email):
+                provenance.skip_row(row, 'skip: not body or not (c.get("name") or email)')
                 continue
             others = [b for b in bodies if b != body]
             recs.append(_ulb.record(MODULE, "HR", body, c["post"], seen, name=c.get("name", ""), email=email, district=c.get("district"),

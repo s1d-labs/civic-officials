@@ -13,6 +13,7 @@ Records: level "zone" (area "North Zone"), wards from the zones page. Record ids
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -100,6 +101,7 @@ def parse(pages, p):
             w, wpos = wards.get(zone, ([], None))
             for post, name, ph, addr, ri in people:
                 if not (name or ph) or (zone, post, name.lower()) in had:     # East: "JUNIOR ENGINEER PANDI" twice
+                    provenance.skipped('skip: not (name or ph) or (zone, post, name.lower()) in had')
                     continue
                 had.add((zone, post, name.lower()))
                 d = _ward.record(MODULE, f"{_esw.slug(zone)}:{_esw.slug(post)}", seen, body=BODY, lgd=LGD, state=STATE,

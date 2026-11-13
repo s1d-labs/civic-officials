@@ -7,6 +7,7 @@ import gzip
 import re
 
 from cforms.cp_common import clean, column, emails, keyed, phones, record, slug, table_rows, useful, ward_no
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -21,10 +22,12 @@ def members(html, p):
     for head, cells in table_rows(html):
         ni, pi, wi = column(head, *NAME), column(head, *PHONE), column(head, *WARD)
         if None in (ni, pi, wi) or max(ni, pi, wi) >= len(cells):
+            provenance.skipped('skip: None in (ni, pi, wi) or max(ni, pi, wi) >= len(cells)')
             continue
         name = TITLE.sub("", clean(cells[ni]) or "")
         ward = ward_no(cells[wi])
         if not name:
+            provenance.skipped('skip: not name')
             continue
         recs.append(record("BR", p["body"], ward, name, p["url"], phone=phones(cells[pi]), email=emails(" ".join(cells)),
                            ward_label=cells[wi], lgd_code=p.get("lgd_code"),

@@ -50,6 +50,7 @@ def entries(text, pos=None):
     out, role, cur = [], None, None
     for k, ln in enumerate(lines):
         if not ln.strip():
+            provenance.skipped("empty")
             continue
         head = ln.strip().lower()
         sec = next((r for w, r in SECTION if head.startswith(w)), "none")
@@ -61,6 +62,7 @@ def entries(text, pos=None):
             out.append(cur)
             ln = re.sub(r"^\s*\d{1,2}\.?", lambda m: " " * len(m.group(0)), ln, count=1)
         if cur is None:
+            provenance.skip_line(ln, 'skip: cur is None')
             continue
         cur["at"].append(where[k])
         for m in re.finditer(r"\S+(?:\s\S+)*", ln):

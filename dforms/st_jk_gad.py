@@ -20,6 +20,7 @@ import re
 
 from dforms import _esw, _state
 from forms import aspnet
+import provenance
 
 METHOD = "html table (ASP.NET GridView, postback paging)"
 MODULE = "st_jk_gad"
@@ -90,6 +91,7 @@ def email_records(html, url):
         kind = "department" if re.search(r"(?i)department|sectt|secretariat", first) else "officer"
         for row, p in zip(rows[1:], pos[1:]):
             if len(row) < 2 or not row[0].strip():
+                provenance.skip_row(row, 'skip: len(row) < 2 or not row[0].strip()')
                 continue
             name, mail = _esw.clean(row[0]), _esw.emails(row[1])
             out.append(_state.rec(

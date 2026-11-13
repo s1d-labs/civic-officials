@@ -27,6 +27,7 @@ One queue item = one section page (1 GET).
 import re
 
 from dforms import _esw, _state, _trail
+import provenance
 
 METHOD = "html table (diary.mp.gov.in section page: header th.tabHead, group rows th.tabSubHead)"
 MODULE = "st_mp_diary"
@@ -245,6 +246,7 @@ def parse(html, sec, url):
         blocks = blocks_of(tr) if mode == "stacked" else None
         cells = cells_of(tr)
         if not cells or not head:
+            provenance.skip_row(tr, 'skip: not cells or not head')
             continue
         n += 1
         pos = _trail.tr_pos(tr)

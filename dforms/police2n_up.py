@@ -15,6 +15,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -61,6 +62,7 @@ def items(get):
     out, seen = [], set()
     for unit, url in units(r.text):
         if unit in seen:          # Lucknow and Gautam Buddh Nagar have two ids that show the same page
+            provenance.skipped('skip: unit in seen')
             continue
         seen.add(unit)
         out.append({"key": f"{M}:{unit}", "payload": {"reader": M, "url": url, "state": "UP", "unit": unit,
@@ -101,6 +103,7 @@ def officers(html):
         for tr in t.find_all("tr")[1:]:
             c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all("td")]
             if len(c) < 7:
+                provenance.skip_row(tr, 'skip: len(c) < 7')
                 continue
             out.append({"name": re.sub(r"\s*\(\s*0\s*\)\s*$", "", c[1]).strip(), "rank": c[2], "posted": c[3], "cug": c[4],
                         "office": c[5], "email": c[6]})
@@ -113,6 +116,7 @@ def parse(html, url, district, state="UP"):
     for o in officers(html):
         posted = o["posted"] if o["posted"] not in ("", "-") and not re.fullmatch(r"leave", o["posted"], re.I) else ""
         if not o["name"] or SKIP.search(posted) or (not posted and not o["cug"].strip("- ")):
+            provenance.skip_row(o, 'skip: not o["name"] or SKIP.search(posted) or (not posted and not o["cug"...')
             continue
         if posted and posted.upper() == district.upper():
             posted = ""
@@ -127,6 +131,7 @@ def parse(html, url, district, state="UP"):
             continue
         post = posted or o["rank"]
         if not post:
+            provenance.skip_row(o, 'skip: not post')
             continue
         unit = bool(re.match(r"\(?\s*(?:CO|ACP)\b", posted, re.I)) or not HEAD.search(post) or FUNCTION.search(post)
         recs.append(rec(M, f"{d}:{slug(post)}", level="district", office_type="unit" if unit else "office", area=district,

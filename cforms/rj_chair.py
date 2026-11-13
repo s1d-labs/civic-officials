@@ -64,6 +64,7 @@ def parse(html, which, url, period_label="SEP 2026", src=None):
     for ri, tr in enumerate(trs[1:], 2):
         cells = [norm(td.get_text(" ", strip=True)) for td in tr.find_all(["td", "th"])]
         if len(cells) != len(head):
+            provenance.skip_row(tr, 'skip: len(cells) != len(head)')
             continue
         rows.append((ri, dict(zip(head, cells))))
     names = [norm(c["ULB Name"]) for _, c in rows]

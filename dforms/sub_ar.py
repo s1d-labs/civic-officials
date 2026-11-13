@@ -40,6 +40,7 @@ def rows(pages, where=None):
     for pno, text in enumerate(pages, 1):
         for lno, line in enumerate(text.splitlines(), 1):
             if not line.strip():
+                provenance.skipped("empty")
                 continue
             ch = _chunks(line)
             if ROW.match(line):
@@ -70,10 +71,12 @@ def parse_pages(pages, url=URL):
     for (ac, desig, name, mail), pos in zip(rows(pages, where), where):
         m = re.match(r"^(\d{1,2})\s*-\s*(.+)$", ac)
         if not m:
+            provenance.skipped('skip: not m')
             continue
         no, acname = int(m.group(1)), re.sub(r"\s*\((st|sc)\)\s*$", " (ST)", _esw.clean(m.group(2)), flags=re.I).strip()
         key = f"AR-AC-{no}:ro"
         if key in seen:
+            provenance.skipped('skip: key in seen')
             continue
         seen.add(key)
         desig = _esw.clean(desig)

@@ -101,6 +101,7 @@ def rows(pages):
                 continue
             if not cols or not line.strip() or re.search(r"(?i)^\s*page \d", line) or \
                     all(re.fullmatch(r"(?i)no\.?|panchayat|constituency|sl\.?|no\.", t) for _, t in segs(line)):
+                provenance.skip_line(line, 'skip: not cols or not line.strip() or re.search(r"(?i)^\\s*page \\d", line)...')
                 continue
             ss = segs(line)
             mid = (cols.get("body", 0) + cols["ward"]) / 2 if "body" in cols else cols["ward"] - 6

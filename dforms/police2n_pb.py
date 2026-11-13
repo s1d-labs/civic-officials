@@ -17,6 +17,7 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms.police_s3waas import grid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -120,6 +121,7 @@ def parse(html, url, district, state="PB"):
             if "station" in k or re.match(r"^\s*SHO\b", designation or "", re.I):           # a station or a police post
                 label = g("station") or designation
                 if not label:
+                    provenance.skip_row(r, 'skip: not label')
                     continue
                 if "police post" in post_head or re.match(r"I/C\s+PP\b", label, re.I):
                     m = re.match(r"^(?:I/C\s+)?PP\s+(.+?)\s*:\s*(.+)$", label, re.I)
@@ -130,6 +132,7 @@ def parse(html, url, district, state="PB"):
                     continue
                 area = station_name(label)
                 if UNIT.search(area) and not re.search(r"women|cyber crime|^ps\b|police station", label, re.I) and "station" not in k:
+                    provenance.skip_row(r, 'skip: UNIT.search(area) and not re.search(r"women|cyber crime|^ps\\b|polic...')
                     continue
                 recs.append(rec(M, f"{d}:{slug(area)}", office_type="police station", area=area, post="SHO", name=name,
                                 belt_no=belt, rank=rank, phone=ph(g("mobile"), g("phone")), mhc_phone=ph(g("mhc")), email=mail,
@@ -140,6 +143,7 @@ def parse(html, url, district, state="PB"):
                 name, post = split_officer(g("name"))
             post = clean(post) or ""
             if not post:
+                provenance.skip_row(r, 'skip: not post')
                 continue
             name = SERVICE.sub(" ", name or "").strip(" ,") or None
             common = dict(name=name, phone=ph(g("mobile"), g("phone")), email=mail, state=state, district=district, source=url)

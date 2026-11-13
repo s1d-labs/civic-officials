@@ -85,6 +85,7 @@ def parse_xlsx(content, discom, url):
             g = {k: (row[i] if i < len(row) else "") for k, i in head.items()}
             office = _power.clean(g.get("office"))
             if not office:
+                provenance.skip_row(row, 'skip: not office')
                 continue
             area = _area(office) if level == "circle" else office
             par = {"circle": _area(g.get("circle"))} if level == "division" and g.get("circle") else None
@@ -373,6 +374,7 @@ def parse_docx(content, discom, url, level=None):
             g = {k: (row[i] if i < len(row) else "") for k, i in head.items()}
             office, post = _power.clean(g.get("office")), _power.clean(g.get("post"))
             if not (office or post):
+                provenance.skip_row(row, 'skip: not (office or post)')
                 continue
             lvl = level or ("circle" if re.search(r"circle", (office or "") + " " + (post or ""), re.I) else "division")
             _add(out, discom, lvl, _area(office) if lvl == "circle" else (office or post), post=post,

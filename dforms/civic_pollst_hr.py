@@ -27,6 +27,7 @@ import re
 from provenance import line_pos
 from dforms import _esw, _ward_kd
 from dforms.sro_up import legacy
+import provenance
 
 METHOD = "pdf text (pypdf layout), cells apart by 2+ spaces"     # source trail (provenance.py): how this reader reads its sources
 
@@ -149,6 +150,7 @@ def parse(pages, url, district=""):
                 ac, ac_name = int(m.group(1)), _esw.clean(_ward_kd.convert(m.group(2)))
                 continue
             if not ln.strip():
+                provenance.skipped("empty")
                 continue
             if FOOT.search(ln):
                 cur = None
@@ -178,6 +180,7 @@ def parse(pages, url, district=""):
             building, polling = hindi(building_raw), hindi(polling_raw)
             locality = re.sub(r"^\d+\s*-\s*", "", hindi(_esw.clean(" ".join(cols.get("locality", [])))))
             if not part or not building or r["ac"] is None or (r["ac"], part) in seen:
+                provenance.skip_row(r, 'skip: not part or not building or r["ac"] is None or (r["ac"], part) in seen')
                 continue
             seen.add((r["ac"], part))
             town = re.search(r"\b(?:Town|City)\s+([A-Z][A-Za-z.]+(?:\s(?!Ward\b)[A-Z][A-Za-z.]+)?)", polling)

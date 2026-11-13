@@ -16,6 +16,7 @@ import json
 import re
 
 from cforms.cp_common import column, emails, keyed, phones, record, table_rows, useful, ward_no
+import provenance
 
 METHOD = "html table (in a WordPress search answer: json api)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -39,6 +40,7 @@ def parse(html, p, url, at_pos=None):
     recs = []
     for head, cells in table_rows(html):
         if not head:
+            provenance.skipped('skip: not head')
             continue
         # English or Tamil heads (Bhavani: வ. எண் | வார்டு எண் | பெயர் | முகவரி மற்றும் அலைப்பேசி எண் | கட்சியின் பெயர்)
         ni = column(head, r"name of (the )?(elected )?(councill?or|candidate|member)", r"councill?or name", r"^name",
@@ -48,10 +50,12 @@ def parse(html, p, url, at_pos=None):
         ei = column(head, r"e-?\s*mail", r"மின்னஞ்சல்")
         ai = column(head, r"address", r"முகவரி")
         if ni is None or (pi is None and ei is None and ai is None) or len(cells) <= ni:
+            provenance.skipped('skip: ni is None or (pi is None and ei is None and ai is None) or len(cel...')
             continue
         at = lambda i: cells[i] if i is not None and i < len(cells) else ""
         name = name_of(at(ni))
         if not name or re.fullmatch(r"[\d\W]+", name):
+            provenance.skipped('skip: not name or re.fullmatch(r"[\\d\\W]+", name)')
             continue
         w = ward_no(at(wi)) if wi is not None else None
         tel = phones(at(pi))

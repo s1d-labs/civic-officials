@@ -12,6 +12,7 @@ numbered line. One item = one PDF (one GET); the PDF is kept in the bucket. Rout
 import re
 
 from dforms import _esw, _field, _state, st_lgd_upbrjh as lgd
+import provenance
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout)"
 MODULE = "st_br_cmo"
@@ -26,6 +27,7 @@ def rows_of(text):
         for n, raw in enumerate(ptext.split("\n"), 1):
             t = raw.strip()
             if not t:
+                provenance.skipped("empty")
                 continue
             m = re.match(r"^(\d{1,2})\s{2,}(.*)$", t)
             if m and re.search(r"@|\d{10}", t):

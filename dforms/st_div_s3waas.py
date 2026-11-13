@@ -69,6 +69,7 @@ def rows_records(p, rows, caption, ids, poss, url, src):
         name = cell(row, r"^name$", r"^title$")
         post = cell(row, r"designation", r"^post$")
         if not (name or post):
+            provenance.skip_row(row, 'skip: not (name or post)')
             continue
         email = _esw.emails(" ".join(str(v) for k, v in row.items() if re.search(r"(?i)e-?mail", k)))
         phone = _esw.phones(*[str(v) for k, v in row.items() if re.search(r"(?i)phone|landline|contact|tel", k)])

@@ -30,6 +30,7 @@ import json
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "json api (GetDepartmentContactDetail)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -178,8 +179,10 @@ def parse(data, p):
         phone = _esw.phones(_s(r.get("MobileNo")).replace("\t", " , "), _s(r.get("PhoneNo")), _s(r.get("OfficeLandline")))
         email = _esw.emails(_s(r.get("Email")))
         if not (name or phone or email) or (r.get("IsPDF") and not (phone or email)):
+            provenance.skip_row(r, 'skip: not (name or phone or email) or (r.get("IsPDF") and not (phone or e...')
             continue
         if re.fullmatch(r"(?i)(test|abc|xyz|none|na|-+)", name or "-") and not phone:
+            provenance.skip_row(r, 'skip: re.fullmatch(r"(?i)(test|abc|xyz|none|na|-+)", name or "-") and not...')
             continue
         dept, level = classify(post, cat, default_dept)
         if p.get("level") == "state" and level == "district" and not p.get("district"):

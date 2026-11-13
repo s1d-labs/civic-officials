@@ -11,6 +11,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -51,6 +52,7 @@ def parse(html, url=URL):
             if m and not role and last == m.group(1):     # a blank role cell under the AC's AEROs (6 - Brajarajnagar)
                 role = "AEROS"
             if not m or role not in ("ERO", "AERO", "AEROS"):
+                provenance.skip_row(row, 'skip: not m or role not in ("ERO", "AERO", "AEROS")')
                 continue
             last = m.group(1)
             no, acname = int(m.group(1)), m.group(2)

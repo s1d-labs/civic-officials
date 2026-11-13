@@ -10,6 +10,7 @@ import re
 from bs4 import BeautifulSoup
 
 from forms.aspnet import session
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -41,6 +42,7 @@ def parse(html, district=None):
                 head = vals                      # header row (also repeated inside tbody in one copy of the table)
                 continue
             if not head or not any(vals):
+                provenance.skip_row(tr, 'skip: not head or not any(vals)')
                 continue
             cells = {head[i] if i < len(head) else f"col{i}": v for i, v in enumerate(vals)}
             for td in tds:
@@ -51,6 +53,7 @@ def parse(html, district=None):
                         cells["lat"], cells["lon"] = lm.group(1), lm.group(2)
             part = next((cells[k] for k in cells if re.search(r"polling station$|booth no|part", k, re.I) and cells[k].isdigit()), vals[0])
             if (ac_no, part) in seen:
+                provenance.skip_row(tr, 'skip: (ac_no, part) in seen')
                 continue
             seen.add((ac_no, part))
             name_k = next((k for k in cells if re.search(r"blo\s*name", k, re.I)), None)

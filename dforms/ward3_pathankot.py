@@ -41,6 +41,7 @@ def parse(pages, p):
     for r in h.rows(pages, post=POST):
         post = _esw.clean(" ".join(x for x in (r["mid"], r["mid_extra"], r["name_extra"]) if x)).strip(" -")
         if not post:
+            provenance.skip_row(r, 'skip: not post')
             continue
         zones = zones_of(post)
         level = "zone" if zones else "body"

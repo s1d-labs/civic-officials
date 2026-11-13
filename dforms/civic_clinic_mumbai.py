@@ -16,6 +16,7 @@ import re
 
 from dforms import _esw
 from provenance import line_pos
+import provenance
 
 METHOD = "pdf text (pypdf layout), columns by character position"     # source trail (provenance.py): how this reader reads its sources
 
@@ -89,6 +90,7 @@ def rows(pages):
                 body.append(("section", m.group(1) or m.group(2)))
                 continue
             if HEADER.match(ln) or TITLE.match(ln):
+                provenance.skipped('skip: HEADER.match(ln) or TITLE.match(ln)')
                 continue
             s = START.match(ln)
             body.append(("start", ln, s.group(1), s.group(2), k) if s else ("line", ln))
@@ -112,6 +114,7 @@ def rows(pages):
             if below is not None and any(body[k][0] == "section" for k in range(i, below)):
                 below = None
             if above is None and below is None:
+                provenance.skip_row(b, 'skip: above is None and below is None')
                 continue
             if below is None or (above is not None and i - above <= below - i):
                 put(page_rows[above], b[1])

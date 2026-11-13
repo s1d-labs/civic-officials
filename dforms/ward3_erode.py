@@ -19,6 +19,7 @@ dept:ward3_erode:<zone-n | body>:<post slug>:<name slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -73,6 +74,7 @@ def rows(html):
             c = [_esw.clean(x.get_text(" ")) for x in tr.find_all(["td", "th"])]
             vals = [v for v in c if v]
             if any(v.lower() == "designation" for v in vals):     # the heading row
+                provenance.skip_row(tr, 'skip: any(v.lower() == "designation" for v in vals)')
                 continue
             if len(vals) == 1 and not c[0].isdigit():
                 block = vals[0]
@@ -91,6 +93,7 @@ def parse(pages, p):
     for url, html in pages.items():
         for block, bzone, bphone, name, post, pos in rows(html):
             if not post or LEFT_OUT.search(post) or re.match(r"(?i)vacant$", name):
+                provenance.skip_row(block, 'skip: not post or LEFT_OUT.search(post) or re.match(r"(?i)vacant$", name)')
                 continue
             m = ZONE.search(post)
             z = int(m.group(1)) if m else bzone

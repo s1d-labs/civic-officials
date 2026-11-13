@@ -16,6 +16,7 @@ import re
 
 from dforms._trail import tr_pos
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -41,6 +42,7 @@ def parse(html, url=URL):
         tds = tr.find_all("td", recursive=False)
         strong = next((td.find("strong") for td in tds if td.find("strong")), None)
         if not strong or len(tds) < 2:
+            provenance.skip_row(tr, 'skip: not strong or len(tds) < 2')
             continue
         name = _esw.clean(strong.get_text(" "))
         td = strong.find_parent("td")
@@ -48,6 +50,7 @@ def parse(html, url=URL):
         rest = rest[1:] if rest and rest[0] == name else rest
         post = rest[0] if rest else ""
         if not re.search(r"(?i)member|chair", post) or re.match(r"^\W*$", name) or re.search(r"(?i)designation", name):
+            provenance.skip_row(tr, 'skip: not re.search(r"(?i)member|chair", post) or re.match(r"^\\W*$", name...')
             continue
         contact = " ".join(_esw.cell_text(x) for x in tds[tds.index(td) + 1:]) if td in tds else ""
         phone = _esw.phones(re.sub(r"(?i)\(fax\)|\d[\d -]*\(fax\)", " ", contact.split("Email")[0]))

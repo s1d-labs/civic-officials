@@ -24,6 +24,7 @@ import json
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
@@ -62,16 +63,19 @@ def parse(data, url=URL):
     recs, seen = [], set()
     for x in rows:
         if not x.get("UserIsActive") or x.get("UserIsDeleted"):
+            provenance.skip_row(x, 'skip: not x.get("UserIsActive") or x.get("UserIsDeleted")')
             continue
         office = _esw.clean(val(x, "OfficeName").replace("\xa0", " "))
         m = TOWN.match(office)
         post = val(x, "DesignationName")
         if not m or not post or NOT_BODY.search(post):
+            provenance.skip_row(x, 'skip: not m or not post or NOT_BODY.search(post)')
             continue
         phone = _esw.phones(val(x, "Mobile"), val(x, "LandlineNo"))
         email = val(x, "UserEmail").lower()
         email = "" if FILLER.match(email) else _esw.emails(email)
         if not (phone or email):
+            provenance.skip_row(x, 'skip: not (phone or email)')
             continue
         town = _esw.clean(m.group(2))
         tie = LGD.get(okey(office), {})

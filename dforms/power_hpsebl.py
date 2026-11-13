@@ -12,6 +12,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, cells, clean, phone, raw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -52,6 +53,7 @@ def parse(html, url=URL):
             out.src = {"src_pos": tr_pos(tr)}
             c = [x for x in cells(tr)]
             if not any(c):
+                provenance.skip_row(tr, 'skip: not any(c)')
                 continue
             if len(c) == 1:
                 k, name = heading(c[0])
@@ -72,8 +74,10 @@ def parse(html, url=URL):
                     division = name
                 continue
             if skip or lvl is None:
+                provenance.skip_row(tr, 'skip: skip or lvl is None')
                 continue
             if c[0].lower() == "name":
+                provenance.skip_row(tr, 'skip: c[0].lower() == "name"')
                 continue
             if len(c) in (2, 3) and not head_taken:
                 # the officer of the office named in the heading
@@ -88,6 +92,7 @@ def parse(html, url=URL):
             if len(c) == 4 and lvl == "division":
                 name, sub, land, mob = c
                 if not clean(sub):
+                    provenance.skip_row(tr, 'skip: not clean(sub)')
                     continue
                 out.add(f"{division}:{sub}", "subdivision", sub, post="Assistant Engineer (sub-division)", name=name,
                         phone_=phone(land, mob), parents={"zone": zone, "circle": circle, "division": division})

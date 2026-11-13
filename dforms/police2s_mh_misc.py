@@ -18,6 +18,7 @@ from bs4 import BeautifulSoup
 
 from dforms import police_s3waas
 from dforms._police import ascii_digits, clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -125,6 +126,7 @@ def merge_scripts(blocks):
                 if src.get(k):
                     dst[k + "_mr"] = src[k]
             if dev:
+                provenance.skip_row(b, 'skip: dev')
                 continue
             out[out.index(o)] = b
             by_mob[mob] = b

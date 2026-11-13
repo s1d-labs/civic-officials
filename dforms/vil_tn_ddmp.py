@@ -94,6 +94,7 @@ def header_cols(lines):
     for n, ln in enumerate(lines):
         cs = chunks(ln)
         if len(cs) == 1 and len(cs[0][2]) >= 20 and VAO_TITLE.search(cs[0][2]) and not PHONE_W.search(cs[0][2]):
+            provenance.skip_line(ln, 'skip: len(cs) == 1 and len(cs[0][2]) >= 20 and VAO_TITLE.search(cs[0][2])...')
             continue
         for s, e, t in cs:
             spans.append([s, e, [(n, t)]])
@@ -299,6 +300,7 @@ def records(text, p, url, method=METHOD):
                       src_pos=pos, table_row=raw, serial=sno or None, method=method, last_updated=p.get("last_updated"),
                       tls_unverified=p.get("tls_unverified"))
         if not area:
+            provenance.skip_line(r, 'skip: not area')
             continue
         nm, ph, vac, ic = person("vao", ["phone", "phone2"]) if "vao" in by or "phone" in by else ("", [], False, False)
         if nm or ph or vac:

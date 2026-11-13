@@ -44,6 +44,7 @@ def rows(text):
     for pg, ptext in enumerate(text.split("\f"), 1):
         for n, raw in enumerate(ptext.split("\n"), 1):
             if not raw.strip() or re.search(r"(?i)designation\s+e-?mail|desk name\s+e-?mail|^\s*sr\.?\s*(no\.?)?\s*$|^\s*no\.\s*$", raw):
+                provenance.skip_line(raw, 'skip: not raw.strip() or re.search(r"(?i)designation\\s+e-?mail|desk name\\...')
                 continue
             em = _esw.emails(raw)
             rest = _esw.clean(_esw.EMAIL.sub(" ", _esw.deob(raw)))
@@ -62,6 +63,7 @@ def rows(text):
                 out.append(cur)
                 continue
             if cur is None:
+                provenance.skip_line(raw, 'skip: cur is None')
                 continue
             if em:
                 if held:

@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _civic
 from dforms._police import clean, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -20,6 +21,7 @@ def parse(html, url=URL):
         for tr in t.find_all("tr"):
             cells = tr.find_all("td")
             if not cells:
+                provenance.skip_row(tr, 'skip: not cells')
                 continue
             c = [clean(x.get_text(" ", strip=True)) for x in cells]
             if left > 0 and len(c) == 2:
@@ -32,6 +34,7 @@ def parse(html, url=URL):
                 continue
             station, num = c[0], c[1]
             if not station or station.lower().startswith("police station"):
+                provenance.skip_row(tr, 'skip: not station or station.lower().startswith("police station")')
                 continue
             kind = "out post" if station.upper().endswith(" OP") else "police station"
             recs.append(rec(M, f"{slug(district or '')}:{slug(station)}", area=station, office_type=kind, post="Officer in charge",

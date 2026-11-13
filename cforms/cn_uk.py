@@ -19,6 +19,7 @@ import re
 import subprocess
 import tempfile
 from html import unescape
+import provenance
 
 METHOD = "pdf text layer by word positions (pdftotext -bbox)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -101,6 +102,7 @@ def rows(pages):
                 cells[column((w[0] + w[2]) / 2 if w[0] < b[COLS.index("ward_name")] else w[0], b)].append(w)
             c = {k: join(v) for k, v in zip(COLS, cells)}
             if c["sr"] == "क्र.सं." or c["name"].startswith("मा0 मेयर /"):
+                provenance.skipped('skip: c["sr"] == "क्र.सं." or c["name"].startswith("मा0 मेयर /")')
                 continue
             for k in ("sr", "district", "body"):
                 if c[k]:
@@ -166,6 +168,7 @@ def records(bos, p):
         for m in bo["members"]:
             ward = "chair" if m["head"] else str(int(m["ward_no"])) if re.fullmatch(r"\d+", m["ward_no"] or "") else ""
             if not ward or not m["name"]:
+                provenance.skip_row(m, 'skip: not ward or not m["name"]')
                 continue
             d = {"type": "councillor", "state": "UK", "body": bo["body_text"], "body_local": info.get("body_local") or name_hi,
                  "body_en": en,

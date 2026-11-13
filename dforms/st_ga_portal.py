@@ -17,6 +17,7 @@ dept:st_ga_portal:<kind>:<n> (n = card or row number on the page; the page order
 import re
 
 from dforms import _esw, _state
+import provenance
 
 METHOD = "html cards (div.apio_holder) / html table"
 
@@ -88,6 +89,7 @@ def parse(html, kind, url):
             rows = _esw.grid(t, pos=pos)
             for row, sp in zip(rows, pos):
                 if len(row) < 4 or re.fullmatch(r"(?i)department", _esw.clean(row[0])):
+                    provenance.skip_row(row, 'skip: len(row) < 4 or re.fullmatch(r"(?i)department", _esw.clean(row[0]))')
                     continue
                 dept, post, addr, mail = (_esw.clean(x) for x in row[:4])
                 addr = re.sub(r"\s*,(\s*,)+", ",", addr.replace(" | ", ", "))

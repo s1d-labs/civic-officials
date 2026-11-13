@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms.police_s3waas import grid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -52,6 +53,7 @@ def stations(html, url, district, state="WB"):
             continue
         for r in rows[1:]:
             if len(r) < 4 or not r[0]:
+                provenance.skip_row(r, 'skip: len(r) < 4 or not r[0]')
                 continue
             area = station_area(r[0])
             cell = clean(r[1]) or ""
@@ -70,6 +72,7 @@ def directory(html, url, district, state="WB"):
         std, subdivision = None, None
         for r in grid(t):
             if not r or not any(r):
+                provenance.skip_row(r, 'skip: not r or not any(r)')
                 continue
             if len(set(r)) == 1:
                 m = re.search(r"^(.+?)\s+SUB-?DIVISION.*?STD-?\s*(0\d{2,4})", r[0], re.I)
@@ -77,9 +80,11 @@ def directory(html, url, district, state="WB"):
                     subdivision, std = m.group(1).title(), m.group(2)
                 continue
             if len(r) < 5:
+                provenance.skip_row(r, 'skip: len(r) < 5')
                 continue
             label, who = clean(r[0]) or "", clean(r[1]) or ""
             if re.search(r"\d{5}", who) or label.lower() == "designation":
+                provenance.skip_row(r, 'skip: re.search(r"\\d{5}", who) or label.lower() == "designation"')
                 continue
             rank, name = person(re.sub(r",?\s*\b(?:IPS|WBPS)\b\.?", "", who).strip(" ,"))
             name = re.sub(r"\s+WBPS$", "", name or "").strip() or None
@@ -90,6 +95,7 @@ def directory(html, url, district, state="WB"):
             ph = phones(", ".join(x for x in (r[4], land(r[2]), land(r[3])) if x))
             common = dict(name=name, rank=rank, phone=ph, state=state, district=district, source=url, police_subdivision=subdivision)
             if UNIT.search(label):
+                provenance.skip_row(r, 'skip: UNIT.search(label)')
                 continue
             m = re.match(r"^SDPO,?\s*(.+)$", label, re.I)
             if m:

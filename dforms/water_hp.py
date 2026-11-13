@@ -11,6 +11,7 @@ import re
 
 from dforms import _esw, _water
 from dforms._power import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -44,6 +45,7 @@ def parse(html, url=URL):
             office = _esw.clean(tds[0].get_text(" "))
             continue
         if len(tds) < 2:
+            provenance.skip_row(tr, 'skip: len(tds) < 2')
             continue
         nm = tds[0].select_one(".fs-5")
         badge = tds[0].select_one(".badge")
@@ -52,11 +54,13 @@ def parse(html, url=URL):
         if name == post:                         # rows without an officer repeat the post in the name line
             name = ""
         if not post or (SKIP.match(post) and not name):
+            provenance.skip_row(tr, 'skip: not post or (SKIP.match(post) and not name)')
             continue
         o, res, mail = label(tds[1], "(O):"), label(tds[1], "(R):"), label(tds[1], "(@):")
         phone = _esw.phones(o, res if len(re.sub(r"\D", "", res)) >= 10 else "")
         email = _esw.emails(mail)
         if not (name or phone or email):
+            provenance.skip_row(tr, 'skip: not (name or phone or email)')
             continue
         area = RANK.sub("", post).strip(" ,-") or office
         key = _water.unique(f"HP-JSV-{_esw.slug(post)}", seen)

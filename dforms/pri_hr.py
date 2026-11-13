@@ -118,6 +118,7 @@ def _body_lines(text):
     out = []
     for n, line in enumerate(text.split("\n"), 1):
         if not line.strip() or re.search(r"GAZ\.|Gazette|EXTRAORDINARY|Published by|Govt\. of|^\s*\(\d+\)\s*$|^\s*\d{4,5}\s*$", line):
+            provenance.skip_line(line, 'skip: not line.strip() or re.search(r"GAZ\\.|Gazette|EXTRAORDINARY|Publish...')
             continue
         out.append((n, line))
     return out
@@ -215,6 +216,7 @@ def build(rows, p, pages, src_url):
         unopposed = name_raw.startswith("*")
         name = uni(name_raw.lstrip("* "), is_kd)
         if not name:
+            provenance.skip_row(r, 'skip: not name')
             continue
         ward_raw = (c.get("ward") or "").strip().rstrip(".")
         ward = ward_raw if ward_raw.isdigit() else ""
@@ -228,6 +230,7 @@ def build(rows, p, pages, src_url):
             role = POST_GP.get(post) or ("head" if not ward else "member")
             gp = uni((r.get("gp") or {}).get("text", ""), is_kd)
             if not gp:
+                provenance.skip_row(r, 'skip: not gp')
                 continue
             g = r.get("gp") or {}
             base = f"{dsl}:{_pri.slug(p['block'])}:g{g.get('serial') or _pri.slug(gp) or 'x'}"     # GP serial of the list
@@ -237,6 +240,7 @@ def build(rows, p, pages, src_url):
                        ward_no=ward if role == "member" else None)
         else:
             if not ward:
+                provenance.skip_row(r, 'skip: not ward')
                 continue
             body = p["district"] if kind == "zp" else uni(c.get("samiti", ""), is_kd) or p["district"]
             key = f"{dsl}:{kind}:w{ward}"

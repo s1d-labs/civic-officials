@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _civic
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table / cards / text, by payload form"     # source trail (provenance.py): how this reader reads its sources
 
@@ -58,6 +59,7 @@ def tables(soup, p):
         for tr in trs[1:]:
             c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all(["td", "th"])]
             if len(c) != len(head):
+                provenance.skip_row(tr, 'skip: len(c) != len(head)')
                 continue
             g = lambda k: c[col[k]] if col[k] is not None else ""   # noqa: E731
             name, post, place = g("name"), g("post"), g("station")
@@ -65,8 +67,10 @@ def tables(soup, p):
                 name, post, place = "", name, place or post
             label = f"{post} {place}"
             if not STATION.search(label) or OTHER.search(label):
+                provenance.skip_row(tr, 'skip: not STATION.search(label) or OTHER.search(label)')
                 continue
             if col["post"] is not None and col["name"] is not None and not OC.match(post) and "Police Station" not in post:
+                provenance.skip_row(tr, 'skip: col["post"] is not None and col["name"] is not None and not OC.matc...')
                 continue                                         # staff of a station, not its officer in charge
             name, rank = _rank(name)
             recs.append(_rec(p, _area(post, place, p["district"]), post="Officer in charge", name=name or None, rank=rank,
@@ -98,9 +102,11 @@ def listing(soup, p):
         pos = {"selector": "page text, numbered items", "item": ki, "text": chunk[:200]}
         m = re.match(r"\d{1,2}\.\s+(.+?)\s+Mobile(?: no)?\s*:\s*([\d\s/​]+)(?:.*?Email(?: Id)?\s*:\s*(\S+@\S+))?", chunk, re.I)
         if not m:
+            provenance.skipped('skip: not m')
             continue
         post = clean(m.group(1))
         if OTHER.search(post):
+            provenance.skipped('skip: OTHER.search(post)')
             continue
         if re.match(r"SDPO\b", post):
             recs.append(_rec(p, re.sub(r"^SDPO\s*", "", post), level="subdivision", post="SDPO", phone=phones(m.group(2)),
@@ -116,6 +122,7 @@ def blocks(soup, p):
     recs = []
     for i, ln in enumerate(lines):
         if not re.search(r"Police Station$", ln or "") or len(ln) > 60 or ln.startswith("Police stations"):
+            provenance.skip_line(ln, 'skip: not re.search(r"Police Station$", ln or "") or len(ln) > 60 or ln.s...')
             continue
         addr = num = None
         for j in range(i + 1, min(i + 7, len(lines))):

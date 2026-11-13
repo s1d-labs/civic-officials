@@ -117,6 +117,7 @@ def sp_offices(get, base, dist_code):
     for b in blocks:
         code = b.get("afso_code")
         if code is None:
+            provenance.skip_row(b, 'skip: code is None')
             continue
         fps = _json(get(f"{base}/Epos_Spring/api/getSearchDetailsFps?dist_code={dist_code}&office_code={code}"
                         f"&month={today.month}&year={today.year}")) or []

@@ -11,6 +11,7 @@ name_regional carry the same text; post is English, post_regional as written. Re
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -63,12 +64,14 @@ def parse(html, p):
         if "सहा" in x["rank"] or "सहा" in post:
             s = samiti(x.get("area", "") + " " + post)
             if not s:
+                provenance.skipped("empty")
                 continue
             area = f"Prabhag Samiti {s[0]}"
             en = "Assistant Commissioner"
         else:
             m = re.search(r"परिमंड[ळल]\s*-?\s*(\d)", x.get("duty", ""))
             if not m:
+                provenance.skip_row(x, 'skip: not m')
                 continue
             area = f"Parimandal {m.group(1)}"
             s = samiti(x["duty"])

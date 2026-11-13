@@ -19,6 +19,7 @@ Ranchi Municipal Corporation has no page in this template (its own site, ranchim
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html cards (div.widget-user; office from #Label7)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -120,10 +121,12 @@ def parse(html, body="", district=None, url=""):
         n, d = w.find(class_="widget-user-username"), w.find(class_="widget-user-desc")
         name, post = _esw.clean(n.get_text(" ") if n else ""), _esw.clean(d.get_text(" ") if d else "")
         if not post or SKIP.match(post):
+            provenance.skipped('skip: not post or SKIP.match(post)')
             continue
         lines = " ".join(h.get_text(" ") for h in w.find_all(class_="description-header"))
         phone, email = _esw.phones(re.sub(r"\+91\s*$", "", lines)), _esw.emails(lines)
         if not (name or phone or email):
+            provenance.skipped('skip: not (name or phone or email)')
             continue
         recs.append(_ulb.record(MODULE, STATE, area, post, seen, name=name, phone=phone, email=email, source=url,
                                 src_pos={"selector": "div.widget-user", "card": k}, **common))

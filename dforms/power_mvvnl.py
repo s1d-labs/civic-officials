@@ -60,6 +60,7 @@ def parse_directory(html, url=DIR_URL):
             for tr in trs[1:]:
                 c = cells(tr)
                 if len(c) != 1 and bool(tr.get("data-hidden")) != hid:
+                    provenance.skip_row(tr, 'skip: len(c) != 1 and bool(tr.get("data-hidden")) != hid')
                     continue
                 tpos = {**tr_pos(tr), "html": "inside an HTML comment" if hid else "table"}
                 if len(c) == 1:
@@ -69,10 +70,12 @@ def parse_directory(html, url=DIR_URL):
                 if len(c) == 7 and c[0].isdigit() and level(clean(c[2])):
                     c = [c[0], ""] + c[1:]           # tables without the title column (Shri / Smt): S.No, name, designation, ...
                 if len(c) < 8 or not c[0].isdigit():
+                    provenance.skip_row(tr, 'skip: len(c) < 8 or not c[0].isdigit()')
                     continue
                 title, name, post, dist, area, tel, mail = c[1], c[2], clean(c[3]), clean(c[4]), clean(c[5]), c[6], c[7]
                 lvl = level(post)
                 if not lvl:
+                    provenance.skip_row(tr, 'skip: not lvl')
                     continue
                 if dist and lvl == "circle":
                     cdist = dist                     # the district is printed once, on the circle row
@@ -82,6 +85,7 @@ def parse_directory(html, url=DIR_URL):
                 if hid and (slug(key) in out.seen or any(not d.get("hidden_in_page") and (d.get("area") == clean(area) and d.get("post") == post
                                                                                          or phone(tel) and d.get("phone") == phone(tel))
                                                          for _, d in out.recs)):
+                    provenance.skip_row(tr, 'skip: hid and (slug(key) in out.seen or any(not d.get("hidden_in_page") a...')
                     continue                         # the same post (or its phone) in the visible list: the visible row wins
                 nm = clean(name)
                 if nm and title and not nm.lower().startswith(title.lower()):

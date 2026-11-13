@@ -29,6 +29,7 @@ import json
 import re
 
 from cforms import _pri
+import provenance
 
 METHOD = "json api (eGramSwaraj ElectedMemberRepresent.do, one list per LGD body; state gate from ElectedStateReport.do)"
 
@@ -69,6 +70,7 @@ def records(rows, url, p, level, code, body, district="", block=""):
         name = " ".join(str(r.get("electedname") or "").split())
         post = " ".join(str(r.get("designationname") or "").split())
         if not name:
+            provenance.skip_row(r, 'skip: not name')
             continue
         wn = ward_no(r.get("wardName"))
         head, vice = bool(HEAD.match(post)), bool(VICE.match(post))

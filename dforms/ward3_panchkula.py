@@ -17,6 +17,7 @@ import io
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "pdf text runs with positions (pypdf visitor), merged cells shared out by position"
 
@@ -135,6 +136,7 @@ def parse(runs, p):
         name = _esw.clean(name.replace("(SD)", ""))
         area = _esw.clean(" ".join(t for _, t in sorted(r["area"])))
         if not (name or phones):
+            provenance.skip_row(r, 'skip: not (name or phones)')
             continue
         a = asi[a_of[i]] if a_of[i] is not None else None
         recs.append(_ward.record(MODULE, f"row-{r['sr']}:{phones[0] if phones else _esw.slug(name)}", seen, body=BODY, lgd=LGD,

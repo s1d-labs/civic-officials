@@ -73,6 +73,7 @@ def parse_text(raw, post):
                 started = bool(START.match(line))
                 continue
             if not line.strip() or i in skip:
+                provenance.skip_line(line, 'skip: not line.strip() or i in skip')
                 continue
             m = ROW.match(line)
             if m:
@@ -134,6 +135,7 @@ def parse_text(raw, post):
                        "invalid": num("invalid"), "valid": num("valid"), "candidates": [], "page": pno}
                 bodies.append(cur)
             if cur is None:
+                provenance.skip_row(r, 'skip: cur is None')
                 continue
             name = re.sub(r"^[`'\s.,-]+", "", " ".join(r.pre + r.name + r.post)).strip()
             party = (r.g("party") or "").strip()

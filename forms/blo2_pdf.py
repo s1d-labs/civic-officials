@@ -31,6 +31,7 @@ import unicodedata
 from pypdf import PdfReader
 
 from cforms import cn_krutidev
+import provenance
 
 METHOD = "pdf text (pypdf layout; Kruti Dev map on pages set in Kruti Dev)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -293,6 +294,7 @@ def rows_from_pages(pages, p, head=None):
         kd = kd_page(page)
         for n_line, line in enumerate(page.splitlines()):
             if not line.strip():
+                provenance.skipped("empty")
                 continue
             flds = _fields(line)
             if kd:          # convert cell by cell: the column positions stay those of the PDF's own text
@@ -306,6 +308,7 @@ def rows_from_pages(pages, p, head=None):
                 pending = []
                 continue
             if head is None or _numbering(texts):
+                provenance.skip_line(line, 'skip: head is None or _numbering(texts)')
                 continue
             has_part = any(INT.match(t) or LEAD_INT.match(t) for t in texts)
             if len(flds) >= max(3, len(head) - 3) and (has_part or MOBILE.search(line)):

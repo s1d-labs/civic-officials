@@ -17,6 +17,7 @@ import re
 
 from dforms import _esw, _state
 from provenance import at
+import provenance
 
 METHOD = "html table (heading rows + Name & Designation | Department | Additional Charges | Address)"
 
@@ -70,6 +71,7 @@ def parse(html, url=URL):
         for row, sp in zip(rows, pos):
             vals = [x for x in row if x]
             if not vals:
+                provenance.skip_row(row, 'skip: not vals')
                 continue
             if len(set(vals)) == 1 and len(row) <= 2 and not re.search(r"\d|@", vals[0]):
                 heading = vals[0]                      # "Chief Secretary", "Staff Officer"
@@ -83,6 +85,7 @@ def parse(html, url=URL):
                 namecell, dept, extra, addr = row[0], "", "", row[-1] if len(row) > 1 else ""
             name, post = split_name(namecell, heading)
             if not name:
+                provenance.skip_row(row, 'skip: not name')
                 continue
             n += 1
             ml = bool(ML.search(name + post))

@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2
 from dforms._power import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -34,11 +35,13 @@ def parse(html, url=URL):
             out.src = {"src_pos": tr_pos(tr)}
             c = [x for x in _power.cells(tr) if x]
             if not c:
+                provenance.skip_row(tr, 'skip: not c')
                 continue
             if len(c) >= 2 and re.search(r"TELEPHONE|PHONE", c[-1], re.I):
                 level = next((lv for lv, rx in HEADS if re.search(rx, c[0].strip().upper())), "division")
                 continue
             if level is None or len(c) < 2:
+                provenance.skip_row(tr, 'skip: level is None or len(c) < 2')
                 continue
             post = {"zone": "Zonal Manager office", "circle": "Regional Manager office", "division": "Divisional Manager office",
                     "section": "Station Manager office", "state": "Office"}[level]

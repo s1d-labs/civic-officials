@@ -88,6 +88,7 @@ def rows(html):
     for i, tr in enumerate(t.find_all("tr")):
         c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all("td")]
         if len(c) < 7 or not re.fullmatch(r"\d+", c[0]):
+            provenance.skip_row(tr, 'skip: len(c) < 7 or not re.fullmatch(r"\\d+", c[0])')
             continue
         out.append({"row": i, "sno": c[0], "office": c[1], "tel": c[2], "mobile": c[3], "fax": c[4], "unit": c[5],
                     "email": c[6]})
@@ -153,6 +154,7 @@ def parse(html, unit, url=URL, src=None):
         tel = std(r["tel"])
         ph = phones(r["mobile"], tel)
         if not ph and not mails:
+            provenance.skip_row(r, 'skip: not ph and not mails')
             continue
         fields = dict(level=level, office_type=otype, post=post, area=area, office=r["office"], phone=ph,
                       mobile=phones(r["mobile"]), telephone=r["tel"] or None, telephone_std=tel if tel != r["tel"] else None, fax=r["fax"] if r["fax"].strip("- ") else None,

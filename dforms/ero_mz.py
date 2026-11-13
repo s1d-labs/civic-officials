@@ -10,6 +10,7 @@ Record ids: dept:ero_mz:MZ-AC-<no>:ero, dept:ero_mz:MZ-AC-<no>:aero:<slug of des
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "html cards (div.media)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -79,6 +80,7 @@ def parse(html, page=1, url=URL):
             continue
         for c in cards(pane):
             if not c["name"] or not c["ac"]:
+                provenance.skip_row(c, 'skip: not c["name"] or not c["ac"]')
                 continue
             no = ac_number(c["ac"], nos)
             office = f"MZ-AC-{no}" if no else f"MZ-AC-{_esw.slug(c['ac'])}"

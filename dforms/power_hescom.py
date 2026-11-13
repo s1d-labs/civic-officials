@@ -29,17 +29,20 @@ def parse_sections(pages, url=URLS["sections"]):
         for ln, line in enumerate(pg.splitlines(), 1):
             m = SEC_ROW.match(line)
             if not m:
+                provenance.skip_line(line, 'skip: not m')
                 continue
             parts = [x.strip() for x in re.split(r"\s{2,}", m.group(2).strip()) if x.strip()]
             mob = None
             if parts and re.fullmatch(r"\d{10}-?", parts[-1]):
                 mob = parts.pop().rstrip("-")
             if not parts:
+                provenance.skip_line(line, 'skip: not parts')
                 continue
             k = next((i for i, x in enumerate(parts) if i and re.search(r"\d{4,}", x)), len(parts))
             name = clean(" ".join(parts[:k]).strip(" -"))
             land = " ".join(parts[k:]) or None
             if not name or re.fullmatch(r"[\d\s/-]+", name):
+                provenance.skip_line(line, 'skip: not name or re.fullmatch(r"[\\d\\s/-]+", name)')
                 continue
             out.add(f"section:{m.group(1)}:{name}", "section", name, post="Section Officer", phone_=phone(mob, land),
                     office_id=m.group(1), src_pos=provenance.line_pos(pn, ln, line))
@@ -122,6 +125,7 @@ def parse_officers(pages, url=URLS["officers"]):
             n += 1
             where[n] = provenance.line_pos(pn, i + 1, line)
             if i == hi or not line.strip():
+                provenance.skip_line(line, 'skip: i == hi or not line.strip()')
                 continue
             cols = {}
             for x, t in tokens(line):

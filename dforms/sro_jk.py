@@ -8,6 +8,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -27,6 +28,7 @@ def parse(html, url=URL):
         division = next((r[0].title() for r in g[:2] if "DIVISION" in r[0].upper()), None)
         for row in g:
             if len(row) < 7 or not row[0].strip().isdigit():
+                provenance.skip_row(row, 'skip: len(row) < 7 or not row[0].strip().isdigit()')
                 continue
             _, office, name, loc, pin, phone, mail = row[:7]
             place = re.sub(r"^(SR|Sub[ -]?Re[gq]istrar)\s+", "", office, flags=re.I).strip()

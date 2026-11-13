@@ -19,6 +19,7 @@ Record ids: dept:ward2n_jammu:<page>:<wards or division or zone>:<post slug>:<na
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -81,6 +82,7 @@ def parse(html, p):
             for r in rows:
                 w = ward_of(r[wi]) if wi < len(r) else None
                 if not w:
+                    provenance.skip_row(r, 'skip: not w')
                     continue
                 for post, i in idx.items():
                     if i is None or i >= len(r) or not r[i].strip():
@@ -113,6 +115,7 @@ def parse(html, p):
                 name, post = _ward.col(d, "name"), _ward.col(d, "designation")
                 phone, jur = _ward.col(d, "contact"), _ward.col(d, "jurisdiction")
                 if not post or not (name or phone) or post.lower() == "designation":
+                    provenance.skip_row(r, 'skip: not post or not (name or phone) or post.lower() == "designation"')
                     continue
                 ws = _ward.wards_of(jur) if re.search(r"(?i)ward", jur) else []
                 area = ("Ward " + ", ".join(ws)) if ws else (f"Executive Engineer {div}" if div else BODY)
@@ -126,6 +129,7 @@ def parse(html, p):
                 d = dict(zip(head, r))
                 name, post = _ward.col(d, "name"), _ward.col(d, "designation")
                 if not post or not name or not re.search(r"[A-Za-z]", post):
+                    provenance.skip_row(r, 'skip: not post or not name or not re.search(r"[A-Za-z]", post)')
                     continue
                 z = re.search(r"\((North|South)\)", post)
                 add(f"{_esw.slug(post)}:{_esw.slug(name)}", level="zone" if z else "body", area=f"{z.group(1)} Zone" if z else BODY,

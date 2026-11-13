@@ -10,6 +10,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -45,6 +46,7 @@ def parse(html, url=URL):
                 dist = next((v for h, v in c.items() if h.startswith("district name")), "")
                 name = next((v for h, v in c.items() if "officers" in h), "")
                 if not dist or not name:
+                    provenance.skip_row(r, 'skip: not dist or not name')
                     continue
                 name, desig = re.subn(r"\s*\bDC\s*/\s*DEO\s*$", "", name)
                 key = f"MN-DEO-{_esw.slug(dist)}"
@@ -61,6 +63,7 @@ def parse(html, url=URL):
             c = dict(zip(head, r))
             m = NO.match(c.get("ac name", ""))
             if not m or not c.get("name"):
+                provenance.skip_row(r, 'skip: not m or not c.get("name")')
                 continue
             no, ac = int(m.group(1)), m.group(2)
             office = f"MN-AC-{no}"

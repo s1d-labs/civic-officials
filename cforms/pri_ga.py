@@ -31,6 +31,7 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 from cforms import _pri
+import provenance
 
 METHOD = "pdf text (pypdf layout; rows at ward marks, columns by header position)"
 BASE = "https://sec.goa.gov.in/"
@@ -386,6 +387,7 @@ def fetch(p, get):
         code = lgd.match("zp", dist)
         for row in zp_rows(r.content):
             if not row["name"]:
+                provenance.skip_row(row, 'skip: not row["name"]')
                 continue
             rid, d = _pri.record("GA", "zp", lgd_code=code, body=body, district=dist, post="Member", name=row["name"],
                                  party=row["party"], ward_no=row["const_no"], constituency=row["constituency"],

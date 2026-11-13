@@ -17,6 +17,7 @@ import json
 import re
 
 from dforms import _esw, _leg
+import provenance
 
 METHOD = 'html table (member list) + html member pages'     # source trail (provenance.py): how this reader reads its sources
 
@@ -52,9 +53,11 @@ def rows(html, kind):
                 group = txt.strip()                           # district heading
             continue
         if len(cells) < 3:
+            provenance.skip_row(tr, 'skip: len(cells) < 3')
             continue
         m = re.match(r"^\s*(\d{1,3})\.\s*(.*)$", cells[0])
         if not m:
+            provenance.skip_row(tr, 'skip: not m')
             continue
         out.append({"no": int(m.group(1)), "constituency": m.group(2).strip(), "name": cells[1], "party": cells[2],
                     "detail": HOST + a["href"].lstrip("/") if a else "", "group": group})

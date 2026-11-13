@@ -112,10 +112,12 @@ def classify(texts, cols=None, labels=None):
     f, text_cols, named = {}, [], {}
     for i, parts in enumerate(texts):
         if not parts:
+            provenance.skipped('skip: not parts')
             continue
         joined = " ".join(parts)
         squeezed = "".join(parts)
         if i == 0 and ANCHOR.match(parts[0]) and len(joined) <= 4:
+            provenance.skipped('skip: i == 0 and ANCHOR.match(parts[0]) and len(joined) <= 4')
             continue
         if "@" in squeezed and "email" not in f:
             m = mail_cell(parts)

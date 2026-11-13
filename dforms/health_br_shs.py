@@ -53,6 +53,7 @@ def parse(html, kind, did, district):
             head = [c.lower() for c in cells]
             continue
         if not head or len(cells) < len(head) - 1 or not re.match(r"^\d+$", cells[0] or ""):
+            provenance.skip_row(tr, 'skip: not head or len(cells) < len(head) - 1 or not re.match(r"^\\d+$", ce...')
             continue
         row = dict(zip(head, cells))
         name = row.get("name", "")
@@ -61,6 +62,7 @@ def parse(html, kind, did, district):
         fax = _esw.phones(row.get("fax", ""))
         email = _esw.emails(row.get("email", ""))
         if not (name or phone or email):
+            provenance.skip_row(tr, 'skip: not (name or phone or email)')
             continue
         dept = "administration" if re.search(r"(?i)district magistrate|collector", post) else "health"
         block = row.get("block", "") if kind == "block" else ""

@@ -12,6 +12,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, cells, email, phone, raw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -58,6 +59,7 @@ def parse(html, page, url):
                 head = [x.lower() for x in c]
                 continue
             if not head or not title:
+                provenance.skip_row(tr, 'skip: not head or not title')
                 continue
             if page == "sections":
                 kind = {k: next((x for x in c if f(x)), None) for k, f in CLASS.items()}

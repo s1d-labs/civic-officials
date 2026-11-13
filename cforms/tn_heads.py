@@ -16,6 +16,7 @@ import re
 from urllib.parse import quote
 
 from bs4 import BeautifulSoup
+import provenance
 
 METHOD = "html table (in a WordPress search answer: json api)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -195,6 +196,7 @@ def items(get=None):
                 continue
             site = row["name"]
             if site.startswith("wpfc-"):          # a cache plugin folder, not a body
+                provenance.skip_row(row, 'skip: site.startswith("wpfc-")')
                 continue
             info = lgd.get(site) or {}
             out.append({"key": f"tn-heads-{site}", "payload": {"kind": "form-tn_heads", "state": "TN", "url": row["url"],

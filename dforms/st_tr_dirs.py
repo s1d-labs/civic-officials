@@ -15,6 +15,7 @@ import re
 from urllib.parse import urljoin
 
 from dforms import _esw, _field, _state, st_ne
+import provenance
 
 METHOD = "pdf text (pdftotext -layout) + person blocks (st_ne.pdf_blocks)"
 MODULE = "st_tr_dirs"
@@ -30,6 +31,7 @@ def index_items(html, url=INDEX):
             a = tr.find("a", href=True)
             tds = [_esw.clean(td.get_text(" ")) for td in tr.find_all("td")]
             if not a or len(tds) < 2:
+                provenance.skip_row(tr, 'skip: not a or len(tds) < 2')
                 continue
             u = urljoin(url, a["href"])
             f = re.sub(r"\.pdf$", "", u.rsplit("/", 1)[-1], flags=re.I)
@@ -49,6 +51,7 @@ def parse(text, p):
     for n, b in enumerate(st_ne.pdf_blocks(text), 1):
         name, post, ph, em, rest = st_ne.block_fields(b)
         if not (name or post):
+            provenance.skip_line(b, 'skip: not (name or post)')
             continue
         dist = ""
         if level == "district":

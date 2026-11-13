@@ -11,6 +11,7 @@ dept:ward2n_mathura:<post slug>:<mobile>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -40,11 +41,13 @@ def parse(html, p):
     for tr in (t.find_all("tr") if t else []):
         tds = [_esw.clean(td.get_text(" ")) for td in tr.find_all("td")]
         if len(tds) < 5:
+            provenance.skip_row(tr, 'skip: len(tds) < 5')
             continue
         name_raw, post_raw, mob, dept = tds[1], tds[2], tds[3], tds[4]
         zm = ZONE.search(name_raw) or ZONE.search(dept)
         zone = ZONES.get(re.sub(r"[^a-z]", "", zm.group(1).lower())) if zm else None
         if not (FIELD.match(post_raw) or zone):
+            provenance.skip_row(tr, 'skip: not (FIELD.match(post_raw) or zone)')
             continue
         name = _esw.clean(re.sub(r"\(\s*[A-Za-z]+\s*\)|,?\s*\b(city|bhut\w*|vrindavan|aurangabad)\s*zone\b", " ", name_raw, flags=re.I))
         name = _esw.clean(re.sub(r"\(\s*\)", " ", name)).strip(" ,")

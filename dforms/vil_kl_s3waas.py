@@ -25,6 +25,7 @@ import re
 from urllib.parse import urlparse
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table (header words -> columns; taluk from caption / heading / tab label)"
 
@@ -171,11 +172,14 @@ def records(html, url, p):
             if kollam:
                 m = VO_ROW.match(area)
                 if not m:
+                    provenance.skip_row(r, 'skip: not m')
                     continue
                 area = m.group(1)
             if not area or re.fullmatch(r"(?i)total|grand total", area):
+                provenance.skip_row(r, 'skip: not area or re.fullmatch(r"(?i)total|grand total", area)')
                 continue
             if re.fullmatch(r"\d+", area):
+                provenance.skip_row(r, 'skip: re.fullmatch(r"\\d+", area)')
                 continue        # a count column read as an area
             raw = {(head[i] if i < len(head) and head[i] else f"col{i + 1}"): c for i, c in enumerate(r) if c}
             pos = {"table": ti, "row": ri, "cells": r}
@@ -202,6 +206,7 @@ def records(html, url, p):
                 mob = _esw.phones(cell.get("mobile", ""))
                 office = _esw.phones(cell.get("office_phone", ""))
                 if not (mob or office or common["email"]):
+                    provenance.skip_row(r, 'skip: not (mob or office or common["email"])')
                     continue
                 recs.append(_esw.record(MODULE, key, dept="revenue", level="village", post=VO_POST, post_regional=VO_ML,
                                         phone=", ".join(x for x in (mob, office) if x), phone_mobile=mob or None,

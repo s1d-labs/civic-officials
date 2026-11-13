@@ -70,6 +70,7 @@ def html_records(html, p, url):
         for ri, tr in enumerate(rows[1:], 1):
             cells = [_esw.clean(c.get_text(" ")) for c in tr.find_all(["td", "th"])]
             if not any(cells):
+                provenance.skip_row(tr, 'skip: not any(cells)')
                 continue
             gp = next((c for c, r in zip(cells, roles) if r == "gp"), "")
             raw = dict(zip(header, cells))
@@ -105,10 +106,12 @@ def pdf_records(text, p, url):
                 continue
             m = re.match(r"^\s*(\d{1,3})[.)]?\s+(.*\S)", raw)
             if not m or not order or not re.search(r"[A-Za-z]", m.group(2)):
+                provenance.skip_line(raw, 'skip: not m or not order or not re.search(r"[A-Za-z]", m.group(2))')
                 continue
             cells = cells_of(m.group(2))
             texts = [i for i, (k, _) in enumerate(cells) if k == "t"]
             if not texts:
+                provenance.skip_line(raw, 'skip: not texts')
                 continue
             gp = cells[texts[0]][1]
             i, cur, people = 0, None, {}

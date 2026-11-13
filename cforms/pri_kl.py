@@ -68,9 +68,11 @@ def body_list(html):
         a = tr.find("a", href=re.compile(r"/public/wyrw/\d+"))
         tds = [" ".join(td.get_text(" ", strip=True).split()) for td in tr.find_all("td")]
         if not a or len(tds) < 4:
+            provenance.skip_row(tr, 'skip: not a or len(tds) < 4')
             continue
         m = re.match(r"^([GBD]\d{5})\s*-\s*(.*)$", " ".join(a.get_text(" ", strip=True).split()))
         if not m:
+            provenance.skip_row(tr, 'skip: not m')
             continue
         out.append((m.group(1), m.group(2), a["href"].rsplit("/", 1)[1], tds[2], tds[3], n))
     return out
@@ -83,6 +85,7 @@ def ward_rows(html, url):
     for n, tr in enumerate(soup.select("table tr"), 1):
         tds = [" ".join(td.get_text(" ", strip=True).split()) for td in tr.find_all("td")]
         if len(tds) < 6:
+            provenance.skip_row(tr, 'skip: len(tds) < 6')
             continue
         a = tr.find("a", href=re.compile(r"wyr/view/\d+"))
         out.append((n, tds[0], tds[1], tds[2], tds[3], tds[4], tds[5], urljoin(url, a["href"]) if a else None))
@@ -152,6 +155,7 @@ def fetch_site(p, get):
     for i, name, post in profile_cards(r.text):
         rank = head_of("", post)
         if not rank or not name:
+            provenance.skipped('skip: not rank or not name')
             continue
         d = {**base(p), "name": name, "post": post, "head": True, "head_rank": rank, "url": p["url"], "site_code": p.get("site_code"),
              "source_kind": "body website", **provenance.at(r, p["url"]), "src_pos": {"selector": "div.profile-card", "index": i}}
@@ -227,6 +231,7 @@ def index_rows(html):
         for n, tr in enumerate(t.find_all("tr")):
             td = tr.find_all("td")
             if len(td) < 4:
+                provenance.skip_row(tr, 'skip: len(td) < 4')
                 continue
             name = " ".join(td[1].get_text(" ", strip=True).split())
             code = " ".join(td[2].get_text(" ", strip=True).split())

@@ -8,6 +8,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -41,6 +42,7 @@ def parse(html, url=URL):
     recs, seen = [], set()
     for row in rows[1:]:
         if len(row) < 6:
+            provenance.skip_row(row, 'skip: len(row) < 6')
             continue
         name, desig, mail, mobile, land, town = row[:6]
         if not re.search(r"[A-Za-z]", name):

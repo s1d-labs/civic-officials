@@ -4,6 +4,7 @@ first row names the columns (Name | Designation | Department | Phone | Email ...
 import re
 
 from dforms import _esw
+import provenance
 
 COLS = [  # header text -> field (first match wins)
     ("sn", r"^(s\.?\s*no|sl\.?\s*no|sr\.?\s*no|serial|#|no\.?)\.?$"),
@@ -40,6 +41,7 @@ def header_rows(table):
                 head = ks
             continue
         if row == g[0] or not any(_esw.clean(c) for c in row):
+            provenance.skip_row(row, 'skip: row == g[0] or not any(_esw.clean(c) for c in row)')
             continue
         d = {}
         for k, c in zip(head, row):

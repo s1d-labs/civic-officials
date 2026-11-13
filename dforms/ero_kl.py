@@ -8,6 +8,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -45,6 +46,7 @@ def parse(html, url=URL):
         district = div["id"][5:].replace("_", " ")
         t = div.find("table")
         if not t:
+            provenance.skipped("empty")
             continue
         rows = pgrid(t)
         head = [h.lower() for h in rows[0]] if rows else []
@@ -52,6 +54,7 @@ def parse(html, url=URL):
             c = dict(zip(head, row))
             m = ROLE.match(c.get("designation", ""))
             if not m:
+                provenance.skip_row(row, 'skip: not m')
                 continue
             role, desig = m.group(1).upper(), m.group(2).strip(" ,&")
             loc = c.get("location", "")

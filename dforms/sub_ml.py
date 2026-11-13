@@ -15,6 +15,7 @@ import re
 
 from dforms._trail import tr_pos
 from dforms import _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -57,6 +58,7 @@ def parse(html, url, page):
     for tr in soup.select("table tbody tr"):
         tds = tr.find_all("td", recursive=False)
         if len(tds) < 2:
+            provenance.skip_row(tr, 'skip: len(tds) < 2')
             continue
         first = tds[0]
         strong, div = first.find("strong"), first.find("div")
@@ -68,6 +70,7 @@ def parse(html, url, page):
         c = _contact(tds[-1])
         d = district(desig)
         if not d:
+            provenance.skip_row(tr, 'skip: not d')
             continue
         base = key = f"ML-{_esw.slug(d)}:{page}"
         n = 2

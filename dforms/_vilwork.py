@@ -18,6 +18,7 @@ import re
 from urllib.parse import urlparse
 
 from dforms import _esw
+import provenance
 
 # header / caption word -> (post, dept, level)
 POSTS = [
@@ -121,8 +122,10 @@ def table_records(module, g, pos, url, p, caption="", tag="page"):
     for row, sp in zip(g[hi + 1:], pos[hi + 1:]):
         cells = [_esw.clean(c) for c in row] + [""] * max(0, len(head) - len(row))
         if [c.lower() for c in cells[:len(head)]] == [h.lower() for h in head]:
+            provenance.skip_row(row, 'skip: [c.lower() for c in cells[:len(head)]] == [h.lower() for h in head]')
             continue        # a repeated header row
         if len(set(c for c in cells if c)) <= 1 and len(head) > 2:
+            provenance.skip_row(row, 'skip: len(set(c for c in cells if c)) <= 1 and len(head) > 2')
             continue        # a full-width title row inside the table
         areas = {}
         for i, (r, _) in enumerate(roles):

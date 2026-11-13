@@ -37,6 +37,7 @@ from urllib.parse import urljoin, urlparse
 from cforms import _pri
 from dforms import _esw
 from dforms.gp_gj_tcm import HOSTS, talukas
+import provenance
 
 METHOD = "html table (district panchayat portal member / sarpanch pages, header words -> columns) and div.contact-box (About-President)"
 STATE = "GJ"
@@ -221,6 +222,7 @@ def table_rows(g, pos):
     for r, sp in zip(g[hi + 1:], pos[hi + 1:]):
         cells = [text(c) for c in r]
         if not any(cells) or cells == header[:len(cells)]:
+            provenance.skip_row(r, 'skip: not any(cells) or cells == header[:len(cells)]')
             continue
         row = {"cells": {header[i] or f"col{i + 1}": c for i, c in enumerate(cells) if c and i < len(header)}}
         for i, c in enumerate(cells):
@@ -284,8 +286,10 @@ def table_records(html, url, p, link_text, ids, taluka_names):
             desig = j(row, "designation")
             name = sar or j(row, "name")
             if not name or re.fullmatch(r"[-–\s.\"”“'’〃]*|vacant|ખાલી", name, re.I):
+                provenance.skip_row(row, 'skip: not name or re.fullmatch(r"[-–\\s.\\"”“\'’〃]*|vacant|ખાલી", name, re.I)')
                 continue
             if desig and OFFICER_POST.search(desig) and not ELECTED_POST.search(desig):
+                provenance.skip_row(row, 'skip: desig and OFFICER_POST.search(desig) and not ELECTED_POST.search(de...')
                 continue
             if sar or re.search(r"સરપંચ|sarpanch", desig, re.I):
                 level = "gp"

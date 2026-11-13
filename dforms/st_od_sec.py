@@ -5,6 +5,7 @@ Records: level state, body_kind commission, dept elections. Ids: dept:st_od_sec:
 unchecked.
 """
 from dforms import _esw, _state, _st_ape
+import provenance
 
 METHOD = "html table (name cell = name | post)"
 MODULE = "st_od_sec"
@@ -18,6 +19,7 @@ def parse(html, url=URL):
             parts = [x.strip() for x in d.get("name", "").split(" | ")]
             name, post = (parts[0], parts[-1]) if len(parts) > 1 else ("", parts[0])
             if not post:
+                provenance.skip_row(d, 'skip: not post')
                 continue
             recs.append(_state.rec(MODULE, str(pos["row"]), state="OD", level="state", post=post,
                                    post_kind=_st_ape.post_kind(post), name="" if name in ("—", "-") else name,

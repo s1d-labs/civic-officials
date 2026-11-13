@@ -10,6 +10,7 @@ dept:ward2n_rajkot:<zone slug>:dmc.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
 
@@ -29,6 +30,7 @@ def parse(html, p):
         t = _esw.clean(para.get_text(" "))
         m = re.match(r"(?i)D\.?\s?M\.?\s?C\.?\s*(EZ|WZ|CZ)\s*:\s*(.+)", t)
         if not m:
+            provenance.skip_row(para, 'skip: not m')
             continue
         zone = ZONES[m.group(1).upper()]
         recs.append(_ward.record(MODULE, f"{_esw.slug(zone)}:dmc", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,

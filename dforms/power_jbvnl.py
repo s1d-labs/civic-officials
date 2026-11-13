@@ -13,6 +13,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, cells, clean, email, phone, raw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -40,11 +41,13 @@ def parse_offices(html, url=URL):
         for c, tr in zip(rows, trs):
             out.src = {"src_pos": tr_pos(tr)}
             if len(c) < 4 or c[0].lower() == "office type":
+                provenance.skip_row(c, 'skip: len(c) < 4 or c[0].lower() == "office type"')
                 continue
             kind = clean(c[0]) or kind                # Area Board rows leave the type empty after the first one
             level = LEVEL.get((kind or "").lower())
             area = clean(c[2])
             if not level or not area or area.upper().startswith("NOT OPEN"):
+                provenance.skip_row(c, 'skip: not level or not area or area.upper().startswith("NOT OPEN")')
                 continue
             ph = phone(c[3]) if "@" not in c[3] else None
             mails = [m for m in (email(x) for x in c[3 if ph is None else 4:]) if m]
@@ -61,6 +64,7 @@ def parse_hq(html, url):
         out.src = {"src_pos": tr_pos(tr)}
         c = cells(tr)
         if len(c) < 3 or c[0].lower() == "department":
+            provenance.skip_row(tr, 'skip: len(c) < 3 or c[0].lower() == "department"')
             continue
         dept, post, name = clean(c[0]), clean(c[1]), clean(c[2])
         out.add(f"hq:{dept}:{post}:{name}", "state", "JBVNL Headquarters", post=f"{post} ({dept})" if dept else post, name=name,

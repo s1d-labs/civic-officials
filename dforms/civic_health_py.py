@@ -17,6 +17,7 @@ import re
 
 from provenance import line_pos
 from dforms import _esw
+import provenance
 
 METHOD = "pdf text (pypdf layout), columns from the rows"     # source trail (provenance.py): how this reader reads its sources
 
@@ -97,6 +98,7 @@ def parse(pages, url=URL):
                 last = None
                 continue
             if not cols or not line.strip():
+                provenance.skip_line(line, 'skip: not cols or not line.strip()')
                 continue
             if not ROW.match(line):
                 if last is not None and not re.search(r"(?i)name of the staff|^\s*joining\s*$|date of\s*$", line):
@@ -117,9 +119,11 @@ def parse(pages, url=URL):
     for r in rows:
         name, post, place = (_esw.clean(" ".join(r[k])) for k in ("name", "post", "place"))
         if not name or not (post or place):
+            provenance.skip_row(r, 'skip: not name or not (post or place)')
             continue
         key = f"PY-{_esw.slug(r['district'])}-{r['sno']}"
         if key in seen:
+            provenance.skip_row(r, 'skip: key in seen')
             continue
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept="health", level="facility", layer="health", area=place or post, post=post,

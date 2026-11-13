@@ -155,6 +155,7 @@ def build(rows, dist, source, seen, where=None):
     recs = []
     for r, (pos, src) in zip(rows, where or [(None, {})] * len(rows)):
         if len(r) < 3 or not BDO.search(r[1]):
+            provenance.skip_row(r, 'skip: len(r) < 3 or not BDO.search(r[1])')
             continue
         name, post, address = _person(r[0]), _esw.clean(r[1]).strip(" ,."), r[-1]
         mail_cells = [c for c in r[2:-1] if "[at]" in c.lower() or "@" in c]
@@ -162,6 +163,7 @@ def build(rows, dist, source, seen, where=None):
         phone = _esw.phones(*[c for c in r[2:-1] if c not in mail_cells])
         area, local = area_of(address)
         if not area:
+            provenance.skip_row(r, 'skip: not area')
             continue
         base = f"UK-{_esw.slug(dist)}:{_esw.slug(area)}"
         key, i = base, 2

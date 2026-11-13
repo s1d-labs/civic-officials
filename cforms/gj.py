@@ -17,6 +17,7 @@ import re
 import shutil
 import subprocess
 import tempfile
+import provenance
 
 METHOD = "ocr tesseract guj (name and address cells) + pdf text layer by drawn cell borders (pdftotext -bbox)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -254,6 +255,7 @@ def ocr_boxes(pdf, page, boxes, tmp, lang, dpi=300, psm=6):
     for ln in r.stdout.splitlines()[1:]:
         p = ln.split("\t")
         if len(p) < 12 or p[0] != "5" or not p[11].strip():
+            provenance.skip_line(ln, 'skip: len(p) < 12 or p[0] != "5" or not p[11].strip()')
             continue
         key = (int(p[1]), int(p[2]), int(p[3]), int(p[4]))
         lines.setdefault(key, []).append((p[11], float(p[10]), int(p[9])))
@@ -309,6 +311,7 @@ def party_of(*texts):
     for t in texts:
         t = norm(t)
         if not t:
+            provenance.skipped("empty")
             continue
         for k, v in PARTY:
             if re.search(k, t):

@@ -12,6 +12,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import ascii_digits, clean, email, gz, phones, rec, uniq
+import provenance
 
 METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
 
@@ -111,10 +112,12 @@ def fetch(p, get):
     for did, text, _, parents in orgchart(r.text):
         lv = level(text)
         if not lv:
+            provenance.skipped('skip: not lv')
             continue
         durl = f"{base}CMS.aspx?orgchart=true&designation_id={did}"
         x = get(durl)
         if x is None:
+            provenance.skipped('skip: x is None')
             continue
         files.append(gz(M, f"{unit}/designation-{did}.html", x.content))
         c = contact(x.text)

@@ -79,6 +79,7 @@ def parse(pages, p):
     for b, b0 in zip(blocks, starts):
         m = next((LABEL.search(ln) for ln in b if LABEL.search(ln)), None)
         if not m:
+            provenance.skip_row(b, 'skip: not m')
             continue
         if m.group(2):
             lo, hi = int(m.group(2)), int(m.group(3))

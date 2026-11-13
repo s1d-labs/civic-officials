@@ -12,6 +12,7 @@ that name a zone (wards from the zone page's mapping, written into the reader as
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
 
@@ -71,12 +72,14 @@ def parse_officers(html, p):
     for li in soup.find_all("li"):
         h5 = li.find("h5")
         if not h5 or not h5.find("small"):
+            provenance.skip_row(li, 'skip: not h5 or not h5.find("small")')
             continue
         post = _esw.clean(h5.find("small").get_text())
         name = _esw.clean(h5.get_text(" ").replace(h5.find("small").get_text(), ""))
         zone = _zone_of(post)
         div = re.search(r"(?i)division\s*[-–]?\s*([IVX\d]+)", post)
         if not zone and not div:
+            provenance.skip_row(li, 'skip: not zone and not div')
             continue
         d = li.find("div", class_="directory")
         phone = " ".join(_esw.clean(x.get_text()) for x in d.find_all("div", class_=["phone-d", "mobile-d"])) if d else ""

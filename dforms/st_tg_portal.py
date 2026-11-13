@@ -13,6 +13,7 @@ Ids: dept:st_tg_portal:<page>:<table>:<row>. Route: the portal answers from Mumb
 import re
 
 from dforms import _esw, _state, _st_ape
+import provenance
 
 METHOD = "html table (header names)"
 MODULE = "st_tg_portal"
@@ -46,6 +47,7 @@ def parse(html, url, page):
             post = d.get("post", "")
             name = d.get("name", "")
             if not (post or name):
+                provenance.skip_row(d, 'skip: not (post or name)')
                 continue
             phone = ", ".join(x for x in (phone_of(d.get("phone")), phone_of(d.get("residence"))) if x)
             fax = re.search(r"(?i)fax\s*:?\s*([\d\s/-]{6,})", " ".join(cells))

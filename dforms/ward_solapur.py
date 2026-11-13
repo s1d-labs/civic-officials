@@ -7,6 +7,7 @@ Records: level "zone". Record ids: dept:ward_solapur:div<N>:<name slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
 
@@ -29,6 +30,7 @@ def parse(html, p):
         email = " ".join(a.get("href", "")[7:] for a in card.find_all("a", href=re.compile(r"^mailto:")))
         m = re.search(r"No\.?\s*(\d+)", post)
         if not m or not (name or phone):
+            provenance.skip_row(card, 'skip: not m or not (name or phone)')
             continue
         charge = re.search(r"\(([^)]*charge[^)]*)\)", name)
         name = re.sub(r"\s*\([^)]*charge[^)]*\)", "", name).strip()

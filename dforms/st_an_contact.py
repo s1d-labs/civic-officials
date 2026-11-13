@@ -11,6 +11,7 @@ import re
 
 from dforms import _esw, _state, _st_ape
 from dforms._trail import tr_pos
+import provenance
 
 METHOD = "html table rows (officer-name / officer-designation / officer-meta / dept-badge)"
 MODULE = "st_an_contact"
@@ -29,6 +30,7 @@ def parse(html, url=URL):
     for n, tr in enumerate(soup.find_all("tr"), 1):
         nm = tr.select_one(".officer-name")
         if nm is None:
+            provenance.skip_row(tr, 'skip: nm is None')
             continue
         name = text(nm)
         post = text(tr.select_one(".officer-designation"))

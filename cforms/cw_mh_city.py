@@ -18,6 +18,7 @@ from bs4 import BeautifulSoup
 
 from cforms import gj
 from cforms.cp_common import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -72,6 +73,7 @@ def pcmc_list(html, pos=None):
     for tr in soup.find_all("tr"):
         tds = tr.find_all("td")
         if len(tds) < 2 or not norm(tds[0].get_text()).translate(DIGITS).isdigit():
+            provenance.skip_row(tr, 'skip: len(tds) < 2 or not norm(tds[0].get_text()).translate(DIGITS).isdig...')
             continue
         ward = str(int(norm(tds[0].get_text()).translate(DIGITS)))
         for col, (seat, td) in enumerate(zip("अबकड", tds[1:5]), 2):
@@ -138,11 +140,13 @@ def amravati_list(html, pos=None):
     for tr in soup.find_all("tr"):
         tds = [norm(td.get_text(" ")) for td in tr.find_all("td")]
         if len(tds) != 4 or not any(tds):
+            provenance.skip_row(tr, 'skip: len(tds) != 4 or not any(tds)')
             continue
         if tds[0] and not any(tds[1:]):
             party = tds[0]
             continue
         if not tds[1]:
+            provenance.skip_row(tr, 'skip: not tds[1]')
             continue
         phones = PHONE.findall(tds[3].translate(DIGITS))
         out.append((tds[0].translate(DIGITS), tds[1], str(int(tds[2].translate(DIGITS))) if tds[2].translate(DIGITS).isdigit()

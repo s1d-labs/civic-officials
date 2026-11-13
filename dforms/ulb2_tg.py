@@ -25,6 +25,7 @@ civic.ulb is sure. All answer only from India (this box in Germany got no answer
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py); tgnew pages: "html cards (div.bg-card)" on each record
 
@@ -142,6 +143,7 @@ def parse_cdma(html, p, seen=None):
         for r, pos in zip(rows, where):
             g = {f: (r[i] if i < len(r) else "") for f, i in h.items()}
             if not g.get("post") or not (g.get("name") or g.get("phone") or g.get("email")):
+                provenance.skip_row(r, 'skip: not g.get("post") or not (g.get("name") or g.get("phone") or g.get(...')
                 continue
             recs.append(_ulb.record(MODULE, STATE, p["body"], g["post"], seen, name=g.get("name", ""), phone=g.get("phone", ""),
                                     email=g.get("email", ""), page=p.get("page"), src_pos=pos, **common(p)))
@@ -174,6 +176,7 @@ def cards(html, p, page, seen):
         h = c.find(["h2", "h3"])
         post = _esw.clean(h.get_text(" ")) if h else ""
         if not post:
+            provenance.skip_row(c, 'skip: not post')
             continue
         n = c.find("p", class_="font-bold")
         name = _esw.clean(n.get_text(" ")) if n else ""
@@ -240,6 +243,7 @@ def parse_ghmc(html, p):
             g = {f: (r[i] if i < len(r) else "") for f, i in h.items()}
             c = want.get(g.get("circle", "").lower())
             if not c or not re.match(r"(?i)deputy\s+commissioner", g.get("post", "")):
+                provenance.skip_row(r, 'skip: not c or not re.match(r"(?i)deputy\\s+commissioner", g.get("post", ""))')
                 continue
             recs.append(_ulb.record(MODULE, STATE, c["body"], g["post"].title(), seen, name=g.get("name", ""), phone=g.get("phone", ""),
                                     email=g.get("email", ""), district=c["district"], lgd_code=c["lgd_code"], source=p["url"],

@@ -42,10 +42,12 @@ def parse_pages(pages, zone, source):
     for pn, ln, line in ((pn, ln, x) for pn, t in enumerate(pages, 1) for ln, x in enumerate(t.splitlines(), 1)):
         s = " ".join(line.split())
         if not s or re.match(r"(?i)^(Sl\.?\s*No|Key Helpline|Meghalaya Power)", s):
+            provenance.skipped('skip: not s or re.match(r"(?i)^(Sl\\.?\\s*No|Key Helpline|Meghalaya Power)"...')
             continue
         m = ROW.match(line)
         if not m:
             if re.fullmatch(r"\d{1,2}", s):
+                provenance.skipped('skip: re.fullmatch(r"\\d{1,2}", s)')
                 continue
             s = re.sub(r"^\d{1,2}\s+", "", s)
             if DES.match(s) or pend:
@@ -60,6 +62,7 @@ def parse_pages(pages, zone, source):
         pend, plines = "", []
         d = DES.match(text)
         if not d:
+            provenance.skipped('skip: not d')
             continue
         post, office = text.split(",", 1)[0].strip(), d.group(2).strip()
         lvl = LEVEL[d.group(1).lower()]

@@ -98,6 +98,7 @@ def ward_rows(html):
         c = cells(tr)
         if len(c) == 5 and c[0].isdigit() and mandal:
             if not c[3] or c[3] == "--":
+                provenance.skip_row(tr, 'skip: not c[3] or c[3] == "--"')
                 continue
             m = re.fullmatch(r"(?:ward\s*-?\s*(?:no\.?)?\s*)?(\d+)", c[1], re.I)
             out.append({"sno": c[0], "block": mandal, "body": gp, "ward": c[1], "ward_no": m.group(1) if m else c[1],

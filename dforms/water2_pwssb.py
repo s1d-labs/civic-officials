@@ -62,10 +62,12 @@ def parse(rows, page, url, circle=None, src=None):
     recs, seen = [], set()
     for xi, x in enumerate(rows if isinstance(rows, list) else []):
         if not isinstance(x, dict):
+            provenance.skip_row(x, 'skip: not isinstance(x, dict)')
             continue
         text = x.get("name") or x.get("name_and_designation") or ""
         name, post, area = split_name(text)
         if not (name or post):
+            provenance.skip_row(x, 'skip: not (name or post)')
             continue
         lvl = level(post, circle)
         area = area or (f"{circle} Circle" if circle and lvl == "circle" else circle) or "Head Office"

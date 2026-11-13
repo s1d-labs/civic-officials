@@ -87,6 +87,7 @@ def fetch(p, get):
         for ri, tr in enumerate(trs[1:], 2):
             c = dict(zip(head, (" ".join(td.get_text(" ", strip=True).split()) for td in tr.find_all(["td", "th"]))))
             if c.get("Result", "").lower() != "winner":
+                provenance.skip_row(tr, 'skip: c.get("Result", "").lower() != "winner"')
                 continue
             if c.get("ULB Name") and c["ULB Name"] != p["body"]:
                 return [], files, f"page shows {c['ULB Name']}, not {p['body']}"

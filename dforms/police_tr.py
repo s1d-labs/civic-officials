@@ -11,6 +11,7 @@ from bs4 import BeautifulSoup
 from dforms import _esw
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms.police_s3waas import grid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -88,6 +89,7 @@ def parse(html, district, url):
                     idx, hit = i, mm
                     break
             if hit is None:
+                provenance.skip_row(row, 'skip: hit is None')
                 continue
             station = re.sub(r"\s*\(.*$", "", hit.group(2)).strip(" ,.")
             station = re.split(r"\s+(?:\d{3}|e-?mail)", station)[0].strip(" ,.")

@@ -16,6 +16,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2_east
 from dforms._power import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -43,6 +44,7 @@ def parse(html, url=URL):
                 head = _util2_east.head_map(c, {"post": r"designation", "name": r"^name", "email": r"e-?mail"})
                 continue
             if not head or not block:
+                provenance.skip_row(tr, 'skip: not head or not block')
                 continue
             g = {k: c[i] if i < len(c) else "" for k, i in head.items()}
             post = _power.clean(g.get("post"))

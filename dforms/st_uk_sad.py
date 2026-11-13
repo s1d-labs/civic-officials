@@ -16,6 +16,7 @@ import re
 from urllib.parse import urljoin
 
 from dforms import _esw, _state
+import provenance
 
 METHOD = "html table (list) + html table and cards (officer pages)"
 MODULE = "st_uk_sad"
@@ -41,6 +42,7 @@ def parse_list(html, url=URL):
                 links[i] = urljoin(url, a["href"])
         for row, p in zip(rows, pos):
             if len(row) < 3 or not re.fullmatch(r"\d{1,4}\.?", row[0].strip()):
+                provenance.skip_row(row, 'skip: len(row) < 3 or not re.fullmatch(r"\\d{1,4}\\.?", row[0].strip())')
                 continue
             out.append((row[0].strip(" ."), _esw.clean(row[1]), _esw.clean(row[2]), links.get(p["row"], ""), p, row))
     return out

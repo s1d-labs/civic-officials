@@ -6,6 +6,7 @@ No assembly site with a member list was found. One queue item = the page. Record
 """
 from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_se
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -25,9 +26,11 @@ def parse(html, url):
     for tr in _esw.soup(html).find_all("tr"):
         tds = tr.find_all("td")
         if len(tds) < 3:
+            provenance.skip_row(tr, 'skip: len(tds) < 3')
             continue
         nm, pos, cons = (_esw.clean(td.get_text(" ")) for td in tds[:3])
         if "MLA" not in pos.upper() or not nm:
+            provenance.skip_row(tr, 'skip: "MLA" not in pos.upper() or not nm')
             continue
         no, note = _leg_se.seat("SK", FIXED.get(_esw.norm_ac(cons)), cons, alias=ALIAS)
         recs.append(_leg.member(MODULE, "SK", "AC", no, _leg_se.name(nm), constituency=cons, source=url, note=note,

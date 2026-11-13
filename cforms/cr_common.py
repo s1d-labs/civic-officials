@@ -16,6 +16,7 @@ from difflib import SequenceMatcher
 from bs4 import BeautifulSoup
 
 from cforms.cp_common import Cells
+import provenance
 
 CONS = {"क": "k", "ख": "kh", "ग": "g", "घ": "gh", "ङ": "n", "च": "ch", "छ": "chh", "ज": "j", "झ": "jh", "ञ": "n", "ट": "t",
         "ठ": "th", "ड": "d", "ढ": "dh", "ण": "n", "त": "t", "थ": "th", "द": "d", "ध": "dh", "न": "n", "प": "p", "फ": "ph",
@@ -175,6 +176,7 @@ def table_members(html, pos=None):
     for rs, rows in member_tables(html):
         for cells in rows:
             if len(cells) < len(rs) - 1:
+                provenance.skip_row(cells, 'skip: len(cells) < len(rs) - 1')
                 continue
             d = {}
             for r, v in zip(rs, cells):
@@ -182,6 +184,7 @@ def table_members(html, pos=None):
                     d[r] = v
             name = clean(d.get("name"))
             if not name or re.fullmatch(r"[-–.\s]*", name):
+                provenance.skip_row(cells, 'skip: not name or re.fullmatch(r"[-–.\\s]*", name)')
                 continue
             m = POST_TAIL.search(name)              # "Sri Gautam Dasgupta Chairman": the post written after the name
             if m and m.start() > 0:

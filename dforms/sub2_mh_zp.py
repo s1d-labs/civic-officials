@@ -186,10 +186,12 @@ def build(rows, p, source, host, upd=None):
         name = r.get("name", "")
         cand = post if BDO.search(post) else (name if BDO.search(name) else "")
         if not cand or NOT_BDO.search(cand):
+            provenance.skipped('skip: not cand or NOT_BDO.search(cand)')
             continue
         email = _esw.emails(r.get("email", "")) or _esw.emails(" ".join(r["_cells"].values()))
         area = area_of(cand, r.get("address", ""), caption, email, r["_cells"])
         if not area:
+            provenance.skipped('skip: not area')
             continue
         if name and (BDO.search(name) or _esw.clean(name).lower() == _esw.clean(post).lower()):
             name = ""
@@ -200,6 +202,7 @@ def build(rows, p, source, host, upd=None):
         key0 = f"{host}:{_esw.slug(area)}"
         k = (key0, name.lower(), phone)
         if k in seen:
+            provenance.skipped('skip: k in seen')
             continue
         seen.add(k)
         key, i = key0, 2
@@ -264,6 +267,7 @@ def fetch(p, get):
     for src in dict.fromkeys(u for u, _ in rows):
         for rid, d in build([row for u, row in rows if u == src], p, src, host, upd):
             if rid in seen:
+                provenance.skipped('skip: rid in seen')
                 continue
             seen.add(rid)
             recs.append((rid, d))

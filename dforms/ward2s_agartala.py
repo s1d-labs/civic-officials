@@ -11,6 +11,7 @@ office phone. Record ids: dept:ward2s_agartala:w<ward>:ward-secretary:<name slug
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -34,6 +35,7 @@ def parse(html, p):
             ward = _ward.wards_of(_ward.col(r, "ward no"))
             name, phone = _ward.col(r, "name"), _ward.col(r, "contact", "phone", "mobile")
             if len(ward) != 1 or not (name or phone):
+                provenance.skip_row(r, 'skip: len(ward) != 1 or not (name or phone)')
                 continue
             w = ward[0]
             recs.append(_ward.record(MODULE, f"w{w}:ward-secretary:{_esw.slug(name) or 'post'}", seen, body=BODY, lgd=LGD,
@@ -42,6 +44,7 @@ def parse(html, p):
     for li_no, li in enumerate(soup.find_all("li"), 1):
         m = ZONE.match(_esw.clean(li.get_text(" ")))
         if not m:
+            provenance.skip_row(li, 'skip: not m')
             continue
         zone = f"{m.group(1).title()} Zone"
         recs.append(_ward.record(MODULE, f"{_esw.slug(zone)}:zone-office", seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT,

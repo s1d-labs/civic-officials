@@ -83,6 +83,7 @@ def fetch(p, get):
     for w in report_a(r.text):
         won = [c for c in w["cands"] if c["status"]]
         if len(won) != 1:
+            provenance.skipped('skip: len(won) != 1')
             continue
         c = won[0]
         others = sorted((x["votes"] for x in w["cands"] if x is not c and x["votes"] is not None), reverse=True)

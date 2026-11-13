@@ -23,6 +23,7 @@ import tempfile
 
 from cforms import gj
 from cforms.tn import mark_stored, stored
+import provenance
 
 METHOD = "ocr tesseract hin (name and ward name cells, 400 dpi) + pdf text layer by drawn cell borders (pdftotext -bbox)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -91,6 +92,7 @@ def page_rows(reader, pdf, pg):
     for cols, a, b in rows:
         t = {c: gj.box_text(ws, cols[c][0], a, cols[c][1], b) for c in range(1, 8)}
         if not t[1].isdigit() or (t[2], t[3], t[7]) == ("2", "3", "7"):      # header and column-number rows
+            provenance.skipped('skip: not t[1].isdigit() or (t[2], t[3], t[7]) == ("2", "3", "7")')
             continue
         out.append({"serial": t[1], "ward_no": num(t[4]), "district_raw": t[2], "body_raw": t[3], "party_raw": t[7],
                     "name_raw": t[6],
@@ -148,6 +150,7 @@ def ocr_cells(pdf, pg, boxes, tmp, dpi=400):
     for ln in r.stdout.splitlines()[1:]:
         p = ln.split("\t")
         if len(p) < 12 or p[0] != "5" or not p[11].strip():
+            provenance.skip_line(ln, 'skip: len(p) < 12 or p[0] != "5" or not p[11].strip()')
             continue
         n = int(p[1])
         if 1 <= n <= len(boxes) and not (float(p[10]) < 20 and len(p[11]) <= 2):
@@ -249,6 +252,7 @@ def page_records(pdf, p, pg, use_ocr=True):
                             full)
                 b = {"body": nm or full, "body_type": bt, "district_local": dist, "slug": f"k-{slug_of(nm or full)}"}
             if not r["ward_no"]:
+                provenance.skip_row(r, 'skip: not r["ward_no"]')
                 continue
             d = {"type": "councillor", "state": "CG", "body": b["body"], "body_local": b["body"],
                  "body_type": b.get("body_type") or bt, "district": b.get("district"),

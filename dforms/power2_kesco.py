@@ -16,6 +16,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, clean, email, phone, raw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -57,10 +58,12 @@ def parse(html, url=URL):
             out.src = {"src_pos": tr_pos(tr)}
             tds = tr.find_all("td")
             if len(tds) < 6:
+                provenance.skip_row(tr, 'skip: len(tds) < 6')
                 continue
             name, post, office, mob, mail = (_cell(x) for x in tds[1:6])
             lvl = level(post)
             if not lvl:
+                provenance.skip_row(tr, 'skip: not lvl')
                 continue
             if (post or "").upper() == "SSO":
                 post, name = f"Sub-station Operator ({name})" if name else "Sub-station Operator", None

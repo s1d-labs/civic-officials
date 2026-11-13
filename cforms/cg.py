@@ -118,6 +118,7 @@ def items(get):
     out = []
     for v, name in options(r.text, "ddlNikay"):
         if not v.isdigit() or name.startswith("क्षेत्रीय कार्यालय"):
+            provenance.skip_line(v, 'skip: not v.isdigit() or name.startswith("क्षेत्रीय कार्यालय")')
             continue
         h = _search(get, v)
         rows = _rows(h) if h else []

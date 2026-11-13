@@ -18,6 +18,7 @@ One queue item = one corporation. Record ids: dept:ward3_kamrc_staff:<city>:<are
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -110,6 +111,7 @@ def rows(html):
                 section = cells[0]
                 continue
             if len(cells) <= max(ni, di, ci):
+                provenance.skip_row(tr, 'skip: len(cells) <= max(ni, di, ci)')
                 continue
             out.append((section, cells[ni], cells[di] or section, cells[ci], {"table": ti, "row": ri}))
     return out
@@ -127,6 +129,7 @@ def zonal_offices(html):
             text = " ".join(cells)
             m = re.search(r"(?i)([A-Za-z]+)\s+Zonal\s+Off\w*\s*-?\s*(\d+)", cells[0] if cells else "")
             if not m or len(cells) < 3:
+                provenance.skip_row(tr, 'skip: not m or len(cells) < 3')
                 continue
             ph = re.sub(r"(\d{3,5})\s*-\s*(\d{6,8})", r"\1-\2", cells[2])
             out.append((f"{m.group(1).title()} Zonal Office - {m.group(2)}", cells[1], ph,
@@ -143,6 +146,7 @@ def parse(html, p, contact_html=None):
         name = re.sub(r"(?i)^(shri|smt|sri)\.?\s*$", "", name).strip()
         ph = re.sub(r"(\d{3,5})\s*-\s*(\d{6,8})", r"\1-\2", ph)
         if not post or CLERICAL.search(post) or not (name or ph):
+            provenance.skipped('skip: not post or CLERICAL.search(post) or not (name or ph)')
             continue
         en = english(post) if KANNADA.search(post) else None
         post_en = en or post

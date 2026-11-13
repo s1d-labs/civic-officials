@@ -18,6 +18,7 @@ import re
 import tempfile
 
 from cforms import gj, hr, mh
+import provenance
 
 METHOD = 'ocr tesseract mar (rotated gazette scan, ruled grid)'     # source trail (provenance.py): how this reader reads its sources
 
@@ -68,6 +69,7 @@ def records(rows, p, page=None):
         members.append(block)
     for blk in members:
         if not any(SEAT.search(cell(r, "seat")) for r in blk):
+            provenance.skip_row(blk, 'skip: not any(SEAT.search(cell(r, "seat")) for r in blk)')
             continue                     # head rows ("(१) (२) ...") and empty bands: their numbers are not wards
         w = next((mh.num(cell(r, "ward")) for r in blk if mh.num(cell(r, "ward"))), "")
         wn = " ".join(cell(r, "ward_name") for r in blk if cell(r, "ward_name"))

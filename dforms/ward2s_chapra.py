@@ -10,6 +10,7 @@ junior engineers, sanitation officers). One queue item = one page. Record ids: d
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -31,6 +32,7 @@ def parse(html, p):
         for r in rows:
             post, name, phone = _ward.col(r, "designation"), _ward.col(r, "name"), _ward.col(r, "contact", "mobile", "phone")
             if not post or not (name or phone):
+                provenance.skip_row(r, 'skip: not post or not (name or phone)')
                 continue
             bare = HONORIFIC.sub("", name)
             recs.append(_ward.record(MODULE, f"{page}:{_esw.slug(post)}:{_esw.slug(bare) or 'post'}", seen, body=BODY, lgd=LGD,

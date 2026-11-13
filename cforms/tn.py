@@ -104,6 +104,7 @@ def ocr_parts(text):
             vi = next((j for j in range(len(toks) - 1, -1, -1) if re.fullmatch(r"\d+", toks[j]) and j + 1 < len(toks)
                        and re.fullmatch(r"\d+\.\d+", toks[j + 1])), None)
             if vi is None:
+                provenance.skip_line(ln, 'skip: vi is None')
                 continue
             gi = next((j for j, t in enumerate(toks) if GENDER.match(t)), None)
             start = 1 if toks and re.fullmatch(r"\d+", toks[0]) else 0

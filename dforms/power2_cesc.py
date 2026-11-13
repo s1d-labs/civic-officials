@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2_east
 from dforms._power import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -39,6 +40,7 @@ def parse(html, url=URL):
                 block = _power.clean(tds[0].get_text(" ", strip=True))
                 continue
             if len(tds) < 3 or not block:
+                provenance.skip_row(tr, 'skip: len(tds) < 3 or not block')
                 continue
             cell = {td.get("data-label", str(i)): td for i, td in enumerate(tds)}
             who = _lines(next((v for k, v in cell.items() if k.startswith("For both")), tds[1]))

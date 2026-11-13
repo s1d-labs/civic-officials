@@ -25,6 +25,7 @@ import subprocess
 import tempfile
 
 from cforms import hr
+import provenance
 
 METHOD = "ocr tesseract eng (one strip per ruled row) or pdf text (pdftotext -layout), by payload source"     # source trail (provenance.py): how this reader reads its sources
 
@@ -214,6 +215,7 @@ def text_rows(text, first=1, pos=None):
             cur = None
             continue
         if starts is None:
+            provenance.skip_line(ln, 'skip: starts is None')
             continue
         if re.search(r"Election Commissioner|DELHI GAZETTE", ln) or not ln.strip():
             cur = None if not ln.strip() else cur

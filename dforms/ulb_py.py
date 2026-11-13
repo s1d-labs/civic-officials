@@ -13,6 +13,7 @@ India server on 2026-11-11), Oulgaret (Ozhukarai in LGD; no page found that name
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -32,10 +33,12 @@ def parse(html, url=KARAIKAL, district=None):
         tp = []
         for row, pos in zip(_esw.grid(t, pos=tp), tp):
             if len(row) < 4:
+                provenance.skip_row(row, 'skip: len(row) < 4')
                 continue
             name, post, address = row[0], row[1], row[2]
             m = BODY.search(post) or BODY.search(address)
             if not m or not re.search(r"(?i)commissioner|chairman|chairperson|special officer", post):
+                provenance.skip_row(row, 'skip: not m or not re.search(r"(?i)commissioner|chairman|chairperson|spec...')
                 continue
             phone, email = row[3], _esw.emails(row[4]) if len(row) > 4 else ""
             post = re.sub(r"(?i),?\s*\b" + re.escape(m.group(0)) + r"\b", "", post).strip(" ,") or post

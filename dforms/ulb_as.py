@@ -25,6 +25,7 @@ also has a template address and number ("1057 Brekke Well", Hamren), so none of 
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html cards (h3.font-semibold + p lines; office from the page footer)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -199,6 +200,7 @@ def parse(staff_html, members_html=None, body="", district=None, url="", members
         elif des and _esw.slug(des) != _esw.slug(post or ""):
             more["designation"] = des
         if not post or not (name or phone):
+            provenance.skipped('skip: not post or not (name or phone)')
             continue
         recs.append(_ulb.record(MODULE, STATE, body, post, seen, name=name, phone=phone, source=url, **common,
                                 section=section, ward=ward or None, src_url=url, src_pos=pos, **more))
@@ -210,6 +212,7 @@ def parse(staff_html, members_html=None, body="", district=None, url="", members
         name, more = split_name(name)
         more.pop("designation", None)
         if not KEEP_MEMBER.search(cat) or not (name or phone):
+            provenance.skipped('skip: not KEEP_MEMBER.search(cat) or not (name or phone)')
             continue
         recs.append(_ulb.record(MODULE, STATE, body, cat, seen, name=name, phone=phone, source=members_url, **common,
                                 ward=ward or None, src_url=members_url, src_pos=pos, **more))

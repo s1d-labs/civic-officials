@@ -86,6 +86,7 @@ def _rows(soup, base, ac_no, ac_name):
             continue
         vals = [_cell(c, base) for c in cells]
         if len(vals) < 3:
+            provenance.skip_row(tr, 'skip: len(vals) < 3')
             continue
         raw = {head[i] if i < len(head) and head[i] else f"col{i}": v for i, v in enumerate(vals)}
         part = raw.get("Part No", "")

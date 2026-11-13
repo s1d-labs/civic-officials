@@ -14,6 +14,7 @@ from urllib.parse import urljoin, urlsplit
 from bs4 import BeautifulSoup
 
 from cforms import cp_common as cp
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -22,14 +23,17 @@ def parse(html, p, url):
     recs = []
     for head, cells in cp.table_rows(html):
         if not head:
+            provenance.skipped('skip: not head')
             continue
         ni = cp.column(head, r"member name|name of the|^name")
         pi = cp.column(head, r"mobile|contact|phone")
         wi = cp.column(head, r"^w\.?\s*no|ward|div")
         if ni is None or pi is None or ni >= len(cells):
+            provenance.skipped('skip: ni is None or pi is None or ni >= len(cells)')
             continue
         name = cells[ni]
         if not name or re.fullmatch(r"[\d\s.]*", name):
+            provenance.skipped('skip: not name or re.fullmatch(r"[\\d\\s.]*", name)')
             continue
         label = cells[wi] if wi is not None and wi < len(cells) else None
         ward = cp.ward_no(label)

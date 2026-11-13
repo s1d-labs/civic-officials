@@ -17,6 +17,7 @@ old district the page groups it under). Ids: dept:health_ap_hmfw:<dmho|state|hos
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -44,6 +45,7 @@ def parse_contact(html, url=CONTACT):
         for n, tr in enumerate(t.find_all("tr"), 1):
             c = _cells(tr)
             if len(c) < 4 or not c[0] or c[0].lower().startswith("name of"):
+                provenance.skip_row(tr, 'skip: len(c) < 4 or not c[0] or c[0].lower().startswith("name of")')
                 continue
             name = HONOR.sub("", re.sub(r"\s+", " ", c[0])).strip()
             if dmho:
@@ -72,6 +74,7 @@ def parse_csms(html, url=CSMS):
             district = c[0].title() if c else ""
             continue
         if len(c) < 5 or not c[1]:
+            provenance.skip_row(tr, 'skip: len(c) < 5 or not c[1]')
             continue
         sno, hosp, name, mob, mail = c[:5]
         kind = hosp.split(",")[0].strip().upper()

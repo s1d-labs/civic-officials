@@ -27,6 +27,7 @@ import json
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
@@ -109,15 +110,18 @@ def parse(data, url=URL):
     for i, x in enumerate(rows):
         x = {**x, "_index": i}
         if x.get("IsPDF") and not (val(x, "OfficerName") or val(x, "MobileNo")):
+            provenance.skip_row(x, 'skip: x.get("IsPDF") and not (val(x, "OfficerName") or val(x, "MobileNo"))')
             continue
         b = body_of(x)
         if not b:
+            provenance.skip_row(x, 'skip: not b')
             continue
         body, district, btype, kind = b
         name, name_hi = person(x)
         phone = _esw.phones(val(x, "MobileNo"), val(x, "PhoneNo"), val(x, "OfficeLandline"))
         email = _esw.emails(val(x, "Email"))
         if not (name or phone or email):
+            provenance.skip_row(x, 'skip: not (name or phone or email)')
             continue
         post = val(x, "DesignationName") or val(x, "ContactCategoryName") or "Contact"
         if not val(x, "DesignationName") and re.search(r"(?i)employee", post):

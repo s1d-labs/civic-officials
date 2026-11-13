@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 from dforms import _esw
 from dforms._police import clean, gz, rec, slug, uniq
 from dforms.police_s3waas import fix_phone, grid, level_of
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -41,6 +42,7 @@ def parse(html, district, url):
         tno = _esw.table_no(t)
         for rn, r in enumerate(rows[1:], 2):
             if len(r) < 3 or not r[1]:
+                provenance.skip_row(r, 'skip: len(r) < 3 or not r[1]')
                 continue
             sphere = clean(r[1])
             name, rank, post, phone = officer(r[2])

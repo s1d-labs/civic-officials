@@ -17,6 +17,7 @@ health inspectors at level "circle" (area "Health Circle 3 (Mattanchery)"); staf
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -103,6 +104,7 @@ def parse(html, p):
             for r, rp in zip(g[2:], gp[2:]):
                 cur["pos"] = rp
                 if len(r) < 5 or not _esw.clean(r[1]):
+                    provenance.skip_row(r, 'skip: len(r) < 5 or not _esw.clean(r[1])')
                     continue
                 circle = _esw.clean(r[2]).title()
                 place = _esw.clean(r[3]).title()

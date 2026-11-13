@@ -43,12 +43,14 @@ def parse_csv(text, url=URL):
         office = " ".join(x for x in (a, b) if x) or None
         lvl = level(post, office)
         if not lvl or not office:
+            provenance.skip_line(row, 'skip: not lvl or not office')
             continue
         name = clean(re.sub(r"\s*\+?\d[\d -]{5,}\d\s*", " ", row.get("First Name") or ""))
         ph = phone(row.get("Mobile Phone"), row.get("Business Phone"), row.get("Primary Phone"))
         key = (re.sub(r"[^a-z]", "", post.lower()), re.sub(r"[^a-z0-9]", "", office.lower()), re.sub(r"\D", "", ph or ""),
                re.sub(r"[^a-z]", "", re.sub(r"(?i)^(er|shri|sri)\.?\s+", "", name or "").lower()))
         if key in seen:
+            provenance.skip_line(row, 'skip: key in seen')
             continue
         seen.add(key)
         out.add(f"{post}:{office}", lvl, office, post=post, name=name, phone_=ph,

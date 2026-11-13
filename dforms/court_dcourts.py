@@ -60,6 +60,7 @@ def town_of(district, *texts):
     dn = re.sub(r"[^a-z]", "", (district or "").lower())
     for t in texts:
         if not t:
+            provenance.skipped("empty")
             continue
         for seg in reversed(re.split(r"[,(]", t.rstrip(" .)"))):
             seg = _esw.clean(seg).strip(" .-")

@@ -9,6 +9,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -44,6 +45,7 @@ def parse(html, url=URL):
             name, desig = c.get("officer name", ""), c.get("designation", "")
             area = re.sub(r"(?i)\s*only\s*$", "", c.get("defining area", "")).strip()
             if not name:
+                provenance.skip_row(r, 'skip: not name')
                 continue
             phone = _esw.phones(std0(c.get("office number")), c.get("mobile number"))
             if re.match(r"(?i)^electoral registration officer|^ero\b", desig):

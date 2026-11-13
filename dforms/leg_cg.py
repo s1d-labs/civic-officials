@@ -15,6 +15,7 @@ import re
 
 from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_neva
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -46,9 +47,11 @@ def parse(html, url=URL):
     for tr in _esw.soup(html).find_all("tr"):
         tds = tr.find_all("td", recursive=False)
         if len(tds) < 6 or not _esw.clean(tds[0].get_text()).strip(".").isdigit():     # "19." too
+            provenance.skip_row(tr, 'skip: len(tds) < 6 or not _esw.clean(tds[0].get_text()).strip(".").isdigit()')
             continue
         m = re.match(r"(\d{1,3})\s*-\s*(.+)", _esw.clean(tds[1].get_text(" ")))
         if not m:
+            provenance.skip_row(tr, 'skip: not m')
             continue
         no = int(m.group(1))
         cons = re.sub(r"\(\s*", "(", _esw.clean(m.group(2)))

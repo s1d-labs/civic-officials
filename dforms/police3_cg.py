@@ -18,6 +18,7 @@ from bs4 import BeautifulSoup
 
 from dforms import police_s3waas
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table (S3WaaS police page)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -62,6 +63,7 @@ def tables(html, url, district, state="CG"):
             for ri, tr in enumerate(rows[1:], 1):
                 c = _cells(tr)
                 if len(c) < 2 or not c[1] or SKIP_LABEL.search(c[0]) or not re.search(r"[A-Za-zऀ-ॿ]", c[1]):
+                    provenance.skip_row(tr, 'skip: len(c) < 2 or not c[1] or SKIP_LABEL.search(c[0]) or not re.search(...')
                     continue
                 post = c[0]
                 level, otype = police_s3waas.level_of(post, post, default="district")
@@ -82,6 +84,7 @@ def tables(html, url, district, state="CG"):
                 sub = clean(m.group(1)) if m else None
                 continue
             if len(c) <= si or not c[si]:
+                provenance.skip_row(tr, 'skip: len(c) <= si or not c[si]')
                 continue
             name = c[si]
             ph = phones(*(c[i] for i in pcols if i < len(c) and c[i].strip("–—- ")))

@@ -13,6 +13,7 @@ import zipfile
 from io import BytesIO
 
 from dforms import _esw
+import provenance
 
 METHOD = "spreadsheet (xlsx)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -79,6 +80,7 @@ def parse(content, url=URL):
     offices, cur, dist_cell = [], None, ""
     for d in rows:
         if any("સ.ર.કચેરીનું" in (v or "") for v in d.values()):
+            provenance.skip_row(d, 'skip: any("સ.ર.કચેરીનું" in (v or "") for v in d.values())')
             continue                                    # header row
         if d.get("A"):
             dist_cell = d["A"]
@@ -88,6 +90,7 @@ def parse(content, url=URL):
                    "villages": [], "rows": []}
             offices.append(cur)
         if cur is None:
+            provenance.skip_row(d, 'skip: cur is None')
             continue
         if d.get("_r"):
             cur["rows"].append(d["_r"])

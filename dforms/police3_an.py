@@ -13,6 +13,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table (+ Joomla e-mail cloak script text)"     # source trail (provenance.py)
 
@@ -51,6 +52,7 @@ def parse(html, url, district):
             tds = tr.find_all("td")
             c = [clean(td.get_text(" ", strip=True)) or "" for td in tds]
             if len(c) < len(head) or not c[col["post"]]:
+                provenance.skip_row(tr, 'skip: len(c) < len(head) or not c[col["post"]]')
                 continue
             post = c[col["post"]]
             name = c[col["name"]]

@@ -55,6 +55,7 @@ def blocks(pages):
                 continue
             rs = runs(raw)
             if not rs:
+                provenance.skip_line(raw, 'skip: not rs')
                 continue
             if cur is None or (len(rs) == 1 and rs[0][1].isupper() and len(rs[0][1]) > 25):
                 if len(rs) == 1 and "@" not in rs[0][1]:

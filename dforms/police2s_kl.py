@@ -19,6 +19,7 @@ from urllib.parse import urljoin, urlparse
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -182,6 +183,7 @@ def table_records(html, url, p):
         rows = [[tidy(td.get_text(" ", strip=True)) for td in tr.find_all(["td", "th"])] for tr in t.find_all("tr")]
         rows = [r for r in rows if any(r)]
         if not rows:
+            provenance.skipped('skip: not rows')
             continue
         cols = {}
         for i, h in enumerate(rows[0]):
@@ -191,6 +193,7 @@ def table_records(html, url, p):
                     cols[k] = i
                     break
         if "name" not in cols:
+            provenance.skipped('skip: "name" not in cols')
             continue
         for r in rows[1:]:
             g = lambda k: r[cols[k]] if k in cols and cols[k] < len(r) else ""  # noqa: E731
@@ -198,6 +201,7 @@ def table_records(html, url, p):
             post = post or p.get("post") or ""
             nums = mobiles(g("phone"))
             if (re.fullmatch(r"[\d\s,]*", name or "") and not area) or (area and not re.search(r"[^\W\d_]", area)):
+                provenance.skip_row(r, 'skip: (re.fullmatch(r"[\\d\\s,]*", name or "") and not area) or (area and n...')
                 continue
             if NUM.search(name or ""):
                 nums, name = nums or mobiles(name), None

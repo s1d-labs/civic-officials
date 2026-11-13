@@ -19,6 +19,7 @@ import subprocess
 
 from cforms import cn_nudi
 from dforms import _esw, _leg, _pdfcells
+import provenance
 
 METHOD = 'pdf text (pdftotext -raw) + Nudi map'     # source trail (provenance.py): how this reader reads its sources
 
@@ -109,6 +110,7 @@ def member(serial, lines):
             continue
         last = None
         if TITLE.search(u):                                                  # the directory's title at a page top
+            provenance.skip_line(ln, 'skip: TITLE.search(u)')
             continue
         if ln.strip() == name_raw.strip() or kn(ln).strip(" ,") == name or LETTERS.search(u):
             d["addresses"].append([])                                        # second address (for letters / in Bengaluru)
@@ -118,6 +120,7 @@ def member(serial, lines):
             d["post"].append(u.strip(" ,"))
             continue
         if len(d["addresses"]) > 1 and not d["addresses"][-1] and POSTLINE.search(u) and not re.search(r"\d", u):
+            provenance.skip_line(ln, 'skip: len(d["addresses"]) > 1 and not d["addresses"][-1] and POSTLINE.sea...')
             continue                                                         # the post again, above the second address
         d["addresses"][-1].append(u.strip())
     d["name_regional"] = name
@@ -135,6 +138,7 @@ def parse_text(text, url, as_on=None):
     for serial, lines in blocks(text):
         d = member(serial, lines)
         if not d["name"]:
+            provenance.skipped('skip: not d["name"]')
             continue
         ph = {k: ", ".join(x for x in v if x) for k, v in d["phones"].items()}
         addrs = [", ".join(a).replace(",,", ",") for a in d["addresses"] if a]

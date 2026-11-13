@@ -81,6 +81,7 @@ def _rows(soup, ac_no, ac_name):
             head = txt
             continue
         if not txt or len(txt) < 3:
+            provenance.skip_row(tr, 'skip: not txt or len(txt) < 3')
             continue
         hdr = head or ["AC No", "Part No", "BLO Name", "Designation", "Mobile"]
         raw = {hdr[i] if i < len(hdr) else f"col{i}": t for i, t in enumerate(txt)}

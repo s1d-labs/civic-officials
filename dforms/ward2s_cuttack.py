@@ -14,6 +14,7 @@ Records: level "ward", wards = [N]. Record ids: dept:ward2s_cuttack:w<N>:<post s
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
 
@@ -47,6 +48,7 @@ def parse(html, p):
     for pi, para in enumerate(box.find_all("p"), 1):
         st = para.find("strong")
         if not st:
+            provenance.skip_row(para, 'skip: not st')
             continue
         label = _esw.clean(st.get_text(" ")).rstrip(":").lower()
         lines[label] = _esw.clean(para.get_text(" ").replace(st.get_text(" "), "", 1)).lstrip(": ")

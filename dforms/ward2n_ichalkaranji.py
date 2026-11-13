@@ -7,6 +7,7 @@ area "Divisional Office A". Record ids: dept:ward2n_ichalkaranji:zone-<letter>:o
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -30,6 +31,7 @@ def parse(html, p):
             dept = _ward.col(r, "विभागाचे नाव")
             z = re.search(r"विभागीय\s*कार्यालय\s*(ए|बी|सी|डी|ई)(?![\u0900-\u097f])", dept)
             if not z:
+                provenance.skip_row(r, 'skip: not z')
                 continue
             letter = LETTERS[z.group(1)]
             area = f"Divisional Office {letter}"

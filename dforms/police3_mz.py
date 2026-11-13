@@ -10,6 +10,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py)
 
@@ -26,11 +27,13 @@ def parse(html, url=URL):
         for ri, tr in enumerate(t.find_all("tr")):
             c = [clean(x.get_text(" ", strip=True)) or "" for x in tr.find_all(["td", "th"])]
             if len(c) < 2 or c[0].lower() == "designation":
+                provenance.skip_row(tr, 'skip: len(c) < 2 or c[0].lower() == "designation"')
                 continue
             c += [""] * (3 - len(c))
             post, name, office = c[0], c[1], c[2]
             ph = phones(office)
             if not name and not ph:
+                provenance.skip_row(tr, 'skip: not name and not ph')
                 continue
             common = dict(name=name or None, phone=ph, office_phone=office or None, state="MZ", source=url,
                           src_pos={"table": ti, "row": ri})

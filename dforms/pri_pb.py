@@ -80,6 +80,7 @@ def parse(pages, p):
         for ln, line in enumerate(text.split("\n"), 1):
             m = ROW.match(line.replace("—", "-"))
             if not m:
+                provenance.skip_line(line, 'skip: not m')
                 continue
             serial, head, zno, name, party, cat = m.groups()
             if level == "ps":
@@ -100,6 +101,7 @@ def build(rows, p, src_url):
     recs, seen = [], {}
     for r in rows:
         if not r["name"]:
+            provenance.skip_row(r, 'skip: not r["name"]')
             continue
         body = p["district"] if level == "zp" else r["samiti"]
         key = f"{dsl}:{'zp' if level == 'zp' else 'ps-' + _pri.slug(r['samiti'])}:{r['zone_no']}-{_pri.slug(r['zone'])}"

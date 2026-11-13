@@ -17,6 +17,7 @@ import json
 import re
 
 from dforms import _emerg, _esw
+import provenance
 
 METHOD = "html table / html cards / json api (WordPress posts), by payload kind"     # source trail (provenance.py): how this reader reads its sources
 
@@ -56,6 +57,7 @@ def table_records(html, p):
         g = _esw.grid(t, pos=gp)
         for row, rp in zip(g[1:], gp[1:]):
             if len(row) < 4:
+                provenance.skip_row(row, 'skip: len(row) < 4')
                 continue
             names, place, adr, contact = row[0], row[1], row[2], row[3]
             dist = district_of(place)

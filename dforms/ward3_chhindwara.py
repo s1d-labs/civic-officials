@@ -15,6 +15,7 @@ as written, post English, post_regional as written. Record ids: dept:ward3_chhin
 import re
 
 from dforms import _esw, _ward, _ward3_central as c3
+import provenance
 
 METHOD = "html elementor rows"     # source trail (provenance.py): how this reader reads its sources
 
@@ -51,6 +52,7 @@ def parse_sanitation(html, p):
             table = "daroga"
             continue
         if not cells or not cells[0].strip().isdigit():
+            provenance.skip_row(cells, 'skip: not cells or not cells[0].strip().isdigit()')
             continue
         if table == "staff" and len(cells) >= 5:
             _, name, post, phone, wards = cells[:5]
@@ -84,9 +86,11 @@ def parse_officers(html, p):
     seen, recs, done = set(), [], set()
     for cells, pos in c3.elementor_rows(html):
         if len(cells) < 3 or cells[0].strip() in ("नाम", "") or "पद" == cells[1].strip():
+            provenance.skip_row(cells, 'skip: len(cells) < 3 or cells[0].strip() in ("नाम", "") or "पद" == cells[...')
             continue
         name, post, phone = cells[0], cells[1], cells[2]
         if not re.search(r"[ऀ-ॿ]", name) or not post.strip() or (_esw.clean(name), _esw.clean(post)) in done:
+            provenance.skip_row(cells, 'skip: not re.search(r"[ऀ-ॿ]", name) or not post.strip() or (_esw.clean(na...')
             continue
         done.add((_esw.clean(name), _esw.clean(post)))
         mob = c3.phones_in(phone)

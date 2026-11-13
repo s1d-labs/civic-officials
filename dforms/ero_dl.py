@@ -10,6 +10,7 @@ Record ids: dept:ero_dl:DL-AC-<no>:ero and dept:ero_dl:DL-AC-<no>:aero:voter-cen
 """
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -43,6 +44,7 @@ def parse(html, page, url):
         c = dict(zip(head, row))
         no = _col(c, "ac no").strip()
         if not no.isdigit():
+            provenance.skip_row(row, 'skip: not no.isdigit()')
             continue
         ac, name = f"DL-AC-{int(no)}", _col(c, "ac name").title()
         f = dict(dept="elections", level="ac", area=f"{int(no)} - {name}", phone=_esw.phones(_col(c, "phone"), _col(c, "mobile")),

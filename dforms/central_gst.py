@@ -15,6 +15,7 @@ from urllib.parse import urlparse
 
 from dforms import _esw
 from dforms.police_s3waas import last_updated
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -63,6 +64,7 @@ def officers(html, url, p):
             f = {k: v for k, v in zip(ks, row) if k}
             name = TITLE.sub("", f.get("name", "")).strip(" ,")
             if not name or name.lower() in ("vacant", "-"):
+                provenance.skip_row(row, 'skip: not name or name.lower() in ("vacant", "-")')
                 continue
             key = f"{p.get('zone', 'x')}:{_esw.slug(area)}:{_esw.slug(name)}"
             n, k = 1, key

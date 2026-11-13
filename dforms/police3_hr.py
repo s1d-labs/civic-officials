@@ -17,6 +17,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -58,6 +59,7 @@ def leaf_rows(html):
                     head = ri
                 continue
             if not any(cells) or len(cells) < len(cols) - 1:
+                provenance.skip_row(tr, 'skip: not any(cells) or len(cells) < len(cols) - 1')
                 continue
             if len(cells) == len(cols) - 1 and cols[0] == "sno" and not re.fullmatch(r"\d+\.?", cells[0]):
                 cells = [""] + cells          # a row without its serial number (rowspan)
@@ -116,6 +118,7 @@ def parse(html, url, district, std=None):
         if name and re.fullmatch(r"[-–\s.]*|vacant", name, re.I):
             name = None
         if not ph and not mails and not name:
+            provenance.skipped('skip: not ph and not mails and not name')
             continue
         key = f"{d}:{slug(post)}-{slug(area)}" if level in ("police_station", "subdivision") else f"{d}:{slug(post)}"
         recs.append(rec(M, key, level=level, office_type=otype, post=post, area=area, office=r["post"], name=name,

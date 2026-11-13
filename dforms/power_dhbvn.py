@@ -17,6 +17,7 @@ import re
 
 from dforms._pdftext import Lines, cut, layout_pages, settle
 from dforms._power import Out, clean, email, raw
+import provenance
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -68,6 +69,7 @@ def header(lines):
     for i, ln in enumerate(lines):
         m = re.search(r"Name of Office(?!r)", ln)
         if not m:
+            provenance.skip_line(ln, 'skip: not m')
             continue
         block = [ln] + [b for b in lines[max(0, i - 2):i + 3] if b is not ln and not re.search(r"(?i)contact (numbers|details) of", b)]
 
@@ -123,6 +125,7 @@ def rows_of(body, cols):
     lines, brk = [], set()                               # brk: a heading line ("Executive Engineer/Operation, ...") came before
     for ln in body:
         if not ln.strip():
+            provenance.skipped("empty")
             continue
         if HEADING.search(ln) and not NAME.search(ln[:cols[2]]) and not TEL.search(ln) and not re.search(r"@|\[at\]", ln, re.I):
             brk.add(len(lines))
@@ -230,6 +233,7 @@ def parse_text(pages, circle, url):
                     post, nm = m.group(1), clean(nm[:m.start()].rstrip(","))
             lvl = level(office, post)
             if not lvl:
+                provenance.skipped('skip: not lvl')
                 continue
             if lvl == "division":
                 division = area_of(office)

@@ -8,6 +8,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
 
@@ -22,10 +23,12 @@ def parse(html, url=URL):
         info = BeautifulSoup(htmlmod.unescape(g["data-info"]).replace("<br>", "\n"), "lxml").get_text("\n")
         lines = [clean(x) for x in info.split("\n") if clean(x)]
         if not lines:
+            provenance.skipped('skip: not lines')
             continue
         name = lines[0]
         tel = " ".join(re.sub(r"(?i)^tel\.?\s*:?", "", x) for x in lines[1:] if re.search(r"(?i)tel|\d{6}", x))
         if name in seen:
+            provenance.skipped('skip: name in seen')
             continue
         seen.add(name)
         lat, lon = g.get("latitude"), g.get("logitude") or g.get("longitude")

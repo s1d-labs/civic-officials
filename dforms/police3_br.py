@@ -11,6 +11,7 @@ import json
 import re
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "json api"
 
@@ -59,6 +60,7 @@ def parse(text, url=URL, state="BR"):
     for i, x in enumerate(data):
         post = clean(x.get("designation"))
         if not post:
+            provenance.skip_row(x, 'skip: not post')
             continue
         rng = clean(x.get("range"))
         std = x.get("std_code")

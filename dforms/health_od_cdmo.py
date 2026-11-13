@@ -41,11 +41,13 @@ def parse(html, url=URL, page=0):
         for row, sp in zip(rows[1:], pos[1:]):
             sn = col(r"sr\.?\s*no", row)
             if not re.fullmatch(r"\d{1,3}", sn or ""):
+                provenance.skip_row(row, 'skip: not re.fullmatch(r"\\d{1,3}", sn or "")')
                 continue
             district, name = col(r"^district", row), col(r"name", row)
             mobile, office, fax = (col(rx, row).translate(ODIA) for rx in (r"mobile", r"office", r"fax"))
             phone = _esw.phones(mobile, office)
             if not (name or phone):
+                provenance.skip_row(row, 'skip: not (name or phone)')
                 continue
             recs.append(_esw.record(MODULE, sn, dept="health", level="district" if district else "state",
                                     area=district or "Odisha", post="CDMO/CMO", name=name, phone=phone,

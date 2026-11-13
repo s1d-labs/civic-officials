@@ -164,10 +164,12 @@ def page_table(pdf, page, tmp, lang, vector=False):
         for ln in r.stdout.splitlines()[1:]:
             f = ln.split("\t")
             if len(f) < 12 or not f[11].strip():
+                provenance.skip_line(ln, 'skip: len(f) < 12 or not f[11].strip()')
                 continue
             x, y, ww, hh = map(int, f[6:10])
             cy = y + hh / 2 + ay
             if not hl[0] < cy < hl[-1]:
+                provenance.skip_line(ln, 'skip: not hl[0] < cy < hl[-1]')
                 continue
             ri = max(k for k, a in enumerate(hl[:-1]) if a <= cy)
             cells[ri].append((x + ax, f[11].strip()))
@@ -433,6 +435,7 @@ def parse(pages, p):
             two = [r[phi], ddig.get(phi, [""] * len(data))[k]] if phi is not None else []
             if pi is not None and len(PART_PAIR.findall(r[pi].translate(DIGIT_FIX))) >= 2 or \
                     any(sum(1 for x in t.split() if phone_of(x)) >= 2 for t in two):
+                provenance.skip_row(r, 'skip: pi is not None and len(PART_PAIR.findall(r[pi].translate(DIGIT_FIX)...')
                 continue                   # two table rows in one (a rule between them was not found): not split, dropped
             name, whole = clean_name(r[cols["blo_name"]]) if "blo_name" in cols else ("", True)
             post = ""
@@ -444,6 +447,7 @@ def parse(pages, p):
                     if m and m.start() > 0:
                         name, post = name[:m.start()].strip(), m.group(0).strip()
             if not (phone or name) or not votes and not phone:
+                provenance.skip_row(r, 'skip: not (phone or name) or not votes and not phone')
                 continue
             cells = {names[i]: r[i] for i in range(n)}
             if phi is not None and ddig.get(phi, [""] * len(data))[k]:
@@ -460,6 +464,7 @@ def parse(pages, p):
     out, seen = [], set()
     for it, part, inf in zip(items, parts, inferred):
         if part is None or part in seen:       # no number, or the same part read twice (keep the first)
+            provenance.skip_row(it, 'skip: part is None or part in seen')
             continue
         seen.add(part)
         row = {"ac_no": p.get("ac_no"), "ac_name": p.get("ac_name"), "district": p.get("district"), "part_no": part,

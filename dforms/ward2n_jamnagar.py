@@ -9,6 +9,7 @@ Record ids: dept:ward2n_jamnagar:<centre slug>:civic-centre.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -29,6 +30,7 @@ def parse(html, p):
         for r in rows:
             name = _ward.col(r, "civic center name")
             if not re.search(r"(?i)civic\s*cent(er|re)", name) or re.search(r"(?i)civic center name", name):
+                provenance.skip_row(r, 'skip: not re.search(r"(?i)civic\\s*cent(er|re)", name) or re.search(r"(?i)...')
                 continue
             area = re.sub(r"(?i)\s*civic\s*cent(er|re)\s*$", "", name).strip() or name
             recs.append(_ward.record(MODULE, f"{_esw.slug(area)}:civic-centre", seen, body=BODY, lgd=LGD, state=STATE,

@@ -64,6 +64,7 @@ def rows(pages):
                         ln.index("eksckbZy"))
                 continue
             if cols is None or not ln.strip():
+                provenance.skip_line(ln, 'skip: cols is None or not ln.strip()')
                 continue
             m = NUM.match(ln)
             b0, c_name, c_post, c_mob = cols

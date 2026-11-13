@@ -86,6 +86,7 @@ def fetch(p, get):
     for (no, dist, ac, name, mobile), pos in zip(rows(a.text, where), where):
         name = _esw.clean(name)
         if not name:
+            provenance.skipped('skip: not name')
             continue
         district, dc = district_of(dist)
         recs.append(_esw.record(MODULE, f"MP-AC-{no}", dept="administration", level="subdivision", area=area_of(ac),

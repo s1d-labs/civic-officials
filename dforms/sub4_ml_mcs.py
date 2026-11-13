@@ -17,6 +17,7 @@ Record ids: dept:sub4_ml_mcs:<post key>:<area slug>[:n] (an officer holding two 
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table rows (BeautifulSoup), charges split from the Present Post cell by regex"     # source trail
 
@@ -110,6 +111,7 @@ def build(pages):
             rows = _esw.grid(table, pos=pos)
             for row, sp in zip(rows, pos):
                 if len(row) < 2 or re.search(r"(?i)present\s+post", row[1]):
+                    provenance.skip_row(row, 'skip: len(row) < 2 or re.search(r"(?i)present\\s+post", row[1])')
                     continue
                 name = re.sub(r",?\s*\bMCS\b\.?$", "", row[0]).strip(" ,")
                 name = TITLE.sub("", name).strip()

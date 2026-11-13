@@ -9,6 +9,7 @@ import base64
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -42,12 +43,15 @@ def parse(html, url, ac=None):
     for trn, piece in enumerate(re.split(r"(?i)<tr[^>]*>", body)[1:], 1):
         cells = [_esw.clean(_esw.soup(c).get_text(" ")) for c in re.findall(r"(?is)<td[^>]*>(.*?)</td>", piece)]
         if len(cells) < 2:
+            provenance.skip_row(piece, 'skip: len(cells) < 2')
             continue
         m = re.match(r"^(\d+)\s*/\s*(\d+[A-Z]?)$", cells[0])
         if not m:
+            provenance.skip_row(piece, 'skip: not m')
             continue
         acn, part = int(m.group(1)), m.group(2)
         if (acn, part) in seen:
+            provenance.skip_row(piece, 'skip: (acn, part) in seen')
             continue
         seen.add((acn, part))
         name = cells[2] if len(cells) > 2 else ""
