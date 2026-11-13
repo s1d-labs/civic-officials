@@ -1,0 +1,248 @@
+[
+ {
+  "key": "st_div_s3waas:patnadivision.bih.nic.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "patnadivision.bih.nic.in",
+   "urls": [
+    "https://patnadivision.bih.nic.in/whos-who/",
+    "https://patnadivision.bih.nic.in/directory/",
+    "https://patnadivision.bih.nic.in/important-contacts/"
+   ],
+   "division": "Patna",
+   "state": "BR",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:purneadivision.bih.nic.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "purneadivision.bih.nic.in",
+   "urls": [
+    "https://purneadivision.bih.nic.in/whos-who/",
+    "https://purneadivision.bih.nic.in/directory/"
+   ],
+   "division": "Purnia",
+   "state": "BR",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:kosidivision.bih.nic.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "kosidivision.bih.nic.in",
+   "urls": [
+    "https://kosidivision.bih.nic.in/whos-who/",
+    "https://kosidivision.bih.nic.in/directory/"
+   ],
+   "division": "Kosi",
+   "state": "BR",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:darbhangadivision.bih.nic.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "darbhangadivision.bih.nic.in",
+   "urls": [
+    "https://darbhangadivision.bih.nic.in/whos-who/",
+    "https://darbhangadivision.bih.nic.in/directory/",
+    "https://darbhangadivision.bih.nic.in/contact-us/"
+   ],
+   "division": "Darbhanga",
+   "state": "BR",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:mungerdivision.bih.nic.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "mungerdivision.bih.nic.in",
+   "urls": [
+    "https://mungerdivision.bih.nic.in/whos-who/",
+    "https://mungerdivision.bih.nic.in/directory/"
+   ],
+   "division": "Munger",
+   "state": "BR",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:sarandivision.bih.nic.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "sarandivision.bih.nic.in",
+   "urls": [
+    "https://sarandivision.bih.nic.in/whos-who/",
+    "https://sarandivision.bih.nic.in/directory/",
+    "https://sarandivision.bih.nic.in/contact-directory/"
+   ],
+   "division": "Saran",
+   "state": "BR",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:divcomjammu.gov.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "divcomjammu.gov.in",
+   "urls": [
+    "https://divcomjammu.gov.in/whos-who/",
+    "https://divcomjammu.gov.in/revenue-directory/",
+    "https://divcomjammu.gov.in/contact-us/"
+   ],
+   "division": "Jammu",
+   "state": "JK",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:divcomkashmir.jk.gov.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "divcomkashmir.jk.gov.in",
+   "urls": [
+    "https://divcomkashmir.jk.gov.in/about-us/whos-who/",
+    "https://divcomkashmir.jk.gov.in/contact-us/"
+   ],
+   "division": "Kashmir",
+   "state": "JK",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:rcmysore.gov.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "rcmysore.gov.in",
+   "urls": [
+    "https://rcmysore.gov.in/whos-who/",
+    "https://rcmysore.gov.in/directory/"
+   ],
+   "division": "Mysuru",
+   "state": "KA",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:kumaon.gov.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "kumaon.gov.in",
+   "urls": [
+    "https://kumaon.gov.in/whos-who/",
+    "https://kumaon.gov.in/divisional-officers/",
+    "https://kumaon.gov.in/contact-us/"
+   ],
+   "division": "Kumaon",
+   "state": "UK",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:garhwal.uk.gov.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "garhwal.uk.gov.in",
+   "urls": [
+    "https://garhwal.uk.gov.in/whos-who/",
+    "https://garhwal.uk.gov.in/contact-us/"
+   ],
+   "division": "Garhwal",
+   "state": "UK",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:amravatidivision.gov.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "amravatidivision.gov.in",
+   "urls": [
+    "https://amravatidivision.gov.in/en/directory/",
+    "https://amravatidivision.gov.in/en/contact-us/"
+   ],
+   "division": "Amravati",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:divcomnashik.maharashtra.gov.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "divcomnashik.maharashtra.gov.in",
+   "urls": [
+    "https://divcomnashik.maharashtra.gov.in/en/whos-who/",
+    "https://divcomnashik.maharashtra.gov.in/en/directory/",
+    "https://divcomnashik.maharashtra.gov.in/en/contact-details/"
+   ],
+   "division": "Nashik",
+   "state": "MH",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:commhsr.haryana.gov.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "commhsr.haryana.gov.in",
+   "urls": [
+    "https://commhsr.haryana.gov.in/whos-who/",
+    "https://commhsr.haryana.gov.in/contact-us/"
+   ],
+   "division": "Hisar",
+   "state": "HR",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_div_s3waas:rdccdcuttack.nic.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "rdccdcuttack.nic.in",
+   "urls": [
+    "https://rdccdcuttack.nic.in/whos-who/",
+    "https://rdccdcuttack.nic.in/contact-us/"
+   ],
+   "division": "Central",
+   "state": "OD",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "pages seen in archive.s1d.me copies (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ }
+]
