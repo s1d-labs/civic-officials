@@ -1,0 +1,103 @@
+[
+ {
+  "key": "st_div_pages:jk-police-zones",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "JK",
+   "key": "jk-police-zones",
+   "division": "Jammu",
+   "kind": "police",
+   "body": "Jammu and Kashmir Police",
+   "urls": [
+    "https://jkpolice.gov.in/Zonal-Range-Hqrs"
+   ],
+   "table_divisions": {
+    "1": "Jammu",
+    "2": "Kashmir"
+   },
+   "police_unit_rx": "(?i)\\b(rajouri|doda|jammu|udhampur)[\\w -]*range\\b|\\b(NKR|SKR|CKR)\\b[\\w ]*",
+   "office": [
+    {
+     "url": "https://jkpolice.gov.in/Zonal-Range-Hqrs",
+     "post": "IGP Jammu Zone",
+     "anchor": "Jammu Zone\\nJ&K",
+     "division": "Jammu",
+     "police_unit": "Jammu Zone"
+    },
+    {
+     "url": "https://jkpolice.gov.in/Zonal-Range-Hqrs",
+     "post": "IGP Kashmir Zone",
+     "anchor": "Kashmir Zone\\nJ&K",
+     "division": "Kashmir",
+     "police_unit": "Kashmir Zone"
+    }
+   ],
+   "note": "the Jammu and Kashmir police zones cover the same districts as the two revenue divisions",
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked",
+   "district_names": {
+    "1": [
+     "Anantnag"
+    ],
+    "10": [
+     "Poonch"
+    ],
+    "11": [
+     "Pulwama"
+    ],
+    "12": [
+     "Rajouri"
+    ],
+    "13": [
+     "Srinagar"
+    ],
+    "14": [
+     "Udhampur"
+    ],
+    "2": [
+     "Budgam"
+    ],
+    "3": [
+     "Baramulla"
+    ],
+    "4": [
+     "Doda"
+    ],
+    "5": [
+     "Jammu"
+    ],
+    "620": [
+     "Kishtwar"
+    ],
+    "621": [
+     "Ramban"
+    ],
+    "622": [
+     "Kulgam"
+    ],
+    "623": [
+     "Bandipora"
+    ],
+    "624": [
+     "Samba"
+    ],
+    "625": [
+     "Shopian"
+    ],
+    "626": [
+     "Ganderbal"
+    ],
+    "627": [
+     "Reasi"
+    ],
+    "7": [
+     "Kathua"
+    ],
+    "8": [
+     "Kupwara"
+    ]
+   }
+  }
+ }
+]

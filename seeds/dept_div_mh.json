@@ -1,0 +1,135 @@
+[
+ {
+  "key": "st_div_pages:mh-konkan",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "MH",
+   "key": "mh-konkan",
+   "division": "Konkan",
+   "urls": [
+    "https://divcomkonkan.gov.in/e0-a4-a8-e0-a4-bf-e0-a4-b0-e0-a5-8d-e0-a4-a6-e0-a5-87-e0-a4-b6-e0-a4-bf-e0-a4-95-e0-a4-be-mr/"
+   ],
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked (S3WaaS)",
+   "district_names": {
+    "466": [
+     "Ahilyanagar"
+    ],
+    "467": [
+     "Akola"
+    ],
+    "468": [
+     "Amravati"
+    ],
+    "469": [
+     "Chhatrapati Sambhajinagar"
+    ],
+    "470": [
+     "Beed"
+    ],
+    "471": [
+     "Bhandara"
+    ],
+    "472": [
+     "Buldhana"
+    ],
+    "473": [
+     "Chandrapur"
+    ],
+    "474": [
+     "Dhule"
+    ],
+    "475": [
+     "Gadchiroli"
+    ],
+    "476": [
+     "Gondia"
+    ],
+    "477": [
+     "Hingoli"
+    ],
+    "478": [
+     "Jalgaon"
+    ],
+    "479": [
+     "Jalna"
+    ],
+    "480": [
+     "Kolhapur"
+    ],
+    "481": [
+     "Latur"
+    ],
+    "482": [
+     "Mumbai",
+     "मुंबई शहर",
+     "Mumbai City"
+    ],
+    "483": [
+     "Mumbai Suburban",
+     "मुंबई उपनगर"
+    ],
+    "484": [
+     "Nagpur"
+    ],
+    "485": [
+     "Nanded"
+    ],
+    "486": [
+     "Nandurbar"
+    ],
+    "487": [
+     "Nashik"
+    ],
+    "488": [
+     "Dharashiv"
+    ],
+    "489": [
+     "Parbhani"
+    ],
+    "490": [
+     "Pune"
+    ],
+    "491": [
+     "Raigad",
+     "रायगड"
+    ],
+    "492": [
+     "Ratnagiri",
+     "रत्नागिरी"
+    ],
+    "493": [
+     "Sangli"
+    ],
+    "494": [
+     "Satara"
+    ],
+    "495": [
+     "Sindhudurg",
+     "सिंधुदुर्ग"
+    ],
+    "496": [
+     "Solapur"
+    ],
+    "497": [
+     "Thane",
+     "ठाणे"
+    ],
+    "498": [
+     "Wardha"
+    ],
+    "499": [
+     "Washim"
+    ],
+    "500": [
+     "Yavatmal"
+    ],
+    "665": [
+     "Palghar",
+     "पालघर"
+    ]
+   }
+  }
+ }
+]

@@ -1,0 +1,490 @@
+[
+ {
+  "key": "st_div_pages:hr-police-ambala",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "key": "hr-police-ambala",
+   "division": "Ambala Range",
+   "kind": "police",
+   "body": "Ambala Range, Haryana Police",
+   "urls": [
+    "https://haryanapolice.gov.in/static/TelephoneDirectory_ambala.aspx"
+   ],
+   "districts": [
+    "58",
+    "76",
+    "68"
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:hr-police-hisar",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "key": "hr-police-hisar",
+   "division": "Hisar Range",
+   "kind": "police",
+   "body": "Hisar Range, Haryana Police",
+   "urls": [
+    "https://haryanapolice.gov.in/static/TelephoneDirectory_hisar.aspx"
+   ],
+   "districts": [
+    "63",
+    "74",
+    "65",
+    "792",
+    "61"
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:hr-police-karnal",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "key": "hr-police-karnal",
+   "division": "Karnal Range",
+   "kind": "police",
+   "body": "Karnal Range, Haryana Police",
+   "urls": [
+    "https://haryanapolice.gov.in/static/TelephoneDirectory_karnal.aspx"
+   ],
+   "districts": [
+    "66",
+    "67",
+    "71"
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:hr-police-rtk",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "key": "hr-police-rtk",
+   "division": "Rohtak Range",
+   "kind": "police",
+   "body": "Rohtak Range, Haryana Police",
+   "urls": [
+    "https://haryanapolice.gov.in/static/TelephoneDirectory_rtk.aspx"
+   ],
+   "districts": [
+    "701",
+    "73",
+    "59"
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:hr-police-southrange",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "key": "hr-police-southrange",
+   "division": "South Range",
+   "kind": "police",
+   "body": "South Range, Haryana Police",
+   "urls": [
+    "https://haryanapolice.gov.in/static/TelephoneDirectory_southrange.aspx"
+   ],
+   "districts": [
+    "72",
+    "619",
+    "69",
+    "604"
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ }
+]

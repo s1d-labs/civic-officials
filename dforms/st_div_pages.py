@@ -51,7 +51,7 @@ FIELDS = [
     ("photo", r"(?i)photo|image|picture|फोटो"),
 ]
 HEADER_WORD = re.compile(r"(?i)^\W*(code|office|residence|mobile( no\.?)?|phones?|fax|e-?mail|name|designation|s\.?\s*no\.?)\W*$")
-HEAD_OF_OFFICE = re.compile(r"(?i)^\W*((divisional|regional|revenue divisional)\s+)?commissioner\b(?!.*\b(police|tax|excise|"
+HEAD_OF_OFFICE = re.compile(r"(?i)^\W*((divisional|regional|revenue divisional)\s+)?commis+ioner\b(?!.*\b(police|tax|excise|"
                             r"labour|food|state|municipal|zila|cooperative)\b)|विभागीय\s+आयुक्त|प्रमंडलीय\s+आयुक्त|संभागीय\s+आयुक्त|"
                             r"मंडलायुक्त|^\W*आयुक्त\W*$")
 NOT_HEAD = re.compile(r"(?i)\b(additional|addl|joint|jt|deputy|dy|assistant|asst|special)\b|अपर|अतिरिक्त|सह\b|उप\b|सहाय्यक")

@@ -1,0 +1,242 @@
+[
+ {
+  "key": "st_div_pages:ka-kalaburagi",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "KA",
+   "key": "ka-kalaburagi",
+   "division": "Kalaburagi",
+   "urls": [
+    "https://rckalaburagi.karnataka.gov.in/107/officers-details/en"
+   ],
+   "office": [
+    {
+     "url": "https://rckalaburagi.karnataka.gov.in/18/contact-us/en",
+     "post": "Regional Commissioner"
+    }
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked",
+   "district_names": {
+    "524": [
+     "Bagalkote"
+    ],
+    "525": [
+     "Bengaluru Urban"
+    ],
+    "526": [
+     "Bengaluru Rural"
+    ],
+    "527": [
+     "Belagavi",
+     "Belgaum"
+    ],
+    "528": [
+     "Ballari"
+    ],
+    "529": [
+     "Bidar"
+    ],
+    "530": [
+     "Vijayapura",
+     "Vijayapur",
+     "Bijapur"
+    ],
+    "531": [
+     "Chamarajanagar"
+    ],
+    "532": [
+     "Chikkamagaluru"
+    ],
+    "533": [
+     "Chitradurga"
+    ],
+    "534": [
+     "Dakshina Kannada"
+    ],
+    "535": [
+     "Davanagere"
+    ],
+    "536": [
+     "Dharwad"
+    ],
+    "537": [
+     "Gadag"
+    ],
+    "538": [
+     "Kalaburagi",
+     "Kalburgi",
+     "Gulbarga"
+    ],
+    "539": [
+     "Hassan"
+    ],
+    "540": [
+     "Haveri"
+    ],
+    "541": [
+     "Kodagu"
+    ],
+    "542": [
+     "Kolar"
+    ],
+    "543": [
+     "Koppal"
+    ],
+    "544": [
+     "Mandya"
+    ],
+    "545": [
+     "Mysuru"
+    ],
+    "546": [
+     "Raichur"
+    ],
+    "547": [
+     "Shivamogga"
+    ],
+    "548": [
+     "Tumakuru"
+    ],
+    "549": [
+     "Udupi"
+    ],
+    "550": [
+     "Uttara Kannada"
+    ],
+    "630": [
+     "Chikkaballapura"
+    ],
+    "631": [
+     "Bengaluru South"
+    ],
+    "635": [
+     "Yadgir"
+    ],
+    "738": [
+     "Vijayanagara"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:ka-belagavi",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "KA",
+   "key": "ka-belagavi",
+   "division": "Belagavi",
+   "urls": [],
+   "office": [
+    {
+     "url": "https://rcbelagavi.karnataka.gov.in/34/contact-us/en",
+     "post": "Regional Commissioner"
+    }
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-13; abroad unchecked",
+   "district_names": {
+    "524": [
+     "Bagalkote"
+    ],
+    "525": [
+     "Bengaluru Urban"
+    ],
+    "526": [
+     "Bengaluru Rural"
+    ],
+    "527": [
+     "Belagavi",
+     "Belgaum"
+    ],
+    "528": [
+     "Ballari"
+    ],
+    "529": [
+     "Bidar"
+    ],
+    "530": [
+     "Vijayapura",
+     "Vijayapur",
+     "Bijapur"
+    ],
+    "531": [
+     "Chamarajanagar"
+    ],
+    "532": [
+     "Chikkamagaluru"
+    ],
+    "533": [
+     "Chitradurga"
+    ],
+    "534": [
+     "Dakshina Kannada"
+    ],
+    "535": [
+     "Davanagere"
+    ],
+    "536": [
+     "Dharwad"
+    ],
+    "537": [
+     "Gadag"
+    ],
+    "538": [
+     "Kalaburagi",
+     "Kalburgi",
+     "Gulbarga"
+    ],
+    "539": [
+     "Hassan"
+    ],
+    "540": [
+     "Haveri"
+    ],
+    "541": [
+     "Kodagu"
+    ],
+    "542": [
+     "Kolar"
+    ],
+    "543": [
+     "Koppal"
+    ],
+    "544": [
+     "Mandya"
+    ],
+    "545": [
+     "Mysuru"
+    ],
+    "546": [
+     "Raichur"
+    ],
+    "547": [
+     "Shivamogga"
+    ],
+    "548": [
+     "Tumakuru"
+    ],
+    "549": [
+     "Udupi"
+    ],
+    "550": [
+     "Uttara Kannada"
+    ],
+    "630": [
+     "Chikkaballapura"
+    ],
+    "631": [
+     "Bengaluru South"
+    ],
+    "635": [
+     "Yadgir"
+    ],
+    "738": [
+     "Vijayanagara"
+    ]
+   }
+  }
+ }
+]

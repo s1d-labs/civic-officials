@@ -36,5 +36,36 @@
    "59",
    "701"
   ]
- }
+ },
+ "police_ranges": {
+  "Ambala Range": [
+   "58",
+   "76",
+   "68"
+  ],
+  "Hisar Range": [
+   "63",
+   "74",
+   "65",
+   "792",
+   "61"
+  ],
+  "Karnal Range": [
+   "66",
+   "67",
+   "71"
+  ],
+  "Rohtak Range": [
+   "701",
+   "73",
+   "59"
+  ],
+  "South Range": [
+   "72",
+   "619",
+   "69",
+   "604"
+  ]
+ },
+ "police_source": "Haryana Police range telephone pages (haryanapolice.gov.in/static/TelephoneDirectory_<range>.aspx, 2026-11-13): the SP posts each range lists, LGD codes"
 }
