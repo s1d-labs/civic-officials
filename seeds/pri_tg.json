@@ -1,0 +1,1242 @@
+[
+ {
+  "key": "pri-tg-189-sarpanch-01",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "01",
+   "district": "Adilabad",
+   "lgd_district": "Adilabad",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "21",
+   "expected": 472,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-02",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "02",
+   "district": "Komaram Bheem Asifabad",
+   "lgd_district": "Kumuram Bheem Asifabad",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "15",
+   "expected": 332,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-03",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "03",
+   "district": "Mancherial",
+   "lgd_district": "Mancherial",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "18",
+   "expected": 302,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-04",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "04",
+   "district": "Nirmal",
+   "lgd_district": "Nirmal",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "19",
+   "expected": 399,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-05",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "05",
+   "district": "Nizamabad",
+   "lgd_district": "Nizamabad",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "33",
+   "expected": 545,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-06",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "06",
+   "district": "Jagtial",
+   "lgd_district": "Jagitial",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "20",
+   "expected": 385,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-07",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "07",
+   "district": "Peddapalli",
+   "lgd_district": "Peddapalli",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "14",
+   "expected": 262,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-08",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "08",
+   "district": "Jayashankar Bhupalpally",
+   "lgd_district": "Jayashankar Bhupalapally",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "12",
+   "expected": 248,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-09",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "09",
+   "district": "Bhadradri Kothagudem",
+   "lgd_district": "Bhadradri Kothagudem",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "23",
+   "expected": 468,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-10",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "10",
+   "district": "Mahabubabad",
+   "lgd_district": "Mahabubabad",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "18",
+   "expected": 482,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-11",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "11",
+   "district": "Warangal",
+   "lgd_district": "Warangal",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "13",
+   "expected": 316,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-12",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "12",
+   "district": "Hanumakonda",
+   "lgd_district": "Hanumakonda",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "14",
+   "expected": 210,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-13",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "13",
+   "district": "Karimnagar",
+   "lgd_district": "Karimnagar",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "16",
+   "expected": 316,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-14",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "14",
+   "district": "Rajanna Sircilla",
+   "lgd_district": "Rajanna Sircilla",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "13",
+   "expected": 260,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-15",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "15",
+   "district": "Kamareddy",
+   "lgd_district": "Kamareddy",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "25",
+   "expected": 532,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-16",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "lgd_district": "Sangareddy",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "28",
+   "expected": 613,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-17",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "17",
+   "district": "Medak",
+   "lgd_district": "Medak",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "21",
+   "expected": 492,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-18",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "18",
+   "district": "Siddipet",
+   "lgd_district": "Siddipet",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "26",
+   "expected": 508,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-19",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "19",
+   "district": "Jangaon",
+   "lgd_district": "Jangoan",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "12",
+   "expected": 280,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-20",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "20",
+   "district": "Yadadri Bhuvanagiri",
+   "lgd_district": "Yadadri Bhuvanagiri",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "17",
+   "expected": 427,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-23",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "23",
+   "district": "Rangareddy",
+   "lgd_district": "Rangareddi",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "27",
+   "expected": 525,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-24",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "24",
+   "district": "Vikarabad",
+   "lgd_district": "Vikarabad",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "20",
+   "expected": 594,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-25",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "25",
+   "district": "Mahabubnagar",
+   "lgd_district": "Mahabubnagar",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "17",
+   "expected": 422,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-26",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "26",
+   "district": "Jogulamba Gadwal",
+   "lgd_district": "Jogulamba Gadwal",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "13",
+   "expected": 255,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-27",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "27",
+   "district": "Wanaparthy",
+   "lgd_district": "Wanaparthy",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "15",
+   "expected": 268,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-28",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "28",
+   "district": "Nagarkurnool",
+   "lgd_district": "Nagarkurnool",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "20",
+   "expected": 454,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-29",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "29",
+   "district": "Nalgonda",
+   "lgd_district": "Nalgonda",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "33",
+   "expected": 866,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-30",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "30",
+   "district": "Suryapet",
+   "lgd_district": "Suryapet",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "23",
+   "expected": 486,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-31",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "31",
+   "district": "Khammam",
+   "lgd_district": "Khammam",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "21",
+   "expected": 565,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-32",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "32",
+   "district": "Mulugu",
+   "lgd_district": "Mulugu",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "10",
+   "expected": 146,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-sarpanch-33",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "sarpanch",
+   "level": "gp",
+   "district_id": "33",
+   "district": "Narayanpet",
+   "lgd_district": "Narayanpet",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "13",
+   "expected": 272,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-01",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "01",
+   "district": "Adilabad",
+   "lgd_district": "Adilabad",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "21",
+   "expected": 3857,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-02",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "02",
+   "district": "Komaram Bheem Asifabad",
+   "lgd_district": "Kumuram Bheem Asifabad",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "15",
+   "expected": 2813,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-03",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "03",
+   "district": "Mancherial",
+   "lgd_district": "Mancherial",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "18",
+   "expected": 2630,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-04",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "04",
+   "district": "Nirmal",
+   "lgd_district": "Nirmal",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "19",
+   "expected": 3354,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-05",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "05",
+   "district": "Nizamabad",
+   "lgd_district": "Nizamabad",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "33",
+   "expected": 5010,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-06",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "06",
+   "district": "Jagtial",
+   "lgd_district": "Jagitial",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "20",
+   "expected": 3533,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-07",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "07",
+   "district": "Peddapalli",
+   "lgd_district": "Peddapalli",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "14",
+   "expected": 2418,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-08",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "08",
+   "district": "Jayashankar Bhupalpally",
+   "lgd_district": "Jayashankar Bhupalapally",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "12",
+   "expected": 2100,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-09",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "09",
+   "district": "Bhadradri Kothagudem",
+   "lgd_district": "Bhadradri Kothagudem",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "23",
+   "expected": 4130,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-10",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "10",
+   "district": "Mahabubabad",
+   "lgd_district": "Mahabubabad",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "18",
+   "expected": 4105,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-11",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "11",
+   "district": "Warangal",
+   "lgd_district": "Warangal",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "13",
+   "expected": 2748,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-12",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "12",
+   "district": "Hanumakonda",
+   "lgd_district": "Hanumakonda",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "14",
+   "expected": 1986,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-13",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "13",
+   "district": "Karimnagar",
+   "lgd_district": "Karimnagar",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "16",
+   "expected": 2946,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-14",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "14",
+   "district": "Rajanna Sircilla",
+   "lgd_district": "Rajanna Sircilla",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "13",
+   "expected": 2268,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-15",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "15",
+   "district": "Kamareddy",
+   "lgd_district": "Kamareddy",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "25",
+   "expected": 4635,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-16",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "16",
+   "district": "Sangareddy",
+   "lgd_district": "Sangareddy",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "28",
+   "expected": 5368,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-17",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "17",
+   "district": "Medak",
+   "lgd_district": "Medak",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "21",
+   "expected": 4215,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-18",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "18",
+   "district": "Siddipet",
+   "lgd_district": "Siddipet",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "26",
+   "expected": 4507,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-19",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "19",
+   "district": "Jangaon",
+   "lgd_district": "Jangoan",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "12",
+   "expected": 2522,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-20",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "20",
+   "district": "Yadadri Bhuvanagiri",
+   "lgd_district": "Yadadri Bhuvanagiri",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "17",
+   "expected": 3701,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-23",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "23",
+   "district": "Rangareddy",
+   "lgd_district": "Rangareddi",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "27",
+   "expected": 4658,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-24",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "24",
+   "district": "Vikarabad",
+   "lgd_district": "Vikarabad",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "20",
+   "expected": 5033,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-25",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "25",
+   "district": "Mahabubnagar",
+   "lgd_district": "Mahabubnagar",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "17",
+   "expected": 3664,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-26",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "26",
+   "district": "Jogulamba Gadwal",
+   "lgd_district": "Jogulamba Gadwal",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "13",
+   "expected": 2376,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-27",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "27",
+   "district": "Wanaparthy",
+   "lgd_district": "Wanaparthy",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "15",
+   "expected": 2435,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-28",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "28",
+   "district": "Nagarkurnool",
+   "lgd_district": "Nagarkurnool",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "20",
+   "expected": 4053,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-29",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "29",
+   "district": "Nalgonda",
+   "lgd_district": "Nalgonda",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "33",
+   "expected": 7454,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-30",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "30",
+   "district": "Suryapet",
+   "lgd_district": "Suryapet",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "23",
+   "expected": 4383,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-31",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "31",
+   "district": "Khammam",
+   "lgd_district": "Khammam",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "21",
+   "expected": 5154,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-32",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "32",
+   "district": "Mulugu",
+   "lgd_district": "Mulugu",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "10",
+   "expected": 1284,
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "pri-tg-189-ward-33",
+  "payload": {
+   "kind": "form-pri_tg",
+   "state": "TG",
+   "url": "https://tsec.gov.in/dashboardresults.do",
+   "post": "ward",
+   "level": "gp",
+   "district_id": "33",
+   "district": "Narayanpet",
+   "lgd_district": "Narayanpet",
+   "election_id": "189",
+   "election_year": "2025",
+   "election": "Telangana 2025 gram panchayat elections",
+   "mandals": "13",
+   "expected": 2461,
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
