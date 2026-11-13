@@ -1,0 +1,1464 @@
+[
+ {
+  "key": "st_up_police:dgphq",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?dgphq&cd=MQA2ADkA",
+   "slug": "dgphq",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:phq",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?phq&cd=MgAxADAA",
+   "slug": "phq",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:commlko",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commlko&cd=NAA0ADQANgA%3D",
+   "slug": "commlko",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:commgbngr",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commgbngr&cd=NAA0ADQANwA%3D",
+   "slug": "commgbngr",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:commknp",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commknp&cd=NAA1ADEANgA%3D",
+   "slug": "commknp",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:commvns",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?commvns&cd=NAA1ADIAMgA%3D",
+   "slug": "commvns",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:zoneagra",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?zoneagra&cd=MgA2ADgA",
+   "slug": "zoneagra",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangeagra",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangeagra&cd=MQA1ADkA",
+   "slug": "rangeagra",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:agra",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?agra&cd=MgA3ADQA",
+   "slug": "agra",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:firozabad",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?firozabad&cd=MgA4ADEA",
+   "slug": "firozabad",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:mainpuri",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?mainpuri&cd=MgA4ADgA",
+   "slug": "mainpuri",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:mathura",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?mathura&cd=MgA5ADUA",
+   "slug": "mathura",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangealgrh",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangealgrh&cd=MwAwADIA",
+   "slug": "rangealgrh",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:aligarh",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?aligarh&cd=MwAwADkA",
+   "slug": "aligarh",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:etah",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?etah&cd=MwAxADcA",
+   "slug": "etah",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:kasganj",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kasganj&cd=MwAyADQA",
+   "slug": "kasganj",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:hathras",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?hathras&cd=MwAzADEA",
+   "slug": "hathras",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:zonebrly",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?zonebrly&cd=NAAxADgA",
+   "slug": "zonebrly",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangemod",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangemod&cd=NAAyADYA",
+   "slug": "rangemod",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:sambhal",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?sambhal&cd=NAAzADMA",
+   "slug": "sambhal",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:bijnor",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bijnor&cd=NAA0ADAA",
+   "slug": "bijnor",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:amroha",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?amroha&cd=NAA0ADcA",
+   "slug": "amroha",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:moradabad",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?moradabad&cd=NAA1ADQA",
+   "slug": "moradabad",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rampur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rampur&cd=NAA2ADEA",
+   "slug": "rampur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangebrly",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangebrly&cd=NAA2ADgA",
+   "slug": "rangebrly",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:bareilly",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bareilly&cd=NAA3ADUA",
+   "slug": "bareilly",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:budaun",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?budaun&cd=NAA4ADIA",
+   "slug": "budaun",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:pilibhit",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?pilibhit&cd=NAA4ADkA",
+   "slug": "pilibhit",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:shahjahanpur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?shahjahanpur&cd=NAA5ADYA",
+   "slug": "shahjahanpur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:zonegrk",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?zonegrk&cd=NQAwADMA",
+   "slug": "zonegrk",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangedeviptn",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangedeviptn&cd=NQAxADAA",
+   "slug": "rangedeviptn",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:bahraich",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bahraich&cd=NgAwADEA",
+   "slug": "bahraich",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:balrampur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?balrampur&cd=NQA5ADQA",
+   "slug": "balrampur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:gonda",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?gonda&cd=NQA4ADcA",
+   "slug": "gonda",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangebasti",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangebasti&cd=NQA3ADMA",
+   "slug": "rangebasti",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:basti",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?basti&cd=NQA2ADYA",
+   "slug": "basti",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:kabirngr",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kabirngr&cd=NQA1ADkA",
+   "slug": "kabirngr",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:sidharthngr",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?sidharthngr&cd=NQA1ADIA",
+   "slug": "sidharthngr",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangegrkpur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangegrkpur&cd=NQA0ADUA",
+   "slug": "rangegrkpur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:deoria",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?deoria&cd=NQAzADgA",
+   "slug": "deoria",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:gorakhpur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?gorakhpur&cd=NQAzADEA",
+   "slug": "gorakhpur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:maharajganj",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?maharajganj&cd=NQAyADUA",
+   "slug": "maharajganj",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:padrona",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?padrona&cd=NQAxADcA",
+   "slug": "padrona",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:zoneknp",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?zoneknp&cd=NgAxADIA",
+   "slug": "zoneknp",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangeknp",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangeknp&cd=NgAxADkA",
+   "slug": "rangeknp",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:auraiya",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?auraiya&cd=NgA0ADEA",
+   "slug": "auraiya",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:etawah",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?etawah&cd=NgA0ADgA",
+   "slug": "etawah",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:fatehgarh",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?fatehgarh&cd=NgA1ADUA",
+   "slug": "fatehgarh",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:kannauj",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kannauj&cd=NgA2ADkA",
+   "slug": "kannauj",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:ramabaingr",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?ramabaingr&cd=NgA3ADUA",
+   "slug": "ramabaingr",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:kanpurngr",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kanpurngr&cd=NgA2ADIA",
+   "slug": "kanpurngr",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangejhansi",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangejhansi&cd=NgA4ADQA",
+   "slug": "rangejhansi",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:jalaun",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?jalaun&cd=NgA5ADEA",
+   "slug": "jalaun",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:jhansi",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?jhansi&cd=NgA5ADgA",
+   "slug": "jhansi",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:lalitpur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?lalitpur&cd=NwAwADUA",
+   "slug": "lalitpur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:zonelko",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?zonelko&cd=NwAxADIA",
+   "slug": "zonelko",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangelko",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangelko&cd=NwAxADkA",
+   "slug": "rangelko",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:hardoi",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?hardoi&cd=NwAyADYA",
+   "slug": "hardoi",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:kheri",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kheri&cd=NwA0ADMA",
+   "slug": "kheri",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:lucknow",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?lucknow&cd=NwA1ADAA",
+   "slug": "lucknow",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:raebareli",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?raebareli&cd=NwA1ADcA",
+   "slug": "raebareli",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:sitapur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?sitapur&cd=NwA2ADUA",
+   "slug": "sitapur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:unnao",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?unnao&cd=NwA3ADIA",
+   "slug": "unnao",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangefzbad",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangefzbad&cd=NwA3ADkA",
+   "slug": "rangefzbad",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:ambedkarngr",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?ambedkarngr&cd=NwA4ADYA",
+   "slug": "ambedkarngr",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:barabanki",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?barabanki&cd=NwA5ADMA",
+   "slug": "barabanki",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:amethi",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?amethi&cd=OAAwADAA",
+   "slug": "amethi",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:faizabad",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?faizabad&cd=OAAwADcA",
+   "slug": "faizabad",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:sultanpur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?sultanpur&cd=OAAyADUA",
+   "slug": "sultanpur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:zonemrt",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?zonemrt&cd=OAAzADIA",
+   "slug": "zonemrt",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangesaharan",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangesaharan&cd=OAAzADkA",
+   "slug": "rangesaharan",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:muzaffarngr",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?muzaffarngr&cd=OAA0ADYA",
+   "slug": "muzaffarngr",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:shamli",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?shamli&cd=OAA1ADUA",
+   "slug": "shamli",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:saharanpur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?saharanpur&cd=OAA2ADMA",
+   "slug": "saharanpur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangemrt",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangemrt&cd=OAA3ADEA",
+   "slug": "rangemrt",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:bagpat",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bagpat&cd=OAA3ADkA",
+   "slug": "bagpat",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:bulandshahr",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bulandshahr&cd=OAA4ADcA",
+   "slug": "bulandshahr",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:ghaziabad",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?ghaziabad&cd=OQAwADMA",
+   "slug": "ghaziabad",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:hapur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?hapur&cd=OQAzADcA",
+   "slug": "hapur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:meerut",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?meerut&cd=OQAzADAA",
+   "slug": "meerut",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:zoneallhd",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?zoneallhd&cd=MwAzADgA",
+   "slug": "zoneallhd",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangeallhd",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangeallhd&cd=MwA0ADUA",
+   "slug": "rangeallhd",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:allahabad",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?allahabad&cd=MwA1ADIA",
+   "slug": "allahabad",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:fatehpur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?fatehpur&cd=MwA1ADkA",
+   "slug": "fatehpur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:kaushambi",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?kaushambi&cd=MwA2ADYA",
+   "slug": "kaushambi",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:pratapgarh",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?pratapgarh&cd=MwA3ADYA",
+   "slug": "pratapgarh",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangecdham",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangecdham&cd=MwA4ADMA",
+   "slug": "rangecdham",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:banda",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?banda&cd=MwA5ADAA",
+   "slug": "banda",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:chitrakoot",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?chitrakoot&cd=MwA5ADcA",
+   "slug": "chitrakoot",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:hamirpur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?hamirpur&cd=NAAwADQA",
+   "slug": "hamirpur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:mahoba",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?mahoba&cd=NAAxADEA",
+   "slug": "mahoba",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:zonevns",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?zonevns&cd=OQA0ADUA",
+   "slug": "zonevns",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangeazmh",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangeazmh&cd=OQA1ADIA",
+   "slug": "rangeazmh",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:azamgarh",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?azamgarh&cd=OQA2ADAA",
+   "slug": "azamgarh",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:ballia",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?ballia&cd=OQA2ADcA",
+   "slug": "ballia",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:mau",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?mau&cd=OQA3ADUA",
+   "slug": "mau",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangevns",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangevns&cd=OQA4ADIA",
+   "slug": "rangevns",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:chandauli",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?chandauli&cd=OQA4ADkA",
+   "slug": "chandauli",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:ghazipur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?ghazipur&cd=OQA5ADcA",
+   "slug": "ghazipur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:jaunpur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?jaunpur&cd=MQAwADAANAA%3D",
+   "slug": "jaunpur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:varanasi",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?varanasi&cd=MQAwADEAMQA%3D",
+   "slug": "varanasi",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rangemirzapur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?rangemirzapur&cd=MQAwADEAOAA%3D",
+   "slug": "rangemirzapur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:bhadoi",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?bhadoi&cd=MQAwADIANQA%3D",
+   "slug": "bhadoi",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:mirzapur",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?mirzapur&cd=MQAwADMAMwA%3D",
+   "slug": "mirzapur",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:sonbhadra",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmOfficials.aspx?sonbhadra&cd=MQAwADQAMAA%3D",
+   "slug": "sonbhadra",
+   "unit": false,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:aco",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?aco&cd=MQAwADYANQA%3D",
+   "slug": "aco",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:cbcid",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?cbcid&cd=MQAwADcAMwA%3D",
+   "slug": "cbcid",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:fire-service",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?fire-service&cd=MQAwADgAOQA%3D",
+   "slug": "fire-service",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:grp",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?grp&cd=MQAwADkAOAA%3D",
+   "slug": "grp",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:hr",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?hr&cd=MQAxADAAOAA%3D",
+   "slug": "hr",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:pac",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?pac&cd=MQAxADEANQA%3D",
+   "slug": "pac",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:recb",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?recb&cd=MQAxADIANwA%3D",
+   "slug": "recb",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:rules-manual",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?rules-manual&cd=MQAxADMANQA%3D",
+   "slug": "rules-manual",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:security",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?security&cd=MQAxADQAMgA%3D",
+   "slug": "security",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:spl-enq",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?spl-enq&cd=MQAxADQANQA%3D",
+   "slug": "spl-enq",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:special-investigation-team",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?special-investigation-team&cd=MQAxADUAMwA%3D",
+   "slug": "special-investigation-team",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:traffic",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?traffic&cd=MQAxADYAOQA%3D",
+   "slug": "traffic",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:training",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?training&cd=MQAxADcANwA%3D",
+   "slug": "training",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:telecom",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?telecom&cd=MQAyADEANgA%3D",
+   "slug": "telecom",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:vigilance",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?vigilance&cd=MQAyADIANwA%3D",
+   "slug": "vigilance",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_police:logistics",
+  "payload": {
+   "reader": "st_up_police",
+   "url": "https://uppolice.gov.in/frmUnitOfficials.aspx?logistics&cd=NAA0ADcANQA%3D",
+   "slug": "logistics",
+   "unit": true,
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_up_portal:district-officials",
+  "payload": {
+   "reader": "st_up_portal",
+   "url": "https://up.gov.in/en/page/contact-details-of-district-level-officials",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

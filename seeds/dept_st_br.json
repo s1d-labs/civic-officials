@@ -1,0 +1,658 @@
+[
+ {
+  "key": "st_br_cmo:commissioner",
+  "payload": {
+   "reader": "st_br_cmo",
+   "url": "https://cmo.bihar.gov.in/pdf/commissioner.pdf",
+   "which": "commissioner",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_cmo:dm",
+  "payload": {
+   "reader": "st_br_cmo",
+   "url": "https://cmo.bihar.gov.in/pdf/dm.pdf",
+   "which": "dm",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_police:phq",
+  "payload": {
+   "reader": "st_br_police",
+   "url": "https://police.bihar.gov.in/PhqContactHandler.ashx?page=1&pageSize=20",
+   "which": "phq",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_police:field",
+  "payload": {
+   "reader": "st_br_police",
+   "url": "https://police.bihar.gov.in/FieldOfficerHandler.ashx?action=getall&lang=en&page=1&pageSize=20",
+   "which": "field",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:1",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "1",
+   "label": "CM Secretariat",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:3",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "3",
+   "label": "Cabinet Secretariat Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:7",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "7",
+   "label": "Disaster Management Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:4",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "4",
+   "label": "General Administration Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:5",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "5",
+   "label": "Home Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:10",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "10",
+   "label": "Information and Public Relations Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:6",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "6",
+   "label": "Law Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:2",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "2",
+   "label": "Parliamentary Affairs Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:8",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "8",
+   "label": "Planning and Development Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:9",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "9",
+   "label": "Vigilance Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:18",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "18",
+   "label": "Education Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:19",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "19",
+   "label": "Health Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:58",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "58",
+   "label": "Higher Education Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:28",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "28",
+   "label": "Science, Technology and Technical Education Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:56",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "56",
+   "label": "Youth, Employment and Skill Development Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:45",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "45",
+   "label": "Art and Culture Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:55",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "55",
+   "label": "Department of Sports",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:44",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "44",
+   "label": "Tourism Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:11",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "11",
+   "label": "Revenue and Land Reforms Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:13",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "13",
+   "label": "Commercial Taxes Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:12",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "12",
+   "label": "Finance Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:17",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "17",
+   "label": "Mines & Geology Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:15",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "15",
+   "label": "Prohibition Excise & Registration Department (Excise)",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:49",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "49",
+   "label": "Prohibition Excise & Registration Department (Registration)",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:16",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "16",
+   "label": "Transport Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:41",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "41",
+   "label": "BC & EBC Welfare Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:40",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "40",
+   "label": "Labour Resources and Migrant Workers Welfare Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:42",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "42",
+   "label": "Minority Welfare Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:43",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "43",
+   "label": "SC and ST Welfare Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:39",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "39",
+   "label": "Social Welfare Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:50",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "50",
+   "label": "Bihar Vikas Mission",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:54",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "54",
+   "label": "Election Department Bihar",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:20",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "20",
+   "label": "Building Construction Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:57",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "57",
+   "label": "Civil Aviation Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:26",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "26",
+   "label": "Department of Industries",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:22",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "22",
+   "label": "Energy Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:27",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "27",
+   "label": "Information Technology Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:24",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "24",
+   "label": "Public Health Engineering Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:21",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "21",
+   "label": "Road Construction Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:23",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "23",
+   "label": "Rural Works Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:25",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "25",
+   "label": "Urban Development and Housing Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:36",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "36",
+   "label": "Environment, Forest & Climate Change Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:29",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "29",
+   "label": "Agriculture Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:35",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "35",
+   "label": "Co-operative Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:30",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "30",
+   "label": "Dairy, Fisheries and Animal Resources Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:34",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "34",
+   "label": "Food & Consumer Protection Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:37",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "37",
+   "label": "Minor Water Resources Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:33",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "33",
+   "label": "Panchayati Raj Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:32",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "32",
+   "label": "Rural Development Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:38",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "38",
+   "label": "Sugarcane Industries Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_br_phone:31",
+  "payload": {
+   "reader": "st_br_phone",
+   "url": "https://state.bihar.gov.in/main/PhoneDirectory.html?getPhoneDirectory",
+   "org_id": "31",
+   "label": "Water Resources Department",
+   "state": "BR",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
