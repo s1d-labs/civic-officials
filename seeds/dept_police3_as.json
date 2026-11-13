@@ -1,0 +1,20 @@
+[
+ {
+  "key": "police3_as:directory",
+  "payload": {
+   "reader": "police3_as",
+   "form": "directory",
+   "url": "https://police.assam.gov.in/sites/default/files/public_utility/directory_ason-23102026.pdf",
+   "state": "AS"
+  }
+ },
+ {
+  "key": "police3_as:landline",
+  "payload": {
+   "reader": "police3_as",
+   "form": "landline",
+   "url": "https://police.assam.gov.in/sites/default/files/public_utility/all_districts-land-line_number.pdf",
+   "state": "AS"
+  }
+ }
+]
