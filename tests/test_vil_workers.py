@@ -181,3 +181,33 @@ def test_mn_awc_full_file_every_row():
     assert by["394"][3:6] == ("Ningthoukhong Awang Khunou Maning Ward no 1(B)", "14252011521", "Laishram Ongbi Manorama Devi")
     assert by["8895"][3:5] == ("Kakching Wairi Khongnang Lamteiba Pareng 37 by 7", "14711010205")
     assert "Ward No.1114252011018" in by["258"][10]                    # line_text stays as the file writes it
+
+
+def test_uk_aww_and_asha_full_files_every_row():
+    """Whole Dehradun DDMP lists (bucket civic-officials-depts/depts/vil_uk_ddmp/, pdftotext -layout text): AWW list 1,555 rows,
+    ASHA list 505 lines. Before 2026-11-13 the AWW reader left out 205 rows without a word (cells that wrap onto the next line;
+    "Main"/"Mini" printed apart from "AWC") and the ASHA reader 4 rows with a 9-digit mobile:
+    AWW 2,500 -> 2,884 records, ASHA 499 -> 503."""
+    import gzip
+    import provenance
+    v = mod("vil_uk_ddmp")
+
+    def text(f):
+        return gzip.decompress((DATA / f).read_bytes()).decode("utf-8")
+    t = text("vil_uk_ddmp_aww_full_pdftotext.txt.gz")
+    provenance.rows_reset()
+    recs = v.aww_records(t.split("\f"), "u", {"format": "aww"}, "pdftotext -layout")
+    assert len(recs) == 2884
+    rows = [ln for pg in t.split("\f") for _, ln, _ in v.aww_lines(pg) if v.AWW.match(ln)]
+    assert len(rows) == 1554 and sum(1 for ln in t.splitlines() if v.START.match(ln)) == 1555   # 131 Nathanpur: no name
+    d = dict(recs)
+    w = d["dept:vil_uk_ddmp:aww:raipur-31"]                  # wrapped row: AWC name on two lines, worker on the second
+    assert (w["name"], w["phone"], w["area"]) == ("Purnima", "9760504866", "AMWALA TARLA LADPUR 2")
+    assert " | " in w["src_pos"]["line_text"] and w["src_pos"]["line_text"].startswith("31")
+    c = d["dept:vil_uk_ddmp:aww:chakrata-01-19"] if "dept:vil_uk_ddmp:aww:chakrata-01-19" in d else \
+        next(x for k, x in d.items() if x.get("serial") == "19" and x.get("project", "").startswith("Chakrata"))
+    assert c["awc_type"] == "AWC" and c["name"] == "ANJU CHAUHAN"   # "Main"/"Mini" not on the row's line
+    t = text("vil_uk_ddmp_asha_full_pdftotext.txt.gz")
+    recs = v.asha_records(t.split("\f"), "u", {"format": "asha"}, "pdftotext -layout")
+    assert len(recs) == 503
+    assert any(x["name"] == "Sangeeta pal" and x["phone"] == "885767940" for _, x in recs)   # 9-digit mobile, kept as written

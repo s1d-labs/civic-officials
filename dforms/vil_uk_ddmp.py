@@ -28,9 +28,9 @@ METHOD = "pdf text (layout), rows by serial number, columns split at runs of 2+ 
 
 MODULE = "vil_uk_ddmp"
 MOB = r"(?:\d{9,11}|_+|-+)"     # a few mobiles in the file have 9 or 11 digits: kept as written
-AWW = re.compile(r"^\s*(\d{1,4})\s+05\s+UTTARAKHAND\s+(\d{5})\s+(.*?)\s+(" + MOB + r")?\s*(Main\s*AWC|Mini\s*AWC)\s*(.*?)\s*("
+AWW = re.compile(r"^\s*(\d{1,4})\s+05\s+UTTARAKHAND\s+(\d{5})\s+(.*?)\s+(" + MOB + r")?\s*((?:Main|Mini)?\s*AWC)\s*(.*?)\s*("
                  + MOB + r")?\s*$", re.I)
-ASHA = re.compile(r"^\s*(\d{1,4})\s+(\d{1,3})\s+(?:(.*?)\s{2,})?(\S.*?)\s+(\d{10}|_+|-+)?\s*$")
+ASHA = re.compile(r"^\s*(\d{1,4})\s+(\d{1,3})\s+(?:(.*?)\s{2,})?(\S.*?)\s+(" + MOB + r")?\s*$")
 PRAHARI = re.compile(r"^\s*[A-Z]?(\d{1,4})\s+(.*?)\s+(\d{10}(?:\s*[,/]\s*\d{10})?)?\s*$")
 NONAME = re.compile(r"(?i)^[_\-\s.]*$|^vacant$")
 
@@ -43,10 +43,34 @@ def gaps(s):
     return [x for x in re.split(r"\s{2,}", (s or "").strip()) if x]
 
 
+START = re.compile(r"^\s*\d{1,4}\s+05\s+UTTARAKHAND\b", re.I)
+
+
+def aww_lines(page):
+    """(line no, line, line_text) of one page; a row whose cells wrap (its line starts with the serial and "05 UTTARAKHAND" but
+    has no AWC type; the worker, mobile and type stand on the next indented line or two) is joined into one line. Full file
+    2026-11-13: 205 of 1,555 rows wrap."""
+    lines = page.splitlines()
+    i = 0
+    while i < len(lines):
+        line, ln, used = lines[i], i + 1, 1
+        if START.match(line) and not AWW.match(line):
+            joined = line
+            for k in (1, 2):
+                if i + k >= len(lines) or START.match(lines[i + k]) or not lines[i + k].strip():
+                    break
+                joined = joined.rstrip() + "   " + lines[i + k].strip()
+                if AWW.match(joined):
+                    line, used = joined, k + 1
+                    break
+        yield ln, line, " | ".join(x.strip() for x in lines[i:i + used]) if used > 1 else line
+        i += used
+
+
 def aww_records(pages, url, p, engine):
     recs, seen = [], set()
     for pg, page in enumerate(pages, 1):
-        for ln, line in enumerate(page.splitlines(), 1):
+        for ln, line, raw in aww_lines(page):
             m = AWW.match(line)
             if not m:
                 provenance.skip_line(line, 'skip: not m')
@@ -62,7 +86,7 @@ def aww_records(pages, url, p, engine):
                 sector = ""
                 awc = " ".join(parts[2:-1] if len(parts) > 3 else parts[1:-1])
                 worker = parts[-1] if len(parts) > 1 else ""
-            pos = provenance.line_pos(pg, ln, line)
+            pos = provenance.line_pos(pg, ln, raw)
             row = f"{_esw.slug(proj) or 'x'}-{sno}"     # serials restart in some projects
             while row in seen:
                 row += "-b"
