@@ -1,0 +1,7 @@
+{"module": "ward3_korba", "payload": {"reader": "ward3_korba", "url": "http://korbamunicipal.in/mck/docs/Zonal%20Information%20List%2006122024.pdf", "state": "CG"},
+ "pages": "korba_zonal.pages",
+ "min_records": 70,
+ "expect": [{"post": "^Commissioner$", "name": "पाण्डेय", "level": "body"},
+            {"post": "^Executive Engineer \\(in charge\\)$", "name": "एन.के.नाथ", "level": "zone"},
+            {"post": "^Sub Engineer$", "name": "आशमा डहरिया", "level": "zone"},
+            {"post": "^Revenue Inspector$", "name": "अजय अग्रवाल", "level": "zone"}]}

@@ -14,8 +14,10 @@ from dforms import _esw, _ward
 MP_POSTS = (
     (r"अधीक्षण\s*(?:यंत्री|अभिय(?:ं|न्)ता)", "Superintending Engineer"),
     (r"अधि(?:शा[षस]ी)?\.?\s*अभि(?:य(?:ं|न्)ता|\.)", "Executive Engineer"), (r"सहायक\s*अभिय(?:ं|न्)ता", "Assistant Engineer"),
-    (r"कनिष्ठ\s*अभिय(?:ं|न्)ता", "Junior Engineer"),
-    (r"मुख्य\s*स्वा(?:स्थ्य)?\.?\s*निरी", "Chief Health Inspector"), (r"स्वा(?:स्थ्य)?\.?\s*निरी", "Health Inspector"), (r"कार्यपालन\s*यंत्री", "Executive Engineer"),
+    (r"कनिष्ठ\s*अभिय(?:ं|न्)ता", "Junior Engineer"), (r"उप\s*अभिय(?:ं|न्)ता", "Sub Engineer"),
+    (r"सहा\.?\s*स्वा\.?\s*अधिकारी|सहायक\s*स्वास्थ्य\s*अधिकारी", "Assistant Health Officer"),
+    (r"राज(?:स्व)?\.?\s*उप\s*निरी", "Revenue Sub Inspector"), (r"अपर\s*आयुक्त", "Additional Commissioner"),
+    (r"मुख्य\s*स्वा(?:स्थ्य)?\.?\s*निरी", "Chief Health Inspector"), (r"स्वा(?:स्थ्य)?\.?\s*निरी", "Health Inspector"), (r"कार्यपालन\s*(?:यंत्री|अभिय(?:ं|न्)ता)", "Executive Engineer"),
     (r"सहायक\s*यंत्री", "Assistant Engineer"), (r"उप\s*यंत्री", "Sub Engineer"),
     (r"जोनल\s*अधिकारी|ज़ोनल\s*अधिकारी", "Zonal Officer"), (r"जोन\s*आयुक्त|जोन\s*कमिश्नर", "Zone Commissioner"),
     (r"सहा\.?\s*स्वच्छता\s*अधिकारी|सहायक\s*स्वच्छता\s*अधिकारी", "Assistant Sanitation Officer"),
