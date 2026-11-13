@@ -213,6 +213,35 @@ def test_tn_seeds():
     assert all("wp-json" in i["payload"]["url"] and i["payload"]["record_prefix"].startswith("councillor:TN:") for i in items)
 
 
+def test_tn_seeds_cover_platform_list():
+    """Every tnurbantree site of platform_sites.csv (155; "wpfc-minified" is a cache folder) has one item, one body each
+    (seeds/build_cp_tn.py; 2026-11-14: 89 -> 154 items; Thoothukudi had the LGD code of Tittakudi)."""
+    import csv
+    items = json.loads((SEEDS / "councillors_cp_tn.json").read_text())
+    sites = [r["name"] for r in csv.DictReader(open(SEEDS.parent / "platform_sites.csv", encoding="utf-8"))
+             if r["domain"].startswith("tnurbantree.tn.gov.in/")]
+    assert len(sites) == 155 and len(items) == 154
+    assert sorted(i["payload"]["site"] for i in items) == sorted(s for s in sites if s != "wpfc-minified")
+    assert len({i["payload"]["lgd_code"] for i in items}) == 154
+    by = {i["payload"]["site"]: i["payload"] for i in items}
+    assert by["thoothukudi"]["lgd_code"] == "252970" and by["thittagudi"]["lgd_code"] == "252789"
+    assert by["gudalur-tiruppur"]["lgd_code"] == "252639" and by["gudalur-theni"]["lgd_code"] == "252596"
+    assert by["gudalur-cbe"]["lgd_code"] == "252920"
+    assert all(p["record_prefix"] == f"councillor:TN:{p['record_prefix'].split(':')[2]}:{p['body']}" for p in by.values())
+
+
+def test_tn_gudalur_nilgiris_page():
+    """Full saved page www.tnurbantree.tn.gov.in/gudalur-tiruppur/ta/municipal-councillor/ (archive, 2026-11-11, sha256
+    76b877ec...): 21 wards, 21 councillors with mobiles; the SEC 2022 results hold 21 members for LGD 252639."""
+    items = json.loads((SEEDS / "councillors_cp_tn.json").read_text())
+    p = next(i["payload"] for i in items if i["payload"]["site"] == "gudalur-tiruppur")
+    recs = cp_tn.parse(read("cp_tn_gudalur_nilgiris.html"), p, "u")
+    assert len(recs) == 21 and sum(1 for d in recs if d.get("phone")) == 21
+    assert [d["ward_no"] for d in recs] == [str(n) for n in range(1, 22)]
+    assert recs[0]["name"] == "Sivaraj .S." and recs[0]["phone"] == "9443560180"
+    assert recs[0]["record_for"] == "councillor:TN:mun-nlg:கூடலூர்:1"
+
+
 # ---- Gujarat: Bhavnagar, Surat, Rajkot, Vadodara (cforms/cp_gj.py)
 
 def test_gj_bhavnagar_pages():
