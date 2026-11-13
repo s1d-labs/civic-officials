@@ -1,0 +1,53 @@
+[
+ {
+  "key": "town3_own-mcpalwal.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://mcpalwal.in/",
+   "site": "mcpalwal.in",
+   "body": "Palwal Municipal Council",
+   "lgd_code": "248586",
+   "district": "Palwal",
+   "state": "HR",
+   "pages": [
+    "http://mcpalwal.in/employee_data"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-mcradaur.com",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://mcradaur.com/",
+   "site": "mcradaur.com",
+   "body": "Radaur Municipal Committee",
+   "lgd_code": "274458",
+   "district": "Yamunanagar",
+   "state": "HR",
+   "pages": [
+    "https://mcradaur.com/webhome/office-directory"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-mcrewari.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://mcrewari.in/",
+   "site": "mcrewari.in",
+   "body": "Rewari Municipal Council",
+   "lgd_code": "248569",
+   "district": "Rewari",
+   "state": "HR",
+   "pages": [
+    "http://mcrewari.in/officers-directory"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

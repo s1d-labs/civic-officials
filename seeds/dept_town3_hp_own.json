@@ -1,0 +1,53 @@
+[
+ {
+  "key": "town3_own-mcrampur.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://mcrampur.in/",
+   "site": "mcrampur.in",
+   "body": "Rampur Municipal Council",
+   "lgd_code": "248245",
+   "district": "Shimla",
+   "state": "HP",
+   "pages": [
+    "https://mcrampur.in/Web/officer"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-mctheog.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://mctheog.in/",
+   "site": "mctheog.in",
+   "body": "Theog Municipal Council",
+   "lgd_code": "248249",
+   "district": "Shimla",
+   "state": "HP",
+   "pages": [
+    "https://mctheog.in/Web/Employee"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-npnirmand.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://npnirmand.in/",
+   "site": "npnirmand.in",
+   "body": "Nirmand Nagar Panchayat",
+   "lgd_code": "297011",
+   "district": "Kullu",
+   "state": "HP",
+   "pages": [
+    "https://npnirmand.in/Home/official"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

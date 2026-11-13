@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Directory - Municipal Council Palwal</title>
+
+  <!-- Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Framework & Icon Assets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  
+
+  <style>
+    /* Absolute Structural Logic Overrides */
+    .skip-link { position: absolute; top: -999px; left: 16px; z-index: 99999; background: #0c4a6e; color: #fff; padding: 10px 20px; border-radius: 8px; font-size: 14px; text-decoration: none; font-weight: 500; transition: top 0.2s; }
+    .skip-link:focus { top: 16px; }
+
+    body.lang-en [data-hi] { display: none !important; }
+    body.lang-hi [data-en] { display: none !important; }
+    [data-en], [data-hi] { display: inline; }
+
+    body.font-sm { font-size: 14px !important; }
+    body.font-md { font-size: 16px !important; }
+    body.font-lg { font-size: 19px !important; }
+
+    /* Fix: Explicitly hide mobile toggle on desktop screen sizes */
+    @media (min-width: 992px) {
+      .nav-toggle { display: none !important; }
+      .modern-menu { display: flex !important; }
+    }
+
+    @media (max-width: 991px) {
+      .nav-toggle { display: flex !important; }
+      .modern-menu { display: none !important; flex-direction: column !important; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(255, 255, 255, 0.98) !important; backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.08); padding: 15px 24px !important; gap: 10px !important; max-height: 80vh; overflow-y: auto; }
+      .modern-menu.open { display: flex !important; }
+      .modern-menu li { width: 100%; }
+      .modern-menu li a { color: #1e293b !important; padding: 12px 16px !important; border-radius: 8px; width: 100%; display: flex; justify-content: space-between; }
+      .modern-menu li a:hover { background: #f1f5f9; }
+      .dropdown-content { position: static !important; box-shadow: none !important; border: none !important; background: #f8fafc !important; width: 100% !important; display: none !important; margin-top: 5px; padding-left: 15px !important; }
+      .dropdown.open > .dropdown-content { display: block !important; }
+    }
+  </style>
+</head>
+
+<body class="lang-en font-md" id="main-body">
+
+<a class="skip-link" href="#main-content">
+  <span data-en>Skip to Main Content</span>
+  <span data-hi>मुख्य सामग्री पर जाएं</span>
+</a>
+
+<!-- Accessibility Top Bar -->
+<div class="top-accessibility-bar">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="gov-core-brand">
+      <span class="pill-badge" data-en>Government of Haryana</span>
+      <span class="pill-badge" data-hi>हरियाणा सरकार</span>
+    </div>
+    <div class="d-flex align-items-center gap-3">
+      <div class="font-engine">
+        <button class="font-trigger" id="btn-sm" onclick="setFont('sm')">A-</button>
+        <button class="font-trigger active" id="btn-md" onclick="setFont('md')">A</button>
+        <button class="font-trigger" id="btn-lg" onclick="setFont('lg')">A+</button>
+      </div>
+      <div class="premium-lang-engine">
+        <button class="lang-selector active" id="btn-en" onclick="setLang('en')">English</button>
+        <button class="lang-selector" id="btn-hi" onclick="setLang('hi')">हिन्दी</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Header Identity Area -->
+<header class="neo-header">
+  <div class="container">
+    <div class="header-grid-wrapper">
+      <div class="brand-core">
+        <a href="/" class="brand-logo-frame">
+          <img src="/static/images/mcp.png" alt="MC Palwal Logo">
+        </a>
+        <div class="brand-text-matrix">
+          <h1 class="main-title" data-en>Municipal Council Palwal</h1>
+          <h1 class="main-title" data-hi>नगर परिषद पलवल</h1>
+          <p class="sub-title" data-en>Directorate of Urban Local Bodies</p>
+          <p class="sub-title" data-hi>शहरी स्थानीय निकाय निदेशालय</p>
+        </div>
+      </div>
+      <div class="national-emblem-cluster">
+        <img src="/static/images/haryana_govt.png" alt="Haryana State Insignia">
+        <div class="divider-line"></div>
+        <img src="/static/images/ulb.png" alt="ULB Department Logo">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Fixed Dynamic Navigation Menu Bar -->
+<nav class="sticky-nav-bar" aria-label="Main Navigation">
+  <div class="container">
+    <div class="nav-container-inner">
+      <!-- Toggles view via CSS rules smoothly, perfectly hidden on wide windows -->
+      <div class="nav-toggle" onclick="toggleMenu()">
+        <span class="d-flex align-items-center gap-2">
+          <i class="fa-solid fa-bars-staggered"></i>
+          <span data-en>Navigation Menu</span><span data-hi>मुख्य मेन्यू</span>
+        </span>
+        <i class="fa-solid fa-chevron-down text-muted" id="nav-icon"></i>
+      </div>
+      
+      <ul class="modern-menu" id="main-menu">
+        <li><a href="/" class="nav-item-link"><i class="bi bi-house-door me-1"></i> <span data-en>Home</span><span data-hi>होम</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-item-link">
+            <span data-en>Information</span><span data-hi>जानकारी</span>
+            <i class="fa-solid fa-angle-down drop-arrow"></i>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="/acts"><span data-en>Acts & Legislations</span><span data-hi>अधिनियम</span></a></li>
+            <li><a href="/service_laws"><span data-en>Rules and By-laws</span><span data-hi>नियम एवं उपविधि</span></a></li>
+            <li><a href="/right_to_service"><span data-en>Right To Service</span><span data-hi>सेवा का अधिकार</span></a></li>
+          </ul>
+        </li>
+        <li><a href="/about" class="nav-item-link"><span data-en>About Us</span><span data-hi>हमारे बारे में</span></a></li>
+        <li><a href="/employee_data" class="nav-item-link"><span data-en>Office Directory</span><span data-hi>कार्यालय निर्देशिका</span></a></li>
+        <li><a href="/contact" class="nav-item-link"><span data-en>Contact Us</span><span data-hi>संपर्क करें</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-item-link">
+            <span data-en>Online Services</span><span data-hi>ऑनलाइन सेवाएं</span>
+            <i class="fa-solid fa-angle-down drop-arrow"></i>
+          </a>
+          
+<ul class="dropdown-content">
+    <li>
+        <a href="https://saralharyana.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span><i class="bi bi-person-vcard-fill me-2"></i>Birth / Death Certificate</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://property.ulbharyana.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span><i class="bi bi-house-door-fill me-2"></i>Property Tax</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://grs.ulbharyana.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span><i class="bi bi-chat-square-dots-fill me-2"></i>Citizen Grievance</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://shaadi.haryana.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span><i class="bi bi-heart-fill me-2"></i>Marriage Registration</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://saralharyana.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span><i class="bi bi-shop me-2"></i>Trade License</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://ulb.project247.in/" target="_blank" rel="noopener noreferrer">
+            <span><i class="bi bi-megaphone-fill me-2"></i>Advertisement Permission</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://obpas.ulbharyana.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span><i class="bi bi-buildings-fill me-2"></i>Building Plan Approval</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://mharisadak.haryana.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span><i class="bi bi-signpost-split-fill me-2"></i>Mhari Sadak</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://pgportal.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span><i class="bi bi-chat-square-text-fill me-2"></i>CPGRAMS</span>
+        </a>
+    </li>
+    <li>
+        <a href="https://swm.ulbharyana.gov.in/" target="_blank" rel="noopener noreferrer">
+            <span><i class="bi bi-recycle me-2"></i>Solid Waste Management</span>
+        </a>
+    </li>
+</ul>
+
+        </li>
+        <li><a href="/tenders" class="nav-item-link"><span data-en>Tenders</span><span data-hi>निविदाएं</span></a></li>
+        <li><a href="/office_orders" class="nav-item-link"><span data-en>Office Orders</span><span data-hi>कार्यालय आदेश</span></a></li>
+        <li><a href="/citizen_corner" class="nav-item-link"><span data-en>Citizen Corner</span><span data-hi>नाकारिक कोना</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="nav-item-link">
+            <span data-en>Other Councils</span><span data-hi>अन्य परिषद</span>
+            <i class="fa-solid fa-angle-down drop-arrow"></i>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="/under_development">MC Hodal</a></li>
+            <li><a href="/under_development">MC Hathin</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content" class="main-viewport-engine container" tabindex="-1">
+  
+
+<style>
+  /* ==========================================================================
+     EMPLOYEE DIRECTORY MODERNIZE STYLESHEET
+     ========================================================================== */
+  .dir-wrapper {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px 60px;
+  }
+
+  /* Header Container */
+  .dir-header {
+    background: var(--gov-primary);
+    color: var(--gov-white);
+    padding: 28px 32px;
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 3px solid var(--gov-accent);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .dir-header h2 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--gov-white);
+    letter-spacing: -0.5px;
+  }
+
+  .dir-header p {
+    margin: 6px 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    font-weight: 400;
+  }
+
+  .dir-header-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Search & Filter Toolbar Controls */
+  .dir-toolbar {
+    background: var(--gov-white);
+    border: 1px solid var(--gov-border);
+    border-top: none;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .dir-toolbar input,
+  .dir-toolbar select {
+    padding: 10px 16px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    outline: none;
+    background: var(--gov-background);
+    color: var(--gov-secondary);
+    transition: all 0.2s ease;
+  }
+
+  .dir-toolbar input {
+    width: 280px;
+  }
+
+  .dir-toolbar input:focus,
+  .dir-toolbar select:focus {
+    border-color: var(--gov-accent);
+    background: var(--gov-white);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.12);
+  }
+
+  .dir-count {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .dir-count span {
+    font-weight: 700;
+    color: var(--gov-accent);
+    background: rgba(2, 132, 199, 0.08);
+    padding: 2px 8px;
+    border-radius: 6px;
+    margin: 0 2px;
+  }
+
+  /* Branch Navigation Tabs */
+  .branch-tabs-bar {
+    display: flex;
+    background: var(--gov-white);
+    border: 1px solid var(--gov-border);
+    border-top: none;
+    border-bottom: none;
+    padding: 0 24px;
+    gap: 4px;
+  }
+
+  .branch-tab {
+    padding: 16px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .branch-tab:hover {
+    color: var(--gov-accent);
+  }
+
+  .branch-tab.active {
+    color: var(--gov-accent);
+    border-bottom-color: var(--gov-accent);
+  }
+
+  .tab-badge {
+    background: var(--gov-background);
+    color: var(--text-main);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 20px;
+    border: 1px solid var(--gov-border);
+    transition: all 0.2s ease;
+  }
+
+  .branch-tab.active .tab-badge {
+    background: var(--gov-accent);
+    color: var(--gov-white);
+    border-color: var(--gov-accent);
+  }
+
+  /* Data Table Layout Formatting */
+  .dir-table-wrap {
+    border: 1px solid var(--gov-border);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+    background: var(--gov-white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  }
+
+  table.dir-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.92rem;
+  }
+
+  table.dir-table thead tr {
+    background: var(--gov-secondary);
+    color: var(--gov-white);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  table.dir-table thead th {
+    padding: 14px 20px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+
+  table.dir-table thead th:first-child {
+    width: 70px;
+    text-align: center;
+  }
+
+  table.dir-table tbody tr {
+    border-bottom: 1px solid var(--gov-border);
+    transition: background 0.15s ease;
+  }
+
+  table.dir-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  table.dir-table tbody tr:nth-child(even) {
+    background: rgba(248, 250, 252, 0.6);
+  }
+
+  table.dir-table tbody tr:hover {
+    background: rgba(2, 132, 199, 0.03);
+  }
+
+  table.dir-table tbody td {
+    padding: 14px 20px;
+    vertical-align: middle;
+    color: var(--text-main);
+  }
+
+  table.dir-table tbody td:first-child {
+    text-align: center;
+    color: var(--text-muted);
+    font-weight: 600;
+  }
+
+  .emp-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    color: var(--gov-primary);
+  }
+
+  .emp-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--gov-accent);
+    color: var(--gov-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
+  }
+
+  .badge-desig {
+    display: inline-block;
+    background: rgba(2, 132, 199, 0.06);
+    color: var(--gov-accent);
+    border: 1px solid rgba(2, 132, 199, 0.15);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+
+  .tab-panel {
+    display: none;
+  }
+
+  .tab-panel.active {
+    display: block;
+  }
+
+  .no-result {
+    display: none;
+  }
+
+  .no-result td {
+    text-align: center;
+    padding: 40px;
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 768px) {
+    .dir-toolbar {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 16px;
+    }
+
+    .dir-toolbar input,
+    .dir-toolbar select {
+      width: 100%;
+    }
+
+    .branch-tabs-bar {
+      overflow-x: auto;
+      padding: 0 16px;
+    }
+    
+    .branch-tab {
+      padding: 14px 16px;
+      white-space: nowrap;
+    }
+  }
+</style>
+
+<div class="dir-wrapper">
+
+  <!-- Header -->
+  <div class="dir-header">
+    <div class="dir-header-icon"><i class="bi bi-people-fill text-white"></i></div>
+    <div>
+      <h2>Employee Directory</h2>
+      <p>Municipal Council Palwal — Official Staff Records</p>
+    </div>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="dir-toolbar">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; width: 100%; max-width: 600px;">
+      <input
+        type="text"
+        id="empSearch"
+        placeholder="🔍 Search by name or designation..."
+        onkeyup="filterTable()"
+      >
+
+      <select id="deptFilter" onchange="filterTable()">
+        <option value="">All Departments</option>
+        
+        
+          <option value="administration">
+            Administration
+          </option>
+        
+          <option value="account and establishment">
+            Account and Establishment 
+          </option>
+        
+          <option value="building branch">
+            Building Branch
+          </option>
+        
+          <option value="sanitation branch">
+            Sanitation Branch
+          </option>
+        
+          <option value="it">
+            IT
+          </option>
+        
+          <option value="house tax and rent branch">
+            House Tax and Rent Branch
+          </option>
+        
+          <option value="parokar">
+            Parokar 
+          </option>
+        
+          <option value="census clerk">
+            Census clerk
+          </option>
+        
+          <option value="pmay">
+            PMAY
+          </option>
+        
+          <option value="birth anmd death branch">
+            Birth anmd Death branch
+          </option>
+        
+          <option value="diary dispatch branch">
+            Diary Dispatch branch
+          </option>
+        
+          <option value="rti branch">
+            RTI Branch
+          </option>
+        
+          <option value="cm window cp gram smgt portal and diary dispatch">
+            CM Window cp gram SMGT Portal and diary dispatch
+          </option>
+        
+          <option value="samadhan portal complaints">
+            Samadhan Portal Complaints
+          </option>
+        
+          <option value="president branch">
+            President Branch
+          </option>
+        
+          <option value="engineering">
+            Engineering
+          </option>
+        
+      </select>
+    </div>
+
+    <div class="dir-count">
+      Showing:
+      <span id="empCount">43</span>
+      employee(s)
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="branch-tabs-bar">
+    
+
+    
+
+    <div
+      class="branch-tab active"
+      id="tab-btn-engineering"
+      onclick="switchBranch('engineering')"
+    >
+      <span>⚙️ Engineering Branch</span>
+      <span class="tab-badge">
+        10
+      </span>
+    </div>
+
+    <div
+      class="branch-tab"
+      id="tab-btn-administration"
+      onclick="switchBranch('administration')"
+    >
+      <span>🏛️ Administration Branch</span>
+      <span class="tab-badge">
+        33
+      </span>
+    </div>
+  </div>
+
+  <!-- Engineering Panel -->
+  <div class="tab-panel active" id="panel-engineering">
+    <div class="dir-table-wrap">
+      <table class="dir-table" id="engTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Employee Name</th>
+            <th>Designation</th>
+            <th>Department</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <div class="emp-avatar">
+                  M
+                </div>
+                Manoj Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig">
+                Executive Engineer
+              </span>
+            </td>
+            <td>
+              Engineering
+            </td>
+            <td>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <div class="emp-avatar">
+                  B
+                </div>
+                Bijender Rathi
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig">
+                Municipal Engineer
+              </span>
+            </td>
+            <td>
+              Engineering
+            </td>
+            <td>
+              9466303906
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <div class="emp-avatar">
+                  M
+                </div>
+                Manish
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig">
+                Junior Engineer
+              </span>
+            </td>
+            <td>
+              Engineering
+            </td>
+            <td>
+              8053303672
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <div class="emp-avatar">
+                  V
+                </div>
+                Vishnu  Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig">
+                Junior Engineer
+              </span>
+            </td>
+            <td>
+              Engineering
+            </td>
+            <td>
+              9541282737
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <div class="emp-avatar">
+                  H
+                </div>
+                Harsh Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig">
+                Junior Engineer
+              </span>
+            </td>
+            <td>
+              Engineering
+            </td>
+            <td>
+              9050604197
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <div class="emp-avatar">
+                  K
+                </div>
+                Kaushal Tanwar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig">
+                Junior Engineer
+              </span>
+            </td>
+            <td>
+              Engineering
+            </td>
+            <td>
+              9728482144
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <div class="emp-avatar">
+                  S
+                </div>
+                Sahil Garg
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig">
+                Technical Expert
+              </span>
+            </td>
+            <td>
+              Engineering
+            </td>
+            <td>
+              9466777386
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <div class="emp-avatar">
+                  I
+                </div>
+                Ishwar Singh
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Engineering
+            </td>
+            <td>
+              8570994726
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <div class="emp-avatar">
+                  B
+                </div>
+                Bharat Bhushan
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Engineering
+            </td>
+            <td>
+              9253879024
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <div class="emp-avatar">
+                  M
+                </div>
+                Manish
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Engineering
+            </td>
+            <td>
+              8053266876
+            </td>
+          </tr>
+          
+          <tr class="no-result" id="noResultEng">
+            <td colspan="4">
+              No employees found matching your search.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Administration Panel -->
+  <div class="tab-panel" id="panel-administration">
+    <div class="dir-table-wrap">
+      <table class="dir-table" id="adminTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Employee Name</th>
+            <th>Designation</th>
+            <th>Department</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  M
+                </div>
+                Manender
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Executive Officer
+              </span>
+            </td>
+            <td>
+              Administration
+            </td>
+            <td>
+              
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  N
+                </div>
+                Naveen Pandey
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Secretary
+              </span>
+            </td>
+            <td>
+              Administration
+            </td>
+            <td>
+              7011210076
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  R
+                </div>
+                Rohtash Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Accountant
+              </span>
+            </td>
+            <td>
+              Account and Establishment 
+            </td>
+            <td>
+              9467214110
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  P
+                </div>
+                Parveen Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Building Inspector
+              </span>
+            </td>
+            <td>
+              Building Branch
+            </td>
+            <td>
+              8168241851
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  S
+                </div>
+                Sandeep Bundela
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Sanitary Inspector
+              </span>
+            </td>
+            <td>
+              Sanitation Branch
+            </td>
+            <td>
+              7015902386
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  V
+                </div>
+                Vinod
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Geosaptial Engineer
+              </span>
+            </td>
+            <td>
+              IT
+            </td>
+            <td>
+              9466039039
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  H
+                </div>
+                Hemal Sharma
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Financial Expert
+              </span>
+            </td>
+            <td>
+              Account and Establishment 
+            </td>
+            <td>
+              8607941918
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  R
+                </div>
+                Rajat
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Programmer
+              </span>
+            </td>
+            <td>
+              IT
+            </td>
+            <td>
+              8820011234
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  V
+                </div>
+                Ved Prakash
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Technical Assistant
+              </span>
+            </td>
+            <td>
+              IT
+            </td>
+            <td>
+              9034902790
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  D
+                </div>
+                Dariya Singh
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Office Assistant
+              </span>
+            </td>
+            <td>
+              Administration
+            </td>
+            <td>
+              9416795581
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  C
+                </div>
+                Chanchal
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Account and Establishment 
+            </td>
+            <td>
+              7988292421
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  A
+                </div>
+                Aman
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              administration
+            </td>
+            <td>
+              8708854242
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  A
+                </div>
+                Anu Garg
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Account and Establishment 
+            </td>
+            <td>
+              9416215015
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  D
+                </div>
+                Deepak Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              House Tax and Rent Branch
+            </td>
+            <td>
+              7065873233
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  N
+                </div>
+                Neeraj Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              House Tax and Rent Branch
+            </td>
+            <td>
+              9717390906
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  S
+                </div>
+                Suraj
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              House Tax and Rent Branch
+            </td>
+            <td>
+              8800960106
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  S
+                </div>
+                Sunil
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Building Branch
+            </td>
+            <td>
+              9813582435
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  R
+                </div>
+                Roop Singh
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Sanitation Branch
+            </td>
+            <td>
+              8685999182
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  J
+                </div>
+                Jitendra Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Sanitation Branch
+            </td>
+            <td>
+              9354111910
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  A
+                </div>
+                Amit Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Parokar 
+            </td>
+            <td>
+              7015191231
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  N
+                </div>
+                Naresh Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Census clerk
+            </td>
+            <td>
+              8813826033
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  K
+                </div>
+                Krishan
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              House Tax and Rent Branch
+            </td>
+            <td>
+              9991447723
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  H
+                </div>
+                Hansraj
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              PMAY
+            </td>
+            <td>
+              8850200215
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  A
+                </div>
+                Ankit
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Birth anmd Death branch
+            </td>
+            <td>
+              7015978010
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  V
+                </div>
+                Vandana
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Diary Dispatch branch
+            </td>
+            <td>
+              9138717175
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  M
+                </div>
+                Manju Devi
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              RTI Branch
+            </td>
+            <td>
+              8395982274
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  S
+                </div>
+                Sachin
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                DEO
+              </span>
+            </td>
+            <td>
+              Building Branch
+            </td>
+            <td>
+              9050501587
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  K
+                </div>
+                Kapil
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Birth anmd Death branch
+            </td>
+            <td>
+              7056983855
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  J
+                </div>
+                Jyoti Choudhary
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                DEO
+              </span>
+            </td>
+            <td>
+              CM Window cp gram SMGT Portal and diary dispatch
+            </td>
+            <td>
+              7027357488
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  H
+                </div>
+                Hemant Kumar
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Samadhan Portal Complaints
+            </td>
+            <td>
+              9711895434
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  J
+                </div>
+                Jyoti Choudhary
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                DEO
+              </span>
+            </td>
+            <td>
+              RTI Branch
+            </td>
+            <td>
+              7027191600
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  K
+                </div>
+                Karam veer
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                Clerk
+              </span>
+            </td>
+            <td>
+              Samadhan Portal Complaints
+            </td>
+            <td>
+              9416932110
+            </td>
+          </tr>
+          
+          <tr>
+            <td class="row-number"></td>
+            <td>
+              <div class="emp-name-cell">
+                <!-- Swapped dynamic color style layout mapping to fit theme -->
+                <div class="emp-avatar" style="background: var(--gov-secondary);">
+                  P
+                </div>
+                Praveen Sharma
+              </div>
+            </td>
+            <td>
+              <span class="badge-desig" style="background: rgba(15, 23, 42, 0.05); color: var(--gov-secondary); border-color: rgba(15, 23, 42, 0.15);">
+                DEO
+              </span>
+            </td>
+            <td>
+              President Branch
+            </td>
+            <td>
+              9466431311
+            </td>
+          </tr>
+          
+          <tr class="no-result" id="noResultAdmin">
+            <td colspan="4">
+              No employees found matching your search.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  let currentBranch = 'engineering';
+
+  function switchBranch(branch) {
+    currentBranch = branch;
+
+    document.querySelectorAll('.branch-tab')
+      .forEach(tab => tab.classList.remove('active'));
+
+    document.querySelectorAll('.tab-panel')
+      .forEach(panel => panel.classList.remove('active'));
+
+    document
+      .getElementById('tab-btn-' + branch)
+      .classList.add('active');
+
+    document
+      .getElementById('panel-' + branch)
+      .classList.add('active');
+
+    document.getElementById('deptFilter').value = '';
+    filterTable();
+  }
+
+  function updateRowNumbers(table) {
+    let index = 1;
+    const rows = table.querySelectorAll('tbody tr:not(.no-result)');
+    rows.forEach(function(row) {
+      if (row.style.display !== 'none') {
+        const cell = row.querySelector('.row-number');
+        if (cell) {
+          cell.textContent = index++;
+        }
+      }
+    });
+  }
+
+  function filterTable() {
+    const input = document.getElementById('empSearch').value.toLowerCase().trim();
+    const dept = document.getElementById('deptFilter').value.toLowerCase().trim();
+
+    const tableId = currentBranch === 'engineering' ? 'engTable' : 'adminTable';
+    const noResultId = currentBranch === 'engineering' ? 'noResultEng' : 'noResultAdmin';
+    const table = document.getElementById(tableId);
+
+    if (!table) return;
+    const rows = table.querySelectorAll('tbody tr:not(.no-result)');
+    let visible = 0;
+
+    rows.forEach(function(row) {
+      const name = row.cells[1]?.innerText.toLowerCase().trim() || '';
+      const designation = row.cells[2]?.innerText.toLowerCase().trim() || '';
+      const deptCell = row.cells[3]?.innerText.toLowerCase().trim() || '';
+
+      const matchSearch = name.includes(input) || designation.includes(input);
+      const matchDept = dept === '' || deptCell === dept;
+      const show = matchSearch && matchDept;
+
+      row.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    updateRowNumbers(table);
+    document.getElementById('empCount').textContent = visible;
+
+    const noResult = document.getElementById(noResultId);
+    if (noResult) {
+      noResult.style.display = visible === 0 ? '' : 'none';
+    }
+  }
+
+  window.onload = function() {
+    filterTable();
+  };
+</script>
+
+
+</main>
+
+<!-- Re-engineered Fixed Footer Section -->
+<footer class="neo-footer">
+  <div class="container footer-inner">
+    <div class="row g-5">
+      <div class="col-xl-4 col-lg-12">
+        <div class="footer-identity-card">
+          <img src="/static/images/mcp.png" alt="MC Palwal Logo" class="f-logo">
+          <div class="f-text-block">
+            <h4 class="f-title" data-en>Municipal Council Palwal</h4>
+            <h4 class="f-title" data-hi>नगर परिषद पलवल</h4>
+            <!-- Fixed Layout Hierarchy Stacked cleanly beneath the title -->
+            <p class="f-sub" data-en>Government of Haryana Administrative Portal</p>
+            <p class="f-sub" data-hi>हरियाणा सरकार प्रशासनिक पोर्टल</p>
+          </div>
+        </div>
+        <p class="f-description mt-3">
+          <span data-en>Optimizing citizen welfare tracking structures through architectural transparency and next-generation delivery frameworks.</span>
+          <span data-hi>वास्तुकला पारदर्शिता और अगली पीढ़ी के वितरण ढांचे के माध्यम से नागरिक कल्याण ट्रैकिंग संरचनाओं को अनुकूलित करना।</span>
+        </p>
+        <div class="f-social-grid">
+          <a href="https://www.facebook.com/share/1EBLVXCc4A/?mibextid=wwXIfr" target="_blank" rel="noopener"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/muni.cipalcouncilpalwal?igsh=Ynh3b200cGVrcjU4&utm_source=qr" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://x.com/secymcpalwal?s=11" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="col-xl-2 col-md-4 col-6">
+        <h5 class="f-column-title" data-en>Governance</h5>
+        <h5 class="f-column-title" data-hi>शासन</h5>
+        <ul class="f-links">
+          <li><a href="/Disclaimer"><span data-en>Disclaimer</span><span data-hi>अस्वीकरण</span></a></li>
+          <li><a href="/privacy"><span data-en>Privacy Policy</span><span data-hi>गोपनीयता नीति</span></a></li>
+          <li><a href="/sitemap">Sitemap</a></li>
+          <li><a href="/terms_and_condition"><span data-en>Terms & Conditions</span></a></li>
+        </ul>
+      </div>
+
+      <div class="col-xl-3 col-md-4 col-6">
+        <h5 class="f-column-title" data-en>Public Utilities</h5>
+        <h5 class="f-column-title" data-hi>सार्वजनिक सुविधाएं</h5>
+        <ul class="f-links">
+          <li><a href="https://saralharyana.gov.in/" target="_blank">Saral Haryana</a></li>
+          <li><a href="https://property.ulbharyana.gov.in/" target="_blank">Property Tax Portal</a></li>
+          <li><a href="https://grs.ulbharyana.gov.in/" target="_blank">Grievance Redressal</a></li>
+          <li><a href="https://rtiharyana.gov.in/" target="_blank">RTI Online Application</a></li>
+        </ul>
+      </div>
+
+      <div class="col-xl-3 col-md-4">
+        <h5 class="f-column-title" data-en>Contact Desk</h5>
+        <h5 class="f-column-title" data-hi>संपर्क डेस्क</h5>
+        <div class="f-contact-card">
+          <div class="c-item"><i class="bi bi-geo-alt"></i> <a href="https://maps.app.goo.gl/hKMyZrpN6H2gkkQC8" target="_blank"><span>Near Committee Chowk, Palwal</span></a></div>
+          <div class="c-item"><i class="bi bi-telephone"></i> <a href="tel:01275252526">+91 1275 252526</a></div>
+          <div class="c-item"><i class="bi bi-envelope"></i> <a href="mailto:eo-palwal@ulbharyana.gov.in">eo-palwal@ulbharyana.gov.in</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-meta-strip">
+      <p class="m-0">&copy; 2026 <span data-en>Municipal Council Palwal.</span><span data-hi>नगर परिषद पलवल।</span></p>
+      <div class="meta-counters">
+        <span data-en>Last Sync: 13/11/2026 | Logs:</span>
+        <span data-hi>अंतिम अपडेट: 13/11/2026 | आगंतुक:</span>
+        <span class="badge-count">181</span>
+      </div>
+      <p class="m-0 developer-credit"><span data-en>Engineered by IT Cell, MC Palwal</span><span data-hi>आईटी सेल, नगर परिषद पलवल द्वारा निर्मित</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function setFont(size) {
+  const body = document.getElementById('main-body');
+  body.classList.remove('font-sm','font-md','font-lg');
+  body.classList.add('font-' + size);
+  ['sm','md','lg'].forEach(s => document.getElementById('btn-'+s).classList.remove('active'));
+  document.getElementById('btn-'+size).classList.add('active');
+  localStorage.setItem('mc_font', size);
+}
+function setLang(lang) {
+  const body = document.getElementById('main-body');
+  body.classList.remove('lang-en','lang-hi');
+  body.classList.add('lang-' + lang);
+  document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  document.getElementById('btn-hi').classList.toggle('active', lang==='hi');
+  document.getElementById('html-root').lang = lang==='hi' ? 'hi' : 'en';
+  localStorage.setItem('mc_lang', lang);
+}
+function toggleMenu() {
+  const menu = document.getElementById('main-menu');
+  const icon = document.getElementById('nav-icon');
+  const isOpen = menu.classList.toggle('open');
+  icon.className = isOpen ? 'fa-solid fa-chevron-up text-muted' : 'fa-solid fa-chevron-down text-muted';
+}
+
+document.querySelectorAll('.modern-menu .dropdown > a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    if (window.innerWidth <= 991) {
+      e.preventDefault();
+      const parent = this.closest('.dropdown');
+      document.querySelectorAll('.modern-menu .dropdown.open').forEach(function(d) {
+        if (d !== parent) d.classList.remove('open');
+      });
+      parent.classList.toggle('open');
+    }
+  });
+});
+
+(function(){
+  const f = localStorage.getItem('mc_font') || 'md';
+  const l = localStorage.getItem('mc_lang') || 'en';
+  setFont(f); setLang(l);
+})();
+</script>
+
+
+</body>
+</html>

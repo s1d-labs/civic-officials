@@ -32,21 +32,22 @@ SERIAL = re.compile(r"^\s*\d{1,3}\s*[.)]?\s*$")
 ZONAL = re.compile(r"(?i)\bzonal\s*(commissioner|officer)\b|\bzone\s*officer\b|ವಲಯ\s*ಆಯುಕ್ತ")
 
 
-def header_map(cells):
-    """{field: column index} of a heading row, or None when it has no name or no post column."""
+def header_map(cells, cols=None):
+    """{field: column index} of a heading row, or None when it has no name or no post column. cols: the column words
+    ({field: regex}; default COLS)."""
     h = {}
     for i, c in enumerate(cells):
         t = _esw.clean(c)
-        for f, rx in COLS.items():
+        for f, rx in (cols or COLS).items():
             if f not in h and rx.search(t):
                 h[f] = i
                 break
     return h if "name" in h and "post" in h else None
 
 
-def staff_rows(html):
+def staff_rows(html, cols=None):
     """[{section, name, post, phone, email, cells, pos}] of the staff tables of a page (pos = {"table", "row"} as _esw.grid gives
-    them). Rows left out are counted (provenance)."""
+    them). Rows left out are counted (provenance). cols: the column words (default COLS; dforms/_town3.py adds more scripts)."""
     soup = _esw.soup(html)
     out, last = [], None          # last: (heading map, row width, section) of the staff table before this one
     for t in soup.find_all("table"):
@@ -56,7 +57,7 @@ def staff_rows(html):
         for cells, where in zip(rows, pos):
             texts = [_esw.clean(c) for c in cells]
             if h is None:
-                h = header_map(texts)
+                h = header_map(texts, cols)
                 if h is not None:
                     provenance.skipped("header")
                     continue
@@ -66,7 +67,7 @@ def staff_rows(html):
                 else:
                     provenance.skip_row(texts, "before the heading row")
                     continue
-            if header_map(texts):            # a repeated heading row
+            if header_map(texts, cols):            # a repeated heading row
                 provenance.skipped("header")
                 continue
             filled = [x for x in texts if x and not NO_NAME.match(x)]
@@ -89,18 +90,20 @@ def staff_rows(html):
             if NO_NAME.match(g["name"]):
                 provenance.skipped("no name")
                 continue
-            out.append({"section": section, "name": g["name"], "post": g["post"].replace(" | ", " "), "phone": g.get("phone", ""),
+            out.append({"section": g.get("section") or section, "name": g["name"], "post": g["post"].replace(" | ", " "), "phone": g.get("phone", ""),
                         "email": g.get("email", ""), "cells": texts, "pos": where})
         if h is not None:
             last = (h, max(set(map(len, rows)), key=[len(r) for r in rows].count), section)     # the usual row width
     return out
 
 
-def record(module, state, site, body, row, seen, *, district=None, lgd_code=None, source="", **extra):
-    """(record id, data) for one staff row of staff_rows() (or a dict with the same keys)."""
+def record(module, state, site, body, row, seen, *, district=None, lgd_code=None, source="", slug=None, **extra):
+    """(record id, data) for one staff row of staff_rows() (or a dict with the same keys). slug: the function that makes the
+    post and name parts of the id (default _esw.slug, a-z0-9 only; dforms/_town3.py keeps letters of every script)."""
     post = _esw.clean(row["post"])
     name = _esw.clean(row["name"])
-    key = unique(f"{site}:{_esw.slug(post)[:60] or 'post'}:{_esw.slug(name)[:60] or 'x'}", seen)
+    slug = slug or _esw.slug
+    key = unique(f"{site}:{slug(post)[:60] or 'post'}:{slug(name)[:60] or 'x'}", seen)
     phone = _esw.phones(row.get("phone", "")) if row.get("phone") else ""
     email = _esw.emails(" ".join(x for x in (row.get("email", ""), row.get("phone", "")) if x))
     role = _ulb.role_of(post)

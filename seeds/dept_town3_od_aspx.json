@@ -1,0 +1,172 @@
+[
+ {
+  "key": "town3_od_aspx-balangirmunicipality.in",
+  "payload": {
+   "reader": "town3_od_aspx",
+   "url": "http://www.balangirmunicipality.in/",
+   "site": "balangirmunicipality.in",
+   "body": "Balangir Municipality",
+   "lgd_code": "250555",
+   "district": "Balangir",
+   "state": "OD",
+   "pages": [
+    "http://balangirmunicipality.in/Administration.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_aspx-bankinac.in",
+  "payload": {
+   "reader": "town3_od_aspx",
+   "url": "http://www.bankinac.in/",
+   "site": "bankinac.in",
+   "body": "Banki Notified Area Council",
+   "lgd_code": "250500",
+   "district": "Kataka",
+   "state": "OD",
+   "pages": [
+    "http://bankinac.in/Staff.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_aspx-gudarinac.in",
+  "payload": {
+   "reader": "town3_od_aspx",
+   "url": "https://gudarinac.in/",
+   "site": "gudarinac.in",
+   "body": "Gudari Notified Area Council",
+   "lgd_code": "250563",
+   "district": "Rayagada",
+   "state": "OD",
+   "pages": [
+    "http://gudarinac.in/Employee.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_aspx-hindolnac.in",
+  "payload": {
+   "reader": "town3_od_aspx",
+   "url": "http://www.hindolnac.in/",
+   "site": "hindolnac.in",
+   "body": "Hindol Notified Area Council",
+   "lgd_code": "259680",
+   "district": "Dhenkanal",
+   "state": "OD",
+   "pages": [
+    "http://hindolnac.in/Administration.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_aspx-jeyporemunicipality.in",
+  "payload": {
+   "reader": "town3_od_aspx",
+   "url": "http://www.jeyporemunicipality.in/",
+   "site": "jeyporemunicipality.in",
+   "body": "Jayapur Municipality",
+   "lgd_code": "250574",
+   "district": "Koraput",
+   "state": "OD",
+   "pages": [
+    "http://jeyporemunicipality.in/Administration.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_aspx-karanjianac.in",
+  "payload": {
+   "reader": "town3_od_aspx",
+   "url": "http://www.karanjianac.in/",
+   "site": "karanjianac.in",
+   "body": "Karanjia Notified Area Council",
+   "lgd_code": "250480",
+   "district": "Mayurbhanj",
+   "state": "OD",
+   "pages": [
+    "http://karanjianac.in/Administration.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_aspx-koraputmunicipality.in",
+  "payload": {
+   "reader": "town3_od_aspx",
+   "url": "http://koraputmunicipality.in/",
+   "site": "koraputmunicipality.in",
+   "body": "Koraput Municipality",
+   "lgd_code": "250571",
+   "district": "Koraput",
+   "state": "OD",
+   "pages": [
+    "http://koraputmunicipality.in/Staff_details.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_aspx-rairangpurmunicipality.org",
+  "payload": {
+   "reader": "town3_od_aspx",
+   "url": "http://www.rairangpurmunicipality.org/",
+   "site": "rairangpurmunicipality.org",
+   "body": "Rairangpur Municipality",
+   "lgd_code": "250478",
+   "district": "Mayurbhanj",
+   "state": "OD",
+   "pages": [
+    "http://rairangpurmunicipality.org/Administration.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_aspx-sunabedamunicipality.in",
+  "payload": {
+   "reader": "town3_od_aspx",
+   "url": "http://www.sunabedamunicipality.in/",
+   "site": "sunabedamunicipality.in",
+   "body": "Sunabeda Municipality",
+   "lgd_code": "250573",
+   "district": "Koraput",
+   "state": "OD",
+   "pages": [
+    "http://sunabedamunicipality.in/Administration.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_aspx-udalanac.in",
+  "payload": {
+   "reader": "town3_od_aspx",
+   "url": "http://www.udalanac.in/",
+   "site": "udalanac.in",
+   "body": "Udala Notified Area Council",
+   "lgd_code": "250479",
+   "district": "Mayurbhanj",
+   "state": "OD",
+   "pages": [
+    "http://udalanac.in/Administration.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

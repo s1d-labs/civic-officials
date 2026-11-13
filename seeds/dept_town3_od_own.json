@@ -1,0 +1,104 @@
+[
+ {
+  "key": "town3_own-choudwarmunicipality.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://choudwarmunicipality.in/",
+   "site": "choudwarmunicipality.in",
+   "body": "Choudwar Municipality",
+   "lgd_code": "250494",
+   "district": "Kataka",
+   "state": "OD",
+   "pages": [
+    "http://choudwarmunicipality.in/Directory.html"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-gunupurmunicipality.com",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://gunupurmunicipality.com/",
+   "site": "gunupurmunicipality.com",
+   "body": "Gunupur Municipality",
+   "lgd_code": "250564",
+   "district": "Rayagada",
+   "state": "OD",
+   "pages": [
+    "http://gunupurmunicipality.com/employee.php"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-jodamunicipality.com",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://jodamunicipality.com/",
+   "site": "jodamunicipality.com",
+   "body": "Joda Municipality",
+   "lgd_code": "250471",
+   "district": "Kendujhar",
+   "state": "OD",
+   "pages": [
+    "http://jodamunicipality.com/employee.php"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-paradeepmunicipality.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://paradeepmunicipality.in/",
+   "site": "paradeepmunicipality.in",
+   "body": "Paradeep Municipality",
+   "lgd_code": "263324",
+   "district": "Jagatsinghapur",
+   "state": "OD",
+   "pages": [
+    "http://paradeepmunicipality.in/Section.html"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-phulbanimunicipality.com",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://phulbanimunicipality.com/",
+   "site": "phulbanimunicipality.com",
+   "body": "Phulabani Municipality",
+   "lgd_code": "250546",
+   "district": "Kandhamala",
+   "state": "OD",
+   "pages": [
+    "http://phulbanimunicipality.com/staffs.php"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-tarbhanac.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://www.tarbhanac.in/",
+   "site": "tarbhanac.in",
+   "body": "Tarbha Notified Area Council",
+   "lgd_code": "250549",
+   "district": "Subarnapur",
+   "state": "OD",
+   "pages": [
+    "http://tarbhanac.in/Staff.html"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
