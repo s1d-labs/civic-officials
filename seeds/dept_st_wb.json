@@ -1,0 +1,36 @@
+[
+ {
+  "key": "st_wb_par:ias",
+  "payload": {
+   "reader": "st_wb_par",
+   "kind": "ias",
+   "url": "https://par.wb.gov.in/writereaddata/WBCSdirectory/Posting%20of%20IAS%20Officers%20as%20on%2004112026.pdf",
+   "page_url": "https://par.wb.gov.in/iasdirectory.php",
+   "state": "WB",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_wb_par:key",
+  "payload": {
+   "reader": "st_wb_par",
+   "kind": "key",
+   "url": "https://par.wb.gov.in/key_people.php",
+   "state": "WB",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_wb_wbcs:list",
+  "payload": {
+   "reader": "st_wb_wbcs",
+   "url": "https://par.wb.gov.in/writereaddata/WBCSdirectory/wbcs_officers_list_ason-04-11-2026.pdf",
+   "page_url": "https://par.wb.gov.in/wbcsdirectory.php",
+   "state": "WB",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
