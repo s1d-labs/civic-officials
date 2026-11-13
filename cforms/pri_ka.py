@@ -23,7 +23,7 @@ The site masks mobile numbers and e-mail addresses itself ("93****4721"): they a
 One queue item = one district panchayat with its taluk and gram panchayats: payload {"kind": "form-pri_ka", "state": "KA",
 "state_code": "29", "url" (the ZP member call), "level": "zp", "district", "lgd_code" (ZP), "year", "election", "route"}.
 About 1 + 1 + taluks + GPs requests per item (Karnataka: 31 ZPs, 237 TPs, 5,946 GPs in LGD), or 1 request while the state is empty.
-Record id pri:<state>:<level>:<LGD code>:<head | vice | w<ward> | m<n>>.
+Record id pri:<state>:<level>:<LGD code>:<head | vice | w<ward> | m<n>>:egs (own suffix: the commission readers use the same ids).
 """
 import json
 import re
@@ -83,6 +83,11 @@ def records(rows, url, p, level, code, body, district="", block=""):
                              block=block, post=post, name=name, ward_no=wn if not (head or vice) else "", ward_name=r.get("wardName"),
                              gender=r.get("gender"), phone=mob, email=mail, election=p.get("election") or ELECTION, url=url,
                              src_url=url, src_pos={"index": i}, method=METHOD)
+        # own ids (":egs"): the state election commission readers write pri:<st>:<level>:<LGD>:<post> for the same seats, and an
+        # eGramSwaraj row (masked phones) must not replace theirs (2026-11-13: 1,345 Telangana records were replaced). The loader
+        # (sql/75) uses an eGramSwaraj row only for a body that no commission reader covers.
+        rid += ":egs"
+        d["source_kind"] = "egramswaraj"
         if head or vice:
             d["head"], d["head_rank"] = True, 1 if head else 2
         if "*" in mob or "*" in mail:

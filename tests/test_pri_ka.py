@@ -42,15 +42,15 @@ def test_records_goa_gp_and_zp():
     url = pri_ka.member_url("254346", "30", "gp")
     recs = pri_ka.records(rows, url, p, "gp", "254346", "Advalpal", "North Goa", "Bicholim")
     ids = [r for r, _ in recs]
-    assert len(recs) == 6 and ids[0] == "pri:GA:gp:254346:head" and "pri:GA:gp:254346:w03" in ids
+    assert len(recs) == 6 and ids[0] == "pri:GA:gp:254346:head:egs" and "pri:GA:gp:254346:w03:egs" in ids
     head = recs[0][1]
     assert head["name"] == "VINESHRI VINESH GAONKAR" and head["post"] == "Sarpanch" and head["head"] is True
     assert head["phone"] == "93****4721" and head["phone_masked"] is True and head["src_pos"] == {"index": 0}
-    m = dict(recs)["pri:GA:gp:254346:w03"]
+    m = dict(recs)["pri:GA:gp:254346:w03:egs"]
     assert m["ward_no"] == "03" and m["post"] == "Panch Member" and m["type"] == "pri_member" and m["level"] == "gp"
     assert m["lgd_code"] == "254346" and m["block"] == "Bicholim" and m["src_url"] == url
     zp = pri_ka.records(json.loads((DATA / "egs_ga_zp_506.json").read_text()), "u", p, "zp", "506", "North Goa")
-    assert [r for r, _ in zp] == ["pri:GA:zp:506:head", "pri:GA:zp:506:w1"]
+    assert [r for r, _ in zp] == ["pri:GA:zp:506:head:egs", "pri:GA:zp:506:w1:egs"]
 
 
 def test_fetch_walks_lgd_tree_when_state_has_members():
