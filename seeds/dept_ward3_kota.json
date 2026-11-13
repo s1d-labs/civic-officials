@@ -1,0 +1,12 @@
+[
+ {
+  "key": "ward3_kota-staff-list",
+  "payload": {
+   "reader": "ward3_kota",
+   "url": "https://jankalyanfile.rajasthan.gov.in/WebMyWayFiles/Department/PDF/DEPTContactDetail/2026/May/DEPTContactDetaild02bc063-71e1-4099-a578-fcaedce98a7e.pdf",
+   "service": "https://lsg.rajasthan.gov.in/webapi/PublicPortal/DepartmentWebsite/GetDepartmentContactDetail",
+   "state": "RJ",
+   "route": "abroad"
+  }
+ }
+]

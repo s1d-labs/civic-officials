@@ -1,0 +1,7 @@
+{"module": "ward3_kota", "payload": {"reader": "ward3_kota", "url": "https://jankalyanfile.rajasthan.gov.in/WebMyWayFiles/Department/PDF/DEPTContactDetail/2026/May/DEPTContactDetaild02bc063-71e1-4099-a578-fcaedce98a7e.pdf", "state": "RJ"},
+ "pages": "kota_staff.pages",
+ "min_records": 180,
+ "expect": [{"post": "^Commissioner$", "name": "ओमप्रकाश मेहरा", "level": "body"},
+            {"post": "^Additional Commissioner$", "name": "हरबिंदर", "level": "body"},
+            {"post": "^Chief Health Inspector \\(acting\\)$", "name": "प्रहलाद माली", "level": "zone"},
+            {"post": "^Health Inspector \\(acting\\)$", "name": "मनोज कुमार पचेरवाल", "level": "zone"}]}
