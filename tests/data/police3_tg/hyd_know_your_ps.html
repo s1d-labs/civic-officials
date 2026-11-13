@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <head>                             
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WRKLLPQGFV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WRKLLPQGFV');
+</script>                     
+<meta charset="utf-8">
+<meta http-equiv="X-Frame-Options" content="deny" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<style id="antiClickjack">
+body {
+    display: none !important;
+}
+
+</style>
+<script type="text/javascript">
+    if (self === top) {
+        var antiClickjack = document.getElementById("antiClickjack");
+        antiClickjack.parentNode.removeChild(antiClickjack);
+    } else {
+        top.location = self.location;
+    }
+       </script>
+<title>Know Your Police Station</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(180deg,#f6f8fc,#eef2f7);
+            font-family: 'Inter','Segoe UI',sans-serif;
+        }
+       
+
+
+        a {
+            text-decoration: none !important;
+        }
+
+        /* ================= JTCP CARD ================= */
+
+        .north-range .jtcp-card {
+            background:linear-gradient(135deg, #0dcaf0, #5f7ac9);
+        }
+
+
+        .south-range .jtcp-card {
+            background: linear-gradient( 180deg, rgba(255,247,237,0.85), rgba(254,240,226,0.75) );
+        }
+
+
+
+        .jtcp-card {
+            position: relative;
+            border-radius: 22px;
+            margin-bottom: 56px;
+            /* Soft static glass */
+            background: linear-gradient( 180deg, rgba(255,255,255,0.85), rgba(240,243,248,0.80) );
+            backdrop-filter: blur(12px) saturate(110%);
+            -webkit-backdrop-filter: blur(12px) saturate(110%);
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.9);
+        }
+      
+        
+
+        .jtcp-header {
+            padding: 20px;
+            font-size: 24px;
+            font-weight: 900;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 1px;
+            border-radius: 24px 24px 0 0;
+        }
+
+ .south-range .jtcp-header {
+          background:  linear-gradient(135deg, #60b4dd, #083667);
+        }
+        .north-range .jtcp-header {
+            background: linear-gradient(135deg, #687477ad, #464741);
+        }
+
+       
+
+
+
+
+
+
+        /* ================= ZONE CARD ================= */
+        .zone-card {
+            background: #fff;
+            border-radius: 18px;
+            border: 1px solid #e6eaf0;
+            box-shadow: 0 18px 35px rgba(0,0,0,.08);
+            transition: .3s;
+            height: 100%;
+        }
+
+            .zone-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 25px 50px rgba(0,0,0,.15);
+            }
+
+        .zone-header  {
+            padding: 14px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 18px;
+            color: #FFFFFF;
+        }
+
+		.zone-header a{
+			color: aliceblue;
+		}
+		
+		
+		
+        /* Zone Colors */
+
+        .north-range .zone-header {
+            background: linear-gradient(135deg, #687477ad, #464741);
+        }
+
+        .south-range .zone-header {
+            background: linear-gradient(135deg, #6aa5d1, #004da7);
+           
+        }
+
+
+        .zone-body {
+            padding: 22px;
+        }
+
+        .acp-name {
+            font-weight: 700;
+            font-size: 15px;
+            color: #1e40af;
+            border-left: 4px solid #2563eb;
+            padding-left: 8px;
+            margin: 14px 0 10px;
+        }
+
+        .ps-item a {
+            display: block;
+            font-size: 14px;
+            color: #374151;
+            font-weight: 500;
+            padding: 6px 0;
+            transition: .25s;
+			text-align: left;
+			white-space: nowrap;
+        }
+
+            .ps-item a::before {
+                content: "› ";
+                color: #2563eb;
+                font-weight: bold;
+            }
+
+            .ps-item a:hover {
+                background: #e0e7ff;
+                color: #1e40af;
+                padding-left: 6px;
+                border-radius: 6px;
+            }
+
+        .zone-footer {
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            padding: 12px;
+            font-weight: 700;
+            color: #2563eb;
+            background: #f8fafc;
+        }
+
+        @media(max-width:768px) {
+            .jtcp-header {
+                font-size: 20px;
+            }
+
+            .zone-header {
+                font-size: 16px;
+            }
+
+           
+        }
+
+        /* OTHER LINKS   */
+        .link-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(226,232,240,0.85));
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.1);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            padding: 20px 10px;
+            margin-bottom: 20px;
+        }
+
+            .link-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+            }
+
+            .link-card h4 {
+                font-weight: 600;
+                margin-bottom: 15px;
+                color: #1a1a1a;
+            }
+
+            .link-card a {
+                display: inline-block;
+                text-decoration: none;
+                color: #000000;
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+                .link-card a:hover {
+                    text-decoration: underline;
+                }
+
+        .women-ps {
+            background: linear-gradient(135deg, #ff9a9e, #fbc2eb);
+        }
+
+        .traffic-ps {
+            background: linear-gradient(135deg, #f6d365, #fda085);
+        }
+
+        /* ============ RESPONSIVE ============ */
+        @media(max-width: 992px) {
+            .jtcp-header {
+                font-size: 22px;
+            }
+
+            .zone-header {
+                font-size: 16px;
+            }
+
+            .link-card a {
+                font-size: 16px;
+            }
+
+            .zone-body {
+                padding: 12px;
+            }
+        }
+
+        @media(max-width: 576px) {
+            .jtcp-header {
+                font-size: 20px;
+                padding: 15px;
+            }
+
+            .zone-header {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .link-card a {
+                font-size: 14px;
+            }
+
+            .zone-body {
+                padding: 10px;
+            }
+        }
+
+    </style>
+<!-- SEO Meta Tags-->
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="support/simplebar/simplebar.min.css"/>
+<link rel="stylesheet" media="screen" href="support/tiny-slider/tiny-slider.css"/>
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon1.png">
+<!-- support CSS Files -->
+<link href="support/aos/aos.css" rel="stylesheet">
+<link href="support/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="support/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="support/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="support/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="support/remixicon/remixicon.css" rel="stylesheet">
+<link href="support/swiper/swiper-bundle.min.css" rel="stylesheet">
+<link rel="stylesheet" media="screen" href="css/theme.min.css">
+<link rel="stylesheet" media="screen" href="css/style.css">
+
+
+</head>
+<!-- Body-->
+<body class="handheld-toolbar-enabled">
+<main class="page-wrapper">  <header class="bg-light shadow-sm">
+  <div class="container"> <div class="row">
+        <div class="col-lg-8 col-md-8 col-sm-12"> <a class="navbar-brand d-sm-block flex-shrink-0" href="index.html"><img src="img/HCP.png" alt="Hyderabad Police Logo" style="float: left;"></a> </div>
+        <div class="col-lg-4 col-md-4 col-sm-2 text-right gadwal_logo" style="text-align: right;"> <img src="img/TS_LOGO.jpeg" alt="TS POLICE LOGO" style="width:85px;height:75px;"> </div>
+      </div> </div>
+  <div class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <div class="navbar-toolbar d-flex align-items-center order-lg-3">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
+      </div>
+      <div class="collapse navbar-collapse me-auto order-lg-2" id="navbarCollapse"> 
+        <!-- Primary menu-->
+        <ul class="navbar-nav">
+           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li><li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">About Us  <i class="bi bi-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html">About Us</a></li>
+				 <li><a class="dropdown-item" href="history.html">History</a></li>
+				<li><a class="dropdown-item" href="CP_Gallery.html">Hyderabad City Police Commissioners </a></li>
+              </ul>
+            </li>
+          <li class="nav-item"><a class="nav-link" href="organization_chart.html">Organization Structure</a></li>
+          <li class="nav-item"> <a class="nav-link" href="index.html#servcs">Services </a></li>
+          <li class="nav-item dropdown"> <a class="nav-link" href="index.html#wingscrl">Wings  </a></li>
+          <li class="nav-item"><a class="nav-link" href="know_your_ps.html">Know Your PS</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#PressReleases">Latest News</a></li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">Internship/Volunteering <i class="bi bi-chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://form.jotform.com/260174016067047">Internship</a></li>
+                <li><a class="dropdown-item" href="https://form.jotform.com/260180761958060">Volunteering</a></li>
+                
+              </ul>
+            </li>
+			<li class="nav-item"><a class="nav-link" href="Important_Contacts.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- Message -->
+<section class="py-2">
+<div class="container py-lg-4">
+  <div class="row text-justify gen_div ">
+	  
+	  	  <div class="row" style="padding-right:1%;">
+		  	<div class="col-lg-8 col-md-6 col-sm-8">
+			  </div>
+		<div class="col-lg-2 col-md-2 col-sm-2">
+			  </div>
+	<div class="col-lg-1 col-md-2 col-sm-1">
+			  </div>		  
+		<div class="col-lg-1 col-md-2 col-sm-1">
+		<button onclick="history.back()"  class="gbk
+					   ">Back
+			</button>
+			
+			
+			  </div>
+	  </div>
+	  
+    <div class="kyps">
+      	  <div class="mb-5">
+            <h2><img src="img/police-station (1).png" alt="ps" style="width: 3%;" > &nbsp; &nbsp;Know Your Police Station
+	
+		</h2>
+          
+        </div>
+				     
+        
+        
+
+        <!-- ================= SOUTH RANGE ================= -->
+        <div class="jtcp-card south-range">
+           
+
+            <div class="row g-4 p-4">
+				 <div class="jtcp-header">ADDL.CP – SOUTH RANGE</div>
+                <div class="col-lg-9 col-md-9 col-sm-12">
+                    <div class="zone-card zone-charminar">
+                        <div class="zone-header"><a href="dcp/charminarzone_dcp.html" style="color:white;" target="_self">DCP Charminar Zone</a></div>
+
+                        <div class="zone-body">
+                            <div class="row">
+                              
+
+                                <div class="col-md-3 col-lg-3 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/charminar_acp.html">
+                                            ACP </br>Charminar
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/charminar_ps.html">Charminar PS</a></div>
+                                    <div class="ps-item"><a href="ps/hussainialam_ps.html">Hussainialam PS</a></div>
+                                    <div class="ps-item"><a href="ps/moghalpura_ps.html">Moghalpura PS</a></div>
+                                    <div class="ps-item"><a href="ps/shahalibanda_ps.html">Shalibanda PS</a></div>
+
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/malakpet_acp.html">
+                                            ACP </br>Malakpet
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/malakpet_ps.html">Malakpet PS</a></div>
+                                    <div class="ps-item"><a href="ps/chaderghat_ps.html">Chaderghat PS</a></div>
+                                    <div class="ps-item"><a href="ps/dabeerpura_ps.html">Dabeerpura PS</a></div>
+
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/mirchowk_acp.html">
+                                            ACP</br> Mirchowk<br>
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/mirchowk_ps.html">Mirchowk PS</a></div>
+                                    <div class="ps-item"><a href="ps/bhavaninagar_ps.html">Bhavani Nagar </br>PS</a></div>
+                                    <div class="ps-item"><a href="ps/reinbazaar_ps.html">Rein Bazar </br>PS</a></div>
+
+                                </div>
+                                <div class="col-md-2 col-lg-2 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/saidabad_acp.html">
+                                            ACP </br>Saidabad
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/saidabad_ps.html">Saidabad PS</a></div>
+                                    <div class="ps-item"><a href="ps/madannapet_ps.html">Madannapet PS</a></div>
+
+                                </div>
+
+                                <div class="col-md-2 col-lg-2 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/santoshnagar_acp.html"  style="font-size: 14px;">
+                                            ACP </br>Chatrinaka
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/santoshnagar_ps.html">Santosh Nagar PS</a></div>
+                                    <div class="ps-item"><a href="ps/issadan_ps.html">IS Sadan PS</a></div>
+                                    <div class="ps-item"><a href="ps/chatrinaka_ps.html">Chatrinaka PS</a></div>
+
+                                </div>
+
+                               <div class="col-md-1 col-lg-1">
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                         
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12">
+                    <div class="zone-card zone-shamshabad">
+                        <div class="zone-header"><a href="dcp/shamshabadzone_dcp.html" target="_self" style="font-size: 16px;color:white;">DCP  Shamshabad Zone</a></div>
+
+                        <div class="zone-body">
+                            <div class="row">
+
+
+                                <div class="col-md-6 col-lg-6 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/adibatla_acp.html">
+                                            ACP </br>Adibatla
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/adibatla_ps.html">Adibatla PS</a></div>
+                                    <div class="ps-item"><a href="ps/balapur_ps.html">Balapur PS</a></div>
+                                    <div class="ps-item"><a href="ps/meerpet_ps.html">Meerpet PS</a></div>
+
+                                </div>
+
+
+                                <div class="col-md-6 col-lg-6 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/rgia_acp.html">
+                                            ACP </br>Shamshabad
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/rgia_ps.html">Shamshabad PS <a href="ps/rgia_op_ps.html">RGIA OP</a> </a> </div>
+                                    <div class="ps-item"><a href="ps/pahadishareef_ps.html">Pahadi <br/>Shareef PS</a></div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="zone-card zone-golconda">
+                        <div class="zone-header"><a href="dcp/golcondazone_dcp.html" style="color: white;" target="_self">DCP Golconda Zone</a></div>
+
+                        <div class="zone-body">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-3 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/asifnagar_acp.html">
+                                            ACP </br>Asif Nagar
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/asifnagar_ps.html">Asif Nagar PS</a></div>
+                                    <div class="ps-item"><a href="ps/Mehdipatnam_ps.html">Mehdipatnam PS</a></div>
+                                    <div class="ps-item"><a href="ps/habeebnagar_ps.html">Habeeb Nagar PS</a></div>
+                                    <div class="ps-item"><a href="ps/masabtank_ps.html">Masab Tank PS</a></div>
+
+                                </div>
+                                <div class="col-md-3 col-lg-3 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/goshamahal_acp.html">
+                                            ACP </br>Goshamahal
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/goshamahal_ps.html">Goshamahal PS</a></div>
+                                    <div class="ps-item"><a href="ps/begumbazaar_ps.html">Begumbazar PS</a></div>
+                                    <div class="ps-item"><a href="ps/afzalgunj_ps.html">Afzalgunj PS</a></div>
+
+                                </div>
+
+                                <div class="col-md-3 col-lg-3 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/kulsumpura_acp.html">
+                                            ACP </br>Kulsumpura
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/kulusumpura_ps.html">Kulsumpura PS</a></div>
+                                    <div class="ps-item"><a href="ps/tappachabutra_ps.html">Tappachabutra PS</a></div>
+                                    <div class="ps-item"><a href="ps/gudimalkapur_ps.html">Gudimalkapur PS</a></div>
+                                    <div class="ps-item"><a href="ps/mangalhat_ps.html">Mangalhat PS</a></div>
+
+                                </div>
+
+
+                                <div class="col-md-3 col-lg-3 col-sm-12">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/tolichowki_acp.html">
+                                            ACP </br>Tolichowki
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/tolichowki_ps.html">Tolichowki PS</a></div>
+                                    <div class="ps-item"><a href="ps/golconda_ps.html">Golconda PS</a></div>
+                                    <div class="ps-item"><a href="ps/langarhouse_ps.html">Langar House PS</a></div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="zone-card zone-rajendranagar">
+                        <div class="zone-header"><a href="dcp/rajendranagarzone_dcp.html" target="_self" style="color: white;">DCP Rajendranagar Zone</a></div>
+
+                        <div class="zone-body">
+                            <div class="row">
+
+
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/chandrayangutta_acp.html">
+                                            ACP </br>Chandrayangutta
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/chandrayangutta_ps.html">Chandrayangutta PS</a></div>
+                                    <div class="ps-item"><a href="ps/bandlaguda_ps.html">Bandlaguda PS</a></div>
+                                    <div class="ps-item"><a href="ps/kanchnbagh_ps.html">Kanchanbagh PS</a></div>
+                                    <div class="ps-item"><a href="ps/mailardevpally_ps.html">Mailardevpally PS</a></div>
+
+                                </div>
+
+
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/falaknuma_acp.html">
+                                            ACP </br>Falaknuma
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/falaknuma_ps.html">Falaknuma PS</a></div>
+                                    <div class="ps-item"><a href="ps/kamatipura_ps.html">Kamatipura PS</a></div>
+                                    <div class="ps-item"><a href="ps/bahadurpura_ps.html">Bahadurpura PS</a></div>
+                                    <div class="ps-item"><a href="ps/kalapathar_ps.html">Kalapathar PS</a></div>
+
+                                </div>
+
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/rajendranagar_acp.html">
+                                            ACP </br>Rajendra Nagar
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/rajendranagar_ps.html">Rajendra Nagar PS</a></div>
+                                    <div class="ps-item"><a href="ps/attapur_ps.html">Attapur PS</a></div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <!--<div class="zone-footer">
+                            Zonal Cyber Cell
+                        </div>-->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+		<div class="jtcp-card north-range">
+            <div class="jtcp-header">JT.CP – NORTH RANGE</div>
+
+            <div class="row g-4 p-4">
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="zone-card zone-secunderabad">
+                        <div class="zone-header"><a href="dcp/secunderabadzone_dcp.html" target="_self" style="color:white;">DCP Secunderabad Zone</a></div>
+						
+
+                        <div class="zone-body">
+                            <div class="row">
+                                <div class="col-md-1 col-lg-1">
+                                </div>
+
+                                <div class="col-md-2 col-lg-2">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/chikkadpally_acp.html">ACP <br/>Kachiguda</a>
+                                    </div>
+                                    <div class="ps-item"><a target="_self" href="ps/chikkadpally_ps.html">Chikkadpally PS</a></div>
+                                    <div class="ps-item"><a href="ps/musheerabad_ps.html">Musheerabad PS</a></div>
+                                    <div class="ps-item"><a href="ps/kachiguda_ps.html">Kachiguda PS </a></div>
+
+                                </div>
+
+                                <div class="col-md-2 col-lg-2">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/chilkalguda_acp.html">ACP<br /> Chilkalguda</a>
+                                    </div>
+                                    
+                                    <div class="ps-item"><a href="ps/chilkalguda_ps.html">Chilkalguda PS</a></div>
+							<div class="ps-item"><a href="ps/lalaguda_ps.html">Lalaguda PS</a></div>
+                                    <div class="ps-item"><a href="ps/warasiguda_ps.html">Warasiguda PS</a></div>
+
+                                </div>
+
+                                <div class="col-md-2 col-lg-2">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/gandhinagar_acp.html">ACP </br>Gandhinagar </a>
+                                    </div>
+                         <div class="ps-item"><a href="ps/gandhinagar_ps.html">Gandhi Nagar PS</a></div>          
+						<div class="ps-item"><a href="ps/domalguda_ps.html">Domalguda PS</a></div>
+                                    
+
+                                </div>
+
+
+                                <div class="col-md-2 col-lg-2">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/mahankali_acp.html">
+                                            ACP </br>Mahankali
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/mahankali_ps.html">Mahankali PS</a></div>
+                                    <div class="ps-item"><a href="ps/ramgopalpet_ps.html">Ramgopalpet PS</a></div>
+                                   
+
+                                </div>
+
+                                <div class="col-md-2 col-lg-2">
+                                    <div class="acp-name">
+                                        <a target="_self" style="text-align:left;" href="acp/ou_acp.html">ACP </br>Osmania University</a>
+                                    </div>
+                                    
+                                    <div class="ps-item"><a href="ps/ousity_ps.html">OU Sity PS</a></div>
+                                    <div class="ps-item"><a href="ps/nallakunta_ps.html">Nallakunta PS</a></div>
+				<div class="ps-item"><a href="ps/amberpet_ps.html">Amberpet PS</a></div>
+
+                                </div>
+                                <div class="col-md-1 col-lg-1">
+                                </div>
+
+                            </div>
+
+
+                            <!--<div class="zone-footer">
+                                Zonal Cyber Cell
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="zone-khairatabad1 zone-card">
+                        <div class="zone-header"><a href="dcp/jubileehillszone_dcp.html" target="_self" style="color: white;">DCP Jubilee Hills Zone</a></div>
+
+                        <div class="zone-body">
+                            <div class="row">
+
+
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/banjarahills_acp.html">
+                                            ACP </br>Banjara Hills
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/banjarahills_ps.html">Banjara Hills PS</a></div>
+                                    <div class="ps-item"><a href="ps/madhuranagar_ps.html">Madhura Nagar PS</a></div>
+
+                                </div>
+
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/jubileehills_acp.html">
+                                            ACP </br>Jubilee Hills
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/jubileehills_ps.html">Jubille Hills PS</a></div>
+                                    <div class="ps-item"><a href="ps/filmnagar_ps.html">Film Nagar PS</a></div>
+
+                                </div>
+
+                                <div class="col-md-4 col-lg-4">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/srnagar_acp.html">
+                                            ACP </br>S.R. Nagar
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/srnagar_ps.html">S.R. Nagar  PS</a></div>
+                                    <div class="ps-item"><a href="ps/borabanda_ps.html">Borabanda PS</a></div>
+                                    <div class="ps-item"><a href="ps/sanathnagar_ps.html">Sanath Nagar PS</a></div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <!--<div class="zone-footer">
+                            Zonal Cyber Cell
+                        </div>-->
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="zone-card zone-khairatabad2">
+                        <div class="zone-header"><a href="dcp/khairathabadzone_dcp.html" target="_self" style="color: white;">DCP Khairatabad Zone</a></div>
+
+                        <div class="zone-body">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-3 ">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/abids_acp.html">
+                                            ACP </br>Abids
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/abids_ps.html">Abids PS</a></div>
+                                    <div class="ps-item"><a href="ps/nampally_ps.html">Nampally PS</a></div>
+                                </div>
+                                <div class="col-md-3 col-lg-3">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/panjagutta_acp.html">
+                                            ACP </br>Panjagutta
+                                        </a>
+                                    </div>
+                                    <div class="ps-item">
+                                        <a href="ps/panjagutta_ps.html">Panjagutta PS</a></div>
+                                    <div class="ps-item">
+                                        <a href="ps/khairatabad_ps.html">Khairatabad PS</a></div>
+
+                                </div>
+
+                                <div class="col-md-3 col-lg-3 ">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/saifabad_acp.html">ACP Saifabad</a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/saifabad_ps.html">Saifabad PS</a></div>
+                                    <div class="ps-item"><a href="ps/lake_ps.html">Lake PS</a></div>
+
+                                </div>
+
+
+                                <div class="col-md-3 col-lg-3 ">
+                                    <div class="acp-name">
+                                        <a target="_self" href="acp/sultanbazaar_acp.html">
+                                            ACP </br>Sultanbazar
+                                        </a>
+                                    </div>
+                                    <div class="ps-item"><a href="ps/sultanbazaar_ps.html">Sultan Bazar</br> PS</a></div>
+                                    <div class="ps-item"><a href="ps/narayanaguda_ps.html">Narayanaguda </br>PS</a></div>
+
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <!--<div class="zone-footer">
+                            Zonal Cyber Cell
+                        </div>-->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- ================= OTHER LINKS ================= -->
+        <div class="row g-4 p-4">
+            <!-- Card 1 -->
+            <div class="col-md-6">
+                <div class="link-card women-ps">
+                    
+                    <a href="women-protection/women_protection.html" target="_self">Click Here to <br />Find Women Police Stations</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6">
+                <div class="link-card traffic-ps">
+                    
+                    <a href="https://htp.gov.in/know_your_ps.html" target="_self">Click Here to <br/>Traffic Police Stations</a>
+                </div>
+            </div>
+
+
+        </div>
+                          
+      
+	  
+	 <div class="col-offset-2">
+<marquee behavior="scroll" direction="right"  scrollamount="10" onmouseover="this.stop();" onmouseout="this.start();">
+		<img src="img/Parol car 2.gif" width="10%" />
+    </marquee>
+</div> 
+	  
+  </div>
+</div>
+	
+
+<!-- Modal for ps under construction -->
+	
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">IMPORTANT INFORMATION </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        NEW<span style="color:red;"> <strong>PAGE UNDER MAINTENANCE</strong> . <img src="img/dial100.png" alt="Dial 100" class="dial100" width="180px"> </span>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	
+	<!-- Modal for ps under construction -->
+	
+	
+
+</div>
+<!-- Footer-->
+<section class="bg-dark py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8 text-muted"> <p>For any queries and suggestions regarding this website <br>please Email to web-pol-hyd(at)tspolice(dot)gov(dot)in&nbsp;</p>
+		  COPYRIGHT © 2022, HYDERABAD CITY POLICE.<br/>
+        Designed and developed by <a href="https://ts.nic.in/" target="_self" style="color: #fff;">NIC, Telangana</a> </div>
+      <!--<div class="col-lg-4 col-md-4 col-sm-4 visitors">
+          <p><span>Visitors</span> <span>123546</span></p>
+        </div>-->
+    </div>
+  </div>
+</section></section>
+</main>
+<!-- Back To Top Button--> 
+<a class="btn-scroll-top" href="#top" data-scroll> <span class="btn-scroll-top-tooltip text-muted fs-sm me-2"></span> <img src="img/previous.png" alt=""> </a> 
+<script src="support/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<script src="support/simplebar/simplebar.min.js"></script> 
+<script src="support/tiny-slider/min/tiny-slider.js"></script> 
+<script src="support/smooth-scroll/smooth-scroll.polyfills.min.js"></script> 
+<!-- Main theme script--> 
+<script src="js/theme.min.js"></script>
+</body>
+</html>
