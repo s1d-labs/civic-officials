@@ -155,3 +155,24 @@ def test_card_lines_are_not_blocks_the_cards_are():
     assert len(src.rows) == 12 and all(r["title"] for r in src.rows) and "repeated blocks" in src.note
     a = audit.audit_source(src, [(rid, "", d.get("phone") or "", d.get("email") or "") for rid, d in recs], "dforms.emerg_hosp_s3waas")
     assert a["verdict"] == "ok" and a["records_person"] == 12
+
+
+def test_pri_kl_member_pages_and_ward_table():
+    """Kerala SEC (cforms/pri_kl), full saved pages. A member page holds one member: its blocks are the site menus, the empty
+    dialogs (old template) or the sections of the one profile (2026 template), all named by pri_kl.AUDIT_LEAVES_OUT. The ward
+    table wyrw/2371 lists 24 members; their records take the member pages as source and name the table in list_url
+    (seeds/build_audit.py counts them for the table): 24 of 24 rows, ok."""
+    from cforms import pri_kl
+    for name, n_out in (("pri_kl_member_old", 5), ("pri_kl_member_2026", 8)):
+        src = audit.read_source(gzip.decompress((DATA / f"{name}.html.gz").read_bytes()), "text/html", "x.html.gz")
+        a = audit.audit_source(src, [("pri:KL:x:w1", "Member", "", "")], "cforms.pri_kl")
+        assert a["rows_left_out"] == n_out and a["rows_visible"] == 0 and a["verdict"] == "not_tabular"
+    body = gzip.decompress((DATA / "pri_kl_wyrw_2371.html.gz").read_bytes())
+    url = "https://sec.kerala.gov.in/public/wyrw/2371"
+    rows = pri_kl.ward_rows(body.decode("utf-8"), url)
+    assert len(rows) == 24 and all(r[3] and r[7] for r in rows)
+    recs = [(f"pri:KL:gp:x:w{r[1]}", r[3], "", "") for r in rows]
+    a = audit.audit_source(audit.read_source(body, "text/html", "x.html.gz"), recs, "cforms.pri_kl")
+    assert a["verdict"] == "ok" and a["records_person"] == 24 and a["rows_matched"] == 24
+    # only the 2 records whose member page did not answer take the table as source: that alone is low
+    assert audit.audit_source(audit.read_source(body, "text/html", "x.html.gz"), recs[:2], "cforms.pri_kl")["verdict"] == "low"

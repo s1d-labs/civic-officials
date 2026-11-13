@@ -30,6 +30,13 @@ import provenance
 from cforms import _pri
 
 METHOD = "html table (SEC ward table) + html labels (SEC member page); body site profile cards for heads"
+# reader audit (audit.py): the SEC member page has no table; its repeated blocks are the site menus ("Know SEC | Commissioner |
+# Who is who ...", "Voter Service | ...") and the empty dialogs ("Modal title | Close"); the newer member page (2026) splits the
+# one member into sections ("Governance Profile", "Election Records", "Official Bio & Tenure", "Contact Details"). The blocks hold
+# no other person. The member's record takes the member page as its source and names the ward table in list_url, so the ward
+# table's rows are checked against those records (seeds/build_audit.py).
+AUDIT_LEAVES_OUT = (r"^(Know SEC|Acts & Rules|Voter Service|Delimitation|RTI Officials|Modal title|Governance Profile|Election Records|"
+                    r"Official Bio|Contact Details)\b")
 
 STATE = "KL"
 ELECTION = "Kerala 2025 (poll December 2025)"

@@ -8,7 +8,8 @@ Runs on dev-vps-3 (needs psql on scrape_hub and civic). Reads:
   3. the reader of each trail (trail records in the same copy).
 A source is queued when it has a saved copy and at least one record. A record made from a list row whose source is the row's
 own detail page (data["list_url"] = the list page, e.g. cforms/pri_kl: SEC ward table -> member page) also counts for every saved
-copy of that list page, with its regional name when it has one (the list page is in the regional script). Records that name a bucket copy themselves (src.file,
+copy of that list page, with its regional name when it has one (the list page is in the regional script); a record read from
+one copy of a list page also counts for the other copies of that page. Records that name a bucket copy themselves (src.file,
 provenance.file_src) use that copy. Small sources go together: at most 50 sources and 2000 records per item.
 
   python seeds/build_audit.py                  counts only
@@ -105,7 +106,7 @@ def build(sample=0, projs=None):
         by_sha[sha].append((rid, name or "", phones or "", email or ""))
         m = meta.setdefault(sha, {"trails": Counter(), "project": proj, "file": file, "url": url})
         m["trails"][trail_reader.get(trail or "", "")] += 1
-        if list_url and list_url != url:
+        if list_url:       # also the other saved copies of the list page when the record's source is the list page itself
             for lsha in by_url.get((index[sha]["project"] if sha in index else proj, list_url), ()):
                 if lsha != sha:
                     by_sha[lsha].append((rid, name_reg or name or "", phones or "", email or ""))
