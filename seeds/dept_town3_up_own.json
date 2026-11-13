@@ -1,0 +1,123 @@
+[
+ {
+  "key": "town3_own-npanpara.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://www.npanpara.in/",
+   "site": "npanpara.in",
+   "body": "Anpara Town Panchayat",
+   "lgd_code": "299053",
+   "district": "Sonbhadra",
+   "state": "UP",
+   "pages": [
+    "http://npanpara.in/employee"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-npkundarki.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://www.npkundarki.in/",
+   "site": "npkundarki.in",
+   "body": "Kundarki Town Panchayat",
+   "lgd_code": "248930",
+   "district": "Moradabad",
+   "state": "UP",
+   "pages": [
+    "http://npkundarki.in/Staff_Members.aspx"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-npkunwargaon.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://npkunwargaon.in/",
+   "site": "npkunwargaon.in",
+   "body": "Kunwargaon Town Panchayat",
+   "lgd_code": "249127",
+   "district": "Budaun",
+   "state": "UP",
+   "pages": [
+    "http://npkunwargaon.in/officer.html",
+    "http://npkunwargaon.in/employee.html"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-npmataundh.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://npmataundh.in/",
+   "site": "npmataundh.in",
+   "body": "Mataundh Town Panchayat",
+   "lgd_code": "249333",
+   "district": "Banda",
+   "state": "UP",
+   "pages": [
+    "https://npmataundh.in/WebController/Officer"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-npnizamabad.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://npnizamabad.in/",
+   "site": "npnizamabad.in",
+   "body": "Nizamabad Town Panchayat",
+   "lgd_code": "249478",
+   "district": "Azamgarh",
+   "state": "UP",
+   "pages": [
+    "http://npnizamabad.in/officer.html",
+    "http://npnizamabad.in/employee.html"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-nppmubarakpur.com",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://nppmubarakpur.com/",
+   "site": "nppmubarakpur.com",
+   "body": "Mubarakpur Municipality",
+   "lgd_code": "249474",
+   "district": "Azamgarh",
+   "state": "UP",
+   "pages": [
+    "http://nppmubarakpur.com/employee"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_own-npzaidpur.in",
+  "payload": {
+   "reader": "town3_own",
+   "url": "https://npzaidpur.in/",
+   "site": "npzaidpur.in",
+   "body": "Zaidpur Town Panchayat",
+   "lgd_code": "249382",
+   "district": "Bara Banki",
+   "state": "UP",
+   "pages": [
+    "http://npzaidpur.in/Home/ContactUs"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

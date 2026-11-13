@@ -1,0 +1,156 @@
+[
+ {
+  "key": "town3_od_wp-bhubannac.in",
+  "payload": {
+   "reader": "town3_od_wp",
+   "url": "https://www.bhubannac.in/",
+   "site": "bhubannac.in",
+   "body": "Bhuban Notified Area Council",
+   "lgd_code": "248059",
+   "district": "Dhenkanal",
+   "state": "OD",
+   "pages": [
+    "https://www.bhubannac.in/?page_id=47"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_wp-bijepurnac.in",
+  "payload": {
+   "reader": "town3_od_wp",
+   "url": "https://bijepurnac.in/",
+   "site": "bijepurnac.in",
+   "body": "Bijepur Notified Area Council",
+   "lgd_code": "276628",
+   "district": "Baragada",
+   "state": "OD",
+   "pages": [
+    "https://bijepurnac.in/?page_id=36"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_wp-dhenkanalmunicipality.com",
+  "payload": {
+   "reader": "town3_od_wp",
+   "url": "https://www.dhenkanalmunicipality.com/",
+   "site": "dhenkanalmunicipality.com",
+   "body": "Dhenkanal Municipality",
+   "lgd_code": "248060",
+   "district": "Dhenkanal",
+   "state": "OD",
+   "pages": [
+    "https://www.dhenkanalmunicipality.com/?page_id=171",
+    "https://www.dhenkanalmunicipality.com/?page_id=173"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_wp-jaleswarmunicipality.org",
+  "payload": {
+   "reader": "town3_od_wp",
+   "url": "https://jaleswarmunicipality.org/",
+   "site": "jaleswarmunicipality.org",
+   "body": "Jaleswar Municipality",
+   "lgd_code": "250482",
+   "district": "Baleshwar",
+   "state": "OD",
+   "pages": [
+    "https://jaleswarmunicipality.org/?page_id=40"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_wp-kamakhyanagarnac.in",
+  "payload": {
+   "reader": "town3_od_wp",
+   "url": "https://kamakhyanagarnac.in/",
+   "site": "kamakhyanagarnac.in",
+   "body": "Kamakhyanagar Notified Area Council",
+   "lgd_code": "248058",
+   "district": "Dhenkanal",
+   "state": "OD",
+   "pages": [
+    "https://kamakhyanagarnac.in/section-staff-list/"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_wp-khandapadanac.in",
+  "payload": {
+   "reader": "town3_od_wp",
+   "url": "https://khandapadanac.in/",
+   "site": "khandapadanac.in",
+   "body": "Khandapada Notified Area Council",
+   "lgd_code": "250510",
+   "district": "Nayagada",
+   "state": "OD",
+   "pages": [
+    "https://khandapadanac.in/?page_id=40"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_wp-nimaparanac.in",
+  "payload": {
+   "reader": "town3_od_wp",
+   "url": "https://www.nimaparanac.in/",
+   "site": "nimaparanac.in",
+   "body": "Nimapada Notified Area Council",
+   "lgd_code": "250522",
+   "district": "Puri",
+   "state": "OD",
+   "pages": [
+    "https://www.nimaparanac.in/?page_id=43"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_wp-rayagadamunicipality.in",
+  "payload": {
+   "reader": "town3_od_wp",
+   "url": "https://rayagadamunicipality.in/",
+   "site": "rayagadamunicipality.in",
+   "body": "Rayagada Municipality",
+   "lgd_code": "250565",
+   "district": "Rayagada",
+   "state": "OD",
+   "pages": [
+    "https://rayagadamunicipality.in/section-staff-list/"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "town3_od_wp-remunanac.in",
+  "payload": {
+   "reader": "town3_od_wp",
+   "url": "https://remunanac.in/",
+   "site": "remunanac.in",
+   "body": "Remuna Notified Area Council",
+   "lgd_code": "300314",
+   "district": "Baleshwar",
+   "state": "OD",
+   "pages": [
+    "https://remunanac.in/section-staff-list/"
+   ],
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
