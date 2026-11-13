@@ -33,8 +33,9 @@ def split_gap(text, offset=0):
     return _esw.clean(text[:best.start()]), _esw.clean(text[best.end():]), offset + best.end()
 
 
-def rows(pages, skip=re.compile(r"(?i)^\s*(sr\.?\s*no|s\.?\s*no|name\b|municipal\s+corporation)")):
-    """[dict(sr, name, mid, phone, name_extra, mid_extra, page, line, line_text)] of every numbered row of a staff list PDF."""
+def rows(pages, skip=re.compile(r"(?i)^\s*(sr\.?\s*no|s\.?\s*no|name\b|municipal\s+corporation)"), post=None):
+    """[dict(sr, name, mid, phone, name_extra, mid_extra, page, line, line_text)] of every numbered row of a staff list PDF.
+    post: a regex of the first word of a post ("ASSISTANT|JUNIOR|..."); a row without a wide gap is cut where it matches."""
     out, cur = [], None
     for pn, pg in enumerate(pages, 1):
         for ln, raw in enumerate(lines_of(pg), 1):
@@ -45,8 +46,13 @@ def rows(pages, skip=re.compile(r"(?i)^\s*(sr\.?\s*no|s\.?\s*no|name\b|municipal
                 rest = raw[m.end():]
                 ph = PHONE_END.search(rest)
                 phone = ph.group(1) if ph else ""
-                body = rest[:ph.start()] if ph else rest
+                body = rest[:ph.start()] if ph else re.sub(r"\s+-+\s*$", "", rest)     # "-" = no phone
                 name, mid, x = split_gap(body, m.end())
+                if not mid and post is not None:
+                    pm = post.search(name)
+                    if pm and pm.start() > 0:
+                        x = m.end() + (len(body) - len(body.lstrip())) + pm.start()
+                        name, mid = _esw.clean(name[:pm.start()]), _esw.clean(name[pm.start():])
                 if not (mid or phone) and cur is not None:     # a stray serial digit before a continuation of the row above
                     t = raw[:m.start(1)] + " " * len(m.group(1)) + raw[m.start(1) + len(m.group(1)):]
                     for r in re.finditer(r"\S+(?:\s{1,2}\S+)*", t):

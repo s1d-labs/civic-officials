@@ -1,0 +1,28 @@
+{
+ "module": "ward3_pathankot",
+ "payload": {
+  "reader": "ward3_pathankot",
+  "url": "https://mcpathankot.punjab.gov.in/Home",
+  "pdf": "https://enigambackuprestore.blob.core.windows.net/securefilestructure/MC/Pathankot/MCSubMenu/pdf/linkpdf_2_26_2026_6_904.MC%20STAFF%20DIRECTORY%20UPTO%2026.02.2026.pdf",
+  "state": "PB"
+ },
+ "pages": "pathankot.pages",
+ "min_records": 55,
+ "expect": [
+  {
+   "post": "DRAFTSMAN \\(ZONE 2,4\\)",
+   "name": "VARUN",
+   "level": "zone"
+  },
+  {
+   "post": "SANITARY INSPECTOR",
+   "name": "AJAY BAINS",
+   "level": "body"
+  },
+  {
+   "post": "^COMMISSIONER",
+   "name": "Palavi",
+   "level": "body"
+  }
+ ]
+}
