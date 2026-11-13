@@ -1,0 +1,34 @@
+[
+ {
+  "key": "st_ld_portal:whos-who",
+  "payload": {
+   "reader": "st_ld_portal",
+   "url": "https://lakshadweep.gov.in/about-lakshadweep/whos-who/",
+   "name": "whos-who",
+   "body": "Lakshadweep Administration",
+   "body_kind": "secretariat",
+   "level": "state",
+   "state": "LD",
+   "district": "Lakshadweep",
+   "district_code": "553",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ld_portal:directory",
+  "payload": {
+   "reader": "st_ld_portal",
+   "url": "https://lakshadweep.gov.in/directory/",
+   "name": "directory",
+   "body": "Lakshadweep Administration, Secretariat",
+   "body_kind": "department",
+   "level": "state",
+   "state": "LD",
+   "district": "Lakshadweep",
+   "district_code": "553",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]
