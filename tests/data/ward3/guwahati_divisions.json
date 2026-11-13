@@ -1,0 +1,5 @@
+{"module": "ward3_guwahati",
+ "payload": {"reader": "ward3_guwahati", "url": "https://gmc.assam.gov.in/about-us/our-divisions", "state": "AS", "kind": "divisions"},
+ "routes": {"https://gmc.assam.gov.in/about-us/our-divisions": "guwahati_divisions.html"},
+ "min_records": 6, "min_wards": 59,
+ "expect": [{"post": "Executive Engineer, Public Works Division I$", "name": "Deepak Talukdar", "wards": ["1", "15"]}, {"post": "Spl. Executive Engineer", "name": "Pankaj Choudhury", "wards": ["10", "27"]}]}
