@@ -1,0 +1,67 @@
+[
+ {
+  "key": "power3_upcl:se",
+  "payload": {
+   "reader": "power3_upcl",
+   "part": "se",
+   "url": "https://upcl.uk.gov.in/contact-list-of-se-and-above/",
+   "state": "UK",
+   "india_only": true,
+   "route": "india_only",
+   "route_note": "S3WaaS page; abroad unchecked (archive copy 2026-11-05)",
+   "expected": 41
+  }
+ },
+ {
+  "key": "power3_upcl:zone:Haridwar",
+  "payload": {
+   "reader": "power3_upcl",
+   "part": "zone",
+   "zone": "Haridwar",
+   "url": "https://cdnbbsr.s3waas.gov.in/s303412aef4dcdee4f934f7bf599f89783/uploads/2025/07/202507041315929139.pdf",
+   "state": "UK",
+   "india_only": false,
+   "route": "abroad",
+   "expected": 67
+  }
+ },
+ {
+  "key": "power3_upcl:zone:Kumaon",
+  "payload": {
+   "reader": "power3_upcl",
+   "part": "zone",
+   "zone": "Kumaon",
+   "url": "https://cdnbbsr.s3waas.gov.in/s303412aef4dcdee4f934f7bf599f89783/uploads/2025/07/202507041607222727.pdf",
+   "state": "UK",
+   "india_only": false,
+   "route": "abroad",
+   "expected": 103
+  }
+ },
+ {
+  "key": "power3_upcl:zone:Garhwal",
+  "payload": {
+   "reader": "power3_upcl",
+   "part": "zone",
+   "zone": "Garhwal",
+   "url": "https://cdnbbsr.s3waas.gov.in/s303412aef4dcdee4f934f7bf599f89783/uploads/2025/07/20250704215953182.pdf",
+   "state": "UK",
+   "india_only": false,
+   "route": "abroad",
+   "expected": 274
+  }
+ },
+ {
+  "key": "power3_upcl:zone:Rudrapur",
+  "payload": {
+   "reader": "power3_upcl",
+   "part": "zone",
+   "zone": "Rudrapur",
+   "url": "https://cdnbbsr.s3waas.gov.in/s303412aef4dcdee4f934f7bf599f89783/uploads/2025/07/202507041047701695.pdf",
+   "state": "UK",
+   "india_only": false,
+   "route": "abroad",
+   "expected": 100
+  }
+ }
+]
