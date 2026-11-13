@@ -1,0 +1,18 @@
+{"source": "Maharashtra Land Revenue Code: six revenue divisions (Konkan, Pune, Nashik, Chhatrapati Sambhajinagar, Amravati, Nagpur), districts as the divisional commissioner sites list them; police ranges (IG ranges of mahapolice.gov.in igcontact3.pdf) under 'police_ranges' (from the range IG offices' published charge; unchecked against a GR). LGD district codes.",
+ "divisions": {
+  "Konkan": ["482", "483", "497", "665", "491", "492", "495"],
+  "Pune": ["490", "494", "493", "496", "480"],
+  "Nashik": ["487", "474", "486", "478", "466"],
+  "Chhatrapati Sambhajinagar": ["469", "479", "470", "481", "488", "485", "489", "477"],
+  "Amravati": ["468", "467", "499", "472", "500"],
+  "Nagpur": ["484", "498", "471", "476", "473", "475"]
+ },
+ "police_ranges": {
+  "Konkan Range": ["497", "665", "491", "492", "495"],
+  "Kolhapur Range": ["480", "493", "494", "490", "496"],
+  "Nashik Range": ["487", "474", "486", "478", "466"],
+  "Aurangabad Range": ["469", "479", "470"],
+  "Nanded Range": ["485", "481", "489", "477"],
+  "Amravati Range": ["468", "467", "499", "472", "500"],
+  "Nagpur Range": ["484", "498", "471", "476", "473"]
+ }}
