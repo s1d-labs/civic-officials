@@ -10,7 +10,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from cforms._pri import HERE, level_of  # noqa: E402
 
 NAMES = {"KL": "Kerala", "TN": "Tamil Nadu", "KA": "Karnataka", "AP": "Andhra Pradesh", "TG": "Telangana", "MH": "Maharashtra",
-         "GJ": "Gujarat", "GA": "Goa", "PY": "Puducherry"}
+         "GJ": "Gujarat", "GA": "Goa", "PY": "Puducherry",
+         # eGramSwaraj states with members (state report 2026-11-13)
+         "MP": "Madhya Pradesh", "CG": "Chhattisgarh", "BR": "Bihar", "OD": "Odisha", "PB": "Punjab", "WB": "West Bengal",
+         "HR": "Haryana", "UK": "Uttarakhand", "JH": "Jharkhand", "HP": "Himachal Pradesh", "AS": "Assam", "AR": "Arunachal Pradesh",
+         "TR": "Tripura", "MN": "Manipur", "SK": "Sikkim", "AN": "Andaman And Nicobar Islands",
+         "DH": "The Dadra And Nagar Haveli And Daman And Diu", "MZ": "Mizoram"}
 
 
 def main(states):

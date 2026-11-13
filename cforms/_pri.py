@@ -32,6 +32,9 @@ TYPE_LEVEL = {
     "block panchayat": "ps", "mandal panchayat": "ps", "taluka panchayat": "ps", "taluk panchayat": "ps",
     "panchayat samiti": "ps", "intermediate panchayat": "ps", "commune panchayat": "ps",
     "gram panchayat": "gp", "grama panchayat": "gp", "village panchayat": "gp",
+    # LGD type names of other states (2026-11-13): MP/CG janpad, UK kshetra, Assam anchalik / gaon, HP zila parishad, J&K
+    "zila parishad": "zp", "janpad panchayat": "ps", "kshetra panchayat": "ps", "anchalik panchayat": "ps", "gaon panchayat": "gp",
+    "district planning & development board": "zp", "block development council": "ps", "halqa panchayat": "gp",
 }
 _STOP = re.compile(r"\b(grama?|gram|village|panchayath?|panchayat|block|mandal|taluka?|district|zilla|zila|parishad|parishath|"
                    r"samiti|commune|gp|vp|bp|dp|zp|ps|tp)\b")

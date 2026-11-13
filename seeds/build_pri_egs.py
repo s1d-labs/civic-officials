@@ -10,7 +10,10 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "seeds"))
 from build_pri_ka import items  # noqa: E402
 
-STATES = {"GA": "30", "GJ": "24", "KL": "32", "MH": "27", "TG": "36"}
+STATES = {"GA": "30", "GJ": "24", "KL": "32", "MH": "27", "TG": "36",
+          # all other states with members in the state report (2026-11-13)
+          "MP": "23", "CG": "22", "BR": "10", "OD": "21", "PB": "3", "WB": "19", "HR": "6", "UK": "5", "JH": "20", "HP": "2",
+          "AS": "18", "AR": "12", "TR": "16", "MN": "14", "SK": "11", "AN": "35", "DH": "38", "MZ": "15"}
 
 if __name__ == "__main__":
     it = []
