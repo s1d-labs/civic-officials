@@ -1,0 +1,195 @@
+ 
+ <!DOCTYPE html>
+<html lang="en-US">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home Page</title>
+
+    <link type="text/css" href="/Content/calendar_assets/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="/Content/calendar_assets/css/calendar_home.css" rel="stylesheet">
+    <link type="text/css" href="/Content/home/css/style.css" rel="stylesheet">
+    
+    
+
+    <link rel="stylesheet" type="text/css" href="/Content/calendar_assets/css/simptip.min.css" media="screen,projection" />
+    
+
+ 
+    
+    <style>
+        &.active span &:first-of-type transform rotate(-45deg) &:last-of-type transform rotate(45deg)
+    </style>
+    <style>
+        a {
+            color: black !important;
+        }
+    </style>
+</head>
+<body>
+
+   <header class="bg-black">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-5">
+                <a href="../Home/ViewCalendar" class="d-flex flex-wrap">
+                    <img src="/Content/calendar_assets/images/logo2.png" title="top-logo" style="width: 81px; height: 76px;" />
+                    
+                <span class="sitename">Government Diary and Calendar, Govt. of Madhya Pradesh</span>
+                </a>
+                
+            </div>
+            <div class="col-md-7 text-md-right">
+                <a href="/Home/GovermentHoliday" class="text-white py-2 d-inline-block">शासकीय अवकाश <span class="pili-line">|</span></a>
+                <a href="/Home/OptionalHoliday" class="text-white  py-2 d-inline-block">ऐच्छिक (आप्शनल) अवकाश <span class="pili-line">|</span></a>
+                
+                <a href="../Home/ViewCalendar" class="text-white d-inline-block"> <img src="/Content/calendar_assets/images/home.png" width="20px"/> <span class="pili-line">|</span </a>
+                 <a href="https://play.google.com/store/apps/details?id=gov.mp.mapit.dairy" class="text-white d-inline-block"> <img src="/Content/calendar_assets/images/google-play-button.png" width="120px"/> </a>
+
+                 <button class="nav-btn" onclick="navFunction()">
+                    <img src="/Content/calendar_assets/images/menu.png" style="width: 23px;"/>
+                 </button>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white border-bottom">
+    <div class="container">
+
+    <div class="row">
+    <div class="col-lg-9">
+        <nav id="top-nav" class="top-nav right-side-navigation">
+            <a href="#" id="top-nav-toggle" class="top-nav-toggle" title="Navigation" data-close-text="Close">
+                <span>Navigation</span> <i class="fa fa-angle-down"></i>
+            </a>
+            
+  <ul  id='menu-primary-navigation-2' class='nav-menu'> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>राष्ट्रपति भवन</a>   <ul class='sub-menu sub_menu_33' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=37' >राष्ट्रपति भवन</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=38' >भारत के उप-राष्ट्रपति</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=39' > उप-राष्ट्रपति  का सचिवालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=35' >संसद</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=34' >नेता प्रतिपक्ष</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>भारत सरकार </a>   <ul class='sub-menu sub_menu_34' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=51' >भारत के प्रधानमंत्री</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=40' >केन्‍द्रीय मंत्रि-परिषद्</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=43' >प्रधानमंत्री का सचिवालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=42' >राज्यमंत्री (प्रधानमंत्री कार्यालय )</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=45' >राज्यमंत्री</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=41' >राज्यमंत्री (स्वतंत्र प्रभार)</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=44' >भारत शासन में सचिव </a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>लोक भवन</a>   <ul class='sub-menu sub_menu_31' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=30' >मध्यप्रदेश के राज्यपाल</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=31' >राज्यपाल का सचिवालय, mprajbhavan@mp.gov.in</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>मध्यप्रदेश </a>   <ul class='sub-menu sub_menu_10' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=6' >मुख्यमंत्री</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=7' >मुख्यमंत्री कार्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=8' >मुख्यमंत्री निवास कार्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=11' >मंत्रि-परिषद्</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=33' >मध्यप्रदेश के संसद सदस्य</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=9' >मध्यप्रदेश मंत्रालय में पदस्थ विभागवार मुख्‍य सचिव/अपर मुख्‍य सचिव/प्रमुख सचिव/सचिव/अपर सचिव</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=23' >आयोग</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=16' >विभागाध्यक्ष</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=24' >मध्यप्रदेश के विश्‍वविद्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=10' >मध्यप्रदेश के निगम  एवं मण्डल</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=46' >मध्यप्रदेश के संभागवार आवश्यक दूरभाष </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=48' >मध्यप्रदेश के जिलेवार आवश्यक दूरभाष</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=21' >मध्‍यप्रदेश नगरपालिक निगम के महापौर एवं आयुक्‍त </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=20' >मध्‍यप्रदेश के जिला पंचायत, प्रशासकीय समिति के अध्‍यक्ष  एवं मुख्य कार्यपालन अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=17' >दिल्ली में पदस्थ मध्यप्रदेश केडर के आई.ए.एस.  अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=19' >दिल्ली में पदस्थ मध्यप्रदेश केडर के आई.पी.एस.  अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=18' >दिल्ली में पदस्थ मध्यप्रदेश केडर के आई.एफ.एस. अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=15' >नई दिल्‍ली स्थित मध्यप्रदेश शासन  के कार्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=14' >मध्यप्रदेश की सामान्य  प्रमुख जानकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=22' >मध्यप्रदेश एवं अखिल भारत के चुने हुए विकास संकेतांक </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=12' >मध्यप्रदेश की जिलेवार प्रमुख जानकारी (भाग-1)</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=13' >मध्यप्रदेश की जिलेवार प्रमुख जानकारी (भाग-2)</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=5' >भारत की जनगणना-2011जनसंख्‍या के अन्तिम आंकड़े एक नजर में</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>न्यायतंत्र</a>   <ul class='sub-menu sub_menu_26' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=3' >मध्यप्रदेश उच्च न्यायालय </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=26' >लोकायुक्‍त कार्यालय, मध्यप्रदेश</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=25' >औद्योगिक, न्यायालय मध्यप्रदेश</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>विधान सभा</a>   <ul class='sub-menu sub_menu_32' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=27' >अध्यक्ष, विधान सभा</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=29' >उपाध्‍यक्ष, विधान सभा </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=32' >नेता प्रतिपक्ष,  विधान सभा</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=28' >विधान सभा सचिवालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=2' >मध्यप्रदेश के विधान सभा सदस्य</a>  </li>  </ul> </li>  </ul>
+
+        </nav>
+        
+    </div>
+    <div class="col-lg-3">
+<form action="/Home/searchdata" method="post"><input name="__RequestVerificationToken" type="hidden" value="ODmgtPWXpLrbxNWqCgYSI3NrYfNqmwTt77_x1mtRAVfIcOQnfsElM8yQ9j0Krz-RXIUH4ARxPXU3EKDayRtaGfS6QwfonMkRQeAjptuce581" />          <div class="input-group mt-1">
+  
+  
+</div>
+</form>    </div>
+    </div>
+
+
+  
+
+
+</div>
+</section>
+<main class="my-3">
+ <div class="container">
+ <div class="bg-light position-relative shadow">
+            
+
+
+<style>
+    .datatab { padding:10px; }
+    .datatab table tr th {}
+    .tabHead { font-weight:bold;  }
+    .tabSubHead { background-color: #ebebf3;}
+</style>
+ 
+
+    <div class="  ">
+        <div style="text-align:right; padding-right:30px;">
+            <a href="#" onclick="javascript:printSection('datatab');" style="font-weight: bold;color: #a58b57;z-index:999999999;" class="btn btn-warning  btn-sm mt-2">  Print</a>
+            
+        </div>
+        <div class="col-md-12   ">
+            <div class="datatab" id="datatab">
+
+                <center><h3>मध्‍यप्रदेश नगरपालिक निगम के महापौर एवं आयुक्‍त </h3></center><table class=' table  table-bordered table-hover'><tr> <th class='tabHead'>जिले का नाम </th><th class='tabHead'>महापौर एवं आयुक्त का नाम </th><th class='tabHead'>कार्यालय दूरभाष </th><th class='tabHead'>निवास दूरभाष/मो. न. </th><th class='tabHead'>निवास स्थान का पता </th><th class='tabHead'>ई-मेल </th><th class='tabHead'>फैक्स </th><th class='tabHead'>वेबसाइट</th></tr> <tr> <td> मुरैना</td> <td> महापौर</br></br>आयुक्‍त</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> </tr> <tr> <td> ग्‍वालियर</td> <td> डॉ. शोभा सतीश सिकरवार</br>महापौर</br></br>श्री अमन वैष्‍णव</br>आयुक्‍त </td> <td> 0751-2438300</br>0751-4080352</br></br>0751-2438300</td> <td> 9826569000</br></br></br>2438301</br>9644405500</td> <td> ललितपुर कालोनी, शंकर चौक, ग्‍वालियर</br></br></br>नगर निगम आयुक्‍त निवास, बाल भवन के पास, सिटी सेन्‍टर, ग्‍वालियर</td> <td> mayorgwalior@gmail.com</br></br></br>nn.gwalior@mpurban.gov.in</td> <td> -</br></br></br>-</td> <td> -</br></br></br>-</td> </tr> <tr> <td> देवास</td> <td> श्री चन्‍द्रमौली शुक्‍ला</br>महापौर</br></br>श्री रजनीश कशेरा</br>आयुक्‍त</td> <td> 07272-223455</br></br></br>07272-220333</td> <td> 252222</br></br></br>9826764694</td> <td> सिविल लाईन ब्रिज के पास, देवास</br></br></br>आयुक्‍त निवास, सिविल लाईन, देवास</td> <td> -</br></br></br>commdewas@mpurban.gov.in</td> <td> -</br></td> <td> -</td> </tr> <tr> <td> रतलाम</td> <td> श्री प्रहलाद पटेल</br>महापौर</br></br>श्री अनिल भाना</br>आयुक्‍त</td> <td> 07412-270551</br></br></br>07412-270555</td> <td> 6232006700</br>9827351355</br></br>9826083639</td> <td> 68, बडबड़, हनुमान मंदिर के पीछे, रतलाम</br></br></br>अरिहंत परिसर, रतलाम</td> <td> patelprahlad657@gmail.com</br></br></br></br>commratlam@mpurban.gov.in</br></td> <td> -</td> <td> -</br></br></br></td> </tr> <tr> <td> उज्‍जैन</td> <td> श्री मुकेश टटवाल</br>महापौर</br></br>श्री अभिलाष मिश्रा</br>आयुक्‍त </td> <td> 0734-2552660</br></br></br>0734-2550659</td> <td> 2551541</br>8770482084</br></br>2535316</br>8826237948</td> <td> क्‍वा. नं. 1, ग्राण्‍ड होटल परिसर, फ्रीगंज, उज्‍जैन</br></br></br>क्‍वार्टर नं. 2, ग्राण्‍ड होटल परिसर, फ्रीगंज, उज्‍जैन</td> <td> mayorujjain-mp@mp.gov.in</br></br></br>commujjain@mpurban.gov.in</td> <td> </br></br></br>-</td> <td> -</td> </tr> <tr> <td> इन्‍दौर </td> <td> श्री पुष्‍यमित्र भार्गव</br>महापौर</br></br>श्री शिवम वर्मा</br>आयुक्‍त</td> <td> 7440440103</br></br></br>0731-2431610</td> <td> 0731-2571112</br>9826848077</br></br>2713636</br>9516972000</td> <td> एफ-2, रेडियो कॉलोनी, इन्‍दौर</br></br></br>-</td> <td> mayor@pushyamitra.in</br></br></br>nagarnigamindore@yahoo.com</br>commindore@mpurban.gov.in</td> <td> -</td> <td> -</td> </tr> <tr> <td> खण्‍डवा</td> <td> श्रीमती अमृता अमर यादव</br>महापौर</br></br>श्री निलेश दुबे</br>आयुक्‍त</td> <td> 0733-2224153</br></br></br>0733-2224158</td> <td> 9425086666</br></br></br>9406563970</td> <td> प्रशासक, नगर निगम निवास, लाल चौकी, खण्‍डवा</br></br></br>आयुक्‍त, नगर निगम निवास, लाल चौकी, खण्‍डवा</td> <td> -</td> <td> -</td> <td> -</td> </tr> <tr> <td> बुरहानपुर </td> <td> श्रीमती माधुरी अतुल पटेल</br>महापौर</br></br>श्री संदीप श्रीवास्‍तव </br>आयुक्‍त</td> <td> 07325-255270</br></br></br>07325-255270</td> <td> 9425326534</br>8962945750</br></br>07325-298001</br>9425170103</br>6269915601</td> <td> ए-102, इंदिरा कॉलोनी, वार्ड क्र. 41, बुरहानपुर</br></br></br>ई-3, सिविल लाईन, कलेक्‍टर कार्यालय के पास, बुरहानपुर </td> <td> mayorburhanpur446@gmail.com</br></br></br>commburhanpur@mpurban.gov.in</br>nn.burhanpur@mpurban.gov.in</br></br></td> <td> -</td> <td> -</td> </tr> <tr> <td> भोपाल</td> <td> श्रीमती मालती राय</br>महापौर</br></br>सुश्री संस्‍कृति जैन</br>आयुक्‍त</td> <td> 0755-2701111</br>0755-2701444</br></br>0755-2701222</br>0755-2602070</td> <td> 9893383963</br></br></br>9424499500</br></td> <td> म. नं.  सी-559, पुष्‍पा नगर, 80 फिट रोड, अशोका गार्डन, भोपाल</br></br></br>-</td> <td> mayorbhopal@yahoo.co.in</br></br></br>commoffice@bmconline.gov.in</td> <td> -</td> <td> -</td> </tr> <tr> <td> सागर </td> <td> श्रीमती संगीता सुशील तिवारी</br>महापौर</br></br>श्री चन्द्रशेखर शुक्ला</br>आयुक्‍त</td> <td> 07582-224553  </br></br></br>07582-229454</td> <td> 236344</br>9425170557</br></br>225186</br>9755496600</br></br></br></td> <td> 21, गोपालगंज, सागर</br></br></br>एफ-5 , न्‍यू कॉलोनी, जिला पंचायत कार्यालय के सामने,  सागर  </td> <td> mayorsagarmp@gmail.com</br></br></br>commsagar@mpurban.co.in</td> <td> -</td> <td> -</td> </tr> <tr> <td> जबलपुर </td> <td> श्री जगत बहादुर सिंह ''अन्‍नू''</br>महापौर</br></br>श्री रामप्रकाश अहिरवार</br>आयुक्‍त</td> <td> 0761-2611451</br></br></br>0761-2611262</td> <td> 9685042200</br></br></br>9685043300</td> <td> म. नं. 659/ई. नरसिंह वार्ड, जबलपुर</br></br></br>ललपुर जलशोधन संयत्र के पास, ग्‍वारीघाट, जबलपुर</td> <td> mayorjabalpur72@gmail.com</br></br></br>comm.jabalpur@nic.in</td> <td> 2610839</br></br></br>2410892</td> <td> -</td> </tr> <tr> <td> कटनी </td> <td> श्रीमती प्रीति संजीव सूरी</br>महापौर</br></br>सुश्री तपस्‍या परिहार</br>आयुक्‍त</td> <td> -</br></br></br>07622-230120</td> <td> 9827344443</br></br></br>7879346652</td> <td> पीयूष स्‍कूल के पीछे, पं. दीनदयाल उपाध्‍याय, वार्ड क्र. 17, कटनी</br></br></br>आयुक्‍त निवास, सिविल लाईन, कटनी</td> <td> suripreeti96@gmail.com</br></br></br>commkatni@mpurban.gov.in</td> <td> -</td> <td> -</td> </tr> <tr> <td> छिन्‍दवाड़ा</td> <td> श्री विक्रम सिंह अहके</br>महापौर</br></br>श्री चन्‍द्रप्रकाश राय</br>आयुक्‍त</td> <td> 07162-222346</br></br></br>07162-222346</td> <td> 8827996688</br></br></br>9425834981</td> <td> वी.आई.पी. रोड, इंडियन काफी हाउस के सामने</br></br></br>पोला ग्राउण्‍ड के सामने, नागपुर रोड</td> <td> -</br></br></br>commissionerchhindwara@mpurban.gov.in</td> <td> -</td> <td> -</td> </tr> <tr> <td> रीवा </td> <td> श्री अजय मिश्रा (बाबा)</br>महापौर</br></br>डॉ. सौरभ संजय सोनवणे</br>आयुक्‍त</td> <td> 07662-299397</br></br></br>07662-299305</td> <td> 9425184549</br></br></br>-</td> <td> शिल्‍पी कामता रेसीडेंसी, वार्ड क्र. 5, भवन क्र. 24, जे. पी. मोड़ के पास, पड़रा, रीवा</br></br></br>-</td> <td> mayornnrewa@gmail.com</br></br></br>commrewa@mpurban.gov.in</td> <td> -</td> <td> -</td> </tr> <tr> <td> सिंगरौली </td> <td> श्रीमती रानी अग्रवाल</br>महापौर</br></br>श्रीमती सविता प्रधान गौड़</br>आयुक्‍त</td> <td> -</br></br></br>-</td> <td> 9424329950</br></br></br>9009225511</td> <td> डी-1, नगरनिगम कालोनी, बिलौंजी, सिंगरौली</br></br></br>डी- 19,  विन्‍ध्‍यनगर, एनटीपीसी कॉलोनी,  सिंगरौली </td> <td> mayor.raniagrawal@gmail.com</br></br></br>commsingrauli@mpurban.gov.in</td> <td> -</td> <td> -</td> </tr> <tr> <td> सतना </td> <td> श्री योगेश कुमार ताम्रकार</br>महापौर</br></br>डॉ. शेर सिंह मीना</br>आयुक्‍त </td> <td> -</br></br></br>07672-228818</td> <td> 9425173271</br></br></br>9999416199</td> <td> रामेश्‍वरम्, आदर्श नगर, रीवा रोड, सतना</br></br></br>आयुक्‍त निवास,  सिविल लाईन, कार्यालय वनमण्‍डलाधिकारी के बगल से, सतना (म. प्र.)</td> <td> yogeshkumar1164@gmail.com</br></br></br>commsatna@mpurban.gov.in</td> <td> -</td> <td> -</td> </tr> </table>
+            </div>
+        </div>
+    </div>
+
+<article id="post-83" class="inner-box post-83 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-travel">
+    <!--<div class="content-container">
+
+        <div class="entry-content">
+            <div class="col-md-12" style="display:none;">
+                <div class="heading">
+                    <h3>Madhya Pradesh Diary And Calendar</h3>
+                </div>
+            </div>
+            <div class="col-md-6 bx-lft">-->
+
+                
+            <!--</div>
+            <div class="col-md-6 bx-lfte">
+
+
+
+                <img src="~/Content/home/images/Calendar.jpg" />
+                <div class="lft_rgt">
+                    <center>
+                        <a href="/home/ViewCalendar" class="btn btn-menu3 center" target="_new">Open</a>
+                        <a href="~/Content/home/download/Calendar.jpg" class="btn btn-menu4 center" download>Download</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</article>
+
+
+</div>
+        </div>
+</main>
+<footer class="bg-white border-top mt-3">
+    <div class="container small text-secondary text-center py-2">
+    &#169; सर्वाधिकार सुरक्षित, मध्यप्रदेश शासन, सामान्य प्रशासन विभाग के लिए नियंत्रक, शासकीय मुद्रण तथा लेखन सामग्री मध्यप्रदेश, भोपाल द्वारा प्रकाशित 
+
+    </div>
+</footer>
+
+
+
+     <script type="text/javascript" src="/Content/calendar_assets/js/jquery-slim.min.js"></script>
+    <script type="text/javascript" src="/Content/calendar_assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Content/calendar_assets/js/popper.min.js"></script>
+    <script src="/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+    
+ 
+   <script>
+       
+       function printSection(obj) {
+           
+           var disp_setting = "toolbar=yes,location=no,directories=yes,menubar=yes,resizable=1,";
+           disp_setting += "scrollbars=yes,width=650, height=600, left=100, top=25";
+           var content_vlue = document.getElementById(obj).innerHTML;
+           var docprint = window.open("", "", disp_setting);
+           docprint.document.open();
+           docprint.document.write('<html><head><title>".:: Print ::."</title>');
+           docprint.document.write('<link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />');
+           //docprint.document.write('<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />');
+
+           docprint.document.write('</head><body onLoad="self.print()"><center>');
+           docprint.document.write(content_vlue);
+           docprint.document.write('</center></body></html>');
+           docprint.document.close();
+           docprint.focus();
+       }
+</script>
+
+    <script>
+      function navFunction() {
+  var element = document.getElementById("navbarSerch");
+  element.classList.toggle("openNav");
+}
+</script>
+
+</body>
+</html>
+
+

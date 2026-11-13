@@ -1,0 +1,195 @@
+ 
+ <!DOCTYPE html>
+<html lang="en-US">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Home Page</title>
+
+    <link type="text/css" href="/Content/calendar_assets/css/bootstrap.css" rel="stylesheet">
+    <link type="text/css" href="/Content/calendar_assets/css/calendar_home.css" rel="stylesheet">
+    <link type="text/css" href="/Content/home/css/style.css" rel="stylesheet">
+    
+    
+
+    <link rel="stylesheet" type="text/css" href="/Content/calendar_assets/css/simptip.min.css" media="screen,projection" />
+    
+
+ 
+    
+    <style>
+        &.active span &:first-of-type transform rotate(-45deg) &:last-of-type transform rotate(45deg)
+    </style>
+    <style>
+        a {
+            color: black !important;
+        }
+    </style>
+</head>
+<body>
+
+   <header class="bg-black">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-5">
+                <a href="../Home/ViewCalendar" class="d-flex flex-wrap">
+                    <img src="/Content/calendar_assets/images/logo2.png" title="top-logo" style="width: 81px; height: 76px;" />
+                    
+                <span class="sitename">Government Diary and Calendar, Govt. of Madhya Pradesh</span>
+                </a>
+                
+            </div>
+            <div class="col-md-7 text-md-right">
+                <a href="/Home/GovermentHoliday" class="text-white py-2 d-inline-block">शासकीय अवकाश <span class="pili-line">|</span></a>
+                <a href="/Home/OptionalHoliday" class="text-white  py-2 d-inline-block">ऐच्छिक (आप्शनल) अवकाश <span class="pili-line">|</span></a>
+                
+                <a href="../Home/ViewCalendar" class="text-white d-inline-block"> <img src="/Content/calendar_assets/images/home.png" width="20px"/> <span class="pili-line">|</span </a>
+                 <a href="https://play.google.com/store/apps/details?id=gov.mp.mapit.dairy" class="text-white d-inline-block"> <img src="/Content/calendar_assets/images/google-play-button.png" width="120px"/> </a>
+
+                 <button class="nav-btn" onclick="navFunction()">
+                    <img src="/Content/calendar_assets/images/menu.png" style="width: 23px;"/>
+                 </button>
+            </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-white border-bottom">
+    <div class="container">
+
+    <div class="row">
+    <div class="col-lg-9">
+        <nav id="top-nav" class="top-nav right-side-navigation">
+            <a href="#" id="top-nav-toggle" class="top-nav-toggle" title="Navigation" data-close-text="Close">
+                <span>Navigation</span> <i class="fa fa-angle-down"></i>
+            </a>
+            
+  <ul  id='menu-primary-navigation-2' class='nav-menu'> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>राष्ट्रपति भवन</a>   <ul class='sub-menu sub_menu_33' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=37' >राष्ट्रपति भवन</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=38' >भारत के उप-राष्ट्रपति</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=39' > उप-राष्ट्रपति  का सचिवालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=35' >संसद</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=34' >नेता प्रतिपक्ष</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>भारत सरकार </a>   <ul class='sub-menu sub_menu_34' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=51' >भारत के प्रधानमंत्री</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=40' >केन्‍द्रीय मंत्रि-परिषद्</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=43' >प्रधानमंत्री का सचिवालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=42' >राज्यमंत्री (प्रधानमंत्री कार्यालय )</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=45' >राज्यमंत्री</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=41' >राज्यमंत्री (स्वतंत्र प्रभार)</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=44' >भारत शासन में सचिव </a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>लोक भवन</a>   <ul class='sub-menu sub_menu_31' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=30' >मध्यप्रदेश के राज्यपाल</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=31' >राज्यपाल का सचिवालय, mprajbhavan@mp.gov.in</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>मध्यप्रदेश </a>   <ul class='sub-menu sub_menu_10' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=6' >मुख्यमंत्री</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=7' >मुख्यमंत्री कार्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=8' >मुख्यमंत्री निवास कार्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=11' >मंत्रि-परिषद्</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=33' >मध्यप्रदेश के संसद सदस्य</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=9' >मध्यप्रदेश मंत्रालय में पदस्थ विभागवार मुख्‍य सचिव/अपर मुख्‍य सचिव/प्रमुख सचिव/सचिव/अपर सचिव</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=23' >आयोग</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=16' >विभागाध्यक्ष</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=24' >मध्यप्रदेश के विश्‍वविद्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=10' >मध्यप्रदेश के निगम  एवं मण्डल</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=46' >मध्यप्रदेश के संभागवार आवश्यक दूरभाष </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=48' >मध्यप्रदेश के जिलेवार आवश्यक दूरभाष</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=21' >मध्‍यप्रदेश नगरपालिक निगम के महापौर एवं आयुक्‍त </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=20' >मध्‍यप्रदेश के जिला पंचायत, प्रशासकीय समिति के अध्‍यक्ष  एवं मुख्य कार्यपालन अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=17' >दिल्ली में पदस्थ मध्यप्रदेश केडर के आई.ए.एस.  अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=19' >दिल्ली में पदस्थ मध्यप्रदेश केडर के आई.पी.एस.  अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=18' >दिल्ली में पदस्थ मध्यप्रदेश केडर के आई.एफ.एस. अधिकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=15' >नई दिल्‍ली स्थित मध्यप्रदेश शासन  के कार्यालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=14' >मध्यप्रदेश की सामान्य  प्रमुख जानकारी</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=22' >मध्यप्रदेश एवं अखिल भारत के चुने हुए विकास संकेतांक </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=12' >मध्यप्रदेश की जिलेवार प्रमुख जानकारी (भाग-1)</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=13' >मध्यप्रदेश की जिलेवार प्रमुख जानकारी (भाग-2)</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=5' >भारत की जनगणना-2011जनसंख्‍या के अन्तिम आंकड़े एक नजर में</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>न्यायतंत्र</a>   <ul class='sub-menu sub_menu_26' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=3' >मध्यप्रदेश उच्च न्यायालय </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=26' >लोकायुक्‍त कार्यालय, मध्यप्रदेश</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=25' >औद्योगिक, न्यायालय मध्यप्रदेश</a>  </li>  </ul> </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-565'> <a href='#'>विधान सभा</a>   <ul class='sub-menu sub_menu_32' > <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=27' >अध्यक्ष, विधान सभा</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=29' >उपाध्‍यक्ष, विधान सभा </a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=32' >नेता प्रतिपक्ष,  विधान सभा</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=28' >विधान सभा सचिवालय</a>  </li> <li class='menu-item menu-item-type-custom menu-item-object-custom menu-item-889'> <a href='/home/index?id=2' >मध्यप्रदेश के विधान सभा सदस्य</a>  </li>  </ul> </li>  </ul>
+
+        </nav>
+        
+    </div>
+    <div class="col-lg-3">
+<form action="/Home/searchdata" method="post"><input name="__RequestVerificationToken" type="hidden" value="dgFVt8jtepu7kQz3hHxBtXcURRTVA1tktjaU-MNfE45C4K5eWJtksztRRjKBIoSGU0-wp0Cp2leqlsJW9z1WvCf1gijfk-huYsuG0Ph4udo1" />          <div class="input-group mt-1">
+  
+  
+</div>
+</form>    </div>
+    </div>
+
+
+  
+
+
+</div>
+</section>
+<main class="my-3">
+ <div class="container">
+ <div class="bg-light position-relative shadow">
+            
+
+
+<style>
+    .datatab { padding:10px; }
+    .datatab table tr th {}
+    .tabHead { font-weight:bold;  }
+    .tabSubHead { background-color: #ebebf3;}
+</style>
+ 
+
+    <div class="  ">
+        <div style="text-align:right; padding-right:30px;">
+            <a href="#" onclick="javascript:printSection('datatab');" style="font-weight: bold;color: #a58b57;z-index:999999999;" class="btn btn-warning  btn-sm mt-2">  Print</a>
+            
+        </div>
+        <div class="col-md-12   ">
+            <div class="datatab" id="datatab">
+
+                <center><h3>मध्‍यप्रदेश के जिला पंचायत, प्रशासकीय समिति के अध्‍यक्ष  एवं मुख्य कार्यपालन अधिकारी</h3></center><table class=' table  table-bordered table-hover'><tr> <th class='tabHead'>जिले का नाम व एस.टी.डी. क्रमांक</th><th class='tabHead'>जिला पंचायत, अध्यक्ष एवं मुख्य कार्यपालन अधिकारी का नाम </th><th class='tabHead'>कार्यालय दूरभाष </th><th class='tabHead'>निवास दूरभाष/मो. न. </th><th class='tabHead'>निवास स्थान का पता </th><th class='tabHead'>ई-मेल </th><th class='tabHead'>वेबसाइट</th></tr> <tr> <td> श्‍योपुर </br>07530</td> <td> श्रीमती गुड्डी बाई आदिवासी</br>अध्‍यक्ष</br></br>सुश्री सौम्‍या आनंद </br>मुख्‍य कार्यपालन अधिकारी</td> <td> -</br></br></br>221240 </td> <td> 9203134669</br></br></br>7879915624</td> <td> हजारेश्‍वर महादेव मंदिर केे पास,  श्‍योपुर</br></br></br>डी-1,  कलेक्‍ट्रेट कालाेेनी, श्‍योपुर</td> <td> -</br></br></br>ceozpshe-mp@nic.in</td> <td> -</td> </tr> <tr> <td> मुरैना </br>07532 </td> <td> श्रीमती आरती आकाश गुर्जर</br>अध्‍यक्ष</br></br>श्री कमलेश कुमार भार्गव </br>मुख्‍य कार्यपालन अधिकारी</td> <td> 222500</br></br></br>222500</td> <td> 9340350428</br>9425433055</br></br>232330</br>9425729394</td> <td> ई-10, कमिश्‍नर काॅलोनी, मुरैना</br></br></br>ई-9, कमिश्‍नर कालोनी, मुरैना</td> <td> adhyakshzmpmorena118@gmail.com</br></br></br>ceozpmor@mp.gov.in</td> <td> -</td> </tr> <tr> <td> भि‍ण्‍ड </br>07534</td> <td> श्रीमती कामना सिंह भदौरिया</br>अध्‍यक्ष</br></br>श्री सुनील दुबे</br> मुख्‍य कार्यपालन अधि‍कारी  </td> <td> 244344</br></br></br>244906</td> <td> 7534796755</br>8959344445</br></br>244201</br>9425037379</td> <td> काटनजीन कालोनी, भि‍ण्‍ड</br></br></br>ऑफीसर कालोनी, इटावा रोड, भिण्‍ड</td> <td> -</br></br></br>ceozpbhi@mp.gov.in</td> <td> -</td> </tr> <tr> <td> ग्‍वा‍लि‍यर </br>0751</br></td> <td> श्रीमती दुर्गेश कुँवर सिंह</br>अध्‍यक्ष</br></br>श्री सोजान सिंह रावत</br> मुख्‍य कार्यपालन अधि‍कारी </td> <td> 2340342</br></br></br>2340342</td> <td> 9826505153</br></br></br>9098797967</td> <td> ई-1, दर्पण कॉलोनी, ठाटीपुर, ग्‍वालियर</br></br></br>14-बी, गांधी रोड, ग्‍वालियर</td> <td> -</br></br></br>ceozpgwa@mp.gov.in</td> <td> -</td> </tr> <tr> <td> शि‍वपुरी </br>07492</td> <td> श्रीमती नेहा-यादव</br>अध्‍यक्ष</br></br>श्री विजय राज</br> मुख्‍य कार्यपालन अधि‍कारी</td> <td> 8889413498</br>9981454495</br></br>233249</td> <td> 9111110223</br></br></br>222866,  </br>9685838098</td> <td> कोठी नंं.37, आदर्श  नगर, झांसी तिराहा के पास, शिवपुरी</br></br></br>फिजिकल रोड, कोठी न. 3, शिवपुरी</td> <td> yadavneha282@gmail.com,</br>amityadau@gmail.com</br></br>ceozpshi@mp.gov.in</td> <td> -</td> </tr> <tr> <td> गुना </br>07542 </td> <td> श्री अरविंद्र धाकड़</br>अध्‍यक्ष</br></br>श्री अभिषेक दुबे</br>मुख्य कार्यपालन अधिकारी </td> <td> 254309</br></br></br>254309</td> <td> 9630240073</br></br></br>9407268435</td> <td> आद्विक पैलेस, संजय सागर वैरियल रोड, राजलक्ष्‍मी क्रेशर प्‍लांट, आवन, तह. राघौगढ़, जिला गुना</br></br>ई-4, ऑफिसर कॉलोनी, लाल परेड ग्राउण्‍ड, कैन्‍ट, गुना</br></br></td> <td> arvind.dhakad90@gmail.com</br></br></br>ceozpgun@mp.gov.in</td> <td> -</td> </tr> <tr> <td> अशोकनगर </br>07543</br></td> <td> राव अजय प्रताप सिंह यादव</br>अध्‍यक्ष</br></br>श्री राजेश कुमार जैन</br>मुख्य कार्यपालन अधिकारी </td> <td> 220030</br></br></br>220030</br></td> <td> 9977444444</br></br></br>9425473915</td> <td> राव भवन, तायडे कालोनी, अशोकनगर</br></br></br>पॉलिटेक्निक परिसर, तारा सदन स्कूल के सामने, अशोकनगर </br></td> <td> -</br></br></br>ceozpash-mp@mp.gov.in</td> <td> -</td> </tr> <tr> <td> दतिया </br>07522 </br></td> <td> श्रीमती इन्दिरा धीरू दांगी</br>अध्‍यक्ष</br></br>श्री अक्षय तेम्रवाल</br> मुख्य कार्यपालन अधिकारी </br></td> <td> 234210</br></br></br>235200</td> <td> 7000564450, </br>9926228594</br></br>235201</br>7501351934</td> <td> एफ-4, सिविल लाईन, दतिया </br></br></br>न्‍यू एफ-01, सिविल लाईन, दतिया</td> <td> -</br></br></br>ceozpdat@mp.gov.in</td> <td> -</td> </tr> <tr> <td> देवास </br>07272 </br></td> <td> श्रीमती लीला भेरूलाल अटारिया</br>अध्‍यक्ष</br> </br>श्रीमती ज्‍योति शर्मा</br> मुख्य कार्यपालन अधिकारी </td> <td> 254487</br></br></br>252540</td> <td> 9111095551</br></br></br>9958020348</td> <td> 53-सी, आदर्श नगर, देवास </br></br></br>ई-3, सिविल लाईन, देवास </td> <td> leelabherulalatariya@gmail.com</br></br></br>ceozpdew@mp.gov.in</td> <td> -</td> </tr> <tr> <td> रतलाम</br>07412</td> <td> श्रीमती लालाबाई-शंभुलाल चंद्रवंशी</br>अध्‍यक्ष</br></br>सुश्री वैशाली जैन</br>मुख्‍य कार्यपालन अधिकारी</td> <td> 270080</br></br></br>270404</td> <td> 9827296589</br>8889355408</br></br>7289952354</td> <td> ग्राम भुतेडा, पोस्‍ट-लालाखेड़ा, तहसील जावरा, जिला रतलाम</br></br></br>ई-08, सिविल लाईन्‍स, आफिसर्स कालोनी, रतलाम</td> <td> shambhulalchandrvanshi@gmail.com</br></br></br>ceozprat@mp.gov.in</td> <td> -</td> </tr> <tr> <td> शाजापुर</br>07364</td> <td> श्री हेमराज सिंह (वकील)</br>अध्‍यक्ष</br></br>श्रीमती अनुपमा चौहान </br>मुख्‍य कार्यपालन अधिकारी</td> <td> 4226100</br></br></br>226100</td> <td> 7580981305</br></br></br>226309</br>9407494333</td> <td> बी-3, ओल्‍ड कलेक्‍ट्रेट रोड, टंकी चौराहा, शाजापुर</br></br></br>-</td> <td> -</br></br></br>ceozpshj@mp.gov.in</td> <td> -</td> </tr> <tr> <td> आगर-मालवा</br>07362</td> <td> श्रीमती मुन्‍नाबाई भेरूसिंह चौहान</br>अध्‍यक्ष</br></br>श्रीमती नंदा भलावे कुशरे</br> मुख्‍य कार्यपालन अधिकारी</td> <td> -</br></br></br>260015</br>260202</td> <td> 6268192829</br>9981150403</br></br>9425015229</br>9669357466</td> <td> ग्राम नरवल, पोस्‍ट एवं तहसील, आगर-मालवा</br></br></br>सी-02, न्यू राजस्‍व कालोनी, दरबार कोठी के पास, छावनी, </br>आगर-मालवा</td> <td> -</br></br></br>ceozpaga@mp.gov.in</td> <td> -</td> </tr> <tr> <td> मन्‍दसौर</br>07422</td> <td> श्रीमती दुर्गा डॉ. विजय पाटीदार</br>अध्‍यक्ष</br></br>श्री अनुकूल जैन</br>मुख्‍य कार्यपालन अधिकारी</td> <td> 223923</br></br></br>223923</td> <td> 9516787868</br>9424042831</br></br>9425172732</td> <td> एफ टाईप क्र.-02, फारेस्‍ट एरिया, महू-नीमच रोड, मन्‍दसौर</br></br></br>शासकीय आवास बी-1, महू-नीमच मार्ग, मन्‍दसौर</td> <td> durgapatidar95167@gmail.com</br></br></br>ceozpmas@mp.gov.in</td> <td> -</td> </tr> <tr> <td> नीमच</br>07423</td> <td> श्री सज्‍जन सिंह चौहान शिवाजी</br>अध्‍यक्ष</br></br>श्री अमन वैष्‍णव</br>मुख्‍य कार्यपालन अधिकारी</td> <td> 230401</br></br></br>230288</td> <td> 9826098967</br></br></br>8826683096</td> <td> ग्राम भंवरासा, पो. पालसोडा, तह. जीरन, जिला नीमच, 2, गांधी नगर, नीमच</br></br></br>-</td> <td> -</br></br></br>ceozpnee@mp.gov.in</td> <td> -</td> </tr> <tr> <td> उज्‍जैन</br>0734</td> <td> श्रीमती कमला कुंवर-अंतरसिंह देवड़ा</br>अध्‍यक्ष</br></br>श्री श्रेयान्‍स कूमट</br>मुख्‍य कार्यपालन अधिकारी</td> <td> 2511956</br></br></br>2517700</td> <td> 9575742514</br></br></br>9636868915</td> <td> ग्राम बरड़िया, पो. खेड़ावदा, तह. बड़नगर, जिला उज्‍जैन</br></br></br>-</td> <td> antarsinghdevda.official@gmail.com</br></br></br>ceozpujj@mp.gov.in</td> <td> -</td> </tr> <tr> <td> इन्‍दौर</br>0731</td> <td> श्रीमती रीना सतीश मालवीय</br>अध्‍यक्ष</br></br>श्री सिद्धार्थ जैन</br>मुख्‍य कार्यपालन अधिकारी</td> <td> 2369485</br></br></br>2363115</br></td> <td> 9926971724</br></br></br>6261479865</td> <td> -</br></br></br>-</td> <td> -</br></br></br>ceozpind@mp.gov.in</td> <td> -</td> </tr> <tr> <td> धार</br>07292</td> <td> श्री सरदार सिंह मेड़ा केशवी</br>अध्‍यक्ष</br></br>श्री अभिषेक चाैधरी</br>मुख्‍य कार्यपालन अधिकारी</td> <td> 222216</br></br></br>234709</br>236030</td> <td> 9589710503</br></br></br>8130187160</td> <td> एफ-6, ऑफिसर्स कालोनी, धार</br></br></br>-</td> <td> -</br></br></br>ceozpdhar@gmail.com</td> <td> -</td> </tr> <tr> <td> अलीराजपुर</br>07394</td> <td> श्रीमती हजरीबाई खरत</br>अध्‍यक्ष</br></br>श्री प्रखर सिंह</br>मुख्‍य कार्यपालन अधिकारी</td> <td> 234130</br></br></br>234405</td> <td> 8120197429</br></br></br>8319059127</td> <td> -</br></br></br>-</td> <td> -</br></br></br>ceozpali@mp.gov.in</td> <td> -</td> </tr> <tr> <td> झाबुआ </br>07392 </td> <td> श्रीमती सोनल जसवंत सिंह भाबर</br>अध्‍यक्ष</br></br>श्री जितेन्‍द्र सिंह चौहान</br>मुख्य कार्यपालन अधिकारी </br></td> <td> 8160921270</br></br> </br>244323</td> <td> 8827214777</br></br></br>9424084166</td> <td> आरईएस  बंगला, राजगढ़ नाका,  झाबुआ</br></br></br>एफ-1, पुलिस अधीक्षक कार्यालय के सामने, सरदार पटेल मार्ग, झाबुआ</td> <td> -</br></br></br>ceozpjha@mp.gov.in</td> <td> -</td> </tr> <tr> <td> खरगोन </br>07282</td> <td> श्रीमती अनुबाई भारत सिंह</br>अध्‍यक्ष</br></br>श्री आकाश सिंह</br>मुख्य कार्यपालन अधिकारी </br></td> <td> 232190</br></br></br>232880</td> <td> 9826989077</br></br></br>8368358243</td> <td>  न्यू आफिसर  कॉलोनी , खरगोन </br></br></br>-</td> <td> -</br></br></br>ceozpkhr@mp.gov.in</td> <td> -</td> </tr> <tr> <td> बड़वानी </br>07290 </td> <td> श्री बलवंत सिंह पटेल</br>अध्‍यक्ष</br></br>सुश्री काजल जावला</br>मुख्य कार्यपालन अधिकारी </td> <td> 222930</br></br></br>222930</td> <td> 796164</br>9977964444</br></br>9302967104</td> <td> 17-बी ब्‍लॉक, सतपुड़ा कॉलोनी, बड़वानी, जिला बड़वानी</br></br></br>डी-2, शासकीय आवास ऑफीसर कॉलोनी, धोबडि़या तालाब के पास, बड़वानी, जिला बड़वानी</td> <td> balwantsinghpatel.8182@gmail.com</br></br></br>ceozpbar@mp.gov.in</td> <td> -</td> </tr> <tr> <td> खण्डवा </br>0733 </td> <td> श्रीमती पिंकी सुदेश  वानखेड़े</br>अध्‍यक्ष</br></br></br>डॉ. नागार्जुन बी. गौड़ा</br>मुख्य कार्यपालन अधिकारी </td> <td> 2226341</br></br></br></br>2226341</td> <td> 9669699772</br>8462924537</br></br></br>9329311578</td> <td> आवास क्र. एफ/02, जेल रोड, खण्‍डवा</br></br></br></br>सिविल लाईन खण्डवा   </td> <td> -</br></br></br></br>ceozpkhd@mp.gov.in</td> <td> -</td> </tr> <tr> <td> बुरहानपुर </br>07325</td> <td> श्री गंगाराम झुनकरू मार्को</br>अध्‍यक्ष</br></br>श्री सृजन वर्मा</br>मुख्य कार्यपालन अधिकारी </td> <td> -</br></br></br>242176</td> <td> 9575923840</br></br></br>7004127385</td> <td> मु. व पो. देड़तलाई,  तह. खकनार, जिला बुरहानपुर </br></br></br>ई- 6, सिविल लाईन, मोहम्‍मदपुरा, बुरहानपुर </br></td> <td> adhyakshazpbpr@rediffmail.com</br></br></br>zpbpr@rediffmail.com, ceozbur@mp.nic.in</td> <td> -</td> </tr> <tr> <td> भोपाल  </br>0755 </td> <td> श्रीमती रामकुंवर नौरंग सिंह गुर्जर</br>अध्‍यक्ष</br></br>श्रीमती इला तिवारी</br>मुख्य कार्यपालन अधिकारी</br></td> <td> 2540964</br></br></br>2738041</br>9424337075</td> <td> 9425458171</br></br></br>-</td> <td> ग्राम बरखेडीदेव, ग्राम पंचायत गडाकलां, तहसील बैरसिया, भोपाल </br></br></br>डीएन-1/2, चार इमली</td> <td> -</br></br></br>ceozpbho@mp.gov.in</td> <td> -</td> </tr> <tr> <td> सीहोर </br>07562 </td> <td> श्रीमती रचना सिंह</br>अध्‍यक्ष</br></br>सुश्री सर्जना यादव</br> मुख्य कार्यपालन अधिकारी </td> <td> -</br></br></br>224351</td> <td> 7748859545</br></br></br>226951</br>9654325996</td> <td> - </br></br></br>-</td> <td> </br></br></br>ceozpseh@mp.gov.in</td> <td> -</td> </tr> <tr> <td> रायसेन </br>07482 </td> <td> श्री यशवंत सिंह ''बबलू भैया''</br>अध्‍यक्ष</br></br>श्री मनोज उपाध्‍याय</br> मुख्य कार्यपालन अधिकारी </td> <td> 9826222944</br></br></br>223212</td> <td> -</br></br></br>9425141824</td> <td> ई-5, न्‍यू कलेक्‍ट्रेट कालोनी, रायसेन </br></br></br>ई-2 , कलेक्ट्रेट  कॉलोनी, रायसेन </br></td> <td> azpraisen@gmail.com</br></br></br>ceozprai@mp.gov.in</td> <td> -</td> </tr> <tr> <td> राजगढ़ </br>07372 </td> <td> श्री चन्‍दर सिंह सौधिया</br>अध्‍यक्ष</br></br>डॉ. इच्छित गढपाले</br>मुख्य कार्यपालन अधिकारी </br></td> <td> 292773</br></br></br>292773</br></br></td> <td> 9425422101</br></br></br>9826071047</td> <td> पी. डब्ल्यू डी. कॉलोनी, जिला चिकित्सालय के पास, राजगढ़ </br></br>एफ टाईप आवास, रामलीला कॉलोनी, राजगढ़ </td> <td> ceozpraj@mp.gov.in</br></br></br>ceozpraj@mp.gov.in</td> <td> -</td> </tr> <tr> <td> विदिशा </br>07592</td> <td> श्रीमती गीता कैलाश रघुवंशी</br>अध्‍यक्ष</br></br>श्री ओमप्रकाश सनोडिया</br>मुख्य कार्यपालन अधिकारी </td> <td> 236960</br></br></br>232960</td> <td> 7771008989</br></br></br>8982799085</td> <td> खरी फाटक के बाहर, जैन मंदिर के पास, विदिशा </br></br></br>-</td> <td> -</br></br></br>ceozpvid@mp.gov.in</td> <td> -</td> </tr> <tr> <td> बैतूल </br>07141 </td> <td> श्री राजा पंवार मान.</br>अध्‍यक्ष</br></br>श्री अक्षत जैन</br> मुख्य कार्यपालन अधिकारी </td> <td> 230466</br></br></br>230035</td> <td> 239659, 9425636965, 7566255790</br></br>9706675545</td> <td> 6 एफ-1, शासकीय आवास सदर, बैतूल </br></br></br>ई-6, सिविल लाईन, बैतूल </td> <td> rajapawer@yahoo.com</br></br></br>ceozpbet@mp.gov.in</td> <td> -</td> </tr> <tr> <td> नर्मदापुरम </br>07574 </td> <td> श्रीमती राधा सुधीर पटेल</br>अध्‍यक्ष</br></br>श्री हिमांशु जैन</br>मुख्य कार्यपालन अधिकारी </td> <td> -</br></br></br>252045</td> <td> 6261580035, 9826350156</br></br>9202376700</td> <td> ग्राम व पोस्‍ट दतवासा, तह. डोलरिया, जिला नर्मदापुरम</br></br></br>डी-2, पांच बंगला, मालाखेड़ी रोड, नर्मदापुरम</td> <td> -</br></br></br>ceozphos@mp.gov.in</td> <td> -</td> </tr> <tr> <td> हरदा </br>07577 </td> <td> श्री गजेन्द्र शाह</br>अध्‍यक्ष</br></br>श्रीमती अंजली जोसेफ जोनाथन</br>मुख्य कार्यपालन अधिकारी </td> <td> 225508</br></br></br>225508</td> <td> 9424409651</br></br></br>9425967897</td> <td> -</br></br></br>-</td> <td> -</br></br></br>ceozphar@mp.gov.in</td> <td> -</td> </tr> <tr> <td> सागर </br>07582</td> <td> श्री हीरा सिंह</br>अध्‍यक्ष</br></br>श्री विवेक के. व्‍ही.</br>मुख्‍य कार्यपालन अधिकारी </td> <td> 223069 </br></br></br>222944 </br></td> <td> 9425620076</br></br></br>9007987747</td> <td> -</br></br></br>-</td> <td> -</br></br></br>ceozpsag@mp.gov.in</td> <td> -</td> </tr> <tr> <td> दमोह </br>07812</td> <td> श्रीमती रंजीता गौरव पटेल</br>अध्‍यक्ष</br></br>श्री प्रवीण फुलपगारे</br>मुख्‍य कार्यपालन अधिकारी</td> <td> 9340294019</br></br></br>222393</td> <td> 8839281653</br></br></br>7000427143</td> <td> आर.बी.ई./5, बेलाताल के सामने, दमोह</br></br></br>डी-3, आफिसर कालोनी, कलेक्ट्रेट के पास, जबलपुर नाका, दमोह</td> <td> ranjita.patel020@gmail.com</br></br></br>ceozpdam@mp.gov.in</td> <td> -</td> </tr> <tr> <td> पन्‍ना </br>07732</td> <td> श्रीमती मीना राजे परमार</br>अध्‍यक्ष</br></br>श्री उमराव सिंह मरावी</br>मुख्‍य कार्यपालन अधिेकारी</td> <td> 252112</br></br></br>252112</td> <td> 8718909091</br></br></br>9329310871</td> <td> डी-1, सिंचाई कॉलोनी, सिविल लाईन, पन्‍ना</br></br></br>-</td> <td> -</br></br></br>ceozppan@mp.gov.in</td> <td> -</td> </tr> <tr> <td> छतरपुर  </br>07682 </td> <td> श्रीमती विद्यादेवी हरिओम अग्निहोत्री </br>अध्‍यक्ष</br></br>श्री नम: शिवाय अरजरिया</br>मुख्य कार्यपालन अधिकारी </br></td> <td> 246060</br></br></br>242072</td> <td> 245782</br>9981392222</br></br>242073</br>7389590000</td> <td> बंगला नं. 2 , न्यू कॉलोनी, छतरपुर </br></br></br>ई-2, पुराना पन्‍ना नाका, छतरपुर</td> <td> ceozpcha@mp.gov.in</br></br></br>ceozpcha@mp.gov.in</td> <td> -</td> </tr> <tr> <td> टीकमगढ़ </br>07683 </td> <td> श्रीमती उर्मिला राजपूत</br>अध्‍यक्ष</br></br>श्री नवीत कुमार धुर्वे</br> मुख्य कार्यपालन अधिकारी </td> <td> -</br></br></br>242296</td> <td> 7024027095</br></br></br>8989156750</td> <td> आर. 10-डी, सिविल लाईन, टीकमगढ़ </br></br></br>-</td> <td> -</br></br></br>ceozptik@mp.nic.in </td> <td> -</td> </tr> <tr> <td> निवाड़ी </br>07680</td> <td> श्रीमती सरोज</br>अध्‍यक्ष</br></br>श्री रोहन सक्‍सेना</br>मुख्य कार्यपालन अधिकारी</td> <td> -</br></br></br>242296</td> <td> 9565635555</br></br></br>9827781765</td> <td> -</br></br></br>-</td> <td> -</br></br></br>-</td> <td> -</br></br></br>-</td> </tr> <tr> <td> जबलपुर </br>0761 </td> <td> श्रीमती आशा मुकेश गोटिया</br>अध्‍यक्ष</br></br>अभिषेक गहलोत</br>मुख्य कार्यपलान अधिकारी </td> <td> 2678746</br></br></br>2624860</td> <td> 9977002930</br>9753427017</br></br>9826042241</td> <td> ई-12, सिविल लाईन, जबलपुर </br></br></br>-</td> <td> -</br></br></br>ceozpjab@mp.gov.in </td> <td> -</td> </tr> <tr> <td> कटनी </br>07622 </td> <td> श्रीमती सुनीता रमेश मेहरा</br>अध्‍यक्ष</br></br>सुश्री हरसिमरनप्रीत कौर</br>मुख्य कार्यपालन अधिकारी </td> <td> 226177</br></br></br>226077</td> <td> 9285090318</br>9303002599</br></br>8194954394</td> <td> ग्राम डिहुटा, पो. आ. गाताखेड़ा, </br>विकासखण्‍ड बहोरीबंद, जिला कटनी </br></br>-</td> <td> sunitarameshmehra94@gmail.com</br></br></br>ceozpkat@mp.gov.in</td> <td> -</td> </tr> <tr> <td> नरसिंहपुर </br>07792 </br></td> <td> श्रीमती ज्‍योति गौड/नीलेश काकोडिया </br>अध्‍यक्ष</br></br>श्री गजेन्‍द्र सिंह नागेश</br>मुख्य कार्यपालन अधिकारी </td> <td> 230247</br></br></br>230247</td> <td> 7879845800</br></br></br> 9752700995</td> <td> ग्राम व पोस्‍ट गोरखपुर, थाना मुंगवानी, </br>तह. व जिला नरसिंहपुर</br> </br>-</br></td> <td> ceozpnar@mp.gov.in</br></br></br>ceozpnar@mp.gov.in</td> <td> -</td> </tr> <tr> <td> छिन्दवाड़ा </br>07162 </td> <td> श्री संजय पुन्हार</br>अध्‍यक्ष</br></br>श्री अग्रिम कुमार</br>मुख्य कार्यपालन अधिकारी </br></td> <td> -</br></br></br>244369,  फैक्‍स-246631 </td> <td> 6263377831</br></br></br>7898039667</td> <td> ई-1, व्ही. आई. पी. कालोनी, </br>कैलाश विहार कालोनी, छिन्दवाड़ा </br></br>-</td> <td> -</br></br></br>ceozpchi@mp.gov.in</td> <td> -</td> </tr> <tr> <td> पांढुर्णा </br>07164</td> <td> -</br>अध्‍यक्ष</br>-</br>मुख्‍य कार्यपालन अधिकारी</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> </tr> <tr> <td> सिवनी </br>07692 </td> <td> श्रीमती मालती मुकेश डहेरिया</br>अध्‍यक्ष</br></br>श्रीमती अंजली शाह </br>मुख्य कार्यपालन अधिकारी </td> <td> 228073</br></br></br>228073</td> <td> 9244595636</br></br></br>220478, </br>9923143348</td> <td> ग्राम-मकझिर, पोस्‍ट सनाईडोंगरी, तहसील लखनादौन, जिला सिवनी</br></br></br>बाहूबली चौक, एस. पी. बंगले के पास, बारापत्‍थर, बावरिया रोड, सिवनी</td> <td> -</br></br></br>ceozpseo@mp.gov.in, ceozpsni@gmail.com</td> <td> -</td> </tr> <tr> <td> मण्डला </br>07642 </td> <td> डॉ. संजय कुशवाह</br>अध्‍यक्ष</br></br>श्री शाश्‍वत सिंह मीना</br>मुख्य कार्यपालन अधिकारी </td> <td> 250785</br></br></br>251844</td> <td> 7879159195</br></br></br>9926199959</td> <td> नेहरु स्‍मारक के पास, सिविल लाईन, </br>मण्‍डला</br></br>-</td> <td> -</br></br></br>ceozpmal@mp.gov.in</td> <td> -</td> </tr> <tr> <td> डिण्डौरी </br>07644 </td> <td> श्री रूदेश परस्ते </br>अध्‍यक्ष</br></br>श्री दिव्‍यांशु चौधरी</br>मुख्य कार्यपालन अधिकारी </td> <td> -</br></br></br>234180</td> <td> 9425999102</br>9713108101</br></br>9430457781</td> <td> ग्राम कोसमडीह, पोस्ट-बछरगांव, तहसील बजाग, जिला डिण्डौरी </br></br></br>-</td> <td> -</br></br></br>ceozpdin@mp.gov.in</td> <td> -</td> </tr> <tr> <td> बालाघाट </br>07632 </td> <td> श्री सम्राट सिंह सरस्‍वर </br>अध्‍यक्ष</br></br>श्री अभिषेक सराफ</br> मुख्य कार्यपालन अधिकारी </br></td> <td> 240230</br></br></br>240907</td> <td> 7987771854</br></br></br>9202376788</td> <td> वार्ड नं. 27,  सर्किट हाऊस रोड, बालाघाट </br></br></br>-</td> <td> -</br></br></br>ceozpbal@mp.gov.in</td> <td> -</td> </tr> <tr> <td> रीवा </br>07662 </td> <td> श्रीमती नीता कोल </br>अध्‍यक्ष</br></br>श्री मेहताब सिंह गुर्जर</br>मुख्य कार्यपालन अधिकारी </td> <td> -</br></br></br>252607</td> <td> 9424623761</br>9424623762</br></br>9926595947</td> <td>   अनन्तपुर, रीवा </br></br></br>-</br></td> <td> -</br></br></br>ceozprew@mp.gov.in</td> <td> -</td> </tr> <tr> <td> सिंगरौली </br>07805 </br></td> <td> सुश्री सोनम सिंह </br>अध्‍यक्ष</br></br>श्री जगदीश कुमार गोमे</br>मुख्य कार्यपालन अधिकारी </td> <td> 355047</br></br></br>355047</td> <td> 6262478274</br></br></br>9424036633</td> <td> ग्राम-पोस्‍ट बरका, जिला सिंगरौली </br></br></br>टाइप-3, डी-5, टी.टी.एस. एनटीपीसी, विन्ध्यनगर, जिला-सिंगरौली </td> <td> -</br></br></br>ceozpsin@mp.gov.in</td> <td> -</td> </tr> <tr> <td> सीधी </br>07822 </td> <td> श्रीमती मंजू रामजी सिंह</br>अध्‍यक्ष</br></br>श्री शैलेन्‍द्र सिंह सोलंकी</br>मुख्य कार्यपालन अधिकारी </td> <td> 250466</br></br></br>250419</td> <td> 8827188033</br></br></br>7999479110</td> <td> एफ-4, इको सेन्टर के सामने, सुभाष नगर, सीधी</br></br></br>-</td> <td> -</br></br></br>ceozpsid@mp.gov.in</td> <td> -</td> </tr> <tr> <td> सतना </br>07672</td> <td> श्री रामखेलावन कोल </br>अध्‍यक्ष</br></br>श्री शैलेन्‍द्र सिंह</br>मुख्य कार्यपालन अधिकारी </td> <td> -</br></br></br>292101</td> <td> 9753027341</br></br></br>7869222333</td> <td> जवाहर नगर, जिला सतना</br></br></br>मु.का.अ. बंगला, सिविल लाईन, सतना</td> <td> ceozpsat@mp.gov.in</br></br></br>ceozpsat@mp.gov.in</td> <td> -</td> </tr> <tr> <td> मैहर </br>07674</td> <td> -</br>अध्‍यक्ष</br>-</br>मुख्‍य कार्यपालन अधिकारी</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> </tr> <tr> <td> उमरिया </br>07653 </td> <td> श्रीमती अनुजा पटेल </br>अध्‍यक्ष</br></br>श्री अभय सिंह अहोरिया </br> मुख्य कार्यपालन अधिकारी </td> <td> -</br></br></br>222968</td> <td> 8720819614</br></br></br>9425798055</td> <td> ग्राम व पो. उरदना, तह. मानपुर, जिला उमरिया </br></br></br>-</td> <td> -</br></br></br>ceozpuma@mp.gov.in</td> <td> -</td> </tr> <tr> <td> शहडोल </br>07652 </br></td> <td> श्रीमती प्रभा मिश्रा</br>अध्‍यक्ष</br></br>श्री शिवम प्रजापति</br>मुख्य कार्यपालन अधिकारी </td> <td> -</br></br></br>241467</td> <td> 09171957281</br>09425379741</br></br>08839713732</td> <td> ग्राम व पो. कुआ, थाना पपौंध, </br>तह./ विकासखण्‍ड ब्‍यौहारी, जिला शहडाेल</br></br>ई-टाईप-बी, गायत्री मंदिर के पास, सिविल लाईन्‍स, जिला शहडोल</br></td> <td> msachin998@gmail.com</br></br></br>ceozpshd@mp.gov.in</td> <td> -</td> </tr> <tr> <td> अनूपपुर </br>07659 </td> <td> श्रीमती प्रीति रमेश सिंह </br>अध्‍यक्ष</br></br>श्रीमती अर्चना कुमारी</br> मुख्य कार्यपालन अधिकारी </td> <td> 222979, </br>फैक्‍स- 222073</br></br>222979</td> <td> 9425892047</br></br></br>9131074485</td> <td> ग्राम खांड़ा, पोस्‍ट रामपुर, जिला अनूपपुर </br></br></br>कलेक्‍ट्रेट कालोनी,  आवास क्र. डी-2, कोतमा रोड, अनूपपुर, जिला अनूपपुर</td> <td> ceozpanu@mp.gov.in</br></br></br>ceozpanu@mp.gov.in</td> <td> -</td> </tr> <tr> <td> मऊगंज </br>07663</td> <td> -</br>अध्‍यक्ष</br>-</br>मुुख्‍य कार्यपालन अधिकारी </td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> <td> -</br></br>-</td> </tr> </table>
+            </div>
+        </div>
+    </div>
+
+<article id="post-83" class="inner-box post-83 post type-post status-publish format-standard has-post-thumbnail sticky hentry category-travel">
+    <!--<div class="content-container">
+
+        <div class="entry-content">
+            <div class="col-md-12" style="display:none;">
+                <div class="heading">
+                    <h3>Madhya Pradesh Diary And Calendar</h3>
+                </div>
+            </div>
+            <div class="col-md-6 bx-lft">-->
+
+                
+            <!--</div>
+            <div class="col-md-6 bx-lfte">
+
+
+
+                <img src="~/Content/home/images/Calendar.jpg" />
+                <div class="lft_rgt">
+                    <center>
+                        <a href="/home/ViewCalendar" class="btn btn-menu3 center" target="_new">Open</a>
+                        <a href="~/Content/home/download/Calendar.jpg" class="btn btn-menu4 center" download>Download</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</article>
+
+
+</div>
+        </div>
+</main>
+<footer class="bg-white border-top mt-3">
+    <div class="container small text-secondary text-center py-2">
+    &#169; सर्वाधिकार सुरक्षित, मध्यप्रदेश शासन, सामान्य प्रशासन विभाग के लिए नियंत्रक, शासकीय मुद्रण तथा लेखन सामग्री मध्यप्रदेश, भोपाल द्वारा प्रकाशित 
+
+    </div>
+</footer>
+
+
+
+     <script type="text/javascript" src="/Content/calendar_assets/js/jquery-slim.min.js"></script>
+    <script type="text/javascript" src="/Content/calendar_assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Content/calendar_assets/js/popper.min.js"></script>
+    <script src="/bundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+    
+ 
+   <script>
+       
+       function printSection(obj) {
+           
+           var disp_setting = "toolbar=yes,location=no,directories=yes,menubar=yes,resizable=1,";
+           disp_setting += "scrollbars=yes,width=650, height=600, left=100, top=25";
+           var content_vlue = document.getElementById(obj).innerHTML;
+           var docprint = window.open("", "", disp_setting);
+           docprint.document.open();
+           docprint.document.write('<html><head><title>".:: Print ::."</title>');
+           docprint.document.write('<link href="../Content/bootstrap.min.css" rel="stylesheet" type="text/css" />');
+           //docprint.document.write('<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" />');
+
+           docprint.document.write('</head><body onLoad="self.print()"><center>');
+           docprint.document.write(content_vlue);
+           docprint.document.write('</center></body></html>');
+           docprint.document.close();
+           docprint.focus();
+       }
+</script>
+
+    <script>
+      function navFunction() {
+  var element = document.getElementById("navbarSerch");
+  element.classList.toggle("openNav");
+}
+</script>
+
+</body>
+</html>
+
+

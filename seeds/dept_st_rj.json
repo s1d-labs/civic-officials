@@ -1,0 +1,800 @@
+[
+ {
+  "key": "st_html_tables:rj-sec",
+  "payload": {
+   "reader": "st_html_tables",
+   "key": "rj-sec",
+   "url": "https://sec.rajasthan.gov.in/officecontacts.aspx",
+   "state": "RJ",
+   "body": "State Election Commission, Rajasthan",
+   "body_kind": "commission",
+   "department": "State Election Commission",
+   "dept": "elections",
+   "post_kinds": {
+    "Commissioner": "state_election_commissioner"
+   },
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_html_tables:rj-rshrc-dir",
+  "payload": {
+   "reader": "st_html_tables",
+   "key": "rj-rshrc-dir",
+   "url": "https://rshrc.rajasthan.gov.in/Content/ContactDirectory.aspx?menu_id=98",
+   "state": "RJ",
+   "body": "Rajasthan State Human Rights Commission",
+   "body_kind": "commission",
+   "department": "Rajasthan State Human Rights Commission",
+   "dept": "courts",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_html_tables:rj-rshrc-officers",
+  "payload": {
+   "reader": "st_html_tables",
+   "key": "rj-rshrc-officers",
+   "url": "https://rshrc.rajasthan.gov.in/Content/InformationOfOfficers.aspx?menu_id=30151",
+   "state": "RJ",
+   "body": "Rajasthan State Human Rights Commission",
+   "body_kind": "commission",
+   "department": "Rajasthan State Human Rights Commission",
+   "dept": "courts",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:ada",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://ada.rajasthan.gov.in/contact-directory",
+   "host": "ada.rajasthan.gov.in",
+   "code": "208",
+   "district": null,
+   "dept": "town_body",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:ard",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://ard.rajasthan.gov.in/contact-directory",
+   "host": "ard.rajasthan.gov.in",
+   "code": "4",
+   "district": null,
+   "dept": "agriculture",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:ayurved",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://ayurved.rajasthan.gov.in/contact-directory",
+   "host": "ayurved.rajasthan.gov.in",
+   "code": "15",
+   "district": null,
+   "dept": "health",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:ayurveda",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://ayurveda.rajasthan.gov.in/contact-directory",
+   "host": "ayurveda.rajasthan.gov.in",
+   "code": "15",
+   "district": null,
+   "dept": "health",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:bcft",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://bcft.rajasthan.gov.in/contact-directory",
+   "host": "bcft.rajasthan.gov.in",
+   "code": "978",
+   "district": null,
+   "dept": "other",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:bda",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://bda.rajasthan.gov.in/contact-directory",
+   "host": "bda.rajasthan.gov.in",
+   "code": "367",
+   "district": null,
+   "dept": "town_body",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:bhda",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://bhda.rajasthan.gov.in/contact-directory",
+   "host": "bhda.rajasthan.gov.in",
+   "code": "245",
+   "district": null,
+   "dept": "town_body",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:budget",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://budget.rajasthan.gov.in/contact-directory",
+   "host": "budget.rajasthan.gov.in",
+   "code": "1149",
+   "district": null,
+   "dept": "treasury",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:csoffice",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://csoffice.rajasthan.gov.in/contact-directory",
+   "host": "csoffice.rajasthan.gov.in",
+   "code": "496",
+   "district": null,
+   "dept": "administration",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:dcr",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://dcr.rajasthan.gov.in/contact-directory",
+   "host": "dcr.rajasthan.gov.in",
+   "code": "210",
+   "district": null,
+   "dept": "other",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:dsap",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://dsap.rajasthan.gov.in/contact-directory",
+   "host": "dsap.rajasthan.gov.in",
+   "code": "167",
+   "district": null,
+   "dept": "administration",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:electropathy",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://electropathy.rajasthan.gov.in/contact-directory",
+   "host": "electropathy.rajasthan.gov.in",
+   "code": "1884",
+   "district": null,
+   "dept": "health",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:evaluation",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://evaluation.rajasthan.gov.in/contact-directory",
+   "host": "evaluation.rajasthan.gov.in",
+   "code": "65",
+   "district": null,
+   "dept": "planning",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:fisheries",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://fisheries.rajasthan.gov.in/contact-directory",
+   "host": "fisheries.rajasthan.gov.in",
+   "code": "152",
+   "district": null,
+   "dept": "agriculture",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:gopalan",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://gopalan.rajasthan.gov.in/contact-directory",
+   "host": "gopalan.rajasthan.gov.in",
+   "code": "147",
+   "district": null,
+   "dept": "agriculture",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:homeopathychikitsa",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://homeopathychikitsa.rajasthan.gov.in/contact-directory",
+   "host": "homeopathychikitsa.rajasthan.gov.in",
+   "code": "304",
+   "district": null,
+   "dept": "health",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:igrs",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://igrs.rajasthan.gov.in/contact-directory",
+   "host": "igrs.rajasthan.gov.in",
+   "code": "121",
+   "district": null,
+   "dept": "registration",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:jda",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://jda.rajasthan.gov.in/contact-directory",
+   "host": "jda.rajasthan.gov.in",
+   "code": "182",
+   "district": null,
+   "dept": "town_body",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:joda",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://joda.rajasthan.gov.in/contact-directory",
+   "host": "joda.rajasthan.gov.in",
+   "code": "93",
+   "district": null,
+   "dept": "town_body",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:kda",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://kda.rajasthan.gov.in/contact-directory",
+   "host": "kda.rajasthan.gov.in",
+   "code": "280",
+   "district": null,
+   "dept": "town_body",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:lado",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://lado.rajasthan.gov.in/contact-directory",
+   "host": "lado.rajasthan.gov.in",
+   "code": "1873",
+   "district": null,
+   "dept": "women_child",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:museums",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://museums.rajasthan.gov.in/contact-directory",
+   "host": "museums.rajasthan.gov.in",
+   "code": "12",
+   "district": null,
+   "dept": "sports_culture",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:peaceandnonviolence",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://peaceandnonviolence.rajasthan.gov.in/contact-directory",
+   "host": "peaceandnonviolence.rajasthan.gov.in",
+   "code": "495",
+   "district": null,
+   "dept": "other",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:phedwater",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://phedwater.rajasthan.gov.in/contact-directory",
+   "host": "phedwater.rajasthan.gov.in",
+   "code": "110",
+   "district": null,
+   "dept": "water",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:plan-mp",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://plan-mp.rajasthan.gov.in/contact-directory",
+   "host": "plan-mp.rajasthan.gov.in",
+   "code": "100",
+   "district": null,
+   "dept": "planning",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:plan",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://plan.rajasthan.gov.in/contact-directory",
+   "host": "plan.rajasthan.gov.in",
+   "code": "111",
+   "district": null,
+   "dept": "planning",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:printingandstationery",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://printingandstationery.rajasthan.gov.in/contact-directory",
+   "host": "printingandstationery.rajasthan.gov.in",
+   "code": "148",
+   "district": null,
+   "dept": "administration",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:psks",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://psks.rajasthan.gov.in/contact-directory",
+   "host": "psks.rajasthan.gov.in",
+   "code": "989",
+   "district": null,
+   "dept": "other",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rajanujanigam",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rajanujanigam.rajasthan.gov.in/contact-directory",
+   "host": "rajanujanigam.rajasthan.gov.in",
+   "code": "118",
+   "district": null,
+   "dept": "other",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rajseeds",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rajseeds.rajasthan.gov.in/contact-directory",
+   "host": "rajseeds.rajasthan.gov.in",
+   "code": "149",
+   "district": null,
+   "dept": "agriculture",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:ranc",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://ranc.rajasthan.gov.in/contact-directory",
+   "host": "ranc.rajasthan.gov.in",
+   "code": "396",
+   "district": null,
+   "dept": "other",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rfc",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rfc.rajasthan.gov.in/contact-directory",
+   "host": "rfc.rajasthan.gov.in",
+   "code": "124",
+   "district": null,
+   "dept": "treasury",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rhb",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rhb.rajasthan.gov.in/contact-directory",
+   "host": "rhb.rajasthan.gov.in",
+   "code": "383",
+   "district": null,
+   "dept": "town_body",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:riico",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://riico.rajasthan.gov.in/contact-directory",
+   "host": "riico.rajasthan.gov.in",
+   "code": "125",
+   "district": null,
+   "dept": "labour_industry",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:risl",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://risl.rajasthan.gov.in/contact-directory",
+   "host": "risl.rajasthan.gov.in",
+   "code": "352",
+   "district": null,
+   "dept": "administration",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rldb",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rldb.rajasthan.gov.in/contact-directory",
+   "host": "rldb.rajasthan.gov.in",
+   "code": "187",
+   "district": null,
+   "dept": "agriculture",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rpg",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rpg.rajasthan.gov.in/contact-directory",
+   "host": "rpg.rajasthan.gov.in",
+   "code": "186",
+   "district": null,
+   "dept": "other",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rsadapp",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rsadapp.rajasthan.gov.in/contact-directory",
+   "host": "rsadapp.rajasthan.gov.in",
+   "code": "1156",
+   "district": null,
+   "dept": "other",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rscpcr",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rscpcr.rajasthan.gov.in/contact-directory",
+   "host": "rscpcr.rajasthan.gov.in",
+   "code": "290",
+   "district": null,
+   "dept": "women_child",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rsha",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rsha.rajasthan.gov.in/contact-directory",
+   "host": "rsha.rajasthan.gov.in",
+   "code": "1290",
+   "district": null,
+   "dept": "other",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rsos",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rsos.rajasthan.gov.in/contact-directory",
+   "host": "rsos.rajasthan.gov.in",
+   "code": "317",
+   "district": null,
+   "dept": "education",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:rudsico",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://rudsico.rajasthan.gov.in/contact-directory",
+   "host": "rudsico.rajasthan.gov.in",
+   "code": "233",
+   "district": null,
+   "dept": "town_body",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:ruvasjaipur",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://ruvasjaipur.rajasthan.gov.in/contact-directory",
+   "host": "ruvasjaipur.rajasthan.gov.in",
+   "code": "1882",
+   "district": null,
+   "dept": "other",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:sainikkalyan",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://sainikkalyan.rajasthan.gov.in/contact-directory",
+   "host": "sainikkalyan.rajasthan.gov.in",
+   "code": "196",
+   "district": null,
+   "dept": "social_welfare",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:sarasmilkfed",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://sarasmilkfed.rajasthan.gov.in/contact-directory",
+   "host": "sarasmilkfed.rajasthan.gov.in",
+   "code": "151",
+   "district": null,
+   "dept": "agriculture",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:statistics",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://statistics.rajasthan.gov.in/contact-directory",
+   "host": "statistics.rajasthan.gov.in",
+   "code": "166",
+   "district": null,
+   "dept": "planning",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:tad",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://tad.rajasthan.gov.in/contact-directory",
+   "host": "tad.rajasthan.gov.in",
+   "code": "136",
+   "district": null,
+   "dept": "social_welfare",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:techedu",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://techedu.rajasthan.gov.in/contact-directory",
+   "host": "techedu.rajasthan.gov.in",
+   "code": "229",
+   "district": null,
+   "dept": "education",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:tri",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://tri.rajasthan.gov.in/contact-directory",
+   "host": "tri.rajasthan.gov.in",
+   "code": "238",
+   "district": null,
+   "dept": "social_welfare",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "rj_jankalyan:uda",
+  "payload": {
+   "reader": "rj_jankalyan",
+   "url": "https://uda.rajasthan.gov.in/contact-directory",
+   "host": "uda.rajasthan.gov.in",
+   "code": "372",
+   "district": null,
+   "dept": "town_body",
+   "level": "state",
+   "state": "RJ",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

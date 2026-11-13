@@ -1,0 +1,33 @@
+[
+ {
+  "key": "st_div_s3waas:division-surguja.cg.gov.in",
+  "payload": {
+   "reader": "st_div_s3waas",
+   "host": "division-surguja.cg.gov.in",
+   "urls": [
+    "https://division-surguja.cg.gov.in/whos-who/",
+    "https://division-surguja.cg.gov.in/directory/"
+   ],
+   "division": "Surguja",
+   "state": "CG",
+   "india_only": false,
+   "route": "abroad",
+   "route_note": "answers from Mumbai (2026-11-13); abroad unchecked (S3WaaS)"
+  }
+ },
+ {
+  "key": "st_html_tables:cg-psc",
+  "payload": {
+   "reader": "st_html_tables",
+   "key": "cg-psc",
+   "url": "https://psc.cg.gov.in/htm/directory.html",
+   "state": "CG",
+   "body": "Chhattisgarh Public Service Commission",
+   "body_kind": "commission",
+   "department": "General Administration",
+   "dept": "administration",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

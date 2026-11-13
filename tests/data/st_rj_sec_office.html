@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+
+
+<script>
+    function myFunctionblack() { 
+
+        document.body.style.backgroundColor = "black";
+        document.getElementById("topbar").className = "topnav-inverse";
+        document.getElementById("banner").style.backgroundColor = "black";
+        document.getElementById("banner_name").style.color = "yellow";
+        document.getElementById("aphone").style.color = "yellow";
+        document.getElementById("acontact").style.color = "yellow"; 
+        document.getElementById("MenuTopnav").className = "topnavmenu-inverse";
+        document.getElementById("Menu_ContactUs").className = "topnavdropdown-inverse";
+        document.getElementById("SubMenu_About_Us").className = "topnavdropdown-content-inverse";
+        document.getElementById("Menu_Commissioner").className = "topnavdropdown-inverse";
+        document.getElementById("Menu_TelephoneDirectory").className = "topnavdropdown-inverse";
+
+        document.getElementById("Menu_FAQ").style.color = "yellow";
+
+        document.getElementById("Div_bottom_menu").className = "bottomnav_menu-inverse";
+        document.getElementById("Div_bottom").className = "bottomnav-inverse";
+         
+        document.getElementById("Div_contain").className = "contain-inverse";
+        document.getElementById("Div_Container").className = "container_child-inverse";
+          
+        document.getElementById("sitemap1").className = "presentpage-inverse";
+       
+    }
+
+    function myFunctionwhite() {
+
+
+        document.body.style.backgroundColor = "white";
+        document.getElementById("topbar").className = "topnav";
+        document.getElementById("banner").style.backgroundColor = "white";
+        document.getElementById("banner_name").style.color = "black";
+        document.getElementById("aphone").style.color = "black";
+        document.getElementById("acontact").style.color = "black";
+        document.getElementById("MenuTopnav").className = "topnavmenu";
+        document.getElementById("Menu_ContactUs").className = "topnavdropdown";
+        document.getElementById("SubMenu_About_Us").className = "topnavdropdown-content";
+        document.getElementById("Menu_Commissioner").className = "topnavdropdown";
+        document.getElementById("Menu_TelephoneDirectory").className = "topnavdropdown";
+
+        document.getElementById("Menu_FAQ").style.color = "#fff";         
+
+        document.getElementById("Div_bottom_menu").className = "bottomnav_menu";
+        document.getElementById("Div_bottom").className = "bottomnav";
+
+        document.getElementById("Div_contain").className = "contain";
+        document.getElementById("Div_Container").className = "container_child";
+
+        document.getElementById("sitemap1").className = "presentpage";
+    }
+</script>
+
+ 
+ 
+
+<script>
+
+    function myFunction() {
+        var x = document.getElementById("topbar");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else if (x.className === "topnav-inverse") {
+            x.className += " responsive";
+        } else if (x.className === "topnav-inverse responsive") {
+            x.className = "topnav-inverse";
+        } else {
+            x.className = "topnav";
+        }
+    }
+
+    function myFunctionmenu() {
+        var x = document.getElementById("MenuTopnav");
+        if (x.className === "topnavmenu") {
+            x.className += " responsive";
+        } else if (x.className === "topnavmenu-inverse") {
+            x.className += " responsive";
+        } else if (x.className === "topnavmenu-inverse responsive") {
+            x.className = "topnavmenu-inverse";
+        } else {
+            x.className = "topnavmenu";
+        }
+    }
+
+    function myFunctionbottommenu() {
+        var x = document.getElementById("Div_bottom_menu");
+        if (x.className === "bottomnav_menu") {
+            x.className += " responsive";
+        } else if (x.className === "bottomnav_menu-inverse") {
+            x.className += " responsive";
+        } else if (x.className === "bottomnav_menu-inverse responsive") {
+            x.className = "bottomnav_menu-inverse";
+        } else {
+            x.className = "bottomnav_menu";
+        }
+    }
+
+</script>
+
+ <script  type="text/javascript">
+    var tgs = new Array('font', 'div', 'span', 'a', 'button');
+
+    //Specify spectrum of different font sizes:
+    var szs = new Array('xx-small', 'x-small', 'small', 'medium', 'large', 'x-large', 'xx-large');
+    var startSz = 5;
+
+    function ts(trgt, inc) {         
+        if (!document.getElementById) return
+        var d = document, cEl = null, sz = startSz, i, j, cTags;
+    
+        
+        sz += inc;
+        if (sz < 0) sz = 0;
+        if (sz > 4) sz = 5;
+        startSz = sz;
+
+        if (!(cEl = d.getElementById(trgt))) cEl = d.getElementsByTagName(trgt)[0];
+        cEl.style.fontSize = szs[sz];
+
+        for (i = 0; i < tgs.length; i++) {
+            cTags = cEl.getElementsByTagName(tgs[i]);
+            for (j = 0; j < cTags.length; j++)
+            {                
+                cTags[j].style.fontSize = szs[sz];
+            }
+        }
+    }
+  </script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head><title>
+	State Election Commission, Rajasthan
+</title><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link href="css/design.css" rel="stylesheet" /><link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    
+    <link href="App_Themes/S/a.css" type="text/css" rel="stylesheet" /><link href="App_Themes/S/b.css" type="text/css" rel="stylesheet" /><link href="App_Themes/S/c.css" type="text/css" rel="stylesheet" /><link href="App_Themes/S/d.css" type="text/css" rel="stylesheet" /></head>
+<body>
+
+    <form method="post" action="./officecontacts.aspx" id="Form2" autocomplete="off">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="2MaFfuetWAoYum051i7//hft9jwsO2VCicQTDS1l9hYnrmkG8rOwqM6HzBqs8TmGHvjcMnGos66kmtPE9QUTJ9GwScESLEWcbMgJPl5szzIZvRYaKEJTpUmuci+cP7k8iQkfo6w32ykdAbVtrpdKSE+Ep7tonjA1fbyzubL/ePNkO0txZJupbuQVkN6NJtPgvirMi66q/lC5vAXwi53+WrmSfkBaQk+547eKxTZq19BEQA6ahLxtyZB6aS4PGQKp+iws7PZTm4wyndX1i+trDxA9b/l08HYihZ6K6ZR4a9rwXTxNF14j+gIUT4WCvYw4gtddndLRDKaY4caOs/1zimqoFvvR5AqHdkXcq85ONeJbbV+kEvcJSZv+A4IN5tvSGyLpbY6KmrFEINPWNSHEFwXO0t24rfxhosuwGaO7ozYRoDlq" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['Form2'];
+if (!theForm) {
+    theForm = document.Form2;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=LmmvlH-YodCiJl0yA7K0vpTGzPMnCeBNyQXNCHSv1_qL6U2ZLoc2um2a1vYrsUnRmLpIR5iGEilODUh3O6EFSBHCnws1&amp;t=639191031332169432" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=9E9iJGK48DF9eBDasnB7ZgruE59wOrpUqg3cNkqvE_6xlQ2qoECP8_jHJh45UZs8PXPRMdIM9Nk1TS3WPFEeOBzE4lTiXmyYiugP_QMhDCbP8FRB0&amp;t=f2cd5c5" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=vIryWfLrNfK_aDmhyNgZo58AunNnLwgLTy78ERdxTRzD1NE1MVSS-x9yJSf5yo82QULX8pjkNEEckGDILt6eU0u-aGkUeuiezc1inyqOlIHfxK7oalevinJ8-motP1EvlgPqvg2&amp;t=f2cd5c5" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3F25E424" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$scm', 'Form2', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+         <div id="topbar" class="topnav">
+        <a href="AccessibilityStatement.aspx">Screen Reader Access</a>
+        <a href="#MenuTopnav">Skip to Navigation</a>
+        <a href="#ListContent">Skip to Main Content</a>
+        <a href="SiteMap.aspx">SiteMap</a>
+        
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="topnav-right">
+            <button id="Button_dark" class="button_D" title="For Dark Theme" onclick="myFunctionblack()"  ></button>
+            <button id="Button_Normal" class="button_N" title="For Normal Theme" onclick="myFunctionwhite()"  ></button> 
+             
+            
+             
+          <a href="javascript:ts('body',1)">A+</a> 
+            <a href="javascript:ts('body',-1)">A-</a> 
+        </div>
+    </div>
+
+    <div id="banner" class="header">
+        <a>
+            <img id="aemb" src="Img/state_emb.png" alt='State Election Commission, Rajasthan' style="height: 90px;"/></a>
+         
+        <a id ="banner_name">राज्य निर्वाचन आयोग, राजस्थान
+                <br />
+            State Election Commission, Rajasthan</a>
+
+        <div class="header-right">
+            <a id="aphone" style="margin-right: 20px; margin-top: 5px; font-size: 18px; "><span class="fa fa-phone"></span>0141-2227407,2227037 </a>
+            <br />
+            <a id="acontact" style="margin-right: 20px; margin-top: 5px; font-size: 18px; "><span class="fa fa-envelope"></span>secraj[at]rajasthan[dot]gov[dot]in </a>
+        </div>
+    </div>
+
+    <div class="topnavmenu" id="MenuTopnav" style="font-weight: bold;" >
+        <a href="../default.aspx">Home</a>
+        <div id="Menu_ContactUs" class="topnavdropdown">
+            <button class="dropbtn">
+                About Us  
+            </button>
+            <div id="SubMenu_About_Us" class="topnavdropdown-content">
+                 <span id="baloonText" title="See Today&#39;s Birthday" style="    padding: 5px;background-color: #42B72A;border-radius: 50%;float: right;margin-top: 15px;margin-right: 5px;"></span> <a href="About-Us.aspx">About Us</a>
+                <a href="OrganizationChart.aspx">Organization Chart</a>
+            </div>
+        </div>
+
+         <div id="Menu_Commissioner" class="topnavdropdown">
+            <button class="dropbtn">
+                Commissioner's Desk  
+            </button>
+            <div id="SubMenu_Commissioner" class="topnavdropdown-content">
+                <a href="cdesk.aspx">Commissioner's Desk</a>
+                
+            </div>
+        </div>
+
+         
+
+
+        
+        <a href="ElectionLaw.aspx">Election Law</a>
+        <a href="StatisticsArchiveReports.aspx">Statistical Reports</a> 
+        
+        
+        <a href="../Events.aspx">Events</a>
+        <div id="Menu_TelephoneDirectory" class="topnavdropdown">
+            <button class="dropbtn">
+                Telephone Directory 
+            </button>
+            <div id="SubMenu_TelephoneDirectory" class="topnavdropdown-content">
+                <a href="officecontacts.aspx">Telephone nos. of Officers of SEC</a>
+                <a href="NewFunctionarieswithACRD.aspx">District Functionaries</a>
+            </div>
+        </div>
+
+        <a href="Contact-Us.aspx">Contact Us</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunctionmenu()">
+            <i class="fa fa-bars"></i></a>
+
+        <div class="topnavmenu-right" style="float: right;">
+            
+
+      
+
+              
+                                    <a href="Login.aspx"><span class="fa fa-sign-in"></span>&nbsp;&nbsp;&nbsp;Log In</a>
+                                    
+
+             
+
+                     
+      
+        </div>
+    </div>
+  
+      
+    <div id="Div_contain" class="contain"  >
+        
+
+    <script>
+        function myFunctionblack() {
+
+            document.body.style.backgroundColor = "black";
+            document.getElementById("topbar").className = "topnav-inverse";
+            document.getElementById("banner").style.backgroundColor = "black";
+            document.getElementById("banner_name").style.color = "yellow";
+            document.getElementById("aphone").style.color = "yellow";
+            document.getElementById("acontact").style.color = "yellow";
+            document.getElementById("MenuTopnav").className = "topnavmenu-inverse";
+            document.getElementById("Menu_ContactUs").className = "topnavdropdown-inverse";
+            document.getElementById("SubMenu_About_Us").className = "topnavdropdown-content-inverse";
+            document.getElementById("Menu_Commissioner").className = "topnavdropdown-inverse";
+            document.getElementById("Menu_TelephoneDirectory").className = "topnavdropdown-inverse";
+
+            document.getElementById("Menu_FAQ").style.color = "yellow";
+
+            document.getElementById("Div_bottom_menu").className = "bottomnav_menu-inverse";
+            document.getElementById("Div_bottom").className = "bottomnav-inverse";
+
+            document.getElementById("Div_contain").className = "contain-inverse";
+            document.getElementById("Div_Container").className = "container_child-inverse";
+
+            document.getElementById("sitemap1").className = "presentpage-inverse";
+            document.getElementById("new").className = "table-inverse";
+        }
+
+        function myFunctionwhite() {
+
+
+            document.body.style.backgroundColor = "white";
+            document.getElementById("topbar").className = "topnav";
+            document.getElementById("banner").style.backgroundColor = "white";
+            document.getElementById("banner_name").style.color = "black";
+            document.getElementById("aphone").style.color = "black";
+            document.getElementById("acontact").style.color = "black";
+            document.getElementById("MenuTopnav").className = "topnavmenu";
+            document.getElementById("Menu_ContactUs").className = "topnavdropdown";
+            document.getElementById("SubMenu_About_Us").className = "topnavdropdown-content";
+            document.getElementById("Menu_Commissioner").className = "topnavdropdown";
+            document.getElementById("Menu_TelephoneDirectory").className = "topnavdropdown";
+
+            document.getElementById("Menu_FAQ").style.color = "#fff";
+
+            document.getElementById("Div_bottom_menu").className = "bottomnav_menu";
+            document.getElementById("Div_bottom").className = "bottomnav";
+
+            document.getElementById("Div_contain").className = "contain";
+            document.getElementById("Div_Container").className = "container_child";
+
+            document.getElementById("sitemap1").className = "presentpage";
+            document.getElementById("new").className = "table";
+        }
+    </script>
+
+    <div id="sitemap1" class="presentpage"><a href="https://sec.rajasthan.gov.in/">Home </a>> Office Contacts </div>
+
+    <div id="Div_Container" class="container_child">
+
+
+        <div class="container_child-header">
+            <a>Office Contacts </a>
+        </div>
+        <div class="container_child-detail">
+            <style>
+                .table-inverse > tbody {
+                    background-color: black;
+                    color: yellow;
+                }
+
+                    .table-inverse > tbody > tr:hover {
+                        background-color: black;
+                        color: yellow;
+                    }
+            </style>
+            <div style="width: 100%">
+
+
+                <table id="new" style="width: 100%" border="1" cellpadding="2" bordercolor="#800000" class="table">
+                    <tr>
+                        <td style="width: 46%; height: 45px; background-color: #158CBA;  color:#FFFFFF;"  >
+                            <p style="margin-left: 100px">
+                                <b><font  color="#FFFFFF">Name and Designation</font></b></p>
+                        </td>
+                        <td style="background-color: #158CBA; width: 54%; height: 20px; text-align: center; color:#FFFFFF; ">
+                            <p style="margin-left: 140px">
+                                <b><font   color="#FFFFFF">Telephone Number</font></b></p> 
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+
+                                <strong>Shri Rajeshwar Singh</strong><br />
+                                Commissioner 
+                            </a>
+                        </td>
+                        <td style="width: 54%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;">(0141)-2227621,<br />
+                                (0141)-2926021<br />
+                                IP-26020,26021 (PA)
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Sh. Rajesh Verma, IAS</strong><br />
+                                Secretary
+          
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;">(0141)-2227280,<br />
+                                21449 (PA)
+                            </span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Sh. Alok Jain, RAS</strong><br />
+                                Deputy Secretary
+          
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;"></span>
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Shri Hemant Kumar Verma</strong><br />
+                                DLR 
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;"></span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Smt. Kiran Meena</strong><br />
+                                ACP 
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;">IP-26030
+                            </span>
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Shri Mool Chand Looniya, RAS</strong><br />
+                                Assistant Secretary 
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;"></span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Smt. Neeraj Sharma, RRDS</strong><br />
+                                Assistant Secretary 
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;"></span>
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Sh. Suresh Chand Meena</strong><br />
+                                Sr. AO 
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;"></span>
+
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Sh. Mukesh Kumar Bairwa</strong><br />
+                                Establishment Officer 
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;"></span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Smt. Rashmi Sharma</strong><br />
+                                Adm. Officer 
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;"></span>
+
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Shri Manvendera Singh Chouhan</strong><br />
+                                Adm. Officer 
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;"></span>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width: 46%; height: 22px;">
+                            <a>
+                                <strong>Sh. Bhupesh Kumar Gupta</strong><br />
+                                AAO-I 
+                            </a>
+                        </td>
+                        <td style="width: 46%; height: 22px;">
+                            <span style="font-size: 10pt; line-height: 2.5;"></span>
+
+                        </td>
+                    </tr>
+
+                </table>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    </div>
+    </form>
+     <div id="Div_bottom_menu" class="bottomnav_menu">
+        <a href="TermsandCondition.aspx">Terms & Conditions</a>
+        <a href="PrivacyPolicy.aspx">Privacy Policy</a>
+        <a href="CopyRightPolicy.aspx">Copyright Policy</a>
+        <a href="HyperLinkPolicy.aspx">Hyperlink policy</a>
+        <a href="AccessibilityStatement.aspx">Screen Reader Access</a>
+        <a href="Disclaimer.aspx">Disclaimer</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunctionbottommenu()">
+            <i class="fa fa-bars"></i></a>
+    </div>
+
+    <div id="Div_bottom" class="bottomnav">
+        <div class="col-sm-2 p-3" style="text-align: center">
+            <a>
+                <span id="Total_Visitors"></span>
+
+                <span id="Label1"></span>
+
+            </a>
+            <br />
+            <a>
+                <span id="Today_Count"></span></a>
+        </div>
+        <div class="col-sm-4 p-3" style="text-align: center">
+            <a style="pointer-events: none;">Nodal Officer : Smt. Kiran Meena, ACP (Deputy Director)
+                    <br />
+                Contact Number :0141-2227407
+            </a>
+        </div>
+        <div class="col-sm-6 p-3 " style="text-align: right">
+            <a>© This is the official website of State Election Commission, Rajasthan. All rights reserved. Website maintained by Rajasthan Electronics & Instruments Ltd., Jaipur.
+            </a>
+
+        </div>
+
+
+
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#flip").click(function () {
+                $("#panel").stop(true, true).slideToggle("slow");
+            });
+        });
+        function toggle() {
+
+            var panel = document.getElementById("panel");
+            var arrow = document.getElementById("imagearrow");
+
+            if (panel.style.display === "none") {
+                arrow.src = "Img/arrow-up.png";
+                arrow.classList.remove("Down");
+                arrow.classList.add("Up");
+            }
+            else {
+                arrow.src = "Img/arrow.png";
+                arrow.classList.remove("Up");
+                arrow.classList.add("Down");
+            }
+        }
+    </script>
+</body>
+</html>
