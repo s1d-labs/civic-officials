@@ -25,6 +25,7 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 from cforms.cr_common import clean
+import provenance
 
 METHOD = "html page (member detail pages, home page cards)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -71,6 +72,8 @@ def detail(html):
             k, v = clean(cols[0].get_text(" ", strip=True)), clean(cols[1].get_text(" ", strip=True))
             if v:
                 d[{"Name": "name", "Email": "email", "Mobile": "phone", "Permanent Address": "address"}.get(k, k.lower())] = v
+        else:
+            provenance.skip_row(row, 'skip: not (len(cols) >= 2)')
     top = soup.select_one(".card-body.text-center")
     if top:
         p = top.find("p")

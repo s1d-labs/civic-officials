@@ -96,6 +96,8 @@ def parse(html, url=URL):
                     continue
                 out.add(f"{division}:{sub}", "subdivision", sub, post="Assistant Engineer (sub-division)", name=name,
                         phone_=phone(land, mob), parents={"zone": zone, "circle": circle, "division": division})
+            else:
+                provenance.skip_row(tr, 'skip: not (len(c) == 4 and lvl == "division")')
     out.src = {}
     return out.recs
 

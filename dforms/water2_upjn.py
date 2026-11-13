@@ -94,6 +94,8 @@ def civil(table, R):
             dist = area.split(",")[-1].strip() if "," in area else area
             R.add(f"civil:division:{area}", "division", area, name, ph, {"zone": zone, "circle": circle}, cadre="civil",
                   district=dist, src_pos=dict(tp, col=idx + 3))
+        else:
+            provenance.skip_row(tr, 'skip: not (len(cells) >= idx + 3)')
 
 
 def _office(c):

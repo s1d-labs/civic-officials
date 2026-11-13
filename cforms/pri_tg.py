@@ -71,6 +71,8 @@ def summary(html):
         c = cells(tr)
         if m and len(c) >= 4:
             out.append((m.group(1), c[1], _pri.digits(c[2]), _pri.digits(c[3])))
+        else:
+            provenance.skip_row(tr, 'skip: not (m and len(c) >= 4)')
     return out
 
 
@@ -82,6 +84,8 @@ def sarpanch_rows(html):
         if len(c) == 7 and c[0].isdigit() and c[4]:
             out.append({"sno": c[0], "block": c[1], "body": c[2], "reservation": c[3], "name": c[4], "party": c[5],
                         "result_status": c[6], "row": ri})
+        else:
+            provenance.skip_row(tr, 'skip: not (len(c) == 7 and c[0].isdigit() and c[4])')
     return out
 
 
@@ -103,6 +107,8 @@ def ward_rows(html):
             m = re.fullmatch(r"(?:ward\s*-?\s*(?:no\.?)?\s*)?(\d+)", c[1], re.I)
             out.append({"sno": c[0], "block": mandal, "body": gp, "ward": c[1], "ward_no": m.group(1) if m else c[1],
                         "reservation": c[2], "name": c[3], "result_status": c[4], "row": ri})
+        else:
+            provenance.skip_row(tr, 'skip: not (len(c) == 5 and c[0].isdigit() and mandal)')
     return out
 
 

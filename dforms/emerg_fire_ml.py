@@ -41,6 +41,8 @@ def stations(html, where=None):
                 out.setdefault(base(row[2]), (dist, _emerg.clean(row[3]), _emerg.clean(row[2]).rstrip(".")))
                 if where is not None:
                     where.setdefault(base(row[2]), rp)
+            else:
+                provenance.skip_row(row, 'skip: not (len(row) >= 4 and row[2])')
     return out
 
 

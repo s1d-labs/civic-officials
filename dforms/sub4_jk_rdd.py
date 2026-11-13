@@ -98,6 +98,8 @@ def page_rows(html):
             cells = [_esw.clean(c.get_text(" ")) for c in tr.find_all(["th", "td"])]
             if len(cells) >= 7 and any(cells[1:4]):
                 out.append((cells[:7], _trail.tr_pos(tr)))
+            else:
+                provenance.skip_row(tr, 'skip: not (len(cells) >= 7 and any(cells[1:4]))')
     return out
 
 

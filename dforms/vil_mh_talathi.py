@@ -96,6 +96,8 @@ def page_cols(lines):
         if len(mid) >= 2:
             vend.append(mid[0][0] + len(mid[0][1]))
             nst.append(mid[-1][0])
+        else:
+            provenance.skip_line(ln, 'skip: not (len(mid) >= 2)')
     if not vs:
         return None
     med = lambda a: sorted(a)[len(a) // 2]
@@ -124,6 +126,8 @@ def circle_cols(lines, v):
         ch = [c for c in _chunks(ln) if c[0] < (mobs[0] if mobs else v)]
         if len(ch) >= 3:
             cn.append((ch[1][0] + len(ch[1][1]) + ch[2][0]) / 2)
+        else:
+            provenance.skip_line(ln, 'skip: not (len(ch) >= 3)')
     med = lambda a: sorted(a)[len(a) // 2] if a else None
     return med(cm), med(ce), med(cn)
 

@@ -100,6 +100,8 @@ def parse(html, p):
                 z = zone_of(r[0])
                 if z and len(r) > 1:
                     add("zone", f"{z} Zonal Office", "Zonal Office", phone=r[1], zone=z)
+                else:
+                    provenance.skip_row(r, 'skip: not (z and len(r) > 1)')
         elif "health inspectors" in top:
             for r, rp in zip(g[2:], gp[2:]):
                 cur["pos"] = rp
@@ -115,18 +117,24 @@ def parse(html, p):
                 cur["pos"] = rp
                 if len(r) >= 4 and _esw.clean(r[1]):
                     staff(r[1], "Revenue Inspector", r[2], r[3])
+                else:
+                    provenance.skip_row(r, 'skip: not (len(r) >= 4 and _esw.clean(r[1]))')
         elif "superintendents" in top:
             for r, rp in zip(g[2:], gp[2:]):
                 cur["pos"] = rp
                 if len(r) >= 5 and _esw.clean(r[1]):
                     sec = _esw.clean(r[2]).title()
                     staff(r[1], f"Superintendent ({sec})" if sec else "Superintendent", r[3], r[4], section=sec or None)
+                else:
+                    provenance.skip_row(r, 'skip: not (len(r) >= 5 and _esw.clean(r[1]))')
         elif heads[0][:2] == ["name", "designation"] and heading(t) != "other officers":
             for r, rp in zip(g[1:], gp[1:]):
                 cur["pos"] = rp
                 if len(r) >= 3 and _esw.clean(r[0]) and _esw.clean(r[1]):
                     post = post_of(r[1])
                     staff(r[0], post, "WEST ZONE" if "west" in post.lower() else "", r[2])
+                else:
+                    provenance.skip_row(r, 'skip: not (len(r) >= 3 and _esw.clean(r[0]) and _esw.clean(r[1]))')
     return recs
 
 

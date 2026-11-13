@@ -10,6 +10,7 @@ items(get) reads the live list page when get is given; items() without get gives
 import re
 
 from dforms import _leg
+import provenance
 
 METHOD = "html page (member detail: .mla-info-bx and .personal-detail table)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -69,6 +70,8 @@ def parse(html, url):
             f[k] = _na(tds[1].get_text(" "))
             if k == "email":            # some members' addresses are shown only as images
                 email_images = [i["src"] for i in tds[1].find_all("img") if i.get("src")]
+        else:
+            provenance.skip_row(tr, 'skip: not (len(tds) >= 2)')
     seat, note = _leg.ac_seat("GA", no, cons)
     return [_leg.member(MODULE, "GA", "AC", seat, name, constituency=cons, party=party.get("alt", "") if party else "",
                         source=url, email=f.get("email", ""), phone_office=f.get("official", ""),

@@ -93,6 +93,8 @@ def _rows(html, src=None):
         if len(c) == len(head) and c[0].isdigit():
             out.append({COLS.get(h, h): v for h, v in zip(head, c)})
             out[-1]["_pos"], out[-1]["_src"] = {"table_id": "ContentPlaceHolder1_Gview", "row": ri}, src or {}
+        else:
+            provenance.skip_row(tr, 'skip: not (len(c) == len(head) and c[0].isdigit())')
     return out
 
 

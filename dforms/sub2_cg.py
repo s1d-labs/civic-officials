@@ -186,6 +186,8 @@ def rows(html, where=None):
             out.append((r[1], r[2], r[3]))
             if where is not None:
                 where.append({**pos, "selector": "table#GridView1"})
+        else:
+            provenance.skip_row(r, 'skip: not (len(r) >= 4)')
     return out
 
 

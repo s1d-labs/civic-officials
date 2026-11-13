@@ -89,6 +89,8 @@ def winners(html):
         if len(c) == len(COLS):
             out.append(dict(zip(COLS, c)))
             out[-1]["_pos"] = {"table_id": "ctl00_ContentPlaceHolder1_winnerdetail", "row": ri}
+        else:
+            provenance.skip_row(tr, 'skip: not (len(c) == len(COLS))')
     return out
 
 

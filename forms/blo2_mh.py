@@ -32,7 +32,7 @@ def parse_raigad(lines, p):
         page, ln = t[0], t[1]
         c = cells(ln)
         if len(c) < 5 or not (part_of(c[0]) and part_of(c[1])):
-            provenance.skipped('skip: len(c) < 5 or not (part_of(c[0]) and part_of(c[1]))')
+            provenance.skip_row(c, 'skip: len(c) < 5 or not (part_of(c[0]) and part_of(c[1]))')
             continue
         i = next((k for k, v in enumerate(c) if mobiles(v)), None)
         if i is None or i < 3:
@@ -60,7 +60,7 @@ def parse_satara(lines, p):
         page, ln = t[0], t[1]
         c = cells(ln)
         if len(c) < 6 or not part_of(c[0]) or not mobiles(c[-1]):
-            provenance.skipped('skip: len(c) < 6 or not part_of(c[0]) or not mobiles(c[-1])')
+            provenance.skip_row(c, 'skip: len(c) < 6 or not part_of(c[0]) or not mobiles(c[-1])')
             continue
         raw = {"page": page, "Sr. No": c[0], "Assembly": c[1], "Part No.": c[2], "Officer Type": c[-3], "AC No": c[-2],
                "Mobile No.": c[-1]}

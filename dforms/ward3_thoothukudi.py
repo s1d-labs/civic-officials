@@ -47,6 +47,8 @@ def zone_wards(html):
             cells = [_esw.clean(c.get_text(" ")) for c in tr.find_all(["td", "th"])]
             if len(cells) >= 2 and zone_of(cells[0]):
                 out[zone_of(cells[0])] = (_ward.wards_of(cells[1]), {"table": ti, "row": ri})
+            else:
+                provenance.skip_row(tr, 'skip: not (len(cells) >= 2 and zone_of(cells[0]))')
     return out
 
 
@@ -75,6 +77,8 @@ def blocks(html):
             tds = tr.find_all("td")
             if len(tds) >= 2:
                 kv.append((_esw.clean(tds[0].get_text(" ")), _esw.clean(tds[1].get_text(" ")), ri))
+            else:
+                provenance.skip_row(tr, 'skip: not (len(tds) >= 2)')
         get = {k.lower(): (v, ri) for k, v, ri in kv}
         name, nrow = get.get("name", ("", 2))
         addr = get.get("address", ("", 0))[0]

@@ -62,6 +62,8 @@ def rows(html, where=None):
             out.append((int(r[0]), r[1], r[2], r[3], r[4]))
             if where is not None:
                 where.append(pos)
+        else:
+            provenance.skip_row(r, 'skip: not (len(r) >= 5 and r[0].strip().isdigit())')
     return out
 
 

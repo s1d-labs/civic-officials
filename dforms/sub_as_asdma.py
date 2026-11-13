@@ -72,6 +72,8 @@ def parse_emergency(html, url=PAGES["emergency"]):
                 if m and len(r) > 2:
                     sat[district(m.group(1))] = re.sub(r"\D", "", r[2])
                     satpos[district(m.group(1))] = pos
+                else:
+                    provenance.skip_row(r, 'skip: not (m and len(r) > 2)')
         elif "name and designation" in head and "landline deoc" in head:
             for r, pos in zip(rows[1:], tp[1:]):
                 r = r + [""] * (5 - len(r))

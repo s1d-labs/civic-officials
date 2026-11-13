@@ -74,6 +74,8 @@ def rows(html):
         if len(tds) == len(COLS):
             out.append(dict(zip(COLS, tds)))
             out[-1]["_pos"] = {"table_id": "ContentPlaceHolder1_gvNominationList", "row": ri}
+        else:
+            provenance.skip_row(tr, 'skip: not (len(tds) == len(COLS))')
     return out
 
 

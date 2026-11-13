@@ -156,3 +156,28 @@ def test_uk_gram_prahari_krutidev():
     t = d["dept:vil_uk_ddmp:prahari:s1:1"]
     assert (t["name"], t["phone"], t["age"], t["tehsil"]) == ("श्री टीकम सिंह", "9805272602", "40", "त्यूनी")
     assert t["src_pos"]["page"] == 1 and "9805272602" in t["src_pos"]["line_text"]
+
+
+def test_mn_awc_full_file_every_row():
+    """The whole awc_in_manipur.pdf (332 pages, sha256 1267564c..., bucket civic-officials-depts/depts/vil_mn_awc/), as pypdf
+    layout text (the engine the GitHub runners use). Serials 1-11,585, one AWC code each. Before 2026-11-13 the reader left
+    out 201 rows without a word: a long AWC name that wraps (code and names on the next line), and a name that runs into the
+    code ("Ward No.1114252011018", "Maning14252011611"): 11,384 rows / 20,658 records -> 11,585 / 21,034."""
+    import gzip
+    import provenance
+    v = mod("vil_mn_awc")
+    text = gzip.decompress((DATA / "vil_mn_awc_full_pypdf.txt.gz").read_bytes()).decode("utf-8")
+    provenance.rows_reset()
+    rows = v.rows(text)
+    assert len(rows) == 11585 and sorted(int(r[0]) for r in rows) == list(range(1, 11586))
+    assert len({r[4] for r in rows}) == 11585
+    assert provenance.rows().get("rows_skipped") == {}          # no line with a digit is left out
+    people = sum(1 for r in rows for nm in (r[5], r[6]) if v._esw.clean(nm) and not v.VACANT.match(v._esw.clean(nm)))
+    assert people == 21034
+    by = {r[0]: r for r in rows}
+    assert by["138"][3:7] == ("Maibam Chingmang Mamang Khongnang Makhong", "14252010605", "Kongkham Sanahanbi Devi",
+                              "Thounaojam Premila Devi")               # wrapped AWC name
+    assert by["258"][3:5] == ("Bishnupur thiyam mamang Leikai Ward No.11", "14252011018")    # "No.11" + code glued
+    assert by["394"][3:6] == ("Ningthoukhong Awang Khunou Maning Ward no 1(B)", "14252011521", "Laishram Ongbi Manorama Devi")
+    assert by["8895"][3:5] == ("Kakching Wairi Khongnang Lamteiba Pareng 37 by 7", "14711010205")
+    assert "Ward No.1114252011018" in by["258"][10]                    # line_text stays as the file writes it

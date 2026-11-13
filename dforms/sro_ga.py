@@ -55,6 +55,8 @@ def parse(html, url=URL):
                     recs.append(_esw.record(MODULE, "GA-SR-state", dept="registration", level="state", area="Goa", post=row[0],
                                             email=_mail(row[1]), address=row[2], phone=_esw.phones(row[3]), state="GA",
                                             office_id="GA-SR-state", source=url, src_pos=row.pos))
+                else:
+                    provenance.skip_row(row, 'skip: not (len(row) >= 4 and "state registrar" in row[0].lower())')
     return recs
 
 

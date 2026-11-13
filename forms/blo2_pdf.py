@@ -254,6 +254,8 @@ def _guess_head(pages):
                 flds = kd_fields(flds)
             if len(flds) >= 3 and MOBILE.search(line):
                 lines.append(flds)
+            else:
+                provenance.skip_line(line, 'skip: not (len(flds) >= 3 and MOBILE.search(line))')
     if len(lines) < 5:
         return None
     counts = {}

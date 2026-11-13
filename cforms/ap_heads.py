@@ -90,6 +90,8 @@ def parse_text(raw, post):
         for r in rows:
             if r.m.group("total") and r.m.group("pre") and len(cols_of(r.m)) >= 3:
                 cols = [c[0] for c in cols_of(r.m)][:3]
+            else:
+                provenance.skip_row(r, 'skip: not (r.m.group("total") and r.m.group("pre") and len(cols_of(r.m))...)')
         name_lo = lambda r: r.m.end("cno")
         for i, line in extra:
             nxt = next((r for r in rows if r.i > i), None)

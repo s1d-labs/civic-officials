@@ -127,6 +127,8 @@ def staff_rows(html):
             c = [_esw.clean(x.get_text(" ")) for x in tr.find_all(["td", "th"])]
             if len(c) >= 4:
                 out.append((c[1], c[2], c[3], c[4] if len(c) > 4 else "", {"table": ti, "row": ri}))
+            else:
+                provenance.skip_row(tr, 'skip: not (len(c) >= 4)')
     return out
 
 

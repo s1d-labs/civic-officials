@@ -168,6 +168,8 @@ def get_pdf(p, get):
                 target = a["href"].split("'")[1]
                 break
             nth -= 1
+        else:
+            provenance.skip_row(tr, 'skip: not (a and len(tds) > 6 and (tds[6] == want or tds[6].startswith(w...)')
     if not target:
         return None, "notice not in the search result"
     data.update({"__EVENTTARGET": target, "__EVENTARGUMENT": ""})

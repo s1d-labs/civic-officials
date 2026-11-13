@@ -129,6 +129,8 @@ def kv(soup):
         c = [_esw.clean(x.get_text(" ")) for x in tr.find_all(["td", "th"])]
         if len(c) == 2 and c[0].endswith(":"):
             out[c[0].rstrip(":").lower()] = c[1]
+        else:
+            provenance.skip_row(tr, 'skip: not (len(c) == 2 and c[0].endswith(":"))')
     return out
 
 

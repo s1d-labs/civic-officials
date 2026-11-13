@@ -13,6 +13,7 @@ name_regional = the Marathi name as written, email, mobile, wards of the zone). 
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -88,6 +89,8 @@ def hod(html):
         tds = tr.find_all("td")
         if len(tds) == 2:
             f[_esw.clean(tds[0].get_text()).lower()] = _esw.clean(tds[1].get_text(" "))
+        else:
+            provenance.skip_row(tr, 'skip: not (len(tds) == 2)')
     addr = soup.select_one("div.department-info div.card-body")
     return x, {"name": f.get("name", ""), "post": f.get("designation", ""), "email": f.get("email", ""), "mobile": f.get("mobile no", ""),
                "address": _esw.clean(addr.get_text(" ")) if addr else ""}

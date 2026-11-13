@@ -153,19 +153,22 @@ def skipped(reason, n=1):
 
 
 _HEAD_WORDS = re.compile(r"(?i)\b(s\.?\s?no|sl\.?\s?no|sr\.?\s?no|serial|name|designation|post|phone|mobile|e-?mail|address|"
-                        r"office|district|contact|no\.)\b|क्र|नाम|पद|मोबाइल|फोन|पता|ಹೆಸರು|பெயர்")
+                        r"office|district|contact|details|no\.)\b|क्र|नाम|पद|मोबाइल|फोन|पता|ಹೆಸರು|பெயர்")
 
 
 def skip_row(cells, reason):
     """skipped() for one row whose cells (list, dict, <tr> or text) the reader left out: "empty" when no cell has text, "header"
     when no cell has a digit and some cell is a header word (Name, Designation, Sl. No., नाम ...), else the reader's reason."""
-    if hasattr(cells, "find_all"):           # a bs4 <tr>
-        cells = [c.get_text(" ") for c in cells.find_all(["td", "th"])] or [cells.get_text(" ")]
-    if isinstance(cells, dict):
-        cells = list(cells.values())
-    elif isinstance(cells, str):
-        cells = [cells]
-    texts = [" ".join((c.get_text(" ") if hasattr(c, "get_text") else str(c or "")).split()) for c in cells or []]
+    try:
+        if hasattr(cells, "find_all"):           # a bs4 <tr>
+            cells = [c.get_text(" ") for c in cells.find_all(["td", "th"])] or [cells.get_text(" ")]
+        if isinstance(cells, dict):
+            cells = list(cells.values())
+        elif isinstance(cells, (str, bytes)) or not hasattr(cells, "__iter__"):
+            cells = [cells]
+        texts = [" ".join((c.get_text(" ") if hasattr(c, "get_text") else str(c or "")).split()) for c in cells or []]
+    except Exception:            # a row object of the reader's own kind: never let the count break a reader
+        texts = ["?1"]
     if not any(texts):
         skipped("empty")
     elif not any(re.search(r"\d", t) for t in texts) and any(_HEAD_WORDS.search(t) for t in texts):
@@ -185,7 +188,10 @@ def skip_line(line, reason):
     """skipped() for one text line (PDF / OCR / page text) the reader left out: "empty", "header" (header words, no digit),
     "text line" (no digit: titles, notes, wrapped words; rows of these lists carry a serial number, a code or a phone), else
     the reader's reason."""
-    t = " ".join(str(line or "").split())
+    try:
+        t = " ".join(str(line or "").split())
+    except Exception:
+        t = "?1"
     if not t:
         skipped("empty")
     elif not re.search(r"\d", t):

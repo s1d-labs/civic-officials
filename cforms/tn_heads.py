@@ -76,6 +76,8 @@ def pairs(html):
                 key = label_key(cells[0])
                 if key:
                     out.append((key, cells[1], ti, ri))
+            else:
+                provenance.skip_row(tr, 'skip: not (len(cells) >= 2)')
     if not any(k == "name" for k, *_ in out):
         for li, line in enumerate(soup.get_text("\n").split("\n")):
             m = re.match(r"\s*([^:]{2,40}?)\s*[:：-]\s*(.+)$", line)

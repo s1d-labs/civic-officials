@@ -84,6 +84,8 @@ def rows(html):
                 continue
             if len(c) >= 3 and c[0].isdigit() and c[1]:
                 out.append((block, bzone, bphone, c[1], c[2], {"table": ti, "row": ri}))
+            else:
+                provenance.skip_row(tr, 'skip: not (len(c) >= 3 and c[0].isdigit() and c[1])')
     return out
 
 

@@ -23,6 +23,10 @@ MODULE = "vil_mn_awc"
 DISTRICTS = ["Bishnupur", "Chandel", "Churachandpur", "Imphal East", "Imphal West", "Jiribam", "Kakching", "Kamjong",
              "Kangpokpi", "Noney", "Pherzawl", "Senapati", "Tamenglong", "Tengnoupal", "Thoubal", "Ukhrul"]
 ROW = re.compile(r"^\s*(\d{1,5})\s+(.*?)\s+(\d{11})(?:\s+(.*?))?\s*$")
+SERIAL_ONLY = re.compile(r"^\s*\d{1,5}\s+\S.*$(?<!\d{11})")     # a serial line without a code at its end
+CODE_FIRST = re.compile(r"^\s+14\d{9}\b")                       # the next line starts (indented) with an AWC code
+# the AWC name runs into the code: "Ward No.11" + "14252011018", "Maning14252011611", "Pareng 37" + "14711010205"
+GLUED = re.compile(r"(?:(?<=[^\s\d])|(?<=\s)(?=\d{12,14}(?!\d)))(\d{0,3})(14\d{9})(?!\d)")
 VACANT = re.compile(r"(?i)^(vacant|nil|-+|n\.?a\.?)$")
 
 
@@ -54,21 +58,48 @@ def split_before(s):
 
 
 def rows(text):
-    """[(serial, district, project, awc, code, worker, helper, sure, page, line no, line)] from the layout text."""
+    """[(serial, district, project, awc, code, worker, helper, sure, page, line no, line)] from the layout text.
+    Two layouts that the one-line pattern misses (full file, 2026-11-13: 180 of 11,580 AWC codes) are read too:
+      - a long AWC name wraps: "138 Bishnupur   Bishnupur   Maibam ... Makhong" and the code + names on the next line;
+        the two lines are read as one row (line = the serial's line; line_text = both lines joined by " | ");
+      - the AWC name runs into the code: "... Ward No.1114252011018 Ningthoujam ...": the code is the last 11 digits of the run
+        (every AWC code in the file starts with 14, the Manipur state code)."""
     out = []
     for pg, page in enumerate(text.split("\f"), 1):
-        for ln, line in enumerate(page.splitlines(), 1):
+        lines = page.splitlines()
+        skip_next = False
+        for ln, line in enumerate(lines, 1):
+            if skip_next:
+                skip_next = False
+                continue
+            raw = line
+            line = GLUED.sub(lambda g: f"{g.group(1)} {g.group(2)}", line)
             m = ROW.match(line)
+            if not m and SERIAL_ONLY.match(line):
+                nxt = next(((k, x) for k, x in enumerate(lines[ln:], ln + 1) if x.strip()), None)
+                if nxt and CODE_FIRST.match(nxt[1]) and nxt[0] == ln + 1:
+                    line = line.rstrip() + "   " + nxt[1].strip()
+                    raw = lines[ln - 1].rstrip() + " | " + nxt[1].strip()
+                    m = ROW.match(line)
+                    skip_next = m is not None
             if not m:
                 provenance.skip_line(line, "line does not match the row pattern")
                 continue
             sno, before, code, after = m.group(1), m.group(2), m.group(3), m.group(4) or ""
+            if not after.strip() and ln < len(lines) and re.match(r"^\s{20,}\S", lines[ln]) and not ROW.match(lines[ln]):
+                # the names are on the next (indented) line; a short first part there is the AWC name's tail ("1(B)")
+                parts = re.split(r"\s{2,}", lines[ln].strip())
+                if len(parts) == 3 and len(parts[0]) <= 8:
+                    before, parts = before + " " + parts[0], parts[1:]
+                after = "    ".join(parts)
+                raw = raw.rstrip() + " | " + lines[ln].strip()
+                skip_next = True
             dist, proj, awc, sure = split_before(before)
             if re.search(r"\s{2,}", after.strip()):
                 (worker, helper), s2 = split_n(after, 2)
             else:       # one name only (or both names with single spaces between): kept whole as the worker
                 worker, helper, s2 = after.strip(), "", False
-            out.append((sno, dist, proj, awc, code, worker, helper, sure and s2, pg, ln, line))
+            out.append((sno, dist, proj, awc, code, worker, helper, sure and s2, pg, ln, raw))
     return out
 
 
