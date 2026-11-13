@@ -19,10 +19,13 @@ Records (dept rural_development, level gram_panchayat): one per TCM row: post "T
 post_regional "તલાટી કમ મંત્રી", name (Gujarati, as written), phone, area = the gram panchayat / sejo as written (Gujarati),
 villages, extra_charge, taluka (English, from the taluka select), district (LGD name), and the Sarpanch of the same row
 (sarpanch_name, sarpanch_phone). A table with a Sarpanch column and no TCM column gives one record per Sarpanch (post
-"Sarpanch", kind sarpanch). Every row also keeps its raw cells (header -> text). PDFs that the menu links are saved to the bucket
+"Sarpanch", kind sarpanch). An administrator column (વહીવટદાર: the officer who runs a panchayat without a sarpanch, Kutch) gives
+one record per named administrator (post "Administrator (Vahivatdar)", kind administrator, id suffix :a); the row's one mobile
+column goes to the administrator when the row names one, else to the sarpanch. Every row also keeps its raw cells (header -> text). PDFs that the menu links are saved to the bucket
 and noted as source_file records (scans: OCR later, on the runners).
 One queue item per district: 1 GET of the home + 1 GET per taluka home + up to 3 list pages per taluka (about 15-40 requests).
-Record ids: dept:gp_gj_tcm:<district slug>:<taluka slug>:<table>-<row>[:s] (s = Sarpanch-only record); files:
+Record ids: dept:gp_gj_tcm:<district slug>:<taluka slug>:[<page slug>:]<table>-<row>[:s | :a] (s = Sarpanch-only record, a =
+administrator; the page slug only when an earlier page of the item gave the same table-row ids); files:
 dept:gp_gj_tcm:<district slug>:file:<sha1 of url, 12>.
 """
 import hashlib
@@ -53,6 +56,10 @@ DITTO = re.compile(r"^[\"”“''’]+$|^〃$|^-do-$", re.I)
 MOBILE_H = re.compile(r"(?i)મોબા|mobile|સંપર્ક|contact|ફોન|phone")
 TCM_H = re.compile(r"(?i)તલાટી|ત\.\s*ક|tcm|talati|મંત્રી")
 SARPANCH_H = re.compile(r"(?i)સરપંચ|sarpanch")
+NOT_NAME_H = re.compile(r"(?i)ઉમર|ઉંમર|\bage\b|હા\s*કે\s*ના|કે\s*કેમ|લિંગ|મહિલા\s*/\s*પુરૂષ")
+DEPUTY_H = re.compile(r"(?i)ઉપ\s*-?\s*સરપંચ|ઉ૫\s*-?\s*સરપંચ|deputy\s*sarpanch|up\s*-?\s*sarpanch")
+CANDIDATE_H = re.compile(r"(?i)ઉમેદવાર|candidate")     # Bavala: "હરીફ ઉમેદવાર" = the elected candidate (the sarpanch)
+ADMIN_H = re.compile(r"(?i)વહીવટદાર|administrator")     # the officer who runs a gram panchayat that has no sarpanch
 NAME_H = re.compile(r"(?i)નામ|name")
 EMP_H = re.compile(r"(?i)કર્મચારી|employee|અધિકારી")
 DESIG_H = re.compile(r"(?i)હોદ્દો|designation")
@@ -65,8 +72,18 @@ DIST_H = re.compile(r"(?i)જિલ્લ|જીલ્લ|district")
 SNO_H = re.compile(r"(?i)^(ક્રમ|અ\.?\s*નં\.?|ક્રમ\s*નં\.?|sr\.?\s*no\.?|s\.?\s*no\.?|no\.?)$")
 
 
+GU_IN_WORD = re.compile(r"(?<=[\u0a81-\u0ae3])[૦-૯]+|[૦-૯]+(?=[\u0a81-\u0ae3])")
+
+
 def text(s):
-    return _esw.clean((s or "").translate(GU_DIGITS))
+    """Gujarati digits as digits, except inside a word: typists write ૫ (5) for પ ("૫ઢીયાર"); there it stays as written."""
+    t = s or ""
+    out, i = [], 0
+    for m in GU_IN_WORD.finditer(t):
+        out.append(t[i:m.start()].translate(GU_DIGITS) + m.group(0))
+        i = m.end()
+    out.append(t[i:].translate(GU_DIGITS))
+    return _esw.clean("".join(out))
 
 
 def roles(header):
@@ -80,8 +97,14 @@ def roles(header):
             out[i] = "mobile"
         elif SNO_H.match(h):
             out[i] = "sno"
-        elif SARPANCH_H.search(h):
+        elif NOT_NAME_H.search(h):
+            continue        # "સરપંચશ્રીની ઉમર" (age), "પ્રથમ વખત સરપંચ ... હા કે ના" (first term?): kept in cells only
+        elif DEPUTY_H.search(h):
+            out[i] = "deputy"
+        elif SARPANCH_H.search(h) or CANDIDATE_H.search(h):
             out[i] = "sarpanch"
+        elif ADMIN_H.search(h):
+            out[i] = "admin"
         elif TCM_H.search(h) and NAME_H.search(h):
             out[i] = "tcm"
         elif EMP_H.search(h) and NAME_H.search(h):
@@ -114,25 +137,26 @@ def table_rows(grid, pos, strict=False):
         return []
     header = [text(c) for c in grid[hi]]
     rl = roles(header)
-    if not any(v in ("tcm", "sarpanch", "employee") for v in rl.values()):
+    if not any(v in ("tcm", "sarpanch", "employee", "deputy", "admin") for v in rl.values()):
         return []
     if strict and not any(v in ("tcm", "sarpanch") for v in rl.values()):
         return []       # district-level pages: an employee list without TCM words is another list (TDOs, branch staff)
     # each mobile column -> the nearest name column on its left
     owner, last = {}, None
     for i in range(len(header)):
-        if rl.get(i) in ("tcm", "sarpanch", "employee"):
+        if rl.get(i) in ("tcm", "sarpanch", "employee", "admin", "deputy"):
             last = rl[i]
         elif rl.get(i) == "mobile":
             owner[i] = last or "tcm"
     out, prev = [], {}
     for r, sp in zip(grid[hi + 1:], pos[hi + 1:]):
         cells = [text(c) for c in r]
-        if not any(cells) or any(c and c == header[i] and rl.get(i) in ("tcm", "sarpanch", "employee", "mobile")
+        if not any(cells) or any(c and c == header[i] and rl.get(i) in ("tcm", "sarpanch", "employee", "mobile", "deputy", "admin")
                                  for i, c in enumerate(cells[:len(header)])):
             provenance.skipped("header" if any(cells) else "empty")
             continue        # a second header row (rowspan repeats the first header's name cell)
-        row = {"cells": {header[i] or f"col{i + 1}": c for i, c in enumerate(cells) if c and i < len(header)}}
+        row = {"cells": {header[i] or f"col{i + 1}": c for i, c in enumerate(cells) if c and i < len(header)},
+               "roles": set(rl.values())}
         for i, c in enumerate(cells):
             role = rl.get(i)
             if not role:
@@ -158,7 +182,19 @@ def j(row, role):
     return " | ".join(vals) or None
 
 
-def records(html, url, p, taluka):
+PHONE_IN_NAME = re.compile(r"[\s,(/-]*((?:\+?91[\s-]*)?[6-9]\d{4}[\s-]?\d{5})\)?\s*$")
+
+
+def split_phone(name, phone):
+    """'શ્રી વિપુલ આર.વાવડીયા 8200694581' in a "name / phone" column (Bardoli): (name, phone) apart, when no phone column gave one."""
+    m = PHONE_IN_NAME.search(name or "")
+    if not m or phone:
+        return name, phone
+    return name[:m.start()].strip(" ,-/") or None, _esw.phones(m.group(1))
+
+
+def records(html, url, p, taluka, page=""):
+    """page: a slug of the page, put in the ids when an earlier page of the same item gave the same ids (see fetch)."""
     soup = _esw.soup(html)
     dslug, tslug = _esw.slug(p["district"]), _esw.slug(taluka or "district")
     recs = []
@@ -174,14 +210,22 @@ def records(html, url, p, taluka):
                     tcm_name = j(row, "employee")
             tcm_name = None if tcm_name and DITTO.match(tcm_name) else tcm_name
             phone = _esw.phones(*(row.get("tcm_phone") or []), *(row.get("employee_phone") or []))
-            sar, sar_phone = j(row, "sarpanch"), _esw.phones(*(row.get("sarpanch_phone") or []))
+            tcm_name, phone = split_phone(tcm_name, phone)
+            sar, sar_phone = split_phone(j(row, "sarpanch"), _esw.phones(*(row.get("sarpanch_phone") or [])))
+            dep, dep_phone = split_phone(j(row, "deputy"), _esw.phones(*(row.get("deputy_phone") or [])))
+            dep = None if dep and DITTO.match(dep) else dep
+            admin = j(row, "admin")
+            admin = None if admin and DITTO.match(admin) else admin
+            admin_phone = _esw.phones(*(row.get("admin_phone") or []))
+            if admin_phone and not admin and sar:       # one mobile column for whoever holds the panchayat: here the sarpanch
+                sar_phone, admin_phone = _esw.phones(sar_phone or "", admin_phone), None
             area = j(row, "gp") or j(row, "sejo")
             common = dict(state="GJ", district=p["district"], taluka=taluka or None, taluka_regional=j(row, "taluka"),
                           district_regional=j(row, "district"), sejo=j(row, "sejo"), villages=j(row, "villages"),
                           extra_charge=j(row, "extra"), remarks=j(row, "remarks"), list_no=j(row, "sno"),
                           designation=j(row, "designation"), cells=row["cells"], source=url, page=url, src_url=url,
                           portal=p["host"], src_pos=sp, area=area or taluka or p["district"])
-            key = f"{dslug}:{tslug}:{sp['table']}-{sp['row']}"
+            key = f"{dslug}:{tslug}:{page + ':' if page else ''}{sp['table']}-{sp['row']}"
             if tcm_name or (phone and not sar):
                 recs.append(_esw.record(MODULE, key, dept="rural_development", level="gram_panchayat",
                                         post="Talati-cum-Mantri (Panchayat Secretary)", post_regional="તલાટી કમ મંત્રી",
@@ -190,6 +234,20 @@ def records(html, url, p, taluka):
             elif sar and not DITTO.match(sar):
                 recs.append(_esw.record(MODULE, key + ":s", dept="rural_development", level="gram_panchayat", post="Sarpanch",
                                         post_regional="સરપંચ", name=sar, phone=sar_phone, kind="sarpanch", **common))
+            if dep:
+                # the deputy sarpanch (ઉપ સરપંચ) has his own column (Sanand) or his own page (Detroj Upsarpanch-details); before
+                # 2026-11-13 he was read as the sarpanch (Sanand: both names in one record; Detroj: post "Sarpanch"). A page of
+                # deputies alone keeps its old ids (":s"), so the records are corrected in place.
+                has_sar = "sarpanch" in row["roles"]
+                recs.append(_esw.record(MODULE, key + (":d" if has_sar else ":s"), dept="rural_development", level="gram_panchayat",
+                                        post="Deputy Sarpanch", post_regional="ઉપ સરપંચ", name=dep, phone=dep_phone,
+                                        kind="deputy_sarpanch", **common))
+            if admin or (admin_phone and not tcm_name and not sar):
+                # a gram panchayat without a sarpanch (term over, no poll yet) is run by an administrator (વહીવટદાર, often the
+                # TDO's officer); before 2026-11-13 these rows were dropped (Rapar: 30 of 83 rows)
+                recs.append(_esw.record(MODULE, key + ":a", dept="rural_development", level="gram_panchayat",
+                                        post="Administrator (Vahivatdar)", post_regional="વહીવટદાર", name=admin, phone=admin_phone,
+                                        kind="administrator", **common))
     return recs
 
 
@@ -272,6 +330,11 @@ def fetch(p, get):
             continue
         html = g.content.decode("utf-8", "replace")
         got = records(html, u, p, taluka)
+        have = {rid for rid, _ in recs}
+        if any(rid in have for rid, _ in got):
+            # two lists of one taluka (Sailla: Information-Talati and information-sarpanches) give the same table-row ids:
+            # before 2026-11-13 the second page replaced 12 of the first page's 46 records. The later page keeps its own ids.
+            got = records(html, u, p, taluka, page=_esw.slug(urlparse(u).path.rstrip("/").rsplit("/", 1)[-1]))
         recs.extend(got)
         if got:
             files.append(_esw.keep(MODULE, f"{dslug}/{_esw.slug(urlparse(u).path)}", g.content, "html"))
