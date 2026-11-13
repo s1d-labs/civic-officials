@@ -74,12 +74,12 @@ def run(item, get):
     fmt = p.get("fmt", "html")
     recs, files = [], []
     if fmt == "pdf":
-        files.append((f"directories/{p.get('state', 'xx')}/{key}.pdf", r.content, "application/pdf"))
+        files.append((f"directories/{p.get('state') or 'xx'}/{key}.pdf", r.content, "application/pdf"))
         for i, text in enumerate(pdf_pages(r.content), 1):
             recs.append((f"dir:{key}:p{i}", {"type": "pdf_page", **meta, "url": p["url"], "page": i, "text": text, "file": files[0][0],
                                              "src_pos": {"page": i}, "method": METHOD_PDF}))
     else:
-        files.append((f"directories/{p.get('state', 'xx')}/{key}.{fmt}.gz", gzip.compress(r.content), "application/gzip"))
+        files.append((f"directories/{p.get('state') or 'xx'}/{key}.{fmt}.gz", gzip.compress(r.content), "application/gzip"))
         if fmt == "json":
             try:
                 rows = [flat(o) for o in objects(r.json())]
@@ -167,8 +167,12 @@ def main():
                 recs, files, why = [], [], f"{type(e).__name__}: {e}"[:200]
             n_data = len(recs)
             recs, files = trail.finish(recs, files)
-            for i in range(0, len(files), 100):      # source copies can make many files: links in chunks
-                hub.upload_many(files[i:i + 100])
+            try:
+                for i in range(0, len(files), 100):      # source copies can make many files: links in chunks
+                    hub.upload_many(files[i:i + 100])
+            except Exception as e:          # one item's bad file (a path the hub refuses) must not end the worker
+                why = why or f"upload refused: {type(e).__name__}: {e}"[:200]
+                recs = [(rid, d) for rid, d in recs if not rid.startswith(("src:", "trail:"))]
             for rid, data in recs:
                 hub.record(rid, data)
             if why:
