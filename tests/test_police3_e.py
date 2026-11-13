@@ -87,3 +87,38 @@ def test_as_directory_fetch():
     dgp = next(d for _, d in recs if d["post"] == "DGP, Assam")
     assert dgp["level"] == "state" and dgp["email"] == "dgp@assampolice.gov.in"
     assert all(d.get("src_pos", {}).get("page") for _, d in recs)
+
+
+# ---------- Odisha ----------
+def test_od_commissionerate():
+    from dforms import police3_od as o
+    recs, files, why = o.fetch({"reader": "police3_od", "url": o.URL}, FakeGet({o.URL: "police3_od/important-contact-number.html"}))
+    recs = dict(recs)
+    assert why == "" and len(recs) >= 80
+    cp = recs["dept:police3_od:officer:1-commissioner-of-police-bhubaneswar-kataka-bhubanes"]
+    assert cp["name"] == "Dr. Suresh Dev Datta Singh, IPS" and cp["district"] == "Khordha"
+    assert cp["phone"] == "8280338300, 0674-2530035" and cp["fax"] == "0674-2530001" and cp["email"] == "commissioneratepolice@od.gov.in"
+    assert recs["dept:police3_od:officer:5-deputy-commissioner-of-police-kataka"]["district"] == "Cuttack"
+    z = recs["dept:police3_od:bhubaneswar:zone-i"]
+    assert (z["level"], z["name"], z["phone"]) == ("circle", "Ramesh Chandra Bisoi", "8280338306")
+    assert "Capital PS" in z["stations"]
+    s = recs["dept:police3_od:bhubaneswar:zone-i:capital-ps"]
+    assert s["level"] == "police_station" and s["circle"] == "Bhubaneswar UPD Zone I" and s["district"] == "Khordha"
+    assert recs["dept:police3_od:kataka:zone-ii:mangalabag-ps"]["district"] == "Cuttack"
+
+
+# ---------- West Bengal ----------
+def test_wb_bidhannagar():
+    from dforms import police3_wb as w
+    recs, files, why = w.fetch({"reader": "police3_wb", "url": w.URL}, FakeGet({w.URL: "police3_wb/bidhannagar.html"}))
+    recs = dict(recs)
+    st = [d for d in recs.values() if d["level"] == "police_station"]
+    assert len(st) == 15 and all(d.get("phone") for d in st)
+    e = recs["dept:police3_wb:bidhannagar:bidhannagar-east-ps"]
+    assert (e["phone"], e["email"], e["zone"], e["district"]) == ("9147889496, 9147889451", "psbdneast@policewb.gov.in",
+                                                                   "Bidhannagar Zone", "North 24 Parganas")
+    assert recs["dept:police3_wb:bidhannagar:cyber-crime-ps"]["office_type"] == "cyber police station"
+    assert recs["dept:police3_wb:bidhannagar:women-ps"]["office_type"] == "women police station"
+    assert recs["dept:police3_wb:bidhannagar:airport-traffic-guard"]["phone"] == "9147889435"
+    assert recs["dept:police3_wb:bidhannagar:control-room-24x7"]["phone"] == "033-23358788, 033-23410465"
+    assert "dept:police3_wb:bidhannagar:bidhannagar-traffic" not in recs
