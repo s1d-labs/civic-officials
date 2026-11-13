@@ -1,0 +1,317 @@
+[
+ {
+  "key": "vil_od_ganjam_gp:surada",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/sites/default/files/2023-06/Surada%20block%20contact%20details.pdf",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Surada",
+   "block_regional": "ସୋରଡା",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:seregada",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/sites/default/files/2023-06/seregada%20contact%20details.pdf",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Sheragada",
+   "block_regional": "ଶେରଗଡ",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:sanakhemundi",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/sites/default/files/2023-06/SANAKHEMUNDI%20BLOCK%20CONTACT%20DETAILS.pdf",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Sanakhemundi",
+   "block_regional": "ସନଖେମୁଣ୍ଡି",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:rangeilunda",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/sites/default/files/2023-06/RANGEILUNDA%20BLOCK%20CONTACT%20DETAILS.pdf",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Rangeilunda",
+   "block_regional": "ରଙ୍ଗେଇଲୁଣ୍ଡା",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:purushottampur",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/sites/default/files/2023-06/PURUSHOTTAMPUR%20BLOCK%20CONTACT%20DETAILS.pdf",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Purushottampur",
+   "block_regional": "ପୁରୁଷୋତ୍ତମପୁର",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:polasara",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/sites/default/files/2025-04/POLASARA%20BLOCK.pdf",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Polasara",
+   "block_regional": "ପୋଲସରା",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:patrapur",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/patrapur",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Patrapur",
+   "block_regional": "ପାତ୍ରପୁର",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:kukudakhandi",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/kukudakhandi",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Kukudakhandi",
+   "block_regional": "କୁକୁଡାଖଣ୍ଡି",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:khallikote",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/khallikote",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Khallikote",
+   "block_regional": "ଖଲ୍ଲିକୋଟ",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:kabisuryanagar",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/kabisuryanagar",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Kabisuryanagar",
+   "block_regional": "କବିସୂର୍ଯ୍ୟନଗର",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:jagannathprasad",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/jagannathprasad",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Jagannathprasad",
+   "block_regional": "ଜଗନ୍ନାଥପ୍ରସାଦ",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:ganjam",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/ganjam",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Ganjam",
+   "block_regional": "ଗଞ୍ଜାମ",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:digapahandi",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/digapahandi-0",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Digapahandi",
+   "block_regional": "ଦିଗପହଣ୍ଡି",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:dharakote",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/dharakote",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Dharakote",
+   "block_regional": "ଧରାକୋଟ",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:chikiti",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/chikiti",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Chikiti",
+   "block_regional": "ଚିକିଟି",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:chatarapaura",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/chatarapaura",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Chhatrapur",
+   "block_regional": "ଛତ୍ରପୁର",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:buguda",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/buguda",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Buguda",
+   "block_regional": "ବୁଗୁଡା",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:bhanjanagar",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/bhanjanagar",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Bhanjanagar",
+   "block_regional": "ଭଞ୍ଜନଗର",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:bellaguntha",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/bellaguntha",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Bellaguntha",
+   "block_regional": "ବେଲଗୁଣ୍ଠା",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:beguniapada",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/or/gram-panchayat-directory/beguniapada",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Beguniapada",
+   "block_regional": "ବେଗୁନିଆପଡା",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ },
+ {
+  "key": "vil_od_ganjam_gp:aska",
+  "payload": {
+   "reader": "vil_od_ganjam_gp",
+   "url": "https://ganjam.odisha.gov.in/sites/default/files/2025-04/ASKA%20BLOCK%20PEO%2CSARAPANCH%2CSAMITI%20MEMEBR%2CZP%20MEMBER.pdf",
+   "host": "ganjam.odisha.gov.in",
+   "block": "Aska",
+   "block_regional": "ଆସ୍କା",
+   "district": "Ganjam",
+   "state": "OD",
+   "india_only": true,
+   "route": "direct",
+   "expected": 90
+  }
+ }
+]
