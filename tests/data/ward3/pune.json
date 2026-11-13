@@ -1,0 +1,8 @@
+{"module": "ward3_pune",
+ "payload": {"reader": "ward3_pune", "url": "https://webadmin.pmc.gov.in/api/zone-officer-data/zone_officers?lang=en",
+             "url_wards": "https://webadmin.pmc.gov.in/api/ward/ward_offices?zone=&lang=en", "state": "MH"},
+ "routes": {"https://webadmin.pmc.gov.in/api/zone-officer-data/zone_officers?lang=en": "pune_zones.api",
+            "https://webadmin.pmc.gov.in/api/ward/ward_offices?zone=&lang=en": "pune_wards.api"},
+ "min_records": 20, "min_wards": 40,
+ "expect": [{"post": "Deputy Commissioner", "name": "Asha Raut", "level": "zone"},
+            {"post": "Assistant Municipal Commissioner", "name": "Somnath Adhav", "level": "ward", "wards": ["1", "2", "3"]}]}
