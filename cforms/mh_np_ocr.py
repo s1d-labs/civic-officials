@@ -21,7 +21,8 @@ boxes with confidences). The words are then read as a table, with no fixed layou
 - When a notice repeats the list in English (Raigad, Ratnagiri, Thane), the English row gives "name" and the Marathi row of the
   same ward gives "name_local".
 Group registers (Konkan "गटातील नगरसेवकांची नावे", Soyagaon "परिशिष्ट अ") have no ward column: their rows are kept with the
-group name ("group") and record id councillor:MH:<LGD code>:grp-<notice>-<serial>; the ward results are councillor:MH:<LGD
+group name ("group"; with a member-count column, the merged group cell is given to every row up to the next count; a
+serial written in the name cell, "१. अक्षय" / "१०.आशियाना", starts a row) and record id councillor:MH:<LGD code>:grp-<notice>-<serial>; the ward results are councillor:MH:<LGD
 code>:<ward> (the same ids as cforms/mh_np.py). Every record keeps the page, its row, the OCR line, the mean word confidence
 and the row's box in pixels (300 dpi) in "src_pos", and the bucket copy (sha256, gazette url, key) in "src".
 One queue item = one notice and up to 6 pages ("first", "last"); OCR runs on the GitHub runners only.
@@ -44,16 +45,17 @@ METHOD = ("ocr tesseract mar+eng (300 dpi, psm 6, word boxes) of the saved gazet
 ELECTION = mh_np.ELECTION
 DPI = 300
 NUM = re.compile(r"^[(\[{|]*([0-9०-९]{1,3})[)\]}|.,:;]*$")
-START = re.compile(r"^(आदेश|अधिसूचना|Order|ORDER|Orcer|Notification|NOTIFICATION)\W*$|BY\s+(THE\s+)?COLLECTOR")
-STOP = re.compile(r"ठिकाण|स्थळ|^दिनांक|^दि\.\s*[0-9०-९]|जिल्हाधिकारी|Collector|^Place|^Dated?\b|स्वाक्षरी|शासन\s*राजपत्र|"
+START = re.compile(r"^(आदेश|अधिसूचना|Order|ORDER|Orcer|Notification|NOTIFICATION)(\W+(आदेश|अधिसूचना|Order|ORDER|Notification|"
+                   r"NOTIFICATION))*\W*$|BY\s+(THE\s+)?COLLECTOR")    # a page in two columns: "अधिसूचना अधिसूचना"
+STOP = re.compile(r"भाग\s*[१1]\s*-\s*अ\s*\(|ठिकाण|स्थळ|^दिनांक|^दि\.\s*[0-9०-९]|जिल्हाधिकारी|Collector|^Place|^Dated?\b|स्वाक्षरी|शासन\s*राजपत्र|"
                   r"ON BEHALF|GOVERNMENT|^भाग\s*एक|^आदेश|^अधिसूचना|^Order\W*$|NOTIFICATION|COLLECTOR|^[A-Z][a-z]+,\s*$")
 CONT = re.compile(r"चालू|contd|Contd")
 LETTERS = re.compile(r"[A-Za-zऀ-ॣॱ-ॿ]")
 ROLES = (("group_leader", re.compile(r"गटनेत")), ("ward", re.compile(r"Constituency", re.I)),
          ("name", re.compile(r"(सदस्य|नगरसेवक|उमेदवार|Councillor|Candidate|Member|Elected).*(नाव|नांव|नावे|Name)|"
                              r"(नाव|नांव|नावे|Name).*(सदस्य|नगरसेवक|उमेदवार|Councillor|Candidate|Member|Elected)", re.I)),
+         ("seats", re.compile(r"एकूण|संख्या")),           # before group: "गटाची / आघाडीची एकूण सदस्य संख्या" (Soyagaon)
          ("group", re.compile(r"गटा|आघाडी|Group", re.I)),
-         ("seats", re.compile(r"एकूण|संख्या")),
          ("ward", re.compile(r"प्रभाग|Ward|Constituency|वार्ड", re.I)),
          ("party", re.compile(r"पक्ष|Party|Front", re.I)),
          ("reservation", re.compile(r"शेरा|आरक्षण|प्रवर्ग|राखीव|तपशील|Remark|Category|reserved|जागा", re.I)),
@@ -64,6 +66,7 @@ ROLES = (("group_leader", re.compile(r"गटनेत")), ("ward", re.compile(r
          ("serial", re.compile(r"अ\s*\.?\s*क्र|अनु|^\s*क्र|Sr\b|S\.?\s*No|^\s*No\b", re.I)),
          ("name", re.compile(r"नाव|नांव|Name", re.I)))
 HEAD_HINT = re.compile(r"नाव|नांव|Name|प्रभाग|Ward|अ\.\s*क्र|Sr\.|शेरा|Remark", re.I)
+SERIAL_IN = re.compile(r"^[0-9०-९]{1,3}[.)]")       # "१." / "१०.आशियाना": a serial written in the name cell
 HONORIFIC = re.compile(r"^(श्रीमती|श्रीम\.?|श्री\.?|सौ\.?|कु\.?|Shri\.?|Smt\.?|Mrs?\.?|Ms\.?)\s+")
 
 
@@ -171,11 +174,16 @@ def roles_of(bs, head_lines, h):
     texts = [[] for _ in range(len(bs) + 1)]
     for l in head_lines:
         ph = []
+        rule = False
         for w in l["words"]:
-            if ph and w["x0"] - ph[-1][1] < 1.2 * h:
+            if w["text"] in ("|", "||", "।", "|।"):
+                rule = True                      # a column rule read as a word: the phrase ends here
+                continue
+            if ph and w["x0"] - ph[-1][1] < 1.2 * h and not rule:
                 ph[-1] = (ph[-1][0], w["x1"], ph[-1][2] + " " + w["text"])
             else:
                 ph.append((w["x0"], w["x1"], w["text"]))
+            rule = False
         for a, b, t in ph:
             texts[sum(1 for x in bs if (a + b) / 2 > x)].append(t)
     roles, used = [], set()
@@ -226,9 +234,11 @@ def fill_roles(roles, data, bs):
 def head_clusters(head_lines, h):
     """Head lines of a table without a column-number row -> column centres from the x ranges of the head words."""
     spans = sorted((w["x0"], w["x1"]) for l in head_lines for w in l["words"] if re.search(r"\w", w["text"]))
+    # a rule "|" that Tesseract read between two head words is a column border ("नगर पंचायतीचे | गटातील ... सदस्यांचे")
+    rules = [(w["x0"] + w["x1"]) / 2 for l in head_lines for w in l["words"] if w["text"] in ("|", "||", "।", "|।")]
     cl = []
     for a, b in spans:
-        if cl and a - cl[-1][1] < 1.2 * h:
+        if cl and a - cl[-1][1] < 1.2 * h and not any(cl[-1][1] <= x <= a for x in rules):
             cl[-1][1] = max(cl[-1][1], b)
         else:
             cl.append([a, b])
@@ -280,10 +290,13 @@ def page_tables(page, lines, state):
                     and not START.search(lines[k0 - 1]["text"]) and i - k0 < 2:
                 k0 -= 1
             while k1 + 1 < len(lines) and lines[k1 + 1]["y0"] < lines[k1]["y1"] + 1.8 * h and k1 - i < 6 \
-                    and _num(lines[k1 + 1]["words"][0]["text"]) is None and not col_row(lines[k1 + 1]):
-                k1 += 1
+                    and _num(lines[k1 + 1]["words"][0]["text"]) is None and not col_row(lines[k1 + 1]) \
+                    and not any(SERIAL_IN.match(w["text"]) for w in lines[k1 + 1]["words"][:3]):
+                k1 += 1                          # (a line with "१." in its first words is the first data row: "सोयगाव १. अक्षय")
             ht = " ".join(x["text"] for x in lines[k0:k1 + 1])
-            if re.search(r"नाव|नांव|Name", ht, re.I) and re.search(r"प्रभाग|Ward|अ\.?\s*क्र|Sr\.|अनुक्र", ht, re.I):
+            # a group register without a serial column (Soyagaon "परिशिष्ट अ": the serial is in the members' name cell)
+            # names the group: "गटातील / आघाडीतील सदस्यांचे नाव"
+            if re.search(r"नाव|नांव|Name", ht, re.I) and re.search(r"प्रभाग|Ward|अ\.?\s*क्र|Sr\.|अनुक्र|गटातील|आघाडीतील", ht, re.I):
                 head = lines[k0:k1 + 1]
                 cs = head_clusters(head, h)
                 i = k1
@@ -340,7 +353,11 @@ def rows_of(data, bs, roles, h):
             continue
         t = lambda r: gj.norm(" ".join(w["text"] for w in named.get(r, [])))  # noqa: E731
         name_ws = named.get("name", [])
-        lead = _num(name_ws[0]["text"]) if (name_ws and key is None) else None
+        lead = None
+        if name_ws and key is None:
+            lead = _num(name_ws[0]["text"])
+            if lead is None and SERIAL_IN.match(name_ws[0]["text"]) and LETTERS.search(name_ws[0]["text"]):
+                lead = 1                         # "१०.आशियाना": serial and name in one word
         if key and named.get(key) and re.search(r"[0-9०-९]", t(key)) and _num(named[key][0]["text"]) is not None:
             start = True
         elif lead is not None:
@@ -456,6 +473,9 @@ def split_by_body(blocks, bodies):
     return out
 
 
+OTHER_NP = re.compile(r"[ऀ-ॿ]{2,}\.?\)?\s*(नगरपंचायतीच्या|नगर\s*पंचायतीच्या|नगरपंचायतीचे)")
+
+
 def block_body(blk, bodies):
     for field in ("body", "ward"):
         b = body_in(" ".join(r["cells"].get(field, "") for r in blk["rows"]), bodies)
@@ -464,6 +484,9 @@ def block_body(blk, bodies):
     b = body_in(blk["intro"], bodies)
     if b:
         return b, "notice text"
+    if OTHER_NP.search(blk["intro"] or ""):
+        return None, ""            # the notice names a nagar panchayat that is not one of the item's (a notice of another
+        #                            collector further down the gazette part: Soyagaon notice 177 page 3, Osmanabad)
     if len(bodies) == 1:
         return bodies[0], "only body of the item"
     return None, ""
@@ -482,6 +505,20 @@ def records(segs, p):
     out, why, by_ward = [], [], {}
     for bi, blk in enumerate(blocks, 1):
         b, how = block_body(blk, bodies)
+        if not blk["has_ward"] and any(r["cells"].get("seats") for r in blk["rows"]):
+            # group register with a member count: the group cell spans the group's rows (one merged cell, its text wrapped
+            # over the first rows): every row up to the next count gets the whole group name
+            grp, cur = [], None
+            for r in blk["rows"]:
+                if r["cells"].get("seats") or cur is None:
+                    cur = []
+                    grp.append(cur)
+                cur.append(r)
+            for g in grp:
+                name_g = gj.norm(" ".join(r["cells"].get("group", "") for r in g))
+                for r in g:
+                    r["cells"]["group"] = name_g
+                    r["cells"].setdefault("seats", g[0]["cells"].get("seats", ""))
         named = [r for r in blk["rows"] if LETTERS.search(clean_name(r["cells"].get("name", "")))]
         if not named:
             provenance.skip_row(blk, 'skip: not named')

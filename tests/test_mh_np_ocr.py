@@ -191,3 +191,21 @@ def test_satara_form_iv_rows_by_gap():
 def test_name_next_to_nagar_panchayat_wins():
     b = bodies("276414", "276383")
     assert m.body_in("नगरपंचायतीचे नाव : लोणंद नगरपंचायत, लोणंद, तालुका खंडाळा, जिल्हा सातारा", b)["lgd_code"] == "276414"
+
+
+def test_soyagaon_group_register_full_notice():
+    """Aurangabad part 1-A, 18 Feb 2022, notice 177 (bucket civic-officials-india-direct/councillors/MH/b5a722daa15d.pdf,
+    sha256 67bb04e8...): pages 1-3 OCR'd here (tesseract 5, mar+eng, psm 6, 300 dpi grey) as n177-p<page>.tsv.
+    Page 1 "परिशिष्ट अ": 15 members of one front, the serial in the name cell, the front's name one merged cell; page 3 is
+    a notice of the Osmanabad collector (Vashi, Lohara) and must not be read as Soyagaon. Before the fix: 1 wrong record."""
+    p = {"bodies": bodies("251436"), "url": "u", "notice": "177"}
+    recs, why = m.parse_tsv([(i, data(f"n177-p{i}.tsv")) for i in (1, 2, 3)], p)
+    d = dict(recs)
+    assert sorted(d) == sorted(f"councillor:MH:251436:grp-177-1-{i}" for i in range(1, 16))
+    assert why == "block 2 (page 3): body not named"
+    r = d["councillor:MH:251436:grp-177-1-1"]
+    assert r["name"] == "अक्षय विनायक काळे" and r["serial"] == "1" and r["body_from"] == "body"
+    assert all(x["group"] == "शिवसेना प्रणित म्युनिसिपल पार्टी सोयगाव" for x in d.values())
+    assert d["councillor:MH:251436:grp-177-1-10"]["name"] == "आशियाना कदीर शाह"       # "१०.आशियाना": one OCR word
+    assert d["councillor:MH:251436:grp-177-1-15"]["name"] == "दीपक नाथा पगारे"
+    assert all(x["src_pos"]["page"] == 1 for x in d.values())
