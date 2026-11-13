@@ -1,0 +1,16 @@
+[
+ {
+  "key": "vil_mn_awc:awc_in_manipur",
+  "payload": {
+   "reader": "vil_mn_awc",
+   "url": "https://socialwelfare.mn.gov.in/media/filer_public/c9/fa/c9fa4864-496d-4c94-bf18-03e62a839874/awc_in_manipur.pdf",
+   "state": "MN",
+   "in_archive": "yes, saved 2026-11-07 (sha256 1267564c...)",
+   "route": "abroad",
+   "expect": {
+    "awc": 11585,
+    "records_about": 21000
+   }
+  }
+ }
+]
