@@ -1,0 +1,6 @@
+{"module": "ward3_chhindwara", "payload": {"reader": "ward3_chhindwara", "kind": "officers", "url": "https://chhindwaranagarnigam.com/municipal-officers/", "state": "MP"},
+ "routes": {"https://chhindwaranagarnigam.com/municipal-officers/": "chhindwara_municipal-officers.html"},
+ "min_records": 7,
+ "expect": [{"post": "^Zonal Officer$", "name": "विवेक चौहान", "level": "zone"},
+            {"post": "^Zonal Officer$", "name": "ब्रजेश पाण्डेय", "level": "zone"},
+            {"post": "^Commissioner$", "name": "चन्द्रप्रकाश राय", "level": "body"}]}

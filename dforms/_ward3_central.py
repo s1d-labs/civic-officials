@@ -51,7 +51,7 @@ def zones_of(text):
     return out
 
 
-TITLE = re.compile(r"^(?:श्रीमती|श्री|सुश्री|कु\.?|डॉ\.?|डाॅ\.?|डा\.?|Shri|Smt\.?|Dr\.?|Mr\.?|Mrs\.?|Ms\.?)\s*", re.I)
+TITLE = re.compile(r"^(?:श्रीमती\s|श्री\s|सुश्री\s|कु\.|डॉ\.|डाॅ\.|डा\.|Shri\s|Smt\.?\s|Dr\.|Mr\.?\s|Mrs\.?\s|Ms\.?\s)\s*", re.I)
 
 
 def strip_title(name):
