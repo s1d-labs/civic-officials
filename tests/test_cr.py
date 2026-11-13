@@ -41,6 +41,28 @@ def test_up_lgd_tie():
     assert cr_up.district_en("लखीमपुर खीरी") == "Kheri"
 
 
+def test_up_lgd_gap_bodies():
+    """The 23 SEC bodies without an LGD code in civic.councillor on 2026-11-14 (495 members): 22 now tie, Chaumukha (Gorakhpur)
+    is not in LGD and stays open."""
+    cases = {("झांसी", "झांसी", "Municipal Corporation"): "249314",           # not Jhansi Railway Settlement
+             ("वृन्दावन-मथुरा", "मथुरा", "Municipal Corporation"): "249052",
+             ("हापुड", "हापुड़", "Municipal Council"): "248991", ("नकुड", "सहारनपुर", "Municipal Council"): "248876",
+             ("बडौत", "बागपत", "Municipal Council"): "248972", ("विसंवा", "सीतापुर", "Municipal Council"): "249193",
+             ("गौरा बरहज", "देवरिया", "Municipal Council"): "249462",
+             ("बक्शी का तालाब", "लखनऊ", "Nagar Panchayat"): "263351", ("बढ़नीचाफा", "सिद्धार्थनगर", "Nagar Panchayat"): "297056",
+             ("जलालाबाद", "शामली", "Nagar Panchayat"): "248907", ("फतेहगंज पश्चिमी", "बरेली", "Nagar Panchayat"): "249142",
+             ("फतेहगंज पूर्वी", "बरेली", "Nagar Panchayat"): "249155", ("बढापुर", "बिजनौर", "Nagar Panchayat"): "248916",
+             ("दारा नगर कड़ाधाम", "कौशाम्बी", "Nagar Panchayat"): "297064", ("करहल", "मैनपुरी", "Nagar Panchayat"): "249107",
+             ("कुरावली", "मैनपुरी", "Nagar Panchayat"): "249103", ("कोहंडौर", "प्रतापगढ़", "Nagar Panchayat"): "297042",
+             ("कटरा मेदनीगंज", "प्रतापगढ़", "Nagar Panchayat"): "249355", ("हैदरगढ", "बाराबंकी", "Nagar Panchayat"): "249387",
+             ("कौडियागंज", "अलीगढ़", "Nagar Panchayat"): "249027", ("बाबूगढ", "हापुड़", "Nagar Panchayat"): "248992",
+             ("निवाडी", "गाजियाबाद", "Nagar Panchayat"): "248978", ("चौमुखा", "गोरखपुर", "Nagar Panchayat"): None}
+    got = {c: cr_up.lgd_code(*c)[0] for c in cases}
+    assert got == cases
+    assert sum(v is not None for v in got.values()) == 22
+    assert cr_up.nukta("हापुड बढ़नी") == "हापुड़ बढ़नी"
+
+
 def test_up_items():
     items = json.loads((SEEDS / "councillors_cr_up.json").read_text())
     assert len(items) == 228 and len({i["key"] for i in items}) == 228
