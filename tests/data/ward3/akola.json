@@ -1,0 +1,5 @@
+{"module": "ward3_akola",
+ "payload": {"reader": "ward3_akola", "url": "https://amcakola.in/ContactUs/Wardofc", "state": "MH"},
+ "routes": {"https://amcakola.in/ContactUs/Wardofc": "akola_wardofc.html"},
+ "min_records": 4,
+ "expect": [{"post": "Zone Office", "level": "zone"}]}
