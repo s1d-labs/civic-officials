@@ -189,3 +189,15 @@ def test_tn_heads_judged_by_the_heads_names():
     assert sorted(rid for rid, _ in recs) == ["councillor:TN:head:dharapuram:chair", "councillor:TN:head:dharapuram:vice-chair"]
     a = audit.audit_source(audit.read_source(body, "application/json", "x.json.gz"), recs_of(recs), "cforms.tn_heads")
     assert a["rows_visible"] == 343 and a["verdict"] == "ok" and a["reason"].startswith("heads only: 2 heads")
+
+
+def test_photo_alt_text_counts_as_source_text():
+    """e-Nigam member list (Mohali, cforms/cr_pb): the members' names are only in the photos' alt / title. With them in the source
+    text, the 50 member-list records and the head are found by name (names_found 1.0), and the state switcher is left out."""
+    from cforms import cr_pb
+    body = gzip.decompress((ROOT / "tests" / "data" / "cr_pb_mohali_vice_detail_full.html.gz").read_bytes())
+    t = body.decode("utf-8")
+    d = cr_pb.detail(t)
+    recs = [("vice", d["name"], d.get("phone") or "", "")] + [(m["ward_no"], m["name"], m["phone"], "") for m in cr_pb.member_list(t)]
+    a = audit.audit_source(audit.read_source(body, "text/html", "x.html.gz"), recs, "cforms.cr_pb")
+    assert a["names_found"] == 1.0 and a["records_person"] == 51 and a["rows_matched"] == 51 and a["rows_left_out"] >= 30

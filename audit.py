@@ -235,7 +235,9 @@ def html_source(body):
         if blocks:
             src.rows = blocks
             src.note = "no table rows: repeated blocks (cards, list items)"
-    src.text = " | ".join(x for x in doc.itertext())
+    # a photo's alt / title often is the only place of the person's name (e-Nigam member lists, cforms/cr_pb)
+    alts = [v for img in doc.iter("img") for v in (img.get("alt"), img.get("title")) if v and v.strip()]
+    src.text = " | ".join(x for x in doc.itertext()) + (" | " + " | ".join(alts) if alts else "")
     return src
 
 
