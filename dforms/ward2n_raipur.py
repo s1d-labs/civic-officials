@@ -5,6 +5,7 @@ has a contact page, /site/contactus, with the table "Zone Wise Contact List": Zo
 Records: level "zone". Ids: dept:ward2n_raipur:zone-<n>:revenue-coordinator.
 """
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -23,6 +24,7 @@ def parse(html, p):
         for r in rows:
             z = _ward.col(r, "zone")
             if not z.isdigit():
+                provenance.skip_row(r, 'skip: not z.isdigit()')
                 continue
             recs.append(_ward.record(MODULE, f"zone-{int(z)}:revenue-coordinator", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level="zone", area=f"Zone {int(z)}", zone=f"Zone {int(z)}",

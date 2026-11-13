@@ -8,6 +8,7 @@ without श्री / श्रीमती / सुश्री / डॉ., nam
 Record ids: dept:ward3_satna:<zone-n or body>:<post slug>:<mobile>.
 """
 from dforms import _esw, _ward, _ward3_central as c3
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -26,6 +27,7 @@ def parse(html, p):
         for r in rows:
             name, post, phone = _ward.col(r, "नाम"), _ward.col(r, "पदनाम"), _ward.col(r, "मोबाइल")
             if not _ward.col(r, "क्रमांक").isdigit() or not post or not (name or phone):
+                provenance.skip_row(r, 'skip: not _ward.col(r, "क्रमांक").isdigit() or not post or not (name or p...')
                 continue
             en = c3.post_en(post)
             zones = c3.zones_of(post)

@@ -16,6 +16,7 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 from cforms.cp_common import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -63,10 +64,12 @@ def amritsar_page(html, url):
     for tr in soup.find_all("tr"):
         tds = tr.find_all("td", recursive=False)
         if len(tds) < 3 or tr.find("tr"):
+            provenance.skip_row(tr, 'skip: len(tds) < 3 or tr.find("tr")')
             continue
         text = norm(" ".join(td.get_text(" ", strip=True) for td in tds[2:3]))
         m = re.search(r"\(\s*Ward\s*No\.?\s*(\d+)\s*\)", text)
         if not m:
+            provenance.skip_row(tr, 'skip: not m')
             continue
         name = norm(text[:m.start()])
         post = POSTS.search(name)
@@ -138,6 +141,7 @@ def fetch(p, get):
         for ward, wurl in jalandhar_links(r.text, url):
             w = get(wurl)
             if w is None:
+                provenance.skipped('skip: w is None')
                 continue
             files.append((f"councillors/PB/jalandhar-ward-{ward}.html.gz", gzip.compress(w.content), "application/gzip"))
             rec = jalandhar_ward(w.text, wurl, ward)

@@ -9,6 +9,7 @@ import re
 
 from dforms import _emerg, _pdftext
 from provenance import line_pos
+import provenance
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -47,6 +48,7 @@ def blocks(text):
     out = []
     for li, ln in enumerate(lines[k:], k):
         if not ln.strip() or re.search(r"Chief Fire Officer|Fire & Emergency Service\s*$|NMC Nagpur\s*$", ln) and len(ln.strip()) < 40:
+            provenance.skip_line(ln, 'skip: not ln.strip() or re.search(r"Chief Fire Officer|Fire & Emergency S...')
             continue
         cells = _pdftext.cut(ln, xs)
         new = re.fullmatch(r"\d{1,3}", cells[0]) or re.match(r"(?i)^(shri|smt)\b", cells[4])
@@ -76,6 +78,7 @@ def records(text, url, at=None, engine=None):
         typo = "&gmail" in col[7]
         email = _emerg.emails(col[7].replace("&gmail", "@gmail"))
         if not station or not name:
+            provenance.skipped('skip: not station or not name')
             continue
         key = _emerg.unique(_emerg.slug(re.sub(r"(?i)\(head quarter\)", "hq", station))[:60], seen)
         recs.append(_emerg.record(

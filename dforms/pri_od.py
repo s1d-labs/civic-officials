@@ -28,6 +28,7 @@ import subprocess
 from html import unescape
 
 from dforms import _pri
+import provenance
 
 METHOD = "pdf text boxes (pdftotext -bbox-layout; columns by x position, wrapped cells by nearest row)"
 MODULE = "pri_od"
@@ -138,6 +139,7 @@ def rows_of(lines, spec):
             dist = m.group(1).strip()
             continue
         if HEADER.match(t) or TOTAL.match(t):
+            provenance.skip_line(x, 'skip: HEADER.match(t) or TOTAL.match(t)')
             continue
         if re.fullmatch(r"[\dIVX.\s]+", t) and y0 < head + 12:
             continue                  # the column number row under the header ("1 2 3 4 5 6", "I. II. III. IV.")

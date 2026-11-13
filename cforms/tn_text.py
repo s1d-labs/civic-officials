@@ -125,6 +125,7 @@ def parse_text(raw, p=None):
                 blocks.append(cur)
                 continue
             if cur is None:
+                provenance.skipped('skip: cur is None')
                 continue
             if "வாக்காளர்கள்" in line and "வாக்குகள்" in line:
                 cur.totals = totals(line)
@@ -144,6 +145,7 @@ def parse_text(raw, p=None):
                         cur.cols["result"] = x
                 continue
             if not ch or any(t.startswith(("வ.", "எண்.")) for _, t in ch[:1]):
+                provenance.skipped('skip: not ch or any(t.startswith(("வ.", "எண்.")) for _, t in ch[:1])')
                 continue
             r = row_of(ch)
             if r:

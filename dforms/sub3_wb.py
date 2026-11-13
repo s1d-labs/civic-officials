@@ -23,6 +23,7 @@ from urllib.parse import quote
 
 from dforms import _esw
 from dforms import _pdfcells
+import provenance
 
 METHOD = 'pdf table cells (pdftotext -raw -bbox, else pypdf)'     # source trail (provenance.py): how this reader reads its sources
 
@@ -180,6 +181,7 @@ def parse(content, p):
             if file == "ceo":
                 sec = ("ceo", None, "elections", "state")
             if not roles or not sec or sec[0] == "cell" or not re.search(r"[A-Za-z]{3}", text_na):
+                provenance.skip_line(row, 'skip: not roles or not sec or sec[0] == "cell" or not re.search(r"[A-Za-z...')
                 continue
             cells = {}
             for role, c in zip(roles, row):
@@ -189,6 +191,7 @@ def parse(content, p):
                         cells[role] = (cells.get(role, "") + " " + c).strip()
             rec = build(sec, cells, district0, url, as_on, pg["page"])
             if rec is None:
+                provenance.skip_line(row, 'skip: rec is None')
                 continue
             base = f"{file}:{sec[0]}:{rec.pop('_key')}"
             seen[base] = seen.get(base, 0) + 1

@@ -25,6 +25,7 @@ import tempfile
 
 from cforms import hr
 from cforms.tn import stored
+import provenance
 
 METHOD = 'ocr tesseract eng (gazette scan)'     # source trail (provenance.py): how this reader reads its sources
 
@@ -118,6 +119,7 @@ def page_records(rows, p, page):
         at = lambda k: cells[cols[k]] if k in cols and cols[k] < len(cells) else ""
         name = hr.clean(at("name"))
         if not name or re.search(r"(?i)^total|no\. of", name):
+            provenance.skip_row(r, 'skip: not name or re.search(r"(?i)^total|no\\. of", name)')
             continue
         n += 1
         ocr_ward = re.sub(r"\D", "", at("ward_no").replace("O", "0").replace("o", "0").replace("l", "1").replace("I", "1"))

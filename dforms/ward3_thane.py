@@ -11,6 +11,7 @@ Names and posts are Marathi: name_regional / post_regional carry them too. Ids: 
 import re
 
 from dforms import _esw, _ward, _ward3_west as w3
+import provenance
 
 METHOD = "html table"
 
@@ -34,6 +35,7 @@ def parse(html, url=URL):
     for d in w3.officer_rows(html):
         post, name = _esw.clean(d.get("post")), _esw.clean(d.get("name"))
         if not post:
+            provenance.skip_row(d, 'skip: not post')
             continue
         circle, committee = CIRCLE.search(post), COMMITTEE.search(post)
         extra = {}

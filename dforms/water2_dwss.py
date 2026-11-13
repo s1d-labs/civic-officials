@@ -16,6 +16,7 @@ import re
 from dforms import _esw
 from dforms._water import unique
 from dforms._power import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -61,11 +62,13 @@ def parse(html, url=URL):
         for tr in tb.find_all("tr"):
             tds = tr.find_all("td")
             if len(tds) < 3:
+                provenance.skip_row(tr, 'skip: len(tds) < 3')
                 continue
             name, post = name_post(raw_cell(tds[0]))
             addr = _esw.clean(_esw.cell_text(tds[1]))
             contact = _esw.clean(_esw.cell_text(tds[2]))
             if not name or re.fullmatch(r"(?i)rank", name):
+                provenance.skip_row(tr, 'skip: not name or re.fullmatch(r"(?i)rank", name)')
                 continue
             m = re.search(r"\((SE-T)\)(.*)$", name)
             if m or (post and re.match(r"\(SE-T\)", post)):        # "Sh. Naval Kishor (SE-T) (additonal charge)": post in brackets

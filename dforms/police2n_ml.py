@@ -22,6 +22,7 @@ from bs4 import BeautifulSoup
 from dforms import _civic
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms.police_s3waas import grid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -58,6 +59,7 @@ def contacts(html, url, district, state="ML"):
             continue
         for r in rows[1:]:
             if len(r) < 5:
+                provenance.skip_row(r, 'skip: len(r) < 5')
                 continue
             name, rank, posting, mobile, mail = (clean(x) for x in r[1:6])
             text = f"{rank} {posting}"
@@ -73,6 +75,7 @@ def contacts(html, url, district, state="ML"):
             elif INCHARGE.search(posting or "") and not UNIT.search(posting or ""):
                 area, kind = station_of(posting)
                 if not area:
+                    provenance.skip_row(r, 'skip: not area')
                     continue
                 post = "OC" if kind == "police station" else "In-charge"
                 recs.append(rec(M, f"{d}:{slug(area)}", office_type=kind, area=area, post=post, designation=posting,
@@ -106,6 +109,7 @@ def shillong(html, url, district="East Khasi Hills", state="ML"):
         for tr in trs[2:]:
             tds = tr.find_all("td")
             if not tds:
+                provenance.skip_row(tr, 'skip: not tds')
                 continue
             cells = [clean(c.get_text(" ", strip=True)) or "" for c in tds]
             if len(tds) == 8:
@@ -141,9 +145,11 @@ def shillong(html, url, district="East Khasi Hills", state="ML"):
             continue
         for r in rows[1:]:
             if len(r) < 4 or not r[1]:
+                provenance.skip_row(r, 'skip: len(r) < 4 or not r[1]')
                 continue
             label = clean(r[1])
             if re.search(r"PCR", label):
+                provenance.skip_row(r, 'skip: re.search(r"PCR", label)')
                 continue
             kind = "police post" if re.search(r"\b(BH|OP)\b", label) else "police station"
             area = re.sub(r"\s*\bP\.?\s?S\.?$", "", label).strip()
@@ -181,9 +187,11 @@ def directory(html, url, state="ML"):
     for t in soup.find_all("table"):
         for r in grid(t):
             if len(r) < 7:
+                provenance.skip_row(r, 'skip: len(r) < 7')
                 continue
             m = re.match(r"^SP,?\s+([A-Za-z \-]+?(?:Hills|Bhoi))\s*,", clean(r[1]) or "", re.I)
             if not m or re.search(r"\(", r[1]):
+                provenance.skip_row(r, 'skip: not m or re.search(r"\\(", r[1])')
                 continue
             district = m.group(1).title().replace("Ri Bhoi", "Ri-Bhoi")
             ph = phones(re.sub(r"(?i)fax[:\- ]*\d+", "", r[2]), r[6])

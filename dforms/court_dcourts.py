@@ -19,6 +19,7 @@ from urllib.parse import urlparse
 
 from dforms import _civic, _esw
 from dforms.police_s3waas import last_updated
+import provenance
 
 METHOD = "html table (judges, contact tables) + html text blocks (contact page)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -59,6 +60,7 @@ def town_of(district, *texts):
     dn = re.sub(r"[^a-z]", "", (district or "").lower())
     for t in texts:
         if not t:
+            provenance.skipped("empty")
             continue
         for seg in reversed(re.split(r"[,(]", t.rstrip(" .)"))):
             seg = _esw.clean(seg).strip(" .-")
@@ -112,6 +114,7 @@ def judges(html, url, p):
         for tr in rows:
             tds = tr.find_all(["td", "th"], recursive=False)
             if len(tds) < 2:
+                provenance.skip_row(tds, "short row")
                 continue
             f, prof = {}, None
             for k, td in zip(kinds, tds):
@@ -124,6 +127,7 @@ def judges(html, url, p):
             name = None if vac else name
             if (not name or name.lower() in ("name", "-", "--")) and not vac:
                 if not f.get("designation"):
+                    provenance.skipped("no name and no designation")
                     continue
                 name = None
             key = _esw.slug(f"{host}:j:{est[:60]}:{name or f.get('designation')}")[:180]
@@ -179,6 +183,7 @@ def contact_tables(node, url, p, lu, host, seen):
             f = {k: v for k, v in zip(kinds, row) if k}
             ph, em = _esw.phones(f.get("phone", "")), _esw.emails(" ".join(row))
             if not (ph or em):
+                provenance.skip_row(row, "no phone or email")
                 continue
             office = f.get("designation") or f.get("location") or f.get("name") or next(
                 (c for c in row if c and not re.fullmatch(r"[\d. ]+", c) and "@" not in c and "[at]" not in c), "")
@@ -232,6 +237,7 @@ def contacts(html, url, p):
         ph, em = _esw.phones(*[x for x in b if not re.search(r"(?i)pin|^\s*\d{6}\s*$", x) or re.search(r"(?i)ph|mob|tel", x)]), \
             _esw.emails(text)
         if not (ph or em):
+            provenance.skipped("no phone or email")
             continue
         office = next((x for x in b if HEAD.search(x) and not CONTACT.search(x) and not NAME_LINE.match(x)), b[0])
         name, post = None, None

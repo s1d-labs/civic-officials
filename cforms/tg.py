@@ -61,6 +61,8 @@ def report_e(html):
             out.append({"ward_no": no.group(1) if no else c[0], "ward_name": None if no else c[1], "reservation": c[2], "name": c[3],
                         "party": c[4], "result_status": c[5], "src_pos": {"table_id": "GridView1", "row": ri},
                         "method": "html table (elected-only report E)"})
+        else:
+            provenance.skip_row(c, 'skip: not (len(c) == 6 and c[0].isdigit())')
     return out
 
 
@@ -83,6 +85,7 @@ def fetch(p, get):
     for w in report_a(r.text):
         won = [c for c in w["cands"] if c["status"]]
         if len(won) != 1:
+            provenance.skipped('skip: len(won) != 1')
             continue
         c = won[0]
         others = sorted((x["votes"] for x in w["cands"] if x is not c and x["votes"] is not None), reverse=True)

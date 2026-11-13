@@ -84,6 +84,7 @@ def page_cols(lines):
         sx = sers[0][0]
         right = [(x, t) for x, t in mobs if x > sx]
         if not right:
+            provenance.skip_line(ln, 'skip: not right')
             continue
         mx = right[-1][0]
         vs.append(sx)
@@ -95,6 +96,8 @@ def page_cols(lines):
         if len(mid) >= 2:
             vend.append(mid[0][0] + len(mid[0][1]))
             nst.append(mid[-1][0])
+        else:
+            provenance.skip_line(ln, 'skip: not (len(mid) >= 2)')
     if not vs:
         return None
     med = lambda a: sorted(a)[len(a) // 2]
@@ -113,6 +116,7 @@ def circle_cols(lines, v):
             continue
         mobs = [x for x, t in w if MOB.match(t) and x < v]
         if not mobs:
+            provenance.skip_line(ln, 'skip: not mobs')
             continue
         if mobs:
             cm.append(mobs[0])
@@ -122,6 +126,8 @@ def circle_cols(lines, v):
         ch = [c for c in _chunks(ln) if c[0] < (mobs[0] if mobs else v)]
         if len(ch) >= 3:
             cn.append((ch[1][0] + len(ch[1][1]) + ch[2][0]) / 2)
+        else:
+            provenance.skip_line(ln, 'skip: not (len(ch) >= 3)')
     med = lambda a: sorted(a)[len(a) // 2] if a else None
     return med(cm), med(ce), med(cn)
 
@@ -139,6 +145,7 @@ def parse_pdf_text(text, p, url):
         lines = pt.split("\n")
         cols = page_cols(lines)
         if not cols:
+            provenance.skipped('skip: not cols')
             continue
         got = circle_cols(lines, cols["v"])
         if got[0] is not None:
@@ -151,8 +158,10 @@ def parse_pdf_text(text, p, url):
         cur_v, cont = None, False
         for ln_no, ln in enumerate(lines, 1):
             if not ln.strip() or HEADER.search(ln) and not any(MOB.match(t) for _, t in _words(ln)):
+                provenance.skip_line(ln, 'skip: not ln.strip() or HEADER.search(ln) and not any(MOB.match(t) for _,...')
                 continue
             if re.search(r"(?i)tah?a?sil\s+office", ln):
+                provenance.skip_line(ln, 'skip: re.search(r"(?i)tah?a?sil\\s+office", ln)')
                 continue
             w = _words(ln)
             # a new circle
@@ -301,6 +310,7 @@ def parse_html(html, p, url, module=MODULE):
             cell = lambda k: _esw.clean(row[col[k]]).translate(DEV_DIGITS) if k in col and col[k] < len(row) else ""
             name, saja = cell("talathi"), cell("saja")
             if not (name or saja) or name == _esw.clean(g[hi][col["talathi"]]):
+                provenance.skip_row(row, 'skip: not (name or saja) or name == _esw.clean(g[hi][col["talathi"]])')
                 continue
             co_raw = cell("co_name")
             co_phone = _esw.phones(co_raw)

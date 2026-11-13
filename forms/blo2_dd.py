@@ -14,6 +14,7 @@ The files answered from Germany for the archive (2026-11-11); the 2024 copies (D
 import re
 
 from forms.blo2_in import MOBILE, download, mobiles, part_of, ruled_tables, split_name
+import provenance
 
 METHOD = "pdf ruled table (pypdf text inside the drawn rules)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -36,6 +37,7 @@ def rows_from_tables(tables, p):
                 cols = ["blo", "resident_address"]
             phones = mobiles(joined)
             if not phones:
+                provenance.skip_row(row, 'skip: not phones')
                 continue
             vals = []
             for v in row:

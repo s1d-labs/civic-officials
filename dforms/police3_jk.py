@@ -15,6 +15,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -46,6 +47,7 @@ def table_recs(t, ti, pdist, url):
     for ri, tr in enumerate(t.find_all("tr")):
         c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all("td")]
         if len(c) < 2:
+            provenance.skip_row(tr, 'skip: len(c) < 2')
             continue
         pos = {"table": ti, "row": ri}
         if c[0]:
@@ -93,6 +95,7 @@ def parse_women(html, url=WOMEN, districts=()):
         for ri, tr in enumerate(t.find_all("tr")):
             c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all("td")]
             if len(c) < 2 or not re.search(r"P/S|police station", c[0], re.I):
+                provenance.skip_row(tr, 'skip: len(c) < 2 or not re.search(r"P/S|police station", c[0], re.I)')
                 continue
             area = station_area(c[0])[0]
             place = re.sub(r"^PS\s+Women\s*", "", area, flags=re.I).split(",")[-1].strip()

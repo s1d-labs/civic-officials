@@ -12,6 +12,7 @@ Record ids: dept:civic_fps2_gj:<FPSUID>. The bucket file keeps only the result t
 import re
 
 from dforms import _civic, _civic_fps, _esw
+import provenance
 
 METHOD = "html table (ASP.NET grid, all rows; row = n-th <tr> after the heading 'FPS Dealers Details')"     # source trail (provenance.py): how this reader reads its sources
 
@@ -60,9 +61,11 @@ def parse(html, src=PAGE):
     for tr in soup.find_all("tr", class_="dg_Item"):
         tds = [_esw.clean(td.get_text(" ")) for td in tr.find_all("td")]
         if len(tds) < 7 or not re.fullmatch(r"\d+", tds[1]):
+            provenance.skip_row(tds, "no fps_id")
             continue
         fid, name, dist_gu, taluka, village, status = tds[1], _civic_fps.name_of(tds[2]), tds[3], tds[4], tds[5], tds[6]
         if fid in seen or not name:
+            provenance.skipped("repeated fps_id or no name")
             continue
         seen.add(fid)
         recs.append(_esw.record(

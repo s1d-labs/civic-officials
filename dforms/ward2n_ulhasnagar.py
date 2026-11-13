@@ -9,6 +9,7 @@ import json
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
@@ -27,6 +28,7 @@ def parse(data, p):
         office = _esw.clean(o.get("ward_name"))
         m = re.search(r"\d+", office)
         if not m:
+            provenance.skip_row(o, 'skip: not m')
             continue
         n = m.group(0)
         area = f"Ward Office {n}"

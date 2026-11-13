@@ -16,6 +16,7 @@ One queue item = the page. Record id dept:police3_gj:<slug of the post used>."""
 import re
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "javascript data literal in html page"     # source trail (provenance.py): how this reader reads its sources
 
@@ -43,6 +44,7 @@ def officers(html):
     for line in body.splitlines():
         line = line.strip()
         if not line.startswith("{sr:"):
+            provenance.skip_line(line, 'skip: not line.startswith("{sr:")')
             continue
         d = {}
         for k, v in PAIR.findall(line):
@@ -93,6 +95,7 @@ def parse(html, url=URL):
     for i, o in officers(html):
         name = clean(o.get("name"))
         if not name:
+            provenance.skipped('skip: not name')
             continue
         level, otype, district, area, used, extra = classify(o.get("post", ""))
         contact = clean(o.get("contact"))

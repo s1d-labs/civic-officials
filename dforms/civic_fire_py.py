@@ -11,6 +11,7 @@ import re
 
 from provenance import line_pos
 from dforms import _civic, _esw
+import provenance
 
 METHOD = "pdf text (pypdf layout), columns from the header"     # source trail (provenance.py): how this reader reads its sources
 
@@ -48,6 +49,7 @@ def rows(text, where=None):
     cells = {i: ["", "", ""] for i in nums}
     for i, x in enumerate(body):
         if not x.strip():
+            provenance.skipped("empty")
             continue
         owner = min(nums, key=lambda n: (abs(n - i), n > i))
         for m in re.finditer(r"\S(?:.*?\S)?(?=\s{2,}|\s*$)", x):

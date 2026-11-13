@@ -15,6 +15,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms import _power, _util2
+import provenance
 
 METHOD = "html cards (div.item-experts / div.team-item)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -62,6 +63,7 @@ def parse(html, page, url):
     for name, post, phone, mail in cards(BeautifulSoup(html, "lxml")):
         name = _util2.person(name)
         if not (name or post):
+            provenance.skipped('skip: not (name or post)')
             continue
         m = re.search(r"\(([^()]*(circle|division)[^()]*)\)", post or "", re.I)
         if m:

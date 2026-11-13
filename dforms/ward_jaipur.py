@@ -12,6 +12,7 @@ as written. Reads pdftotext (poppler) text, else pypdf. Record ids: dept:ward_ja
 import re
 
 from dforms import _esw, _ward, _ward_kd as kd
+import provenance
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
 
@@ -75,10 +76,12 @@ def parse(pages, p):
             text = _ward.hi_norm(kd.convert(text_kd)).replace("ुु", "ु").replace("ु ु", "ु")
             m = re.search(r"(उपायु\S*(?:\s+त(?=\s))?|अधिशाषी\s+अभियं?\S*|सहायक\s+अभियं?\S*|कनिष्ठ\s+अभियं?\S*|राजस्व\s+अधिकारी)\s+([^\s].{1,20}?)\s+जोन", text)
             if not m:
+                provenance.skipped('skip: not m')
                 continue
             post = _esw.clean(m.group(0))
             zone = next((en for hi, en in sorted(ZONES.items(), key=lambda kv: -len(kv[0])) if hi in m.group(2)), None)
             if not zone:
+                provenance.skipped('skip: not zone')
                 continue
             nm = NAME.search(text)
             name = _esw.clean(re.sub(r"[\d½¼]+", " ", nm.group(0))) if nm else ""

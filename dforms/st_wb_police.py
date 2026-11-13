@@ -42,9 +42,11 @@ def parse(html, url=URL, page=1, sha=None):
         for d, pos, cells in _st_ape.header_rows(t):
             office = d.get("department") or d.get("district") or ""
             if not office or re.search(r"(?i)total no\. of record|please note", office):
+                provenance.skip_row(d, 'skip: not office or re.search(r"(?i)total no\\. of record|please note", of...')
                 continue
             name = d.get("name", "")
             if re.fullmatch(r"[\d\s.]+", office):        # the pager row
+                provenance.skip_row(d, 'skip: re.fullmatch(r"[\\d\\s.]+", office)')
                 continue
             code, dname = district_in(office)
             if re.search(r"(?i)\bP\.?S\.?\b|police station|thana", office) and not re.search(r"(?i)\bACP\b|\bDCP\b", office):

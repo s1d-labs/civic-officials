@@ -15,6 +15,7 @@ dept:ward_trichy:z<N>:<post slug>:<name slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
 
@@ -35,6 +36,7 @@ def cards(html):
     for c in soup.find_all("div", class_="schedule-block-one"):
         heads = [_esw.clean(h.get_text()) for h in c.select(".content-box .text")[0].find_all(["h4", "h6"])] if c.select(".content-box .text") else []
         if not heads:
+            provenance.skip_row(c, 'skip: not heads')
             continue
         name, post = heads[0], " ".join(heads[1:])
         lis = [_esw.clean(li.get_text()) for li in c.select("ul.post-info li")]
@@ -78,6 +80,7 @@ def parse(ward_html, zonal_html, p):
     for name, post, office, mobile, rest in cards(zonal_html or ""):
         oz = office_zone(rest)
         if oz is not None and oz != n:
+            provenance.skipped('skip: oz is not None and oz != n')
             continue                                     # zone I's officers, repeated on the page of zone n
         name = name.strip(" ,;")
         m = re.search(r"([A-Z][a-z]+(?:\s[A-Z][a-z]+)?)\s+Zone", rest)

@@ -11,6 +11,7 @@ import re
 
 from dforms._pdftext import block_pos, cut, layout_pages, settle
 from dforms._power import Out, clean, email, raw
+import provenance
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -74,6 +75,7 @@ def parse_text(pages, circle, url):
         cur = None
         for li, ln in enumerate(lines):
             if not ln.strip() or "Name of Office" in ln or re.match(r"\s*(Telephone|No\.)\s*$", ln) or "1912" in ln:
+                provenance.skip_line(ln, 'skip: not ln.strip() or "Name of Office" in ln or re.match(r"\\s*(Telephon...')
                 continue
             m = re.match(r"\s{0,8}(\d{1,3})\s+(\S.*)", ln)
             if m and cols and len(ln) > cols[1]:

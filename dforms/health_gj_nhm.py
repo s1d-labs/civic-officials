@@ -14,6 +14,7 @@ post as written, name, phone, email. One queue item = one GET. Ids: dept:health_
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table per district heading"     # source trail (provenance.py): how this reader reads its sources
 
@@ -48,6 +49,7 @@ def parse(html, url=URL):
             post, name = col(r"designation", row), col(r"name", row)
             phone, email = _esw.phones(col(r"contact|mobile", row)), _esw.emails(" ".join(row[head.index("email id"):]) if "email id" in head else col(r"email", row))
             if not (name or phone or email):
+                provenance.skip_row(row, 'skip: not (name or phone or email)')
                 continue
             key = f"{_esw.slug(site)}:{sn if re.fullmatch(r'\d{1,3}', sn or '') else _esw.slug(post)}"
             k, n = key, 2

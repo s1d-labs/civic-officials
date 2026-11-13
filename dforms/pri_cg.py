@@ -25,6 +25,7 @@ from html import unescape
 from pathlib import Path
 
 from dforms import _pri
+import provenance
 
 METHOD = "pdf text (pdftotext -bbox word boxes; columns from the header words, rows anchored on the running serial number)"
 MODULE = "pri_cg"
@@ -142,6 +143,7 @@ def page_rows(ws, level):
     for ph in phrases(body):
         yc = (ph[0][1] + ph[0][3]) / 2
         if any(abs(yc - y) < 2 for y in first):
+            provenance.skipped('skip: any(abs(yc - y) < 2 for y in first)')
             continue
         y = min(anchors, key=lambda a: abs(a - yc))
         span = (ph[0][0], 0, ph[-1][2], 0, "")
@@ -162,6 +164,7 @@ def records(content, url, level, source_page=None):
             const = int(m.group(1)) if m else None
             dno = _pri.int_or_none(t.get("dno"))
             if const is None or not t.get("name"):
+                provenance.skipped('skip: const is None or not t.get("name")')
                 continue
             serial = _pri.int_or_none(t.get("serial")) if level == "zp" else dno      # the JP file's क्रमांक is the running serial
             key = f"2025:{level}:{serial}"

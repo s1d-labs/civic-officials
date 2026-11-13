@@ -89,6 +89,8 @@ def winners(html):
         if len(c) == len(COLS):
             out.append(dict(zip(COLS, c)))
             out[-1]["_pos"] = {"table_id": "ctl00_ContentPlaceHolder1_winnerdetail", "row": ri}
+        else:
+            provenance.skip_row(tr, 'skip: not (len(c) == len(COLS))')
     return out
 
 
@@ -108,6 +110,7 @@ def records(rows, post, url=URL):
         m = re.match(r"\s*(\d+)\s*[-–.]?\s*(.*)$", digits(r["ward"]))
         ward_no, ward_name = (m.group(1), clean(m.group(2)) or None) if m and not chair else ("chair" if chair else None, None)
         if not ward_no:
+            provenance.skip_row(r, 'skip: not ward_no')
             continue
         d = {"type": "councillor", "state": "UP", "body": r["body"], "body_type": body_type, "district": r["district"],
              "district_en": dn, "lgd_code": code, "ward_no": ward_no, "ward_name": ward_name if not chair else None,

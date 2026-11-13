@@ -33,6 +33,7 @@ from bs4 import BeautifulSoup
 
 from cforms import hr
 from cforms.tn import stored
+import provenance
 
 METHOD = "ocr tesseract hin+eng (ruled grid of the Prapatra-23 district gazette, one image per column)"
 ELECTION = "Jharkhand Municipal (General) Election 2026 (poll 23.02.2026, count 27.02.2026; district gazette Prapatra-23)"
@@ -316,13 +317,16 @@ def page_records(rows, p, page):
                 cols.setdefault(k, i)
             continue
         if not any(hr.clean(x) for x in cells) or all(re.fullmatch(r"[\d\s०-९]*", hr.clean(x)) for x in cells):
+            provenance.skip_row(r, 'skip: not any(hr.clean(x) for x in cells) or all(re.fullmatch(r"[\\d\\s०-९]...')
             continue          # empty row or the column numbers row "1 2 3 4 5"
         use = cols or ({k: i for i, k in enumerate(FORM23)} if len(cells) == 5 else None)
         if not use:
+            provenance.skip_row(r, 'skip: not use')
             continue
         at = lambda k: cells[use[k]] if k in use and use[k] < len(cells) else ""
         name = hr.clean(at("name"))
         if not name or len(name) < 3 or re.search(r"नाम|name of|योग|total", name, re.I):
+            provenance.skip_row(r, 'skip: not name or len(name) < 3 or re.search(r"नाम|name of|योग|total", na...')
             continue
         row_text = " ".join(cells)
         position, head = post_of(at("post") or "")
@@ -330,6 +334,7 @@ def page_records(rows, p, page):
             position, head = post_of(p["post"])
         if position is None and not re.search(r"पार्षद|सदस्य|member|councillor|ward", at("post") or row_text, re.I) \
                 and not ward_of(at("ward") or at("body")):
+            provenance.skip_row(r, 'skip: position is None and not re.search(r"पार्षद|सदस्य|member|councillor...')
             continue
         btxt = body_cell(at("body"))
         code = find_body(btxt, district) or p.get("lgd_code") or find_body(row_text, district)

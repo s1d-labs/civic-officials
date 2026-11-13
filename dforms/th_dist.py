@@ -36,6 +36,7 @@ from pathlib import Path
 
 from dforms import _esw, _ulb
 from dforms.ulb_mh import latin
+import provenance
 
 METHOD = "html table (row: post cell; head: heading columns)"     # source trail (provenance.py)
 MODULE = "th_dist"
@@ -207,9 +208,11 @@ def parse(html, url, state, district):
                 body_cell = blank(c["body"])
                 body = body_of(body_cell)
                 if not body or re.fullmatch(r"[\d\s.]+", body):
+                    provenance.skip_row(row, 'skip: not body or re.fullmatch(r"[\\d\\s.]+", body)')
                     continue
                 name, phone, email = blank(c["name"]), _esw.phones(c.get("phone", "").translate(DIGITS)), _esw.emails(c.get("email", "").translate(DIGITS))
                 if not (name or phone or email):
+                    provenance.skip_row(row, 'skip: not (name or phone or email)')
                     continue
                 btype = (re.search(TYPES, body_cell, re.I) or [None])[0]
                 recs.append(rec(state, district, body, blank(rows[0][col["name"]]), seen, url, up, pos, name=name, phone=phone,
@@ -219,6 +222,7 @@ def parse(html, url, state, district):
             cells = [blank(x) for x in row]
             pi = next((i for i, x in enumerate(cells) if POST.search(x)), None)
             if pi is None or NOT_TOWN.search(" ".join(cells)):
+                provenance.filtered("not a town body head")
                 continue
             pc = cells[pi]
             m = POST.search(pc)
@@ -232,10 +236,12 @@ def parse(html, url, state, district):
                 code = lgd_of(state, district, "", email)
                 body = LGD["lgd"][code][3] or LGD["lgd"][code][2] if code else ""
             if not body:
+                provenance.skip_row(row, 'skip: not body')
                 continue
             phone = _esw.phones(*[x.translate(DIGITS) for i, x in enumerate(cells) if i != pi and "@" not in _esw.deob(x)
                                   and not re.fullmatch(r"\d{1,4}", x)])
             if not (name or phone or email):
+                provenance.skip_row(row, 'skip: not (name or phone or email)')
                 continue
             btype = (re.search(TYPES, body_src, re.I) or [None])[0]
             recs.append(rec(state, district, body, blank(m.group(0)), seen, url, up, pos, name=name, phone=phone, email=email,

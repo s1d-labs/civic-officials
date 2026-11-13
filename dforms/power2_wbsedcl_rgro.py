@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2_east
 from dforms._power import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -60,6 +61,7 @@ def parse(html, page, url):
             if page == "rgro":
                 region = _power.clean(re.sub(r"\s*Regional\s+office$|\s*Region$", "", g.get("region", ""), flags=re.I))
                 if not region:
+                    provenance.skip_row(tr, 'skip: not region')
                     continue
                 out.add(f"rgro:{region}", "circle", region, post=f"Regional Grievance Redressal Officer ({_power.clean(g.get('post'))})",
                         name=_util2_east.person(g.get("name")),
@@ -68,6 +70,7 @@ def parse(html, page, url):
             else:
                 div, ccc = _power.clean(g.get("division")), _power.clean(g.get("ccc"))
                 if not ccc:
+                    provenance.skip_row(tr, 'skip: not ccc')
                     continue
                 out.add(f"ccc:{div}:{ccc}", "section", _title(ccc), post="Customer Care Centre (Station Manager)",
                         phone_=_phones(g.get("tel")), parents={"division": "-".join(_title(x) for x in div.split("-"))} if div else None)

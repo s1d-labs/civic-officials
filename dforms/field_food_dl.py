@@ -15,6 +15,7 @@ Records: dept health, layer field, field_layer food, state DL. Ids dept:field_fo
 import re
 
 from dforms import _esw, _field
+import provenance
 
 METHOD = "html table (drugs who's who) + pdf text (food safety officers, pdftotext -layout else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -86,12 +87,14 @@ def parse_food(text, url, method="pdf text (layout)"):
     for pg, k, ln in lines:
         t = _esw.clean(ln)
         if not t or re.search(r"(?i)implementation of|corresponding with|know your field|^\(\*\)|note:", t):
+            provenance.skipped('skip: not t or re.search(r"(?i)implementation of|corresponding with|know ...')
             continue
         g = next((x for x in GROUPS if re.search(x[0], t, re.I)), None)
         if g and len(re.split(r"\s{2,}", ln.strip())) == 1:
             grp = g
             continue
         if grp is None or re.search(r"(?i)^for (all )?districts", t):
+            provenance.skipped('skip: grp is None or re.search(r"(?i)^for (all )?districts", t)')
             continue
         for name in re.split(r"\s{2,}", ln.strip()):
             name = _esw.clean(name)

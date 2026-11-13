@@ -11,6 +11,7 @@ Record ids: dept:sub_od_dist:OD-D-<LGD code>:<slug of post>[:n].
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -58,6 +59,7 @@ def parse(html, url, seen):
     for r, pos in zip(rows(html, where), where):
         cap = _esw.clean(r["district"]).upper()
         if cap not in LGD:
+            provenance.skip_row(r, 'skip: cap not in LGD')
             continue
         code, district = LGD[cap], district_name(cap)
         post, mail = _esw.clean(r["designation"]), _esw.emails(r["mail"])

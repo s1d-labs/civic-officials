@@ -9,6 +9,7 @@ Record ids: dept:ward3_haridwar:<page>:<post slug>:<row>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -46,6 +47,7 @@ def parse(html, p):
         for r in rows:
             name, des = _ward.col(r, "Name"), _ward.col(r, "Designation")
             if not (name and des):
+                provenance.skip_row(r, 'skip: not (name and des)')
                 continue
             post = en_post(des, page)
             sno = re.sub(r"\D", "", _ward.col(r, "S.No")) or str(len(recs) + 1)

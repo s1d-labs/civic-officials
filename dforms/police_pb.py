@@ -14,6 +14,7 @@ import re
 
 from dforms import _civic
 from dforms._police import clean, email, gz, phones, rec, slug
+import provenance
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
@@ -98,6 +99,7 @@ def parse(rows, district_code, url=SOURCE):
         name, rank, belt, name_phone = split_name(x.get("shoName"))
         mhc, mhc_rank, mhc_belt, _ = split_name(x.get("mhcName"))
         if not st and not name:
+            provenance.skip_row(x, 'skip: not st and not name')
             continue
         lat, lon = latlon(x.get("latitude"), x.get("longitude"))
         women = x.get("officeType") == "WOMEN_PS"

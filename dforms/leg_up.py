@@ -20,6 +20,7 @@ from collections import Counter
 
 from dforms._trail import tr_pos
 from dforms import _esw, _leg
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -55,6 +56,7 @@ def rows(html, where=None):
         mid = re.search(r"memberId=(\d+)", tr["onclick"]).group(1)
         tds = tr.find_all("td", recursive=False)
         if mid in seen or len(tds) < 4:
+            provenance.skip_row(tr, 'skip: mid in seen or len(tds) < 4')
             continue
         seen.add(mid)
         if where is not None:

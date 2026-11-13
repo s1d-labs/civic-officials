@@ -17,6 +17,7 @@ import re
 from urllib.parse import urlsplit
 
 from bs4 import BeautifulSoup
+import provenance
 
 DIGITS = str.maketrans("०१२३४५६७८९০১২৩৪৫৬৭৮৯੦੧੨੩੪੫੬੭੮੯૦૧૨૩૪૫૬૭૮૯୦୧୨୩୪୫୬୭୮୯௦௧௨௩௪௫௬௭௮௯౦౧౨౩౪౫౬౭౮౯೦೧೨೩೪೫೬೭೮೯൦൧൨൩൪൫൬൭൮൯",
                        "0123456789" * 9)
@@ -104,6 +105,7 @@ def table_rows(html):
             cells = Cells(" ".join(c.get_text(" ", strip=True).split()) for c in tr.find_all(["td", "th"]))
             cells.pos = {"table": ti, "row": ri}
             if not any(cells):
+                provenance.skip_row(tr, 'skip: not any(cells)')
                 continue
             if head is None and len(cells) > 1 and not any(c.isdigit() for c in cells) and (
                     tr.find("th") or HEAD_WORDS.search(" ".join(cells))):
@@ -165,10 +167,12 @@ def table_members(html, state, body, url, *, lgd_code=None, record_prefix=None, 
     recs = []
     for head, cells in table_rows(html):
         if not head:
+            provenance.skipped('skip: not head')
             continue
         ni = column(head, *NAME_COL)
         pi, ei, ai = column(head, *PHONE_COL), column(head, *EMAIL_COL), column(head, *ADDR_COL)
         if ni is None or (pi is None and ei is None and ai is None) or ni >= len(cells):
+            provenance.skipped('skip: ni is None or (pi is None and ei is None and ai is None) or ni >= l...')
             continue
         wi, di = column(head, *WARD_COL), column(head, *POST_COL)
         if wi == ni:
@@ -176,8 +180,10 @@ def table_members(html, state, body, url, *, lgd_code=None, record_prefix=None, 
         cell = lambda i: cells[i] if i is not None and i < len(cells) else None
         name, post = cell(ni), cell(di)
         if not name or re.fullmatch(r"[\d\s.\-]*", name) or re.search(r"\b(vacant|रिक्त)\b", name, re.I):
+            provenance.skipped('skip: not name or re.fullmatch(r"[\\d\\s.\\-]*", name) or re.search(r"\\b(vac...')
             continue
         if post and re.search(r"\b(m\.?p|m\.?l\.?a|m\.?l\.?c|ex.?officio)\b", post, re.I):
+            provenance.skipped('skip: post and re.search(r"\\b(m\\.?p|m\\.?l\\.?a|m\\.?l\\.?c|ex.?officio)\\b", ...')
             continue
         label = cell(wi)
         ward = ward_no(label)

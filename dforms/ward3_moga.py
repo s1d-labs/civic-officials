@@ -113,6 +113,7 @@ def parse(pages, p):
         for r in g["rows"]:
             post = re.sub(r"(?i)sanitay", "Sanitary", r["post"])
             if not post:
+                provenance.skip_row(r, 'skip: not post')
                 continue
             ph = r["phone"] if re.search(r"\d{5}", r["phone"]) else ""
             key = f"{_esw.slug(g['branch'])[:40] or 'branch'}:{_esw.slug(post)[:40]}:{re.sub(r'[^0-9]', '', ph) or _esw.slug(r['name'])}"

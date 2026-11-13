@@ -5,6 +5,7 @@ BLO names without part numbers). The page answers from abroad. One queue item.
 Record ids: dept:civic_pollst_ld:LD-1-<part>. Layer "pollst".
 """
 from dforms import _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -29,6 +30,7 @@ def parse(html, url=URL):
             get = lambda k: r[col[k]] if col[k] is not None and col[k] < len(r) else ""  # noqa: E731
             part, station = get("part no"), get("part name")
             if not part.isdigit() or not station or part in seen:
+                provenance.skip_row(r, 'skip: not part.isdigit() or not station or part in seen')
                 continue
             seen.add(part)
             key = f"LD-1-{part}"

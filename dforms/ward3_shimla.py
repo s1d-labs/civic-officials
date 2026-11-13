@@ -13,6 +13,7 @@ Record ids: dept:ward3_shimla:<page>:<ward or post slug>:<mobile or name slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py)
 
@@ -49,6 +50,7 @@ def parse(html, p):
             ext = re.sub(r"^-+$", "", cell(r, "epbax no."))
             mob = re.sub(r"^-+$", "", cell(r, "resi no./mobile no."))
             if not post or not (name or office or mob):
+                provenance.skip_row(r, 'skip: not post or not (name or office or mob)')
                 continue
             post = re.sub(r"(?i)^supervisior$", "Supervisor", post)
             m = WARD.search(ward_txt)

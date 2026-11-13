@@ -22,6 +22,7 @@ import re
 from urllib.parse import urljoin, urlparse
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table (Zilla Panchayat gram panchayat pages, header words -> columns)"     # source trail (provenance.py)
 
@@ -91,6 +92,7 @@ def records(html, url, p, page_id):
         for r, sp in zip(g[hi + 1:], pos[hi + 1:]):
             cells = [_esw.clean(c) for c in r]
             if cells[:len(header)] == header:
+                provenance.skip_row(r, 'skip: cells[:len(header)] == header')
                 continue
             v = {}
             for i, c in enumerate(cells):
@@ -100,6 +102,7 @@ def records(html, url, p, page_id):
             phone = _esw.phones(*(v.get("phone") or []))
             name = " | ".join(v.get("name") or []) or None
             if not gp or not (phone or name):
+                provenance.skip_row(r, 'skip: not gp or not (phone or name)')
                 continue
             desig = " | ".join(v.get("designation") or []) or None
             post = ("Panchayat Development Officer (PDO)" if not desig or re.search(r"(?i)\bpdo\b|development officer|secretar", desig)

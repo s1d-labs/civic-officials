@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _civic
 from dforms._police import clean, gz, phones, rec, slug
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -40,6 +41,7 @@ def rows(html, where=None):
         for tr in trs[1:]:
             c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all(["td", "th"])]
             if len(c) < 3 or c[1] == head[1]:
+                provenance.skip_row(tr, 'skip: len(c) < 3 or c[1] == head[1]')
                 continue
             officer = c[officer_col] if officer_col is not None and officer_col < len(c) else None
             out.append((c[1], c[-1], officer, station_list))
@@ -62,6 +64,7 @@ def records(module, html, p):
     for ri, (label, num, officer, station_list) in enumerate(rows(html, where)):
         ph = phones(num)
         if not ph or re.fullmatch(r"x+", num or "", re.I):
+            provenance.skipped('skip: not ph or re.fullmatch(r"x+", num or "", re.I)')
             continue
         m = OC.match(label)
         if DIST.match(label) or SUBDIV.match(label):
@@ -72,6 +75,7 @@ def records(module, html, p):
             pos_of[key] = [where[ri]]
             continue
         if not (station_list or m or PS.search(label)) or SKIP.search(label):
+            provenance.skipped('skip: not (station_list or m or PS.search(label)) or SKIP.search(label)')
             continue
         name = m.group(1) if m else label
         post_kind = "police post" if re.search(r"out-?\s?post|police post|\bPP\b", name, re.I) else "police station"

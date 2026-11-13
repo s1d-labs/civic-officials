@@ -6,6 +6,7 @@ say which zone or ward each officer holds; the whoswho task reads it.
 Records: level "ward", post "Ward Officer", wards = [the ward]. Record ids: dept:ward2s_sambalpur:w<ward>:ward-officer:<name slug>.
 """
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -25,6 +26,7 @@ def parse(html, p):
             ward = _ward.wards_of(_ward.col(r, "ward no"))
             name, phone = _ward.col(r, "name"), _ward.col(r, "phone")
             if len(ward) != 1 or not (name or phone):
+                provenance.skip_row(r, 'skip: len(ward) != 1 or not (name or phone)')
                 continue
             w = ward[0]
             recs.append(_ward.record(MODULE, f"w{w}:ward-officer:{_esw.slug(name) or 'post'}", seen, body=BODY, lgd=LGD,

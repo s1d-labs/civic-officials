@@ -9,6 +9,7 @@ rows not counted); "sn" is the serial number as printed.
 """
 import io
 import re
+import provenance
 
 
 def _merge(vals, tol=2.0):

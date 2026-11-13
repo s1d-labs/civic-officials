@@ -19,6 +19,7 @@ import re
 from urllib.parse import urlparse
 
 from dforms import _esw, _field
+import provenance
 
 METHOD = "html table (header words -> role name / mobile column pairs)"
 
@@ -84,6 +85,7 @@ def records(html, url, p):
         for n, (r, pos) in enumerate(zip(g[hi + 1:], gpos[hi + 1:]), 1):
             cells = [_esw.clean(c) for c in r]
             if cells[:len(header)] == header or len(set(cells)) == 1:
+                provenance.skipped('skip: cells[:len(header)] == header or len(set(cells)) == 1')
                 continue
 
             def cell(i):

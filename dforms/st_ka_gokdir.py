@@ -16,6 +16,7 @@ import re
 
 from dforms import _esw, _state
 from provenance import at
+import provenance
 
 METHOD = "html table per accordion panel (header names the columns)"
 
@@ -75,6 +76,7 @@ def parse(html, url=URL):
                 continue
             g = {f: (row[i] if i < len(row) else "") for f, i in hm.items()}
             if not any(g.get(k) for k in ("name", "post", "department", "area")):
+                provenance.skip_row(row, 'skip: not any(g.get(k) for k in ("name", "post", "department", "area"))')
                 continue
             n += 1
             area = g.get("area", "")

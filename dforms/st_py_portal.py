@@ -18,6 +18,7 @@ import re
 
 from dforms import _esw, _state
 from provenance import at
+import provenance
 
 METHOD = "html table (header names the columns) + html cards (secretaries)"
 
@@ -103,6 +104,7 @@ def parse_table(html, url, p, module=MODULE):
                 continue
             g = {f: (row[i] if i < len(row) else "") for f, i in hm.items()}
             if not (g.get("post") or g.get("name") or g.get("department")):
+                provenance.skip_row(row, 'skip: not (g.get("post") or g.get("name") or g.get("department"))')
                 continue
             n += 1
             dept_name = g.get("department", "")

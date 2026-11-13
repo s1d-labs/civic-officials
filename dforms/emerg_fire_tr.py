@@ -8,6 +8,7 @@ The page shows no date. Record ids: dept:emerg_fire_tr:st-<station>, div-<divisi
 import re
 
 from dforms import _emerg, _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -35,6 +36,7 @@ def records(html, url):
         gp = []
         for row, rp in zip(_esw.grid(t, pos=gp), gp):
             if len(row) < 2 or re.match(r"(?i)name\s*&\s*designation|postal address", row[0]):
+                provenance.skip_row(row, 'skip: len(row) < 2 or re.match(r"(?i)name\\s*&\\s*designation|postal addres...')
                 continue
             left, right = row[0], row[1]
             lc = _emerg.clean(left.replace(" | ", " "))

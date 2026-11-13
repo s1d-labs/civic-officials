@@ -16,6 +16,7 @@ dept:ward2s_ghmc:<section slug>:<zone or circle slug>:<post slug>:<name slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -63,12 +64,15 @@ def parse(html, p):
             zone, circle = row.get("zone", ""), row.get("circle", "")
             contact, mail = _ward.col(row, "contact"), _ward.col(row, "email", "emaii")
             if not post or not (name or contact or mail):
+                provenance.skip_row(r, 'skip: not post or not (name or contact or mail)')
                 continue
             if HEAD_OFFICE.search(zone) and HEAD_OFFICE.search(circle):
+                provenance.skip_row(r, 'skip: HEAD_OFFICE.search(zone) and HEAD_OFFICE.search(circle)')
                 continue
             circle = "" if HEAD_OFFICE.search(circle) else circle
             zone = "" if HEAD_OFFICE.search(zone) or zone.lower() == "zonal office" else zone
             if not circle and not zone and not re.search(r"(?i)zone", row.get("circle", "")):
+                provenance.skip_row(r, 'skip: not circle and not zone and not re.search(r"(?i)zone", row.get("cir...')
                 continue
             if not zone and re.search(r"(?i)\bzone\b", circle):      # "Zonal Office" | "Khairathabad Zone"
                 zone, circle = circle, ""

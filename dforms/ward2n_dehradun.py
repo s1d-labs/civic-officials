@@ -12,6 +12,7 @@ dept:ward2n_dehradun:si-list:<mobile> (list of supervisors).
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -39,6 +40,7 @@ def parse_section(html, p):
         for vals, vp in zip(g[1:], gp[1:]):
             ward = re.sub(r"\D", "", vals[0])
             if not ward or len(vals) < 6:
+                provenance.skipped('skip: not ward or len(vals) < 6')
                 continue
             ward = str(int(ward))
             wname, sup, sup_mob, ins, ins_mob = (_esw.clean(v) for v in vals[1:6])
@@ -67,6 +69,7 @@ def parse_list(html, p):
             mob = _ward.col(r, "mobile")
             wards = _ward.wards_of(_ward.col(r, "ward"))
             if not (name and wards):
+                provenance.skip_row(r, 'skip: not (name and wards)')
                 continue
             k = re.sub(r"\D", "", mob) or _esw.slug(name)
             recs.append(_rec(seen, f"si-list:{k}", level="ward", area="Wards " + ", ".join(wards),

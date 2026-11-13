@@ -107,6 +107,7 @@ def parse(pages):
             mobs = MOBILE.findall(line)
             m = SERIAL.match(line)
             if not mobs or not m:
+                provenance.skip_line(raw, 'skip: not mobs or not m')
                 continue
             mid = MOBILE.sub(" ", m.group(2))
             mid = re.sub(r"[|_\[\]{}“”\"']", " ", mid).strip()
@@ -126,6 +127,7 @@ def parse(pages):
             if kind:
                 words = words[:-1]
             if not words:
+                provenance.skip_line(raw, 'skip: not words')
                 continue
             dist, body, code, ds, bs = best_split(words, kind)
             out.append({"serial": m.group(1), "kind": "body", "district": dist, "body": _esw.clean(body), "body_type": kind,

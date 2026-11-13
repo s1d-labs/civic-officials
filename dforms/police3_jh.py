@@ -13,6 +13,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"
 
@@ -81,14 +82,17 @@ def parse(html, url=URL, state="JH"):
         for ri, tr in enumerate(t.find_all("tr")):
             c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all("td")]
             if len(c) < 8:
+                provenance.skip_row(tr, 'skip: len(c) < 8')
                 continue
             name, post, std, office, resi, fax, mob, mails = c[:8]
             name = dash(name) or None
             if not post:
+                provenance.skip_row(tr, 'skip: not post')
                 continue
             nums = with_std(std, office) + with_std(std, resi) + [m for m in re.findall(r"\d{10,12}", dash(mob))]
             fx = with_std(std, fax)
             if not name and not nums and not dash(mails):
+                provenance.skip_row(tr, 'skip: not name and not nums and not dash(mails)')
                 continue
             dist, sub = district_post(post)
             if dist:

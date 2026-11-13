@@ -56,6 +56,7 @@ def _rows(lines, where=None):
     for li, ln in enumerate(lines):
         runs = _runs(ln)
         if not runs or re.match(r"^\s*(S\.|No\b|Officers\b)", ln) or re.fullmatch(r"\s*\d{1,3}\s*", ln):
+            provenance.skip_line(ln, 'skip: not runs or re.match(r"^\\s*(S\\.|No\\b|Officers\\b)", ln) or re.fullma...')
             continue
         row = {"no": None, "name": [], "office": [], "phone": [], "email": [], "li": li}
         for x, t in runs:

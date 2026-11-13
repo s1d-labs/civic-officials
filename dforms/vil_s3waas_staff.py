@@ -152,6 +152,7 @@ def list_rows(text):
         lines = pt.split("\n")
         for k, ln in enumerate(lines, 1):
             if not ln.strip():
+                provenance.skipped("empty")
                 continue
             if cols is None or (re.search(r"(?i)cadre|cell\s*no|mobile", ln) and not PHONE.search(ln)):
                 if re.search(r"(?i)cell|mobile|phone|contact", ln) and not PHONE.search(ln):
@@ -161,9 +162,11 @@ def list_rows(text):
                         cols = c
                 continue
             if HEAD_LINE.search(ln) and not PHONE.search(ln):
+                provenance.skip_line(ln, 'skip: HEAD_LINE.search(ln) and not PHONE.search(ln)')
                 continue                  # the rest of the header block
             ch = _field._chunks(ln)
             if not ch:
+                provenance.skip_line(ln, 'skip: not ch')
                 continue
             order = sorted(cols.items(), key=lambda kv: kv[1])
             cells = {}
@@ -176,6 +179,7 @@ def list_rows(text):
                     role = order[0][0]
                 cells[role] = (cells.get(role, "") + " " + c).strip()
             if re.fullmatch(r"[\d\s.]*", " ".join(cells.values())):
+                provenance.skip_line(ln, 'skip: re.fullmatch(r"[\\d\\s.]*", " ".join(cells.values()))')
                 continue                      # the "1 2 3 4 5" column number line
             m = re.sub(r"^\d{1,3}\s+", "", cells.get("mandal", "")).strip(" .")
             if m and not re.fullmatch(r"\d+", m):

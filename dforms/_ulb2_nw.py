@@ -17,6 +17,7 @@ import re
 from urllib.parse import urljoin, urlparse
 
 from dforms import _esw, _ulb
+import provenance
 
 MAX_PAGES = 8
 NAME = re.compile(r"(?i)^\W*(name|employee\s*name|officer'?s?\s*name|name\s*of\s*(the\s*)?(officer|official|employee|member|councill?or)s?|member\s*name)\b|^\W*नाम")
@@ -53,19 +54,23 @@ def table_rows(table):
     out = []
     for row, pos in zip(rows[i + 1:], tp[i + 1:]):
         if len(row) <= max(list(cols.values()) + tels) or row == rows[i]:
+            provenance.skip_row(row, 'skip: len(row) <= max(list(cols.values()) + tels) or row == rows[i]')
             continue
         v = {k: _esw.clean(row[j].replace(" | ", " ")) for k, j in cols.items()}
         v["phone"] = " , ".join(row[j] for j in tels if row[j] != row[cols["name"]])
         name, post = v.get("name", ""), v.get("post", "")
         if EMPTY.match(name) and not post:
+            provenance.skip_row(row, 'skip: EMPTY.match(name) and not post')
             continue
         if EMPTY.match(name):
             name = ""
         phone = _esw.phones(v["phone"])
         email = _esw.emails(" ".join(row))
         if not post and not re.search(r"\w", v.get("ward") or ""):
+            provenance.skip_row(row, 'skip: not post and not re.search(r"\\w", v.get("ward") or "")')
             continue
         if not (name or phone or email):
+            provenance.skip_row(row, 'skip: not (name or phone or email)')
             continue
         ward = v.get("ward") if re.search(r"\w", v.get("ward") or "") else None
         out.append({"post": post or "Ward Member", "name": name, "phone": phone, "email": email, "ward": ward, "pos": pos})
@@ -123,6 +128,7 @@ def records(module, state, p, people, seen, office_email="", office_phone="", so
     for x in people:
         k = (x["post"].lower(), x["name"].lower(), x.get("ward"))
         if k in done:
+            provenance.skip_row(x, 'skip: k in done')
             continue
         done.add(k)
         extra = {"ward": x["ward"]} if x.get("ward") else {}

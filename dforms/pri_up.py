@@ -104,6 +104,7 @@ def rows(html):
     for ri, tr in enumerate(trs[1:], 2):
         c = [clean(td.get_text(" ", strip=True)) for td in tr.find_all("td")]
         if len(c) != len(header):
+            provenance.skip_row(tr, 'skip: len(c) != len(header)')
             continue
         out.append(({rl[i]: v for i, v in enumerate(c) if i in rl}, dict(zip(header, c)), ri))
     return out
@@ -177,6 +178,7 @@ def records(html, post, src, district_id=None, block_id=None, block_name=None):
     recs, cache = [], {}
     for r, cells, ri in rows(html):
         if not r.get("name"):
+            provenance.skip_row(r, 'skip: not r.get("name")')
             continue
         dist_hi = r.get("district") or (lgd()["districts"][district_id][0] if district_id else "")
         sid, dist_en, zp = zp_of(dist_hi) if dist_hi else (None, None, None)

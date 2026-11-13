@@ -9,6 +9,7 @@ The pages show no date. Record ids: dept:emerg_fire_ml:st-<station>, off-<email 
 import re
 
 from dforms import _emerg, _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -40,6 +41,8 @@ def stations(html, where=None):
                 out.setdefault(base(row[2]), (dist, _emerg.clean(row[3]), _emerg.clean(row[2]).rstrip(".")))
                 if where is not None:
                     where.setdefault(base(row[2]), rp)
+            else:
+                provenance.skip_row(row, 'skip: not (len(row) >= 4 and row[2])')
     return out
 
 
@@ -75,6 +78,7 @@ def records(html, stations_html, url, stations_url=None):
         if "fire station" in head:                       # station table
             for row, rp in zip(g[1:], gp[1:]):
                 if len(row) < 4 or not row[2]:
+                    provenance.skip_row(row, 'skip: len(row) < 4 or not row[2]')
                     continue
                 name, post = name_post(row[1])
                 area = _emerg.clean(row[2])
@@ -95,9 +99,11 @@ def records(html, stations_html, url, stations_url=None):
         elif "designation" in head:                      # senior officers
             for row, rp in zip(g[1:], gp[1:]):
                 if len(row) < 3:
+                    provenance.skip_row(row, 'skip: len(row) < 3')
                     continue
                 parts = [x.strip(" ,.") for x in row[1].split("|") if x.strip(" ,.")]
                 if not parts:
+                    provenance.skip_row(row, 'skip: not parts')
                     continue
                 name = re.sub(r",\s*(IPS|MPS)$", r" (\1)", parts[0])
                 post = ", ".join(parts[1:-1]) if len(parts) > 2 else (parts[1] if len(parts) > 1 else None)

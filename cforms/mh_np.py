@@ -27,6 +27,7 @@ import re
 import tempfile
 
 from cforms import gj, mh, mh_gztext
+import provenance
 
 METHOD = "pdf text layer (pdftotext -bbox words): the English ORDER of each notice; columns from the schedule head"
 ELECTION = "Maharashtra Nagar Panchayat General Election 2021-22"
@@ -133,6 +134,7 @@ def rows_of(pages):
         for li, (y, lw) in enumerate(lines, 1):
             t = gj.norm(text(lw))
             if LEGACY.search(t):
+                provenance.skipped('skip: LEGACY.search(t)')
                 continue                         # a line of the Marathi part (legacy font codes)
             if START.match(t):
                 cur = {"text": "", "rows": []}
@@ -140,6 +142,7 @@ def rows_of(pages):
                 roles, bs, row = None, None, None
                 continue
             if cur is None:
+                provenance.skipped('skip: cur is None')
                 continue
             hr = head_roles(lw)
             if hr and not row:
@@ -175,13 +178,16 @@ def records(blocks, p):
     bodies = p.get("bodies") or []
     for bi, blk in enumerate(blocks):
         if not blk["rows"]:
+            provenance.skip_row(blk, 'skip: not blk["rows"]')
             continue
         b = body_of(blk["text"], bodies) if bodies else None
         if b is None and len(bodies) == 1 and len(blocks) == 1:
             b = bodies[0]
         if b is None:
+            provenance.skip_row(blk, 'skip: b is None')
             continue                             # a block for a body that the item does not ask for
         if not RESULT.search(blk["text"]) or NOT_RESULT.search(blk["text"]):
+            provenance.skip_row(blk, 'skip: not RESULT.search(blk["text"]) or NOT_RESULT.search(blk["text"])')
             continue                             # a ward formation, reservation or nomination order
         for r in blk["rows"]:
             m = re.match(r"^(.*?[A-Za-z.])\s+(\d{1,3})$", gj.norm(r.get("name", "")))
@@ -191,6 +197,7 @@ def records(blocks, p):
             m = re.fullmatch(r"(?:(?:Ward|Prabhag|Pra\.)\s*)?(?:(?:No|Kr)\.?\s*)?(\d{1,3})\s*[.,]?\s*(.*)", ward_t, re.I)
             rest = m.group(2).strip() if m else ""
             if not m or (rest and not re.fullmatch(r"[\d\s.]+", rest) and not reservation(rest)):
+                provenance.skip_row(r, 'skip: not m or (rest and not re.fullmatch(r"[\\d\\s.]+", rest) and not rese...')
                 continue                         # a ward cell is a short number: anything else is not a member row
             if rest and reservation(rest) and not r.get("reservation"):
                 r["reservation"] = rest          # the reservation set close to the ward number (Amravati)
@@ -198,6 +205,7 @@ def records(blocks, p):
             name = gj.norm(r.get("name", "")).strip(" .")
             name = re.sub(r"\s*\.\.+\s*", " ", name).strip()
             if not ward or not name:
+                provenance.skip_row(r, 'skip: not ward or not name')
                 continue
             resv_t = re.sub(r"^\d{1,2}\s+(?=[A-Za-z])", "", gj.norm(r.get("reservation", "")))
             party_t = gj.norm(r.get("party", ""))

@@ -17,6 +17,7 @@ import re
 from bs4 import BeautifulSoup
 
 from cforms.cp_common import clean, column, emails, keyed, phones, record, table_rows, useful, ward_no
+import provenance
 
 METHOD = "html table (else page text blocks)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -72,14 +73,17 @@ def table_layout(html, p):
     recs, skip = [], set()
     for head, cells in table_rows(cf_emails(html)):
         if not head or SKIP_TABLE.search(" ".join(head)):
+            provenance.skipped('skip: not head or SKIP_TABLE.search(" ".join(head))')
             continue
         ni, wi = column(head, *NAME), column(head, *WARD)
         pi, ai, ei, di = column(head, *PHONE), column(head, *ADDR), column(head, *EMAIL), column(head, *POST)
         if ni is None or pi is None or ni >= len(cells):
+            provenance.skipped('skip: ni is None or pi is None or ni >= len(cells)')
             continue
         cell = lambda i: cells[i] if i is not None and i < len(cells) else None
         name, post, rel = split_name(cell(ni))
         if not name:
+            provenance.skipped('skip: not name')
             continue
         post = post or cell(di)
         label = cell(wi)

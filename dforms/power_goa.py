@@ -13,6 +13,7 @@ when it is a person; "Shri. X (Jr. Engineer), Navelim Section Office" keeps the 
 import re
 
 from dforms._power import Out, clean, email, raw, slug
+import provenance
 
 METHOD = "pdf text (pypdf, plain)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -86,8 +87,10 @@ def entries(pages, pos=None):
             at.append([li])                              # the numbered line (its number may stand alone)
             s = m.group(2).strip()
             if not s:
+                provenance.skipped("empty")
                 continue
         if cur is None:
+            provenance.skip_line(line, 'skip: cur is None')
             continue
         if at[-1][-1] != li:
             at[-1].append(li)
@@ -181,6 +184,7 @@ def parse_pages(pages, source=URL):
                 key = slug(f"{division or circle or ''} {head}")
             keys.add(key)
         if lvl == "other":
+            provenance.skipped('skip: lvl == "other"')
             continue
         if lvl == "circle":
             circle = area
@@ -188,6 +192,7 @@ def parse_pages(pages, source=URL):
             division = area
         txt = " ".join(" ".join(lines).split())
         if not txt and not phones:
+            provenance.skipped('skip: not txt and not phones')
             continue
         name, des = split_name(txt)
         elvl, earea = lvl, area

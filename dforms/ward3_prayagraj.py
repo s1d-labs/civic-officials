@@ -14,6 +14,7 @@ Record ids: dept:ward3_prayagraj:<nagarnigam|jalkal>:zone<n>:<post slug>:<mobile
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -45,6 +46,7 @@ def zone_wards(html):
             z, w = zone_no(_ward.col(r, "Zone")), _ward.col(r, "Ward")
             m = re.match(r"\s*(\d{1,3})\s*-\s*(.*)$", w)
             if not (z and m):
+                provenance.skip_row(r, 'skip: not (z and m)')
                 continue
             ws = out.setdefault(z, [])
             if m.group(1) not in [x for x, _ in ws]:
@@ -62,6 +64,7 @@ def offices(html, src, wing, zw, seen):
         for r in rows:
             z = zone_no(_ward.col(r, "Zone"))
             if not z:
+                provenance.skip_row(r, 'skip: not z')
                 continue
             area = f"Zone {z}"
             post = "Zonal Officer (Jal Kal)" if wing == "water" else "Zonal Officer"
@@ -85,6 +88,7 @@ def employees(html, src, wing, zw, seen):
             z = zone_no(_ward.col(r, "Zone"))
             name, post = _ward.col(r, "Employee Name"), _ward.col(r, "Designation")
             if not (z and post and name):
+                provenance.skip_row(r, 'skip: not (z and post and name)')
                 continue
             area = f"Zone {z}"
             ph = phone_of(_ward.col(r, "Mobile"))

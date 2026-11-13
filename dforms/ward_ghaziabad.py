@@ -13,6 +13,7 @@ written. Records: level "zone", wards = the zone's wards. Record ids: dept:ward_
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -72,10 +73,12 @@ def parse(html, zw, p):
                 dept = cells[0]
                 continue
             if len(cells) < 4 or not cells[0].isdigit():
+                provenance.skip_row(r, 'skip: len(cells) < 4 or not cells[0].isdigit()')
                 continue
             name, post, phone, tel = cells[1], cells[2], cells[3], cells[4] if len(cells) > 4 else ""
             zs = zones_in(post)
             if not zs or re.search(r"समस्त", post):
+                provenance.filtered("not a zone post (city-level row)")
                 continue
             wing = next((w for k, w in DEPTS.items() if dept.startswith(k)), None)
             en = _ward.hi_post(post)

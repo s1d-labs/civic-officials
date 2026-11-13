@@ -16,6 +16,7 @@ from urllib.parse import urlparse
 
 from dforms import _esw
 from dforms.police_s3waas import last_updated
+import provenance
 
 METHOD = "html table (+ office card on Uttarakhand pages)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -69,6 +70,7 @@ def uk(html, url, p):
         for row, rp in zip(g[1:], gpos[1:]):
             name = TITLE.sub("", row[ni]).strip() if ni < len(row) else ""
             if not name:
+                provenance.skip_row(row, 'skip: not name')
                 continue
             k = f"{p['state']}:{slug}:{_esw.slug(name)}"
             k = k if k not in seen else f"{k}-{len(seen)}"
@@ -100,6 +102,7 @@ def mh(html, url, p):
             val = {k: (row[i] if i is not None and i < len(row) else "") for k, i in col.items()}
             code = re.sub(r"\s+", "", val["code"]).upper() or last_code
             if not (val["name"] or code):
+                provenance.skip_row(row, 'skip: not (val["name"] or code)')
                 continue
             last_code = code
             name = val["name"]

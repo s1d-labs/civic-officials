@@ -20,6 +20,7 @@ import json
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -92,6 +93,7 @@ def parse(html, p, source=None):
             phone = " , ".join(x for x in (_ward.col(r, "phone"), _ward.col(r, "mobile")) if re.search(r"\d{5}", x or ""))
             email = _ward.col(r, "email")
             if not post or not (name or phone or email):
+                provenance.skip_row(r, 'skip: not post or not (name or phone or email)')
                 continue
             full, wing = long_post(post)
             dw = next((w for k, w in DEPT_WING if k in dept.lower()), None)

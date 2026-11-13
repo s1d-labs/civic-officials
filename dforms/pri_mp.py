@@ -26,6 +26,7 @@ from html import unescape
 from pathlib import Path
 
 from dforms import _pri
+import provenance
 
 METHOD = "html cards (Panchayat Darpan representatives handler, card index)"
 MODULE = "pri_mp"
@@ -117,6 +118,7 @@ def records(html, url, home, typ, bid, oid, ctx):
     for no, name, post_hi, prof in cards(html):
         p = post_of(post_hi)
         if not p or not name:
+            provenance.skipped('skip: not p or not name')
             continue
         level, role, post = p
         out.append(_pri.record(

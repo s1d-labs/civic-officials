@@ -5,6 +5,7 @@ One queue item. Record ids: dept:sro_py:PY-SRO-<slug of region>.
 """
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -31,6 +32,7 @@ def parse(html, url=URL):
     recs, seen = [], set()
     for row in pgrid(table)[1:]:
         if len(row) < 5 or not row[0].strip():
+            provenance.skip_row(row, 'skip: len(row) < 5 or not row[0].strip()')
             continue
         region, name, address, phone, mail = row[:5]
         base = f"PY-SRO-{_esw.slug(region)}"

@@ -34,6 +34,7 @@ One queue item = one city page. Record ids: dept:ward2s_tnurban:<city>:<zone or 
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -143,6 +144,7 @@ def parse(html, p):
         for r, rp in zip(g, gp):
             h = _heading(r)
             if h and re.fullmatch(r"[\d\s-]+", h):
+                provenance.skip_row(r, 'skip: h and re.fullmatch(r"[\\d\\s-]+", h)')
                 continue
             if h:
                 m = re.search(r"(?i)\bzone\s*(\d+)", h)
@@ -170,6 +172,7 @@ def parse(html, p):
                 phone = ""
             post = _post_cell(post)
             if not post or re.fullmatch(r"[\d.]+", post) or SKIP.search(_esw.clean(post)):
+                provenance.skip_row(r, 'skip: not post or re.fullmatch(r"[\\d.]+", post) or SKIP.search(_esw.clean...')
                 continue
             z = zone
             mz = ZONE_IN_POST.search(post)
@@ -179,6 +182,7 @@ def parse(html, p):
                 post = re.sub(r"\s+\(", " (", post)
             post = _post(post)
             if not post:
+                provenance.skip_row(r, 'skip: not post')
                 continue
             note = None
             mrest = re.search(r"\s*\|\s*(Deputy Collector.*)$", name)

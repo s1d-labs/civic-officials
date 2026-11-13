@@ -91,11 +91,13 @@ def listing(html):
             head = texts
             continue
         if not head or len(cells) < len(head) - 1:
+            provenance.skip_row(tr, 'skip: not head or len(cells) < len(head) - 1')
             continue
         row = dict(zip(head, texts))
         links = [a["href"] for a in tr.find_all("a", href=True)]
         pdf = next((h for h in links if ".pdf" in h.lower()), links[0] if links else "")
         if not pdf:
+            provenance.skip_row(tr, 'skip: not pdf')
             continue
         out.append({"no": row.get("राजपत्र क्र.", "").translate(DIGITS), "date": row.get("दिनांक", ""),
                     "kind": row.get("राजपत्र प्रकार", ""), "dept": row.get("विभाग", ""), "subject": row.get("विषय", ""),
@@ -383,9 +385,11 @@ def members(table, rl, tno=None):
         # a post cell the scan left unread: still a member row when its party cell names a party (header rows have none);
         # the ward number then comes from the run of numbers (sequence())
         if not POST.search(post) and not party_of(party_local):
+            provenance.skip_row(r, 'skip: not POST.search(post) and not party_of(party_local)')
             continue
         name = clean_name(cell("name"))
         if len(name) < 3 or HEADER.search(name) or HEADER.search(post) or junk(name):
+            provenance.skip_row(r, 'skip: len(name) < 3 or HEADER.search(name) or HEADER.search(post) or junk...')
             continue
         mayor = "महापौर" in post or "महापोर" in post
         ward = "" if mayor else (word_num(cell("ward_words")) or num(cell("ward")) or num(post))

@@ -230,6 +230,7 @@ def parse_eo(content, url=EO_PDF, emails=None, last_updated=None, email_url=None
     for r in table_rows(content, 5):
         serial = "".join(t for _, t in r["cells"][0]).strip()
         if not re.fullmatch(r"\d+", serial):
+            provenance.skip_row(r, 'skip: not re.fullmatch(r"\\d+", serial)')
             continue                                     # the heading row
         if r["district"].strip():
             district = hindi(r["district"])
@@ -246,6 +247,7 @@ def parse_eo(content, url=EO_PDF, emails=None, last_updated=None, email_url=None
         for y, t in lines:
             name, post = officer(t)
             if not post or name in ("", "रिक्त"):
+                provenance.skipped('skip: not post or name in ("", "रिक्त")')
                 continue
             phone = ", ".join(m for my, m in mobs if abs(my - y) < 4)
             pos = {"page": r.get("page"), "row": r.get("band"), "line_text": t}

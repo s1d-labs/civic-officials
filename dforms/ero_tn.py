@@ -70,6 +70,7 @@ def parse(html, page, district=None, url=None, src=None):
         for r in rows:
             m = NO.match(_col(head, r, "district"))
             if not m:
+                provenance.skip_row(r, 'skip: not m')
                 continue
             dist = m.group(2).title()
             key = f"TN-DEO-{_esw.slug(dist)}"
@@ -82,6 +83,7 @@ def parse(html, page, district=None, url=None, src=None):
     for r in rows:
         m = NO.match(_col(head, r, "assembly"))
         if not m:
+            provenance.skip_row(r, 'skip: not m')
             continue
         no, ac = int(m.group(1)), m.group(2)
         desig, _, addr = _col(head, r, "designation").partition(" | ")

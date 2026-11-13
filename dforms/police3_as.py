@@ -21,6 +21,7 @@ from dforms._field import pdf_text_engine
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
 from dforms._police3e import kind, station_name
 from provenance import line_pos
+import provenance
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout), lines grouped by serial number"
 
@@ -150,6 +151,7 @@ def parse_landline(text, url, engine=None):
         rows = [dict(page=p, line=i, line_text=ln, serial=sn, location=loc, number=[num] if num else [], extra=[], at=k)
                 for k, (p, i, ln, kd, sn, loc, num) in enumerate(lines) if kd == "row"]
         if not rows:
+            provenance.skipped('skip: not rows')
             continue
         pos = [r["at"] for r in rows]
         for k, (p, i, ln, kd, sn, loc, num) in enumerate(lines):
@@ -165,6 +167,7 @@ def parse_landline(text, url, engine=None):
         for r in rows:
             loc = clean(" ".join([r["location"]] + r["extra"])) if r["location"] else clean(" ".join(r["extra"]))
             if not loc:
+                provenance.skip_row(r, 'skip: not loc')
                 continue
             level, otype, post = kind(loc)
             raw = " ; ".join(r["number"])
@@ -275,11 +278,13 @@ def parse_directory(text, url, engine=None):
     recs = []
     for e in entries:
         if not e["serial"] or not (e["names"] or e["posts"]):
+            provenance.skip_row(e, 'skip: not e["serial"] or not (e["names"] or e["posts"])')
             continue
         name = clean(" ".join(e["names"])) if e["names"] else None
         post = clean(re.sub(r"\S+@\S+", " ", " ".join(e["posts"])))
         post = re.sub(r"^\d{3,5}\s+|\s+\d{3,5}$", "", post or "")
         if not post:
+            provenance.skip_row(e, 'skip: not post')
             continue
         by = {}
         for c, t in e["tok"]:

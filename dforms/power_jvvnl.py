@@ -16,6 +16,7 @@ import json
 import re
 
 from dforms._power import Out, clean, email, phone, raw
+import provenance
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
@@ -54,6 +55,7 @@ def parse(rows, source=URL):
             prev_office = office
             block_repeat = repeat
         if discom is None:
+            provenance.skip_row(x, 'skip: discom is None')
             continue
         m = POST.match(des)
         if discom != "JVVNL":                     # AVVNL / JdVVNL: only zone and O&M circle heads
@@ -62,6 +64,7 @@ def parse(rows, source=URL):
                 out.add(des, lvl, clean(m.group(3)) or des, post=des, name=name, phone_=ph, email_=em, discom=discom)
             continue
         if not BLOCK.match(office):
+            provenance.skip_row(x, 'skip: not BLOCK.match(office)')
             continue
         om = POST.match(office)
         if om and om.group(1) == "ZCE":
@@ -79,9 +82,11 @@ def parse(rows, source=URL):
                     phone_=ph, email_=em, parents={"zone": zone, "circle": circle if lvl != "circle" else None})
             continue
         if not m:
+            provenance.skip_row(x, 'skip: not m')
             continue
         kind, tag, town = m.group(1), (m.group(2) or "").strip(), clean(m.group(3))
         if tag and not DIST.match(tag):
+            provenance.skip_row(x, 'skip: tag and not DIST.match(tag)')
             continue
         lvl = LEVEL[kind]
         area = town or (f"{sub_town} ({tag})" if kind == "JEN" and sub_town and tag else sub_town if kind == "JEN" else None) or tag or des

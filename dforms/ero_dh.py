@@ -12,6 +12,7 @@ import re
 
 from dforms import _esw
 from dforms._power import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -59,6 +60,7 @@ def parse(html, url=URL):
                 pc = (int(m.group(1)), m.group(2).strip())
                 continue
             if pc is None or not texts:
+                provenance.skip_row(tr, 'skip: pc is None or not texts')
                 continue
             roles = [_role(x) for x in texts]
             if all(r != "none" for r in roles):
@@ -69,9 +71,11 @@ def parse(html, url=URL):
                 role = cols[col] if col < len(cols) else None
                 col += n
                 if not role or not text:
+                    provenance.skip_line(text, 'skip: not role or not text')
                     continue
                 o = officer(text)
                 if not o["name"]:
+                    provenance.skip_line(text, 'skip: not o["name"]')
                     continue
                 f = dict(dept="elections", designation=o["designation"], name=o["name"], phone=o["phone"], email=o["email"],
                          address=o["address"], state="DH", source=url, src_pos=dict(tp, col=col - n + 1))
@@ -85,6 +89,7 @@ def parse(html, url=URL):
                     f.update(level="pc", area=f"{pc[0]} - {pc[1]}", office_id=office,
                              post="Electoral Registration Officer" if role == "ero" else "Assistant Electoral Registration Officer")
                 if key in seen:
+                    provenance.skip_line(text, 'skip: key in seen')
                     continue
                 seen.add(key)
                 recs.append(_esw.record(MODULE, key, **f))

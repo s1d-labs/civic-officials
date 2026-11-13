@@ -23,6 +23,7 @@ import re
 from urllib.parse import quote
 
 from dforms import _esw, _trail
+import provenance
 
 METHOD = "html table (halqa pages of the RD&PR directory; selects from ajaxData.php)"     # source trail (provenance.py)
 
@@ -97,6 +98,8 @@ def page_rows(html):
             cells = [_esw.clean(c.get_text(" ")) for c in tr.find_all(["th", "td"])]
             if len(cells) >= 7 and any(cells[1:4]):
                 out.append((cells[:7], _trail.tr_pos(tr)))
+            else:
+                provenance.skip_row(tr, 'skip: not (len(cells) >= 7 and any(cells[1:4]))')
     return out
 
 
@@ -110,8 +113,10 @@ def build(district, block, pages):
             m = HALQA.match(halqa)
             h_gp, h_dist, h_block = (m.group(1), m.group(2), m.group(3)) if m else (halqa, district, block)
             if key(h_block) != key(block) or key(h_dist) != key(district):
+                provenance.skip_row(cells, 'skip: key(h_block) != key(block) or key(h_dist) != key(district)')
                 continue
             if not name and not mobile:
+                provenance.skip_row(cells, 'skip: not name and not mobile')
                 continue
             extra = {"aadhaar_column_filled": True} if re.search(r"\d", aadhaar or "") else {}
             if BDO.match(desig):

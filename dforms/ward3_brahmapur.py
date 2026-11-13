@@ -9,6 +9,7 @@ one office, Ward 1, without staff), so the records are level "body" (area = the 
 Record ids: dept:ward3_brahmapur:<slug>:<post slug>:<name slug>.
 """
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -36,6 +37,7 @@ def parse(html, p):
         for r in rows:
             name, post, phone = _ward.col(r, "name"), _ward.col(r, "designation"), _ward.col(r, "phone", "mobile")
             if not post or not (name or phone):
+                provenance.skip_row(r, 'skip: not post or not (name or phone)')
                 continue
             recs.append(_ward.record(MODULE, f"{slug}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}", seen, body=BODY, lgd=LGD,
                                      state=STATE, district=DISTRICT, level="body", area=BODY, post=post, name=name,

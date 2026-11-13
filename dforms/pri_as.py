@@ -78,6 +78,7 @@ def table_records(html, url, r, page_key):
             cells = [_pri.clean(c) for c in row]
             name = cells[col["name"]] if col["name"] < len(cells) else ""
             if not name or NAME_H.fullmatch(name):
+                provenance.skip_row(row, 'skip: not name or NAME_H.fullmatch(name)')
                 continue
             g = lambda k: cells[col[k]] if k in col and col[k] < len(cells) else ""   # noqa: E731
             out.append(_pri.record(

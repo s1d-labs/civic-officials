@@ -18,6 +18,7 @@ One queue item = one page of one body. Record ids: dept:ward_kamrc:<city>:<page>
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -56,6 +57,7 @@ def people(cell):
     for name in NAMESPLIT.split(text):
         name = _esw.clean(name).strip(" .,/|")
         if len(name) < 2 or re.fullmatch(r"[-–.\d\s]*|(?i:nil|na|n/a)", name):
+            provenance.skipped('skip: len(name) < 2 or re.fullmatch(r"[-–.\\d\\s]*|(?i:nil|na|n/a)", name)')
             continue
         (notes if LABEL.search(name) else names).append(name)
     note = "; ".join(notes) or None

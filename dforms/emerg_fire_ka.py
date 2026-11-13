@@ -14,6 +14,7 @@ import re
 
 from dforms import _emerg, _pdftext
 from provenance import line_pos
+import provenance
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -32,6 +33,7 @@ def rows(text, where=None, at=None):
     for li, line in enumerate(text.splitlines()):
         m = re.match(r"^\s*(\d{1,3})\s+(.*\S)\s*$", line) or re.match(r"^\s{4,}((?:CFO|RFO|DFO|COMMAND|HEAD)\b.*\S)\s*$", line)
         if not m:
+            provenance.skip_line(line, 'skip: not m')
             continue
         rest = m.group(m.lastindex)
         toks = [t.strip() for t in re.split(r"\s{2,}", rest) if t.strip()]
@@ -73,6 +75,7 @@ def records(text, url, at=None, engine=None):
     for n, (cfo, rfo, dfo, no, name) in enumerate(rows(text, where, at)):
         unit = no is None
         if unit and not re.search(r"(?i)\(units?\)|academy|workshop", name):
+            provenance.skipped('skip: unit and not re.search(r"(?i)\\(units?\\)|academy|workshop", name)')
             continue
         key = _emerg.unique(f"st-{no}" if not unit else f"unit-{_emerg.slug(name)}", seen)
         recs.append(_emerg.record(

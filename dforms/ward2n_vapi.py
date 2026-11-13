@@ -8,6 +8,7 @@ Record ids: dept:ward2n_vapi:ward-<n>:ssi.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -30,12 +31,14 @@ def parse(html, p):
             continue
         for r, rp in zip(g[1:], gp[1:]):
             if len(r) < 4:
+                provenance.skip_row(r, 'skip: len(r) < 4')
                 continue
             sr, who, phone, ward = (_esw.clean(c).translate(GU) for c in r[:4])
             wards = _ward.wards_of(ward)
             if "વોર્ડ" in sr:
                 wards = list(dict.fromkeys(_ward.wards_of(sr.replace("વોર્ડ", "")) + wards))
             if not wards:
+                provenance.skip_row(r, 'skip: not wards')
                 continue
             name, _, post_regional = who.partition(",")
             name = _esw.clean(name)

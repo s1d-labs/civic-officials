@@ -57,6 +57,7 @@ def ward_rows(page, at=None):
                 at.append(lno)
             ln = ln[:m.start(1)] + " " * len(m.group(1)) + ln[m.end(1):]
         if cur is None:
+            provenance.skip_line(ln, 'skip: cur is None')
             continue
         for x, t in _runs(ln):
             col = max(i for i, p in enumerate(peaks) if p <= x + 2) if x + 2 >= peaks[0] else 0

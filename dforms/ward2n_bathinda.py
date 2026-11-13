@@ -11,6 +11,7 @@ of sweepers (docx), not read. Record ids: dept:ward2n_bathinda:<branch slug>:<zo
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -46,6 +47,7 @@ def parse(html, p):
         for r in rows:
             name, post = _ward.col(r, "name"), _ward.col(r, "designation")
             if not post or not name:
+                provenance.skip_row(r, 'skip: not post or not name')
                 continue
             zs = zones_of(_ward.col(r, "area", "zone"))
             wing = _ward.wing_of(post)

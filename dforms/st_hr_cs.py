@@ -12,6 +12,7 @@ Ids: dept:st_hr_cs:<Sr. No.>.
 import re
 
 from dforms import _esw, _state
+import provenance
 
 METHOD = "html table"
 MODULE = "st_hr_cs"
@@ -39,6 +40,7 @@ def parse(html, url=URL):
             continue
         for row, p in zip(rows, pos):
             if len(row) < 7 or not re.fullmatch(r"\d{1,3}", row[0].strip()):
+                provenance.skip_row(row, 'skip: len(row) < 7 or not re.fullmatch(r"\\d{1,3}", row[0].strip())')
                 continue
             sn, name, posting, off, res, epbax, addr = (_esw.clean(c) for c in row[:7])
             post, dept = split_post(posting)

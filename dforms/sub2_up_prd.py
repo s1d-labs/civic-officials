@@ -100,6 +100,7 @@ def rows(html, where=None):
     out = []
     for r, pos in zip(g[1:], tp[1:]):
         if len(r) < 7 or not re.fullmatch(r"\d+", r[0].strip()):
+            provenance.skip_row(r, 'skip: len(r) < 7 or not re.fullmatch(r"\\d+", r[0].strip())')
             continue
         if where is not None:
             where.append(pos)

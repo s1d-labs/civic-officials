@@ -41,6 +41,7 @@ def parse(html, p, module=MODULE, body=BODY, lgd=LGD, district=DISTRICT):
             name = _ward.col(r, "name of employee", "name")
             post = _ward.col(r, "designation").strip(" -")
             if not post or not name or name == post or re.fullmatch(r"(?i)name.*", name):
+                provenance.skip_row(r, 'skip: not post or not name or name == post or re.fullmatch(r"(?i)name.*",...')
                 continue
             phone = _ward.col(r, "mobile", "mob", "contact", "phone")
             email = _ward.col(r, "email", "mail")

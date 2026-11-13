@@ -13,6 +13,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import ascii_digits, clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html select options (district stations) + html table (Bengaluru city)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -100,6 +101,7 @@ def parse_bcp(html, url=BCP):
         for n, tr in enumerate(trs[1:], 2):
             c = [clean(td.get_text(" ", strip=True)) for td in tr.find_all("td")]
             if len(c) < 4 or not c[1]:
+                provenance.skip_row(tr, 'skip: len(c) < 4 or not c[1]')
                 continue
             label, mobile, phone = c[1], c[2], c[3]
             m = RANK.match(label)
@@ -108,6 +110,7 @@ def parse_bcp(html, url=BCP):
             if rank == "DCP":
                 division = area
             if (label, mobile) in seen:
+                provenance.skip_row(tr, 'skip: (label, mobile) in seen')
                 continue
             seen.add((label, mobile))
             level = {"DCP": "division", "ACP": "subdivision"}.get(rank, "police_station")

@@ -138,8 +138,10 @@ def parse_text(raw):
         for i, rl in enumerate(page.splitlines()):
             line = convert(rl)
             if not line.strip():
+                provenance.skipped("empty")
                 continue
             if re.fullmatch(r"\s*(page\s*)?\d+\s*(/\s*\d+)?\s*", line, re.I):
+                provenance.skipped('skip: re.fullmatch(r"\\s*(page\\s*)?\\d+\\s*(/\\s*\\d+)?\\s*", line, re.I)')
                 continue      # page numbers
             ch = chunks(rl)
             if LABEL.search(line):
@@ -153,6 +155,7 @@ def parse_text(raw):
                 blocks.append(cur)
                 continue
             if "தேர்தல்" in line and not NUM.match(ch[0][1]):
+                provenance.skipped('skip: "தேர்தல்" in line and not NUM.match(ch[0][1])')
                 continue      # page titles
             if any("பாலினம்" in t or t.startswith(("தந்தை", "பெற்ற", "சதவீதம்", "முடிவு")) for _, t in ch):
                 if cur is not None:
@@ -169,6 +172,7 @@ def parse_text(raw):
                             cur.cols["result"] = x
                 continue
             if ch and ch[0][1].startswith(("வ.", "எண்.")):
+                provenance.skipped('skip: ch and ch[0][1].startswith(("வ.", "எண்."))')
                 continue
             r = row_of(ch)
             if head is not None and r is None:
@@ -178,6 +182,7 @@ def parse_text(raw):
                 update(ctx, head_fields(head))
                 head = None
             if cur is None:
+                provenance.skipped('skip: cur is None')
                 continue
             if r:
                 r["line"], r["page"], r["raw"] = (page_no, i), page_no, rl

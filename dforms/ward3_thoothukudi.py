@@ -13,6 +13,7 @@ Records: level "zone" (area "North Zone"), wards from the zones page. Record ids
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -46,6 +47,8 @@ def zone_wards(html):
             cells = [_esw.clean(c.get_text(" ")) for c in tr.find_all(["td", "th"])]
             if len(cells) >= 2 and zone_of(cells[0]):
                 out[zone_of(cells[0])] = (_ward.wards_of(cells[1]), {"table": ti, "row": ri})
+            else:
+                provenance.skip_row(tr, 'skip: not (len(cells) >= 2 and zone_of(cells[0]))')
     return out
 
 
@@ -74,6 +77,8 @@ def blocks(html):
             tds = tr.find_all("td")
             if len(tds) >= 2:
                 kv.append((_esw.clean(tds[0].get_text(" ")), _esw.clean(tds[1].get_text(" ")), ri))
+            else:
+                provenance.skip_row(tr, 'skip: not (len(tds) >= 2)')
         get = {k.lower(): (v, ri) for k, v, ri in kv}
         name, nrow = get.get("name", ("", 2))
         addr = get.get("address", ("", 0))[0]
@@ -100,6 +105,7 @@ def parse(pages, p):
             w, wpos = wards.get(zone, ([], None))
             for post, name, ph, addr, ri in people:
                 if not (name or ph) or (zone, post, name.lower()) in had:     # East: "JUNIOR ENGINEER PANDI" twice
+                    provenance.skipped('skip: not (name or ph) or (zone, post, name.lower()) in had')
                     continue
                 had.add((zone, post, name.lower()))
                 d = _ward.record(MODULE, f"{_esw.slug(zone)}:{_esw.slug(post)}", seen, body=BODY, lgd=LGD, state=STATE,

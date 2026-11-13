@@ -16,6 +16,7 @@ import json
 import re
 
 from dforms import _esw, _state
+import provenance
 
 METHOD = "html table"
 MODULE = "st_la_dir"
@@ -61,6 +62,7 @@ def parse(html, url=URL):
         n = 0
         for row, p in zip(_esw.grid(t, pos=pos), pos):
             if len(row) < 6 or re.fullmatch(r"(?i)name", row[0].strip()):
+                provenance.skip_row(row, 'skip: len(row) < 6 or re.fullmatch(r"(?i)name", row[0].strip())')
                 continue
             n += 1
             name, post, mail, mob, land, addr = (_esw.clean(c) for c in row[:6])

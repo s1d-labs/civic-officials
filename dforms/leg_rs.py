@@ -10,6 +10,7 @@ Record ids: dept:leg_rs:<ST>-RS-<slug of name>.
 """
 from dforms import _leg
 from dforms.leg_ls import _split_fax
+import provenance
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
@@ -27,6 +28,7 @@ def parse(doc, url):
     recs = []
     for i, m in enumerate((doc or {}).get("records") or []):
         if str(m.get("mpFlag")) != "1" and _leg.clean(m.get("status")) != "Sitting":
+            provenance.skip_row(m, 'skip: str(m.get("mpFlag")) != "1" and _leg.clean(m.get("status")) != "Sit...')
             continue
         st = _leg.state_code(m.get("state")) or "NM"
         first, last = _leg.clean(m.get("firstName")), _leg.clean(m.get("lastName"))

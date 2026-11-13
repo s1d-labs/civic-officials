@@ -23,6 +23,7 @@ import shutil
 import tempfile
 
 from cforms import gj
+import provenance
 
 METHOD = "ocr tesseract mar (word cells) + pdf text layer by drawn cell borders (pdftotext -bbox, numbers and seat codes)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -167,6 +168,8 @@ def get_pdf(p, get):
                 target = a["href"].split("'")[1]
                 break
             nth -= 1
+        else:
+            provenance.skip_row(tr, 'skip: not (a and len(tds) > 6 and (tds[6] == want or tds[6].startswith(w...)')
     if not target:
         return None, "notice not in the search result"
     data.update({"__EVENTTARGET": target, "__EVENTARGUMENT": ""})
@@ -229,6 +232,7 @@ def parse(pdf, p, use_ocr=True):
             return gj.box_text(ws, c[0], band[0], c[1], band[1])
         name = row.get(role["name"], "")
         if not name or len(name) < 3:
+            provenance.skipped('skip: not name or len(name) < 3')
             continue
         seat_t = row.get(role.get("seat"), "") if "seat" in role else ""
         m = re.search(r"([अबकडइ])\s*\)?\s*$", seat_t) or re.search(r"([अबकडइ])\s*\)?\s*$", gj.norm(layer("seat")))

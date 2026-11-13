@@ -17,6 +17,7 @@ once per ward. "VACANT" posts are kept with vacant = true. Record ids: dept:ward
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -76,9 +77,11 @@ def parse(html, p, block=None, seen=None, recs=None, blocks=None):
         blocks.setdefault(ward, []).append(block)
     for section, name, post, phone in rows:
         if not post:
+            provenance.skipped('skip: not post')
             continue
         key = f"w{ward}:{_esw.slug(section)}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}"
         if f"dept:{MODULE}:{key}" in {r for r, _ in recs}:
+            provenance.skipped("repeated (same post in an earlier answer)")
             continue
         recs.append(_ward.record(MODULE, key, seen, body=BODY, lgd=LGD, state=STATE, district=DISTRICT, level="ward",
                                  area=f"Election Ward {ward}", post=post, name=name, phone=phone, wards=[ward],

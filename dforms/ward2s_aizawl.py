@@ -11,6 +11,7 @@ Records: extra key "list" ("officers" / "staff"). Record ids: dept:ward2s_aizawl
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -38,9 +39,11 @@ def parse(html, p):
         lst = "staff" if any("staff" in c.lower() or "employees" in c.lower() for r in g[:2] for c in r) else "officers"
         for r, rp in zip(g, gp):
             if len(r) < 3 or not r[0].isdigit():
+                provenance.skip_row(r, 'skip: len(r) < 3 or not r[0].isdigit()')
                 continue
             name, post = r[1], POSTS.get(r[2].replace(" ", ""), r[2])
             if not name or not post or (lst == "staff" and not FIELD.search(r[2] + " " + post)):
+                provenance.skip_row(r, 'skip: not name or not post or (lst == "staff" and not FIELD.search(r[2] +...')
                 continue
             recs.append(_ward.record(MODULE, f"{lst}:{_esw.slug(post)}:{_esw.slug(name)}", seen, body=BODY, lgd=LGD, state=STATE,
                                      district=DISTRICT, level="body", area=BODY, post=post, name=name, list=lst,

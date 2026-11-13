@@ -41,11 +41,13 @@ def parse_table(html, level, url):
                 head = low
                 continue
             if not head or len(c) < len(head):
+                provenance.skip_row(tr, 'skip: not head or len(c) < len(head)')
                 continue
             d = dict(zip(head, c))
             place = d.get("place/district") or d.get("place") or c[0]
             post = d.get("designation")
             if not place or not post:
+                provenance.skip_row(tr, 'skip: not place or not post')
                 continue
             area = re.sub(r"\s*\b(DIVISION|DVN|CIRCLE|ZONE)\b\s*$", "", place, flags=re.I) or place
             out.add(f"{level}:{place}:{post}", level, area, post=re.sub(r"\s+El$", " (Elec.)", post),
@@ -79,11 +81,13 @@ def parse_emails(pages, url):
                 continue
             m = re.match(r"\s*(\d{1,3})\s+(\S.*)$", line)
             if not m or not level:
+                provenance.skip_line(line, 'skip: not m or not level')
                 continue
             parts = [p for p in re.split(r"\s{2,}", m.group(2).strip()) if p]
             mails = [p for p in parts if "@" in p or re.search(r"gmail\.?com$", p)]
             name = " ".join(p for p in parts if p not in mails and p != "_")
             if not name:
+                provenance.skip_line(line, 'skip: not name')
                 continue
             area = name if kind in ("corporate", "vigilance", "construction") else _area(name)
             post = {"zone": "Chief Engineer (Elec.)", "circle": "Superintending Engineer (Elec.)",

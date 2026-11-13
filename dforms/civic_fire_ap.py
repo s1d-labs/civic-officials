@@ -12,6 +12,7 @@ Record ids: dept:civic_fire_ap:<district slug>:<station slug>, and dept:civic_fi
 import re
 
 from dforms import _civic, _esw
+import provenance
 
 METHOD = "html table + html page (label spans)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -72,6 +73,7 @@ def parse(html, url):
         gp = []
         for gi, row in enumerate(_esw.grid(table, pos=gp)):
             if len(row) < 7 or not re.fullmatch(r"\d+", row[0].strip()):
+                provenance.skip_row(row, 'skip: len(row) < 7 or not re.fullmatch(r"\\d+", row[0].strip())')
                 continue
             _, station, address, name, phone, mobile, mail = row[:7]
             station = _esw.clean(station)

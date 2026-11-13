@@ -69,6 +69,7 @@ def zone_wards(text):
             break
         m = re.match(r"\s*(\d+)\s", ln)
         if not m:
+            provenance.skip_line(ln, 'skip: not m')
             continue
         for t in re.finditer(r"(?<![\w(])(\d{1,3})(?=\s+[A-Za-z(])", ln[m.end():]):
             pos = t.start() + m.end()
@@ -92,11 +93,13 @@ def parse(html, zw, p):
         wing = next((w for k, w in DEPTS.items() if k in dept), None)
         for r, rp in zip(g[1:], gp[1:]):
             if len(r) < 3:
+                provenance.skip_row(r, 'skip: len(r) < 3')
                 continue
             name, post, phone = (_esw.clean(c) for c in r[:3])
             email = _esw.clean(r[3]) if len(r) > 3 else ""
             zs = zones_of(post)
             if not zs or not name:
+                provenance.skip_row(r, 'skip: not zs or not name')
                 continue
             en = english(post)
             for z in zs:

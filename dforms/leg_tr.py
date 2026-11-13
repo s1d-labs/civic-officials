@@ -6,6 +6,7 @@ site (tripuraassembly.nic.in) refuses connections from Germany and India (2026-1
 One queue item = the page. Record ids: dept:leg_tr:TR-AC-<no>.
 """
 from dforms import _esw, _leg, _leg_se
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -23,6 +24,7 @@ def parse(html, url):
         tp = []
         for row, pos in zip(_esw.grid(table, pos=tp), tp):
             if len(row) < 4 or not row[2].strip().isdigit():
+                provenance.skip_row(row, 'skip: len(row) < 4 or not row[2].strip().isdigit()')
                 continue
             nm, cons, no, party = (_esw.clean(x.replace(" | ", " ")) for x in row[:4])
             seat, note = _leg_se.seat("TR", no, cons)

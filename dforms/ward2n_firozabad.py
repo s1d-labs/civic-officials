@@ -10,6 +10,7 @@ carry the same text. Record ids: dept:ward2n_firozabad:ward-<n>:<post slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -35,6 +36,7 @@ def parse(html, p):
     for tr in (t.find_all("tr") if t else []):
         tds = [_esw.clean(td.get_text(" ")) for td in tr.find_all("td")]
         if len(tds) < 4:
+            provenance.skip_row(tr, 'skip: len(tds) < 4')
             continue
         post_hi, name, mob = tds[1], tds[2], tds[3]
         en = next((e for rx, e in POSTS if re.search(rx, _ward.hi_norm(post_hi))), None) or _ward.hi_post(post_hi)

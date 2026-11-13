@@ -165,6 +165,7 @@ def parse_nn(html, url=KINDS["nn"]):
         pos = []
         for row, tp in zip(_esw.grid(t, pos=pos), pos):
             if len(row) < 5 or not re.fullmatch(r"\d+", row[0].strip()):
+                provenance.skip_row(row, 'skip: len(row) < 5 or not re.fullmatch(r"\\d+", row[0].strip())')
                 continue
             district = nfc(_esw.clean(row[1]))
             m = re.match(r"\s*(.*?)\s*(?:\|\s*)?((?:https?://|www\.)\S+)?\s*$", row[2])
@@ -293,9 +294,11 @@ def parse_pdf(content, kind, url=None):
         for r, (lno, ltext) in zip(page_rows(page, where), where):
             serial, district, body, res, name, rel, mob = (_esw.clean(fix(" ".join(c))) for c in r)
             if not re.fullmatch(r"\d+", serial) or not body:
+                provenance.skip_row(r, 'skip: not re.fullmatch(r"\\d+", serial) or not body')
                 continue
             name = person(name)
             if not (name or mob):
+                provenance.skip_row(r, 'skip: not (name or mob)')
                 continue
             recs.append(rec(body, "अध्यक्ष", seen, name=name, phone=mob, district=district or None,
                                     body_type=BODY_TYPE[kind], source=url, serial=int(serial), reservation=res or None,

@@ -11,6 +11,7 @@ from urllib.parse import urlsplit
 from bs4 import BeautifulSoup
 
 from cforms import cp_common as cp
+import provenance
 
 METHOD = "html cards (.author-text), else html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -20,6 +21,7 @@ def cards(html, p, url):
     for k, card in enumerate(BeautifulSoup(html, "lxml").select(".author-text"), 1):
         name = card.select_one(".author-name")
         if not name:
+            provenance.skip_line(card, 'skip: not name')
             continue
         post = card.select_one(".deg")
         conts = {}

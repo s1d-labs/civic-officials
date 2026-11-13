@@ -11,6 +11,7 @@ import json
 import re
 
 from dforms._police import clean, email, gz, rec, slug, uniq
+import provenance
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
@@ -56,6 +57,7 @@ def parse(rows, dist_id, district, url=SOURCE):
     for i, x in enumerate(rows):
         unit, desig, name = clean(x.get("unitName")), clean(x.get("designationName")), clean(x.get("empName"))
         if not unit:
+            provenance.skip_row(x, 'skip: not unit')
             continue
         phone = re.sub(r"\D", "", x.get("contactNo") or "")[-10:]
         mail = email(x.get("email") or "")

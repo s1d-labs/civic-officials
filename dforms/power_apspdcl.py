@@ -16,6 +16,7 @@ from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, cells, clean, phone, raw
 from dforms._power_ap import classify
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -41,10 +42,12 @@ def parse(html, url=URL):
             out.src = {"src_pos": tr_pos(tr)}
             c = cells(tr)
             if len(c) < 3 or not clean(c[1]) or c[1].lower() == "designation":
+                provenance.skip_row(tr, 'skip: len(c) < 3 or not clean(c[1]) or c[1].lower() == "designation"')
                 continue
             desig = clean(c[1])
             key = (re.sub(r"[^a-z0-9]", "", desig.lower()), re.sub(r"\D", "", c[2] or ""))
             if key in seen:
+                provenance.skip_row(tr, 'skip: key in seen')
                 continue
             seen.add(key)
             if corporate:

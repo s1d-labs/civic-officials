@@ -26,6 +26,7 @@ from urllib.parse import urlparse
 
 from dforms import _emerg, _esw
 from dforms.police_s3waas import last_updated
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -121,17 +122,21 @@ def records(url, html, p):
         for cells, rp in zip(_esw.grid(table, pos=gp), gp):
             labels, numtext = split_row(cells)
             if not labels:
+                provenance.skip_row(cells, 'skip: not labels')
                 continue
             label = " - ".join(dict.fromkeys(labels))
             if re.fullmatch(r"(?i)(s\.?\s*no\.?|sl\.?\s*no\.?|name|services?|department|contact.*|helpline.*|designation|"
                             r"office|particulars|service\s*/\s*\w+|.*number.*|.*details.*)( - .*)?", label) and not numtext:
+                provenance.skip_row(cells, 'skip: re.fullmatch(r"(?i)(s\\.?\\s*no\\.?|sl\\.?\\s*no\\.?|name|services?|depar...')
                 continue
             nums = _emerg.phones(numtext, *[x for x in labels if re.search(r"\d{6,}", x)])
             if not nums:
+                provenance.skip_row(cells, 'skip: not nums')
                 continue
             ctx = f"{head} {label}"
             dept = dept_of(label) or dept_of(head)
             if not dept:
+                provenance.skip_row(cells, 'skip: not dept')
                 continue
             station = STATION.get(dept)
             level = ("police_station" if dept == "police" else "facility") if station and re.search(station, ctx, re.I) \

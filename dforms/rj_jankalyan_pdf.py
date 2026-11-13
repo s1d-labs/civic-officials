@@ -135,6 +135,7 @@ def page_lines(text):
         for k, raw in enumerate(pt.split("\n"), 1):
             ln = _esw.clean(raw) and re.sub("[​‌‍﻿]", "", raw.replace("\xa0", " "))
             if not ln or not ln.strip():
+                provenance.skipped("empty")
                 continue
             if is_kd:
                 ln = relayout(ln, kd_chunk)
@@ -274,6 +275,7 @@ def loose_rows(lines):
     rows = []
     for pg, k, raw, ln in lines:
         if not (MOBILE.search(ln) or "@" in ln):
+            provenance.skip_line(ln, "no phone or email")
             continue
         ch = [c for c in CHUNK.findall(ln)]
         ch = [re.sub(r"^\d{1,3}[.)]?\s+", "", c) if j == 0 else c for j, c in enumerate(ch)]
@@ -304,6 +306,7 @@ def build(rows, p):
         if health_fac and not (name or post) and r["area"]:
             post = f"{cat.strip()} {r['area']}"
         if not (phone or email) or not (name or post):
+            provenance.skipped("no phone/email or no name/post")
             continue
         vacant = bool(re.search(r"(?i)^(vacant|रिक्त)", name))
         if el:
@@ -320,6 +323,7 @@ def build(rows, p):
                 dept, level = "health", "facility"
         key = f"{p['code']}:{p['entry_id']}:{n}"
         if key in seen:
+            provenance.skipped("repeated key")
             continue
         seen.add(key)
         recs.append(_esw.record(MODULE, key, dept=dept, level=level, area=r["area"] or p.get("district") or "Rajasthan",

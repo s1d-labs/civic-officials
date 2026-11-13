@@ -28,6 +28,7 @@ from pathlib import Path
 
 from dforms._trail import tr_pos
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -75,6 +76,7 @@ def parse_contacts(html, url=CONTACTS):
     for tr in t.find_all("tr")[1:]:
         c = [cell(td) for td in tr.find_all("td")]
         if len(c) < 11 or not c[2]:
+            provenance.skip_row(tr, 'skip: len(c) < 11 or not c[2]')
             continue
         div, dist, body, btype, post, name, office, mobile, email, eng, engmob = c[:11]
         code, latin, _ = tie(LGD["contacts"].get(norm(dist) + "|" + norm(body)))
@@ -97,6 +99,7 @@ def parse_elected(html, url=ELECTED):
         for tr in t.find_all("tr")[1:]:
             c = [cell(td) for td in tr.find_all("td")]
             if len(c) < 4 or not c[1]:
+                provenance.skip_row(tr, 'skip: len(c) < 4 or not c[1]')
                 continue
             body = c[1]
             b = norm(body)

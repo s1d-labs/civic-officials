@@ -18,6 +18,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._power import Out, cells, tr_pos, clean, phone, raw, pdf_pages, slug
+import provenance
 
 METHOD = "html table + pdf text (pypdf layout, one record per page)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -35,6 +36,7 @@ def parse_ee(html, source=URL):
         c = cells(tr)
         tpos = tr_pos(tr)
         if len(c) < 4:
+            provenance.skip_row(tr, 'skip: len(c) < 4')
             continue
         if c[0] == "Executive Engineer Name":
             mode = c[1].lower()
@@ -44,9 +46,11 @@ def parse_ee(html, source=URL):
             zone = clean(where)
             continue
         if mode != "circle" or not clean(div) or NOT_AREA.search(div):
+            provenance.skip_row(tr, 'skip: mode != "circle" or not clean(div) or NOT_AREA.search(div)')
             continue
         key = (slug(where), slug(div), re.sub(r"\D", "", mob or ""))
         if key in seen:                  # the page holds the whole list twice (two accordion copies); one division is also
+            provenance.skip_row(tr, 'skip: key in seen')
             continue                     # listed twice in a circle with the same phone ("Latur | Latur | 7875762011")
         seen.add(key)
         name = re.sub(r"\s*\(I/C\)\s*$", " (I/C)", name)

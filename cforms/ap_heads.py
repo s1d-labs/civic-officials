@@ -73,6 +73,7 @@ def parse_text(raw, post):
                 started = bool(START.match(line))
                 continue
             if not line.strip() or i in skip:
+                provenance.skip_line(line, 'skip: not line.strip() or i in skip')
                 continue
             m = ROW.match(line)
             if m:
@@ -89,6 +90,8 @@ def parse_text(raw, post):
         for r in rows:
             if r.m.group("total") and r.m.group("pre") and len(cols_of(r.m)) >= 3:
                 cols = [c[0] for c in cols_of(r.m)][:3]
+            else:
+                provenance.skip_row(r, 'skip: not (r.m.group("total") and r.m.group("pre") and len(cols_of(r.m))...)')
         name_lo = lambda r: r.m.end("cno")
         for i, line in extra:
             nxt = next((r for r in rows if r.i > i), None)
@@ -134,6 +137,7 @@ def parse_text(raw, post):
                        "invalid": num("invalid"), "valid": num("valid"), "candidates": [], "page": pno}
                 bodies.append(cur)
             if cur is None:
+                provenance.skip_row(r, 'skip: cur is None')
                 continue
             name = re.sub(r"^[`'\s.,-]+", "", " ".join(r.pre + r.name + r.post)).strip()
             party = (r.g("party") or "").strip()

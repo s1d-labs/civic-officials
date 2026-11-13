@@ -20,6 +20,7 @@ transliteration, and take their ids from it). The pages answer from outside Indi
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table"     # kind "cards" (Satara): "html cards (S3WaaS public utility)" on each record
 METHOD_CARDS = "html cards (S3WaaS public utility)"     # source trail (provenance.py): how this reader reads its sources
@@ -138,6 +139,7 @@ def parse_table(html, url, district):
             c = {k: (row[i] if i < len(row) else "") for k, i in col.items()}
             body = blank(c["body"]).replace(" | ", " ").replace("|", " ")
             if not body or re.fullmatch(r"[\d\s.]+", body):
+                provenance.skip_row(row, 'skip: not body or re.fullmatch(r"[\\d\\s.]+", body)')
                 continue
             extra = {k: blank(c[k]) for k in ("body_class",) if blank(c.get(k, ""))}
             btype = blank(c.get("body_type", "")) or None

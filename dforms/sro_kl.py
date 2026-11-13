@@ -9,6 +9,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -27,6 +28,7 @@ def parse(html, url=URL):
     for t in soup.find_all("table"):
         for row in pgrid(t):
             if len(row) != 7 or not re.fullmatch(r"\d+", row[0].strip()):
+                provenance.skip_row(row, 'skip: len(row) != 7 or not re.fullmatch(r"\\d+", row[0].strip())')
                 continue
             c = dict(zip(HEAD, row))
             post, office, district = c["post"], c["office"], c["district"]

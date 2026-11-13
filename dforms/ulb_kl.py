@@ -22,6 +22,7 @@ import re
 from datetime import datetime
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html cards (div.team-card) or name tables, home page of the body"     # source trail (provenance.py): how this reader reads its sources
 
@@ -46,11 +47,13 @@ def index_rows(html):
         for tr in t.find_all("tr"):
             td = tr.find_all("td")
             if len(td) < 4:
+                provenance.skip_row(tr, 'skip: len(td) < 4')
                 continue
             name, code = _esw.clean(td[1].get_text(" ")), _esw.clean(td[2].get_text(" "))
             a = td[3].find("a", href=True)
             site = (a["href"] if a else _esw.clean(td[3].get_text(" "))).strip()
             if not KIND.search(name) or not re.fullmatch(r"[MC]\d{6}", code) or not site:
+                provenance.skip_row(tr, 'skip: not KIND.search(name) or not re.fullmatch(r"[MC]\\d{6}", code) or no...')
                 continue
             out.append((name, code, site))
     more = soup.find("a", attrs={"rel": "next"}) is not None or soup.select_one("li.pager__item--next") is not None

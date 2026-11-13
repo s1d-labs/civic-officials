@@ -13,6 +13,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, clean, phone, raw, slug
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -29,9 +30,11 @@ def sections(html):
     for tr in soup.find_all("tr"):
         td = tr.find_all("td")
         if len(td) < 2:
+            provenance.skip_row(tr, 'skip: len(td) < 2')
             continue
         sec = clean(td[0].get_text(" ", strip=True))
         if not sec or not sec.upper().endswith("SECTION"):
+            provenance.skip_row(tr, 'skip: not sec or not sec.upper().endswith("SECTION")')
             continue
         a = tr.find_all("a", href=True)
         name = clean(td[-1].get_text(" ", strip=True))

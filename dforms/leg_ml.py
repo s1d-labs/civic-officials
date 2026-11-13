@@ -8,6 +8,7 @@ import re
 
 from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_se
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -25,6 +26,7 @@ def parse(html, url):
     for tr in _esw.soup(html).select("table tbody tr"):
         c = tr.select_one("td.views-field-field-constituency")
         if not c:
+            provenance.skip_row(tr, 'skip: not c')
             continue
         t = _esw.clean(c.get_text(" "))
         m = re.search(r"Number\s*:\s*(\d+)", t)
@@ -35,6 +37,7 @@ def parse(html, url):
         ct = _esw.clean(contact.get_text(" ")) if contact else ""
         ph = re.search(r"Phone\s*:\s*(.*?)(?:Email|$)", ct)
         if not nm:
+            provenance.skip_row(tr, 'skip: not nm')
             continue
         cons = _esw.clean(k.group(1)) if k else ""
         no, note = _leg_se.seat("ML", m.group(1) if m else None, cons)

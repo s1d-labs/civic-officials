@@ -14,6 +14,7 @@ Names follow the department's spelling (Madhuranthagam, Thiruthani, Podhaturpet)
 import re
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -42,9 +43,11 @@ def parse_tp(html, url=TP_URL):
                 district = _esw.clean(m.group(1))
                 continue
             if len(row) < 4 or not re.fullmatch(r"\d+", row[0].strip()):
+                provenance.skip_row(row, 'skip: len(row) < 4 or not re.fullmatch(r"\\d+", row[0].strip())')
                 continue
             body, office, eo = blank(row[1]), blank(row[2]), blank(row[3])
             if not body or not (office or eo):
+                provenance.skip_row(row, 'skip: not body or not (office or eo)')
                 continue
             recs.append(_ulb.record(MODULE, "TN", body, "Executive Officer", seen, phone=eo, district=district,
                                     body_type="Town Panchayat", source=url, office_phone=_esw.phones(office) if office else None,
@@ -62,9 +65,11 @@ def parse_cma(html, url=CMA_URL):
                 region = _esw.clean(m.group(1))
                 continue
             if len(row) < 5 or not re.fullmatch(r"\d+", row[0].strip()):
+                provenance.skip_row(row, 'skip: len(row) < 5 or not re.fullmatch(r"\\d+", row[0].strip())')
                 continue
             district, body, grade, email = blank(row[1]), blank(row[2]), blank(row[3]), _esw.emails(row[4])
             if not body or not email:
+                provenance.skip_row(row, 'skip: not body or not email')
                 continue
             recs.append(_ulb.record(MODULE, "TN", body, "Commissioner", seen, email=email, district=district or None,
                                     body_type="Municipality", source=url, grade=grade or None, region=region, src_pos=pos))

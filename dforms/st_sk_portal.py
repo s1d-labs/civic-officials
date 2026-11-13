@@ -16,6 +16,7 @@ Record ids: dept:st_sk_portal:<hod|minister|dc|emp>:<slug>.
 import re
 
 from dforms import _esw, _state, st_ne
+import provenance
 
 METHOD = "html table + html label lists (www.sikkim.gov.in)"
 MODULE = "st_sk_portal"
@@ -39,6 +40,7 @@ def parse_hod(html, url=HOD, phones=None):
     for r in st_ne.table_rows(html):
         dept, name, post = r.get("department", ""), r.get("name", ""), r.get("post", "")
         if not (name or post):
+            provenance.skip_row(r, 'skip: not (name or post)')
             continue
         k = f"hod:{_esw.slug(dept)}:{_esw.slug(post)}:{nkey(name)}"
         seen[k] = seen.get(k, 0) + 1

@@ -16,6 +16,7 @@ import re
 from urllib.parse import quote
 
 from bs4 import BeautifulSoup
+import provenance
 
 METHOD = "html table (in a WordPress search answer: json api)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -75,6 +76,8 @@ def pairs(html):
                 key = label_key(cells[0])
                 if key:
                     out.append((key, cells[1], ti, ri))
+            else:
+                provenance.skip_row(tr, 'skip: not (len(cells) >= 2)')
     if not any(k == "name" for k, *_ in out):
         for li, line in enumerate(soup.get_text("\n").split("\n")):
             m = re.match(r"\s*([^:]{2,40}?)\s*[:：-]\s*(.+)$", line)
@@ -195,6 +198,7 @@ def items(get=None):
                 continue
             site = row["name"]
             if site.startswith("wpfc-"):          # a cache plugin folder, not a body
+                provenance.skip_row(row, 'skip: site.startswith("wpfc-")')
                 continue
             info = lgd.get(site) or {}
             out.append({"key": f"tn-heads-{site}", "payload": {"kind": "form-tn_heads", "state": "TN", "url": row["url"],

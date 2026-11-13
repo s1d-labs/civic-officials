@@ -16,6 +16,7 @@ import re
 from dforms import _emerg
 from dforms._pdftext import layout_pages
 from provenance import line_pos
+import provenance
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout): mobile + e-mail line; post and area from the e-mail name"     # source trail (provenance.py): how this reader reads its sources
 
@@ -69,6 +70,7 @@ def records(pages, url=URL, engine=None):
     for i, ln in enumerate(lines):
         m = LINE.search(ln)
         if not m:
+            provenance.skip_line(ln, 'skip: not m')
             continue
         mobile, mail = m.group(1), m.group(2)
         if "@" not in mail and i + 1 < len(lines):
@@ -77,6 +79,7 @@ def records(pages, url=URL, engine=None):
         local = mail.split("@")[0].lower()
         u = unit(local)
         if not u:
+            provenance.skip_line(ln, 'skip: not u')
             continue
         post, level, code = u
         if local.startswith(("dtc", "dycg")) and code in TRAINING:

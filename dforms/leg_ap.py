@@ -71,6 +71,7 @@ def parse_address(html, where=None):
     for tr in _esw.soup(html).find_all("tr"):
         tds = tr.find_all("td", recursive=False)
         if len(tds) < 4 or not _esw.clean(tds[0].get_text()).isdigit():
+            provenance.skip_row(tr, 'skip: len(tds) < 4 or not _esw.clean(tds[0].get_text()).isdigit()')
             continue
         parts = [x for x in _esw.cell_text(tds[1]).split(" | ") if x]
         nm = _leg_se.name(parts[0]) if parts else ""

@@ -5,6 +5,7 @@ email column, in English, Marathi, Hindi or Gujarati), as dicts {name, post, ema
 import re
 
 from dforms import _esw
+import provenance
 
 COLS = (
     ("name", r"(name|नाव|नाम|નામ)"),
@@ -45,6 +46,7 @@ def officer_rows(html):
             continue
         for row, p in zip(g[start:], pos[start:]):
             if header_map(row).get("name") is not None and len(header_map(row)) >= 3:
+                provenance.skip_row(row, 'skip: header_map(row).get("name") is not None and len(header_map(row)) >= 3')
                 continue        # a repeated header row
             d = {f: (row[i] if i < len(row) else "") for f, i in hm.items()}
             d["cells"], d["pos"] = row, p

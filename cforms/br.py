@@ -49,6 +49,8 @@ def _result(html):
             c = [" ".join(td.get_text(" ", strip=True).split()) for td in tr.find_all("td")]
             if len(c) == len(head):
                 rows.append(dict(zip(head, c)))
+            else:
+                provenance.skip_row(tr, 'skip: not (len(c) == len(head))')
     return (m.get_text(" ", strip=True) if m else ""), rows, (str(g) if g else "")
 
 

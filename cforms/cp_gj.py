@@ -165,6 +165,7 @@ def fetch(p, get):
             b = nav and get(urljoin(p["url"], nav[0]), method="POST", data=nav[1])
             d = b and smc_detail(b.text)
             if not d:
+                provenance.skipped('skip: not d')
                 continue
             files.append((f"councillors/GJ/cp-{slug(body)}-{slug(name)}.html.gz", gzip.compress(b.content), "application/gzip"))
             # source trail: the detail page (a POST answer; every member POSTs to the same url, so it is named by its bytes)

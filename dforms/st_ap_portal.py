@@ -19,6 +19,7 @@ import json
 import re
 
 from dforms import _esw, _state, _st_ape
+import provenance
 
 METHOD = "json api (dataList rows; contactDetails html labels)"
 MODULE = "st_ap_portal"
@@ -112,9 +113,11 @@ def parse(group, child, master=None, sub=None, url=""):
     recs = []
     for i, x in enumerate(rows(child)):
         if x.get("isActive") is False or x.get("isDeleted"):
+            provenance.skip_row(x, 'skip: x.get("isActive") is False or x.get("isDeleted")')
             continue
         name, post = _esw.clean(x.get("name")), _esw.clean(x.get("designation"))
         if not (name or post):
+            provenance.skip_row(x, 'skip: not (name or post)')
             continue
         mname, mcode = label_name(mnames.get(x.get("masterId"), ""))
         sname, scode = label_name(snames.get(x.get(g.get("sub_key", "")), "")) if g.get("sub_key") else ("", "")

@@ -22,6 +22,7 @@ from bs4 import BeautifulSoup
 
 from dforms import police_s3waas
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html label/value text (Hyderabad, Cyberabad pages) + html table"     # source trail (provenance.py)
 
@@ -197,6 +198,7 @@ def hyd_dir_parse(html, url):
         for ri, tr in enumerate(t.find_all("tr")):
             c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all("td")]
             if len(c) < 4 or not c[0].strip(". ").isdigit():
+                provenance.skip_row(tr, 'skip: len(c) < 4 or not c[0].strip(". ").isdigit()')
                 continue
             # rows lack the name cell when the post is vacant or unnamed: S.No | Rank | Office | Mobile? | Email
             if len(c) >= 6:
@@ -300,6 +302,7 @@ def si_parse(html, url, district):
         for ri, tr in enumerate(rows[1:], 1):
             c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all("td")]
             if len(c) < len(head) or not c[hi["name"]]:
+                provenance.skip_row(tr, 'skip: len(c) < len(head) or not c[hi["name"]]')
                 continue
             place = c[hi["place"]]
             m = re.match(r"^(SI-?\s*[IV]+|W?SI|SHO|Inspector|Inspr\.?|CI)\s*[,:-]?\s*(.+)$", place, re.I)

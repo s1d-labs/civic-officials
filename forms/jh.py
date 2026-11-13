@@ -90,9 +90,11 @@ def _grid_rows(soup, resp=None, page=1):
     for n, tr in enumerate(g.find_all("tr", recursive=False), 1):
         tds = tr.find_all("td", recursive=False)
         if len(tds) != 5:
+            provenance.skip_row(tr, 'skip: len(tds) != 5')
             continue
         cells = [td.get_text(" ", strip=True) for td in tds]
         if not any(cells):  # blank spacer row before the pager
+            provenance.skip_row(tr, 'skip: not any(cells)')
             continue
         out.append(_Cells(cells))
         out[-1].src = {**src, "src_pos": {"selector": "#GridView1", "row": n, "grid_page": page}}

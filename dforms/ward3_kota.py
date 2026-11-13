@@ -21,6 +21,7 @@ import json
 import re
 
 from dforms import _esw, _ward, _ward3_central as c3, ward2n_kota as k2
+import provenance
 
 METHOD = "contact service json + pdf text (pdftotext -layout) + Kruti Dev map"     # source trail (provenance.py)
 
@@ -45,9 +46,11 @@ def pick(data):
     best = None
     for x in rows:
         if _esw.clean(x.get("DepartmentTitle")) != TITLE or not x.get("IsActive", True):
+            provenance.skip_row(x, 'skip: _esw.clean(x.get("DepartmentTitle")) != TITLE or not x.get("IsActiv...')
             continue
         u = _esw.clean(x.get("AttachmentUrl"))
         if not u.lower().endswith(".pdf"):
+            provenance.skip_row(x, 'skip: not u.lower().endswith(".pdf")')
             continue
         if best is None or int(x.get("Id") or 0) > int(best.get("Id") or 0):
             best = x

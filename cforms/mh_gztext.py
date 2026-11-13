@@ -19,6 +19,7 @@ import subprocess
 import tempfile
 
 from cforms import gj, mh
+import provenance
 
 METHOD = 'pdf text layer (gazette, Unicode Marathi)'     # source trail (provenance.py): how this reader reads its sources
 
@@ -142,6 +143,7 @@ def records(rows, p):
         ward = w or ward
         name = gj.norm(r.get("name", ""))
         if not name or not ward:
+            provenance.skip_row(r, 'skip: not name or not ward')
             continue
         ward_name = re.sub(r"^[\s0-9०-९.\-–]+", "", gj.norm(r.get("ward", ""))).strip() if "ward" in r else ""
         party_local = gj.norm(r.get("party", ""))

@@ -6,6 +6,7 @@ Record ids: dept:sro_dl:DL-SRO-<slug of office>.
 """
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -25,6 +26,7 @@ def parse(html, url=URL):
     recs, seen = [], set()
     for row in pgrid(table):
         if len(row) < 3 or row[0].strip().upper() == "DISTRICT" or not row[1].strip():
+            provenance.skip_row(row, 'skip: len(row) < 3 or row[0].strip().upper() == "DISTRICT" or not row[1]....')
             continue
         district, office, address = row[:3]
         base = f"DL-SRO-{_esw.slug(office)}"

@@ -12,6 +12,7 @@ Record ids: dept:ward_coimbatore:<zone>:<post slug>:<name slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -60,6 +61,7 @@ def parse(html, p):
     for name, post, phone in officers:
         post = _esw.clean(post).replace("Assisstant", "Assistant").replace("Adminstrative", "Administrative")
         if not (name or phone):
+            provenance.skipped('skip: not (name or phone)')
             continue
         recs.append(_ward.record(MODULE, f"{zone}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}", seen, level="zone", area=zname,
                                  post=post, name=name, phone=phone, wards=wards, **common))

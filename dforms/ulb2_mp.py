@@ -58,6 +58,7 @@ def rows(text, where=None):
     for pno, lno, line in lines:
         s = line.strip()
         if not s:
+            provenance.skipped("empty")
             continue
         if s.startswith("ftyk "):
             dist = convert(re.split(r"\s{2,}", s[5:])[0].strip())

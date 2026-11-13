@@ -82,6 +82,8 @@ def janpads(text):
     for i, row in enumerate(d.get("rows") or []):
         if len(row) >= 2 and str(row[0]).strip().isdigit():
             out.append((str(row[0]).strip(), _esw.clean(str(row[1]))))
+        else:
+            provenance.skip_row(row, 'skip: not (len(row) >= 2 and str(row[0]).strip().isdigit())')
     return out
 
 

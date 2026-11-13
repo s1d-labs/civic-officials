@@ -129,6 +129,7 @@ def parse(soup, pos=None):
     for n, tr in enumerate(tab.find_all("tr"), 1):
         tds = tr.find_all("td")
         if not tds:
+            provenance.skip_row(tr, 'skip: not tds')
             continue
         vals = [" ".join(td.get_text(" ", strip=True).split()) for td in tds]
         keys = heads if len(heads) == len(vals) else ["col%d" % i for i in range(len(vals))]

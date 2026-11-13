@@ -19,6 +19,7 @@ from pathlib import Path
 
 from cforms import cw_cg, gj
 from cforms.tn import mark_stored, stored
+import provenance
 
 METHOD = ("ocr tesseract hin (name cell, 400 dpi) + pdf text layer by drawn cell borders (serial, district, body, party; "
           "pdftotext -bbox)")
@@ -46,6 +47,7 @@ def page_rows(reader, pdf, pg):
     for cols, a, b in rows:
         t = {c: gj.box_text(ws, cols[c][0], a, cols[c][1], b) for c in range(1, 6)}
         if not t[1].isdigit() or (t[2], t[3]) == ("2", "3"):
+            provenance.skipped('skip: not t[1].isdigit() or (t[2], t[3]) == ("2", "3")')
             continue
         out.append({"serial": t[1], "district_raw": t[2], "body_raw": t[3], "name_raw": t[4], "party_raw": t[5],
                     "cols": cols, "y0": a, "y1": b})

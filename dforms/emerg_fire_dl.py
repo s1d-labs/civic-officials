@@ -21,6 +21,7 @@ import re
 from dforms import _emerg, _pdftext
 from dforms._util2_pdfgrid import page_parts
 from provenance import line_pos
+import provenance
 
 METHOD = "pdf ruled table (pypdf text positions inside the drawn cell rules) + pdf text (pdftotext -layout, else pypdf layout)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -91,6 +92,7 @@ def cells(texts, hlines, vlines):
             continue
         k = next((i for i in range(6) if xs[i] - 1 <= x + 1 < xs[i + 1]), None)
         if k is None:
+            provenance.skip_line(x, 'skip: k is None')
             continue
         cx = (xs[k] + xs[k + 1]) / 2
         ys = [hy for x0, x1, hy in hlines if x0 - 2 <= cx <= x1 + 2]
@@ -204,6 +206,7 @@ def records(pages, phones, url, phones_url=None):
         for col, (area, offs, emails) in (("subdivision", sd), ("division", dv), ("dcfo", officers(row.get("dcfo", ""))),
                                           ("cfo", officers(row.get("cfo", "")))):
             if not row.get(col) or (col, row[col]) in done:
+                provenance.skipped('skip: not row.get(col) or (col, row[col]) in done')
                 continue
             done.add((col, row[col]))
             for i, (post, level, name, addl) in enumerate(offs):

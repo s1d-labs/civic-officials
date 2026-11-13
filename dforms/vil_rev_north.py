@@ -28,6 +28,7 @@ import re
 from urllib.parse import urlparse
 
 from dforms import _esw, _field
+import provenance
 
 METHOD = "html table (header words -> columns), or pdf text (pdftotext -layout) split at 2+ spaces with columns from the payload"
 
@@ -217,16 +218,19 @@ def html_records(html, url, p):
                     cap_tehsil = m.group(2).strip()
                 continue
             if is_header(cells):
+                provenance.skip_row(r, 'skip: is_header(cells)')
                 continue
             f = row_fields(cells, rl)
             b = build(f, p, cap_tehsil, hpost)
             if not b:
+                provenance.skip_row(r, 'skip: not b')
                 continue
             raw = {header[i] or f"col{i + 1}": c for i, c in enumerate(cells) if c and i < len(header)}
             sno = f.get("sno", "")
             if roster:
                 rk = (b["name"], b["area"], b["post_as_written"])
                 if rk in seen:
+                    provenance.skip_row(r, 'skip: rk in seen')
                     continue
                 seen.add(rk)
                 key = f"{host}:{tag}:roster:{t_no}-{pos.get('row') if isinstance(pos, dict) else len(out)}"
@@ -281,6 +285,7 @@ def text_records(text, url, p, engine="pdftotext -layout"):
         for ln_no, line in enumerate(page.splitlines(), 1):
             m = re.match(r"^\s*(\d{1,4})[.)]?\s{1,}(\S.*)$", line)
             if not m:
+                provenance.skip_line(line, 'skip: not m')
                 continue
             pieces = [x.strip() for x in re.split(r"\s{2,}", m.group(2).strip()) if x.strip()]
             phone = ""
@@ -304,12 +309,14 @@ def text_records(text, url, p, engine="pdftotext -layout"):
                 f[c] = v
             b = build(f, p, None, None)
             if not b:
+                provenance.skip_line(line, 'skip: not b')
                 continue
             key = f"{host}:{tag}:p{pg}-{ln_no}"
             rid, d = _rec(key, b, p, url, {"line": line.strip()}, {"page": pg, "line": ln_no, "line_text": line.rstrip()},
                           f"pdf text ({engine}), line split at 2+ spaces, columns from the payload")
             d["sno"] = m.group(1)
             if rid in ids:
+                provenance.skip_line(line, 'skip: rid in ids')
                 continue
             ids.add(rid)
             out.append((rid, d))

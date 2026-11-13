@@ -20,6 +20,7 @@ Both files are kept in the bucket. pdftotext / pypdf layout text, a few pages: l
 import re
 
 from dforms import _esw, _field, _ward_kd as kd
+import provenance
 
 METHOD = "pdf text (pdftotext -layout, else pypdf layout) + Kruti Dev map"     # source trail (provenance.py): how this reader reads its sources
 
@@ -150,6 +151,7 @@ def parse_contacts(text, url=CONTACTS):
     rows, sec, division, pre, last = [], None, "", [], None
     for pg, n_line, raw in lines_of(text):
         if not raw.strip():
+            provenance.skipped("empty")
             continue
         m = re.match(r"^\s*(\d{1,3})\s+(.*)$", raw)
         hi = hindi(raw)
@@ -159,9 +161,11 @@ def parse_contacts(text, url=CONTACTS):
                 sec, division, pre, last = s, "", [], None
                 continue
             if sec is None or re.search(r"क्रमांक|नम्बर|नंबर|^नं0|^का नाम|टेलीफोन", hi):
+                provenance.skipped('skip: sec is None or re.search(r"क्रमांक|नम्बर|नंबर|^नं0|^का नाम|टेलीफोन"...')
                 continue
             cs = chunks(raw)
             if len(cs) != 1:
+                provenance.skipped('skip: len(cs) != 1')
                 continue
             frag = hindi(cs[0])
             if last is not None and last.get("_frag_district"):
@@ -171,9 +175,11 @@ def parse_contacts(text, url=CONTACTS):
                 pre.append((frag, raw))
             continue
         if sec is None:
+            provenance.skipped('skip: sec is None')
             continue
         body = m.group(2)
         if re.fullmatch(r"[\d\s]+", body):        # the column-number row "1 2 3 4 5 6"
+            provenance.skipped('skip: re.fullmatch(r"[\\d\\s]+", body)')
             continue
         cs = []
         for c in (hindi(c) for c in chunks(body)):
@@ -284,12 +290,14 @@ def parse_emails(text, url=EMAILS):
     for pg, n_line, raw in lines_of(text):
         t = _esw.clean(raw)
         if not t:
+            provenance.skipped("empty")
             continue
         s = next((v for rx, v in EMAIL_SECTIONS if re.search(rx, t, re.I) and "@" not in t), None)
         if s:
             sec, last = s, None
             continue
         if sec is None:
+            provenance.skipped('skip: sec is None')
             continue
         em = _esw.emails(t)
         label = _esw.clean(re.sub(r"^\d{1,3}\s*|\S+@\S+|,", " ", t))

@@ -9,6 +9,7 @@ Records: level "zone", area "Zone <n>". Record ids: dept:ward2n_amravati:zone<n>
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -41,6 +42,7 @@ def parse(html, p):
             parts = [_esw.clean(x) for x in des.split("/")]
             zpart = next((x for x in parts if ZONE.search(x)), None)
             if not zpart:
+                provenance.skip_row(r, 'skip: not zpart')
                 continue
             z = ZONE.search(zpart)
             zones = [g for g in z.groups() if g]

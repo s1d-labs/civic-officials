@@ -13,6 +13,7 @@ Record id dept:st_jh_police:<location id>:<table n>:<row n>:<post slug>. src_pos
 Route: direct or proxy (answers from Mumbai); abroad unchecked. One item = one location page (one GET).
 """
 from dforms import _esw, _state, st_lgd_upbrjh as lgd
+import provenance
 
 METHOD = "html table (Drupal view, grouped)"
 MODULE = "st_jh_police"
@@ -52,10 +53,12 @@ def parse(html, url, loc=""):
             rows = _esw.grid(t, pos=pos)
             for i, (cells, sp) in enumerate(zip(rows, pos)):
                 if not cells or cells[0].lower() == "name":
+                    provenance.skipped('skip: not cells or cells[0].lower() == "name"')
                     continue
                 c = (cells + [""] * 8)[:8]
                 name, post, std = blank(c[0]), blank(c[1]), blank(c[2])
                 if not post and not name:
+                    provenance.skipped('skip: not post and not name')
                     continue
                 std_p = (lambda x: f"{std}-{x}" if x and std and not x.startswith("0") and len(x) < 9 else x)
                 office = ", ".join(std_p(x.strip()) for x in blank(c[3]).split(",") if x.strip("- "))

@@ -259,6 +259,7 @@ def html_rows(html):
         out = []
         for r, rp in zip(g[1:], tp[1:]):
             if len(r) < len(roles):
+                provenance.skip_row(r, 'skip: len(r) < len(roles)')
                 continue
             post_area = r[ix["area"]] if "area" in ix else ""
             out.append({"district": r[ix["district"]], "area": post_area, "post": r[ix["post"]] if "post" in ix else "",
@@ -294,6 +295,7 @@ def build(kind, rows, source, src=None):
         area = title(re.sub(r"(?i)\s+(block|prakhand)$", "", split_post(r["area"], post) if kind != "bdo" else r["area"]))
         phone = _esw.phones(r["mobile"])
         if not area or not phone:
+            provenance.skip_row(r, 'skip: not area or not phone')
             continue
         dist, dc = district(r["district"])
         base = f"{kind}:{_esw.slug(dist)}:{_esw.slug(area)}"

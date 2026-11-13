@@ -29,6 +29,7 @@ from urllib.parse import urlparse
 
 from dforms import _civic, _esw
 from dforms.police_s3waas import cards, last_updated
+import provenance
 
 METHOD = ("html cards (S3WaaS public utility, .public-utlty-catg; /page/N/ pages); fallback: html tables of the portal's "
           "tehsil / sub-division / block pages, columns by header words")     # source trail (provenance.py): how this reader reads its sources
@@ -300,6 +301,7 @@ def table_records(html, url, p):
             continue
         for row, pos in zip(body, poss):
             if [c.lower() for c in row] == [c.lower() for c in head] or (len(row) > 1 and len({c for c in row if c}) == 1):
+                provenance.skip_row(row, 'skip: [c.lower() for c in row] == [c.lower() for c in head] or (len(row) ...')
                 continue                   # a repeated header, or a section row ("Nizamabad Division" in every cell)
 
             def cell(k):

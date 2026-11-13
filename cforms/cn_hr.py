@@ -88,6 +88,7 @@ def records(p, rows, page):
     out = []
     for x in rows:
         if not x["body"]:
+            provenance.skip_row(x, 'skip: not x["body"]')
             continue
         rid, d = hr.record(p, None, x, page, "ocr")
         d["party"] = party(x["party"])

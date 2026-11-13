@@ -12,6 +12,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, cells, clean, email, phone, raw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -56,6 +57,7 @@ def parse(html, source=URL):
             office_lvl, office = lvl, (area, c[0])
             continue
         if len(c) < 4 or c[0] == "Name of Officer" or office_lvl in (None, "other"):
+            provenance.skip_row(tr, 'skip: len(c) < 4 or c[0] == "Name of Officer" or office_lvl in (None, "ot...')
             continue
         name, des, mob, em = c[:4]
         par = {"zone": cur["zone"], "circle": cur["circle"], "division": cur["division"]}

@@ -83,12 +83,14 @@ def rows(html, url, page, p, block_code="", r=None):
         for rn, r in enumerate(g[hi + 1:], hi + 2):
             cells = [_pri.clean(c) for c in r]
             if len(cells) < len(head) or not cells[col["name"]]:
+                provenance.skip_row(r, 'skip: len(cells) < len(head) or not cells[col["name"]]')
                 continue
             v = {k: cells[i] for k, i in col.items()}
             unit = v.get("unit", "")
             m = re.match(r"^(\d+)\s*-\s*(.+)$", _pri.digits(unit))
             wcode = v.get("ward_code", "")
             if not wcode.isdigit():
+                provenance.skip_row(r, 'skip: not wcode.isdigit()')
                 continue
             f = dict(state="UK", level=level, role="head" if level == "gp" else "member", post=post, post_regional=post_reg,
                      name_regional=v["name"], name=v["name"], category=v.get("category"), address=v.get("address"),

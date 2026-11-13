@@ -9,6 +9,7 @@ Text PDF without rules; read with pypdf layout mode. Answers from Germany. Seed:
 import re
 
 from forms.blo2_in import cells, download, layout_lines, line_pos, mobiles, part_of
+import provenance
 
 METHOD = "pdf text (pypdf layout, columns split at 2+ spaces)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -30,6 +31,7 @@ def parse_ludhiana(lines, p):
             continue
         c = cells(ln)
         if len(c) < 2 or not part_of(c[0]) or not mobiles(c[-1]):
+            provenance.skipped('skip: len(c) < 2 or not part_of(c[0]) or not mobiles(c[-1])')
             continue
         name = " ".join(c[1:-1])
         raw = {"page": page, "Part No.": c[0], "BLO Name": name, "Mobile Number": c[-1]}

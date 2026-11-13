@@ -19,6 +19,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _power, _util2
 from dforms._power import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -84,6 +85,7 @@ def staff(soup, out):
                 head = [x.lower() for x in c]
                 continue
             if not head or len(c) < len(head) - 1:
+                provenance.skip_row(tr, 'skip: not head or len(c) < len(head) - 1')
                 continue
             if title is None:
                 prev = tb.find_previous(string=lambda t: t and re.search(r"[A-Z]{3}", t) and not re.search(r"\d{6}", t))
@@ -92,6 +94,7 @@ def staff(soup, out):
             name = _util2.person(d.get("name"))
             post = _power.clean(d.get("designation"))
             if not (name or post):
+                provenance.skip_row(tr, 'skip: not (name or post)')
                 continue
             sub = _power.clean(d.get("sub division"))
             lvl = staff_level(post, sub)
@@ -125,6 +128,7 @@ def parse(html, page, url):
                 continue
             if page == "officers":
                 if len(c) < 4 or not c[1]:
+                    provenance.skip_row(tr, 'skip: len(c) < 4 or not c[1]')
                     continue
                 d = dict(zip(head, c))
                 post = d.get("designation") or None
@@ -133,6 +137,7 @@ def parse(html, page, url):
                         district="Gangtok")
             else:
                 if len(tds) < 3:
+                    provenance.skip_row(tr, 'skip: len(tds) < 3')
                     continue
                 cols = [paras(td) for td in tds]
                 area = " ".join(cols[0]).strip() or title

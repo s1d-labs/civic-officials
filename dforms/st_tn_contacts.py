@@ -20,6 +20,7 @@ import re
 
 from dforms import _esw, _state
 from provenance import at
+import provenance
 
 METHOD = "html table (Designation | Name | Direct | Residence) + html cards (secretaries)"
 
@@ -116,10 +117,12 @@ def parse_table(html, url, p):
     recs, n = [], 0
     for row, sp in zip(rows, pos):
         if not row or re.match(r"(?i)designation", row[0] or ""):
+            provenance.skip_row(row, 'skip: not row or re.match(r"(?i)designation", row[0] or "")')
             continue
         row = (row + ["", "", "", ""])[:4]
         post, name, direct, res = row
         if not (post or name):
+            provenance.skip_row(row, 'skip: not (post or name)')
             continue
         n += 1
         recs.append(_state.rec(

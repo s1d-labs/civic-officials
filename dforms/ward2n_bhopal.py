@@ -11,6 +11,7 @@ import json
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
@@ -45,6 +46,7 @@ def parse(data, p):
     for xi, x in enumerate(rows):
         m = re.search(r"(?i)zone\s*0*(\d+)", x.get("ZoneWardNo") or "")
         if not m:
+            provenance.skip_row(x, 'skip: not m')
             continue
         z = m.group(1)
         en, wing = post_of(x.get("Designation") or "")

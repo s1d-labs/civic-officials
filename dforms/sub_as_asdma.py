@@ -21,6 +21,7 @@ from xml.etree import ElementTree as ET
 
 from dforms import _esw
 from dforms.sub_as import district
+import provenance
 
 METHOD = "html table"     # page "field": "spreadsheet (xlsx)" on each record
 METHOD_XLSX = "spreadsheet (xlsx, first worksheet)"     # source trail (provenance.py): how this reader reads its sources
@@ -60,6 +61,7 @@ def parse_emergency(html, url=PAGES["emergency"]):
             for r, pos in zip(rows[1:], tp[1:]):
                 r = r + [""] * (6 - len(r))
                 if not re.match(r"(?i)\s*d\.\s*c\.", r[1]):
+                    provenance.skip_row(r, 'skip: not re.match(r"(?i)\\s*d\\.\\s*c\\.", r[1])')
                     continue
                 d = district(re.sub(r"(?i)^\s*d\.\s*c\.\s*", "", r[1]))
                 dc[d] = {"phone": _esw.phones(_std(r[2], r[3]), _std(r[2], r[4])), "fax": _esw.phones(_std(r[2], r[5])),
@@ -70,11 +72,14 @@ def parse_emergency(html, url=PAGES["emergency"]):
                 if m and len(r) > 2:
                     sat[district(m.group(1))] = re.sub(r"\D", "", r[2])
                     satpos[district(m.group(1))] = pos
+                else:
+                    provenance.skip_row(r, 'skip: not (m and len(r) > 2)')
         elif "name and designation" in head and "landline deoc" in head:
             for r, pos in zip(rows[1:], tp[1:]):
                 r = r + [""] * (5 - len(r))
                 m = re.match(r"^(.*?),\s*PO\s*,?\s*(.+)$", r[1])
                 if not m:
+                    provenance.skip_row(r, 'skip: not m')
                     continue
                 po.append((m.group(1).strip(), district(m.group(2)), m.group(2).strip(), r[2], r[3], r[4], pos))
     recs = []
@@ -162,6 +167,7 @@ def parse_field(content, url=PAGES["field"]):
     for r, pos in zip(rows[1:], where[1:]):
         circle, dname = cell(r, "revenue circle"), cell(r, "district")
         if not circle or not dname:
+            provenance.skip_row(r, 'skip: not circle or not dname')
             continue
         d = district(dname)
         base = key = f"AS-{_esw.slug(d)}:fo:{_esw.slug(circle)}"

@@ -90,8 +90,10 @@ def parse_whoswho(html, url, html_ta=None):
         for ri, r in enumerate(rows[1:], 1):
             name, post, ph, mob, mail = (r + [""] * 5)[:5]
             if not post or post.lower() == "designation":
+                provenance.skip_row(r, 'skip: not post or post.lower() == "designation"')
                 continue
             if prev == r:                                          # the saved page repeats its last row
+                provenance.skip_row(r, 'skip: prev == r')
                 continue
             prev = r
             name = "" if name.strip(" -") == "" else name.strip(" ,")

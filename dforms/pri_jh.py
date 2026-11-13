@@ -133,10 +133,12 @@ def page_records(rows, p, page):
     for r in rows:
         cells = [_pri.clean(c) for c in r["cells"]]
         if len(cells) < 5:
+            provenance.skip_row(r, 'skip: len(cells) < 5')
             continue
         name, post, resv, women, place = cells[0], cells[1], cells[2], cells[3], " ".join(cells[4:])
         got = post_of(post)
         if not got or not name or len(name) < 3 or re.search(r"नाम|पद का|विवरण", name):
+            provenance.skip_row(r, 'skip: not got or not name or len(name) < 3 or re.search(r"नाम|पद का|विवरण...')
             continue
         level, role, en = got
         c = constituency(place)

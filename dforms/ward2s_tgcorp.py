@@ -13,6 +13,7 @@ Record ids: dept:ward2s_tgcorp:<city>:<post slug>:<name slug>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -45,6 +46,7 @@ def parse(html, p):
         for row in rows:
             name, post, phone = _ward.col(row, "name"), _ward.col(row, "designation"), _ward.col(row, "mobile", "phone")
             if not post or not (name or phone) or post.lower() == "designation":
+                provenance.skip_row(row, 'skip: not post or not (name or phone) or post.lower() == "designation"')
                 continue
             post = post.title() if post.isupper() else post
             recs.append(_ward.record(MODULE, f"{p['city']}:{_esw.slug(post)}:{_esw.slug(name) or 'post'}", seen, body=body, lgd=lgd,

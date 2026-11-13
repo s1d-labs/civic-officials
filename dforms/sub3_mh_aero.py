@@ -89,6 +89,7 @@ def parse(pages):
         cont = False        # a page starts with the gazette's running head (Marathi read as Latin): no continuation before a row
         for n, ln in enumerate((text or "").splitlines(), 1):
             if not ln.strip() or SKIP.search(ln) or re.search(r"[^\x00-\x7f]{3}", ln) and not re.search(r"[A-Za-z]{4}", ln):
+                provenance.skip_line(ln, 'skip: not ln.strip() or SKIP.search(ln) or re.search(r"[^\\x00-\\x7f]{3}", ...')
                 continue
             m = AC.match(ln)
             if m and last_ac < int(m.group(1)) <= 288 and re.search(r"[A-Za-z]{3}", m.group(2) or ""):
@@ -100,6 +101,7 @@ def parse(pages):
                     cont = True
                 continue
             if ac is None:
+                provenance.skip_line(ln, 'skip: ac is None')
                 continue
             m = ITEM.match(ln)
             if m:
@@ -153,10 +155,12 @@ def build(rows, source):
         cell = fix_ocr(r["cell"])
         found = post_of(cell)
         if not found:
+            provenance.skip_row(r, 'skip: not found')
             continue
         post, dept, level, rx = found
         rid = f"AC-{r['ac_no']}:{r['serial']}"
         if rid in seen:
+            provenance.skip_row(r, 'skip: rid in seen')
             continue
         seen.add(rid)
         recs.append(_esw.record(MODULE, rid, dept=dept, level=level, area=place_of(cell, rx, r["ac_name"]), post=post,

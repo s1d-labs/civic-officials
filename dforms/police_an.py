@@ -7,6 +7,7 @@ import re
 
 from provenance import line_pos
 from dforms._police import clean, phones, rec, slug, uniq
+import provenance
 
 METHOD = "pdf text (pypdf)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -33,6 +34,7 @@ def parse(texts, url=URL, first_page=1):
                 return uniq(recs)
             m = ROW.match(ln) if mode else None
             if not m:
+                provenance.skipped('skip: not m')
                 continue
             num = m.group(2)
             while num.rstrip().endswith(",") and i < len(lines) and re.fullmatch(r"[\d\s,-]+", lines[i].strip() or "x"):

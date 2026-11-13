@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _civic
 from dforms._police import clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -25,10 +26,12 @@ def parse(html, url=URL):
             district = c[0].title().replace(" District", "")
             continue
         if district is None or len(c) < 3:
+            provenance.skip_row(tr, 'skip: district is None or len(c) < 3')
             continue
         post = c[1] or ""
         m = re.match(r"^(SHO|SDPO|SSP|SP|ASP)\s*/\s*(.+)$", post.replace(" / ", "/").replace(" /", "/"))
         if not m:
+            provenance.skip_row(tr, 'skip: not m')
             continue
         kind, place = m.group(1), m.group(2).title()
         level = {"SHO": "police_station", "SDPO": "subdivision"}.get(kind, "district")

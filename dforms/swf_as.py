@@ -24,6 +24,7 @@ import re
 from datetime import datetime
 
 from dforms import _esw
+import provenance
 
 METHOD = "html cards (SWF Who's Who / Contact Us)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -104,6 +105,7 @@ def cards(html):
         cat = _t(head.find("h6")) if head is not None else ""
         f = _fields(card)
         if not f["name"] or PLACEHOLDER.match(f["name"]):
+            provenance.skip_row(card, 'skip: not f["name"] or PLACEHOLDER.match(f["name"])')
             continue
         f["_pos"] = {"selector": "#swf_content_area div.card_info|rim-contact-card|hod-contact-card", "card": n}   # source trail
         out.append((cat, f))

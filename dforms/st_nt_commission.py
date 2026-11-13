@@ -14,6 +14,7 @@ Ids: dept:st_nt_commission:<state>-<body slug>:<page n>:<row>.
 import re
 
 from dforms import _esw, _state
+import provenance
 
 METHOD = "html table"
 MODULE = "st_nt_commission"
@@ -50,6 +51,7 @@ def parse(html, url, p, page_no=1):
             get = lambda k: _esw.clean(row[hm[k]]) if k in hm and hm[k] < len(row) else ""  # noqa: E731
             name, post = get("name"), get("post")
             if not (name or post):
+                provenance.skip_row(row, 'skip: not (name or post)')
                 continue
             vac = bool(re.search(r"(?i)vacant", name))
             out.append(_state.rec(

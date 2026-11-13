@@ -9,6 +9,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -34,6 +35,7 @@ def parse(html, url=URL):
             rp, row = row.pos, row + [""] * (7 - len(row))
             m = AC.match(row[0])
             if not m:
+                provenance.skip_row(row, 'skip: not m')
                 continue
             no, ac = int(m.group(1)), f"GA-AC-{int(m.group(1))}"
             recs[f"{ac}:ero"] = _esw.record(MODULE, f"{ac}:ero", dept="elections", level="ac", area=f"{no} - {m.group(2)}",

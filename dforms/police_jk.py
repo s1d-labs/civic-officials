@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _civic
 from dforms._police import clean, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -43,6 +44,7 @@ def subdiv_table(t, p):
     for tr in t.find_all("tr")[1:]:
         c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all("td")]
         if len(c) < 2:
+            provenance.skip_row(tr, 'skip: len(c) < 2')
             continue
         m = re.match(r"SDPO\s+(.+?)\s*(?:\(([^)]*)\))?$", c[0])
         if m:

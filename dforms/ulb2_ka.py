@@ -24,6 +24,7 @@ import re
 from pathlib import Path
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html cards (flip cards div#block-*, .frontside)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -89,6 +90,7 @@ def cards(html):
     for b in soup.find_all("div", id=re.compile("^block-")):
         fr = b.find("div", class_="frontside")
         if not fr or b.find("div", id=re.compile("^block-")):
+            provenance.skip_row(b, 'skip: not fr or b.find("div", id=re.compile("^block-"))')
             continue
         lines = [_esw.clean(x) for x in fr.get_text("\n").split("\n")]
         out.append((b["id"], [x for x in lines if x]))
@@ -100,9 +102,11 @@ def parse(html, body, site, url="", district=None, lgd_code=None):
     recs, seen, why = [], set(), []
     for bid, lines in cards(html):
         if any(SKIP.search(x) for x in lines):
+            provenance.skipped('skip: any(SKIP.search(x) for x in lines)')
             continue
         i = next((n for n, x in enumerate(lines) if POST.search(x)), None)
         if i is None:
+            provenance.skipped('skip: i is None')
             continue
         post, _, after = lines[i].partition(",")
         post = HONOUR.sub("", _esw.clean(post)).strip(" .,:")

@@ -11,6 +11,7 @@ import re
 from datetime import datetime
 
 from dforms import _civic, _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -61,9 +62,11 @@ def parse(html, url, region=""):
         district = heading(table)
         for gi, row in enumerate(g[1:], 1):
             if col["station"] is None or len(row) <= col["station"]:
+                provenance.skip_row(row, 'skip: col["station"] is None or len(row) <= col["station"]')
                 continue
             station = _esw.clean(row[col["station"]])
             if not station or station.lower().startswith(("s.no", "total")):
+                provenance.skip_row(row, 'skip: not station or station.lower().startswith(("s.no", "total"))')
                 continue
             cell = lambda k: row[col[k]] if col[k] is not None and col[k] < len(row) else ""   # noqa: E731
             name = re.sub(r"\s+FS$", "", station).strip()

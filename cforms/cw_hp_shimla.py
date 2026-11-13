@@ -11,6 +11,7 @@ import gzip
 import re
 
 from cforms import cp_common as cp
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -21,15 +22,18 @@ def parse(html, url):
     rows = []
     for head, cells in cp.table_rows(html):
         if not head:
+            provenance.skipped('skip: not head')
             continue
         ni, wi, wn = cp.column(head, r"^name"), cp.column(head, r"ward no"), cp.column(head, r"ward name")
         li, pa = cp.column(head, r"local address"), cp.column(head, r"permanent address")
         ei, pi = cp.column(head, r"e-?mail"), cp.column(head, r"contact")
         if ni is None or wi is None or ni >= len(cells):
+            provenance.skipped('skip: ni is None or wi is None or ni >= len(cells)')
             continue
         at = lambda i: cells[i] if i is not None and i < len(cells) else ""
         name = at(ni)
         if not name or re.search(r"\btest user\b", name, re.I):
+            provenance.skipped('skip: not name or re.search(r"\\btest user\\b", name, re.I)')
             continue
         ward = re.sub(r"\D", "", at(wi)) or None
         addr = " / ".join(dict.fromkeys(x for x in (at(li), at(pa)) if x))

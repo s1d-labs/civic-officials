@@ -19,6 +19,7 @@ import json
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "json in the page (Next.js flight data, \"initialData\" lists)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -106,6 +107,7 @@ def build(entries, source, where=None):
         des = _esw.clean(field(e, "designationName", "designation", "Designation"))
         found = post_of(des)
         if not found:
+            provenance.skip_row(e, 'skip: not found')
             continue
         key, post, level = found
         name = _esw.clean(field(e, "officer_Name", "officerName", "name", "Name"))
@@ -114,6 +116,7 @@ def build(entries, source, where=None):
         phone = _esw.phones(field(e, "mobile", "mobileNo", "mobile_No", "phone", "phoneNo", "contactNo", "contact"))
         email = _esw.emails(field(e, "email", "Email", "emailId"))
         if not (name or phone or email) or not area:
+            provenance.skip_row(e, 'skip: not (name or phone or email) or not area')
             continue
         base = f"{_esw.slug(dist) or 'hr'}:{key}:{_esw.slug(area)}"
         rid, i = base, 2

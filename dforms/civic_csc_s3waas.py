@@ -16,6 +16,7 @@ from urllib.parse import unquote, urlparse
 
 from dforms import _civic, _esw
 from dforms.police_s3waas import cards, last_updated
+import provenance
 
 METHOD = "html cards (S3WaaS public utility, paged /page/N/)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -52,6 +53,7 @@ def records(pages, p):
         for ci, c in enumerate(cards(html, cw)):
             centre = _esw.clean(c.get("title"))
             if not centre:
+                provenance.skip_row(c, 'skip: not centre')
                 continue
             adr = _esw.clean(c.get("address"))
             name = operator(adr) if p.get("operator_first") else ""

@@ -56,6 +56,7 @@ def fetch(s, p):
         for n, tr in enumerate(trs[1:], 2):
             cells = [" ".join(c.get_text(" ", strip=True).split()) for c in tr.find_all(["td", "th"])]
             if not any(cells):
+                provenance.skip_row(tr, 'skip: not any(cells)')
                 continue
             c = {head[i] if i < len(head) else f"col{i}": v for i, v in enumerate(cells)}
             rows.append({"ac_no": p.get("ac_no"), "ac_name": p.get("ac_name"), "district": p.get("district"), "cells": c,

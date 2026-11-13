@@ -199,8 +199,10 @@ def parse_table(raw, kind):
         owner, dset = {}, set(data)
         for i, ln in enumerate(lines):
             if not ln.strip() or i in dset or NUMS.match(ln):
+                provenance.skip_line(ln, 'skip: not ln.strip() or i in dset or NUMS.match(ln)')
                 continue
             if all(HEADER_WORDS.search(t) for _, _, t in pieces(ln)):
+                provenance.skip_line(ln, 'skip: all(HEADER_WORDS.search(t) for _, _, t in pieces(ln))')
                 continue
             mates = [d for d in data if blockmate(lines, d, i)]
             if mates:

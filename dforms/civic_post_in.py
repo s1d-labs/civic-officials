@@ -14,6 +14,7 @@ import json
 from urllib.parse import urlencode
 
 from dforms import _civic, _esw
+import provenance
 
 METHOD = "arcgis feature layer (json query)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -46,6 +47,7 @@ def parse(doc, url=LAYER):
         office = _esw.clean(a.get("officename"))
         pin = str(a.get("pincode") or "").strip()
         if not office:
+            provenance.skipped("no office name")
             continue
         typ = _esw.clean(a.get("officetype")).upper()
         key = _civic.unique(f"{pin}-{_esw.slug(office)}", seen)

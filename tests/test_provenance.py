@@ -221,3 +221,36 @@ def test_tables_positions_and_directory_blo_records():
     assert recs[0][1]["src_pos"] == {"table": 2, "row": 2} and recs[0][1]["method"] == "html table"
     from forms import blo2_pdf
     assert blo.reader_method({"kind": "form-blo2_pdf"}) == blo2_pdf.METHOD
+
+
+def test_row_counts_on_the_trail_record():
+    import officials
+    from dforms import _esw
+    t = provenance.Trail("depts", "civic-officials-depts", "7")
+    t.begin({"key": "r-1", "payload": {}}, "dforms.x")
+    html = ("<table><tr><th>Name</th><th>Post</th></tr><tr><td>A</td><td>DM</td></tr><tr><td></td><td></td></tr>"
+            "<tr><td>B</td><td>SP</td></tr><tr><td>C</td></tr></table>")
+    rows = officials.tables(html)[0]["rows"]
+    assert len(rows) == 3
+    for r in rows:
+        if len(r) < 2:
+            provenance.skipped("short row")
+            continue
+        provenance.used()
+    recs, _ = t.finish([("dept:x:a", {}), ("dept:x:b", {})], [])
+    tr = dict(recs)[next(rid for rid, _ in recs if rid.startswith("trail:"))]
+    assert tr["rows_used"] == 2 and tr["rows_skipped"] == {"short row": 1}
+    assert tr["rows_not_data"] == {"header": 1, "empty": 1} and tr["rows_seen"] == 5 and tr["rows_given"] == 3
+    # next item: counts start again; a reader that counts nothing adds no row keys
+    t.begin({"key": "r-2", "payload": {}}, "dforms.x")
+    recs, _ = t.finish([("dept:x:c", {})], [])
+    assert not any("rows_seen" in d for _, d in recs)
+    # a reader that only says what it skipped: rows_used is the number of data records
+    t.begin({"key": "r-3", "payload": {}}, "dforms.x")
+    soup = _esw.soup("<table><tr><td>a</td><td>1</td></tr><tr><td></td></tr></table>")
+    assert _esw.grid(soup.find("table")) == [["a", "1"]]
+    provenance.skipped("no number", 2)
+    recs, _ = t.finish([("dept:x:d", {})], [])
+    tr = dict(recs)[next(rid for rid, _ in recs if rid.startswith("trail:"))]
+    assert tr["rows_used"] == 1 and tr["rows_used_from"] == "records" and tr["rows_seen"] == 4
+    assert tr["rows_skipped"] == {"no number": 2} and tr["rows_not_data"] == {"empty": 1}

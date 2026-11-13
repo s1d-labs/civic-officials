@@ -83,6 +83,7 @@ def parse_text(text, url=URL):
         acol = address_col(lines)
         for n, raw in enumerate(lines, 1):
             if not raw.strip() or HEADER.match(raw) or re.match(r"(?i)\s*(epabx|email i\.?d|fax)", raw.strip()):
+                provenance.skip_line(raw, 'skip: not raw.strip() or HEADER.match(raw) or re.match(r"(?i)\\s*(epabx|em...')
                 continue
             if is_heading(raw):
                 close()
@@ -107,6 +108,7 @@ def parse_text(text, url=URL):
             elif lead and "@" not in lead and block is not None:
                 block["posts"].append(lead)
             if block is None:
+                provenance.skip_line(raw, 'skip: block is None')
                 continue
             for t in [x for x in left if "@" in x] + [t for _, t in right if "@" in t]:
                 block["emails"].append(t)

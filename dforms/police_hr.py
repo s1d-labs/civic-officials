@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _civic
 from dforms._police import ascii_digits, clean, email, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -72,6 +73,7 @@ def parse_state(html, url=URL):
                 district, section = None, h.title().rstrip(".")
             continue
         if len(c) != 5 or not re.match(r"^\d+\.?$", c[0] or "") or not c[1]:
+            provenance.skip_row(tr, 'skip: len(c) != 5 or not re.match(r"^\\d+\\.?$", c[0] or "") or not c[1]')
             continue
         st = c[1]
         recs.append(rec(M, f"{slug(district or section or 'haryana')}:{slug(st)}", area=st, office_type=section, post="SHO (station CUG)",
@@ -109,6 +111,7 @@ def parse_sho(html, district, url):
             if len(c) == len(head) - 1 and not re.match(r"^\d+\.?$", c[0] or ""):
                 c = [""] + c
             if len(c) != len(head) or not c[st_i]:
+                provenance.skip_row(tr, 'skip: len(c) != len(head) or not c[st_i]')
                 continue
             cell = lambda i: c[i] if i is not None and c[i] not in ("-", "--") else None  # noqa: E731
             st, who = c[st_i], cell(name_i)

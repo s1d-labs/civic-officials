@@ -82,6 +82,7 @@ def pio_rows(pages):
         for ln, line in enumerate(page.splitlines(), 1):
             cs = chunks(line)
             if not cs:
+                provenance.skip_line(line, 'skip: not cs')
                 continue
             ri = next((i for i, (_, t) in enumerate(cs) if ROLE.match(t) and re.fullmatch(r"(Appellate|PIO|APIO)\b.*", t)), None)
             if ri is None and len(cs) >= 2 and re.match(r"^\S+\s+(Appellate|PIO|APIO)\b", cs[1][1]):
@@ -107,6 +108,7 @@ def pio_rows(pages):
                     _cell(cur, pos, t, first=True)
                 continue
             if cur is None:
+                provenance.skip_line(line, 'skip: cur is None')
                 continue
             if re.match(r"(?i)^note\b", cs[0][1]):
                 cur = None
@@ -212,9 +214,11 @@ def parse_hierarchy(pages, url=URLS["hierarchy"], last_updated=None):
         m = HROW.match(line)
         out.src = {"src_pos": provenance.line_pos(pn, ln, line), "method": "pdf text (pypdf layout)"}
         if not m:
+            provenance.skipped('skip: not m')
             continue
         zc, zn, cc, cn, dc, dn, sc, sn, rest = m.groups()
         if not (cc.startswith(zc) and dc.startswith(cc) and sc.startswith(dc)):
+            provenance.skipped('skip: not (cc.startswith(zc) and dc.startswith(cc) and sc.startswith(dc))')
             continue
         zn = f"{zn.title()} Zone"
         cn, dn, sn = (clean(x) for x in (cn, dn, sn))
@@ -226,6 +230,7 @@ def parse_hierarchy(pages, url=URLS["hierarchy"], last_updated=None):
                 out.add(f"h:{code}", lvl, name, post={"zone": "Chief Engineer / DS", "circle": "Dy. CE / DS (circle head)",
                                                       "division": "Addl. SE / Sr. Xen (DS)"}[lvl], office_id=code, parents=par or None)
         if sc in seen:
+            provenance.skipped('skip: sc in seen')
             continue
         seen.add(sc)
         lvl = "section" if re.match(r"(?i)sub\s*office", sn) else "subdivision"
@@ -251,9 +256,11 @@ def parse_ncc(html, url=URLS["ncc"]):
                 circle, zone = parts[0], (parts[1] if len(parts) > 1 else None)
                 continue
             if len(c) < 4 or not re.match(r"^\d+\.?$", c[0]) or not circle:
+                provenance.skip_row(tr, 'skip: len(c) < 4 or not re.match(r"^\\d+\\.?$", c[0]) or not circle')
                 continue
             div = clean(c[1])
             if not div:
+                provenance.skip_row(tr, 'skip: not div')
                 continue
             out.add(f"ncc:{circle}:{div}", "division", div, post="Addl. SE / Sr. Xen", phone_=phone(*re.split(r"\s+(?=\d)", c[3])),
                     parents={"zone": zone, "circle": circle},

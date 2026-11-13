@@ -10,6 +10,7 @@ import gzip
 import re
 
 from bs4 import BeautifulSoup
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -50,10 +51,12 @@ def amc_rows(html, pos=None):
                             "party": next((i for i, t in enumerate(low) if "party" in t), None)}
                 continue
             if len(tds) <= max(v for v in head.values() if v is not None):
+                provenance.skip_row(tr, 'skip: len(tds) <= max(v for v in head.values() if v is not None)')
                 continue
             name, ward = tds[head["name"]], tds[head["ward"]]
             n = roman(ward) or (int(ward) if ward.isdigit() else None)
             if not name or n is None:
+                provenance.skip_row(tr, 'skip: not name or n is None')
                 continue
             out.append({"name": name, "ward_no": str(n), "ward_roman": ward if roman(ward) else None,
                         "position": tds[head["post"]] if head["post"] is not None else None,

@@ -17,6 +17,7 @@ import re
 from pathlib import Path
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table (officials page of the body)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -85,9 +86,11 @@ def rows(html):
                 section = filled[0]
                 continue
             if len(c) <= max(idx["name"], idx["post"]):
+                provenance.skip_row(tr, 'skip: len(c) <= max(idx["name"], idx["post"])')
                 continue
             name, post = c[idx["name"]], c[idx["post"]]
             if not name or not re.search(r"[A-Za-zഀ-ൿ]{2}", name) or re.fullmatch(r"(?i)vacant|nil|-+", name):
+                provenance.skip_row(tr, 'skip: not name or not re.search(r"[A-Za-zഀ-ൿ]{2}", name) or re.fullmatch(...')
                 continue
             phone = c[idx["phone"]] if "phone" in idx and idx["phone"] < len(c) else ""
             m = re.search(r"(?i)[-–,]?\s*(phone|mob(ile)?)\s*(no)?[.:\s]*([\d\s-]{8,})$", post)

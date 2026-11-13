@@ -12,6 +12,7 @@ Record ids: dept:ward3_rudrapur:<post slug>:<mobile or row>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -70,6 +71,7 @@ def parse_supervisors(html, p):
             w, wname = _ward.col(r, "वार्ड नं"), _ward.col(r, "Ward Name")
             name, ph = _ward.col(r, "Supervisor"), phone_of(_ward.col(r, "Mobile"))
             if not re.fullmatch(r"\d{1,3}", w or "") or not (name or ph):
+                provenance.skip_row(r, 'skip: not re.fullmatch(r"\\d{1,3}", w or "") or not (name or ph)')
                 continue
             g = people.setdefault((ph or name), {"name": name, "phone": ph, "wards": [], "names": [], "pos": []})
             g["wards"].append(str(int(w)))
@@ -93,6 +95,7 @@ def parse_zonal(html, p):
         for r in rows:
             post, name, ph = _ward.col(r, "Designation"), _ward.col(r, "Name"), phone_of(_ward.col(r, "Phone"))
             if not (name or ph):
+                provenance.skip_row(r, 'skip: not (name or ph)')
                 continue
             en = en_post(post)
             recs.append(_ward.record(MODULE, f"zonal:{_esw.slug(en)}:{ph or len(recs)}", seen, body=BODY, lgd=LGD, state=STATE,

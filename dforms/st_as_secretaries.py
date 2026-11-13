@@ -9,6 +9,7 @@ get level division and their districts from dforms/st_div_as.json. Record ids: d
 import re
 
 from dforms import _esw, _state, st_ne
+import provenance
 
 METHOD = "html table (assam.gov.in list of secretaries)"
 MODULE = "st_as_secretaries"
@@ -21,6 +22,7 @@ def parse(html, url=URL):
     for r in st_ne.table_rows(html):
         name, post = r.get("name", ""), r.get("post", "")
         if not name:
+            provenance.skip_row(r, 'skip: not name')
             continue
         dep = r["src_pos"]["table"] > 1 or bool(re.search(r"(?i)govt\.? of india|central deputation", post))
         m = DIV.search(post)

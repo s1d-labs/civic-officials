@@ -93,6 +93,8 @@ def _rows(html, src=None):
         if len(c) == len(head) and c[0].isdigit():
             out.append({COLS.get(h, h): v for h, v in zip(head, c)})
             out[-1]["_pos"], out[-1]["_src"] = {"table_id": "ContentPlaceHolder1_Gview", "row": ri}, src or {}
+        else:
+            provenance.skip_row(tr, 'skip: not (len(c) == len(head) and c[0].isdigit())')
     return out
 
 
@@ -118,6 +120,7 @@ def items(get):
     out = []
     for v, name in options(r.text, "ddlNikay"):
         if not v.isdigit() or name.startswith("क्षेत्रीय कार्यालय"):
+            provenance.skip_line(v, 'skip: not v.isdigit() or name.startswith("क्षेत्रीय कार्यालय")')
             continue
         h = _search(get, v)
         rows = _rows(h) if h else []

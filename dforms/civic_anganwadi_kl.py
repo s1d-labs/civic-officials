@@ -16,6 +16,7 @@ import re
 from urllib.parse import urlparse
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -79,6 +80,7 @@ def parse(html, url, p=None):
             name = re.sub(r"^\W+", "", cell("name"))
             phone = _esw.phones(cell("phone"))
             if not (name or phone) or name.lower() == g[0][cols["name"]].lower():
+                provenance.skip_row(row, 'skip: not (name or phone) or name.lower() == g[0][cols["name"]].lower()')
                 continue
             cno = cell("centre_no")
             key = _esw.slug(f"{hk}-{cno}") if cno else f"{hk}-row-{n}"

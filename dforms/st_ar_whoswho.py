@@ -9,6 +9,7 @@ post_kind is the first rank in it. Record ids: dept:st_ar_whoswho:<table>-<row>:
 import re
 
 from dforms import _esw, _state, st_ne
+import provenance
 
 METHOD = "html table (arunachalpradesh.gov.in Who's Who)"
 MODULE = "st_ar_whoswho"
@@ -20,6 +21,7 @@ def parse(html, url=URL):
     for r in st_ne.table_rows(html):
         name, post = r.get("name", ""), r.get("post", "")
         if not name or re.fullmatch(r"(?i)name.*", name):
+            provenance.skip_row(r, 'skip: not name or re.fullmatch(r"(?i)name.*", name)')
             continue
         ph, em, _ = st_ne.contact(r.get("contact", "") + " " + r.get("phone", "") + " " + r.get("email", ""))
         p = r["src_pos"]

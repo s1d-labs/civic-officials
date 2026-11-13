@@ -12,6 +12,7 @@ division or district>. src_pos {"table", "row"}. One item = the page (one GET). 
 import re
 
 from dforms import _esw, _state, st_lgd_upbrjh as lgd
+import provenance
 
 METHOD = "html table"
 MODULE = "st_up_portal"
@@ -41,11 +42,13 @@ def parse(html, url=URL):
         division = ""
         for cells, sp in zip(rows, pos):
             if cells is head:
+                provenance.skip_row(cells, 'skip: cells is head')
                 continue
             if len(set(cells)) <= 2 and len(cells) >= 2 and re.search(r"(?i)division\s*$", cells[-1]):
                 division = div_name(cells[-1])
                 continue
             if not re.fullmatch(r"\d{1,3}\.?", cells[0] or ""):
+                provenance.skip_row(cells, 'skip: not re.fullmatch(r"\\d{1,3}\\.?", cells[0] or "")')
                 continue
             c = (cells + [""] * 5)[:5]
             if kind == "divcom":

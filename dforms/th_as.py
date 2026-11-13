@@ -40,6 +40,7 @@ def rows():
     out = []
     for line in (HERE / "th_as_rows.tsv").read_text().splitlines():
         if not line.strip():
+            provenance.skipped("empty")
             continue
         page, row, district, body, name, rank, mobile = line.split("\t")
         out.append({"page": int(page), "row": int(row), "district": district, "body": body, "name": name, "rank": rank,

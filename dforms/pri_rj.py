@@ -97,6 +97,7 @@ def _tab(soup, tab_id):
     for ri, tr in enumerate(trs[1:], 2):
         cells = [_pri.clean(c.get_text(" ", strip=True)) for c in tr.find_all(["td", "th"])]
         if len(cells) != len(head):        # sub-header rows ("Before 27.11.1995 | On Or After 28.11.1995")
+            provenance.skip_row(tr, 'skip: len(cells) != len(head)')
             continue
         rows.append((ri, dict(zip(head, cells))))
     return rows

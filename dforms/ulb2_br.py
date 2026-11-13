@@ -27,6 +27,7 @@ import re
 from pathlib import Path
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "pdf text (pypdf plain mode)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -72,6 +73,7 @@ def rows(pages):
         for lno, line in enumerate(pg.split("\n"), 1):
             s = line.strip()
             if not s or re.match(r"(?i)^(sl\.|govt\. of|urban development)", s):
+                provenance.skip_line(line, 'skip: not s or re.match(r"(?i)^(sl\\.|govt\\. of|urban development)", s)')
                 continue
             h = HEAD.search(s)
             if h:
@@ -86,6 +88,7 @@ def rows(pages):
                 out.append(cur)
                 rest = m.group(3)
             elif cur is None:
+                provenance.skip_line(line, 'skip: cur is None')
                 continue
             else:
                 rest = s

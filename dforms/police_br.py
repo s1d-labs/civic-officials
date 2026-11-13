@@ -6,6 +6,7 @@ district_id, district, expected); items(get) lists them. Record id dept:police_b
 import json
 
 from dforms._police import email, gz, phones, rec, slug
+import provenance
 
 METHOD = "json api"     # source trail (provenance.py): how this reader reads its sources
 
@@ -30,6 +31,7 @@ def parse(rows, url=SOURCE):
     for i, x in enumerate(rows):
         st = x.get("ps_name_en") or x.get("ps_name")
         if not st:
+            provenance.skip_row(x, 'skip: not st')
             continue
         key = str(x["ps_id"]) if x.get("ps_id") is not None else f"{slug(x.get('district_name'))}:{slug(st)}"
         recs.append(rec(M, key, area=st, area_regional=x.get("ps_name_hi"), post="SHO (station CUG)", phone=phones(x.get("mobile")),

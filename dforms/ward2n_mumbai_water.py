@@ -141,6 +141,7 @@ def parse_maillist(content, url, code, seen=None, created=None):
     recs = []
     for sec, title, mail, pos in mail_rows(content):
         if not WATER.search(sec):
+            provenance.skipped('skip: not WATER.search(sec)')
             continue
         post = f"{title} (Water Works)" if "water" not in title.lower() else title
         recs.append(_ward.record(MODULE, f"{slug(code)}:mail:{mail.split('@')[0]}", seen, body=BODY, lgd=LGD, state=STATE,
@@ -250,6 +251,7 @@ def table_rows(content):
         for x, y, t in texts:
             ci = next((i for i, (a, b) in enumerate(cols) if a - 2 <= x < b), None)
             if ci is None:
+                provenance.skip_line(x, 'skip: ci is None')
                 continue
             ys = bands(hr, *cols[ci])
             cell.setdefault((ci, band_of(y, ys)), []).append((x, y, t))

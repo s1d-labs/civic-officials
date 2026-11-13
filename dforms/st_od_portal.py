@@ -14,6 +14,7 @@ Route: archive copies of 2026-11-05/06 were taken through the Indian proxy; the 
 import re
 
 from dforms import _esw, _state, _st_ape
+import provenance
 
 METHOD = "html table (header names), Drupal pager ?page=N"
 MODULE = "st_od_portal"
@@ -38,6 +39,7 @@ def parse(html, url, page):
             if page == "secretariat":
                 dep = d.get("department", "")
                 if not dep:
+                    provenance.skip_row(d, 'skip: not dep')
                     continue
                 recs.append(_state.rec(MODULE, k, post="Department office", post_kind="office", body=f"{dep} Department",
                                        body_kind="secretariat", department=dep, phone=_esw.phones(d.get("phone")),
@@ -45,6 +47,7 @@ def parse(html, url, page):
                 continue
             post, name = d.get("post", ""), d.get("name", "")
             if not (post or name):
+                provenance.skip_row(d, 'skip: not (post or name)')
                 continue
             if page == "cmo":
                 body, kind, dep = "Chief Minister's Office, Odisha", "cm_office", "Chief Minister's Office"

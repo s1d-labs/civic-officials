@@ -143,6 +143,7 @@ def staff(html):
             r = r + [""] * (len(head) - len(r))
             name = _esw.clean(r[col["name"]])
             if not name or name.lower() == "name":
+                provenance.skip_row(r, "no name")
                 continue
             rows.append({"name": name, "post": _esw.clean(r[col["post"]]), "phone": _esw.phones(r[col["phone"]]) if "phone" in col else "",
                          "email": _esw.emails(r[col["email"]]) if "email" in col else "", "role": role, "pos": pos})
@@ -162,9 +163,11 @@ def build(o, rows, upd, district, seen, src=None):
     done = set()
     for r in rows:
         if not r["role"] and not is_officer(r["post"]):
+            provenance.skipped("not an officer post")
             continue
         k = (r["name"].lower(), r["post"].lower())
         if k in done:
+            provenance.skipped("repeated")
             continue
         done.add(k)
         base = f"OD-{o['code']}:{_esw.slug(r['post']) or _esw.slug(r['name'])}"

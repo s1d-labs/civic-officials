@@ -12,6 +12,7 @@ import re
 from bs4 import BeautifulSoup
 
 from cforms.cp_common import keyed, phones, record, useful, ward_no
+import provenance
 
 METHOD = "html cards (h3 + p)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -33,6 +34,7 @@ def parse(html, p):
     recs = []
     for k, (name, ps) in enumerate(cards(html), 1):
         if GONE.search(name):
+            provenance.skipped('skip: GONE.search(name)')
             continue
         post = next((t for t in ps if re.search(r"chair|commissioner|councillor|member", t, re.I)), None)
         tel = next((phones(t) for t in ps if phones(t)), None)

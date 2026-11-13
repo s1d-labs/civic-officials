@@ -190,10 +190,12 @@ def rows_records(p, rows, section, ids, poss, url, src=None):
     for row, rid, pos in zip(rows, ids, poss):
         vals = [_esw.clean(v) for v in row.values() if _esw.clean(v)]
         if vals and all(HEADER_WORD.match(v) for v in vals):
+            provenance.skip_row(row, 'skip: vals and all(HEADER_WORD.match(v) for v in vals)')
             continue                                    # a second header row ("Code | Office | Residence | Mobile No.")
         f = fields(row)
         name, post = f.get("name", ""), f.get("post", "")
         if not (name or post) or re.fullmatch(r"(?i)name|नाम|नाव|designation", name or ""):
+            provenance.skip_row(row, 'skip: not (name or post) or re.fullmatch(r"(?i)name|नाम|नाव|designation",...')
             continue
         email = _esw.emails(" ".join([f.get("email", "")] + f["phone_raw"]))
         phone = _esw.phones(*f["phone_raw"])

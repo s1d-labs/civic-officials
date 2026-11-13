@@ -8,6 +8,7 @@ Records: level "zone", area "Ward Committee <n>". Record ids: dept:ward2n_bhiwan
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -40,6 +41,7 @@ def parse(html, p):
             post = _ward.col(r, "Designation")
             name = re.sub(r"^-+$", "", _ward.col(r, "Name"))
             if not post:
+                provenance.skip_row(r, 'skip: not post')
                 continue
             post = re.sub(r"(?i)commisioner", "Commissioner", post)
             post = post[0].upper() + post[1:]

@@ -32,6 +32,7 @@ def blocks(text):
     for pg, page in enumerate(text.split("\f"), 1):
         for ln, raw in enumerate(page.split("\n"), 1):
             if not raw.strip() or SKIP.search(raw):
+                provenance.skip_line(raw, 'skip: not raw.strip() or SKIP.search(raw)')
                 continue
             m = ROW.match(raw)
             if m and not re.match(r"\s*\(", m.group(3)) and not re.search(r"(?i)\bdob\b", m.group(3)):
@@ -52,6 +53,7 @@ def blocks(text):
                 out.append(cur)
                 continue
             if cur is None:
+                provenance.skip_line(raw, 'skip: cur is None')
                 continue
             for c in re.finditer(r"\S+(?: \S+)*", raw):
                 s, t = c.start(), c.group(0)

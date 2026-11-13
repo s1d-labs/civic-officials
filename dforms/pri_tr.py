@@ -25,6 +25,7 @@ import json
 import re
 
 from dforms import _pri
+import provenance
 
 METHOD = "json api (SEC Tripura result board, dashboard/get-data GP_Results_Summary)"     # source trail (provenance.py)
 MODULE = "pri_tr"
@@ -54,11 +55,13 @@ def records(data, url):
             for gi, g in enumerate(b.get("gp_results") or []):
                 for ci, c in enumerate(g.get("constituency_result") or []):
                     if not c.get("is_declared"):
+                        provenance.skip_row(c, 'skip: not c.get("is_declared")')
                         continue
                     cands = c.get("candidate_data") or []
                     win = next((k for k in cands if k.get("is_winner") == 1 and not k.get("is_nota")), None)
                     name = (win or {}).get("candidate_name") or c.get("winning_candidate_name")
                     if not name:
+                        provenance.skip_row(c, 'skip: not name')
                         continue
                     ward, seat_no, cat = seat_parts(c.get("constituency_no_name"))
                     code = c.get("constituency_code")

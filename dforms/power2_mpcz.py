@@ -14,6 +14,7 @@ import re
 
 from dforms import _power, _util2
 from dforms._util2_pdfgrid import rows
+import provenance
 
 METHOD = "pdf table grid (pypdf text positions and ruling lines, _util2_pdfgrid)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -63,6 +64,7 @@ def records(content, file, url):
         k = seen_pg[r.get("page")] = seen_pg.get(r.get("page"), 0) + 1      # source trail: person row k of the page, top down
         post, name = _power.clean(r.get("post")), _util2.person(r.get("name"))
         if not (post or name):
+            provenance.skip_row(r, 'skip: not (post or name)')
             continue
         labels = [x for x in r["offices"] if not _power.EMAIL.search(x)]
         mails = [x for x in r["offices"] if _power.EMAIL.search(x)]

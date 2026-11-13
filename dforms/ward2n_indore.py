@@ -10,6 +10,7 @@ import json
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html page: embedded JSON (__NEXT_DATA__ zonalOfficersCard)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -31,6 +32,7 @@ def fields(desc):
     for ln in (desc or "").splitlines():
         m = re.match(r"\s*(.+?)\s*:\s*-?\s*(.*)$", ln)
         if not m:
+            provenance.skip_line(ln, 'skip: not m')
             continue
         label = m.group(1).strip(" -")
         for k, rx in LINES:

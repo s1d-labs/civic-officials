@@ -46,9 +46,11 @@ def rows(text, where=None):
         line = re.sub(r"\s+@", "@", line)
         m = ROW.match(line)
         if not m:
+            provenance.skip_line(line, 'skip: not m')
             continue
         cols = [c.strip() for c in re.split(r"\s{3,}", m.group(2).strip()) if c.strip()]
         if len(cols) < 4 or not re.search(r"(?i)munic|muncip", cols[0]):
+            provenance.skip_line(line, 'skip: len(cols) < 4 or not re.search(r"(?i)munic|muncip", cols[0])')
             continue
         phone = cols[-1] if re.fullmatch(r"[\d\s,/+-]{6,}", cols[-1]) else ""
         rest = cols[:-1] if phone else cols

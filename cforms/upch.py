@@ -16,6 +16,7 @@ import re
 import tempfile
 
 from cforms import hr
+import provenance
 
 METHOD = "ocr tesseract hin (ruled grid, one image per column)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -86,10 +87,12 @@ def fetch(p, get):
         for pg in range(first, last + 1):
             for row in hr.table(pdf, pg, tmp, p.get("lang", "hin")):
                 if len(row["cells"]) != len(cols):
+                    provenance.skip_row(row, 'skip: len(row["cells"]) != len(cols)')
                     continue
                 c = dict(zip(cols, row["cells"]))
                 if (HEAD.search(" ".join(row["cells"][:4])) or not norm(c.get("name")) or not norm(c.get("body"))
                         or re.search(r"स्थित|के नाम", " ".join(row["cells"]))):     # title row inside the frame
+                    provenance.skip_row(row, 'skip: HEAD.search(" ".join(row["cells"][:4])) or not norm(c.get("name")) ...')
                     continue
                 body, btype, btype_hi = split_body(c["body"], (p.get("body_type"), p.get("body_type_hi")))
                 desig = norm(c.get("designation", ""))

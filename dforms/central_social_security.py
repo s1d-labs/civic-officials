@@ -14,6 +14,7 @@ import re
 from pathlib import Path
 
 from dforms import _esw
+import provenance
 
 METHOD = "html tabs: office card + officer table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -77,6 +78,7 @@ def records(html, url, p):
             for tr in t.select("tbody tr") or all_trs[1:]:
                 tds = tr.find_all("td")
                 if len(tds) < 2:
+                    provenance.skip_row(tr, 'skip: len(tds) < 2')
                     continue
                 raw = _esw.clean(tds[0].get_text(" "))
                 name = TITLE.sub("", raw).strip()
@@ -85,6 +87,7 @@ def records(html, url, p):
                 if m:
                     charge, name = m.group(1), name[:m.start()].strip()
                 if not name or name.lower() in ("vacant", "-"):
+                    provenance.skip_row(tr, 'skip: not name or name.lower() in ("vacant", "-")')
                     continue
                 post = _esw.clean(tds[1].get_text(" "))
                 ph, em = None, None

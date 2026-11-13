@@ -16,6 +16,7 @@ import re
 from datetime import datetime
 
 from dforms import _esw, _ulb
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -55,6 +56,7 @@ def parse_directory(html, district=None, url=YANAM):
             post = col("designation")
             m = BODY.search(post)
             if not m:
+                provenance.skip_row(r, 'skip: not m')
                 continue
             body = m.group(1)
             extra = {"lgd_code": CODES[body.lower()]} if body.lower() in CODES else {}

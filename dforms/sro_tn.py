@@ -62,6 +62,7 @@ def parse(html, url=LIST, src=None):
         c = {k: (row[i] if i is not None and i < len(row) else "") for k, i in col.items()}
         name = c["sro"]
         if not name or not c["sr"].strip().isdigit():
+            provenance.skip_row(row, 'skip: not name or not c["sr"].strip().isdigit()')
             continue
         area = re.sub(r"_.*$", "", name).strip()          # "Aathur_Dindugal" -> "Aathur" (the suffix tells two Aathurs apart)
         post = "District Registrar" if re.search(r"\bDRO\b|District Registrar", name, re.I) else \

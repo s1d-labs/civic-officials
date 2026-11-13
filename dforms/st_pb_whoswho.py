@@ -14,6 +14,7 @@ Ids: dept:st_pb_whoswho:<officer slug>:<n>.
 import re
 
 from dforms import _esw, _state
+import provenance
 
 METHOD = "html table"
 MODULE = "st_pb_whoswho"
@@ -63,11 +64,13 @@ def parse(html, url=URL, cs=None):
         rows = _esw.grid(t, pos=pos)
         for row, p in zip(rows, pos):
             if len(row) < 2 or re.search(r"(?i)name of the officer", row[0]):
+                provenance.skip_row(row, 'skip: len(row) < 2 or re.search(r"(?i)name of the officer", row[0])')
                 continue
             cell, posting = row[0], row[1]
             m = re.search(r"\(\s*(RR|SCS|PCS|NSCS)\s*:?\s*(\d{4})\s*\)", cell)
             name = _esw.clean(re.sub(r"\|", " ", cell[: m.start()] if m else cell)).strip(" ,")
             if not name:
+                provenance.skip_row(row, 'skip: not name')
                 continue
             slug = _esw.slug(re.sub(HONOR, "", name.split(",")[0]))
             base = slug
@@ -102,6 +105,7 @@ def parse_cs(html):
     for t in s.find_all("table"):
         for row in _esw.grid(t):
             if len(row) < 2:
+                provenance.skip_row(row, 'skip: len(row) < 2')
                 continue
             if re.search(r"(?i)contact", row[0]):
                 d["phone"] = _esw.phones(row[1])

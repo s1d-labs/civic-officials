@@ -104,6 +104,8 @@ class Out:
             parents=None, source=None, last_updated=None, state=None, **extra):
         area, post, name = clean(area), clean(post), clean(name)
         if not (area or post):
+            import provenance
+            provenance.skipped("no area or post")      # row counts (provenance.py)
             return None
         k = slug(key) or slug(f"{level}-{area}-{post}")
         n = self.seen.get(k, 0) + 1

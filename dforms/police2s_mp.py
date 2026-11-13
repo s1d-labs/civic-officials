@@ -13,6 +13,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import ascii_digits, clean, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -164,6 +165,7 @@ def records(html, url, p):
             if not post and name:
                 post, name = name, ""
             if not post or re.fullmatch(r"[.\s]*", post):
+                provenance.skip_row(r, 'skip: not post or re.fullmatch(r"[.\\s]*", post)')
                 continue
             if name and re.fullmatch(r"[.\s-]*", name):
                 name = ""

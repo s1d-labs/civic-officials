@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _civic
 from dforms._police import clean, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -77,6 +78,7 @@ def parse(html, nid, district=None, url=URL):
         for tr in t.find_all("tr"):
             st = _cell(tr, "title")
             if not st or not tr.find("td"):
+                provenance.skip_row(tr, 'skip: not st or not tr.find("td")')
                 continue
             a = tr.find("td", class_="views-field-title").find("a", href=True)
             std = _cell(tr, "field-thana-code")

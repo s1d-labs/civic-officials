@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 
 from dforms import _power
 from dforms._power import tr_pos
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -60,6 +61,7 @@ def parse(html, url=URL):
             out.src = {"src_pos": tr_pos(tr)}
             c = [x for x in _power.cells(tr)]
             if not any(c):
+                provenance.skip_row(tr, 'skip: not any(c)')
                 continue
             filled = [x for x in c if x]
             if len(filled) == 1 and not re.search(r"\d{5,}", filled[0]):
@@ -67,6 +69,7 @@ def parse(html, url=URL):
                 org = org or office
                 continue
             if not office:
+                provenance.skip_row(tr, 'skip: not office')
                 continue
             if c and not c[0] and len(c) >= 4:
                 c = c[1:]
@@ -74,6 +77,7 @@ def parse(html, url=URL):
             mails = _power.email(" ".join(c))
             post = _power.clean(_power.EMAIL.sub("", re.sub(r"\s*@\s*", "@", post_cell)).strip(" ,"))
             if not post:
+                provenance.skip_row(tr, 'skip: not post')
                 continue
             land = c[1] if len(c) > 1 else ""
             mob = c[2] if len(c) > 2 else ""

@@ -10,6 +10,7 @@ import re
 
 from dforms._trail import tr_pos
 from dforms import _leg
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -32,6 +33,7 @@ def parse(html, url=URL):
         tds = tr.find_all("td", recursive=False)
         cells = [_leg.clean(td.get_text(" ")) for td in tds]
         if len(cells) < 7 or not cells[0].strip().isdigit():
+            provenance.skip_row(tr, 'skip: len(cells) < 7 or not cells[0].strip().isdigit()')
             continue
         no, cons, name, gender, party, mobile = cells[0], cells[2], cells[3], cells[4], cells[5], cells[6]
         email = cells[7] if len(cells) > 7 else ""

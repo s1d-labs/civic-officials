@@ -127,6 +127,7 @@ def parse_contacts(pages, p):
     seen, recs, at = set(), [], []
     for (serial, name, post, mob, tel), pos in zip(contact_rows(pages, at), at):
         if not post:
+            provenance.skipped('skip: not post')
             continue
         en = post_en(post)
         recs.append(_ward.record(MODULE, f"body:{_esw.slug(en)}:{_esw.slug(name)}", seen, body=BODY, lgd=LGD, state=STATE,

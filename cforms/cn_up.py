@@ -166,6 +166,8 @@ def gorakhpur(html, url):
             recs.append(rec("gorakhpur", str(int(c[1])), {"ward_no": str(int(c[1])), "ward_name": c[2], "name": c[3],
                                                           "phone": phones(c[4]), "position": "Member", "url": url,
                                                           "src_pos": tr_pos(tr), "method": "html table"}))
+        else:
+            provenance.skip_row(tr, 'skip: not (len(c) >= 5 and re.fullmatch(r"\\d{1,3}", c[1]) and c[3])')
     return recs
 
 

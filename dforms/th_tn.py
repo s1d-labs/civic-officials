@@ -104,6 +104,7 @@ def head_page(html):
         cells = [text(c) for c in tr.find_all(["td", "th"])]
         cells = [c for c in cells if c]
         if len(cells) < 2:
+            provenance.skip_row(tr, 'skip: len(cells) < 2')
             continue
         label, val = cells[0], " ".join(cells[1:])
         for key, rx in LABELS:
@@ -139,9 +140,11 @@ def staff_rows(html):
     out = []
     for ti, ri, c in table_rows(html, r"sanctioned\s*post|name\s*of\s*the\s*person"):
         if len(c) < 3 or not re.fullmatch(r"\d{1,4}\.?", c[0]):
+            provenance.skipped('skip: len(c) < 3 or not re.fullmatch(r"\\d{1,4}\\.?", c[0])')
             continue
         post, name = c[1], c[2]
         if not re.search(r"[A-Za-z஀-௿]{2,}", name) or re.fullmatch(r"(?i)(vacant|nil|-+|–+|—+)", name.strip()):
+            provenance.skipped('skip: not re.search(r"[A-Za-z\u0b80-\u0bff]{2,}", name) or re.fullmatch(r"(?i)(vaca...')
             continue
         extra = {"grade": c[3] if len(c) > 3 else "", "gender": c[4] if len(c) > 4 else "", "age": c[5] if len(c) > 5 else "",
                  "service": c[6] if len(c) > 6 else "", "cells": c}
@@ -154,11 +157,13 @@ def officer_rows(html):
     out, own = [], None
     for ti, ri, c in table_rows(html, r"அலுவலர்|officer|designation"):
         if len(c) < 3 or not re.fullmatch(r"\d{1,4}\.?", c[0]):
+            provenance.skipped('skip: len(c) < 3 or not re.fullmatch(r"\\d{1,4}\\.?", c[0])')
             continue
         office, post = c[1], c[2]
         phone = _esw.phones(" ".join(c[3:])) if len(c) > 3 else ""
         own = own or office
         if office != own:
+            provenance.skipped('skip: office != own')
             continue
         out.append(({"table": ti, "row": ri}, office, post, phone))
     return out
@@ -218,6 +223,7 @@ def parse(answers, p):
         meta, rows = staff[0]
         for pos, post, name, extra in rows:
             if heads and _ulb.role_of(post) == "head":
+                provenance.skipped('skip: heads and _ulb.role_of(post) == "head"')
                 continue        # the commissioner already has the head record (with phone and mail)
             add(meta, post, pos, name=name, **{k: v for k, v in extra.items() if v})
     if officers:
@@ -225,6 +231,7 @@ def parse(answers, p):
         meta, rows = officers[0]
         for pos, office, post, phone in rows:
             if not phone:
+                provenance.skipped('skip: not phone')
                 continue
             add(meta, post, pos, phone=phone, office=office, post_from="directory")
     return recs

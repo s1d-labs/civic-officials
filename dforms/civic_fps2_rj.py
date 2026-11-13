@@ -12,6 +12,7 @@ seeds/dept_civic_fps2_rj.json). Only reached from India so far (india_only). Rec
 import re
 
 from dforms import _civic, _civic_fps, _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -50,11 +51,13 @@ def parse(html, district="", district_regional="", dist_code="", src=PAGE):
     for tr in table.find_all("tr"):
         tds = [_esw.clean(td.get_text(" ")) for td in tr.find_all("td")]
         if len(tds) < 12 or not re.fullmatch(r"\d+", tds[1]):
+            provenance.skip_row(tds, "no fps_id")
             continue
         fid, name_hi, name_en, shop, addr, place, panchayat, block, town, tehsil, phone = tds[1:12]
         name_hi, name_en = _civic_fps.name_of(name_hi), _civic_fps.name_of(name_en)
         name = name_en or name_hi
         if fid in seen or not name:
+            provenance.skipped("repeated fps_id or no name")
             continue
         seen.add(fid)
         urban = bool(town) and not (panchayat or block)

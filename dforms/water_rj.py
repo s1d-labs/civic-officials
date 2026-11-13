@@ -12,6 +12,7 @@ import re
 
 from dforms import _esw, _water
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -72,6 +73,7 @@ def parse(html, url=URL):
             c = {k: (row[i] if i < len(row) else "") for k, i in col.items()}
             post = blank(c.get("post"))
             if not post or SKIP.match(post):
+                provenance.skip_row(row, 'skip: not post or SKIP.match(post)')
                 continue
             name, own = person(c.get("name", ""))
             std = re.sub(r"\D", "", c.get("std", ""))
@@ -80,6 +82,7 @@ def parse(html, url=URL):
             phone = _esw.phones(own, blank(c.get("mobile")), office, blank(c.get("resi")) if len(re.sub(r"\D", "", c.get("resi", ""))) >= 10 else "")
             email = _esw.emails(blank(c.get("email")))
             if not (phone or email or name):
+                provenance.skip_row(row, 'skip: not (phone or email or name)')
                 continue
             place = _esw.clean(re.sub(r"\d{6,}", "", blank(c.get("place")))) or blank(c.get("district"))
             level = _water.level_of(post, "state")

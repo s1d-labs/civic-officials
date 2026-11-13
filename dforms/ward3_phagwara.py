@@ -74,6 +74,8 @@ def table(pages):
                     continue
                 section = re.sub(r"(?i)^municipal corporation phagwara'?s?\s*", "", t)
                 cur = None
+            else:
+                provenance.skip_line(raw, 'skip: not (len(runs) == 1)')
     for r in out:
         r["remark"] = _esw.clean(" ".join(x for x in r["remark"] if x))
     return out

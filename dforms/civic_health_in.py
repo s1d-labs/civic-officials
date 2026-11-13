@@ -29,6 +29,7 @@ import re
 import urllib.parse
 
 from dforms import _esw
+import provenance
 
 METHOD = "arcgis feature layer (json query)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -127,6 +128,7 @@ def parse(doc, url=LAYER, layer="directory"):
         if layer == "centres":
             name = val(a.get("facilityname"))
             if oid is None or not name:
+                provenance.skipped("no objectid or name")
                 continue
             g = f.get("geometry") or {}
             lat, lon = g.get("y"), g.get("x")
@@ -143,6 +145,7 @@ def parse(doc, url=LAYER, layer="directory"):
             continue
         name = val(a.get("health_facility_name"))
         if oid is None or not name:
+            provenance.skipped("no objectid or name")
             continue
         addr = ", ".join(x for x in (val(a.get(k)) for k in ("address", "street", "landmark", "locality")) if x)
         pin = val(a.get("posatalcode"))

@@ -55,6 +55,7 @@ def people(text):
     for part in PERSON.split(text):
         part = _esw.clean(part).strip(" ,/")
         if not re.match(r"(?:Sh|Ms|MS|Smt|Mr|Mrs|Dr)\s?\.", part):
+            provenance.skipped('skip: not re.match(r"(?:Sh|Ms|MS|Smt|Mr|Mrs|Dr)\\s?\\.", part)')
             continue
         mobs = MOB.findall(part)
         rest = _esw.clean(MOB.sub(" ", part)).strip(" ,/")
@@ -183,6 +184,7 @@ def parse(pages, p):
         si_x = min(x for x, t in rs)
         asi = [x for x, t in rs if re.match(r"(?:Sh|Ms|MS|Smt|Mr)\s?\.", t) and x > si_x + 12]
         if not asi:
+            provenance.skipped('skip: not asi')
             continue
         asi_x = min(asi)
         mob_x = min((x for x, t in rs if re.match(r"[6-9]\d{9}", t) and x > asi_x + 8), default=asi_x + 18)

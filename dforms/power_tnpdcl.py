@@ -13,6 +13,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, cells, clean, email, phone, raw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -85,7 +86,9 @@ def parse(html, url=URL):
             for tr in tb.find_all("tr")[1:]:
                 out.src = {"src_pos": tr_pos(tr)}
                 c = cells(tr)
-                if len(c) == 4:
+                if len(c) != 4:
+                    provenance.skip_row(c, "not 4 cells")
+                else:
                     name, post, _, addr = split_office(c[1])
                     out.add(f"zone:{region}", "zone", region, post=post, name=name, phone_=phone(*c[2].split(" / ")),
                             email_=email(c[3]), address=addr)
@@ -99,10 +102,12 @@ def parse(html, url=URL):
             out.src = {"src_pos": tr_pos(tr)}
             c = cells(tr)
             if len(c) != 4:
+                provenance.skip_row(c, "not 4 cells")
                 continue
             name, post, area, addr = split_office(c[1])
             lvl = level(post)
             if lvl is None:
+                provenance.skip_row(c, "post of no known level")
                 continue
             if lvl == "circle":
                 area, div, sub = circle, None, None

@@ -25,6 +25,7 @@ from urllib.parse import urlparse
 
 from dforms import _emerg
 from dforms.police_s3waas import last_updated
+import provenance
 
 METHOD = "html table + html text (label lines)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -136,6 +137,7 @@ def table_rows(table, where=None):
     out = []
     for r, rp in zip(body, bpos):
         if heads_l and [_emerg.clean(c) for c in r] == heads_l:
+            provenance.skip_row(r, 'skip: heads_l and [_emerg.clean(c) for c in r] == heads_l')
             continue
         ks = kinds or [guess(c) for c in r]
         d = {}
@@ -246,6 +248,7 @@ def text_blocks(post):
                 continue
             if not re.search(r"(?i)control|emergency|eoc|disaster|helpline|toll|room|office|officer|authority|cell|centre|center|"
                              r"आपदा|नियंत्रण|कंट्रोल", post_l + " " + label):
+                provenance.skip_line(ln, 'skip: not re.search(r"(?i)control|emergency|eoc|disaster|helpline|toll|ro...')
                 continue
             out.append({"post": post_l, "phone": ph, "email": em, "label": label, "helpline": sc})
         elif re.search(r"[:：]\s*$", ln) and len(ln) < 100:

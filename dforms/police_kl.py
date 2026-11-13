@@ -10,6 +10,7 @@ import re
 
 from provenance import line_pos
 from dforms._police import clean, gz, phones, rec, slug, uniq
+import provenance
 
 METHOD = "pdf text (pypdf, text pieces put in lines by position)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -67,6 +68,7 @@ def parse(lines, url=URL, where=None):
     started = False
     for li, ln in enumerate(lines):
         if not ln:
+            provenance.skipped("empty")
             continue
         if HEAD.match(ln) and not PS.search(ln):
             h = clean(ln)
@@ -76,6 +78,7 @@ def parse(lines, url=URL, where=None):
             started = started or h in DISTRICTS or h in UNITS
             continue
         if not started or head not in DISTRICTS | UNITS:
+            provenance.skip_line(ln, 'skip: not started or head not in DISTRICTS | UNITS')
             continue
         m = ONLY_NUM.match(ln)
         if m and last is not None:

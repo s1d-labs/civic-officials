@@ -30,6 +30,7 @@ import json
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -127,6 +128,8 @@ def parse_table(html):
             tds = [_esw.clean(td.get_text(" ")) for td in tr.find_all("td")]
             if len(tds) >= 3 and re.fullmatch(r"\d{1,3}", tds[0]):
                 rows.append({"sr": tds[0], "name_cell": tds[1], "dept_cell": tds[2], "date_cell": tds[3] if len(tds) > 3 else ""})
+            else:
+                provenance.skip_row(tr, 'skip: not (len(tds) >= 3 and re.fullmatch(r"\\d{1,3}", tds[0]))')
     m = re.search(r"(?i)last\s*updated\s*on\s*(\d{1,2})/(\d{1,2})/(\d{4})", soup.get_text(" "))
     upd = f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}" if m else None
     return rows, upd

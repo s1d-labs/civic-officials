@@ -13,6 +13,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._power import tr_pos, Out, cells, clean, email, phone, raw, slug
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -52,6 +53,7 @@ def parse(html, page_level, url, district=None):
             out.src = {"src_pos": tr_pos(tr)}
             c = [x for x in cells(tr)]
             if not any(c):
+                provenance.skip_row(tr, 'skip: not any(c)')
                 continue
             if len(c) == 1 or (len([x for x in c if x]) == 1 and not re.match(r"^\d+$", c[0])):
                 txt = next(x for x in c if x)
@@ -68,10 +70,12 @@ def parse(html, page_level, url, district=None):
                 head = low
                 continue
             if not head or not cur:
+                provenance.skip_row(tr, 'skip: not head or not cur')
                 continue
             d = dict(zip(head, c))
             post = clean(d.get("designation"))
             if not post:
+                provenance.skip_row(tr, 'skip: not post')
                 continue
             mob = d.get("mobile number") or d.get("mobile")
             ph = phone(mob, d.get("landline"))

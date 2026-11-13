@@ -10,6 +10,7 @@ import re
 from bs4 import BeautifulSoup
 
 from dforms._police import clean, gz, rec, slug, uniq
+import provenance
 
 METHOD = "html page"     # source trail (provenance.py): how this reader reads its sources
 
@@ -51,6 +52,7 @@ def parse(html, url=URL, state="OD"):
         for st in box.find_all("div", class_=lambda c: c and any(x.endswith("_station") for x in c.split())):
             name = clean(st.get_text(" ", strip=True))
             if not name:
+                provenance.skipped('skip: not name')
                 continue
             recs.append(rec(M, f"{u}:{slug(zone)}:{slug(name)}", office_type="police station", area=name, post="IIC",
                             circle=f"{upd_name} {zone}", state=state, district=dist, source=url, last_updated=lu))

@@ -21,6 +21,7 @@ import json
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "js bundle (officer object and locale objects read by regex)"     # source trail (provenance.py)
 
@@ -124,6 +125,7 @@ def parse(js, p, source=None, zones=None):
         name = _name(en.get(nkey, ""))
         email = re.sub(r"\s+", "", f.get("email", ""))
         if not (name or email):
+            provenance.skipped('skip: not (name or email)')
             continue
         area = z or body
         recs.append(_ward.record(MODULE, f"{city}:{_esw.slug(z) if z else 'top'}:{_esw.slug(post)}", seen,

@@ -17,6 +17,7 @@ from urllib.parse import urlparse
 
 from dforms import _civic, _emerg
 from dforms.police_s3waas import cards, last_updated
+import provenance
 
 METHOD = "html cards (S3WaaS public utility, paged /page/N/)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -55,6 +56,7 @@ def records(pages, p):
         for ci, c in enumerate(cards(html, cw)):
             name = _emerg.clean(c.get("title"))
             if not name:
+                provenance.skip_row(c, 'skip: not name')
                 continue
             key = _emerg.unique(f"{host}:{_emerg.slug(name)}", seen)
             adr = _emerg.clean(c.get("address"))

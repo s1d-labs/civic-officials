@@ -7,6 +7,7 @@ webtest.nagaland.gov.in/nla) is not read. One queue item = the page. Record ids:
 """
 from dforms._trail import tr_pos
 from dforms import _esw, _leg, _leg_se
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -24,6 +25,7 @@ def parse(html, url):
     for tr in _esw.soup(html).find_all("tr"):
         tds = tr.find_all("td")
         if len(tds) < 3 or not _esw.clean(tds[0].get_text()).isdigit():
+            provenance.skip_row(tr, 'skip: len(tds) < 3 or not _esw.clean(tds[0].get_text()).isdigit()')
             continue
         sl, nm, cons = (_esw.clean(td.get_text(" ")) for td in tds[:3])
         by_name, note = _leg_se.seat("NL", None, cons, alias=ALIAS)

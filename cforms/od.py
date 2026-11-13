@@ -10,6 +10,7 @@ import io
 import re
 
 from pypdf import PdfReader
+import provenance
 
 METHOD = "pdf text (pypdf: plain lines, or text pieces by position for vote files)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -47,6 +48,7 @@ def list_rows(reader, p):
         for li, line in enumerate((page.extract_text() or "").splitlines(), 1):
             m = ROW.match(" ".join(line.split()))
             if not m:
+                provenance.skip_line(line, 'skip: not m')
                 continue
             sl, district, body, ward, reservation, rest = m.groups()
             name, party = split_party(rest)

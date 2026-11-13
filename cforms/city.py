@@ -22,6 +22,7 @@ import re
 from urllib.parse import quote
 
 from bs4 import BeautifulSoup
+import provenance
 
 METHOD = "by payload source: csv file, html table / cards / list, json in html, js bundle, pdf text (pypdf layout), MediaWiki json api"     # each record names its own     # source trail (provenance.py): how this reader reads its sources
 
@@ -84,6 +85,7 @@ def opencity(p, get):
         x = {clean(k): clean(v) for k, v in x.items() if k}
         w = x.get("Ward No.")
         if not w or not x.get("Elected Candidate Name"):
+            provenance.skip_row(x, 'skip: not w or not x.get("Elected Candidate Name")')
             continue
         if x.get("Ward Name"):
             ward_name[w] = x["Ward Name"]
@@ -104,6 +106,7 @@ def kolhapur(p, get):
         m = re.search(r"(\d+)", clean(h.get_text()).translate(DEVA))
         card = h.find_parent(class_="card")
         if not m or card is None:
+            provenance.skipped('skip: not m or card is None')
             continue
         for j, pc in enumerate(card.select("div.profile-card"), 1):
             name = clean(pc.select_one(".name").get_text() if pc.select_one(".name") else "")
@@ -181,6 +184,7 @@ def agartala(p, get):
             name = c.get("Name of Corporator") or ""
             m = re.match(r"^(.*?)\s*\(([^)]*)\)\s*$", name)
             if not c.get("Ward No.") or not name:
+                provenance.skip_row(tr, 'skip: not c.get("Ward No.") or not name')
                 continue
             rows.append({"ward_no": c["Ward No."], "name": m.group(1) if m else name, "position": m.group(2).title() if m else None,
                          "phone": phones(c.get("Contact Number")), "method": "html table", "src_pos": {"table": ti, "row": ri}})
@@ -253,9 +257,11 @@ def panaji(p, get):
         for ri, tr in enumerate(t.find_all("tr") if t else [], 1):
             tds = tr.find_all("td")
             if len(tds) < 2 or not clean(tds[0].get_text()).isdigit():
+                provenance.skip_row(tr, 'skip: len(tds) < 2 or not clean(tds[0].get_text()).isdigit()')
                 continue
             lines = [clean(s) for s in tds[-1].stripped_strings]
             if not lines or any("NOMINATED" in x.upper() for x in lines):
+                provenance.skip_row(tr, 'skip: not lines or any("NOMINATED" in x.upper() for x in lines)')
                 continue
             addr = re.sub(r"^COUNCILLOR,?\s*WARD\s*NO\.?\s*\d+,?\s*", "", " ".join(lines[1:]), flags=re.I)
             ccp[clean(tds[0].get_text())] = {"name": lines[0], "address": clean(addr) or None, "pos": {"table": tno, "row": ri}}
@@ -320,17 +326,20 @@ def wikipedia(p, get):
         g = grid(t)
         heads = [row for row in g if row and all(h for _, h in row)]
         if not heads:
+            provenance.skipped('skip: not heads')
             continue
         width = max(len(row) for row in heads)
         label = [" | ".join(dict.fromkeys(row[i][0] for row in heads if i < len(row) and row[i][0])) for i in range(width)]
         winner = any("Winner" in x for x in label)
         if not (winner or any(re.search(r"Councillor", x) for x in label)):
+            provenance.skipped('skip: not (winner or any(re.search(r"Councillor", x) for x in label))')
             continue
 
         def col(*need, avoid=None):
             return [i for i, x in enumerate(label) if all(n.lower() in x.lower() for n in need) and not (avoid and avoid in x)]
         wcol = next(iter(col("Ward")), None)
         if wcol is None:
+            provenance.skipped('skip: wcol is None')
             continue
         side = "Winner" if winner else ""
         name_c = (col(side, "Candidate") if winner else col("Councillor"))[:1]
@@ -345,10 +354,12 @@ def wikipedia(p, get):
         rows = []
         for ri, row in enumerate(g, 1):
             if not row or all(h for _, h in row) or wcol >= len(row):
+                provenance.skip_row(row, 'skip: not row or all(h for _, h in row) or wcol >= len(row)')
                 continue
             m = re.search(r"(\d+)", row[wcol][0])
             name = val(row, name_c)
             if not m or not name:
+                provenance.skip_row(row, 'skip: not m or not name')
                 continue
             rows.append({"ward_no": m.group(1), "name": name, "party": val(row, party_c), "votes": val(row, votes_c),
                          "runner_up": val(row, ru_name), "runner_up_party": val(row, ru_party), "runner_up_votes": val(row, ru_votes),
@@ -369,6 +380,7 @@ def fetch(p, get):
     recs, seen = [], {}
     for x in rows:
         if not x.get("name"):
+            provenance.skip_row(x, 'skip: not x.get("name")')
             continue
         ward = x.get("ward_no") or slug(x.get("ward_name") or "") or str(len(recs) + 1)
         key = ward + (f"-{slug(x['seat'].translate(SEATS))}" if x.get("seat") and slug(x["seat"].translate(SEATS)) else "")

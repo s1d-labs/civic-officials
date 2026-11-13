@@ -15,6 +15,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "json api + html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -80,6 +81,7 @@ def parse_pheo(html, p):
             c = dict(zip(head, row))
             name, desig = c.get("name", ""), c.get("designation", "")
             if not ENGINEER.search(desig) or not name or name.lower().startswith("vacant"):
+                provenance.skip_row(row, 'skip: not ENGINEER.search(desig) or not name or name.lower().startswith("...')
                 continue
             place = _place(c.get("place of posting", "")) or office
             key = f"pheo-{portal}:{_esw.slug(place)}:{_esw.slug(desig)}"
@@ -127,6 +129,7 @@ def parse_watco(js, url=WATCO):
             desig, place = _esw.clean(x.get("designation")), _esw.clean(x.get("placeOfPosting"))
             name = re.sub(r"\(\s*contractual\s*\)", "", _esw.clean(x.get("nameOfTheStaff")), flags=re.I).strip()
             if not name and not x.get("contactNo"):
+                provenance.skip_row(x, 'skip: not name and not x.get("contactNo")')
                 continue
             key = f"watco:{_esw.slug(group)}:{_esw.slug(place)}:{_esw.slug(desig)}"
             k, i = key, 2
@@ -154,6 +157,7 @@ def parse_watco_main(js, url=WATCO_MAIN):
         lines = [_esw.clean(htmlmod.unescape(s)) for s in re.split(r"<br\s*/?>|</p>", x.get("name") or "")]
         lines = [re.sub(r"<[^>]+>", "", s).strip() for s in lines if re.sub(r"<[^>]+>", "", s).strip()]
         if not lines:
+            provenance.skip_row(x, 'skip: not lines')
             continue
         if len(lines) >= 2:
             name, post = lines[0], " ".join(lines[1:])

@@ -13,6 +13,7 @@ Record ids: dept:ward3_siliguri:borough-<n>:<post slug>:<name slug or phone>.
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html tables + head lines (bs4)"     # source trail (provenance.py)
 
@@ -112,6 +113,7 @@ def parse_pwd(html, url, wards_of_borough, seen):
         for r in rows:
             name, desig, ph = _ward.col(r, "name"), _ward.col(r, "designation"), _ward.col(r, "phone")
             if not (name or ph):
+                provenance.skip_row(r, 'skip: not (name or ph)')
                 continue
             m = re.search(r"(?i)borough\s*-?\s*(IV|V|III|II|I)\b", desig)
             if m:

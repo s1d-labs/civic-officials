@@ -20,6 +20,7 @@ Clerks, peons, tracers and drivers are left out. Record ids: dept:ward2s_shillon
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -66,6 +67,7 @@ def parse(html, p):
             if r[0].isdigit():                         # Sl No first
                 r = r[1:] + [""]
             if not any(r):
+                provenance.skip_row(r, 'skip: not any(r)')
                 continue
             zm = ZONE.search(r[1])
             if zm and "ward" in r[2].lower():           # SWM zone manager: name | post + zone | Ward No. .. | phone

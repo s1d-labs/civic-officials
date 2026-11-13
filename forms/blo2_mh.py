@@ -9,6 +9,7 @@ Text PDFs without rules on cdn.s3waas.gov.in; read with pypdf layout mode (forms
 The pages answer from Germany (cdn.s3waas.gov.in). Seed: seeds/blo2_mh.json (links from the archived notice pages).
 """
 from forms.blo2_in import cells, download, layout_lines, line_pos, mobiles, part_of
+import provenance
 
 METHOD = "pdf text (pypdf layout, columns split at 2+ spaces)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -31,9 +32,11 @@ def parse_raigad(lines, p):
         page, ln = t[0], t[1]
         c = cells(ln)
         if len(c) < 5 or not (part_of(c[0]) and part_of(c[1])):
+            provenance.skip_row(c, 'skip: len(c) < 5 or not (part_of(c[0]) and part_of(c[1]))')
             continue
         i = next((k for k, v in enumerate(c) if mobiles(v)), None)
         if i is None or i < 3:
+            provenance.skipped('skip: i is None or i < 3')
             continue
         desig, office = _mid(c[3:i])
         raw = {"page": page, "Sr.No.": c[0], "Part Number": c[1], "Name of BLO": c[2], "Designation of BLO": desig,
@@ -57,6 +60,7 @@ def parse_satara(lines, p):
         page, ln = t[0], t[1]
         c = cells(ln)
         if len(c) < 6 or not part_of(c[0]) or not mobiles(c[-1]):
+            provenance.skip_row(c, 'skip: len(c) < 6 or not part_of(c[0]) or not mobiles(c[-1])')
             continue
         raw = {"page": page, "Sr. No": c[0], "Assembly": c[1], "Part No.": c[2], "Officer Type": c[-3], "AC No": c[-2],
                "Mobile No.": c[-1]}

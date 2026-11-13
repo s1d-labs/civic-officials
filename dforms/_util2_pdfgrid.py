@@ -13,6 +13,7 @@ Pages without their own header reuse the columns of the page before (long lists)
 """
 import io
 import re
+import provenance
 
 ROLE_RULES = (  # (role, regex on the header text of one column), first match wins
     ("sn", r"^\s*(s\.?\s*n|sr|sl|s\.?\s*no|so\s*no)\b[.\s0o]*$"),
@@ -115,6 +116,7 @@ def _header(lines, vlines):
         txt = " ".join(t[2] for t in line)
         if len(line) < 3 or not HEADER_HINT.search(txt) or not re.search(r"name|officer|employee|office", " ".join(
                 " ".join(t[2] for t in l) for l in lines[max(0, i - 2):i + 3]), re.I):
+            provenance.skip_line(line, 'skip: len(line) < 3 or not HEADER_HINT.search(txt) or not re.search(r"nam...')
             continue
         y = line[0][1]
         band = []
@@ -150,6 +152,7 @@ def _header(lines, vlines):
                 cols.append([a if k else -10_000, b, " ".join(t[2] for t in sorted(g, key=lambda t: (-t[1], t[0])))])
         out = [(a, b, _role(w) or "office") for a, b, w in cols if w.strip()]
         if not out:
+            provenance.skip_line(line, 'skip: not out')
             continue
         # empty header cells (between two lines) still hold data: give them the role "office"
         if len(xs) >= 4:

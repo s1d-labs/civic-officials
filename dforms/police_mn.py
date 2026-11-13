@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 from dforms import police_nl
 from dforms import _civic
 from dforms._police import clean, gz, phones, rec, slug
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -25,11 +26,13 @@ def control_rooms(html, url):
         for tr in t.find_all("tr"):
             c = [clean(td.get_text(" ", strip=True)) or "" for td in tr.find_all("td")]
             if len(c) < 3 or not re.search(r"control room", c[1], re.I):
+                provenance.skip_row(tr, 'skip: len(c) < 3 or not re.search(r"control room", c[1], re.I)')
                 continue
             office = c[1]
             district = re.sub(r"\s*Control Room\s*$", "", office, flags=re.I)
             ph = phones(c[2])
             if not ph:
+                provenance.skip_row(tr, 'skip: not ph')
                 continue
             state_level = district.upper().startswith("DG")
             recs.append(rec(M, f"control-room:{slug(district)}", level="state" if state_level else "district",

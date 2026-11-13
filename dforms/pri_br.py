@@ -288,6 +288,8 @@ def _grid(html):
             c = [_pri.clean(td.get_text(" ")) for td in tr.find_all("td")]
             if len(c) == len(head) and any(c):
                 out.append((i, dict(zip(head, c))))
+            else:
+                provenance.skip_row(tr, 'skip: not (len(c) == len(head) and any(c))')
         return out
     return []
 

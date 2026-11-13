@@ -110,6 +110,7 @@ def from_api(p, section, items, r, url):
         post_mr = clean(o.get("designation_in_marathi") or o.get("post_in_marathi"))
         name = clean(o.get("name"))
         if not name:
+            provenance.skip_row(o, 'skip: not name')
             continue
         area = clean(st.get("name")) if section == "police-station-incharge" else None
         if area and not re.search(r"(?i)police|station|\bps\b", area):
@@ -337,6 +338,7 @@ def label_list(html, p, r, url, section):
     recs = []
     for b in blocks:
         if not b.get("name"):
+            provenance.skip_row(b, 'skip: not b.get("name")')
             continue
         post = b.get("post") if (b.get("branch") or "") == (b.get("post") or "") else f"{b.get('post')}, {b.get('branch')}"
         recs.append(_record(p, section, b.get("branch") or post, post=post, name=b["name"], area=b.get("branch"),

@@ -8,6 +8,7 @@ import re
 
 from dforms import _esw
 from dforms._water import pgrid
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -35,9 +36,11 @@ def parse(html, url=URL):
         if head[:1] == ["taluka office"]:
             for row in g[1:]:
                 if len(row) < 2:
+                    provenance.skip_row(row, 'skip: len(row) < 2')
                     continue
                 parts = [x.strip(" .") for x in row[0].split(",")[1:] if x.strip(" .")]
                 if not parts:
+                    provenance.skip_row(row, 'skip: not parts')
                     continue
                 first = parts[0]
                 taluka = TALUKA.get(first.lower(), first)
@@ -52,6 +55,8 @@ def parse(html, url=URL):
                     recs.append(_esw.record(MODULE, "GA-SR-state", dept="registration", level="state", area="Goa", post=row[0],
                                             email=_mail(row[1]), address=row[2], phone=_esw.phones(row[3]), state="GA",
                                             office_id="GA-SR-state", source=url, src_pos=row.pos))
+                else:
+                    provenance.skip_row(row, 'skip: not (len(row) >= 4 and "state registrar" in row[0].lower())')
     return recs
 
 

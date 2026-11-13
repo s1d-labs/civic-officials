@@ -12,6 +12,7 @@ import re
 
 from provenance import line_pos
 from dforms import _esw
+import provenance
 
 METHOD = "pdf text (pypdf layout), columns from the header"     # source trail (provenance.py): how this reader reads its sources
 
@@ -102,6 +103,7 @@ def parse(pages, url=URL):
                 xs = h
                 continue
             if not line.strip() or HEAD.search(line) or not xs:
+                provenance.skip_line(line, 'skip: not line.strip() or HEAD.search(line) or not xs')
                 continue
             r = start_row(line, xs)
             if r:

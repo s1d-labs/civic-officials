@@ -10,6 +10,7 @@ The pages give no phones and no ward lists. Records: level "zone". Record ids: d
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -31,6 +32,7 @@ def parse_officials(html, p, seen):
             branch, name, post = _ward.col(r, "department", "branch"), _ward.col(r, "name of the officer"), _ward.col(r, "designation")
             m = re.search(r"(?i)\b(north|south|east|west|central)\s*zone\b", branch)
             if not m or not name:
+                provenance.skip_row(r, 'skip: not m or not name')
                 continue
             zone = f"{m.group(1).title()} Zone"
             recs.append(_ward.record(MODULE, f"officials:{_esw.slug(zone)}:{_esw.slug(post or 'officer')}", seen, body=BODY, lgd=LGD,
@@ -45,6 +47,7 @@ def parse_centres(html, p, seen):
         for r in rows:
             name, addr = _ward.col(r, "name"), _ward.col(r, "address")
             if not re.search(r"(?i)civic\s*cent", f"{name} {addr}"):
+                provenance.skip_row(r, 'skip: not re.search(r"(?i)civic\\s*cent", f"{name} {addr}")')
                 continue
             area = re.sub(r"(?i)\s*[–-]?\s*(city\s*)?civic\s*cent(er|re)\s*$", "", name).strip() or name
             recs.append(_ward.record(MODULE, f"civic-centres:{_esw.slug(area)}", seen, body=BODY, lgd=LGD, state=STATE,

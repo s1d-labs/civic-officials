@@ -87,6 +87,7 @@ def records(html, url, p, r=None):
         for rn, row in enumerate(g[1:], 2):
             cells = [_pri.clean(c) for c in row]
             if len(cells) < len(head) or not cells[col["name"]]:
+                provenance.skip_row(row, 'skip: len(cells) < len(head) or not cells[col["name"]]')
                 continue
             v = {k: cells[i] for k, i in col.items()}
             ward = v.get("ward", "")

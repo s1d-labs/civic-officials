@@ -62,6 +62,8 @@ def rows(html, where=None):
             out.append((int(r[0]), r[1], r[2], r[3], r[4]))
             if where is not None:
                 where.append(pos)
+        else:
+            provenance.skip_row(r, 'skip: not (len(r) >= 5 and r[0].strip().isdigit())')
     return out
 
 
@@ -86,6 +88,7 @@ def fetch(p, get):
     for (no, dist, ac, name, mobile), pos in zip(rows(a.text, where), where):
         name = _esw.clean(name)
         if not name:
+            provenance.skipped('skip: not name')
             continue
         district, dc = district_of(dist)
         recs.append(_esw.record(MODULE, f"MP-AC-{no}", dept="administration", level="subdivision", area=area_of(ac),

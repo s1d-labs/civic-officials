@@ -15,6 +15,7 @@ post_regional. Record ids: dept:ward3_agra:<zone slug or body>:<post slug>:<mobi
 import re
 
 from dforms import _esw, _ward
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -92,6 +93,7 @@ def parse(html, p, zones_html=None):
                     sec = filled[0]
                 continue
             if len(cells) < 4 or "नाम" in cells[1] and "पद" in cells[2]:
+                provenance.skip_row(row, 'skip: len(cells) < 4 or "नाम" in cells[1] and "पद" in cells[2]')
                 continue
             name, post, ph = cells[1], cells[2], cells[3]
             if re.match(r"(?i)e-?mail", post) and last is not None:

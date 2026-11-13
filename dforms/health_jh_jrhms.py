@@ -11,6 +11,7 @@ One queue item = one GET. Ids: dept:health_jh_jrhms:<site code>:<slug of post>[:
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table"     # source trail (provenance.py): how this reader reads its sources
 
@@ -45,6 +46,7 @@ def parse(html, url=URL):
             post, name = col(r"designation", row), col(r"team name|^name", row)
             phone, email = _esw.phones(col(r"mobile|contact", row)), _esw.emails(col(r"email", row))
             if not (name or phone or email):
+                provenance.skip_row(row, 'skip: not (name or phone or email)')
                 continue
             district = LGD.get(code) or re.sub(r"\s*\([A-Z]{3}\)", "", dist_site).strip()
             key = f"{code or _esw.slug(district)}:{_esw.slug(post)}"

@@ -14,6 +14,7 @@ import re
 import tempfile
 
 from cforms import gj
+import provenance
 
 METHOD = "ocr tesseract mar (name cells) + pdf text layer by drawn cell borders (pdftotext -bbox)"     # source trail (provenance.py): how this reader reads its sources
 
@@ -45,6 +46,7 @@ def parse_page(ws, hs, vs, texts=None, last_ward="", pos=None):
     for gi, (cols, a, b) in enumerate(rows, 1):
         serial = re.sub(r"\D", "", gj.box_text(ws, cols[1][0], a, cols[1][1], b))
         if not serial:
+            provenance.skipped('skip: not serial')
             continue
         band = gj.cell_of(3, hs, (a + b) / 2, cols)
         ward = re.sub(r"\D", "", gj.box_text(ws, cols[3][0], band[0], cols[3][1], band[1])) or last_ward
@@ -80,6 +82,7 @@ def parse(pdf, p, use_ocr=True):
                 seat = seat or SEATS[min(counts[ward], 5) - 1]
                 title, name, addr = split_name(cell)
                 if not name:
+                    provenance.skipped('skip: not name')
                     continue
                 rec = {"type": "councillor", "state": "MH", "body": "Aurangabad", "body_en": "Aurangabad",
                        "body_local": "छत्रपती संभाजीनगर महानगरपालिका", "body_type": "Municipal Corporation",

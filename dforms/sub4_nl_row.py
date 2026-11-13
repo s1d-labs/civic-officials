@@ -11,6 +11,7 @@ One queue item: 1 GET. Record ids: dept:sub4_nl_row:<post>:<district slug>[:n].
 import re
 
 from dforms import _esw
+import provenance
 
 METHOD = "html table rows (BeautifulSoup)"     # source trail (provenance.py)
 
@@ -39,11 +40,13 @@ def build(html, source=URL):
             continue
         for row, sp in zip(rows[1:], pos[1:]):
             if len(row) < 4:
+                provenance.skip_row(row, 'skip: len(row) < 4')
                 continue
             name, desig, district, contact = row[:4]
             email = row[4] if len(row) > 4 else ""
             post = next((p for p in POSTS if re.search(p[3], desig, re.I)), None)
             if not post or not district:
+                provenance.skip_row(row, 'skip: not post or not district')
                 continue
             dk = re.sub(r"[^a-z]", "", district.lower())
             if re.fullmatch(rf"(?i)\s*{re.escape(district)}\s+{re.escape(desig)}\s*", name):

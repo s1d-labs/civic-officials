@@ -156,3 +156,58 @@ def test_uk_gram_prahari_krutidev():
     t = d["dept:vil_uk_ddmp:prahari:s1:1"]
     assert (t["name"], t["phone"], t["age"], t["tehsil"]) == ("श्री टीकम सिंह", "9805272602", "40", "त्यूनी")
     assert t["src_pos"]["page"] == 1 and "9805272602" in t["src_pos"]["line_text"]
+
+
+def test_mn_awc_full_file_every_row():
+    """The whole awc_in_manipur.pdf (332 pages, sha256 1267564c..., bucket civic-officials-depts/depts/vil_mn_awc/), as pypdf
+    layout text (the engine the GitHub runners use). Serials 1-11,585, one AWC code each. Before 2026-11-13 the reader left
+    out 201 rows without a word: a long AWC name that wraps (code and names on the next line), and a name that runs into the
+    code ("Ward No.1114252011018", "Maning14252011611"): 11,384 rows / 20,658 records -> 11,585 / 21,034."""
+    import gzip
+    import provenance
+    v = mod("vil_mn_awc")
+    text = gzip.decompress((DATA / "vil_mn_awc_full_pypdf.txt.gz").read_bytes()).decode("utf-8")
+    provenance.rows_reset()
+    rows = v.rows(text)
+    assert len(rows) == 11585 and sorted(int(r[0]) for r in rows) == list(range(1, 11586))
+    assert len({r[4] for r in rows}) == 11585
+    assert provenance.rows().get("rows_skipped") == {}          # no line with a digit is left out
+    people = sum(1 for r in rows for nm in (r[5], r[6]) if v._esw.clean(nm) and not v.VACANT.match(v._esw.clean(nm)))
+    assert people == 21034
+    by = {r[0]: r for r in rows}
+    assert by["138"][3:7] == ("Maibam Chingmang Mamang Khongnang Makhong", "14252010605", "Kongkham Sanahanbi Devi",
+                              "Thounaojam Premila Devi")               # wrapped AWC name
+    assert by["258"][3:5] == ("Bishnupur thiyam mamang Leikai Ward No.11", "14252011018")    # "No.11" + code glued
+    assert by["394"][3:6] == ("Ningthoukhong Awang Khunou Maning Ward no 1(B)", "14252011521", "Laishram Ongbi Manorama Devi")
+    assert by["8895"][3:5] == ("Kakching Wairi Khongnang Lamteiba Pareng 37 by 7", "14711010205")
+    assert "Ward No.1114252011018" in by["258"][10]                    # line_text stays as the file writes it
+
+
+def test_uk_aww_and_asha_full_files_every_row():
+    """Whole Dehradun DDMP lists (bucket civic-officials-depts/depts/vil_uk_ddmp/, pdftotext -layout text): AWW list 1,555 rows,
+    ASHA list 505 lines. Before 2026-11-13 the AWW reader left out 205 rows without a word (cells that wrap onto the next line;
+    "Main"/"Mini" printed apart from "AWC") and the ASHA reader 4 rows with a 9-digit mobile:
+    AWW 2,500 -> 2,884 records, ASHA 499 -> 503."""
+    import gzip
+    import provenance
+    v = mod("vil_uk_ddmp")
+
+    def text(f):
+        return gzip.decompress((DATA / f).read_bytes()).decode("utf-8")
+    t = text("vil_uk_ddmp_aww_full_pdftotext.txt.gz")
+    provenance.rows_reset()
+    recs = v.aww_records(t.split("\f"), "u", {"format": "aww"}, "pdftotext -layout")
+    assert len(recs) == 2884
+    rows = [ln for pg in t.split("\f") for _, ln, _ in v.aww_lines(pg) if v.AWW.match(ln)]
+    assert len(rows) == 1554 and sum(1 for ln in t.splitlines() if v.START.match(ln)) == 1555   # 131 Nathanpur: no name
+    d = dict(recs)
+    w = d["dept:vil_uk_ddmp:aww:raipur-31"]                  # wrapped row: AWC name on two lines, worker on the second
+    assert (w["name"], w["phone"], w["area"]) == ("Purnima", "9760504866", "AMWALA TARLA LADPUR 2")
+    assert " | " in w["src_pos"]["line_text"] and w["src_pos"]["line_text"].startswith("31")
+    c = d["dept:vil_uk_ddmp:aww:chakrata-01-19"] if "dept:vil_uk_ddmp:aww:chakrata-01-19" in d else \
+        next(x for k, x in d.items() if x.get("serial") == "19" and x.get("project", "").startswith("Chakrata"))
+    assert c["awc_type"] == "AWC" and c["name"] == "ANJU CHAUHAN"   # "Main"/"Mini" not on the row's line
+    t = text("vil_uk_ddmp_asha_full_pdftotext.txt.gz")
+    recs = v.asha_records(t.split("\f"), "u", {"format": "asha"}, "pdftotext -layout")
+    assert len(recs) == 503
+    assert any(x["name"] == "Sangeeta pal" and x["phone"] == "885767940" for _, x in recs)   # 9-digit mobile, kept as written
