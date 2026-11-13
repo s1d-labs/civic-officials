@@ -16,6 +16,10 @@ from urllib.parse import urljoin
 from dforms import _esw, _state, st_ne
 
 METHOD = "html table (meghalaya.gov.in key contacts)"
+# reader audit (audit.py): an organisation page often names one or two people (rows without contact details); the other blocks
+# are the portal's header, menus and footer, no person
+AUDIT_LEAVES_OUT = (r"^(?:Skip To Main Content|Menu|Category|Be involved|Total Visitors:|Site Designed, Developed and Hosted by:)"
+                    r"\s*(?:\||$)")
 MODULE = "st_ml_keycontacts"
 BASE = "https://meghalaya.gov.in"
 INDEX = BASE + "/key-contacts"
