@@ -1,0 +1,22 @@
+[
+ {
+  "key": "ward3_chhindwara-sanitation",
+  "payload": {
+   "reader": "ward3_chhindwara",
+   "kind": "sanitation",
+   "url": "https://chhindwaranagarnigam.com/team-sanitation/",
+   "state": "MP",
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "ward3_chhindwara-officers",
+  "payload": {
+   "reader": "ward3_chhindwara",
+   "kind": "officers",
+   "url": "https://chhindwaranagarnigam.com/municipal-officers/",
+   "state": "MP",
+   "route": "abroad"
+  }
+ }
+]

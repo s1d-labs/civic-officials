@@ -1,0 +1,6 @@
+{"module": "ward3_chhindwara", "payload": {"reader": "ward3_chhindwara", "kind": "sanitation", "url": "https://chhindwaranagarnigam.com/team-sanitation/", "state": "MP"},
+ "routes": {"https://chhindwaranagarnigam.com/team-sanitation/": "chhindwara_team-sanitation.html"},
+ "min_records": 55, "min_wards": 48,
+ "expect": [{"post": "Health Inspector", "name": "अरुण ग", "wards": ["23", "24", "34", "40"], "level": "ward"},
+            {"post": "Daroga", "name": "महेश चौहान", "wards": ["21"], "level": "ward"},
+            {"post": "Daroga", "name": "अजय गोदरे", "wards": ["48"], "level": "ward"}]}
