@@ -1,0 +1,36 @@
+{
+ "module": "ward3_rudrapur",
+ "payload": {
+  "reader": "ward3_rudrapur",
+  "url": "https://www.nagarnigamrudrapur.com/ward-supervisor-list/",
+  "state": "UK",
+  "page": "supervisors"
+ },
+ "routes": {
+  "https://www.nagarnigamrudrapur.com/ward-supervisor-list/": "rudrapur_ward_supervisors.html"
+ },
+ "min_records": 30,
+ "min_wards": 40,
+ "expect": [
+  {
+   "post": "Sanitary Inspector",
+   "name": "कुलदीप",
+   "wards": [
+    "1",
+    "2",
+    "12",
+    "19"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Ward Sanitation Supervisor",
+   "name": "सूरज",
+   "wards": [
+    "11",
+    "12"
+   ],
+   "level": "ward"
+  }
+ ]
+}

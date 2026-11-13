@@ -1,0 +1,24 @@
+{
+ "module": "ward3_ayodhya",
+ "payload": {
+  "reader": "ward3_ayodhya",
+  "url": "https://nagarnigamayodhya.in/",
+  "state": "UP"
+ },
+ "routes": {
+  "https://nagarnigamayodhya.in/": "ayodhya_home.html",
+  "https://nagarnigamayodhya.in/static/js/main.2aeca607.js": "ayodhya_main.js"
+ },
+ "min_records": 35,
+ "expect": [
+  {
+   "post": "Sanitary inspector",
+   "name": "Kamal Kumar",
+   "level": "body"
+  },
+  {
+   "post": "Junior Engineer \\(Water\\)",
+   "name": "Anu Jaiswal"
+  }
+ ]
+}

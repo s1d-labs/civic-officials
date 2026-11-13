@@ -1,0 +1,20 @@
+{
+ "module": "ward3_rudrapur",
+ "payload": {
+  "reader": "ward3_rudrapur",
+  "url": "https://www.nagarnigamrudrapur.com/zonal-office/",
+  "state": "UK",
+  "page": "zonal"
+ },
+ "routes": {
+  "https://www.nagarnigamrudrapur.com/zonal-office/": "rudrapur_zonal_office.html"
+ },
+ "min_records": 5,
+ "expect": [
+  {
+   "post": "Zonal Office In-Charge",
+   "name": "दीपक",
+   "level": "zone"
+  }
+ ]
+}

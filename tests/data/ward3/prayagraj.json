@@ -1,0 +1,38 @@
+{
+ "module": "ward3_prayagraj",
+ "payload": {
+  "reader": "ward3_prayagraj",
+  "url": "https://prayagrajmc.up.gov.in/SectionInformation.html?editForm&rowId=354&page=",
+  "state": "UP"
+ },
+ "routes": {
+  "https://prayagrajmc.up.gov.in/SectionInformation.html?editForm&rowId=354&page=": "prayagraj_zone_offices.html",
+  "https://prayagrajmc.up.gov.in/SectionInformation.html?editForm&rowId=355&page=": "prayagraj_zone_employees.html",
+  "https://prayagrajmc.up.gov.in/SectionInformation.html?editForm&rowId=356&page=": "prayagraj_zone_wards.html",
+  "https://prayagrajmc.up.gov.in/SectionInformation.html?editForm&rowId=358&page=": "prayagraj_jalkal_offices.html",
+  "https://prayagrajmc.up.gov.in/SectionInformation.html?editForm&rowId=359&page=": "prayagraj_jalkal_employees.html"
+ },
+ "min_records": 150,
+ "min_wards": 100,
+ "expect": [
+  {
+   "post": "^Zonal Officer$",
+   "name": "Neeraj Singh",
+   "wards": [
+    "28",
+    "44"
+   ],
+   "level": "zone"
+  },
+  {
+   "post": "Zonal Officer \\(Jal Kal\\)",
+   "name": "Ganga Sagar Sonkar",
+   "level": "zone"
+  },
+  {
+   "post": "Junior Engineer",
+   "name": "Deepak Kumar",
+   "level": "zone"
+  }
+ ]
+}
