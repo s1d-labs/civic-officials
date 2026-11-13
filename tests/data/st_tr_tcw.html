@@ -1,0 +1,2614 @@
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'html' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ html--who-is-who.html.twig
+   ✅ html.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/html.html.twig' -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+<script>(function () {
+
+  class AccessibilityMenu {
+
+    settings = {
+      fontSizeLimit: 30,
+    };
+
+    defaults = {
+      fontSize: [1.15, 1.35, 1.55, 1.7],
+      lineHeight: [1.25, 1.5, 1.75],
+      letterSpacing: [1.25, 1.75, 2.25],
+      fontFamily: ['serif', 'sans-serif'],
+    };
+
+    map = {
+      fontSize: 'font_size',
+      lineHeight: 'line_height',
+      letterSpacing: 'letter_spacing',
+      fontFamily: 'font_style',
+    };
+
+    constructor(element) {
+      this.wrapper = element;
+      this.buttons = {};
+      this.buttons.close = this.wrapper.querySelector('.js-accessibility-close');
+      this.buttons.open = document.querySelector('.js-accessibility-btn');
+      this.buttons.reset = this.wrapper.querySelector('.js-accessibility-reset');
+      this.container = this.wrapper.querySelector('.b-accessibility-menu');
+      this.init();
+    }
+
+    init = function () {
+      const self = this;
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.js-accessibility-menu') && !e.target.closest('.js-accessibility-btn')) {
+          self.close();
+        }
+      });
+      self.buttons.open.addEventListener('click', self.open.bind(self));
+      self.buttons.close.addEventListener('click', self.close.bind(self));
+      self.buttons.reset.addEventListener('click', () => {
+        self.reset();
+      });
+      self.container.addEventListener('click', (e) => {
+        const target = e.target.closest('.b-accessibility-menu__item');
+        if (target) {
+          self.itemClick(target);
+          self.refresh();
+        }
+      });
+      if (localStorage.getItem('accessibility_menu')) {
+        self.refresh();
+      }
+    };
+    refresh = function () {
+      const self = this;
+      self.container.querySelectorAll('.b-accessibility-menu__item').forEach((element) => {
+        self.itemClick(element, false);
+      });
+      let storage = localStorage.getItem('accessibility_menu');
+      storage = JSON.parse(storage) ?? {};
+
+      let elements = document.querySelectorAll('body *');
+      elements.forEach((element) => {
+        let styles = getComputedStyle(element);
+        if (!element.prepare) {
+          element.prepare = {};
+        }
+        for (let type in self.defaults) {
+          if (styles[type] !== undefined) {
+            if (!element.initialStyles) {
+              element.initialStyles = {};
+            }
+            if (!element?.initialStyles[type]) {
+              let propertyValue = styles[type];
+              switch (type) {
+                case 'letterSpacing':
+                  if (propertyValue === 'normal') {
+                    propertyValue = 1;
+                  }
+                  element.initialStyles[type] = parseFloat(propertyValue);
+                  break;
+
+                default:
+                  element.initialStyles[type] = parseFloat(propertyValue);
+                  break;
+              }
+            }
+
+            let value = element.initialStyles[type];
+            let coef = self.defaults[type][storage[self.map[type]]];
+            if (coef === undefined) {
+              element.prepare[type] = '';
+            } else {
+              switch (type) {
+                case 'fontFamily':
+                  element.prepare[type] = coef;
+                  break;
+
+                case 'fontSize':
+                  let max = value > self.settings.fontSizeLimit ? value : self.settings.fontSizeLimit;
+                  element.prepare[type] = ((value * coef) > max ? max : value * coef) + 'px';
+                  break;
+
+                default:
+                  element.prepare[type] = (coef * value) + 'px';
+                  break;
+              }
+            }
+          }
+        }
+      });
+      document.body.classList.remove('images-grayscale');
+      document.body.classList.remove('images-none');
+      document.body.classList.remove('am-big-cursor');
+      self.removeReadingLine();
+      switch (storage['reading_line']) {
+        case 0:
+          self.initReadingLine();
+          break;
+      }
+      switch (storage['cursor']) {
+        case 0:
+          document.body.classList.add('am-big-cursor');
+          break;
+      }
+      switch (storage['images']) {
+        case 0:
+          document.body.classList.add('images-grayscale');
+          break;
+        case 1:
+          document.body.classList.add('images-none');
+          break;
+      }
+
+      delete document.body.dataset.am_theme;
+      if (storage?.contrast !== undefined) {
+        document.body.dataset.am_theme = 'theme_' + storage['contrast'];
+      }
+
+      elements.forEach((element) => {
+        if (element.prepare) {
+          if (element.closest('.js-accessibility-menu')) {
+            return;
+          }
+          for (let style in element.prepare) {
+            element.style[style] = element.prepare[style];
+          }
+        }
+      });
+    };
+
+    _getElementIndex = function (node) {
+      let index = 0;
+      while ((node = node.previousElementSibling)) {
+        index++;
+      }
+      return index;
+    };
+
+    getValue = function (item) {
+      const type = item.dataset.type;
+      let storage = localStorage.getItem('accessibility_menu');
+      storage = JSON.parse(storage) ?? {};
+      if (storage[type] !== undefined) {
+        return storage[type];
+      }
+      return undefined;
+    };
+    setValue = function (item, value) {
+      const type = item.dataset.type;
+      let storage = localStorage.getItem('accessibility_menu');
+      storage = JSON.parse(storage) ?? {};
+      storage[type] = value;
+      if (value === undefined) {
+        delete (storage[type]);
+      }
+      storage = JSON.stringify(storage);
+      if (storage === '{}') {
+        localStorage.removeItem('accessibility_menu');
+      } else {
+        localStorage.setItem('accessibility_menu', storage);
+      }
+
+    };
+    reset = function () {
+      const self = this;
+      localStorage.removeItem('accessibility_menu');
+      self.refresh();
+    };
+
+    itemClick = function (item, increase = true) {
+      const self = this;
+      let value = self.getValue(item);
+      if (increase) {
+        if (value !== undefined) {
+          value++;
+        } else {
+          value = 0;
+        }
+      }
+      let title = item.dataset?.title ?? '';
+      let setValue = undefined;
+      let links = item.querySelectorAll('.js-accessibility-link');
+      links.forEach((element) => {
+        element.classList.remove('is-active');
+        const index = self._getElementIndex(element);
+        if (index === value) {
+          title = element.dataset.title ?? title;
+          setValue = index;
+        }
+        if (index <= value) {
+          element.classList.add('is-active');
+        }
+      });
+      self.setValue(item, setValue);
+      item.querySelector('.b-accessibility-menu__title span').innerText = title;
+      if (setValue !== undefined) {
+        item.classList.add('is-active');
+      } else {
+        item.classList.remove('is-active');
+      }
+    };
+
+    open = function () {
+      const self = this;
+      if (!self.wrapper.classList.contains('is-open')) {
+        self.wrapper.classList.add('is-open');
+        setTimeout(() => {
+          self.container.classList.add('is-open');
+        }, 16);
+      }
+    };
+    close = function () {
+      const self = this;
+      if (self.wrapper.classList.contains('is-open')) {
+        self.container.classList.remove('is-open');
+        self.wrapper.classList.remove('is-open');
+      }
+    };
+
+    initReadingLine = function () {
+      if (!this.container.line) {
+        const line = document.createElement('div');
+        line.classList.add('am-reading-line');
+        line.classList.add('am-skip');
+        document.body.append(line);
+        this.container.line = line;
+        window.addEventListener('mousemove', this.moveMouse.bind(this));
+      }
+    };
+    removeReadingLine = function () {
+      if (this.container.line) {
+        window.removeEventListener('mousemove', this.moveMouse.bind(this));
+        this.container.line.remove();
+        this.container.line = null;
+      }
+    };
+    moveMouse = function (t) {
+      this.container.line && this.container.line.style && (this.container.line.style.top = t.y + 'px');
+    };
+  }
+
+  document.addEventListener('DOMContentLoaded', function (event) {
+    const menuContainer = document.querySelector('.js-accessibility-menu');
+    if (menuContainer) {
+      const menu = new AccessibilityMenu(menuContainer);
+      document.querySelector('.notyf')?.classList?.add('am-skip');
+    }
+  });
+
+})();
+</script>
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" href="/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Who is Who | Tripura Commission For Women</title>
+    <link rel="stylesheet" media="all" href="/modules/contrib/accessibility_menu/misc/accessibility_menu.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/core.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/controlgroup.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/checkboxradio.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/resizable.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/button.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/dialog.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/core/components/progress.module.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/core/components/ajax-progress.module.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/core/components/item-list.module.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/align.module.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/container-inline.module.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/clearfix.module.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/hidden.module.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/system/components/js.module.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/modules/ckeditor5/css/ckeditor5.dialog.fix.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/core/dropbutton/dropbutton.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/modules/contrib/styleswitcher/css/styleswitcher-overlay.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/themes/stable9/css/views/views.module.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/theme.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/assets/css/bootstrap.min.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/assets/css/fontawesome.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/assets/css/themify-icons.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/assets/css/animate.min.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/assets/css/jquery-ui.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/assets/css/common.css?tiofh2" />
+<link rel="stylesheet" media="print" href="/themes/custom/tripura/assets/css/print.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/assets/css/responsive.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/css/sm-core-css.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/css/sm-clean.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/css/breaking-news-ticker.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/themes/custom/tripura/assets/css/style.css?tiofh2" />
+<link rel="stylesheet" media="all" href="/index.php/styleswitcher/css/tripura?tiofh2" id="styleswitcher-css" />
+
+    
+     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/index.php\/","pathPrefix":"","currentPath":"who-is-who","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJxdjlEOwyAMQy9Ey5GmEKIuXYAqCeu4_bb-0R9LfpZlAyKZcWJhH49CtUc0C9iUYtZ-gKyZQdq2wg6fmWs7UndvdcLsVBZh88AVpWeymJTgxXVbKp03F8yHkJ3s-CSNeVQojMv_w5xMLtiw30xMYBRc-egKcZOWQK7qDe0W3vyfvnQtLXehL8XrYZQ","theme":"tripura","theme_token":null},"ajaxTrustedUrl":[],"styleSwitcher":{"styles":{"custom\/black":{"name":"custom\/black","label":"B","path":"http:\/\/tcw.tripura.gov.in\/modules\/contrib\/styleswitcher\/color-theme\/black.css","is_default":false,"status":true,"weight":0,"_i":0,"theme":"tripura"},"custom\/blue":{"name":"custom\/blue","label":"B","path":"http:\/\/tcw.tripura.gov.in\/modules\/contrib\/styleswitcher\/color-theme\/blue.css","is_default":false,"status":true,"weight":0,"_i":1,"theme":"tripura"},"custom\/default":{"name":"custom\/default","label":"A","path":"http:\/\/tcw.tripura.gov.in\/index.php\/styleswitcher\/css\/tripura","is_default":false,"status":true,"weight":0,"_i":2,"theme":"tripura"},"custom\/grey":{"name":"custom\/grey","label":"G","path":"http:\/\/tcw.tripura.gov.in\/modules\/contrib\/styleswitcher\/color-theme\/grey.css","is_default":false,"status":true,"weight":0,"_i":3,"theme":"tripura"}},"default":"custom\/default","enableOverlay":true,"cookieExpire":31536000,"theme":"tripura"},"user":{"uid":0,"permissionsHash":"b2be05ac0f90aacb1f454193f9979439eb9e1bf4bed318feec8352ae1689bdba"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0-rc.1"></script>
+<script src="/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=11.3.0"></script>
+<script src="/core/misc/drupal.js?v=11.3.0"></script>
+<script src="/core/misc/drupal.init.js?v=11.3.0"></script>
+<script src="/core/misc/debounce.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/version-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/data-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/jquery-patch-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/unique-id-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/focusable-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/keycode-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/plugin-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widget-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/labels-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/controlgroup-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/form-reset-mixin-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/mouse-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/checkboxradio-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/draggable-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/resizable-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/button-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/jquery.ui/ui/widgets/dialog-min.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/tabbable/index.umd.min.js?v=6.3.0"></script>
+<script src="/core/assets/vendor/tua-body-scroll-lock/tua-bsl.umd.min.js?v=11.3.0"></script>
+<script src="/core/misc/progress.js?v=11.3.0"></script>
+<script src="/core/assets/vendor/loadjs/loadjs.min.js?v=4.3.0"></script>
+<script src="/core/misc/announce.js?v=11.3.0"></script>
+<script src="/core/misc/message.js?v=11.3.0"></script>
+<script src="/core/misc/ajax.js?v=11.3.0"></script>
+<script src="/core/misc/displace.js?v=11.3.0"></script>
+<script src="/core/misc/position.js?v=11.3.0"></script>
+<script src="/core/misc/dialog/dialog-deprecation.js?v=11.3.0"></script>
+<script src="/core/misc/dialog/dialog.js?v=11.3.0"></script>
+<script src="/core/misc/dialog/dialog.position.js?v=11.3.0"></script>
+<script src="/core/misc/dialog/dialog.jquery-ui.js?v=11.3.0"></script>
+<script src="/core/modules/ckeditor5/js/ckeditor5.dialog.fix.js?v=11.3.0"></script>
+<script src="/core/misc/dialog/dialog.ajax.js?v=11.3.0"></script>
+<script src="/core/misc/dropbutton/dropbutton.js?v=11.3.0"></script>
+<script src="/modules/contrib/styleswitcher/js/styleswitcher.js?v=2.x"></script>
+<script src="/themes/custom/tripura/assets/js/bootstrap.bundle.min.js?tiofh2"></script>
+<script src="/themes/custom/tripura/js/newsTicker.js?tiofh2"></script>
+<script src="/themes/custom/tripura/js/owl.carousel.min.js?tiofh2"></script>
+<script src="/themes/custom/tripura/js/jQuery.scrollText.js?tiofh2"></script>
+<script src="/themes/custom/tripura/js/jquery.smartmenus.js?tiofh2"></script>
+<script src="/themes/custom/tripura/js/jquery.easy-ticker.min.js?tiofh2"></script>
+<script src="/themes/custom/tripura/js/breaking-news-ticker.min.js?tiofh2"></script>
+<script src="/themes/custom/tripura/js/custom.js?tiofh2"></script>
+<script src="/themes/custom/tripura/assets/js/custom.js?tiofh2"></script>
+ 
+<script>
+(function ($) { 
+$(function(){
+$(document).ready(function(){
+
+
+var lang=$('#lang').val();
+if(lang=="en")
+{
+$('li.en a').css("display","none");
+$("a.style-default").attr("title","Default Theme");
+$("a.style-black").attr("title","Black Theme");
+$("a.style-blue").attr("title","Blue Theme");
+$("a.style-gray").attr("title","Gray Theme");
+}
+else
+{
+$('li.hi a').css("display","none");
+$("a.style-default").attr("title","डिफ़ॉल्ट थीम");
+$("a.style-black").attr("title","ब्लैक थीम");
+$("a.style-blue").attr("title","ब्लू थीम");
+$("a.style-gray").attr("title","ग्रे थीम");
+}
+});
+
+}); 
+})(jQuery);	
+
+
+</script>
+
+  </head>
+ 
+ <body class="path-who-is-who">
+
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'off_canvas_page_wrapper' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/content/off-canvas-page-wrapper.html.twig' -->
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'page' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ page--who-is-who.html.twig
+   ✅ page.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/page.html.twig' -->
+<!-- body wrap start -->
+<div class="body_wrap">
+  <!-- header start -->
+
+  <header class="header">
+    <div class="header_top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="d-flex flex-wrap justify-content-start">
+              <div class="p-1">
+                
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--screen-reader.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-screenreaderaccess.html.twig
+   ▪️ block--block-content--e5a3966b-a133-48ac-ad7e-2f5bfb3903c5.html.twig
+   ▪️ block--block-content--id-view--tripura-screenreaderaccess--full.html.twig
+   ▪️ block--block-content--id--tripura-screenreaderaccess.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--basic.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+<div id="block-tripura-screenreaderaccess" class="block">
+  
+    
+  <div class="block-content" tabindex="0">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ▪️ field--text-with-summary.html.twig
+   ✅ field.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field-item"><p><a style="color:#fff !important;font-size:14px;text-decoration:underline;" href="/screen-reader-access"><strong>Screen Reader Access</strong>&nbsp;</a></p></div>
+      
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+
+    </div>
+</div> <!--/.block-content -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+              </div>
+              <div class="p-1">
+                
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--skip-to-main.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-skiptomaincontent.html.twig
+   ▪️ block--block-content--d9e10f6d-6f10-4d0b-8482-d226071e7588.html.twig
+   ▪️ block--block-content--id-view--tripura-skiptomaincontent--full.html.twig
+   ▪️ block--block-content--id--tripura-skiptomaincontent.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--basic.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+<div id="block-tripura-skiptomaincontent" class="block">
+  
+    
+  <div class="block-content" tabindex="0">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ▪️ field--text-with-summary.html.twig
+   ✅ field.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field-item"><p><a style="box-sizing:border-box;color:#fff !important;cursor:pointer;font-size:14px;text-decoration:underline;transition:0.3s ease-out;" href="#main-content"><strong style="font-weight:bolder;">Skip to Main Content</strong>&nbsp;</a></p></div>
+      
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+
+    </div>
+</div> <!--/.block-content -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+              </div>
+                           </div>
+          </div>
+          <div class="col-md-6">
+            <div class="d-flex flex-wrap justify-content-start justify-content-md-end">
+              <div class="p-1 style-switch">
+                
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--style-switcher.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-styleswitcher.html.twig
+   ▪️ block--styleswitcher-styleswitcher.html.twig
+   ✅ block--styleswitcher.html.twig
+   ▪️ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block--styleswitcher.html.twig' -->
+<div id="block-tripura-styleswitcher" class="block">
+  
+    
+  <div class="block-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'item_list' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/dataset/item-list.html.twig' -->
+<div class="item-list">
+    <ul><li><a href="/index.php/styleswitcher/switch/tripura/custom/black?destination=/index.php/who-is-who" class="style-switcher custom-style style-black" data-rel="custom/black" rel="nofollow">B</a></li><li><a href="/index.php/styleswitcher/switch/tripura/custom/blue?destination=/index.php/who-is-who" class="style-switcher custom-style style-blue" data-rel="custom/blue" rel="nofollow">B</a></li><li><a href="/index.php/styleswitcher/switch/tripura/custom/default?destination=/index.php/who-is-who" class="style-switcher custom-style style-default" data-rel="custom/default" rel="nofollow">A</a></li><li><a href="/index.php/styleswitcher/switch/tripura/custom/grey?destination=/index.php/who-is-who" class="style-switcher custom-style style-grey" data-rel="custom/grey" rel="nofollow">G</a></li></ul>
+  </div>
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/dataset/item-list.html.twig' -->
+
+
+    </div>
+</div> <!--/.block-content -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block--styleswitcher.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+              </div>
+              <div class="p-1 textsize">
+                
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--textsize.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-textresize.html.twig
+   ▪️ block--block-content--7eb9cb63-fb86-4101-be03-35a0159bbc9a.html.twig
+   ▪️ block--block-content--id-view--tripura-textresize--full.html.twig
+   ▪️ block--block-content--id--tripura-textresize.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--basic.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+<div id="block-tripura-textresize" class="block">
+  
+    
+  <div class="block-content" tabindex="0">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ▪️ field--text-with-summary.html.twig
+   ✅ field.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field-item"><ul>
+	<li class="mFocus"><a class="fsize" href="javascript:void(0);" onclick="setFontSize('plus');" title="Increase Font Size"><span aria-hidden="true">A+</span></a></li>
+	<li><a class="fsize" href="javascript:void(0);" onclick="setFontSize('default');" title="Default Font Size"><span aria-hidden="true">A</span></a></li>
+	<li><a class="fsize" href="javascript:void(0);" onclick="setFontSize('minus');" title="Decrease Font Size"><span aria-hidden="true">A-</span></a></li>
+</ul></div>
+      
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+
+    </div>
+</div> <!--/.block-content -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+              </div>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+
+    <div class="header_bottom">
+
+      <div class="container">
+
+        <div class="row align-items-center">
+                   <!-- Logo -->
+  <div class="col-lg-2 col-md-3 col-4">
+    <div class="site-logo">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--site-logo.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-sitelogo.html.twig
+   ▪️ block--block-content--3db7d1f5-cb8f-4417-b7c6-354603a287e0.html.twig
+   ▪️ block--block-content--id-view--tripura-sitelogo--full.html.twig
+   ▪️ block--block-content--id--tripura-sitelogo.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--basic.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+<div id="block-tripura-sitelogo" class="block">
+  
+    
+  <div class="block-content" tabindex="0">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ▪️ field--text-with-summary.html.twig
+   ✅ field.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field-item"><img src="/sites/default/files/inline-images/WhatsApp%20Image%202026-07-15%20at%2011.18.22%20AM_0.jpeg" data-entity-uuid="8930a2d1-eced-456e-a73a-219cc698fae2" data-entity-type="file" alt="1" width="120" height="129" class="align-center" loading="lazy"></div>
+      
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+
+    </div>
+</div> <!--/.block-content -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+    </div>
+  </div>
+
+  <!-- Site Name -->
+  <div class="col-lg-7 col-md-6 col-5 text-center">
+    <div class="site-title-wrapper">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--site-name.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-sitename.html.twig
+   ▪️ block--block-content--867498ce-d6ae-4926-9da5-e7ef125ee1ab.html.twig
+   ▪️ block--block-content--id-view--tripura-sitename--full.html.twig
+   ▪️ block--block-content--id--tripura-sitename.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--basic.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+<div id="block-tripura-sitename" class="block">
+  
+    
+  <div class="block-content" tabindex="0">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ▪️ field--text-with-summary.html.twig
+   ✅ field.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field-item"><div class="site-title">
+
+    <h1>TRIPURA COMMISSION FOR WOMEN</h1>
+
+    <h2>Government of Tripura</h2>
+
+    <p>Melarmath, Agartala, West Tripura – 799001</p>
+
+</div>
+
+<style>
+.site-title{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:#fff;
+    padding:12px 15px;   /* Reduced padding */
+    margin:0 auto;
+}
+
+.site-title h1{
+    margin:0;
+    color:#0b6f82;
+    font-family:Georgia, "Times New Roman", serif;
+    font-size:40px;      /* Reduced from 48px */
+    font-weight:700;
+    line-height:1.1;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    white-space:nowrap;
+}
+
+.site-title h2{
+    margin:6px 0 4px;
+    color:#333;
+    font-size:20px;      /* Reduced from 24px */
+    font-weight:700;
+}
+
+.site-title p{
+    margin:0;
+    color:#666;
+    font-size:16px;      /* Reduced from 18px */
+}
+
+/* Tablet */
+@media (max-width:1200px){
+    .site-title h1{
+        font-size:34px;
+        white-space:normal;
+    }
+
+    .site-title h2{
+        font-size:18px;
+    }
+
+    .site-title p{
+        font-size:15px;
+    }
+}
+
+/* Mobile */
+@media (max-width:768px){
+    .site-title{
+        padding:10px;
+    }
+
+    .site-title h1{
+        font-size:26px;
+    }
+
+    .site-title h2{
+        font-size:16px;
+    }
+
+    .site-title p{
+        font-size:14px;
+    }
+}
+</style></div>
+      
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+
+    </div>
+</div> <!--/.block-content -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+    </div>
+  </div>
+
+  <!-- Search -->
+  <div class="col-lg-3 col-md-3 col-3 text-end">
+    <div class="header_right">
+      
+    </div>
+  </div>
+
+
+
+        </div><!--row -->
+    </div><!--container -->
+
+  </div><!-- header -->
+
+ <!-- Sticky Menu -->
+    <div class="topmenu" id="topmenu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-12 col-lg-12 d-lg-block">
+                    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--main-navigation.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-mainnavigation.html.twig
+   ▪️ block--system-menu-block--main.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block--system-menu-block.html.twig' -->
+<!--<nav  aria-labelledby="block-tripura-mainnavigation-menu" id="block-tripura-mainnavigation"> -->
+
+            
+  <h2 class="visually-hidden" id="block-tripura-mainnavigation-menu">Main navigation</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__main' -->
+<!-- FILE NAME SUGGESTIONS:
+   ✅ menu--main.html.twig
+   ✅ menu--main.html.twig
+   ▪️ menu.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/navigation/menu--main.html.twig' -->
+<div class="main-nav">
+  <!-- <h2 class="nav-brand">Main Menu</h2> -->
+    <!-- Mobile menu toggle button (hamburger/x icon) -->
+  <input id="main-menu-state" type="checkbox" />
+
+   <label class="main-menu-btn" for="main-menu-state">
+    <span class="main-menu-btn-icon"></span> Main Menu
+  </label>
+        
+<ul id="main-menu" class="sm sm-clean" style="">
+        	 	   <li ><a href="/index.php/" data-drupal-link-system-path="&lt;front&gt;">Home</a></li>
+	         	 	            <li tabindex="0">
+        <a href="/index.php/" title="About Us">About Us </a>
+
+                       <ul>
+        	 	     <li tabindex="0">
+        <a href="/index.php/about-the-commission" data-drupal-link-system-path="node/223">About the Commission</a>
+
+                       <ul>
+        	 	   <li ><a href="/index.php/brief-history" data-drupal-link-system-path="node/232">Brief History</a></li>
+	         	 	   <li ><a href="/index.php/constitution" data-drupal-link-system-path="node/233">Constitution</a></li>
+	         	 	   <li ><a href="/index.php/mandate" data-drupal-link-system-path="node/234">Mandate</a></li>
+	             </ul>
+
+  
+
+      </li>
+	   	       	 	   <li ><a href="/index.php/mission" data-drupal-link-system-path="node/225">Mission</a></li>
+	         	 	   <li ><a href="/index.php/vision" data-drupal-link-system-path="node/226">Vision</a></li>
+	         	 	   <li ><a href="/index.php/office-of-the-commission" data-drupal-link-system-path="office-of-the-commission">Office Of the Commission</a></li>
+	         	 	   <li ><a href="/index.php/composition-of-the-commission" data-drupal-link-system-path="composition-of-the-commission">Composition of the commision</a></li>
+	         	 	   <li ><a href="/index.php/activities-of-the-commission" data-drupal-link-system-path="node/140">Activities of the Commission</a></li>
+	         	 	   <li ><a href="/index.php/who-is-who" data-drupal-link-system-path="who-is-who" class="is-active" aria-current="page">Who is Who</a></li>
+	             </ul>
+
+  
+
+      </li>
+	  	       	 	            <li tabindex="0">
+        <a href="/index.php/act-s-and-rules-relating-to-women" title="Act&#039;s  And Rules  relating to women">Act&#039;s  And Rules  relating to women </a>
+
+                       <ul>
+        	 	   <li ><a href="/index.php/sites/default/files/2026-07/TheTripuraCommissionforWomenAct1993.pdf">Tripura Commission for Women Act, 1993 ( Act No. 20 of 1990 of Govt.of India)</a></li>
+	         	 	   <li ><a href="/index.php/sites/default/files/2026-07/TheTripuraCommissionforWomensalariesRules2008.pdf">The Tripura Commission for Women( salaries ...) Rules, 2008</a></li>
+	             </ul>
+
+  
+
+      </li>
+	  	       	 	            <li tabindex="0">
+        <a href="/index.php/" title="IEC">IEC </a>
+
+                       <ul>
+        	 	   <li ><a href="/index.php/annual-report" data-drupal-link-system-path="annual-report">Annual report</a></li>
+	             </ul>
+
+  
+
+      </li>
+	  	       	 	            <li tabindex="0">
+        <a href="/index.php/" title="Documents">Documents </a>
+
+                       <ul>
+        	 	   <li ><a href="/index.php/achievements" data-drupal-link-system-path="node/145">Achievements</a></li>
+	         	 	   <li ><a href="/index.php/highlights-of-success-stories">Highlights of success stories </a></li>
+	         	 	   <li ><a href="/index.php/news">News</a></li>
+	         	 	   <li ><a href="/index.php/our-publications-studies" data-drupal-link-system-path="node/222">Our publications and Studies</a></li>
+	         	 	   <li ><a href="/index.php/recommendation">Recommendations</a></li>
+	         	 	   <li ><a href="/index.php/welfare-scheme-for-women">Welfare Scheme for women</a></li>
+	         	 	   <li ><a href="/index.php/tender" data-drupal-link-system-path="tender">Tender</a></li>
+	             </ul>
+
+  
+
+      </li>
+	  	       	 	            <li tabindex="0">
+        <a href="/index.php/notification" title="Notification">Notification </a>
+
+                       <ul>
+        	 	   <li ><a href="/index.php/internal-complaint-committee" data-drupal-link-system-path="node/235">Internal Complaint Committee on Sexual Harassment at work place</a></li>
+	         	 	   <li ><a href="http://localhost:8000/sites/default/files/2026-07/IMG%20Minutes%2007.07.2026_20260709_0001.pdf">Minutes of the Commission Meetings</a></li>
+	         	 	   <li ><a href="/index.php/programme" data-drupal-link-system-path="programme">Programme</a></li>
+	             </ul>
+
+  
+
+      </li>
+	  	       	 	            <li tabindex="0">
+        <a href="/index.php/" title="TCW Application">TCW Application </a>
+
+                       <ul>
+        	 	     <li tabindex="0">
+        <a href="/index.php/" data-drupal-link-system-path="&lt;front&gt;">Complaints </a>
+
+                       <ul>
+        	 	   <li ><a href="/index.php/register-complaint" data-drupal-link-system-path="node/227">Online Complaints Registration </a></li>
+	             </ul>
+
+  
+
+      </li>
+	   	           </ul>
+
+  
+
+      </li>
+	  	       	 	            <li tabindex="0">
+        <a href="/index.php/photo-gallery" title="Gallery">Gallery </a>
+
+                       <ul>
+        	 	   <li ><a href="/index.php/photo-gallery" data-drupal-link-system-path="photo-gallery">Photo Gallery</a></li>
+	         	 	   <li ><a href="/index.php/video-gallery" data-drupal-link-system-path="video-gallery">Video Gallery</a></li>
+	             </ul>
+
+  
+
+      </li>
+	  	       	 	            <li tabindex="0">
+        <a href="/index.php/contact-us" title="Contact Us">Contact Us </a>
+
+                       <ul>
+        	 	   <li ><a href="/index.php/Contact_directory" data-drupal-link-system-path="Contact_directory">Contact Directory</a></li>
+	             </ul>
+
+  
+
+      </li>
+	  	           </ul>
+
+  
+
+</div>
+
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/navigation/menu--main.html.twig' -->
+
+
+  
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block--system-menu-block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Sticky Menu -->
+
+    <!-- Rest of the page content -->
+
+            <div class="inner-page" id="maincontent">
+      <div class="container pb-3">
+        
+        <div id="breadcrumb">
+          <div class="container px-0">
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--breadcrumb.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-breadcrumbs.html.twig
+   ▪️ block--system-breadcrumb-block.html.twig
+   ▪️ block--system.html.twig
+   ✅ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+<div id="block-tripura-breadcrumbs" class="block">
+  
+    
+  <div class="block-content" tabindex="0">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'breadcrumb' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/navigation/breadcrumb.html.twig' -->
+<nav class="breadcrumb">
+  <ol class="breadcrumb-items">
+        <li class="breadcrumb-item" tabindex="0">
+      
+      <a href="/index.php/">Home</a>
+
+          </li>
+        <li class="breadcrumb-item" tabindex="0">
+            Who Is Who
+          </li>
+      </ol>
+</nav>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/navigation/breadcrumb.html.twig' -->
+
+
+    </div>
+</div> <!--/.block-content -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+          </div>
+        </div>
+                <!-- End: Breadcrumb -->
+        <div class="row content">
+
+          <div class="col-12 inner-text ">
+            
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--content.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-content.html.twig
+   ▪️ block--system-main-block.html.twig
+   ▪️ block--system.html.twig
+   ✅ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+<div id="block-tripura-content" class="block">
+  
+    
+  <div class="block-content" tabindex="0">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'container' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/form/container.html.twig' -->
+<div class="views-element-container">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view.html.twig' -->
+<div class="js-view-dom-id-d2c5ed9705e9f9b7818bc160f6483d25e73e4ea30d38fdb596e72a3575b680ba">
+  
+  
+  
+
+  
+  
+  
+
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_table' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-table.html.twig' -->
+<table class="cols-6">
+        <thead>
+      <tr>
+                                                  <th id="view-counter-table-column" class="views-field views-field-counter" scope="col">SL.No.</th>
+                                                  <th id="view-field-name1-table-column" class="views-field views-field-field-name1" scope="col">Name</th>
+                                                  <th id="view-field-designation-table-column" class="views-field views-field-field-designation" scope="col">Designation</th>
+                                                  <th id="view-field-contact-no-table-column" class="views-field views-field-field-contact-no" scope="col">Contact No</th>
+                                                  <th id="view-field-email-id-table-column" class="views-field views-field-field-email-id" scope="col">Email ID</th>
+                                                  <th id="view-field-image2-table-column" class="views-field views-field-field-image2" scope="col">Photo</th>
+              </tr>
+    </thead>
+    <tbody>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+1
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-name1-table-column" class="views-field views-field-field-name1">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+Smt. Jharna Debbarma
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-designation-table-column" class="views-field views-field-field-designation">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+Hon&#039;ble Chairperson
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-contact-no-table-column" class="views-field views-field-field-contact-no">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+8415890799, 9436461702
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-email-id-table-column" class="views-field views-field-field-email-id">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+tripuracommissionforwomen@gmail.com
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-image2-table-column" class="views-field views-field-field-image2">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-07/jharna_1_0.png" width="89" height="100" alt="Jharna Debbarma" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+2
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-name1-table-column" class="views-field views-field-field-name1">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+Smt. Madhumita Choudhury
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-designation-table-column" class="views-field views-field-field-designation">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+Hon&#039;ble Vice-Chairperson
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-contact-no-table-column" class="views-field views-field-field-contact-no">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+9862152597
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-email-id-table-column" class="views-field views-field-field-email-id">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+madhumitachoudhury29@gmail.com
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-image2-table-column" class="views-field views-field-field-image2">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-07/madhumita_1_0.png" width="91" height="100" alt="madhumita" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+3
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-name1-table-column" class="views-field views-field-field-name1">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+Smt. Ratna Kar Debnath
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-designation-table-column" class="views-field views-field-field-designation">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+Hon&#039;ble Member
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-contact-no-table-column" class="views-field views-field-field-contact-no">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+8837264755
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-email-id-table-column" class="views-field views-field-field-email-id">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+bednathratna321@gmail.com
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-image2-table-column" class="views-field views-field-field-image2">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-07/Ratna_1_0.png" width="91" height="100" alt="ratna" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+4
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-name1-table-column" class="views-field views-field-field-name1">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+Smt. Namita Debbarma
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-designation-table-column" class="views-field views-field-field-designation">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+Hon&#039;ble Member
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-contact-no-table-column" class="views-field views-field-field-contact-no">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+6009598551
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-email-id-table-column" class="views-field views-field-field-email-id">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+tripuracommissionforwomen@gmail.com
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-image2-table-column" class="views-field views-field-field-image2">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-07/namita_0.png" width="93" height="100" alt="Smt. Namita Debbarma" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+              </tr>
+          <tr>
+                                                                                        <td headers="view-counter-table-column" class="views-field views-field-counter">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+5
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-name1-table-column" class="views-field views-field-field-name1">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+Smt. Pallavi Roy
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-designation-table-column" class="views-field views-field-field-designation">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+Member Secretary
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-contact-no-table-column" class="views-field views-field-field-contact-no">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+8586843253
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-email-id-table-column" class="views-field views-field-field-email-id">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+tripuracommissionforwomen@gmail.com
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+                                                                                        <td headers="view-field-image2-table-column" class="views-field views-field-field-image2">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-07/pallabi_0.jpg" width="98" height="100" alt="pallavi" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+          </td>
+              </tr>
+      </tbody>
+</table>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-table.html.twig' -->
+
+
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_mini_pager' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-mini-pager.html.twig' -->
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-mini-pager.html.twig' -->
+
+
+
+  
+  
+
+  
+  
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view.html.twig' -->
+
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/form/container.html.twig' -->
+
+
+    </div>
+</div> <!--/.block-content -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+    
+    <!--footer logo-->
+        <div id="clients" class="clients section-bg">
+
+      <div class="container">
+
+        <div class="row">
+          
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--footer-external-logos.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-views-block--footer-external-logos-block-1.html.twig
+   ▪️ block--views-block--footer-external-logos-block-1.html.twig
+   ▪️ block--views-block.html.twig
+   ▪️ block--views.html.twig
+   ✅ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+<div class="views-element-container block" id="block-tripura-views-block-footer-external-logos-block-1">
+  
+    
+  <div class="block-content" tabindex="0">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'container' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/form/container.html.twig' -->
+<div>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view.html.twig' -->
+<div class="js-view-dom-id-e0537501f821a6de57317820df2aa09897f51e4c25d7dad83835a5b063ecbb81">
+  
+  
+  
+
+  
+  
+  
+
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_unformatted__footer_external_logos' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ views-view-unformatted--footer-external-logos.html.twig
+   ▪️ views-view-unformatted--footer-external-logos.html.twig
+   ▪️ views-view-unformatted.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/views/views-view-unformatted--footer_external_logos.html.twig' -->
+
+            <div class="breaking-news-ticker" id="newsTicker1">
+    <div class="bn-news">
+    <ul>
+    <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-logos-image"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-01/human_0.jpg" width="219" height="70" alt="6" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+
+</li>
+    <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-logos-image"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-01/1t-portal_tidc_0.jpg" width="219" height="70" alt="5" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+
+</li>
+    <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-logos-image"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-01/2t-portal_0_0.jpg" width="219" height="70" alt="4" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+
+</li>
+    <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-logos-image"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-01/national-portal_1_0.jpg" width="219" height="70" alt="3" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+
+</li>
+    <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-logos-image"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-01/human.jpg" width="219" height="70" alt="1" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+
+</li>
+    <li>
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_fields' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+<div class="views-field views-field-field-external-logos-image"><div class="field-content">
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'views_view_field' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image_formatter' -->
+<!-- BEGIN OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'image' -->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+<img loading="lazy" src="/sites/default/files/2026-01/Untitled%20design%20%281%29%20%283%29.png" width="219" height="70" alt="2" class="image-field" />
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/image.html.twig' -->
+
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/field/image-formatter.html.twig' -->
+
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-field.html.twig' -->
+
+</div></div>
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view-fields.html.twig' -->
+
+</li>
+      </ul>
+  </div>
+  <div class="bn-controls  footer-logos"> 
+    <button title="Previous"><span class="bn-arrow bn-prev"></span></button>
+    <button title="Play/Pause"><span class="bn-action"></span></button>
+    <button title="Next"><span class="bn-arrow bn-next"></span></button>
+  </div>
+</div>
+<script type="text/javascript"></script>
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/views/views-view-unformatted--footer_external_logos.html.twig' -->
+
+
+    
+
+  
+  
+
+  
+  
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/views/views-view.html.twig' -->
+
+</div>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/form/container.html.twig' -->
+
+
+    </div>
+</div> <!--/.block-content -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+        </div>
+
+      </div>
+    </div>
+        <!-- End footer Section -->
+      
+    <!-- ======= Footer ======= -->
+
+    <footer id="footer" class="footer_area footer_bg ">
+      <div class="footer_main">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12">
+
+              <div class="col-lg-12 col-md-12">
+                <div class="footer_widget footer_link-left" tabindex="0">
+                  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--footer-menu.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-footer.html.twig
+   ▪️ block--system-menu-block--footer.html.twig
+   ✅ block--system-menu-block.html.twig
+   ▪️ block--system.html.twig
+   ▪️ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block--system-menu-block.html.twig' -->
+<!--<nav  aria-labelledby="block-tripura-footer-menu" id="block-tripura-footer"> -->
+
+            
+  <h2 class="visually-hidden" id="block-tripura-footer-menu">Footer</h2>
+  
+
+        
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'menu__footer' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ menu--footer.html.twig
+   ✅ menu.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/navigation/menu.html.twig' -->
+
+              <ul class="menu">
+                    <li class="menu-item" tabindex="0">
+        <a href="/accessibility-statement" data-drupal-link-system-path="node/64">Accessibility Statement</a>
+              </li>
+                <li class="menu-item" tabindex="0">
+        <a href="/disclaimer" data-drupal-link-system-path="node/8">Disclaimer</a>
+              </li>
+                <li class="menu-item" tabindex="0">
+        <a href="/form/feedback-form" data-drupal-link-system-path="webform/feedback_form">Feedback</a>
+              </li>
+                <li class="menu-item" tabindex="0">
+        <a href="/hyperlink-policy" data-drupal-link-system-path="node/65">Hyperlink Policy</a>
+              </li>
+                <li class="menu-item" tabindex="0">
+        <a href="/sitemap" data-drupal-link-system-path="sitemap">Sitemap</a>
+              </li>
+                <li class="menu-item" tabindex="0">
+        <a href="/terms-conditions" data-drupal-link-system-path="node/66">Terms &amp; Conditions</a>
+              </li>
+                <li class="menu-item" tabindex="0">
+        <a href="/copyright-policy" data-drupal-link-system-path="node/7">copyright policy</a>
+              </li>
+        </ul>
+  
+
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/navigation/menu.html.twig' -->
+
+
+  
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block--system-menu-block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+                <div class="row">
+      <div class="col-12 text-center">
+        <div class="social-menu-wrapper">
+          
+        </div>
+      </div>
+    </div>
+
+        <div class="footer_bottom">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 col-md-12">
+                <div class="footer_widget">
+                  
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'region' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ region--copyright.html.twig
+   ✅ region.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+  <div>
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'block' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ block--tripura-copyrightblock.html.twig
+   ▪️ block--block-content--ac8c7e37-145e-4dbe-98db-e27b24ace583.html.twig
+   ▪️ block--block-content--id-view--tripura-copyrightblock--full.html.twig
+   ▪️ block--block-content--id--tripura-copyrightblock.html.twig
+   ▪️ block--block-content--view-type--basic--full.html.twig
+   ▪️ block--block-content--type--basic.html.twig
+   ▪️ block--block-content--view--full.html.twig
+   ▪️ block--bundle--basic.html.twig
+   ▪️ block--block-content.html.twig
+   ✅ block.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+<div id="block-tripura-copyrightblock" class="block">
+  
+    
+  <div class="block-content" tabindex="0">
+      
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'field' -->
+<!-- FILE NAME SUGGESTIONS:
+   ▪️ field--block-content--body--basic.html.twig
+   ▪️ field--block-content--body.html.twig
+   ▪️ field--block-content--basic.html.twig
+   ▪️ field--body.html.twig
+   ▪️ field--text-with-summary.html.twig
+   ✅ field.html.twig
+-->
+<!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field-item"><section class="tcw-footer">
+
+    <div class="footer-main">
+
+        <!-- About -->
+        <div class="footer-col">
+            <h4>
+                <i class="fas fa-building-columns"></i>
+                About Commission
+            </h4>
+
+            <p>
+                Tripura Commission for Women is committed to protecting the rights,
+                dignity and welfare of women by promoting gender equality,
+                empowerment and access to justice across the State.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+            <h4>
+                <i class="fas fa-link"></i>
+                Quick Links
+            </h4>
+
+            <ul>
+                <li><a href="./about-the-commission">About Us</a></li>
+                <li><a href="./notification">Notifications</a></li>
+                <li><a href="./photo-gallery">Gallery</a></li>
+                <li><a href="./contact-us">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+
+            <h4>
+                <i class="fas fa-address-book"></i>
+                Contact Us
+            </h4>
+
+            <p>
+                <i class="fas fa-map-marker-alt"></i>
+                Tripura Commission for Women<br>
+                Government of Tripura
+            </p>
+
+            <div class="contact-info-row">
+
+                <span>
+                    <i class="fas fa-phone"></i>
+                    +91-0381- 2986466
+                </span>
+
+                <span>
+                    <i class="fas fa-envelope"></i>
+                    <a class="footer-link" href="mailto:tripuracommissionforwomen@gmail.com">
+                        tripuracommissionforwomen@gmail.com
+                    </a>
+                </span>
+
+                <div class="contact-social">
+
+                    <a href="#" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" title="X">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" title="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer Bottom -->
+
+    <div class="footer-bottom">
+
+        <p>
+            Copyright © 2026
+            <strong>Tripura Commission for Women</strong>.
+            All Rights Reserved.
+            &nbsp; | &nbsp;
+            Designed &amp; Developed by
+            <a class="footer-link" href="https://dit.tripura.gov.in/" target="_blank">
+                Directorate of Information Technology, Government of Tripura
+            </a>
+        </p>
+
+        <p class="footer-info">
+            <strong>Note:</strong>
+            Content on this website is published and managed by
+            <strong>Tripura Commission for Women, Government of Tripura.</strong>
+
+            &nbsp; | &nbsp;
+
+            For any query regarding this website, please contact
+            <strong>Shri Baptu Saha</strong>
+
+            &nbsp; | &nbsp;  &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            <i class="fas fa-envelope"></i>
+
+            <a class="footer-link" href="mailto:tripuracommissionforwomen@gmail.com">
+                tripuracommissionforwomen@gmail.com
+            </a>
+
+            &nbsp; | &nbsp;
+
+            <i class="fas fa-phone"></i>
+
+            +91-0381- 2986466
+        </p>
+
+    </div>
+
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<style>
+/*=========================================
+            FOOTER
+=========================================*/
+
+.tcw-footer{
+    background:#138496;
+    color:#fff;
+    margin-top:25px;
+}
+
+/* Main Footer */
+
+.footer-main{
+    max-width:1250px;
+    margin:auto;
+    padding:30px 20px;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1.2fr;
+    gap:35px;
+}
+
+/* Headings */
+
+.footer-col h4{
+    color:#fff;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:15px;
+    padding-bottom:10px;
+    border-bottom:2px solid rgba(255,255,255,.25);
+}
+
+.footer-col h4 i{
+    color:#ffd54f;
+    margin-right:8px;
+}
+
+/* Paragraph */
+
+.footer-col p{
+    color:#eef7f8;
+    font-size:15px;
+    line-height:1.7;
+    margin-bottom:10px;
+}
+
+/* Quick Links */
+
+.footer-col ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.footer-col ul li{
+    margin-bottom:8px;
+}
+
+.footer-col ul li a{
+    color:#fff;
+    font-size:15px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-col ul li a:hover{
+    color:#ffd54f;
+    padding-left:6px;
+}
+
+/* Contact Icons */
+
+.footer-col p i{
+    color:#ffd54f;
+    width:22px;
+}
+
+/* Social Icons */
+
+.contact-social{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.contact-social a{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.contact-social a:hover{
+    background:#fff;
+    color:#138496;
+    transform:translateY(-3px);
+}
+
+/* Bottom */
+
+.footer-bottom{
+    text-align:center;
+    padding:15px 20px;
+    border-top:1px solid rgba(255,255,255,.25);
+}
+
+.footer-bottom p{
+    color:#f8f8f8;
+    margin:6px 0;
+    font-size:14px;
+    line-height:1.6;
+}
+
+.footer-link{
+    color:#fff;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.footer-link:hover{
+    color:#ffd54f;
+    text-decoration:underline;
+}
+
+/* Responsive */
+
+@media(max-width:991px){
+
+    .footer-main{
+        grid-template-columns:1fr;
+        gap:25px;
+        padding:25px 15px;
+    }
+
+    .footer-col{
+        text-align:center;
+    }
+
+    .contact-social{
+        justify-content:center;
+    }
+
+    .footer-col h4{
+        font-size:22px;
+    }
+
+}
+</style></div>
+      
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/field/field.html.twig' -->
+
+
+    </div>
+</div> <!--/.block-content -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/block/block.html.twig' -->
+
+
+  </div>
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/region.html.twig' -->
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="container text-center">
+                                                                      <a class="btn btn-sm btn-primary" href="http://tcw.tripura.gov.in/user/login">Log In</a>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+    <div class="footer_widget">
+        <div class="about_text">
+            Website last updated date : 10/09/2026 03:06 pm
+        </div>
+    </div>
+</div>
+
+              
+
+               <!-- Visitor Counter -->
+          <div class="col-lg-4 col-md-6 text-end ms-auto">
+
+            <div class="footer_widget">
+
+              <div class="about_text">
+
+                <strong>
+                  Total Visitors :
+                </strong>
+
+                <span id="site_visitors_count">
+                  0
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Hidden Fields -->
+  <input type="hidden"
+         id="base"
+         value="http://tcw.tripura.gov.in">
+
+  <input type="hidden"
+         id="lang"
+         value="en">
+
+</footer>
+<!-- ======= END FOOTER ======= -->
+  </div> <!-- main end -->
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center" title="Back to Top"><i
+      class="fas fa-arrow-up"></i><span>Back to Top</span></a>
+</div><!-- body wrap end -->
+
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/page.html.twig' -->
+
+
+  </div>
+
+<!-- END OUTPUT from 'core/themes/stable9/templates/content/off-canvas-page-wrapper.html.twig' -->
+
+
+    
+
+<!-- THEME DEBUG -->
+<!-- THEME HOOK: 'accessibility_menu' -->
+<!-- BEGIN OUTPUT from 'modules/contrib/accessibility_menu/templates/accessibility-menu.html.twig' -->
+<div class="b-accessibility-menu__button js-accessibility-btn am-skip" id="b-accessibility-menu"></div>
+
+<div class="b-accessibility-menu__wrapper js-accessibility-menu am-skip">
+  <div class="b-accessibility-menu am-skip">
+    <div class="b-accessibility-menu__header am-skip">
+      <div class="b-accessibility-menu__title am-skip">Accessibility menu</div>
+      <div class="b-accessibility-menu__close js-accessibility-close am-skip"></div>
+    </div>
+    <div class="b-accessibility-menu__content am-skip">
+      <div class="b-accessibility-menu__items am-skip">
+                            <div class="b-accessibility-menu__item-wrapper am-skip">
+            <div class="b-accessibility-menu__item am-skip type-contrast" data-type="contrast" data-title="Contrast settings">
+              <div class="b-accessibility-menu__title am-skip"><span class="am-skip">Contrast settings</span></div>
+              <div class="b-accessibility-menu__links am-skip">
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="High contrast"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Inversion"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="White"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Comfort"></div>
+                              </div>
+            </div>
+          </div>
+                                      <div class="b-accessibility-menu__item-wrapper am-skip">
+            <div class="b-accessibility-menu__item am-skip type-font_size" data-type="font_size" data-title="Font size">
+              <div class="b-accessibility-menu__title am-skip"><span class="am-skip">Font size</span></div>
+              <div class="b-accessibility-menu__links am-skip">
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Font size"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Font size"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Font size"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Font size"></div>
+                              </div>
+            </div>
+          </div>
+                                      <div class="b-accessibility-menu__item-wrapper am-skip">
+            <div class="b-accessibility-menu__item am-skip type-letter_spacing" data-type="letter_spacing" data-title="Letter spacing">
+              <div class="b-accessibility-menu__title am-skip"><span class="am-skip">Letter spacing</span></div>
+              <div class="b-accessibility-menu__links am-skip">
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Increased interval"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Moderate interval"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Wide interval"></div>
+                              </div>
+            </div>
+          </div>
+                                      <div class="b-accessibility-menu__item-wrapper am-skip">
+            <div class="b-accessibility-menu__item am-skip type-line_height" data-type="line_height" data-title="Line height">
+              <div class="b-accessibility-menu__title am-skip"><span class="am-skip">Line height</span></div>
+              <div class="b-accessibility-menu__links am-skip">
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Line height (1.5x)"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Line height (1.75x)"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Line height (2x)"></div>
+                              </div>
+            </div>
+          </div>
+                                      <div class="b-accessibility-menu__item-wrapper am-skip">
+            <div class="b-accessibility-menu__item am-skip type-images" data-type="images" data-title="Images">
+              <div class="b-accessibility-menu__title am-skip"><span class="am-skip">Images</span></div>
+              <div class="b-accessibility-menu__links am-skip">
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Grayscale"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Disabled"></div>
+                              </div>
+            </div>
+          </div>
+                                      <div class="b-accessibility-menu__item-wrapper am-skip">
+            <div class="b-accessibility-menu__item am-skip type-font_style" data-type="font_style" data-title="Font">
+              <div class="b-accessibility-menu__title am-skip"><span class="am-skip">Font</span></div>
+              <div class="b-accessibility-menu__links am-skip">
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Serif"></div>
+                                  <div class="b-accessibility-menu__link js-accessibility-link am-skip" data-title="Sans serif"></div>
+                              </div>
+            </div>
+          </div>
+                                                            </div>
+      <div class="b-accessibility-menu__reset js-accessibility-reset am-skip">Reset the settings</div>
+    </div>
+  </div>
+</div>
+
+<!-- END OUTPUT from 'modules/contrib/accessibility_menu/templates/accessibility-menu.html.twig' -->
+
+
+   </body>
+ 
+
+
+</html>
+<!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/tripura/templates/layout/html.html.twig' -->
+

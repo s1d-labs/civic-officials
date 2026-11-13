@@ -1,0 +1,17 @@
+[
+ {
+  "key": "st_ne_page:mz-sec",
+  "payload": {
+   "reader": "st_ne_page",
+   "url": "https://sec.mizoram.gov.in/page/officers-staff",
+   "page_key": "mz-sec",
+   "state": "MZ",
+   "body": "State Election Commission, Mizoram",
+   "body_kind": "commission",
+   "dept": "elections",
+   "level": "state",
+   "india_only": false,
+   "route": "direct"
+  }
+ }
+]

@@ -1,0 +1,884 @@
+[
+ {
+  "key": "st_ml_keycontacts:gov-sect",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/gov-sect",
+   "page": "gov-sect",
+   "org": "Governor's Secretariat",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:cm-sect",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/cm-sect",
+   "page": "cm-sect",
+   "org": "Chief Minister's Secretariat",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:chief-secretary",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/chief-secretary",
+   "page": "chief-secretary",
+   "org": "Chief Secretary and State Vigilance Commissioner",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:addl-chief",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/addl-chief",
+   "page": "addl-chief",
+   "org": "Additional Chief Secretary",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:secretaries",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/secretaries",
+   "page": "secretaries",
+   "org": "Secretary to Department",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:deputy-commissioner",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/deputy-commissioner",
+   "page": "deputy-commissioner",
+   "org": "Deputy Commissioner",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:superintendent-of-police",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/superintendent-of-police",
+   "page": "superintendent-of-police",
+   "org": "Superintendent of Police",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-37482",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/37482",
+   "page": "organisation/37482",
+   "org": "Bio Resources Development Centre (BRDC)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35298",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35298",
+   "page": "organisation/35298",
+   "org": "Commissioner of Division, Shillong",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35297",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35297",
+   "page": "organisation/35297",
+   "org": "Commissioner of Inquiry",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-20755",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/20755",
+   "page": "organisation/20755",
+   "org": "District Rural Development Agency (DRDA)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-19758",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/19758",
+   "page": "organisation/19758",
+   "org": "Mawmluh Cherra Cements Ltd. (MCCL)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-16942",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/16942",
+   "page": "organisation/16942",
+   "org": "Meghalaya Administrative Training Institute (MATI)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35324",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35324",
+   "page": "organisation/35324",
+   "org": "Meghalaya Basin Development Authority (MBDA)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-49376",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/49376",
+   "page": "organisation/49376",
+   "org": "Meghalaya Basin Management Agency (MBMA)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-37831",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/37831",
+   "page": "organisation/37831",
+   "org": "Meghalaya Board of Revenue",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-13379",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/13379",
+   "page": "organisation/13379",
+   "org": "Meghalaya Board of School Education (MBOSE)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-27818",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/27818",
+   "page": "organisation/27818",
+   "org": "Meghalaya Building & Other Construction Workers Welfare Board (MBOCWWB)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15226",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15226",
+   "page": "organisation/15226",
+   "org": "Meghalaya Cherra Cements Limited (MCCL)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35300",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35300",
+   "page": "organisation/35300",
+   "org": "Meghalaya Civil Task Force (MCTF)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15147",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15147",
+   "page": "organisation/15147",
+   "org": "Meghalaya Commission on Resource Mobilisation (MCRM)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35293",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35293",
+   "page": "organisation/35293",
+   "org": "Meghalaya Commission on Resource Mobilization (MCRM)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-14570",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/14570",
+   "page": "organisation/14570",
+   "org": "Meghalaya Energy Corporation Limited (MeECL)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35323",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35323",
+   "page": "organisation/35323",
+   "org": "Meghalaya Farmer's Empowerment Commission",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-32531",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/32531",
+   "page": "organisation/32531",
+   "org": "Meghalaya Human Rights Commission (MHRC)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35322",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35322",
+   "page": "organisation/35322",
+   "org": "Meghalaya Institute of Entrepreneurship (MIE)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15230",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15230",
+   "page": "organisation/15230",
+   "org": "Meghalaya Khadi and Village Industries Board (MKVIB)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35464",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35464",
+   "page": "organisation/35464",
+   "org": "Meghalaya Legislative Assembly Secretariat",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-33993",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/33993",
+   "page": "organisation/33993",
+   "org": "Meghalaya Lokayukta",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-17244",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/17244",
+   "page": "organisation/17244",
+   "org": "Meghalaya Mineral Development Corporation",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-33446",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/33446",
+   "page": "organisation/33446",
+   "org": "Meghalaya New & Renewable Energy Development Agency (MNREDA)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15942",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15942",
+   "page": "organisation/15942",
+   "org": "Meghalaya Non-Conventional and Rural Energy Development Agency",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-30650",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/30650",
+   "page": "organisation/30650",
+   "org": "Meghalaya Power Distribution Corporation Ltd",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-37759",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/37759",
+   "page": "organisation/37759",
+   "org": "Meghalaya Power Generation Corporation Limited",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-16452",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/16452",
+   "page": "organisation/16452",
+   "org": "Meghalaya Public Service Commission (MPSC)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35306",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35306",
+   "page": "organisation/35306",
+   "org": "Meghalaya Resource & Employment Generation Council (MREGC)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-33444",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/33444",
+   "page": "organisation/33444",
+   "org": "Meghalaya Society For Social Audit & Transparency (MSSAT)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-16499",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/16499",
+   "page": "organisation/16499",
+   "org": "Meghalaya State Agricultural Marketing Board (MEGAMB)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15372",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15372",
+   "page": "organisation/15372",
+   "org": "Meghalaya State Commission for Women (MSCW)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35304",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35304",
+   "page": "organisation/35304",
+   "org": "Meghalaya State Cooperative Marketing and Consumers' Federation Limited (MeCOFED)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-14668",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/14668",
+   "page": "organisation/14668",
+   "org": "Meghalaya State Electricity Regulatory Commission",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35301",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35301",
+   "page": "organisation/35301",
+   "org": "Meghalaya State Food Corporation (MSFC)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-14911",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/14911",
+   "page": "organisation/14911",
+   "org": "Meghalaya State Housing Board",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-16453",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/16453",
+   "page": "organisation/16453",
+   "org": "Meghalaya State Information Commission (MEGSIC)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15146",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15146",
+   "page": "organisation/15146",
+   "org": "Meghalaya State Lottery",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15868",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15868",
+   "page": "organisation/15868",
+   "org": "Meghalaya State Olympic Association",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15517",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15517",
+   "page": "organisation/15517",
+   "org": "Meghalaya State Planning Board",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-14045",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/14045",
+   "page": "organisation/14045",
+   "org": "Meghalaya State Pollution Control Board (MSPCB)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-42568",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/42568",
+   "page": "organisation/42568",
+   "org": "Meghalaya State Public Services Delivery Commission (MSPSDC)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-33779",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/33779",
+   "page": "organisation/33779",
+   "org": "Meghalaya State Rural Livelihoods Society (MSRLS)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35295",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35295",
+   "page": "organisation/35295",
+   "org": "Meghalaya State Skill Development Society (MSSDS)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-37776",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/37776",
+   "page": "organisation/37776",
+   "org": "Meghalaya State Skill Development Society (MSSDS)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-16957",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/16957",
+   "page": "organisation/16957",
+   "org": "Meghalaya State Warehousing Corporation (MSWC)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-41456",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/41456",
+   "page": "organisation/41456",
+   "org": "Meghalaya State Watershed & Wasteland Development Agency (MSWWDA)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-14102",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/14102",
+   "page": "organisation/14102",
+   "org": "Meghalaya Tourism Development Corporation",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35303",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35303",
+   "page": "organisation/35303",
+   "org": "Meghalaya Transport Corporation (MTC)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15281",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15281",
+   "page": "organisation/15281",
+   "org": "Meghalaya Urban Development Agency",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15280",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15280",
+   "page": "organisation/15280",
+   "org": "Meghalaya Urban Development Authority",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-42534",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/42534",
+   "page": "organisation/42534",
+   "org": "Meghalayan Age Limited (MAL)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-37413",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/37413",
+   "page": "organisation/37413",
+   "org": "Mission Director, Jal Jeeven Mission (JJM) Meghalaya, Shillong",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-49124",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/49124",
+   "page": "organisation/49124",
+   "org": "Science & Technology Cell",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-15282",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/15282",
+   "page": "organisation/15282",
+   "org": "Shillong Municipal Board (SMB)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-49125",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/49125",
+   "page": "organisation/49125",
+   "org": "Shillong Science Centre",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35299",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35299",
+   "page": "organisation/35299",
+   "org": "Small Savings",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-47696",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/47696",
+   "page": "organisation/47696",
+   "org": "State Commission for Protection of Child Rights Meghalaya, Shillong",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-37483",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/37483",
+   "page": "organisation/37483",
+   "org": "State Council for Science, Technology and Environment (SCSTE)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35302",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35302",
+   "page": "organisation/35302",
+   "org": "State Disaster Management Authority (SDMA)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35294",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35294",
+   "page": "organisation/35294",
+   "org": "State Education Mission Authority of Meghalaya (SEMAM) (SSA)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-13441",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/13441",
+   "page": "organisation/13441",
+   "org": "State Institute of Rural Development (SIRD)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-35296",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/35296",
+   "page": "organisation/35296",
+   "org": "State Investment and Project Management and Implementation Unit (SIPMIU)",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ml_keycontacts:organisation-24958",
+  "payload": {
+   "reader": "st_ml_keycontacts",
+   "url": "https://meghalaya.gov.in/key-contacts/organisation/24958",
+   "page": "organisation/24958",
+   "org": "State Rural Employment Society Meghalaya",
+   "state": "ML",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ne_page:ml-police-tel",
+  "payload": {
+   "reader": "st_ne_page",
+   "url": "https://megpolice.gov.in/telephone-directory",
+   "page_key": "ml-police-tel",
+   "state": "ML",
+   "body": "Meghalaya Police Headquarters",
+   "body_kind": "police",
+   "dept": "police",
+   "level": "state",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ne_page:ml-labour",
+  "payload": {
+   "reader": "st_ne_page",
+   "url": "https://meglc.gov.in/telephone_directory.html",
+   "page_key": "ml-labour",
+   "state": "ML",
+   "body": "Office of the Labour Commissioner, Meghalaya",
+   "body_kind": "directorate",
+   "dept": "labour_industry",
+   "level": "state",
+   "india_only": false,
+   "route": "direct"
+  }
+ }
+]

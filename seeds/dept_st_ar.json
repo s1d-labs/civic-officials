@@ -1,0 +1,28 @@
+[
+ {
+  "key": "st_ar_whoswho:page",
+  "payload": {
+   "reader": "st_ar_whoswho",
+   "url": "https://arunachalpradesh.gov.in/whos-who.php",
+   "state": "AR",
+   "india_only": false,
+   "route": "direct"
+  }
+ },
+ {
+  "key": "st_ne_page:ar-sec",
+  "payload": {
+   "reader": "st_ne_page",
+   "url": "https://secap.nic.in/telephone.htm",
+   "page_key": "ar-sec",
+   "state": "AR",
+   "body": "State Election Commission, Arunachal Pradesh",
+   "body_kind": "commission",
+   "dept": "elections",
+   "level": "state",
+   "india_only": false,
+   "route": "direct",
+   "tls_note": "certificate expired on 2026-11-13: get() retries without checks (tls_unverified)"
+  }
+ }
+]
