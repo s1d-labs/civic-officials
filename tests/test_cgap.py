@@ -36,5 +36,16 @@ def test_gap_seeds():
         assert items and len({i["key"] for i in items}) == len(items), f
         for i in items:
             p = i["payload"]
-            assert i["key"].startswith("cgap-") and p["kind"].startswith("form-") and p["state"] and p["url"].startswith("http")
-            assert p.get("lgd_code") and p.get("route") in ("abroad", "direct") and isinstance(p.get("india_only"), bool)
+            # Jharkhand items keep the key that cforms/ce_jh.py page_items() gives (a later seed run then finds them queued)
+            assert i["key"].startswith(("cgap-", "ce-jh26-")) and p["kind"].startswith("form-") and p["state"]
+            assert p["url"].startswith("http") and (p.get("lgd_code") or p.get("district"))
+            assert p.get("route") in ("abroad", "direct") and isinstance(p.get("india_only"), bool)
+
+
+def test_jh_gap_seeds():
+    """7 result files (Jamtara, Koderma, Garhwa district sites) that the Jharkhand seed did not list: no election page was known
+    for Jamtara and Koderma, Garhwa's vice-chair file sits on its English page."""
+    items = json.loads((SEEDS / "councillors_gap_jh.json").read_text())
+    assert len(items) == 7 and {i["payload"]["district"] for i in items} == {"Jamtara", "Koderma", "Garhwa"}
+    assert sum(i["payload"].get("post") == "Vice Chairperson" for i in items) == 5
+    assert all(i["payload"]["route"] == "abroad" for i in items)
