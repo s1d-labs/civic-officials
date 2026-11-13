@@ -1,0 +1,14 @@
+[
+ {
+  "key": "pri_tr:vc2026",
+  "payload": {
+   "reader": "pri_tr",
+   "url": "https://sec-results.tripura.gov.in/electionresultscheduler/dashboard/get-data",
+   "board": "https://sec-results.tripura.gov.in/sec",
+   "api_key": "GP_Results_Summary",
+   "state": "TR",
+   "india_only": true,
+   "route": "direct"
+  }
+ }
+]

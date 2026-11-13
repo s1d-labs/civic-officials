@@ -1,0 +1,5128 @@
+[
+ {
+  "key": "pri_up:p1",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "1",
+   "tier": "heads"
+  }
+ },
+ {
+  "key": "pri_up:p3",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "3",
+   "tier": "heads"
+  }
+ },
+ {
+  "key": "pri_up:p5:d1",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "1",
+   "district": "Saharanpur",
+   "district_regional": "सहारनपुर",
+   "zp_lgd_code": "168"
+  }
+ },
+ {
+  "key": "pri_up:p5:d2",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "2",
+   "district": "Muzaffarnagar",
+   "district_regional": "मुज़फ्फरनगर",
+   "zp_lgd_code": "163"
+  }
+ },
+ {
+  "key": "pri_up:p5:d3",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "3",
+   "district": "Shamli",
+   "district_regional": "शामली",
+   "zp_lgd_code": "259727"
+  }
+ },
+ {
+  "key": "pri_up:p5:d4",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "4",
+   "district": "Meerut",
+   "district_regional": "मेरठ",
+   "zp_lgd_code": "160"
+  }
+ },
+ {
+  "key": "pri_up:p5:d5",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "5",
+   "district": "Baghpat",
+   "district_regional": "बागपत",
+   "zp_lgd_code": "115"
+  }
+ },
+ {
+  "key": "pri_up:p5:d6",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "6",
+   "district": "Ghaziabad",
+   "district_regional": "गाजियाबाद",
+   "zp_lgd_code": "136"
+  }
+ },
+ {
+  "key": "pri_up:p5:d7",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "7",
+   "district": "Gautam Buddha Nagar",
+   "district_regional": "गौतमबुद्ध नगर",
+   "zp_lgd_code": "135"
+  }
+ },
+ {
+  "key": "pri_up:p5:d8",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "8",
+   "district": "Bulandshahr",
+   "district_regional": "बुलंदशहर",
+   "zp_lgd_code": "125"
+  }
+ },
+ {
+  "key": "pri_up:p5:d9",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "9",
+   "district": "Hapur",
+   "district_regional": "हापुड़",
+   "zp_lgd_code": "259728"
+  }
+ },
+ {
+  "key": "pri_up:p5:d10",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "10",
+   "district": "Bijnor",
+   "district_regional": "बिजनौर",
+   "zp_lgd_code": "123"
+  }
+ },
+ {
+  "key": "pri_up:p5:d11",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "11",
+   "district": "Amroha",
+   "district_regional": "अमरोहा",
+   "zp_lgd_code": "145"
+  }
+ },
+ {
+  "key": "pri_up:p5:d12",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "12",
+   "district": "Moradabad",
+   "district_regional": "मुरादाबाद",
+   "zp_lgd_code": "162"
+  }
+ },
+ {
+  "key": "pri_up:p5:d13",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "13",
+   "district": "Rampur",
+   "district_regional": "रामपुर",
+   "zp_lgd_code": "167"
+  }
+ },
+ {
+  "key": "pri_up:p5:d14",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "14",
+   "district": "Sambhal",
+   "district_regional": "सम्भल",
+   "zp_lgd_code": "259726"
+  }
+ },
+ {
+  "key": "pri_up:p5:d15",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "15",
+   "district": "Bareilly",
+   "district_regional": "बरेली",
+   "zp_lgd_code": "121"
+  }
+ },
+ {
+  "key": "pri_up:p5:d16",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "16",
+   "district": "Pilibhit",
+   "district_regional": "पीलीभीत",
+   "zp_lgd_code": "164"
+  }
+ },
+ {
+  "key": "pri_up:p5:d17",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "17",
+   "district": "Shahjahanpur",
+   "district_regional": "शाहजहांपुर",
+   "zp_lgd_code": "171"
+  }
+ },
+ {
+  "key": "pri_up:p5:d18",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "18",
+   "district": "Budaun",
+   "district_regional": "बदायूं",
+   "zp_lgd_code": "124"
+  }
+ },
+ {
+  "key": "pri_up:p5:d19",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "19",
+   "district": "Aligarh",
+   "district_regional": "अलीगढ़",
+   "zp_lgd_code": "110"
+  }
+ },
+ {
+  "key": "pri_up:p5:d20",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "20",
+   "district": "Hathras",
+   "district_regional": "हाथरस",
+   "zp_lgd_code": "154"
+  }
+ },
+ {
+  "key": "pri_up:p5:d21",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "21",
+   "district": "Etah",
+   "district_regional": "एटा",
+   "zp_lgd_code": "129"
+  }
+ },
+ {
+  "key": "pri_up:p5:d22",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "22",
+   "district": "Kasganj",
+   "district_regional": "कासगंज",
+   "zp_lgd_code": "577"
+  }
+ },
+ {
+  "key": "pri_up:p5:d23",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "23",
+   "district": "Mathura",
+   "district_regional": "मथुरा",
+   "zp_lgd_code": "158"
+  }
+ },
+ {
+  "key": "pri_up:p5:d24",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "24",
+   "district": "Agra",
+   "district_regional": "आगरा",
+   "zp_lgd_code": "109"
+  }
+ },
+ {
+  "key": "pri_up:p5:d25",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "25",
+   "district": "Firozabad",
+   "district_regional": "फिरोज़ाबाद",
+   "zp_lgd_code": "134"
+  }
+ },
+ {
+  "key": "pri_up:p5:d26",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "26",
+   "district": "Mainpuri",
+   "district_regional": "मैनपुरी",
+   "zp_lgd_code": "157"
+  }
+ },
+ {
+  "key": "pri_up:p5:d27",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "27",
+   "district": "Farrukhabad",
+   "district_regional": "फ़र्रुखाबाद",
+   "zp_lgd_code": "132"
+  }
+ },
+ {
+  "key": "pri_up:p5:d28",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "28",
+   "district": "Kannauj",
+   "district_regional": "कन्नौज",
+   "zp_lgd_code": "146"
+  }
+ },
+ {
+  "key": "pri_up:p5:d29",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "29",
+   "district": "Etawah",
+   "district_regional": "इटावा",
+   "zp_lgd_code": "130"
+  }
+ },
+ {
+  "key": "pri_up:p5:d30",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "30",
+   "district": "Auraiya",
+   "district_regional": "औरैया",
+   "zp_lgd_code": "113"
+  }
+ },
+ {
+  "key": "pri_up:p5:d31",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "31",
+   "district": "Kanpur Nagar",
+   "district_regional": "कानपुर नगर",
+   "zp_lgd_code": "148"
+  }
+ },
+ {
+  "key": "pri_up:p5:d32",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "32",
+   "district": "Kanpur Dehat",
+   "district_regional": "कानपुर देहात",
+   "zp_lgd_code": "147"
+  }
+ },
+ {
+  "key": "pri_up:p5:d33",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "33",
+   "district": "Jalaun",
+   "district_regional": "जालौन",
+   "zp_lgd_code": "142"
+  }
+ },
+ {
+  "key": "pri_up:p5:d34",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "34",
+   "district": "Lalitpur",
+   "district_regional": "ललितपुर",
+   "zp_lgd_code": "152"
+  }
+ },
+ {
+  "key": "pri_up:p5:d35",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "35",
+   "district": "Jhansi",
+   "district_regional": "झांसी",
+   "zp_lgd_code": "144"
+  }
+ },
+ {
+  "key": "pri_up:p5:d36",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "36",
+   "district": "Mahoba",
+   "district_regional": "महोबा",
+   "zp_lgd_code": "156"
+  }
+ },
+ {
+  "key": "pri_up:p5:d37",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "37",
+   "district": "Hamirpur",
+   "district_regional": "हमीरपुर",
+   "zp_lgd_code": "140"
+  }
+ },
+ {
+  "key": "pri_up:p5:d38",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "38",
+   "district": "Banda",
+   "district_regional": "बांदा",
+   "zp_lgd_code": "119"
+  }
+ },
+ {
+  "key": "pri_up:p5:d39",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "39",
+   "district": "Chitrakoot",
+   "district_regional": "चित्रकूट",
+   "zp_lgd_code": "127"
+  }
+ },
+ {
+  "key": "pri_up:p5:d40",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "40",
+   "district": "Fatehpur",
+   "district_regional": "फतेहपुर",
+   "zp_lgd_code": "133"
+  }
+ },
+ {
+  "key": "pri_up:p5:d41",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "41",
+   "district": "Kaushambi",
+   "district_regional": "कौशाम्बी",
+   "zp_lgd_code": "149"
+  }
+ },
+ {
+  "key": "pri_up:p5:d42",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "42",
+   "district": "Prayagraj",
+   "district_regional": "प्रयागराज",
+   "zp_lgd_code": "111"
+  }
+ },
+ {
+  "key": "pri_up:p5:d43",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "43",
+   "district": "Pratapgarh",
+   "district_regional": "प्रतापगढ़",
+   "zp_lgd_code": "165"
+  }
+ },
+ {
+  "key": "pri_up:p5:d44",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "44",
+   "district": "Rae Bareli",
+   "district_regional": "रायबरेली",
+   "zp_lgd_code": "166"
+  }
+ },
+ {
+  "key": "pri_up:p5:d45",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "45",
+   "district": "Unnao",
+   "district_regional": "उन्नाव",
+   "zp_lgd_code": "177"
+  }
+ },
+ {
+  "key": "pri_up:p5:d46",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "46",
+   "district": "Hardoi",
+   "district_regional": "हरदोई",
+   "zp_lgd_code": "141"
+  }
+ },
+ {
+  "key": "pri_up:p5:d47",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "47",
+   "district": "Lucknow",
+   "district_regional": "लखनऊ",
+   "zp_lgd_code": "153"
+  }
+ },
+ {
+  "key": "pri_up:p5:d48",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "48",
+   "district": "Sitapur",
+   "district_regional": "सीतापुर",
+   "zp_lgd_code": "174"
+  }
+ },
+ {
+  "key": "pri_up:p5:d49",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "49",
+   "district": "Kheri",
+   "district_regional": "लखीमपुर खीरी",
+   "zp_lgd_code": "150"
+  }
+ },
+ {
+  "key": "pri_up:p5:d50",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "50",
+   "district": "Amethi",
+   "district_regional": "अमेठी",
+   "zp_lgd_code": "584"
+  }
+ },
+ {
+  "key": "pri_up:p5:d51",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "51",
+   "district": "Bara Banki",
+   "district_regional": "बाराबंकी",
+   "zp_lgd_code": "120"
+  }
+ },
+ {
+  "key": "pri_up:p5:d52",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "52",
+   "district": "Sultanpur",
+   "district_regional": "सुलतानपुर",
+   "zp_lgd_code": "176"
+  }
+ },
+ {
+  "key": "pri_up:p5:d53",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "53",
+   "district": "Ambedkar Nagar",
+   "district_regional": "अम्बेडकर नगर",
+   "zp_lgd_code": "112"
+  }
+ },
+ {
+  "key": "pri_up:p5:d54",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "54",
+   "district": "Ayodhya",
+   "district_regional": "अयोध्या",
+   "zp_lgd_code": "131"
+  }
+ },
+ {
+  "key": "pri_up:p5:d55",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "55",
+   "district": "Bahraich",
+   "district_regional": "बहराइच",
+   "zp_lgd_code": "116"
+  }
+ },
+ {
+  "key": "pri_up:p5:d56",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "56",
+   "district": "Shrawasti",
+   "district_regional": "श्रावस्ती",
+   "zp_lgd_code": "172"
+  }
+ },
+ {
+  "key": "pri_up:p5:d57",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "57",
+   "district": "Balrampur",
+   "district_regional": "बलरामपुर",
+   "zp_lgd_code": "118"
+  }
+ },
+ {
+  "key": "pri_up:p5:d58",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "58",
+   "district": "Gonda",
+   "district_regional": "गोंडा",
+   "zp_lgd_code": "138"
+  }
+ },
+ {
+  "key": "pri_up:p5:d59",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "59",
+   "district": "Basti",
+   "district_regional": "बस्ती",
+   "zp_lgd_code": "122"
+  }
+ },
+ {
+  "key": "pri_up:p5:d60",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "60",
+   "district": "Siddharthnagar",
+   "district_regional": "सिद्धार्थ नगर",
+   "zp_lgd_code": "173"
+  }
+ },
+ {
+  "key": "pri_up:p5:d61",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "61",
+   "district": "Sant Kabir Nagar",
+   "district_regional": "सन्त कबीर नगर",
+   "zp_lgd_code": "169"
+  }
+ },
+ {
+  "key": "pri_up:p5:d62",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "62",
+   "district": "Gorakhpur",
+   "district_regional": "गोरखपुर",
+   "zp_lgd_code": "139"
+  }
+ },
+ {
+  "key": "pri_up:p5:d63",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "63",
+   "district": "Mahrajganj",
+   "district_regional": "महराजगंज",
+   "zp_lgd_code": "155"
+  }
+ },
+ {
+  "key": "pri_up:p5:d64",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "64",
+   "district": "Kushinagar",
+   "district_regional": "कुशीनगर",
+   "zp_lgd_code": "151"
+  }
+ },
+ {
+  "key": "pri_up:p5:d65",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "65",
+   "district": "Deoria",
+   "district_regional": "देवरिया",
+   "zp_lgd_code": "128"
+  }
+ },
+ {
+  "key": "pri_up:p5:d66",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "66",
+   "district": "Azamgarh",
+   "district_regional": "आजमगढ़",
+   "zp_lgd_code": "114"
+  }
+ },
+ {
+  "key": "pri_up:p5:d67",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "67",
+   "district": "Mau",
+   "district_regional": "मऊ",
+   "zp_lgd_code": "159"
+  }
+ },
+ {
+  "key": "pri_up:p5:d68",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "68",
+   "district": "Ballia",
+   "district_regional": "बलिया",
+   "zp_lgd_code": "117"
+  }
+ },
+ {
+  "key": "pri_up:p5:d69",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "69",
+   "district": "Ghazipur",
+   "district_regional": "गाज़ीपुर",
+   "zp_lgd_code": "137"
+  }
+ },
+ {
+  "key": "pri_up:p5:d70",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "70",
+   "district": "Chandauli",
+   "district_regional": "चन्दौली",
+   "zp_lgd_code": "126"
+  }
+ },
+ {
+  "key": "pri_up:p5:d71",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "71",
+   "district": "Varanasi",
+   "district_regional": "वाराणसी",
+   "zp_lgd_code": "178"
+  }
+ },
+ {
+  "key": "pri_up:p5:d72",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "72",
+   "district": "Jaunpur",
+   "district_regional": "जौनपुर",
+   "zp_lgd_code": "143"
+  }
+ },
+ {
+  "key": "pri_up:p5:d73",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "73",
+   "district": "Bhadohi",
+   "district_regional": "भदोही",
+   "zp_lgd_code": "170"
+  }
+ },
+ {
+  "key": "pri_up:p5:d74",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "74",
+   "district": "Mirzapur",
+   "district_regional": "मीरजापुर",
+   "zp_lgd_code": "161"
+  }
+ },
+ {
+  "key": "pri_up:p5:d75",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "5",
+   "tier": "heads",
+   "district_id": "75",
+   "district": "Sonbhadra",
+   "district_regional": "सोनभद्र",
+   "zp_lgd_code": "175"
+  }
+ },
+ {
+  "key": "pri_up:p2:d1",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "1",
+   "district": "Saharanpur",
+   "district_regional": "सहारनपुर",
+   "zp_lgd_code": "168"
+  }
+ },
+ {
+  "key": "pri_up:p2:d2",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "2",
+   "district": "Muzaffarnagar",
+   "district_regional": "मुज़फ्फरनगर",
+   "zp_lgd_code": "163"
+  }
+ },
+ {
+  "key": "pri_up:p2:d3",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "3",
+   "district": "Shamli",
+   "district_regional": "शामली",
+   "zp_lgd_code": "259727"
+  }
+ },
+ {
+  "key": "pri_up:p2:d4",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "4",
+   "district": "Meerut",
+   "district_regional": "मेरठ",
+   "zp_lgd_code": "160"
+  }
+ },
+ {
+  "key": "pri_up:p2:d5",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "5",
+   "district": "Baghpat",
+   "district_regional": "बागपत",
+   "zp_lgd_code": "115"
+  }
+ },
+ {
+  "key": "pri_up:p2:d6",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "6",
+   "district": "Ghaziabad",
+   "district_regional": "गाजियाबाद",
+   "zp_lgd_code": "136"
+  }
+ },
+ {
+  "key": "pri_up:p2:d7",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "7",
+   "district": "Gautam Buddha Nagar",
+   "district_regional": "गौतमबुद्ध नगर",
+   "zp_lgd_code": "135"
+  }
+ },
+ {
+  "key": "pri_up:p2:d8",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "8",
+   "district": "Bulandshahr",
+   "district_regional": "बुलंदशहर",
+   "zp_lgd_code": "125"
+  }
+ },
+ {
+  "key": "pri_up:p2:d9",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "9",
+   "district": "Hapur",
+   "district_regional": "हापुड़",
+   "zp_lgd_code": "259728"
+  }
+ },
+ {
+  "key": "pri_up:p2:d10",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "10",
+   "district": "Bijnor",
+   "district_regional": "बिजनौर",
+   "zp_lgd_code": "123"
+  }
+ },
+ {
+  "key": "pri_up:p2:d11",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "11",
+   "district": "Amroha",
+   "district_regional": "अमरोहा",
+   "zp_lgd_code": "145"
+  }
+ },
+ {
+  "key": "pri_up:p2:d12",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "12",
+   "district": "Moradabad",
+   "district_regional": "मुरादाबाद",
+   "zp_lgd_code": "162"
+  }
+ },
+ {
+  "key": "pri_up:p2:d13",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "13",
+   "district": "Rampur",
+   "district_regional": "रामपुर",
+   "zp_lgd_code": "167"
+  }
+ },
+ {
+  "key": "pri_up:p2:d14",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "14",
+   "district": "Sambhal",
+   "district_regional": "सम्भल",
+   "zp_lgd_code": "259726"
+  }
+ },
+ {
+  "key": "pri_up:p2:d15",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "15",
+   "district": "Bareilly",
+   "district_regional": "बरेली",
+   "zp_lgd_code": "121"
+  }
+ },
+ {
+  "key": "pri_up:p2:d16",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "16",
+   "district": "Pilibhit",
+   "district_regional": "पीलीभीत",
+   "zp_lgd_code": "164"
+  }
+ },
+ {
+  "key": "pri_up:p2:d17",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "17",
+   "district": "Shahjahanpur",
+   "district_regional": "शाहजहांपुर",
+   "zp_lgd_code": "171"
+  }
+ },
+ {
+  "key": "pri_up:p2:d18",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "18",
+   "district": "Budaun",
+   "district_regional": "बदायूं",
+   "zp_lgd_code": "124"
+  }
+ },
+ {
+  "key": "pri_up:p2:d19",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "19",
+   "district": "Aligarh",
+   "district_regional": "अलीगढ़",
+   "zp_lgd_code": "110"
+  }
+ },
+ {
+  "key": "pri_up:p2:d20",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "20",
+   "district": "Hathras",
+   "district_regional": "हाथरस",
+   "zp_lgd_code": "154"
+  }
+ },
+ {
+  "key": "pri_up:p2:d21",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "21",
+   "district": "Etah",
+   "district_regional": "एटा",
+   "zp_lgd_code": "129"
+  }
+ },
+ {
+  "key": "pri_up:p2:d22",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "22",
+   "district": "Kasganj",
+   "district_regional": "कासगंज",
+   "zp_lgd_code": "577"
+  }
+ },
+ {
+  "key": "pri_up:p2:d23",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "23",
+   "district": "Mathura",
+   "district_regional": "मथुरा",
+   "zp_lgd_code": "158"
+  }
+ },
+ {
+  "key": "pri_up:p2:d24",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "24",
+   "district": "Agra",
+   "district_regional": "आगरा",
+   "zp_lgd_code": "109"
+  }
+ },
+ {
+  "key": "pri_up:p2:d25",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "25",
+   "district": "Firozabad",
+   "district_regional": "फिरोज़ाबाद",
+   "zp_lgd_code": "134"
+  }
+ },
+ {
+  "key": "pri_up:p2:d26",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "26",
+   "district": "Mainpuri",
+   "district_regional": "मैनपुरी",
+   "zp_lgd_code": "157"
+  }
+ },
+ {
+  "key": "pri_up:p2:d27",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "27",
+   "district": "Farrukhabad",
+   "district_regional": "फ़र्रुखाबाद",
+   "zp_lgd_code": "132"
+  }
+ },
+ {
+  "key": "pri_up:p2:d28",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "28",
+   "district": "Kannauj",
+   "district_regional": "कन्नौज",
+   "zp_lgd_code": "146"
+  }
+ },
+ {
+  "key": "pri_up:p2:d29",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "29",
+   "district": "Etawah",
+   "district_regional": "इटावा",
+   "zp_lgd_code": "130"
+  }
+ },
+ {
+  "key": "pri_up:p2:d30",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "30",
+   "district": "Auraiya",
+   "district_regional": "औरैया",
+   "zp_lgd_code": "113"
+  }
+ },
+ {
+  "key": "pri_up:p2:d31",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "31",
+   "district": "Kanpur Nagar",
+   "district_regional": "कानपुर नगर",
+   "zp_lgd_code": "148"
+  }
+ },
+ {
+  "key": "pri_up:p2:d32",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "32",
+   "district": "Kanpur Dehat",
+   "district_regional": "कानपुर देहात",
+   "zp_lgd_code": "147"
+  }
+ },
+ {
+  "key": "pri_up:p2:d33",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "33",
+   "district": "Jalaun",
+   "district_regional": "जालौन",
+   "zp_lgd_code": "142"
+  }
+ },
+ {
+  "key": "pri_up:p2:d34",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "34",
+   "district": "Lalitpur",
+   "district_regional": "ललितपुर",
+   "zp_lgd_code": "152"
+  }
+ },
+ {
+  "key": "pri_up:p2:d35",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "35",
+   "district": "Jhansi",
+   "district_regional": "झांसी",
+   "zp_lgd_code": "144"
+  }
+ },
+ {
+  "key": "pri_up:p2:d36",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "36",
+   "district": "Mahoba",
+   "district_regional": "महोबा",
+   "zp_lgd_code": "156"
+  }
+ },
+ {
+  "key": "pri_up:p2:d37",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "37",
+   "district": "Hamirpur",
+   "district_regional": "हमीरपुर",
+   "zp_lgd_code": "140"
+  }
+ },
+ {
+  "key": "pri_up:p2:d38",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "38",
+   "district": "Banda",
+   "district_regional": "बांदा",
+   "zp_lgd_code": "119"
+  }
+ },
+ {
+  "key": "pri_up:p2:d39",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "39",
+   "district": "Chitrakoot",
+   "district_regional": "चित्रकूट",
+   "zp_lgd_code": "127"
+  }
+ },
+ {
+  "key": "pri_up:p2:d40",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "40",
+   "district": "Fatehpur",
+   "district_regional": "फतेहपुर",
+   "zp_lgd_code": "133"
+  }
+ },
+ {
+  "key": "pri_up:p2:d41",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "41",
+   "district": "Kaushambi",
+   "district_regional": "कौशाम्बी",
+   "zp_lgd_code": "149"
+  }
+ },
+ {
+  "key": "pri_up:p2:d42",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "42",
+   "district": "Prayagraj",
+   "district_regional": "प्रयागराज",
+   "zp_lgd_code": "111"
+  }
+ },
+ {
+  "key": "pri_up:p2:d43",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "43",
+   "district": "Pratapgarh",
+   "district_regional": "प्रतापगढ़",
+   "zp_lgd_code": "165"
+  }
+ },
+ {
+  "key": "pri_up:p2:d44",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "44",
+   "district": "Rae Bareli",
+   "district_regional": "रायबरेली",
+   "zp_lgd_code": "166"
+  }
+ },
+ {
+  "key": "pri_up:p2:d45",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "45",
+   "district": "Unnao",
+   "district_regional": "उन्नाव",
+   "zp_lgd_code": "177"
+  }
+ },
+ {
+  "key": "pri_up:p2:d46",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "46",
+   "district": "Hardoi",
+   "district_regional": "हरदोई",
+   "zp_lgd_code": "141"
+  }
+ },
+ {
+  "key": "pri_up:p2:d47",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "47",
+   "district": "Lucknow",
+   "district_regional": "लखनऊ",
+   "zp_lgd_code": "153"
+  }
+ },
+ {
+  "key": "pri_up:p2:d48",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "48",
+   "district": "Sitapur",
+   "district_regional": "सीतापुर",
+   "zp_lgd_code": "174"
+  }
+ },
+ {
+  "key": "pri_up:p2:d49",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "49",
+   "district": "Kheri",
+   "district_regional": "लखीमपुर खीरी",
+   "zp_lgd_code": "150"
+  }
+ },
+ {
+  "key": "pri_up:p2:d50",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "50",
+   "district": "Amethi",
+   "district_regional": "अमेठी",
+   "zp_lgd_code": "584"
+  }
+ },
+ {
+  "key": "pri_up:p2:d51",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "51",
+   "district": "Bara Banki",
+   "district_regional": "बाराबंकी",
+   "zp_lgd_code": "120"
+  }
+ },
+ {
+  "key": "pri_up:p2:d52",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "52",
+   "district": "Sultanpur",
+   "district_regional": "सुलतानपुर",
+   "zp_lgd_code": "176"
+  }
+ },
+ {
+  "key": "pri_up:p2:d53",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "53",
+   "district": "Ambedkar Nagar",
+   "district_regional": "अम्बेडकर नगर",
+   "zp_lgd_code": "112"
+  }
+ },
+ {
+  "key": "pri_up:p2:d54",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "54",
+   "district": "Ayodhya",
+   "district_regional": "अयोध्या",
+   "zp_lgd_code": "131"
+  }
+ },
+ {
+  "key": "pri_up:p2:d55",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "55",
+   "district": "Bahraich",
+   "district_regional": "बहराइच",
+   "zp_lgd_code": "116"
+  }
+ },
+ {
+  "key": "pri_up:p2:d56",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "56",
+   "district": "Shrawasti",
+   "district_regional": "श्रावस्ती",
+   "zp_lgd_code": "172"
+  }
+ },
+ {
+  "key": "pri_up:p2:d57",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "57",
+   "district": "Balrampur",
+   "district_regional": "बलरामपुर",
+   "zp_lgd_code": "118"
+  }
+ },
+ {
+  "key": "pri_up:p2:d58",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "58",
+   "district": "Gonda",
+   "district_regional": "गोंडा",
+   "zp_lgd_code": "138"
+  }
+ },
+ {
+  "key": "pri_up:p2:d59",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "59",
+   "district": "Basti",
+   "district_regional": "बस्ती",
+   "zp_lgd_code": "122"
+  }
+ },
+ {
+  "key": "pri_up:p2:d60",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "60",
+   "district": "Siddharthnagar",
+   "district_regional": "सिद्धार्थ नगर",
+   "zp_lgd_code": "173"
+  }
+ },
+ {
+  "key": "pri_up:p2:d61",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "61",
+   "district": "Sant Kabir Nagar",
+   "district_regional": "सन्त कबीर नगर",
+   "zp_lgd_code": "169"
+  }
+ },
+ {
+  "key": "pri_up:p2:d62",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "62",
+   "district": "Gorakhpur",
+   "district_regional": "गोरखपुर",
+   "zp_lgd_code": "139"
+  }
+ },
+ {
+  "key": "pri_up:p2:d63",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "63",
+   "district": "Mahrajganj",
+   "district_regional": "महराजगंज",
+   "zp_lgd_code": "155"
+  }
+ },
+ {
+  "key": "pri_up:p2:d64",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "64",
+   "district": "Kushinagar",
+   "district_regional": "कुशीनगर",
+   "zp_lgd_code": "151"
+  }
+ },
+ {
+  "key": "pri_up:p2:d65",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "65",
+   "district": "Deoria",
+   "district_regional": "देवरिया",
+   "zp_lgd_code": "128"
+  }
+ },
+ {
+  "key": "pri_up:p2:d66",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "66",
+   "district": "Azamgarh",
+   "district_regional": "आजमगढ़",
+   "zp_lgd_code": "114"
+  }
+ },
+ {
+  "key": "pri_up:p2:d67",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "67",
+   "district": "Mau",
+   "district_regional": "मऊ",
+   "zp_lgd_code": "159"
+  }
+ },
+ {
+  "key": "pri_up:p2:d68",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "68",
+   "district": "Ballia",
+   "district_regional": "बलिया",
+   "zp_lgd_code": "117"
+  }
+ },
+ {
+  "key": "pri_up:p2:d69",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "69",
+   "district": "Ghazipur",
+   "district_regional": "गाज़ीपुर",
+   "zp_lgd_code": "137"
+  }
+ },
+ {
+  "key": "pri_up:p2:d70",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "70",
+   "district": "Chandauli",
+   "district_regional": "चन्दौली",
+   "zp_lgd_code": "126"
+  }
+ },
+ {
+  "key": "pri_up:p2:d71",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "71",
+   "district": "Varanasi",
+   "district_regional": "वाराणसी",
+   "zp_lgd_code": "178"
+  }
+ },
+ {
+  "key": "pri_up:p2:d72",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "72",
+   "district": "Jaunpur",
+   "district_regional": "जौनपुर",
+   "zp_lgd_code": "143"
+  }
+ },
+ {
+  "key": "pri_up:p2:d73",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "73",
+   "district": "Bhadohi",
+   "district_regional": "भदोही",
+   "zp_lgd_code": "170"
+  }
+ },
+ {
+  "key": "pri_up:p2:d74",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "74",
+   "district": "Mirzapur",
+   "district_regional": "मीरजापुर",
+   "zp_lgd_code": "161"
+  }
+ },
+ {
+  "key": "pri_up:p2:d75",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "2",
+   "tier": "members",
+   "district_id": "75",
+   "district": "Sonbhadra",
+   "district_regional": "सोनभद्र",
+   "zp_lgd_code": "175"
+  }
+ },
+ {
+  "key": "pri_up:p4:d1",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "1",
+   "district": "Saharanpur",
+   "district_regional": "सहारनपुर",
+   "zp_lgd_code": "168"
+  }
+ },
+ {
+  "key": "pri_up:p4:d2",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "2",
+   "district": "Muzaffarnagar",
+   "district_regional": "मुज़फ्फरनगर",
+   "zp_lgd_code": "163"
+  }
+ },
+ {
+  "key": "pri_up:p4:d3",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "3",
+   "district": "Shamli",
+   "district_regional": "शामली",
+   "zp_lgd_code": "259727"
+  }
+ },
+ {
+  "key": "pri_up:p4:d4",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "4",
+   "district": "Meerut",
+   "district_regional": "मेरठ",
+   "zp_lgd_code": "160"
+  }
+ },
+ {
+  "key": "pri_up:p4:d5",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "5",
+   "district": "Baghpat",
+   "district_regional": "बागपत",
+   "zp_lgd_code": "115"
+  }
+ },
+ {
+  "key": "pri_up:p4:d6",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "6",
+   "district": "Ghaziabad",
+   "district_regional": "गाजियाबाद",
+   "zp_lgd_code": "136"
+  }
+ },
+ {
+  "key": "pri_up:p4:d7",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "7",
+   "district": "Gautam Buddha Nagar",
+   "district_regional": "गौतमबुद्ध नगर",
+   "zp_lgd_code": "135"
+  }
+ },
+ {
+  "key": "pri_up:p4:d8",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "8",
+   "district": "Bulandshahr",
+   "district_regional": "बुलंदशहर",
+   "zp_lgd_code": "125"
+  }
+ },
+ {
+  "key": "pri_up:p4:d9",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "9",
+   "district": "Hapur",
+   "district_regional": "हापुड़",
+   "zp_lgd_code": "259728"
+  }
+ },
+ {
+  "key": "pri_up:p4:d10",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "10",
+   "district": "Bijnor",
+   "district_regional": "बिजनौर",
+   "zp_lgd_code": "123"
+  }
+ },
+ {
+  "key": "pri_up:p4:d11",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "11",
+   "district": "Amroha",
+   "district_regional": "अमरोहा",
+   "zp_lgd_code": "145"
+  }
+ },
+ {
+  "key": "pri_up:p4:d12",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "12",
+   "district": "Moradabad",
+   "district_regional": "मुरादाबाद",
+   "zp_lgd_code": "162"
+  }
+ },
+ {
+  "key": "pri_up:p4:d13",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "13",
+   "district": "Rampur",
+   "district_regional": "रामपुर",
+   "zp_lgd_code": "167"
+  }
+ },
+ {
+  "key": "pri_up:p4:d14",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "14",
+   "district": "Sambhal",
+   "district_regional": "सम्भल",
+   "zp_lgd_code": "259726"
+  }
+ },
+ {
+  "key": "pri_up:p4:d15",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "15",
+   "district": "Bareilly",
+   "district_regional": "बरेली",
+   "zp_lgd_code": "121"
+  }
+ },
+ {
+  "key": "pri_up:p4:d16",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "16",
+   "district": "Pilibhit",
+   "district_regional": "पीलीभीत",
+   "zp_lgd_code": "164"
+  }
+ },
+ {
+  "key": "pri_up:p4:d17",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "17",
+   "district": "Shahjahanpur",
+   "district_regional": "शाहजहांपुर",
+   "zp_lgd_code": "171"
+  }
+ },
+ {
+  "key": "pri_up:p4:d18",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "18",
+   "district": "Budaun",
+   "district_regional": "बदायूं",
+   "zp_lgd_code": "124"
+  }
+ },
+ {
+  "key": "pri_up:p4:d19",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "19",
+   "district": "Aligarh",
+   "district_regional": "अलीगढ़",
+   "zp_lgd_code": "110"
+  }
+ },
+ {
+  "key": "pri_up:p4:d20",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "20",
+   "district": "Hathras",
+   "district_regional": "हाथरस",
+   "zp_lgd_code": "154"
+  }
+ },
+ {
+  "key": "pri_up:p4:d21",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "21",
+   "district": "Etah",
+   "district_regional": "एटा",
+   "zp_lgd_code": "129"
+  }
+ },
+ {
+  "key": "pri_up:p4:d22",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "22",
+   "district": "Kasganj",
+   "district_regional": "कासगंज",
+   "zp_lgd_code": "577"
+  }
+ },
+ {
+  "key": "pri_up:p4:d23",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "23",
+   "district": "Mathura",
+   "district_regional": "मथुरा",
+   "zp_lgd_code": "158"
+  }
+ },
+ {
+  "key": "pri_up:p4:d24",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "24",
+   "district": "Agra",
+   "district_regional": "आगरा",
+   "zp_lgd_code": "109"
+  }
+ },
+ {
+  "key": "pri_up:p4:d25",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "25",
+   "district": "Firozabad",
+   "district_regional": "फिरोज़ाबाद",
+   "zp_lgd_code": "134"
+  }
+ },
+ {
+  "key": "pri_up:p4:d26",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "26",
+   "district": "Mainpuri",
+   "district_regional": "मैनपुरी",
+   "zp_lgd_code": "157"
+  }
+ },
+ {
+  "key": "pri_up:p4:d27",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "27",
+   "district": "Farrukhabad",
+   "district_regional": "फ़र्रुखाबाद",
+   "zp_lgd_code": "132"
+  }
+ },
+ {
+  "key": "pri_up:p4:d28",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "28",
+   "district": "Kannauj",
+   "district_regional": "कन्नौज",
+   "zp_lgd_code": "146"
+  }
+ },
+ {
+  "key": "pri_up:p4:d29",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "29",
+   "district": "Etawah",
+   "district_regional": "इटावा",
+   "zp_lgd_code": "130"
+  }
+ },
+ {
+  "key": "pri_up:p4:d30",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "30",
+   "district": "Auraiya",
+   "district_regional": "औरैया",
+   "zp_lgd_code": "113"
+  }
+ },
+ {
+  "key": "pri_up:p4:d31",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "31",
+   "district": "Kanpur Nagar",
+   "district_regional": "कानपुर नगर",
+   "zp_lgd_code": "148"
+  }
+ },
+ {
+  "key": "pri_up:p4:d32",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "32",
+   "district": "Kanpur Dehat",
+   "district_regional": "कानपुर देहात",
+   "zp_lgd_code": "147"
+  }
+ },
+ {
+  "key": "pri_up:p4:d33",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "33",
+   "district": "Jalaun",
+   "district_regional": "जालौन",
+   "zp_lgd_code": "142"
+  }
+ },
+ {
+  "key": "pri_up:p4:d34",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "34",
+   "district": "Lalitpur",
+   "district_regional": "ललितपुर",
+   "zp_lgd_code": "152"
+  }
+ },
+ {
+  "key": "pri_up:p4:d35",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "35",
+   "district": "Jhansi",
+   "district_regional": "झांसी",
+   "zp_lgd_code": "144"
+  }
+ },
+ {
+  "key": "pri_up:p4:d36",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "36",
+   "district": "Mahoba",
+   "district_regional": "महोबा",
+   "zp_lgd_code": "156"
+  }
+ },
+ {
+  "key": "pri_up:p4:d37",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "37",
+   "district": "Hamirpur",
+   "district_regional": "हमीरपुर",
+   "zp_lgd_code": "140"
+  }
+ },
+ {
+  "key": "pri_up:p4:d38",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "38",
+   "district": "Banda",
+   "district_regional": "बांदा",
+   "zp_lgd_code": "119"
+  }
+ },
+ {
+  "key": "pri_up:p4:d39",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "39",
+   "district": "Chitrakoot",
+   "district_regional": "चित्रकूट",
+   "zp_lgd_code": "127"
+  }
+ },
+ {
+  "key": "pri_up:p4:d40",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "40",
+   "district": "Fatehpur",
+   "district_regional": "फतेहपुर",
+   "zp_lgd_code": "133"
+  }
+ },
+ {
+  "key": "pri_up:p4:d41",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "41",
+   "district": "Kaushambi",
+   "district_regional": "कौशाम्बी",
+   "zp_lgd_code": "149"
+  }
+ },
+ {
+  "key": "pri_up:p4:d42",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "42",
+   "district": "Prayagraj",
+   "district_regional": "प्रयागराज",
+   "zp_lgd_code": "111"
+  }
+ },
+ {
+  "key": "pri_up:p4:d43",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "43",
+   "district": "Pratapgarh",
+   "district_regional": "प्रतापगढ़",
+   "zp_lgd_code": "165"
+  }
+ },
+ {
+  "key": "pri_up:p4:d44",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "44",
+   "district": "Rae Bareli",
+   "district_regional": "रायबरेली",
+   "zp_lgd_code": "166"
+  }
+ },
+ {
+  "key": "pri_up:p4:d45",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "45",
+   "district": "Unnao",
+   "district_regional": "उन्नाव",
+   "zp_lgd_code": "177"
+  }
+ },
+ {
+  "key": "pri_up:p4:d46",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "46",
+   "district": "Hardoi",
+   "district_regional": "हरदोई",
+   "zp_lgd_code": "141"
+  }
+ },
+ {
+  "key": "pri_up:p4:d47",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "47",
+   "district": "Lucknow",
+   "district_regional": "लखनऊ",
+   "zp_lgd_code": "153"
+  }
+ },
+ {
+  "key": "pri_up:p4:d48",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "48",
+   "district": "Sitapur",
+   "district_regional": "सीतापुर",
+   "zp_lgd_code": "174"
+  }
+ },
+ {
+  "key": "pri_up:p4:d49",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "49",
+   "district": "Kheri",
+   "district_regional": "लखीमपुर खीरी",
+   "zp_lgd_code": "150"
+  }
+ },
+ {
+  "key": "pri_up:p4:d50",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "50",
+   "district": "Amethi",
+   "district_regional": "अमेठी",
+   "zp_lgd_code": "584"
+  }
+ },
+ {
+  "key": "pri_up:p4:d51",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "51",
+   "district": "Bara Banki",
+   "district_regional": "बाराबंकी",
+   "zp_lgd_code": "120"
+  }
+ },
+ {
+  "key": "pri_up:p4:d52",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "52",
+   "district": "Sultanpur",
+   "district_regional": "सुलतानपुर",
+   "zp_lgd_code": "176"
+  }
+ },
+ {
+  "key": "pri_up:p4:d53",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "53",
+   "district": "Ambedkar Nagar",
+   "district_regional": "अम्बेडकर नगर",
+   "zp_lgd_code": "112"
+  }
+ },
+ {
+  "key": "pri_up:p4:d54",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "54",
+   "district": "Ayodhya",
+   "district_regional": "अयोध्या",
+   "zp_lgd_code": "131"
+  }
+ },
+ {
+  "key": "pri_up:p4:d55",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "55",
+   "district": "Bahraich",
+   "district_regional": "बहराइच",
+   "zp_lgd_code": "116"
+  }
+ },
+ {
+  "key": "pri_up:p4:d56",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "56",
+   "district": "Shrawasti",
+   "district_regional": "श्रावस्ती",
+   "zp_lgd_code": "172"
+  }
+ },
+ {
+  "key": "pri_up:p4:d57",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "57",
+   "district": "Balrampur",
+   "district_regional": "बलरामपुर",
+   "zp_lgd_code": "118"
+  }
+ },
+ {
+  "key": "pri_up:p4:d58",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "58",
+   "district": "Gonda",
+   "district_regional": "गोंडा",
+   "zp_lgd_code": "138"
+  }
+ },
+ {
+  "key": "pri_up:p4:d59",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "59",
+   "district": "Basti",
+   "district_regional": "बस्ती",
+   "zp_lgd_code": "122"
+  }
+ },
+ {
+  "key": "pri_up:p4:d60",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "60",
+   "district": "Siddharthnagar",
+   "district_regional": "सिद्धार्थ नगर",
+   "zp_lgd_code": "173"
+  }
+ },
+ {
+  "key": "pri_up:p4:d61",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "61",
+   "district": "Sant Kabir Nagar",
+   "district_regional": "सन्त कबीर नगर",
+   "zp_lgd_code": "169"
+  }
+ },
+ {
+  "key": "pri_up:p4:d62",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "62",
+   "district": "Gorakhpur",
+   "district_regional": "गोरखपुर",
+   "zp_lgd_code": "139"
+  }
+ },
+ {
+  "key": "pri_up:p4:d63",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "63",
+   "district": "Mahrajganj",
+   "district_regional": "महराजगंज",
+   "zp_lgd_code": "155"
+  }
+ },
+ {
+  "key": "pri_up:p4:d64",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "64",
+   "district": "Kushinagar",
+   "district_regional": "कुशीनगर",
+   "zp_lgd_code": "151"
+  }
+ },
+ {
+  "key": "pri_up:p4:d65",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "65",
+   "district": "Deoria",
+   "district_regional": "देवरिया",
+   "zp_lgd_code": "128"
+  }
+ },
+ {
+  "key": "pri_up:p4:d66",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "66",
+   "district": "Azamgarh",
+   "district_regional": "आजमगढ़",
+   "zp_lgd_code": "114"
+  }
+ },
+ {
+  "key": "pri_up:p4:d67",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "67",
+   "district": "Mau",
+   "district_regional": "मऊ",
+   "zp_lgd_code": "159"
+  }
+ },
+ {
+  "key": "pri_up:p4:d68",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "68",
+   "district": "Ballia",
+   "district_regional": "बलिया",
+   "zp_lgd_code": "117"
+  }
+ },
+ {
+  "key": "pri_up:p4:d69",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "69",
+   "district": "Ghazipur",
+   "district_regional": "गाज़ीपुर",
+   "zp_lgd_code": "137"
+  }
+ },
+ {
+  "key": "pri_up:p4:d70",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "70",
+   "district": "Chandauli",
+   "district_regional": "चन्दौली",
+   "zp_lgd_code": "126"
+  }
+ },
+ {
+  "key": "pri_up:p4:d71",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "71",
+   "district": "Varanasi",
+   "district_regional": "वाराणसी",
+   "zp_lgd_code": "178"
+  }
+ },
+ {
+  "key": "pri_up:p4:d72",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "72",
+   "district": "Jaunpur",
+   "district_regional": "जौनपुर",
+   "zp_lgd_code": "143"
+  }
+ },
+ {
+  "key": "pri_up:p4:d73",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "73",
+   "district": "Bhadohi",
+   "district_regional": "भदोही",
+   "zp_lgd_code": "170"
+  }
+ },
+ {
+  "key": "pri_up:p4:d74",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "74",
+   "district": "Mirzapur",
+   "district_regional": "मीरजापुर",
+   "zp_lgd_code": "161"
+  }
+ },
+ {
+  "key": "pri_up:p4:d75",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "4",
+   "tier": "members",
+   "district_id": "75",
+   "district": "Sonbhadra",
+   "district_regional": "सोनभद्र",
+   "zp_lgd_code": "175"
+  }
+ },
+ {
+  "key": "pri_up:p6:d1",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "1",
+   "district": "Saharanpur",
+   "district_regional": "सहारनपुर",
+   "zp_lgd_code": "168"
+  }
+ },
+ {
+  "key": "pri_up:p6:d2",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "2",
+   "district": "Muzaffarnagar",
+   "district_regional": "मुज़फ्फरनगर",
+   "zp_lgd_code": "163"
+  }
+ },
+ {
+  "key": "pri_up:p6:d3",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "3",
+   "district": "Shamli",
+   "district_regional": "शामली",
+   "zp_lgd_code": "259727"
+  }
+ },
+ {
+  "key": "pri_up:p6:d4",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "4",
+   "district": "Meerut",
+   "district_regional": "मेरठ",
+   "zp_lgd_code": "160"
+  }
+ },
+ {
+  "key": "pri_up:p6:d5",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "5",
+   "district": "Baghpat",
+   "district_regional": "बागपत",
+   "zp_lgd_code": "115"
+  }
+ },
+ {
+  "key": "pri_up:p6:d6",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "6",
+   "district": "Ghaziabad",
+   "district_regional": "गाजियाबाद",
+   "zp_lgd_code": "136"
+  }
+ },
+ {
+  "key": "pri_up:p6:d7",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "7",
+   "district": "Gautam Buddha Nagar",
+   "district_regional": "गौतमबुद्ध नगर",
+   "zp_lgd_code": "135"
+  }
+ },
+ {
+  "key": "pri_up:p6:d8",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "8",
+   "district": "Bulandshahr",
+   "district_regional": "बुलंदशहर",
+   "zp_lgd_code": "125"
+  }
+ },
+ {
+  "key": "pri_up:p6:d9",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "9",
+   "district": "Hapur",
+   "district_regional": "हापुड़",
+   "zp_lgd_code": "259728"
+  }
+ },
+ {
+  "key": "pri_up:p6:d10",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "10",
+   "district": "Bijnor",
+   "district_regional": "बिजनौर",
+   "zp_lgd_code": "123"
+  }
+ },
+ {
+  "key": "pri_up:p6:d11",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "11",
+   "district": "Amroha",
+   "district_regional": "अमरोहा",
+   "zp_lgd_code": "145"
+  }
+ },
+ {
+  "key": "pri_up:p6:d12",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "12",
+   "district": "Moradabad",
+   "district_regional": "मुरादाबाद",
+   "zp_lgd_code": "162"
+  }
+ },
+ {
+  "key": "pri_up:p6:d13",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "13",
+   "district": "Rampur",
+   "district_regional": "रामपुर",
+   "zp_lgd_code": "167"
+  }
+ },
+ {
+  "key": "pri_up:p6:d14",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "14",
+   "district": "Sambhal",
+   "district_regional": "सम्भल",
+   "zp_lgd_code": "259726"
+  }
+ },
+ {
+  "key": "pri_up:p6:d15",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "15",
+   "district": "Bareilly",
+   "district_regional": "बरेली",
+   "zp_lgd_code": "121"
+  }
+ },
+ {
+  "key": "pri_up:p6:d16",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "16",
+   "district": "Pilibhit",
+   "district_regional": "पीलीभीत",
+   "zp_lgd_code": "164"
+  }
+ },
+ {
+  "key": "pri_up:p6:d17",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "17",
+   "district": "Shahjahanpur",
+   "district_regional": "शाहजहांपुर",
+   "zp_lgd_code": "171"
+  }
+ },
+ {
+  "key": "pri_up:p6:d18",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "18",
+   "district": "Budaun",
+   "district_regional": "बदायूं",
+   "zp_lgd_code": "124"
+  }
+ },
+ {
+  "key": "pri_up:p6:d19",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "19",
+   "district": "Aligarh",
+   "district_regional": "अलीगढ़",
+   "zp_lgd_code": "110"
+  }
+ },
+ {
+  "key": "pri_up:p6:d20",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "20",
+   "district": "Hathras",
+   "district_regional": "हाथरस",
+   "zp_lgd_code": "154"
+  }
+ },
+ {
+  "key": "pri_up:p6:d21",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "21",
+   "district": "Etah",
+   "district_regional": "एटा",
+   "zp_lgd_code": "129"
+  }
+ },
+ {
+  "key": "pri_up:p6:d22",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "22",
+   "district": "Kasganj",
+   "district_regional": "कासगंज",
+   "zp_lgd_code": "577"
+  }
+ },
+ {
+  "key": "pri_up:p6:d23",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "23",
+   "district": "Mathura",
+   "district_regional": "मथुरा",
+   "zp_lgd_code": "158"
+  }
+ },
+ {
+  "key": "pri_up:p6:d24",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "24",
+   "district": "Agra",
+   "district_regional": "आगरा",
+   "zp_lgd_code": "109"
+  }
+ },
+ {
+  "key": "pri_up:p6:d25",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "25",
+   "district": "Firozabad",
+   "district_regional": "फिरोज़ाबाद",
+   "zp_lgd_code": "134"
+  }
+ },
+ {
+  "key": "pri_up:p6:d26",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "26",
+   "district": "Mainpuri",
+   "district_regional": "मैनपुरी",
+   "zp_lgd_code": "157"
+  }
+ },
+ {
+  "key": "pri_up:p6:d27",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "27",
+   "district": "Farrukhabad",
+   "district_regional": "फ़र्रुखाबाद",
+   "zp_lgd_code": "132"
+  }
+ },
+ {
+  "key": "pri_up:p6:d28",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "28",
+   "district": "Kannauj",
+   "district_regional": "कन्नौज",
+   "zp_lgd_code": "146"
+  }
+ },
+ {
+  "key": "pri_up:p6:d29",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "29",
+   "district": "Etawah",
+   "district_regional": "इटावा",
+   "zp_lgd_code": "130"
+  }
+ },
+ {
+  "key": "pri_up:p6:d30",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "30",
+   "district": "Auraiya",
+   "district_regional": "औरैया",
+   "zp_lgd_code": "113"
+  }
+ },
+ {
+  "key": "pri_up:p6:d31",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "31",
+   "district": "Kanpur Nagar",
+   "district_regional": "कानपुर नगर",
+   "zp_lgd_code": "148"
+  }
+ },
+ {
+  "key": "pri_up:p6:d32",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "32",
+   "district": "Kanpur Dehat",
+   "district_regional": "कानपुर देहात",
+   "zp_lgd_code": "147"
+  }
+ },
+ {
+  "key": "pri_up:p6:d33",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "33",
+   "district": "Jalaun",
+   "district_regional": "जालौन",
+   "zp_lgd_code": "142"
+  }
+ },
+ {
+  "key": "pri_up:p6:d34",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "34",
+   "district": "Lalitpur",
+   "district_regional": "ललितपुर",
+   "zp_lgd_code": "152"
+  }
+ },
+ {
+  "key": "pri_up:p6:d35",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "35",
+   "district": "Jhansi",
+   "district_regional": "झांसी",
+   "zp_lgd_code": "144"
+  }
+ },
+ {
+  "key": "pri_up:p6:d36",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "36",
+   "district": "Mahoba",
+   "district_regional": "महोबा",
+   "zp_lgd_code": "156"
+  }
+ },
+ {
+  "key": "pri_up:p6:d37",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "37",
+   "district": "Hamirpur",
+   "district_regional": "हमीरपुर",
+   "zp_lgd_code": "140"
+  }
+ },
+ {
+  "key": "pri_up:p6:d38",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "38",
+   "district": "Banda",
+   "district_regional": "बांदा",
+   "zp_lgd_code": "119"
+  }
+ },
+ {
+  "key": "pri_up:p6:d39",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "39",
+   "district": "Chitrakoot",
+   "district_regional": "चित्रकूट",
+   "zp_lgd_code": "127"
+  }
+ },
+ {
+  "key": "pri_up:p6:d40",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "40",
+   "district": "Fatehpur",
+   "district_regional": "फतेहपुर",
+   "zp_lgd_code": "133"
+  }
+ },
+ {
+  "key": "pri_up:p6:d41",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "41",
+   "district": "Kaushambi",
+   "district_regional": "कौशाम्बी",
+   "zp_lgd_code": "149"
+  }
+ },
+ {
+  "key": "pri_up:p6:d42",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "42",
+   "district": "Prayagraj",
+   "district_regional": "प्रयागराज",
+   "zp_lgd_code": "111"
+  }
+ },
+ {
+  "key": "pri_up:p6:d43",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "43",
+   "district": "Pratapgarh",
+   "district_regional": "प्रतापगढ़",
+   "zp_lgd_code": "165"
+  }
+ },
+ {
+  "key": "pri_up:p6:d44",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "44",
+   "district": "Rae Bareli",
+   "district_regional": "रायबरेली",
+   "zp_lgd_code": "166"
+  }
+ },
+ {
+  "key": "pri_up:p6:d45",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "45",
+   "district": "Unnao",
+   "district_regional": "उन्नाव",
+   "zp_lgd_code": "177"
+  }
+ },
+ {
+  "key": "pri_up:p6:d46",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "46",
+   "district": "Hardoi",
+   "district_regional": "हरदोई",
+   "zp_lgd_code": "141"
+  }
+ },
+ {
+  "key": "pri_up:p6:d47",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "47",
+   "district": "Lucknow",
+   "district_regional": "लखनऊ",
+   "zp_lgd_code": "153"
+  }
+ },
+ {
+  "key": "pri_up:p6:d48",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "48",
+   "district": "Sitapur",
+   "district_regional": "सीतापुर",
+   "zp_lgd_code": "174"
+  }
+ },
+ {
+  "key": "pri_up:p6:d49",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "49",
+   "district": "Kheri",
+   "district_regional": "लखीमपुर खीरी",
+   "zp_lgd_code": "150"
+  }
+ },
+ {
+  "key": "pri_up:p6:d50",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "50",
+   "district": "Amethi",
+   "district_regional": "अमेठी",
+   "zp_lgd_code": "584"
+  }
+ },
+ {
+  "key": "pri_up:p6:d51",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "51",
+   "district": "Bara Banki",
+   "district_regional": "बाराबंकी",
+   "zp_lgd_code": "120"
+  }
+ },
+ {
+  "key": "pri_up:p6:d52",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "52",
+   "district": "Sultanpur",
+   "district_regional": "सुलतानपुर",
+   "zp_lgd_code": "176"
+  }
+ },
+ {
+  "key": "pri_up:p6:d53",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "53",
+   "district": "Ambedkar Nagar",
+   "district_regional": "अम्बेडकर नगर",
+   "zp_lgd_code": "112"
+  }
+ },
+ {
+  "key": "pri_up:p6:d54",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "54",
+   "district": "Ayodhya",
+   "district_regional": "अयोध्या",
+   "zp_lgd_code": "131"
+  }
+ },
+ {
+  "key": "pri_up:p6:d55",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "55",
+   "district": "Bahraich",
+   "district_regional": "बहराइच",
+   "zp_lgd_code": "116"
+  }
+ },
+ {
+  "key": "pri_up:p6:d56",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "56",
+   "district": "Shrawasti",
+   "district_regional": "श्रावस्ती",
+   "zp_lgd_code": "172"
+  }
+ },
+ {
+  "key": "pri_up:p6:d57",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "57",
+   "district": "Balrampur",
+   "district_regional": "बलरामपुर",
+   "zp_lgd_code": "118"
+  }
+ },
+ {
+  "key": "pri_up:p6:d58",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "58",
+   "district": "Gonda",
+   "district_regional": "गोंडा",
+   "zp_lgd_code": "138"
+  }
+ },
+ {
+  "key": "pri_up:p6:d59",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "59",
+   "district": "Basti",
+   "district_regional": "बस्ती",
+   "zp_lgd_code": "122"
+  }
+ },
+ {
+  "key": "pri_up:p6:d60",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "60",
+   "district": "Siddharthnagar",
+   "district_regional": "सिद्धार्थ नगर",
+   "zp_lgd_code": "173"
+  }
+ },
+ {
+  "key": "pri_up:p6:d61",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "61",
+   "district": "Sant Kabir Nagar",
+   "district_regional": "सन्त कबीर नगर",
+   "zp_lgd_code": "169"
+  }
+ },
+ {
+  "key": "pri_up:p6:d62",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "62",
+   "district": "Gorakhpur",
+   "district_regional": "गोरखपुर",
+   "zp_lgd_code": "139"
+  }
+ },
+ {
+  "key": "pri_up:p6:d63",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "63",
+   "district": "Mahrajganj",
+   "district_regional": "महराजगंज",
+   "zp_lgd_code": "155"
+  }
+ },
+ {
+  "key": "pri_up:p6:d64",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "64",
+   "district": "Kushinagar",
+   "district_regional": "कुशीनगर",
+   "zp_lgd_code": "151"
+  }
+ },
+ {
+  "key": "pri_up:p6:d65",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "65",
+   "district": "Deoria",
+   "district_regional": "देवरिया",
+   "zp_lgd_code": "128"
+  }
+ },
+ {
+  "key": "pri_up:p6:d66",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "66",
+   "district": "Azamgarh",
+   "district_regional": "आजमगढ़",
+   "zp_lgd_code": "114"
+  }
+ },
+ {
+  "key": "pri_up:p6:d67",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "67",
+   "district": "Mau",
+   "district_regional": "मऊ",
+   "zp_lgd_code": "159"
+  }
+ },
+ {
+  "key": "pri_up:p6:d68",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "68",
+   "district": "Ballia",
+   "district_regional": "बलिया",
+   "zp_lgd_code": "117"
+  }
+ },
+ {
+  "key": "pri_up:p6:d69",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "69",
+   "district": "Ghazipur",
+   "district_regional": "गाज़ीपुर",
+   "zp_lgd_code": "137"
+  }
+ },
+ {
+  "key": "pri_up:p6:d70",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "70",
+   "district": "Chandauli",
+   "district_regional": "चन्दौली",
+   "zp_lgd_code": "126"
+  }
+ },
+ {
+  "key": "pri_up:p6:d71",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "71",
+   "district": "Varanasi",
+   "district_regional": "वाराणसी",
+   "zp_lgd_code": "178"
+  }
+ },
+ {
+  "key": "pri_up:p6:d72",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "72",
+   "district": "Jaunpur",
+   "district_regional": "जौनपुर",
+   "zp_lgd_code": "143"
+  }
+ },
+ {
+  "key": "pri_up:p6:d73",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "73",
+   "district": "Bhadohi",
+   "district_regional": "भदोही",
+   "zp_lgd_code": "170"
+  }
+ },
+ {
+  "key": "pri_up:p6:d74",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "74",
+   "district": "Mirzapur",
+   "district_regional": "मीरजापुर",
+   "zp_lgd_code": "161"
+  }
+ },
+ {
+  "key": "pri_up:p6:d75",
+  "payload": {
+   "reader": "pri_up",
+   "url": "https://sec.up.nic.in/site/WinnerListPRI2021.aspx",
+   "host": "sec.up.nic.in",
+   "state": "UP",
+   "india_only": true,
+   "route": "direct",
+   "post": "6",
+   "tier": "members",
+   "district_id": "75",
+   "district": "Sonbhadra",
+   "district_regional": "सोनभद्र",
+   "zp_lgd_code": "175"
+  }
+ }
+]

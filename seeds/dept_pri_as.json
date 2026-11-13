@@ -1,0 +1,13 @@
+[
+ {
+  "key": "pri_as:pe-result-2025",
+  "payload": {
+   "reader": "pri_as",
+   "url": "https://sec.assam.gov.in/results/pe-result-2025",
+   "state": "AS",
+   "route": "proxy",
+   "india_only": true,
+   "expected": 0
+  }
+ }
+]

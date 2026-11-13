@@ -1,0 +1,13 @@
+[
+ {
+  "key": "pri_jk:ddc2020",
+  "payload": {
+   "reader": "pri_jk",
+   "url": "https://secjk.nic.in/ResultDDC_ms/DDC_2020_Result_final.pdf",
+   "state": "JK",
+   "india_only": true,
+   "route": "direct",
+   "expected": 278
+  }
+ }
+]

@@ -1,0 +1,359 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title><link href="styles/style3.css" rel="stylesheet" type="text/css" /><link href="styles/style1.css" type="text/css" rel="stylesheet" />
+        
+        <script type="text/javascript" language="Javascript">
+            history.go(1); // disable the browser's back button
+        </script>
+        <script type="text/javascript" language="Javascript">
+
+            function isNumber(evt) {
+                evt = (evt) ? evt : window.event;
+                var charCode = (evt.which) ? evt.which : evt.keyCode;
+                if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                    return false;
+                }
+                return true;
+            }
+            function DisableRightClick(event) {
+
+                //For mouse right click
+
+                if (event.button == 2) {
+
+                    alert("Right Clicking not allowed!");
+
+                }
+
+            }
+            function DisableKey(e) {
+
+                var code = (document.all) ? event.keyCode : e.which;
+
+                var message17 = "Ctrl key functionality is disabled!";
+                var message13 = "Enter key functionality is disabled!";
+                var message16 = "Shift key functionality is disabled!";
+                // look for CTRL key press
+
+                if (parseInt(code) == 17) {
+
+                    alert(message17);
+
+                    window.event.returnValue = false;
+
+                }
+                if (parseInt(code) == 13) {
+
+                    alert(message13);
+
+                    window.event.returnValue = false;
+
+                }
+                if (parseInt(code) == 16) {
+
+                    alert(message16);
+
+                    window.event.returnValue = false;
+
+                }
+            }
+        </script>
+        <style type="text/css">
+            .style1
+            {
+                width: 100%;
+           
+            
+            }
+        
+             .circle
+            {
+            width:105px;
+            height:105px;
+            border-radius:50%;
+            font-size:15px;
+            font-weight :bold ;
+            color:#fff;
+            line-height:107px;
+            text-align:center;
+            background:#660d05;
+            margin:10px;
+            cursor:pointer ;
+
+            }
+
+            .circle:hover
+            {
+            width:105px;
+            height:105px;
+            border-radius:60%;
+            font-size:16px;
+            font-weight :bold ;
+            color:Black;
+            line-height:107px;
+            text-align:center;
+            background:#00A65D;
+            text-decoration:underline;
+            margin:10px;
+            cursor:pointer ;
+
+            }
+
+            hr {
+                height: 1px;
+                color: #ed1d61;
+                background: #ed1d61;
+                font-size: 0;
+                border: 0;
+            }
+            #form1 {        
+                height:900px;
+                overflow-y:auto
+                }
+        </style>
+</head>
+<body>
+     <form method="post" action="./PElection.aspx" id="form1" class="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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BRFDbGljayB0byBEb3dubG9hZGRkAgcPZBYMZg8PFgIfBAUCMjJkZAIBD2QWAgIBDw8WAh8EBRNQYW5jaGF5YXQgKEdlbmVyYWwpZGQCAg8PFgIfBAUHUmVzdWx0c2RkAgMPZBYCAgEPDxYCHwQFCjcyMjAyMzIxNzBkZAIEDw8WAh8EBUJXZXN0IFNpbmdoYmh1bSBXaW5uaW5nIENhbmRpZGF0ZXMgTGlzdCBmb3IgUGFuY2hheWF0IEVsZWN0aW9uIDIwMjJkZAIFD2QWBGYPFQI4VXNlckZpbGVzL3BkZi83MjIwMjMyMTcwLzIyX1dlc3RTaW5naGJodW1fUHJhcGF0cmEyMy5wZGYKNzIyMDIzMjE3MGQCAQ8PFgIfBAURQ2xpY2sgdG8gRG93bmxvYWRkZAIID2QWDGYPDxYCHwQFAjIzZGQCAQ9kFgICAQ8PFgIfBAUTUGFuY2hheWF0IChHZW5lcmFsKWRkAgIPDxYCHwQFB1Jlc3VsdHNkZAIDD2QWAgIBDw8WAh8EBQoxODIwMjMyMTY5ZGQCBA8PFgIfBAVHU2VyYWlrZWxhIEtoYXJzYXdhbiBXaW5uaW5nIENhbmRpZGF0ZXMgTGlzdCBmb3IgUGFuY2hheWF0IEVsZWN0aW9uIDIwMjJkZAIFD2QWBGYPFQI0VXNlckZpbGVzL3BkZi8xODIwMjMyMTY5LzIzX1NlcmFpa2VsYV9QcmFwYXRyYTIzLnBkZgoxODIwMjMyMTY5ZAIBDw8WAh8EBRFDbGljayB0byBEb3dubG9hZGRkAgkPZBYMZg8PFgIfBAUCMjRkZAIBD2QWAgIBDw8WAh8EBRNQYW5jaGF5YXQgKEdlbmVyYWwpZGQCAg8PFgIfBAUHUmVzdWx0c2RkAgMPZBYCAgEPDxYCHwQFCjQzMjAyMzIxNjhkZAIEDw8WAh8EBUJFYXN0IFNpbmdoYmh1bSBXaW5uaW5nIENhbmRpZGF0ZXMgTGlzdCBmb3IgUGFuY2hheWF0IEVsZWN0aW9uIDIwMjJkZAIFD2QWBGYPFQI4VXNlckZpbGVzL3BkZi80MzIwMjMyMTY4LzI0X0Vhc3RTaW5naGJodW1fUHJhcGF0cmEyMy5wZGYKNDMyMDIzMjE2OGQCAQ8PFgIfBAURQ2xpY2sgdG8gRG93bmxvYWRkZAIKDw8WAh4HVmlzaWJsZWhkZAIJDw8WAh8EZWRkGAEFA2d2MQ88KwAMAgICAQgCAmS6EsCs1kw7Ua7IZJmIrl51wbETjTPnTSiW8DbnXBQQTA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="63CAFAB3" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdADkm6oHz2KOmEViizolExxFHVTdTMy90q2y8fLYtDIz/w5eNhC3mFVbGidg2ROhXJGxu1e/YcMaRhCWRMRhsyyiwpdppHvx6l9+JbpyCzNLAGOhcMS1yLyZ52cUQpBBi9r6KOxbg8uzVwdeGr6v29r+3b0u/QkGuYIFlLayujxQuRqh+ll8bPCT3wuR0TgExGp9b/hB8HXyGLOsPipqjmcdaOenLtJpo57s+mQ2oktuj9Mh3PYOJnWSUvy/6dJ/6ywkOlHSWJ+j7cIaAZT0koyJlcgzDIfMXmH+j6y1cUW0s6IZqgpTyby406Rv1YHJzujWsZzxQNg9mHkyBzHiGjG7r4pvuw/nqxuX0nse21zEH6EMCElCx1sJb2i1QHjQcOAybkOyGTd2j07lXT2gWRxnFVU5I9yPS89g/IwLw7+BBr3WyT4f2PfGZ0mdG84PRFa7Obt99eqMVYLTAzzmdVTYegwJjQ4vyMqfwvjolHVeQcijwqdVGkjK/BBP8e6G2QZ5dMdF7E6cZh7oUZ4tfMUR2MXhjYtbGo2dim4Y6FxsIV7aSqZY3AWjczOS7l2TAVZnysnxN3AS7qSQOiMKVZeMO6IdOikZ7UN3KMnR/3BgBTup8KJPwJKbS0KZCtgQwyiPy8F9fdots2uSYHTHcbMDh8iT6otoskMp58EG+Mbijtg4mrn9/uBQLF8eG5VNfb/g72ZoJlO9Km1G3KM28MduPa9SGDA92aebeI9qkTwYA4rhiW5UELNEEIfL9/6ZOD7YU4Al1gQEDEK6H+qIo02MLlHcv3LKwSzDvyzxFA/9JVzYwX5pFhhl9sORgxfdexW8x7FuEJnYRsnI9UGo72g/sJQXr0SIDGtNz1Hr9LPEPnxDSO3uA7+5CM66D7bqyhpgGtk9SSvHbBM2CoaSYPMne+erRFRH+GBTupwBStU3uzdSb9C3gbTcQKZP6HmdT0fUsTVHW7XUP5lQdhAOexOJGE0VrOLzJED6NnFBI1EoYVekc1XQqcEFALn2POjMXZD82NjXNsqJ6X7PU0MF4trA1Vhhoz8850YH9Dvym2B1uPM++SNGEYhwWofB0UhA7QfVW3M6TJgM76lILP/FbXMKgRJW8VnfgCfPFhcOUaCpeaLfjuVJUhYn2q6NtyebS9rNiST6iO12Xctuh51gMDpGPsmZLKIfZX4VxvTeh5nbN9ILLZpD1cy84ww6bIdm8BW9fQLgyxlaiBkfziQ4MlsXyO1d07x5oCcV247sQi7kqQw==" />
+</div>
+    
+           	<div id="title-bar">
+                    <ul id="breadcrumbs1">
+                        <li><a  title="Home"><span id="bc-home"></span></a></li>
+                        <li class="no-hover"><a href="#">Panchayat Election Details </a></li>
+                    </ul>
+            </div>
+            <div class="shadow-bottom shadow-titlebar">
+            </div>           
+            <table width="100%" align="center" cellpadding="0" cellspacing="0">
+                <tr >
+                    <td align="center" style="color: White; background-color: #693931; font-size: 20px;   height: 25px">
+                     
+                        <select name="BulletinTypeDropDown" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;BulletinTypeDropDown\&#39;,\&#39;\&#39;)&#39;, 0)" id="BulletinTypeDropDown">
+	<option value="0">--Select--</option>
+	<option selected="selected" value="1">Panchayat General Election</option>
+	<option value="2">Panchayat Bye Election</option>
+
+</select> 
+                        <select name="ddlYear" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ddlYear\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlYear" style="width:120px;">
+	<option value="2015">2015</option>
+	<option value="2016">2016</option>
+	<option value="2017">2017</option>
+	<option value="2018">2018</option>
+	<option value="2019">2019</option>
+	<option value="2020">2020</option>
+	<option value="2021">2021</option>
+	<option selected="selected" value="2022">2022</option>
+	<option value="2023">2023</option>
+	<option value="2024">2024</option>
+	<option value="2025">2025</option>
+	<option value="2026">2026</option>
+	<option value="2027">2027</option>
+	<option value="2028">2028</option>
+	<option value="2029">2029</option>
+	<option value="2030">2030</option>
+	<option value="2031">2031</option>
+	<option value="2032">2032</option>
+	<option value="2033">2033</option>
+	<option value="2034">2034</option>
+	<option value="2035">2035</option>
+	<option value="2036">2036</option>
+	<option value="2037">2037</option>
+	<option value="2038">2038</option>
+	<option value="2039">2039</option>
+	<option value="2040">2040</option>
+	<option value="2041">2041</option>
+	<option value="2042">2042</option>
+	<option value="2043">2043</option>
+	<option value="2044">2044</option>
+	<option value="2045">2045</option>
+	<option value="2046">2046</option>
+	<option value="2047">2047</option>
+	<option value="2048">2048</option>
+	<option value="2049">2049</option>
+	<option value="2050">2050</option>
+
+</select> 
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    Category
+                    <select name="ddlCategory" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ddlCategory\&#39;,\&#39;\&#39;)&#39;, 0)" id="ddlCategory" style="width:210px;">
+	<option value="0">All Category</option>
+	<option value="9">Circular</option>
+	<option value="10">HandBooks</option>
+	<option value="11">Notification</option>
+	<option value="12">Imp. Directions</option>
+	<option value="13">Election Symbol</option>
+	<option value="14">Gazatte</option>
+	<option value="15">Nomination</option>
+	<option selected="selected" value="16">Results</option>
+	<option value="17">Others/Misc.</option>
+	<option value="18">Reservation</option>
+	<option value="19">Expenditure Details</option>
+	<option value="20">DeBarred List</option>
+
+</select>
+                </td>
+                </tr>
+            </table>  
+   
+			<div>
+	<table cellspacing="0" rules="all" border="1" id="gv1" style="font-family:Calibri;width:100%;border-collapse:collapse;">
+		<tr align="left" style="background-color:#E2E2E2;font-family:Calibri;">
+			<th align="center" scope="col" style="width:2%;">SNo</th><th align="center" scope="col" style="width:13%;">Election Type</th><th scope="col" style="width:8%;">Category Name</th><th scope="col">Subject</th><th align="center" scope="col" style="width:8%;">Download</th>
+		</tr><tr>
+			<td align="center" style="width:2%;">16</td><td align="center" valign="middle" style="width:20px;">
+                                                    <span id="gv1_ctl02_Label2">Panchayat (General)</span>
+                                                    Election
+							
+                                                </td><td align="left" style="width:8%;">Results</td><td style="width:30%;">Ramgarh Winning Candidates List for Panchayat Election 2022</td><td align="center">                                                 
+                                                   <span class="">                
+                                                     <a href='UserFiles/pdf/8920232176/16_Ramgarh_Prapatra23.pdf' target="_blank" title='8920232176'>
+                                                     <span id="gv1_ctl02_lblFile" style="color:Red;font-weight:bold;">Click to Download</span>
+                                                      </a><br />
+                                                   </span>
+                                                </td>
+		</tr><tr style="background-color:#E8F3FF;">
+			<td align="center" style="width:2%;">17</td><td align="center" valign="middle" style="width:20px;">
+                                                    <span id="gv1_ctl03_Label2">Panchayat (General)</span>
+                                                    Election
+							
+                                                </td><td align="left" style="width:8%;">Results</td><td style="width:30%;">Lohardaga Winning Candidates List for Panchayat Election 2022</td><td align="center">                                                 
+                                                   <span class="">                
+                                                     <a href='UserFiles/pdf/4520232175/17_Lohardaga_Prapatra23.pdf' target="_blank" title='4520232175'>
+                                                     <span id="gv1_ctl03_lblFile" style="color:Red;font-weight:bold;">Click to Download</span>
+                                                      </a><br />
+                                                   </span>
+                                                </td>
+		</tr><tr>
+			<td align="center" style="width:2%;">18</td><td align="center" valign="middle" style="width:20px;">
+                                                    <span id="gv1_ctl04_Label2">Panchayat (General)</span>
+                                                    Election
+							
+                                                </td><td align="left" style="width:8%;">Results</td><td style="width:30%;">Gumla Winning Candidates List for Panchayat Election 2022</td><td align="center">                                                 
+                                                   <span class="">                
+                                                     <a href='UserFiles/pdf/8820232174/18_Gumla_Prapatra23.pdf' target="_blank" title='8820232174'>
+                                                     <span id="gv1_ctl04_lblFile" style="color:Red;font-weight:bold;">Click to Download</span>
+                                                      </a><br />
+                                                   </span>
+                                                </td>
+		</tr><tr style="background-color:#E8F3FF;">
+			<td align="center" style="width:2%;">19</td><td align="center" valign="middle" style="width:20px;">
+                                                    <span id="gv1_ctl05_Label2">Panchayat (General)</span>
+                                                    Election
+							
+                                                </td><td align="left" style="width:8%;">Results</td><td style="width:30%;">Khunti Winning Candidates List for Panchayat Election 2022</td><td align="center">                                                 
+                                                   <span class="">                
+                                                     <a href='UserFiles/pdf/9820232173/19_Khunti_Prapatra23.pdf' target="_blank" title='9820232173'>
+                                                     <span id="gv1_ctl05_lblFile" style="color:Red;font-weight:bold;">Click to Download</span>
+                                                      </a><br />
+                                                   </span>
+                                                </td>
+		</tr><tr>
+			<td align="center" style="width:2%;">20</td><td align="center" valign="middle" style="width:20px;">
+                                                    <span id="gv1_ctl06_Label2">Panchayat (General)</span>
+                                                    Election
+							
+                                                </td><td align="left" style="width:8%;">Results</td><td style="width:30%;">Ranchi Winning Candidates List for Panchayat Election 2022</td><td align="center">                                                 
+                                                   <span class="">                
+                                                     <a href='UserFiles/pdf/3020232172/20_Ranchi_Prapatra23.pdf' target="_blank" title='3020232172'>
+                                                     <span id="gv1_ctl06_lblFile" style="color:Red;font-weight:bold;">Click to Download</span>
+                                                      </a><br />
+                                                   </span>
+                                                </td>
+		</tr><tr style="background-color:#E8F3FF;">
+			<td align="center" style="width:2%;">21</td><td align="center" valign="middle" style="width:20px;">
+                                                    <span id="gv1_ctl07_Label2">Panchayat (General)</span>
+                                                    Election
+							
+                                                </td><td align="left" style="width:8%;">Results</td><td style="width:30%;">Simdega Winning Candidates List for Panchayat Election 2022</td><td align="center">                                                 
+                                                   <span class="">                
+                                                     <a href='UserFiles/pdf/2320232171/21_Simdega_Prapatra23.pdf' target="_blank" title='2320232171'>
+                                                     <span id="gv1_ctl07_lblFile" style="color:Red;font-weight:bold;">Click to Download</span>
+                                                      </a><br />
+                                                   </span>
+                                                </td>
+		</tr><tr>
+			<td align="center" style="width:2%;">22</td><td align="center" valign="middle" style="width:20px;">
+                                                    <span id="gv1_ctl08_Label2">Panchayat (General)</span>
+                                                    Election
+							
+                                                </td><td align="left" style="width:8%;">Results</td><td style="width:30%;">West Singhbhum Winning Candidates List for Panchayat Election 2022</td><td align="center">                                                 
+                                                   <span class="">                
+                                                     <a href='UserFiles/pdf/7220232170/22_WestSinghbhum_Prapatra23.pdf' target="_blank" title='7220232170'>
+                                                     <span id="gv1_ctl08_lblFile" style="color:Red;font-weight:bold;">Click to Download</span>
+                                                      </a><br />
+                                                   </span>
+                                                </td>
+		</tr><tr style="background-color:#E8F3FF;">
+			<td align="center" style="width:2%;">23</td><td align="center" valign="middle" style="width:20px;">
+                                                    <span id="gv1_ctl09_Label2">Panchayat (General)</span>
+                                                    Election
+							
+                                                </td><td align="left" style="width:8%;">Results</td><td style="width:30%;">Seraikela Kharsawan Winning Candidates List for Panchayat Election 2022</td><td align="center">                                                 
+                                                   <span class="">                
+                                                     <a href='UserFiles/pdf/1820232169/23_Seraikela_Prapatra23.pdf' target="_blank" title='1820232169'>
+                                                     <span id="gv1_ctl09_lblFile" style="color:Red;font-weight:bold;">Click to Download</span>
+                                                      </a><br />
+                                                   </span>
+                                                </td>
+		</tr><tr>
+			<td align="center" style="width:2%;">24</td><td align="center" valign="middle" style="width:20px;">
+                                                    <span id="gv1_ctl10_Label2">Panchayat (General)</span>
+                                                    Election
+							
+                                                </td><td align="left" style="width:8%;">Results</td><td style="width:30%;">East Singhbhum Winning Candidates List for Panchayat Election 2022</td><td align="center">                                                 
+                                                   <span class="">                
+                                                     <a href='UserFiles/pdf/4320232168/24_EastSinghbhum_Prapatra23.pdf' target="_blank" title='4320232168'>
+                                                     <span id="gv1_ctl10_lblFile" style="color:Red;font-weight:bold;">Click to Download</span>
+                                                      </a><br />
+                                                   </span>
+                                                </td>
+		</tr><tr>
+			<td colspan="5"><table>
+				<tr>
+					<td><a href="javascript:__doPostBack(&#39;gv1&#39;,&#39;Page$1&#39;)">1</a></td><td><span>2</span></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table>
+</div>
+			
+		
+             
+			<div class="clearingdiv">&nbsp;<span id="lblError" style="color:Red;font-weight:bold;"></span></div>
+    </form>
+</body>
+</html>

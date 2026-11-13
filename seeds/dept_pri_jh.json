@@ -1,0 +1,314 @@
+[
+ {
+  "key": "pri_jh:file:1",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/1320232191/1_Garhwa_Prapatra23.pdf",
+   "district": "Garhwa",
+   "no": 1,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:2",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/9820232190/2_Palamu_Prapatra23.pdf",
+   "district": "Palamu",
+   "no": 2,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:3",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/3620232189/3_Latehar_Prapatra23.pdf",
+   "district": "Latehar",
+   "no": 3,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:4",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/2820232188/4_Chatra_Prapatra23.pdf",
+   "district": "Chatra",
+   "no": 4,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:5",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/6220232187/5_Hazaribagh_Prapatra23.pdf",
+   "district": "Hazaribagh",
+   "no": 5,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:6",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/4920232186/6_Koderma_Prapatra23.pdf",
+   "district": "Koderma",
+   "no": 6,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:7",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/9520232185/7_Giridih_Prapatra23.pdf",
+   "district": "Giridih",
+   "no": 7,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:8",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/3520232184/8_Deoghar_Prapatra23.pdf",
+   "district": "Deoghar",
+   "no": 8,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:9",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/7120232183/9_Godda_Prapatra23.pdf",
+   "district": "Godda",
+   "no": 9,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:10",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/1820232182/10_Sahebgunj_Prapatra23.pdf",
+   "district": "Sahebganj",
+   "no": 10,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:11",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/3120232181/11_Pakur_Prapatra23.pdf",
+   "district": "Pakur",
+   "no": 11,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:12",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/8520232180/12_Dumka_Prapatra%2023.pdf",
+   "district": "Dumka",
+   "no": 12,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:13",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/1520232179/13_Jamtara_Prapatra23.pdf",
+   "district": "Jamtara",
+   "no": 13,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:14",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/3320232178/14_Dhanbad_Prapatra23.pdf",
+   "district": "Dhanbad",
+   "no": 14,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:15",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/9020232177/15_Bokaro_Prapatra23.pdf",
+   "district": "Bokaro",
+   "no": 15,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:16",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/8920232176/16_Ramgarh_Prapatra23.pdf",
+   "district": "Ramgarh",
+   "no": 16,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:17",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/4520232175/17_Lohardaga_Prapatra23.pdf",
+   "district": "Lohardaga",
+   "no": 17,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:18",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/8820232174/18_Gumla_Prapatra23.pdf",
+   "district": "Gumla",
+   "no": 18,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:19",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/9820232173/19_Khunti_Prapatra23.pdf",
+   "district": "Khunti",
+   "no": 19,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:20",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/3020232172/20_Ranchi_Prapatra23.pdf",
+   "district": "Ranchi",
+   "no": 20,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:21",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/2320232171/21_Simdega_Prapatra23.pdf",
+   "district": "Simdega",
+   "no": 21,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:22",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/7220232170/22_WestSinghbhum_Prapatra23.pdf",
+   "district": "West Singhbhum",
+   "no": 22,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:23",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/1820232169/23_Seraikela_Prapatra23.pdf",
+   "district": "Saraikela Kharsawan",
+   "no": 23,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "pri_jh:file:24",
+  "payload": {
+   "reader": "pri_jh",
+   "kind": "file",
+   "url": "https://sec.jharkhand.gov.in/UserFiles/pdf/4320232168/24_EastSinghbhum_Prapatra23.pdf",
+   "district": "East Singhbhum",
+   "no": 24,
+   "state": "JH",
+   "expected": 0,
+   "route": "abroad"
+  }
+ }
+]

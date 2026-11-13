@@ -1,0 +1,5478 @@
+[
+ {
+  "key": "pri_wb:zp:110000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 110000000,
+   "district": "COOCHBEHAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110101000,
+   "district": "COOCHBEHAR",
+   "block": "COOCH BEHAR - I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110102000,
+   "district": "COOCHBEHAR",
+   "block": "COOCH BEHAR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110201000,
+   "district": "COOCHBEHAR",
+   "block": "DINHATA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110202000,
+   "district": "COOCHBEHAR",
+   "block": "SITAI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110203000,
+   "district": "COOCHBEHAR",
+   "block": "DINHATA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110301000,
+   "district": "COOCHBEHAR",
+   "block": "HALDIBARI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110302000,
+   "district": "COOCHBEHAR",
+   "block": "MEKHLIGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110401000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110401000,
+   "district": "COOCHBEHAR",
+   "block": "MATHABHANGA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110402000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110402000,
+   "district": "COOCHBEHAR",
+   "block": "MATHABHANGA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110403000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110403000,
+   "district": "COOCHBEHAR",
+   "block": "SITALKUCHI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110501000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110501000,
+   "district": "COOCHBEHAR",
+   "block": "TUFANGANJ-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:110502000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 110000000,
+   "ps_id": 110502000,
+   "district": "COOCHBEHAR",
+   "block": "TUFANGANJ - I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:120000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 120000000,
+   "district": "JALPAIGURI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:120101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 120000000,
+   "ps_id": 120101000,
+   "district": "JALPAIGURI",
+   "block": "DHUPGURI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:120102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 120000000,
+   "ps_id": 120102000,
+   "district": "JALPAIGURI",
+   "block": "MAYNAGURI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:120103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 120000000,
+   "ps_id": 120103000,
+   "district": "JALPAIGURI",
+   "block": "JALPAIGURI SADAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:120104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 120000000,
+   "ps_id": 120104000,
+   "district": "JALPAIGURI",
+   "block": "RAJGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:120105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 120000000,
+   "ps_id": 120105000,
+   "district": "JALPAIGURI",
+   "block": "BANARHAT",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:120201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 120000000,
+   "ps_id": 120201000,
+   "district": "JALPAIGURI",
+   "block": "MAL",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:120202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 120000000,
+   "ps_id": 120202000,
+   "district": "JALPAIGURI",
+   "block": "MATIALI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:120203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 120000000,
+   "ps_id": 120203000,
+   "district": "JALPAIGURI",
+   "block": "NAGRAKATA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:120204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 120000000,
+   "ps_id": 120204000,
+   "district": "JALPAIGURI",
+   "block": "KRANTI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:130000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 130000000,
+   "district": "UTTAR DINAJPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:130101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 130000000,
+   "ps_id": 130101000,
+   "district": "UTTAR DINAJPUR",
+   "block": "CHOPRA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:130102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 130000000,
+   "ps_id": 130102000,
+   "district": "UTTAR DINAJPUR",
+   "block": "ISLAMPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:130103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 130000000,
+   "ps_id": 130103000,
+   "district": "UTTAR DINAJPUR",
+   "block": "GOALPOKHER-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:130104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 130000000,
+   "ps_id": 130104000,
+   "district": "UTTAR DINAJPUR",
+   "block": "GOALPOKHER-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:130105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 130000000,
+   "ps_id": 130105000,
+   "district": "UTTAR DINAJPUR",
+   "block": "KARANDIGHI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:130201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 130000000,
+   "ps_id": 130201000,
+   "district": "UTTAR DINAJPUR",
+   "block": "HEMTABAD",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:130202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 130000000,
+   "ps_id": 130202000,
+   "district": "UTTAR DINAJPUR",
+   "block": "KALIYAGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:130203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 130000000,
+   "ps_id": 130203000,
+   "district": "UTTAR DINAJPUR",
+   "block": "RAIGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:130204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 130000000,
+   "ps_id": 130204000,
+   "district": "UTTAR DINAJPUR",
+   "block": "ITAHAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:140000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 140000000,
+   "district": "DAKSHIN DINAJPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:140101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 140000000,
+   "ps_id": 140101000,
+   "district": "DAKSHIN DINAJPUR",
+   "block": "KUSHMANDI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:140102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 140000000,
+   "ps_id": 140102000,
+   "district": "DAKSHIN DINAJPUR",
+   "block": "GANGARAMPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:140103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 140000000,
+   "ps_id": 140103000,
+   "district": "DAKSHIN DINAJPUR",
+   "block": "HARIRAMPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:140104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 140000000,
+   "ps_id": 140104000,
+   "district": "DAKSHIN DINAJPUR",
+   "block": "BANSHIHARI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:140201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 140000000,
+   "ps_id": 140201000,
+   "district": "DAKSHIN DINAJPUR",
+   "block": "KUMARGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:140202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 140000000,
+   "ps_id": 140202000,
+   "district": "DAKSHIN DINAJPUR",
+   "block": "BALURGHAT",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:140203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 140000000,
+   "ps_id": 140203000,
+   "district": "DAKSHIN DINAJPUR",
+   "block": "HILI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:140204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 140000000,
+   "ps_id": 140204000,
+   "district": "DAKSHIN DINAJPUR",
+   "block": "TAPAN",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:150000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 150000000,
+   "district": "MALDA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150101000,
+   "district": "MALDA",
+   "block": "BAMANGOLA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150102000,
+   "district": "MALDA",
+   "block": "HABIBPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150103000,
+   "district": "MALDA",
+   "block": "GAZOLE",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150104000,
+   "district": "MALDA",
+   "block": "MANIKCHAK",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150105000,
+   "district": "MALDA",
+   "block": "ENGLISHBAZAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150106000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150106000,
+   "district": "MALDA",
+   "block": "OLD MALDA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150107000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150107000,
+   "district": "MALDA",
+   "block": "KALIACHAK-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150108000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150108000,
+   "district": "MALDA",
+   "block": "KALIACHAK-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150109000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150109000,
+   "district": "MALDA",
+   "block": "KALIACHAK-III",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150201000,
+   "district": "MALDA",
+   "block": "HARISHCHANDRAPUR-1",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150202000,
+   "district": "MALDA",
+   "block": "CHANCHAL-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150203000,
+   "district": "MALDA",
+   "block": "HARISHCHANDRAPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150204000,
+   "district": "MALDA",
+   "block": "CHANCHAL-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150205000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150205000,
+   "district": "MALDA",
+   "block": "RATUA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:150206000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 150000000,
+   "ps_id": 150206000,
+   "district": "MALDA",
+   "block": "RATUA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:160000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 160000000,
+   "district": "MURSHIDABAD",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160101000,
+   "district": "MURSHIDABAD",
+   "block": "RANINAGAR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160102000,
+   "district": "MURSHIDABAD",
+   "block": "RANINAGAR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160103000,
+   "district": "MURSHIDABAD",
+   "block": "JALANGI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160104000,
+   "district": "MURSHIDABAD",
+   "block": "DOMKAL",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160201000,
+   "district": "MURSHIDABAD",
+   "block": "RAGHUNATHGANJ-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160202000,
+   "district": "MURSHIDABAD",
+   "block": "SUTI-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160203000,
+   "district": "MURSHIDABAD",
+   "block": "FARAKKA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160204000,
+   "district": "MURSHIDABAD",
+   "block": "SAGARDIGHI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160205000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160205000,
+   "district": "MURSHIDABAD",
+   "block": "SAMSERGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160206000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160206000,
+   "district": "MURSHIDABAD",
+   "block": "RAGHUNATHGANJ-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160207000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160207000,
+   "district": "MURSHIDABAD",
+   "block": "SUTI-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160301000,
+   "district": "MURSHIDABAD",
+   "block": "KANDI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160302000,
+   "district": "MURSHIDABAD",
+   "block": "BHARATPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160303000,
+   "district": "MURSHIDABAD",
+   "block": "BURWAN",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160304000,
+   "district": "MURSHIDABAD",
+   "block": "BHARATPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160305000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160305000,
+   "district": "MURSHIDABAD",
+   "block": "KHARGRAM",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160401000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160401000,
+   "district": "MURSHIDABAD",
+   "block": "LALGOLA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160402000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160402000,
+   "district": "MURSHIDABAD",
+   "block": "MURSHIDABAD-JIAGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160403000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160403000,
+   "district": "MURSHIDABAD",
+   "block": "NABAGRAM",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160404000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160404000,
+   "district": "MURSHIDABAD",
+   "block": "BHAGWANGOLA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160405000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160405000,
+   "district": "MURSHIDABAD",
+   "block": "BHAGWANGOLA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160501000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160501000,
+   "district": "MURSHIDABAD",
+   "block": "BELDANGA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160502000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160502000,
+   "district": "MURSHIDABAD",
+   "block": "BELDANGA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160503000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160503000,
+   "district": "MURSHIDABAD",
+   "block": "NOWDA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160504000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160504000,
+   "district": "MURSHIDABAD",
+   "block": "BERHAMPORE",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:160505000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 160000000,
+   "ps_id": 160505000,
+   "district": "MURSHIDABAD",
+   "block": "HARIHARPARA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:170000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 170000000,
+   "district": "NADIA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170101000,
+   "district": "NADIA",
+   "block": "KARIMPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170102000,
+   "district": "NADIA",
+   "block": "KARIMPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170103000,
+   "district": "NADIA",
+   "block": "TEHATTA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170104000,
+   "district": "NADIA",
+   "block": "TEHATTA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170201000,
+   "district": "NADIA",
+   "block": "NAKASHIPARA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170202000,
+   "district": "NADIA",
+   "block": "KALIGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170203000,
+   "district": "NADIA",
+   "block": "CHAPRA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170204000,
+   "district": "NADIA",
+   "block": "KRISHNAGAR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170205000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170205000,
+   "district": "NADIA",
+   "block": "KRISHNAGAR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170206000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170206000,
+   "district": "NADIA",
+   "block": "KRISHNAGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170207000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170207000,
+   "district": "NADIA",
+   "block": "NABADWIP",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170301000,
+   "district": "NADIA",
+   "block": "SANTIPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170302000,
+   "district": "NADIA",
+   "block": "RANAGHAT-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170303000,
+   "district": "NADIA",
+   "block": "RANAGHAT-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170304000,
+   "district": "NADIA",
+   "block": "HANSKHALI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170401000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170401000,
+   "district": "NADIA",
+   "block": "CHAKDAHA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170402000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170402000,
+   "district": "NADIA",
+   "block": "KALYANI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:170403000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 170000000,
+   "ps_id": 170403000,
+   "district": "NADIA",
+   "block": "HARINGHATA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:180000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 180000000,
+   "district": "NORTH 24 PARGANAS",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180101000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "AMDANGA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180102000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "BARASAT-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180103000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "BARASAT-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180104000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "DEGANGA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180105000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "HABRA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180106000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180106000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "HABRA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180107000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180107000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "RAJARHAT",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180201000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "BARRACKPORE-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180202000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "BARRACKPORE-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180301000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "BADURIA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180302000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "BASIRHAT-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180303000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "BASIRHAT-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180304000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "HAROA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180305000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180305000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "HASNABAD",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180306000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180306000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "HINGALGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180307000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180307000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "MINAKHAN",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180308000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180308000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "SANDESHKHALI-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180309000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180309000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "SANDESHKHALI-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180310000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180310000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "SWARUPNAGAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180401000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180401000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "BAGDAH",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180402000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180402000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "BONGAON",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:180403000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 180000000,
+   "ps_id": 180403000,
+   "district": "NORTH 24 PARGANAS",
+   "block": "GAIGHATA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:190000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 190000000,
+   "district": "SOUTH 24-PARGANAS",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190101000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "BARUIPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190102000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "BHANGORE-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190103000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "BHANGORE-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190104000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "JOYNAGAR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190105000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "JOYNAGAR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190106000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190106000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "KULTALI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190107000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190107000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "SONARPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190201000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "BASANTI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190202000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "GOSABA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190203000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "CANNING-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190204000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "CANNING-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190301000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "MAGRAHAT-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190302000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "DIAMOND HARBOUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190303000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "DIAMOND HARBOUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190304000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "FALTA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190305000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190305000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "KULPI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190306000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190306000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "MAGRAHAT-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190307000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190307000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "MANDIRBAZAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190308000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190308000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "MATHURAPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190309000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190309000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "MATHURAPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190401000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190401000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "KAKDWIP",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190402000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190402000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "NAMKHANA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190403000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190403000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "PATHARPRATIMA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190404000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190404000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "SAGAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190501000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190501000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "BISHNUPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190502000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190502000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "BISHNUPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190503000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190503000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "BUDGE BUDGE-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190504000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190504000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "BUDGE BUDGE-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:190505000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 190000000,
+   "ps_id": 190505000,
+   "district": "SOUTH 24-PARGANAS",
+   "block": "THAKURPUKUR MAHESHTALA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:200000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 200000000,
+   "district": "HOWRAH",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:201001000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 201001000,
+   "district": "HOWRAH",
+   "block": "UDAYNARAYANPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:201002000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 201002000,
+   "district": "HOWRAH",
+   "block": "ULUBERIA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:201003000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 201003000,
+   "district": "HOWRAH",
+   "block": "ULUBERIA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:201004000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 201004000,
+   "district": "HOWRAH",
+   "block": "SHYAMPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:201005000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 201005000,
+   "district": "HOWRAH",
+   "block": "SHYAMPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:201006000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 201006000,
+   "district": "HOWRAH",
+   "block": "BAGNAN II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:201007000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 201007000,
+   "district": "HOWRAH",
+   "block": "BAGNAN-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:201008000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 201008000,
+   "district": "HOWRAH",
+   "block": "AMTA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:201009000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 201009000,
+   "district": "HOWRAH",
+   "block": "AMTA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:202001000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 202001000,
+   "district": "HOWRAH",
+   "block": "SANKRAIL",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:202002000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 202002000,
+   "district": "HOWRAH",
+   "block": "DOMJUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:202003000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 202003000,
+   "district": "HOWRAH",
+   "block": "BALLY-JAGACHA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:202004000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 202004000,
+   "district": "HOWRAH",
+   "block": "PANCHLA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:202005000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 200000000,
+   "ps_id": 202005000,
+   "district": "HOWRAH",
+   "block": "JAGATBALLAVPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:210000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 210000000,
+   "district": "HOOGHLY",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210101000,
+   "district": "HOOGHLY",
+   "block": "ARAMBAGH",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210102000,
+   "district": "HOOGHLY",
+   "block": "GOGHAT - I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210103000,
+   "district": "HOOGHLY",
+   "block": "GOGHAT-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210104000,
+   "district": "HOOGHLY",
+   "block": "KHANAKUL-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210105000,
+   "district": "HOOGHLY",
+   "block": "KHANAKUL-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210106000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210106000,
+   "district": "HOOGHLY",
+   "block": "PURSURAH",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210201000,
+   "district": "HOOGHLY",
+   "block": "BALAGARH",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210202000,
+   "district": "HOOGHLY",
+   "block": "CHINSURAH-MOGRA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210203000,
+   "district": "HOOGHLY",
+   "block": "DHANIAKHALI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210204000,
+   "district": "HOOGHLY",
+   "block": "PANDUA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210205000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210205000,
+   "district": "HOOGHLY",
+   "block": "POLBA-DADPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210301000,
+   "district": "HOOGHLY",
+   "block": "CHANDITALA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210302000,
+   "district": "HOOGHLY",
+   "block": "CHANDITALA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210303000,
+   "district": "HOOGHLY",
+   "block": "JANGIPARA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210304000,
+   "district": "HOOGHLY",
+   "block": "SERAMPORE-UTTARPARA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210401000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210401000,
+   "district": "HOOGHLY",
+   "block": "HARIPAL",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210402000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210402000,
+   "district": "HOOGHLY",
+   "block": "SINGUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:210403000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 210000000,
+   "ps_id": 210403000,
+   "district": "HOOGHLY",
+   "block": "TARAKESWAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:220000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 220000000,
+   "district": "PURBA MEDINIPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220101000,
+   "district": "PURBA MEDINIPUR",
+   "block": "EGRA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220102000,
+   "district": "PURBA MEDINIPUR",
+   "block": "EGRA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220103000,
+   "district": "PURBA MEDINIPUR",
+   "block": "BHAGWANPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220104000,
+   "district": "PURBA MEDINIPUR",
+   "block": "PATASHPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220105000,
+   "district": "PURBA MEDINIPUR",
+   "block": "PATASHPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220201000,
+   "district": "PURBA MEDINIPUR",
+   "block": "DESHAPRAN",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220202000,
+   "district": "PURBA MEDINIPUR",
+   "block": "KHEJURI-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220203000,
+   "district": "PURBA MEDINIPUR",
+   "block": "CONTAI-III",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220204000,
+   "district": "PURBA MEDINIPUR",
+   "block": "BHAGWANPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220205000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220205000,
+   "district": "PURBA MEDINIPUR",
+   "block": "RAMNAGAR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220206000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220206000,
+   "district": "PURBA MEDINIPUR",
+   "block": "KHEJURI-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220207000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220207000,
+   "district": "PURBA MEDINIPUR",
+   "block": "RAMNAGAR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220208000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220208000,
+   "district": "PURBA MEDINIPUR",
+   "block": "CONTAI-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220301000,
+   "district": "PURBA MEDINIPUR",
+   "block": "SAHID MATANGINI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220302000,
+   "district": "PURBA MEDINIPUR",
+   "block": "CHANDIPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220303000,
+   "district": "PURBA MEDINIPUR",
+   "block": "KOLAGHAT",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220304000,
+   "district": "PURBA MEDINIPUR",
+   "block": "MOYNA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220305000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220305000,
+   "district": "PURBA MEDINIPUR",
+   "block": "TAMLUK",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220306000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220306000,
+   "district": "PURBA MEDINIPUR",
+   "block": "NANDAKUMAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220307000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220307000,
+   "district": "PURBA MEDINIPUR",
+   "block": "PANSKURA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220401000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220401000,
+   "district": "PURBA MEDINIPUR",
+   "block": "HALDIA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220402000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220402000,
+   "district": "PURBA MEDINIPUR",
+   "block": "NANDIGRAM-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220403000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220403000,
+   "district": "PURBA MEDINIPUR",
+   "block": "SUTAHATA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220404000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220404000,
+   "district": "PURBA MEDINIPUR",
+   "block": "NANDIGRAM-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:220405000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 220000000,
+   "ps_id": 220405000,
+   "district": "PURBA MEDINIPUR",
+   "block": "MAHISHADAL",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:230000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 230000000,
+   "district": "PASCHIM MEDINIPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230101000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "GARHBETA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230102000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "GARHBETA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230103000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "GARHBETA-III",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230104000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "KESHPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230105000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "SALBONI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230106000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230106000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "MIDNAPUR SADAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230201000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "DEBRA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230202000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "KHARAGPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230203000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "KHARAGPUR - II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230204000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "DANTAN-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230205000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230205000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "DANTAN - II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230206000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230206000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "KESHIARY",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230207000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230207000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "SABANG",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230208000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230208000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "PINGLA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230209000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230209000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "NARAYANGARH",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230210000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230210000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "MOHANPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230301000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "GHATAL",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230302000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "DASPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230303000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "DASPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230304000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "CHANDRAKONA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:230305000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 230000000,
+   "ps_id": 230305000,
+   "district": "PASCHIM MEDINIPUR",
+   "block": "CHANDRAKONA - II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:240000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 240000000,
+   "district": "PURULIA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240101000,
+   "district": "PURULIA",
+   "block": "ARSHA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240102000,
+   "district": "PURULIA",
+   "block": "PURULIA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240103000,
+   "district": "PURULIA",
+   "block": "BALARAMPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240104000,
+   "district": "PURULIA",
+   "block": "HURA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240105000,
+   "district": "PURULIA",
+   "block": "PURULIA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240201000,
+   "district": "PURULIA",
+   "block": "BANDWAN",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240202000,
+   "district": "PURULIA",
+   "block": "MANBAZAR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240203000,
+   "district": "PURULIA",
+   "block": "MANBAZAR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240204000,
+   "district": "PURULIA",
+   "block": "BARABAZAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240205000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240205000,
+   "district": "PURULIA",
+   "block": "PUNCHA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240301000,
+   "district": "PURULIA",
+   "block": "RAGHUNATHPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240302000,
+   "district": "PURULIA",
+   "block": "RAGHUNATHPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240303000,
+   "district": "PURULIA",
+   "block": "SANTURI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240304000,
+   "district": "PURULIA",
+   "block": "PARA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240305000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240305000,
+   "district": "PURULIA",
+   "block": "NETURIA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240306000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240306000,
+   "district": "PURULIA",
+   "block": "KASHIPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240401000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240401000,
+   "district": "PURULIA",
+   "block": "JOYPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240402000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240402000,
+   "district": "PURULIA",
+   "block": "JHALDA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240403000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240403000,
+   "district": "PURULIA",
+   "block": "JHALDA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:240404000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 240000000,
+   "ps_id": 240404000,
+   "district": "PURULIA",
+   "block": "BAGHMUNDI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:250000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 250000000,
+   "district": "BANKURA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250101000,
+   "district": "BANKURA",
+   "block": "SALTORA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250102000,
+   "district": "BANKURA",
+   "block": "MEJHIA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250103000,
+   "district": "BANKURA",
+   "block": "GANGAJALGHATI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250104000,
+   "district": "BANKURA",
+   "block": "CHHATNA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250105000,
+   "district": "BANKURA",
+   "block": "BANKURA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250106000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250106000,
+   "district": "BANKURA",
+   "block": "BANKURA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250107000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250107000,
+   "district": "BANKURA",
+   "block": "BARJORA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250108000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250108000,
+   "district": "BANKURA",
+   "block": "ONDA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250201000,
+   "district": "BANKURA",
+   "block": "INDPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250202000,
+   "district": "BANKURA",
+   "block": "HIRBANDH",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250203000,
+   "district": "BANKURA",
+   "block": "KHATRA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250204000,
+   "district": "BANKURA",
+   "block": "RANIBANDH",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250205000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250205000,
+   "district": "BANKURA",
+   "block": "RAIPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250206000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250206000,
+   "district": "BANKURA",
+   "block": "SARENGA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250207000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250207000,
+   "district": "BANKURA",
+   "block": "SIMLAPAL",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250208000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250208000,
+   "district": "BANKURA",
+   "block": "TALDANGRA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250301000,
+   "district": "BANKURA",
+   "block": "BISHNUPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250302000,
+   "district": "BANKURA",
+   "block": "JOYPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250303000,
+   "district": "BANKURA",
+   "block": "KOTULPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250304000,
+   "district": "BANKURA",
+   "block": "INDUS",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250305000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250305000,
+   "district": "BANKURA",
+   "block": "PATRASAYER",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:250306000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 250000000,
+   "ps_id": 250306000,
+   "district": "BANKURA",
+   "block": "SONAMUKHI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:260000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 260000000,
+   "district": "PURBA BARDHAMAN",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260101000,
+   "district": "PURBA BARDHAMAN",
+   "block": "RAINA - I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260102000,
+   "district": "PURBA BARDHAMAN",
+   "block": "KHANDAGHOSH",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260103000,
+   "district": "PURBA BARDHAMAN",
+   "block": "RAINA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260104000,
+   "district": "PURBA BARDHAMAN",
+   "block": "MEMARI-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260105000,
+   "district": "PURBA BARDHAMAN",
+   "block": "MEMARI-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260106000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260106000,
+   "district": "PURBA BARDHAMAN",
+   "block": "JAMALPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260201000,
+   "district": "PURBA BARDHAMAN",
+   "block": "KATWA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260202000,
+   "district": "PURBA BARDHAMAN",
+   "block": "KATWA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260203000,
+   "district": "PURBA BARDHAMAN",
+   "block": "KETUGRAM-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260204000,
+   "district": "PURBA BARDHAMAN",
+   "block": "MONGALKOTE",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260205000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260205000,
+   "district": "PURBA BARDHAMAN",
+   "block": "KETUGRAM-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260301000,
+   "district": "PURBA BARDHAMAN",
+   "block": "BHATAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260302000,
+   "district": "PURBA BARDHAMAN",
+   "block": "BURDWAN-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260303000,
+   "district": "PURBA BARDHAMAN",
+   "block": "AUSGRAM-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260304000,
+   "district": "PURBA BARDHAMAN",
+   "block": "GALSI-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260305000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260305000,
+   "district": "PURBA BARDHAMAN",
+   "block": "AUSGRAM-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260306000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260306000,
+   "district": "PURBA BARDHAMAN",
+   "block": "GALSI-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260307000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260307000,
+   "district": "PURBA BARDHAMAN",
+   "block": "BURDWAN-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260401000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260401000,
+   "district": "PURBA BARDHAMAN",
+   "block": "KALNA-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260402000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260402000,
+   "district": "PURBA BARDHAMAN",
+   "block": "KALNA-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260403000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260403000,
+   "district": "PURBA BARDHAMAN",
+   "block": "MONTESWAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260404000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260404000,
+   "district": "PURBA BARDHAMAN",
+   "block": "PURBASTHALI-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:260405000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 260000000,
+   "ps_id": 260405000,
+   "district": "PURBA BARDHAMAN",
+   "block": "PURBASTHALI-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:270000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 270000000,
+   "district": "BIRBHUM",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270101000,
+   "district": "BIRBHUM",
+   "block": "BOLPUR-SRINIKETAN",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270102000,
+   "district": "BIRBHUM",
+   "block": "ILLAMBAZAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270103000,
+   "district": "BIRBHUM",
+   "block": "LABPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270104000,
+   "district": "BIRBHUM",
+   "block": "NANOOR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270201000,
+   "district": "BIRBHUM",
+   "block": "DUBRAJPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270202000,
+   "district": "BIRBHUM",
+   "block": "KHOYRASOLE",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270203000,
+   "district": "BIRBHUM",
+   "block": "MD. BAZAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270204000,
+   "district": "BIRBHUM",
+   "block": "RAJNAGAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270205000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270205000,
+   "district": "BIRBHUM",
+   "block": "SURI-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270206000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270206000,
+   "district": "BIRBHUM",
+   "block": "SURI-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270207000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270207000,
+   "district": "BIRBHUM",
+   "block": "SAINTHIA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270301000,
+   "district": "BIRBHUM",
+   "block": "RAMPURHAT-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270302000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270302000,
+   "district": "BIRBHUM",
+   "block": "RAMPURHAT-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270303000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270303000,
+   "district": "BIRBHUM",
+   "block": "MAYURESWAR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270304000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270304000,
+   "district": "BIRBHUM",
+   "block": "MAYURESWAR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270305000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270305000,
+   "district": "BIRBHUM",
+   "block": "MURARAI-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270306000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270306000,
+   "district": "BIRBHUM",
+   "block": "NALHATI-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270307000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270307000,
+   "district": "BIRBHUM",
+   "block": "NALHATI-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:270308000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 270000000,
+   "ps_id": 270308000,
+   "district": "BIRBHUM",
+   "block": "MURARAI-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:280000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 280000000,
+   "district": "ALIPURDUAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:280101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 280000000,
+   "ps_id": 280101000,
+   "district": "ALIPURDUAR",
+   "block": "KUMARGRAM",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:280102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 280000000,
+   "ps_id": 280102000,
+   "district": "ALIPURDUAR",
+   "block": "ALIPURDUAR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:280103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 280000000,
+   "ps_id": 280103000,
+   "district": "ALIPURDUAR",
+   "block": "KALCHINI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:280104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 280000000,
+   "ps_id": 280104000,
+   "district": "ALIPURDUAR",
+   "block": "ALIPURDUAR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:280105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 280000000,
+   "ps_id": 280105000,
+   "district": "ALIPURDUAR",
+   "block": "FALAKATA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:280106000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 280000000,
+   "ps_id": 280106000,
+   "district": "ALIPURDUAR",
+   "block": "MADARIHAT BIRPARA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:290000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 290000000,
+   "district": "JHARGRAM",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:290101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 290000000,
+   "ps_id": 290101000,
+   "district": "JHARGRAM",
+   "block": "GOPIBALLAVPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:290102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 290000000,
+   "ps_id": 290102000,
+   "district": "JHARGRAM",
+   "block": "GOPIBALLAVPUR-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:290103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 290000000,
+   "ps_id": 290103000,
+   "district": "JHARGRAM",
+   "block": "NAYAGRAM",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:290104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 290000000,
+   "ps_id": 290104000,
+   "district": "JHARGRAM",
+   "block": "JHARGRAM",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:290105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 290000000,
+   "ps_id": 290105000,
+   "district": "JHARGRAM",
+   "block": "SANKRAIL",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:290106000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 290000000,
+   "ps_id": 290106000,
+   "district": "JHARGRAM",
+   "block": "BINPUR-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:290107000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 290000000,
+   "ps_id": 290107000,
+   "district": "JHARGRAM",
+   "block": "BINPUR - II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:290108000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 290000000,
+   "ps_id": 290108000,
+   "district": "JHARGRAM",
+   "block": "JAMBONI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:300000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 300000000,
+   "district": "PASCHIM BARDHAMAN",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:300101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 300000000,
+   "ps_id": 300101000,
+   "district": "PASCHIM BARDHAMAN",
+   "block": "PANDAVESWAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:300102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 300000000,
+   "ps_id": 300102000,
+   "district": "PASCHIM BARDHAMAN",
+   "block": "ANDAL",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:300103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 300000000,
+   "ps_id": 300103000,
+   "district": "PASCHIM BARDHAMAN",
+   "block": "DURGAPUR-FARIDPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:300104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 300000000,
+   "ps_id": 300104000,
+   "district": "PASCHIM BARDHAMAN",
+   "block": "KANKSA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:300201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 300000000,
+   "ps_id": 300201000,
+   "district": "PASCHIM BARDHAMAN",
+   "block": "RANIGANJ",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:300202000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 300000000,
+   "ps_id": 300202000,
+   "district": "PASCHIM BARDHAMAN",
+   "block": "BARABANI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:300203000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 300000000,
+   "ps_id": 300203000,
+   "district": "PASCHIM BARDHAMAN",
+   "block": "JAMURIA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:300204000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 300000000,
+   "ps_id": 300204000,
+   "district": "PASCHIM BARDHAMAN",
+   "block": "SALANPUR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:310000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 310000000,
+   "district": "KALIMPONG",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:310101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 310000000,
+   "ps_id": 310101000,
+   "district": "KALIMPONG",
+   "block": "GORUBATHAN",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:310102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 310000000,
+   "ps_id": 310102000,
+   "district": "KALIMPONG",
+   "block": "KALIMPONG-I",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:310103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 310000000,
+   "ps_id": 310103000,
+   "district": "KALIMPONG",
+   "block": "KALIMPONG-II",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:310104000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 310000000,
+   "ps_id": 310104000,
+   "district": "KALIMPONG",
+   "block": "LAVA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:310105000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 310000000,
+   "ps_id": 310105000,
+   "district": "KALIMPONG",
+   "block": "PEDONG",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:zp:320000000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "zp",
+   "zp_id": 320000000,
+   "district": "DARJEELING",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:320101000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 320000000,
+   "ps_id": 320101000,
+   "district": "DARJEELING",
+   "block": "DARJEELING PULBAZAR",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:320102000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 320000000,
+   "ps_id": 320102000,
+   "district": "DARJEELING",
+   "block": "JOREBUNGLOW SUKHIAPOKHRI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:320103000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 320000000,
+   "ps_id": 320103000,
+   "district": "DARJEELING",
+   "block": "RANGLI RANGLIOT",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:320201000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 320000000,
+   "ps_id": 320201000,
+   "district": "DARJEELING",
+   "block": "KURSEONG",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:320301000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 320000000,
+   "ps_id": 320301000,
+   "district": "DARJEELING",
+   "block": "MIRIK",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:320401000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 320000000,
+   "ps_id": 320401000,
+   "district": "DARJEELING",
+   "block": "KHARIBARI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:320402000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 320000000,
+   "ps_id": 320402000,
+   "district": "DARJEELING",
+   "block": "MATIGARA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:320403000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 320000000,
+   "ps_id": 320403000,
+   "district": "DARJEELING",
+   "block": "NAXALBARI",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ },
+ {
+  "key": "pri_wb:ps:320404000",
+  "payload": {
+   "reader": "pri_wb",
+   "url": "https://portal.wbsec.org/",
+   "level": "ps",
+   "zp_id": 320000000,
+   "ps_id": 320404000,
+   "district": "DARJEELING",
+   "block": "PHANSIDEWA",
+   "state": "WB",
+   "route": "direct",
+   "expected": 0
+  }
+ }
+]
