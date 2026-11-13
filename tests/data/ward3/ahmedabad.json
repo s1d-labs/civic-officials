@@ -1,0 +1,7 @@
+{"module": "ward3_ahmedabad",
+ "payload": {"reader": "ward3_ahmedabad", "url": "https://ahmedabad.gujarat.gov.in/assets/downloads/AMC_Contact_Directory_.pdf", "state": "GJ"},
+ "pages": "ahmedabad_directory.pages",
+ "min_records": 120,
+ "expect": [{"post": "Assistant Municipal Commissioner W Z - 4", "name": "Hemant R Balat", "level": "ward"},
+            {"post": "Deputy Health Officer", "name": "Daxaben", "level": "zone"},
+            {"post": "Dy. MC- WEST ZONE", "name": "Amrutesh", "level": "zone"}]}
