@@ -40,29 +40,32 @@ ELECTION = "Jharkhand Municipal (General) Election 2026 (poll 23.02.2026, count 
 LANG = "hin+eng"
 MAX_PAGES = 15
 
-# district host -> (district, election pages seen on 2026-11-12; empty = find them from the home page menu)
+# district host -> (district, election pages seen on 2026-11-12; empty = find them from the home page menu). Gap round 2026-11-14:
+# the 7 districts that had none got the election pages of their archive.s1d.me copies (2026-11-05/06); the home page menus of
+# Koderma and Jamtara did not lead to their result files (Koderma "Form 23 Gazette Notification for Chairperson/Ward", Jamtara
+# "जिला गजट अधिसूचना ... परिणाम प्रकाशन"), and the Sahebganj site is sahibganj.nic.in.
 DISTRICTS = {
     "bokaro.nic.in": ("Bokaro", ["https://bokaro.nic.in/municipality-general-election-2026/"]),
     "chatra.nic.in": ("Chatra", ["https://chatra.nic.in/municipal-election-2026/"]),
     "deoghar.nic.in": ("Deoghar", ["https://deoghar.nic.in/district-election-portal/"]),
     "dhanbad.nic.in": ("Dhanbad", ["https://dhanbad.nic.in/hi/नगरपालिका-चुनाव-2026/"]),
     "dumka.nic.in": ("Dumka", ["https://dumka.nic.in/nagarpalika-election-2026/"]),
-    "jamshedpur.nic.in": ("East Singhbum", []),
+    "jamshedpur.nic.in": ("East Singhbum", ["https://jamshedpur.nic.in/departments/district-election-office/"]),
     "garhwa.nic.in": ("Garhwa", ["https://garhwa.nic.in/hi/नगरपालिका-आम-निर्वाचन-2026/"]),
     "giridih.nic.in": ("Giridih", ["https://giridih.nic.in/municipality-election-2022-23/"]),
     "godda.nic.in": ("Godda", ["https://godda.nic.in/municipal-general-election-2026/"]),
-    "gumla.nic.in": ("Gumla", []),
+    "gumla.nic.in": ("Gumla", ["https://gumla.nic.in/election/municipal-election/"]),
     "hazaribag.nic.in": ("Hazaribagh", ["https://hazaribag.nic.in/hi/नगरपालिका-आम-निर्वाचन-2026/"]),
-    "jamtara.nic.in": ("Jamtara", []),
+    "jamtara.nic.in": ("Jamtara", ["https://jamtara.nic.in/hi/नगरपालिका-निर्वाचन-2025/"]),
     "khunti.nic.in": ("Khunti", ["https://khunti.nic.in/municipal-election-2026/"]),
-    "koderma.nic.in": ("Koderma", []),
+    "koderma.nic.in": ("Koderma", ["https://koderma.nic.in/election-department/municipal-election/"]),
     "latehar.nic.in": ("Latehar", ["https://latehar.nic.in/hi/नगरपालिका-चुनाव-2026/"]),
-    "lohardaga.nic.in": ("Lohardaga", []),
+    "lohardaga.nic.in": ("Lohardaga", ["https://lohardaga.nic.in/nagar-palika-election-2026-voter-list-final-roll/"]),
     "pakur.nic.in": ("Pakur", ["https://pakur.nic.in/municipal-general-election-2026/"]),
     "palamu.nic.in": ("Palamu", ["https://palamu.nic.in/municipal-election-2020-3/"]),
-    "ramgarh.nic.in": ("Ramgarh", []),
+    "ramgarh.nic.in": ("Ramgarh", ["https://ramgarh.nic.in/नगरपालिका-चुनाव-2025/"]),
     "ranchi.nic.in": ("Ranchi", ["https://ranchi.nic.in/election-2/"]),
-    "sahebganj.nic.in": ("Sahebganj", []),
+    "sahibganj.nic.in": ("Sahebganj", ["https://sahibganj.nic.in/municipal-general-election-2026/"]),   # the site is sahibganj.nic.in
     "seraikela.nic.in": ("Saraikela Kharsawan", ["https://seraikela.nic.in/municipal-general-election-2026/"]),
     "simdega.nic.in": ("Simdega", ["https://simdega.nic.in/en/municipal-general-elections-2026/"]),
     "chaibasa.nic.in": ("West Singhbhum", ["https://chaibasa.nic.in/municipal-election-2026/"]),
@@ -127,7 +130,10 @@ WANT = re.compile(r"प्रपत्र\s*[-–—]?\s*23|form\s*[-–—]?\s*
 NOT = re.compile(r"शपथ|affidavit|मतदाता|voter|booth|मतदान\s*केन्द्र|मतदान\s*केंद्र|polling|आरक्षण|reservation|"
                  r"(प्रपत्र|form)\s*[-–—]?\s*(3|5|24)\b|नाम\s*निर्देशन|nomination|training|प्रशिक्षण|helpline|press|"
                  r"व्यय|expenditure|panchayat\s*office|पंचायत\s*(चुनाव|निर्वाचन)|lok\s*sabha|vidhan|assembly|"
-                 r"ro\s*(and|&)\s*aro|अधिसूचित|विज्ञापन|प्रचार", re.I)
+                 r"ro\s*(and|&)\s*aro|अधिसूचित|विज्ञापन|प्रचार|"
+                 # files posted on the election pages after the count that are not results (gap round 2026-11-14: SIR FAQs on
+                 # the Hazaribagh and Saraikela pages; Dhanbad's "Panchayat Election 2022 - Form - 23")
+                 r"faq|frequently\s*asked|special\s*intensive|\bSIR\b|tender|\brfp\b|panchayat\s*election", re.I)
 MENU = re.compile(r"(municipal|nagar\s*palika|nagarpalika|नगरपालिका|नगर\s*निकाय|नगर\s*पंचायत|nagar\s*nigam).*(2026|2025)|"
                   r"(2026|2025).*(municipal|nagarpalika|नगरपालिका)|municipality\s*election", re.I)
 

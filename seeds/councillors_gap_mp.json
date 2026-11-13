@@ -1,0 +1,70 @@
+[
+ {
+  "key": "cgap-mp-ratlam",
+  "payload": {
+   "kind": "form-cgap_mp",
+   "state": "MP",
+   "layout": "ratlam",
+   "body": "Ratlam",
+   "body_type": "Municipal Corporation",
+   "district": "Ratlam",
+   "lgd_code": "250843",
+   "url": "http://rmcratlam.in/assets/uploads/Janpratinidhi_List.pdf",
+   "election": "MP urban body general election 2022 (Ratlam Municipal Corporation list of representatives, 27.01.2023)",
+   "expected": 50,
+   "route": "direct",
+   "india_only": true
+  }
+ },
+ {
+  "key": "cgap-mp-joura",
+  "payload": {
+   "kind": "form-cr_body",
+   "state": "MP",
+   "slug": "joura",
+   "body": "Joura",
+   "body_type": "Municipality",
+   "district": "Morena",
+   "lgd_code": "250679",
+   "url": "http://npjoura.in/council-of-member.html",
+   "election": "MP urban body general election 2022 (member list on the body's own site)",
+   "expected": 18,
+   "route": "direct",
+   "india_only": true
+  }
+ },
+ {
+  "key": "cgap-mp-isagarh",
+  "payload": {
+   "kind": "form-cr_body",
+   "state": "MP",
+   "slug": "isagarh",
+   "body": "Isagarh",
+   "body_type": "Nagar Parishad",
+   "district": "Ashoknagar",
+   "lgd_code": "250712",
+   "url": "http://npisagarh.in/council-of-member.html",
+   "election": "MP urban body general election 2022 (member list on the body's own site)",
+   "expected": 15,
+   "route": "direct",
+   "india_only": true
+  }
+ },
+ {
+  "key": "cgap-mp-mauganj",
+  "payload": {
+   "kind": "form-cr_body",
+   "state": "MP",
+   "slug": "mauganj",
+   "body": "Mauganj",
+   "body_type": "Nagar Parishad",
+   "district": "Mauganj",
+   "lgd_code": "250796",
+   "url": "http://nagarparishadmauganj.in/council-of-member.php",
+   "election": "MP urban body general election 2022 (member list on the body's own site)",
+   "expected": 15,
+   "route": "direct",
+   "india_only": true
+  }
+ }
+]

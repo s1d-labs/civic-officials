@@ -69,11 +69,36 @@ def district_en(hi):
     return best if sim(key(best), lk) >= 0.7 else None
 
 
+# SEC body names that the name match leaves open (two LGD bodies with the same key, SEC spelling far from LGD's), checked by
+# hand against the LGD body list of the district, 2026-11-14 (gap round): (LGD district, SEC body name) -> LGD code.
+# 495 members of 23 bodies had no LGD code before (civic.councillor, 2026-11-14).
+ALIASES = {("Mathura", "वृन्दावन-मथुरा"): "249052", ("Jhansi", "झांसी"): "249314", ("Sitapur", "विसंवा"): "249193",
+           ("Lucknow", "बक्शी का तालाब"): "263351", ("Siddharthnagar", "बढ़नीचाफा"): "297056",
+           ("Shamli", "जलालाबाद"): "248907",      # LGD lists Jalalabad(Shamli) under Bijnor district
+           ("Bareilly", "फतेहगंज पश्चिमी"): "249142", ("Bareilly", "फतेहगंज पूर्वी"): "249155",
+           ("Bijnor", "बढापुर"): "248916",        # LGD "Warhapur"
+           ("Kaushambi", "दारा नगर कड़ाधाम"): "297064", ("Mainpuri", "करहल"): "249107", ("Mainpuri", "कुरावली"): "249103",
+           ("Pratapgarh", "कोहंडौर"): "297042", ("Pratapgarh", "कटरा मेदनीगंज"): "249355", ("Deoria", "गौरा बरहज"): "249462"}
+
+
+def nukta(s):
+    """The SEC often writes ड / ढ where the name has ड़ / ढ़ (हापुड = Hapur, बडौत = Baraut, निवाडी = Niwari)."""
+    return re.sub("([डढ])(?!\u093c)", "\\1\u093c", s or "")
+
+
 def lgd_code(body_hi, district_hi, body_type):
+    """LGD code of an SEC body: the name match over the district's bodies, then over the bodies of the post's type only (Jhansi
+    Municipal Corporation, not Jhansi Railway Settlement), then with ड़ / ढ़, then ALIASES."""
     dn = district_en(district_hi)
     bodies = [b for b in lgd()["bodies"] if b[2] == dn] if dn else []
-    code, _ = best_body(body_hi, bodies, LGD_TYPES.get(body_type))
-    return code, dn
+    types = LGD_TYPES.get(body_type)
+    code, _ = best_body(body_hi, bodies, types)
+    typed = [b for b in bodies if not types or b[3] in types]
+    for name in (body_hi, nukta(body_hi)):
+        if code:
+            break
+        code, _ = best_body(name, typed, types)
+    return code or ALIASES.get((dn, clean(body_hi))), dn
 
 
 def slug(s):

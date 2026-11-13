@@ -640,12 +640,62 @@ def lgd_match(body_local, district_local, btype):
     return scored[0][2]
 
 
+def split_body(body_local, district_local):
+    """(body, district) of a preamble cut that kept too much: "बड़ौद जिला आगर मालवा" (body and district in one cell),
+    "ह॒ गरप़ालिका परिषद गाडरवाड़ा" (the body type in front), "पंरिषद् करेली ह" (a stray letter at the end). Gap round
+    2026-11-14: 18 bodies (352 members in civic.councillor) had no LGD code because of these cuts."""
+    b, d = body_local or "", district_local or ""
+    m = re.search(r"\s+जिं?ला(ँ|ं)?\s+", b)
+    if m:
+        b, rest = b[:m.start()], b[m.end():]
+        if not d or d == body_local or "जि" in d:
+            d = rest
+    b = re.sub(r"^.*?(प[ंॅ]?रिषद्?|पालिका|निगम)\s+", "", b) if re.search(r"(प[ंॅ]?रिषद्?|पालिका|निगम)\s+\S", b) else b
+    b = re.sub(r"\s+\S$", "", b.strip())           # a stray one-letter OCR mark at the end
+    return b.strip(" -") or body_local, d.strip() or district_local
+
+
+# OCR'd preamble names that no sound match reaches, checked by hand against the LGD list (gap round 2026-11-14)
+ALIASES = {"कैंटनी": "250979",          # Katni Municipal Corporation (LGD "Murwara - Katni")
+           "गाशसिवनी": "251037",        # वारासिवनी, Waraseoni (Balaghat)
+           "जुन्नारदेव": "JAMAI",       # Junnardeo Municipality: LGD name "Jamai"
+           "फूप": "250683"}              # Phuphkalan (Bhind)
+
+
+def lgd_of_split(body_local, district_local, btype):
+    """The LGD body of a preamble cut (split_body): ALIASES first, then the sound match inside the named district when the
+    district is clear (Badod, Agar-Malwa: the open match gave Bairad, Shivpuri), else the open match."""
+    import difflib
+    lgd_match("", "", "")                    # loads _LGD
+    b, d = split_body(body_local, district_local)
+    code = ALIASES.get(b)
+    if code:
+        return next((r for r in _LGD if r[0] == code or (code == "JAMAI" and r[1] == "Jamai")), None)
+    dsim = lambda x: difflib.SequenceMatcher(None, skel(roman(d)), skel(x)).ratio()    # noqa: E731
+    open_ = lgd_match(b, d, btype)
+    if open_ is not None and dsim(open_[2]) >= 0.7:
+        return open_
+    best = max({r[2] for r in _LGD}, key=dsim)
+    if dsim(best) >= 0.8:
+        br = roman(b)
+        inside = sorted(((difflib.SequenceMatcher(None, skel(br), skel(r[1])).ratio(), r) for r in _LGD if r[2] == best),
+                        key=lambda x: -x[0])
+        # with an open match at hand the district-scoped one must be clearly good (Mihona: OCR "मिण्ड" is closer to Mandla
+        # than to Bhind, and Mandla district has a body Mandla)
+        floor = 0.75 if open_ is not None else 0.6
+        if inside and inside[0][0] >= floor and (len(inside) == 1 or inside[0][0] - inside[1][0] >= 0.1):
+            return inside[0][1]
+    return open_
+
+
 def title(s):
     return " ".join(w.capitalize() for w in s.split())
 
 
 def record(p, body, m, page):
     lgd = lgd_match(body["body_local"], body["district_local"], body["body_type"])
+    if lgd is None and body["body_local"]:
+        lgd = lgd_of_split(body["body_local"], body["district_local"], body["body_type"])
     name_en = lgd[1] if lgd else title(roman(body["body_local"]))
     dist_en = lgd[2] if lgd else title(roman(body["district_local"]))
     slug = re.sub(r"[^a-z0-9]+", "-", f"{name_en}-{dist_en}".lower()).strip("-")
