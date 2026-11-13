@@ -44,6 +44,10 @@
     "blo2-ocr": [
       "python",
       "blo.py"
+    ],
+    "audit": [
+      "python",
+      "audit.py"
     ]
   }
 }

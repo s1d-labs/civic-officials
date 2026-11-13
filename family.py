@@ -241,3 +241,15 @@ if _dmf.exists():
         _p = project(_suffix, f"District officers: portals not read before ({_route})", [], **_extra)
         _p["items"] = [i for i in _dm if i["payload"]["route"] == _route]
         PROJECTS.append(_p)
+
+# Reader audit (audit.py, owner 2026-11-13): one item = a batch of saved sources with the records made from each; the task
+# reads each source copy from the family bucket (hub.read_urls; no request to a government site), counts its data rows and
+# writes "audit:<sha256>" (type audit_source, verdict ok / check / low / not_tabular). seeds/build_audit.py makes the items on
+# dev-vps-3 from the source index and the civic copy of the records; the file is large (about 86 MB), so it is not committed
+# and the items go to the hub with `python seeds/build_audit.py --insert` (owner's OK first). Without the file the project is
+# set up with an empty queue. Plain GitHub runners: no proxy, no India server.
+_audit = HERE / "seeds" / "audit_items.json"
+PROJECTS.append({"name": f"{FAMILY}-audit", "title": "Reader audit: data rows in each saved source against the records made from it",
+                 "task": "audit", "target": f"{FAMILY}-audit", "env": {}, "probe": None, "unit_label": "batch of sources",
+                 "record_label": "audited source", "items": json.loads(_audit.read_text()) if _audit.exists() else [],
+                 "workers": 8, "threads": 1, "delay_ms": 0})

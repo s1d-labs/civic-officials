@@ -20,6 +20,10 @@ from dforms._power import tr_pos, Out, cells, clean, email, phone, raw, slug
 METHOD = "pdf text (pdftotext -layout, else pypdf layout) + html table"     # source trail (provenance.py): how this reader reads its sources
 
 MOD = "power_mvvnl"
+# audit.py: tables this reader leaves out on purpose (regex on the text of a table's first row): the head quarter, store and
+# workshop tables, and the head office lists inside HTML comments (no zone title: the first row is the column heads
+# "S. No. | Name of Officers | Post | Email Id | Phone ...")
+AUDIT_LEAVES_OUT = r"(?i)^(head quarter|work allotment|store circle|workshop circle|s\.? ?no\.? ?name of officers)"
 DIR_URL = "https://mvvnl.in/post/en/directory?cd=NQA2AA%3d%3d"
 LESA_URL = "https://mvvnl.in/site/writereaddata/siteContent/202512061655264596Lesa-Direcotary_061225.pdf"
 MOBILE = re.compile(r"(?<!\d)[6-9]\d{9}(?!\d)")
