@@ -76,7 +76,7 @@ def parse(html, p):
 
 
 def fetch(p, get):
-    r = get(p["url"])
+    r = get(p["url"], headers={"Connection": "close"})   # 2026-11-13: with keep-alive, requests times out reading the body (curl does not)
     if r is None:
         return [], [], "no answer"
     recs = parse(r.text, p)

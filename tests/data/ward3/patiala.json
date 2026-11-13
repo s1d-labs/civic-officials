@@ -1,0 +1,40 @@
+{
+ "module": "ward3_patiala",
+ "payload": {
+  "reader": "ward3_patiala",
+  "url": "https://mcpatiala.punjab.gov.in/Home/Index?mcid=1002&lng=",
+  "pdf": "https://enigambackuprestore.blob.core.windows.net/securefilestructure/MC/Patiala/MCSubMenu/pdf/linkpdf_8_10_2026_27_553.mc%20patiala%20officer.pdf",
+  "state": "PB"
+ },
+ "pages": "patiala.pages",
+ "min_records": 70,
+ "min_wards": 55,
+ "expect": [
+  {
+   "post": "Sanitary Inspector",
+   "name": "Mohit Jindal",
+   "wards": [
+    "1",
+    "9",
+    "59"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Sanitary Supervisor",
+   "name": "Narinder Kumar",
+   "wards": [
+    "31",
+    "33",
+    "40",
+    "41"
+   ],
+   "level": "ward"
+  },
+  {
+   "post": "Assistant Commissioner",
+   "name": "Ravdeep Singh",
+   "level": "body"
+  }
+ ]
+}
