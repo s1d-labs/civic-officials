@@ -111,3 +111,23 @@ def test_pri_hp_ward_members_and_ps():
     recs = m.records((DATA / "pri/hp_una_s.html").read_text(), HP, p)
     check_pri(recs, "pri_hp", "HP")
     assert recs[0][1]["level"] == "ps" and recs[0][1]["body_name"] == "अम्ब" and recs[0][1]["ward_no"] == "1"
+
+
+def test_pri_jk_ddc_2020_pdf():
+    m = mod("pri_jk")
+    seeds = json.loads((ROOT / "seeds" / "dept_pri_jk.json").read_text())
+    assert seeds == m.items() and len(seeds) == 1
+    p = seeds[0]["payload"]
+    get = fake_get({p["url"]: "pri/jk_ddc_2020_p1_p10.pdf"})        # pages 1 and 10 of the 10-page print
+    recs, _, why = m.fetch(p, get)
+    assert why == ""
+    check_pri(recs, "pri_jk", "JK")
+    assert len(recs) == 33 and all(d["vote_check"] == "ok" for _, d in recs)
+    d = dict(recs)
+    r = d["pri:pri_jk:ddc2020:1"]
+    assert (r["name"], r["party"], r["votes"], r["runner_up"], r["runner_up_votes"], r["margin"]) == (
+        "Sameena Hussain", "J&K NC", 2618, "Shagufta Akhter", 1522, 1096)
+    assert r["district"] == "Anantnag" and r["constituency"] == "1-Achabal" and r["ward_no"] == "1" and r["level"] == "zp"
+    assert r["src_pos"]["page"] == 1 and r["src_sha256"] and "term" in r["status"]
+    u = d["pri:pri_jk:ddc2020:277"]
+    assert u["constituency"] == "13-Udhampur-I" and u["name"] == "Puran Chand" and u["src_pos"]["page"] == 2
