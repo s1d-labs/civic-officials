@@ -1,0 +1,6 @@
+{"module": "ward3_cyberabad", "payload": {"reader": "ward3_cyberabad", "url": "https://cmc.telangana.gov.in/KeyContacts.aspx", "state": "TG", "india_only": true, "route": "direct"},
+ "routes": {"https://cmc.telangana.gov.in/KeyContacts.aspx": "cyberabad_keycontacts.html"},
+ "min_records": 120,
+ "expect": [{"post": "Zonal Commissioner", "name": "Mayank Singh", "level": "zone"},
+            {"post": "Deputy Commissioner", "name": "Lavanya", "level": "circle"},
+            {"post": "Sanitation officer", "name": "Santhosh", "level": "circle"}]}
