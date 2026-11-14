@@ -1,0 +1,42 @@
+[
+ {
+  "key": "psall_tg:gadwal-telangana-gov-in-public-utility-category-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://gadwal.telangana.gov.in/public-utility-category/police/",
+   "state": "TG",
+   "district": "Jogulamba Gadwal",
+   "expected": 7
+  }
+ },
+ {
+  "key": "psall_tg:medchal-malkajgiri-telangana-gov-in-public-utility-category-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://medchal-malkajgiri.telangana.gov.in/public-utility-category/police/",
+   "state": "TG",
+   "district": "Medchal Malkajgiri",
+   "expected": 1
+  }
+ },
+ {
+  "key": "psall_tg:narayanpet-telangana-gov-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://narayanpet.telangana.gov.in/police/",
+   "state": "TG",
+   "district": "Narayanpet",
+   "expected": 13
+  }
+ },
+ {
+  "key": "psall_tg:narayanpet-telangana-gov-in-public-utility-category-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://narayanpet.telangana.gov.in/public-utility-category/police/",
+   "state": "TG",
+   "district": "Narayanpet",
+   "expected": 12
+  }
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "key": "psall_mz:mamit-nic-in-public-utility-category-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://mamit.nic.in/public-utility-category/police/",
+   "state": "MZ",
+   "district": "Mamit",
+   "expected": 5
+  }
+ },
+ {
+  "key": "psall_mz:serchhip-nic-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://serchhip.nic.in/public-utility-category/police-stations/",
+   "state": "MZ",
+   "district": "Serchhip",
+   "expected": 3
+  }
+ }
+]

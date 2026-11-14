@@ -1,0 +1,12 @@
+[
+ {
+  "key": "psall_nl:phek-nic-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://phek.nic.in/police/",
+   "state": "NL",
+   "district": "Phek",
+   "expected": 7
+  }
+ }
+]

@@ -1,0 +1,22 @@
+[
+ {
+  "key": "psall_wb:coochbehar-gov-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://coochbehar.gov.in/police/",
+   "state": "WB",
+   "district": "Cooch Behar",
+   "expected": 10
+  }
+ },
+ {
+  "key": "psall_wb:ddinajpur-nic-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://ddinajpur.nic.in/police/",
+   "state": "WB",
+   "district": "Dakshin Dinajpur",
+   "expected": 10
+  }
+ }
+]

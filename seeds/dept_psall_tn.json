@@ -1,0 +1,122 @@
+[
+ {
+  "key": "psall_tn:ariyalur-nic-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://ariyalur.nic.in/public-utility-category/police-stations/",
+   "state": "TN",
+   "district": "Ariyalur",
+   "expected": 18
+  }
+ },
+ {
+  "key": "psall_tn:dharmapuri-nic-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://dharmapuri.nic.in/police/",
+   "state": "TN",
+   "district": "Dharmapuri",
+   "expected": 28
+  }
+ },
+ {
+  "key": "psall_tn:karur-nic-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://karur.nic.in/public-utility-category/police-stations/",
+   "state": "TN",
+   "district": "Karur",
+   "expected": 10
+  }
+ },
+ {
+  "key": "psall_tn:krishnagiri-nic-in-public-utility-category-police-station",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://krishnagiri.nic.in/public-utility-category/police-station/",
+   "state": "TN",
+   "district": "Krishnagiri",
+   "expected": 36
+  }
+ },
+ {
+  "key": "psall_tn:mayiladuthurai-nic-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://mayiladuthurai.nic.in/public-utility-category/police-stations/",
+   "state": "TN",
+   "district": "Mayiladuthurai",
+   "expected": 13
+  }
+ },
+ {
+  "key": "psall_tn:namakkal-nic-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://namakkal.nic.in/public-utility-category/police-stations/",
+   "state": "TN",
+   "district": "Namakkal",
+   "expected": 20
+  }
+ },
+ {
+  "key": "psall_tn:perambalur-nic-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://perambalur.nic.in/public-utility-category/police-stations/",
+   "state": "TN",
+   "district": "Perambalur",
+   "expected": 9
+  }
+ },
+ {
+  "key": "psall_tn:ramanathapuram-nic-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://ramanathapuram.nic.in/public-utility-category/police-stations/",
+   "state": "TN",
+   "district": "Ramanathapuram",
+   "expected": 5
+  }
+ },
+ {
+  "key": "psall_tn:tenkasi-nic-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://tenkasi.nic.in/public-utility-category/police-stations/",
+   "state": "TN",
+   "district": "Tenkasi",
+   "expected": 16
+  }
+ },
+ {
+  "key": "psall_tn:tiruppur-nic-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://tiruppur.nic.in/public-utility-category/police-stations/",
+   "state": "TN",
+   "district": "Tiruppur",
+   "expected": 13
+  }
+ },
+ {
+  "key": "psall_tn:tiruvallur-nic-in-public-utility-category-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://tiruvallur.nic.in/public-utility-category/police/",
+   "state": "TN",
+   "district": "Tiruvallur",
+   "expected": 1
+  }
+ },
+ {
+  "key": "psall_tn:tiruvannamalai-nic-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://tiruvannamalai.nic.in/public-utility-category/police-stations/",
+   "state": "TN",
+   "district": "Tiruvannamalai",
+   "expected": 20
+  }
+ }
+]

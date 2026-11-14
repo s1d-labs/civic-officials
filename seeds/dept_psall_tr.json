@@ -1,0 +1,22 @@
+[
+ {
+  "key": "psall_tr:sepahijala-nic-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://sepahijala.nic.in/police/",
+   "state": "TR",
+   "district": "Sepahijala",
+   "expected": 10
+  }
+ },
+ {
+  "key": "psall_tr:southtripura-nic-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://southtripura.nic.in/police/",
+   "state": "TR",
+   "district": "South Tripura",
+   "expected": 7
+  }
+ }
+]

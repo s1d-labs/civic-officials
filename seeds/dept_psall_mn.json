@@ -1,0 +1,22 @@
+[
+ {
+  "key": "psall_mn:jiribam-nic-in-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://jiribam.nic.in/police-stations/",
+   "state": "MN",
+   "district": "Jiribam",
+   "expected": 2
+  }
+ },
+ {
+  "key": "psall_mn:kamjong-nic-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://kamjong.nic.in/police/",
+   "state": "MN",
+   "district": "Kamjong",
+   "expected": 3
+  }
+ }
+]

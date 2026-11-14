@@ -1,0 +1,22 @@
+[
+ {
+  "key": "psall_jk:kulgam-nic-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://kulgam.nic.in/police/",
+   "state": "JK",
+   "district": "Kulgam",
+   "expected": 5
+  }
+ },
+ {
+  "key": "psall_jk:poonch-nic-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://poonch.nic.in/police/",
+   "state": "JK",
+   "district": "Poonch",
+   "expected": 3
+  }
+ }
+]

@@ -1,0 +1,32 @@
+[
+ {
+  "key": "psall_ar:eastsiang-nic-in-public-utility-category-police-station",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://eastsiang.nic.in/public-utility-category/police-station/",
+   "state": "AR",
+   "district": "East Siang",
+   "expected": 4
+  }
+ },
+ {
+  "key": "psall_ar:itanagar-nic-in-police",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://itanagar.nic.in/police/",
+   "state": "AR",
+   "district": "Itanagar Capital Complex",
+   "expected": 6
+  }
+ },
+ {
+  "key": "psall_ar:roing-nic-in-public-utility-category-police-station",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://roing.nic.in/public-utility-category/police-station/",
+   "state": "AR",
+   "district": "Lower Dibang Valley",
+   "expected": 4
+  }
+ }
+]

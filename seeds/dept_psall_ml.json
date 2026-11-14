@@ -1,0 +1,22 @@
+[
+ {
+  "key": "psall_ml:eastgarohills-gov-in-public-utility-category-police-stations",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://eastgarohills.gov.in/public-utility-category/police-stations/",
+   "state": "ML",
+   "district": "East Garo Hills",
+   "expected": 4
+  }
+ },
+ {
+  "key": "psall_ml:westkhasihills-gov-in-public-utility-category-police-station",
+  "payload": {
+   "reader": "psall_s3waas",
+   "url": "https://westkhasihills.gov.in/public-utility-category/police-station/",
+   "state": "ML",
+   "district": "West Khasi Hills",
+   "expected": 4
+  }
+ }
+]
