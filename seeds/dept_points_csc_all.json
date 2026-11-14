@@ -1,0 +1,162 @@
+[
+ {
+  "key": "points_csc_meity-0000000",
+  "payload": {
+   "reader": "points_csc_meity",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/govt-services/Bharatmaps_MeitY_CSCs_2022.parquet",
+   "state": "IN",
+   "rg": 0,
+   "lo": 0,
+   "hi": 50000,
+   "n_file": 401268,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_csc_meity-0050000",
+  "payload": {
+   "reader": "points_csc_meity",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/govt-services/Bharatmaps_MeitY_CSCs_2022.parquet",
+   "state": "IN",
+   "rg": 0,
+   "lo": 50000,
+   "hi": 100000,
+   "n_file": 401268,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_csc_meity-0100000",
+  "payload": {
+   "reader": "points_csc_meity",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/govt-services/Bharatmaps_MeitY_CSCs_2022.parquet",
+   "state": "IN",
+   "rg": 0,
+   "lo": 100000,
+   "hi": 122880,
+   "n_file": 401268,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_csc_meity-0122880",
+  "payload": {
+   "reader": "points_csc_meity",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/govt-services/Bharatmaps_MeitY_CSCs_2022.parquet",
+   "state": "IN",
+   "rg": 1,
+   "lo": 122880,
+   "hi": 172880,
+   "n_file": 401268,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_csc_meity-0172880",
+  "payload": {
+   "reader": "points_csc_meity",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/govt-services/Bharatmaps_MeitY_CSCs_2022.parquet",
+   "state": "IN",
+   "rg": 1,
+   "lo": 172880,
+   "hi": 222880,
+   "n_file": 401268,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_csc_meity-0222880",
+  "payload": {
+   "reader": "points_csc_meity",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/govt-services/Bharatmaps_MeitY_CSCs_2022.parquet",
+   "state": "IN",
+   "rg": 1,
+   "lo": 222880,
+   "hi": 245760,
+   "n_file": 401268,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_csc_meity-0245760",
+  "payload": {
+   "reader": "points_csc_meity",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/govt-services/Bharatmaps_MeitY_CSCs_2022.parquet",
+   "state": "IN",
+   "rg": 2,
+   "lo": 245760,
+   "hi": 295760,
+   "n_file": 401268,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_csc_meity-0295760",
+  "payload": {
+   "reader": "points_csc_meity",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/govt-services/Bharatmaps_MeitY_CSCs_2022.parquet",
+   "state": "IN",
+   "rg": 2,
+   "lo": 295760,
+   "hi": 345760,
+   "n_file": 401268,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_csc_meity-0345760",
+  "payload": {
+   "reader": "points_csc_meity",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/govt-services/Bharatmaps_MeitY_CSCs_2022.parquet",
+   "state": "IN",
+   "rg": 2,
+   "lo": 345760,
+   "hi": 368640,
+   "n_file": 401268,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_csc_meity-0368640",
+  "payload": {
+   "reader": "points_csc_meity",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/govt-services/Bharatmaps_MeitY_CSCs_2022.parquet",
+   "state": "IN",
+   "rg": 3,
+   "lo": 368640,
+   "hi": 401268,
+   "n_file": 401268,
+   "expected": 32628,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ }
+]
