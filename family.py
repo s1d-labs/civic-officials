@@ -253,3 +253,15 @@ PROJECTS.append({"name": f"{FAMILY}-audit", "title": "Reader audit: data rows in
                  "task": "audit", "target": f"{FAMILY}-audit", "env": {}, "probe": None, "unit_label": "batch of sources",
                  "record_label": "audited source", "items": json.loads(_audit.read_text()) if _audit.exists() else [],
                  "workers": 8, "threads": 1, "delay_ms": 0})
+
+# Source bundle (bundle.py, owner 2026-11-14): zip files of every saved source copy in the family bucket, for download through
+# a signed link (cityofficials.s1d.me/data/sources). One item = one shard (the sources whose sha256 starts with the same 2 hex
+# digits; about 950 sources and 90 MB of original bytes), plus one index item. The task reads the copies from the family
+# bucket (hub.read_urls; no request to a government site). seeds/build_bundle.py makes the items on dev-vps-3 from DB civic;
+# the file is large (about 88 MB), so it is not committed and the items go to the hub with `python seeds/build_bundle.py
+# --insert` (owner's OK first; weekly or on request, never after each refresh). Plain GitHub runners: no proxy, no India server.
+_bundle = HERE / "seeds" / "bundle_items.json"
+PROJECTS.append({"name": f"{FAMILY}-bundle", "title": "Source bundle: zip files of every saved source copy (for download)",
+                 "task": "bundle", "target": f"{FAMILY}-bundle", "env": {}, "probe": None, "unit_label": "shard",
+                 "record_label": "file", "items": json.loads(_bundle.read_text()) if _bundle.exists() else [],
+                 "workers": 8, "threads": 1, "delay_ms": 0})
