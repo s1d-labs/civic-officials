@@ -1,0 +1,578 @@
+[
+ {
+  "key": "points_school_bm-0000000",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 0,
+   "lo": 0,
+   "hi": 50000,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0050000",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 0,
+   "lo": 50000,
+   "hi": 100000,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0100000",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 0,
+   "lo": 100000,
+   "hi": 122880,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0122880",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 1,
+   "lo": 122880,
+   "hi": 172880,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0172880",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 1,
+   "lo": 172880,
+   "hi": 222880,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0222880",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 1,
+   "lo": 222880,
+   "hi": 245760,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0245760",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 2,
+   "lo": 245760,
+   "hi": 295760,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0295760",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 2,
+   "lo": 295760,
+   "hi": 345760,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0345760",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 2,
+   "lo": 345760,
+   "hi": 368640,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0368640",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 3,
+   "lo": 368640,
+   "hi": 418640,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0418640",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 3,
+   "lo": 418640,
+   "hi": 468640,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0468640",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 3,
+   "lo": 468640,
+   "hi": 491520,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0491520",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 4,
+   "lo": 491520,
+   "hi": 541520,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0541520",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 4,
+   "lo": 541520,
+   "hi": 591520,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0591520",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 4,
+   "lo": 591520,
+   "hi": 614400,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0614400",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 5,
+   "lo": 614400,
+   "hi": 664400,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0664400",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 5,
+   "lo": 664400,
+   "hi": 714400,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0714400",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 5,
+   "lo": 714400,
+   "hi": 737280,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0737280",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 6,
+   "lo": 737280,
+   "hi": 787280,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0787280",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 6,
+   "lo": 787280,
+   "hi": 837280,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0837280",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 6,
+   "lo": 837280,
+   "hi": 860160,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0860160",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 7,
+   "lo": 860160,
+   "hi": 910160,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0910160",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 7,
+   "lo": 910160,
+   "hi": 960160,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0960160",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 7,
+   "lo": 960160,
+   "hi": 983040,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-0983040",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 8,
+   "lo": 983040,
+   "hi": 1033040,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1033040",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 8,
+   "lo": 1033040,
+   "hi": 1083040,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1083040",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 8,
+   "lo": 1083040,
+   "hi": 1105920,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1105920",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 9,
+   "lo": 1105920,
+   "hi": 1155920,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1155920",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 9,
+   "lo": 1155920,
+   "hi": 1205920,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1205920",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 9,
+   "lo": 1205920,
+   "hi": 1228800,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1228800",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 10,
+   "lo": 1228800,
+   "hi": 1278800,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1278800",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 10,
+   "lo": 1278800,
+   "hi": 1328800,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1328800",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 10,
+   "lo": 1328800,
+   "hi": 1351680,
+   "n_file": 1466160,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1351680",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 11,
+   "lo": 1351680,
+   "hi": 1401680,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1401680",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 11,
+   "lo": 1401680,
+   "hi": 1451680,
+   "n_file": 1466160,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_school_bm-1451680",
+  "payload": {
+   "reader": "points_school_bm",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/education/Bharatmaps_Schooldata.parquet",
+   "state": "IN",
+   "rg": 11,
+   "lo": 1451680,
+   "hi": 1466160,
+   "n_file": 1466160,
+   "expected": 14480,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ }
+]

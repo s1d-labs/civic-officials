@@ -181,6 +181,8 @@ if _dept:
     # geo + proxy: India servers and GitHub runners through the Indian proxies both take these items
 
 # Open sources (public files on GitHub and the like, payload "open": no geoblock): plain GitHub runners, no proxy, no India server
+# seeds/dept_points_<kind>_all.json (2026-11-14, seeds/build_dept_points.py): national point layers (schools, anganwadis, ration
+# shops, CSCs, bank branches, ATMs, Aadhaar centres; 3,959,542 rows in 98 items) from ramSeraph/indian_facilities GeoParquet files
 _open = [i for i in _dept if i["payload"].get("open") and not i["payload"].get("india_only")]
 if _open:
     PROJECTS.append({"name": f"{FAMILY}-depts-open", "title": "Department offices from open files (no geoblock)", "task": "depts",

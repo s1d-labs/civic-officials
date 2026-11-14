@@ -1,0 +1,66 @@
+[
+ {
+  "key": "points_bank_dfs-0000000",
+  "payload": {
+   "reader": "points_bank_dfs",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/banking/Bharatmaps_DFS_Bank_Branches_2022.parquet",
+   "state": "IN",
+   "rg": 0,
+   "lo": 0,
+   "hi": 50000,
+   "n_file": 168955,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_bank_dfs-0050000",
+  "payload": {
+   "reader": "points_bank_dfs",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/banking/Bharatmaps_DFS_Bank_Branches_2022.parquet",
+   "state": "IN",
+   "rg": 0,
+   "lo": 50000,
+   "hi": 100000,
+   "n_file": 168955,
+   "expected": 50000,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_bank_dfs-0100000",
+  "payload": {
+   "reader": "points_bank_dfs",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/banking/Bharatmaps_DFS_Bank_Branches_2022.parquet",
+   "state": "IN",
+   "rg": 0,
+   "lo": 100000,
+   "hi": 122880,
+   "n_file": 168955,
+   "expected": 22880,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ },
+ {
+  "key": "points_bank_dfs-0122880",
+  "payload": {
+   "reader": "points_bank_dfs",
+   "url": "https://github.com/ramSeraph/indian_facilities/releases/download/banking/Bharatmaps_DFS_Bank_Branches_2022.parquet",
+   "state": "IN",
+   "rg": 1,
+   "lo": 122880,
+   "hi": 168955,
+   "n_file": 168955,
+   "expected": 46075,
+   "open": true,
+   "india_only": false,
+   "route": "abroad"
+  }
+ }
+]
