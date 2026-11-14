@@ -129,3 +129,20 @@ def test_seeds_cover_each_file_once(kind):
         assert p["open"] is True and not p["india_only"] and p["url"].startswith("https://github.com/ramSeraph/indian_facilities/")
         lo = p["hi"]
     assert lo == FOOTER_ROWS[kind]
+
+
+def test_atm_owning_branch():
+    """The owning branch from the ATM id (SBI, Canara, Syndicate), on the 400 rows: 129 ids give one (SBI 67, Canara 38 + old
+    Syndicate 24); the other banks' ids give none. Owner and operator cells without a value (NA, Not Applicable, &nbsp;) are left out."""
+    recs = run(points_atm_dfs, (DATA / "Bharatmaps_DFS_Bank_ATMs_2022_rg0_head400.parquet").read_bytes())[0]
+    by = {r.split(":")[-1]: d for r, d in recs}
+    assert Counter(d["branch_ifsc"][:4] for d in by.values() if d.get("branch_ifsc")) == {"SBIN": 67, "CNRB": 62}
+    assert by["SBIN-S1BB005080002"]["branch_ifsc"] == "SBIN0005080"
+    assert by["SYNB-A9950002"]["branch_ifsc"] == "CNRB0019950" and by["SYNB-A0199001"]["branch_ifsc"] == "CNRB0010199"
+    assert by["CNRB-13336148"]["branch_ifsc"] == "CNRB0001333"
+    assert "branch_ifsc" not in by["UCBA-DA224001"] and "branch_ifsc" not in by["KARB-KBL11026"]
+    assert Counter(d["branch_ifsc"] for d in by.values() if d.get("branch_ifsc")).most_common(1) == [("SBIN0000871", 51)]
+    assert sum(1 for d in by.values() if d.get("atm_owner")) == 256 and sum(1 for d in by.values() if d.get("atm_operator")) == 72
+    assert by["UTIB-SWCW07733"]["atm_owner"] == "BROWN LABEL" and by["UTIB-SWCW07733"]["atm_operator"] == "AGS"
+    assert points_atm_dfs.branch_ifsc("SBMY", "S1OG400739001") == "SBIN0400739" and points_atm_dfs.branch_ifsc("SBIN", "FBBX000871122") is None
+    assert points_atm_dfs.branch_ifsc("SBIN", "S10K000871100") == "SBIN0000871" and points_atm_dfs.branch_ifsc("IOBA", "IOB9330") is None
