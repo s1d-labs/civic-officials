@@ -4,6 +4,8 @@ This family reads the officials that Indian government sites list (Who's Who, di
 - `officials.py`: pure parsing (link finding, tables, S3WaaS pager inputs, pager answers). Test it on `tests/pages/`.
 - `whoswho.py`: the task. One queue item = one site. `--local URL` runs one site without the hub.
 - `family.py`: projects from `sites.csv` (one per kind of site) and `retry_in.txt` (sites that need an Indian proxy).
+- `osm.py`: the OpenStreetMap task (project civic-officials-osm): the Geofabrik India extract, filtered with pyosmium, saved as
+  `osm/<date>/<kind>.geojsonl.gz` in the family bucket. ODbL data: credit "© OpenStreetMap contributors"; README says more.
 - S3WaaS pager: the site's own admin-ajax.php calls `ww_pages` / `dir_pages`, with the nonce the page itself carries. Only these.
 
 ## The scrape pool contract (from the family template)

@@ -1,6 +1,6 @@
 {
   "family": "civic-officials",
-  "about": "Officials of Indian districts, cities and police units (Who's Who, directory and contact pages of government sites), Booth Level Officers and elected ward councillors, and department offices (police stations, power offices, EROs, sub-registrars, water offices).",
+  "about": "Officials of Indian districts, cities and police units (Who's Who, directory and contact pages of government sites), Booth Level Officers and elected ward councillors, and department offices (police stations, power offices, EROs, sub-registrars, water offices); public-service points and admin boundaries from OpenStreetMap (ODbL, (c) OpenStreetMap contributors).",
   "setup": [
     "pip install -r requirements.txt"
   ],
@@ -52,6 +52,10 @@
     "bundle": [
       "python",
       "bundle.py"
+    ],
+    "osm": [
+      "python",
+      "osm.py"
     ]
   }
 }

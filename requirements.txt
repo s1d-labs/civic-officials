@@ -2,3 +2,4 @@ beautifulsoup4>=4.12
 lxml>=5.0
 pypdf>=4.0
 requests>=2.31
+osmium>=4.0
