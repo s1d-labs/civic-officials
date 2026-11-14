@@ -318,6 +318,18 @@ def pdf_source(body):
     return src
 
 
+def nonul(v):
+    """The value without NUL characters: PostgreSQL jsonb refuses \\u0000, and the hub answered 500 to every batch that held one
+    (text of some PDFs and pages; 7 audit items looped 55 times, 2026-11-15)."""
+    if isinstance(v, str):
+        return v.replace("\x00", "")
+    if isinstance(v, dict):
+        return {nonul(k): nonul(x) for k, x in v.items()}
+    if isinstance(v, (list, tuple)):
+        return [nonul(x) for x in v]
+    return v
+
+
 def json_source(body):
     """Rows = the objects at the JSON path that holds the most person-like objects (lists inside lists are one path:
     data[].blocks[].candidates[]). JSON text inside strings (ASP.NET "d") is read too. When strings hold HTML with data rows
@@ -651,7 +663,8 @@ def main():
             if not items:
                 break
             item = items[0]
-            n, errors = run_item(item, fetch, hub.record, hub.failure, hub.metric)
+            n, errors = run_item(item, fetch, lambda rid, d: hub.record(rid, nonul(d)),
+                                 lambda kind, key, reason="", **dt: hub.failure(kind, key, nonul(reason), **nonul(dt)), hub.metric)
             if errors and not n:
                 hub.complete([item["key"]], "failed", error="; ".join(errors)[:200])
             else:
