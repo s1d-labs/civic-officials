@@ -267,3 +267,14 @@ PROJECTS.append({"name": f"{FAMILY}-bundle", "title": "Source bundle: zip files 
                  "task": "bundle", "target": f"{FAMILY}-bundle", "env": {}, "probe": None, "unit_label": "shard",
                  "record_label": "file", "items": json.loads(_bundle.read_text()) if _bundle.exists() else [],
                  "workers": 8, "threads": 1, "delay_ms": 0})
+
+# OpenStreetMap (osm.py, owner 2026-11-14: "try OSM then, let OSM help"): one item = the Geofabrik India extract (about 1.6 GB),
+# downloaded once, filtered with pyosmium (police, fire, post offices, schools, colleges, health, banks, ATMs, courts, town halls,
+# community centres, libraries, social facilities, government offices; admin boundaries 2-10 as polygons) and saved to the family
+# bucket as osm/<date>/<kind>.geojsonl.gz + manifest.json + latest.json. ODbL: credit "(c) OpenStreetMap contributors"; keep OSM
+# data in its own tables and source field. A new key (a new month) builds a new date; an item whose date is already in the bucket
+# does nothing. Plain GitHub runners (about 14 GB disk), no proxy, no India server, one worker.
+OSM_ITEMS = [{"key": "osm:india:2026-11", "payload": {"url": "https://download.geofabrik.de/asia/india-latest.osm.pbf", "region": "india"}}]
+PROJECTS.append({"name": f"{FAMILY}-osm", "title": "OpenStreetMap India: public-service points and admin boundaries (ODbL)",
+                 "task": "osm", "target": "download.geofabrik.de", "env": {}, "probe": None, "unit_label": "extract",
+                 "record_label": "extract", "items": OSM_ITEMS, "workers": 1, "threads": 1, "delay_ms": 0})
