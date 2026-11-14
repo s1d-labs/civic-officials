@@ -5,16 +5,22 @@ No request goes to a government site. Each source is read from the family bucket
 <project>/sources/<sha[:2]>/<sha><ext>.gz (hub.read_urls signs a read link; the runner never holds a storage key).
 
 Layout in the bucket (project civic-officials-bundle, so every key starts with "civic-officials-bundle/"):
-  bundle/sources-<shard>.zip      one zip per shard: the sources whose sha256 starts with <shard> (SHARD_DIGITS hex digits);
-                                  inside: <host>/<sha256><ext> (the original bytes, decompressed), manifest.csv, README.txt
+  bundle/sources-<shard>.zip      one zip per shard (s00001, s00002 ...); inside: <host>/<sha256><ext> (the original bytes,
+                                  decompressed), manifest.csv, README.txt
   bundle/manifests/<shard>.csv.gz the shard's manifest.csv, also apart (the index item joins them without reading the zips)
   bundle/shards/<shard>.json      the shard's state: list_hash, files, missing, bytes, zip size and sha256, built_at
   bundle/index.json               every shard (key, size, sha256, files, built_at, list_hash) and the totals
   bundle/sources.csv.gz           all manifest rows of all shards
   bundle/README.txt               what the files are, how records point to them, the public-records note
+  bundle/assignment.csv.gz        sha256 -> shard (+ copy key, host, url, type, bytes, fetch time) of every file in the bundle
+
+Shards are append-only (owner, 2026-11-14): a sha256 stays in the shard it got first; seeds/build_bundle.py reads the last
+assignment.csv.gz and puts only new sources in new shards (fetch time order, at most SHARD_MAX_FILES sources / SHARD_MAX_BYTES
+original bytes each). An update so builds only the new shards and the index. A source that leaves the database stays in its
+old shard.
 
 Queue items (seeds/build_bundle.py makes them from DB civic):
-  shard: {"kind": "shard", "shard": "3f", "list_hash", "expected", "bytes", "cols": COLS, "rows": [[...], ...]}
+  shard: {"kind": "shard", "shard": "s00001", "list_hash", "expected", "bytes", "cols": COLS, "rows": [[...], ...]}
          The item skips its shard when bundle/shards/<shard>.json in the bucket has the same list_hash (nothing changed).
   index: {"kind": "index", "shards": {shard: list_hash}}: waits until every shard json carries the list_hash given (else the
          item fails with "waiting for N shards" and the hub hands it out again >= 3 minutes later), then writes index.json,
@@ -44,12 +50,16 @@ import zipfile
 from urllib.parse import urlsplit
 
 TASK = "bundle"
-SHARD_DIGITS = 2
+SHARD_MAX_FILES = 950
+SHARD_MAX_BYTES = 90_000_000
+SHARD_MAX_PAYLOAD = 380_000       # bytes of JSON rows in one queue item
+SHARD_ID = re.compile(r"^s\d{5}$")
 PREFIX = "bundle"
 COLS = ["sha256", "key", "host", "ext", "url", "content_type", "bytes", "final_url", "fetched_at", "projects", "readers",
         "records", "record_ids", "archive"]
 MANIFEST = ["sha256", "path_in_zip", "zip", "url", "final_url", "host", "content_type", "bytes", "fetched_at", "projects",
-            "readers", "records_made", "record_ids_sample", "archive_capture", "status"]
+            "readers", "records_made", "record_ids_sample", "archive_capture", "status", "bucket_copy"]
+ASSIGNMENT = ["sha256", "shard", "bucket_copy", "host", "url", "final_url", "content_type", "bytes", "fetched_at"]
 STORED = {".pdf", ".zip", ".png", ".jpg", ".jpeg", ".gif", ".webp", ".gz", ".xlsx", ".docx", ".pptx", ".ods", ".odt", ".7z",
           ".rar", ".mp4", ".mp3", ".jp2"}
 FREE_MARGIN = 512 * 1024 * 1024
@@ -65,7 +75,9 @@ What the files are
   sites (HTML pages, PDF files, JSON answers of public APIs, CSV and spreadsheet files).
 - A file is the exact bytes that the reader got, as fetched. Its name is <host>/<sha256><ext>: the web site host, then the
   SHA-256 hash of the bytes. The same bytes are kept once, also when two pages gave them.
-- The shard of a file is the first {digits} hex digit(s) of its SHA-256. Example: a file with hash 3fa9... is in sources-3f.zip.
+- Shards are named s00001, s00002 ... A file stays in the shard it got first; new files go to new shards (in fetch time
+  order), so an update adds zip files and leaves the old ones as they are. A file whose source left the database stays in
+  its old shard. sources.csv.gz and assignment.csv.gz give the shard (zip) of every file.
 - manifest.csv in each zip (and sources.csv.gz for all shards) gives one row per file: sha256, path in the zip, url asked,
   final url, host, content type, bytes, fetch time (UTC), the hub projects that saved it, the readers that read it, the
   number of records made from it, up to 3 record ids, an archive.s1d.me capture of the same url (if any), and the status
@@ -74,8 +86,8 @@ What the files are
 How records point to the files
 - Every record that a reader made carries "src": {{"sha256", "url"}} (and a "trail" record id). On cityofficials.s1d.me each
   row has a source link; its hash is the same SHA-256 (first 16 hex digits on the page).
-- To find the file of a record: take src.sha256, open sources-<first {digits} hex digits>.zip, read the row of that sha256
-  in manifest.csv, and open path_in_zip.
+- To find the file of a record: take src.sha256, find its row in sources.csv.gz (column "zip"), open that zip file, and
+  open path_in_zip.
 - How a record gets its src (most exact first): the reader names the exact bytes (src_sha256); else the url that it read
   when that url gave one answer; else the only source of that queue item; else the record's own url field. Details:
   provenance.py in https://github.com/s1d-labs/civic-officials.
@@ -152,7 +164,7 @@ def manifest_row(r, shard, status):
     d = dict(zip(COLS, r))
     return [d["sha256"], f"{d['host']}/{d['sha256']}{d['ext']}" if status == "ok" else "", zip_name(shard), d["url"],
             d["final_url"] or d["url"], d["host"], d["content_type"], d["bytes"], d["fetched_at"], d["projects"], d["readers"],
-            d["records"], d["record_ids"], d["archive"], status]
+            d["records"], d["record_ids"], d["archive"], status, copy_key(r)]
 
 
 def date_time(at):
@@ -221,7 +233,7 @@ def write_shard(path, shard, rows, fetch, metric=None):
 
 
 def readme(shards, files, nbytes, built=None):
-    return README.format(digits=SHARD_DIGITS, built=built or time.strftime("%Y-%m-%d %H:%M", time.gmtime()), shards=shards,
+    return README.format(built=built or time.strftime("%Y-%m-%d %H:%M", time.gmtime()), shards=shards,
                          files=f"{files:,}", bytes=f"{nbytes:,}")
 
 
@@ -375,7 +387,9 @@ def run_index(item, hub, bucket, project):
         return "failed", 0, f"waiting for {len(waiting)} shards: {' '.join(waiting[:20])}"[:200]
     mkeys = {s: f"{project}/{rel(f'manifests/{s}.csv.gz')}" for s in want}
     mans = bucket.get_many(list(mkeys.values()))
-    out = io.BytesIO()
+    out, aout = io.BytesIO(), io.StringIO()
+    aw = csv.writer(aout, lineterminator="\n")
+    aw.writerow(ASSIGNMENT)
     n_rows = 0
     with gzip.GzipFile(fileobj=out, mode="wb", compresslevel=6) as g:
         g.write((",".join(MANIFEST) + "\n").encode())
@@ -383,20 +397,25 @@ def run_index(item, hub, bucket, project):
             raw = mans.get(mkeys[s])
             if raw is None:
                 return "failed", 0, f"manifest of shard {s} is not in the bucket"
-            lines = gzip.decompress(raw).split(b"\n", 1)
-            body = lines[1] if len(lines) > 1 else b""
-            n_rows += body.count(b"\n")
-            g.write(body)
+            text = gzip.decompress(raw).decode("utf-8")
+            lines = text.split("\n", 1)
+            body = lines[1] if len(lines) > 1 else ""
+            n_rows += body.count("\n")
+            g.write(body.encode("utf-8"))
+            for m in csv.DictReader(io.StringIO(text)):
+                aw.writerow([m["sha256"], s, m.get("bucket_copy", ""), m["host"], m["url"], m["final_url"], m["content_type"],
+                             m["bytes"], m["fetched_at"]])
     files = sum(st["files"] for st in states.values())
     raw_bytes = sum(st["raw_bytes"] for st in states.values())
     built = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-    index = {"built_at": built, "shard_digits": SHARD_DIGITS, "files": files, "rows": n_rows,
+    index = {"built_at": built, "files": files, "rows": n_rows,
              "missing": sum(st["missing"] for st in states.values()), "raw_bytes": raw_bytes,
              "zip_bytes": sum(st["zip_bytes"] for st in states.values()), "sources_csv": f"{project}/{rel('sources.csv.gz')}",
-             "readme": f"{project}/{rel('README.txt')}",
+             "readme": f"{project}/{rel('README.txt')}", "assignment": f"{project}/{rel('assignment.csv.gz')}",
              "shards": [{k: states[s][k] for k in ("shard", "zip_key", "zip_bytes", "zip_sha256", "files", "missing", "raw_bytes",
                                                    "built_at", "list_hash")} for s in sorted(states)]}
     hub.upload_many([(rel("sources.csv.gz"), out.getvalue(), "application/gzip"),
+                     (rel("assignment.csv.gz"), gzip.compress(aout.getvalue().encode("utf-8"), 6), "application/gzip"),
                      (rel("README.txt"), readme(len(states), files, raw_bytes, built[:16].replace("T", " ")).encode(), "text/plain; charset=utf-8")])
     hub.upload_many([(rel("index.json"), json.dumps(index, indent=1).encode(), "application/json")])
     return "done", len(states), ""
@@ -465,7 +484,7 @@ def local(items_file, out_dir, keys="/etc/scrape-hub/member-keys/sarthak.env"):
         with open(os.path.join(out_dir, f"{p['shard']}.csv.gz"), "wb") as f:
             f.write(csv_gz(manifest))
         print(json.dumps({"shard": p["shard"], "files": written, "missing": missing, "zip_bytes": os.path.getsize(path),
-                          "raw_bytes": sum(r[6] for r in p["rows"]), "status": sorted({m[-1] for m in manifest})}))
+                          "raw_bytes": sum(r[6] for r in p["rows"]), "status": sorted({m[14] for m in manifest})}))
 
 
 if __name__ == "__main__":

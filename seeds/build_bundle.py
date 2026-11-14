@@ -9,14 +9,22 @@ scrape_hub query, no write anywhere unless --insert):
   - civic.source_trail_src + civic.source_trail: the readers that read each source, and archive.s1d.me captures of the same
     url (archive-first hits), if any.
 Nothing here runs after a refresh: the owner (or a weekly timer, if the owner wants one) runs it and queues the items.
-A shard = the sources whose sha256 starts with the same SHARD_DIGITS hex digits (2: 256 shards of about 950 sources and 90 MB
-of original bytes). The item carries its whole source list (compact rows, about 0.3-0.5 MB), so the task needs no other list.
-Item key "bundle:<shard>:<list hash 12>": a shard whose source list did not change keeps its key, so a done item is not queued
-again; the task also skips a shard whose list hash equals the one in the bucket (bundle/shards/<shard>.json).
+Shards are append-only (owner, 2026-11-14). The builder reads, with the read-only bucket key (as audit.py --local does),
+the last bundle/assignment.csv.gz (sha256 -> shard; written by the index item) and bundle/index.json (list hash per shard):
+  - every sha256 in the assignment keeps its shard (a source that left the database stays there, from the assignment's row);
+  - new sha256 values fill new shards s<NNNNN> (after the highest id so far), in fetched_at order, then sha256; a shard closes
+    at SHARD_MAX_FILES sources, SHARD_MAX_BYTES original bytes or SHARD_MAX_PAYLOAD bytes of payload rows;
+  - an item is made only for a shard whose list hash is not the one in index.json (new shards; an old shard only when the
+    bucket lost its state), plus the index item. A first run (no assignment, no index) needs --first.
+The item carries its whole source list (compact rows, < 0.4 MB), so the task needs no other list. Item key
+"bundle:<shard>:<list hash 12>": a shard whose list did not change keeps its key; the task also skips a shard whose list hash
+equals the one in bundle/shards/<shard>.json.
 
   python seeds/build_bundle.py                 counts and payload sizes only
   python seeds/build_bundle.py --out FILE      also write the items (seeds/bundle_items.json is not committed: it is large)
   python seeds/build_bundle.py --sample 3 --out FILE    3 small shards of 5 sources each + their index item (a local try)
+  --first                                      allow a first run (no assignment.csv.gz and no index.json in the bucket)
+  --keys FILE                                  read-only bucket key (default /etc/scrape-hub/member-keys/sarthak.env)
   python seeds/build_bundle.py --insert        also put the items in the hub queue of civic-officials-bundle (INSERT ... ON
                                                CONFLICT DO NOTHING) and remove its PENDING items of older lists; the project
                                                must exist (Setup workflow) and the owner must agree first
@@ -66,26 +74,73 @@ left join a a1 on a1.url = c.url left join a a2 on a2.url = c.final_url
 order by c.sha256"""
 
 
-def build(digits=bundle.SHARD_DIGITS):
-    shards, n_rec, n_rd, n_arch, n_multi, hosts, size = {}, 0, 0, 0, 0, set(), 0
+def db_rows():
+    """{sha256: payload row} of every saved copy (one query on DB civic)."""
+    out = {}
     for sha, key, url, final, ctype, nbytes, at, projs, rd, n, ids, cap in psql("civic", QUERY):
-        row = bundle.row(sha, key, url, final, ctype, nbytes, at, projs, rd, n, ids, cap)
-        shards.setdefault(sha[:digits], []).append(row)
-        n_rec += n > 0
-        n_rd += bool(rd)
-        n_arch += bool(cap)
-        n_multi += ";" in projs
-        hosts.add(row[2])
-        size += int(nbytes or 0)
-    return shards, {"sources": sum(len(v) for v in shards.values()), "bytes": size, "hosts": len(hosts), "with_records": n_rec,
-                    "with_reader": n_rd, "with_archive": n_arch, "multi_project": n_multi}
+        out[sha] = bundle.row(sha, key, url, final, ctype, nbytes, at, projs, rd, n, ids, cap)
+    return out
 
 
-def items(shards):
-    out, hashes = [], {}
-    for shard, rows in sorted(shards.items()):
-        h = bundle.list_hash(rows)
-        hashes[shard] = h
+def assignment_row(a):
+    """A payload row for a source that left the database, from its assignment.csv.gz row."""
+    return bundle.row(a["sha256"], a.get("bucket_copy", ""), a.get("url", ""), a.get("final_url", ""), a.get("content_type", ""),
+                      a.get("bytes") or 0, a.get("fetched_at", ""), "", "", 0, [], "")
+
+
+def row_size(r):
+    return len(json.dumps(r, ensure_ascii=False).encode()) + 1
+
+
+def plan(rows, assignment, index_hashes, max_files=bundle.SHARD_MAX_FILES, max_bytes=bundle.SHARD_MAX_BYTES,
+         max_payload=bundle.SHARD_MAX_PAYLOAD):
+    """(shards {id: rows}, hashes {id: list hash}, changed [ids]) from the database rows {sha: row}, the last assignment
+    {sha: {"shard", ...}} and the last index's list hashes {id: hash}. Pure: tested without the bucket."""
+    shards = {}
+    for sha, a in assignment.items():
+        shards.setdefault(a["shard"], []).append(rows.get(sha) or assignment_row(a))
+    new = sorted((r for sha, r in rows.items() if sha not in assignment), key=lambda r: (r[8] or "9999", r[0]))
+    n = max([int(i[1:]) for i in shards if bundle.SHARD_ID.match(i)] or [0])
+    cur, cur_bytes, cur_payload = None, 0, 0
+    for r in new:
+        size = row_size(r)
+        if cur is None or len(shards[cur]) >= max_files or cur_bytes + r[6] > max_bytes or cur_payload + size > max_payload:
+            n += 1
+            cur, cur_bytes, cur_payload = f"s{n:05d}", 0, 0
+            shards[cur] = []
+        shards[cur].append(r)
+        cur_bytes += r[6]
+        cur_payload += size
+    hashes = {i: bundle.list_hash(v) for i, v in shards.items()}
+    changed = sorted(i for i, h in hashes.items() if index_hashes.get(i) != h)
+    return shards, hashes, changed
+
+
+def read_bucket(keys, first):
+    """(assignment {sha: row}, index list hashes {id: hash}) of the last build, read with the read-only key."""
+    import csv
+    import gzip
+    import io
+    import requests
+    import audit
+    env, sess = audit.read_env(keys), requests.Session()
+    base = f"{PROJECT}/{bundle.PREFIX}/"
+    raw_a, raw_i = audit.s3_get(env, base + "assignment.csv.gz", sess), audit.s3_get(env, base + "index.json", sess)
+    if raw_a is None and raw_i is None:
+        if not first:
+            raise SystemExit("no assignment.csv.gz and no index.json in the bucket: a first run? (then add --first)")
+        return {}, {}
+    if raw_a is None or raw_i is None:
+        raise SystemExit("the bucket has only one of assignment.csv.gz and index.json: the last index item did not finish?")
+    assignment = {a["sha256"]: a for a in csv.DictReader(io.StringIO(gzip.decompress(raw_a).decode("utf-8")))}
+    index = {s["shard"]: s["list_hash"] for s in json.loads(raw_i).get("shards", [])}
+    return assignment, index
+
+
+def items(shards, hashes, changed):
+    out = []
+    for shard in changed:
+        rows, h = shards[shard], hashes[shard]
         out.append({"key": f"bundle:{shard}:{h[:12]}", "payload": {"kind": "shard", "shard": shard, "list_hash": h,
                                                                     "expected": len(rows), "bytes": sum(r[6] for r in rows),
                                                                     "cols": bundle.COLS, "rows": rows}})
@@ -94,12 +149,11 @@ def items(shards):
     return out
 
 
-def sample(shards, n, per=5):
-    """n small shards of `per` small sources each (a local try with few downloads)."""
-    out = {}
-    for shard in sorted(shards)[:n]:
-        out[shard] = sorted(shards[shard], key=lambda r: r[6])[:per]
-    return out
+def sample(rows, n, per=5):
+    """n small shards of `per` small sources each (a local try with few downloads; first-run ids)."""
+    small = sorted(rows.values(), key=lambda r: (r[6], r[0]))[:n * per]
+    shards = {f"s{i + 1:05d}": small[i * per:(i + 1) * per] for i in range(n)}
+    return shards, {i: bundle.list_hash(v) for i, v in shards.items()}, sorted(shards)
 
 
 def insert(its):
@@ -120,20 +174,36 @@ def insert(its):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out")
-    ap.add_argument("--digits", type=int, default=bundle.SHARD_DIGITS, help="hex digits per shard (1 = 16 shards, 2 = 256)")
     ap.add_argument("--sample", type=int, default=0)
+    ap.add_argument("--first", action="store_true")
+    ap.add_argument("--fresh", action="store_true", help="counts as on a first run, without reading the bucket (no --insert)")
+    ap.add_argument("--keys", default="/etc/scrape-hub/member-keys/sarthak.env")
     ap.add_argument("--insert", action="store_true")
     a = ap.parse_args()
-    shards, counts = build(a.digits)
+    if a.fresh and a.insert:
+        raise SystemExit("--fresh is for counts only")
+    rows = db_rows()
+    assignment = {}
     if a.sample:
-        shards = sample(shards, a.sample)
-    its = items(shards)
+        shards, hashes, changed = sample(rows, a.sample)
+    else:
+        assignment, index = ({}, {}) if a.fresh else read_bucket(a.keys, a.first)
+        shards, hashes, changed = plan(rows, assignment, index)
+    its = items(shards, hashes, changed)
     sizes = sorted(len(json.dumps(i, ensure_ascii=False).encode()) for i in its)
-    raw = sorted(sum(r[6] for r in rows) for rows in shards.values())
-    counts.update({"shards": len(shards), "items": len(its), "item_bytes_max": sizes[-1], "item_bytes_median": sizes[len(sizes) // 2],
-                   "item_bytes_total": sum(sizes), "shard_sources_max": max(len(r) for r in shards.values()),
-                   "shard_raw_bytes_max": raw[-1], "shard_raw_bytes_median": raw[len(raw) // 2],
-                   "content_types": dict(Counter(r[5].split(";")[0].strip().lower() for rows in shards.values() for r in rows).most_common(8))})
+    old_ids = {x["shard"] for x in assignment.values()}
+    ch = [shards[i] for i in changed] or [[]]
+    raw = sorted(sum(r[6] for r in v) for v in ch)
+    counts = {"db_sources": len(rows), "assigned_before": len(assignment),
+              "left_db": sum(1 for sha in assignment if sha not in rows),
+              "new_sources": sum(1 for sha in rows if sha not in assignment), "shards": len(shards),
+              "shards_queued": len(changed), "shards_new": sum(1 for i in changed if i not in old_ids),
+              "items": len(its), "item_bytes_max": sizes[-1], "item_bytes_median": sizes[len(sizes) // 2],
+              "item_bytes_total": sum(sizes), "queued_sources": sum(len(v) for v in ch), "queued_raw_bytes": sum(raw),
+              "shard_raw_bytes_max": raw[-1], "shard_raw_bytes_median": raw[len(raw) // 2],
+              "shard_files_min": min(len(v) for v in ch), "shard_files_median": sorted(len(v) for v in ch)[len(ch) // 2],
+              "shard_files_max": max(len(v) for v in ch),
+              "content_types": dict(Counter(r[5].split(";")[0].strip().lower() for v in ch for r in v).most_common(6))}
     print(json.dumps(counts, indent=1))
     if a.out:
         with open(a.out, "w", encoding="utf-8") as f:

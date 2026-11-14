@@ -62,12 +62,7 @@ def test_pool_loop_end_to_end(tmp_path, monkeypatch):
             p = store / key
             p.parent.mkdir(parents=True, exist_ok=True)
             p.write_bytes(gzip.compress(body))
-    by_shard = {}
-    for sha, _, r in srcs:
-        by_shard.setdefault(sha[:bundle.SHARD_DIGITS], []).append(r)
-    # two shards: put everything in the first two shard names the hashes give (so the test does not depend on the hashes)
-    names = sorted(by_shard)
-    shards = {names[0]: by_shard[names[0]], "zz": [r for n in names[1:] for r in by_shard[n]]}
+    shards = {"s00001": [r for _, _, r in srcs[:2]], "s00002": [r for _, _, r in srcs[2:]]}
     items = []
     for s, rows in shards.items():
         items.append({"key": f"bundle:{s}:{bundle.list_hash(rows)[:12]}",
@@ -127,3 +122,63 @@ def test_pool_loop_end_to_end(tmp_path, monkeypatch):
     rows = list(csv.DictReader(io.StringIO(gzip.decompress((base / "sources.csv.gz").read_bytes()).decode())))
     assert len(rows) == 5 and {r["sha256"] for r in rows} == {sha for sha, _, _ in srcs}
     assert "src.sha256" in (base / "README.txt").read_text()
+    asg = list(csv.DictReader(io.StringIO(gzip.decompress((base / "assignment.csv.gz").read_bytes()).decode())))
+    assert {(a["sha256"], a["shard"]) for a in asg} == {(r[0], s) for s, rows in shards.items() for r in rows}
+    assert all(a["bucket_copy"] == k for a, (_, k, _) in zip(sorted(asg, key=lambda a: a["sha256"]), sorted(srcs)))
+
+
+def builder():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("build_bundle_t", ROOT / "seeds" / "build_bundle.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def fake_rows(n, day="2026-11-13", start=0):
+    out = {}
+    for i in range(start, start + n):
+        body = f"page {i}".encode()
+        sha, key, r = source(body, ".html", f"https://x{i % 7}.gov.in/p{i}", "text/html")
+        r[8] = f"{day}T{i // 3600 % 24:02d}:{i // 60 % 60:02d}:{i % 60:02d}Z"
+        r[6] = 30_000_000 if i % 50 == 0 else 1000
+        out[sha] = r
+    return out
+
+
+def assignment_of(shards):
+    """What the index item writes to assignment.csv.gz (the columns the builder reads)."""
+    return {r[0]: {"sha256": r[0], "shard": s, "bucket_copy": bundle.copy_key(r), "host": r[2], "url": r[4], "final_url": r[7] or r[4],
+                   "content_type": r[5], "bytes": str(r[6]), "fetched_at": r[8]} for s, rows in shards.items() for r in rows}
+
+
+def test_append_only_shards():
+    """First run: all sources in fetch order, shards closed by file count and bytes. Second run with 3 new sources: exactly
+    one new shard queued, no old shard; a source that left the database stays in its shard."""
+    b = builder()
+    rows = fake_rows(25)
+    shards, hashes, changed = b.plan(rows, {}, {}, max_files=10, max_bytes=70_000_000)
+    assert list(shards) == changed == [f"s{i:05d}" for i in range(1, len(shards) + 1)]
+    flat = [r for s in sorted(shards) for r in shards[s]]
+    assert [(r[8], r[0]) for r in flat] == sorted((r[8], r[0]) for r in rows.values())        # fetch time, then sha256
+    assert all(len(v) <= 10 and (len(v) == 1 or sum(r[6] for r in v) <= 70_000_000) for v in shards.values())
+    its = b.items(shards, hashes, changed)
+    assert len(its) == len(shards) + 1 and its[-1]["payload"]["kind"] == "index"
+    # the second run: the last build's assignment and index, 3 new sources, one old source gone from the database
+    asg = assignment_of(shards)
+    gone = flat[0][0]
+    rows2 = {k: v for k, v in rows.items() if k != gone}
+    rows2.update(fake_rows(3, day="2026-11-20", start=100))
+    shards2, hashes2, changed2 = b.plan(rows2, asg, hashes, max_files=10, max_bytes=70_000_000)
+    new_id = f"s{len(shards) + 1:05d}"
+    assert changed2 == [new_id] and len(shards2[new_id]) == 3
+    assert all(hashes2[s] == hashes[s] for s in shards)                                    # old shards: same lists
+    assert gone in {r[0] for r in shards2["s00001"]}                                       # stays in its old shard
+    kept = next(r for r in shards2["s00001"] if r[0] == gone)
+    assert bundle.copy_key(kept) == bundle.copy_key(flat[0]) and kept[2] == flat[0][2]
+    its2 = b.items(shards2, hashes2, changed2)
+    assert [i["key"].split(":")[1] for i in its2] == [new_id, its2[-1]["key"].split(":")[1]]
+    assert its2[-1]["key"] != its[-1]["key"] and set(its2[-1]["payload"]["shards"]) == set(shards2)
+    # nothing new: no shard item, the same index key as before (not queued again)
+    _, h3, c3 = b.plan({**rows2}, {**asg, **assignment_of({new_id: shards2[new_id]})}, hashes2, max_files=10, max_bytes=70_000_000)
+    assert c3 == [] and b.items(shards2, h3, c3)[-1]["key"] == its2[-1]["key"]
