@@ -27,9 +27,12 @@ METHOD = "pdf text (pypdf layout), else ocr tesseract eng (scanned gazettes)"   
 LIST = "https://ddd.gov.in/document-category/latest-updates/page/{}/"
 WINDOWS = ((datetime.date(2025, 11, 1), datetime.date(2026, 1, 31), "DNH&DD Municipal Councils 2025"),
            (datetime.date(2023, 2, 1), datetime.date(2023, 6, 30), "Diu Municipal Council 2023"))
-HEAD = re.compile(r"Names\s+of\s+the\s+persons?\s+(?:declared\s+)?elected\s+to\s+the\s+([A-Za-z ]+?)\s+Municipal\s+Council", re.I)
+# 2025 gazette (Extraordinary No. 152, 11.11.2025): "Names of persons elected to Daman Municipal Council" (no "the"), rows
+# "1/15   Mario Franisco Lopes   Bharatiya Janata Party" (no honorific): ROW_N reads those (ward written n/total)
+HEAD = re.compile(r"Names\s+of\s+(?:the\s+)?persons?\s+(?:declared\s+)?elected\s+to\s+(?:the\s+)?([A-Za-z ]+?)\s+Municipal\s+Council", re.I)
 HONOR = r"(?:Shri|Smt|Sh|Ms|Mr|Mrs|Kum|Km|Kumari|Dr)\b[.,]?"
 ROW = re.compile(r"(?:^|[\s|])(\d{1,2})\s*(?:/\s*\d{1,2})?\s*[_|.]*\s*[|]?\s+(" + HONOR + r"\s*\S.*)$")
+ROW_N = re.compile(r"(?:^|\s)(\d{1,2})\s*/\s*\d{1,2}\s{2,}([A-Za-z].*)$")
 PARTY = (("bharatiya janata", "BJP"), ("indian national congress", "INC"), ("independent", "Independent"),
          ("janata dal (united)", "JD(U)"), ("janata dal(united)", "JD(U)"), ("janata dal (u)", "JD(U)"),
          ("shiv sena", "SHS"), ("nationalist congress", "NCP"), ("aam aadmi", "AAP"), ("bahujan samaj", "BSP"))
@@ -118,7 +121,7 @@ def members(text, pos=None):
         seen = set()
         line0 = text.count("\n", 0, h.end()) + 1
         for li, line in enumerate(block.split("\n")):
-            m = ROW.search(line)
+            m = ROW.search(line) or ROW_N.search(line)
             if not m:
                 provenance.skip_line(line, 'skip: not m')
                 continue

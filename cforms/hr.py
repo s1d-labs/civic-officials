@@ -392,7 +392,8 @@ def text_rows(text):
         if re.search(r"ftyk|Ukxj|Ø-", ln):          # Kruti Dev (Hindi) header: Hindi half
             starts, cur = None, None
             continue
-        if re.match(r"\s*Sr\.?\s", ln) and "District" in ln:
+        # header line: "Sr. District Name of W. ..." (2025 councils); single-body notices start at "District" (Kalanwali, 08.07.2025)
+        if (re.match(r"\s*Sr\.?\s", ln) and "District" in ln) or (re.match(r"\s*District\s", ln) and "Father" in ln):
             starts, cur = header_cols(ln), None
             continue
         if starts is None:

@@ -429,6 +429,83 @@ def plain_text(pdf, page, tmp):
     return subprocess.run(["tesseract", png, "-", "-l", LANG, "--psm", "6"], capture_output=True, text=True).stdout
 
 
+# ---- text-layer files (gap round 2026-11-15: Ranchi / Bundu gazettes typed in Kruti Dev 010, Chatra vice-chair in Unicode):
+# the PDF text, converted to Unicode when it is Kruti Dev, read line by line. One member line:
+# "<name>   <post> <reservation>   <women/other>   <district>/<no> <body> (वर्ग-क)/वार्ड संख्या-01" (the ward part may be on
+# the next line). Exact names, so this path comes before OCR; a file without such lines goes to OCR as before.
+POSTS = r"वार्ड\s*पार्षद|उप\s*महापौर|महापौर|उपाध्यक्ष|अध्यक्ष"
+METHOD_TEXT = "pdf text (pdftotext -layout; Kruti Dev 010 converted to Unicode when the file uses it)"
+
+
+def page_texts(pdf, n):
+    """[(page, text)] of the PDF text layer, Kruti Dev converted; [] when the layer is empty."""
+    from cforms import cn_krutidev
+    out = []
+    for pg in range(1, n + 1):
+        txt = subprocess.run(["pdftotext", "-layout", "-f", str(pg), "-l", str(pg), pdf, "-"], capture_output=True,
+                             text=True).stdout
+        if cn_krutidev.is_krutidev(txt):
+            txt = cn_krutidev.convert(txt).replace("¼", "(").replace("½", ")")     # Kruti Dev brackets
+        out.append((pg, txt))
+    return out if sum(len(x.strip()) for _, x in out) > 200 else []
+
+
+TEXT_POST = re.compile(r"^\s*(?:(\S[^\d]{1,60}?)\s{2,})?(" + POSTS + r")(?:\s+(.*\S))?\s*$")
+PROSE = re.compile(r"के\s*लिए|नियम|अधिसूचित|निर्वाचन|स्तंभ|पद\s*पर")
+
+
+def text_records(pages, p):
+    """Member lines of the text layer. A row can wrap: "<name>  <post>" on one line and the reservation, women/other and
+    body on the next lines, or the name alone on the line before the post; the row ends at its ward ("वार्ड संख्या-NN")
+    or at the next row."""
+    recs = []
+    for pg, txt in pages:
+        lines = txt.split("\n")
+        starts = []
+        for li, ln in enumerate(lines):
+            m = TEXT_POST.match(ln)
+            if not m or PROSE.search(ln):
+                continue
+            name, first = m.group(1), li
+            if not name:                     # the name on the line before (a long name pushed the post down)
+                k = li - 1
+                while k >= 0 and not lines[k].strip():
+                    k -= 1
+                if k < 0 or re.search(r"\d|" + POSTS, lines[k]) or len(lines[k].strip()) > 40:
+                    provenance.skip_line(ln, "post without a name")
+                    continue
+                name, first = lines[k].strip(), k
+            starts.append((li, first, hr.clean(name), m.group(2), m.group(3) or ""))
+        for n, (li, first, name, post_txt, rest) in enumerate(starts):
+            end = starts[n + 1][1] if n + 1 < len(starts) else min(len(lines), li + 6)
+            block = [rest] + [hr.clean(x) for x in lines[li + 1:end]]
+            for j, x in enumerate(block):
+                if re.search(r"(?:वार्ड|ward)\s*(?:संख्या|सं|no)", x, re.I):
+                    block = block[:j + 1]
+                    break
+            joined = " ".join(x for x in block if x)
+            w = re.search(r"(?:^|\s)(महिला|अन्य)(?:\s|$)", joined)
+            reservation = hr.clean(joined[:w.start()]) if w else None
+            body_txt = hr.clean(joined[w.end():]) if w else hr.clean(joined)
+            position, head = post_of(post_txt)
+            ward = head or ward_of(body_txt)
+            found = bodies_in(body_txt)
+            code = (p.get("lgd_code") if p.get("lgd_code") in found or not found else None) \
+                or find_body(body_txt.split("/", 1)[1] if "/" in body_txt else body_txt, p.get("district")) or p.get("lgd_code")
+            d = {"type": "councillor", "state": "JH", "lgd_code": code,
+                 "body": BODIES[code][1] if code in BODIES else p.get("body"), "body_local": body_txt or None,
+                 "body_type": BODIES[code][2] if code in BODIES else None,
+                 "district": BODIES[code][0] if code in BODIES else p.get("district"), "ward_no": ward, "name": name,
+                 "position": position or "Member", "post_local": post_txt, "reservation": reservation or None,
+                 "women_seat": women(w.group(1)) if w else None, "election": p.get("election", ELECTION), "url": p["url"],
+                 "page_url": p.get("page_url"), "link_text": p.get("link_text"), "page": pg, "read": "text layer",
+                 "src_pos": {"page": pg, "line": first + 1, "line_text": lines[li].strip()}, "method": METHOD_TEXT}
+            if not d["ward_no"]:
+                d["ward_no_missing"] = True
+            recs.append(d)
+    return recs
+
+
 def fetch(p, get):
     if not hr.tools():
         return [], [], "tesseract not available"
@@ -451,9 +528,13 @@ def fetch(p, get):
         m = re.search(r"Pages:\s+(\d+)", info)
         n = int(m.group(1)) if m else 1
         pages = list(range(1, min(n, MAX_PAGES) + 1))
-        with concurrent.futures.ThreadPoolExecutor(max(1, min(len(pages), (os.cpu_count() or 2) // 2))) as ex:
-            tabs = dict(zip(pages, ex.map(lambda pg: ocr_page(pdf, pg, tmp), pages)))
-        found = [d for pg in pages for d in page_records(tabs[pg], p, pg)]
+        found = text_records(page_texts(pdf, len(pages)), p)
+        if found:
+            pages = []                      # the text layer gave the members: no OCR
+        if pages:
+            with concurrent.futures.ThreadPoolExecutor(max(1, min(len(pages), (os.cpu_count() or 2) // 2))) as ex:
+                tabs = dict(zip(pages, ex.map(lambda pg: ocr_page(pdf, pg, tmp), pages)))
+            found = [d for pg in pages for d in page_records(tabs[pg], p, pg)]
         if not found:
             texts = [plain_text(pdf, pg, tmp)[:6000] for pg in pages[:4]]
     if not found:
