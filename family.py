@@ -206,6 +206,14 @@ if _news.exists():
 
 # Round 3 (seeds/ocrf_councillors_*.json): the MP pages again with notices whose body name the scan lost kept (Amarkantak),
 # small-type tables (Ashoknagar, Ex-392 p. 13), "राज्य - में", "के माहं", and aliases (Badoda, Badawada, Anuppur).
+# Gazette searches for bodies with no notice in the first lists (ocr-gap round 3: govtpress MP, e-Gazette MH; India only, the
+# hub's Indian proxies). Own task name: the -councillors runners kept a checkout from before cw_mp.items(get, p) / mh_np.items.
+_seed_in = HERE / "seeds" / "seedin_councillors.json"
+if _seed_in.exists():
+    PROJECTS.append({"name": f"{FAMILY}-councillors-seed-in", "title": "Ward councillors: gazette searches (India only)",
+                     "task": "councillors-seed", "target": f"{FAMILY}-councillors-seed-in", "env": {}, "probe": None,
+                     "unit_label": "search", "record_label": "seed listing", "items": json.loads(_seed_in.read_text()), "workers": 2,
+                     "threads": 1, "delay_ms": 1000, "proxy": "IN"})
 _ocr_f = [i for f in sorted((HERE / "seeds").glob("ocrf_councillors_*.json")) for i in json.loads(f.read_text())]
 if _ocr_f:
     PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-f", "title": "Ward councillors by OCR, saved results PDFs read again (ocr-gap round 3)",
