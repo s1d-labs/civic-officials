@@ -20,9 +20,17 @@ the joined post text: its match is the post of one record (the whole post text i
 e-mail come from the whole entry text: "(0281) 2477511 (O)" office, "(R)" residence, "(F)" fax, "99784 05368 (M)" mobile.
 Entries that name no division of the payload are counted as skipped (provenance.skipped).
 
+  - Chhattisgarh GAD: "Civil List of IAS Officers 2026, as on 02nd November, 2026" (gad.cg.gov.in/ias/view_preview.aspx?fn=
+    CL/2026/11/0483, made 2026-11-11). The opening line carries the name in a legacy Hindi font (Kruti Dev) and the post
+    spread over columns ("Commissioner,      Bastar       Division,   Level 14 in"); the English name is on a later line
+    ("Doman Singh   2009:CG   Jagdalpur. 19-07-2024."). Payload "post_end_rx" and "name_rx" (below) read it.
+
 Payload: {"reader": "st_div_postlist", "key", "state", "url", "kind": "revenue" | "police", "as_on" (the list's own date),
 "body", "first_rx", "break_rx" (a line that opens an entry even when first_rx does not match it), "posts": [{"rx",
-"division"}], "col_slack" (default 6), "phone_rx" (office phones written without "(O)")}.
+"division"}], "col_slack" (default 6), "phone_rx" (office phones written without "(O)"), "post_end_rx" (optional: on the opening
+line the post is all the text from the post column up to this regex, not only the first chunk), "name_rx" (optional: a regex
+with group "name", searched line by line in the entry's later lines; the first match is the name, in place of the opening
+line's "name" group)}.
 Records (_state.rec, type dept_office): level division, division = the rule's division (as dforms/st_div_<st>.json writes it),
 post, name, phone, email, fax, as_on, list_title, src_pos = provenance.line_pos(page, line, opening line) + "entry" (the
 serial number). Ids: dept:st_div_postlist:<key>:<serial>:<division>.
@@ -78,11 +86,17 @@ def entries(pages, first_rx, break_rx=None):
     return out
 
 
-def post_text(e, slack=6):
-    """The entry's post: the "post" chunk of the opening line plus the chunks of later lines that start near its column."""
+def post_text(e, slack=6, end_rx=None):
+    """The entry's post: the "post" chunk of the opening line plus the chunks of later lines that start near its column. With
+    end_rx, the opening line gives all its text from the post column up to the first end_rx match (columns joined)."""
     col = e["post_col"]
     parts = []
     for i, ln in enumerate(e["lines"]):
+        if i == 0 and end_rx:
+            rest = ln[col:]
+            m = re.search(end_rx, rest)
+            parts.append(rest[: m.start()] if m else rest)
+            continue
         for m in CHUNK.finditer(ln):
             if (i == 0 and m.start() == col) or (i > 0 and col - slack <= m.start() <= col + slack):
                 parts.append(m.group())
@@ -110,16 +124,21 @@ def parse_pages(p, pages):
     recs = []
     slack = int(p.get("col_slack", 6))
     rules = [(re.compile(r["rx"]), r["division"]) for r in p["posts"]]
+    name_rx = re.compile(p["name_rx"]) if p.get("name_rx") else None
     for e in entries(pages, p["first_rx"], p.get("break_rx")):
         if e.get("unread"):
             provenance.skipped("skip: entry opening line not read (break_rx)")
             continue
-        full = post_text(e, slack)
+        full = post_text(e, slack, p.get("post_end_rx"))
         hits = [(m, div) for rx, div in rules for m in [rx.search(full)] if m]
         if not hits:
             provenance.skipped("skip: entry names no division of the payload")
             continue
         ph, mob, email = contacts(e, p.get("phone_rx"))
+        if name_rx is not None:
+            m = next((m for ln in e["lines"][1:] for m in [name_rx.search(ln)] if m), None)
+            if m:
+                e["name"] = _esw.clean(m.group("name"))
         police = p.get("kind") == "police"
         for m, div in hits:
             post = re.sub(r"\s+,", ",", _esw.clean(m.group(0))).strip(" ,.")

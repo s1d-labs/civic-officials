@@ -1,0 +1,242 @@
+[
+ {
+  "key": "st_div_pages:div4-hr-rohtak-range",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "HR",
+   "key": "div4-hr-rohtak-range",
+   "division": "Rohtak Range",
+   "kind": "police",
+   "body": "Rohtak Range, Haryana Police",
+   "urls": [
+    "https://haryanapolice.gov.in/static/TelephoneDirectory_rtk"
+   ],
+   "districts": [
+    "701",
+    "73",
+    "59"
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-15; abroad unchecked",
+   "district_names": {
+    "58": [
+     "Ambala"
+    ],
+    "59": [
+     "Bhiwani"
+    ],
+    "60": [
+     "Faridabad"
+    ],
+    "604": [
+     "Nuh",
+     "Mewat"
+    ],
+    "61": [
+     "Fatehabad"
+    ],
+    "619": [
+     "Palwal"
+    ],
+    "62": [
+     "Gurugram",
+     "Gurgaon"
+    ],
+    "63": [
+     "Hisar"
+    ],
+    "64": [
+     "Jhajjar"
+    ],
+    "65": [
+     "Jind"
+    ],
+    "66": [
+     "Kaithal"
+    ],
+    "67": [
+     "Karnal"
+    ],
+    "68": [
+     "Kurukshetra"
+    ],
+    "69": [
+     "Mahendragarh",
+     "Mahendergarh",
+     "Narnaul"
+    ],
+    "70": [
+     "Panchkula"
+    ],
+    "701": [
+     "Charkhi Dadri"
+    ],
+    "71": [
+     "Panipat"
+    ],
+    "72": [
+     "Rewari"
+    ],
+    "73": [
+     "Rohtak"
+    ],
+    "74": [
+     "Sirsa"
+    ],
+    "75": [
+     "Sonipat"
+    ],
+    "76": [
+     "Yamunanagar"
+    ],
+    "792": [
+     "Hansi"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_pages:div4-ka-bengaluru",
+  "payload": {
+   "reader": "st_div_pages",
+   "state": "KA",
+   "key": "div4-ka-bengaluru",
+   "division": "Bengaluru",
+   "urls": [
+    "https://rcb.karnataka.gov.in/20/Officers%20Details/en"
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-15; abroad unchecked",
+   "district_names": {
+    "524": [
+     "Bagalkote"
+    ],
+    "525": [
+     "Bengaluru Urban"
+    ],
+    "526": [
+     "Bengaluru Rural"
+    ],
+    "527": [
+     "Belagavi",
+     "Belgaum"
+    ],
+    "528": [
+     "Ballari"
+    ],
+    "529": [
+     "Bidar"
+    ],
+    "530": [
+     "Vijayapura",
+     "Vijayapur",
+     "Bijapur"
+    ],
+    "531": [
+     "Chamarajanagar"
+    ],
+    "532": [
+     "Chikkamagaluru"
+    ],
+    "533": [
+     "Chitradurga"
+    ],
+    "534": [
+     "Dakshina Kannada"
+    ],
+    "535": [
+     "Davanagere"
+    ],
+    "536": [
+     "Dharwad"
+    ],
+    "537": [
+     "Gadag"
+    ],
+    "538": [
+     "Kalaburagi",
+     "Kalburgi",
+     "Gulbarga"
+    ],
+    "539": [
+     "Hassan"
+    ],
+    "540": [
+     "Haveri"
+    ],
+    "541": [
+     "Kodagu"
+    ],
+    "542": [
+     "Kolar"
+    ],
+    "543": [
+     "Koppal"
+    ],
+    "544": [
+     "Mandya"
+    ],
+    "545": [
+     "Mysuru"
+    ],
+    "546": [
+     "Raichur"
+    ],
+    "547": [
+     "Shivamogga"
+    ],
+    "548": [
+     "Tumakuru"
+    ],
+    "549": [
+     "Udupi"
+    ],
+    "550": [
+     "Uttara Kannada"
+    ],
+    "630": [
+     "Chikkaballapura"
+    ],
+    "631": [
+     "Bengaluru South"
+    ],
+    "635": [
+     "Yadgir"
+    ],
+    "738": [
+     "Vijayanagara"
+    ]
+   }
+  }
+ },
+ {
+  "key": "st_div_postlist:div4-cg-ias-civil-list",
+  "payload": {
+   "reader": "st_div_postlist",
+   "state": "CG",
+   "key": "div4-cg-ias-civil-list",
+   "kind": "revenue",
+   "as_on": "02.11.2026",
+   "list_title": "Civil List of IAS Officers 2026, as on 02nd November, 2026",
+   "url": "https://gad.cg.gov.in/ias/view_preview.aspx?fn=CL/2026/11/0483",
+   "first_rx": "^\\s{0,3}(?P<sno>\\d{1,3})\\s{3,}(?P<name>\\S.*?)\\s{2,}(?:\\S.*?\\s{2,})?\\d\\d\\s?/\\s?\\d\\d\\s?/\\s?\\d{4}\\s+(?P<post>\\S.*?)(?:\\s{3,}|$)",
+   "post_end_rx": "\\s{2,}Level\\s+\\d|\\s{2,}\\d\\d-\\s*$",
+   "name_rx": "^\\s{3,}(?P<name>(?:Dr\\.\\s|Smt\\.\\s|Shri\\s)?[A-Z][A-Za-z.]*(?:\\s[A-Z][A-Za-z.]*)+)\\s{2,}",
+   "posts": [
+    {
+     "rx": "(?i)\\bcommissioner,\\s*bastar\\s+division",
+     "division": "Bastar"
+    },
+    {
+     "rx": "(?i)\\bcommissioner,\\s*bilaspur\\s+division",
+     "division": "Bilaspur"
+    }
+   ],
+   "india_only": true,
+   "route": "direct",
+   "route_note": "answered dev-vps-3 (Mumbai) 2026-11-15; abroad unchecked"
+  }
+ }
+]

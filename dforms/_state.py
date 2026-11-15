@@ -153,11 +153,13 @@ _DIV = {}
 
 def divisions(state):
     """{division name: [LGD district codes]} of one state, from dforms/st_div_<state lower>.json (made by hand from the state's
-    own list of divisions; {} when the file is not there)."""
+    own list of divisions; {} when the file is not there): its "divisions" (revenue); its "police_ranges" only when it has no
+    "divisions" (Gujarat: police ranges only; Haryana keeps its revenue divisions here)."""
     st = state.upper()
     if st not in _DIV:
         f = HERE / f"st_div_{st.lower()}.json"
-        _DIV[st] = json.loads(f.read_text())["divisions"] if f.exists() else {}
+        d = json.loads(f.read_text()) if f.exists() else {}
+        _DIV[st] = d.get("divisions") or d.get("police_ranges") or {}
     return _DIV[st]
 
 
