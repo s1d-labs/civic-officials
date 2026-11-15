@@ -4,11 +4,12 @@
 The first reads used Tesseract (tessdata hin / mar / guj / tam, per cell or per line). This task reads each page again, whole, with
 a different engine, and stores what it read with the position of every text segment. It does not see the first read: the comparison
 (name and ward per row) is done afterwards on the box (investigations civic-india/ocr2_compare.py).
-  - Devanagari (hi, mr), Tamil (ta), English (en): EasyOCR (CRAFT text detector + CRNN recogniser; PyTorch CPU), page at 300 dpi.
-  - Gujarati (EasyOCR has no Gujarati model): Tesseract with the tessdata_best script model "Gujarati" (a different, float LSTM
-    network from the tessdata "guj" of the first read), page binarised (Otsu) with the ruled lines removed, psm 4, word boxes.
+  - Devanagari (hi, mr), English (en): EasyOCR (CRAFT text detector + CRNN recogniser; PyTorch CPU), page at 300 dpi.
+  - Gujarati and Tamil (EasyOCR has no Gujarati model, and its Tamil model does not load: size mismatch, 2026-11-15): Tesseract
+    with the tessdata_best script model "Gujarati" / "Tamil" (a different, float LSTM network from the tessdata "guj" / "tam" of
+    the first read), page binarised (Otsu) with the ruled lines removed, psm 4, word boxes.
 Payload: {"doc": "<project>/<key>.pdf[.gz]", "pages": [n, ...], "engine": "easyocr" | "tess-best", "langs": ["hi", "en"] |
-"Gujarati", "sha256": "<sha256 of the PDF>"}.
+"Gujarati" | "Tamil", "sha256": "<sha256 of the PDF>"}.
 Record per page: "ocr2:<sha256[:16]>:p<page>" = {"type": "ocr_second_read", "doc", "sha256", "page", "engine", "langs", "dpi",
 "size_pt": [w, h], "segs": [[x0, y0, x1, y1, text, conf], ...]} with boxes in PDF points (origin top left, as box_pt of the first
 reads). `python ocr2.py --local '<payload json>' FILE.pdf` reads a local file without the hub.
