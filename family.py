@@ -163,6 +163,16 @@ if _ocr_tn:
                      "unit_label": "6 PDF pages", "record_label": "councillor", "items": _ocr_tn, "workers": 100, "threads": 1,
                      "delay_ms": 0})
 
+# Pages read again with a newer reader (seeds/ocrc_councillors_*.json; gap round 2026-11-15: MP gazette pages without a ruled grid,
+# cforms/cw_mp.py text lines): the saved copies, GitHub runners, no proxy. Own task name, so a runner whose checkout predates the
+# reader fetches the family code again before it takes them (the -ocr-b runners kept their old checkout and read them the old way).
+_ocr_c = [i for f in sorted((HERE / "seeds").glob("ocrc_councillors_*.json")) for i in json.loads(f.read_text())]
+if _ocr_c:
+    PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-c", "title": "Ward councillors by OCR, saved results PDFs read again with a newer reader",
+                     "task": "councillors-ocr-c", "target": f"{FAMILY}-councillors-ocr-c", "env": {}, "probe": None,
+                     "unit_label": "PDF pages", "record_label": "councillor", "items": _ocr_c, "workers": 20, "threads": 1,
+                     "delay_ms": 0})
+
 # Department offices and officers (depts task, dforms/<module>.py; every seeds/dept_*.json): police stations, power offices,
 # EROs, sub-registrars, water offices. Both projects run on the India servers and on GitHub runners through the Indian proxies;
 # "india_only" items are kept apart because GitHub runners without a proxy must never get them.
