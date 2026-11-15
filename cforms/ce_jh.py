@@ -47,7 +47,9 @@ MAX_PAGES = 15
 DISTRICTS = {
     "bokaro.nic.in": ("Bokaro", ["https://bokaro.nic.in/municipality-general-election-2026/"]),
     "chatra.nic.in": ("Chatra", ["https://chatra.nic.in/municipal-election-2026/"]),
-    "deoghar.nic.in": ("Deoghar", ["https://deoghar.nic.in/district-election-portal/"]),
+    "deoghar.nic.in": ("Deoghar", ["https://deoghar.nic.in/district-election-portal/",
+                                   # the result gazettes are on this page (gap round 2026-11-15)
+                                   "https://deoghar.nic.in/deoghar-nagar-nigam-and-madhupur-nagar-parishad-general-election-2025/"]),
     "dhanbad.nic.in": ("Dhanbad", ["https://dhanbad.nic.in/hi/नगरपालिका-चुनाव-2026/"]),
     "dumka.nic.in": ("Dumka", ["https://dumka.nic.in/nagarpalika-election-2026/"]),
     "jamshedpur.nic.in": ("East Singhbum", ["https://jamshedpur.nic.in/departments/district-election-office/"]),
@@ -63,7 +65,7 @@ DISTRICTS = {
     "lohardaga.nic.in": ("Lohardaga", ["https://lohardaga.nic.in/nagar-palika-election-2026-voter-list-final-roll/"]),
     "pakur.nic.in": ("Pakur", ["https://pakur.nic.in/municipal-general-election-2026/"]),
     "palamu.nic.in": ("Palamu", ["https://palamu.nic.in/municipal-election-2020-3/"]),
-    "ramgarh.nic.in": ("Ramgarh", ["https://ramgarh.nic.in/नगरपालिका-चुनाव-2025/"]),
+    "ramgarh.nic.in": ("Ramgarh", ["https://ramgarh.nic.in/नगरपालिका-चुनाव-2025/", "https://ramgarh.nic.in/municipality-election/"]),
     "ranchi.nic.in": ("Ranchi", ["https://ranchi.nic.in/election-2/"]),
     "sahibganj.nic.in": ("Sahebganj", ["https://sahibganj.nic.in/municipal-general-election-2026/"]),   # the site is sahibganj.nic.in
     "seraikela.nic.in": ("Saraikela Kharsawan", ["https://seraikela.nic.in/municipal-general-election-2026/"]),
@@ -389,7 +391,12 @@ def page_records(rows, p, page):
             provenance.skip_row(r, 'skip: position is None and not re.search(r"पार्षद|सदस्य|member|councillor...')
             continue
         btxt = body_cell(at("body"))
-        code = find_body(btxt, district) or p.get("lgd_code") or find_body(row_text, district)
+        # the cell is "XXIII <district>/<no><body> (वर्ग-ख)/वार्ड ...": the district before the first "/" also names a body
+        # (Giridih district / Giridih corporation), so the part after it is read first (gap round 2026-11-15: the Dhanwar
+        # file went to Giridih); a body the item itself names wins when the cell names it too
+        tail = btxt.split("/", 1)[1] if "/" in btxt else ""
+        code = (p.get("lgd_code") if p.get("lgd_code") in bodies_in(btxt) else None) or find_body(tail, district) \
+            or find_body(btxt, district) or p.get("lgd_code") or find_body(row_text, district)
         ward = head or ward_of(at("ward")) or ward_of(at("body"))
         conf = [x for x in (r.get("conf") or []) if x is not None]
         d = {"type": "councillor", "state": "JH", "lgd_code": code,

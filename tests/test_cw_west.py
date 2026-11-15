@@ -495,3 +495,23 @@ def test_mp_gap_preamble_cuts():
     got = {c: (cw_mp.lgd_of_split(*c) or [None])[0] for c in cases}
     assert got == cases
     assert cw_mp.split_body("बड़ौद जिला आगर मालवा", "बड़ौद जिला आगर मालवा") == ("बड़ौद", "आगर मालवा")
+
+
+def test_mp_text_rows():
+    """Ex-543 of 03.10.2022 prints the member table without row lines: whole-page OCR lines (Tesseract hin, psm 6)."""
+    r = cw_mp.text_row("4. नगर परिषद्‌ बरगवां, पार्षद ] एक. मंगल सिंह उर्फ मकरध्वज प्रताप भारतीय जनता पार्टी")
+    assert r[3] == "एक." and r[4] == "मंगल सिंह उर्फ मकरध्वज प्रताप" and cw_mp.party_of(r[5]) == "BJP"
+    r = cw_mp.text_row("१3, पार्षद 33 तेरह. दानी “भजन चक्रवर्ती” निर्दलीय")
+    assert cw_mp.word_num(r[3]) == "13" and r[4].startswith("दानी")
+    r = cw_mp.text_row("१7. पार्षद )] ग्यारह पुष्पा साहू निर्दलीय")
+    assert cw_mp.word_num(r[3]) == "11" and r[4] == "पुष्पा साहू"
+    # a ward word OCR spoilt ("पन्रह" for पन्द्रह) is not part of the name
+    r = cw_mp.text_row("व5. पार्षद 35 पन्रह सरोजरानी/दीनदयाल पटेल भारतीय जनता पार्टी")
+    assert r[4] == "सरोजरानी/दीनदयाल पटेल"
+    assert cw_mp.text_row("मध्यप्रदेश राज्य निर्वाचन आयोग के आदेशानुसार,") is None
+    ms = cw_mp.members([cw_mp.text_row("१0. पार्षद १0 दस मानिकचंद गुप्ता भारतीय जनता पार्टी")],
+                       {"body": 0, "post": 1, "ward": 2, "ward_words": 3, "name": 4})
+    assert ms[0]["ward_no"] == "10" and ms[0]["name"] == "मानिकचंद गुप्ता"
+    b = cw_mp.body_from("राज्य में नगर परिषद्‌ देवरी, जिला-रायसेन के माह सितम्बर, 2022 में कराये गये आम निर्वाचन में")
+    assert b["body_local"] == "देवरी" and b["district_local"] == "रायसेन"
+    assert cw_mp.lgd_match("शहपुरा", "डिण्डौरी", "Nagar Parishad")[0] == "250986"     # not Shahpura (Jabalpur)

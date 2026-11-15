@@ -38,7 +38,7 @@ import provenance
 from cforms import gj, tn
 from cforms.cg import roman
 
-METHOD = "ocr tesseract hin (one image per ruled cell, scan without text layer)"     # source trail (provenance.py): how this reader reads its sources
+METHOD = "ocr tesseract hin (one image per ruled cell, scan without text layer; whole-page text lines where no grid is read)"     # source trail (provenance.py): how this reader reads its sources
 
 SITE = "https://govtpress.mp.gov.in"
 PAGE = SITE + "/gazette"
@@ -397,7 +397,8 @@ def members(table, rl, tno=None):
                     "post_read": bool(POST.search(post)), "body_cell": norm(cell("body")),
                     "ward_words": word_num(cell("ward_words")), "name": name,
                     "party": party_of(party_local), "party_local": party_local,
-                    "_pos": {k: v for k, v in (("table", tno), ("row", ri), ("box_pt", getattr(r, "box", None))) if v is not None}})
+                    "_pos": {k: v for k, v in (("table", tno), ("row", ri), ("box_pt", getattr(r, "box", None)),
+                                                     ("ocr_line", getattr(r, "line", None))) if v is not None}})
     return out
 
 
@@ -410,7 +411,7 @@ def body_from(text):
     full, month, year = mm.group(1), mm.group(2), mm.group(3).translate(DIGITS)
     full = re.sub(r"\s+", " ", full).strip(" ,")
     dist = ""
-    dm = re.search(r"(.*?)\s*[^\sऀ-ॿ]?\s*(?:जिला|ज़िला)\s+(?:[^\sक-ह]+\s+)*(\S+)\s*$", full)   # (\W would eat a vowel sign)
+    dm = re.search(r"(.*?)\s*[^\sऀ-ॿ]?\s*(?:जिला|ज़िला)[\s-]+(?:[^\sक-ह]+\s+)*(\S+)\s*$", full)   # (\W would eat a vowel sign)
     if dm:
         full, dist = dm.group(1), dm.group(2)
     btype = ""
@@ -491,12 +492,98 @@ def page_cells(pdf, page, tmp):
     return out
 
 
+# ---------------------------------------------------------------- pages without a ruled grid: text lines
+
+# Some issues print the member table without row lines (Ex-543, 550, 551 of Sept-Oct 2022: one body per page, columns only
+# spaced), and some ruled pages are too faint for grid(). On such a page the whole page is read by Tesseract (hin, psm 6) and
+# each text line with a post word (पार्षद / महापौर) followed by a party name is a member row:
+#   "<serial>. [body cell] पार्षद <ward in figures> <ward in words> <name> <party>"
+# The ward in words is the surer number (Tesseract reads 11 as ")]" and 12 as "32"). Other lines are kept as text blocks
+# ("pre"), so the notice preamble names the body as on a ruled page.
+TEXT_POST = re.compile(r"(?:^|\s)(पा\s?र्?\s?[षशघ]\S*|महापौर|महापोर)\s+")
+FIG = re.compile(r"^[\s(|\[\])}0-9०-९.,:;'\"-]*$")
+
+
+def text_row(line):
+    """A member row from one OCR'd text line: Row([body cell, post, ward figures, ward words, name, party]) or None."""
+    t = norm(line)
+    mm = TEXT_POST.search(t)
+    if not mm:
+        return None
+    rest = t[mm.end():]
+    starts = [m.start() for k, _ in PARTY for m in [re.search(k, rest)] if m]
+    if not starts:
+        return None
+    cut = min(starts)
+    party, before = rest[cut:].strip(), rest[:cut].split()
+    mayor = mm.group(1).startswith("महा")
+    fig = words = ""
+    before = [w for w in before if re.search(r"[ऀ-ॿA-Za-z0-9]", w.replace("।", "").replace("॥", ""))]
+    if not mayor:
+        for i, tok in enumerate(before[:3]):
+            if word_num(tok):
+                words, fig, before = tok, " ".join(before[:i]), before[i + 1:]
+                break
+        else:
+            if before and FIG.match(before[0]):
+                fig, before = before[0], before[1:]
+                # the ward-in-words cell is always there: a word OCR spoilt ("पन्रह") is that cell, not part of the name
+                if len(before) >= 3 or (len(before) == 2 and before[0].endswith(".")):
+                    before = before[1:]
+    name = " ".join(before).strip(" .,:;-|")
+    pre = re.sub(r"^[\s0-9०-९.,:;|)\]'\"-]*\S{0,1}[0-9०-९]*[.,]\s*", "", t[:mm.start()]).strip()
+    row = Row([pre, mm.group(1), fig, words, name, party])
+    row.rl = {"body": 0, "post": 1, "ward": 2, "ward_words": 3, "name": 4}
+    return row
+
+
+def page_text(pdf, page, tmp):
+    """The page as blocks like page_cells(), from a whole-page OCR: text runs ("pre") and member lines ("rows")."""
+    base = os.path.join(tmp, f"t{page}")
+    subprocess.run(["pdftoppm", "-r", "300", "-gray", "-f", str(page), "-l", str(page), "-singlefile", pdf, base], capture_output=True)
+    if not os.path.exists(base + ".pgm"):
+        return []
+    r = subprocess.run(["tesseract", base + ".pgm", "-", "-l", "hin", "--psm", "6"], capture_output=True, text=True, timeout=600)
+    os.remove(base + ".pgm")
+    out, pre = [], []
+    for ln, line in enumerate(r.stdout.splitlines(), 1):
+        row = text_row(line)
+        if row is None:
+            pre.append(line)
+            continue
+        row.box = None
+        row.line = ln
+        if pre:
+            out.append(("pre", "\n".join(pre)))
+            pre = []
+        if out and out[-1][0] == "rows":
+            out[-1][1].append(row)
+        else:
+            out.append(("rows", [row]))
+    if pre:
+        out.append(("pre", "\n".join(pre)))
+    return out
+
+
+def page_blocks(pdf, page, tmp):
+    """page_cells(), or page_text() when the grid gives fewer than 3 member rows and the text lines give more."""
+    bl = page_cells(pdf, page, tmp)
+    rows = [r for kind, v in bl if kind == "rows" for r in v]
+    n = len(members(rows, roles(rows))) if rows else 0
+    if n >= 3:
+        return bl
+    tb = page_text(pdf, page, tmp)
+    nt = sum(len(v) for kind, v in tb if kind == "rows")
+    return tb if nt > n else bl
+
+
 def read_pages(blocks, body=None):
     """Members of consecutive pages: blocks = [(page, page_cells())]; body = the notice open at the first page (or None).
     Returns [(body, member, page)]."""
     out, since = [], 0                                  # since: rows read since the last preamble
     for page, bl in blocks:
-        rl = roles([r for kind, v in bl if kind == "rows" for r in v])
+        fixed = next((r.rl for kind, v in bl if kind == "rows" for r in v if getattr(r, "rl", None)), None)
+        rl = fixed or roles([r for kind, v in bl if kind == "rows" for r in v])
         tno = 0
         for kind, v in bl:
             if kind == "pre":
@@ -556,7 +643,9 @@ def sequence(found):
         if m["ward_no"] == str(prev):                  # the same number twice: the second row is the next ward
             m["ward_no"] = nxt
         if m["ward_no"] != nxt and (nxt in (m.get("ward_read"), m.get("ward_words")) or not m["ward_no"]
-                                    or m["ward_no"].replace("4", "1") == nxt):      # Tesseract hin reads 1 as 4
+                                    or m["ward_no"].replace("4", "1") == nxt       # Tesseract hin reads 1 as 4
+                                    or (len(nxt) == 2 and len(m["ward_no"]) == 2 and m["ward_no"][1] == nxt[1]
+                                        and m["ward_no"][0] in "34" and nxt[0] == "1")):   # ... and 12 as 32 (page text)
             m["ward_no"] = nxt
         prev = int(m["ward_no"]) if m["ward_no"].isdigit() else prev + 1
     return found
@@ -581,13 +670,13 @@ def fetch(p, get):
         with open(pdf, "wb") as f:
             f.write(content)
         first, last = int(p.get("first", 1)), int(p.get("last", p.get("first", 1)))
-        blocks = [(page, page_cells(pdf, page, tmp)) for page in range(first, last + 1)]
+        blocks = [(page, page_blocks(pdf, page, tmp)) for page in range(first, last + 1)]
         # an item that starts mid-notice: the notice's body from the last preamble on the pages before it
         body = None
         lead = blocks[0][1] if blocks else []
         if not (lead and lead[0][0] == "pre" and body_from(lead[0][1])):
             for back in range(first - 1, max(0, first - 4), -1):
-                pres = [body_from(v) for kind, v in page_cells(pdf, back, tmp) if kind == "pre"]
+                pres = [body_from(v) for kind, v in page_blocks(pdf, back, tmp) if kind == "pre"]
                 pres = [b for b in pres if b]
                 if pres:
                     body = pres[-1]
@@ -627,16 +716,28 @@ def lgd_match(body_local, district_local, btype):
         _LGD = json.loads((pathlib.Path(__file__).parent / "cw_mp_lgd.json").read_text())
     ratio = lambda a, b: difflib.SequenceMatcher(None, a, b).ratio()   # noqa: E731
 
-    def sim(x, name):                       # x: romanised OCR text; name: an LGD name ("Khandwa (East Nimar)": each part)
+    def sim(x, name, dist=""):              # x: romanised OCR text; name: an LGD name ("Khandwa (East Nimar)": each part)
         parts = [name] + re.findall(r"[^()]+", name)
+        if dist and dist.split()[0].lower() in name.lower() and name.lower() != dist.lower():
+            # LGD adds the district to a name two towns share ("Shahpura Dindori", "Pichhore Gwalior"): the name without it
+            parts.append(re.sub(re.escape(dist.split()[0]), "", name, flags=re.I).strip(" -"))
         return max(0.6 * ratio(skel(x), skel(p)) + 0.4 * ratio(x.lower(), re.sub(r"[^a-z ]", "", p.lower()).strip())
                    for p in parts if p.strip())
     br, dr = roman(body_local), roman(district_local)
     # districts are a tie-break, not a filter: LGD moved some towns to new districts (New Ramnagar: Satna -> Maihar)
-    scored = sorted(((sim(br, r[1]), sim(dr, r[2]), r) for r in _LGD), key=lambda x: -(x[0] + 0.25 * x[1]
+    scored = sorted(((sim(br, r[1], r[2]), sim(dr, r[2]), r) for r in _LGD), key=lambda x: -(x[0] + 0.25 * x[1]
                                                                                        + (0.05 if LGD_TYPE.get(btype) == x[2][3] else 0)))
     if not scored or scored[0][0] < 0.55:
         return None
+    # a district the notice names clearly: a body of that district whose name is nearly as close wins (Shahpura of Dindori,
+    # not Shahpura of Jabalpur; gap round 2026-11-15)
+    if dr and district_local != body_local:      # (a preamble cut that gave no district repeats the body name)
+        dists = {r[2] for r in _LGD}
+        dbest = max(dists, key=lambda d: sim(dr, d))
+        if sim(dr, dbest) >= 0.7 and scored[0][2][2] != dbest:
+            inside = [x for x in scored if x[2][2] == dbest and x[0] >= max(0.55, scored[0][0] - 0.15)]
+            if inside:
+                return inside[0][2]
     return scored[0][2]
 
 
@@ -659,7 +760,10 @@ def split_body(body_local, district_local):
 ALIASES = {"कैंटनी": "250979",          # Katni Municipal Corporation (LGD "Murwara - Katni")
            "गाशसिवनी": "251037",        # वारासिवनी, Waraseoni (Balaghat)
            "जुन्नारदेव": "JAMAI",       # Junnardeo Municipality: LGD name "Jamai"
-           "फूप": "250683"}              # Phuphkalan (Bhind)
+           "फूप": "250683",              # Phuphkalan (Bhind)
+           "छनेरा": "250920",            # Chhanera = Harsud (Khandwa; LGD keeps the old name)
+           "चैंदिया": "250800", "चंदिया": "250800",   # Chandia (Umaria), not Chand (Chhindwara)
+           "बाड़ी": "250961"}             # Badi (Raisen), not Bareli
 
 
 def lgd_of_split(body_local, district_local, btype):
@@ -693,7 +797,9 @@ def title(s):
 
 
 def record(p, body, m, page):
-    lgd = lgd_match(body["body_local"], body["district_local"], body["body_type"])
+    alias = ALIASES.get(split_body(body["body_local"], body["district_local"])[0])
+    lgd = lgd_of_split(body["body_local"], body["district_local"], body["body_type"]) if alias else \
+        lgd_match(body["body_local"], body["district_local"], body["body_type"])
     if lgd is None and body["body_local"]:
         lgd = lgd_of_split(body["body_local"], body["district_local"], body["body_type"])
     name_en = lgd[1] if lgd else title(roman(body["body_local"]))
