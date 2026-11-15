@@ -259,6 +259,7 @@ def fetch(p, get):
 
 # ---------------------------------------------------------------- search (seed step, India only)
 
+SEARCH = mh.SEARCH
 LAST_LISTING = []        # every row of the last items() search (councillors.seed keeps them in its record)
 DATE = re.compile(r"^(\d{1,2})[/.-](\d{1,2})[/.-](\d{4})")
 

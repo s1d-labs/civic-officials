@@ -66,7 +66,8 @@ POST = re.compile(r"पा\s?(?:र्?)?\s?[षशघ]|पार्?\s?द|म�
 TYPES = (("नगरपालिक निगम", "Municipal Corporation"), ("नगर पालिक निगम", "Municipal Corporation"), ("नगर निगम", "Municipal Corporation"),
          ("नगरपालिका परिषद", "Municipality"), ("नगर पालिका परिषद", "Municipality"), ("नगरपालिका", "Municipality"),
          ("नगर परिषद", "Nagar Parishad"))
-PREAMBLE = re.compile(r"राज्य\s*में\s*(.{3,80}?)\s*के\s*माह\S?\s*[-–—,.]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—]*\s*([0-9०-९]{4})")
+PREAMBLE = re.compile(r"राज्य\s*में\s*(.{3,80}?)\s*के\s*\S?ाह\S{0,2}\s*[-–—,.]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—.]*\s*([0-9०-९]{4})")
+# ("के गाह", "के माह्ठ", "जुलाई .2022": Barhi Ex-417 p. 9, Malthone Ex-427 p. 51, Hatod Ex-432 p. 40)
 # the same preamble with the OCR slips of faint scans (ocr-gap round 2026-11-15): "राज्य में" read as "चाज्य 7", "शज्य में",
 # "र|ज्य में"; "के माह" read as "के.माह", "क॑ माह", "के भाह". The body starts at its type word (नगर ...).
 PREAMBLE_LOOSE = re.compile(r"\S{0,3}ज्य\S{0,2}\s*(?:\S{0,4}\s+){1,2}((?:न\S?ग\S?र|नगरपालिक)\S*\s*.{2,80}?)\s*[कंक]\S{0,2}[\s.]*[मभ]ाह\S?\s*"
@@ -440,7 +441,7 @@ def body_from(text):
     full = re.sub(r"\s+जि\S?ला\W*$", "", full)               # "चांद जिला" with the district lost (Chand, Ex-425 p. 22)
     dist = ""
     # the district: one or two words after जिला (also read as जिलः, जिंला, जिले; "धार जिला, धार"; "आगर मालवा")
-    dm = re.search(r"(.*?)\s*[^\sऀ-ॿ]?\s*(?:जि\S?ल[ाःे]|ज़िला)[\s,.:;_*-]+(?:[^\sक-ह]+\s+)*(\S+(?:\s+\S+)?)\s*$", full)   # (\W would eat a vowel sign)
+    dm = re.search(r"(.*?)\s*[^\sऀ-ॿ]?\s*(?:जि\S?ल[ाःे]?|ज़िला)[\s,.:;_*-]+(?:[^\sक-ह]+\s+)*(\S+(?:\s+\S+)?)\s*$", full)   # (\W would eat a vowel sign)
     if dm:
         full, dist = dm.group(1), dm.group(2)
     btype = ""
@@ -620,7 +621,11 @@ def read_pages(blocks, body=None):
         tno = 0
         for kind, v in bl:
             if kind == "pre":
-                b = body_from(v) or unread_notice(v)
+                b = body_from(v)
+                if not b and (body is None or since > 0):
+                    # (not right after a preamble that named the body: the preamble's tail cut into a block of its own
+                    # would blank it; Sainkheda Ex-433 p. 7, Damoh Ex-392 p. 8 in round 3)
+                    b = unread_notice(v)
                 if b:
                     body, since = b, 0
                 continue
