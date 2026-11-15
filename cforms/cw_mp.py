@@ -66,11 +66,11 @@ POST = re.compile(r"पा\s?(?:र्?)?\s?[षशघ]|पार्?\s?द|म�
 TYPES = (("नगरपालिक निगम", "Municipal Corporation"), ("नगर पालिक निगम", "Municipal Corporation"), ("नगर निगम", "Municipal Corporation"),
          ("नगरपालिका परिषद", "Municipality"), ("नगर पालिका परिषद", "Municipality"), ("नगरपालिका", "Municipality"),
          ("नगर परिषद", "Nagar Parishad"))
-PREAMBLE = re.compile(r"राज्य\s*में\s*(.{3,80}?)\s*के\s*माह\s*[-–—]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—]*\s*([0-9०-९]{4})")
+PREAMBLE = re.compile(r"राज्य\s*में\s*(.{3,80}?)\s*के\s*माह\S?\s*[-–—,.]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—]*\s*([0-9०-९]{4})")
 # the same preamble with the OCR slips of faint scans (ocr-gap round 2026-11-15): "राज्य में" read as "चाज्य 7", "शज्य में",
 # "र|ज्य में"; "के माह" read as "के.माह", "क॑ माह", "के भाह". The body starts at its type word (नगर ...).
-PREAMBLE_LOOSE = re.compile(r"\S{0,3}ज्य\S{0,2}\s*\S{0,4}\s+((?:न\S?ग\S?र|नगरपालिक)\S*\s*.{2,80}?)\s*[कंक]\S{0,2}[\s.]*[मभ]ाह\s*"
-                            r"[-–—.]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—]*\s*([0-9०-९]{4})")
+PREAMBLE_LOOSE = re.compile(r"\S{0,3}ज्य\S{0,2}\s*(?:\S{0,4}\s+){1,2}((?:न\S?ग\S?र|नगरपालिक)\S*\s*.{2,80}?)\s*[कंक]\S{0,2}[\s.]*[मभ]ाह\S?\s*"
+                            r"[-–—.,]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—]*\s*([0-9०-९]{4})")
 
 
 def tools():
@@ -122,8 +122,19 @@ def slug_of(row):
     return f"mp-gz-{d or 'nodate'}-{row['no'] or hashlib.sha1(row['url'].encode()).hexdigest()[:8]}"
 
 
-def items(get):
-    """Seed step on an India server: list the notices, save each PDF in the bucket once, return the OCR items."""
+LAST_LISTING = []        # the rows of the last items() search (councillors.seed keeps them in its record)
+
+
+def items(get, p=None):
+    """Seed step on an India server: list the notices, save each PDF in the bucket once, return the OCR items.
+    p (seed payload) may widen the search (ocr-gap round 2026-11-15, bodies with no notice in the first list): "years" (default
+    2022, 2023), "names" (Hindi body names: a notice whose subject names one is kept whatever its subject says), "skip" (slugs
+    already in the bucket). Every SEC row of the search goes to LAST_LISTING."""
+    p = p or {}
+    years = [str(y) for y in p.get("years") or ("2022", "2023")]
+    names = [n for n in p.get("names") or [] if n]
+    skip = set(p.get("skip") or [])
+    LAST_LISTING.clear()
     from pypdf import PdfReader
     hub = getattr(get, "hub", None)
     project = os.environ.get("SCRAPE_POOL_PROJECT", "civic-officials-councillors")
@@ -136,7 +147,7 @@ def items(get):
         if call and page_url == ARCHIVE and call.group(1).rstrip("/") + "/{}" != LIST:
             pages.append((ARCHIVE, call.group(1).rstrip("/") + "/{}"))
     for _, call in pages:
-        for year in ("2022", "2023"):
+        for year in years:
             todo, done, token = [0], set(), ""
             while todo and len(done) < 80:
                 off = todo.pop(0)
@@ -150,8 +161,10 @@ def items(get):
                 tm = re.search(r'name="ci_csrf_token" value="([^"]*)"', r.text)   # the answer carries the form's next token
                 token = tm.group(1) if tm else token
                 found, offsets = listing(r.text)
+                LAST_LISTING.extend(dict(row, year=year) for row in found)
                 for row in found:
-                    if row["url"] not in seen and wanted(row):
+                    named = any(n in row["subject"] for n in names)
+                    if row["url"] not in seen and (wanted(row) or named) and slug_of(row) not in skip:
                         seen.add(row["url"])
                         rows.append(row)
                 todo += [o for o in offsets if o > off and o not in done and o not in todo]
@@ -227,7 +240,7 @@ def grid(w, h, pix):
     hs = _cluster(hy)
     # vertical lines: an x that is dark in nearly every row of most table bands (text strokes fill only part of a band).
     # Per band, the rows' bytes are added as big integers: each byte then holds that x's dark count (no carry: < 256 rows).
-    bands = [(int(a) + 2, int(b) - 1) for a, b in zip(hs, hs[1:]) if 15 <= b - a <= 160]
+    bands = [(int(a) + 2, int(b) - 1) for a, b in zip(hs, hs[1:]) if 12 <= b - a <= 160]   # (12: small-type tables, Ashoknagar Ex-392 p. 13)
     if len(bands) < 2:
         return hs, [], []
     found = []                                   # (x, band) of the line pieces in each band
@@ -441,6 +454,7 @@ def body_from(text):
         mm2 = re.match(r"नगर\s+(?:प\S*|\S{1,2})\s+(\S.*)$", full)
         if mm2 and not re.match(r"नगर\s*(?:पालि|निगम)", full):
             btype, full = "Nagar Parishad", mm2.group(1)
+    full = re.sub(r"^प\S{0,2}रिषद\S*\s+", "", full)     # "नगरपालिका प्ररिषद् अनूपपुर": the misread rest of the type
     full = re.sub(r"[।॥०-९]", " ", full)
     name = re.sub(r"[^ऀ-ॿ ()-]", "", full).strip(" ,-")
     name = " ".join(name.split())
@@ -606,7 +620,7 @@ def read_pages(blocks, body=None):
         tno = 0
         for kind, v in bl:
             if kind == "pre":
-                b = body_from(v)
+                b = body_from(v) or unread_notice(v)
                 if b:
                     body, since = b, 0
                 continue
@@ -629,6 +643,22 @@ def read_pages(blocks, body=None):
                 out += [(body, m, page) for m in ms]
                 since += len(ms)
     return sequence(out)
+
+
+NOTICE = re.compile(r"निर्वाचित\s*हुए|आम\s*निर्वाचन|धारा\s*45")
+
+
+def unread_notice(text):
+    """A notice preamble whose body name and pattern the scan lost ("कि राज्य में नगर. परिषद् ... जिला अन..."; Amarkantak, Ex-433
+    p. 28): a body with no name, so the table's rows are kept (sql/70 ties the page) and are not given to the notice before it.
+    The district when one is legible after जिला."""
+    t = norm(text)
+    if not NOTICE.search(t):
+        return None
+    dm = re.search(r"जि\S?ला[\s,.:;_*-]+([अ-ह]\S{2,})", t)
+    year = re.search(r"(20[0-9]{2}|२०[०-९]{2})", t)
+    return {"body_local": "", "district_local": dm.group(1) if dm else "", "body_type": "", "month": "",
+            "year": (year.group(1).translate(DIGITS) if year else ""), "unread": True}
 
 
 def backwards(m, since):
@@ -801,7 +831,10 @@ ALIASES = {"कैंटनी": "250979",          # Katni Municipal Corporatio
            "बोड़ा": "250938", "बोडा": "250938",               # Boda (Rajgarh), not Biaora, Ex-432 p. 28
            "छापीहेड़ा": "262992", "छापीहेडा": "262992",       # Chhapiheda (Rajgarh), not Chhapara, Ex-432 p. 35
            "बिछिया": "253171",                              # Bichhiya (Mandla; LGD "Bhuwa Bichhia"), not Bichhua, Ex-551 p. 4
-           "पानखेड़ी": "263010", "पानखेडी": "263010"}         # Pankhedi Kalapipal (Shajapur), Ex-428 p. 6
+           "पानखेड़ी": "263010", "पानखेडी": "263010",
+           "अनूपपुर": "265847", "अनुपपुर": "265847",
+           "बड़ौदा": "250674", "बडौदा": "250674",
+           "बड़ावदा": "250838", "बडावदा": "250838"}          # Badawada (Ratlam), not Bairad, Ex-427 p. 35           # Badoda (Sheopur), not Bairad (Shivpuri), Ex-411 p. 13       # Anuppur municipality (LGD "Anuppur Np"), Ex-433 p. 26         # Pankhedi Kalapipal (Shajapur), Ex-428 p. 6
 
 
 def lgd_of_split(body_local, district_local, btype):

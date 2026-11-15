@@ -140,9 +140,13 @@ def pdf(p, get):
 def seed(p, get):
     """List a state's queue items through the hub (no direct requests from a box): cforms/<module>.py items(get) -> one record."""
     mod = importlib.import_module("cforms." + p["module"])
-    items = mod.items(get)
-    return ([(f"seed:{p['module']}", {"type": "seed_items", "module": p["module"], "items": items, "url": p.get("url", "")})], [],
-            "" if items else "no items")
+    import inspect
+    items = mod.items(get, p) if len(inspect.signature(mod.items).parameters) > 1 else mod.items(get)
+    rec = {"type": "seed_items", "module": p["module"], "items": items, "url": p.get("url", "")}
+    if getattr(mod, "LAST_LISTING", None):
+        rec["listing"] = list(mod.LAST_LISTING)       # every row the search listed (for a person to check what it skipped)
+    rid = f"seed:{p['module']}" + (f":{p['tag']}" if p.get("tag") else "")
+    return [(rid, rec)], [], "" if items else "no items"
 
 
 KINDS = {"kl-body": kl_body, "pdf": pdf, "seed": seed}

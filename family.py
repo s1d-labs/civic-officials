@@ -204,6 +204,15 @@ if _news.exists():
                      "unit_label": "article", "record_label": "article", "items": json.loads(_news.read_text()), "workers": 2,
                      "threads": 1, "delay_ms": 3000})
 
+# Round 3 (seeds/ocrf_councillors_*.json): the MP pages again with notices whose body name the scan lost kept (Amarkantak),
+# small-type tables (Ashoknagar, Ex-392 p. 13), "राज्य - में", "के माहं", and aliases (Badoda, Badawada, Anuppur).
+_ocr_f = [i for f in sorted((HERE / "seeds").glob("ocrf_councillors_*.json")) for i in json.loads(f.read_text())]
+if _ocr_f:
+    PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-f", "title": "Ward councillors by OCR, saved results PDFs read again (ocr-gap round 3)",
+                     "task": "councillors-ocr-f", "target": f"{FAMILY}-councillors-ocr-f", "env": {}, "probe": None,
+                     "unit_label": "PDF pages", "record_label": "councillor", "items": _ocr_f, "workers": 20, "threads": 1,
+                     "delay_ms": 0})
+
 # Department offices and officers (depts task, dforms/<module>.py; every seeds/dept_*.json): police stations, power offices,
 # EROs, sub-registrars, water offices. Both projects run on the India servers and on GitHub runners through the Indian proxies;
 # "india_only" items are kept apart because GitHub runners without a proxy must never get them.

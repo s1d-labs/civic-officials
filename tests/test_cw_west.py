@@ -548,3 +548,20 @@ def test_mp_roles_party_not_post():
     rl = cw_mp.roles(rows)
     assert rl.get("party") == 7 and rl.get("name") == 6
     assert len(cw_mp.members(rows, rl)) == 4
+
+
+def test_mp_ocr_gap_round3():
+    """A notice whose body name the scan lost keeps its rows (Amarkantak, Ex-433 p. 28); preamble slips of round 3."""
+    from cforms import cw_mp
+    b = cw_mp.unread_notice("कि राज्य में नगर. परिषद् जिला अनूपपुर के ाह जुलाई 2022 में कराये गये आम निर्वाचन में ... निर्वाचित हुए है")
+    assert b and b["body_local"] == "" and b["district_local"] == "अनूपपुर"
+    assert cw_mp.unread_notice("मध्यप्रदेश राज्य निर्वाचन आयोग के आदेशानुसार, हस्ता./-") is None
+    for text, want in {"कि राज्य - में नगर परिषद् बनखेडी जिले नर्मदापुरम के माह जुलाई 2022 में": "बनखेडी",
+                       "कि राज्य में नगर परिषद् कैलारस जिला मुरैना के माहं जुलाई 2022 में": "कैलारस",
+                       'कि राज्य में नगरपालिका प्ररिषद् अनूपपुर जिला अनूपूपुर "के माह, जुलाई 2022 में': "अनूपपुर"}.items():
+        assert (cw_mp.body_from(text) or {}).get("body_local") == want, text
+    from cforms import mh_np
+    rows, pages = mh_np.search_rows('<table><tr><td>1</td><td>x</td><td>25-1-2022</td><td>a</td><td>b</td><td>c</td>'
+                                    '<td>जिल्हाधिकारी नांदेड अर्धापूर नगर पंचायत</td><td><a href="javascript:__doPostBack(\'g\',\'View$0\')">V</a></td></tr>'
+                                    '<tr><td><a href="javascript:__doPostBack(\'g\',\'Page$2\')">2</a></td></tr></table>')
+    assert rows[0]["date"] == "25/01/2022" and pages == ["Page$2"]

@@ -255,3 +255,96 @@ def fetch(p, get):
     if recs and want - got:
         why = "bodies not read: " + ",".join(sorted(want - got))
     return recs, files, why
+
+
+# ---------------------------------------------------------------- search (seed step, India only)
+
+LAST_LISTING = []        # every row of the last items() search (councillors.seed keeps them in its record)
+DATE = re.compile(r"^(\d{1,2})[/.-](\d{1,2})[/.-](\d{4})")
+
+
+def search_rows(html):
+    """Rows of one e-Gazette search answer: [{"date", "text", "cells"}] and the pager targets ("Page$N") it offers."""
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(html or "", "lxml")
+    out = []
+    for tr in soup.find_all("tr"):
+        a = tr.find("a", href=re.compile("doPostBack"))
+        tds = [gj.norm(td.get_text(" ", strip=True)) for td in tr.find_all("td")]
+        if not a or len(tds) <= 6 or "Page$" in a.get("href", ""):
+            continue
+        d = next((DATE.match(t) for t in tds if DATE.match(t)), None)
+        out.append({"date": f"{int(d.group(1)):02d}/{int(d.group(2)):02d}/{d.group(3)}" if d else "", "text": tds[6], "cells": tds})
+    pages = sorted({m for m in re.findall(r"'(Page\$\d+)'", html or "")}, key=lambda x: int(x.split("$")[1]))
+    return out, pages
+
+
+def items(get, p=None):
+    """Seed step (ocr-gap round 2026-11-15): search the e-Gazette for the notices of bodies with no members yet.
+    p: "searches" [{"division", "from", "to", "section" (default "3"), "gazette_type" (default "1")}], "bodies" [{"lgd_code",
+    "en": [names], "local", "local_alt": [...], "district", "district_local"}]. A row whose text names a body (or the collector
+    of its district next to "नगरपंचायत" / "नगर परिषद") gives a save-and-read item (kind form-mh_np: the English part is read,
+    the PDF is kept) for the OCR step. Every row goes to LAST_LISTING."""
+    from bs4 import BeautifulSoup
+    p = p or {}
+    bodies = p.get("bodies") or []
+    LAST_LISTING.clear()
+    out, seen = [], set()
+
+    def form(html):
+        soup = BeautifulSoup(html, "lxml")
+        data = {i["name"]: i.get("value", "") for i in soup.find_all("input", type="hidden") if i.get("name")}
+        for sel in soup.find_all("select"):
+            o = sel.find("option", selected=True)
+            if sel.get("name"):
+                data[sel["name"]] = o.get("value") if o else ""
+        for inp in soup.find_all("input", type="text"):
+            if inp.get("name"):
+                data[inp["name"]] = inp.get("value", "")
+        return data
+    for sr in p.get("searches") or []:
+        r = get(SEARCH)
+        if r is None:
+            continue
+        data = form(r.text)
+        q = {"ctl00$CPH$ddldivision": str(sr["division"]), "ctl00$CPH$ddlSection": str(sr.get("section", "3")),
+             "ctl00$CPH$ddlGazetteType": str(sr.get("gazette_type", "1")), "ctl00$CPH$txtfromDate": sr["from"],
+             "ctl00$CPH$txtToDate": sr["to"]}
+        data.update(q)
+        data["ctl00$CPH$btnSearch"] = "Search"
+        r = get(SEARCH, "POST", data)
+        done_pages = set()
+        while r is not None:
+            rows, pager = search_rows(r.text)
+            count = {}
+            for row in rows:
+                k = (row["date"], row["text"])
+                count[k] = count.get(k, -1) + 1
+                LAST_LISTING.append(dict(row, division=q["ctl00$CPH$ddldivision"], section=q["ctl00$CPH$ddlSection"],
+                                         gazette_type=q["ctl00$CPH$ddlGazetteType"], nth=count[k]))
+                t = row["text"]
+                hit = [b for b in bodies if any(n and n in t for n in (b.get("en") or []) + [b.get("local", "")] + list(b.get("local_alt") or []))]
+                if not hit and re.search(r"नगर\s*पंचायत|नगरपंचायत|नगर\s*परिषद|Nagar\s*Panchayat|Municipal\s*Council", t, re.I):
+                    hit = [b for b in bodies if any(d and d in t for d in (b.get("district_local"), b.get("district")))]
+                key = (row["date"], t, count[k])
+                if hit and key not in seen and row["date"]:
+                    seen.add(key)
+                    h = hashlib.sha1((row["date"] + t + str(count[k] or "")).encode()).hexdigest()[:12]
+                    out.append({"key": f"mh-gap-{h}", "payload": {
+                        "url": SEARCH, "kind": "form-mh_np", "state": "MH", "match": t, "gazette_date": row["date"],
+                        "division": q["ctl00$CPH$ddldivision"], "section": q["ctl00$CPH$ddlSection"],
+                        "gazette_type": q["ctl00$CPH$ddlGazetteType"], "nth": count[k] or 0,
+                        "bodies": [{k2: v for k2, v in b.items() if k2 in ("lgd_code", "en", "local", "local_alt", "name", "district")}
+                                   for b in hit]}})
+            nxt = [pg for pg in pager if pg not in done_pages and int(pg.split("$")[1]) > 1]
+            if not nxt or len(done_pages) >= 40:
+                break
+            done_pages.add(nxt[0])
+            data = form(r.text)
+            data.update(q)
+            data.update({"__EVENTTARGET": re.search(r"__doPostBack\('([^']*)','" + re.escape(nxt[0]), r.text).group(1)
+                         if re.search(r"__doPostBack\('([^']*)','" + re.escape(nxt[0]), r.text) else "ctl00$CPH$GridView1",
+                         "__EVENTARGUMENT": nxt[0]})
+            data.pop("ctl00$CPH$btnSearch", None)
+            r = get(SEARCH, "POST", data)
+    return out
