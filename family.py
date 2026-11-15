@@ -173,6 +173,16 @@ if _ocr_c:
                      "unit_label": "PDF pages", "record_label": "councillor", "items": _ocr_c, "workers": 20, "threads": 1,
                      "delay_ms": 0})
 
+# The same, one reader version later (seeds/ocrd_councillors_*.json; ocr-gap round 2026-11-15): every MP gazette page (122 items of 4
+# pages) read again by cforms/cw_mp.py with the faint-preamble pattern, the text below the last table, the post word without "र्"
+# and the body aliases. Own project and task name, so the newest read of each page wins over -ocr-c (civic sql/70).
+_ocr_d = [i for f in sorted((HERE / "seeds").glob("ocrd_councillors_*.json")) for i in json.loads(f.read_text())]
+if _ocr_d:
+    PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-d", "title": "Ward councillors by OCR, saved results PDFs read again (ocr-gap round)",
+                     "task": "councillors-ocr-d", "target": f"{FAMILY}-councillors-ocr-d", "env": {}, "probe": None,
+                     "unit_label": "PDF pages", "record_label": "councillor", "items": _ocr_d, "workers": 20, "threads": 1,
+                     "delay_ms": 0})
+
 # Department offices and officers (depts task, dforms/<module>.py; every seeds/dept_*.json): police stations, power offices,
 # EROs, sub-registrars, water offices. Both projects run on the India servers and on GitHub runners through the Indian proxies;
 # "india_only" items are kept apart because GitHub runners without a proxy must never get them.

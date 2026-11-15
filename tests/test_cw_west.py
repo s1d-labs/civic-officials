@@ -476,7 +476,7 @@ def test_ga_orders_are_not_winners():
 
 def test_mp_gap_preamble_cuts():
     """The 18 OCR'd preamble names without an LGD code in civic.councillor on 2026-11-14 (352 members): 16 now tie;
-    पांडल्थाखुर्द (Khargone) stays open (no LGD body is close)."""
+    पांडल्थाखुर्द (Khargone) is Karahi-Padlya Khurd (alias, ocr-gap round 2026-11-15)."""
     from cforms import cw_mp
     cases = {("आगरमालवा जिला आगर मालवा", "आगरमालवा जिला आगर मालवा", "Municipality"): "250858",
              ("बड़नगर जिला उज्जैन", "बड़नगर जिला उज्जैन", "Municipality"): "250852",
@@ -491,7 +491,7 @@ def test_mp_gap_preamble_cuts():
              ("नलखेडा जिला आगर मालवा", "नलखेडा जिला आगर मालवा", "Nagar Parishad"): "250855",
              ("पंरिषद् करेली ह", "नरसिंहपुर", "Municipality"): "251002", ("फूप", "मिंण्ड", "Nagar Parishad"): "250683",
              ("सोयतकलां जिला आगर मालवा", "सोयतकलां जिला आगर मालवा", "Nagar Parishad"): "250853",
-             ("पांडल्थाखुर्द", "खरगौन", "Nagar Parishad"): None}
+             ("पांडल्थाखुर्द", "खरगौन", "Nagar Parishad"): "293822"}
     got = {c: (cw_mp.lgd_of_split(*c) or [None])[0] for c in cases}
     assert got == cases
     assert cw_mp.split_body("बड़ौद जिला आगर मालवा", "बड़ौद जिला आगर मालवा") == ("बड़ौद", "आगर मालवा")
@@ -515,3 +515,36 @@ def test_mp_text_rows():
     b = cw_mp.body_from("राज्य में नगर परिषद्‌ देवरी, जिला-रायसेन के माह सितम्बर, 2022 में कराये गये आम निर्वाचन में")
     assert b["body_local"] == "देवरी" and b["district_local"] == "रायसेन"
     assert cw_mp.lgd_match("शहपुरा", "डिण्डौरी", "Nagar Parishad")[0] == "250986"     # not Shahpura (Jabalpur)
+
+
+def test_mp_ocr_gap_preambles():
+    """Faint preambles (ocr-gap round 2026-11-15): "राज्य में" and "के माह" misread, district after "जिला," or in two words."""
+    from cforms import cw_mp
+    cases = {"यह अधिसूचित किया जाता है कि चाज्य 7 नगरपालिक निगम भोपाल जिला भोपाल के माह-जुलाई 2022 में": ("भोपाल", "भोपाल"),
+             "कि राज्य में नगरपालिका परिषद् शिवपुरी [जिला शिवपुरी के.माह जुलाई 2022 में": ("शिवपुरी", "शिवपुरी"),
+             "कि राज्य में नगरपालिका परिषद् रायसेन जिला*रायसेन के भाह-जुलाई 2022 में": ("रायसेन", "रायसेन"),
+             "कि राज्य में नगरपालिका परिषद् धार जिला, धार के माह जनवरी 2023 में": ("धार", "धार"),
+             "कि राज्य में नगर परिषद् सुसनेर जिला आगर मालवा के माह जुलाई 2022 में": ("सुसनेर", "आगरमालवा"),
+             "कि शज्य में नगरपालिका परिषद् कोतमा जिला अनूपपुर के माह सितम्बर 2022 में": ("कोतमा", "अनूपपुर"),
+             "कि राज्य में नंगरपालिका परिषद खाचरोद जिला उज्जैन के माह जुलाई 2022 में": ("खाचरोद", "उज्जैन")}
+    for text, want in cases.items():
+        b = cw_mp.body_from(text)
+        assert b and (b["body_local"], b["district_local"]) == want, (text, b)
+    assert cw_mp.POST.search("पाषद") and cw_mp.POST.search("पाष॑द")      # पार्षद without the र्
+    lg = lambda b, d, t: cw_mp.record({"url": "u"}, {"body_local": b, "district_local": d, "body_type": t, "month": "", "year": "2022"},
+                                     {"name": "x", "position": "Councillor", "ward_no": "1", "party": "", "party_local": ""}, 1)[1]["lgd_code"]
+    assert lg("सुसनेर जिला आएर मालवा", "सुसनेर जिला आएर मालवा", "Nagar Parishad") == "250854"     # not Seoni-Malwa
+    assert lg("नौरोजाबाद", "उमरिया", "Nagar Parishad") == "250803"                               # not Jawad
+    assert lg("नैनपुर", "मण्डला", "Municipality") == "248075"                                    # not Dhanpuri
+
+
+def test_mp_roles_party_not_post():
+    """A party cell read "पार्दी" made the party column the post column: no party, no members (Jaithari, Ex-37 p. 4)."""
+    from cforms import cw_mp
+    rows = [["", "नगर परिषद् जैतहरी", "प्", "", "1", "एक", "जयप्रकाश अग्रवाल", "इंडियन नेशनल काँग्रेस"],
+            ["", "", "प", "", "2", "दो", "ऋषभ कुमार लंहगीर", "भारतीय जनता पार्टी"],
+            ["", "", "प्", "", "3", "तीन", "रविन्द्र राठौर", "भारतीय जनता पार्दी"],
+            ["", "", "प्", "", "4", "चार", "कैलाश सिंह मरावी", "भारतीय जनता पार्टी"]]
+    rl = cw_mp.roles(rows)
+    assert rl.get("party") == 7 and rl.get("name") == 6
+    assert len(cw_mp.members(rows, rl)) == 4

@@ -62,11 +62,15 @@ PARTY = ((r"[भम]ारत\S?य\s*जन|[भम]ारतीय|भा\.?\s
          (r"मार्क्सवादी", "CPI(M)"), (r"कम्युनिस्ट", "CPI"), (r"राष्ट्रवादी", "NCP"), (r"शिवसेना", "SHS"),
          (r"जनता\s*दल", "JD(U)"), (r"जयस|आदिवासी", "JAYS / tribal party"))
 HEADER = re.compile(r"निर्वाचित|व्यक्ति|सम्बद्ध|संबद्ध|का नाम|शब्दों|अंकों|क्रमांक|^पद\b|पद पा")
-POST = re.compile(r"पा\s?र्?\s?[षशघ]|पार्?\s?द|महापौर|महापोर")      # पार्षद, also cut ("पार्ष") or misread
+POST = re.compile(r"पा\s?(?:र्?)?\s?[षशघ]|पार्?\s?द|महापौर|महापोर")      # पार्षद, also cut ("पार्ष") or misread
 TYPES = (("नगरपालिक निगम", "Municipal Corporation"), ("नगर पालिक निगम", "Municipal Corporation"), ("नगर निगम", "Municipal Corporation"),
          ("नगरपालिका परिषद", "Municipality"), ("नगर पालिका परिषद", "Municipality"), ("नगरपालिका", "Municipality"),
          ("नगर परिषद", "Nagar Parishad"))
 PREAMBLE = re.compile(r"राज्य\s*में\s*(.{3,80}?)\s*के\s*माह\s*[-–—]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—]*\s*([0-9०-९]{4})")
+# the same preamble with the OCR slips of faint scans (ocr-gap round 2026-11-15): "राज्य में" read as "चाज्य 7", "शज्य में",
+# "र|ज्य में"; "के माह" read as "के.माह", "क॑ माह", "के भाह". The body starts at its type word (नगर ...).
+PREAMBLE_LOOSE = re.compile(r"\S{0,3}ज्य\S{0,2}\s*\S{0,4}\s+((?:न\S?ग\S?र|नगरपालिक)\S*\s*.{2,80}?)\s*[कंक]\S{0,2}[\s.]*[मभ]ाह\s*"
+                            r"[-–—.]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—]*\s*([0-9०-९]{4})")
 
 
 def tools():
@@ -334,7 +338,7 @@ def roles(table):
     out = {}
     if share(post, POST.search) >= 0.3:
         out["post"] = post
-    if share(party, party_of) >= 0.3 and party != post:
+    if share(party, party_of) >= 0.3 and party != out.get("post"):   # (a party cell read "पार्दी" made it the post column)
         out["party"] = party
     after = [c for c in range(ncol) if c > out.get("post", -1) and c != out.get("party")]
     nums = [c for c in after if share(c, lambda v: re.fullmatch(r"[\s(|]*[0-9०-९]{1,3}[\s.)|]*", v)) >= 0.5]
@@ -350,6 +354,9 @@ def roles(table):
         left = [c for c in range(out["party"] - 1, -1, -1) if c not in out.values()][:2]
         if left:
             out["name"] = max(left, key=lambda c: (sum(len(r[c].strip()) for r in table if c < len(r)), c))
+    elif "ward_words" in out and out["ward_words"] + 1 < ncol:
+        # no party column read (the right border lost in a skewed scan, Kotma 2022): the name is the column after the ward in words
+        out["name"] = out["ward_words"] + 1
     return out
 
 
@@ -405,13 +412,19 @@ def members(table, rl, tno=None):
 def body_from(text):
     """(body, district, body type, month, year) from a notice preamble."""
     t = norm(text).replace("परिषद्", "परिषद").replace("परिषद्‌", "परिषद").replace("–", "-")
-    mm = PREAMBLE.search(t)
+    t = t.replace("ग़", "ग").replace("ज़", "ज")
+    # stray nasal marks in the body type ("नंगरपालिका", "नगंर परिषद") and a cut "निगः": else the type stays in the name and the
+    # sound match goes astray (Khachrod and Ratlam went to Nainpur, Gurh to Dongar Parasia)
+    t = re.sub(r"न[ंँ]?ग[ंँ]?र", "नगर", t)
+    t = re.sub(r"(नगर\s*पालिक\s*)निग\S?(?=\s)", r"\1निगम", t)
+    mm = PREAMBLE.search(t) or PREAMBLE_LOOSE.search(t)
     if not mm:
         return None
     full, month, year = mm.group(1), mm.group(2), mm.group(3).translate(DIGITS)
     full = re.sub(r"\s+", " ", full).strip(" ,")
     dist = ""
-    dm = re.search(r"(.*?)\s*[^\sऀ-ॿ]?\s*(?:जिला|ज़िला)[\s-]+(?:[^\sक-ह]+\s+)*(\S+)\s*$", full)   # (\W would eat a vowel sign)
+    # the district: one or two words after जिला (also read as जिलः, जिंला, जिले; "धार जिला, धार"; "आगर मालवा")
+    dm = re.search(r"(.*?)\s*[^\sऀ-ॿ]?\s*(?:जि\S?ल[ाःे]|ज़िला)[\s,.:;_*-]+(?:[^\sक-ह]+\s+)*(\S+(?:\s+\S+)?)\s*$", full)   # (\W would eat a vowel sign)
     if dm:
         full, dist = dm.group(1), dm.group(2)
     btype = ""
@@ -476,6 +489,9 @@ def page_cells(pdf, page, tmp):
             shape.append(n)
         plan.append(("rows", len(boxes) - sum(shape), (shape, bands)))
         top = seg[-1][1] + 1
+    if h - top > 60:                            # text below the last table: a notice whose table starts on the next page
+        plan.append(("pre", len(boxes), 1))
+        boxes.append((0, top * k, w * k, (h - 1) * k))
     texts = gj.ocr_boxes(pdf, page, boxes, tmp, "hin", dpi=300, psm=6)
     out = []
     for kind, i, shape in plan:
@@ -500,7 +516,7 @@ def page_cells(pdf, page, tmp):
 #   "<serial>. [body cell] पार्षद <ward in figures> <ward in words> <name> <party>"
 # The ward in words is the surer number (Tesseract reads 11 as ")]" and 12 as "32"). Other lines are kept as text blocks
 # ("pre"), so the notice preamble names the body as on a ruled page.
-TEXT_POST = re.compile(r"(?:^|\s)(पा\s?र्?\s?[षशघ]\S*|महापौर|महापोर)\s+")
+TEXT_POST = re.compile(r"(?:^|\s)(पा\s?(?:र्?)?\s?[षशघ]\S*|महापौर|महापोर)\s+")
 FIG = re.compile(r"^[\s(|\[\])}0-9०-९.,:;'\"-]*$")
 
 
@@ -597,6 +613,13 @@ def read_pages(blocks, body=None):
             # Its body cell ("नगर परिषद् X जिला Y", over the first rows) names it; else its rows are left out.
             if ms and since and "1" in (ms[0].get("ward_read"), ms[0].get("ward_words")):
                 body, since = body_from_cell(" ".join(m["body_cell"] for m in ms[:4]), body), 0
+            elif ms and body and not since and len(re.sub(r"[^क-ह]", "", body["body_local"])) < 2:
+                # a preamble whose body name the scan lost ("नगर परिषद् जिला सिवनी", "नगर परिषद् ४२७ जिला कटनी"): the body cell
+                # of the first rows names it (Barghat, Ex-427 p. 55; Vijayraghavgarh, Ex-392 p. 12)
+                cell = body_from_cell(" ".join(m["body_cell"] for m in ms[:4]), body)
+                if cell:
+                    cell = dict(cell, district_local=body["district_local"] if cell["district_local"] == cell["body_local"] else cell["district_local"])
+                    body = cell
             elif ms and since and body and backwards(ms[0], since):
                 body = None                             # numbers run backwards: another notice, its start not read
             if body:
@@ -620,6 +643,7 @@ def body_from_cell(text, last):
     t = norm(text)
     if not t or not re.search(r"नगर", t):
         return None
+    t = re.split(r"[,|]\s*(?!जि)", t)[0]          # "नगर परिषद बेरघाट, पर्रिषद": the cell's repeat after a comma or a stray line
     b = body_from(f"राज्य में {t} के माह {(last or {}).get('month', '')} {(last or {}).get('year', '2022')}")
     return b if b and b["body_local"] else None
 
@@ -645,7 +669,8 @@ def sequence(found):
         if m["ward_no"] != nxt and (nxt in (m.get("ward_read"), m.get("ward_words")) or not m["ward_no"]
                                     or m["ward_no"].replace("4", "1") == nxt       # Tesseract hin reads 1 as 4
                                     or (len(nxt) == 2 and len(m["ward_no"]) == 2 and m["ward_no"][1] == nxt[1]
-                                        and m["ward_no"][0] in "34" and nxt[0] == "1")):   # ... and 12 as 32 (page text)
+                                        and m["ward_no"][0] in "34" and nxt[0] == "1")    # ... and 12 as 32 (page text)
+                                    or (len(nxt) == 2 and m["ward_no"] == nxt[1] and nxt[0] == "1")):   # ... and 14 as 4
             m["ward_no"] = nxt
         prev = int(m["ward_no"]) if m["ward_no"].isdigit() else prev + 1
     return found
@@ -717,7 +742,7 @@ def lgd_match(body_local, district_local, btype):
     ratio = lambda a, b: difflib.SequenceMatcher(None, a, b).ratio()   # noqa: E731
 
     def sim(x, name, dist=""):              # x: romanised OCR text; name: an LGD name ("Khandwa (East Nimar)": each part)
-        parts = [name] + re.findall(r"[^()]+", name)
+        parts = [name] + re.findall(r"[^()]+", name) + [x for x in re.split(r"\s+-\s*|\s*-\s+", name) if x != name]   # "Nowrozabad - Khodargama"
         if dist and dist.split()[0].lower() in name.lower() and name.lower() != dist.lower():
             # LGD adds the district to a name two towns share ("Shahpura Dindori", "Pichhore Gwalior"): the name without it
             parts.append(re.sub(re.escape(dist.split()[0]), "", name, flags=re.I).strip(" -"))
@@ -763,7 +788,17 @@ ALIASES = {"कैंटनी": "250979",          # Katni Municipal Corporatio
            "फूप": "250683",              # Phuphkalan (Bhind)
            "छनेरा": "250920",            # Chhanera = Harsud (Khandwa; LGD keeps the old name)
            "चैंदिया": "250800", "चंदिया": "250800",   # Chandia (Umaria), not Chand (Chhindwara)
-           "बाड़ी": "250961"}             # Badi (Raisen), not Bareli
+           "बाड़ी": "250961",             # Badi (Raisen), not Bareli
+           # ocr-gap round 2026-11-15, each checked on the scan
+           "माखन नगर": "250975", "माखननगर": "250975",   # Makhan Nagar = LGD Babai (Narmadapuram), Ex-428 p. 12
+           "पांडल्थाखुर्द": "293822", "पाडल्याखुर्द": "293822", "करही पाडल्याखुर्द": "293822",   # Karahi-Padlya Khurd (Khargone), Ex-428 p. 19
+           "बरेली": "250962", "बरेलीं": "250962",          # Bareli (Raisen), Ex-426 p. 6
+           "नौरोजाबाद": "250803",                           # Nowrozabad - Khodargama (Umaria), Ex-429 p. 18
+           "नैनपुर": "248075",                              # Nainpur (Mandla; LGD "Nagar Palika, Nainpur"), not Dhanpuri, Ex-551 p. 2
+           "बोड़ा": "250938", "बोडा": "250938",               # Boda (Rajgarh), not Biaora, Ex-432 p. 28
+           "छापीहेड़ा": "262992", "छापीहेडा": "262992",       # Chhapiheda (Rajgarh), not Chhapara, Ex-432 p. 35
+           "बिछिया": "253171",                              # Bichhiya (Mandla; LGD "Bhuwa Bichhia"), not Bichhua, Ex-551 p. 4
+           "पानखेड़ी": "263010", "पानखेडी": "263010"}         # Pankhedi Kalapipal (Shajapur), Ex-428 p. 6
 
 
 def lgd_of_split(body_local, district_local, btype):
@@ -798,6 +833,8 @@ def title(s):
 
 def record(p, body, m, page):
     alias = ALIASES.get(split_body(body["body_local"], body["district_local"])[0])
+    # a body name that still holds its district ("सुसनेर जिला आएर मालवा"): the split reading (the open match gave Seoni-Malwa)
+    alias = alias or re.search(r"\sजि\S?ल", body["body_local"])
     lgd = lgd_of_split(body["body_local"], body["district_local"], body["body_type"]) if alias else \
         lgd_match(body["body_local"], body["district_local"], body["body_type"])
     if lgd is None and body["body_local"]:
@@ -805,6 +842,10 @@ def record(p, body, m, page):
     name_en = lgd[1] if lgd else title(roman(body["body_local"]))
     dist_en = lgd[2] if lgd else title(roman(body["district_local"]))
     slug = re.sub(r"[^a-z0-9]+", "-", f"{name_en}-{dist_en}".lower()).strip("-")
+    if lgd is None:
+        # no LGD body: the gazette page in the id, so that two notices with lost body names in one district (Ex-392 p. 12
+        # Vijayraghavgarh, Ex-433 p. 28 Amarkantak) do not overwrite each other's rows
+        slug = f"{slug}-gz{p.get('gazette_no') or ''}-p{page}".strip("-")
     month_year = f"{body['month']} {body['year']}".strip()
     d = {"type": "councillor", "state": "MP", "name": m["name"], "position": m["position"], "ward_no": m["ward_no"] or None,
          "party": m["party"] or m["party_local"] or None, "party_local": m["party_local"], "body": name_en, "body_en": name_en,
