@@ -68,6 +68,10 @@
     "osm": [
       "python",
       "osm.py"
+    ],
+    "councillors-news": [
+      "python",
+      "councillors.py"
     ]
   }
 }

@@ -194,6 +194,16 @@ if _ocr_e:
                      "unit_label": "PDF pages", "record_label": "councillor", "items": _ocr_e, "workers": 20, "threads": 1,
                      "delay_ms": 0})
 
+# News reports that name ward councillors of bodies with no official member list (owner, 2026-11-15; cforms/news.py,
+# seeds/news_councillors.json): one item per article, the page saved once. News sites answer abroad: GitHub runners, no proxy.
+# Own task name, so older checkouts never take these items.
+_news = HERE / "seeds" / "news_councillors.json"
+if _news.exists():
+    PROJECTS.append({"name": f"{FAMILY}-councillors-news", "title": "Ward councillors named in news reports (bodies with no official list)",
+                     "task": "councillors-news", "target": f"{FAMILY}-councillors-news", "env": {}, "probe": None,
+                     "unit_label": "article", "record_label": "article", "items": json.loads(_news.read_text()), "workers": 2,
+                     "threads": 1, "delay_ms": 3000})
+
 # Department offices and officers (depts task, dforms/<module>.py; every seeds/dept_*.json): police stations, power offices,
 # EROs, sub-registrars, water offices. Both projects run on the India servers and on GitHub runners through the Indian proxies;
 # "india_only" items are kept apart because GitHub runners without a proxy must never get them.
