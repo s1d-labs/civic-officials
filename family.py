@@ -193,6 +193,8 @@ if _open:
 # civic-india wm_geopdf.py converts the saved copies to ward GeoJSON (2026-11-11: Okeskar/Maha_Election_2025, 975 files, 5.7 GB).
 # seeds/wm2_*.json (2026-11-11): the SBM-Urban live ward layer per state, Esri India Living Atlas wards, APSAC, Puducherry SEC
 # ward PDFs, Rajasthan LSG 2019 maps; their India-only items go to the -wardmaps-in project
+# 2026-11-15 (wardmaps-4): KGIS (seeds/wm2_kgis.json) and WB AMRUT WFS (seeds/wm2_wbamrut.json) gave up after 3 attempts on GitHub
+# runners (0 files); KGIS answers from India (Ward_Dynamic count 7,250 from dev-vps-3): both now india_only (Indian proxies).
 _wm = [i for f in sorted((HERE / "seeds").glob("wm*_*.json")) for i in json.loads(f.read_text())]
 if _wm:
     PROJECTS.append({"name": f"{FAMILY}-wardmaps", "title": "Ward map files (GeoPDFs, PDF maps) saved once to the bucket",

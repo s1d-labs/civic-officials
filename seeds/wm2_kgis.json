@@ -8,7 +8,7 @@
    "oid": "OBJECTID",
    "page": 1000,
    "state": "29",
-   "india_only": false,
+   "india_only": true,
    "source": "kgis",
    "chunk": "ward_dynamic",
    "fields": {
@@ -30,7 +30,7 @@
    "oid": "OBJECTID",
    "page": 1000,
    "state": "29",
-   "india_only": false,
+   "india_only": true,
    "source": "kgis_towns",
    "chunk": "town",
    "fields": {
