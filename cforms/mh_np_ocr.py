@@ -50,7 +50,7 @@ START = re.compile(r"^(आदेश|अधिसूचना|Order|ORDER|Orcer|N
 STOP = re.compile(r"भाग\s*[१1]\s*-\s*अ\s*\(|ठिकाण|स्थळ|^दिनांक|^दि\.\s*[0-9०-९]|जिल्हाधिकारी|Collector|^Place|^Dated?\b|स्वाक्षरी|शासन\s*राजपत्र|"
                   r"ON BEHALF|GOVERNMENT|^भाग\s*एक|^आदेश|^अधिसूचना|^Order\W*$|NOTIFICATION|COLLECTOR|^[A-Z][a-z]+,\s*$")
 CONT = re.compile(r"चालू|contd|Contd")
-TITLE = re.compile(r"^\W*(अनुसूची|परिशिष्ट|Schedule|SCHEDULE)\W*$")
+TITLE = re.compile(r"^\W*(अनुसूची|Schedule|SCHEDULE)\W*$")      # (not "परिशिष्ट": group registers start their head there)
 LETTERS = re.compile(r"[A-Za-zऀ-ॣॱ-ॿ]")
 ROLES = (("group_leader", re.compile(r"गटनेत")), ("ward", re.compile(r"Constituency", re.I)),
          ("name", re.compile(r"(सदस्य|नगरसेवक|उमेदवार|Councillor|Candidate|Member|Elected).*(नाव|नांव|नावे|Name)|"
