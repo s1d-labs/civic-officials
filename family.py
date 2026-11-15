@@ -226,7 +226,8 @@ if _ocr_f:
 # civic DB (investigations civic-india/ocr2_compare.py items), so it is registered there, not here.
 # last-gaps round (2026-11-15). Pages read again from a cleaned image (cforms/scan_prep.py through payload "prep": turned
 # straight, re-rendered at 300 dpi; seeds/ocrh_councillors_*.json): Kotma Ex-550 p. 3 (grid tilted ~2 degrees, 9 of 15 read)
-# and Nayagaon Ex-411 p. 27 (faint scan, 6 of 15). Own project and task name: the newest read of a page wins (civic sql/70).
+# and Nayagaon Ex-411 p. 27 (faint scan, 6 of 15); Rapar, Gujarat Extra No. 110 pp. 2-3 (own slug: the first read gave Bhachau the
+# Rapar ids). Own project and task name: the newest read of a page wins (civic sql/70).
 _ocr_h = [i for f in sorted((HERE / "seeds").glob("ocrh_councillors_*.json")) for i in json.loads(f.read_text())]
 if _ocr_h:
     PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-h", "title": "Ward councillors by OCR, pages read again from a cleaned image (deskew)",

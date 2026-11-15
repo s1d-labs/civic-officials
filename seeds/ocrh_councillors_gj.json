@@ -1,0 +1,22 @@
+[
+ {
+  "key": "h-cwgj25-ex110-rapar-p2",
+  "payload": {
+   "ocr": true,
+   "url": "https://egazette.gujarat.gov.in/ViewPdf2.aspx?docid=202502201649385599.pdf&cdbid=1e2801e03f25978a1bf748a12393f515&contentType=application/pdf",
+   "kind": "form-cw_gj",
+   "first": 2,
+   "last": 3,
+   "slug": "gj25-ex110r",
+   "state": "GJ",
+   "stored": "civic-officials-india-direct/councillors/GJ/9b958cb0ff1c.pdf",
+   "gazette": "Gujarat Government Gazette Extraordinary Part IV-C No. 110, 18/02/2025",
+   "election": "Gujarat 2025 (poll 16 Feb 2025)",
+   "body_type": "Municipality",
+   "body_local": "રાપર નગરપાલિકા",
+   "india_only": false,
+   "expected": 28,
+   "note": "Rapar pages 2-3 again: the first read gave Bhachau's rows (pages 4-5) the Rapar ids, so they replaced Rapar's 28 rows; own slug gj25-ex110r keeps the ids apart"
+  }
+ }
+]
