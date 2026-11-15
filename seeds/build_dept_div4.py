@@ -7,7 +7,8 @@ Items (each source answered dev-vps-3, OVH Mumbai, 2026-11-15; abroad unchecked,
     name without ".aspx"; the old item st_div_pages:hr-police-rtk gave up on 2026-11-13) to
     https://haryanapolice.gov.in/static/TelephoneDirectory_rtk ("Updated on 21.10.2026": IGP Rohtak Range and the SPs of
     Charkhi Dadri, Rohtak, Bhiwani). The other four range pages redirect the same way; their records of 2026-11-13 are kept
-    (a new url gives new record ids), so only Rohtak is queued here.
+    (a new url gives new record ids), so only Rohtak was queued first; on 2026-11-15 the other four (Ambala, Hisar, Karnal,
+    South Range) followed at their new urls (div4-hr-<range>; each answered 200 from dev-vps-3 on 2026-11-15).
   - Karnataka, Regional Commissioner Bengaluru Division: https://rcb.karnataka.gov.in/20/Officers%20Details/en (the
     karnataka.gov.in CMS, as rckalaburagi; "/info-1/Officers+Details/en" answers 307 to it). "About Us" (/26/About%20Us/en)
     lists the 9 districts of dforms/st_div_ka.json "Bengaluru" (Ramanagara = Bengaluru South).
@@ -51,7 +52,17 @@ def items():
                       {"rx": r"(?i)\bcommissioner,\s*bilaspur\s+division", "division": "Bilaspur"}],
             **DIRECT}},
     ]
+    for slug, div, dcs in HR_RANGES:
+        out.append({"key": f"st_div_pages:div4-hr-{slug}", "payload": {
+            "reader": "st_div_pages", "state": "HR", "key": f"div4-hr-{slug}", "division": div, "kind": "police",
+            "body": f"{div}, Haryana Police", "urls": [f"https://haryanapolice.gov.in/static/TelephoneDirectory_{slug}"],
+            "districts": dcs, **DIRECT, "district_names": hr}})
     return out
+
+
+# the other Haryana Police range pages (same move as Rohtak); districts as in seeds/dept_div_hr.json
+HR_RANGES = [("ambala", "Ambala Range", ["58", "76", "68"]), ("hisar", "Hisar Range", ["63", "74", "65", "792", "61"]),
+             ("karnal", "Karnal Range", ["66", "67", "71"]), ("southrange", "South Range", ["72", "619", "69", "604"])]
 
 
 if __name__ == "__main__":

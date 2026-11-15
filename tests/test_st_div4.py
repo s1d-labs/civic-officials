@@ -19,7 +19,9 @@ def text(name):
 
 
 def test_seeds():
-    assert set(SEEDS) == {"div4-hr-rohtak-range", "div4-ka-bengaluru", "div4-cg-ias-civil-list"}
+    assert set(SEEDS) == {"div4-hr-rohtak-range", "div4-ka-bengaluru", "div4-cg-ias-civil-list", "div4-hr-ambala",
+                          "div4-hr-hisar", "div4-hr-karnal", "div4-hr-southrange"}
+    assert SEEDS["div4-hr-southrange"]["urls"] == ["https://haryanapolice.gov.in/static/TelephoneDirectory_southrange"]
     for p in SEEDS.values():
         assert p["route"] == "direct" and p["india_only"]
 
