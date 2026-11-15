@@ -262,6 +262,7 @@ def fetch(p, get):
 SEARCH = mh.SEARCH
 LAST_LISTING = []        # every row of the last items() search (councillors.seed keeps them in its record)
 DATE = re.compile(r"^(\d{1,2})[/.-](\d{1,2})[/.-](\d{4})")
+ISO = re.compile(r"^(\d{4})[/.-](\d{1,2})[/.-](\d{1,2})$")
 
 
 def search_rows(html):
@@ -275,7 +276,10 @@ def search_rows(html):
         if not a or len(tds) <= 6 or "Page$" in a.get("href", ""):
             continue
         d = next((DATE.match(t) for t in tds if DATE.match(t)), None)
-        out.append({"date": f"{int(d.group(1)):02d}/{int(d.group(2)):02d}/{d.group(3)}" if d else "", "text": tds[6], "cells": tds})
+        iso = next((ISO.match(t) for t in tds if ISO.match(t)), None)     # the list writes "2021/12/30"
+        date = (f"{int(d.group(1)):02d}/{int(d.group(2)):02d}/{d.group(3)}" if d else
+                f"{int(iso.group(3)):02d}/{int(iso.group(2)):02d}/{iso.group(1)}" if iso else "")
+        out.append({"date": date, "text": tds[6], "cells": tds})
     pages = sorted({m for m in re.findall(r"'(Page\$\d+)'", html or "")}, key=lambda x: int(x.split("$")[1]))
     return out, pages
 
