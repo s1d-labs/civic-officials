@@ -1,0 +1,19 @@
+[
+ {
+  "key": "news-in-mz-98cc05ca14ac",
+  "payload": {
+   "kind": "form-news",
+   "state": "MZ",
+   "url": "https://thelanternpost.in/news/zpm-sweeps-lmc-election-secures-all-eleven-wards",
+   "bodies": [
+    {
+     "lgd_code": "249780",
+     "name": "Lunglei"
+    }
+   ],
+   "max_attempts": 1,
+   "fail_hard": true,
+   "note": "HTTP 403 on GitHub runners (project councillors-news); one try through an Indian proxy, no more"
+  }
+ }
+]

@@ -1,0 +1,46 @@
+[
+ {
+  "key": "h-mp-gz-04102022-550-p3",
+  "payload": {
+   "url": "https://govtpress.mp.gov.in/uploads/gazette/Extra_2022-10-04-Ex-550.pdf",
+   "kind": "form-cw_mp",
+   "state": "MP",
+   "slug": "mp-gz-04102022-550",
+   "pages": 25,
+   "stored": "civic-officials-councillors/councillors/MP/mp-gz-04102022-550.pdf",
+   "gazette_no": "550",
+   "gazette_date": "04-10-2022",
+   "first": 3,
+   "last": 3,
+   "prep": {
+    "deskew": true,
+    "contrast": 1.0,
+    "dpi": 300
+   },
+   "expected": 15,
+   "note": "Kotma (Anuppur): 9 of 15 read before; the ruled grid is tilted about 2 degrees"
+  }
+ },
+ {
+  "key": "h-mp-gz-26072022-411-p27",
+  "payload": {
+   "url": "https://govtpress.mp.gov.in/uploads/gazette/Extra_2022-07-26-Ex-411.pdf",
+   "kind": "form-cw_mp",
+   "state": "MP",
+   "slug": "mp-gz-26072022-411",
+   "pages": 43,
+   "stored": "civic-officials-councillors/councillors/MP/mp-gz-26072022-411.pdf",
+   "gazette_no": "411",
+   "gazette_date": "26-07-2022",
+   "first": 27,
+   "last": 27,
+   "prep": {
+    "deskew": true,
+    "contrast": 1.0,
+    "dpi": 300
+   },
+   "expected": 15,
+   "note": "Nayagaon (Neemuch): 6 of 15 read before; faint scan, read from the page re-rendered at 300 dpi"
+  }
+ }
+]

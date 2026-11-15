@@ -66,11 +66,12 @@ POST = re.compile(r"पा\s?(?:र्?)?\s?[षशघ]|पार्?\s?द|म�
 TYPES = (("नगरपालिक निगम", "Municipal Corporation"), ("नगर पालिक निगम", "Municipal Corporation"), ("नगर निगम", "Municipal Corporation"),
          ("नगरपालिका परिषद", "Municipality"), ("नगर पालिका परिषद", "Municipality"), ("नगरपालिका", "Municipality"),
          ("नगर परिषद", "Nagar Parishad"))
-PREAMBLE = re.compile(r"राज्य\s*में\s*(.{3,80}?)\s*के\s*\S?ाह\S{0,2}\s*[-–—,.]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—.]*\s*([0-9०-९]{4})")
-# ("के गाह", "के माह्ठ", "जुलाई .2022": Barhi Ex-417 p. 9, Malthone Ex-427 p. 51, Hatod Ex-432 p. 40)
+PREAMBLE = re.compile(r"राज्य\s*[मग]ें\s*(.{3,80}?)\s*के\s*\S?ाह\S{0,2}\s*[-–—,.]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—.]*\s*([0-9०-९]{4})")
+# ("के गाह", "के माह्ठ", "जुलाई .2022": Barhi Ex-417 p. 9, Malthone Ex-427 p. 51, Hatod Ex-432 p. 40; "राज्य गें": Nayagaon
+# Ex-411 p. 27 read from a cleaned page, last-gaps 2026-11-15)
 # the same preamble with the OCR slips of faint scans (ocr-gap round 2026-11-15): "राज्य में" read as "चाज्य 7", "शज्य में",
 # "र|ज्य में"; "के माह" read as "के.माह", "क॑ माह", "के भाह". The body starts at its type word (नगर ...).
-PREAMBLE_LOOSE = re.compile(r"\S{0,3}ज्य\S{0,2}\s*(?:\S{0,4}\s+){1,2}((?:न\S?ग\S?र|नगरपालिक)\S*\s*.{2,80}?)\s*[कंक]\S{0,2}[\s.]*[मभ]ाह\S?\s*"
+PREAMBLE_LOOSE = re.compile(r"\S{0,3}ज्य\S{0,2}\s*(?:\S{0,4}\s+){1,2}((?:न\S?ग\S?र|नगरपालिक)\S*\s*.{2,80}?)\s*[कंक]\S{0,2}[\s.]*[मभग]ाह\S?\s*"
                             r"[-–—.,]*\s*(\S+?)\s*(?:वर्ष)?\s*[-–—]*\s*([0-9०-९]{4})")
 
 
@@ -733,7 +734,16 @@ def fetch(p, get):
         with open(pdf, "wb") as f:
             f.write(content)
         first, last = int(p.get("first", 1)), int(p.get("last", p.get("first", 1)))
-        blocks = [(page, page_blocks(pdf, page, tmp)) for page in range(first, last + 1)]
+        prep, angles = p.get("prep") or None, {}
+        if prep:
+            # pages cleaned before OCR (cforms/scan_prep.py): turned straight and / or darker, read like the original page
+            from cforms import scan_prep
+            blocks = []
+            for page in range(first, last + 1):
+                pp, angles[page] = scan_prep.prep_page(pdf, page, tmp, prep)
+                blocks.append((page, page_blocks(pp, 1, tmp) if pp else []))
+        else:
+            blocks = [(page, page_blocks(pdf, page, tmp)) for page in range(first, last + 1)]
         # an item that starts mid-notice: the notice's body from the last preamble on the pages before it
         body = None
         lead = blocks[0][1] if blocks else []
@@ -745,6 +755,11 @@ def fetch(p, get):
                     body = pres[-1]
                     break
         recs = [record(p, b, m, page) for b, m, page in read_pages(blocks, body)]
+        if prep:
+            for _, d in recs:
+                d["prep"] = {"deskew_deg": round(angles.get(d["page"], 0.0), 2), "contrast": float(prep.get("contrast", 1.0) or 1.0),
+                             "dpi": int(prep.get("dpi", 300))}
+                d["method"] = METHOD + "; " + scan_prep.METHOD
     if src:
         for _, d in recs:
             d["src"] = dict(src)
@@ -872,14 +887,25 @@ def title(s):
     return " ".join(w.capitalize() for w in s.split())
 
 
+# (body, district) pairs whose body name another district also has, checked on the scan (last-gaps 2026-11-15): the -ocr-e/f/g
+# reads tied Ex-432 p. 17 (बड़ौद, Agar-Malwa) to Bairad (Shivpuri) and p. 18 (नगर-परिषद बड़ागांव, Agar-Malwa) to Dongar Parasia
+# (Chhindwara); Badagaon of Tikamgarh keeps the plain sound match
+DIST_ALIASES = {("बड़ौद", "आगरमालवा"): "250857", ("बड़ागांव", "आगरमालवा"): "250733"}
+
+
 def record(p, body, m, page):
-    alias = ALIASES.get(split_body(body["body_local"], body["district_local"])[0])
+    lgd_match("", "", "")                    # loads _LGD
+    sb = split_body(body["body_local"], body["district_local"])
+    dcode = DIST_ALIASES.get((sb[0], re.sub(r"\s+", "", sb[1])))
+    alias = ALIASES.get(sb[0])
     # a body name that still holds its district ("सुसनेर जिला आएर मालवा"): the split reading (the open match gave Seoni-Malwa)
     alias = alias or re.search(r"\sजि\S?ल", body["body_local"])
     lgd = lgd_of_split(body["body_local"], body["district_local"], body["body_type"]) if alias else \
         lgd_match(body["body_local"], body["district_local"], body["body_type"])
     if lgd is None and body["body_local"]:
         lgd = lgd_of_split(body["body_local"], body["district_local"], body["body_type"])
+    if dcode:
+        lgd = next((r for r in _LGD if r[0] == dcode), lgd)
     name_en = lgd[1] if lgd else title(roman(body["body_local"]))
     dist_en = lgd[2] if lgd else title(roman(body["district_local"]))
     slug = re.sub(r"[^a-z0-9]+", "-", f"{name_en}-{dist_en}".lower()).strip("-")

@@ -32,6 +32,9 @@ import provenance
 from certs_trust import trust
 from forms.aspnet import LegacyTLS, insecure_retry
 
+# readers whose items end "failed" (not "done" with 0 records) when the server never answered in their attempts; payload
+# "fail_hard": true does the same for one item, payload "max_attempts" sets the attempts (default 3)
+FAIL_HARD_READERS = {"wm2_wfs"}
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; s1d-labs public records; +https://labs.s1d.me)"}
 stop = False
 
@@ -270,9 +273,14 @@ def main(run_fn=None, task="councillors"):
                 break
             item = items[0]
             url = item["payload"].get("url", "")
-            if item.get("attempts", 0) > 3:
-                hub.failure(task, item["key"], "gave up after 3 attempts", url=url)
-                hub.complete([item["key"]], "done", fetched=0)
+            tries = int(item["payload"].get("max_attempts") or 3)
+            if item.get("attempts", 0) > tries:
+                hub.failure(task, item["key"], f"gave up after {tries} attempts", url=url)
+                # a layer server or page that never answered is no finished item (last-gaps 2026-11-15: three WB AMRUT WFS items
+                # ended "done" with 0 records): such items end "failed"; the hub stops retrying them after its attempt cap
+                hard = item["payload"].get("fail_hard") or item["payload"].get("reader") in FAIL_HARD_READERS
+                hub.complete([item["key"]], "failed" if hard else "done", fetched=0,
+                             **({"error": f"gave up after {tries} attempts (no answer)"} if hard else {}))
                 continue
             before = set(getattr(s, "unverified_hosts", ()))
             if af:

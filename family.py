@@ -224,6 +224,23 @@ if _ocr_f:
 # Second OCR read (owner, 2026-11-15; ocr2.py, task councillors-ocr2): project civic-officials-councillors-ocr2 reads every saved page
 # behind an OCR'd councillor row again with another engine (EasyOCR; Tesseract tessdata_best Gujarati). Its items come from the
 # civic DB (investigations civic-india/ocr2_compare.py items), so it is registered there, not here.
+# last-gaps round (2026-11-15). Pages read again from a cleaned image (cforms/scan_prep.py through payload "prep": turned
+# straight, re-rendered at 300 dpi; seeds/ocrh_councillors_*.json): Kotma Ex-550 p. 3 (grid tilted ~2 degrees, 9 of 15 read)
+# and Nayagaon Ex-411 p. 27 (faint scan, 6 of 15). Own project and task name: the newest read of a page wins (civic sql/70).
+_ocr_h = [i for f in sorted((HERE / "seeds").glob("ocrh_councillors_*.json")) for i in json.loads(f.read_text())]
+if _ocr_h:
+    PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-h", "title": "Ward councillors by OCR, pages read again from a cleaned image (deskew)",
+                     "task": "councillors-ocr-h", "target": f"{FAMILY}-councillors-ocr-h", "env": {}, "probe": None,
+                     "unit_label": "PDF pages", "record_label": "councillor", "items": _ocr_h, "workers": 2, "threads": 1,
+                     "delay_ms": 0})
+# News articles that refused GitHub runners (HTTP 403): one try through the hub's Indian proxies (seeds/newsin_councillors.json;
+# payload max_attempts 1 and fail_hard, so a second refusal ends the item "failed" without another request).
+_news_in = HERE / "seeds" / "newsin_councillors.json"
+if _news_in.exists():
+    PROJECTS.append({"name": f"{FAMILY}-councillors-news-in", "title": "Ward councillors named in news reports (sites that refuse runners abroad)",
+                     "task": "councillors-news", "target": f"{FAMILY}-councillors-news-in", "env": {}, "probe": None,
+                     "unit_label": "article", "record_label": "article", "items": json.loads(_news_in.read_text()), "workers": 1,
+                     "threads": 1, "delay_ms": 3000, "proxy": "IN"})
 
 # Department offices and officers (depts task, dforms/<module>.py; every seeds/dept_*.json): police stations, power offices,
 # EROs, sub-registrars, water offices. Both projects run on the India servers and on GitHub runners through the Indian proxies;
