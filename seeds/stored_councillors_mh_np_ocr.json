@@ -864,9 +864,42 @@
      "local": "कुडाळ",
      "name": "Kudal Nagar Panchayat",
      "district": "Sindhudurg"
+    },
+    {
+     "en": [
+      "Kasai Dodamarg",
+      "Dodamarg",
+      "Kasai-Dodamarg"
+     ],
+     "name": "Kasai Dodamarg Nagar Panchayat",
+     "local": "कसाई दोडामार्ग  नगर पंचायत",
+     "district": "Sindhudurg",
+     "lgd_code": "263884"
+    },
+    {
+     "en": [
+      "Vaibhavwadi",
+      "Vabhave-Vaibhavwadi",
+      "Vabhave Vaibhavwadi"
+     ],
+     "name": "Vabhave Vaibhavwadi Nagar Panchayat",
+     "local": "वाभवे -वैभववाडी",
+     "district": "Sindhudurg",
+     "lgd_code": "263834"
+    },
+    {
+     "en": [
+      "Devgad",
+      "Devgad-Jamsande",
+      "Devgad Jamsande"
+     ],
+     "name": "Devgad-Jamsande Nagar Panchayat",
+     "local": "देवगड-जामसांडे",
+     "district": "Sindhudurg",
+     "lgd_code": "276321"
     }
    ],
-   "expected": 17
+   "expected": 68
   }
  },
  {

@@ -180,17 +180,19 @@ def get_pdf(p, get):
         return None, "search did not answer"
     soup, data = form(r.text)
     want = gj.norm(p["match"])
-    target, nth = None, int(p.get("nth", 0) or 0)      # nth: the day lists the same text more than once
+    nth = int(p.get("nth", 0) or 0)      # nth: the day lists the same text more than once
+    # exact text first; the 80-letter prefix only when no row has the exact text (two notices of one day can share their first
+    # 80 letters: Amravati 25/01/2022, Buldhana "Sr. 17-20" and Yavatmal "Sr. Nos. 5-16")
+    exact, prefix = [], []
     for tr in soup.find_all("tr"):
         a = tr.find("a", href=re.compile("doPostBack"))
         tds = [gj.norm(td.get_text(" ", strip=True)) for td in tr.find_all("td")]
         if a and len(tds) > 6 and (tds[6] == want or tds[6].startswith(want[:80])):
-            if nth == 0:
-                target = a["href"].split("'")[1]
-                break
-            nth -= 1
+            (exact if tds[6] == want else prefix).append(a["href"].split("'")[1])
         else:
             provenance.skip_row(tr, 'skip: not (a and len(tds) > 6 and (tds[6] == want or tds[6].startswith(w...)')
+    found = exact or prefix
+    target = found[nth] if nth < len(found) else None
     if not target:
         return None, "notice not in the search result"
     data.update({"__EVENTTARGET": target, "__EVENTARGUMENT": ""})
