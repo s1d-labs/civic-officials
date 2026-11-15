@@ -423,6 +423,8 @@ def body_from(text):
         return None
     full, month, year = mm.group(1), mm.group(2), mm.group(3).translate(DIGITS)
     full = re.sub(r"\s+", " ", full).strip(" ,.;:|-")       # "राज्य में . नगरपालिका परिषद् -सीघी" (Sidhi)
+    full = re.sub(r"^नगर[.,:;|]\s*", "नगर ", full)           # "नगर. परिषद्" (Amarkantak, Ex-433 p. 28)
+    full = re.sub(r"\s+जि\S?ला\W*$", "", full)               # "चांद जिला" with the district lost (Chand, Ex-425 p. 22)
     dist = ""
     # the district: one or two words after जिला (also read as जिलः, जिंला, जिले; "धार जिला, धार"; "आगर मालवा")
     dm = re.search(r"(.*?)\s*[^\sऀ-ॿ]?\s*(?:जि\S?ल[ाःे]|ज़िला)[\s,.:;_*-]+(?:[^\sक-ह]+\s+)*(\S+(?:\s+\S+)?)\s*$", full)   # (\W would eat a vowel sign)
@@ -772,7 +774,7 @@ def split_body(body_local, district_local):
     "ह॒ गरप़ालिका परिषद गाडरवाड़ा" (the body type in front), "पंरिषद् करेली ह" (a stray letter at the end). Gap round
     2026-11-14: 18 bodies (352 members in civic.councillor) had no LGD code because of these cuts."""
     b, d = body_local or "", district_local or ""
-    m = re.search(r"\s+जिं?ला(ँ|ं)?\s+", b)
+    m = re.search(r"\s+जिं?ला(ँ|ं)?(\s+|$)", b)
     if m:
         b, rest = b[:m.start()], b[m.end():]
         if not d or d == body_local or "जि" in d:
