@@ -6,6 +6,9 @@ This family reads the officials that Indian government sites list (Who's Who, di
 - `family.py`: projects from `sites.csv` (one per kind of site) and `retry_in.txt` (sites that need an Indian proxy).
 - `osm.py`: the OpenStreetMap task (project civic-officials-osm): the Geofabrik India extract, filtered with pyosmium, saved as
   `osm/<date>/<kind>.geojsonl.gz` in the family bucket. ODbL data: credit "© OpenStreetMap contributors"; README says more.
+- `ocr2.py`: the second OCR read (task councillors-ocr2, project civic-officials-councillors-ocr2): saved PDF pages behind OCR'd
+  councillor rows, read again whole with EasyOCR (hi/mr/ta/en) or Tesseract tessdata_best Gujarati; segments with boxes in PDF points.
+  It installs PyTorch (CPU build) and EasyOCR at its first item. The comparison with the first read is in investigations civic-india.
 - S3WaaS pager: the site's own admin-ajax.php calls `ww_pages` / `dir_pages`, with the nonce the page itself carries. Only these.
 
 ## The scrape pool contract (from the family template)

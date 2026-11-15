@@ -221,6 +221,10 @@ if _ocr_f:
                      "unit_label": "PDF pages", "record_label": "councillor", "items": _ocr_f, "workers": 20, "threads": 1,
                      "delay_ms": 0})
 
+# Second OCR read (owner, 2026-11-15; ocr2.py, task councillors-ocr2): project civic-officials-councillors-ocr2 reads every saved page
+# behind an OCR'd councillor row again with another engine (EasyOCR; Tesseract tessdata_best Gujarati). Its items come from the
+# civic DB (investigations civic-india/ocr2_compare.py items), so it is registered there, not here.
+
 # Department offices and officers (depts task, dforms/<module>.py; every seeds/dept_*.json): police stations, power offices,
 # EROs, sub-registrars, water offices. Both projects run on the India servers and on GitHub runners through the Indian proxies;
 # "india_only" items are kept apart because GitHub runners without a proxy must never get them.
