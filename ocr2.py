@@ -42,10 +42,20 @@ def sh(cmd):
     return subprocess.run(cmd, shell=True, capture_output=True, text=True)
 
 
+class NoTools(Exception):
+    """The runner could not install a tool: the item goes back to the queue untouched and this job ends."""
+
+
 def need_poppler():
-    if not shutil.which("pdftoppm") or not shutil.which("tesseract"):
-        sh("sudo -n apt-get update -q && sudo -n apt-get install -y -q poppler-utils tesseract-ocr")
-    return bool(shutil.which("pdftoppm"))
+    for attempt in range(4):
+        if shutil.which("pdftoppm") and shutil.which("tesseract"):
+            return True
+        lock = "-o DPkg::Lock::Timeout=180"
+        r = sh(f"sudo -n apt-get {lock} install -y -q poppler-utils tesseract-ocr || "
+               f"(sudo -n apt-get {lock} update -q && sudo -n apt-get {lock} install -y -q poppler-utils tesseract-ocr)")
+        if r.returncode:
+            time.sleep(20 * (attempt + 1))
+    return bool(shutil.which("pdftoppm") and shutil.which("tesseract"))
 
 
 def need_easyocr():
@@ -141,9 +151,9 @@ def read_item(p, pdf_bytes):
         # the bucket copy is not the file the first read used: nothing to compare
         return [], f"sha256 differs: {sha[:16]}"
     if not need_poppler():
-        return [], "poppler not available"
-    if p["engine"] == "easyocr" and not need_easyocr():
-        return [], "easyocr not available"
+        raise NoTools("poppler / tesseract not available")
+    if not need_easyocr():         # EasyOCR, and OpenCV for the line removal of the Tesseract pages
+        raise NoTools("easyocr not available")
     recs = []
     with tempfile.TemporaryDirectory() as tmp:
         pdf = os.path.join(tmp, "doc.pdf")
@@ -159,7 +169,6 @@ def read_item(p, pdf_bytes):
             if p["engine"] == "easyocr":
                 segs = read_easyocr(png, p["langs"])
             else:
-                need_easyocr()           # opencv for the line removal
                 segs = read_tess_best(png, p["langs"], tmp)
             recs.append((f"ocr2:{sha[:16]}:p{page}", {
                 "type": "ocr_second_read", "doc": p["doc"], "sha256": sha, "page": page, "engine": p["engine"],
@@ -212,6 +221,10 @@ def main():
                 hub.metric("n_http")
                 hub.metric("t_http_s", time.time() - t)
                 recs, why = read_item(p, b)
+            except NoTools as e:
+                hub.metric("no_tools")
+                hub.complete([item["key"]], "pending", error=str(e))
+                break
             except Exception as e:  # noqa: BLE001
                 recs, why = [], f"{type(e).__name__}: {e}"[:200]
             hub.metric("pages_read", len(recs))
