@@ -484,5 +484,35 @@
     }
    ]
   }
+ },
+ {
+  "key": "news-mz-f377d1cdbab8",
+  "payload": {
+   "kind": "form-news",
+   "state": "MZ",
+   "url": "http://web.archive.org/web/20240721215823/https://thelanternpost.in/news/zpm-sweeps-lmc-election-secures-all-eleven-wards",
+   "bodies": [
+    {
+     "lgd_code": "249780",
+     "name": "Lunglei"
+    }
+   ],
+   "note": "The Lantern Post article (3 Apr 2023) as archived by the Wayback Machine on 21 Jul 2024: the site itself answers 404 (Indian proxy, 2026-11-15)"
+  }
+ },
+ {
+  "key": "news-mh-473a6ff35d6d",
+  "payload": {
+   "kind": "form-news",
+   "state": "MH",
+   "url": "https://navbharatlive.com/maharashtra/akola/patur-nagar-parishad-election-result-2026-congress-hidayat-khan-won-1813201.html",
+   "bodies": [
+    {
+     "lgd_code": "251316",
+     "name": "Patur"
+    }
+   ],
+   "note": "Patur poll 20.06.2026, count 21.06.2026 (SEC order 07.05.2026); no official ward list found"
+  }
  }
 ]
