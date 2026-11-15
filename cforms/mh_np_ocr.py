@@ -50,6 +50,7 @@ START = re.compile(r"^(आदेश|अधिसूचना|Order|ORDER|Orcer|N
 STOP = re.compile(r"भाग\s*[१1]\s*-\s*अ\s*\(|ठिकाण|स्थळ|^दिनांक|^दि\.\s*[0-9०-९]|जिल्हाधिकारी|Collector|^Place|^Dated?\b|स्वाक्षरी|शासन\s*राजपत्र|"
                   r"ON BEHALF|GOVERNMENT|^भाग\s*एक|^आदेश|^अधिसूचना|^Order\W*$|NOTIFICATION|COLLECTOR|^[A-Z][a-z]+,\s*$")
 CONT = re.compile(r"चालू|contd|Contd")
+TITLE = re.compile(r"^\W*(अनुसूची|परिशिष्ट|Schedule|SCHEDULE)\W*$")
 LETTERS = re.compile(r"[A-Za-zऀ-ॣॱ-ॿ]")
 ROLES = (("group_leader", re.compile(r"गटनेत")), ("ward", re.compile(r"Constituency", re.I)),
          ("name", re.compile(r"(सदस्य|नगरसेवक|उमेदवार|Councillor|Candidate|Member|Elected).*(नाव|नांव|नावे|Name)|"
@@ -130,12 +131,36 @@ def lines_of(words):
             out[-1]["yc"] = (out[-1]["yc"] * (n - len(l["words"])) + l["yc"] * len(l["words"])) / n
         else:
             out.append(l)
+    figs = [m.group(2) for m in (FIGWORD.match(w["text"]) for w in words) if m]
+    page_dev = sum(1 for f in figs if re.search(r"[०-९]", f)) > 0.7 * len(figs) if len(figs) >= 10 else False
     for l in out:
         l["words"].sort(key=lambda w: w["x0"])
+        fix_digits(l["words"], page_dev)
         l["y0"] = min(w["y0"] for w in l["words"])
         l["y1"] = max(w["y1"] for w in l["words"])
         l["text"] = gj.norm(" ".join(w["text"] for w in l["words"]))
     return out
+
+
+# Tesseract (mar) reads some Devanagari figures of a clean table as Latin look-alikes: १ as "q", ६ as "&", ५ as "4" or "षु",
+# ७ as "9" or "0". (Nagpur notices in DV-TTYogesh, e.g. Bhandara Ex-3: "४. ४ १", then "षु. 4 १", "६. & q", "0. 9 q".) In a line
+# that has Devanagari figures (or "q" / "&" alone), a figure-only word is read in Devanagari. ocr-gap round 2026-11-15.
+FIGWORD = re.compile(r"^([(\[{|]*)([0-9०-९q&]{1,3}|षु)([)\]}|.,:;]*)$")
+LOOKALIKE = str.maketrans({"q": "१", "&": "६", "4": "५", "9": "७", "0": "०", "1": "१", "2": "२", "3": "३", "5": "५", "6": "६",
+                           "7": "७", "8": "८"})
+
+
+def fix_digits(words, page_dev=False):
+    """page_dev: most figure words of the page are Devanagari (then a line of Latin look-alikes only, "4 4", is read too)."""
+    figs = [FIGWORD.match(w["text"]) for w in words]
+    if not page_dev and not any(m and (re.search(r"[०-९]", m.group(2)) or m.group(2) in ("q", "&", "षु")) for m in figs):
+        return
+    for w, m in zip(words, figs):
+        if not m:
+            continue
+        core = m.group(2)
+        core = "५" if core == "षु" else ("७" if core == "0" else core.translate(LOOKALIKE))
+        w["text"] = m.group(1) + core + m.group(3)
 
 
 def _num(t):
@@ -175,15 +200,21 @@ def roles_of(bs, head_lines, h):
     for l in head_lines:
         ph = []
         rule = False
+        col = lambda w: sum(1 for x in bs if (w["x0"] + w["x1"]) / 2 > x)   # noqa: E731
+        last = None
         for w in l["words"]:
             if w["text"] in ("|", "||", "।", "|।"):
                 rule = True                      # a column rule read as a word: the phrase ends here
                 continue
-            if ph and w["x0"] - ph[-1][1] < 1.2 * h and not rule:
+            # a phrase also ends where the next word stands in another column: tight heads ran "नगर पंचायतचे" and "प्रभाग
+            # क्र." together, and the joined phrase made the body column the ward column (Bhandara Ex-3, ocr-gap 2026-11-15)
+            if ph and w["x0"] - ph[-1][1] < 1.2 * h and not rule and (last is None or col(w) == col(last)
+                                                                        or w["x0"] - ph[-1][1] < 0.25 * h):
                 ph[-1] = (ph[-1][0], w["x1"], ph[-1][2] + " " + w["text"])
             else:
                 ph.append((w["x0"], w["x1"], w["text"]))
             rule = False
+            last = w
         for a, b, t in ph:
             texts[sum(1 for x in bs if (a + b) / 2 > x)].append(t)
     roles, used = [], set()
@@ -283,11 +314,12 @@ def page_tables(page, lines, state):
         cs = col_row(l)
         head = []
         if cs is None and HEAD_HINT.search(l["text"]) and role_of(l["text"]) and len(l["words"]) < 20 \
-                and not START.search(l["text"]) and _num(l["words"][0]["text"]) is None:
+                and not START.search(l["text"]) and _num(l["words"][0]["text"]) is None \
+                and not any(TITLE.search(x["text"]) for x in lines[i + 1:i + 4]):     # notice text above "अनुसूची"
             # a head line: with a name word and a ward or serial word somewhere in the head lines around it
             k0, k1 = i, i
             while k0 > 0 and lines[k0 - 1]["y1"] > l["y0"] - 2.5 * h and len(lines[k0 - 1]["words"]) < 20 \
-                    and not START.search(lines[k0 - 1]["text"]) and i - k0 < 2:
+                    and not START.search(lines[k0 - 1]["text"]) and not TITLE.search(lines[k0 - 1]["text"]) and i - k0 < 2:
                 k0 -= 1
             while k1 + 1 < len(lines) and lines[k1 + 1]["y0"] < lines[k1]["y1"] + 1.8 * h and k1 - i < 6 \
                     and _num(lines[k1 + 1]["words"][0]["text"]) is None and not col_row(lines[k1 + 1]) \
@@ -310,6 +342,9 @@ def page_tables(page, lines, state):
             while k > 0 and lines[k - 1]["y1"] > lines[k]["y0"] - 2.5 * h and len(lines[k - 1]["words"]) < 20 \
                     and not START.search(lines[k - 1]["text"]) and i - k < 5:
                 k -= 1
+                if TITLE.search(lines[k]["text"]):
+                    k += 1                       # the schedule title: the notice text above it is no head (its "सदस्य ...
+                    break                        # म्हणून" made the body column the name column, Gondia Ex-6)
                 if STOP.search(lines[k]["text"]) or CONT.search(lines[k]["text"]):
                     break
             head = [x for x in lines[k:i] if not STOP.search(x["text"]) and not CONT.search(x["text"])]
@@ -582,6 +617,198 @@ def records(segs, p):
 
 # ---------------------------------------------------------------- OCR and fetch
 
+# ---------------------------------------------------------------- fallback: member lines anchored on the reservation word
+
+# Some notices defeat the column reader: tight tables whose column-number row is misread ("g २ ३ %", Sindhudurg Ex-12), Latur's
+# tables with a seven-line head and no number row, Beed's. Tesseract with psm 4 (one column of lines) reads their rows well:
+#   "<serial> [ward] <name> [ward] <reservation> [address] [party]"   e.g. "१ १ जळवी ज्योती जयेंद्र सर्वसाधारण महिला"
+# A member line is a line with a reservation word; the name is the letters before it (figures, look-alikes and stray marks of
+# the serial and ward cells dropped). The lines between two notice starts or body titles form one body's list; the body is the
+# one that the text above the list names. The ward is the place in the list, so a list is kept only when it has exactly the
+# body's seats (17), or when every row's own ward figure agrees with its place. ocr-gap round 2026-11-15.
+ANCHOR = re.compile(r"सर्वसाधारण|सर्व\s*साधारण|अनु\s*स\S{0,3}त|अराखीव|अ\s*राखीव|नागरिकांचा|ना\.\s*मा\.\s*[प्रव]|इतर\s*मागास|"
+                    r"मागास\s*प्रवर्ग|General|Scheduled")
+JUNK = re.compile(r"^[\W_0-9०-९q&%g]+$|^[क-ह][्ुूं]?[.,)]?$|^[क-ह][क-ह]$")     # ("प." = ५., "छ." = ७. in Beed)      # a figure, a look-alike or a lone letter or two
+RESVW = re.compile(r"^\(?(सर्वसाधारण|साधारण|सर्व|अनु\s*स\S{0,3}त|जाती|जमाती|महिला|स्त्री|राखीव|अराखीव|प्रवर्ग|मागास|इतर|"
+                   r"नागरिकांचा|ना\.?\s*मा\.?\s*\S*)\)?[,.]?$")
+HEADW = re.compile(r"असल्यास|कोणासाठी|स्त्रीयासाठी|धरून|जसे\s|अगर\s|सदस्यांच|सदस्याच|शेरा|Remarks?\b", re.I)
+END = re.compile(r"ठिकाण|स्थळ|^दिनांक|^दि\.\s*[0-9०-९]|जिल्हाधिकारी|Collector|^Place")
+SECTION = re.compile(r"^\W*(आदेश|अधिसूचना|Order|ORDER)\W*$|^\W*नगर\s*पंचायत\s+\S+")
+
+
+def anchor_lists(pages, p):
+    """pages: [(page no, tesseract TSV of psm 4)] -> {lgd_code: [(ward, name, reservation text, tail, page, line, conf)]}."""
+    bodies = p.get("bodies") or []
+    seats = int(p.get("seats", 17))
+    out, cur, intro = {}, [], ""
+    addr_x = None                                # the name column's right border, when the head has an address column
+
+    def close():
+        b = body_in(intro, bodies)
+        if b is None or not cur:
+            return
+        rows = cur
+        figs = [r[0] for r in rows]
+        if len(rows) == seats or (figs and all(f == i for i, f in enumerate(figs, 1))):
+            got = [(str(i),) + r[1:] for i, r in enumerate(rows, 1)]
+            if len(got) > len(out.get(b["lgd_code"], [])):
+                out[b["lgd_code"]] = got
+    for pg, tsv in pages:
+        for li, l in enumerate(lines_of(tsv_words(tsv))):
+            t = l["text"]
+            if SECTION.search(t) and not ANCHOR.search(t):
+                close()
+                cur, intro = [], t
+                continue
+            m = ANCHOR.search(t)
+            hw = [w for w in l["words"] if re.match(r"पत्ता|पत्त", w["text"])]
+            nw = [w for w in l["words"] if re.search(r"नांव|नाव", w["text"])]
+            if hw and nw and nw[-1]["x1"] < hw[0]["x0"]:
+                # "... उमेदवाराचे नांव | पत्ता" (Beed Ex-2): the name head spans its column, the address head is centred
+                addr_x = min(nw[-1]["x1"] + 60, (nw[-1]["x1"] + hw[0]["x0"]) / 2)
+            if m and HEADW.search(t):
+                continue                         # the table head ("जागा राखीव असल्यास कोणासाठी जसे अनुसूचित जाती ...")
+            if cur and END.search(t):
+                close()                          # the signature under the list ("ठिकाण - बीड"): the list ends here
+                cur, intro = [], ""
+                continue
+            if not m or STOP.search(t):
+                if not cur:
+                    intro += " " + t
+                continue
+            pre = t[:m.start()].split()
+            fig = None
+            lead = 0
+            while pre and (JUNK.match(pre[0]) or re.fullmatch(r"[\W_]+", pre[0])) and lead < 3:
+                n = _num(pre[0])
+                if n is not None and fig is None and re.search(r"[0-9०-९]", pre[0]):
+                    fig = n
+                if not re.fullmatch(r"[\W_]+", pre[0]):
+                    lead += 1
+                pre = pre[1:]
+            name = []
+            for tok in pre:
+                if re.fullmatch(r"[|।\W_0-9०-९]+", tok):
+                    break                        # the ward cell after the name ("मठपती सुषमा बस्वराज ७ सर्वसाधारण")
+                name.append(tok)
+            if not name:
+                # the reservation before the name ("१. १ अनुसुचित जाती अडागळे किशोर परमेश्वर मु.पो. माऊली नगर", Beed): the
+                # words after the reservation words, up to the address column (or a word with a dot, comma or figure; 4 words)
+                ws = [w for w in l["words"] if w["x0"] >= min((x["x0"] for x in l["words"] if ANCHOR.search(x["text"])), default=0)]
+                while ws and (RESVW.match(ws[0]["text"]) or ANCHOR.search(ws[0]["text"])):
+                    ws = ws[1:]
+                for w in ws:
+                    if re.fullmatch(r"[\W_]+", w["text"]):
+                        continue
+                    if (addr_x and w["x0"] > addr_x) or re.search(r"[.,/0-9०-९:]", w["text"]) or len(name) >= (5 if addr_x else 3):
+                        break
+                    name.append(w["text"])
+            while name and JUNK.match(name[-1]):
+                name.pop()                       # the ward figure misread as a letter after the name ("एकनाथ न" = ६)
+            name = clean_name(" ".join(name).strip(" |।.,"))
+            if len(re.sub(r"[^क-हA-Za-z]", "", name)) < 3 or ANCHOR.search(name) or RESVW.match(name.split()[0]):
+                continue                         # a head line ("(अनुसुचित जाती")
+            conf = [w["conf"] for w in l["words"] if w["conf"] >= 0]
+            cur.append((fig, name, gj.norm(t[m.start():]), t, pg, li, round(sum(conf) / len(conf), 1) if conf else None))
+    close()
+    return out
+
+
+DARKRUN = re.compile(rb"[\x00-\x9f]{120,}")      # a ruled column line at 300 dpi: 120 dark pixels (1 cm) down
+HRUN = re.compile(rb"[\x00-\x9f]{500,}")         # a ruled row line: 500 pixels (4 cm) across (a word's head line is shorter)
+
+
+def unline(path):
+    """Whiten the ruled lines of a grey PGM (runs of 500+ dark pixels across, 120+ down, and one pixel round them) in place:
+    Tesseract then reads the cells of ruled tables it skipped (Latur Ex-1). Pure Python: rows and columns as byte slices."""
+    with open(path, "rb") as f:
+        img = f.read()
+    m = re.match(rb"P5\s+(\d+)\s+(\d+)\s+255\s", img)
+    if not m:
+        return path
+    w, h, off = int(m.group(1)), int(m.group(2)), m.end()
+    pix = bytearray(img[off:])
+    src = bytes(pix)
+    for y in range(h):
+        for r in HRUN.finditer(src, y * w, (y + 1) * w):
+            a, b = max(0, r.start() - y * w - 1), min(w, r.end() - y * w + 1)
+            for yy in (y - 1, y, y + 1):
+                if 0 <= yy < h:
+                    pix[yy * w + a:yy * w + b] = b"\xff" * (b - a)
+    for x in range(w):
+        col = src[x::w]
+        for r in DARKRUN.finditer(col):
+            for xx in (x - 1, x, x + 1):
+                if 0 <= xx < w:
+                    a, b = max(0, r.start() - 1), min(h, r.end() + 1)
+                    pix[a * w + xx:b * w + xx:w] = b"\xff" * (b - a)
+    with open(path, "wb") as f:
+        f.write(img[:off] + bytes(pix))
+    return path
+
+
+def ocr_lines(pdf, page, tmp, p, clean=True):
+    """The psm 4 reading of one page for anchor_lists(). clean: ruled lines whitened, Marathi only (mar+eng put Latin words
+    into Marathi names: "fears साईप्रसाद"); else the page as it is, mar+eng (Vaibhavwadi, Sindhudurg Ex-12, reads better so)."""
+    base = os.path.join(tmp, f"q{page}{'c' if clean else 'p'}")
+    subprocess.run(["pdftoppm", "-r", str(DPI), "-gray", "-f", str(page), "-l", str(page), "-singlefile", pdf, base],
+                   capture_output=True)
+    img = mh_scan.upright(base + ".pgm", rotation(p, page))
+    if clean:
+        img = unline(img)
+    r = subprocess.run(["tesseract", img, "-", "-l", "mar" if clean else "mar+eng", "--psm", "4", "tsv"], capture_output=True,
+                       text=True)
+    return r.stdout
+
+
+def short_bodies(recs, p):
+    """LGD codes of the payload bodies with fewer ward records than seats."""
+    seats = int(p.get("seats", 17))
+    out = []
+    for b in p.get("bodies") or []:
+        n = len({k for k, _ in recs if k.startswith(f"councillor:MH:{b['lgd_code']}:") and ":grp-" not in k})
+        if n < seats:
+            out.append(b["lgd_code"])
+    return out
+
+
+def merge_fallback(recs, why, lists, p):
+    """The anchored lists replace the column reader's records of a body when they hold more wards."""
+    short = set(short_bodies(recs, p))
+    new = anchor_records({c: rows for c, rows in lists.items() if c in short}, p)
+    done = set()
+    for code in short:
+        mine = [(k, d) for k, d in new if k.startswith(f"councillor:MH:{code}:")]
+        old = [k for k, _ in recs if k.startswith(f"councillor:MH:{code}:") and ":grp-" not in k]
+        if len(mine) > len(old):
+            recs = [(k, d) for k, d in recs if not (k.startswith(f"councillor:MH:{code}:") and ":grp-" not in k)] + mine
+            done.add(code)
+    if done:
+        why = "; ".join(x for x in (why or "").split("; ") if x and x.split(":")[0] not in done)
+        why = (why + "; " if why else "") + "anchored lines: " + ", ".join(sorted(done))
+    return recs, why
+
+
+def anchor_records(lists, p):
+    bodies = {b["lgd_code"]: b for b in p.get("bodies") or []}
+    out = []
+    for code, rows in lists.items():
+        b = bodies[code]
+        for ward, name, resv_t, line, pg, li, conf in rows:
+            party = mh.party_of(resv_t) or mh_np.party_of(resv_t)
+            d = {"type": "councillor", "state": "MH", "body": (b.get("en") or [""])[0] + " Nagar Panchayat",
+                 "body_local": b.get("local", ""), "body_en": b.get("name") or ((b.get("en") or [""])[0] + " Nagar Panchayat"),
+                 "body_type": "Nagar Panchayat", "district": b.get("district", ""), "lgd_code": code, "ward_no": ward,
+                 "name": name, "reservation": mh.reservation(resv_t), "reservation_text": resv_t, "party": party,
+                 "election": ELECTION, "url": p.get("url", ""), "gazette": p.get("match", ""),
+                 "gazette_date": p.get("gazette_date", ""), "page": pg, "lang": "mr", "read": "ocr (scan or legacy-font notice)",
+                 "method": METHOD + "; fallback: psm 4 lines anchored on the reservation word, ward = place in the list",
+                 "body_from": "notice text", "ward_from": "place in the list",
+                 "src_pos": {"page": pg, "line": li + 1, "line_text": line, "conf": conf, "dpi": DPI, "psm": 4}}
+            out.append((f"councillor:MH:{code}:{ward}", {k: v for k, v in d.items() if v not in ("", None)}))
+    return out
+
+
 def rotation(p, page):
     deg = int(p.get("rotate", 0) or 0)
     rng = p.get("rotate_pages")
@@ -626,7 +853,15 @@ def fetch(p, get):
         pages = list(range(int(p.get("first", 1)), min(int(p.get("last", n) or n), n) + 1))
         with concurrent.futures.ThreadPoolExecutor(max(1, min(len(pages), os.cpu_count() or 1))) as ex:
             tsvs = list(ex.map(lambda pg: ocr(pdf, pg, tmp, p), pages))
-    recs, why = parse_tsv(list(zip(pages, tsvs)), p)
+        recs, why = parse_tsv(list(zip(pages, tsvs)), p)
+        if short_bodies(recs, p):
+            # a body with fewer wards than seats: the anchored-line reading of the cleaned pages (ocr-gap round 2026-11-15)
+            for cl in (True, False):
+                if not short_bodies(recs, p):
+                    break
+                with concurrent.futures.ThreadPoolExecutor(max(1, min(len(pages), os.cpu_count() or 1))) as ex:
+                    lt = list(ex.map(lambda pg: ocr_lines(pdf, pg, tmp, p, cl), pages))
+                recs, why = merge_fallback(recs, why, anchor_lists(list(zip(pages, lt)), p), p)
     mark_stored(recs, p, content, p.get("url"))
     if not recs:
         chars = sum(len(t) for t in tsvs)

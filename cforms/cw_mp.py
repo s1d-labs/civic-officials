@@ -23,7 +23,7 @@ Two steps (bucket rule: the India-only download happens once):
   each with a "stored" key. Not yet seen working: the one search tried by hand (title "पार्षद", SEC, 2022) answered "no record",
   so the 2022 issues may sit in the archive list only; the seed record then says "no items".
 - OCR items (kind "form-cw_mp", councillors-ocr project): read the saved copy (cforms/tn.stored), else the gazette site.
-Record id councillor:MP:<LGD name slug>-<district slug>:<ward> ("mayor" for the mayor)."""
+Record id councillor:MP:<LGD name slug>-<district slug>:<ward>:gz<issue>-p<page> ("mayor" for the mayor; the page since 2026-11-15)."""
 import functools
 import hashlib
 import io
@@ -416,12 +416,13 @@ def body_from(text):
     # stray nasal marks in the body type ("नंगरपालिका", "नगंर परिषद") and a cut "निगः": else the type stays in the name and the
     # sound match goes astray (Khachrod and Ratlam went to Nainpur, Gurh to Dongar Parasia)
     t = re.sub(r"न[ंँ]?ग[ंँ]?र", "नगर", t)
-    t = re.sub(r"(नगर\s*पालिक\s*)निग\S?(?=\s)", r"\1निगम", t)
+    t = re.sub(r"(नगर\s*पालिक\s*)नि[गन]\S?(?=\s)", r"\1निगम", t)        # "निगः", "निनः"
+    t = re.sub("[\u0951\u0952]", "", t)                                   # Vedic stress marks: "प॑रिषद्" (Sehore)
     mm = PREAMBLE.search(t) or PREAMBLE_LOOSE.search(t)
     if not mm:
         return None
     full, month, year = mm.group(1), mm.group(2), mm.group(3).translate(DIGITS)
-    full = re.sub(r"\s+", " ", full).strip(" ,")
+    full = re.sub(r"\s+", " ", full).strip(" ,.;:|-")       # "राज्य में . नगरपालिका परिषद् -सीघी" (Sidhi)
     dist = ""
     # the district: one or two words after जिला (also read as जिलः, जिंला, जिले; "धार जिला, धार"; "आगर मालवा")
     dm = re.search(r"(.*?)\s*[^\sऀ-ॿ]?\s*(?:जि\S?ल[ाःे]|ज़िला)[\s,.:;_*-]+(?:[^\sक-ह]+\s+)*(\S+(?:\s+\S+)?)\s*$", full)   # (\W would eat a vowel sign)
@@ -842,10 +843,10 @@ def record(p, body, m, page):
     name_en = lgd[1] if lgd else title(roman(body["body_local"]))
     dist_en = lgd[2] if lgd else title(roman(body["district_local"]))
     slug = re.sub(r"[^a-z0-9]+", "-", f"{name_en}-{dist_en}".lower()).strip("-")
-    if lgd is None:
-        # no LGD body: the gazette page in the id, so that two notices with lost body names in one district (Ex-392 p. 12
-        # Vijayraghavgarh, Ex-433 p. 28 Amarkantak) do not overwrite each other's rows
-        slug = f"{slug}-gz{p.get('gazette_no') or ''}-p{page}".strip("-")
+    # the gazette page in the id: two notices tied to one body (a wrong tie, or two lost body names in one district) overwrote
+    # each other's rows (Seondha's page tied to Sawer replaced Sawer's own page; Ex-392 p. 12 and Ex-433 p. 28). sql/70 ties a
+    # page to its body again where the tie is wrong.
+    page_tag = f"gz{p.get('gazette_no') or ''}-p{page}"
     month_year = f"{body['month']} {body['year']}".strip()
     d = {"type": "councillor", "state": "MP", "name": m["name"], "position": m["position"], "ward_no": m["ward_no"] or None,
          "party": m["party"] or m["party_local"] or None, "party_local": m["party_local"], "body": name_en, "body_en": name_en,
@@ -857,4 +858,4 @@ def record(p, body, m, page):
          # source trail: the table on the page (1-based, top to bottom), the row in it (1-based) and the row band in PDF points
          "src_pos": {"page": page, **(m.get("_pos") or {})}}
     ward = m["ward_no"] or ("mayor" if m["position"] == "Mayor" else f"p{page}-{hashlib.sha1(m['name'].encode()).hexdigest()[:6]}")
-    return f"councillor:MP:{slug}:{ward}", d
+    return f"councillor:MP:{slug}:{ward}:{page_tag}", d

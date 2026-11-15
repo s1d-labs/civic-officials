@@ -183,6 +183,17 @@ if _ocr_d:
                      "unit_label": "PDF pages", "record_label": "councillor", "items": _ocr_d, "workers": 20, "threads": 1,
                      "delay_ms": 0})
 
+# And once more (seeds/ocre_councillors_*.json): the MP pages with the gazette page in the record id (wrong ties had overwritten
+# other pages' rows), stress marks and "निनः" in the preamble; the 28 Maharashtra nagar panchayat notices read by
+# cforms/mh_np_ocr.py with Latin look-alike figures, the schedule title as the end of the notice text, and the anchored-line
+# fallback (psm 4, ruled lines whitened) for a body with fewer wards than seats.
+_ocr_e = [i for f in sorted((HERE / "seeds").glob("ocre_councillors_*.json")) for i in json.loads(f.read_text())]
+if _ocr_e:
+    PROJECTS.append({"name": f"{FAMILY}-councillors-ocr-e", "title": "Ward councillors by OCR, saved results PDFs read again (ocr-gap round 2)",
+                     "task": "councillors-ocr-e", "target": f"{FAMILY}-councillors-ocr-e", "env": {}, "probe": None,
+                     "unit_label": "PDF pages", "record_label": "councillor", "items": _ocr_e, "workers": 20, "threads": 1,
+                     "delay_ms": 0})
+
 # Department offices and officers (depts task, dforms/<module>.py; every seeds/dept_*.json): police stations, power offices,
 # EROs, sub-registrars, water offices. Both projects run on the India servers and on GitHub runners through the Indian proxies;
 # "india_only" items are kept apart because GitHub runners without a proxy must never get them.

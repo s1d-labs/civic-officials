@@ -209,3 +209,44 @@ def test_soyagaon_group_register_full_notice():
     assert d["councillor:MH:251436:grp-177-1-10"]["name"] == "आशियाना कदीर शाह"       # "१०.आशियाना": one OCR word
     assert d["councillor:MH:251436:grp-177-1-15"]["name"] == "दीपक नाथा पगारे"
     assert all(x["src_pos"]["page"] == 1 for x in d.values())
+
+
+def _tsv(lines):
+    """Tesseract-like TSV from [(y, [(x, word)])]."""
+    out = ["level\tpage_num\tblock_num\tpar_num\tline_num\tword_num\tleft\ttop\twidth\theight\tconf\ttext"]
+    for ln, (y, ws) in enumerate(lines, 1):
+        for wn, (x, t) in enumerate(ws, 1):
+            out.append(f"5\t1\t1\t1\t{ln}\t{wn}\t{x}\t{y}\t{20 * len(t)}\t40\t90\t{t}")
+    return "\n".join(out)
+
+
+def test_ocr_gap_lookalike_figures():
+    """Tesseract (mar) reads ५ as "4", १ as "q", ६ as "&", ७ as "0." in a Devanagari table (Bhandara Ex-3)."""
+    from cforms import mh_np_ocr as m
+    ws = [{"text": t} for t in ("0.", "9", "q", "गायधने", "मनिषा")]
+    m.fix_digits(ws)
+    assert [w["text"] for w in ws][:3] == ["७.", "७", "१"]
+    ws = [{"text": t} for t in ("4", "4", "शहारे")]
+    m.fix_digits(ws)                              # no Devanagari figure in the line: left alone
+    assert ws[0]["text"] == "4"
+    m.fix_digits(ws, page_dev=True)
+    assert ws[0]["text"] == "५"
+
+
+def test_ocr_gap_anchored_lines():
+    """The fallback reads "<serial> <ward> <name> <reservation>" and "<serial>. <ward> <reservation> <name> <address>" lines;
+    a list is kept only with all 17 seats."""
+    from cforms import mh_np_ocr as m
+    p = {"bodies": [{"lgd_code": "263884", "en": ["Kasai Dodamarg"], "local": "कसई-दोडामार्ग", "name": "Kasai Dodamarg Nagar Panchayat"}],
+         "seats": 3}
+    tsv = _tsv([(100, [(0, "आदेश")]), (150, [(0, "कसई-दोडामार्ग"), (400, "नगरपंचायतच्या")]),
+                (200, [(0, "१"), (60, "१"), (120, "मणेरीकर"), (300, "रामचंद्र"), (480, "प्रभाकर"), (700, "सर्वसाधारण")]),
+                (250, [(0, "२"), (60, "२"), (120, "ठाकूर"), (300, "रामचंद्र"), (480, "सोमा"), (700, "सर्वसाधारण")]),
+                (300, [(0, "डु"), (60, "%"), (120, "मयेकर"), (300, "वासंती"), (480, "अनिल"), (700, "सर्वसाधारण"), (900, "महिला")]),
+                (350, [(0, "सिंधुदुर्गनगरी,"), (300, "जिल्हाधिकारी")])])
+    lists = m.anchor_lists([(1, tsv)], p)
+    assert [r[:2] for r in lists["263884"]] == [("1", "मणेरीकर रामचंद्र प्रभाकर"), ("2", "ठाकूर रामचंद्र सोमा"), ("3", "मयेकर वासंती अनिल")]
+    recs = m.anchor_records(lists, p)
+    assert recs[2][0] == "councillor:MH:263884:3" and recs[2][1]["reservation_text"].startswith("सर्वसाधारण महिला")
+    p["seats"] = 4                                # a row missing: the list is not kept (the wards would shift)
+    assert m.anchor_lists([(1, tsv)], p) == {}
