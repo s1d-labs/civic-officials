@@ -42,5 +42,27 @@
    "expected": 15,
    "note": "Nayagaon (Neemuch): 6 of 15 read before; faint scan, read from the page re-rendered at 300 dpi"
   }
+ },
+ {
+  "key": "h-mp-gz-01082022-432-p17",
+  "payload": {
+   "url": "https://govtpress.mp.gov.in/uploads/gazette/Extra_2022-08-01-Ex-432.pdf",
+   "kind": "form-cw_mp",
+   "state": "MP",
+   "slug": "mp-gz-01082022-432",
+   "pages": 48,
+   "stored": "civic-officials-councillors/councillors/MP/mp-gz-01082022-432.pdf",
+   "gazette_no": "432",
+   "gazette_date": "01-08-2022",
+   "first": 17,
+   "last": 18,
+   "prep": {
+    "deskew": true,
+    "contrast": 1.0,
+    "dpi": 300
+   },
+   "expected": 30,
+   "note": "Badod p. 17 and Badagaaon p. 18 (Agar-Malwa): -ocr-g tied them to Bairad / Dongar Parasia and lost Badagaaon ward 14"
+  }
  }
 ]
